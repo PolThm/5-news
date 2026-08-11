@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   collect:
-    name: Collect and deduplicate
+    name: Collect, dedupe, and cluster
     runs-on: ubuntu-latest
     # Sized against the adapter's own request budget rather than guessed:
     # MAX_REQUESTS_PER_COLLECTION (120) at 6s pacing is ~12 minutes for GDELT,
@@ -48,6 +48,11 @@ jobs:
         run: uv sync --locked
 
       - name: Run the cycle
+        env:
+          # Story 2.1: clustering calls Cohere embed-v4. A missing/invalid key
+          # degrades the cycle (one Cluster per dedupe group, no cross-language
+          # merge) rather than failing it — set as a repository secret.
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
         run: uv run python -m pipeline.stages.cycle
 
       - name: Commit the cycle's output

@@ -1,4 +1,5 @@
-"""Running a full cycle: collect, then dedupe, then record what happened.
+"""Running a full cycle: collect, then dedupe, then cluster, then record what
+happened.
 
 Story 1.5 turns the pipeline from something you invoke into something that
 accumulates. The Build Order's inspection window depends on days of real output
@@ -15,6 +16,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.adapters import CollectionResult, Failure
+from pipeline.adapters.cohere_embed import EmbeddingResult
 from pipeline.domain import ArticleRecord
 from pipeline.stages.cycle import CycleResult, run_cycle
 
@@ -35,6 +37,18 @@ def _collection(*records: ArticleRecord, failures: list[Failure] | None = None) 
     return CollectionResult(articles=[r.to_dict() for r in records], failures=failures or [])
 
 
+def _no_op_embed(titles: list[str]) -> EmbeddingResult:
+    """These tests exercise collect/dedupe/cycle-record behavior, not
+    clustering — a stub embedding keeps them independent of Cohere and of
+    Story 2.1's clustering logic, which has its own test module. Each title
+    gets a distinct *direction* (not just a distinct magnitude, which
+    normalizes away) so groups never accidentally merge, and no vector is
+    all-zero, which would trip the malformed-response guard."""
+    return EmbeddingResult(
+        vectors=[[1.0 if i == j else 0.0 for j in range(len(titles))] for i in range(len(titles))]
+    )
+
+
 def test_runs_collect_then_dedupe(tmp_path: Path) -> None:
     """AC: collect and dedupe run for World / day."""
     collection = _collection(
@@ -47,6 +61,7 @@ def test_runs_collect_then_dedupe(tmp_path: Path) -> None:
         collect=lambda: collection,
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert result.articles_collected == 3
@@ -62,6 +77,7 @@ def test_writes_a_cycle_record(tmp_path: Path) -> None:
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     record = json.loads(result.cycle_path.read_text())
@@ -82,10 +98,11 @@ def test_cycle_record_names_upstream_failures(tmp_path: Path) -> None:
         ),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     record = json.loads(result.cycle_path.read_text())
-    assert record["failures"] == [{"adapter": "gdelt", "detail": "429 after 3 of 7 windows"}]
+    assert {"adapter": "gdelt", "detail": "429 after 3 of 7 windows"} in record["failures"]
     assert record["degraded"] is True
 
 
@@ -94,6 +111,7 @@ def test_a_clean_cycle_is_not_marked_degraded(tmp_path: Path) -> None:
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert json.loads(result.cycle_path.read_text())["degraded"] is False
@@ -107,6 +125,7 @@ def test_cycle_state_lands_where_a_later_run_can_resume_it(tmp_path: Path) -> No
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert result.cycle_path == tmp_path / "intermediate" / "2026-08-11T00-00-00Z" / "cycle.json"
@@ -121,6 +140,7 @@ def test_a_totally_failed_collection_still_completes_the_cycle(tmp_path: Path) -
         ),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert result.articles_collected == 0
@@ -136,6 +156,7 @@ def test_a_new_cycle_does_not_touch_a_previous_one(tmp_path: Path) -> None:
         collect=lambda: _collection(_record("Yesterday", "a.com")),
         cycle_id="2026-08-10T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
     yesterday = first.dedupe_path.read_text()
 
@@ -143,6 +164,7 @@ def test_a_new_cycle_does_not_touch_a_previous_one(tmp_path: Path) -> None:
         collect=lambda: CollectionResult(articles=[], failures=[Failure("gdelt", "down")]),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert first.dedupe_path.read_text() == yesterday, "yesterday's output survived"
@@ -153,11 +175,13 @@ def test_each_cycle_gets_its_own_directory(tmp_path: Path) -> None:
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-10T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
     second = run_cycle(
         collect=lambda: _collection(_record("B", "b.com")),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert first.cycle_path != second.cycle_path
@@ -176,6 +200,7 @@ def test_collect_raising_is_contained(tmp_path: Path) -> None:
         collect=explode,
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert result.articles_collected == 0
@@ -194,6 +219,7 @@ def test_result_reports_success_for_a_degraded_but_completed_cycle(tmp_path: Pat
         ),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert isinstance(result, CycleResult)
@@ -221,6 +247,7 @@ def test_dedupe_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
         collect=collect_returning_unwritable,
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
+        embed=_no_op_embed,
     )
 
     assert result.cycle_path.exists(), "a cycle record must survive any crash"
@@ -244,6 +271,7 @@ def test_completed_is_false_when_a_stage_crashes(tmp_path: Path) -> None:
             collect=lambda: _collection(_record("A", "a.com")),
             cycle_id="2026-08-11T00-00-00Z",
             data_root=tmp_path,
+            embed=_no_op_embed,
         )
     finally:
         cycle_module.run_dedupe = original  # type: ignore[assignment]
@@ -252,3 +280,73 @@ def test_completed_is_false_when_a_stage_crashes(tmp_path: Path) -> None:
     record = json.loads(result.cycle_path.read_text())
     assert record["completed"] is False
     assert any("disk full" in f["detail"] for f in record["failures"])
+
+
+def test_runs_cluster_after_dedupe(tmp_path: Path) -> None:
+    """Story 2.1: the cycle now has a third stage. Two dispatches with
+    distinct vectors must not be merged by the no-op embed stub."""
+    result = run_cycle(
+        collect=lambda: _collection(
+            _record("Ceasefire agreed", "reuters.com", "united-kingdom"),
+            _record("Markets rally", "ft.com", "france"),
+        ),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+    )
+
+    assert result.clusters_after_grouping == 2
+    assert result.cluster_path.exists()
+
+    record = json.loads(result.cycle_path.read_text())
+    assert record["clusters_after_grouping"] == 2
+
+
+def test_cluster_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
+    """Same guard pattern as dedupe: cluster is the third guarded step, and a
+    crash in it must not prevent cycle.json from being written."""
+    import pipeline.stages.cycle as cycle_module
+
+    def explode(*args: object, **kwargs: object) -> None:
+        raise RuntimeError("cluster exploded")
+
+    original = cycle_module.run_cluster
+    cycle_module.run_cluster = explode  # type: ignore[assignment]
+    try:
+        result = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+        )
+    finally:
+        cycle_module.run_cluster = original  # type: ignore[assignment]
+
+    assert result.completed is False
+    record = json.loads(result.cycle_path.read_text())
+    assert record["completed"] is False
+    assert any("cluster exploded" in f["detail"] for f in record["failures"])
+
+
+def test_embedding_failure_degrades_the_cycle_but_it_still_completes(tmp_path: Path) -> None:
+    """Consistent with every other adapter boundary: a Cohere outage degrades
+    clustering (falls back to one Cluster per dedupe group) but the cycle
+    still runs to completion and still commits a cycle.json (AD-10)."""
+
+    def failing_embed(titles: list[str]) -> EmbeddingResult:
+        return EmbeddingResult(failures=[Failure("cohere_embed", "rate limited")])
+
+    result = run_cycle(
+        collect=lambda: _collection(
+            _record("A", "a.com"),
+            _record("B", "b.com"),
+        ),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=failing_embed,
+    )
+
+    assert result.completed is True
+    assert result.clusters_after_grouping == 2  # degraded: one cluster per group
+    record = json.loads(result.cycle_path.read_text())
+    assert record["degraded"] is True

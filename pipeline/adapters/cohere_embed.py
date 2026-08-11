@@ -1,0 +1,123 @@
+"""Cohere embed-v4 adapter: turns titles into vectors for cross-language
+clustering.
+
+A French and a Japanese headline about the same event share no words. The
+cluster stage groups on semantic similarity instead of text similarity, and
+that similarity has to come from somewhere outside this pipeline — this
+adapter is where the vendor call for it lives, so the cluster stage never
+imports ``cohere`` or sees a Cohere response object (AD-13).
+
+Isolated on purpose: an injectable ``client`` (mirroring GdeltClient's
+injectable ``fetch``) keeps every test here network-free, and never raising
+past this module's boundary (AD-10) means an embedding outage degrades a
+cycle's clustering rather than crashing it.
+"""
+
+from __future__ import annotations
+
+import os
+from dataclasses import dataclass, field
+from typing import Any, Protocol
+
+from pipeline.adapters import Failure
+
+ADAPTER = "cohere_embed"
+
+MODEL = "embed-v4.0"
+
+# Matryoshka-truncatable to 256/512/1024/1536; 1024 balances clustering
+# quality against payload size for title-length text — no evidence at this
+# volume that 1536 would change any grouping decision.
+EMBEDDING_DIMENSION = 1024
+
+# Cohere's own per-request cap. A larger batch is rejected outright, not
+# truncated, so this must be enforced before the call, not discovered from it.
+MAX_TEXTS_PER_REQUEST = 96
+
+
+class _Embeddings(Protocol):
+    float_: list[list[float]]
+
+
+class _EmbedResponse(Protocol):
+    embeddings: _Embeddings
+
+
+class Client(Protocol):
+    """The subset of ``cohere.ClientV2`` this adapter needs.
+
+    Narrow on purpose, same reasoning as ``gdelt.Response``: it keeps the
+    vendor client swappable and lets tests supply a plain object instead of
+    mocking a library.
+    """
+
+    def embed(self, **kwargs: Any) -> _EmbedResponse: ...
+
+
+@dataclass(frozen=True, slots=True)
+class EmbeddingResult:
+    """What embedding retrieved, and what it could not.
+
+    Parallel to ``CollectionResult`` rather than a reuse of it: embeddings are
+    vectors aligned by position to the input titles, not Article-shaped dicts,
+    and forcing that shape into ``CollectionResult`` would be a worse fit than
+    a small dedicated type.
+    """
+
+    vectors: list[list[float]] = field(default_factory=list)
+    failures: list[Failure] = field(default_factory=list)
+
+
+def _chunks(items: list[str], size: int) -> list[list[str]]:
+    return [items[i : i + size] for i in range(0, len(items), size)]
+
+
+def embed_titles(titles: list[str], client: Client | None = None) -> EmbeddingResult:
+    """Embed titles for clustering, in batches of at most
+    ``MAX_TEXTS_PER_REQUEST``, preserving input order.
+
+    ``input_type="clustering"`` is mandatory: the retrieval-oriented values
+    (``search_document``/``search_query``) produce embeddings tuned for
+    asymmetric query/document matching, not symmetric similarity grouping —
+    using them would not error, it would just silently degrade every
+    downstream clustering decision.
+    """
+    if not titles:
+        return EmbeddingResult()
+
+    if client is None:
+        api_key = os.environ.get("COHERE_API_KEY")
+        if not api_key:
+            return EmbeddingResult(
+                failures=[Failure(ADAPTER, "COHERE_API_KEY is not set; cannot embed titles")]
+            )
+        import cohere
+
+        client = cohere.ClientV2(api_key=api_key)
+
+    # Deliberately all-or-nothing, unlike CollectionResult's partial-results
+    # convention: vectors are positional (index i is group i's embedding), and
+    # the cluster stage has no way to cluster a partial vector list against a
+    # full group list without either misaligning positions or re-deriving
+    # which titles are missing. A partial batch failure degrades exactly like
+    # a total one — one Cluster per dedupe group for the whole cycle — rather
+    # than risk a subtler bug from partial alignment.
+    vectors: list[list[float]] = []
+    try:
+        for batch in _chunks(titles, MAX_TEXTS_PER_REQUEST):
+            response = client.embed(
+                model=MODEL,
+                texts=batch,
+                input_type="clustering",
+                embedding_types=["float"],
+                output_dimension=EMBEDDING_DIMENSION,
+                truncate="END",
+            )
+            vectors.extend(response.embeddings.float_)
+    except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
+        return EmbeddingResult(failures=[Failure(ADAPTER, f"embedding request failed: {exc}")])
+
+    return EmbeddingResult(vectors=vectors)
+
+
+__all__ = ["EMBEDDING_DIMENSION", "MAX_TEXTS_PER_REQUEST", "EmbeddingResult", "embed_titles"]

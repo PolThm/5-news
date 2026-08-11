@@ -4,7 +4,7 @@ baseline_commit: b3cf82b827c95923c0e2695ab14eeff0b43238e0
 
 # Story 1.1: Repository and pipeline skeleton
 
-Status: review
+Status: done
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -313,6 +313,21 @@ Not applicable. Single commit, no code history to learn patterns from.
 - Build Order and the inspection window: [Source: prd.md#10-Build-Order]
 - Tooling versions verified via web research 2026-08-11 (uv 0.12.3, ruff 0.16.2, scikit-learn 1.9.0, Astro 7.2.0, GitHub Actions v7 line, Node 20 runner removal 2026-09-16)
 
+### Review Findings
+
+Three-layer adversarial review (Blind Hunter, Edge Case Hunter, Acceptance Auditor), 25 raw signals, deduplicated and verified against the actual code before rating.
+
+- [x] [Review][Patch] `domain/` violates "types only, no behavior" — `ConsensusScore.qualifies()` and `Cluster.consensus_score` are computed behavior, and `qualifies()` duplicates config's threshold constants as hardcoded `2`s because `domain/` cannot import `config/`. Decided: move qualification logic to `pipeline/stages/rank/` (Story 2.2), which owns FR-6 and may import config freely. `domain/` keeps `ConsensusScore` as a pure data holder. [pipeline/domain/__init__.py:131-134,149-155]
+- [x] [Review][Patch] `config/` carries ranking thresholds (`MIN_ITEMS`, `MAX_ITEMS`, `MAX_ITEMS_PER_COUNTRY_IN_CONTINENT`, `MIN_INDEPENDENT_SOURCES`, `MIN_DISTINCT_COUNTRIES`) that Task 3 did not ask this story to populate — Story 2.2/2.4 own them. Decided: remove from this story; they return with the stage that uses them. [pipeline/config/__init__.py:65-76]
+- [x] [Review][Patch] `QualifyingCluster` has no invariant enforcement — it wraps any `Cluster` regardless of whether it actually qualifies, so the type reads as a proof but is just a label. Follows from the two items above: once qualification logic lives in `rank/`, that stage is the only place a `QualifyingCluster` gets constructed, and it should only do so after checking the floor. [pipeline/domain/__init__.py:159-171]
+- [x] [Review][Patch] AC 4 ("prove it fails... do not mark this AC done on an untested check") has zero corresponding artifact in the diff — the three violation checks were run manually and pasted as a transcript into Completion Notes, with no committed test. Add `tests/test_boundary.sh` (or a pytest wrapper invoking the script via subprocess) that plants each of the three violations in a temp copy of the tree and asserts non-zero exit, then removes them. [scripts/check-boundary.sh]
+- [x] [Review][Patch] Script header comment says "Exits... 1 on the first violation found" but the implementation accumulates all violations across all three checks before exiting — the comment describes behavior the code doesn't have. Fix the comment to say what the script does. [scripts/check-boundary.sh:14]
+- [x] [Review][Patch] `astral-sh/setup-uv@v6` contradicts the story's own "use the v7 action line" mandate and the Dev Notes' Node-20-deadline rationale — it's the one action left off the v7 line with no explanation. Pin to the current `setup-uv` major (v7 series) or, if v7 isn't yet published for this action, add one sentence in the workflow comment explaining why it's the deliberate exception. [.github/workflows/ci.yml:33]
+- [x] [Review][Patch] `read_jsonl` propagates a raw `json.JSONDecodeError` with no file or line context when a JSONL line is malformed — every other error path in this diff (missing input, CI failures) is deliberately made legible, this one isn't. Wrap the parse and re-raise with `path` and line number. [pipeline/stages/__init__.py:53]
+- [x] [Review][Defer] `write_jsonl` leaves a truncated file on disk if the source iterable raises mid-write — no stage does that today, so it's not reachable, but worth a temp-file+rename pattern once a real stage's input can fail mid-stream. [pipeline/stages/__init__.py:58-70] — deferred, pre-existing pattern with no live caller yet.
+- [x] [Review][Defer] No guard against a caller passing `--cycle-id` that collides with a stage name or contains `/`/`:` — `cycle_id_for()`'s own output is safe by construction, but a manually-supplied one on the CLI isn't validated. Not reachable until a later story's automation actually passes an externally-derived cycle id. [pipeline/stages/__init__.py:63-77] — deferred, no current caller supplies an unsafe value.
+- [x] [Review][Defer] `placeholder.py` doesn't distinguish "input path is a directory" from "input path is missing" — both should be a clean stderr+exit-1, only the missing case is. Low value to fix on a file marked for deletion once a real stage replaces it. [pipeline/stages/placeholder.py] — deferred, placeholder is explicitly temporary.
+
 ## Dev Agent Record
 
 ### Agent Model Used
@@ -447,5 +462,14 @@ to prove the contract and is marked for deletion once a real stage replaces it.
 
 ## Change Log
 
+- 2026-08-11 — Code review (3-layer adversarial: Blind Hunter, Edge Case Hunter, Acceptance
+  Auditor). 25 raw signals, 7 patches applied, 3 deferred, 15 dismissed as noise (including
+  one false positive: package-lock.json was claimed missing but was present and tracked —
+  the reviewer simply hadn't been given that file in its scoped diff). Domain layer reduced
+  back to pure types (qualification logic moves to Story 2.2/rank); ranking thresholds
+  removed from config (same reason); AC 4 now proven by a committed test
+  (tests/test_boundary_check.py) instead of a hand-typed transcript; setup-uv bumped to v9
+  (verified current — the v7 pin in the original workflow was itself already stale);
+  read_jsonl now raises with file:line context on malformed JSON. 25 tests passing.
 - 2026-08-11 — Story 1.1 implemented. Repository skeleton, domain types, configuration,
   stage contract, boundary check, Astro scaffold, CI. 20 tests passing.

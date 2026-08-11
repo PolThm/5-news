@@ -128,11 +128,6 @@ class ConsensusScore:
     independent_sources: int
     countries: int
 
-    def qualifies(self) -> bool:
-        """The Qualifying Cluster floor: at least 2 Independent Sources from
-        at least 2 distinct countries."""
-        return self.independent_sources >= 2 and self.countries >= 2
-
 
 @dataclass(frozen=True, slots=True)
 class Cluster:
@@ -157,10 +152,17 @@ class Cluster:
 
 @dataclass(frozen=True, slots=True)
 class QualifyingCluster:
-    """A Cluster eligible for inclusion in a Briefing.
+    """A Cluster that has met the Qualifying Cluster floor.
 
     Clusters below the floor are never displayed and never counted toward item
     totals — they belong to Discarded Volume instead.
+
+    This type carries no validation of its own: it is a marker applied by
+    whichever stage owns the floor check (``pipeline.stages.rank``, Story 2.2),
+    which is also the only place threshold constants may be read from
+    ``pipeline.config`` — ``domain`` is the leaf of the dependency graph and
+    may not import ``config``. Do not construct one directly except from that
+    stage's qualification check.
     """
 
     cluster: Cluster

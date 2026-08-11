@@ -61,12 +61,13 @@ def test_consensus_score_carries_both_counts() -> None:
     assert score.countries == 12
 
 
-def test_qualifying_cluster_floor() -> None:
-    """At least 2 Independent Sources from at least 2 distinct countries."""
-    assert domain.ConsensusScore(independent_sources=2, countries=2).qualifies()
-    assert not domain.ConsensusScore(independent_sources=1, countries=1).qualifies()
-    assert not domain.ConsensusScore(independent_sources=5, countries=1).qualifies()
-    assert not domain.ConsensusScore(independent_sources=1, countries=5).qualifies()
+def test_consensus_score_is_a_plain_data_holder() -> None:
+    """The Qualifying Cluster floor is a ranking rule, not a domain fact — it
+    belongs to pipeline.stages.rank (Story 2.2), which may import the
+    thresholds from pipeline.config. domain/ may not (it is the leaf), so it
+    must not encode the rule at all rather than duplicate the numbers.
+    """
+    assert not hasattr(domain.ConsensusScore, "qualifies")
 
 
 def test_discarded_volume() -> None:

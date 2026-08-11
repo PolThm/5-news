@@ -47,12 +47,21 @@ def output_dir_for(stage: str, cycle_id: str, root: Path = DEFAULT_DATA_ROOT) ->
 
 
 def read_jsonl(path: Path) -> Iterator[dict[str, Any]]:
-    """Read JSON Lines, skipping blank lines."""
+    """Read JSON Lines, skipping blank lines.
+
+    A malformed line raises with the file and line number attached — every
+    other failure path in this module is deliberately legible, and a bare
+    ``JSONDecodeError`` with no location would not be.
+    """
     with path.open(encoding="utf-8") as handle:
-        for line in handle:
-            line = line.strip()
-            if line:
-                yield json.loads(line)
+        for line_number, line in enumerate(handle, start=1):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            try:
+                yield json.loads(stripped)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"{path}:{line_number}: invalid JSON: {exc}") from exc
 
 
 def write_jsonl(path: Path, records: Iterable[dict[str, Any]]) -> int:

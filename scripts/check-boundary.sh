@@ -12,7 +12,8 @@
 # catching none of the violations that can actually happen.
 #
 # Usage: scripts/check-boundary.sh
-# Exits 0 when clean, 1 on the first violation found.
+# Exits 0 when clean. Runs all three checks and reports every violation found
+# before exiting 1 — it does not stop at the first one.
 
 set -uo pipefail
 

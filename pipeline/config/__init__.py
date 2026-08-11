@@ -59,22 +59,11 @@ OUTPUT_LANGUAGES: tuple[OutputLanguage, ...] = (
     OutputLanguage.ES,
 )
 
-# --- Thresholds --------------------------------------------------------------
-
-# The Qualifying Cluster floor (PRD Glossary). Ranking never considers a
-# Cluster below it, and such Clusters count toward Discarded Volume.
-MIN_INDEPENDENT_SOURCES = 2
-MIN_DISTINCT_COUNTRIES = 2
-
-# A Briefing holds between this many and MAX_ITEMS items, never padded (FR-4).
-MIN_ITEMS = 2
-MAX_ITEMS = 5
-
-# At most this many items from one country in a Continent Briefing (FR-17).
-# Not applied to World — see PRD Open Question 5.
-MAX_ITEMS_PER_COUNTRY_IN_CONTINENT = 2
-
-# Story 2.3/2.4 tune their Syndication Detection thresholds here.
+# Ranking thresholds (the Qualifying Cluster floor, item-count bounds, the
+# anti-concentration cap) belong to Story 2.2/2.6, which own the rules that
+# read them. Story 1.1 is scaffolding only — adding them here ahead of the
+# stage that uses them was scope creep past "types only, no behavior" and was
+# removed in code review.
 
 
 # --- Derived -----------------------------------------------------------------
@@ -110,11 +99,6 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
 
 
 __all__ = [
-    "MAX_ITEMS",
-    "MAX_ITEMS_PER_COUNTRY_IN_CONTINENT",
-    "MIN_DISTINCT_COUNTRIES",
-    "MIN_INDEPENDENT_SOURCES",
-    "MIN_ITEMS",
     "OUTPUT_LANGUAGES",
     "PERIODS",
     "STAGE_NAMES",

@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FIVE — Séance de brainstorming, 10 août 2026</title>
+<style>
+/* ============================================================
+   FIVE — keepsake éditorial
+   Langage visuel : journal papier, encre noire sur papier crème,
+   une seule couleur d'accent (rouge de rotative), beaucoup de vide.
+   Le vide est le sujet.
+   ============================================================ */
+
+:root{
+  --paper:#f4f1ea;
+  --paper-2:#eae5da;
+  --ink:#14130f;
+  --ink-soft:#4a4740;
+  --ink-faint:#8a857a;
+  --rule:#c9c2b3;
+  --red:#b4231e;
+  --blue:#1d3f66;
+  --serif: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua","Times New Roman",Georgia,serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --mono: ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --maxw: 1080px;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:18px;
+  line-height:1.55;
+  /* grain de papier très léger */
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(0,0,0,.014) 0 1px, transparent 1px),
+    radial-gradient(circle at 70% 65%, rgba(0,0,0,.012) 0 1px, transparent 1px);
+  background-size:7px 7px, 11px 11px;
+}
+img{max-width:100%;}
+
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+.narrow{max-width:660px;margin-left:auto;margin-right:auto;}
+
+/* ---------- typographie utilitaire ---------- */
+.kicker{
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  font-weight:600;
+}
+.rule{border:0;border-top:1px solid var(--rule);margin:0;}
+.rule-thick{border:0;border-top:3px solid var(--ink);margin:0;}
+.rule-double{border:0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);height:4px;margin:0;}
+
+/* ============================================================
+   MASTHEAD
+   ============================================================ */
+.masthead{padding:56px 0 0;}
+.masthead-top{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:16px;flex-wrap:wrap;
+  font-family:var(--sans);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--ink-faint);
+  padding-bottom:10px;
+}
+.logotype{
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:clamp(84px,22vw,240px);
+  line-height:.84;
+  letter-spacing:-.04em;
+  margin:26px 0 0;
+  text-align:center;
+}
+.logotype .num{
+  display:block;
+  font-size:clamp(150px,40vw,420px);
+  line-height:.78;
+  letter-spacing:-.06em;
+  position:relative;
+}
+.logotype .num::after{
+  content:"";
+  position:absolute;left:50%;bottom:-.06em;transform:translateX(-50%);
+  width:.9em;height:3px;background:var(--red);
+}
+.deck{
+  text-align:center;
+  font-size:clamp(19px,2.6vw,27px);
+  line-height:1.35;
+  max-width:640px;margin:34px auto 0;
+  color:var(--ink);
+}
+.deck em{font-style:italic;color:var(--red);}
+.masthead-meta{
+  display:flex;justify-content:center;gap:0;flex-wrap:wrap;
+  margin:38px 0 0;
+  font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+.masthead-meta span{padding:0 14px;border-left:1px solid var(--rule);}
+.masthead-meta span:first-child{border-left:0;}
+
+/* compteur d'entrées, style ours de journal */
+.ledger{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+  margin:44px 0 0;
+}
+.ledger div{
+  padding:16px 10px;
+  text-align:center;
+  border-left:1px solid var(--rule);
+}
+.ledger div:first-child{border-left:0;}
+.ledger b{
+  display:block;font-size:30px;line-height:1;font-weight:700;
+}
+.ledger small{
+  display:block;margin-top:7px;
+  font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+}
+
+/* ============================================================
+   SOMMAIRE
+   ============================================================ */
+.toc{margin:64px 0 0;}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:t;}
+.toc li{
+  counter-increment:t;
+  border-top:1px solid var(--rule);
+  padding:15px 0;
+  display:flex;align-items:baseline;gap:16px;
+}
+.toc li:last-child{border-bottom:1px solid var(--rule);}
+.toc li::before{
+  content:counter(t,decimal-leading-zero);
+  font-family:var(--mono);font-size:12px;color:var(--red);
+  min-width:2.4em;
+}
+.toc a{color:inherit;text-decoration:none;font-size:20px;flex:1;}
+.toc a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;}
+.toc .tag{
+  font-family:var(--sans);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);white-space:nowrap;
+}
+
+/* ============================================================
+   SECTIONS — en-têtes
+   ============================================================ */
+section{padding:96px 0 0;}
+.sec-head{margin-bottom:44px;}
+.sec-num{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(56px,12vw,120px);line-height:.85;letter-spacing:-.04em;
+  color:var(--paper-2);
+  -webkit-text-stroke:1px var(--rule);
+}
+.sec-title{
+  font-size:clamp(30px,5.4vw,54px);line-height:1.05;letter-spacing:-.02em;
+  margin:-.28em 0 0;font-weight:700;
+}
+.sec-sub{
+  margin:16px 0 0;max-width:620px;color:var(--ink-soft);font-size:18px;line-height:1.6;
+}
+.sec-badge{
+  display:inline-block;margin-bottom:12px;
+  font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  border:1px solid var(--ink);padding:5px 10px;
+}
+.sec-badge.invented{background:var(--red);border-color:var(--red);color:#fff;}
+
+/* ============================================================
+   ENTRÉES — grammaire commune
+   idea = texte courant ; insight = encadré ; note = filet
+   ============================================================ */
+.insight{
+  border-top:3px solid var(--red);
+  border-bottom:1px solid var(--red);
+  background:rgba(180,35,30,.045);
+  padding:22px 24px;
+  margin:26px 0;
+}
+.insight .lbl{
+  font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--red);font-weight:700;display:block;margin-bottom:8px;
+}
+.insight p{margin:0;font-size:21px;line-height:1.42;font-style:italic;}
+
+.note{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-faint);
+  display:flex;align-items:center;gap:12px;margin:30px 0;
+}
+.note::before,.note::after{content:"";flex:1;height:1px;background:var(--rule);}
+
+/* ============================================================
+   1. ROLE PLAYING — galerie de personas, cartes de casting
+   ============================================================ */
+.cast{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(268px,1fr));
+  gap:1px;background:var(--rule);
+  border:1px solid var(--rule);
+}
+.persona{
+  background:var(--paper);
+  padding:24px 22px 26px;
+  display:flex;flex-direction:column;
+}
+.persona-id{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:var(--mono);font-size:10px;color:var(--ink-faint);letter-spacing:.1em;
+  border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:14px;
+}
+.persona-id .n{color:var(--red);}
+.persona h3{
+  margin:0 0 4px;font-size:23px;line-height:1.14;letter-spacing:-.01em;font-weight:700;
+}
+.persona .role{
+  font-family:var(--sans);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-faint);margin-bottom:14px;
+}
+.persona ul{list-style:none;margin:0;padding:0;flex:1;}
+.persona li{
+  font-size:15.5px;line-height:1.45;color:var(--ink-soft);
+  padding:9px 0 9px 16px;border-top:1px solid var(--paper-2);position:relative;
+}
+.persona li::before{
+  content:"—";position:absolute;left:0;color:var(--red);
+}
+.persona .quote{
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--rule);
+  font-style:italic;font-size:16px;line-height:1.4;
+}
+
+/* ============================================================
+   2. LUNDI MATIN — chronologie minute par minute
+   ============================================================ */
+.clock-hero{
+  text-align:center;margin-bottom:10px;
+}
+.clock-hero .t{
+  font-family:var(--mono);font-weight:700;
+  font-size:clamp(58px,15vw,150px);line-height:1;letter-spacing:-.03em;
+}
+.clock-hero .t small{font-size:.34em;letter-spacing:.1em;color:var(--ink-faint);}
+.clock-hero .cap{
+  font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-faint);margin-top:10px;
+}
+
+.timeline{position:relative;margin-top:52px;padding-left:0;}
+.timeline::before{
+  content:"";position:absolute;left:86px;top:0;bottom:0;width:1px;background:var(--rule);
+}
+.tick{
+  position:relative;display:grid;
+  grid-template-columns:86px 1fr;
+  gap:0 28px;
+  padding:0 0 34px;
+}
+.tick .min{
+  font-family:var(--mono);font-size:15px;font-weight:700;text-align:right;
+  padding-top:2px;position:relative;
+}
+.tick .min::after{
+  content:"";position:absolute;right:-32px;top:9px;
+  width:9px;height:9px;background:var(--paper);border:2px solid var(--ink);border-radius:50%;
+}
+.tick.crisis .min{color:var(--red);}
+.tick.crisis .min::after{border-color:var(--red);background:var(--red);}
+.tick .body{padding-top:0;}
+.tick h4{
+  margin:0 0 8px;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-.01em;
+}
+.tick p{margin:0 0 10px;font-size:16.5px;line-height:1.55;color:var(--ink-soft);}
+.tick p:last-child{margin-bottom:0;}
+.friction{
+  display:inline-block;font-family:var(--sans);font-size:9.5px;letter-spacing:.15em;
+  text-transform:uppercase;padding:3px 8px;border:1px solid var(--red);color:var(--red);
+  margin-bottom:9px;
+}
+.fix{
+  border-left:3px solid var(--ink);padding:8px 0 8px 14px;margin:10px 0 0;
+  font-size:16.5px;line-height:1.5;
+}
+.fix b{font-family:var(--sans);font-size:10px;letter-spacing:.16em;text-transform:uppercase;display:block;color:var(--ink-faint);margin-bottom:3px;}
+.tick .insight{margin:16px 0 0;}
+.tick .insight p{font-size:18.5px;}
+
+/* ============================================================
+   3. AUTOPSIE DU TITRE — dissection mot à mot
+   ============================================================ */
+.specimen{
+  border:1px solid var(--ink);
+  padding:34px 22px;
+  text-align:center;
+  background:var(--paper-2);
+  margin-bottom:8px;
+}
+.specimen .sentence{
+  font-size:clamp(20px,4.6vw,40px);
+  line-height:1.4;font-weight:700;letter-spacing:-.02em;
+  word-spacing:.06em;
+}
+.specimen .w{
+  position:relative;display:inline-block;padding:0 .06em;
+}
+.specimen .w.cut{
+  color:var(--red);
+  text-decoration:underline;
+  text-decoration-style:dotted;
+  text-decoration-thickness:2px;
+  text-underline-offset:8px;
+}
+.specimen .caption{
+  font-family:var(--sans);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--ink-faint);margin-top:22px;
+}
+
+.dissect{border-top:1px solid var(--ink);}
+.word-row{
+  display:grid;grid-template-columns:210px 1fr;gap:0 30px;
+  border-bottom:1px solid var(--rule);
+  padding:26px 0;
+  align-items:start;
+}
+.word-row .specimen-word{
+  font-size:clamp(26px,5vw,44px);line-height:1;font-weight:700;letter-spacing:-.03em;
+  color:var(--red);
+  text-transform:uppercase;
+  word-break:break-word;
+}
+.word-row .specimen-word small{
+  display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  color:var(--ink-faint);text-transform:uppercase;margin-top:8px;font-weight:400;
+}
+.word-row .findings p{margin:0 0 12px;font-size:16.5px;line-height:1.55;color:var(--ink-soft);}
+.word-row .findings p:last-child{margin-bottom:0;}
+.word-row .findings strong{color:var(--ink);}
+.verdict{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;
+}
+.verdict span{
+  font-family:var(--sans);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  border:1px solid var(--rule);padding:4px 9px;color:var(--ink-soft);
+}
+.verdict span.keep{border-color:var(--ink);color:var(--ink);}
+.verdict span.kill{border-color:var(--red);color:#fff;background:var(--red);}
+
+.madlibs{
+  margin-top:44px;border:3px solid var(--ink);padding:34px 24px;text-align:center;
+}
+.madlibs .lbl{
+  font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);
+  margin-bottom:20px;
+}
+.madlibs .phrase{
+  font-size:clamp(20px,4.4vw,38px);line-height:1.5;font-weight:700;letter-spacing:-.02em;
+}
+.slot{
+  display:inline-block;
+  border-bottom:3px solid var(--red);
+  color:var(--red);
+  padding:0 .12em;
+  cursor:pointer;
+  transition:background .15s ease;
+  user-select:none;
+}
+.slot:hover{background:rgba(180,35,30,.1);}
+.madlibs .hint{
+  font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);margin-top:22px;
+}
+
+/* ============================================================
+   4. ONE FEATURE ONLY — cartes de soustraction
+   ============================================================ */
+.subtraction{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:20px;
+}
+.sub-card{
+  border:1px solid var(--ink);
+  padding:0;
+  display:flex;flex-direction:column;
+  background:var(--paper);
+}
+.sub-card .strip{
+  border-bottom:1px solid var(--ink);
+  padding:10px 16px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+.sub-card .strip .minus{
+  font-size:15px;color:var(--red);font-weight:700;
+}
+.sub-card .kept{
+  padding:20px 16px 4px;
+}
+.sub-card .kept .lbl{
+  font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);
+}
+.sub-card .kept h4{
+  margin:6px 0 0;font-size:22px;line-height:1.15;font-weight:700;letter-spacing:-.01em;
+}
+.sub-card .removed{
+  padding:12px 16px 0;
+  font-size:14.5px;color:var(--ink-faint);
+  text-decoration:line-through;
+  text-decoration-color:var(--red);
+  text-decoration-thickness:1px;
+}
+.sub-card .becomes{
+  padding:16px;margin-top:auto;
+  border-top:1px solid var(--rule);
+  font-size:16px;line-height:1.5;color:var(--ink-soft);
+}
+.sub-card .becomes b{
+  display:block;font-family:var(--sans);font-size:9.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-faint);margin-bottom:5px;
+}
+.sub-card.star{border-width:3px;}
+.sub-card.star .strip{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.sub-card.star .strip .minus{color:var(--paper);}
+
+/* pipeline / technique */
+.pipeline{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:14px;
+}
+.step{background:var(--paper);padding:20px 18px;}
+.step .n{font-family:var(--mono);font-size:11px;color:var(--red);letter-spacing:.12em;}
+.step h5{margin:8px 0 6px;font-size:18px;font-weight:700;line-height:1.2;}
+.step p{margin:0;font-size:15px;line-height:1.5;color:var(--ink-soft);}
+
+/* modèles économiques */
+.money{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:14px;}
+.money-card{border-top:3px solid var(--ink);padding:14px 0 0;}
+.money-card.anti{border-top-color:var(--red);}
+.money-card h5{margin:0 0 6px;font-size:18px;font-weight:700;}
+.money-card p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink-soft);}
+.money-card.anti h5{color:var(--red);}
+
+/* noms candidats */
+.names{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;
+}
+.names span{
+  border:1px solid var(--rule);padding:8px 14px;font-size:17px;
+}
+.names span.pick{border:2px solid var(--ink);font-weight:700;}
+
+/* ============================================================
+   SYNTHÈSE FINALE — le climax
+   ============================================================ */
+.finale{
+  background:var(--ink);
+  color:var(--paper);
+  margin-top:110px;
+  padding:80px 0 90px;
+}
+.finale .kicker{color:rgba(244,241,234,.5);}
+.finale .rule{border-color:rgba(244,241,234,.22);}
+.finale h2{
+  font-size:clamp(38px,9vw,96px);line-height:.94;letter-spacing:-.035em;
+  margin:16px 0 0;font-weight:700;
+}
+.finale .lede{
+  max-width:600px;margin:24px 0 0;font-size:19px;line-height:1.6;color:rgba(244,241,234,.72);
+}
+.points{margin-top:64px;border-top:1px solid rgba(244,241,234,.22);}
+.point{
+  display:grid;grid-template-columns:120px 1fr;gap:0 32px;
+  border-bottom:1px solid rgba(244,241,234,.22);
+  padding:34px 0;
+  align-items:start;
+}
+.point .idx{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(48px,10vw,88px);line-height:.8;letter-spacing:-.05em;
+  color:var(--red);
+}
+.point h3{
+  margin:0 0 10px;font-size:clamp(23px,4vw,34px);line-height:1.12;
+  letter-spacing:-.02em;font-weight:700;
+}
+.point p{margin:0;font-size:17.5px;line-height:1.62;color:rgba(244,241,234,.78);}
+.point p strong{color:var(--paper);}
+.point.buried h3{color:var(--red);}
+.point.warn .idx{color:rgba(244,241,234,.4);}
+
+.manifesto{
+  margin-top:76px;text-align:center;
+  border-top:1px solid rgba(244,241,234,.22);
+  border-bottom:1px solid rgba(244,241,234,.22);
+  padding:56px 16px;
+}
+.manifesto p{
+  margin:0;font-size:clamp(24px,5.4vw,52px);line-height:1.22;
+  letter-spacing:-.02em;font-weight:700;
+}
+.manifesto p em{color:var(--red);font-style:normal;}
+.manifesto .attrib{
+  margin-top:24px;font-family:var(--sans);font-size:10px;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(244,241,234,.45);font-weight:400;
+}
+
+/* ============================================================
+   ÉCRAN DE FIN — l'app vous met dehors
+   ============================================================ */
+.theend{
+  padding:120px 0 130px;text-align:center;
+}
+.theend .five{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(90px,26vw,260px);line-height:.8;letter-spacing:-.06em;
+  color:var(--paper-2);
+  -webkit-text-stroke:1px var(--rule);
+}
+.theend h2{
+  font-size:clamp(28px,6vw,52px);line-height:1.14;margin:8px 0 0;letter-spacing:-.02em;
+}
+.theend p{
+  max-width:460px;margin:20px auto 0;color:var(--ink-soft);font-size:18px;line-height:1.6;
+}
+.colophon{
+  border-top:1px solid var(--rule);margin-top:80px;padding:26px 0 60px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:760px){
+  body{font-size:17px;}
+  .timeline::before{left:58px;}
+  .tick{grid-template-columns:58px 1fr;gap:0 20px;}
+  .tick .min{font-size:13px;}
+  .tick .min::after{right:-24px;width:7px;height:7px;}
+  .word-row{grid-template-columns:1fr;gap:14px 0;}
+  .word-row .specimen-word small{margin-top:5px;}
+  .point{grid-template-columns:1fr;gap:6px 0;}
+  .point .idx{line-height:1;}
+  .ledger{grid-template-columns:repeat(2,1fr);}
+  .ledger div:nth-child(3){border-left:0;}
+  .ledger div:nth-child(1),.ledger div:nth-child(2){border-bottom:1px solid var(--rule);}
+  .toc li{flex-wrap:wrap;}
+  .toc .tag{width:100%;padding-left:0;}
+  section{padding-top:72px;}
+  .wrap{padding:0 18px;}
+}
+@media (max-width:420px){
+  .masthead-meta span{border-left:0;padding:2px 8px;}
+}
+@media print{
+  body{background:#fff;}
+  .finale{background:#fff;color:#000;}
+  .finale .point p{color:#333;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     MASTHEAD
+     ============================================================ -->
+<header class="masthead">
+  <div class="wrap">
+    <div class="masthead-top">
+      <span>Séance de brainstorming</span>
+      <span>Édition unique</span>
+      <span>Lundi 10 août 2026</span>
+    </div>
+    <hr class="rule-thick">
+
+    <h1 class="logotype">
+      <span class="num">5</span>
+    </h1>
+
+    <p class="deck">
+      Une app qui montre les cinq actualités qui comptent.<br>
+      Jour, semaine, mois. Pays, continent, monde.<br>
+      <em>Rien de plus. C'est le point.</em>
+    </p>
+
+    <div class="masthead-meta">
+      <span>Mode autonome</span>
+      <span>4 techniques</span>
+      <span>110 entrées</span>
+      <span>Statut&nbsp;: complet</span>
+    </div>
+
+    <div class="ledger">
+      <div><b>92</b><small>Idées</small></div>
+      <div><b>12</b><small>Insights</small></div>
+      <div><b>4</b><small>Techniques</small></div>
+      <div><b>6</b><small>Points de synthèse</small></div>
+    </div>
+
+    <nav class="toc narrow">
+      <p class="kicker" style="margin:0 0 14px;">Sommaire</p>
+      <ol>
+        <li><a href="#roleplay">Onze personas entrent dans la pièce</a><span class="tag">Role Playing</span></li>
+        <li><a href="#lundi">Le Test du Lundi Matin, 7h42 → 7h51</a><span class="tag">Technique inventée</span></li>
+        <li><a href="#autopsie">L'Autopsie du Titre, mot par mot</a><span class="tag">Technique inventée</span></li>
+        <li><a href="#onefeature">One Feature Only&nbsp;: neuf soustractions</a><span class="tag">Contrainte</span></li>
+        <li><a href="#synthese">Synthèse finale</a><span class="tag">Le point d'arrivée</span></li>
+      </ol>
+    </nav>
+  </div>
+</header>
+
+<!-- ============================================================
+     1 — ROLE PLAYING
+     ============================================================ -->
+<section id="roleplay">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">01</div>
+      <span class="sec-badge">Technique · Role Playing · collaboratif</span>
+      <h2 class="sec-title">Onze personas<br>entrent dans la pièce</h2>
+      <p class="sec-sub">On ne demande pas ce que le produit devrait faire. On demande à onze personnes très différentes ce qu'elles viennent y chercher — et surtout ce qui les ferait partir. Les objections valent plus que les compliments.</p>
+    </div>
+
+    <div class="cast">
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 01</span><span>7 min de métro</span></div>
+        <h3>Le Cadre Pressé</h3>
+        <div class="role">Lecture debout, une main</div>
+        <ul>
+          <li>Veut la liste lisible en une respiration, sans scroll — 5 news tiennent dans un écran sans défilement</li>
+          <li>Ne veut pas «&nbsp;les news&nbsp;»&nbsp;: il veut ne pas être pris en défaut en réunion. L'angle produit est l'assurance conversationnelle</li>
+          <li>Mode «&nbsp;lu en 60 secondes&nbsp;» avec chrono visible, comme une promesse contractuelle</li>
+        </ul>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 02</span><span>a désinstallé Twitter</span></div>
+        <h3>L'Anxieux</h3>
+        <div class="role">Culpabilise de ne plus s'informer</div>
+        <ul>
+          <li>Veut revenir à l'info sans rechute anxieuse</li>
+          <li>Exige un contrôle de charge émotionnelle&nbsp;: badge de tonalité avant d'ouvrir la card</li>
+          <li>App SANS flux infini, qui se termine explicitement</li>
+        </ul>
+        <p class="quote">«&nbsp;C'est tout. Revenez demain.&nbsp;» — l'écran de fin comme feature signature&nbsp;: la seule app d'actu qui vous met dehors. Anti-engagement assumé comme argument marketing.</p>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 03</span><span>Singapour</span></div>
+        <h3>L'Expatrié</h3>
+        <div class="role">Français à l'étranger</div>
+        <ul>
+          <li>Veut suivre pays d'origine ET pays d'accueil — le sélecteur doit permettre 2 sélections</li>
+          <li>Révèle l'usage réel du sélecteur mensuel&nbsp;: rattraper un mois d'absence, pas suivre le quotidien</li>
+        </ul>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 04</span><span>hostile</span></div>
+        <h3>Le Journaliste résumé</h3>
+        <div class="role">Celui dont on prend le travail</div>
+        <ul>
+          <li>Craint le vol de trafic&nbsp;: exige attribution visible + lien sortant sur chaque card</li>
+          <li>Exigerait que le résumé donne envie de lire l'original, pas qu'il le remplace</li>
+        </ul>
+        <p class="quote">Le résumé comme bande-annonce, pas comme substitut.</p>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 05</span><span>hostile</span></div>
+        <h3>Le Sceptique Politique</h3>
+        <div class="role">«&nbsp;Qui décide de ce qui est important&nbsp;?&nbsp;»</div>
+        <ul>
+          <li>Exige une transparence sur le critère de sélection, sinon il crie au biais</li>
+          <li>Réponse&nbsp;: afficher POURQUOI chaque news est dans le top 5 — «&nbsp;couverte par 34 sources dans 12 pays&nbsp;». Le critère devient la feature de confiance</li>
+          <li>Importance mesurée par consensus de couverture plutôt que par jugement éditorial de l'IA — moins attaquable, plus défendable</li>
+          <li>Voudrait voir les sources qui NE couvrent PAS une news&nbsp;: l'angle mort comme information</li>
+        </ul>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 06</span><span>pédagogue</span></div>
+        <h3>Le Parent</h3>
+        <div class="role">Veut expliquer le monde à son ado</div>
+        <ul>
+          <li>A besoin d'un niveau de langue ajustable, un mode «&nbsp;explique simplement&nbsp;»</li>
+          <li>Mode «&nbsp;Explique-moi comme si je débarquais&nbsp;»&nbsp;: chaque news avec 1 ligne de contexte historique</li>
+        </ul>
+        <p class="quote">Le «&nbsp;previously on…&nbsp;» de série TV appliqué à l'actu&nbsp;: le rappel du contexte est le vrai manque des apps existantes.</p>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 07</span><span>hostile</span></div>
+        <h3>L'Investisseur / Fondateur</h3>
+        <div class="role">«&nbsp;Pourquoi pas juste un prompt ChatGPT&nbsp;?&nbsp;»</div>
+        <ul>
+          <li>Exige une réponse à la commoditisation</li>
+          <li>Réponse&nbsp;: la valeur n'est pas le résumé mais la CURATION répétable et la confiance dans le critère</li>
+        </ul>
+        <p class="quote">Le produit est le filtre, pas le texte.</p>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 08</span><span>hebdomadaire</span></div>
+        <h3>L'Utilisateur du Dimanche Soir</h3>
+        <div class="role">Usage rituel, pas quotidien</div>
+        <ul>
+          <li>Le sélecteur «&nbsp;week&nbsp;» pourrait être le défaut, pas «&nbsp;day&nbsp;»</li>
+        </ul>
+      </article>
+
+      <article class="persona">
+        <div class="persona-id"><span class="n">Persona 09</span><span>mains occupées</span></div>
+        <h3>Le Malvoyant / Multitâche</h3>
+        <div class="role">Veut écouter, pas lire</div>
+        <ul>
+          <li>5 news = 5 pistes audio de 20 s, format podcast auto-généré</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div class="narrow">
+      <div class="insight">
+        <span class="lbl">Insight — Role Playing</span>
+        <p>Le sélecteur temporel n'est pas un filtre technique mais un choix de RITUEL&nbsp;: day = habitude, week = rattrapage, month = archive. Trois produits différents dans une seule UI.</p>
+      </div>
+      <p class="note">Checkpoint · Role Playing complet</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2 — LE TEST DU LUNDI MATIN
+     ============================================================ -->
+<section id="lundi">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">02</div>
+      <span class="sec-badge invented">Technique inventée · Le Test du Lundi Matin</span>
+      <h2 class="sec-title">7h42.<br>Minute par minute.</h2>
+      <p class="sec-sub">Au lieu de discuter des features dans l'abstrait, on se place dans la scène réelle&nbsp;: un lundi matin, quelqu'un ouvre l'app. On avance d'une minute à la fois et on note tout ce qui casse. Neuf minutes ont suffi à démolir et reconstruire l'architecture.</p>
+    </div>
+
+    <div class="clock-hero">
+      <div class="t">7<small>:</small>42</div>
+      <div class="cap">Il ouvre l'app</div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tick crisis">
+        <div class="min">7h42</div>
+        <div class="body">
+          <span class="friction">Friction fatale</span>
+          <h4>Il doit refaire les deux sélecteurs à chaque fois</h4>
+          <p>Il faut mémoriser le dernier choix et proposer un 1-clic.</p>
+          <div class="fix"><b>Corollaire</b>Le vrai MVP n'est peut-être pas «&nbsp;2 sélecteurs + bouton&nbsp;», mais un résultat immédiat avec possibilité de changer après coup.</div>
+          <div class="fix"><b>Anti-pattern à éviter</b>Faire travailler l'utilisateur AVANT de lui montrer la valeur. Inverser&nbsp;: montrer le top 5 monde/jour par défaut, laisser affiner ensuite.</div>
+        </div>
+      </div>
+
+      <div class="tick">
+        <div class="min">7h43</div>
+        <div class="body">
+          <h4>Il a déjà lu 2 de ces news hier soir</h4>
+          <p>Besoin de marquer «&nbsp;déjà vu&nbsp;» ou de filtrer ce qu'il a déjà consommé.</p>
+          <div class="fix"><b>Idée</b>«&nbsp;Depuis votre dernière visite&nbsp;»&nbsp;: l'app se souvient et dit «&nbsp;nouveau depuis dimanche 20h&nbsp;». La fenêtre temporelle devient personnelle, pas calendaire.</div>
+          <div class="insight">
+            <span class="lbl">Rupture majeure</span>
+            <p>Remplacer «&nbsp;les 5 news des dernières 24h&nbsp;» par «&nbsp;les 5 news que vous avez ratées&nbsp;». La personnalisation temporelle bat la fenêtre fixe.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tick crisis">
+        <div class="min">7h44</div>
+        <div class="body">
+          <span class="friction">8 secondes de chargement</span>
+          <h4>L'attente tue le rituel</h4>
+          <p>L'appel IA en temps réel est incompatible avec un geste matinal. Il faut du pré-calculé.</p>
+          <div class="fix"><b>Conséquence architecture MVP</b>Générer le top 5 en batch (cron) par combinaison zone/période, servir du cache. L'IA tourne 24 fois par jour, pas à chaque clic.</div>
+          <div class="fix"><b>Effet de bord</b>Le pré-calcul rend le coût prévisible et la latence nulle&nbsp;: contrainte business et UX alignées.</div>
+        </div>
+      </div>
+
+      <div class="tick">
+        <div class="min">7h45</div>
+        <div class="body">
+          <h4>Il veut envoyer une news à un collègue</h4>
+          <p>Bouton partager qui génère une image / carte lisible, pas juste une URL.</p>
+          <div class="fix"><b>Acquisition</b>La carte partageable comme moteur d'acquisition gratuit&nbsp;: chaque partage porte le branding et la promesse «&nbsp;5 news&nbsp;».</div>
+        </div>
+      </div>
+
+      <div class="tick crisis">
+        <div class="min">7h46</div>
+        <div class="body">
+          <span class="friction">Paradoxe</span>
+          <h4>Il ferme l'app et ne revient pas</h4>
+          <p>Sans notification ou rituel ancré, l'app est oubliée. Mais notifier trahit la promesse anti-anxiété.</p>
+          <div class="fix"><b>Résolution</b>UNE seule notification par jour, à une heure choisie par l'utilisateur, contenant déjà le titre des 5 news. La notif EST le produit.</div>
+          <div class="insight">
+            <span class="lbl">Insight</span>
+            <p>La notification quotidienne unique qui contient déjà la valeur (les 5 titres) est peut-être le vrai produit&nbsp;; l'app n'est que le détail.</p>
+          </div>
+          <div class="fix"><b>Variante</b>Une newsletter quotidienne générée par le même moteur — canal de distribution à coût zéro pour un MVP.</div>
+        </div>
+      </div>
+
+      <p class="note" style="margin-left:0;">Checkpoint · Lundi matin</p>
+
+      <div class="tick">
+        <div class="min">7h47</div>
+        <div class="body">
+          <span class="friction">Cas limite</span>
+          <h4>Journée sans actualité majeure</h4>
+          <p>L'app doit-elle forcer 5 news&nbsp;? Assumer «&nbsp;aujourd'hui, seulement 3 choses comptent&nbsp;» renforce la crédibilité.</p>
+          <div class="insight">
+            <span class="lbl">Insight</span>
+            <p>Le nombre 5 est une promesse marketing, pas une vérité éditoriale. Oser un nombre variable (2 à 5) devient un signal d'honnêteté rare.</p>
+          </div>
+          <div class="fix"><b>Symétrique</b>Jour de crise majeure&nbsp;: 1 news écrase tout — mode «&nbsp;breaking&nbsp;» où la card unique prend tout l'écran.</div>
+        </div>
+      </div>
+
+      <div class="tick">
+        <div class="min">7h48</div>
+        <div class="body">
+          <h4>Il sélectionne «&nbsp;Afrique&nbsp;» et obtient 4 news sur un seul pays</h4>
+          <p>Problème de représentativité intra-continent, à gérer explicitement.</p>
+          <div class="fix"><b>Règle anti-concentration</b>Maximum 2 news du même pays dans un top 5 continental&nbsp;: la diversité géographique est forcée.</div>
+        </div>
+      </div>
+
+      <div class="tick">
+        <div class="min">7h49</div>
+        <div class="body">
+          <h4>Il choisit un petit pays&nbsp;: pas assez de sources</h4>
+          <p>Fallback gracieux vers le continent, avec mention explicite.</p>
+          <div class="fix"><b>Stratégie de lancement révélée</b>Commencer par 5 à 10 pays bien couverts plutôt que le monde entier mal couvert.</div>
+        </div>
+      </div>
+
+      <div class="tick">
+        <div class="min">7h50</div>
+        <div class="body">
+          <h4>La news est en anglais, l'utilisateur est francophone</h4>
+          <p>La traduction automatique du résumé est un multiplicateur d'audience quasi gratuit.</p>
+          <div class="fix"><b>Angle différenciant</b>Lire l'actu ALLEMANDE en français&nbsp;: accéder à des perspectives étrangères dans sa langue, impossible ailleurs sans effort.</div>
+          <div class="insight">
+            <span class="lbl">Le vrai produit caché</span>
+            <p>Briser la bulle linguistique. Un Français ne lit jamais la presse japonaise&nbsp;; ici c'est un clic, et c'est en français.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tick crisis">
+        <div class="min">7h51</div>
+        <div class="body">
+          <span class="friction">Friction de confiance</span>
+          <h4>«&nbsp;L'IA a-t-elle halluciné&nbsp;?&nbsp;»</h4>
+          <p>Chaque affirmation du résumé liée à sa source par une ancre cliquable.</p>
+          <div class="fix"><b>Politique anti-hallucination MVP</b>Le résumé ne dit RIEN qui ne soit dans au moins 2 sources concordantes.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3 — L'AUTOPSIE DU TITRE
+     ============================================================ -->
+<section id="autopsie">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">03</div>
+      <span class="sec-badge invented">Technique inventée · L'Autopsie du Titre</span>
+      <h2 class="sec-title">Le titre,<br>disséqué mot à mot</h2>
+      <p class="sec-sub">On pose la phrase d'accroche sur la table et on l'ouvre. Chaque mot est un choix de cadrage&nbsp;: on l'isole, on demande ce qu'il promet, ce qu'il coûte, ce qui le remplacerait. Six mots examinés — un seul en est sorti indemne.</p>
+    </div>
+
+    <div class="specimen">
+      <div class="sentence">
+        <span class="w cut">Get</span> the <span class="w cut">ultimate</span> <span class="w">5</span> <span class="w cut">most&nbsp;important</span> <span class="w cut">news</span> <span class="w cut">of&nbsp;the</span> day
+      </div>
+      <div class="caption">Pièce à conviction — pointillés&nbsp;: mots mis en cause</div>
+    </div>
+
+    <div class="dissect">
+
+      <div class="word-row">
+        <div class="specimen-word">Get<small>Verbe · transaction</small></div>
+        <div class="findings">
+          <p>Verbe de transaction&nbsp;: transforme l'actu en <strong>livraison</strong>. Renforce le cadrage «&nbsp;je viens chercher ma dose et je repars&nbsp;», cohérent avec l'anti-doomscroll.</p>
+          <p>Alternatives testées&nbsp;: «&nbsp;Catch up on&nbsp;» cadre le rattrapage&nbsp;; «&nbsp;Know&nbsp;» cadre la compétence. «&nbsp;Get&nbsp;» reste le plus direct pour un MVP.</p>
+          <div class="verdict"><span class="keep">Conservé</span><span>Cohérent anti-doomscroll</span></div>
+        </div>
+      </div>
+
+      <div class="word-row">
+        <div class="specimen-word">Ultimate<small>Adjectif · promesse</small></div>
+        <div class="findings">
+          <p>Promesse forte mais floue&nbsp;: risque de sonner marketing creux. À remplacer par une <strong>preuve chiffrée</strong> («&nbsp;scanned 400 sources&nbsp;»).</p>
+          <p>Le sous-titre comme preuve&nbsp;: <em>«&nbsp;We read 1,247 articles this morning. Here are the 5 that matter.&nbsp;»</em> Le travail invisible rendu visible crée la valeur perçue.</p>
+          <div class="verdict"><span class="kill">Supprimé</span><span>Remplacé par une preuve chiffrée</span></div>
+          <div class="insight" style="margin-top:16px;">
+            <span class="lbl">Insight</span>
+            <p>Montrer le volume écarté (1 247 lus, 5 gardés) est plus persuasif que promettre la qualité&nbsp;: le ratio EST le produit.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="word-row">
+        <div class="specimen-word">5<small>Chiffre · ancrage</small></div>
+        <div class="findings">
+          <p>Ancrage cognitif fort — la main, les cinq doigts. <strong>5 est mémorable là où 7 ou 10 seraient du bruit.</strong> À garder comme marque.</p>
+          <p>Le nom du produit pourrait être le chiffre lui-même&nbsp;: <em>Five</em>, <em>The Five</em>, <em>Daily Five</em>. Nommer la contrainte, pas la catégorie.</p>
+          <div class="verdict"><span class="keep">Conservé</span><span class="keep">Promu au rang de marque</span></div>
+        </div>
+      </div>
+
+      <div class="word-row">
+        <div class="specimen-word">Most important<small>Superlatif · pour qui&nbsp;?</small></div>
+        <div class="findings">
+          <p>Importance pour QUI&nbsp;? Trois axes distincts se cachent sous le même mot&nbsp;: importance <strong>géopolitique</strong>, importance <strong>pour ma vie quotidienne</strong>, importance <strong>économique</strong>.</p>
+          <p>Feature future&nbsp;: choisir sa définition d'important («&nbsp;impact sur ma vie&nbsp;» vs «&nbsp;impact sur le monde&nbsp;»). Hors MVP, à garder en réserve.</p>
+          <div class="verdict"><span>Ambiguïté assumée</span><span>Réserve post-MVP</span></div>
+        </div>
+      </div>
+
+      <div class="word-row">
+        <div class="specimen-word">News<small>Substantif · charge affective</small></div>
+        <div class="findings">
+          <p>Terme chargé négativement pour les news-avoiders. «&nbsp;<strong>The 5 things that happened</strong>&nbsp;» est plus neutre et moins anxiogène.</p>
+          <p>Reframing anti-anxiété&nbsp;: ne pas vendre «&nbsp;des news&nbsp;» mais <strong>de la clarté</strong>. Le bénéfice est la tranquillité d'être à jour, pas l'information.</p>
+          <div class="verdict"><span class="kill">Sous surveillance</span><span>Anxiogène pour la cible</span></div>
+        </div>
+      </div>
+
+      <div class="word-row">
+        <div class="specimen-word">of the<small>Préposition · découpage</small></div>
+        <div class="findings">
+          <p>La préposition suppose un découpage calendaire. «&nbsp;<strong>Since you last checked</strong>&nbsp;» serait plus juste, mais plus complexe&nbsp;: garder le calendaire au MVP.</p>
+          <div class="verdict"><span class="keep">Conservé au MVP</span><span>Dette assumée</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="madlibs">
+      <div class="lbl">Ce que l'autopsie a produit — la phrase à trous</div>
+      <div class="phrase">
+        Get the <b>5</b> most important news of the
+        <span class="slot" data-cycle="day|week|month">day</span>
+        in
+        <span class="slot" data-cycle="France|Europe|Africa|Asia|the world">the world</span>
+      </div>
+      <div class="hint">Cliquez sur les mots soulignés</div>
+    </div>
+
+    <div class="narrow">
+      <div class="insight">
+        <span class="lbl">Design clé</span>
+        <p>Transformer les sélecteurs en mots cliquables DANS la phrase (mad-libs). Élégant, auto-explicatif, mémorable — et cela supprime le besoin de labels.</p>
+      </div>
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);">Le titre devient une phrase à trous que l'utilisateur complète&nbsp;: <strong>le formulaire EST la phrase</strong>. Le bouton «&nbsp;Let's go&nbsp;!&nbsp;» devient superflu si la phrase se complète&nbsp;: le clic sur le dernier mot déclenche. Moins de friction encore.</p>
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);">Si l'on garde un bouton&nbsp;: «&nbsp;Show me&nbsp;» (doux) vs «&nbsp;Let's go&nbsp;!&nbsp;» (énergique) vs «&nbsp;<strong>Brief me</strong>&nbsp;» (professionnel). «&nbsp;Brief me&nbsp;» cadre le produit comme un briefing d'agence. Le mot <strong>BRIEFING</strong> comme concept central&nbsp;: militaire, exécutif, il connote la synthèse pour décideur — bien plus valorisant que «&nbsp;résumé&nbsp;».</p>
+      <p class="note">Checkpoint · Autopsie</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4 — ONE FEATURE ONLY
+     ============================================================ -->
+<section id="onefeature">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">04</div>
+      <span class="sec-badge">Technique · One Feature Only · contrainte</span>
+      <h2 class="sec-title">Neuf soustractions</h2>
+      <p class="sec-sub">On enlève tout sauf une chose, et on regarde ce qui reste debout. Chaque amputation révèle où se trouve vraiment la valeur — et fait apparaître, en creux, des produits entiers que personne n'avait demandés.</p>
+    </div>
+
+    <div class="subtraction">
+
+      <article class="sub-card star">
+        <div class="strip"><span>Soustraction 01</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>La sélection<br>(le filtre)</h4></div>
+        <div class="removed">le résumé généré</div>
+        <div class="becomes"><b>Ce qui reste</b>5 titres bruts + liens. Utile&nbsp;? Oui&nbsp;: le tri est déjà 80&nbsp;% de la valeur.</div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Soustraction 02</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>Le résumé</h4></div>
+        <div class="removed">le choix de zone</div>
+        <div class="becomes"><b>Ce qui reste</b>«&nbsp;Les 5 news mondiales du jour&nbsp;»&nbsp;: une seule page, zéro interaction. MVP ultra-minimal livrable en jours.</div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Soustraction 03</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>Les cards<br>cliquables</h4></div>
+        <div class="removed">la home</div>
+        <div class="becomes"><b>Ce qui reste</b>On entre directement par une news partagée&nbsp;: chaque news est une landing page SEO.</div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Conséquence 03·a</span><span class="minus">+</span></div>
+        <div class="kept"><div class="lbl">Effet composé</div><h4>L'archive<br>comme actif</h4></div>
+        <div class="removed">l'éphémère</div>
+        <div class="becomes"><b>Ce qui reste</b>Chaque briefing archivé devient une page indexable («&nbsp;5 most important news of March 3, 2026&nbsp;»). Au bout d'un an&nbsp;: 365 pages qui capturent la recherche rétrospective. Moat lent mais réel.</div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Soustraction 04</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>Le sélecteur<br>de période</h4></div>
+        <div class="removed">la géographie</div>
+        <div class="becomes"><b>Ce qui reste</b>Une machine à remonter le temps de l'actu. Angle «&nbsp;que s'est-il passé en juin&nbsp;?&nbsp;» pour les revenants.</div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Soustraction 05</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>Le sélecteur<br>géographique</h4></div>
+        <div class="removed">la période</div>
+        <div class="becomes"><b>Ce qui reste</b>Un «&nbsp;globe des nouvelles&nbsp;»&nbsp;: carte cliquable, chaque pays révèle ses 5 news. Très visuel, très partageable. Plus lent à l'usage, mais infiniment plus attractif pour la première visite. <em>Compromis&nbsp;: carte pour la découverte, sélecteur texte pour l'usage répété — deux entrées vers la même donnée.</em></div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Soustraction 06</span><span class="minus">−4</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>Une seule news</h4></div>
+        <div class="removed">les quatre autres</div>
+        <div class="becomes"><b>Ce qui reste</b>«&nbsp;La seule chose que vous devez savoir aujourd'hui&nbsp;»&nbsp;: radicalité maximale, mémorabilité maximale, risque de rater le contexte. Le format 1 news comme produit d'appel (notification, widget), le format 5 news comme produit principal — hiérarchie de canaux.</div>
+      </article>
+
+      <article class="sub-card star">
+        <div class="strip"><span>Soustraction 07</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">On ne garde que</div><h4>L'audio</h4></div>
+        <div class="removed">tout l'écran</div>
+        <div class="becomes"><b>Ce qui reste</b>Un briefing de 90 secondes généré chaque matin, écoutable dans la douche. Canal où la concurrence est faible.</div>
+      </article>
+
+      <article class="sub-card">
+        <div class="strip"><span>Soustraction 08</span><span class="minus">−</span></div>
+        <div class="kept"><div class="lbl">Côté données</div><h4>Une source<br>par pays</h4></div>
+        <div class="removed">l'exhaustivité des sources</div>
+        <div class="becomes"><b>Ce qui reste</b>Le quotidien de référence, un par pays&nbsp;: le coût d'ingestion s'effondre et la qualité reste correcte pour un MVP.</div>
+      </article>
+
+    </div>
+
+    <div class="narrow">
+      <div class="insight">
+        <span class="lbl">Test décisif</span>
+        <p>La curation seule a de la valeur&nbsp;; le résumé seul n'en a pas. Donc le cœur du produit est l'algorithme de sélection, pas la génération de texte.</p>
+      </div>
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);"><strong>MVP v0 recommandé&nbsp;:</strong> une seule page statique, monde/jour, régénérée chaque matin. Valider l'appétit avant de construire les sélecteurs.</p>
+      <div class="insight">
+        <span class="lbl">Insight</span>
+        <p>Le briefing audio de 90 s est le format le plus différenciant identifié&nbsp;: il résout la surcharge ET la contrainte de temps ET le multitâche — mais il coûte plus cher à produire.</p>
+      </div>
+      <p class="note">Checkpoint · One Feature Only</p>
+    </div>
+
+    <!-- Pipeline technique -->
+    <div style="margin-top:56px;">
+      <p class="kicker" style="margin:0 0 6px;">Ce que la contrainte a fait apparaître · Le pipeline</p>
+      <p style="max-width:620px;margin:0;font-size:16.5px;line-height:1.6;color:var(--ink-soft);">Ingestion la plus simple&nbsp;: flux RSS des grands titres + une API d'agrégation (NewsAPI / GDELT) plutôt que du scraping — légal, rapide, suffisant. GDELT comme source du signal d'importance&nbsp;: il mesure déjà le volume de couverture mondiale, donc le «&nbsp;consensus de couverture&nbsp;» est disponible sans le construire.</p>
+      <div class="pipeline">
+        <div class="step"><div class="n">Étape 1</div><h5>Collecter</h5><p>Les titres des dernières 24 heures.</p></div>
+        <div class="step"><div class="n">Étape 2</div><h5>Clusteriser</h5><p>Regrouper les articles parlant du même événement.</p></div>
+        <div class="step"><div class="n">Étape 3</div><h5>Classer</h5><p>Trier les clusters par taille et diversité de sources&nbsp;; garder le top 5.</p></div>
+        <div class="step"><div class="n">Étape 4</div><h5>Résumer</h5><p>L'IA n'intervient qu'à la fin&nbsp;: 5 appels par zone et par jour, pas 1 par utilisateur.</p></div>
+      </div>
+      <div class="narrow" style="margin-top:22px;">
+        <div class="insight">
+          <span class="lbl">Insight technique</span>
+          <p>Le clustering d'événements est le vrai cœur technique — c'est là que se joue la qualité, pas dans le prompt de résumé.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modèles économiques -->
+    <div style="margin-top:56px;">
+      <p class="kicker" style="margin:0 0 14px;">Trois modèles économiques, un anti-modèle</p>
+      <div class="money">
+        <div class="money-card"><h5>01 · Gratuit + sponsor</h5><p>Newsletter sponsorisée, un sponsor par jour, format non intrusif — cohérent avec l'anti-pub agressive.</p></div>
+        <div class="money-card"><h5>02 · Freemium</h5><p>Le gratuit est monde/jour&nbsp;; le payant débloque pays/continent, archives et audio.</p></div>
+        <div class="money-card"><h5>03 · B2B</h5><p>Vendre le briefing zone personnalisé aux entreprises internationales, pour leurs employés expatriés.</p></div>
+        <div class="money-card anti"><h5>✕ · À éviter</h5><p>Pub programmatique et engagement&nbsp;: trahirait la promesse anti-anxiété et détruirait la confiance.</p></div>
+      </div>
+    </div>
+
+    <!-- Nom + manifeste + validation -->
+    <div style="margin-top:56px;" class="narrow">
+      <p class="kicker" style="margin:0 0 6px;">Noms candidats</p>
+      <div class="names">
+        <span class="pick">Five</span><span class="pick">FIVE.news</span><span>Cinq</span><span>The Brief</span><span>Worth Knowing</span><span>Signal</span>
+      </div>
+      <p style="font-size:15px;color:var(--ink-faint);margin-top:12px;">Tester la disponibilité du domaine tôt.</p>
+
+      <p style="font-size:19px;line-height:1.5;margin-top:34px;"><strong>Positionnement en une phrase&nbsp;:</strong><br>«&nbsp;L'actualité mondiale en 5 titres. Rien de plus. C'est le point.&nbsp;»</p>
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);">Le «&nbsp;rien de plus&nbsp;» comme manifeste&nbsp;: publier une page <strong>«&nbsp;ce que nous ne ferons jamais&nbsp;»</strong> — pas de flux infini, pas de notifications multiples, pas de faits divers. La contrainte comme marque.</p>
+
+      <div class="insight">
+        <span class="lbl">Insight</span>
+        <p>La promesse la plus défendable n'est pas «&nbsp;nous résumons mieux&nbsp;» mais «&nbsp;nous en montrons moins&nbsp;». La rareté est le seul avantage que les géants ne copieront pas.</p>
+      </div>
+
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);"><strong>Métrique de succès contre-intuitive&nbsp;:</strong> temps passé DÉCROISSANT par visite + retour quotidien. Mesurer la satisfaction par la brièveté, pas par l'engagement.</p>
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);"><strong>Test de validation rapide avant de coder&nbsp;:</strong> publier deux semaines de briefings manuels sur une page ou une newsletter, et mesurer les réouvertures.</p>
+      <p style="font-size:16.5px;line-height:1.6;color:var(--ink-soft);"><strong>Stack MVP suggéré&nbsp;:</strong> Next.js + une base simple + un cron quotidien + Claude API pour les résumés&nbsp;; déploiement Vercel. Livrable en 1 à 2 semaines.</p>
+      <p class="note">Checkpoint final</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SYNTHÈSE FINALE — climax
+     ============================================================ -->
+<div class="finale" id="synthese">
+  <div class="wrap">
+    <p class="kicker">Après 110 entrées et 4 techniques</p>
+    <hr class="rule" style="margin-top:14px;">
+    <h2>Synthèse<br>finale</h2>
+    <p class="lede">Six points. Ce qui reste quand tout le reste a été soustrait — y compris quatre points qui contredisent l'intuition de départ.</p>
+
+    <div class="points">
+
+      <div class="point">
+        <div class="idx">1</div>
+        <div>
+          <h3>Le produit est le FILTRE, pas le résumé</h3>
+          <p>La curation seule a de la valeur&nbsp;; le résumé seul n'en a pas. <strong>Le cœur technique est le clustering et le classement</strong>, pas la génération de texte.</p>
+        </div>
+      </div>
+
+      <div class="point">
+        <div class="idx">2</div>
+        <div>
+          <h3>Le pré-calcul par cron résout trois tensions d'un coup</h3>
+          <p><strong>Latence nulle. Coût prévisible. Scalabilité.</strong> Une décision d'architecture qui est simultanément une décision produit et une décision business.</p>
+        </div>
+      </div>
+
+      <div class="point">
+        <div class="idx">3</div>
+        <div>
+          <h3>La rareté est le seul avantage défendable</h3>
+          <p>Écran de fin, nombre variable de 2 à 5, manifeste «&nbsp;ce que nous ne ferons jamais&nbsp;». <strong>Un géant peut copier un résumé&nbsp;; il ne peut pas se permettre de montrer moins.</strong></p>
+        </div>
+      </div>
+
+      <div class="point">
+        <div class="idx">4</div>
+        <div>
+          <h3>Le design MAD-LIBS fusionne tout en une phrase</h3>
+          <p>Les sélecteurs inline dans la phrase font disparaître titre, sélecteurs et bouton&nbsp;: il ne reste <strong>qu'une seule phrase auto-explicative</strong>.</p>
+        </div>
+      </div>
+
+      <div class="point buried">
+        <div class="idx">5</div>
+        <div>
+          <h3>Percée enterrée&nbsp;: briser la BULLE LINGUISTIQUE</h3>
+          <p>Lire la presse étrangère dans sa langue est un produit que personne ne fait — <strong>bien plus fort que le simple filtrage géographique</strong>. Elle est apparue à 7h50 et a failli passer inaperçue.</p>
+        </div>
+      </div>
+
+      <div class="point warn">
+        <div class="idx">6</div>
+        <div>
+          <h3>Mise en garde</h3>
+          <p>Ne pas faire travailler l'utilisateur avant de lui montrer la valeur. <strong>Afficher monde/jour par défaut, affiner ensuite.</strong></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="manifesto">
+      <p>Nous ne résumons pas mieux.<br><em>Nous en montrons moins.</em></p>
+      <div class="attrib">La promesse la plus défendable de la séance</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ÉCRAN DE FIN
+     ============================================================ -->
+<div class="theend">
+  <div class="wrap">
+    <div class="five">5</div>
+    <h2>C'est tout.<br>Revenez demain.</h2>
+    <p>Cette page se termine explicitement, comme l'app qu'elle décrit. Il n'y a pas de section suivante, pas de suggestion, pas de flux infini. C'était le point.</p>
+
+    <div class="colophon">
+      <span>Séance de brainstorming · mode autonome</span>
+      <span>10 août 2026 · 16h08</span>
+      <span>110 entrées · 4 techniques · 1 conclusion</span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Mad-libs : les sélecteurs sont les mots eux-mêmes. */
+(function(){
+  var slots = document.querySelectorAll('.slot');
+  slots.forEach(function(slot){
+    var opts = (slot.getAttribute('data-cycle')||'').split('|');
+    var i = opts.indexOf(slot.textContent.trim());
+    if(i < 0) i = 0;
+    function advance(){
+      i = (i + 1) % opts.length;
+      slot.textContent = opts[i];
+    }
+    slot.addEventListener('click', advance);
+    slot.setAttribute('tabindex','0');
+    slot.setAttribute('role','button');
+    slot.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); advance(); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+[project]
+name = "five-news-pipeline"
+version = "0.1.0"
+description = "Batch pipeline that selects and summarizes the day's most-covered news events"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.16.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "pipeline"
+module-root = ""
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["pipeline", "tests"]
+# Only our code. _bmad/ ships vendored BMad scripts we do not own or style.
+include = ["pipeline/**/*.py", "tests/**/*.py"]
+extend-exclude = ["_bmad", "_bmad-output", ".claude"]
+
+[tool.ruff.lint]
+# Conservative, useful set. E/W pycodestyle, F pyflakes, I import sorting
+# (replaces isort), UP pyupgrade, B bugbear, SIM simplify.
+select = ["E", "W", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

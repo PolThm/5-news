@@ -1,0 +1,39 @@
+# --- Pipeline intermediate data ---
+# Per-cycle stage output is bulky and must not enter git history, but the
+# cross-phase cycle state (cycle.json) MUST be committed so a later scheduled
+# run can resume a pending batch (AD-11, Story 3.4).
+#
+# All three lines are required, in this order. The middle line is the one that
+# is easy to omit and fatal to omit: git never descends into an excluded
+# directory, so a negation for a file inside it can never match. Re-including
+# the directories is what lets git reach the file-level negation.
+#
+# Do NOT simplify to `data/intermediate/*` — under that pattern cycle.json is
+# silently ignored and Story 3.4's resume logic breaks with no obvious cause.
+data/intermediate/**
+!data/intermediate/**/
+!data/intermediate/**/cycle.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Node / Astro ---
+node_modules/
+dist/
+.astro/
+*.tsbuildinfo
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

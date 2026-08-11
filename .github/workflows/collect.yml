@@ -1,0 +1,76 @@
+name: Daily collection
+
+# The Build Order's inspection window depends on days of real output piling up
+# without anyone starting them. This is what makes that happen.
+#
+# 05:30 UTC: after European morning editions have published, before the author
+# would normally look. The exact hour matters less than its stability — cycles
+# at a consistent time make day-to-day diffs comparable.
+on:
+  schedule:
+    - cron: "30 5 * * *"
+  workflow_dispatch: # manual trigger, for testing the cycle without waiting
+
+# One cycle at a time. Two concurrent runs would race on the same commit.
+concurrency:
+  group: daily-collection
+  cancel-in-progress: false
+
+permissions:
+  contents: write # the cycle commits its own output
+
+jobs:
+  collect:
+    name: Collect and deduplicate
+    runs-on: ubuntu-latest
+    # Generous: GDELT pacing plus recursive window bisection on a busy day can
+    # take a while, and a killed cycle leaves a half-written record.
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v9
+        with:
+          version: "0.12.3"
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version-file: ".python-version"
+
+      - name: Sync dependencies
+        run: uv sync --locked
+
+      - name: Run the cycle
+        run: uv run python -m pipeline.stages.cycle
+
+      - name: Commit the cycle's output
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Only cycle.json is tracked under data/intermediate/ — the bulky
+          # per-stage output stays ignored. See .gitignore for why the negation
+          # pattern is three lines.
+          git add --all data/
+
+          if git diff --cached --quiet; then
+            echo "No cycle output to commit — investigate before assuming this is normal."
+            exit 0
+          fi
+
+          git commit -m "Cycle $(date -u +%Y-%m-%dT%H-%M-%SZ)"
+          git push
+
+      # GitHub disables scheduled workflows after 60 days without repository
+      # activity. A daily pipeline whose only commits come from itself is
+      # exactly the case that trips this, so the cycle's own commit above is
+      # what keeps the schedule alive. If commits ever stop, the schedule dies
+      # silently — that is the failure to watch for.
+      - name: Report
+        if: always()
+        run: |
+          echo "Cycle finished with status: ${{ job.status }}"
+          echo "A degraded cycle (upstream throttled, feed down) still succeeds."
+          echo "Check data/intermediate/<cycle-id>/cycle.json for what failed."

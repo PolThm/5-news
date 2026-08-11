@@ -64,6 +64,59 @@ class Article:
 
 
 @dataclass(frozen=True, slots=True)
+class ArticleRecord:
+    """An Article as it lives on disk, one per JSON Line.
+
+    Flat rather than nested so the intermediate files stay greppable and
+    diffable by hand during the Build Order's inspection window. Every adapter
+    produces this shape whatever its upstream returns, which is what keeps the
+    vendor response shape inside ``pipeline.adapters`` (AD-13).
+
+    ``collected_by`` names the adapter, so a human reading the output can tell
+    GDELT's coverage from RSS's without running anything.
+    """
+
+    title: str
+    url: str
+    published_at: datetime
+    source: str
+    source_country: str
+    language: str
+    collected_by: str
+
+    def __post_init__(self) -> None:
+        if self.published_at.tzinfo is None:
+            raise ValueError(
+                "published_at must be timezone-aware; a naive timestamp would be "
+                "read as local time downstream and could shift an Article into "
+                "the wrong Period"
+            )
+
+    def to_dict(self) -> dict[str, str]:
+        return {
+            "title": self.title,
+            "url": self.url,
+            "published_at": self.published_at.isoformat(),
+            "source": self.source,
+            "source_country": self.source_country,
+            "language": self.language,
+            "collected_by": self.collected_by,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict[str, str]) -> ArticleRecord:
+        return cls(
+            title=data["title"],
+            url=data["url"],
+            published_at=datetime.fromisoformat(data["published_at"]),
+            source=data["source"],
+            source_country=data["source_country"],
+            language=data["language"],
+            collected_by=data["collected_by"],
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class IndependentSource:
     """A Source whose Article is not a republication of another Source's
     dispatch, as determined by Syndication Detection.
@@ -238,6 +291,7 @@ class Briefing:
 
 __all__ = [
     "Article",
+    "ArticleRecord",
     "Briefing",
     "Cluster",
     "ConsensusScore",

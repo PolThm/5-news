@@ -13,6 +13,9 @@
 data/intermediate/**
 !data/intermediate/**/
 !data/intermediate/**/cycle.json
+# Keeps the directory itself in a fresh clone; without this the stage contract
+# has nowhere to write on first run.
+!data/intermediate/.gitkeep
 
 # --- Python ---
 __pycache__/

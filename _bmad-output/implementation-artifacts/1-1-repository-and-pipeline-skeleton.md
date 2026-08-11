@@ -4,7 +4,7 @@ baseline_commit: b3cf82b827c95923c0e2695ab14eeff0b43238e0
 
 # Story 1.1: Repository and pipeline skeleton
 
-Status: ready-for-dev
+Status: review
 
 <!-- Note: Validation is optional. Run validate-create-story for quality check before dev-story. -->
 
@@ -30,46 +30,46 @@ so that the two halves cannot accidentally couple as the code grows.
 
 ## Tasks / Subtasks
 
-- [ ] **Task 1: Directory skeleton and git treatment** (AC: 1, 2)
-  - [ ] Create the directory tree exactly as specified in Dev Notes → Project Structure
-  - [ ] Write `.gitignore` using the **exact three-line pattern** in Dev Notes → The cycle.json exception. Do not simplify it — the obvious two-line version silently fails. Add standard Python/Node ignores alongside.
-  - [ ] Add `.gitkeep` to `data/intermediate/` and `data/briefings/` so both survive a fresh clone
-  - [ ] Run the `git check-ignore` verification block from Dev Notes; all three lines must print `ok`
-  - [ ] Verify: `git clone` into a temp dir produces both directories
+- [x] **Task 1: Directory skeleton and git treatment** (AC: 1, 2)
+  - [x] Create the directory tree exactly as specified in Dev Notes → Project Structure
+  - [x] Write `.gitignore` using the **exact three-line pattern** in Dev Notes → The cycle.json exception. Do not simplify it — the obvious two-line version silently fails. Add standard Python/Node ignores alongside.
+  - [x] Add `.gitkeep` to `data/intermediate/` and `data/briefings/` so both survive a fresh clone
+  - [x] Run the `git check-ignore` verification block from Dev Notes; all three lines must print `ok`
+  - [x] Verify: `git clone` into a temp dir produces both directories
 
-- [ ] **Task 2: Python project setup** (AC: 6)
-  - [ ] `pyproject.toml` with PEP 621 `[project]` metadata, `requires-python = ">=3.11"`
-  - [ ] Dev dependencies in PEP 735 `[dependency-groups]`, not extras and not uv-specific tables
-  - [ ] Configure `ruff` for both lint and format (no Black, no isort — ruff covers both)
-  - [ ] Run `uv sync`, commit `uv.lock`
-  - [ ] Pin the `uv` version used in CI
+- [x] **Task 2: Python project setup** (AC: 6)
+  - [x] `pyproject.toml` with PEP 621 `[project]` metadata, `requires-python = ">=3.11"`
+  - [x] Dev dependencies in PEP 735 `[dependency-groups]`, not extras and not uv-specific tables
+  - [x] Configure `ruff` for both lint and format (no Black, no isort — ruff covers both)
+  - [x] Run `uv sync`, commit `uv.lock`
+  - [x] Pin the `uv` version used in CI
 
-- [ ] **Task 3: Configuration module** (AC: 3)
-  - [ ] `pipeline/config/` exposes `ZONES`, `PERIODS`, `OUTPUT_LANGUAGES` as **Python module-level constants** (not TOML/YAML). Rationale: they are read by every stage, need no runtime reload, and typed constants give the domain types something to validate against. Story 2.4's tunable thresholds go in the same module.
-  - [ ] Use the exact slugs in Dev Notes → Configuration values. Do not invent slugs.
-  - [ ] Each Zone records its kind (`world` | `continent` | `country`) and, for countries, its containing continent — FR-16's fallback needs this in Story 2.5
-  - [ ] Verify: the 135-combination matrix (15 × 3 × 3) is derivable from config alone
+- [x] **Task 3: Configuration module** (AC: 3)
+  - [x] `pipeline/config/` exposes `ZONES`, `PERIODS`, `OUTPUT_LANGUAGES` as **Python module-level constants** (not TOML/YAML). Rationale: they are read by every stage, need no runtime reload, and typed constants give the domain types something to validate against. Story 2.4's tunable thresholds go in the same module.
+  - [x] Use the exact slugs in Dev Notes → Configuration values. Do not invent slugs.
+  - [x] Each Zone records its kind (`world` | `continent` | `country`) and, for countries, its containing continent — FR-16's fallback needs this in Story 2.5
+  - [x] Verify: the 135-combination matrix (15 × 3 × 3) is derivable from config alone
 
-- [ ] **Task 4: Domain types** (AC: 3)
-  - [ ] `pipeline/domain/` defines the Glossary types with the exact names in Dev Notes → Domain vocabulary
-  - [ ] `pipeline/domain/` imports nothing from `adapters/`, `stages/`, or `config/` — it is the leaf
-  - [ ] Types only; no behavior, no I/O
+- [x] **Task 4: Domain types** (AC: 3)
+  - [x] `pipeline/domain/` defines the Glossary types with the exact names in Dev Notes → Domain vocabulary
+  - [x] `pipeline/domain/` imports nothing from `adapters/`, `stages/`, or `config/` — it is the leaf
+  - [x] Types only; no behavior, no I/O
 
-- [ ] **Task 5: Stage contract and placeholder stage** (AC: 5)
-  - [ ] Define the stage contract: read input path → write output path under `data/intermediate/<stage>/<cycle-id>/`
-  - [ ] **Entrypoint convention — every later stage inherits this:** `python -m pipeline.stages.<name> --input <path> --cycle-id <id>`, with `--cycle-id` defaulting to a UTC timestamp derived at invocation. Fix the flag names now; Story 1.2 onward will copy them.
-  - [ ] Ship one runnable placeholder stage proving the contract end to end
-  - [ ] Verify: invoke it from the command line with an input path, alone, and it produces output
+- [x] **Task 5: Stage contract and placeholder stage** (AC: 5)
+  - [x] Define the stage contract: read input path → write output path under `data/intermediate/<stage>/<cycle-id>/`
+  - [x] **Entrypoint convention — every later stage inherits this:** `python -m pipeline.stages.<name> --input <path> --cycle-id <id>`, with `--cycle-id` defaulting to a UTC timestamp derived at invocation. Fix the flag names now; Story 1.2 onward will copy them.
+  - [x] Ship one runnable placeholder stage proving the contract end to end
+  - [x] Verify: invoke it from the command line with an input path, alone, and it produces output
 
-- [ ] **Task 6: Boundary check in CI** (AC: 4)
-  - [ ] Write the grep-based boundary check (see Dev Notes → Boundary check for the exact violation patterns)
-  - [ ] Wire it into a GitHub Actions workflow using the v7 action line (see Dev Notes → GitHub Actions)
-  - [ ] **Prove it fails:** add a deliberate violation, watch CI go red, remove it. Do not mark this AC done on an untested check.
+- [x] **Task 6: Boundary check in CI** (AC: 4)
+  - [x] Write the grep-based boundary check (see Dev Notes → Boundary check for the exact violation patterns)
+  - [x] Wire it into a GitHub Actions workflow using the v7 action line (see Dev Notes → GitHub Actions)
+  - [x] **Prove it fails:** add a deliberate violation, watch CI go red, remove it. Do not mark this AC done on an untested check.
 
-- [ ] **Task 7: Site scaffold** (AC: 1, 6)
-  - [ ] Scaffold Astro 7.2.x under `site/` with `src/pages/`, `src/islands/`, `public/`
-  - [ ] Pin Node ≥ 22.12.0 (Astro 7 requires it)
-  - [ ] The scaffold must build. It renders nothing real yet — that is Epic 4.
+- [x] **Task 7: Site scaffold** (AC: 1, 6)
+  - [x] Scaffold Astro 7.2.x under `site/` with `src/pages/`, `src/islands/`, `public/`
+  - [x] Pin Node ≥ 22.12.0 (Astro 7 requires it)
+  - [x] The scaffold must build. It renders nothing real yet — that is Epic 4.
 
 ## Dev Notes
 
@@ -317,10 +317,135 @@ Not applicable. Single commit, no code history to learn patterns from.
 
 ### Agent Model Used
 
-_To be filled by the dev agent._
+claude-opus-5[1m]
 
 ### Debug Log References
 
+Two defects surfaced during implementation that the working directory would have hidden:
+
+1. **`data/intermediate/` vanished on clone.** The `.gitkeep` was swept up by
+   `data/intermediate/**`; the negation lines protected `cycle.json` but said nothing
+   about `.gitkeep`. Caught only because AC 6 required verification against a real
+   clone. Fixed by adding `!data/intermediate/.gitkeep`.
+2. **The boundary check drowned in false positives** once Astro was installed —
+   `node_modules/astro` has its own internal "pipeline" concept, producing 36 spurious
+   hits. A check that noisy gets disabled within days. Fixed by excluding vendored
+   directories, then re-proving all three violation modes still fail the build.
+
+One test was corrected rather than the code: `test_domain_imports_nothing_from_the_rest_of_the_pipeline`
+grepped source text, so a docstring mentioning `pipeline.stages.dedupe` in prose tripped
+it. Rewritten to walk the AST — the rule is about imports, not about words.
+
 ### Completion Notes List
 
+**AC 1 — Directory skeleton.** Verified in a fresh clone: `pipeline/domain`,
+`pipeline/adapters`, `pipeline/stages`, `pipeline/config`, `data/briefings`,
+`data/intermediate`, `site` all present.
+
+**AC 2 — Git treatment (proof required).**
+
+```
+git check-ignore -q data/intermediate/test-cycle/cycle.json        -> ok (not ignored)
+git check-ignore -q data/intermediate/test-cycle/articles.jsonl    -> ok (ignored)
+git check-ignore -q data/intermediate/test-cycle/collect/out.jsonl -> ok (ignored)
+git check-ignore -q data/intermediate/.gitkeep                     -> ok (not ignored)
+git add -A -n  ->  add 'data/intermediate/test-cycle/cycle.json'   (nothing else)
+```
+
+`data/briefings/` is committed and left empty — the publish stage creates
+`<lang>/<zone>/<period>` paths as it writes them.
+
+**AC 3 — Configuration as data.** 15 Zones with `kind` and, for countries, the
+containing `continent` FR-16 falls back to. 3 Periods, 3 Output Languages.
+`briefing_combinations()` yields exactly 135 unique triples, ordered
+language → zone → period to match the published path. Pinned by 9 tests, including
+one asserting no Zone slug collides with a stage name.
+
+**AC 4 — Boundary check (proven, not asserted).** Each violation mode introduced
+deliberately, CI failure confirmed, then removed:
+
+```
+V1  pipeline/ reads site by path            -> caught
+V2  site/ imports ../../pipeline            -> caught
+V3  site/ references pipeline/ by path      -> caught
+clean repo (with node_modules present)      -> exit 0
+```
+
+**AC 5 — Stage runs alone (proof required).**
+
+```
+$ uv run python -m pipeline.stages.placeholder \
+    --input /tmp/ac5demo/in.jsonl \
+    --cycle-id 2026-08-11T09-00-00Z \
+    --data-root /tmp/ac5demo
+placeholder: 2 records -> /tmp/ac5demo/intermediate/placeholder/2026-08-11T09-00-00Z/output.jsonl
+
+$ cat .../output.jsonl
+{"source": "Reuters", "title": "Ceasefire agreed"}
+{"source": "AFP", "title": "Markets rally"}
+```
+
+Keys sorted, trailing newline, byte-identical across runs — the intermediate files
+are read by hand during the inspection window, so stable bytes keep diffs readable.
+
+**AC 6 — Toolchain reproducible from a fresh clone (proof required).**
+
+```
+$ git clone <repo> freshclone2 && cd freshclone2
+$ uv sync --locked                 -> exit 0
+$ uv run pytest -q                 -> 20 passed
+$ uv run ruff check .              -> All checks passed!
+$ ./scripts/check-boundary.sh      -> exit 0
+$ cd site && npm install           -> exit 0
+$ npm run build                    -> 1 page(s) built, Complete!
+```
+
+Python pinned to 3.11 (`.python-version`), Node to 24.10.0 (`site/.nvmrc`),
+uv to 0.12.3 in CI. `uv.lock` committed.
+
+**Deviations worth flagging for review:**
+
+- `ruff` is scoped to `pipeline/` and `tests/` via `include`/`extend-exclude`. Without
+  it, ruff lints the vendored `_bmad/` scripts — 102 errors in code we do not own.
+- `ZoneKind`, `Period`, and `OutputLanguage` use `enum.StrEnum` rather than
+  `(str, Enum)`, on ruff's advice. `StrEnum` needs Python 3.11, which is our floor.
+- The site scaffold was written by hand rather than via `npm create astro`, whose
+  interactive prompts do not suit an automated run. Result is the same: Astro 7.2.0,
+  static output, builds clean.
+- `scripts/` is a new top-level directory the spine's seed does not name. It holds the
+  boundary check. Flagging it rather than silently extending the structure.
+
+**Scope held.** No ingestion, no clustering, no page. The placeholder stage exists only
+to prove the contract and is marked for deletion once a real stage replaces it.
+
 ### File List
+
+- `.gitignore` (new)
+- `.github/workflows/ci.yml` (new)
+- `.python-version` (new)
+- `pyproject.toml` (new)
+- `uv.lock` (new)
+- `scripts/check-boundary.sh` (new)
+- `pipeline/__init__.py` (new)
+- `pipeline/domain/__init__.py` (new)
+- `pipeline/config/__init__.py` (new)
+- `pipeline/adapters/__init__.py` (new)
+- `pipeline/stages/__init__.py` (new)
+- `pipeline/stages/placeholder.py` (new)
+- `tests/__init__.py` (new)
+- `tests/test_config.py` (new)
+- `tests/test_domain.py` (new)
+- `tests/test_stage_contract.py` (new)
+- `data/briefings/.gitkeep` (new)
+- `data/intermediate/.gitkeep` (new)
+- `site/package.json` (new)
+- `site/package-lock.json` (new)
+- `site/astro.config.mjs` (new)
+- `site/src/pages/index.astro` (new)
+- `site/.nvmrc` (new)
+- `site/.gitignore` (new)
+
+## Change Log
+
+- 2026-08-11 — Story 1.1 implemented. Repository skeleton, domain types, configuration,
+  stage contract, boundary check, Astro scaffold, CI. 20 tests passing.

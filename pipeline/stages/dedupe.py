@@ -31,7 +31,8 @@ import json
 import re
 import sys
 import unicodedata
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
+from difflib import SequenceMatcher
 from pathlib import Path
 
 from pipeline.domain import ArticleRecord
@@ -154,6 +155,11 @@ class ArticleGroup:
 
     normalized_title: str
     articles: tuple[ArticleRecord, ...]
+    # Which mechanism formed this group: "title" (layer 1, Story 1.4) or
+    # "agency" (layer 2, Story 2.3). Recorded on the output so a change in
+    # grouping introduced by this layer is inspectable by diffing
+    # groups.jsonl, not a silent difference in composition (AC4).
+    formed_by: str = "title"
 
     @property
     def sources(self) -> frozenset[str]:
@@ -223,6 +229,7 @@ class ArticleGroup:
             "sources": sorted(self.sources),
             "countries": sorted(self.countries),
             "article_count": len(self.articles),
+            "formed_by": self.formed_by,
         }
 
     @staticmethod
@@ -284,6 +291,147 @@ def group_by_title(records: list[ArticleRecord]) -> list[ArticleGroup]:
     ]
 
 
+# Below this ratio, two titles are not treated as the same dispatch even if
+# they share an agency attribution. difflib's SequenceMatcher.ratio() is
+# stdlib, needs no new dependency, and is symmetric — good enough for "is
+# this plausibly the same headline, lightly edited" without importing an
+# NLP library for what is fundamentally a corroborating check, not the
+# primary signal (title normalization, layer 1, already did the heavy
+# lifting; this only catches near-misses that share an agency).
+_AGENCY_MERGE_SIMILARITY_FLOOR = 0.6
+
+# SequenceMatcher.ratio() on short strings is dominated by character overlap
+# rather than semantic similarity — verified directly: "un dead" vs. "un
+# lead" scores 0.857, comfortably above the floor, despite describing
+# opposite outcomes. Below this length, similarity alone is not trustworthy
+# enough to corroborate an agency match; the pair is left unmerged rather
+# than risk a false merge on a coincidence of short, similar-looking words.
+_AGENCY_MERGE_MIN_TITLE_LENGTH = 20
+
+
+def _agencies_in(group: ArticleGroup) -> frozenset[str]:
+    """Every recognized wire-service attribution present anywhere in the
+    group, not just its representative.
+
+    A title-normalization group can mix an attributed and an unattributed
+    Article under the identical headline (one republisher's feed populates
+    ``dc:creator``, another's doesn't) — an adversarial review found that
+    reading only ``representative.wire_agency`` made a group's visibility to
+    this layer depend on which member happened to publish earliest, an
+    accident unrelated to whether the attribution evidence actually exists.
+    """
+    return frozenset(a.wire_agency for a in group.articles if a.wire_agency is not None)
+
+
+def merge_by_agency(groups: list[ArticleGroup]) -> list[ArticleGroup]:
+    """Layer 2 (FR-10, Story 2.3): merge separate title-normalization groups
+    that share a recognized wire-service attribution AND a similar-enough
+    title — corroborating evidence that a near-miss on title normalization
+    (translation, local editing) is still one dispatch.
+
+    Agency alone is deliberately never sufficient. Two different Reuters
+    stories published the same day share ``wire_agency="Reuters"`` but are
+    not the same Event — merging on that alone would silently inflate
+    ``independent_source_count`` for unrelated stories, the same class of
+    false-merge bug an adversarial review caught twice in Story 2.1
+    (HDBSCAN chaining, then a cluster-ID hash collision). Both signals are
+    required specifically to avoid a third occurrence.
+
+    Merging requires every pair within a cluster to directly clear both
+    signals — a clique, not a connected component. An adversarial review of
+    the first version of this function found that comparing every candidate
+    only against the *first* group encountered let a chain of individually-
+    passing pairs (A-B similar, B-C similar, A-C not) fold C into A's cluster
+    anyway — the single-linkage chaining bug this docstring already claimed
+    to defend against, reintroduced by a different path. A plain connected-
+    components graph (Story 2.1's own fix for the same bug in the cluster
+    stage) has the identical weakness here: A-B and B-C edges alone connect
+    all three even when A-C never qualifies. Requiring every pair in the
+    final group to pass, not just an edge to some member, closes that gap for
+    real rather than moving it one hop over.
+
+    A group with no recognized agency attribution (the common case — GDELT
+    articles, and RSS articles from feeds like BBC's that never populate
+    ``dc:creator``) is left untouched; this is not a failure (AC3).
+    """
+    n = len(groups)
+
+    agencies_by_index: dict[int, frozenset[str]] = {}
+    for i in range(n):
+        agencies = _agencies_in(groups[i])
+        if agencies and len(groups[i].normalized_title) >= _AGENCY_MERGE_MIN_TITLE_LENGTH:
+            agencies_by_index[i] = agencies
+
+    # Every directly-qualifying pair, computed once: shared agency AND
+    # SequenceMatcher.ratio() over the floor. "Directly" is the whole point
+    # — nothing here ever infers a merge from two other merges.
+    qualifies: set[tuple[int, int]] = set()
+    for i in agencies_by_index:
+        for j in agencies_by_index:
+            if j <= i or not (agencies_by_index[i] & agencies_by_index[j]):
+                continue
+            similarity = SequenceMatcher(
+                None, groups[i].normalized_title, groups[j].normalized_title
+            ).ratio()
+            if similarity >= _AGENCY_MERGE_SIMILARITY_FLOOR:
+                qualifies.add((i, j))
+
+    def directly_qualifies(a: int, b: int) -> bool:
+        return a == b or (min(a, b), max(a, b)) in qualifies
+
+    # A cluster is valid only if every pair inside it directly qualifies — a
+    # clique, not a connected component. Built greedily: start from each
+    # unclaimed group and absorb every remaining candidate that directly
+    # qualifies against *every* member already in the cluster, in
+    # descending-similarity order so the strongest matches are tried first.
+    # This is not a general maximum-clique solver — it does not need to be:
+    # the input is a handful of same-day, same-agency dedupe groups, and a
+    # merge left too conservative here (a group that could have joined but
+    # didn't, because a stronger candidate claimed a slot first) only costs
+    # a missed collapse, never a false one, which is the one-sided error
+    # this whole layer is designed to prefer.
+    claimed: set[int] = set()
+    clusters: list[list[int]] = []
+
+    for i in sorted(agencies_by_index):
+        if i in claimed:
+            continue
+        cluster = [i]
+        candidates = sorted(
+            (j for j in agencies_by_index if j != i and j not in claimed),
+            key=lambda j: SequenceMatcher(
+                None, groups[i].normalized_title, groups[j].normalized_title
+            ).ratio(),
+            reverse=True,
+        )
+        for j in candidates:
+            if all(directly_qualifies(j, member) for member in cluster):
+                cluster.append(j)
+        claimed.update(cluster)
+        clusters.append(cluster)
+
+    clustered_indices = {index for cluster in clusters for index in cluster}
+    for i in range(n):
+        if i not in clustered_indices:
+            clusters.append([i])
+
+    merged: list[ArticleGroup] = []
+    for cluster in sorted(clusters, key=min):
+        cluster_articles: list[ArticleRecord] = []
+        for index in cluster:
+            cluster_articles.extend(groups[index].articles)
+        anchor = groups[min(cluster)]
+        merged.append(
+            replace(
+                anchor,
+                articles=tuple(sorted(cluster_articles, key=lambda a: (a.published_at, a.url))),
+                formed_by="agency" if len(cluster) > 1 else "title",
+            )
+        )
+
+    return merged
+
+
 @dataclass(frozen=True, slots=True)
 class WrittenDedupe:
     output_path: Path
@@ -299,7 +447,7 @@ def run_dedupe(
     """Collapse verbatim reprints and write the counts everything downstream
     will use."""
     records = [ArticleRecord.from_dict(row) for row in read_jsonl(input_path)]
-    groups = group_by_title(records)
+    groups = merge_by_agency(group_by_title(records))
 
     destination = output_dir_for(STAGE, cycle_id, root=data_root)
     output_path = destination / "groups.jsonl"

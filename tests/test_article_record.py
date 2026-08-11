@@ -95,3 +95,50 @@ def test_keys_are_glossary_terms() -> None:
         "language",
         "collected_by",
     }
+
+
+def test_wire_agency_defaults_to_none() -> None:
+    """GDELT exposes no attribution field at all (Story 2.3 scope reality
+    check) — every GDELT-collected record has wire_agency=None unconditionally,
+    and this must be the default so no existing call site needs to change."""
+    record = ArticleRecord(
+        title="x",
+        url="https://example.com/f",
+        published_at=datetime(2026, 8, 11, tzinfo=UTC),
+        source="S",
+        source_country="japan",
+        language="ja",
+        collected_by="gdelt",
+    )
+    assert record.wire_agency is None
+
+
+def test_wire_agency_is_omitted_from_the_dict_when_absent() -> None:
+    """Common-case bytes stay unchanged from before this field existed —
+    diffs during the inspection window stay readable (AC4)."""
+    record = ArticleRecord(
+        title="x",
+        url="https://example.com/g",
+        published_at=datetime(2026, 8, 11, tzinfo=UTC),
+        source="S",
+        source_country="japan",
+        language="ja",
+        collected_by="gdelt",
+    )
+    assert "wire_agency" not in record.to_dict()
+
+
+def test_wire_agency_round_trips_when_present() -> None:
+    original = ArticleRecord(
+        title="Wire dispatch",
+        url="https://example.com/h",
+        published_at=datetime(2026, 8, 11, tzinfo=UTC),
+        source="outlet.com",
+        source_country="france",
+        language="en",
+        collected_by="rss",
+        wire_agency="AFP",
+    )
+    restored = ArticleRecord.from_dict(original.to_dict())
+    assert restored == original
+    assert restored.wire_agency == "AFP"

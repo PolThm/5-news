@@ -30,6 +30,7 @@ def _record(
     country: str = "france",
     url: str | None = None,
     language: str = "fr",
+    wire_agency: str | None = None,
 ) -> ArticleRecord:
     return ArticleRecord(
         title=title,
@@ -39,6 +40,7 @@ def _record(
         source_country=country,
         language=language,
         collected_by="gdelt",
+        wire_agency=wire_agency,
     )
 
 
@@ -343,3 +345,256 @@ def test_one_dispatch_across_twelve_countries_is_not_twelve_country_consensus() 
     assert len(groups) == 1, "one dispatch"
     assert coverage.independent_source_count == 1
     assert coverage.country_count == 1, "not 8, and certainly not 12"
+
+
+# --- Wire-agency attribution merge (Story 2.3, FR-10 layer 2) ----------------
+
+
+def test_two_agency_attributed_near_miss_titles_merge() -> None:
+    """Same agency AND similar (but not identical-after-normalization) titles
+    is the corroborating-evidence case this layer exists for — e.g. two
+    slightly different local translations/edits of one AFP dispatch."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("Ceasefire declared in the region", "outlet-a.com", wire_agency="AFP")
+    b = _record(
+        "Ceasefire declared across the region",
+        "outlet-b.com",
+        url="https://outlet-b.com/x",
+        wire_agency="AFP",
+    )
+
+    groups = group_by_title([a, b])
+    assert len(groups) == 2, "titles differ enough that layer 1 alone keeps them separate"
+
+    merged = merge_by_agency(groups)
+    assert len(merged) == 1
+    assert merged[0].independent_source_count == 1
+
+
+def test_same_agency_but_unrelated_titles_do_not_merge() -> None:
+    """The false-merge guard: two different Reuters stories on the same day
+    share wire_agency="Reuters" but are not the same Event. Agency alone must
+    never be sufficient — this is exactly the class of bug Story 2.1's review
+    caught twice (HDBSCAN chaining, cluster-ID hash collisions)."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("Ceasefire declared in the capital", "outlet-a.com", wire_agency="Reuters")
+    b = _record(
+        "Stock markets rally on earnings",
+        "outlet-b.com",
+        url="https://outlet-b.com/x",
+        wire_agency="Reuters",
+    )
+
+    groups = group_by_title([a, b])
+    merged = merge_by_agency(groups)
+
+    assert len(merged) == 2, "unrelated titles must not merge even with matching agency"
+
+
+def test_groups_with_no_agency_attribution_are_unaffected() -> None:
+    """AC3: a Source exposing no attribution metadata is treated as
+    independent, and the stage does not fail — the normal case."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("Ceasefire declared", "outlet-a.com")
+    b = _record("Markets rally", "outlet-b.com", url="https://outlet-b.com/x")
+
+    groups = group_by_title([a, b])
+    merged = merge_by_agency(groups)
+
+    assert len(merged) == 2
+
+
+def test_merged_group_carries_a_marker_distinguishing_it_from_a_title_merge() -> None:
+    """AC4: the change in grouping mechanism must be inspectable in the
+    output, not a silent difference in composition."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("Ceasefire declared in the region", "outlet-a.com", wire_agency="AFP")
+    b = _record(
+        "Ceasefire declared across the region",
+        "outlet-b.com",
+        url="https://outlet-b.com/x",
+        wire_agency="AFP",
+    )
+
+    groups = group_by_title([a, b])
+    merged = merge_by_agency(groups)
+
+    assert merged[0].to_dict()["formed_by"] == "agency"
+
+
+def test_a_title_only_group_is_marked_accordingly() -> None:
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("Ceasefire declared", "outlet-a.com")
+    groups = group_by_title([a])
+    merged = merge_by_agency(groups)
+
+    assert merged[0].to_dict()["formed_by"] == "title"
+
+
+def test_run_dedupe_end_to_end_with_agency_merging(tmp_path: Path) -> None:
+    """A GDELT article (no wire_agency, per Story 2.3's scope) and two
+    RSS-shaped agency-attributed near-miss dispatches flow through the same
+    cycle without error, mirroring a realistic mixed-source day."""
+    gdelt_record = _record("Unrelated GDELT story", "reuters.com", url="https://reuters.com/g")
+    a = _record("Ceasefire declared in the region", "outlet-a.com", wire_agency="AFP")
+    b = _record(
+        "Ceasefire declared across the region",
+        "outlet-b.com",
+        url="https://outlet-b.com/x",
+        wire_agency="AFP",
+    )
+
+    input_path = tmp_path / "articles.jsonl"
+    input_path.write_text(
+        "\n".join(json.dumps(r.to_dict()) for r in [gdelt_record, a, b]) + "\n",
+        encoding="utf-8",
+    )
+
+    written = run_dedupe(input_path, cycle_id="c1", data_root=tmp_path / "data")
+    groups = [json.loads(line) for line in written.output_path.read_text().splitlines()]
+
+    assert written.groups_out == 2  # the unrelated story + the merged AFP pair
+    assert any(g["formed_by"] == "agency" for g in groups)
+    assert any(g["formed_by"] == "title" for g in groups)
+
+
+def test_three_agency_attributed_groups_that_all_mutually_qualify_merge() -> None:
+    """A genuine clique of 3+ groups (every pair independently clears both
+    signals) is exactly the intended, safe case for this layer to handle."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("Ceasefire declared across the wider capital region", "s1.com", wire_agency="AFP")
+    b = _record(
+        "Ceasefire declared across the wider capital area",
+        "s2.com",
+        url="https://s2.com/x",
+        wire_agency="AFP",
+    )
+    c = _record(
+        "Ceasefire declared across the wider capital zone",
+        "s3.com",
+        url="https://s3.com/x",
+        wire_agency="AFP",
+    )
+
+    groups = group_by_title([a, b, c])
+    assert len(groups) == 3
+
+    merged = merge_by_agency(groups)
+    assert len(merged) == 1
+    assert merged[0].independent_source_count == 1
+    assert merged[0].to_dict()["formed_by"] == "agency"
+
+
+def test_transitive_chaining_does_not_fold_a_non_clique_triple_together() -> None:
+    """The exact bug an adversarial review caught in the first implementation:
+    a chain of individually-passing pairs (A-B similar, B-C similar, A-C not)
+    must NOT fold all three into one group just because each hop matches —
+    every pair in the final group must directly qualify, not just adjacent
+    ones. Verified by mocking similarity directly rather than hunting for
+    natural-language strings with this exact property, since SequenceMatcher
+    empirically resists producing one."""
+    import pipeline.stages.dedupe as dedupe_module
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("x" * 21, "s1.com", wire_agency="Reuters")  # long enough to clear the length floor
+    b = _record("y" * 21, "s2.com", url="https://s2.com/x", wire_agency="Reuters")
+    c = _record("z" * 21, "s3.com", url="https://s3.com/x", wire_agency="Reuters")
+    groups = [
+        ArticleGroup(normalized_title=a.title, articles=(a,)),
+        ArticleGroup(normalized_title=b.title, articles=(b,)),
+        ArticleGroup(normalized_title=c.title, articles=(c,)),
+    ]
+
+    # A-B and B-C both qualify; A-C does not — a non-clique chain.
+    similarities = {
+        (a.title, b.title): 0.9,
+        (b.title, a.title): 0.9,
+        (b.title, c.title): 0.8,
+        (c.title, b.title): 0.8,
+        (a.title, c.title): 0.1,
+        (c.title, a.title): 0.1,
+    }
+
+    class _FakeMatcher:
+        def __init__(self, _isjunk: object, t1: str, t2: str) -> None:
+            self._ratio = similarities[(t1, t2)]
+
+        def ratio(self) -> float:
+            return self._ratio
+
+    original = dedupe_module.SequenceMatcher
+    dedupe_module.SequenceMatcher = _FakeMatcher  # type: ignore[assignment]
+    try:
+        merged = merge_by_agency(groups)
+    finally:
+        dedupe_module.SequenceMatcher = original  # type: ignore[assignment]
+
+    # A and B merge (they mutually qualify); C stands alone, because merging
+    # it into A's cluster would violate the A-C pair, and merging it into a
+    # hypothetical B-C-only cluster would break the "every pair" requirement
+    # once A is already claimed by B.
+    sources_by_group = [sorted(art.source for art in g.articles) for g in merged]
+    assert sorted(sources_by_group) == [["s1.com", "s2.com"], ["s3.com"]]
+
+
+def test_agency_on_a_non_representative_member_is_still_detected() -> None:
+    """A title-normalization group can mix an attributed and an unattributed
+    Article under the identical headline. An adversarial review found that
+    checking only the group's representative (earliest-published) made
+    visibility to this layer depend on which member happened to publish
+    first — an accident unrelated to whether attribution evidence exists."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    early_no_agency = _record(
+        "Ceasefire declared across the wider capital region",
+        "s1.com",
+        wire_agency=None,
+    )
+    later_with_agency = ArticleRecord(
+        title="Ceasefire declared across the wider capital region",
+        url="https://s1.com/later",
+        published_at=early_no_agency.published_at.replace(hour=7),
+        source="s1.com",
+        source_country="france",
+        language="fr",
+        collected_by="rss",
+        wire_agency="AFP",
+    )
+    other = _record(
+        "Ceasefire declared across the wider capital area",
+        "s2.com",
+        url="https://s2.com/x",
+        wire_agency="AFP",
+    )
+
+    group_a = ArticleGroup(
+        normalized_title=normalize_title(early_no_agency.title),
+        articles=(early_no_agency, later_with_agency),
+    )
+    group_b = ArticleGroup(normalized_title=normalize_title(other.title), articles=(other,))
+
+    merged = merge_by_agency([group_a, group_b])
+    assert len(merged) == 1, "the AFP signal on the non-representative member must still count"
+
+
+def test_short_titles_do_not_merge_on_agency_alone() -> None:
+    """SequenceMatcher.ratio() on short strings is dominated by character
+    overlap rather than semantic similarity — verified: 'un dead' vs.
+    'un lead' scores 0.857 despite describing opposite outcomes. Below the
+    length floor, similarity is not trustworthy evidence, agency match or
+    not."""
+    from pipeline.stages.dedupe import merge_by_agency
+
+    a = _record("UN dead", "s1.com", wire_agency="AP")
+    b = _record("UN lead", "s2.com", url="https://s2.com/x", wire_agency="AP")
+
+    groups = group_by_title([a, b])
+    merged = merge_by_agency(groups)
+
+    assert len(merged) == 2, "short titles must not merge purely on character overlap"

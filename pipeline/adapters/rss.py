@@ -15,6 +15,7 @@ downstream can tell the two apart except by reading ``collected_by`` (AD-13).
 
 from __future__ import annotations
 
+import unicodedata
 import urllib.error
 import urllib.request
 from collections.abc import Callable, Iterable
@@ -30,6 +31,58 @@ from pipeline.domain import ArticleRecord
 ADAPTER = "rss"
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
+DC_NS = "{http://purl.org/dc/elements/1.1/}"
+
+# Story 2.3 (FR-10 layer 2): a narrow, RSS-only wire-attribution signal.
+#
+# There is no cross-source attribution field — GDELT exposes none at all
+# (confirmed against a live response: title/url/seendate/domain/language/
+# sourcecountry is the complete schema), and RSS's Dublin Core dc:creator is
+# overloaded: the same element holds a human byline for original reporting
+# and a wire-service name for republished dispatches, with no way to tell
+# them apart except by matching known agency names. Some configured feeds
+# (BBC) never populate dc:creator at all — that is a real, accepted gap in
+# this layer's coverage, not a bug.
+#
+# Deliberately a small, explicit table rather than a fuzzy matcher: a missed
+# variant means an Article is (correctly, safely) treated as independent,
+# which is the harmless direction of error. A false match would inflate the
+# Independent Source count — the display-facing number this whole pipeline
+# protects — so guessing is not an acceptable tradeoff here.
+_WIRE_SERVICE_NAMES: dict[str, str] = {
+    "ap": "AP",
+    "associated press": "AP",
+    "the associated press": "AP",
+    "ap news": "AP",
+    "by the associated press": "AP",
+    "reuters": "Reuters",
+    "reuters staff": "Reuters",
+    "by reuters staff": "Reuters",
+    "reuters editorial": "Reuters",
+    "afp": "AFP",
+    "agence france-presse": "AFP",
+    "by afp": "AFP",
+}
+
+
+def resolve_wire_agency(creator: str | None) -> str | None:
+    """Match a raw ``dc:creator`` value against known wire-service names.
+
+    Case-insensitive; anything unrecognized — including an ordinary human
+    byline, which shares this same overloaded field — resolves to ``None``.
+
+    Normalized the same way ``normalize_title`` handles headlines (NFC,
+    collapsed internal whitespace): an XML-formatted feed can carry a
+    double space or a non-breaking space around ``dc:creator``'s text, and
+    an accented name (e.g. a future agency with a diacritic) could arrive in
+    a different Unicode normal form. Neither should cost a match against an
+    otherwise-identical, exact-string table entry.
+    """
+    if not creator:
+        return None
+    normalized = unicodedata.normalize("NFC", creator).strip()
+    normalized = " ".join(normalized.split())
+    return _WIRE_SERVICE_NAMES.get(normalized.lower())
 
 
 @dataclass(frozen=True, slots=True)
@@ -127,10 +180,14 @@ def parse_feed(body: str, source: str, source_country: str, language: str) -> li
             source=source,
             source_country=source_country,
             language=language,
+            wire_agency=resolve_wire_agency(item.findtext(f"{DC_NS}creator")),
         )
         if record:
             records.append(record)
 
+    # Atom entries do not get dc:creator extraction: none of the currently
+    # configured feeds are Atom, and Dublin Core-in-Atom is a separate,
+    # unconfirmed convention — not worth speculatively supporting.
     for entry in root.iter(f"{ATOM_NS}entry"):  # Atom
         link_element = entry.find(f"{ATOM_NS}link")
         record = _record_from(
@@ -156,6 +213,7 @@ def _record_from(
     source: str,
     source_country: str,
     language: str,
+    wire_agency: str | None = None,
 ) -> ArticleRecord | None:
     """Build a record, or None when the item lacks what a record requires.
 
@@ -176,6 +234,7 @@ def _record_from(
         source_country=source_country,
         language=language,
         collected_by=ADAPTER,
+        wire_agency=wire_agency,
     )
 
 

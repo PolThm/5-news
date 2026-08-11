@@ -83,6 +83,12 @@ class ArticleRecord:
     source_country: str
     language: str
     collected_by: str
+    # The Article's recognized wire-service attribution, if any (Story 2.3,
+    # FR-10 layer 2). None is the default and by far the common case — GDELT
+    # exposes no such field at all, and most RSS feeds either don't populate
+    # it or attribute to a human byline rather than an agency. Absence is not
+    # a failure; it means dedupe treats the Article as independent.
+    wire_agency: str | None = None
 
     def __post_init__(self) -> None:
         if self.published_at.tzinfo is None:
@@ -93,7 +99,7 @@ class ArticleRecord:
             )
 
     def to_dict(self) -> dict[str, str]:
-        return {
+        data = {
             "title": self.title,
             "url": self.url,
             "published_at": self.published_at.isoformat(),
@@ -102,6 +108,12 @@ class ArticleRecord:
             "language": self.language,
             "collected_by": self.collected_by,
         }
+        # Omitted rather than written as a literal null when absent, so the
+        # common case's on-disk bytes are unchanged from before this field
+        # existed — the inspection window's diffs stay readable (AC4).
+        if self.wire_agency is not None:
+            data["wire_agency"] = self.wire_agency
+        return data
 
     @classmethod
     def from_dict(cls, data: dict[str, str]) -> ArticleRecord:
@@ -113,6 +125,7 @@ class ArticleRecord:
             source_country=data["source_country"],
             language=data["language"],
             collected_by=data["collected_by"],
+            wire_agency=data.get("wire_agency"),
         )
 
 

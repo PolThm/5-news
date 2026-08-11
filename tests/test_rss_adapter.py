@@ -250,3 +250,106 @@ def _feed(url: str, source: str):
     from pipeline.adapters.rss import Feed
 
     return Feed(url=url, source=source, source_country="france", language="fr")
+
+
+# --- Wire-service attribution (Story 2.3) -------------------------------------
+
+
+SAMPLE_RSS_WITH_ATTRIBUTION = """<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Example</title>
+    <item>
+      <title>Wire dispatch republished</title>
+      <link>https://example.com/wire.html</link>
+      <pubDate>Mon, 11 Aug 2026 06:30:00 +0000</pubDate>
+      <dc:creator>Agence France-Presse</dc:creator>
+    </item>
+    <item>
+      <title>Original reporting</title>
+      <link>https://example.com/original.html</link>
+      <pubDate>Mon, 11 Aug 2026 07:00:00 +0000</pubDate>
+      <dc:creator>Brittney Melton</dc:creator>
+    </item>
+    <item>
+      <title>No attribution at all</title>
+      <link>https://example.com/none.html</link>
+      <pubDate>Mon, 11 Aug 2026 08:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
+"""
+
+
+def test_recognized_wire_service_creator_sets_wire_agency() -> None:
+    records = parse_feed(
+        SAMPLE_RSS_WITH_ATTRIBUTION, source="example.com", source_country="france", language="en"
+    )
+    by_title = {r.title: r for r in records}
+
+    assert by_title["Wire dispatch republished"].wire_agency == "AFP"
+
+
+def test_human_byline_in_dc_creator_does_not_resolve_to_an_agency() -> None:
+    """dc:creator is overloaded: the same element holds a human byline for
+    original reporting. An unrecognized name must resolve to None, not be
+    guessed at."""
+    records = parse_feed(
+        SAMPLE_RSS_WITH_ATTRIBUTION, source="example.com", source_country="france", language="en"
+    )
+    by_title = {r.title: r for r in records}
+
+    assert by_title["Original reporting"].wire_agency is None
+
+
+def test_missing_dc_creator_leaves_wire_agency_none() -> None:
+    """This is the normal case for the large majority of articles, and for
+    entire feeds like BBC's — not an error."""
+    records = parse_feed(
+        SAMPLE_RSS_WITH_ATTRIBUTION, source="example.com", source_country="france", language="en"
+    )
+    by_title = {r.title: r for r in records}
+
+    assert by_title["No attribution at all"].wire_agency is None
+
+
+def test_wire_service_name_lookup_matches_known_variants() -> None:
+    from pipeline.adapters.rss import resolve_wire_agency
+
+    assert resolve_wire_agency("AP") == "AP"
+    assert resolve_wire_agency("Associated Press") == "AP"
+    assert resolve_wire_agency("The Associated Press") == "AP"
+    assert resolve_wire_agency("Reuters") == "Reuters"
+    assert resolve_wire_agency("AFP") == "AFP"
+    assert resolve_wire_agency("Agence France-Presse") == "AFP"
+    assert resolve_wire_agency("agence france-presse") == "AFP"  # case-insensitive
+
+
+def test_wire_service_name_lookup_rejects_unrecognized_and_none() -> None:
+    from pipeline.adapters.rss import resolve_wire_agency
+
+    assert resolve_wire_agency("Brittney Melton") is None
+    assert resolve_wire_agency(None) is None
+    assert resolve_wire_agency("") is None
+
+
+def test_resolve_wire_agency_tolerates_extra_internal_whitespace() -> None:
+    """XML formatting can introduce a double space or non-breaking space
+    around dc:creator's text content — this must not cost a match."""
+    from pipeline.adapters.rss import resolve_wire_agency
+
+    assert resolve_wire_agency("Agence  France-Presse") == "AFP"  # double space
+    assert resolve_wire_agency("  Reuters  ") == "Reuters"  # leading/trailing
+
+
+def test_resolve_wire_agency_matches_common_decorated_bylines() -> None:
+    """Real-world dc:creator conventions often decorate the bare agency name
+    ('Reuters Staff', 'By AFP') rather than using it alone — an adversarial
+    review found the exact-match table as first written missed these common
+    forms entirely."""
+    from pipeline.adapters.rss import resolve_wire_agency
+
+    assert resolve_wire_agency("By Reuters Staff") == "Reuters"
+    assert resolve_wire_agency("Reuters Editorial") == "Reuters"
+    assert resolve_wire_agency("AP News") == "AP"
+    assert resolve_wire_agency("By AFP") == "AFP"

@@ -26,7 +26,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.adapters import CollectionResult, Failure
-from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for
+from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for, output_dir_for
 from pipeline.stages.collect import write_collection
 from pipeline.stages.dedupe import run_dedupe
 
@@ -66,16 +66,43 @@ def run_cycle(
     started_at = datetime.now(UTC)
     cycle_id = cycle_id or cycle_id_for(started_at)
 
+    failures: list[Failure] = []
+    completed = True
+
     try:
         collection = collect()
     except Exception as exc:  # noqa: BLE001 - last line of defense; a crash must leave a record
-        collection = CollectionResult(
-            articles=[],
-            failures=[Failure("cycle", f"collection raised: {exc}")],
-        )
+        collection = CollectionResult(articles=[])
+        failures.append(Failure("cycle", f"collection raised: {exc}"))
 
-    written = write_collection(collection, cycle_id=cycle_id, data_root=data_root)
-    deduped = run_dedupe(written.articles_path, cycle_id=cycle_id, data_root=data_root)
+    failures.extend(collection.failures)
+
+    articles_path = output_dir_for("collect", cycle_id, root=data_root) / "articles.jsonl"
+    dedupe_path = output_dir_for("dedupe", cycle_id, root=data_root) / "groups.jsonl"
+    articles_collected = 0
+    groups_after_dedupe = 0
+
+    # Every step below is guarded, because cycle.json is the only tracked file
+    # and it is written last. A crash anywhere in here without a record leaves
+    # nothing in git at all — the silent gap this whole function exists to
+    # prevent. A malformed line from a truncated earlier run is enough to
+    # trigger it: read_jsonl raises, and so does ArticleRecord.from_dict.
+    try:
+        written = write_collection(collection, cycle_id=cycle_id, data_root=data_root)
+        articles_path = written.articles_path
+        articles_collected = written.article_count
+    except Exception as exc:  # noqa: BLE001
+        failures.append(Failure("cycle", f"writing collection raised: {exc}"))
+        completed = False
+
+    if completed:
+        try:
+            deduped = run_dedupe(articles_path, cycle_id=cycle_id, data_root=data_root)
+            dedupe_path = deduped.output_path
+            groups_after_dedupe = deduped.groups_out
+        except Exception as exc:  # noqa: BLE001
+            failures.append(Failure("cycle", f"dedupe raised: {exc}"))
+            completed = False
 
     # Cross-phase state lives beside the cycle, not under a stage: a later run
     # reads this to resume (AD-11, and Story 3.4's two-phase batch depends on
@@ -88,10 +115,11 @@ def run_cycle(
                 "cycle_id": cycle_id,
                 "started_at": started_at.isoformat(),
                 "phase": "collected",
-                "articles_collected": written.article_count,
-                "groups_after_dedupe": deduped.groups_out,
-                "degraded": bool(collection.failures),
-                "failures": [f.to_dict() for f in collection.failures],
+                "articles_collected": articles_collected,
+                "groups_after_dedupe": groups_after_dedupe,
+                "completed": completed,
+                "degraded": bool(failures),
+                "failures": [f.to_dict() for f in failures],
             },
             indent=2,
             sort_keys=True,
@@ -103,12 +131,13 @@ def run_cycle(
 
     return CycleResult(
         cycle_id=cycle_id,
-        articles_collected=written.article_count,
-        groups_after_dedupe=deduped.groups_out,
-        collect_path=written.articles_path,
-        dedupe_path=deduped.output_path,
+        articles_collected=articles_collected,
+        groups_after_dedupe=groups_after_dedupe,
+        collect_path=articles_path,
+        dedupe_path=dedupe_path,
         cycle_path=cycle_path,
-        failures=tuple(collection.failures),
+        failures=tuple(failures),
+        completed=completed,
     )
 
 

@@ -23,9 +23,14 @@ jobs:
   collect:
     name: Collect and deduplicate
     runs-on: ubuntu-latest
-    # Generous: GDELT pacing plus recursive window bisection on a busy day can
-    # take a while, and a killed cycle leaves a half-written record.
-    timeout-minutes: 45
+    # Sized against the adapter's own request budget rather than guessed:
+    # MAX_REQUESTS_PER_COLLECTION (120) at 6s pacing is ~12 minutes for GDELT,
+    # plus RSS fetches and 429 backoffs. 30 minutes leaves generous headroom
+    # while still failing fast if something hangs.
+    #
+    # The budget is what makes this bound meaningful — without it a saturating
+    # day bisects into 4095 requests (~410 minutes) and no timeout is safe.
+    timeout-minutes: 30
 
     steps:
       - uses: actions/checkout@v7
@@ -61,7 +66,18 @@ jobs:
           fi
 
           git commit -m "Cycle $(date -u +%Y-%m-%dT%H-%M-%SZ)"
-          git push
+
+          # Rebase before pushing: a manual run or any other commit landing
+          # between checkout and push makes this a non-fast-forward, and a
+          # failed push discards the cycle entirely — data/intermediate/ is
+          # gitignored, so nothing survives the runner.
+          for attempt in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "Push attempt $attempt failed; retrying."
+            sleep $((attempt * 5))
+          done
+          echo "::error::Could not push the cycle after 3 attempts. Output is lost."
+          exit 1
 
       # GitHub disables scheduled workflows after 60 days without repository
       # activity. A daily pipeline whose only commits come from itself is

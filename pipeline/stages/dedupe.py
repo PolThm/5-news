@@ -41,6 +41,7 @@ from pipeline.stages import (
     output_dir_for,
     read_jsonl,
     stage_arg_parser,
+    write_atomically,
     write_jsonl,
 )
 
@@ -50,13 +51,76 @@ STAGE = "dedupe"
 # "... - BBC News"). Stripping it lets the same dispatch match across
 # republishers.
 #
-# Deliberately narrow: at most three words, each capitalized or an acronym.
-# A greedy "everything after a dash" rule would also eat real headline tails
-# like "— sources say", merging genuinely different headlines. Under-stripping
-# costs a missed collapse; over-stripping corrupts the Consensus Score, which
-# is the number the reader is shown as proof.
+# Matched against a KNOWN LIST rather than a shape, because shape alone cannot
+# distinguish a republisher's brand from a real headline tail. Wire headlines
+# routinely end in an attribution that IS the story:
+#
+#     "Ukraine strikes back - Zelensky"     <- attribution, must survive
+#     "Death toll rises - UN"               <- attribution, must survive
+#     "Ceasefire agreed - Reuters"          <- branding, should go
+#
+# A "capitalized words after a dash" rule eats all three, merging genuinely
+# different dispatches. Over-stripping corrupts the Consensus Score — the
+# number shown to the reader as proof — while under-stripping only costs a
+# missed collapse. The asymmetry decides the design: match what we recognize,
+# leave everything else alone.
+#
+# Separator handling is deliberately permissive about spacing and case, because
+# "agreed-Reuters" and "agreed | reuters" are the same dispatch as
+# "agreed - Reuters" and must land in the same group.
+_KNOWN_OUTLETS = (
+    "reuters",
+    "ap",
+    "associated press",
+    "afp",
+    "bloomberg",
+    "bbc",
+    "bbc news",
+    "cnn",
+    "the guardian",
+    "guardian",
+    "the times",
+    "nyt",
+    "the new york times",
+    "wsj",
+    "the washington post",
+    "washington post",
+    "npr",
+    "pbs",
+    "sky news",
+    "al jazeera",
+    "dw",
+    "france 24",
+    "rfi",
+    "le monde",
+    "le figaro",
+    "liberation",
+    "el pais",
+    "el mundo",
+    "der spiegel",
+    "spiegel",
+    "die welt",
+    "faz",
+    "the japan times",
+    "nhk",
+    "kyodo",
+    "scmp",
+    "xinhua",
+    "ndtv",
+    "the hindu",
+    "times of india",
+    "globo",
+    "folha",
+    "efe",
+    "ansa",
+    "pa media",
+    "pti",
+    "ians",
+)
 _OUTLET_SUFFIX = re.compile(
-    r"\s*[|–—]\s*(?:[A-Z][\w.&']*\s*){1,3}$|\s+-\s+(?:[A-Z][\w.&']*\s*){1,3}$"
+    r"\s*[|•·–—]\s*(?:" + "|".join(re.escape(o) for o in _KNOWN_OUTLETS) + r")\s*$"
+    r"|\s*-\s*(?:" + "|".join(re.escape(o) for o in _KNOWN_OUTLETS) + r")\s*$",
+    flags=re.IGNORECASE,
 )
 
 _PUNCTUATION = re.compile(r"[^\w\s]", flags=re.UNICODE)
@@ -137,6 +201,18 @@ class ArticleGroup:
         """
         return min(self.articles, key=lambda a: (a.published_at, a.url))
 
+    @property
+    def origin_country(self) -> str:
+        """Where this dispatch originated: the earliest publisher's country.
+
+        One country per dispatch. Not "every country that republished it" —
+        that is the inflation this stage removes — and not a stand-in for the
+        others either: when several *distinct* dispatches describe one Event,
+        it is these origin countries, unioned, that make up real geographic
+        consensus.
+        """
+        return self.representative.source_country
+
     def to_dict(self) -> dict[str, object]:
         record = self.representative
         return {
@@ -160,12 +236,17 @@ class ArticleGroup:
         """
         return Coverage(
             independent_source_count=len(groups),
-            # The representative's country, one per group — NOT every country
-            # the group's articles came from. A single dispatch republished
-            # across eight countries is one dispatch from one country; folding
-            # in every republisher's country would reintroduce exactly the
-            # inflation this stage removes, one level up.
-            country_count=len({g.representative.source_country for g in groups}),
+            # The PRD defines the country count as "the count of distinct
+            # countries AMONG the Independent Sources". One dispatch is one
+            # Independent Source with one origin country, so this is the union
+            # of origin countries — one per dispatch.
+            #
+            # Both neighbouring readings are wrong, in opposite directions:
+            # unioning every republisher's country reinflates exactly what this
+            # stage removes, while collapsing to a single country understates
+            # genuine multi-country coverage. Two French dispatches really are
+            # one country; a French and a German dispatch really are two.
+            country_count=len({g.origin_country for g in groups}),
         )
 
 
@@ -235,9 +316,8 @@ def run_dedupe(
         # this ratio is the evidence the layer is doing anything at all.
         "collapsed": len(records) - len(groups),
     }
-    metadata_path.write_text(
-        json.dumps(metadata, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+    write_atomically(
+        metadata_path, json.dumps(metadata, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
     )
 
     return WrittenDedupe(

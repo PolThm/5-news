@@ -58,9 +58,35 @@ def test_normalization_ignores_punctuation() -> None:
 
 
 def test_normalization_strips_a_trailing_outlet_suffix() -> None:
-    """Syndicated headlines often carry the republisher's name appended."""
-    assert normalize_title("Ceasefire agreed | Reuters") == normalize_title("Ceasefire agreed")
-    assert normalize_title("Ceasefire agreed - BBC News") == normalize_title("Ceasefire agreed")
+    """Syndicated headlines carry the republisher's name appended, in whatever
+    punctuation and casing that outlet happens to use. All of these are the
+    same dispatch and must land in one group."""
+    for variant in (
+        "Ceasefire agreed | Reuters",
+        "Ceasefire agreed - BBC News",
+        "Ceasefire agreed-Reuters",
+        "Ceasefire agreed | reuters",
+        "Ceasefire agreed — AFP",
+    ):
+        assert normalize_title(variant) == normalize_title("Ceasefire agreed"), variant
+
+
+def test_normalization_keeps_a_real_attribution_tail() -> None:
+    """The trap this layer must not fall into: wire headlines routinely end in
+    an attribution that IS the story. "Ukraine strikes back - Zelensky" and
+    "Ukraine strikes back - Pentagon" are different dispatches, and merging
+    them would delete real coverage from the Consensus Score.
+
+    Matching a known-outlet list rather than a shape is what makes this
+    possible — no "capitalized words after a dash" rule can tell Zelensky from
+    Reuters.
+    """
+    assert normalize_title("Ukraine strikes back - Zelensky") != normalize_title(
+        "Ukraine strikes back - Pentagon"
+    )
+    assert "zelensky" in normalize_title("Ukraine strikes back - Zelensky")
+    assert "un" in normalize_title("Death toll rises - UN")
+    assert "officials say" in normalize_title("Fire contained — Officials Say")
 
 
 def test_normalization_keeps_genuinely_different_headlines_apart() -> None:

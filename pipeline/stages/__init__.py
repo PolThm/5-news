@@ -64,13 +64,46 @@ def read_jsonl(path: Path) -> Iterator[dict[str, Any]]:
                 raise ValueError(f"{path}:{line_number}: invalid JSON: {exc}") from exc
 
 
+def write_atomically(path: Path, content: str) -> None:
+    """Write a file so that it is either complete or absent, never truncated.
+
+    The scheduled cycle runs under a job timeout, and a kill mid-write leaves a
+    half-written file that the next stage cannot parse — turning one bad day
+    into a broken pipeline. Writing to a sibling temp file and renaming makes
+    the swap atomic on POSIX, so a killed run leaves the previous content
+    intact rather than corrupting it.
+    """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(content, encoding="utf-8")
+    temporary.replace(path)
+
+
 def write_jsonl(path: Path, records: Iterable[dict[str, Any]]) -> int:
     """Write JSON Lines with stable bytes, returning the record count.
 
     Sorted keys and a trailing newline are not cosmetic: intermediate output is
     inspected by hand and diffed between cycles during the Build Order's
     inspection window. Unstable ordering would make every diff unreadable.
+
+    Written atomically — see ``write_atomically``. A timeout kill mid-write
+    would otherwise leave a truncated final line, and every downstream read
+    raises on it.
     """
+    path.parent.mkdir(parents=True, exist_ok=True)
+    count = 0
+    buffer: list[str] = []
+    for record in records:
+        buffer.append(json.dumps(record, sort_keys=True, ensure_ascii=False))
+        count += 1
+    write_atomically(path, "".join(f"{line}\n" for line in buffer))
+    return count
+
+
+def _write_jsonl_streaming(path: Path, records: Iterable[dict[str, Any]]) -> int:
+    """Non-atomic streaming variant, kept for a future stage whose output is
+    too large to buffer. Not used yet — the cycle's volumes are small enough
+    that atomicity is worth more than constant memory."""
     path.parent.mkdir(parents=True, exist_ok=True)
     count = 0
     with path.open("w", encoding="utf-8") as handle:
@@ -105,6 +138,7 @@ def stage_arg_parser(stage: str) -> argparse.ArgumentParser:
 
 __all__ = [
     "DEFAULT_DATA_ROOT",
+    "write_atomically",
     "cycle_id_for",
     "output_dir_for",
     "read_jsonl",

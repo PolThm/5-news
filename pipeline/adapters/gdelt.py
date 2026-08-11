@@ -58,6 +58,20 @@ REQUEST_INTERVAL_SECONDS = 6.0
 # Below this, bisecting further buys nothing — accept truncation and say so.
 MIN_WINDOW = timedelta(minutes=1)
 
+# Hard ceiling on requests per collection.
+#
+# Bisecting a 24h window down to the 1-minute floor is 4095 requests, which at
+# the 6-second pacing below is ~410 minutes — far beyond any sane job timeout.
+# A busy news day is exactly when that happens, so without a cap the cycle gets
+# killed mid-write on precisely the days that matter most.
+#
+# 120 requests is ~12 minutes of pacing and covers a 24h window bisected to
+# roughly 11-minute slices. Past that the marginal article is not worth risking
+# the whole cycle: partial coverage that lands is worth more than complete
+# coverage that gets killed. Exhausting the budget is recorded as a failure so
+# the shortfall is visible rather than silent.
+MAX_REQUESTS_PER_COLLECTION = 120
+
 
 # FIPS 10-4 country codes for the eight Country Zones (PRD FR-3).
 # NOT ISO 3166 — see the module docstring.
@@ -280,7 +294,16 @@ class GdeltClient:
         """
         collected: dict[str, dict[str, Any]] = {}
         failures: list[Failure] = []
-        self._collect_into(query, start, end, collected, failures)
+        budget = [MAX_REQUESTS_PER_COLLECTION]
+        self._collect_into(query, start, end, collected, failures, budget)
+        if budget[0] <= 0:
+            failures.append(
+                Failure(
+                    ADAPTER,
+                    f"request budget of {MAX_REQUESTS_PER_COLLECTION} exhausted; "
+                    "coverage for this cycle is incomplete",
+                )
+            )
         return CollectionResult(articles=list(collected.values()), failures=failures)
 
     def _collect_into(
@@ -290,7 +313,11 @@ class GdeltClient:
         end: datetime,
         collected: dict[str, dict[str, Any]],
         failures: list[Failure],
+        budget: list[int],
     ) -> None:
+        if budget[0] <= 0:
+            return
+        budget[0] -= 1
         result = self.fetch_window(query, start, end)
         failures.extend(result.failures)
 
@@ -315,7 +342,7 @@ class GdeltClient:
             return
 
         for half_start, half_end in halves:
-            self._collect_into(query, half_start, half_end, collected, failures)
+            self._collect_into(query, half_start, half_end, collected, failures, budget)
 
 
 def collect_world_day(now: datetime | None = None) -> CollectionResult:
@@ -338,6 +365,7 @@ __all__ = [
     "ADAPTER",
     "FIPS_BY_ZONE",
     "MAX_RECORDS",
+    "MAX_REQUESTS_PER_COLLECTION",
     "GdeltClient",
     "collect_world_day",
     "format_query_datetime",

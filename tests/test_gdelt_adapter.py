@@ -345,3 +345,62 @@ def test_collect_deduplicates_by_url_across_slices() -> None:
     )
 
     assert len(result.articles) == 1
+
+
+def test_collection_stops_at_the_request_budget() -> None:
+    """A fully-saturating day would bisect into 4095 requests — ~410 minutes at
+    the pacing this adapter uses, far past any job timeout. Without a cap the
+    cycle gets killed mid-write on exactly the busiest news days.
+
+    Partial coverage that lands beats complete coverage that gets killed, so
+    the budget stops the recursion and records the shortfall.
+    """
+    from pipeline.adapters.gdelt import MAX_REQUESTS_PER_COLLECTION
+
+    calls: list[str] = []
+
+    def always_saturated(url: str) -> FakeResponse:
+        calls.append(url)
+        articles = ",".join(
+            f'{{"url": "https://example.com/{len(calls)}-{i}", "title": "t", '
+            f'"seendate": "20260810T114500Z", "domain": "example.com", '
+            f'"language": "English", "sourcecountry": "United States"}}'
+            for i in range(250)
+        )
+        return FakeResponse(200, f'{{"articles": [{articles}]}}')
+
+    client = GdeltClient(fetch=always_saturated)
+    result = client.collect(
+        query="sourcelang:eng",
+        start=datetime(2026, 8, 11, 0, 0, tzinfo=UTC),
+        end=datetime(2026, 8, 12, 0, 0, tzinfo=UTC),
+    )
+
+    assert len(calls) <= MAX_REQUESTS_PER_COLLECTION, "budget must bound the recursion"
+    assert any("budget" in f.detail for f in result.failures), (
+        "an exhausted budget is a coverage shortfall and must be recorded, not silent"
+    )
+
+
+def test_a_normal_day_does_not_touch_the_budget() -> None:
+    """The cap is a backstop for pathological days, not a routine constraint."""
+    calls: list[str] = []
+
+    def unsaturated(url: str) -> FakeResponse:
+        calls.append(url)
+        return FakeResponse(
+            200,
+            '{"articles": [{"url": "https://example.com/a", "title": "t", '
+            '"seendate": "20260810T114500Z", "domain": "example.com", '
+            '"language": "English", "sourcecountry": "United States"}]}',
+        )
+
+    client = GdeltClient(fetch=unsaturated)
+    result = client.collect(
+        query="sourcelang:eng",
+        start=datetime(2026, 8, 11, tzinfo=UTC),
+        end=datetime(2026, 8, 12, tzinfo=UTC),
+    )
+
+    assert len(calls) == 1
+    assert result.failures == []

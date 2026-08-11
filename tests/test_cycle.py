@@ -198,3 +198,57 @@ def test_result_reports_success_for_a_degraded_but_completed_cycle(tmp_path: Pat
 
     assert isinstance(result, CycleResult)
     assert result.completed is True
+
+
+def test_dedupe_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
+    """cycle.json is the ONLY tracked file and it is written last. A crash in
+    dedupe that skipped it would leave nothing in git at all — the exact silent
+    gap this function exists to prevent.
+
+    Reachable in practice: a truncated articles.jsonl from a timed-out earlier
+    run makes read_jsonl raise on the partial final line.
+    """
+    bad = tmp_path / "intermediate" / "collect" / "2026-08-11T00-00-00Z"
+    bad.mkdir(parents=True)
+    (bad / "articles.jsonl").write_text('{"title": "truncated"')  # no closing brace
+
+    def collect_returning_unwritable() -> CollectionResult:
+        # Force dedupe to read the malformed file already on disk by writing
+        # nothing new over it.
+        return CollectionResult(articles=[], failures=[])
+
+    result = run_cycle(
+        collect=collect_returning_unwritable,
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+    )
+
+    assert result.cycle_path.exists(), "a cycle record must survive any crash"
+    record = json.loads(result.cycle_path.read_text())
+    assert record["cycle_id"] == "2026-08-11T00-00-00Z"
+
+
+def test_completed_is_false_when_a_stage_crashes(tmp_path: Path) -> None:
+    """`completed` distinguishes "ran and found little" from "could not run".
+    Without it the field is a constant and the distinction is unrepresentable.
+    """
+    import pipeline.stages.cycle as cycle_module
+
+    def explode(*args: object, **kwargs: object) -> None:
+        raise RuntimeError("disk full")
+
+    original = cycle_module.run_dedupe
+    cycle_module.run_dedupe = explode  # type: ignore[assignment]
+    try:
+        result = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+        )
+    finally:
+        cycle_module.run_dedupe = original  # type: ignore[assignment]
+
+    assert result.completed is False
+    record = json.loads(result.cycle_path.read_text())
+    assert record["completed"] is False
+    assert any("disk full" in f["detail"] for f in record["failures"])

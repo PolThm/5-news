@@ -5,7 +5,6 @@ must be able to run collect and dedupe for days and look at the output before
 anything downstream exists.
 """
 
-import json
 import subprocess
 import sys
 from pathlib import Path
@@ -35,17 +34,28 @@ def test_output_dir_shape() -> None:
     assert d == Path("/tmp/x/intermediate/collect/2026-08-11T00-00-00Z")
 
 
-def test_placeholder_stage_runs_alone(tmp_path: Path) -> None:
-    """Invoke the stage from the command line with an input path, with no
-    other stage involved, and confirm it writes JSON Lines output."""
+def test_a_stage_runs_alone(tmp_path: Path) -> None:
+    """Invoke a stage from the command line with an input path, with no other
+    stage involved, and confirm it writes JSON Lines output (AD-3).
+
+    Exercises `dedupe` — a real stage rather than a demonstration one, so the
+    contract is proven against code that ships.
+    """
     src = tmp_path / "in.jsonl"
-    src.write_text('{"title": "one"}\n{"title": "two"}\n')
+    src.write_text(
+        '{"title": "one", "url": "https://a.com/1", '
+        '"published_at": "2026-08-11T06:00:00+00:00", "source": "a.com", '
+        '"source_country": "france", "language": "fr", "collected_by": "gdelt"}\n'
+        '{"title": "two", "url": "https://b.com/2", '
+        '"published_at": "2026-08-11T06:00:00+00:00", "source": "b.com", '
+        '"source_country": "germany", "language": "de", "collected_by": "gdelt"}\n'
+    )
 
     result = subprocess.run(
         [
             sys.executable,
             "-m",
-            "pipeline.stages.placeholder",
+            "pipeline.stages.dedupe",
             "--input",
             str(src),
             "--cycle-id",
@@ -59,26 +69,27 @@ def test_placeholder_stage_runs_alone(tmp_path: Path) -> None:
 
     assert result.returncode == 0, result.stderr
 
-    out = tmp_path / "intermediate" / "placeholder" / "2026-08-11T00-00-00Z" / "output.jsonl"
+    out = tmp_path / "intermediate" / "dedupe" / "2026-08-11T00-00-00Z" / "groups.jsonl"
     assert out.exists(), f"stage wrote nothing to {out}"
-
-    lines = out.read_text().splitlines()
-    assert len(lines) == 2
-    assert json.loads(lines[0])["title"] == "one"
+    assert len(out.read_text().splitlines()) == 2
 
 
 def test_stage_output_is_stable_across_runs(tmp_path: Path) -> None:
     """Committed intermediate files must diff readably during the inspection
-    window: stable key ordering, trailing newline, no embedded raw newlines."""
+    window: stable key ordering, trailing newline, byte-identical reruns."""
     src = tmp_path / "in.jsonl"
-    src.write_text('{"b": 2, "a": 1}\n')
+    src.write_text(
+        '{"title": "one", "url": "https://a.com/1", '
+        '"published_at": "2026-08-11T06:00:00+00:00", "source": "a.com", '
+        '"source_country": "france", "language": "fr", "collected_by": "gdelt"}\n'
+    )
 
     def run() -> str:
         subprocess.run(
             [
                 sys.executable,
                 "-m",
-                "pipeline.stages.placeholder",
+                "pipeline.stages.dedupe",
                 "--input",
                 str(src),
                 "--cycle-id",
@@ -90,10 +101,10 @@ def test_stage_output_is_stable_across_runs(tmp_path: Path) -> None:
             check=True,
         )
         return (
-            tmp_path / "intermediate" / "placeholder" / "2026-08-11T00-00-00Z" / "output.jsonl"
+            tmp_path / "intermediate" / "dedupe" / "2026-08-11T00-00-00Z" / "groups.jsonl"
         ).read_text()
 
     first = run()
     assert first == run(), "re-running on identical input must be byte-identical"
     assert first.endswith("\n"), "trailing newline at EOF"
-    assert first.startswith('{"a": 1'), "keys must be sorted for readable diffs"
+    assert first.startswith('{"article_count"'), "keys must be sorted for readable diffs"

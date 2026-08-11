@@ -29,6 +29,7 @@ from pipeline.stages import (
     cycle_id_for,
     output_dir_for,
     stage_arg_parser,
+    write_atomically,
     write_jsonl,
 )
 
@@ -68,9 +69,8 @@ def write_collection(
         "article_count": count,
         "failures": [failure.to_dict() for failure in result.failures],
     }
-    metadata_path.write_text(
-        json.dumps(metadata, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
-        encoding="utf-8",
+    write_atomically(
+        metadata_path, json.dumps(metadata, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
     )
 
     return WrittenCollection(

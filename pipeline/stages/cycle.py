@@ -31,6 +31,7 @@ from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for, output_dir_for
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
 from pipeline.stages.dedupe import run_dedupe
+from pipeline.stages.rank import run_rank
 
 
 @dataclass(frozen=True, slots=True)
@@ -41,9 +42,17 @@ class CycleResult:
     articles_collected: int
     groups_after_dedupe: int
     clusters_after_grouping: int
+    clusters_selected: int
     collect_path: Path
-    dedupe_path: Path
-    cluster_path: Path
+    # None means the stage never ran or crashed before writing — distinct from
+    # a Path, which always means the file actually exists. An adversarial
+    # review of Story 2.2 found these previously defaulted to the *expected*
+    # output path even on a crash, so a caller checking e.g. `rank_path.exists()`
+    # after a failed cycle would get a false negative rather than an explicit
+    # "this was never written."
+    dedupe_path: Path | None
+    cluster_path: Path | None
+    rank_path: Path | None
     cycle_path: Path
     failures: tuple[Failure, ...]
     completed: bool = True
@@ -83,11 +92,13 @@ def run_cycle(
     failures.extend(collection.failures)
 
     articles_path = output_dir_for("collect", cycle_id, root=data_root) / "articles.jsonl"
-    dedupe_path = output_dir_for("dedupe", cycle_id, root=data_root) / "groups.jsonl"
-    cluster_path = output_dir_for("cluster", cycle_id, root=data_root) / "clusters.jsonl"
+    dedupe_path: Path | None = None
+    cluster_path: Path | None = None
+    rank_path: Path | None = None
     articles_collected = 0
     groups_after_dedupe = 0
     clusters_after_grouping = 0
+    clusters_selected = 0
 
     # Every step below is guarded, because cycle.json is the only tracked file
     # and it is written last. A crash anywhere in here without a record leaves
@@ -125,6 +136,20 @@ def run_cycle(
             failures.append(Failure("cycle", f"clustering raised: {exc}"))
             completed = False
 
+    if completed:
+        try:
+            ranked = run_rank(cluster_path, cycle_id=cycle_id, data_root=data_root)
+            rank_path = ranked.output_path
+            clusters_selected = ranked.clusters_selected
+        except Exception as exc:  # noqa: BLE001
+            # Unlike cluster's embedding call, rank has no external dependency
+            # — every input is already on disk and validated. An exception
+            # here is a real bug, not a degraded-but-expected outcome. Still
+            # guarded, for the same reason every stage before it is: cycle.json
+            # must survive a crash regardless of where it originates.
+            failures.append(Failure("cycle", f"ranking raised: {exc}"))
+            completed = False
+
     # Cross-phase state lives beside the cycle, not under a stage: a later run
     # reads this to resume (AD-11, and Story 3.4's two-phase batch depends on
     # exactly this path).
@@ -139,6 +164,7 @@ def run_cycle(
                 "articles_collected": articles_collected,
                 "groups_after_dedupe": groups_after_dedupe,
                 "clusters_after_grouping": clusters_after_grouping,
+                "clusters_selected": clusters_selected,
                 "completed": completed,
                 "degraded": bool(failures),
                 "failures": [f.to_dict() for f in failures],
@@ -156,9 +182,11 @@ def run_cycle(
         articles_collected=articles_collected,
         groups_after_dedupe=groups_after_dedupe,
         clusters_after_grouping=clusters_after_grouping,
+        clusters_selected=clusters_selected,
         collect_path=articles_path,
         dedupe_path=dedupe_path,
         cluster_path=cluster_path,
+        rank_path=rank_path,
         cycle_path=cycle_path,
         failures=tuple(failures),
         completed=completed,
@@ -182,7 +210,8 @@ def main(argv: list[str] | None = None) -> int:
 
     print(
         f"cycle {result.cycle_id}: {result.articles_collected} articles "
-        f"-> {result.groups_after_dedupe} groups -> {result.clusters_after_grouping} clusters"
+        f"-> {result.groups_after_dedupe} groups -> {result.clusters_after_grouping} clusters "
+        f"-> {result.clusters_selected} selected"
     )
     # A degraded cycle still succeeded. Only a cycle that could not run at all
     # is a failure, and that path raises before reaching here.

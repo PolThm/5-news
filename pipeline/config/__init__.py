@@ -9,6 +9,7 @@ changing one is a breaking change to the site's routing.
 from __future__ import annotations
 
 from collections.abc import Iterator
+from typing import Final
 
 from pipeline.domain import OutputLanguage, Period, Zone, ZoneKind
 
@@ -59,11 +60,23 @@ OUTPUT_LANGUAGES: tuple[OutputLanguage, ...] = (
     OutputLanguage.ES,
 )
 
-# Ranking thresholds (the Qualifying Cluster floor, item-count bounds, the
-# anti-concentration cap) belong to Story 2.2/2.6, which own the rules that
-# read them. Story 1.1 is scaffolding only — adding them here ahead of the
-# stage that uses them was scope creep past "types only, no behavior" and was
-# removed in code review.
+# --- Ranking thresholds -------------------------------------------------------
+#
+# Removed from this file during Story 1.1's code review as premature — no
+# rank stage existed yet to consume them. Story 2.2 is that consumer; the
+# anti-concentration cap (Story 2.6) and Continent fallback (Story 2.5) will
+# read these same constants rather than each defining their own copy (AD-12:
+# one owner per value).
+
+# PRD Glossary, "Qualifying Cluster": at least 2 Independent Sources from at
+# least 2 distinct countries. Both floors are `>=` and both must hold — a
+# Cluster with 5 sources all from one country does not qualify.
+MIN_INDEPENDENT_SOURCES: Final[int] = 2
+MIN_COUNTRIES: Final[int] = 2
+
+# FR-4: at most 5 Qualifying Clusters appear in any Briefing; the rest count
+# toward Discarded Volume. Never padded below this if fewer qualify.
+MAX_SELECTED_CLUSTERS: Final[int] = 5
 
 
 # --- Derived -----------------------------------------------------------------
@@ -99,6 +112,9 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
 
 
 __all__ = [
+    "MAX_SELECTED_CLUSTERS",
+    "MIN_COUNTRIES",
+    "MIN_INDEPENDENT_SOURCES",
     "OUTPUT_LANGUAGES",
     "PERIODS",
     "STAGE_NAMES",

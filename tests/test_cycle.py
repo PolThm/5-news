@@ -230,29 +230,31 @@ def test_dedupe_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
     """cycle.json is the ONLY tracked file and it is written last. A crash in
     dedupe that skipped it would leave nothing in git at all — the exact silent
     gap this function exists to prevent.
-
-    Reachable in practice: a truncated articles.jsonl from a timed-out earlier
-    run makes read_jsonl raise on the partial final line.
     """
-    bad = tmp_path / "intermediate" / "collect" / "2026-08-11T00-00-00Z"
-    bad.mkdir(parents=True)
-    (bad / "articles.jsonl").write_text('{"title": "truncated"')  # no closing brace
+    import pipeline.stages.cycle as cycle_module
 
-    def collect_returning_unwritable() -> CollectionResult:
-        # Force dedupe to read the malformed file already on disk by writing
-        # nothing new over it.
-        return CollectionResult(articles=[], failures=[])
+    def explode(*args: object, **kwargs: object) -> None:
+        raise RuntimeError("dedupe exploded")
 
-    result = run_cycle(
-        collect=collect_returning_unwritable,
-        cycle_id="2026-08-11T00-00-00Z",
-        data_root=tmp_path,
-        embed=_no_op_embed,
-    )
+    original = cycle_module.run_dedupe
+    cycle_module.run_dedupe = explode  # type: ignore[assignment]
+    try:
+        result = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+        )
+    finally:
+        cycle_module.run_dedupe = original  # type: ignore[assignment]
 
     assert result.cycle_path.exists(), "a cycle record must survive any crash"
+    assert result.completed is False
+    assert result.dedupe_path is None, "a crashed stage must not report a path it never wrote"
+    assert result.cluster_path is None, "a stage after a crash never ran and must report no path"
     record = json.loads(result.cycle_path.read_text())
     assert record["cycle_id"] == "2026-08-11T00-00-00Z"
+    assert any("dedupe exploded" in f["detail"] for f in record["failures"])
 
 
 def test_completed_is_false_when_a_stage_crashes(tmp_path: Path) -> None:
@@ -323,6 +325,8 @@ def test_cluster_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
         cycle_module.run_cluster = original  # type: ignore[assignment]
 
     assert result.completed is False
+    assert result.cluster_path is None, "a crashed stage must not report a path it never wrote"
+    assert result.rank_path is None, "a stage after a crash never ran and must report no path"
     record = json.loads(result.cycle_path.read_text())
     assert record["completed"] is False
     assert any("cluster exploded" in f["detail"] for f in record["failures"])
@@ -350,3 +354,54 @@ def test_embedding_failure_degrades_the_cycle_but_it_still_completes(tmp_path: P
     assert result.clusters_after_grouping == 2  # degraded: one cluster per group
     record = json.loads(result.cycle_path.read_text())
     assert record["degraded"] is True
+
+
+def test_runs_rank_after_cluster(tmp_path: Path) -> None:
+    """Story 2.2: the cycle now has a fourth stage. Two distinct dispatches
+    from different countries each land in their own singleton cluster, which
+    does not meet the 2-source/2-country qualifying floor -- 0 selected is
+    the correct, honest result, not a bug."""
+    result = run_cycle(
+        collect=lambda: _collection(
+            _record("Ceasefire agreed", "reuters.com", "united-kingdom"),
+            _record("Markets rally", "ft.com", "france"),
+        ),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+    )
+
+    assert result.rank_path.exists()
+    assert result.clusters_selected == 0  # neither singleton cluster qualifies
+
+    record = json.loads(result.cycle_path.read_text())
+    assert record["clusters_selected"] == 0
+
+
+def test_rank_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
+    """Same guard pattern as collect/dedupe/cluster: rank is the fourth
+    guarded step, and a crash in it must not prevent cycle.json from being
+    written."""
+    import pipeline.stages.cycle as cycle_module
+
+    def explode(*args: object, **kwargs: object) -> None:
+        raise RuntimeError("rank exploded")
+
+    original = cycle_module.run_rank
+    cycle_module.run_rank = explode  # type: ignore[assignment]
+    try:
+        result = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+        )
+    finally:
+        cycle_module.run_rank = original  # type: ignore[assignment]
+
+    assert result.completed is False
+    assert result.rank_path is None, "a crashed stage must not report a path it never wrote"
+    assert result.cluster_path is not None, "cluster ran successfully before rank crashed"
+    record = json.loads(result.cycle_path.read_text())
+    assert record["completed"] is False
+    assert any("rank exploded" in f["detail"] for f in record["failures"])

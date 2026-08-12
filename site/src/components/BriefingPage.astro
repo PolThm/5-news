@@ -13,7 +13,14 @@
 // `briefing.served_zone` could differ from the Zone this page is actually
 // addressed at, and the link must always point at the requested route,
 // not wherever the fallback happened to serve content from.
-import { hasValidAttribution, nextPeriod, periodSentenceText } from "../lib/briefing";
+import {
+  fallbackNoticeText,
+  hasValidAttribution,
+  nextPeriod,
+  nextZone,
+  periodSentenceText,
+  zoneSentenceLabel,
+} from "../lib/briefing";
 import type { BriefingRecord, Period } from "../lib/briefing";
 
 interface Props {
@@ -26,6 +33,12 @@ interface Props {
 const { briefing, lang, zone, period } = Astro.props;
 
 const nextPeriodHref = `/${lang}/${zone}/${nextPeriod(period)}`;
+// Built from the *route's* zone prop (what was requested), never
+// briefing.served_zone -- see this file's own header comment above on why
+// a Continent-fallback page's Zone link must always advance from the
+// requested Zone, not wherever the fallback happened to serve content from.
+const nextZoneHref = `/${lang}/${nextZone(zone)}/${period}`;
+const fallbackNotice = fallbackNoticeText(briefing);
 
 // See index.astro's own history for why this is UTC-labeled, not silently
 // implied-local: this page has no client JS at build/initial-render time
@@ -107,12 +120,11 @@ function formatTimestamp(iso: string): string {
         line-height: 1.25;
         color: #1a1a18;
       }
-      /* .word applies to both the static <span> (Zone, not yet
-         interactive -- Story 4.3) and the real <a> (Period, this story) --
-         the dotted underline must look identical either way, and must not
-         pick up a browser's default solid link-underline styling
-         (DESIGN.md's explicit "dotted, not solid" distinction from
-         attribution links). */
+      /* .word applies to both mad-libs words (Zone and Period, both real
+         <a> elements as of Story 4.3) -- the dotted underline must look
+         identical for both, and must not pick up a browser's default solid
+         link-underline styling (DESIGN.md's explicit "dotted, not solid"
+         distinction from attribution links). */
       h1 .word {
         color: #1f4d3d;
         text-decoration: underline dotted 2px;
@@ -121,6 +133,18 @@ function formatTimestamp(iso: string): string {
       }
       h1 a.word {
         text-decoration-line: underline;
+      }
+      /* Exact values from mockups/briefing-fallback.html -- `secondary`
+         (#8a3a2b text on #f6dcd4 background) is reserved for exactly this
+         one meaning (DESIGN.md Colors) and must never appear anywhere else
+         on the page. */
+      .fallback-notice {
+        margin-top: 10px;
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #8a3a2b;
+        background: #f6dcd4;
+        border-radius: 3px;
       }
       .timestamp {
         margin-top: 8px;
@@ -181,7 +205,14 @@ function formatTimestamp(iso: string): string {
 
       <div class="sentence-block" id="sentence-block">
         <h1 id="mad-libs-sentence">
-          Voici ce qui se passe dans <span class="word">le Monde</span>, <a
+          Voici ce qui se passe <a
+            class="word"
+            data-zone-word
+            data-lang={lang}
+            data-zone={zone}
+            data-period={period}
+            href={nextZoneHref}>{zoneSentenceLabel(zone)}</a
+          >, <a
             class="word"
             data-period-word
             data-lang={lang}
@@ -190,6 +221,13 @@ function formatTimestamp(iso: string): string {
             href={nextPeriodHref}>{periodSentenceText(period)}</a
           >.
         </h1>
+        {
+          fallbackNotice && (
+            <div class="fallback-notice" id="fallback-notice">
+              {fallbackNotice}
+            </div>
+          )
+        }
         <div class="timestamp" id="timestamp">{formatTimestamp(briefing.generated_at)}</div>
       </div>
 

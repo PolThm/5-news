@@ -2,18 +2,24 @@ import { describe, expect, it } from "vitest";
 import {
   attach,
   briefingJsonUrl,
+  fallbackNoticeText,
   nextPeriod,
+  nextZone,
   pageUrl,
   periodSentenceText,
+  renderFallbackNoticeHtml,
   renderItemListHtml,
+  zoneSentenceLabel,
 } from "../period-switcher";
 
 // A minimal hand-rolled stand-in for the DOM surface attach() touches --
-// jsdom is not a dependency of this project (see this story's Dev Notes on
-// why Playwright/jsdom were judged disproportionate for one click handler),
-// and this bug (listener accumulation across repeated attach() calls) only
-// needs querySelector/hasAttribute/setAttribute/addEventListener to
-// reproduce and prove fixed.
+// jsdom is not a dependency of this project (see Story 4.2's Dev Notes on
+// why Playwright/jsdom were judged disproportionate for one click handler,
+// a decision Story 4.3 re-confirms since it's the same shape of
+// interaction on a second axis), and this bug (listener accumulation
+// across repeated attach() calls) only needs
+// querySelector/hasAttribute/setAttribute/addEventListener to reproduce
+// and prove fixed.
 function createFakeAnchor() {
   const attributes = new Map<string, string>();
   const clickListeners: Array<(event: { preventDefault: () => void }) => void> = [];
@@ -49,8 +55,60 @@ describe("periodSentenceText", () => {
   });
 });
 
+describe("nextZone", () => {
+  it("cycles through all 15 Zones and wraps Brazil -> World", () => {
+    expect(nextZone("world")).toBe("europe");
+    expect(nextZone("brazil")).toBe("world");
+  });
+});
+
+describe("zoneSentenceLabel", () => {
+  it("mirrors briefing.ts's zoneSentenceLabel exactly for a sample of each preposition case", () => {
+    expect(zoneSentenceLabel("world")).toBe("dans le Monde");
+    expect(zoneSentenceLabel("europe")).toBe("en Europe");
+    expect(zoneSentenceLabel("united-kingdom")).toBe("au Royaume-Uni");
+    expect(zoneSentenceLabel("united-states")).toBe("aux États-Unis");
+  });
+});
+
+describe("fallbackNoticeText", () => {
+  it("mirrors briefing.ts's fallbackNoticeText exactly, including plural verb agreement", () => {
+    expect(fallbackNoticeText({ zone: "france", served_zone: "france" })).toBeNull();
+    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" })).toBe(
+      "Affichage de l'Europe — la France n'a pas assez de couverture aujourd'hui."
+    );
+    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" })).toBe(
+      "Affichage de l'Amérique du Nord — les États-Unis n'ont pas assez de couverture aujourd'hui."
+    );
+  });
+});
+
+describe("renderFallbackNoticeHtml", () => {
+  it("returns an empty string when there is no fallback", () => {
+    const html = renderFallbackNoticeHtml({
+      zone: "world",
+      served_zone: "world",
+      generated_at: "2026-08-12T06:14:00Z",
+      clusters: [],
+    });
+    expect(html).toBe("");
+  });
+
+  it("returns the notice div with escaped, exact French text when a fallback is active", () => {
+    const html = renderFallbackNoticeHtml({
+      zone: "france",
+      served_zone: "europe",
+      generated_at: "2026-08-12T06:14:00Z",
+      clusters: [],
+    });
+    expect(html).toBe(
+      '<div class="fallback-notice" id="fallback-notice">Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui.</div>'
+    );
+  });
+});
+
 describe("briefingJsonUrl", () => {
-  it("builds the exact static-asset path Task 5's copy script exposes", () => {
+  it("builds the exact static-asset path the copy script exposes", () => {
     expect(briefingJsonUrl("fr", "world", "week")).toBe("/briefings/fr/world/week.json");
   });
 });
@@ -64,6 +122,8 @@ describe("pageUrl", () => {
 describe("renderItemListHtml", () => {
   it("mirrors BriefingPage.astro's item markup for a cluster with full attribution", () => {
     const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
       clusters: [
         {
@@ -86,6 +146,8 @@ describe("renderItemListHtml", () => {
 
   it("omits the summary paragraph when summary is absent from the cluster", () => {
     const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
       clusters: [{ cluster_id: "b", independent_source_count: 3, country_count: 2 }],
     });
@@ -96,6 +158,8 @@ describe("renderItemListHtml", () => {
 
   it("omits the attribution span when outbound_source is missing despite a valid url", () => {
     const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
       clusters: [
         {
@@ -113,6 +177,8 @@ describe("renderItemListHtml", () => {
 
   it("escapes HTML-significant characters in summary and outbound_source", () => {
     const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
       clusters: [
         {
@@ -133,6 +199,8 @@ describe("renderItemListHtml", () => {
 
   it("renders one item per cluster, in order, for multiple clusters", () => {
     const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
       clusters: [
         { cluster_id: "e", independent_source_count: 1, country_count: 1 },
@@ -149,25 +217,30 @@ describe("renderItemListHtml", () => {
 });
 
 describe("attach", () => {
-  it("attaches exactly one click listener even when called repeatedly on the same node", () => {
-    // Reproduces the bug this story's adversarial review caught: attach()
+  it("attaches exactly one click listener to each mad-libs word even when called repeatedly", () => {
+    // Reproduces the bug Story 4.2's adversarial review caught: attach()
     // is re-invoked after every swap, but the swap mutates the existing
-    // anchor in place rather than replacing it -- without the
-    // ATTACHED_MARKER guard, each call added a duplicate listener, so a
-    // single click fired the handler once per prior attach() call
-    // (duplicate fetches, a period cycled further than one click should
-    // advance it).
-    const anchor = createFakeAnchor();
+    // anchors in place rather than replacing them -- without the
+    // ATTACHED_MARKER guard, each call added a duplicate listener per word,
+    // so a single click fired the handler once per prior attach() call.
+    // Story 4.3 extends attach() to cover both the Zone and Period words,
+    // so this test verifies the guard holds for both independently.
+    const zoneAnchor = createFakeAnchor();
+    const periodAnchor = createFakeAnchor();
     const originalDocument = globalThis.document;
     // @ts-expect-error -- minimal stand-in, see createFakeAnchor's docstring
-    globalThis.document = { querySelector: () => anchor };
+    globalThis.document = {
+      querySelector: (selector: string) =>
+        selector.includes("zone") ? zoneAnchor : periodAnchor,
+    };
 
     try {
       attach();
       attach();
       attach();
 
-      expect(anchor.clickListenerCount).toBe(1);
+      expect(zoneAnchor.clickListenerCount).toBe(1);
+      expect(periodAnchor.clickListenerCount).toBe(1);
     } finally {
       globalThis.document = originalDocument;
     }

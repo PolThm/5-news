@@ -2,7 +2,15 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import { copyBriefingsToPublic } from "../copy-briefings-to-public";
+import { COMBINATIONS, copyBriefingsToPublic } from "../copy-briefings-to-public";
+
+describe("COMBINATIONS", () => {
+  it("covers all 15 Zones x 3 Periods (Story 4.3 extends this from World-only)", () => {
+    expect(COMBINATIONS).toHaveLength(45);
+    expect(COMBINATIONS).toContainEqual({ lang: "fr", zone: "brazil", period: "month" });
+    expect(COMBINATIONS.filter((c) => c.zone === "world")).toHaveLength(3);
+  });
+});
 
 describe("copyBriefingsToPublic", () => {
   let siteRoot: string;

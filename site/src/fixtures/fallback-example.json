@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "zone": "france",
+  "zone_kind": "country",
+  "zone_continent": "europe",
+  "served_zone": "europe",
+  "served_zone_kind": "continent",
+  "served_zone_continent": null,
+  "period": "day",
+  "language": "fr",
+  "clusters": [
+    {
+      "cluster_id": "eu-energy-summit-2026-08-11",
+      "members": [
+        {
+          "title": "European summit on energy ends in compromise",
+          "url": "https://politico.eu/europe/energy-summit-compromise",
+          "source": "Politico Europe",
+          "source_country": "germany",
+          "language": "en"
+        }
+      ],
+      "independent_source_count": 6,
+      "country_count": 5,
+      "countries": ["france", "germany", "italy", "spain", "united-kingdom"],
+      "origin_country": "germany",
+      "rank": 1,
+      "summary": "Le sommet européen sur l'énergie s'achève sur un compromis. Les vingt-sept ont convenu d'un mécanisme commun de stockage, après des désaccords sur son financement.",
+      "outbound_url": "https://politico.eu/europe/energy-summit-compromise",
+      "outbound_source": "Politico Europe"
+    }
+  ],
+  "discarded_ingested": 612,
+  "discarded_kept": 1,
+  "generated_at": "2026-08-11T07:14:00+00:00"
+}

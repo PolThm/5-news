@@ -15,6 +15,7 @@
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { ZONE_CYCLE } from "../src/lib/briefing.ts";
 import { loadBriefing } from "../src/lib/loadBriefing.ts";
 
 export interface Combination {
@@ -23,14 +24,17 @@ export interface Combination {
   period: string;
 }
 
-// Story 4.2's own scope: world/fr, all 3 Periods. Story 4.3/4.7 extend
-// this list the same way they extend [period].astro's getStaticPaths --
-// both must stay in sync by hand (see that route file's own comment).
-export const COMBINATIONS: Combination[] = [
-  { lang: "fr", zone: "world", period: "day" },
-  { lang: "fr", zone: "world", period: "week" },
-  { lang: "fr", zone: "world", period: "month" },
-];
+const PERIODS = ["day", "week", "month"];
+
+// Cross product of all 15 Zones (Story 4.3, reusing briefing.ts's own
+// ZONE_CYCLE rather than a third hand-duplicated copy of the same list --
+// [lang]/[zone]/[period].astro's getStaticPaths does the same) x all 3
+// Periods x fr (Story 4.7 extends the Language axis). Both this list and
+// that route file's getStaticPaths must stay in sync by hand (see that
+// route file's own comment) since neither can import the other.
+export const COMBINATIONS: Combination[] = ZONE_CYCLE.flatMap((zone) =>
+  PERIODS.map((period) => ({ lang: "fr", zone, period }))
+);
 
 export function copyBriefingsToPublic(
   siteRoot: string,

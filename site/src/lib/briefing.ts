@@ -102,3 +102,127 @@ export function hasValidAttribution(
     !!cluster.outbound_url && !!cluster.outbound_source && /^https?:\/\//i.test(cluster.outbound_url)
   );
 }
+
+// The 15 Zones (World, 6 Continents, 8 Countries), in the exact cycle order
+// of pipeline/config/__init__.py's ZONES tuple. Hand-mirrored, not
+// imported -- site/ must never import from pipeline/
+// (scripts/check-boundary.sh forbids any cross-reference); this list is
+// kept in sync by hand the same way BriefingRecord's fields above are.
+// Adding a Zone there is a breaking routing change here too (see that
+// file's own header comment).
+export const ZONE_CYCLE: readonly string[] = [
+  "world",
+  "europe",
+  "north-america",
+  "south-america",
+  "asia",
+  "africa",
+  "oceania",
+  "france",
+  "united-kingdom",
+  "germany",
+  "united-states",
+  "japan",
+  "china",
+  "india",
+  "brazil",
+];
+
+export function nextZone(current: string): string {
+  const index = ZONE_CYCLE.indexOf(current);
+  return ZONE_CYCLE[(index + 1) % ZONE_CYCLE.length];
+}
+
+// The mad-libs sentence's Zone word text, per Zone -- each entry is a full
+// preposition-inclusive French phrase ("dans le Monde", "en Europe", "au
+// Japon"), not a bare noun, because French geographic prepositions vary by
+// Zone (continents and non-plural feminine countries take "en", masculine
+// countries take "au", the one plural country takes "aux", the World takes
+// "dans le"). Baking the preposition into the label keeps the surrounding
+// sentence template ("Voici ce qui se passe {label}, {period}.") a single
+// fixed string with no second per-Zone grammatical dimension to track.
+const ZONE_SENTENCE_LABEL: Record<string, string> = {
+  world: "dans le Monde",
+  europe: "en Europe",
+  "north-america": "en Amérique du Nord",
+  "south-america": "en Amérique du Sud",
+  asia: "en Asie",
+  africa: "en Afrique",
+  oceania: "en Océanie",
+  france: "en France",
+  "united-kingdom": "au Royaume-Uni",
+  germany: "en Allemagne",
+  "united-states": "aux États-Unis",
+  japan: "au Japon",
+  china: "en Chine",
+  india: "en Inde",
+  brazil: "au Brésil",
+};
+
+export function zoneSentenceLabel(zone: string): string {
+  return ZONE_SENTENCE_LABEL[zone];
+}
+
+// The Continent-fallback notice's clause forms -- distinct from
+// ZONE_SENTENCE_LABEL because French grammatical role changes the article:
+// the mad-libs sentence uses "en France" (preposition), but the fallback
+// notice's subject clause uses "la France n'a pas..." (subject, own
+// article, own verb-number agreement). Only Continents ever appear as
+// `servedLabel` (a Country never falls back to another Country) and only
+// Countries ever appear as `requestedLabel` (Continents and World never
+// fall back, per pipeline/stages/rank.py's own logic) -- so each map only
+// needs to cover the 6 Continents or 8 Countries respectively, not all 15
+// Zones.
+const ZONE_SERVED_LABEL: Record<string, string> = {
+  europe: "l'Europe",
+  "north-america": "l'Amérique du Nord",
+  "south-america": "l'Amérique du Sud",
+  asia: "l'Asie",
+  africa: "l'Afrique",
+  oceania: "l'Océanie",
+};
+
+const ZONE_REQUESTED_LABEL: Record<string, { label: string; plural: boolean }> = {
+  france: { label: "la France", plural: false },
+  "united-kingdom": { label: "le Royaume-Uni", plural: false },
+  germany: { label: "l'Allemagne", plural: false },
+  // The one Country whose French name is grammatically plural -- the verb
+  // in fallbackNoticeText's sentence must agree ("n'ont pas", not "n'a
+  // pas") or the notice reads as a native-speaker-visible grammar error.
+  "united-states": { label: "les États-Unis", plural: true },
+  japan: { label: "le Japon", plural: false },
+  china: { label: "la Chine", plural: false },
+  india: { label: "l'Inde", plural: false },
+  brazil: { label: "le Brésil", plural: false },
+};
+
+export function isZoneFallback(briefing: Pick<BriefingRecord, "zone" | "served_zone">): boolean {
+  return briefing.served_zone !== briefing.zone;
+}
+
+/**
+ * The Continent-fallback notice's exact French sentence (FR-16), or `null`
+ * when no fallback is active. Data-driven entirely from `zone`/`served_zone`
+ * already present in the loaded `BriefingRecord` -- the pipeline
+ * (pipeline/stages/rank.py) already decided the substitution before writing
+ * the file; this only renders the decision, never re-derives it.
+ */
+export function fallbackNoticeText(
+  briefing: Pick<BriefingRecord, "zone" | "served_zone">
+): string | null {
+  if (!isZoneFallback(briefing)) return null;
+
+  const servedLabel = ZONE_SERVED_LABEL[briefing.served_zone];
+  const requested = ZONE_REQUESTED_LABEL[briefing.zone];
+  // Defense against a malformed data/briefings/**/*.json (partial write,
+  // hand-edit, future pipeline bug): loadBriefing does no schema
+  // validation, and this function runs unconditionally for every
+  // statically-generated page at build time -- an uncaught crash here would
+  // fail the whole `astro build`, not just one page. Today's pipeline logic
+  // only ever produces zone/served_zone pairs both tables cover, but this
+  // function must not assume that holds for every byte on disk.
+  if (!servedLabel || !requested) return null;
+
+  const verb = requested.plural ? "n'ont" : "n'a";
+  return `Affichage de ${servedLabel} — ${requested.label} ${verb} pas assez de couverture aujourd'hui.`;
+}

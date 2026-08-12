@@ -1,4 +1,5 @@
-"""One cycle: collect, dedupe, and record what happened.
+"""One cycle: collect, dedupe, cluster, rank per Zone x Period, summarize per
+Output Language, and publish -- the whole pipeline, orchestrated.
 
 Story 1.5 turns the pipeline from something you invoke into something that
 accumulates. The Build Order's inspection window — days of real output to judge
@@ -15,7 +16,7 @@ crash is caught and recorded rather than left as a silent gap. Exit status
 reports whether the cycle *ran*, not whether coverage was perfect — a scheduled
 job that goes red on a thin day trains its owner to ignore it.
 
-Story 3.4 adds AD-11's two-phase split on top of collect-through-history: a
+Story 3.4 added AD-11's two-phase split on top of collect-through-history: a
 fresh cycle (no pending batch recorded in `cycle.json`) runs every guarded
 step below exactly as before, then submits a summarize batch and returns
 without waiting. A later invocation of the *same* `cycle_id` finds the
@@ -24,6 +25,16 @@ through history never re-runs. Checking is a single call, never a poll loop:
 if the batch is not done, this run records that it checked and exits; the
 next invocation checks again. Neither phase holds a process open waiting on
 the Batch API (AD-11's own words).
+
+Story 3.5 replaces the flat, single-Zone rank call and single-language
+summarize call with the real 15 Zone x 3 Period matrix
+(`pipeline.stages.briefing_matrix`) and submits exactly 3 summarize batches
+per cycle (one per Output Language, shared across every Zone x Period via a
+deduplicated Cluster union -- Story 3.5's fan-out decision). A cycle is not
+ready to publish until every language's batch has collected; `_resume_cycle`
+checks whichever languages are still pending and leaves already-resolved
+ones untouched. Once all three have collected, this same resumed invocation
+assembles and publishes the 135-Briefing set atomically (AD-7).
 """
 
 from __future__ import annotations
@@ -36,20 +47,32 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.adapters import CollectionResult, Failure
-from pipeline.adapters.cohere_embed import embed_titles
-from pipeline.domain import OutputLanguage
-from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for, output_dir_for, read_jsonl
+from pipeline.adapters.cohere_embed import EmbeddingResult, embed_titles
+from pipeline.config import OUTPUT_LANGUAGES, zone_by_slug
+from pipeline.domain import OutputLanguage, Period
+from pipeline.stages import (
+    DEFAULT_DATA_ROOT,
+    cycle_id_for,
+    output_dir_for,
+    read_jsonl,
+    write_atomically,
+    write_jsonl,
+)
+from pipeline.stages.briefing_matrix import build_period_pools, dedupe_union, rank_all_zones
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
 from pipeline.stages.dedupe import run_dedupe
-from pipeline.stages.history import append_history
-from pipeline.stages.rank import run_rank
+from pipeline.stages.history import append_history, read_history
+from pipeline.stages.publish import WrittenPublish, assemble_briefings, publish_briefings
+from pipeline.stages.rank import ZoneRanking
 from pipeline.stages.summarize import (
     WrittenSubmission,
     WrittenSummarize,
     collect_summarize,
     submit_summarize,
 )
+
+_HISTORY_RETENTION_DAYS = 30
 
 
 @dataclass(frozen=True, slots=True)
@@ -75,37 +98,48 @@ class CycleResult:
     failures: tuple[Failure, ...]
     completed: bool = True
     # Story 3.4's two-phase summarize status, distinct from `completed` --
-    # a cycle can complete every guarded step below and still be
-    # "summarize_pending" (batch submitted, not yet checked) or
-    # "summarize_collected" (batch ended, results written). `None` means
+    # a cycle can complete every guarded step below and still be pending on
+    # one or more languages' batches. Story 3.5 adds the terminal
+    # "published" phase once every language has collected. `None` means
     # this run didn't reach the summarize phase at all (a crash upstream).
     summarize_phase: str | None = None
+    # Story 3.5: set once this cycle's Briefing set has actually been
+    # written to data/briefings/ -- distinct from summarize_phase, which
+    # only tracks the summarize batches' own state.
+    published: bool = False
+    briefings_path: Path | None = None
 
-    @property
-    def degraded(self) -> bool:
-        return bool(self.failures)
+
+_TERMINAL_PHASES = frozenset({None, "collected"})
 
 
-def _read_pending_batch(cycle_path: Path) -> dict | None:
-    """The pending-batch section of a previous run's `cycle.json`, if this
-    `cycle_id` already submitted one -- `None` if `cycle.json` doesn't exist
-    yet, or exists but records no pending batch (a fresh cycle, or one that
-    crashed before reaching the summarize phase).
+def _should_resume(cycle_path: Path) -> bool:
+    """Whether this `cycle_id` has unfinished work from a previous
+    invocation to resume -- `False` if `cycle.json` doesn't exist yet, or
+    exists but never reached the summarize phase (a crash upstream, so
+    `phase` is still `"collected"`), or has already published (nothing left
+    to resume).
+
+    Deliberately keyed on `published`, not on whether `summarize_batches`
+    is empty: every language's batch can have collected while publish
+    itself still failed (a crash during staging) -- that cycle must still
+    resume on the next invocation, straight to retrying publish, not fall
+    through to a fresh cycle that re-submits batches for data already
+    collected and sitting on disk.
 
     Reading, not holding this in memory across invocations, is the whole
     point of AD-11: the *file* is the durable state a separate process
     invocation resumes from, not anything this function remembers.
     """
     if not cycle_path.is_file():
-        return None
+        return False
     try:
         record = json.loads(cycle_path.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
-        return None
-    pending = record.get("summarize_batch")
-    if not pending or not pending.get("batch_id"):
-        return None
-    return pending
+        return False
+    if record.get("phase") in _TERMINAL_PHASES:
+        return False
+    return not record.get("published", False)
 
 
 def run_cycle(
@@ -113,12 +147,13 @@ def run_cycle(
     cycle_id: str | None = None,
     data_root: Path = DEFAULT_DATA_ROOT,
     embed: EmbedFn = embed_titles,
-    language: OutputLanguage = OutputLanguage.FR,
     submit_summarize_fn: Callable[..., WrittenSubmission] = submit_summarize,
     collect_summarize_fn: Callable[..., WrittenSummarize | None] = collect_summarize,
 ) -> CycleResult:
-    """Run collect, then dedupe, then cluster, then rank, then history, then
-    submit (or, on a resumed invocation, check) a summarize batch.
+    """Run collect, then dedupe, then cluster, then the 15 Zone x 3 Period
+    ranking matrix, then history, then submit (or, on a resumed invocation,
+    check) a summarize batch per Output Language, then, once every
+    language has collected, assemble and publish the 135-Briefing set.
 
     ``collect`` and ``embed`` are both injected so a cycle can be exercised
     without a network — the scheduled entrypoint passes the real adapters.
@@ -131,13 +166,14 @@ def run_cycle(
     cycle_id = cycle_id or cycle_id_for(started_at)
     cycle_path = data_root / "intermediate" / cycle_id / "cycle.json"
 
-    # Resume case: this cycle_id already submitted a batch on a previous
-    # invocation. Skip collect through history entirely -- they already ran
-    # -- and go straight to checking the batch (AD-11: "does not re-run
-    # collect/dedupe/cluster/rank", read literally).
-    pending = _read_pending_batch(cycle_path)
-    if pending is not None:
-        return _resume_cycle(cycle_path, pending, collect_summarize_fn=collect_summarize_fn)
+    # Resume case: this cycle_id has unfinished summarize/publish work from
+    # a previous invocation. Skip collect through history entirely -- they
+    # already ran -- and go straight to checking whichever languages are
+    # still pending, or straight to retrying publish if every language has
+    # already collected (AD-11: "does not re-run collect/dedupe/cluster/
+    # rank", read literally).
+    if _should_resume(cycle_path):
+        return _resume_cycle(cycle_path, collect_summarize_fn=collect_summarize_fn)
 
     failures: list[Failure] = []
     completed = True
@@ -158,6 +194,7 @@ def run_cycle(
     groups_after_dedupe = 0
     clusters_after_grouping = 0
     clusters_selected = 0
+    clusters: list[dict] = []
 
     # Every step below is guarded, because cycle.json is the only tracked file
     # and it is written last. A crash anywhere in here without a record leaves
@@ -188,6 +225,7 @@ def run_cycle(
             )
             cluster_path = clustered.output_path
             clusters_after_grouping = clustered.clusters_out
+            clusters = list(read_jsonl(cluster_path))
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"
                 failures.append(Failure("cycle", detail))
@@ -195,63 +233,88 @@ def run_cycle(
             failures.append(Failure("cycle", f"clustering raised: {exc}"))
             completed = False
 
+    zone_rankings: dict[Period, list[ZoneRanking]] = {}
+    union: list[dict] = []
     if completed:
         try:
-            ranked = run_rank(cluster_path, cycle_id=cycle_id, data_root=data_root)
-            rank_path = ranked.output_path
-            clusters_selected = ranked.clusters_selected
+            history_entries = read_history(
+                data_root / "history",
+                reference_date=started_at,
+                window_days=_HISTORY_RETENTION_DAYS,
+            )
+            embedding_by_id = _embed_for_linking(clusters, history_entries, embed)
+            pools = build_period_pools(
+                today_clusters=clusters,
+                history_entries=history_entries,
+                embedding_by_id=embedding_by_id,
+                reference_date=started_at,
+            )
+            for period, pool in pools.items():
+                zone_rankings[period] = rank_all_zones(pool)
+            union = dedupe_union([r for rankings in zone_rankings.values() for r in rankings])
+            clusters_selected = len(union)
+            rank_path = output_dir_for("rank", cycle_id, root=data_root) / "ranked.jsonl"
+            write_jsonl(rank_path, union)
+            _write_zone_rankings(
+                output_dir_for("rank", cycle_id, root=data_root) / "zone_rankings.json",
+                zone_rankings,
+            )
         except Exception as exc:  # noqa: BLE001
-            # Unlike cluster's embedding call, rank has no external dependency
-            # — every input is already on disk and validated. An exception
-            # here is a real bug, not a degraded-but-expected outcome. Still
-            # guarded, for the same reason every stage before it is: cycle.json
-            # must survive a crash regardless of where it originates.
+            # Unlike cluster's embedding call, ranking has no external
+            # dependency of its own once `clusters` is in hand -- an
+            # exception here is a real bug, not a degraded-but-expected
+            # outcome. Still guarded, for the same reason every stage
+            # before it is: cycle.json must survive a crash regardless of
+            # where it originates.
             failures.append(Failure("cycle", f"ranking raised: {exc}"))
             completed = False
 
     if completed:
         try:
-            selected = list(read_jsonl(rank_path)) if rank_path else []
             append_history(
-                selected,
+                union,
                 cycle_id=cycle_id,
                 history_root=data_root / "history",
                 embed=embed,
             )
         except Exception as exc:  # noqa: BLE001
-            # Same reasoning as rank: no external dependency of its own once
-            # `selected` is in hand (the embed call inside append_history
+            # Same reasoning as ranking: no external dependency of its own
+            # once `union` is in hand (the embed call inside append_history
             # degrades gracefully on its own, per its docstring) — an
-            # exception escaping here is a real bug. Still guarded: cycle.json
-            # must survive a crash regardless of where it originates.
+            # exception escaping here is a real bug. Still guarded:
+            # cycle.json must survive a crash regardless of where it
+            # originates.
             failures.append(Failure("cycle", f"writing history raised: {exc}"))
             completed = False
 
-    # Only a completed cycle has ranked Clusters to submit. A crash upstream
-    # means there is nothing to summarize yet -- record the crash and stop.
-    # This cycle_id itself is never revisited: the next scheduled run gets a
-    # fresh cycle_id and starts over from collect (AD-7's "leaves the
-    # previous Briefing set in place"), it does not resume this one's
-    # already-collected data.
+    # Only a completed cycle has a ranked Cluster union to submit. A crash
+    # upstream means there is nothing to summarize yet -- record the crash
+    # and stop. This cycle_id itself is never revisited: the next scheduled
+    # run gets a fresh cycle_id and starts over from collect (AD-7's
+    # "leaves the previous Briefing set in place"), it does not resume this
+    # one's already-collected data.
     summarize_phase: str | None = None
-    summarize_batch: dict | None = None
+    summarize_batches: dict[str, dict] = {}
     if completed:
-        submission = submit_summarize_fn(
-            selected, language=language, cycle_id=cycle_id, data_root=data_root
-        )
-        if submission.batch_id is not None:
-            summarize_phase = "summarize_submitted"
-            summarize_batch = {
-                "batch_id": submission.batch_id,
-                "language": language.value,
-                "ranked_path": str(rank_path),
-            }
-        else:
-            # Submission itself failed (e.g. no API key) -- degrade, same as
-            # every other adapter-boundary failure in this function, rather
-            # than treating it as a reason to mark the whole cycle failed.
-            failures.append(Failure("cycle", "summarize submission failed; see summarize.json"))
-            summarize_phase = "summarize_submit_failed"
+        any_failed = False
+        for language in OUTPUT_LANGUAGES:
+            submission = submit_summarize_fn(
+                union, language=language, cycle_id=cycle_id, data_root=data_root
+            )
+            if submission.batch_id is not None:
+                summarize_batches[language.value] = {
+                    "batch_id": submission.batch_id,
+                    "ranked_path": str(rank_path),
+                }
+            else:
+                any_failed = True
+                failures.append(
+                    Failure(
+                        "cycle",
+                        f"summarize submission failed for {language.value}; see summarize.json",
+                    )
+                )
+        summarize_phase = "summarize_submit_failed" if any_failed else "summarize_submitted"
 
     # Cross-phase state lives beside the cycle, not under a stage: a later run
     # reads this to resume (AD-11, and Story 3.4's two-phase batch depends on
@@ -270,7 +333,9 @@ def run_cycle(
                 "completed": completed,
                 "degraded": bool(failures),
                 "failures": [f.to_dict() for f in failures],
-                "summarize_batch": summarize_batch,
+                "summarize_batches": summarize_batches,
+                "published": False,
+                "briefings_path": None,
             },
             indent=2,
             sort_keys=True,
@@ -297,18 +362,72 @@ def run_cycle(
     )
 
 
+def _embed_for_linking(
+    clusters: list[dict], history_entries: list[dict], embed: EmbedFn
+) -> dict[str, list[float]]:
+    """Every id `link_across_days` might need to compare: today's Clusters
+    need a fresh embed call (their representative title); history entries
+    already carry their own stored embedding (Story 2.7) -- no re-embedding
+    of historical entries needed."""
+    embedding_by_id: dict[str, list[float]] = {}
+    embeddable = [c for c in clusters if c.get("members")]
+    if embeddable:
+        titles = [c["members"][0]["title"] for c in embeddable]
+        result: EmbeddingResult = embed(titles)
+        if not result.failures and len(result.vectors) == len(embeddable):
+            for cluster, vector in zip(embeddable, result.vectors, strict=True):
+                embedding_by_id[cluster["cluster_id"]] = list(vector)
+    for entry in history_entries:
+        if "embedding" in entry:
+            embedding_by_id[entry["cluster_id"]] = entry["embedding"]
+    return embedding_by_id
+
+
+def _write_zone_rankings(path: Path, zone_rankings: dict[Period, list[ZoneRanking]]) -> None:
+    data = {
+        period.value: [
+            {
+                "requested_zone": r.requested_zone.slug,
+                "served_zone": r.served_zone.slug,
+                "ranked_clusters": r.ranked_clusters,
+            }
+            for r in rankings
+        ]
+        for period, rankings in zone_rankings.items()
+    }
+    write_atomically(path, json.dumps(data, indent=2, sort_keys=True, ensure_ascii=False) + "\n")
+
+
+def _read_zone_rankings(path: Path) -> dict[Period, list[ZoneRanking]]:
+    data = json.loads(path.read_text(encoding="utf-8"))
+    return {
+        Period(period_value): [
+            ZoneRanking(
+                requested_zone=zone_by_slug(r["requested_zone"]),
+                served_zone=zone_by_slug(r["served_zone"]),
+                ranked_clusters=r["ranked_clusters"],
+            )
+            for r in rankings
+        ]
+        for period_value, rankings in data.items()
+    }
+
+
 def _resume_cycle(
     cycle_path: Path,
-    pending: dict,
     collect_summarize_fn: Callable[..., WrittenSummarize | None],
 ) -> CycleResult:
     """The second-invocation half of AD-11's two-phase cycle: collect
     through history already ran (recorded in this same `cycle.json`) --
-    only check the pending batch, once, and never re-derive anything the
-    first invocation already wrote.
+    only check whichever languages' batches are still pending, and never
+    re-derive anything the first invocation already wrote.
+
+    Once every language has collected, this same invocation assembles and
+    publishes the 135-Briefing set (Story 3.5) -- publishing is the
+    terminal phase; nothing resumes after it for this `cycle_id`.
 
     Guarded the same way every stage in ``run_cycle`` is: a crash checking
-    the batch (a network blip, a malformed ``ranked.jsonl`` left by a
+    a batch (a network blip, a malformed ``ranked.jsonl`` left by a
     truncated earlier write) must degrade this run, not raise past it and
     leave ``cycle.json`` stuck mid-resume with no record of what happened
     (AD-10).
@@ -316,41 +435,94 @@ def _resume_cycle(
     record = json.loads(cycle_path.read_text(encoding="utf-8"))
     cycle_id = record["cycle_id"]
     data_root = cycle_path.parent.parent.parent
-    language = OutputLanguage(pending["language"])
-    ranked_path = Path(pending["ranked_path"])
-
     failures = [Failure(f["adapter"], f["detail"]) for f in record.get("failures", [])]
-    try:
-        clusters = list(read_jsonl(ranked_path)) if ranked_path.is_file() else []
-        collected = collect_summarize_fn(
-            pending["batch_id"],
-            clusters,
-            language=language,
-            cycle_id=cycle_id,
-            data_root=data_root,
-        )
-    except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
-        failures.append(Failure("cycle", f"checking summarize batch raised: {exc}"))
-        record["last_checked_at"] = datetime.now(UTC).isoformat()
-        record["degraded"] = True
-        record["failures"] = [f.to_dict() for f in failures]
-        phase = record["phase"]
-        collected = None
-    else:
-        if collected is None:
-            # Still pending -- record that a check happened, but do not touch
-            # the pending batch ID itself, so the *next* invocation resumes
-            # the same wait rather than starting a new batch (AD-11's exact
-            # words).
+
+    summaries_by_language: dict[OutputLanguage, dict[str, dict]] = {}
+    remaining_batches = dict(record.get("summarize_batches", {}))
+    # The one shared union path every language was submitted against
+    # (Story 3.5's fan-out decision) -- deliberately not re-derived from
+    # whichever batch_info happens to be last-iterated below, since a
+    # resume call with remaining_batches already empty (retrying publish
+    # only) never enters that loop at all and still needs this for
+    # CycleResult.rank_path.
+    ranked_path = output_dir_for("rank", cycle_id, root=data_root) / "ranked.jsonl"
+
+    for language_value, batch_info in list(remaining_batches.items()):
+        language = OutputLanguage(language_value)
+        batch_ranked_path = Path(batch_info["ranked_path"])
+        try:
+            clusters = list(read_jsonl(batch_ranked_path)) if batch_ranked_path.is_file() else []
+            collected = collect_summarize_fn(
+                batch_info["batch_id"],
+                clusters,
+                language=language,
+                cycle_id=cycle_id,
+                data_root=data_root,
+            )
+        except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
+            failures.append(
+                Failure("cycle", f"checking {language_value} summarize batch raised: {exc}")
+            )
             record["last_checked_at"] = datetime.now(UTC).isoformat()
-            phase = record["phase"]
-        else:
-            failures.extend(collected.failures)
-            record["phase"] = "summarize_collected"
-            record["summarize_batch"] = None  # resolved -- nothing left to resume
-            record["degraded"] = bool(failures)
+            continue
+
+        if collected is None:
+            # Still pending -- leave this language's entry in
+            # remaining_batches untouched, so the *next* invocation resumes
+            # the same wait rather than starting a new batch (AD-11's exact
+            # words). Record that a check happened, for observability.
+            record["last_checked_at"] = datetime.now(UTC).isoformat()
+            continue
+
+        failures.extend(collected.failures)
+        summaries_by_language[language] = _summaries_from_output(collected.output_path)
+        del remaining_batches[language_value]
+
+    record["summarize_batches"] = remaining_batches
+    record["degraded"] = bool(failures)
+    record["failures"] = [f.to_dict() for f in failures]
+
+    published = False
+    briefings_path: Path | None = None
+    if not remaining_batches:
+        # Every language has collected -- assemble and publish. A language
+        # collected on an earlier invocation left no trace of its own
+        # summaries here, so re-read every already-resolved language's
+        # summarized.jsonl too, not just the ones just collected this call.
+        for language in OUTPUT_LANGUAGES:
+            if language not in summaries_by_language:
+                output_path = (
+                    data_root
+                    / "intermediate"
+                    / "summarize"
+                    / cycle_id
+                    / language.value
+                    / "summarized.jsonl"
+                )
+                if output_path.is_file():
+                    summaries_by_language[language] = _summaries_from_output(output_path)
+
+        zone_rankings_path = output_dir_for("rank", cycle_id, root=data_root) / "zone_rankings.json"
+        try:
+            zone_rankings = _read_zone_rankings(zone_rankings_path)
+            briefings = assemble_briefings(
+                zone_rankings,
+                summaries_by_language,
+                generated_at=datetime.fromisoformat(record["started_at"]),
+            )
+            written: WrittenPublish = publish_briefings(briefings, data_root=data_root)
+            published = True
+            briefings_path = written.briefings_path
+            record["phase"] = "published"
+        except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
+            failures.append(Failure("cycle", f"publish raised: {exc}"))
+            record["degraded"] = True
             record["failures"] = [f.to_dict() for f in failures]
-            phase = "summarize_collected"
+            record["phase"] = "publish_failed"
+    phase = record["phase"]
+
+    record["published"] = published
+    record["briefings_path"] = str(briefings_path) if briefings_path else None
 
     cycle_path.write_text(
         json.dumps(record, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
@@ -371,7 +543,19 @@ def _resume_cycle(
         failures=tuple(failures),
         completed=record.get("completed", True),
         summarize_phase=phase,
+        published=published,
+        briefings_path=briefings_path,
     )
+
+
+def _summaries_from_output(output_path: Path) -> dict[str, dict]:
+    """The Cluster-to-summarized-fields map `assemble_briefings` needs,
+    rebuilt from an already-collected `summarized.jsonl` -- every collected
+    Cluster already carries `summary`, `outbound_url`, `outbound_source`
+    (Stories 3.1-3.3; FR-14). The whole dict is kept, not just `summary`,
+    so `assemble_briefings` can attach the outbound link too -- dropping it
+    here would silently defeat FR-14 for every published Briefing."""
+    return {c["cluster_id"]: c for c in read_jsonl(output_path) if "summary" in c}
 
 
 def main(argv: list[str] | None = None) -> int:

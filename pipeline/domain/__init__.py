@@ -302,10 +302,112 @@ class Briefing:
     served_zone: Zone | None = None
 
 
+# --- The on-disk shape of a published Briefing --------------------------
+
+
+_BRIEFING_RECORD_SCHEMA_VERSION = 1
+
+
+def _zone_from_dict(data: dict[str, str | None]) -> Zone:
+    return Zone(slug=data["slug"], kind=ZoneKind(data["kind"]), continent=data["continent"])
+
+
+@dataclass(frozen=True, slots=True)
+class BriefingRecord:
+    """A published Briefing exactly as it lives on disk, one JSON file per
+    (Output Language, Zone, Period) combination at
+    ``data/briefings/<lang>/<zone>/<period>.json`` (architecture spine,
+    Consistency Conventions).
+
+    Deliberately distinct from ``Briefing``: this pipeline's stages
+    (dedupe, cluster, rank, summarize) have never materialized
+    ``QualifyingCluster``/``Cluster``/``Event``/``Article`` — every stage
+    operates on plain dicts end to end. ``clusters`` here is that same dict
+    shape (whatever ``summarize``'s collected output already carries:
+    ``cluster_id``, ``members``, ``summary``, ``outbound_url``, ``rank``,
+    etc.), not a forced conversion into the richer domain objects
+    ``Briefing`` names — building that conversion layer would be new
+    complexity with no real consumer anywhere in the codebase.
+
+    ``schema_version`` exists because the architecture spine requires this
+    shape to be versioned: "A schema change is a version bump, never a
+    silent field edit." ``publish`` (Story 3.5) and the site (Epic 4) both
+    read against this one definition, so neither can drift from the other.
+    """
+
+    zone: Zone
+    period: Period
+    language: OutputLanguage
+    clusters: tuple[dict, ...]
+    generated_at: datetime
+    served_zone: Zone | None = None
+    # FR-8 (Discarded Volume: "how many Articles were ingested and how many
+    # were kept") is explicitly Epic 4's display responsibility, not Epic
+    # 3's -- these fields exist so the shape is ready for whichever future
+    # story computes real per-Zone-per-Period ingested/kept counts. Story
+    # 3.5's `publish.assemble_briefings` does not populate them (no stage
+    # yet computes a per-Zone-per-Period ingested/kept count to pass
+    # through); they default to 0, which must not be read as "nothing was
+    # filtered" until a future story wires real values through.
+    discarded_ingested: int = 0
+    discarded_kept: int = 0
+
+    def __post_init__(self) -> None:
+        if self.served_zone is None:
+            # FR-16's fallback is the exception, not the rule — every
+            # ordinary Briefing's served_zone equals what was requested,
+            # and requiring every caller to repeat the Zone twice for the
+            # common case would be pure ceremony.
+            object.__setattr__(self, "served_zone", self.zone)
+
+    def to_dict(self) -> dict:
+        return {
+            "schema_version": _BRIEFING_RECORD_SCHEMA_VERSION,
+            "zone": self.zone.slug,
+            "zone_kind": self.zone.kind.value,
+            "zone_continent": self.zone.continent,
+            "served_zone": self.served_zone.slug,
+            "served_zone_kind": self.served_zone.kind.value,
+            "served_zone_continent": self.served_zone.continent,
+            "period": self.period.value,
+            "language": self.language.value,
+            "clusters": list(self.clusters),
+            "discarded_ingested": self.discarded_ingested,
+            "discarded_kept": self.discarded_kept,
+            "generated_at": self.generated_at.isoformat(),
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict) -> BriefingRecord:
+        return cls(
+            zone=_zone_from_dict(
+                {
+                    "slug": data["zone"],
+                    "kind": data["zone_kind"],
+                    "continent": data["zone_continent"],
+                }
+            ),
+            served_zone=_zone_from_dict(
+                {
+                    "slug": data["served_zone"],
+                    "kind": data["served_zone_kind"],
+                    "continent": data["served_zone_continent"],
+                }
+            ),
+            period=Period(data["period"]),
+            language=OutputLanguage(data["language"]),
+            clusters=tuple(data["clusters"]),
+            discarded_ingested=data.get("discarded_ingested", 0),
+            discarded_kept=data.get("discarded_kept", 0),
+            generated_at=datetime.fromisoformat(data["generated_at"]),
+        )
+
+
 __all__ = [
     "Article",
     "ArticleRecord",
     "Briefing",
+    "BriefingRecord",
     "Cluster",
     "ConsensusScore",
     "DiscardedVolume",

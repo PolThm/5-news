@@ -36,7 +36,7 @@ def _history_path(history_root: Path) -> Path:
     return history_root / "clusters.jsonl"
 
 
-def _cycle_date(cycle_id: str) -> datetime | None:
+def cycle_date(cycle_id: str) -> datetime | None:
     """A cycle id is a UTC timestamp (``pipeline.stages.cycle_id_for``'s
     format); parsing it back is how history entries are dated without a
     separate stored field to keep in sync.
@@ -68,7 +68,7 @@ def read_history(
     cutoff = reference_date - timedelta(days=window_days)
     result = []
     for row in read_jsonl(path):
-        row_date = _cycle_date(row.get("cycle_id", ""))
+        row_date = cycle_date(row.get("cycle_id", ""))
         if row_date is not None and row_date >= cutoff:
             result.append(row)
     return result
@@ -126,7 +126,7 @@ def append_history(
                     }
                 )
 
-    reference_date = _cycle_date(cycle_id)
+    reference_date = cycle_date(cycle_id)
     if reference_date is None:
         # cycle_id is this cycle's own identifier -- normally always
         # well-formed (cycle_id_for()'s output), but --cycle-id is a
@@ -139,7 +139,7 @@ def append_history(
     cutoff = reference_date - timedelta(days=RETENTION_DAYS)
     retained = []
     for row in existing:
-        row_date = _cycle_date(row.get("cycle_id", ""))
+        row_date = cycle_date(row.get("cycle_id", ""))
         if row_date is not None and row_date >= cutoff:
             retained.append(row)
 

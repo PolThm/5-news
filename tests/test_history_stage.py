@@ -177,7 +177,7 @@ def test_append_with_an_empty_members_list_does_not_crash(tmp_path: Path) -> Non
 
 
 def test_a_malformed_cycle_id_in_history_is_skipped_not_crashed(tmp_path: Path) -> None:
-    """An adversarial review found _cycle_date had no error handling --
+    """An adversarial review found cycle_date had no error handling --
     data/history/clusters.jsonl is a long-lived, hand-editable, committed
     file with no schema enforcement, so a single malformed row must not
     crash every future read."""

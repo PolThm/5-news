@@ -1,5 +1,5 @@
-"""Running a full cycle: collect, then dedupe, then cluster, then record what
-happened.
+"""Running a full cycle: collect, dedupe, cluster, rank per Zone x Period,
+summarize per Output Language, then publish -- and record what happened.
 
 Story 1.5 turns the pipeline from something you invoke into something that
 accumulates. The Build Order's inspection window depends on days of real output
@@ -57,12 +57,71 @@ def _no_op_submit_summarize(
     not summarization -- a stub submission keeps them independent of the
     Claude adapter (its own test module) and of a real ANTHROPIC_API_KEY,
     which is never set in this test environment. Always "succeeds" with a
-    fixed batch ID so the cycle reaches summarize_submitted, not a degrade."""
+    batch ID derived from the language, so each of the 3 per-cycle
+    submissions gets a distinct id."""
     return WrittenSubmission(
-        batch_id="stub-batch-id",
-        metadata_path=data_root / "intermediate" / "summarize" / cycle_id / "submitting.json",
+        batch_id=f"stub-batch-{language.value}",
+        metadata_path=data_root
+        / "intermediate"
+        / "summarize"
+        / cycle_id
+        / language.value
+        / "submitting.json",
         submitted=True,
     )
+
+
+def _collect_that_never_completes(
+    batch_id: str, clusters: list[dict], language: OutputLanguage, cycle_id: str, data_root: Path
+) -> None:
+    return None
+
+
+def _make_collect_that_completes_for(*ready_languages: OutputLanguage):
+    """A fake collect_summarize_fn where only the named languages'
+    batches have "ended" -- everything else stays pending, so tests can
+    exercise the partial-resume case precisely."""
+
+    def _collect(
+        batch_id: str,
+        clusters: list[dict],
+        language: OutputLanguage,
+        cycle_id: str,
+        data_root: Path,
+    ) -> WrittenSummarize | None:
+        if language not in ready_languages:
+            return None
+        output_path = (
+            data_root
+            / "intermediate"
+            / "summarize"
+            / cycle_id
+            / language.value
+            / "summarized.jsonl"
+        )
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        lines = [
+            json.dumps(
+                {
+                    **c,
+                    "summary": f"{language.value} summary for {c['cluster_id']}",
+                    "outbound_url": f"https://example.com/{c['cluster_id']}",
+                    "outbound_source": "example.com",
+                }
+            )
+            for c in clusters
+        ]
+        output_path.write_text("\n".join(lines) + ("\n" if lines else ""), encoding="utf-8")
+        metadata_path = output_path.parent / "summarize.json"
+        metadata_path.write_text("{}", encoding="utf-8")
+        return WrittenSummarize(
+            output_path=output_path,
+            metadata_path=metadata_path,
+            clusters_summarized=len(clusters),
+            degraded=False,
+        )
+
+    return _collect
 
 
 def test_runs_collect_then_dedupe(tmp_path: Path) -> None:
@@ -380,6 +439,7 @@ def test_embedding_failure_degrades_the_cycle_but_it_still_completes(tmp_path: P
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
         embed=failing_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
     )
 
     assert result.completed is True
@@ -389,10 +449,10 @@ def test_embedding_failure_degrades_the_cycle_but_it_still_completes(tmp_path: P
 
 
 def test_runs_rank_after_cluster(tmp_path: Path) -> None:
-    """Story 2.2: the cycle now has a fourth stage. Two distinct dispatches
-    from different countries each land in their own singleton cluster, which
-    does not meet the 2-source/2-country qualifying floor -- 0 selected is
-    the correct, honest result, not a bug."""
+    """The cycle ranks across all 15 Zones x 3 Periods now (Story 3.5) --
+    two distinct dispatches from different countries each land in their own
+    singleton cluster, which does not meet the 2-source/2-country qualifying
+    floor -- 0 selected in the union is the correct, honest result."""
     result = run_cycle(
         collect=lambda: _collection(
             _record("Ceasefire agreed", "reuters.com", "united-kingdom"),
@@ -412,7 +472,7 @@ def test_runs_rank_after_cluster(tmp_path: Path) -> None:
 
 
 def test_rank_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
-    """Same guard pattern as collect/dedupe/cluster: rank is the fourth
+    """Same guard pattern as collect/dedupe/cluster: ranking is the fourth
     guarded step, and a crash in it must not prevent cycle.json from being
     written."""
     import pipeline.stages.cycle as cycle_module
@@ -420,8 +480,8 @@ def test_rank_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
     def explode(*args: object, **kwargs: object) -> None:
         raise RuntimeError("rank exploded")
 
-    original = cycle_module.run_rank
-    cycle_module.run_rank = explode  # type: ignore[assignment]
+    original = cycle_module.rank_all_zones
+    cycle_module.rank_all_zones = explode  # type: ignore[assignment]
     try:
         result = run_cycle(
             collect=lambda: _collection(_record("A", "a.com")),
@@ -431,11 +491,11 @@ def test_rank_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
             submit_summarize_fn=_no_op_submit_summarize,
         )
     finally:
-        cycle_module.run_rank = original  # type: ignore[assignment]
+        cycle_module.rank_all_zones = original  # type: ignore[assignment]
 
     assert result.completed is False
     assert result.rank_path is None, "a crashed stage must not report a path it never wrote"
-    assert result.cluster_path is not None, "cluster ran successfully before rank crashed"
+    assert result.cluster_path is not None, "cluster ran successfully before ranking crashed"
     record = json.loads(result.cycle_path.read_text())
     assert record["completed"] is False
     assert any("rank exploded" in f["detail"] for f in record["failures"])
@@ -493,13 +553,12 @@ def test_history_runs_after_rank_and_records_selected_clusters(tmp_path: Path) -
         assert len(records) == result.clusters_selected
 
 
-# --- Story 3.4: the two-phase summarize split ---------------------------------
+# --- Story 3.4/3.5: the two-phase, three-language summarize split -----------
 
 
-def test_a_fresh_cycle_submits_a_batch_and_stops_without_waiting(tmp_path: Path) -> None:
-    """AC1: phase one runs collect through history, then submits a batch and
-    exits -- it never calls collect_summarize_fn (there is nothing to check
-    yet on this same invocation)."""
+def test_a_fresh_cycle_submits_three_batches_and_stops_without_waiting(tmp_path: Path) -> None:
+    """AC5: phase one submits exactly one batch per Output Language (3
+    total, not 135) and exits -- it never calls collect_summarize_fn."""
 
     def collect_summarize_fn_that_must_not_be_called(*args, **kwargs):
         raise AssertionError("a fresh cycle must not check a batch it just submitted")
@@ -516,12 +575,13 @@ def test_a_fresh_cycle_submits_a_batch_and_stops_without_waiting(tmp_path: Path)
     assert result.completed is True
     assert result.summarize_phase == "summarize_submitted"
     record = json.loads(result.cycle_path.read_text())
-    assert record["summarize_batch"]["batch_id"] == "stub-batch-id"
+    assert set(record["summarize_batches"].keys()) == {"fr", "en", "es"}
+    assert record["summarize_batches"]["fr"]["batch_id"] == "stub-batch-fr"
 
 
 def test_a_resumed_cycle_skips_collect_through_history_entirely(tmp_path: Path) -> None:
-    """AC2/AC3: on the second invocation of the same cycle_id, collect
-    through history must not re-run -- only the pending batch is checked."""
+    """On the second invocation of the same cycle_id, collect through
+    history must not re-run -- only the pending batches are checked."""
     collect_calls = 0
 
     def counting_collect() -> CollectionResult:
@@ -529,7 +589,7 @@ def test_a_resumed_cycle_skips_collect_through_history_entirely(tmp_path: Path) 
         collect_calls += 1
         return _collection(_record("A", "a.com"))
 
-    first = run_cycle(
+    run_cycle(
         collect=counting_collect,
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
@@ -537,16 +597,6 @@ def test_a_resumed_cycle_skips_collect_through_history_entirely(tmp_path: Path) 
         submit_summarize_fn=_no_op_submit_summarize,
     )
     assert collect_calls == 1
-    assert first.summarize_phase == "summarize_submitted"
-
-    def fake_collect_summarize(
-        batch_id: str,
-        clusters: list[dict],
-        language: OutputLanguage,
-        cycle_id: str,
-        data_root: Path,
-    ) -> None:
-        return None  # still pending
 
     second = run_cycle(
         collect=counting_collect,
@@ -554,21 +604,16 @@ def test_a_resumed_cycle_skips_collect_through_history_entirely(tmp_path: Path) 
         data_root=tmp_path,
         embed=_no_op_embed,
         submit_summarize_fn=_no_op_submit_summarize,
-        collect_summarize_fn=fake_collect_summarize,
+        collect_summarize_fn=_collect_that_never_completes,
     )
 
     assert collect_calls == 1, "collect must not run again on a resumed invocation"
-    # Still pending -- the phase stays "summarize_submitted" (unresolved),
-    # matching AD-11's "leaves the pending state in place for a later run".
-    assert second.summarize_phase == "summarize_submitted"
+    assert second.published is False
 
 
-def test_a_resumed_cycle_not_yet_ended_leaves_the_pending_batch_id_unchanged(
-    tmp_path: Path,
-) -> None:
-    """AC3: the batch is not yet complete -- exit without collecting, and
-    the *next* invocation must find the same batch ID to resume, not a new
-    one and not none at all."""
+def test_a_partially_resolved_cycle_does_not_publish(tmp_path: Path) -> None:
+    """A cycle where only some languages have collected must not publish a
+    partial set -- it stays pending until every language resolves."""
     run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
@@ -577,13 +622,51 @@ def test_a_resumed_cycle_not_yet_ended_leaves_the_pending_batch_id_unchanged(
         submit_summarize_fn=_no_op_submit_summarize,
     )
 
-    def not_yet_ended(
+    result = run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        collect_summarize_fn=_make_collect_that_completes_for(OutputLanguage.FR),
+    )
+
+    assert result.published is False
+    record = json.loads(result.cycle_path.read_text())
+    assert set(record["summarize_batches"].keys()) == {"en", "es"}, (
+        "fr resolved and must be removed from the pending set; en/es remain"
+    )
+
+
+def test_a_second_resume_does_not_recheck_an_already_resolved_language(tmp_path: Path) -> None:
+    """Once a language's batch has collected, a later resumed invocation
+    must not call collect_summarize_fn for it again."""
+    run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+    run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        collect_summarize_fn=_make_collect_that_completes_for(OutputLanguage.FR),
+    )
+
+    checked_languages: list[OutputLanguage] = []
+
+    def recording_collect(
         batch_id: str,
         clusters: list[dict],
         language: OutputLanguage,
         cycle_id: str,
         data_root: Path,
     ) -> None:
+        checked_languages.append(language)
         return None
 
     run_cycle(
@@ -592,20 +675,129 @@ def test_a_resumed_cycle_not_yet_ended_leaves_the_pending_batch_id_unchanged(
         data_root=tmp_path,
         embed=_no_op_embed,
         submit_summarize_fn=_no_op_submit_summarize,
-        collect_summarize_fn=not_yet_ended,
+        collect_summarize_fn=recording_collect,
     )
 
-    record = json.loads(
-        (tmp_path / "intermediate" / "2026-08-11T00-00-00Z" / "cycle.json").read_text()
+    assert OutputLanguage.FR not in checked_languages
+    assert set(checked_languages) == {OutputLanguage.EN, OutputLanguage.ES}
+
+
+def test_a_cycle_where_all_three_languages_collect_publishes(tmp_path: Path) -> None:
+    """AC1: once every language's batch has ended, the cycle assembles and
+    publishes the full Briefing set atomically."""
+    run_cycle(
+        collect=lambda: _collection(
+            _record("Ceasefire agreed", "reuters.com", "united-kingdom"),
+            _record("Ceasefire agreed", "lemonde.fr", "france"),
+        ),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
     )
-    assert record["summarize_batch"]["batch_id"] == "stub-batch-id"
+
+    result = run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        collect_summarize_fn=_make_collect_that_completes_for(
+            OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES
+        ),
+    )
+
+    assert result.published is True
+    assert result.summarize_phase == "published"
+    assert result.briefings_path == tmp_path / "briefings"
+    assert (tmp_path / "briefings" / "fr" / "world" / "day.json").is_file()
+    record = json.loads(result.cycle_path.read_text())
+    assert record["summarize_batches"] == {}
+    assert record["published"] is True
 
 
-def test_a_resumed_cycle_whose_batch_has_ended_collects_and_updates_the_phase(
+def test_a_published_briefing_carries_its_clusters_outbound_link(tmp_path: Path) -> None:
+    """FR-14: a reader always has a genuine Article to click through to --
+    the outbound_url/outbound_source summarize attaches per Cluster must
+    survive all the way through publish, into the file actually served."""
+    import pipeline.stages.cycle as cycle_module
+    from pipeline.stages.cluster import WrittenCluster
+
+    qualifying_cluster = {
+        "cluster_id": "qualifying",
+        "members": [
+            {
+                "title": "Ceasefire declared",
+                "url": "https://reuters.com/1",
+                "source": "reuters.com",
+                "source_country": "united-kingdom",
+                "language": "en",
+            },
+            {
+                "title": "Regional truce",
+                "url": "https://lemonde.fr/2",
+                "source": "lemonde.fr",
+                "source_country": "france",
+                "language": "fr",
+            },
+        ],
+        "independent_source_count": 2,
+        "country_count": 2,
+        "countries": ["france", "united-kingdom"],
+        "origin_country": "united-kingdom",
+    }
+
+    original_run_cluster = cycle_module.run_cluster
+
+    def fake_run_cluster(*args, **kwargs) -> WrittenCluster:
+        written = original_run_cluster(*args, **kwargs)
+        from pipeline.stages import write_jsonl
+
+        write_jsonl(written.output_path, [qualifying_cluster])
+        return WrittenCluster(
+            output_path=written.output_path,
+            metadata_path=written.metadata_path,
+            clusters_out=1,
+            degraded=written.degraded,
+        )
+
+    cycle_module.run_cluster = fake_run_cluster
+    try:
+        run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+            submit_summarize_fn=_no_op_submit_summarize,
+        )
+    finally:
+        cycle_module.run_cluster = original_run_cluster
+
+    run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        collect_summarize_fn=_make_collect_that_completes_for(
+            OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES
+        ),
+    )
+
+    published = json.loads((tmp_path / "briefings" / "fr" / "world" / "day.json").read_text())
+    assert published["clusters"], "the published Briefing must carry at least one Cluster"
+    for cluster in published["clusters"]:
+        assert cluster["outbound_url"] == f"https://example.com/{cluster['cluster_id']}"
+        assert cluster["outbound_source"] == "example.com"
+
+
+def test_a_publish_failure_is_retried_on_the_next_resume_without_resubmitting(
     tmp_path: Path,
 ) -> None:
-    """AC2: once the batch has completed, phase two collects results and
-    the cycle's phase reflects that -- no re-running of any earlier stage."""
+    """AD-10/AD-7: a publish failure must degrade, not discard the
+    already-collected summaries and force the whole cycle to restart from
+    collect. The next invocation must retry publish directly -- it must not
+    re-submit or re-collect any language's batch."""
     run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
@@ -614,45 +806,53 @@ def test_a_resumed_cycle_whose_batch_has_ended_collects_and_updates_the_phase(
         submit_summarize_fn=_no_op_submit_summarize,
     )
 
-    def now_ended(
-        batch_id: str,
-        clusters: list[dict],
-        language: OutputLanguage,
-        cycle_id: str,
-        data_root: Path,
-    ) -> WrittenSummarize:
-        output_path = (
-            data_root
-            / "intermediate"
-            / "summarize"
-            / cycle_id
-            / language.value
-            / "summarized.jsonl"
-        )
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text("")
-        metadata_path = output_path.parent / "summarize.json"
-        metadata_path.write_text("{}")
-        return WrittenSummarize(
-            output_path=output_path,
-            metadata_path=metadata_path,
-            clusters_summarized=0,
-            degraded=False,
-        )
+    def submit_fn_that_must_not_be_called(*args, **kwargs):
+        raise AssertionError("a cycle retrying publish must not re-submit any batch")
 
-    result = run_cycle(
+    class _Boom(Exception):
+        pass
+
+    import pipeline.stages.cycle as cycle_module
+
+    original_publish = cycle_module.publish_briefings
+
+    def raising_publish(*args, **kwargs):
+        raise _Boom("simulated publish crash")
+
+    cycle_module.publish_briefings = raising_publish
+    try:
+        first_resume = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+            submit_summarize_fn=submit_fn_that_must_not_be_called,
+            collect_summarize_fn=_make_collect_that_completes_for(
+                OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES
+            ),
+        )
+    finally:
+        cycle_module.publish_briefings = original_publish
+
+    assert first_resume.published is False
+    assert first_resume.completed is True
+    record = json.loads(first_resume.cycle_path.read_text())
+    assert record["degraded"] is True
+    assert any("publish raised" in f["detail"] for f in record["failures"])
+
+    second_resume = run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
         embed=_no_op_embed,
-        submit_summarize_fn=_no_op_submit_summarize,
-        collect_summarize_fn=now_ended,
+        submit_summarize_fn=submit_fn_that_must_not_be_called,
+        collect_summarize_fn=_make_collect_that_completes_for(
+            OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES
+        ),
     )
 
-    assert result.summarize_phase == "summarize_collected"
-    record = json.loads(result.cycle_path.read_text())
-    assert record["phase"] == "summarize_collected"
-    assert record["summarize_batch"] is None  # resolved -- nothing left to resume
+    assert second_resume.published is True
+    assert (tmp_path / "briefings" / "fr" / "world" / "day.json").is_file()
 
 
 def test_no_phase_of_the_cycle_ever_calls_time_sleep(tmp_path: Path, monkeypatch) -> None:
@@ -673,37 +873,24 @@ def test_no_phase_of_the_cycle_ever_calls_time_sleep(tmp_path: Path, monkeypatch
         submit_summarize_fn=_no_op_submit_summarize,
     )
 
-    def not_yet_ended(
-        batch_id: str,
-        clusters: list[dict],
-        language: OutputLanguage,
-        cycle_id: str,
-        data_root: Path,
-    ) -> None:
-        return None
-
     run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
         embed=_no_op_embed,
         submit_summarize_fn=_no_op_submit_summarize,
-        collect_summarize_fn=not_yet_ended,
+        collect_summarize_fn=_collect_that_never_completes,
     )
 
 
-# --- Post-review fixes: resume-phase failures must degrade, never crash,
-# and a collected batch's own failures must reach cycle.json ------------------
+# --- Post-review fixes carried over from Story 3.4 --------------------------
 
 
 def test_a_resume_check_that_raises_degrades_the_cycle_instead_of_crashing(
     tmp_path: Path,
 ) -> None:
     """AD-10: every other guarded step in run_cycle degrades on an
-    exception rather than letting it propagate. The resume half
-    (_resume_cycle) had no such guard around collect_summarize_fn -- a
-    transient failure there (network blip, bad ranked.jsonl) used to crash
-    run_cycle entirely instead of recording a Failure and returning."""
+    exception rather than letting it propagate."""
     run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
@@ -739,10 +926,7 @@ def test_a_resume_check_that_raises_degrades_the_cycle_instead_of_crashing(
 
 def test_a_collected_batchs_failures_are_folded_into_the_cycle_record(tmp_path: Path) -> None:
     """A batch that ends with every Cluster degraded must mark cycle.json
-    as degraded too -- previously, collect_summarize's WrittenSummarize
-    carried these Failures but _resume_cycle discarded them, leaving
-    cycle.json's own degraded flag false even though summarization for
-    every Cluster had just failed."""
+    as degraded too."""
     run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
@@ -775,7 +959,7 @@ def test_a_collected_batchs_failures_are_folded_into_the_cycle_record(tmp_path: 
             metadata_path=metadata_path,
             clusters_summarized=0,
             degraded=True,
-            failures=(Failure("claude", "batch failed entirely"),),
+            failures=(Failure("claude", f"batch failed entirely for {language.value}"),),
         )
 
     result = run_cycle(

@@ -32,6 +32,7 @@ ADAPTER = "rss"
 
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 DC_NS = "{http://purl.org/dc/elements/1.1/}"
+RDF_NS = "{http://purl.org/rss/1.0/}"
 
 # Story 2.3 (FR-10 layer 2): a narrow, RSS-only wire-attribution signal.
 #
@@ -149,8 +150,9 @@ def parse_rfc2822(value: str) -> datetime:
     return parsed.astimezone(UTC)
 
 
-def _parse_atom_date(value: str) -> datetime:
-    """Atom uses ISO-8601 rather than RFC 2822."""
+def _parse_iso8601_date(value: str) -> datetime:
+    """Atom's updated/published, and RSS 1.0/RDF's dc:date, use ISO-8601
+    rather than RSS 2.0's RFC 2822."""
     parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=UTC)
@@ -170,13 +172,36 @@ def parse_feed(body: str, source: str, source_country: str, language: str) -> li
         return []
 
     records: list[ArticleRecord] = []
+    seen_links: set[str] = set()
 
-    for item in root.iter("item"):  # RSS
+    # RSS 2.0's <item> is unprefixed; RSS 1.0/RDF's is namespaced under
+    # http://purl.org/rss/1.0/ (confirmed live on dw.com, whose <rdf:RDF>
+    # root declares that as the default namespace). A feed is one or the
+    # other, never both, but iterating both tags unconditionally is
+    # harmless -- an RSS 2.0 feed has zero RDF_NS-prefixed items and vice
+    # versa. seen_links guards against ElementTree.iter() ever double-
+    # visiting an element under two equivalent tag spellings.
+    for item in [*root.iter("item"), *root.iter(f"{RDF_NS}item")]:
+        link = item.findtext("link") or item.findtext(f"{RDF_NS}link")
+        if link and link in seen_links:
+            continue
+        # RSS 2.0 dates items with pubDate (RFC 2822). RSS 1.0/RDF has no
+        # pubDate at all and uses Dublin Core's dc:date (ISO-8601) instead —
+        # the same namespace this adapter already reads dc:creator from.
+        # Without this fallback, every item from an RDF feed fails
+        # _record_from's "no date, no record" check and is silently
+        # dropped, which is exactly what happened to dw.com before this was
+        # noticed against a real cycle.
+        pub_date = item.findtext("pubDate")
+        if pub_date:
+            date_text, date_parser = pub_date, parse_rfc2822
+        else:
+            date_text, date_parser = item.findtext(f"{DC_NS}date"), _parse_iso8601_date
         record = _record_from(
-            title=item.findtext("title"),
-            link=item.findtext("link"),
-            date_text=item.findtext("pubDate"),
-            date_parser=parse_rfc2822,
+            title=item.findtext("title") or item.findtext(f"{RDF_NS}title"),
+            link=link,
+            date_text=date_text,
+            date_parser=date_parser,
             source=source,
             source_country=source_country,
             language=language,
@@ -184,6 +209,8 @@ def parse_feed(body: str, source: str, source_country: str, language: str) -> li
         )
         if record:
             records.append(record)
+            if link:
+                seen_links.add(link)
 
     # Atom entries do not get dc:creator extraction: none of the currently
     # configured feeds are Atom, and Dublin Core-in-Atom is a separate,
@@ -194,7 +221,7 @@ def parse_feed(body: str, source: str, source_country: str, language: str) -> li
             title=entry.findtext(f"{ATOM_NS}title"),
             link=link_element.get("href") if link_element is not None else None,
             date_text=entry.findtext(f"{ATOM_NS}updated") or entry.findtext(f"{ATOM_NS}published"),
-            date_parser=_parse_atom_date,
+            date_parser=_parse_iso8601_date,
             source=source,
             source_country=source_country,
             language=language,

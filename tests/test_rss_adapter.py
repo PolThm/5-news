@@ -50,6 +50,26 @@ SAMPLE_ATOM = """<?xml version="1.0" encoding="UTF-8"?>
 </feed>
 """
 
+# RSS 1.0 / RDF, the shape confirmed live on dw.com's actual feed. Every
+# element -- item, title, link -- is namespaced under rss/1.0, and there is
+# no pubDate at all; dc:date is the only date signal. Before Story 2.7's
+# post-completion inspection caught this against a real cycle (0 records
+# parsed from a genuinely live feed), every item here silently vanished.
+SAMPLE_RDF = """<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://purl.org/rss/1.0/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel rdf:about="https://example.com/feed">
+    <title>Example RDF Feed</title>
+  </channel>
+  <item rdf:about="https://example.com/rdf-1">
+    <title>An RDF item</title>
+    <link>https://example.com/rdf-1</link>
+    <dc:date>2026-08-12T08:57:00Z</dc:date>
+  </item>
+</rdf:RDF>
+"""
+
 
 # --- Parsing -----------------------------------------------------------------
 
@@ -353,3 +373,25 @@ def test_resolve_wire_agency_matches_common_decorated_bylines() -> None:
     assert resolve_wire_agency("Reuters Editorial") == "Reuters"
     assert resolve_wire_agency("AP News") == "AP"
     assert resolve_wire_agency("By AFP") == "AFP"
+
+
+# --- RSS 1.0 / RDF support (post-Epic-2 real-cycle finding) -------------------
+
+
+def test_parses_rdf_items_with_dc_date_fallback() -> None:
+    """Confirmed against a real, live dw.com fetch: RSS 1.0/RDF has no
+    pubDate and uses dc:date instead, under a fully namespaced <item>."""
+    records = parse_feed(SAMPLE_RDF, source="dw.com", source_country="germany", language="en")
+
+    assert len(records) == 1
+    assert records[0].title == "An RDF item"
+    assert records[0].url == "https://example.com/rdf-1"
+    assert records[0].published_at.isoformat() == "2026-08-12T08:57:00+00:00"
+
+
+def test_rdf_and_rss20_feeds_do_not_interfere_with_each_other() -> None:
+    """The two <item> tag spellings (unprefixed vs RDF_NS-prefixed) are
+    scanned unconditionally in the same pass -- confirm an ordinary RSS 2.0
+    feed still parses correctly and isn't double-counted."""
+    records = parse_feed(SAMPLE_RSS, source="lemonde.fr", source_country="france", language="fr")
+    assert len(records) == 2

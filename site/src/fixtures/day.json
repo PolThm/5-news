@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "zone": "world",
+  "zone_kind": "world",
+  "zone_continent": null,
+  "served_zone": "world",
+  "served_zone_kind": "world",
+  "served_zone_continent": null,
+  "period": "day",
+  "language": "fr",
+  "clusters": [
+    {
+      "cluster_id": "ceasefire-2026-08-11",
+      "members": [
+        {
+          "title": "Ceasefire declared in the region",
+          "url": "https://reuters.com/world/ceasefire-declared",
+          "source": "Reuters",
+          "source_country": "united-kingdom",
+          "language": "en"
+        },
+        {
+          "title": "Un cessez-le-feu entre en vigueur",
+          "url": "https://lemonde.fr/international/cessez-le-feu",
+          "source": "Le Monde",
+          "source_country": "france",
+          "language": "fr"
+        }
+      ],
+      "independent_source_count": 7,
+      "country_count": 5,
+      "countries": ["australia", "brazil", "france", "japan", "united-kingdom"],
+      "origin_country": "united-kingdom",
+      "rank": 1,
+      "summary": "Un cessez-le-feu entre en vigueur après trois jours de négociations. Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.",
+      "outbound_url": "https://reuters.com/world/ceasefire-declared",
+      "outbound_source": "Reuters"
+    },
+    {
+      "cluster_id": "central-bank-rate-2026-08-11",
+      "members": [
+        {
+          "title": "Central bank raises rates for the third time this year",
+          "url": "https://lemonde.fr/economie/taux-directeur",
+          "source": "Le Monde",
+          "source_country": "france",
+          "language": "fr"
+        }
+      ],
+      "independent_source_count": 5,
+      "country_count": 4,
+      "countries": ["france", "germany", "japan", "united-states"],
+      "origin_country": "france",
+      "rank": 2,
+      "summary": "La banque centrale relève son taux directeur pour la troisième fois cette année. La décision, largement anticipée par les marchés, vise à contenir une inflation restée supérieure à l'objectif fixé.",
+      "outbound_url": "https://lemonde.fr/economie/taux-directeur",
+      "outbound_source": "Le Monde"
+    },
+    {
+      "cluster_id": "space-mission-2026-08-11",
+      "members": [
+        {
+          "title": "Joint space mission reports first samples",
+          "url": "https://apnews.com/science/mission-samples",
+          "source": "Associated Press",
+          "source_country": "united-states",
+          "language": "en"
+        }
+      ],
+      "independent_source_count": 4,
+      "country_count": 3,
+      "countries": ["france", "japan", "united-states"],
+      "origin_country": "united-states",
+      "rank": 3,
+      "summary": "Une mission spatiale conjointe rapporte ses premiers échantillons. L'équipe scientifique évoque des résultats préliminaires prometteurs, sans encore confirmer d'ici combien de mois une analyse complète sera publiée.",
+      "outbound_url": "https://apnews.com/science/mission-samples",
+      "outbound_source": "Associated Press"
+    },
+    {
+      "cluster_id": "trade-agreement-2026-08-11",
+      "members": [
+        {
+          "title": "Regional trade agreement signed after two years of talks",
+          "url": "https://dw.com/economie/accord-commercial",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "language": "de"
+        }
+      ],
+      "independent_source_count": 3,
+      "country_count": 2,
+      "countries": ["china", "germany"],
+      "origin_country": "germany",
+      "rank": 4
+    }
+  ],
+  "discarded_ingested": 1384,
+  "discarded_kept": 4,
+  "generated_at": "2026-08-11T06:14:00+00:00"
+}

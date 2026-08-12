@@ -1,0 +1,41 @@
+---
+// The dynamic [lang]/[zone]/[period] route the architecture spine names
+// explicitly (ARCHITECTURE-SPINE.md, Structural Seed). Story 4.2's own
+// scope: only the World Zone, French language, all 3 Periods -- Story
+// 4.3 (Zone) and 4.7 (Language) extend getStaticPaths()'s enumeration,
+// not this file's rendering logic, which is already generic across all
+// three axes via BriefingPage.
+//
+// AD-1/AD-2: reads only data/briefings/ at build time, no client-side
+// fetch, no AI/embedding/ingestion/third-party call.
+import { join } from "node:path";
+import BriefingPage from "../../../components/BriefingPage.astro";
+import { loadBriefing } from "../../../lib/loadBriefing";
+import type { Period } from "../../../lib/briefing";
+
+interface RouteParams {
+  lang: string;
+  zone: string;
+  period: Period;
+}
+
+export function getStaticPaths(): { params: RouteParams }[] {
+  // Hardcoded to this story's own scope (world/fr, all 3 Periods) rather
+  // than importing pipeline.config's ZONES/OUTPUT_LANGUAGES -- site/ must
+  // never import from pipeline/ (scripts/check-boundary.sh forbids any
+  // cross-reference). Story 4.3/4.7 extend this same array, not the
+  // rendering below.
+  const periods: Period[] = ["day", "week", "month"];
+  return periods.map((period) => ({ params: { lang: "fr", zone: "world", period } }));
+}
+
+const { lang, zone, period } = Astro.params as RouteParams;
+
+const SITE_ROOT = process.cwd();
+const REAL_PATH = join(SITE_ROOT, "..", "data", "briefings", lang, zone, `${period}.json`);
+const FIXTURE_PATH = join(SITE_ROOT, "src", "fixtures", `${period}.json`);
+
+const briefing = loadBriefing(REAL_PATH, FIXTURE_PATH);
+---
+
+<BriefingPage briefing={briefing} lang={lang} zone={zone} period={period} />

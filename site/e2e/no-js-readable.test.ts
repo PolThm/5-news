@@ -5,12 +5,19 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 // AC4: the Briefing content is readable with JavaScript unavailable. Proven
 // here by building the real static output and asserting on the HTML
-// directly, rather than driving a real browser with JS disabled (Playwright)
-// -- this page has no client-side logic at all in this story, so a text-
-// level assertion on the built HTML is exactly as strong a proof and adds no
-// new test-runner dependency. Revisit with Playwright once a later story
-// (4.2/4.3) introduces real client-side interactivity worth exercising in a
-// browser.
+// directly, rather than driving a real browser with JS disabled (Playwright).
+//
+// Story 4.2 adds real client-side interactivity (the Period-switcher
+// island), but the no-JS proof this suite exists for doesn't change: content
+// and every mad-libs word's href are still fully present and correct in the
+// server-rendered HTML with zero script execution -- these are static-HTML
+// assertions, not a running browser. Introducing Playwright now, for one
+// click handler, would be a disproportionate new dependency for a solo
+// project; period-switcher.ts's pure functions (URL/text computation) are
+// unit-tested directly instead (see islands/__tests__/period-switcher.test.ts),
+// and its DOM-touching `attach()`/`handleClick()` are exercised only by
+// manual verification in this story (see Dev Notes). Revisit Playwright if a
+// future story needs to assert real click-driven DOM mutation in a browser.
 
 const SITE_ROOT = join(__dirname, "..");
 const DIST_INDEX = join(SITE_ROOT, "dist", "index.html");
@@ -24,8 +31,20 @@ describe("no-JS readability of the built page", () => {
     html = readFileSync(DIST_INDEX, "utf-8");
   });
 
-  it("ships no <script> tag at all", () => {
-    expect(html).not.toMatch(/<script/i);
+  it("ships exactly one <script> tag, the Period-switcher island (progressive enhancement only)", () => {
+    const scriptTags = html.match(/<script[^>]*>/gi) ?? [];
+    expect(scriptTags).toHaveLength(1);
+    // Astro inlines the module's compiled body directly rather than an
+    // external src="..." reference (see the built output) -- assert on a
+    // symbol from the island's own compiled code instead of a filename.
+    expect(html).toContain("data-period-word");
+    expect(html).toMatch(/briefings\/\$\{|\/briefings\//);
+  });
+
+  it("renders the Period word as a real <a href> to the equivalent static route, not a placeholder", () => {
+    expect(html).toMatch(
+      /<a class="word" data-period-word data-lang="fr" data-zone="world" data-period="day" href="\/fr\/world\/week"[^>]*>aujourd&#39;hui<\/a>/
+    );
   });
 
   it("includes every item's Summary text as plain HTML content", () => {
@@ -83,7 +102,13 @@ describe("empty clusters array (AC6)", () => {
       const html = readFileSync(DIST_INDEX, "utf-8");
       expect(html).toContain("5 NEWS");
       expect(html).toContain("Voici ce qui se passe dans");
-      expect(html).not.toMatch(/class="item"/);
+      // Strip the inlined island's <script> body before this check -- its
+      // compiled source contains the literal string `class="item"` as part
+      // of the item-rendering template it carries for later client-side use
+      // (Story 4.2), which is unrelated to whether any .item div was
+      // actually server-rendered onto the page.
+      const htmlWithoutScripts = html.replace(/<script[\s\S]*?<\/script>/gi, "");
+      expect(htmlWithoutScripts).not.toMatch(/class="item"[ >]/);
     } finally {
       writeFileSync(FIXTURE_PATH, originalFixture);
     }

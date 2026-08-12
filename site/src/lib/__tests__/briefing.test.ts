@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { hasValidAttribution } from "../briefing";
+import { hasValidAttribution, nextPeriod, periodSentenceText } from "../briefing";
 
 describe("hasValidAttribution", () => {
   it("accepts a well-formed http(s) URL with a non-empty source", () => {
@@ -38,5 +38,21 @@ describe("hasValidAttribution", () => {
     expect(
       hasValidAttribution({ outbound_url: "https://example.com/a", outbound_source: "" })
     ).toBe(false);
+  });
+});
+
+describe("nextPeriod", () => {
+  it("cycles day -> week -> month -> day", () => {
+    expect(nextPeriod("day")).toBe("week");
+    expect(nextPeriod("week")).toBe("month");
+    expect(nextPeriod("month")).toBe("day");
+  });
+});
+
+describe("periodSentenceText", () => {
+  it("returns the French mad-libs word for each Period", () => {
+    expect(periodSentenceText("day")).toBe("aujourd'hui");
+    expect(periodSentenceText("week")).toBe("cette semaine");
+    expect(periodSentenceText("month")).toBe("ce mois");
   });
 });

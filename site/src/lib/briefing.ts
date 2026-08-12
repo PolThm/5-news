@@ -54,6 +54,33 @@ export interface BriefingRecord {
   generated_at: string;
 }
 
+// The day -> week -> month -> day cycle Story 4.2's mad-libs Period word
+// advances through on each click (FR-2). A plain array-index cycle, not a
+// lookup table with explicit next-pointers, since three elements never
+// need more machinery than that -- kept here (not in a page/component) so
+// both the server-rendered link's href and the client island's click
+// handler compute the identical next value from one source of truth.
+const PERIOD_CYCLE: readonly Period[] = ["day", "week", "month"];
+
+export function nextPeriod(current: Period): Period {
+  const index = PERIOD_CYCLE.indexOf(current);
+  return PERIOD_CYCLE[(index + 1) % PERIOD_CYCLE.length];
+}
+
+// The mad-libs sentence's Period word text, per Period -- distinct from
+// the Period's own URL slug ("day"/"week"/"month"), which is never shown
+// to a reader. French only in this story's scope (Story 4.7 owns Output
+// Language switching); a future story generalizes this per language.
+const PERIOD_SENTENCE_TEXT: Record<Period, string> = {
+  day: "aujourd'hui",
+  week: "cette semaine",
+  month: "ce mois",
+};
+
+export function periodSentenceText(period: Period): string {
+  return PERIOD_SENTENCE_TEXT[period];
+}
+
 /**
  * Whether a Cluster's outbound link is safe and complete enough to render.
  *

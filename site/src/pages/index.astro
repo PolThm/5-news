@@ -1,18 +1,17 @@
 ---
-// Story 4.1: the World / day / French default route.
+// Story 4.1: the World / day / French default route, kept as its own
+// dedicated fast-path entry point at `/` (Story 4.1's own AC1: "no
+// client-side fetch required") -- Story 4.2 introduces the equivalent
+// `/fr/world/day` as a separate, equally-valid direct-link target under
+// the dynamic route; both are static files, so this costs nothing at
+// build time. See that story's Dev Notes for the explicit decision.
 //
 // Nothing here calls an AI, embedding, ingestion, or third-party API -- at
 // build time or request time (AD-1). The only input is the JSON the pipeline
 // writes to data/briefings/ (AD-2), read once at build time below -- never
 // fetched client-side.
-//
-// Scope, per the story: the mad-libs words (Zone, Period) render as static
-// styled text, not yet clickable -- Story 4.2/4.3 own making them
-// interactive. The Output Language control renders but is inert -- Story
-// 4.7 owns its behavior. Discarded Volume and the End Screen are not
-// rendered at all in this story -- Stories 4.4/4.5 own them.
 import { join } from "node:path";
-import { hasValidAttribution } from "../lib/briefing";
+import BriefingPage from "../components/BriefingPage.astro";
 import { loadBriefing } from "../lib/loadBriefing";
 
 // import.meta.url is not safe to build paths from here: Astro bundles this
@@ -24,184 +23,6 @@ const REAL_PATH = join(SITE_ROOT, "..", "data", "briefings", "fr", "world", "day
 const FIXTURE_PATH = join(SITE_ROOT, "src", "fixtures", "day.json");
 
 const briefing = loadBriefing(REAL_PATH, FIXTURE_PATH);
-
-// This page is generated once at build time, server-side, with no client
-// JS -- there is no way to know a visiting reader's real timezone without
-// a client-side script, which is explicitly out of scope for this story.
-// Stating the time as UTC explicitly is honest about that; silently
-// rendering UTC clock digits as if they were the reader's local time (the
-// original version of this function) would be wrong for every reader not
-// in UTC+0, with no indication of the error. Revisit if a later story
-// (e.g. one that already ships client JS for another reason) adds real
-// timezone conversion.
-function formatTimestamp(iso: string): string {
-  const date = new Date(iso);
-  const hours = String(date.getUTCHours()).padStart(2, "0");
-  const minutes = String(date.getUTCMinutes()).padStart(2, "0");
-  return `Mis à jour à ${hours}:${minutes} UTC`;
-}
 ---
 
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>5 News</title>
-    <style>
-      /*
-        Governed by: DESIGN.md (Colors, Typography, Layout & Spacing,
-        Shapes, Components) and EXPERIENCE.md (Information Architecture,
-        State Patterns: "Cold load", Accessibility Floor).
-      */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background: #faf9f6;
-        color: #1a1a18;
-        font-family: "IBM Plex Sans", Arial, sans-serif;
-        font-size: 15px;
-        line-height: 1.5;
-      }
-      .page {
-        max-width: 680px;
-        margin: 0 auto;
-        padding: 0 16px;
-      }
-      @media (min-width: 720px) {
-        .page {
-          padding: 0 48px;
-        }
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 0 12px;
-        border-bottom: 1px solid #e7e4dc;
-      }
-      .mark {
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 0.08em;
-      }
-      .lang {
-        display: flex;
-        gap: 10px;
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-      }
-      .lang span {
-        color: #777265;
-      }
-      .lang span.active {
-        color: #1f4d3d;
-      }
-      .sentence-block {
-        padding: 24px 0 8px;
-      }
-      h1 {
-        font-family: "Source Serif 4", Georgia, serif;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 1.25;
-        color: #1a1a18;
-      }
-      h1 .word {
-        color: #1f4d3d;
-        text-decoration: underline dotted 2px;
-        text-decoration-color: #8fc2ac;
-        text-underline-offset: 3px;
-      }
-      .timestamp {
-        margin-top: 8px;
-        font-size: 13px;
-        color: #4d4a42;
-      }
-      .item-list {
-        padding: 8px 0 0;
-      }
-      .item {
-        padding: 24px 0;
-        border-bottom: 1px solid #e7e4dc;
-      }
-      .item:last-of-type {
-        border-bottom: none;
-      }
-      .item p.summary {
-        font-family: "Source Serif 4", Georgia, serif;
-        font-size: 19px;
-        line-height: 1.5;
-        color: #1a1a18;
-        margin-bottom: 12px;
-      }
-      .chip {
-        display: inline-block;
-        font-family: "IBM Plex Mono", "Courier New", monospace;
-        font-size: 14px;
-        font-weight: 500;
-        background: #eeece5;
-        color: #1a1a18;
-        border-radius: 3px;
-        padding: 4px 10px;
-        margin-bottom: 10px;
-      }
-      .chip .num {
-        color: #1f4d3d;
-      }
-      .attribution {
-        display: block;
-        font-size: 13px;
-        color: #4d4a42;
-      }
-      .attribution a {
-        color: #1a1a18;
-        text-decoration: underline;
-        font-weight: 500;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="page">
-      <header>
-        <div class="mark">5 NEWS</div>
-        <div class="lang" aria-hidden="true">
-          <span class="active">FR</span><span>EN</span><span>ES</span>
-        </div>
-      </header>
-
-      <div class="sentence-block">
-        <h1>
-          Voici ce qui se passe dans <span class="word">le Monde</span>, <span
-            class="word">aujourd'hui</span
-          >.
-        </h1>
-        <div class="timestamp">{formatTimestamp(briefing.generated_at)}</div>
-      </div>
-
-      <div class="item-list">
-        {
-          briefing.clusters.map((cluster) => (
-            <div class="item">
-              {cluster.summary && <p class="summary">{cluster.summary}</p>}
-              <span class="chip">
-                <span class="num">{cluster.independent_source_count}</span> sources
-                indépendantes · <span class="num">{cluster.country_count}</span> pays
-              </span>
-              {hasValidAttribution(cluster) && (
-                <span class="attribution">
-                  Rapporté par <em>{cluster.outbound_source}</em> —{" "}
-                  <a href={cluster.outbound_url}>lire l'article original →</a>
-                </span>
-              )}
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </body>
-</html>
+<BriefingPage briefing={briefing} lang="fr" zone="world" period="day" />

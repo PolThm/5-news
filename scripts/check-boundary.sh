@@ -71,6 +71,28 @@ if [ -d site ]; then
   fi
 fi
 
+# --- 4. site/ referencing an AI/embedding/ingestion provider (AD-1) ----------
+# Story 3.6: the site's whole point is that it makes no AI, embedding, or
+# ingestion call at build time or request time -- its only input is the
+# static JSON the pipeline already wrote under data/briefings/. This is a
+# tripwire for Epic 4 (which hasn't been built yet, so nothing fires today),
+# not a claim that this list covers every future violation.
+if [ -d site ]; then
+  # Bare provider names, not narrower variants like "cohere_embed" or
+  # "ANTHROPIC_API_KEY" -- a bare name already matches those (and any other
+  # casing/punctuation variant, e.g. "cohere-embed") since this is a
+  # case-insensitive substring search, and a narrower pattern only risks
+  # missing a variant it didn't anticipate.
+  hits=$(grep -rniE \
+    'anthropic|cohere|gdelt|newsapi' \
+    --include='*.ts' --include='*.tsx' --include='*.js' --include='*.mjs' \
+    --include='*.astro' --include='*.svelte' "${EXCLUDE[@]}" \
+    site 2>/dev/null || true)
+  if [ -n "$hits" ]; then
+    report "site/ references an AI/embedding/ingestion provider (AD-1)" "$hits"
+  fi
+fi
+
 if [ "$violations" -gt 0 ]; then
   printf '\nBoundary check failed: %d violation(s).\n' "$violations"
   printf 'The pipeline writes data/briefings/; the site reads it. Nothing else crosses.\n\n'

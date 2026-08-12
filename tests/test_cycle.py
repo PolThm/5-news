@@ -975,3 +975,97 @@ def test_a_collected_batchs_failures_are_folded_into_the_cycle_record(tmp_path: 
     record = json.loads(result.cycle_path.read_text())
     assert record["degraded"] is True
     assert any("batch failed entirely" in f["detail"] for f in record["failures"])
+
+
+# --- Story 3.6: cost independence -------------------------------------------
+
+
+def test_summarize_submission_count_stays_fixed_regardless_of_cluster_volume(
+    tmp_path: Path,
+) -> None:
+    """AC2/AC3: exactly one submit_summarize_fn call per Output Language (3
+    total) per cycle, never one per Zone, Period, or Cluster -- proven here
+    by varying Cluster volume across two cycles and asserting the
+    submission count never moves."""
+    import pipeline.stages.cycle as cycle_module
+    from pipeline.stages import write_jsonl
+    from pipeline.stages.cluster import WrittenCluster
+
+    def _qualifying_cluster(cluster_id: str) -> dict:
+        return {
+            "cluster_id": cluster_id,
+            "members": [
+                {
+                    "title": f"title {cluster_id}",
+                    "url": f"https://reuters.com/{cluster_id}",
+                    "source": "reuters.com",
+                    "source_country": "united-kingdom",
+                    "language": "en",
+                },
+                {
+                    "title": f"autre titre {cluster_id}",
+                    "url": f"https://lemonde.fr/{cluster_id}",
+                    "source": "lemonde.fr",
+                    "source_country": "france",
+                    "language": "fr",
+                },
+            ],
+            "independent_source_count": 2,
+            "country_count": 2,
+            "countries": ["france", "united-kingdom"],
+            "origin_country": "united-kingdom",
+        }
+
+    def _run_with_n_clusters(cycle_id: str, n: int) -> int:
+        clusters = [_qualifying_cluster(f"c{i}") for i in range(n)]
+        original_run_cluster = cycle_module.run_cluster
+
+        def fake_run_cluster(*args, **kwargs) -> WrittenCluster:
+            written = original_run_cluster(*args, **kwargs)
+            write_jsonl(written.output_path, clusters)
+            return WrittenCluster(
+                output_path=written.output_path,
+                metadata_path=written.metadata_path,
+                clusters_out=len(clusters),
+                degraded=written.degraded,
+            )
+
+        submit_calls: list[OutputLanguage] = []
+
+        def counting_submit_summarize(
+            clusters_in: list[dict], language: OutputLanguage, cycle_id: str, data_root: Path
+        ) -> WrittenSubmission:
+            submit_calls.append(language)
+            return WrittenSubmission(
+                batch_id=f"stub-{language.value}",
+                metadata_path=data_root / "intermediate" / "summarize" / cycle_id / "x.json",
+                submitted=True,
+            )
+
+        cycle_module.run_cluster = fake_run_cluster
+        try:
+            run_cycle(
+                collect=lambda: _collection(_record("A", "a.com")),
+                cycle_id=cycle_id,
+                data_root=tmp_path,
+                embed=_no_op_embed,
+                submit_summarize_fn=counting_submit_summarize,
+            )
+        finally:
+            cycle_module.run_cluster = original_run_cluster
+
+        return len(submit_calls)
+
+    empty_run_calls = _run_with_n_clusters("2026-08-10T00-00-00Z", n=0)
+    small_run_calls = _run_with_n_clusters("2026-08-11T00-00-00Z", n=1)
+    large_run_calls = _run_with_n_clusters("2026-08-12T00-00-00Z", n=50)
+
+    # n=0 (a day with zero qualifying Clusters) is a real case this
+    # invariant must hold for too -- an empty union must not short-circuit
+    # the per-language submission loop early.
+    assert empty_run_calls == 3
+    assert small_run_calls == 3
+    assert large_run_calls == 3
+    assert empty_run_calls == small_run_calls == large_run_calls, (
+        "submission count must not vary with Cluster/Zone volume, including zero"
+    )

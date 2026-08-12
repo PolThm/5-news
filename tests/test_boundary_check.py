@@ -92,3 +92,52 @@ def test_does_not_flag_stdlib_site_module(sandbox: Path) -> None:
 
     result = run_check(sandbox)
     assert result.returncode == 0, result.stdout + result.stderr
+
+
+def test_catches_site_referencing_an_ai_provider(sandbox: Path) -> None:
+    """Violation mode 4 (Story 3.6, AD-1): site/ must never call an AI,
+    embedding, or ingestion provider -- its only input is the static JSON
+    the pipeline already wrote under data/briefings/."""
+    probe = sandbox / "site" / "src" / "_probe.ts"
+    probe.parent.mkdir(parents=True, exist_ok=True)
+    probe.write_text("const key = process.env.ANTHROPIC_API_KEY;\n")
+
+    result = run_check(sandbox)
+    assert result.returncode != 0
+    assert "AI/embedding/ingestion provider" in result.stdout
+
+
+@pytest.mark.parametrize(
+    "snippet",
+    [
+        "import Anthropic from '@anthropic-ai/sdk';",
+        "const client = new Cohere.Client();",
+        "// fetched via cohere-embed-v3",
+        "const url = 'https://api.gdelt.org/api/v2/doc/doc';",
+        "const key = process.env.NEWSAPI_KEY;",
+    ],
+)
+def test_catches_every_provider_name_in_the_alternation(sandbox: Path, snippet: str) -> None:
+    """Each token in the check's regex alternation (anthropic, cohere,
+    gdelt, newsapi) is exercised individually -- a narrower pattern here
+    (e.g. one requiring an exact identifier like ANTHROPIC_API_KEY) would
+    have silently let a hyphenated or differently-cased real-world
+    reference like "cohere-embed-v3" through untested."""
+    probe = sandbox / "site" / "src" / "_probe.ts"
+    probe.parent.mkdir(parents=True, exist_ok=True)
+    probe.write_text(snippet + "\n")
+
+    result = run_check(sandbox)
+    assert result.returncode != 0, f"expected a violation for: {snippet!r}"
+    assert "AI/embedding/ingestion provider" in result.stdout
+
+
+def test_a_clean_site_with_only_briefings_json_references_passes(sandbox: Path) -> None:
+    """Regression guard: reading data/briefings/ (the pipeline's real,
+    intended output) must never trip the AI-provider tripwire."""
+    probe = sandbox / "site" / "src" / "_probe.ts"
+    probe.parent.mkdir(parents=True, exist_ok=True)
+    probe.write_text('const path = "../../data/briefings/fr/world/day.json";\n')
+
+    result = run_check(sandbox)
+    assert result.returncode == 0, result.stdout + result.stderr

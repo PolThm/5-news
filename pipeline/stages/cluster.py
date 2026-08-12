@@ -176,6 +176,13 @@ def assign_cluster_ids(labels: list[int]) -> list[str]:
 class Coverage:
     independent_source_count: int
     country_count: int
+    # The actual countries, not just their count -- Story 2.5 needs this to
+    # decide whether a Cluster is relevant to a given Zone. country_count
+    # stays as its own field (not derived at every call site) because
+    # Story 2.2's qualifying-floor and ordering logic already reads it, and
+    # AD-12 says a value has one owner -- duplicating "len(countries)" at
+    # every caller would be the same value computed twice.
+    countries: frozenset[str]
 
 
 def coverage_for_cluster(groups: list[dict]) -> Coverage:
@@ -192,9 +199,11 @@ def coverage_for_cluster(groups: list[dict]) -> Coverage:
     the count of groups and the count of distinct origin countries among them
     — do not re-derive this differently than Story 1.4 already settled.
     """
+    countries = frozenset(g["source_country"] for g in groups)
     return Coverage(
         independent_source_count=len(groups),
-        country_count=len({g["source_country"] for g in groups}),
+        country_count=len(countries),
+        countries=countries,
     )
 
 
@@ -262,6 +271,7 @@ def run_cluster(
                 "member_titles": sorted(m["normalized_title"] for m in members),
                 "independent_source_count": coverage.independent_source_count,
                 "country_count": coverage.country_count,
+                "countries": sorted(coverage.countries),
             }
         )
 

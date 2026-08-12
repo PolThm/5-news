@@ -138,6 +138,7 @@ def test_coverage_unions_origin_countries_like_merge_all() -> None:
 
     assert coverage.independent_source_count == 2
     assert coverage.country_count == 2
+    assert coverage.countries == frozenset({"france", "germany"})
 
 
 def test_coverage_of_two_dispatches_from_the_same_country_is_one_country() -> None:
@@ -149,6 +150,7 @@ def test_coverage_of_two_dispatches_from_the_same_country_is_one_country() -> No
 
     assert coverage.independent_source_count == 2
     assert coverage.country_count == 1
+    assert coverage.countries == frozenset({"france"})
 
 
 def test_coverage_of_a_singleton_matches_the_underlying_group() -> None:
@@ -157,6 +159,19 @@ def test_coverage_of_a_singleton_matches_the_underlying_group() -> None:
 
     assert coverage.independent_source_count == 1
     assert coverage.country_count == 1
+    assert coverage.countries == frozenset({"japan"})
+
+
+def test_country_count_always_matches_the_length_of_countries() -> None:
+    """The prerequisite invariant Story 2.5 depends on: country_count is
+    always derivable from countries, never independently wrong."""
+    for groups in (
+        [_group("A", "a", "japan", ["o1.com"])],
+        [_group("A", "a", "france", ["o1.com"]), _group("B", "b", "germany", ["o2.com"])],
+        [_group("A", "a", "france", ["o1.com"]), _group("B", "b", "france", ["o2.com"])],
+    ):
+        coverage = coverage_for_cluster(groups)
+        assert coverage.country_count == len(coverage.countries)
 
 
 # --- run_cluster: end to end, with an injected embedding function -----------
@@ -198,6 +213,8 @@ def test_run_cluster_groups_across_languages_and_writes_output(tmp_path: Path) -
     assert len(by_size[1]["member_titles"]) == 2  # the two ceasefire dispatches
     assert by_size[1]["independent_source_count"] == 2
     assert by_size[1]["country_count"] == 2  # france + japan, genuinely distinct
+    assert by_size[1]["countries"] == ["france", "japan"]  # sorted, actual list not just a count
+    assert by_size[0]["countries"] == ["united-states"]
 
 
 def test_run_cluster_degrades_to_one_cluster_per_group_on_embedding_failure(

@@ -23,7 +23,15 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-from pipeline.config import MAX_SELECTED_CLUSTERS, MIN_COUNTRIES, MIN_INDEPENDENT_SOURCES
+from pipeline.config import (
+    MAX_SELECTED_CLUSTERS,
+    MIN_COUNTRIES,
+    MIN_INDEPENDENT_SOURCES,
+    MIN_QUALIFYING_FOR_ZONE,
+    ZONES,
+    continent_for,
+)
+from pipeline.domain import Zone, ZoneKind
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
     cycle_id_for,
@@ -61,6 +69,118 @@ def rank_clusters(clusters: list[dict]) -> list[dict]:
     return sorted(
         clusters,
         key=lambda c: (-c["independent_source_count"], -c["country_count"], c["cluster_id"]),
+    )
+
+
+def _is_relevant_to(cluster: dict, zone: Zone) -> bool:
+    """Whether a Cluster's coverage touches a given Zone.
+
+    Relevant to a Country means the Cluster's ``countries`` list includes
+    that country's slug directly. Relevant to a Continent means relevant to
+    any Country belonging to it — a Cluster with no member in that
+    continent is not part of its Briefing regardless of how it ranks
+    globally. Derived entirely from ``countries`` (Story 2.5's prerequisite
+    addition to Cluster output); this is not a new signal, per that
+    story's AC4.
+    """
+    if zone.kind == ZoneKind.WORLD:
+        # Everything is relevant to World -- there is no filtering to do,
+        # and no country's `continent` field ever equals "world", so the
+        # Continent branch below would otherwise wrongly find zero matches.
+        return True
+    cluster_countries = set(cluster["countries"])
+    if zone.kind == ZoneKind.COUNTRY:
+        return zone.slug in cluster_countries
+    # A Continent: relevant if any of its countries appears in the Cluster.
+    continent_countries = {z.slug for z in ZONES if z.continent == zone.slug}
+    return bool(cluster_countries & continent_countries)
+
+
+@dataclass(frozen=True, slots=True)
+class ZoneRanking:
+    """The result of ranking Clusters for one Zone, with FR-16's Continent
+    fallback already resolved.
+
+    Mirrors ``pipeline.domain.Briefing``'s existing ``zone``/``served_zone``
+    fields rather than inventing a parallel shape — those fields were
+    anticipated in Story 1.1's domain design specifically for this purpose.
+    """
+
+    requested_zone: Zone
+    served_zone: Zone
+    ranked_clusters: list[dict]
+
+    @property
+    def substituted(self) -> bool:
+        """FR-16: the substitution is never silent — this is the explicit,
+        inspectable answer to "did a fallback occur", not left for a caller
+        to infer by comparing the two Zones itself."""
+        return self.served_zone != self.requested_zone
+
+
+def rank_for_zone(clusters: list[dict], zone: Zone) -> ZoneRanking:
+    """Rank Clusters relevant to ``zone``, falling back to its Continent
+    (FR-16) if fewer than ``MIN_QUALIFYING_FOR_ZONE`` Clusters both qualify
+    and are relevant.
+
+    Deliberately does not read from or write to disk — this proves the
+    ranking-with-fallback mechanism correct in isolation. Wiring it into a
+    per-cycle loop that runs it for all 15 Zones and decides where that
+    output lives is later Epic 3/4 work, once the summarize/publish stages
+    exist to consume its shape (see Story 2.5's Dev Notes for why that
+    orchestration is deliberately deferred).
+
+    A Continent (or World) Zone never falls back further — there is nothing
+    above it to substitute, regardless of how thin its own coverage is.
+    """
+    return _rank_for_zone(clusters, requested_zone=zone, serving_zone=zone, visited=frozenset())
+
+
+def _rank_for_zone(
+    clusters: list[dict],
+    requested_zone: Zone,
+    serving_zone: Zone,
+    visited: frozenset[str],
+) -> ZoneRanking:
+    """Recursion helper: ``requested_zone`` stays fixed across fallback hops
+    while ``serving_zone`` walks up the Continent chain, so the returned
+    ``ZoneRanking`` always reports what the reader actually asked for
+    alongside what was actually served — never just the final hop.
+
+    ``visited`` guards against an infinite loop if ``ZONES`` ever grew a
+    cycle (a Continent given a non-``None`` ``continent`` field, or a chain
+    longer than two levels with a mistake in it). Nothing in ``pipeline.config``
+    enforces that ``ZONES`` stays a strict two-level hierarchy, so this is a
+    cheap defense against a config edit turning a fallback into a hang,
+    not a scenario reachable with the data as it exists today.
+    """
+    if serving_zone.slug in visited:
+        raise ValueError(
+            f"Zone fallback cycle detected at {serving_zone.slug!r} "
+            f"(path: {sorted(visited)!r}) — check pipeline.config.ZONES for a "
+            "Zone whose continent chain loops back on itself."
+        )
+
+    relevant = [c for c in clusters if _is_relevant_to(c, serving_zone)]
+    qualifying_relevant = [c for c in relevant if qualifies(c)]
+
+    parent = continent_for(serving_zone)
+    if len(qualifying_relevant) < MIN_QUALIFYING_FOR_ZONE and parent is not None:
+        return _rank_for_zone(
+            clusters,
+            requested_zone=requested_zone,
+            serving_zone=parent,
+            visited=visited | {serving_zone.slug},
+        )
+
+    ordered = rank_clusters(qualifying_relevant)
+    selected = ordered[:MAX_SELECTED_CLUSTERS]
+    ranked_out = [
+        {**cluster, "rank": position} for position, cluster in enumerate(selected, start=1)
+    ]
+
+    return ZoneRanking(
+        requested_zone=requested_zone, served_zone=serving_zone, ranked_clusters=ranked_out
     )
 
 

@@ -238,3 +238,253 @@ def test_empty_input(tmp_path: Path) -> None:
     metadata = json.loads(written.metadata_path.read_text())
     assert metadata["clusters_in"] == 0
     assert metadata["clusters_selected"] == 0
+
+
+# --- Zone-scoped ranking with Continent fallback (Story 2.5) -----------------
+
+
+def _zone_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
+    return {
+        "cluster_id": cluster_id,
+        "member_titles": [f"title-{cluster_id}"],
+        "independent_source_count": sources,
+        "country_count": len(countries),
+        "countries": sorted(countries),
+    }
+
+
+def test_a_well_served_country_needs_no_fallback() -> None:
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _zone_cluster("a", sources=3, countries=["france", "germany"]),
+        _zone_cluster("b", sources=2, countries=["france", "japan"]),
+    ]
+    zone = zone_by_slug("france")
+
+    result = rank_for_zone(clusters, zone)
+
+    assert result.requested_zone == zone
+    assert result.served_zone == zone
+    assert result.substituted is False
+    assert len(result.ranked_clusters) == 2
+
+
+def test_a_thin_country_falls_back_to_its_continent() -> None:
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        # Only 1 Cluster relevant to France -- below the fallback floor.
+        _zone_cluster("fr1", sources=3, countries=["france", "germany"]),
+        # Not relevant to France, but relevant to Europe (france's continent).
+        _zone_cluster("uk1", sources=2, countries=["united-kingdom", "germany"]),
+        _zone_cluster("de1", sources=2, countries=["germany", "japan"]),
+    ]
+    zone = zone_by_slug("france")
+
+    result = rank_for_zone(clusters, zone)
+
+    assert result.requested_zone == zone
+    assert result.served_zone == zone_by_slug("europe")
+    assert result.substituted is True
+    # All 3 clusters are relevant to Europe (each involves a European country).
+    assert len(result.ranked_clusters) == 3
+
+
+def test_a_continent_zone_never_falls_back_further() -> None:
+    """A Continent has nowhere further to fall back to -- even a thin
+    Continent must not attempt to substitute World, which the current
+    scope of this story does not define a relevance rule for."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [_zone_cluster("a", sources=2, countries=["france", "germany"])]
+    zone = zone_by_slug("europe")
+
+    result = rank_for_zone(clusters, zone)
+
+    assert result.served_zone == zone
+    assert result.substituted is False
+
+
+def test_relevance_is_derived_from_the_countries_list_not_a_new_signal() -> None:
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import _is_relevant_to
+
+    france = zone_by_slug("france")
+    europe = zone_by_slug("europe")
+    japan = zone_by_slug("japan")
+    asia = zone_by_slug("asia")
+
+    cluster = _zone_cluster("a", sources=2, countries=["france", "germany"])
+
+    assert _is_relevant_to(cluster, france) is True
+    assert _is_relevant_to(cluster, europe) is True  # france's continent
+    assert _is_relevant_to(cluster, japan) is False
+    assert _is_relevant_to(cluster, asia) is False
+
+
+def test_a_cluster_relevant_to_zero_of_the_target_countries_is_excluded() -> None:
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _zone_cluster("relevant", sources=2, countries=["france", "germany"]),
+        _zone_cluster("irrelevant", sources=5, countries=["japan", "china"]),
+    ]
+    zone = zone_by_slug("france")
+
+    result = rank_for_zone(clusters, zone)
+
+    ids = [c["cluster_id"] for c in result.ranked_clusters]
+    assert "irrelevant" not in ids
+
+
+def test_world_zone_is_relevant_to_every_cluster() -> None:
+    """World has no country/continent filtering at all (PRD FR-16 area) --
+    verified explicitly since _is_relevant_to's Continent-branch logic
+    would otherwise wrongly find zero matches for World (no country's
+    `continent` field ever equals "world")."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import _is_relevant_to
+
+    world = zone_by_slug("world")
+    cluster = _zone_cluster("a", sources=2, countries=["japan", "brazil"])
+
+    assert _is_relevant_to(cluster, world) is True
+
+
+def test_world_zone_never_falls_back(monkeypatch) -> None:
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [_zone_cluster("a", sources=1, countries=["france"])]  # not even qualifying
+    world = zone_by_slug("world")
+
+    result = rank_for_zone(clusters, world)
+
+    assert result.served_zone == world
+    assert result.substituted is False
+
+
+def test_a_continent_with_too_few_qualifying_clusters_still_serves_itself() -> None:
+    """A Continent has nowhere further to fall back to (World is not a
+    fallback target per this story's scope) -- even a Continent below the
+    MIN_QUALIFYING_FOR_ZONE floor must still serve its own thin result
+    rather than crash or recurse further."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [_zone_cluster("only-one", sources=2, countries=["france", "germany"])]
+    europe = zone_by_slug("europe")
+
+    result = rank_for_zone(clusters, europe)
+
+    assert result.served_zone == europe
+    assert result.substituted is False
+    assert len(result.ranked_clusters) == 1
+
+
+def test_a_cluster_spanning_two_continents_is_relevant_to_both() -> None:
+    """A Cluster covering countries in two different continents counts as
+    relevant to each independently -- the relevance rule is per-continent
+    membership, not exclusive assignment to one continent."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import _is_relevant_to
+
+    cluster = _zone_cluster("a", sources=2, countries=["france", "japan"])
+
+    assert _is_relevant_to(cluster, zone_by_slug("europe")) is True
+    assert _is_relevant_to(cluster, zone_by_slug("asia")) is True
+    assert _is_relevant_to(cluster, zone_by_slug("north-america")) is False
+
+
+def test_fallback_still_respects_the_five_item_cap() -> None:
+    """The MAX_SELECTED_CLUSTERS cap applies at the zone that ends up
+    actually serving the request, not the originally requested one --
+    verified with a Continent fallback yielding more than 5 candidates."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _zone_cluster("fr-thin", sources=2, countries=["france"]),  # below the zone floor alone
+        *[
+            _zone_cluster(f"eu{i}", sources=10 - i, countries=["germany", "united-kingdom"])
+            for i in range(6)
+        ],
+    ]
+    zone = zone_by_slug("france")
+
+    result = rank_for_zone(clusters, zone)
+
+    assert result.served_zone == zone_by_slug("europe")
+    assert len(result.ranked_clusters) == 5
+
+
+def test_real_cluster_output_is_consumable_by_rank_for_zone(tmp_path) -> None:
+    """Integration check: the countries field pipeline.stages.cluster.py
+    actually writes to disk round-trips correctly through
+    read_jsonl -> rank_for_zone, not just through hand-built test dicts."""
+    import json
+
+    from pipeline.adapters.cohere_embed import EmbeddingResult
+    from pipeline.config import zone_by_slug
+    from pipeline.stages import read_jsonl
+    from pipeline.stages.cluster import run_cluster
+    from pipeline.stages.rank import rank_for_zone
+
+    groups = [
+        {
+            "title": "Ceasefire agreed",
+            "url": "https://a.com/x",
+            "published_at": "2026-08-11T06:00:00+00:00",
+            "source": "a.com",
+            "source_country": "france",
+            "language": "en",
+            "collected_by": "gdelt",
+            "normalized_title": "ceasefire agreed",
+            "independent_source_count": 1,
+            "country_count": 1,
+            "sources": ["a.com"],
+            "countries": ["france"],
+            "article_count": 1,
+        },
+        {
+            "title": "Truce declared",
+            "url": "https://b.com/x",
+            "published_at": "2026-08-11T06:05:00+00:00",
+            "source": "b.com",
+            "source_country": "germany",
+            "language": "en",
+            "collected_by": "gdelt",
+            "normalized_title": "truce declared",
+            "independent_source_count": 1,
+            "country_count": 1,
+            "sources": ["b.com"],
+            "countries": ["germany"],
+            "article_count": 1,
+        },
+    ]
+    input_path = tmp_path / "groups.jsonl"
+    input_path.write_text("\n".join(json.dumps(g) for g in groups) + "\n", encoding="utf-8")
+
+    def embed(titles: list[str]) -> EmbeddingResult:
+        # Close enough to merge into one cross-language-style Cluster.
+        vectors = {"Ceasefire agreed": [1.0, 0.0], "Truce declared": [0.99, 0.02]}
+        return EmbeddingResult(vectors=[vectors[t] for t in titles])
+
+    written = run_cluster(input_path, cycle_id="c1", data_root=tmp_path / "data", embed=embed)
+    clusters_on_disk = list(read_jsonl(written.output_path))
+
+    result = rank_for_zone(clusters_on_disk, zone_by_slug("france"))
+
+    # The merged cluster spans france+germany (country_count=2, qualifies)
+    # and is relevant to france, but it is the only qualifying-relevant
+    # cluster for france -- below MIN_QUALIFYING_FOR_ZONE (2), so this
+    # correctly falls back to europe rather than serving france directly.
+    assert result.served_zone == zone_by_slug("europe")
+    assert result.substituted is True
+    assert len(result.ranked_clusters) == 1
+    assert result.ranked_clusters[0]["country_count"] == 2

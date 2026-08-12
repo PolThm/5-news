@@ -78,6 +78,25 @@ MIN_COUNTRIES: Final[int] = 2
 # toward Discarded Volume. Never padded below this if fewer qualify.
 MAX_SELECTED_CLUSTERS: Final[int] = 5
 
+# FR-16: "a Country Zone yielding fewer than 2 Qualifying Clusters serves its
+# Continent's Briefing." A distinct concept from MIN_INDEPENDENT_SOURCES/
+# MIN_COUNTRIES above — those gate whether one Cluster qualifies at all;
+# this gates whether a Zone has enough qualifying Clusters to serve on its
+# own. Named separately even though the value happens to match, because a
+# future change to one must not accidentally change the other (AD-12
+# applied to config values, not just stage-owned fields).
+MIN_QUALIFYING_FOR_ZONE: Final[int] = 2
+
+# If this ever failed, a Zone could never avoid falling back even after
+# selecting a full Briefing — MIN_QUALIFYING_FOR_ZONE is checked against the
+# pre-selection count in pipeline.stages.rank._rank_for_zone, so raising it
+# above MAX_SELECTED_CLUSTERS would silently make every Zone fall back
+# regardless of how much real coverage it has. Caught here, at import time,
+# rather than as a confusing runtime symptom in rank.py.
+assert MIN_QUALIFYING_FOR_ZONE <= MAX_SELECTED_CLUSTERS, (
+    "MIN_QUALIFYING_FOR_ZONE must not exceed MAX_SELECTED_CLUSTERS"
+)
+
 # --- Syndication Detection, layer 3 (Story 2.4) -------------------------------
 #
 # REASONED, NOT MEASURED. The Build Order (PRD §10) calls for calibrating
@@ -136,6 +155,7 @@ __all__ = [
     "MAX_SELECTED_CLUSTERS",
     "MIN_COUNTRIES",
     "MIN_INDEPENDENT_SOURCES",
+    "MIN_QUALIFYING_FOR_ZONE",
     "REWRITE_SIMILARITY_FLOOR",
     "OUTPUT_LANGUAGES",
     "PERIODS",

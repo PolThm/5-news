@@ -6,20 +6,22 @@ past this module's boundary (AD-10) means a summarization failure degrades
 the affected Clusters rather than crashing the cycle.
 
 Goes through the Batch API, not the synchronous Messages API (Story 3.6,
-NFR-2): one request per Cluster, submitted together, polled until the batch
-reports ``ended``, then collected. This function blocks on that poll loop
-within one call — the deliberately simplified version of AD-11's two-phase
-resumable cycle. Story 3.4 replaces this poll loop with a real submit-then-
-exit / resume-later split; this story only builds the mechanism the split
-will later wrap.
+NFR-2). Split into two functions per AD-11's two-phase cycle: ``submit_batch``
+submits a request and returns immediately with a batch ID -- it never waits.
+``collect_batch`` checks a batch's status with a single call and either
+returns "pending" (nothing to report yet) or collects and degrades results
+exactly as a completed batch's per-Cluster failures always have. Neither
+function loops, sleeps, or otherwise holds a process open waiting on the
+Batch API to finish -- that was Story 3.1's deliberately simplified stand-in
+(a single blocking ``summarize_clusters``), removed by Story 3.4 now that a
+real two-phase caller (``pipeline.stages.summarize``) exists to use the split.
 """
 
 from __future__ import annotations
 
 import os
-import time
 from dataclasses import dataclass, field
-from typing import Any, Protocol
+from typing import Any, Literal, Protocol
 
 from pipeline.adapters import Failure
 from pipeline.domain import OutputLanguage
@@ -96,15 +98,40 @@ class Client(Protocol):
 
 
 @dataclass(frozen=True, slots=True)
-class SummarizeResult:
-    """What summarization retrieved, and what it could not.
+class BatchSubmission:
+    """What submitting a batch produced: a batch ID to record and check
+    later, or a submission-level failure (e.g. no API key, the request
+    itself was rejected) with no ID to check.
 
-    Parallel to ``EmbeddingResult``/``CollectionResult`` rather than a reuse
-    of either: this is a mapping keyed by ``cluster_id`` (the Batch API's
-    own ``custom_id``), not a positional list -- results arrive in arbitrary
-    order, so there is no "index i" this shape could sensibly mean.
+    ``batch_id`` is ``None`` exactly when submission never happened or
+    never succeeded -- there is nothing for a caller to poll in that case,
+    distinct from ``collect_batch``'s "pending" outcome, where a real batch
+    exists but has not finished.
     """
 
+    batch_id: str | None = None
+    failures: list[Failure] = field(default_factory=list)
+
+
+@dataclass(frozen=True, slots=True)
+class BatchCollectResult:
+    """The outcome of checking one batch's status, once.
+
+    ``status`` is the caller-facing tri-state AD-11's phase two needs:
+    ``"pending"`` means the batch has not reached ``ended`` yet -- there is
+    nothing to report, and the caller should check again later (via a new
+    invocation, never a loop inside this call). ``"ended"`` means results
+    were collected (``summaries``/``failures`` populated per-Cluster exactly
+    as a completed batch's outcome always has, including the mid-iteration-
+    failure-preserves-already-collected-summaries fix from Story 3.1).
+
+    Deliberately not a reuse of the old ``SummarizeResult`` shape: a
+    "pending" outcome is not "every Cluster failed" -- collapsing the two
+    would make a client unable to tell "retry the same batch" apart from
+    "this batch is done and everything in it genuinely failed."
+    """
+
+    status: Literal["pending", "ended"]
     summaries: dict[str, str] = field(default_factory=dict)
     failures: list[Failure] = field(default_factory=list)
 
@@ -153,15 +180,33 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     )
 
 
-def summarize_clusters(
+def _client_or_degrade(client: Client | None) -> tuple[Client | None, Failure | None]:
+    """Resolve the injected client, or build the real one from
+    ``ANTHROPIC_API_KEY`` -- shared by both ``submit_batch`` and
+    ``collect_batch`` so the missing-key degrade is expressed once, not
+    twice with two chances to drift."""
+    if client is not None:
+        return client, None
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return None, Failure(ADAPTER, "ANTHROPIC_API_KEY is not set; cannot summarize")
+    import anthropic
+
+    return anthropic.Anthropic(api_key=api_key), None
+
+
+def submit_batch(
     clusters: list[dict],
     language: OutputLanguage,
     client: Client | None = None,
-    poll_interval_seconds: float = 2.0,
-    max_poll_attempts: int = 300,
-) -> SummarizeResult:
-    """Summarize each Cluster's member Articles into one paragraph, in
-    ``language``, via the Batch API.
+) -> BatchSubmission:
+    """Submit one Batch API request per Cluster and return immediately with
+    the batch ID -- this call never waits for the batch to complete (AD-11:
+    "neither phase holds a process open waiting on an external service").
+
+    ``custom_id`` is set to each Cluster's ``cluster_id`` — the only correct
+    way to reassociate a result with its Cluster later, since the Batch API
+    makes no ordering guarantee on ``results()``.
 
     ``language`` is typed on ``OutputLanguage`` (not a bare ``str``) for
     static analysis and self-documentation. ``OutputLanguage`` is a
@@ -171,31 +216,13 @@ def summarize_clusters(
     runtime enforcement is ``_prompt_for``'s ``_LANGUAGE_NAMES[language]``
     lookup, which raises ``KeyError`` for any value -- string or enum
     member -- outside the three supported languages.
-
-    ``custom_id`` is set to each Cluster's ``cluster_id`` — the only correct
-    way to reassociate a result with its Cluster, since the Batch API makes
-    no ordering guarantee on ``results()``.
-
-    ``max_poll_attempts`` bounds the poll loop (default: 300 x the 2-second
-    default interval = 10 minutes) so a stuck or permanently-wedged batch
-    degrades to a ``Failure`` for every Cluster in the call rather than
-    blocking this function -- and the whole cycle, since nothing else runs
-    concurrently -- forever. This is still the deliberately simplified,
-    blocking version of AD-11's two-phase split (Story 3.4 replaces the
-    whole poll loop); the cap only prevents an unbounded hang within it.
     """
     if not clusters:
-        return SummarizeResult()
+        return BatchSubmission()
 
-    if client is None:
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
-        if not api_key:
-            return SummarizeResult(
-                failures=[Failure(ADAPTER, "ANTHROPIC_API_KEY is not set; cannot summarize")]
-            )
-        import anthropic
-
-        client = anthropic.Anthropic(api_key=api_key)
+    client, degrade = _client_or_degrade(client)
+    if degrade is not None:
+        return BatchSubmission(failures=[degrade])
 
     from anthropic.types.message_create_params import MessageCreateParamsNonStreaming
     from anthropic.types.messages.batch_create_params import Request
@@ -215,26 +242,44 @@ def summarize_clusters(
             for cluster in clusters
         ]
         batch = client.messages.batches.create(requests=requests)
-
-        attempts = 0
-        while batch.processing_status != "ended":
-            attempts += 1
-            if attempts >= max_poll_attempts:
-                return SummarizeResult(
-                    failures=[
-                        Failure(
-                            ADAPTER,
-                            f"batch {batch.id}: did not complete within "
-                            f"{max_poll_attempts} poll attempts",
-                        )
-                    ]
-                )
-            time.sleep(poll_interval_seconds)
-            batch = client.messages.batches.retrieve(batch.id)
     except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
-        return SummarizeResult(failures=[Failure(ADAPTER, f"batch submission failed: {exc}")])
+        return BatchSubmission(failures=[Failure(ADAPTER, f"batch submission failed: {exc}")])
 
-    # A separate try/except from submission/polling above: an exception
+    return BatchSubmission(batch_id=batch.id)
+
+
+def collect_batch(
+    batch_id: str,
+    clusters: list[dict],
+    client: Client | None = None,
+) -> BatchCollectResult:
+    """Check ``batch_id``'s status with a single call. If it has not
+    reached ``"ended"``, return immediately with ``status="pending"`` --
+    this function never loops, sleeps, or otherwise waits for the batch to
+    finish (AD-11). If it has ended, collect and degrade results exactly as
+    a completed batch's outcome always has.
+
+    ``clusters`` is needed to detect a ``custom_id`` absent from
+    ``results()`` entirely -- the Batch API's own contract says this
+    shouldn't happen, but this adapter degrades that Cluster rather than
+    silently dropping it or crashing on a missing key.
+    """
+    client, degrade = _client_or_degrade(client)
+    if degrade is not None:
+        # Nothing to poll for without a client -- report as an ended batch
+        # whose every Cluster failed, not "pending" (retrying won't help).
+        return BatchCollectResult(status="ended", failures=[degrade])
+
+    try:
+        batch = client.messages.batches.retrieve(batch_id)
+        if batch.processing_status != "ended":
+            return BatchCollectResult(status="pending")
+    except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
+        return BatchCollectResult(
+            status="ended", failures=[Failure(ADAPTER, f"batch status check failed: {exc}")]
+        )
+
+    # A separate try/except from the status check above: an exception
     # raised partway through iterating results() (e.g. a transient network
     # blip) must not discard summaries already collected earlier in this
     # same iteration -- only the Clusters not yet reached by the time it
@@ -245,7 +290,7 @@ def summarize_clusters(
     failures: list[Failure] = []
     seen_custom_ids: set[str] = set()
     try:
-        for item in client.messages.batches.results(batch.id):
+        for item in client.messages.batches.results(batch_id):
             seen_custom_ids.add(item.custom_id)
             if item.result.type == "succeeded":
                 text_blocks = [b.text for b in item.result.message.content if b.type == "text"]
@@ -273,7 +318,16 @@ def summarize_clusters(
                 Failure(ADAPTER, f"cluster {cluster_id}: no result returned by the batch")
             )
 
-    return SummarizeResult(summaries=summaries, failures=failures)
+    return BatchCollectResult(status="ended", summaries=summaries, failures=failures)
 
 
-__all__ = ["ADAPTER", "MAX_TOKENS", "MODEL", "Client", "SummarizeResult", "summarize_clusters"]
+__all__ = [
+    "ADAPTER",
+    "MAX_TOKENS",
+    "MODEL",
+    "BatchCollectResult",
+    "BatchSubmission",
+    "Client",
+    "collect_batch",
+    "submit_batch",
+]

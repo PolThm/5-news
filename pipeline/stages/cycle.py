@@ -14,6 +14,16 @@ A cycle always completes. Upstream failures degrade it (AD-10); an unexpected
 crash is caught and recorded rather than left as a silent gap. Exit status
 reports whether the cycle *ran*, not whether coverage was perfect — a scheduled
 job that goes red on a thin day trains its owner to ignore it.
+
+Story 3.4 adds AD-11's two-phase split on top of collect-through-history: a
+fresh cycle (no pending batch recorded in `cycle.json`) runs every guarded
+step below exactly as before, then submits a summarize batch and returns
+without waiting. A later invocation of the *same* `cycle_id` finds the
+pending batch ID in `cycle.json` and skips straight to checking it -- collect
+through history never re-runs. Checking is a single call, never a poll loop:
+if the batch is not done, this run records that it checked and exits; the
+next invocation checks again. Neither phase holds a process open waiting on
+the Batch API (AD-11's own words).
 """
 
 from __future__ import annotations
@@ -27,12 +37,19 @@ from pathlib import Path
 
 from pipeline.adapters import CollectionResult, Failure
 from pipeline.adapters.cohere_embed import embed_titles
+from pipeline.domain import OutputLanguage
 from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for, output_dir_for, read_jsonl
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
 from pipeline.stages.dedupe import run_dedupe
 from pipeline.stages.history import append_history
 from pipeline.stages.rank import run_rank
+from pipeline.stages.summarize import (
+    WrittenSubmission,
+    WrittenSummarize,
+    collect_summarize,
+    submit_summarize,
+)
 
 
 @dataclass(frozen=True, slots=True)
@@ -57,10 +74,38 @@ class CycleResult:
     cycle_path: Path
     failures: tuple[Failure, ...]
     completed: bool = True
+    # Story 3.4's two-phase summarize status, distinct from `completed` --
+    # a cycle can complete every guarded step below and still be
+    # "summarize_pending" (batch submitted, not yet checked) or
+    # "summarize_collected" (batch ended, results written). `None` means
+    # this run didn't reach the summarize phase at all (a crash upstream).
+    summarize_phase: str | None = None
 
     @property
     def degraded(self) -> bool:
         return bool(self.failures)
+
+
+def _read_pending_batch(cycle_path: Path) -> dict | None:
+    """The pending-batch section of a previous run's `cycle.json`, if this
+    `cycle_id` already submitted one -- `None` if `cycle.json` doesn't exist
+    yet, or exists but records no pending batch (a fresh cycle, or one that
+    crashed before reaching the summarize phase).
+
+    Reading, not holding this in memory across invocations, is the whole
+    point of AD-11: the *file* is the durable state a separate process
+    invocation resumes from, not anything this function remembers.
+    """
+    if not cycle_path.is_file():
+        return None
+    try:
+        record = json.loads(cycle_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+    pending = record.get("summarize_batch")
+    if not pending or not pending.get("batch_id"):
+        return None
+    return pending
 
 
 def run_cycle(
@@ -68,8 +113,12 @@ def run_cycle(
     cycle_id: str | None = None,
     data_root: Path = DEFAULT_DATA_ROOT,
     embed: EmbedFn = embed_titles,
+    language: OutputLanguage = OutputLanguage.FR,
+    submit_summarize_fn: Callable[..., WrittenSubmission] = submit_summarize,
+    collect_summarize_fn: Callable[..., WrittenSummarize | None] = collect_summarize,
 ) -> CycleResult:
-    """Run collect, then dedupe, then cluster, then write the cycle record.
+    """Run collect, then dedupe, then cluster, then rank, then history, then
+    submit (or, on a resumed invocation, check) a summarize batch.
 
     ``collect`` and ``embed`` are both injected so a cycle can be exercised
     without a network — the scheduled entrypoint passes the real adapters.
@@ -80,6 +129,15 @@ def run_cycle(
     """
     started_at = datetime.now(UTC)
     cycle_id = cycle_id or cycle_id_for(started_at)
+    cycle_path = data_root / "intermediate" / cycle_id / "cycle.json"
+
+    # Resume case: this cycle_id already submitted a batch on a previous
+    # invocation. Skip collect through history entirely -- they already ran
+    # -- and go straight to checking the batch (AD-11: "does not re-run
+    # collect/dedupe/cluster/rank", read literally).
+    pending = _read_pending_batch(cycle_path)
+    if pending is not None:
+        return _resume_cycle(cycle_path, pending, collect_summarize_fn=collect_summarize_fn)
 
     failures: list[Failure] = []
     completed = True
@@ -169,17 +227,42 @@ def run_cycle(
             failures.append(Failure("cycle", f"writing history raised: {exc}"))
             completed = False
 
+    # Only a completed cycle has ranked Clusters to submit. A crash upstream
+    # means there is nothing to summarize yet -- record the crash and stop.
+    # This cycle_id itself is never revisited: the next scheduled run gets a
+    # fresh cycle_id and starts over from collect (AD-7's "leaves the
+    # previous Briefing set in place"), it does not resume this one's
+    # already-collected data.
+    summarize_phase: str | None = None
+    summarize_batch: dict | None = None
+    if completed:
+        submission = submit_summarize_fn(
+            selected, language=language, cycle_id=cycle_id, data_root=data_root
+        )
+        if submission.batch_id is not None:
+            summarize_phase = "summarize_submitted"
+            summarize_batch = {
+                "batch_id": submission.batch_id,
+                "language": language.value,
+                "ranked_path": str(rank_path),
+            }
+        else:
+            # Submission itself failed (e.g. no API key) -- degrade, same as
+            # every other adapter-boundary failure in this function, rather
+            # than treating it as a reason to mark the whole cycle failed.
+            failures.append(Failure("cycle", "summarize submission failed; see summarize.json"))
+            summarize_phase = "summarize_submit_failed"
+
     # Cross-phase state lives beside the cycle, not under a stage: a later run
     # reads this to resume (AD-11, and Story 3.4's two-phase batch depends on
     # exactly this path).
-    cycle_path = data_root / "intermediate" / cycle_id / "cycle.json"
     cycle_path.parent.mkdir(parents=True, exist_ok=True)
     cycle_path.write_text(
         json.dumps(
             {
                 "cycle_id": cycle_id,
                 "started_at": started_at.isoformat(),
-                "phase": "collected",
+                "phase": summarize_phase or "collected",
                 "articles_collected": articles_collected,
                 "groups_after_dedupe": groups_after_dedupe,
                 "clusters_after_grouping": clusters_after_grouping,
@@ -187,6 +270,7 @@ def run_cycle(
                 "completed": completed,
                 "degraded": bool(failures),
                 "failures": [f.to_dict() for f in failures],
+                "summarize_batch": summarize_batch,
             },
             indent=2,
             sort_keys=True,
@@ -209,6 +293,84 @@ def run_cycle(
         cycle_path=cycle_path,
         failures=tuple(failures),
         completed=completed,
+        summarize_phase=summarize_phase,
+    )
+
+
+def _resume_cycle(
+    cycle_path: Path,
+    pending: dict,
+    collect_summarize_fn: Callable[..., WrittenSummarize | None],
+) -> CycleResult:
+    """The second-invocation half of AD-11's two-phase cycle: collect
+    through history already ran (recorded in this same `cycle.json`) --
+    only check the pending batch, once, and never re-derive anything the
+    first invocation already wrote.
+
+    Guarded the same way every stage in ``run_cycle`` is: a crash checking
+    the batch (a network blip, a malformed ``ranked.jsonl`` left by a
+    truncated earlier write) must degrade this run, not raise past it and
+    leave ``cycle.json`` stuck mid-resume with no record of what happened
+    (AD-10).
+    """
+    record = json.loads(cycle_path.read_text(encoding="utf-8"))
+    cycle_id = record["cycle_id"]
+    data_root = cycle_path.parent.parent.parent
+    language = OutputLanguage(pending["language"])
+    ranked_path = Path(pending["ranked_path"])
+
+    failures = [Failure(f["adapter"], f["detail"]) for f in record.get("failures", [])]
+    try:
+        clusters = list(read_jsonl(ranked_path)) if ranked_path.is_file() else []
+        collected = collect_summarize_fn(
+            pending["batch_id"],
+            clusters,
+            language=language,
+            cycle_id=cycle_id,
+            data_root=data_root,
+        )
+    except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
+        failures.append(Failure("cycle", f"checking summarize batch raised: {exc}"))
+        record["last_checked_at"] = datetime.now(UTC).isoformat()
+        record["degraded"] = True
+        record["failures"] = [f.to_dict() for f in failures]
+        phase = record["phase"]
+        collected = None
+    else:
+        if collected is None:
+            # Still pending -- record that a check happened, but do not touch
+            # the pending batch ID itself, so the *next* invocation resumes
+            # the same wait rather than starting a new batch (AD-11's exact
+            # words).
+            record["last_checked_at"] = datetime.now(UTC).isoformat()
+            phase = record["phase"]
+        else:
+            failures.extend(collected.failures)
+            record["phase"] = "summarize_collected"
+            record["summarize_batch"] = None  # resolved -- nothing left to resume
+            record["degraded"] = bool(failures)
+            record["failures"] = [f.to_dict() for f in failures]
+            phase = "summarize_collected"
+
+    cycle_path.write_text(
+        json.dumps(record, indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+    return CycleResult(
+        cycle_id=cycle_id,
+        articles_collected=record.get("articles_collected", 0),
+        groups_after_dedupe=record.get("groups_after_dedupe", 0),
+        clusters_after_grouping=record.get("clusters_after_grouping", 0),
+        clusters_selected=record.get("clusters_selected", 0),
+        collect_path=output_dir_for("collect", cycle_id, root=data_root) / "articles.jsonl",
+        dedupe_path=None,
+        cluster_path=None,
+        rank_path=ranked_path if ranked_path.is_file() else None,
+        cycle_path=cycle_path,
+        failures=tuple(failures),
+        completed=record.get("completed", True),
+        summarize_phase=phase,
     )
 
 
@@ -230,7 +392,7 @@ def main(argv: list[str] | None = None) -> int:
     print(
         f"cycle {result.cycle_id}: {result.articles_collected} articles "
         f"-> {result.groups_after_dedupe} groups -> {result.clusters_after_grouping} clusters "
-        f"-> {result.clusters_selected} selected"
+        f"-> {result.clusters_selected} selected -> {result.summarize_phase}"
     )
     # A degraded cycle still succeeded. Only a cycle that could not run at all
     # is a failure, and that path raises before reaching here.

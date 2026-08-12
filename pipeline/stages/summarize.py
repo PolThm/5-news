@@ -8,10 +8,19 @@ renumber anything -- every field on a ranked Cluster dict besides these is
 owned by an earlier stage and is copied through unchanged, never recomputed
 (AD-12).
 
-One language per call (Story 3.2's explicit scope). Story 3.2's own
-orchestration calls this three times per cycle, once per Output Language.
-Output is written under a language-scoped subdirectory so those three calls
-never overwrite each other's output.
+One language per call (Story 3.2's explicit scope). A future orchestration
+story calls this three times per cycle, once per Output Language. Output is
+written under a language-scoped subdirectory so those three calls never
+overwrite each other's output.
+
+Two entry points, per AD-11's two-phase cycle (Story 3.4): `submit_summarize`
+submits a batch and returns immediately -- it writes nothing but a pending
+marker. `collect_summarize` checks that batch once; if it has not finished,
+it returns `None` and writes nothing (the caller retries on a later
+invocation); if it has finished, it writes the same `summarized.jsonl` shape
+Stories 3.1-3.3 established. Neither function loops or sleeps waiting on the
+Batch API -- that was Story 3.1's deliberately simplified stand-in
+(a single blocking call), removed now that this two-phase split exists.
 
 A summarize failure for one Cluster degrades that item's `summary` to its
 title; it never fails the whole Briefing (AD-6, mirroring AD-10's "one
@@ -33,7 +42,13 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-from pipeline.adapters.claude import SummarizeResult, summarize_clusters
+from pipeline.adapters import Failure
+from pipeline.adapters.claude import (
+    BatchCollectResult,
+    BatchSubmission,
+    collect_batch,
+    submit_batch,
+)
 from pipeline.domain import OutputLanguage
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
@@ -46,10 +61,11 @@ from pipeline.stages import (
 
 STAGE = "summarize"
 
-# summarize_clusters's real signature also takes optional `client` and
-# `poll_interval_seconds` for injection; this alias only describes the
-# two-argument shape every call site here actually uses.
-SummarizeFn = Callable[[list[dict], OutputLanguage], SummarizeResult]
+# submit_batch/collect_batch's real signatures also take optional `client`
+# for injection; these aliases only describe the shape every call site here
+# actually uses.
+SubmitFn = Callable[[list[dict], OutputLanguage], BatchSubmission]
+CollectFn = Callable[[str, list[dict]], BatchCollectResult]
 
 
 def _representative_member(cluster: dict) -> dict | None:
@@ -86,14 +102,14 @@ def _degrade_title(cluster: dict, representative: dict | None) -> str:
 def _select_outbound_link(representative: dict | None) -> tuple[str | None, str | None]:
     """The `(outbound_url, outbound_source)` every Briefing item carries
     (Story 3.3, FR-14) -- from the same representative member
-    `_earliest_member_title` selects for the degrade path, applied here for
-    every Cluster regardless of whether summarization succeeded or
-    degraded, so a reader always has a genuine Article to click through to.
+    `_degrade_title` selects for the degrade path, applied here for every
+    Cluster regardless of whether summarization succeeded or degraded, so
+    a reader always has a genuine Article to click through to.
 
     Takes the already-selected representative (rather than the Cluster
-    itself) so a caller that also needs `_earliest_member_title`'s degrade
-    text for the same Cluster doesn't pay for `_representative_member`'s
-    `min()` scan twice.
+    itself) so a caller that also needs `_degrade_title`'s degrade text for
+    the same Cluster doesn't pay for `_representative_member`'s `min()`
+    scan twice.
 
     Degrades to `(None, None)` for: a Cluster with no members (matching
     `_representative_member`'s own `None`); a representative missing
@@ -110,42 +126,96 @@ def _select_outbound_link(representative: dict | None) -> tuple[str | None, str 
     return url, source
 
 
+def _destination(data_root: Path, cycle_id: str, language: OutputLanguage) -> Path:
+    return data_root / "intermediate" / STAGE / cycle_id / language.value
+
+
+@dataclass(frozen=True, slots=True)
+class WrittenSubmission:
+    batch_id: str | None
+    metadata_path: Path
+    submitted: bool
+
+
+def submit_summarize(
+    clusters: list[dict],
+    language: OutputLanguage,
+    cycle_id: str,
+    data_root: Path = DEFAULT_DATA_ROOT,
+    submit_fn: SubmitFn = submit_batch,
+) -> WrittenSubmission:
+    """Submit a Batch API request for `clusters`, in `language`, and return
+    immediately (AD-11) -- this never waits for the batch to complete.
+
+    Writes only a small pending-batch marker (`submitting.json`), not
+    `summarized.jsonl` -- there is nothing to summarize yet. `cycle.py` is
+    responsible for recording the batch ID (and the fact that `clusters`
+    came from this cycle's `ranked.jsonl`) durably enough for a later
+    invocation to call `collect_summarize` with the same inputs.
+    """
+    destination = _destination(data_root, cycle_id, language)
+    metadata_path = destination / "submitting.json"
+
+    submission = submit_fn(clusters, language)
+
+    metadata = {
+        "stage": STAGE,
+        "cycle_id": cycle_id,
+        "language": language.value,
+        "clusters_submitted": len(clusters),
+        "batch_id": submission.batch_id,
+        "failures": [f.to_dict() for f in submission.failures],
+    }
+    write_atomically(
+        metadata_path, json.dumps(metadata, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
+    )
+
+    return WrittenSubmission(
+        batch_id=submission.batch_id,
+        metadata_path=metadata_path,
+        submitted=submission.batch_id is not None,
+    )
+
+
 @dataclass(frozen=True, slots=True)
 class WrittenSummarize:
     output_path: Path
     metadata_path: Path
     clusters_summarized: int
     degraded: bool
+    # The collect-side Failures a caller needs to fold into its own record
+    # (e.g. cycle.json's `failures`/`degraded`) -- distinct from `degraded`,
+    # which only reflects per-Cluster summary-text degrades, not every
+    # Failure `collect_fn` reported (a batch-level failure can degrade
+    # every Cluster without necessarily being one of `degraded_cluster_ids`).
+    failures: tuple[Failure, ...] = ()
 
 
-def run_summarize(
+def collect_summarize(
+    batch_id: str,
     clusters: list[dict],
     language: OutputLanguage,
     cycle_id: str,
     data_root: Path = DEFAULT_DATA_ROOT,
-    summarize_fn: SummarizeFn = summarize_clusters,
-) -> WrittenSummarize:
-    """Attach a `summary` field to each ranked Cluster, in `language`.
+    collect_fn: CollectFn = collect_batch,
+) -> WrittenSummarize | None:
+    """Check `batch_id`'s status once. Returns `None` (writes nothing) if
+    the batch has not finished -- the caller retries on a later invocation,
+    per AD-11. If it has finished, attaches `summary`/`outbound_url`/
+    `outbound_source` to every Cluster exactly as Story 3.1-3.3 established
+    and writes `summarized.jsonl`.
 
-    `clusters` is `run_rank`'s output exactly as written -- not re-sorted,
-    re-filtered, or re-sliced. `summarize_fn` is injected so this stage is
-    tested without a network, matching every other adapter-boundary test in
-    this pipeline. `language` is typed on `OutputLanguage` for static
-    analysis and self-documentation -- since it's a `StrEnum`, this is not
-    a runtime guard (see `summarize_clusters`'s docstring); the actual
-    enforcement is `claude.py`'s `_LANGUAGE_NAMES` lookup raising on an
-    unsupported value.
+    `clusters` must be the same list `submit_summarize` was called with for
+    this `batch_id` -- `collect_batch` reassociates results by `cluster_id`
+    against exactly this list.
     """
-    # Explicit .value rather than relying on OutputLanguage's StrEnum-ness
-    # to stringify itself implicitly: the path segment and metadata field
-    # below are records, not prompt instructions, and every other stage's
-    # metadata already uses lowercase slugs for this kind of field. Only
-    # claude.py's prompt text needed the human-readable name ("French").
-    destination = data_root / "intermediate" / STAGE / cycle_id / language.value
+    result: BatchCollectResult = collect_fn(batch_id, clusters)
+    if result.status == "pending":
+        return None
+
+    destination = _destination(data_root, cycle_id, language)
     output_path = destination / "summarized.jsonl"
     metadata_path = destination / f"{STAGE}.json"
-
-    result: SummarizeResult = summarize_fn(clusters, language) if clusters else SummarizeResult()
 
     degraded_cluster_ids: list[str] = []
     unlinked_cluster_ids: list[str] = []
@@ -206,6 +276,7 @@ def run_summarize(
         metadata_path=metadata_path,
         clusters_summarized=len(summarized_out),
         degraded=bool(degraded_cluster_ids),
+        failures=tuple(result.failures),
     )
 
 
@@ -214,6 +285,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--language", required=True, choices=[lang.value for lang in OutputLanguage]
     )
+    parser.add_argument(
+        "--batch-id", default=None, help="Collect an already-submitted batch instead of submitting"
+    )
     args = parser.parse_args(argv)
 
     if not args.input.is_file():
@@ -221,15 +295,28 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     cycle_id = args.cycle_id or cycle_id_for(datetime.now())
+    language = OutputLanguage(args.language)
     clusters = list(read_jsonl(args.input))
-    written = run_summarize(
-        clusters,
-        language=OutputLanguage(args.language),
-        cycle_id=cycle_id,
-        data_root=args.data_root,
-    )
 
-    print(f"{STAGE}: {written.clusters_summarized} summarized -> {written.output_path}")
+    if args.batch_id:
+        collected = collect_summarize(
+            args.batch_id, clusters, language=language, cycle_id=cycle_id, data_root=args.data_root
+        )
+        if collected is None:
+            print(f"{STAGE}: batch {args.batch_id} not yet complete")
+            return 0
+        for failure in collected.failures:
+            print(f"{STAGE}: degraded — {failure.adapter}: {failure.detail}", file=sys.stderr)
+        print(f"{STAGE}: {collected.clusters_summarized} summarized -> {collected.output_path}")
+        return 0
+
+    submitted = submit_summarize(
+        clusters, language=language, cycle_id=cycle_id, data_root=args.data_root
+    )
+    if submitted.batch_id is None:
+        print(f"{STAGE}: submission failed; see {submitted.metadata_path}", file=sys.stderr)
+        return 0
+    print(f"{STAGE}: submitted batch {submitted.batch_id}")
     return 0
 
 

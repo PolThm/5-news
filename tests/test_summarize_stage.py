@@ -1,9 +1,15 @@
 """Tests for the summarize stage.
 
 AD-6 is the whole contract here: input is an already-ordered, already-counted
-Briefing; output is the same Briefing with one field (`summary`) added. No
-live Claude call anywhere — `summarize_fn` is injected, exactly like every
-other adapter-boundary test in this pipeline.
+Briefing; output is the same Briefing with new fields added, never anything
+removed/reordered/renumbered. No live Claude call anywhere — `submit_fn`/
+`collect_fn` are injected, exactly like every other adapter-boundary test in
+this pipeline.
+
+Story 3.4 split the single `run_summarize` into `submit_summarize` (submits,
+returns immediately) and `collect_summarize` (checks status once; `None` if
+not yet done). Most of Stories 3.1-3.3's assertions carry over unchanged --
+only which function calls them differs.
 """
 
 from __future__ import annotations
@@ -12,10 +18,10 @@ import json
 from pathlib import Path
 
 from pipeline.adapters import Failure
-from pipeline.adapters.claude import SummarizeResult, _prompt_for
+from pipeline.adapters.claude import BatchCollectResult, BatchSubmission, _prompt_for
 from pipeline.domain import OutputLanguage
 from pipeline.stages import read_jsonl
-from pipeline.stages.summarize import run_summarize
+from pipeline.stages.summarize import collect_summarize, submit_summarize
 
 
 def _ranked_cluster(
@@ -57,16 +63,89 @@ def _ranked_cluster(
     }
 
 
+# --- submit_summarize --------------------------------------------------------
+
+
+def test_submit_writes_the_batch_id_and_returns_immediately(tmp_path: Path) -> None:
+    clusters = [_ranked_cluster("a", rank=1), _ranked_cluster("b", rank=2)]
+
+    def fake_submit(clusters_in: list[dict], language: OutputLanguage) -> BatchSubmission:
+        return BatchSubmission(batch_id="batch_xyz")
+
+    written = submit_summarize(
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        data_root=tmp_path,
+        submit_fn=fake_submit,
+    )
+
+    assert written.batch_id == "batch_xyz"
+    assert written.submitted is True
+    metadata = json.loads(written.metadata_path.read_text())
+    assert metadata["batch_id"] == "batch_xyz"
+    assert metadata["clusters_submitted"] == 2
+    assert metadata["language"] == "fr"
+
+
+def test_submit_records_a_failure_when_submission_itself_fails(tmp_path: Path) -> None:
+    clusters = [_ranked_cluster("a", rank=1)]
+
+    def fake_submit(clusters_in: list[dict], language: OutputLanguage) -> BatchSubmission:
+        return BatchSubmission(failures=[Failure("claude", "ANTHROPIC_API_KEY is not set")])
+
+    written = submit_summarize(
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        data_root=tmp_path,
+        submit_fn=fake_submit,
+    )
+
+    assert written.batch_id is None
+    assert written.submitted is False
+    metadata = json.loads(written.metadata_path.read_text())
+    assert metadata["batch_id"] is None
+    assert len(metadata["failures"]) == 1
+
+
+# --- collect_summarize: pending ----------------------------------------------
+
+
+def test_collect_returns_none_and_writes_nothing_when_batch_not_yet_ended(tmp_path: Path) -> None:
+    """AC3: phase two exits without collecting when the batch is not
+    complete, leaving the pending state for a later run to resume."""
+    clusters = [_ranked_cluster("a", rank=1)]
+
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="pending")
+
+    result = collect_summarize(
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        data_root=tmp_path,
+        collect_fn=fake_collect,
+    )
+
+    assert result is None
+    assert not (tmp_path / "intermediate" / "summarize" / "c1" / "fr" / "summarized.jsonl").exists()
+
+
+# --- collect_summarize: ended, carrying forward Stories 3.1-3.3's contract --
+
+
 def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> None:
     """AD-6: summarize adds Summary text keyed to Cluster identity and may
     not add, remove, reorder, or renumber anything else."""
     clusters = [_ranked_cluster("a", rank=1), _ranked_cluster("b", rank=2)]
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(summaries={"a": "Resume A.", "b": "Resume B."})
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="ended", summaries={"a": "Resume A.", "b": "Resume B."})
 
-    written = run_summarize(
-        clusters, language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = list(read_jsonl(written.output_path))
 
@@ -129,14 +208,15 @@ def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffecte
     )
     clusters = [ok_cluster, bad_cluster]
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended",
             summaries={"ok": "Tout va bien."},
             failures=[Failure("claude", "cluster bad: batch result was 'errored'")],
         )
 
-    written = run_summarize(
-        clusters, language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
 
@@ -178,11 +258,17 @@ def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_co
         ],
     )
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(failures=[Failure("claude", "cluster tied: errored")])
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended", failures=[Failure("claude", "cluster tied: errored")]
+        )
 
-    written = run_summarize(
-        [tied_cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1",
+        [tied_cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -191,9 +277,8 @@ def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_co
 
 def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_link() -> None:
     """AC1: every item carries an outbound link and Source name, selected by
-    the same (published_at, url)-earliest convention _earliest_member_title
-    already uses for the degrade path -- applied here for the ordinary,
-    non-degraded case too."""
+    the same (published_at, url)-earliest convention the degrade path
+    already uses -- applied here for the ordinary, non-degraded case too."""
     cluster = _ranked_cluster(
         "a",
         rank=1,
@@ -217,11 +302,11 @@ def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_
         ],
     )
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(summaries={"a": "Un resume reel."})
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="ended", summaries={"a": "Un resume reel."})
 
-    written = run_summarize(
-        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -257,11 +342,13 @@ def test_a_degraded_cluster_still_carries_a_correct_outbound_link() -> None:
         ],
     )
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(failures=[Failure("claude", "cluster bad: errored")])
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended", failures=[Failure("claude", "cluster bad: errored")]
+        )
 
-    written = run_summarize(
-        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -276,11 +363,11 @@ def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() 
     Article to link to -- degrade to None, don't crash, don't fabricate."""
     cluster = _ranked_cluster("history-only", rank=1, members=[])
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(summaries={"history-only": "Un resume."})
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="ended", summaries={"history-only": "Un resume."})
 
-    written = run_summarize(
-        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -291,16 +378,17 @@ def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() 
 def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields() -> None:
     """The most degraded state a Cluster can be in: no members to link to,
     and summarization also failed. Both the summary-text fallback (its own
-    cluster_id, per _earliest_member_title's None-representative branch) and
-    the outbound-link fallback (None, None) must hold simultaneously --
-    never exercised together before this test."""
+    cluster_id, per the None-representative branch) and the outbound-link
+    fallback (None, None) must hold simultaneously."""
     cluster = _ranked_cluster("history-only", rank=1, members=[])
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(failures=[Failure("claude", "cluster history-only: errored")])
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended", failures=[Failure("claude", "cluster history-only: errored")]
+        )
 
-    written = run_summarize(
-        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -311,7 +399,7 @@ def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields()
 
 def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle() -> None:
     """AD-10's degrade-not-abort principle must hold here too: a malformed
-    upstream member (missing `source`) must not crash the whole summarize
+    upstream member (missing `source`) must not crash the whole collect
     call -- it should degrade only that Cluster's outbound link."""
     ok_cluster = _ranked_cluster("ok", rank=1)
     malformed_cluster = _ranked_cluster(
@@ -330,11 +418,13 @@ def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle
     )
     clusters = [ok_cluster, malformed_cluster]
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(summaries={"ok": "Ca va.", "malformed": "Aussi resume."})
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended", summaries={"ok": "Ca va.", "malformed": "Aussi resume."}
+        )
 
-    written = run_summarize(
-        clusters, language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
 
@@ -362,11 +452,11 @@ def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> N
         ],
     )
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(summaries={"a": "Un resume."})
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="ended", summaries={"a": "Un resume."})
 
-    written = run_summarize(
-        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    written = collect_summarize(
+        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -383,14 +473,17 @@ def test_metadata_records_how_many_clusters_lack_an_outbound_link() -> None:
     linked_cluster = _ranked_cluster("linked", rank=1)
     unlinked_cluster = _ranked_cluster("unlinked", rank=2, members=[])
 
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult(summaries={"linked": "Ok.", "unlinked": "Ok aussi."})
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended", summaries={"linked": "Ok.", "unlinked": "Ok aussi."}
+        )
 
-    written = run_summarize(
+    written = collect_summarize(
+        "batch_1",
         [linked_cluster, unlinked_cluster],
         language=OutputLanguage.FR,
         cycle_id="c1",
-        summarize_fn=fake_summarize,
+        collect_fn=fake_collect,
     )
     metadata = json.loads(written.metadata_path.read_text())
 
@@ -454,15 +547,16 @@ def test_a_title_containing_a_quote_does_not_break_out_of_its_delimiter() -> Non
 
 
 def test_empty_input_produces_empty_output(tmp_path: Path) -> None:
-    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
-        return SummarizeResult()
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="ended")
 
-    written = run_summarize(
+    written = collect_summarize(
+        "batch_1",
         [],
         language=OutputLanguage.FR,
         cycle_id="c1",
         data_root=tmp_path,
-        summarize_fn=fake_summarize,
+        collect_fn=fake_collect,
     )
     out = list(read_jsonl(written.output_path))
 
@@ -470,3 +564,38 @@ def test_empty_input_produces_empty_output(tmp_path: Path) -> None:
     metadata = json.loads(written.metadata_path.read_text())
     assert metadata["clusters_in"] == 0
     assert metadata["clusters_summarized"] == 0
+
+
+# --- Post-review fix: main() must surface a submission failure -------------
+
+
+def test_main_reports_a_submission_failure_on_stderr_instead_of_printing_none(
+    tmp_path: Path, monkeypatch, capsys
+) -> None:
+    """Previously main() printed "submitted batch None" on stdout with no
+    other indication anything went wrong when submission failed -- the same
+    failure category cycle.py's own main() already surfaces on stderr."""
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    from pipeline.stages import write_jsonl
+    from pipeline.stages.summarize import main
+
+    input_path = tmp_path / "ranked.jsonl"
+    write_jsonl(input_path, [_ranked_cluster("a", rank=1)])
+
+    exit_code = main(
+        [
+            "--input",
+            str(input_path),
+            "--language",
+            "fr",
+            "--data-root",
+            str(tmp_path),
+            "--cycle-id",
+            "c1",
+        ]
+    )
+
+    captured = capsys.readouterr()
+    assert exit_code == 0
+    assert "None" not in captured.out
+    assert "submission failed" in captured.err

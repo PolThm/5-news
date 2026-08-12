@@ -77,6 +77,15 @@ def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> No
             assert produced[key] == value, f"field {key!r} must pass through unchanged"
     assert out[0]["summary"] == "Resume A."
     assert out[1]["summary"] == "Resume B."
+    # AC2 (Story 3.3): the loop above already covers independent_source_count/
+    # country_count/countries/origin_country generically (every original
+    # field must survive unchanged) -- named explicitly here so the AC has a
+    # direct assertion, not just an incidental one.
+    for original, produced in zip(clusters, out, strict=True):
+        assert produced["independent_source_count"] == original["independent_source_count"]
+        assert produced["country_count"] == original["country_count"]
+        assert produced["countries"] == original["countries"]
+        assert produced["origin_country"] == original["origin_country"]
 
 
 def test_the_prompt_receives_member_data_and_a_no_fabrication_instruction() -> None:
@@ -178,6 +187,215 @@ def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_co
     out = list(read_jsonl(written.output_path))[0]
 
     assert out["summary"] == "Z later-sorting title"  # the (published_at, url)-earliest member
+
+
+def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_link() -> None:
+    """AC1: every item carries an outbound link and Source name, selected by
+    the same (published_at, url)-earliest convention _earliest_member_title
+    already uses for the degrade path -- applied here for the ordinary,
+    non-degraded case too."""
+    cluster = _ranked_cluster(
+        "a",
+        rank=1,
+        members=[
+            {
+                "title": "later dispatch",
+                "url": "https://later.com/x",
+                "source": "later.com",
+                "source_country": "japan",
+                "language": "ja",
+                "published_at": "2026-08-11T09:00:00+00:00",
+            },
+            {
+                "title": "earliest dispatch",
+                "url": "https://earliest.com/x",
+                "source": "earliest.com",
+                "source_country": "china",
+                "language": "zh",
+                "published_at": "2026-08-11T05:00:00+00:00",
+            },
+        ],
+    )
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(summaries={"a": "Un resume reel."})
+
+    written = run_summarize(
+        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
+    out = list(read_jsonl(written.output_path))[0]
+
+    assert out["summary"] == "Un resume reel."
+    assert out["outbound_url"] == "https://earliest.com/x"
+    assert out["outbound_source"] == "earliest.com"
+
+
+def test_a_degraded_cluster_still_carries_a_correct_outbound_link() -> None:
+    """The degrade path only replaces `summary` -- attribution fields must
+    still point somewhere real, so a reader always has a link to click
+    through to regardless of whether the AI text is real or a fallback."""
+    cluster = _ranked_cluster(
+        "bad",
+        rank=1,
+        members=[
+            {
+                "title": "later dispatch",
+                "url": "https://later.com/bad",
+                "source": "later.com",
+                "source_country": "japan",
+                "language": "ja",
+                "published_at": "2026-08-11T09:00:00+00:00",
+            },
+            {
+                "title": "earliest dispatch",
+                "url": "https://earliest.com/bad",
+                "source": "earliest.com",
+                "source_country": "china",
+                "language": "zh",
+                "published_at": "2026-08-11T05:00:00+00:00",
+            },
+        ],
+    )
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(failures=[Failure("claude", "cluster bad: errored")])
+
+    written = run_summarize(
+        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
+    out = list(read_jsonl(written.output_path))[0]
+
+    assert out["summary"] == "earliest dispatch"  # the degrade text
+    assert out["outbound_url"] == "https://earliest.com/bad"
+    assert out["outbound_source"] == "earliest.com"
+
+
+def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() -> None:
+    """The link_across_days history-only-clique case (Story 3.1's Task 0)
+    legitimately produces a Cluster with an empty members list. There is no
+    Article to link to -- degrade to None, don't crash, don't fabricate."""
+    cluster = _ranked_cluster("history-only", rank=1, members=[])
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(summaries={"history-only": "Un resume."})
+
+    written = run_summarize(
+        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
+    out = list(read_jsonl(written.output_path))[0]
+
+    assert out["outbound_url"] is None
+    assert out["outbound_source"] is None
+
+
+def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields() -> None:
+    """The most degraded state a Cluster can be in: no members to link to,
+    and summarization also failed. Both the summary-text fallback (its own
+    cluster_id, per _earliest_member_title's None-representative branch) and
+    the outbound-link fallback (None, None) must hold simultaneously --
+    never exercised together before this test."""
+    cluster = _ranked_cluster("history-only", rank=1, members=[])
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(failures=[Failure("claude", "cluster history-only: errored")])
+
+    written = run_summarize(
+        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
+    out = list(read_jsonl(written.output_path))[0]
+
+    assert out["summary"] == "history-only"  # falls back to cluster_id
+    assert out["outbound_url"] is None
+    assert out["outbound_source"] is None
+
+
+def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle() -> None:
+    """AD-10's degrade-not-abort principle must hold here too: a malformed
+    upstream member (missing `source`) must not crash the whole summarize
+    call -- it should degrade only that Cluster's outbound link."""
+    ok_cluster = _ranked_cluster("ok", rank=1)
+    malformed_cluster = _ranked_cluster(
+        "malformed",
+        rank=2,
+        members=[
+            {
+                "title": "no source field",
+                "url": "https://a.com/malformed",
+                "source_country": "france",
+                "language": "fr",
+                "published_at": "2026-08-11T06:00:00+00:00",
+                # "source" deliberately omitted
+            }
+        ],
+    )
+    clusters = [ok_cluster, malformed_cluster]
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(summaries={"ok": "Ca va.", "malformed": "Aussi resume."})
+
+    written = run_summarize(
+        clusters, language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
+    out = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
+
+    assert out["ok"]["outbound_url"] is not None
+    assert out["malformed"]["outbound_url"] == "https://a.com/malformed"
+    assert out["malformed"]["outbound_source"] is None
+
+
+def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> None:
+    """A present-but-empty string is a different failure mode than a missing
+    key -- both must degrade to None rather than pass through a falsy value
+    that would render as a broken empty href on the display side."""
+    cluster = _ranked_cluster(
+        "a",
+        rank=1,
+        members=[
+            {
+                "title": "X",
+                "url": "",
+                "source": "",
+                "source_country": "france",
+                "language": "fr",
+                "published_at": "2026-08-11T06:00:00+00:00",
+            }
+        ],
+    )
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(summaries={"a": "Un resume."})
+
+    written = run_summarize(
+        [cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
+    out = list(read_jsonl(written.output_path))[0]
+
+    assert out["outbound_url"] is None
+    assert out["outbound_source"] is None
+
+
+def test_metadata_records_how_many_clusters_lack_an_outbound_link() -> None:
+    """AD-6/AD-10's philosophy throughout this file is to state every
+    visible shortfall in metadata, never degrade silently -- a Cluster with
+    no outbound link is exactly this kind of reader-facing shortfall, and
+    deserves the same visibility degraded_cluster_ids already gives
+    summary-text degrades."""
+    linked_cluster = _ranked_cluster("linked", rank=1)
+    unlinked_cluster = _ranked_cluster("unlinked", rank=2, members=[])
+
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
+        return SummarizeResult(summaries={"linked": "Ok.", "unlinked": "Ok aussi."})
+
+    written = run_summarize(
+        [linked_cluster, unlinked_cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        summarize_fn=fake_summarize,
+    )
+    metadata = json.loads(written.metadata_path.read_text())
+
+    assert metadata["clusters_without_outbound_link"] == 1
+    assert metadata["clusters_without_outbound_link_ids"] == ["unlinked"]
 
 
 def test_a_singleton_member_cluster_is_summarized_without_claiming_two_sources() -> None:

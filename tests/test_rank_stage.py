@@ -250,6 +250,11 @@ def _zone_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
+        # Arbitrary but deterministic and always a member of `countries` --
+        # these Story 2.5 tests predate the anti-concentration cap (Story
+        # 2.6) and don't care which one is "origin", only that the field
+        # exists so the cap's lookup doesn't KeyError.
+        "origin_country": sorted(countries)[0],
     }
 
 
@@ -409,9 +414,20 @@ def test_fallback_still_respects_the_five_item_cap() -> None:
     from pipeline.stages.rank import rank_for_zone
 
     clusters = [
-        _zone_cluster("fr-thin", sources=2, countries=["france"]),  # below the zone floor alone
+        # Below the zone floor alone (only 1 qualifying-relevant cluster
+        # touches france), so this forces a fallback to europe.
+        _zone_cluster("fr-thin", sources=2, countries=["france", "germany"]),
+        # 6 candidates NOT touching france directly, spread across the other
+        # 2 configured European countries (at most 2 per country, so the
+        # per-country cap never triggers) -- only relevant once serving_zone
+        # widens to europe, exercising the plain 5-item cap post-fallback.
         *[
-            _zone_cluster(f"eu{i}", sources=10 - i, countries=["germany", "united-kingdom"])
+            _origin_cluster(
+                f"eu{i}",
+                sources=10 - i,
+                origin=["germany", "united-kingdom"][i % 2],
+                countries=["germany", "united-kingdom"],
+            )
             for i in range(6)
         ],
     ]
@@ -488,3 +504,161 @@ def test_real_cluster_output_is_consumable_by_rank_for_zone(tmp_path) -> None:
     assert result.substituted is True
     assert len(result.ranked_clusters) == 1
     assert result.ranked_clusters[0]["country_count"] == 2
+
+
+# --- Anti-concentration cap (Story 2.6) --------------------------------------
+
+
+def _origin_cluster(cluster_id: str, sources: int, origin: str, countries: list[str]) -> dict:
+    return {
+        "cluster_id": cluster_id,
+        "member_titles": [f"title-{cluster_id}"],
+        "independent_source_count": sources,
+        "country_count": len(countries),
+        "countries": sorted(countries),
+        "origin_country": origin,
+    }
+
+
+def test_apply_anti_concentration_cap_keeps_at_most_two_per_country() -> None:
+    from pipeline.stages.rank import apply_anti_concentration_cap
+
+    ranked = [
+        _origin_cluster("fr1", sources=10, origin="france", countries=["france", "germany"]),
+        _origin_cluster("fr2", sources=9, origin="france", countries=["france", "germany"]),
+        _origin_cluster("fr3", sources=8, origin="france", countries=["france", "germany"]),
+        _origin_cluster("de1", sources=7, origin="germany", countries=["germany", "france"]),
+    ]
+
+    capped = apply_anti_concentration_cap(ranked)
+
+    ids = [c["cluster_id"] for c in capped]
+    assert ids == ["fr1", "fr2", "de1"], "the 3rd-ranked French cluster is dropped, not fr1/fr2"
+
+
+def test_anti_concentration_cap_preserves_relative_order() -> None:
+    from pipeline.stages.rank import apply_anti_concentration_cap
+
+    ranked = [
+        _origin_cluster("a", sources=10, origin="japan", countries=["japan"]),
+        _origin_cluster("b", sources=9, origin="france", countries=["france"]),
+        _origin_cluster("c", sources=8, origin="japan", countries=["japan"]),
+        _origin_cluster("d", sources=7, origin="brazil", countries=["brazil"]),
+    ]
+
+    capped = apply_anti_concentration_cap(ranked)
+
+    assert [c["cluster_id"] for c in capped] == ["a", "b", "c", "d"]
+
+
+def test_cap_only_removes_never_pads(monkeypatch=None) -> None:
+    from pipeline.stages.rank import apply_anti_concentration_cap
+
+    ranked = [
+        _origin_cluster("fr1", sources=10, origin="france", countries=["france"]),
+        _origin_cluster("fr2", sources=9, origin="france", countries=["france"]),
+        _origin_cluster("fr3", sources=8, origin="france", countries=["france"]),
+    ]
+
+    capped = apply_anti_concentration_cap(ranked)
+
+    assert len(capped) == 2, "the excess is dropped, never backfilled with padding"
+
+
+def test_continent_briefing_applies_the_cap_with_backfill() -> None:
+    """AC1, end to end: an over-represented country's excess Cluster is
+    dropped and a lower-ranked Cluster from another country fills the freed
+    slot -- capping must happen before the top-5 slice, not after."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _origin_cluster(f"fr{i}", sources=10 - i, origin="france", countries=["france", "spain"])
+        for i in range(3)
+    ] + [_origin_cluster("de1", sources=2, origin="germany", countries=["germany", "italy"])]
+
+    result = rank_for_zone(clusters, zone_by_slug("europe"))
+
+    ids = [c["cluster_id"] for c in result.ranked_clusters]
+    assert "fr2" not in ids, "3rd-ranked France cluster excluded by the cap"
+    assert "de1" in ids, "de1 backfills the slot the cap freed"
+    assert len(ids) == 3
+
+
+def test_cap_before_slice_backfills_from_beyond_the_top_five() -> None:
+    """The real regression this ordering exists to prevent: with 5 ranked
+    slots and MORE than 5 total candidates, capping AFTER the slice would
+    never see the 6th-ranked cluster at all -- it would just be sliced away
+    before the cap ever ran, leaving a 4-item Briefing when a 5th,
+    lower-ranked-but-eligible cluster exists and should fill the freed slot.
+    An adversarial review found the prior version of this test used only 4
+    total candidates, so slicing before or after capping produced identical
+    output -- it never actually exercised this ordering."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        # Ranks 1-4: France, an over-represented country that will hit the
+        # cap after only 2 survive.
+        *[
+            _origin_cluster(
+                f"fr{i}", sources=20 - i, origin="france", countries=["france", "spain"]
+            )
+            for i in range(4)
+        ],
+        # Rank 5: Germany.
+        _origin_cluster("de1", sources=15, origin="germany", countries=["germany", "italy"]),
+        # Rank 6: United Kingdom -- ranked below the top-5 slice, but must
+        # backfill into the slot freed by capping fr2/fr3, since capping
+        # runs before the slice. If the code sliced to 5 first and capped
+        # after, this cluster would never be reachable at all. Uses a real
+        # configured European country (only france/germany/united-kingdom
+        # exist in ZONES) so it is genuinely relevant to europe, not
+        # excluded by the relevance filter before the cap question even
+        # arises.
+        _origin_cluster(
+            "uk1", sources=14, origin="united-kingdom", countries=["united-kingdom", "germany"]
+        ),
+    ]
+
+    result = rank_for_zone(clusters, zone_by_slug("europe"))
+
+    ids = [c["cluster_id"] for c in result.ranked_clusters]
+    assert ids == ["fr0", "fr1", "de1", "uk1"], (
+        "fr2/fr3 capped away; uk1 (rank 6) backfills a freed slot only "
+        "reachable if the cap ran before the top-5 slice"
+    )
+    assert len(ids) <= 5
+
+
+def test_world_zone_is_not_subject_to_the_cap() -> None:
+    """AC2: the cap does not apply to World, per FR-17's explicit exemption."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _origin_cluster(f"fr{i}", sources=10 - i, origin="france", countries=["france", "spain"])
+        for i in range(4)
+    ]
+
+    result = rank_for_zone(clusters, zone_by_slug("world"))
+
+    ids = [c["cluster_id"] for c in result.ranked_clusters]
+    assert ids == ["fr0", "fr1", "fr2", "fr3"], "no cap applied -- all 4 France clusters included"
+
+
+def test_country_zone_is_not_subject_to_the_cap() -> None:
+    """The cap is stated as being about Continent Briefings; a Country
+    Zone's own Briefing was never in its scope either."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _origin_cluster(f"fr{i}", sources=10 - i, origin="france", countries=["france", "spain"])
+        for i in range(4)
+    ]
+
+    result = rank_for_zone(clusters, zone_by_slug("france"))
+
+    ids = [c["cluster_id"] for c in result.ranked_clusters]
+    assert len(ids) == 4, "a Country Zone Briefing is not subject to the anti-concentration cap"

@@ -21,11 +21,17 @@ from pipeline.stages.cluster import (
 )
 
 
-def _group(title: str, normalized: str, country: str, sources: list[str]) -> dict:
+def _group(
+    title: str,
+    normalized: str,
+    country: str,
+    sources: list[str],
+    published_at: str = "2026-08-11T06:00:00+00:00",
+) -> dict:
     return {
         "title": title,
         "url": f"https://example.com/{normalized}",
-        "published_at": "2026-08-11T06:00:00+00:00",
+        "published_at": published_at,
         "source": sources[0],
         "source_country": country,
         "language": "en",
@@ -281,3 +287,75 @@ def test_run_cluster_empty_input(tmp_path: Path) -> None:
     )
     clusters = list(read_jsonl(written.output_path))
     assert clusters == []
+
+
+def test_origin_country_is_the_earliest_published_members_country() -> None:
+    """A Cluster's origin is where the Event was first reported -- distinct
+    from `countries` (everywhere it's covered) and `country_count` (how many
+    places). Applies the same earliest-publisher-defines-origin principle
+    already established at the dedupe-group level one layer up."""
+    groups = [
+        _group(
+            "Ceasefire declared - AP",
+            "ceasefire declared ap",
+            "germany",
+            ["o2.com"],
+            published_at="2026-08-11T08:00:00+00:00",  # published later
+        ),
+        _group(
+            "Ceasefire declared",
+            "ceasefire declared",
+            "france",
+            ["o1.com"],
+            published_at="2026-08-11T06:00:00+00:00",  # published first
+        ),
+    ]
+    coverage = coverage_for_cluster(groups)
+
+    assert coverage.origin_country == "france"
+    assert coverage.countries == frozenset({"france", "germany"})
+
+
+def test_origin_country_is_always_a_member_of_countries() -> None:
+    """Invariant: a Cluster's origin cannot be a country it has no coverage
+    from -- origin_country must always be drawn from the same set countries
+    is built from."""
+    for groups in (
+        [_group("A", "a", "japan", ["o1.com"])],
+        [
+            _group("A", "a", "france", ["o1.com"], published_at="2026-08-11T06:00:00+00:00"),
+            _group("B", "b", "germany", ["o2.com"], published_at="2026-08-11T07:00:00+00:00"),
+        ],
+    ):
+        coverage = coverage_for_cluster(groups)
+        assert coverage.origin_country in coverage.countries
+
+
+def test_origin_country_compares_timestamps_semantically_not_lexicographically() -> None:
+    """An adversarial review flagged that comparing published_at as raw
+    strings is only safe if every timestamp shares an identical UTC offset
+    format. Constructed here with a verified real disagreement: lexicographic
+    order picks "2026-08-10T23:00:00-05:00" as earliest (the digit '1' in
+    '11T01' sorts after '10T23'), but that timestamp is actually
+    2026-08-11T04:00:00 UTC -- later than the other group's
+    2026-08-11T01:00:00+00:00. A string-comparing implementation picks the
+    wrong group as origin; a datetime-parsing one does not."""
+    groups = [
+        _group(
+            "Later report, different offset",
+            "later report different offset",
+            "germany",
+            ["o2.com"],
+            published_at="2026-08-10T23:00:00-05:00",  # == 2026-08-11T04:00 UTC
+        ),
+        _group(
+            "Earliest report",
+            "earliest report",
+            "france",
+            ["o1.com"],
+            published_at="2026-08-11T01:00:00+00:00",  # genuinely earlier
+        ),
+    ]
+    coverage = coverage_for_cluster(groups)
+
+    assert coverage.origin_country == "france"

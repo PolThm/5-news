@@ -87,6 +87,16 @@ MAX_SELECTED_CLUSTERS: Final[int] = 5
 # applied to config values, not just stage-owned fields).
 MIN_QUALIFYING_FOR_ZONE: Final[int] = 2
 
+# FR-17: "A Continent Briefing contains at most 2 items from the same
+# country" -- so "Africa" does not silently mean "Nigeria." Applied against
+# a Cluster's origin_country (Story 2.6: the country of its earliest
+# reported member), not its full countries set -- a Cluster's origin is
+# always exactly one country, which is what a per-country cap needs.
+# Explicitly not applied to World (FR-17's own stated exemption) or to a
+# Country Zone's own Briefing (the rule is stated as being about Continent
+# Briefings specifically).
+MAX_PER_COUNTRY: Final[int] = 2
+
 # If this ever failed, a Zone could never avoid falling back even after
 # selecting a full Briefing — MIN_QUALIFYING_FOR_ZONE is checked against the
 # pre-selection count in pipeline.stages.rank._rank_for_zone, so raising it
@@ -152,6 +162,7 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
 
 
 __all__ = [
+    "MAX_PER_COUNTRY",
     "MAX_SELECTED_CLUSTERS",
     "MIN_COUNTRIES",
     "MIN_INDEPENDENT_SOURCES",

@@ -28,6 +28,7 @@ import json
 import sys
 from collections.abc import Callable
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 
 import numpy as np
@@ -183,6 +184,15 @@ class Coverage:
     # AD-12 says a value has one owner -- duplicating "len(countries)" at
     # every caller would be the same value computed twice.
     countries: frozenset[str]
+    # Where the Event was FIRST reported -- distinct from `countries` (every
+    # country this Cluster's coverage touches) and `country_count` (how
+    # many). Story 2.6's anti-concentration cap needs a single origin per
+    # Cluster, not a set: capping against a set would let one Cluster
+    # consume several countries' quotas at once, which is not what "at most
+    # 2 items from the same country" means to a reader. Always a member of
+    # `countries` (it is one of the countries covered) -- never a country
+    # the Cluster has no coverage from.
+    origin_country: str
 
 
 def coverage_for_cluster(groups: list[dict]) -> Coverage:
@@ -200,8 +210,23 @@ def coverage_for_cluster(groups: list[dict]) -> Coverage:
     — do not re-derive this differently than Story 1.4 already settled.
     """
     countries = frozenset(g["source_country"] for g in groups)
+    # Earliest by published_at, then url for a stable tiebreak -- the same
+    # convention dedupe.py's ArticleGroup.representative already uses one
+    # layer down, applied here one layer up: the first dispatch reported
+    # defines where a Cluster's Event originated.
+    #
+    # Parsed to a real datetime before comparing, not compared as raw
+    # strings: an adversarial review noted that lexicographic string
+    # comparison of ISO-8601 timestamps is only safe if every timestamp in
+    # the pipeline shares an identical, fixed-width offset format -- true
+    # today by convention, enforced nowhere. Parsing removes the dependency
+    # on that convention rather than merely relying on it, and matches
+    # dedupe.py's ArticleRecord.representative, which compares real
+    # datetime objects, not their string serialization.
+    earliest = min(groups, key=lambda g: (datetime.fromisoformat(g["published_at"]), g["url"]))
     return Coverage(
         independent_source_count=len(groups),
+        origin_country=earliest["source_country"],
         country_count=len(countries),
         countries=countries,
     )
@@ -272,6 +297,7 @@ def run_cluster(
                 "independent_source_count": coverage.independent_source_count,
                 "country_count": coverage.country_count,
                 "countries": sorted(coverage.countries),
+                "origin_country": coverage.origin_country,
             }
         )
 

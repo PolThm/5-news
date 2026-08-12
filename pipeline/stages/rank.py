@@ -24,6 +24,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from pipeline.config import (
+    MAX_PER_COUNTRY,
     MAX_SELECTED_CLUSTERS,
     MIN_COUNTRIES,
     MIN_INDEPENDENT_SOURCES,
@@ -164,8 +165,30 @@ def _rank_for_zone(
     relevant = [c for c in clusters if _is_relevant_to(c, serving_zone)]
     qualifying_relevant = [c for c in relevant if qualifies(c)]
 
+    ordered = rank_clusters(qualifying_relevant)
+    if serving_zone.kind == ZoneKind.CONTINENT:
+        # FR-17: applied before the top-5 slice, not after -- capping after
+        # would just shrink a Briefing that could have had 5 items down to
+        # fewer, instead of backfilling with the next-ranked Cluster from an
+        # under-represented country, which is what "the next-ranked Clusters
+        # from other countries take the remaining places" describes.
+        # Explicitly not applied to World (FR-17's own exemption) or a
+        # Country Zone's own Briefing (the rule is stated as being about
+        # Continent Briefings specifically).
+        #
+        # Applied BEFORE the fallback-floor check below, not after: an
+        # adversarial review found (and reproduced) that checking the floor
+        # against the pre-cap count let a Continent whose qualifying
+        # Clusters were concentrated in one country pass the floor, then get
+        # capped down below it with no re-check and nowhere further to fall
+        # back to -- silently serving a thinner Briefing than the floor was
+        # meant to guarantee. Evaluating the floor against the post-cap
+        # count is what the floor is actually supposed to measure: can this
+        # Zone genuinely fill a Briefing on its own, cap included.
+        ordered = apply_anti_concentration_cap(ordered)
+
     parent = continent_for(serving_zone)
-    if len(qualifying_relevant) < MIN_QUALIFYING_FOR_ZONE and parent is not None:
+    if len(ordered) < MIN_QUALIFYING_FOR_ZONE and parent is not None:
         return _rank_for_zone(
             clusters,
             requested_zone=requested_zone,
@@ -173,7 +196,6 @@ def _rank_for_zone(
             visited=visited | {serving_zone.slug},
         )
 
-    ordered = rank_clusters(qualifying_relevant)
     selected = ordered[:MAX_SELECTED_CLUSTERS]
     ranked_out = [
         {**cluster, "rank": position} for position, cluster in enumerate(selected, start=1)
@@ -182,6 +204,30 @@ def _rank_for_zone(
     return ZoneRanking(
         requested_zone=requested_zone, served_zone=serving_zone, ranked_clusters=ranked_out
     )
+
+
+def apply_anti_concentration_cap(ranked: list[dict]) -> list[dict]:
+    """FR-17: at most ``MAX_PER_COUNTRY`` Clusters from the same
+    ``origin_country`` survive, in rank order. Everything else's relative
+    order is preserved; excess Clusters from an over-represented country are
+    dropped in place, never reordering what's kept.
+
+    Only ever removes Clusters that were already going to be included
+    (FR-4's never-pad rule extends naturally here) — the caller applies the
+    ``MAX_SELECTED_CLUSTERS`` top-N slice afterward, so a Cluster this
+    function drops can be replaced by whatever the next-ranked, still-
+    eligible Cluster is.
+    """
+    kept: list[dict] = []
+    seen_per_country: dict[str, int] = {}
+    for cluster in ranked:
+        origin = cluster["origin_country"]
+        count = seen_per_country.get(origin, 0)
+        if count >= MAX_PER_COUNTRY:
+            continue
+        seen_per_country[origin] = count + 1
+        kept.append(cluster)
+    return kept
 
 
 @dataclass(frozen=True, slots=True)

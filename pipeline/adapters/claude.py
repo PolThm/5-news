@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 from typing import Any, Protocol
 
 from pipeline.adapters import Failure
+from pipeline.domain import OutputLanguage
 
 ADAPTER = "claude"
 
@@ -31,6 +32,25 @@ MODEL = "claude-haiku-4-5"
 # (both error on this model) -- irrelevant anyway for a short, bounded,
 # low-reasoning task: writing one paragraph from a handful of headlines.
 MAX_TOKENS = 512
+
+# Claude needs an instruction it can actually parse -- "Write ... in fr,
+# summarizing ..." is not a sentence. Deliberately small and explicit, same
+# reasoning as resolve_wire_agency's wire-service table (Story 2.3): a
+# missing mapping should raise loudly (KeyError), never silently fall back
+# to something plausible-but-wrong. Exactly the three values OutputLanguage
+# has -- not a general i18n library or locale-name lookup.
+_LANGUAGE_NAMES: dict[OutputLanguage, str] = {
+    OutputLanguage.FR: "French",
+    OutputLanguage.EN: "English",
+    OutputLanguage.ES: "Spanish",
+}
+# A future OutputLanguage value added without a matching entry here would
+# otherwise fail as a KeyError deep inside _prompt_for, at batch-submission
+# time -- not at import time, and not caught by any test that doesn't
+# specifically construct that missing case. Catch it at import instead.
+assert set(_LANGUAGE_NAMES) == set(OutputLanguage), (
+    "_LANGUAGE_NAMES must have exactly one entry per OutputLanguage value"
+)
 
 _NO_FABRICATION_INSTRUCTION = (
     "Only state facts present in the Articles given to you. Never invent a "
@@ -103,7 +123,7 @@ def _member_lines(members: list[dict]) -> str:
     return "\n".join(f'- "{_escape_quotes(m["title"])}" ({m["source"]})' for m in members)
 
 
-def _prompt_for(cluster: dict, language: str) -> str:
+def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     members = cluster.get("members", [])
     lines = _member_lines(members)
     # A Cluster with fewer than 2 members is legitimate (a singleton Cluster
@@ -120,9 +140,14 @@ def _prompt_for(cluster: dict, language: str) -> str:
         if len(members) < 2
         else "Write a short paragraph synthesizing what these Articles agree on."
     )
+    # The language *name* ("French"), never the bare OutputLanguage code
+    # ("fr") -- "Write ... in fr, summarizing ..." is not an instruction an
+    # instruction-following model should be expected to parse correctly.
+    language_name = _LANGUAGE_NAMES[language]
     return (
-        f"Write one short paragraph, in {language}, summarizing the following "
-        f"news event for a reader who has not seen any of these Articles.\n\n"
+        f"Write one short paragraph, in {language_name}, summarizing the "
+        f"following news event for a reader who has not seen any of these "
+        f"Articles.\n\n"
         f"Articles:\n{lines}\n\n"
         f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}"
     )
@@ -130,13 +155,22 @@ def _prompt_for(cluster: dict, language: str) -> str:
 
 def summarize_clusters(
     clusters: list[dict],
-    language: str,
+    language: OutputLanguage,
     client: Client | None = None,
     poll_interval_seconds: float = 2.0,
     max_poll_attempts: int = 300,
 ) -> SummarizeResult:
     """Summarize each Cluster's member Articles into one paragraph, in
     ``language``, via the Batch API.
+
+    ``language`` is typed on ``OutputLanguage`` (not a bare ``str``) for
+    static analysis and self-documentation. ``OutputLanguage`` is a
+    ``StrEnum``, so this is not a runtime guard -- a bare ``"fr"`` still
+    behaves identically, since ``OutputLanguage.FR == "fr"`` holds and
+    dict lookups by that string succeed the same way. The only actual
+    runtime enforcement is ``_prompt_for``'s ``_LANGUAGE_NAMES[language]``
+    lookup, which raises ``KeyError`` for any value -- string or enum
+    member -- outside the three supported languages.
 
     ``custom_id`` is set to each Cluster's ``cluster_id`` — the only correct
     way to reassociate a result with its Cluster, since the Batch API makes

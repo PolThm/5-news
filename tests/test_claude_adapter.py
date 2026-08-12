@@ -11,7 +11,9 @@ never by position, since the real Batch API makes no ordering guarantee.
 
 from __future__ import annotations
 
-from pipeline.adapters.claude import MODEL, summarize_clusters
+import pytest
+from pipeline.adapters.claude import MODEL, _prompt_for, summarize_clusters
+from pipeline.domain import OutputLanguage
 
 
 class _FakeMessage:
@@ -117,7 +119,9 @@ def test_submits_one_batch_request_per_cluster_with_custom_id() -> None:
     batches = _FakeBatches(text_by_custom_id=text_by_custom_id)
     client = _FakeClient(batches)
 
-    result = summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert not result.failures
     assert result.summaries == text_by_custom_id
@@ -131,7 +135,7 @@ def test_uses_the_configured_model() -> None:
     batches = _FakeBatches(text_by_custom_id={"a": "Texte."})
     client = _FakeClient(batches)
 
-    summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    summarize_clusters(clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0)
 
     submitted = batches.create_calls[0]["requests"]
     assert submitted[0]["params"]["model"] == MODEL
@@ -152,7 +156,9 @@ def test_results_are_reassociated_by_custom_id_not_position() -> None:
     )
     client = _FakeClient(batches)
 
-    result = summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert result.summaries["first"] == "Premier resume."
     assert result.summaries["second"] == "Deuxieme resume."
@@ -169,7 +175,9 @@ def test_an_errored_result_is_reported_as_a_failure_scoped_to_its_cluster() -> N
     )
     client = _FakeClient(batches)
 
-    result = summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert result.summaries == {"ok": "Ca va."}
     assert len(result.failures) == 1
@@ -189,7 +197,9 @@ def test_a_custom_id_missing_from_results_is_reported_as_a_failure_not_a_crash()
     )
     client = _FakeClient(batches)
 
-    result = summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert result.summaries == {"present": "Ok."}
     assert len(result.failures) == 1
@@ -201,7 +211,9 @@ def test_polls_until_the_batch_reports_ended() -> None:
     batches = _FakeBatches(text_by_custom_id={"a": "Texte."}, polls_before_ended=3)
     client = _FakeClient(batches)
 
-    result = summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert batches.retrieve_calls == 4  # 3 in-progress polls, then the ended one
     assert result.summaries == {"a": "Texte."}
@@ -226,7 +238,9 @@ def test_a_failure_while_iterating_results_does_not_discard_already_collected_su
     batches = _RaisingBatches()
     client = _FakeClient(batches)
 
-    result = summarize_clusters(clusters, language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        clusters, language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert result.summaries == {"a": "Resume A."}
     assert any("b" in f.detail for f in result.failures)
@@ -242,7 +256,7 @@ def test_a_batch_that_never_reaches_ended_degrades_instead_of_hanging_forever() 
 
     result = summarize_clusters(
         clusters,
-        language="fr",
+        language=OutputLanguage.FR,
         client=client,
         poll_interval_seconds=0,
         max_poll_attempts=5,
@@ -254,11 +268,80 @@ def test_a_batch_that_never_reaches_ended_degrades_instead_of_hanging_forever() 
     assert batches.retrieve_calls == 4  # capped at max_poll_attempts - 1 retrieves before giving up
 
 
+def test_the_prompt_names_the_language_not_the_bare_code() -> None:
+    """Claude needs a natural-language instruction ("French"), not a bare
+    ISO code ("fr") -- "Write ... in fr, summarizing ..." is not a sentence
+    an instruction-following model should be expected to parse correctly."""
+    cluster = _cluster("a", [{"title": "Un evenement", "source": "lemonde.fr"}])
+
+    for language, name in (
+        (OutputLanguage.FR, "French"),
+        (OutputLanguage.EN, "English"),
+        (OutputLanguage.ES, "Spanish"),
+    ):
+        prompt = _prompt_for(cluster, language)
+        assert name in prompt
+        assert f", in {language.value}," not in prompt  # never the bare code
+        for other_name in ("French", "English", "Spanish"):
+            if other_name != name:
+                assert other_name not in prompt
+
+
+def test_the_same_member_data_is_embedded_regardless_of_target_language() -> None:
+    """The facts available to ground a Summary must not vary by language --
+    only the language of the resulting prose should differ."""
+    cluster = _cluster(
+        "a",
+        [
+            {"title": "Ceasefire declared", "source": "lemonde.fr"},
+            {"title": "Market rallies", "source": "cnn.com"},
+        ],
+    )
+
+    prompts = [
+        _prompt_for(cluster, language)
+        for language in (OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES)
+    ]
+    for prompt in prompts:
+        assert "Ceasefire declared" in prompt
+        assert "lemonde.fr" in prompt
+        assert "Market rallies" in prompt
+        assert "cnn.com" in prompt
+
+
+def test_non_latin_script_titles_pass_through_unchanged_for_every_language() -> None:
+    """The model does the translation -- this adapter must not attempt to
+    transliterate, filter, or otherwise preprocess non-Latin-script text."""
+    cluster = _cluster(
+        "a",
+        [{"title": "停戦が宣言された", "source": "asahi.com", "source_country": "japan"}],
+    )
+
+    for language in (OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES):
+        prompt = _prompt_for(cluster, language)
+        assert "停戦が宣言された" in prompt
+
+
+def test_an_unsupported_language_raises_rather_than_silently_falling_back() -> None:
+    """_LANGUAGE_NAMES is deliberately small and explicit (same reasoning as
+    resolve_wire_agency's wire-service table) -- a value with no mapped name
+    must raise, not silently produce a prompt with no language instruction
+    or a wrong one. This is the module's only actual runtime enforcement of
+    "one of the three supported languages" (OutputLanguage's typing alone
+    does not stop a bare matching string, since it's a StrEnum)."""
+    cluster = _cluster("a", [{"title": "X", "source": "y.com"}])
+
+    with pytest.raises(KeyError):
+        _prompt_for(cluster, "de")  # a real ISO code, but not a supported one
+
+
 def test_no_clusters_returns_empty_without_submitting_a_batch() -> None:
     batches = _FakeBatches()
     client = _FakeClient(batches)
 
-    result = summarize_clusters([], language="fr", client=client, poll_interval_seconds=0)
+    result = summarize_clusters(
+        [], language=OutputLanguage.FR, client=client, poll_interval_seconds=0
+    )
 
     assert result.summaries == {}
     assert result.failures == []
@@ -271,7 +354,7 @@ def test_missing_api_key_with_no_injected_client_degrades_to_a_failure(
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     clusters = [_cluster("a", [{"title": "X", "source": "y.com"}])]
 
-    result = summarize_clusters(clusters, language="fr")
+    result = summarize_clusters(clusters, language=OutputLanguage.FR)
 
     assert result.summaries == {}
     assert len(result.failures) == 1

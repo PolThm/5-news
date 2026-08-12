@@ -12,7 +12,8 @@ import json
 from pathlib import Path
 
 from pipeline.adapters import Failure
-from pipeline.adapters.claude import SummarizeResult
+from pipeline.adapters.claude import SummarizeResult, _prompt_for
+from pipeline.domain import OutputLanguage
 from pipeline.stages import read_jsonl
 from pipeline.stages.summarize import run_summarize
 
@@ -61,10 +62,12 @@ def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> No
     not add, remove, reorder, or renumber anything else."""
     clusters = [_ranked_cluster("a", rank=1), _ranked_cluster("b", rank=2)]
 
-    def fake_summarize(clusters_in: list[dict], language: str) -> SummarizeResult:
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
         return SummarizeResult(summaries={"a": "Resume A.", "b": "Resume B."})
 
-    written = run_summarize(clusters, language="fr", cycle_id="c1", summarize_fn=fake_summarize)
+    written = run_summarize(
+        clusters, language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
     out = list(read_jsonl(written.output_path))
 
     assert [c["cluster_id"] for c in out] == ["a", "b"]  # same order
@@ -78,10 +81,8 @@ def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> No
 
 def test_the_prompt_receives_member_data_and_a_no_fabrication_instruction() -> None:
     """AC2: verified via prompt content, not live model behavior."""
-    from pipeline.adapters.claude import _prompt_for
-
     cluster = _ranked_cluster("a", rank=1)
-    prompt = _prompt_for(cluster, "fr")
+    prompt = _prompt_for(cluster, OutputLanguage.FR)
 
     assert "title for a" in prompt
     assert "a.com" in prompt
@@ -119,13 +120,15 @@ def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffecte
     )
     clusters = [ok_cluster, bad_cluster]
 
-    def fake_summarize(clusters_in: list[dict], language: str) -> SummarizeResult:
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
         return SummarizeResult(
             summaries={"ok": "Tout va bien."},
             failures=[Failure("claude", "cluster bad: batch result was 'errored'")],
         )
 
-    written = run_summarize(clusters, language="fr", cycle_id="c1", summarize_fn=fake_summarize)
+    written = run_summarize(
+        clusters, language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
+    )
     out = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
 
     assert out["ok"]["summary"] == "Tout va bien."
@@ -166,11 +169,11 @@ def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_co
         ],
     )
 
-    def fake_summarize(clusters_in: list[dict], language: str) -> SummarizeResult:
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
         return SummarizeResult(failures=[Failure("claude", "cluster tied: errored")])
 
     written = run_summarize(
-        [tied_cluster], language="fr", cycle_id="c1", summarize_fn=fake_summarize
+        [tied_cluster], language=OutputLanguage.FR, cycle_id="c1", summarize_fn=fake_summarize
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -182,8 +185,6 @@ def test_a_singleton_member_cluster_is_summarized_without_claiming_two_sources()
     cross-day linking) even though every ranked Cluster met the 2+
     Independent Source floor -- member count and Independent Source count
     are not always the same number."""
-    from pipeline.adapters.claude import _prompt_for
-
     singleton = _ranked_cluster(
         "solo",
         rank=1,
@@ -198,7 +199,7 @@ def test_a_singleton_member_cluster_is_summarized_without_claiming_two_sources()
             }
         ],
     )
-    prompt = _prompt_for(singleton, "fr")
+    prompt = _prompt_for(singleton, OutputLanguage.FR)
 
     # A singleton-member prompt must never claim two sources -- the
     # two-source instruction ("synthesizing what these Articles agree on")
@@ -213,8 +214,6 @@ def test_a_title_containing_a_quote_does_not_break_out_of_its_delimiter() -> Non
     (RSS/GDELT) and are concatenated directly into the prompt. A title
     containing a double-quote must not be able to prematurely close its
     delimiter and blend into the surrounding instruction text."""
-    from pipeline.adapters.claude import _prompt_for
-
     cluster = _ranked_cluster(
         "a",
         rank=1,
@@ -229,7 +228,7 @@ def test_a_title_containing_a_quote_does_not_break_out_of_its_delimiter() -> Non
             }
         ],
     )
-    prompt = _prompt_for(cluster, "fr")
+    prompt = _prompt_for(cluster, OutputLanguage.FR)
 
     # The escaped quote must appear as \" (an escaped literal), not as a bare
     # " that would close the surrounding delimiter early.
@@ -237,11 +236,15 @@ def test_a_title_containing_a_quote_does_not_break_out_of_its_delimiter() -> Non
 
 
 def test_empty_input_produces_empty_output(tmp_path: Path) -> None:
-    def fake_summarize(clusters_in: list[dict], language: str) -> SummarizeResult:
+    def fake_summarize(clusters_in: list[dict], language: OutputLanguage) -> SummarizeResult:
         return SummarizeResult()
 
     written = run_summarize(
-        [], language="fr", cycle_id="c1", data_root=tmp_path, summarize_fn=fake_summarize
+        [],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        data_root=tmp_path,
+        summarize_fn=fake_summarize,
     )
     out = list(read_jsonl(written.output_path))
 

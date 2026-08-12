@@ -31,6 +31,7 @@ from datetime import datetime
 from pathlib import Path
 
 from pipeline.adapters.claude import SummarizeResult, summarize_clusters
+from pipeline.domain import OutputLanguage
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
     cycle_id_for,
@@ -45,7 +46,7 @@ STAGE = "summarize"
 # summarize_clusters's real signature also takes optional `client` and
 # `poll_interval_seconds` for injection; this alias only describes the
 # two-argument shape every call site here actually uses.
-SummarizeFn = Callable[[list[dict], str], SummarizeResult]
+SummarizeFn = Callable[[list[dict], OutputLanguage], SummarizeResult]
 
 
 def _earliest_member_title(cluster: dict) -> str:
@@ -77,7 +78,7 @@ class WrittenSummarize:
 
 def run_summarize(
     clusters: list[dict],
-    language: str,
+    language: OutputLanguage,
     cycle_id: str,
     data_root: Path = DEFAULT_DATA_ROOT,
     summarize_fn: SummarizeFn = summarize_clusters,
@@ -87,9 +88,18 @@ def run_summarize(
     `clusters` is `run_rank`'s output exactly as written -- not re-sorted,
     re-filtered, or re-sliced. `summarize_fn` is injected so this stage is
     tested without a network, matching every other adapter-boundary test in
-    this pipeline.
+    this pipeline. `language` is typed on `OutputLanguage` for static
+    analysis and self-documentation -- since it's a `StrEnum`, this is not
+    a runtime guard (see `summarize_clusters`'s docstring); the actual
+    enforcement is `claude.py`'s `_LANGUAGE_NAMES` lookup raising on an
+    unsupported value.
     """
-    destination = data_root / "intermediate" / STAGE / cycle_id / language
+    # Explicit .value rather than relying on OutputLanguage's StrEnum-ness
+    # to stringify itself implicitly: the path segment and metadata field
+    # below are records, not prompt instructions, and every other stage's
+    # metadata already uses lowercase slugs for this kind of field. Only
+    # claude.py's prompt text needed the human-readable name ("French").
+    destination = data_root / "intermediate" / STAGE / cycle_id / language.value
     output_path = destination / "summarized.jsonl"
     metadata_path = destination / f"{STAGE}.json"
 
@@ -110,7 +120,7 @@ def run_summarize(
     metadata = {
         "stage": STAGE,
         "cycle_id": cycle_id,
-        "language": language,
+        "language": language.value,
         "clusters_in": len(clusters),
         "clusters_summarized": len(summarized_out) - len(degraded_cluster_ids),
         "clusters_degraded": len(degraded_cluster_ids),
@@ -131,7 +141,9 @@ def run_summarize(
 
 def main(argv: list[str] | None = None) -> int:
     parser = stage_arg_parser(STAGE)
-    parser.add_argument("--language", required=True)
+    parser.add_argument(
+        "--language", required=True, choices=[lang.value for lang in OutputLanguage]
+    )
     args = parser.parse_args(argv)
 
     if not args.input.is_file():
@@ -141,7 +153,10 @@ def main(argv: list[str] | None = None) -> int:
     cycle_id = args.cycle_id or cycle_id_for(datetime.now())
     clusters = list(read_jsonl(args.input))
     written = run_summarize(
-        clusters, language=args.language, cycle_id=cycle_id, data_root=args.data_root
+        clusters,
+        language=OutputLanguage(args.language),
+        cycle_id=cycle_id,
+        data_root=args.data_root,
     )
 
     print(f"{STAGE}: {written.clusters_summarized} summarized -> {written.output_path}")

@@ -226,3 +226,23 @@ export function fallbackNoticeText(
   const verb = requested.plural ? "n'ont" : "n'a";
   return `Affichage de ${servedLabel} — ${requested.label} ${verb} pas assez de couverture aujourd'hui.`;
 }
+
+/**
+ * The End Screen's completion statement (FR-5, UX-DR8), or `null` when
+ * there is nothing to declare complete (0 items -- a real, already-observed
+ * state per Story 4.1's AC6 empty-clusters case; no UX spec defines what
+ * this sentence should say for zero items, so the End Screen is suppressed
+ * entirely rather than inventing copy). Reuses periodSentenceText's exact
+ * wording (not a separate copy) so the End Screen's period phrase and the
+ * mad-libs Period word never drift. French noun/verb agreement changes
+ * with the item count ("1 sujet a atteint..." vs "N sujets ont atteint..."
+ * for N > 1) -- the same class of singular/plural agreement
+ * fallbackNoticeText already handles for "les États-Unis".
+ */
+export function endScreenText(itemCount: number, period: Period): string | null {
+  if (itemCount === 0) return null;
+
+  const noun = itemCount === 1 ? "sujet" : "sujets";
+  const verb = itemCount === 1 ? "a" : "ont";
+  return `Vous avez atteint la fin. ${itemCount} ${noun} ${verb} atteint le seuil ${periodSentenceText(period)}.`;
+}

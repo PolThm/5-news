@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  endScreenText,
   fallbackNoticeText,
   hasValidAttribution,
   isZoneFallback,
@@ -179,5 +180,37 @@ describe("fallbackNoticeText", () => {
     // must not assume the input is always well-formed.
     expect(fallbackNoticeText({ zone: "not-a-real-zone", served_zone: "also-not-real" })).toBeNull();
     expect(fallbackNoticeText({ zone: "world", served_zone: "not-a-real-zone" })).toBeNull();
+  });
+});
+
+describe("endScreenText", () => {
+  it("uses singular French grammar for exactly 1 item", () => {
+    expect(endScreenText(1, "day")).toBe(
+      "Vous avez atteint la fin. 1 sujet a atteint le seuil aujourd'hui."
+    );
+  });
+
+  it("uses plural French grammar for 2 or more items", () => {
+    expect(endScreenText(2, "day")).toBe(
+      "Vous avez atteint la fin. 2 sujets ont atteint le seuil aujourd'hui."
+    );
+    expect(endScreenText(4, "day")).toBe(
+      "Vous avez atteint la fin. 4 sujets ont atteint le seuil aujourd'hui."
+    );
+  });
+
+  it("reuses periodSentenceText's exact wording for each Period", () => {
+    expect(endScreenText(3, "day")).toContain("aujourd'hui.");
+    expect(endScreenText(3, "week")).toContain("cette semaine.");
+    expect(endScreenText(3, "month")).toContain("ce mois.");
+  });
+
+  it("returns null for 0 items instead of a nonsensical '0 sujets ont atteint...' sentence", () => {
+    // A real, already-observed case (Story 4.1's AC6: a real cycle run
+    // produced zero qualifying Clusters). There is nothing to declare
+    // "complete" when nothing rendered above it -- the End Screen must be
+    // suppressed entirely for this input, not given invented copy no UX
+    // spec defines.
+    expect(endScreenText(0, "day")).toBeNull();
   });
 });

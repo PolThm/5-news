@@ -14,6 +14,7 @@
 // addressed at, and the link must always point at the requested route,
 // not wherever the fallback happened to serve content from.
 import {
+  endScreenText,
   fallbackNoticeText,
   hasValidAttribution,
   nextPeriod,
@@ -39,6 +40,7 @@ const nextPeriodHref = `/${lang}/${zone}/${nextPeriod(period)}`;
 // requested Zone, not wherever the fallback happened to serve content from.
 const nextZoneHref = `/${lang}/${nextZone(zone)}/${period}`;
 const fallbackNotice = fallbackNoticeText(briefing);
+const endScreenStatement = endScreenText(briefing.clusters.length, period);
 
 // See index.astro's own history for why this is UTC-labeled, not silently
 // implied-local: this page has no client JS at build/initial-render time
@@ -192,6 +194,28 @@ function formatTimestamp(iso: string): string {
         text-decoration: underline;
         font-weight: 500;
       }
+      /* FR-5, UX-DR8 -- the one component whose entire job is to stop the
+         page (EXPERIENCE.md). .rule is the outline-variant hairline;
+         the <p> is the label-caps completion statement (uppercase applied
+         here per the mockup -- the label-caps token itself doesn't encode
+         case). Nothing renders after this element in the markup. */
+      .end-screen {
+        padding: 20px 0 32px;
+        text-align: center;
+      }
+      .end-screen .rule {
+        height: 1px;
+        background: #cac5b8;
+        margin-bottom: 16px;
+      }
+      .end-screen p {
+        font-family: "IBM Plex Sans", Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #4d4a42;
+      }
     </style>
   </head>
   <body>
@@ -250,6 +274,15 @@ function formatTimestamp(iso: string): string {
           ))
         }
       </div>
+
+      {
+        endScreenStatement && (
+          <div class="end-screen" id="end-screen">
+            <div class="rule" />
+            <p>{endScreenStatement}</p>
+          </div>
+        )
+      }
     </div>
     <script src="../islands/period-switcher.ts"></script>
   </body>

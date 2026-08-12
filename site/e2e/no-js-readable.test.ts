@@ -22,6 +22,19 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 const SITE_ROOT = join(__dirname, "..");
 const DIST_INDEX = join(SITE_ROOT, "dist", "index.html");
 
+// The island's compiled JS is inlined directly into a <script> tag (Astro
+// does not emit an external src="..." reference -- see any built page's
+// output), and that JS's own template-literal rendering logic contains
+// literal strings (`<div class="item">`, `id="fallback-notice"`, etc.)
+// that collide with a naive presence/count check meant to inspect only
+// server-rendered content. Every assertion in this file that counts or
+// checks for the absence of such a string strips <script> content first --
+// centralized here after hitting this same false-positive three times
+// across Stories 4.2-4.4.
+function stripInlineScript(html: string): string {
+  return html.replace(/<script[\s\S]*?<\/script>/gi, "");
+}
+
 describe("no-JS readability of the built page", () => {
   let html: string;
 
@@ -68,6 +81,29 @@ describe("no-JS readability of the built page", () => {
       /<a class="word" data-zone-word data-lang="fr" data-zone="world" data-period="day" href="\/fr\/europe\/day"[^>]*>dans le Monde<\/a>/
     );
   });
+
+  it("renders the End Screen with the outline-variant hairline and the correct item-count/period completion statement (AC2)", () => {
+    expect(html).toMatch(/\.rule[^{]*\{[^}]*background:#cac5b8/);
+    // day.json has 4 clusters, day period -> plural French grammar.
+    expect(html).toContain("Vous avez atteint la fin. 4 sujets ont atteint le seuil aujourd&#39;hui.");
+  });
+
+  it("renders nothing after the End Screen (AC2's 'nothing further' clause)", () => {
+    // The End Screen's own <p> completion statement must be the last piece
+    // of real page content before the .page container closes and the
+    // island's <script> tag begins -- i.e. only the End Screen's own
+    // closing tags (</p></div>) and the .page/.body/.html closings separate
+    // it from <script>, with no other element's opening tag in between.
+    const endScreenIndex = html.indexOf('id="end-screen"');
+    expect(endScreenIndex).toBeGreaterThan(-1);
+
+    const afterEndScreen = html.slice(endScreenIndex);
+    const beforeScript = afterEndScreen.slice(0, afterEndScreen.indexOf("<script"));
+    // Only the rule div, the <p>, and their own closing tags should appear
+    // -- no further <div>/<span>/<a> opening tag past the <p> itself.
+    const afterCompletionStatement = beforeScript.slice(beforeScript.indexOf("</p>") + "</p>".length);
+    expect(afterCompletionStatement).not.toMatch(/<(div|span|a|p|h1|ul|li)[ >]/);
+  });
 });
 
 // Story 4.3: the Zone axis extends beyond World to Continents and
@@ -107,9 +143,10 @@ describe("Zone axis: Continent and Country pages (Story 4.3)", () => {
     // rendering logic, unrelated to whether an element was actually
     // server-rendered -- the exact same false-positive class as AC6's
     // `class="item"` check below).
-    const htmlWithoutStyleOrScript = html
-      .replace(/<style[\s\S]*?<\/style>/gi, "")
-      .replace(/<script[\s\S]*?<\/script>/gi, "");
+    const htmlWithoutStyleOrScript = stripInlineScript(html).replace(
+      /<style[\s\S]*?<\/style>/gi,
+      ""
+    );
     expect(htmlWithoutStyleOrScript).not.toContain('id="fallback-notice"');
   });
 });
@@ -162,6 +199,74 @@ describe("Continent-fallback notice (AC3)", () => {
   });
 });
 
+// Story 4.4: AC1 (variable item count, no placeholders) and AC3 (a single
+// dominating item's block is content-driven height, not capped). This
+// describe block only verifies -- BriefingPage.astro's item-list rendering
+// is already a bare `.map()` with no fixed count or placeholder logic, so
+// these are proving an existing property, not exercising new code, except
+// for the "no height/overflow constraint" CSS check.
+describe("variable item count (AC1, AC3)", () => {
+  const FIXTURE_PATH = join(SITE_ROOT, "src", "fixtures", "day.json");
+  const BACKUP_PATH = `${FIXTURE_PATH}.ac1ac3.bak`;
+  const SINGLE_ITEM_PATH = join(SITE_ROOT, "src", "fixtures", "single-item-example.json");
+  const originalFixture = readFileSync(FIXTURE_PATH, "utf-8");
+  writeFileSync(BACKUP_PATH, originalFixture);
+
+  afterAll(() => {
+    if (existsSync(BACKUP_PATH)) rmSync(BACKUP_PATH);
+  });
+
+  it("renders exactly as many .item divs as clusters exist, for 3 and 4 clusters (existing fixtures)", () => {
+    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+
+    const dayHtml = readFileSync(DIST_INDEX, "utf-8"); // day.json: 4 clusters
+    const weekHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "week.html"), "utf-8"); // week.json: 3 clusters
+
+    // Count only server-rendered .item divs -- the island's own inlined
+    // <script> source carries the literal string `<div class="item">` as
+    // part of its client-side rendering template (renderItemListHtml),
+    // which would otherwise inflate this count by 1 regardless of the real
+    // server-rendered total (the same false-positive class Story 4.2/4.3
+    // already hit for `class="item"`/`id="fallback-notice"` -- strip
+    // <script> first, every time this pattern is checked).
+    const countItems = (html: string) =>
+      (stripInlineScript(html).match(/<div class="item"/g) ?? []).length;
+    expect(countItems(dayHtml)).toBe(4);
+    expect(countItems(weekHtml)).toBe(3);
+  });
+
+  it("renders exactly 1 .item div, with no height/overflow constraint, for a single-cluster Briefing (AC1, AC3)", () => {
+    const singleItemContent = readFileSync(SINGLE_ITEM_PATH, "utf-8");
+    writeFileSync(FIXTURE_PATH, singleItemContent);
+
+    try {
+      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+
+      const html = readFileSync(DIST_INDEX, "utf-8");
+      const htmlWithoutScripts = stripInlineScript(html);
+      const itemCount = (htmlWithoutScripts.match(/<div class="item"/g) ?? []).length;
+      expect(itemCount).toBe(1);
+
+      // AC3: no placeholder/skeleton markup filling a gap, and the long
+      // (~260+ char) Summary is not truncated -- proves AC4's "nothing
+      // clips a long Summary" claim concretely, not just by CSS inspection.
+      expect(htmlWithoutScripts).not.toMatch(/skeleton|placeholder|loading-more/i);
+      expect(html).toContain(
+        "Une mission diplomatique de longue haleine aboutit enfin à un accord-cadre"
+      );
+      expect(html).toContain("dossier sensible.");
+
+      // AC3: no CSS rule caps .item/.item-list height or clips overflow.
+      const styleMatch = html.match(/<style[^>]*>([\s\S]*?)<\/style>/);
+      const css = styleMatch?.[1] ?? "";
+      expect(css).not.toMatch(/\.item(?:-list)?\[[^\]]*\]\s*\{[^}]*(?:max-height|overflow)/);
+    } finally {
+      writeFileSync(FIXTURE_PATH, originalFixture);
+      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+    }
+  });
+});
+
 // AC6: an empty `clusters` array is a real, already-observed case (a real
 // cycle run during this project produced zero qualifying Clusters) -- the
 // build must not crash, and the header/sentence must still render.
@@ -200,13 +305,14 @@ describe("empty clusters array (AC6)", () => {
       const html = readFileSync(DIST_INDEX, "utf-8");
       expect(html).toContain("5 NEWS");
       expect(html).toContain("Voici ce qui se passe");
-      // Strip the inlined island's <script> body before this check -- its
-      // compiled source contains the literal string `class="item"` as part
-      // of the item-rendering template it carries for later client-side use
-      // (Story 4.2), which is unrelated to whether any .item div was
-      // actually server-rendered onto the page.
-      const htmlWithoutScripts = html.replace(/<script[\s\S]*?<\/script>/gi, "");
+      const htmlWithoutScripts = stripInlineScript(html);
       expect(htmlWithoutScripts).not.toMatch(/class="item"[ >]/);
+      // Story 4.4's own Blind Hunter review caught a real bug here: the End
+      // Screen originally rendered unconditionally, producing a
+      // nonsensical "0 sujets ont atteint le seuil..." for this exact
+      // input. It must be suppressed entirely for 0 clusters, not just
+      // avoid crashing.
+      expect(htmlWithoutScripts).not.toContain('id="end-screen"');
     } finally {
       writeFileSync(FIXTURE_PATH, originalFixture);
     }

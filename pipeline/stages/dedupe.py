@@ -31,10 +31,17 @@ import json
 import re
 import sys
 import unicodedata
+from collections.abc import Callable
 from dataclasses import dataclass, replace
 from difflib import SequenceMatcher
 from pathlib import Path
 
+import numpy as np
+from scipy.spatial.distance import cosine
+from sklearn.preprocessing import normalize
+
+from pipeline.adapters.cohere_embed import EmbeddingResult, embed_titles
+from pipeline.config import REWRITE_SIMILARITY_FLOOR
 from pipeline.domain import ArticleRecord
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
@@ -45,6 +52,11 @@ from pipeline.stages import (
     write_atomically,
     write_jsonl,
 )
+
+# embed_titles's real signature also takes an optional `client` for
+# injection; this alias only describes the single-argument shape every call
+# site here actually uses, mirroring cluster.py's identical alias.
+EmbedFn = Callable[[list[str]], EmbeddingResult]
 
 STAGE = "dedupe"
 
@@ -308,6 +320,15 @@ _AGENCY_MERGE_SIMILARITY_FLOOR = 0.6
 # than risk a false merge on a coincidence of short, similar-looking words.
 _AGENCY_MERGE_MIN_TITLE_LENGTH = 20
 
+# Applied to rewrite detection too, defensively rather than on verified
+# evidence: semantic embeddings are not character-overlap algorithms and are
+# not expected to share SequenceMatcher's specific short-string failure mode
+# (no live Cohere call was available to confirm this directly — see Story
+# 2.4's Dev Notes). Given this layer has no second corroborating signal at
+# all, the cost of being wrong about that assumption is high enough that a
+# free, zero-evidence floor is worth keeping anyway.
+_REWRITE_MERGE_MIN_TITLE_LENGTH = _AGENCY_MERGE_MIN_TITLE_LENGTH
+
 
 def _agencies_in(group: ArticleGroup) -> frozenset[str]:
     """Every recognized wire-service attribution present anywhere in the
@@ -323,85 +344,50 @@ def _agencies_in(group: ArticleGroup) -> frozenset[str]:
     return frozenset(a.wire_agency for a in group.articles if a.wire_agency is not None)
 
 
-def merge_by_agency(groups: list[ArticleGroup]) -> list[ArticleGroup]:
-    """Layer 2 (FR-10, Story 2.3): merge separate title-normalization groups
-    that share a recognized wire-service attribution AND a similar-enough
-    title — corroborating evidence that a near-miss on title normalization
-    (translation, local editing) is still one dispatch.
+def _clique_merge(
+    groups: list[ArticleGroup],
+    eligible: Callable[[int], bool],
+    directly_qualifies: Callable[[int, int], bool],
+    similarity: Callable[[int, int], float],
+    formed_by: str,
+) -> list[ArticleGroup]:
+    """Merge groups into cliques under an arbitrary pairwise qualification
+    rule — the mechanism shared by every Syndication Detection layer past
+    layer 1 (Story 2.3's agency matching, Story 2.4's rewrite detection).
 
-    Agency alone is deliberately never sufficient. Two different Reuters
-    stories published the same day share ``wire_agency="Reuters"`` but are
-    not the same Event — merging on that alone would silently inflate
-    ``independent_source_count`` for unrelated stories, the same class of
-    false-merge bug an adversarial review caught twice in Story 2.1
-    (HDBSCAN chaining, then a cluster-ID hash collision). Both signals are
-    required specifically to avoid a third occurrence.
+    A cluster is valid only if every pair inside it directly qualifies — a
+    clique, not a connected component. An adversarial review of the first
+    version of this mechanism (written for Story 2.3, before this was
+    factored out) found that comparing every candidate only against a fixed
+    anchor group let a chain of individually-passing pairs (A-B similar, B-C
+    similar, A-C not) fold C into A's cluster anyway — the single-linkage
+    chaining bug the pipeline had already been burned by twice before, in
+    Story 2.1's cluster stage. A plain connected-components graph (Story
+    2.1's own fix for that bug) has the identical weakness: A-B and B-C
+    edges alone connect all three even when A-C never qualifies. Requiring
+    every pair in the final group to pass, not just an edge to some member,
+    closes the gap for real rather than moving it one hop over.
 
-    Merging requires every pair within a cluster to directly clear both
-    signals — a clique, not a connected component. An adversarial review of
-    the first version of this function found that comparing every candidate
-    only against the *first* group encountered let a chain of individually-
-    passing pairs (A-B similar, B-C similar, A-C not) fold C into A's cluster
-    anyway — the single-linkage chaining bug this docstring already claimed
-    to defend against, reintroduced by a different path. A plain connected-
-    components graph (Story 2.1's own fix for the same bug in the cluster
-    stage) has the identical weakness here: A-B and B-C edges alone connect
-    all three even when A-C never qualifies. Requiring every pair in the
-    final group to pass, not just an edge to some member, closes that gap for
-    real rather than moving it one hop over.
-
-    A group with no recognized agency attribution (the common case — GDELT
-    articles, and RSS articles from feeds like BBC's that never populate
-    ``dc:creator``) is left untouched; this is not a failure (AC3).
+    Built greedily, not as a general maximum-clique solver — it does not
+    need to be one: the input is a handful of same-day candidate groups, and
+    a merge left too conservative (a group that could have joined but
+    didn't, because a stronger candidate claimed a slot first) only costs a
+    missed collapse, never a false one — the one-sided error every layer
+    here is designed to prefer.
     """
     n = len(groups)
+    eligible_indices = [i for i in range(n) if eligible(i)]
 
-    agencies_by_index: dict[int, frozenset[str]] = {}
-    for i in range(n):
-        agencies = _agencies_in(groups[i])
-        if agencies and len(groups[i].normalized_title) >= _AGENCY_MERGE_MIN_TITLE_LENGTH:
-            agencies_by_index[i] = agencies
-
-    # Every directly-qualifying pair, computed once: shared agency AND
-    # SequenceMatcher.ratio() over the floor. "Directly" is the whole point
-    # — nothing here ever infers a merge from two other merges.
-    qualifies: set[tuple[int, int]] = set()
-    for i in agencies_by_index:
-        for j in agencies_by_index:
-            if j <= i or not (agencies_by_index[i] & agencies_by_index[j]):
-                continue
-            similarity = SequenceMatcher(
-                None, groups[i].normalized_title, groups[j].normalized_title
-            ).ratio()
-            if similarity >= _AGENCY_MERGE_SIMILARITY_FLOOR:
-                qualifies.add((i, j))
-
-    def directly_qualifies(a: int, b: int) -> bool:
-        return a == b or (min(a, b), max(a, b)) in qualifies
-
-    # A cluster is valid only if every pair inside it directly qualifies — a
-    # clique, not a connected component. Built greedily: start from each
-    # unclaimed group and absorb every remaining candidate that directly
-    # qualifies against *every* member already in the cluster, in
-    # descending-similarity order so the strongest matches are tried first.
-    # This is not a general maximum-clique solver — it does not need to be:
-    # the input is a handful of same-day, same-agency dedupe groups, and a
-    # merge left too conservative here (a group that could have joined but
-    # didn't, because a stronger candidate claimed a slot first) only costs
-    # a missed collapse, never a false one, which is the one-sided error
-    # this whole layer is designed to prefer.
     claimed: set[int] = set()
     clusters: list[list[int]] = []
 
-    for i in sorted(agencies_by_index):
+    for i in sorted(eligible_indices):
         if i in claimed:
             continue
         cluster = [i]
         candidates = sorted(
-            (j for j in agencies_by_index if j != i and j not in claimed),
-            key=lambda j: SequenceMatcher(
-                None, groups[i].normalized_title, groups[j].normalized_title
-            ).ratio(),
+            (j for j in eligible_indices if j != i and j not in claimed),
+            key=lambda j: similarity(i, j),
             reverse=True,
         )
         for j in candidates:
@@ -425,11 +411,175 @@ def merge_by_agency(groups: list[ArticleGroup]) -> list[ArticleGroup]:
             replace(
                 anchor,
                 articles=tuple(sorted(cluster_articles, key=lambda a: (a.published_at, a.url))),
-                formed_by="agency" if len(cluster) > 1 else "title",
+                formed_by=formed_by if len(cluster) > 1 else anchor.formed_by,
             )
         )
 
     return merged
+
+
+def merge_by_agency(groups: list[ArticleGroup]) -> list[ArticleGroup]:
+    """Layer 2 (FR-10, Story 2.3): merge separate title-normalization groups
+    that share a recognized wire-service attribution AND a similar-enough
+    title — corroborating evidence that a near-miss on title normalization
+    (translation, local editing) is still one dispatch.
+
+    Agency alone is deliberately never sufficient. Two different Reuters
+    stories published the same day share ``wire_agency="Reuters"`` but are
+    not the same Event — merging on that alone would silently inflate
+    ``independent_source_count`` for unrelated stories, the same class of
+    false-merge bug an adversarial review caught twice in Story 2.1
+    (HDBSCAN chaining, then a cluster-ID hash collision). Both signals are
+    required specifically to avoid a third occurrence. See ``_clique_merge``
+    for how the merge itself avoids transitive false-chaining.
+
+    A group with no recognized agency attribution (the common case — GDELT
+    articles, and RSS articles from feeds like BBC's that never populate
+    ``dc:creator``) is left untouched; this is not a failure (AC3).
+    """
+    agencies_by_index: dict[int, frozenset[str]] = {}
+    for i, group in enumerate(groups):
+        agencies = _agencies_in(group)
+        if agencies and len(group.normalized_title) >= _AGENCY_MERGE_MIN_TITLE_LENGTH:
+            agencies_by_index[i] = agencies
+
+    def title_similarity(i: int, j: int) -> float:
+        return SequenceMatcher(None, groups[i].normalized_title, groups[j].normalized_title).ratio()
+
+    def directly_qualifies(i: int, j: int) -> bool:
+        if i not in agencies_by_index or j not in agencies_by_index:
+            return False
+        if not (agencies_by_index[i] & agencies_by_index[j]):
+            return False
+        return title_similarity(i, j) >= _AGENCY_MERGE_SIMILARITY_FLOOR
+
+    return _clique_merge(
+        groups,
+        eligible=lambda i: i in agencies_by_index,
+        directly_qualifies=directly_qualifies,
+        similarity=title_similarity,
+        formed_by="agency",
+    )
+
+
+def _vectors_are_well_formed(vectors: list[list[float]]) -> bool:
+    """Same guard as ``pipeline.stages.cluster``'s helper of the same name,
+    duplicated rather than imported: importing from ``cluster`` here would
+    point a dependency backward across the pipeline's own stage order
+    (cluster runs after dedupe), and the check is small enough that the
+    duplication costs less than the layering violation would.
+
+    **Keep this in sync with ``pipeline.stages.cluster._vectors_are_well_formed``
+    by hand.** An adversarial review found the two copies' call sites had
+    already drifted — one guarded unconditionally, the other only when
+    ``result.vectors`` was non-empty — even though both copies of this
+    function's body were still identical. There is no test enforcing parity
+    between the two files; if this function's logic ever needs to change,
+    change both.
+
+    Rejects a malformed vendor response (ragged rows, NaN/Inf, all-zero)
+    before it reaches ``cosine``/``normalize``, which would otherwise either
+    raise (escalating to a whole-cycle failure) or silently produce a
+    meaningless distance of 0 between two all-zero vectors.
+    """
+    if not vectors:
+        return True
+    width = len(vectors[0])
+    for vector in vectors:
+        if len(vector) != width:
+            return False
+        if any(not np.isfinite(component) for component in vector):
+            return False
+        if all(component == 0 for component in vector):
+            return False
+    return True
+
+
+def merge_by_rewrite_detection(
+    groups: list[ArticleGroup],
+    embed: EmbedFn = embed_titles,
+    return_degraded: bool = False,
+) -> list[ArticleGroup] | tuple[list[ArticleGroup], str | None]:
+    """Layer 3 (FR-10, Story 2.4): merge groups whose representative titles
+    are close enough, by embedding, to be the same dispatch reworded rather
+    than two independent reports of the same Event.
+
+    **Deliberately built before the Build Order's prescribed inspection
+    window closed** — see Story 2.4's Dev Notes for the explicit decision
+    and its reasoning. ``pipeline.config.REWRITE_SIMILARITY_FLOOR`` is a
+    starting hypothesis, not a measured constant; treat any surprising
+    behavior here as a config-value question first, not a bug report.
+
+    This layer has no second corroborating signal the way layer 2 does
+    (shared agency attribution) — semantic similarity via embedding is the
+    only evidence available, which is exactly why the threshold is
+    deliberately stricter than ``pipeline.stages.cluster``'s
+    ``_SAME_EVENT_DISTANCE``. That constant answers "same real-world Event"
+    (a question where two Independent Sources both counting is the *desired*
+    outcome); this threshold answers "same dispatch, reworded" (where two
+    Independent Sources collapsing into one would silently erase real
+    coverage). Reusing the looser constant here would be a correctness bug,
+    not a simplification.
+
+    On any embedding failure, this layer's merge is skipped for the cycle —
+    the input groups pass through unchanged, matching every other adapter
+    boundary in this pipeline (AD-10). ``return_degraded`` exposes *why*, not
+    just whether, that happened — an adversarial review found a bare boolean
+    collapsed three distinct failure modes (the embed call itself failing,
+    a malformed response, a vector-count mismatch) into one flag, losing the
+    detail ``cluster.py`` already records for the same three cases. Callers
+    that don't need it can ignore the second element by leaving
+    ``return_degraded`` at its default ``False`` and taking the plain list.
+    """
+    if not groups:
+        return (groups, None) if return_degraded else groups
+
+    titles = [group.representative.title for group in groups]
+    result = embed(titles)
+
+    reason: str | None = None
+    if result.failures:
+        detail = "; ".join(f.detail for f in result.failures)
+        reason = f"embedding request failed: {detail}"
+    elif len(result.vectors) != len(groups):
+        reason = f"embedding returned {len(result.vectors)} vectors for {len(groups)} groups"
+    elif result.vectors and not _vectors_are_well_formed(result.vectors):
+        reason = "embedding response was malformed"
+
+    if reason is not None:
+        return (groups, reason) if return_degraded else groups
+
+    unit_vectors = normalize(np.asarray(result.vectors, dtype=float), copy=True)
+
+    def cosine_distance(i: int, j: int) -> float:
+        return cosine(unit_vectors[i], unit_vectors[j])
+
+    def cosine_similarity(i: int, j: int) -> float:
+        # 1 - cosine distance; higher means more similar, matching the other
+        # merge layers' "similarity" convention despite the underlying metric
+        # being a distance. Reuses cosine_distance rather than recomputing
+        # the metric a second way, unlike an earlier version of this
+        # function that computed the same pair's cosine distance twice.
+        return 1.0 - cosine_distance(i, j)
+
+    def directly_qualifies(i: int, j: int) -> bool:
+        title_i = groups[i].representative.title
+        title_j = groups[j].representative.title
+        if (
+            len(title_i) < _REWRITE_MERGE_MIN_TITLE_LENGTH
+            or len(title_j) < _REWRITE_MERGE_MIN_TITLE_LENGTH
+        ):
+            return False
+        return cosine_distance(i, j) <= REWRITE_SIMILARITY_FLOOR
+
+    merged = _clique_merge(
+        groups,
+        eligible=lambda _i: True,
+        directly_qualifies=directly_qualifies,
+        similarity=cosine_similarity,
+        formed_by="rewrite",
+    )
+    return (merged, None) if return_degraded else merged
 
 
 @dataclass(frozen=True, slots=True)
@@ -443,11 +593,20 @@ def run_dedupe(
     input_path: Path,
     cycle_id: str,
     data_root: Path = DEFAULT_DATA_ROOT,
+    embed: EmbedFn = embed_titles,
 ) -> WrittenDedupe:
     """Collapse verbatim reprints and write the counts everything downstream
-    will use."""
+    will use.
+
+    Three layers, in order: title normalization (Story 1.4), agency
+    attribution (Story 2.3), then embedding-based rewrite detection (Story
+    2.4). Each layer only sees what the ones before it left unmerged.
+    """
     records = [ArticleRecord.from_dict(row) for row in read_jsonl(input_path)]
-    groups = merge_by_agency(group_by_title(records))
+    after_title_and_agency = merge_by_agency(group_by_title(records))
+    groups, rewrite_degraded_reason = merge_by_rewrite_detection(
+        after_title_and_agency, embed=embed, return_degraded=True
+    )
 
     destination = output_dir_for(STAGE, cycle_id, root=data_root)
     output_path = destination / "groups.jsonl"
@@ -463,6 +622,10 @@ def run_dedupe(
         # How much inflation this layer removed. During the inspection window
         # this ratio is the evidence the layer is doing anything at all.
         "collapsed": len(records) - len(groups),
+        # None when layer 3 ran normally; otherwise the specific reason it
+        # was skipped (embed call failed, malformed response, or a vector
+        # count mismatch) rather than a bare boolean losing that detail.
+        "rewrite_detection_degraded": rewrite_degraded_reason,
     }
     write_atomically(
         metadata_path, json.dumps(metadata, indent=2, sort_keys=True, ensure_ascii=False) + "\n"

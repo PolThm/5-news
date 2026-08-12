@@ -115,7 +115,7 @@ def run_cycle(
 
     if completed:
         try:
-            deduped = run_dedupe(articles_path, cycle_id=cycle_id, data_root=data_root)
+            deduped = run_dedupe(articles_path, cycle_id=cycle_id, data_root=data_root, embed=embed)
             dedupe_path = deduped.output_path
             groups_after_dedupe = deduped.groups_out
         except Exception as exc:  # noqa: BLE001

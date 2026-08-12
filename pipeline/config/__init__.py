@@ -78,6 +78,27 @@ MIN_COUNTRIES: Final[int] = 2
 # toward Discarded Volume. Never padded below this if fewer qualify.
 MAX_SELECTED_CLUSTERS: Final[int] = 5
 
+# --- Syndication Detection, layer 3 (Story 2.4) -------------------------------
+#
+# REASONED, NOT MEASURED. The Build Order (PRD §10) calls for calibrating
+# this threshold against real cycle output inspected after layers 1-2 ship —
+# no such output existed when this story was built, so this value is a
+# starting hypothesis, not a validated constant. Revisit against real
+# data/intermediate/dedupe/ output at the first opportunity; a threshold that
+# turns out to merge (or miss) more than expected is the foreseen cost of
+# this deliberate deviation, not evidence of a bug in the code that reads it.
+#
+# Deliberately stricter than pipeline/stages/cluster.py's
+# _SAME_EVENT_DISTANCE = 0.4. That constant answers "same real-world Event"
+# — a looser question where two Independent Sources covering the same
+# happening is the *desired*, counted outcome. This constant answers "same
+# dispatch, merely reworded" — reusing the looser value here would silently
+# collapse genuine independent reporting, which is the one error direction
+# this whole pipeline exists to avoid. 0.25 (cosine similarity ~= 0.97 via
+# the same d^2 = 2 - 2c relationship documented in cluster.py) is chosen to
+# require near-paraphrase closeness, not merely topical relatedness.
+REWRITE_SIMILARITY_FLOOR: Final[float] = 0.25
+
 
 # --- Derived -----------------------------------------------------------------
 
@@ -115,6 +136,7 @@ __all__ = [
     "MAX_SELECTED_CLUSTERS",
     "MIN_COUNTRIES",
     "MIN_INDEPENDENT_SOURCES",
+    "REWRITE_SIMILARITY_FLOOR",
     "OUTPUT_LANGUAGES",
     "PERIODS",
     "STAGE_NAMES",

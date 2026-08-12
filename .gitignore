@@ -19,6 +19,12 @@ data/intermediate/**
 # Atomic-write temp files must never be committed, even if a crash leaves one.
 data/**/.*.tmp
 
+# data/history/ is deliberately NOT excluded above -- unlike data/intermediate/'s
+# bulky per-stage output, this is a small, intentionally-committed cross-cycle
+# record (Story 2.7, FR-18): a GitHub Actions runner is ephemeral, so nothing
+# survives between cycles unless it is explicitly tracked in git, the same
+# reason cycle.json is committed. See pipeline/stages/history.py.
+
 # --- Python ---
 __pycache__/
 *.py[cod]

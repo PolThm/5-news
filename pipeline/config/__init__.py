@@ -128,6 +128,28 @@ assert MIN_QUALIFYING_FOR_ZONE <= MAX_SELECTED_CLUSTERS, (
 # require near-paraphrase closeness, not merely topical relatedness.
 REWRITE_SIMILARITY_FLOOR: Final[float] = 0.25
 
+# --- Cross-day Cluster continuity, FR-18 (Story 2.7) --------------------------
+#
+# REASONED, NOT MEASURED — the same deliberate deviation Story 2.4 made for
+# REWRITE_SIMILARITY_FLOOR, made here for the analogous reason: the
+# architecture spine explicitly defers "Cluster identity across cycles" to be
+# informed by an inspection window that has not happened yet. Revisit against
+# real data/history/ output at the first opportunity.
+#
+# Positioned between the pipeline's two other embedding-distance floors, not
+# copied from either: cluster.py's _SAME_EVENT_DISTANCE (0.4) links same-day
+# coverage, where wording drift is minimal because every Article was written
+# within hours of the same news cycle. REWRITE_SIMILARITY_FLOOR (0.25) links
+# same-day *dispatches*, an even narrower claim. This constant links an
+# *ongoing* Event's coverage one or more days apart, where the story has had
+# time to develop and be reworded more than same-day coverage would be, but
+# still describes the same Event, not merely a related one -- looser than
+# REWRITE_SIMILARITY_FLOOR's "same dispatch" claim, but not as loose as
+# _SAME_EVENT_DISTANCE's same-day tolerance, since more days apart means more
+# opportunity for two genuinely different follow-on Events to drift into
+# each other's neighborhood by coincidence.
+CROSS_DAY_SIMILARITY_FLOOR: Final[float] = 0.35
+
 
 # --- Derived -----------------------------------------------------------------
 
@@ -162,6 +184,7 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
 
 
 __all__ = [
+    "CROSS_DAY_SIMILARITY_FLOOR",
     "MAX_PER_COUNTRY",
     "MAX_SELECTED_CLUSTERS",
     "MIN_COUNTRIES",

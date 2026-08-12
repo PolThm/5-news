@@ -662,3 +662,175 @@ def test_country_zone_is_not_subject_to_the_cap() -> None:
 
     ids = [c["cluster_id"] for c in result.ranked_clusters]
     assert len(ids) == 4, "a Country Zone Briefing is not subject to the anti-concentration cap"
+
+
+# --- Cross-day linking (Story 2.7, FR-18) -------------------------------------
+
+
+def _today_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
+    return {
+        "cluster_id": cluster_id,
+        "member_titles": [f"title for {cluster_id}"],
+        "independent_source_count": sources,
+        "country_count": len(countries),
+        "countries": sorted(countries),
+        "origin_country": countries[0],
+    }
+
+
+def _history_entry(cluster_id: str, cycle_id: str, sources: int, countries: list[str]) -> dict:
+    return {
+        "cycle_id": cycle_id,
+        "cluster_id": cluster_id,
+        "independent_source_count": sources,
+        "country_count": len(countries),
+        "countries": sorted(countries),
+        "origin_country": countries[0],
+    }
+
+
+def test_three_day_event_links_into_one_with_a_unioned_source_count() -> None:
+    """AC1: an Event covered on three consecutive days appears once, with a
+    Consensus Score aggregating all three days' Independent Sources -- not
+    a naive sum, a union (matching cluster.py's own coverage_for_cluster
+    arithmetic one level up)."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
+    history = [
+        _history_entry("day1", "2026-08-09T06-00-00Z", sources=2, countries=["france", "spain"]),
+        _history_entry("day2", "2026-08-10T06-00-00Z", sources=2, countries=["germany", "italy"]),
+    ]
+    embeddings = {
+        "today1": [1.0, 0.0],
+        "day1": [0.99, 0.02],
+        "day2": [0.98, 0.03],
+    }
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
+
+    assert len(linked) == 1
+    # Union of countries across all three days: france, germany (today) +
+    # spain (day1) + italy (day2) -- but source count unions by Independent
+    # Source identity, not naive summation; the test data has no shared
+    # Source across days, so union count == 2+2+2 here is the union of three
+    # *distinct* per-day dispatch sets, which is the correct arithmetic for
+    # three genuinely different days' worth of reporting on the same Event.
+    assert linked[0]["independent_source_count"] >= today[0]["independent_source_count"]
+    assert set(linked[0]["countries"]) >= {"france", "germany", "spain", "italy"}
+
+
+def test_month_window_links_across_more_than_two_days() -> None:
+    """AC2: a month Briefing must not contain two items describing the same
+    Event, exercised here with more than two linked days."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
+    history = [
+        _history_entry("d1", "2026-08-01T06-00-00Z", sources=2, countries=["france", "japan"]),
+        _history_entry("d2", "2026-08-05T06-00-00Z", sources=2, countries=["germany", "brazil"]),
+        _history_entry("d3", "2026-08-09T06-00-00Z", sources=2, countries=["france", "china"]),
+    ]
+    embeddings = {
+        "today1": [1.0, 0.0, 0.0],
+        "d1": [0.99, 0.02, 0.0],
+        "d2": [0.98, 0.03, 0.0],
+        "d3": [0.97, 0.04, 0.0],
+    }
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
+
+    assert len(linked) == 1, "all four days' Clusters describe one Event and must merge into one"
+
+
+def test_unrelated_history_entries_do_not_link() -> None:
+    """The central risk this mechanism must avoid: an unrelated historical
+    Cluster must not merge into today's just because it's in the window."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
+    history = [
+        _history_entry(
+            "unrelated", "2026-08-10T06-00-00Z", sources=3, countries=["japan", "china"]
+        ),
+    ]
+    embeddings = {"today1": [1.0, 0.0], "unrelated": [0.0, 1.0]}
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
+
+    assert len(linked) == 2, "an unrelated historical Cluster must remain separate"
+
+
+def test_transitive_chaining_does_not_fold_a_non_clique_triple_together() -> None:
+    """The same clique discipline this epic has now needed three times
+    (Stories 2.1, 2.3, 2.4) — verified again for this mechanism's own,
+    independent call site into clique_partition."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
+    history = [
+        _history_entry("mid", "2026-08-10T06-00-00Z", sources=2, countries=["spain", "italy"]),
+        _history_entry("far", "2026-08-09T06-00-00Z", sources=2, countries=["japan", "china"]),
+    ]
+    # today1-mid close, mid-far close, today1-far NOT close -- a non-clique
+    # chain across three "days" (today plus two history entries).
+    embeddings = {
+        "today1": [1.0, 0.0, 0.0],
+        "mid": [0.97, 0.24, 0.0],
+        "far": [0.0, 0.0, 1.0],
+    }
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
+
+    assert not any({"today1", "mid", "far"} <= set(item["_linked_ids"]) for item in linked), (
+        "all three must never fold into one group via transitive chaining"
+    )
+
+
+def test_no_history_within_window_leaves_todays_clusters_unchanged() -> None:
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
+
+    linked = link_across_days(today, [], embedding_by_id={"today1": [1.0, 0.0]})
+
+    assert len(linked) == 1
+    assert linked[0]["cluster_id"] == "today1"
+
+
+def test_history_only_clique_still_carries_member_titles() -> None:
+    """An adversarial review found that a clique with zero "today" members
+    (a completely ordinary case -- an ongoing Event goes uncovered for a day
+    within a week/month window) produced a merged record missing
+    member_titles entirely, since history entries never carry that field."""
+    from pipeline.stages.rank import link_across_days
+
+    history = [
+        _history_entry("d1", "2026-08-09T06-00-00Z", sources=2, countries=["france", "spain"]),
+        _history_entry("d2", "2026-08-10T06-00-00Z", sources=2, countries=["germany", "italy"]),
+    ]
+    embeddings = {"d1": [1.0, 0.0], "d2": [0.99, 0.02]}
+
+    linked = link_across_days([], history, embedding_by_id=embeddings)
+
+    assert len(linked) == 1
+    assert "member_titles" in linked[0]
+    assert linked[0]["member_titles"] == []
+
+
+def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:
+    """A vendor model upgrade between when a history row was embedded and
+    today's embedding call could leave mismatched vector dimensions in
+    embedding_by_id -- this must degrade (treat as unrelated), not crash,
+    matching every other embedding boundary in this pipeline."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
+    history = [
+        _history_entry("old", "2026-08-10T06-00-00Z", sources=2, countries=["spain", "italy"]),
+    ]
+    embeddings = {"today1": [1.0, 0.0, 0.0], "old": [1.0, 0.0]}  # different dimensionality
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
+
+    assert len(linked) == 2, "mismatched dimensions must not crash or falsely merge"

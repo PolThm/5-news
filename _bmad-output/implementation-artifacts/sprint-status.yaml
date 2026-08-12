@@ -11,10 +11,10 @@
 # Epic keys use epic-N. Story keys use N-M-slug.
 # Build Order (PRD §10) governs sequence: pipeline first, page fifth, PWA last.
 
-last_updated: 2026-08-11 (Story 2.1 created)
+last_updated: 2026-08-12 (Epic 2 complete)
 
 development_status:
-  epic-1: in-progress
+  epic-1: done
   1-1-repository-and-pipeline-skeleton: done
   1-2-collect-articles-from-gdelt: done
   1-3-supplement-collection-with-rss-feeds: done
@@ -23,14 +23,21 @@ development_status:
 
   # Gate: SM-1 sits at the end of Epic 2. The interface is built only once the
   # filter is credible. Do not start Epic 4 before that gate passes.
-  epic-2: in-progress
+  #
+  # SM-1 itself (comparing each day's real World/day Briefing against
+  # independent knowledge over a two-week observation window) has NOT yet
+  # run -- it requires real scheduled cycles to accumulate output to judge,
+  # which requires a COHERE_API_KEY repository secret to be added (flagged
+  # as an outstanding manual step since Story 2.1's Completion Notes) before
+  # the daily workflow can produce non-degraded output to observe.
+  epic-2: done
   2-1-group-articles-describing-the-same-event: done
   2-2-rank-clusters-deterministically: done
   2-3-detect-wire-copy-by-attribution-metadata: done
   2-4-detect-locally-rewritten-dispatches: done
   2-5-fall-back-to-the-continent-when-a-country-is-too-thin: done
   2-6-cap-per-country-concentration-in-continent-briefings: done
-  2-7-link-clusters-across-ingest-days: backlog
+  2-7-link-clusters-across-ingest-days: done
 
   epic-3: backlog
   3-1-summarize-selected-clusters-in-one-language: backlog

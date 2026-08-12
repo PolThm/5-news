@@ -20,12 +20,76 @@ from __future__ import annotations
 
 import argparse
 import json
-from collections.abc import Iterable, Iterator
+from collections.abc import Callable, Iterable, Iterator
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 DEFAULT_DATA_ROOT = Path("data")
+
+
+def clique_partition(
+    n: int,
+    eligible: Callable[[int], bool],
+    directly_qualifies: Callable[[int, int], bool],
+    similarity: Callable[[int, int], float],
+) -> list[list[int]]:
+    """Partition ``range(n)`` into cliques under an arbitrary pairwise
+    qualification rule, returning each clique as a sorted-by-first-member
+    list of indices (every index not merged into a larger clique appears as
+    its own singleton).
+
+    The mechanism shared by every Syndication Detection layer past layer 1
+    (Story 2.3's agency matching, Story 2.4's rewrite detection, Story 2.7's
+    cross-day linking) — extracted here once those three call sites made
+    clear it has no logic specific to any one of them.
+
+    A cluster is valid only if every pair inside it directly qualifies — a
+    clique, not a connected component. An adversarial review of the first
+    version of this mechanism (written for Story 2.3, before it was factored
+    out here) found that comparing every candidate only against a fixed
+    anchor let a chain of individually-passing pairs (A-B similar, B-C
+    similar, A-C not) fold C into A's cluster anyway — the single-linkage
+    chaining bug the pipeline had already been burned by once before, in
+    Story 2.1's cluster stage. A plain connected-components graph (Story
+    2.1's own fix for that bug) has the identical weakness: A-B and B-C
+    edges alone connect all three even when A-C never qualifies. Requiring
+    every pair in the final group to pass, not just an edge to some member,
+    closes the gap for real rather than moving it one hop over.
+
+    Built greedily, not as a general maximum-clique solver — it does not
+    need to be one: the input at every call site is a handful of candidate
+    items, and a merge left too conservative (an item that could have joined
+    but didn't, because a stronger candidate claimed a slot first) only
+    costs a missed collapse, never a false one — the one-sided error every
+    layer that calls this is designed to prefer.
+    """
+    eligible_indices = [i for i in range(n) if eligible(i)]
+
+    claimed: set[int] = set()
+    cliques: list[list[int]] = []
+
+    for i in sorted(eligible_indices):
+        if i in claimed:
+            continue
+        clique = [i]
+        candidates = sorted(
+            (j for j in eligible_indices if j != i and j not in claimed),
+            key=lambda j: similarity(i, j),
+            reverse=True,
+        )
+        for j in candidates:
+            if all(directly_qualifies(j, member) for member in clique):
+                clique.append(j)
+        claimed.update(clique)
+        cliques.append(clique)
+
+    clustered_indices = {index for clique in cliques for index in clique}
+    for i in range(n):
+        if i not in clustered_indices:
+            cliques.append([i])
+
+    return sorted(cliques, key=min)
 
 
 def cycle_id_for(instant: datetime | None = None) -> str:
@@ -138,6 +202,7 @@ def stage_arg_parser(stage: str) -> argparse.ArgumentParser:
 
 __all__ = [
     "DEFAULT_DATA_ROOT",
+    "clique_partition",
     "write_atomically",
     "cycle_id_for",
     "output_dir_for",

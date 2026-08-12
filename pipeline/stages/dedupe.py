@@ -45,6 +45,7 @@ from pipeline.config import REWRITE_SIMILARITY_FLOOR
 from pipeline.domain import ArticleRecord
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
+    clique_partition,
     cycle_id_for,
     output_dir_for,
     read_jsonl,
@@ -351,67 +352,25 @@ def _clique_merge(
     similarity: Callable[[int, int], float],
     formed_by: str,
 ) -> list[ArticleGroup]:
-    """Merge groups into cliques under an arbitrary pairwise qualification
-    rule — the mechanism shared by every Syndication Detection layer past
-    layer 1 (Story 2.3's agency matching, Story 2.4's rewrite detection).
-
-    A cluster is valid only if every pair inside it directly qualifies — a
-    clique, not a connected component. An adversarial review of the first
-    version of this mechanism (written for Story 2.3, before this was
-    factored out) found that comparing every candidate only against a fixed
-    anchor group let a chain of individually-passing pairs (A-B similar, B-C
-    similar, A-C not) fold C into A's cluster anyway — the single-linkage
-    chaining bug the pipeline had already been burned by twice before, in
-    Story 2.1's cluster stage. A plain connected-components graph (Story
-    2.1's own fix for that bug) has the identical weakness: A-B and B-C
-    edges alone connect all three even when A-C never qualifies. Requiring
-    every pair in the final group to pass, not just an edge to some member,
-    closes the gap for real rather than moving it one hop over.
-
-    Built greedily, not as a general maximum-clique solver — it does not
-    need to be one: the input is a handful of same-day candidate groups, and
-    a merge left too conservative (a group that could have joined but
-    didn't, because a stronger candidate claimed a slot first) only costs a
-    missed collapse, never a false one — the one-sided error every layer
-    here is designed to prefer.
+    """Merge ``ArticleGroup``s into cliques under an arbitrary pairwise
+    qualification rule, using ``pipeline.stages.clique_partition`` for the
+    index-level mechanism shared by every Syndication Detection layer past
+    layer 1 (see that function's docstring for why cliques, not connected
+    components).
     """
-    n = len(groups)
-    eligible_indices = [i for i in range(n) if eligible(i)]
-
-    claimed: set[int] = set()
-    clusters: list[list[int]] = []
-
-    for i in sorted(eligible_indices):
-        if i in claimed:
-            continue
-        cluster = [i]
-        candidates = sorted(
-            (j for j in eligible_indices if j != i and j not in claimed),
-            key=lambda j: similarity(i, j),
-            reverse=True,
-        )
-        for j in candidates:
-            if all(directly_qualifies(j, member) for member in cluster):
-                cluster.append(j)
-        claimed.update(cluster)
-        clusters.append(cluster)
-
-    clustered_indices = {index for cluster in clusters for index in cluster}
-    for i in range(n):
-        if i not in clustered_indices:
-            clusters.append([i])
+    cliques = clique_partition(len(groups), eligible, directly_qualifies, similarity)
 
     merged: list[ArticleGroup] = []
-    for cluster in sorted(clusters, key=min):
+    for clique in cliques:
         cluster_articles: list[ArticleRecord] = []
-        for index in cluster:
+        for index in clique:
             cluster_articles.extend(groups[index].articles)
-        anchor = groups[min(cluster)]
+        anchor = groups[min(clique)]
         merged.append(
             replace(
                 anchor,
                 articles=tuple(sorted(cluster_articles, key=lambda a: (a.published_at, a.url))),
-                formed_by=formed_by if len(cluster) > 1 else anchor.formed_by,
+                formed_by=formed_by if len(clique) > 1 else anchor.formed_by,
             )
         )
 

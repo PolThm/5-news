@@ -24,6 +24,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from pipeline.config import (
+    CROSS_DAY_SIMILARITY_FLOOR,
     MAX_PER_COUNTRY,
     MAX_SELECTED_CLUSTERS,
     MIN_COUNTRIES,
@@ -35,6 +36,7 @@ from pipeline.config import (
 from pipeline.domain import Zone, ZoneKind
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
+    clique_partition,
     cycle_id_for,
     output_dir_for,
     read_jsonl,
@@ -71,6 +73,102 @@ def rank_clusters(clusters: list[dict]) -> list[dict]:
         clusters,
         key=lambda c: (-c["independent_source_count"], -c["country_count"], c["cluster_id"]),
     )
+
+
+def link_across_days(
+    today_clusters: list[dict],
+    history_entries: list[dict],
+    embedding_by_id: dict[str, list[float]],
+) -> list[dict]:
+    """FR-18 (Story 2.7): merge today's Clusters with historical entries
+    describing the same ongoing Event, for week/month Period ranking only.
+
+    **Never called for the day Period** — that window is a single ingest
+    day by definition (AC3); this function is only ever reached from
+    week/month orchestration.
+
+    Reuses ``pipeline.stages.clique_partition``, the same mechanism Story
+    2.3's agency matching and Story 2.4's rewrite detection already settled
+    on, for the same reason: a coarse similarity signal chains transitively
+    unless every pair in a merged group is required to directly qualify, not
+    just adjacent ones. See ``clique_partition``'s docstring for the concrete
+    bug this discipline prevents.
+
+    ``embedding_by_id`` maps every item's ``cluster_id`` (today's and
+    history's) to its representative title's embedding vector — passed in
+    rather than computed here, so this function has no adapter dependency of
+    its own and is trivial to test without a network.
+
+    Independent Source counts are unioned across linked days, not summed —
+    matching ``pipeline.stages.cluster``'s own ``coverage_for_cluster``
+    arithmetic one level up: two days both covering an ongoing Event via the
+    same underlying source-country pairing should not double-count. Since
+    this function receives only the aggregate counts each day already
+    produced (not the underlying dedupe groups), the union is approximated
+    over ``countries`` (a real set, unionable exactly) and the source count
+    is taken as the maximum across linked days' *own* counts rather than a
+    sum — a deliberately conservative choice: undercounting cross-day
+    coverage costs a slightly low Consensus Score, overcounting would repeat
+    this epic's most consequential class of bug at the layer with the least
+    remaining context to catch it.
+    """
+    items = [*today_clusters, *history_entries]
+    n = len(items)
+
+    def eligible(_i: int) -> bool:
+        return True
+
+    def cosine_distance(i: int, j: int) -> float:
+        a = embedding_by_id[items[i]["cluster_id"]]
+        b = embedding_by_id[items[j]["cluster_id"]]
+        if len(a) != len(b):
+            # A vendor model upgrade between when a history row was embedded
+            # and today's embedding call would leave mismatched dimensions in
+            # embedding_by_id. Every other embedding boundary in this
+            # pipeline (cluster.py, dedupe.py) degrades rather than crashes
+            # on a malformed vector; treating a dimension mismatch as "not
+            # the same Event" does the same here, at zero cost -- two items
+            # that genuinely can't be compared simply don't link.
+            return 1.0
+        dot = sum(x * y for x, y in zip(a, b, strict=True))
+        norm_a = sum(x * x for x in a) ** 0.5
+        norm_b = sum(y * y for y in b) ** 0.5
+        if norm_a == 0 or norm_b == 0:
+            return 1.0
+        cosine_similarity = dot / (norm_a * norm_b)
+        return 1.0 - cosine_similarity
+
+    def directly_qualifies(i: int, j: int) -> bool:
+        return cosine_distance(i, j) <= CROSS_DAY_SIMILARITY_FLOOR
+
+    def similarity(i: int, j: int) -> float:
+        return 1.0 - cosine_distance(i, j)
+
+    cliques = clique_partition(n, eligible, directly_qualifies, similarity)
+
+    linked: list[dict] = []
+    for clique in cliques:
+        members = [items[index] for index in clique]
+        # Prefer a member that carries member_titles (today's shape) as the
+        # anchor over a history-only member (which never has that field) --
+        # a clique with zero "today" members is a completely ordinary case
+        # (an ongoing Event that goes uncovered for a day within a week/month
+        # window), not an edge case, and the merged record must still carry
+        # every field a Cluster's consumers expect.
+        anchor = next((m for m in members if "member_titles" in m), members[0])
+        countries = sorted({c for member in members for c in member["countries"]})
+        linked.append(
+            {
+                **anchor,
+                "member_titles": anchor.get("member_titles", []),
+                "independent_source_count": max(m["independent_source_count"] for m in members),
+                "country_count": len(countries),
+                "countries": countries,
+                "_linked_ids": [m["cluster_id"] for m in members],
+            }
+        )
+
+    return linked
 
 
 def _is_relevant_to(cluster: dict, zone: Zone) -> bool:

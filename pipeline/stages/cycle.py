@@ -27,10 +27,11 @@ from pathlib import Path
 
 from pipeline.adapters import CollectionResult, Failure
 from pipeline.adapters.cohere_embed import embed_titles
-from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for, output_dir_for
+from pipeline.stages import DEFAULT_DATA_ROOT, cycle_id_for, output_dir_for, read_jsonl
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
 from pipeline.stages.dedupe import run_dedupe
+from pipeline.stages.history import append_history
 from pipeline.stages.rank import run_rank
 
 
@@ -148,6 +149,24 @@ def run_cycle(
             # guarded, for the same reason every stage before it is: cycle.json
             # must survive a crash regardless of where it originates.
             failures.append(Failure("cycle", f"ranking raised: {exc}"))
+            completed = False
+
+    if completed:
+        try:
+            selected = list(read_jsonl(rank_path)) if rank_path else []
+            append_history(
+                selected,
+                cycle_id=cycle_id,
+                history_root=data_root / "history",
+                embed=embed,
+            )
+        except Exception as exc:  # noqa: BLE001
+            # Same reasoning as rank: no external dependency of its own once
+            # `selected` is in hand (the embed call inside append_history
+            # degrades gracefully on its own, per its docstring) — an
+            # exception escaping here is a real bug. Still guarded: cycle.json
+            # must survive a crash regardless of where it originates.
+            failures.append(Failure("cycle", f"writing history raised: {exc}"))
             completed = False
 
     # Cross-phase state lives beside the cycle, not under a stage: a later run

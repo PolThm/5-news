@@ -405,3 +405,53 @@ def test_rank_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
     record = json.loads(result.cycle_path.read_text())
     assert record["completed"] is False
     assert any("rank exploded" in f["detail"] for f in record["failures"])
+
+
+def test_history_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
+    """Same guard pattern as collect/dedupe/cluster/rank: history is the
+    fifth guarded step, and a crash in it must not prevent cycle.json from
+    being written."""
+    import pipeline.stages.cycle as cycle_module
+
+    def explode(*args: object, **kwargs: object) -> None:
+        raise RuntimeError("history exploded")
+
+    original = cycle_module.append_history
+    cycle_module.append_history = explode  # type: ignore[assignment]
+    try:
+        result = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+        )
+    finally:
+        cycle_module.append_history = original  # type: ignore[assignment]
+
+    assert result.completed is False
+    record = json.loads(result.cycle_path.read_text())
+    assert record["completed"] is False
+    assert any("history exploded" in f["detail"] for f in record["failures"])
+
+
+def test_history_runs_after_rank_and_records_selected_clusters(tmp_path: Path) -> None:
+    """The end-to-end path: a cycle with genuine selected Clusters writes
+    them to data/history/clusters.jsonl."""
+    from pipeline.stages import read_jsonl
+
+    result = run_cycle(
+        collect=lambda: _collection(
+            _record("Ceasefire agreed", "reuters.com", "united-kingdom"),
+            _record("Ceasefire agreed", "lemonde.fr", "france"),
+        ),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+    )
+
+    assert result.completed is True
+    history_path = tmp_path / "history" / "clusters.jsonl"
+    if result.clusters_selected > 0:
+        assert history_path.exists()
+        records = list(read_jsonl(history_path))
+        assert len(records) == result.clusters_selected

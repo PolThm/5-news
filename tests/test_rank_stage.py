@@ -17,7 +17,7 @@ from pipeline.stages.rank import run_rank
 def _cluster(cluster_id: str, sources: int, countries: int) -> dict:
     return {
         "cluster_id": cluster_id,
-        "member_titles": [f"title-{cluster_id}"],
+        "members": [{"title": f"title-{cluster_id}", "url": f"https://example.com/{cluster_id}"}],
         "independent_source_count": sources,
         "country_count": countries,
     }
@@ -246,7 +246,7 @@ def test_empty_input(tmp_path: Path) -> None:
 def _zone_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
     return {
         "cluster_id": cluster_id,
-        "member_titles": [f"title-{cluster_id}"],
+        "members": [{"title": f"title-{cluster_id}", "url": f"https://example.com/{cluster_id}"}],
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
@@ -512,7 +512,7 @@ def test_real_cluster_output_is_consumable_by_rank_for_zone(tmp_path) -> None:
 def _origin_cluster(cluster_id: str, sources: int, origin: str, countries: list[str]) -> dict:
     return {
         "cluster_id": cluster_id,
-        "member_titles": [f"title-{cluster_id}"],
+        "members": [{"title": f"title-{cluster_id}", "url": f"https://example.com/{cluster_id}"}],
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
@@ -670,7 +670,7 @@ def test_country_zone_is_not_subject_to_the_cap() -> None:
 def _today_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
     return {
         "cluster_id": cluster_id,
-        "member_titles": [f"title for {cluster_id}"],
+        "members": [{"title": f"title for {cluster_id}", "url": "https://example.com/x"}],
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
@@ -798,11 +798,11 @@ def test_no_history_within_window_leaves_todays_clusters_unchanged() -> None:
     assert linked[0]["cluster_id"] == "today1"
 
 
-def test_history_only_clique_still_carries_member_titles() -> None:
+def test_history_only_clique_still_carries_members() -> None:
     """An adversarial review found that a clique with zero "today" members
     (a completely ordinary case -- an ongoing Event goes uncovered for a day
-    within a week/month window) produced a merged record missing
-    member_titles entirely, since history entries never carry that field."""
+    within a week/month window) produced a merged record missing member
+    data entirely, since history entries never carry that field."""
     from pipeline.stages.rank import link_across_days
 
     history = [
@@ -814,8 +814,8 @@ def test_history_only_clique_still_carries_member_titles() -> None:
     linked = link_across_days([], history, embedding_by_id=embeddings)
 
     assert len(linked) == 1
-    assert "member_titles" in linked[0]
-    assert linked[0]["member_titles"] == []
+    assert "members" in linked[0]
+    assert linked[0]["members"] == []
 
 
 def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:

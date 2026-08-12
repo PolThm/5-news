@@ -214,13 +214,28 @@ def test_run_cluster_groups_across_languages_and_writes_output(tmp_path: Path) -
     clusters = list(read_jsonl(written.output_path))
     assert len(clusters) == 2
 
-    by_size = sorted(clusters, key=lambda c: len(c["member_titles"]))
-    assert len(by_size[0]["member_titles"]) == 1  # the market story, alone
-    assert len(by_size[1]["member_titles"]) == 2  # the two ceasefire dispatches
+    by_size = sorted(clusters, key=lambda c: len(c["members"]))
+    assert len(by_size[0]["members"]) == 1  # the market story, alone
+    assert len(by_size[1]["members"]) == 2  # the two ceasefire dispatches
     assert by_size[1]["independent_source_count"] == 2
     assert by_size[1]["country_count"] == 2  # france + japan, genuinely distinct
     assert by_size[1]["countries"] == ["france", "japan"]  # sorted, actual list not just a count
     assert by_size[0]["countries"] == ["united-states"]
+
+    # Article-level data (url, source, source_country, language) must survive
+    # into the member dict -- Story 3.1's summarize stage needs it to write a
+    # grounded Summary and to attribute an outbound link. Confirmed round-trip
+    # against the market story's single member, which has a known fixture shape.
+    market_member = by_size[0]["members"][0]
+    assert market_member["title"] == "Stock market rallies"
+    assert market_member["url"] == "https://example.com/stock market rallies"
+    assert market_member["source"] == "cnn.com"
+    assert market_member["source_country"] == "united-states"
+    assert market_member["language"] == "en"
+    # members is sorted by title (same determinism guarantee member_titles's
+    # sorted() call previously provided), not by publish order.
+    ceasefire_members = by_size[1]["members"]
+    assert [m["title"] for m in ceasefire_members] == sorted(m["title"] for m in ceasefire_members)
 
 
 def test_run_cluster_degrades_to_one_cluster_per_group_on_embedding_failure(

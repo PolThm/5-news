@@ -293,7 +293,25 @@ def run_cluster(
         clusters_out.append(
             {
                 "cluster_id": cluster_id,
-                "member_titles": sorted(m["normalized_title"] for m in members),
+                # Article-level data a downstream summarize stage needs to
+                # write a grounded Summary and cite an outbound link (Story
+                # 3.1) -- previously collapsed to bare normalized titles
+                # (`member_titles`), which dropped exactly what that stage
+                # needs. Sorted by title, the same determinism guarantee the
+                # old member_titles field provided; NOT publish order.
+                "members": sorted(
+                    (
+                        {
+                            "title": m["title"],
+                            "url": m["url"],
+                            "source": m["source"],
+                            "source_country": m["source_country"],
+                            "language": m["language"],
+                        }
+                        for m in members
+                    ),
+                    key=lambda mem: mem["title"],
+                ),
                 "independent_source_count": coverage.independent_source_count,
                 "country_count": coverage.country_count,
                 "countries": sorted(coverage.countries),

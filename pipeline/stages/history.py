@@ -97,11 +97,23 @@ def append_history(
     existing = list(read_jsonl(path)) if path.is_file() else []
 
     new_records: list[dict[str, Any]] = []
-    if selected_clusters:
-        titles = [cluster["member_titles"][0] for cluster in selected_clusters]
+    # A clique formed entirely from historical entries (rank.py's
+    # link_across_days, once wired into a real cycle) legitimately produces
+    # `"members": []` -- that function's own comment calls this "a
+    # completely ordinary case," not an edge case. Such a Cluster has
+    # nothing new to embed or record here; skip it rather than crash on an
+    # empty members[0] lookup, matching AD-10's degrade-not-abort pattern.
+    embeddable = [c for c in selected_clusters if c.get("members")]
+    if embeddable:
+        # Story 3.1 replaced cluster.py's bare member_titles with full member
+        # dicts ({"title": ..., "url": ..., ...}); the representative title
+        # (members are sorted by title -- the first is a stable, arbitrary
+        # pick, same as the old member_titles[0] convention) is all this
+        # embedding call ever needed.
+        titles = [cluster["members"][0]["title"] for cluster in embeddable]
         result = embed(titles)
-        if not result.failures and len(result.vectors) == len(selected_clusters):
-            for cluster, vector in zip(selected_clusters, result.vectors, strict=True):
+        if not result.failures and len(result.vectors) == len(embeddable):
+            for cluster, vector in zip(embeddable, result.vectors, strict=True):
                 new_records.append(
                     {
                         "cycle_id": cycle_id,

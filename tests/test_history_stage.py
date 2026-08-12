@@ -19,7 +19,7 @@ from pipeline.stages.history import append_history, read_history
 def _ranked_cluster(cluster_id: str, sources: int, countries: list[str], rank: int) -> dict:
     return {
         "cluster_id": cluster_id,
-        "member_titles": [f"title for {cluster_id}"],
+        "members": [{"title": f"title for {cluster_id}", "url": "https://example.com/x"}],
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
@@ -96,7 +96,7 @@ def test_retention_prunes_entries_older_than_the_window(tmp_path: Path) -> None:
         [
             {
                 "cluster_id": "new",
-                "member_titles": ["title for new"],
+                "members": [{"title": "title for new", "url": "https://example.com/new"}],
                 "independent_source_count": 2,
                 "country_count": 2,
                 "countries": ["china", "japan"],
@@ -141,6 +141,39 @@ def test_append_with_no_selected_clusters_writes_nothing_new(tmp_path: Path) -> 
     history_path = tmp_path / "clusters.jsonl"
     records = list(read_jsonl(history_path)) if history_path.exists() else []
     assert records == []
+
+
+def test_append_with_an_empty_members_list_does_not_crash(tmp_path: Path) -> None:
+    """A clique formed entirely from historical entries (rank.py's
+    link_across_days) legitimately produces `"members": []` -- its own
+    comment calls this "a completely ordinary case," not an edge case. This
+    stage must degrade that Cluster, not raise IndexError, once cross-day
+    linking is wired into a real cycle."""
+    embed = _fake_embed({"title for normal": [1.0, 0.0]})
+    append_history(
+        [
+            {
+                "cluster_id": "history-only",
+                "members": [],
+                "independent_source_count": 2,
+                "country_count": 2,
+                "countries": ["france", "germany"],
+                "origin_country": "france",
+                "rank": 1,
+            },
+            _ranked_cluster("normal", sources=2, countries=["japan", "china"], rank=2),
+        ],
+        cycle_id="2026-08-11T06-00-00Z",
+        history_root=tmp_path,
+        embed=embed,
+    )
+
+    history_path = tmp_path / "clusters.jsonl"
+    records = list(read_jsonl(history_path))
+    # The empty-members Cluster is skipped (nothing to embed for it); the
+    # normal Cluster is still recorded -- one Cluster's degenerate shape
+    # must not cost every other Cluster its history entry.
+    assert {r["cluster_id"] for r in records} == {"normal"}
 
 
 def test_a_malformed_cycle_id_in_history_is_skipped_not_crashed(tmp_path: Path) -> None:

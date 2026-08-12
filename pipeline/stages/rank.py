@@ -149,18 +149,18 @@ def link_across_days(
     linked: list[dict] = []
     for clique in cliques:
         members = [items[index] for index in clique]
-        # Prefer a member that carries member_titles (today's shape) as the
+        # Prefer a member that carries `members` (today's shape) as the
         # anchor over a history-only member (which never has that field) --
         # a clique with zero "today" members is a completely ordinary case
         # (an ongoing Event that goes uncovered for a day within a week/month
         # window), not an edge case, and the merged record must still carry
         # every field a Cluster's consumers expect.
-        anchor = next((m for m in members if "member_titles" in m), members[0])
+        anchor = next((m for m in members if "members" in m), members[0])
         countries = sorted({c for member in members for c in member["countries"]})
         linked.append(
             {
                 **anchor,
-                "member_titles": anchor.get("member_titles", []),
+                "members": anchor.get("members", []),
                 "independent_source_count": max(m["independent_source_count"] for m in members),
                 "country_count": len(countries),
                 "countries": countries,

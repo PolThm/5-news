@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Batch pipeline that selects and summarizes the day's most-covered news events"
 requires-python = ">=3.11"
 dependencies = [
+    "anthropic>=0.121.0",
     "cohere>=7.0.0",
     "numpy>=2.4.6",
     "scikit-learn>=1.3",

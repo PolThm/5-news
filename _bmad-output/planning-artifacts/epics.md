@@ -3,6 +3,8 @@ stepsCompleted: ['step-01-validate-prerequisites', 'step-02-design-epics', 'step
 inputDocuments:
   - "_bmad-output/planning-artifacts/prds/prd-5-news-2026-08-10/prd.md"
   - "_bmad-output/planning-artifacts/architecture/architecture-5-news-2026-08-10/ARCHITECTURE-SPINE.md"
+  - "_bmad-output/planning-artifacts/ux-designs/ux-5-news-2026-08-12/DESIGN.md"
+  - "_bmad-output/planning-artifacts/ux-designs/ux-5-news-2026-08-12/EXPERIENCE.md"
 ---
 
 # 5 News - Epic Breakdown
@@ -11,7 +13,7 @@ inputDocuments:
 
 This document provides the complete epic and story breakdown for 5 News, decomposing the requirements from the PRD and Architecture spine into implementable stories.
 
-No UX design contract exists yet — `bmad-ux` has not run. This is consistent with the PRD's Build Order, which places the page fifth of six. Stories covering the reading surface inherit the PRD's `[ASSUMPTION]` tags and are marked for confirmation during UX.
+`bmad-ux` has run (2026-08-12), consistent with the PRD's Build Order placing the page fifth of six. The UX design contract (`DESIGN.md` + `EXPERIENCE.md`, "Wire & Ledger") is now a first-class input; Epic 4's stories were updated in place to reflect its decisions — the PRD's `[ASSUMPTION]` tags on the reading surface are resolved, not merely flagged.
 
 ## Requirements Inventory
 
@@ -71,17 +73,21 @@ Extracted from the Architecture spine. Each is an invariant that constrains how 
 
 ### UX Design Requirements
 
-None. No UX design contract exists — `bmad-ux` has not run.
+`bmad-ux` has run. UX design contract: `{planning_artifacts}/ux-designs/ux-5-news-2026-08-12/DESIGN.md` + `EXPERIENCE.md` ("Wire & Ledger" — editorial-restraint register; single-page IA addressed by Language/Zone/Period). Every PRD-level `[ASSUMPTION]` affecting Epic 4 is now a settled decision, reflected directly in each story below:
 
-Stories covering the reading surface (FR-1 to FR-5, FR-7 to FR-9, FR-12, FR-14, FR-20) carry the PRD's open assumptions rather than settled design decisions:
+- UX-DR1: Summary length target set to ~260 characters (midpoint of the PRD's 240–320 range) — "readable in one breath."
+- UX-DR2: Output Language control placed top-right of the page header, outside and above the mad-libs sentence, rendered as `label-caps` text options (e.g. "FR · EN · ES") — keeps the sentence at exactly two blanks (Zone, Period).
+- UX-DR3: Freshness timestamp rendered as literal text "Mis à jour à HH:MM" (in the reader's chosen Output Language, local time convention) — always real text content, never an icon-only tooltip (accessibility floor).
+- UX-DR4: WCAG 2.1 AA confirmed as the accessibility floor — 4.5:1 minimum contrast for body text, 3:1 for the monospace Consensus figures, visible focus ring on every interactive element, `aria-live` announcement on mad-libs word change, `aria-expanded` on the Consensus chip.
+- UX-DR5: Mad-libs word component — dotted underline in the `primary` accent color (the *only* interactive color on the page); click/`Enter`/`Space` cycles to the next value (Zone: World → 6 Continents → 8 Countries → World; Period: day → week → month → day); no-JS fallback renders as a plain link to the equivalent static route.
+- UX-DR6: Consensus chip component — collapsed by default in `numeral` (monospace) typography on a `surface-container` background; expands inline (never a modal) on click/`Enter` to list contributing Sources and their countries; the listed count must always equal the displayed number.
+- UX-DR7: Continent-fallback notice — a single `secondary`-colored (muted brick red) inline sentence directly beneath the mad-libs title, never a dismissible banner or toast; this is the *only* use of the secondary accent anywhere on the page.
+- UX-DR8: End Screen component — a full-width hairline rule in `outline-variant` followed by a `label-caps` completion statement; nothing renders below it (no related content, no infinite scroll trigger).
+- UX-DR9: Attribution — outlet name as visible plain text immediately followed by a solid-underlined outbound link, present on initial render, never behind hover/menu/disclosure.
+- UX-DR10: Single-column editorial stack at every viewport (mobile-first, ~680px max content width on desktop via wider margins, never additional columns) — no dashboard-style multi-column grid.
+- UX-DR11: Voice and tone — declarative, unapologetic sentences (see EXPERIENCE.md's Do/Don't table); never frames a thin Discarded Volume or a Continent fallback as a failure or an apology.
 
-- One-breath readability interpreted as ~240–320 characters per Summary (PRD §4.1).
-- Output Language control sits outside the mad-libs sentence, which keeps exactly two blanks (PRD §4.3).
-- Briefing freshness surfaced as "updated at HH:MM" (PRD §4.4).
-- WCAG 2.1 AA as the accessibility target (NFR-4).
-- 2–3 second network timeout before cache fallback (PRD §4.5).
-
-These are flagged in the affected stories. Running `bmad-ux` before Build Order step 5 would replace them with decisions.
+Superseded by this UX contract, no longer open: the 2–3 second network-timeout-before-cache-fallback assumption (PRD §4.5) — moot under this architecture, since every Briefing is a pre-generated static file with no client-side network fetch on the happy path (AD-1/AD-2); a genuinely offline reader's experience is Epic 5's PWA-caching scope, not Epic 4's.
 
 ### FR Coverage Map
 
@@ -551,7 +557,7 @@ So that the product cannot become expensive by becoming popular.
 
 The reading surface. A visitor arrives and the Briefing is already there; two clickable words change what they see; the numbers that justify each item are on screen; the page ends.
 
-*All stories in this epic carry the PRD's open UX assumptions. Running `bmad-ux` before this epic would replace them with decisions.*
+*UX design contract: `{planning_artifacts}/ux-designs/ux-5-news-2026-08-12/DESIGN.md` + `EXPERIENCE.md` ("Wire & Ledger"). Every acceptance criterion below reflects a settled decision from that contract, not a PRD assumption — see the UX Design Requirements (UX-DR1–11) above for the full list and rationale. Mockups: `mockups/briefing-world-day.html`, `mockups/briefing-fallback.html`.*
 
 ### Story 4.1: Render the World / day Briefing on arrival
 
@@ -572,11 +578,15 @@ So that I get value before doing any work.
 
 **Given** a typical mobile connection
 **When** the page loads
-**Then** first contentful paint occurs within 1 second at the 95th percentile `[ASSUMPTION: 1s p95 — confirm during UX]` (NFR-1)
+**Then** first contentful paint occurs within 1 second at the 95th percentile (NFR-1)
 
 **Given** JavaScript is unavailable
 **When** the page loads
-**Then** the Briefing content is readable (NFR-4)
+**Then** the Briefing content is readable, and the mad-libs words render as plain links to the equivalent static route for their next cycle value (NFR-4, EXPERIENCE.md State Patterns: "Cold load")
+
+**Given** the page renders in any supported Output Language
+**When** the layout is composed
+**Then** it follows the single-column editorial stack (UX-DR10): header, mad-libs sentence, item list, Discarded Volume, End Screen, in that fixed order, never a multi-column grid at any viewport
 
 ### Story 4.2: Change the Period by clicking a word
 
@@ -587,9 +597,13 @@ So that the control explains itself without labels or a submit button.
 **Acceptance Criteria:**
 
 **Given** a rendered Briefing
-**When** the reader clicks the period words in the title sentence
-**Then** the Period cycles day → week → month and the Briefing is replaced (FR-2)
+**When** the reader clicks the period word in the title sentence
+**Then** the Period cycles day → week → month → day and the Briefing is replaced (FR-2)
 **And** the sentence text updates to match
+
+**Given** the mad-libs word component (UX-DR5)
+**When** it renders
+**Then** it shows a dotted underline in the `primary` accent color — the only interactive color on the page — visually distinct from the solid-underlined attribution links (DESIGN.md Components)
 
 **Given** a Period is selected
 **When** the URL is read
@@ -597,7 +611,7 @@ So that the control explains itself without labels or a submit button.
 
 **Given** the reader changes Period
 **When** the new Briefing renders
-**Then** it renders within the same latency bound as first load (NFR-1)
+**Then** it renders within the same latency bound as first load (NFR-1), and the sentence/item-list swap in place without a full navigation flash when JavaScript is present (EXPERIENCE.md State Patterns: "Zone/Period change (JS present)")
 
 ### Story 4.3: Change the Zone by clicking a word
 
@@ -608,13 +622,13 @@ So that following two places costs two clicks.
 **Acceptance Criteria:**
 
 **Given** a rendered Briefing
-**When** the reader clicks the zone words
-**Then** they can select World, one of 6 Continents, or one of 8 supported Countries — 15 Zones (FR-3)
+**When** the reader clicks the zone word
+**Then** they can cycle through World, the 6 Continents, and the 8 supported Countries — 15 Zones (FR-3)
 **And** the Briefing is replaced and the URL reflects the selection
 
 **Given** a Country Zone that fell back to its Continent
 **When** the Briefing renders
-**Then** the page states that the Continent is being shown instead of the requested Country (FR-16)
+**Then** the page states the substitution via the Continent-fallback notice (FR-16, UX-DR7): a single `secondary`-colored (muted brick red) inline sentence directly beneath the mad-libs title, never a dismissible banner or toast — this is the only use of that accent color anywhere on the page
 
 ### Story 4.4: Show a variable number of items and end the page
 
@@ -630,16 +644,16 @@ So that I know I am finished rather than wondering what is below.
 
 **Given** any Briefing
 **When** the last item has rendered
-**Then** an explicit End Screen states the Briefing is complete (FR-5)
+**Then** an explicit End Screen (UX-DR8) states the Briefing is complete (FR-5): a full-width hairline rule in `outline-variant` followed by a `label-caps` completion statement
 **And** no further content, recommendation, related item, or infinite-scroll trigger appears below it
 
 **Given** a Briefing with a single dominating item
 **When** it renders
-**Then** that item fills the screen rather than sitting above filler
+**Then** that item's block takes whatever vertical space its content needs (content-driven height) rather than being capped to look like a multi-item layout
 
-**Given** a 5-item Briefing on a standard mobile viewport
+**Given** a Briefing on a standard mobile viewport
 **When** it renders
-**Then** the items fit with minimal scrolling, each readable in one breath `[ASSUMPTION: ~240–320 characters per Summary — confirm during UX]`
+**Then** each Summary targets ~260 characters (UX-DR1, the midpoint of the PRD's suggested range) so items fit with minimal scrolling, each readable in one breath
 
 ### Story 4.5: Show why each item is here
 
@@ -651,16 +665,16 @@ So that I can disagree with it rather than having to trust it.
 
 **Given** a Briefing item
 **When** it renders
-**Then** it shows the Independent Source count and the distinct-country count, in the form *covered by N independent sources across M countries* (FR-7)
+**Then** it shows the Independent Source count and the distinct-country count as a Consensus chip (UX-DR6) in the form *N independent sources · M countries*, set in the reserved monospace `numeral` typography token (FR-7)
 **And** those are the counts the ranking used, not raw Article counts (AD-5, AD-12)
 
 **Given** a Briefing
 **When** it renders
-**Then** the Discarded Volume appears once, at the foot of the item list (FR-8)
+**Then** the Discarded Volume appears once, at the foot of the item list, in plain text with two numeral-styled counts ("1,247 ingested → 5 kept") (FR-8)
 
-**Given** a reader interacts with the Consensus Score
+**Given** a reader clicks or presses Enter on the Consensus chip
 **When** it expands
-**Then** the contributing Sources and their countries are listed, and their number equals the displayed count (FR-9)
+**Then** it expands inline — never a modal — listing the contributing Sources and their countries, and their number equals the displayed count exactly; this is a hard rendering guarantee, not a best-effort display (FR-9, UX-DR6)
 
 ### Story 4.6: Attribute every item and link out
 
@@ -672,7 +686,7 @@ So that the Summary sends readers to the original rather than replacing it.
 
 **Given** a Briefing item
 **When** it renders
-**Then** attribution is visible and an outbound link to an original Article is present without interaction — not behind a menu or hover (FR-14)
+**Then** the outlet name is visible as plain text immediately followed by a solid-underlined outbound link to an original Article, present on initial render — not behind a menu, hover state, or the Consensus chip's expansion (FR-14, UX-DR9)
 
 **Given** a Summary
 **When** it is read
@@ -692,11 +706,11 @@ So that the foreign-press promise actually reaches me.
 
 **Given** a reader changes the Output Language
 **When** the Briefing re-renders
-**Then** it is in that language, and the URL reflects it
+**Then** it is in that language, and the URL reflects it — the URL segment is the only persistence mechanism in v1, so a bookmarked or shared link always reproduces the same language regardless of the visiting browser's preference (EXPERIENCE.md State Patterns: "Language explicitly chosen")
 
 **Given** the mad-libs sentence
 **When** the language control is placed
-**Then** it sits outside the sentence, which keeps exactly two blanks `[ASSUMPTION: placement — confirm during UX]`
+**Then** it sits top-right of the page header, outside and above the sentence, rendered as `label-caps` text options (e.g. "FR · EN · ES") with the active one in the `primary` accent color — keeping the sentence at exactly two blanks (UX-DR2)
 
 ### Story 4.8: Meet the accessibility target
 
@@ -708,15 +722,19 @@ So that the product is usable beyond its default reader.
 
 **Given** the rendered page
 **When** it is audited
-**Then** contrast and keyboard navigation meet WCAG 2.1 AA `[ASSUMPTION: AA target — confirm during UX]` (NFR-4)
+**Then** contrast and keyboard navigation meet WCAG 2.1 AA (UX-DR4, NFR-4): 4.5:1 minimum contrast for body text, 3:1 for the monospace Consensus figures at minimum rendered size, a visible focus ring (never `outline: none`) on every interactive element
 
 **Given** the mad-libs selectors
 **When** navigated by keyboard
-**Then** each is reachable, operable, and announces its current value
+**Then** each is reachable, operable via Enter/Space, and announces its role and current value via `aria-live` on change (e.g. "Zone, World, button, cycles to Europe") — not just its visible text
+
+**Given** the Consensus chip
+**When** it expands or collapses
+**Then** the state change is announced via `aria-expanded`, and the newly revealed source list is reachable in the same tab sequence, never skipped
 
 **Given** the freshness timestamp
 **When** it renders
-**Then** the reader can see when the Briefing was generated `[ASSUMPTION: "updated at HH:MM" — confirm during UX]` (FR-19)
+**Then** the reader can see when the Briefing was generated, as literal text "Mis à jour à HH:MM" (or the equivalent in the active Output Language) — never an icon-only tooltip (UX-DR3, FR-19)
 
 ---
 

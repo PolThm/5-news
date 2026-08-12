@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>5 News — Continent fallback + expanded Consensus chip</title>
+<style>
+/*
+  Governed by: DESIGN.md (Colors — secondary reserved for fallback,
+  tertiary for expanded source list; Components — Continent-fallback
+  notice, Consensus chip) and EXPERIENCE.md (Component Patterns —
+  Consensus chip expand behavior; State Patterns — Continent fallback
+  active; Flow 2 — Kwame; Flow 3 — Priya).
+  Two states shown side by side in one file, per the key-screens brief's
+  "load-bearing alternate state" allowance:
+  Left:  France requested, too thin -> Europe served, fallback notice shown.
+  Right: Consensus chip expanded, listing contributing Sources (Flow 3).
+*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #eeece5;
+  color: #1a1a18;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  padding: 24px;
+  flex-wrap: wrap;
+}
+.frame {
+  width: 390px;
+  background: #faf9f6;
+  border: 1px solid #dfdcd2;
+}
+.caption {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: #4d4a42;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid #e7e4dc;
+}
+.mark { font-weight: 600; font-size: 13px; letter-spacing: 0.08em; }
+.lang { display: flex; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; }
+.lang span { color: #777265; }
+.lang span.active { color: #1f4d3d; }
+.sentence-block { padding: 24px 16px 8px; }
+h1 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.25;
+}
+h1 .word {
+  color: #1f4d3d;
+  text-decoration: underline dotted 2px;
+  text-decoration-color: #8fc2ac;
+  text-underline-offset: 3px;
+}
+.fallback-notice {
+  margin-top: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #8a3a2b;
+  background: #f6dcd4;
+  border-radius: 3px;
+}
+.timestamp { margin-top: 8px; font-size: 13px; color: #4d4a42; }
+.item-list { padding: 16px 16px 0; }
+.item { padding: 20px 0; border-bottom: 1px solid #e7e4dc; }
+.item h2 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+.item p.summary { font-size: 16px; line-height: 1.55; margin-bottom: 12px; }
+.chip {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  background: #eeece5;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.chip.expanded { background: #dde2ee; margin-bottom: 0; }
+.chip .num { color: #1f4d3d; }
+.source-list {
+  margin-top: 0;
+  padding: 12px 14px;
+  background: #dde2ee;
+  border-radius: 0 0 3px 3px;
+  font-size: 13px;
+  color: #1a2438;
+}
+.source-list ul { margin-top: 6px; padding-left: 18px; }
+.source-list li { margin-bottom: 2px; }
+.attribution { display: block; margin-top: 10px; font-size: 13px; color: #4d4a42; }
+.attribution a { color: #1a1a18; text-decoration: underline; font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div>
+  <div class="caption">Repli Continent — France trop peu couverte</div>
+  <div class="frame">
+    <header>
+      <div class="mark">5 NEWS</div>
+      <div class="lang"><span class="active">FR</span><span>EN</span><span>ES</span></div>
+    </header>
+    <div class="sentence-block">
+      <h1>Voici ce qui se passe en <span class="word">France</span>, <span class="word">aujourd'hui</span>.</h1>
+      <div class="fallback-notice">Affichage de l'Europe — la France n'a pas assez de couverture aujourd'hui.</div>
+      <div class="timestamp">Mis à jour à 07:14</div>
+    </div>
+    <div class="item-list">
+      <div class="item">
+        <h2>Le sommet européen sur l'énergie s'achève sur un compromis</h2>
+        <p class="summary">Les vingt-sept ont convenu d'un mécanisme commun de stockage, après des désaccords sur son financement.</p>
+        <span class="chip"><span class="num">6</span> sources indépendantes · <span class="num">5</span> pays</span>
+        <span class="attribution">Rapporté par <em>Politico Europe</em> — <a href="#">lire l'article original →</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="caption">Score de Consensus déplié (Flow 3 — Priya)</div>
+  <div class="frame">
+    <div class="item-list" style="padding-top: 20px;">
+      <div class="item" style="border-bottom: none;">
+        <h2>Un cessez-le-feu entre en vigueur après trois jours de négociations</h2>
+        <p class="summary">Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.</p>
+        <span class="chip expanded"><span class="num">7</span> sources indépendantes · <span class="num">5</span> pays</span>
+        <div class="source-list">
+          Sources et pays contributeurs :
+          <ul>
+            <li>Reuters (Royaume-Uni)</li>
+            <li>Associated Press (États-Unis)</li>
+            <li>Le Monde (France)</li>
+            <li>Der Spiegel (Allemagne)</li>
+            <li>Kyodo News (Japon)</li>
+            <li>ABC News (Australie)</li>
+            <li>Folha de S.Paulo (Brésil)</li>
+          </ul>
+        </div>
+        <span class="attribution">Rapporté par <em>Reuters</em> — <a href="#">lire l'article original →</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

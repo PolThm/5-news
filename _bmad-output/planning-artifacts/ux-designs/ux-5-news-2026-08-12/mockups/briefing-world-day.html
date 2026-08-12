@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>5 News — World / day (canonical entry)</title>
+<style>
+/*
+  Governed by: DESIGN.md (Colors, Typography, Layout & Spacing, Shapes,
+  Components) and EXPERIENCE.md (Information Architecture — the 4-region
+  stack; Component Patterns — Mad-libs word, Consensus chip, Attribution,
+  End Screen; Voice and Tone table).
+  Canonical state: World / day, French, 4 items (a realistic qualifying
+  count, not padded to 5 — FR-4), no Continent fallback active.
+*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #faf9f6;
+  color: #1a1a18;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 64px;
+}
+.frame {
+  width: 390px;
+  background: #faf9f6;
+  border: 1px solid #dfdcd2;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid #e7e4dc;
+}
+.mark {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: #1a1a18;
+}
+.lang {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.lang span { color: #777265; cursor: default; }
+.lang span.active { color: #1f4d3d; }
+.sentence-block { padding: 24px 16px 8px; }
+h1 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.25;
+  color: #1a1a18;
+}
+h1 .word {
+  color: #1f4d3d;
+  text-decoration: underline dotted 2px;
+  text-decoration-color: #8fc2ac;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.timestamp {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #4d4a42;
+}
+.item-list { padding: 8px 16px 0; }
+.item {
+  padding: 24px 0;
+  border-bottom: 1px solid #e7e4dc;
+}
+.item:last-of-type { border-bottom: none; }
+.item h2 {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.35;
+  margin-bottom: 8px;
+  color: #1a1a18;
+}
+.item p.summary {
+  font-size: 17px;
+  line-height: 1.55;
+  color: #1a1a18;
+  margin-bottom: 12px;
+}
+.chip {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  background: #eeece5;
+  color: #1a1a18;
+  border-radius: 3px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.chip .num { color: #1f4d3d; }
+.attribution {
+  font-size: 13px;
+  color: #4d4a42;
+}
+.attribution a {
+  color: #1a1a18;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.discarded {
+  padding: 20px 16px;
+  font-size: 13px;
+  color: #4d4a42;
+  border-top: 1px solid #e7e4dc;
+}
+.discarded .num {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-weight: 500;
+  color: #1a1a18;
+}
+.end-screen {
+  padding: 20px 16px 32px;
+  text-align: center;
+}
+.end-screen .rule {
+  height: 1px;
+  background: #cac5b8;
+  margin-bottom: 16px;
+}
+.end-screen p {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4d4a42;
+}
+</style>
+</head>
+<body>
+<div class="frame">
+  <header>
+    <div class="mark">5 NEWS</div>
+    <div class="lang"><span class="active">FR</span><span>EN</span><span>ES</span></div>
+  </header>
+
+  <div class="sentence-block">
+    <h1>Voici ce qui se passe dans <span class="word">le Monde</span>, <span class="word">aujourd'hui</span>.</h1>
+    <div class="timestamp">Mis à jour à 07:14</div>
+  </div>
+
+  <div class="item-list">
+    <div class="item">
+      <h2>Un cessez-le-feu entre en vigueur après trois jours de négociations</h2>
+      <p class="summary">Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.</p>
+      <span class="chip"><span class="num">7</span> sources indépendantes · <span class="num">5</span> pays</span><br>
+      <span class="attribution">Rapporté par <em>Reuters</em> — <a href="#">lire l'article original →</a></span>
+    </div>
+
+    <div class="item">
+      <h2>La banque centrale relève son taux directeur pour la troisième fois cette année</h2>
+      <p class="summary">La décision, largement anticipée par les marchés, vise à contenir une inflation restée supérieure à l'objectif fixé.</p>
+      <span class="chip"><span class="num">5</span> sources indépendantes · <span class="num">4</span> pays</span><br>
+      <span class="attribution">Rapporté par <em>Le Monde</em> — <a href="#">lire l'article original →</a></span>
+    </div>
+
+    <div class="item">
+      <h2>Une mission spatiale conjointe rapporte ses premiers échantillons</h2>
+      <p class="summary">L'équipe scientifique évoque des résultats préliminaires prometteurs, sans encore confirmer d'ici combien de mois une analyse complète sera publiée.</p>
+      <span class="chip"><span class="num">4</span> sources indépendantes · <span class="num">3</span> pays</span><br>
+      <span class="attribution">Rapporté par <em>Associated Press</em> — <a href="#">lire l'article original →</a></span>
+    </div>
+
+    <div class="item">
+      <h2>Un accord commercial régional est signé après deux ans de discussions</h2>
+      <p class="summary">Le texte prévoit une réduction progressive des droits de douane entre les pays signataires sur une période de cinq ans.</p>
+      <span class="chip"><span class="num">6</span> sources indépendantes · <span class="num">6</span> pays</span><br>
+      <span class="attribution">Rapporté par <em>Deutsche Welle</em> — <a href="#">lire l'article original →</a></span>
+    </div>
+  </div>
+
+  <div class="discarded">
+    <span class="num">1 384</span> articles examinés → <span class="num">4</span> conservés.
+  </div>
+
+  <div class="end-screen">
+    <div class="rule"></div>
+    <p>Vous avez atteint la fin. 4 sujets ont atteint le seuil aujourd'hui.</p>
+  </div>
+</div>
+</body>
+</html>

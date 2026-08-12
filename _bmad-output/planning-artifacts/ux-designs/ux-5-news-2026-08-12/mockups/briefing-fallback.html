@@ -14,6 +14,9 @@
   "load-bearing alternate state" allowance:
   Left:  France requested, too thin -> Europe served, fallback notice shown.
   Right: Consensus chip expanded, listing contributing Sources (Flow 3).
+  Post-4.1-scoping correction: no separate headline field exists in the
+  real BriefingRecord JSON schema (only `summary`) -- each item renders
+  as a single summary paragraph, matching briefing-world-day.html's fix.
 */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -77,14 +80,12 @@ h1 .word {
 .timestamp { margin-top: 8px; font-size: 13px; color: #4d4a42; }
 .item-list { padding: 16px 16px 0; }
 .item { padding: 20px 0; border-bottom: 1px solid #e7e4dc; }
-.item h2 {
+.item p.summary {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.35;
-  margin-bottom: 8px;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 12px;
 }
-.item p.summary { font-size: 16px; line-height: 1.55; margin-bottom: 12px; }
 .chip {
   display: inline-block;
   font-family: 'IBM Plex Mono', 'Courier New', monospace;
@@ -127,8 +128,7 @@ h1 .word {
     </div>
     <div class="item-list">
       <div class="item">
-        <h2>Le sommet européen sur l'énergie s'achève sur un compromis</h2>
-        <p class="summary">Les vingt-sept ont convenu d'un mécanisme commun de stockage, après des désaccords sur son financement.</p>
+        <p class="summary">Le sommet européen sur l'énergie s'achève sur un compromis. Les vingt-sept ont convenu d'un mécanisme commun de stockage, après des désaccords sur son financement.</p>
         <span class="chip"><span class="num">6</span> sources indépendantes · <span class="num">5</span> pays</span>
         <span class="attribution">Rapporté par <em>Politico Europe</em> — <a href="#">lire l'article original →</a></span>
       </div>
@@ -141,8 +141,7 @@ h1 .word {
   <div class="frame">
     <div class="item-list" style="padding-top: 20px;">
       <div class="item" style="border-bottom: none;">
-        <h2>Un cessez-le-feu entre en vigueur après trois jours de négociations</h2>
-        <p class="summary">Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.</p>
+        <p class="summary">Un cessez-le-feu entre en vigueur après trois jours de négociations. Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.</p>
         <span class="chip expanded"><span class="num">7</span> sources indépendantes · <span class="num">5</span> pays</span>
         <div class="source-list">
           Sources et pays contributeurs :

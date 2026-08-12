@@ -11,7 +11,7 @@
 # Epic keys use epic-N. Story keys use N-M-slug.
 # Build Order (PRD §10) governs sequence: pipeline first, page fifth, PWA last.
 
-last_updated: 2026-08-12 (Story 3.6 done -- Epic 3 complete)
+last_updated: 2026-08-12 (Epic 4 started -- UX contract landed, SM-1 gate deliberately bypassed)
 
 development_status:
   epic-1: done
@@ -22,7 +22,7 @@ development_status:
   1-5-run-the-collection-on-a-schedule: done
 
   # Gate: SM-1 sits at the end of Epic 2. The interface is built only once the
-  # filter is credible. Do not start Epic 4 before that gate passes.
+  # filter is credible.
   #
   # SM-1 itself (comparing each day's real World/day Briefing against
   # independent knowledge over a two-week observation window) has NOT yet
@@ -30,6 +30,14 @@ development_status:
   # which requires a COHERE_API_KEY repository secret to be added (flagged
   # as an outstanding manual step since Story 2.1's Completion Notes) before
   # the daily workflow can produce non-degraded output to observe.
+  #
+  # 2026-08-12: user explicitly decided to bypass this gate and start Epic 4
+  # now, accepting the risk of building the reading surface before the
+  # ranking filter's real-world credibility has been observed over the
+  # originally-planned two-week window. Not resolved, not waived on
+  # technical grounds -- a deliberate schedule call. Revisit if Epic 4's own
+  # work surfaces evidence the filter needs correction before more UI is
+  # built on top of it.
   epic-2: done
   2-1-group-articles-describing-the-same-event: done
   2-2-rank-clusters-deterministically: done
@@ -47,9 +55,9 @@ development_status:
   3-5-publish-atomically-and-survive-a-failed-cycle: done
   3-6-keep-generation-cost-independent-of-readership: done
 
-  # Recommended: run bmad-ux before starting Epic 4. Its stories currently
-  # carry PRD assumptions rather than design decisions.
-  epic-4: backlog
+  # bmad-ux ran 2026-08-12 -- stories now carry settled design decisions
+  # (DESIGN.md + EXPERIENCE.md, "Wire & Ledger"), not PRD assumptions.
+  epic-4: in-progress
   4-1-render-the-world-day-briefing-on-arrival: backlog
   4-2-change-the-period-by-clicking-a-word: backlog
   4-3-change-the-zone-by-clicking-a-word: backlog

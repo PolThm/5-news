@@ -11,7 +11,7 @@
 # Epic keys use epic-N. Story keys use N-M-slug.
 # Build Order (PRD §10) governs sequence: pipeline first, page fifth, PWA last.
 
-last_updated: 2026-08-13 (Story 5.1 done)
+last_updated: 2026-08-13 (Story 5.2 done)
 
 development_status:
   epic-1: done
@@ -69,6 +69,6 @@ development_status:
 
   epic-5: in-progress
   5-1-make-the-application-installable: done
-  5-2-serve-fresh-content-first-cache-only-as-a-fallback: backlog
+  5-2-serve-fresh-content-first-cache-only-as-a-fallback: done
   5-3-invalidate-the-cache-on-every-published-cycle: backlog
   5-4-serve-an-honest-offline-experience: backlog

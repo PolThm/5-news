@@ -66,30 +66,46 @@ describe("no-JS readability of the built page", () => {
     html = readFileSync(DIST_INDEX, "utf-8");
   }, 30000);
 
-  it("ships exactly two <script> tags on / -- the Period-switcher island and the opportunistic language-detect redirect (progressive enhancement only)", () => {
+  it("ships exactly three <script> tags on / -- the Period-switcher island, the SW registration, and the opportunistic language-detect redirect (progressive enhancement only)", () => {
     // Story 4.7 (AC1) adds a second script, present only on `/`: the
-    // browser-language-detection redirect. Both are progressive
-    // enhancement -- neither is required to read the page, which the rest
-    // of this describe block's assertions prove directly against the
-    // server-rendered HTML.
-    const scriptTags = html.match(/<script[^>]*>/gi) ?? [];
-    expect(scriptTags).toHaveLength(2);
+    // browser-language-detection redirect. Story 5.2 adds a third,
+    // present on every page (not /-only): the service-worker
+    // registration. All three are progressive enhancement -- none is
+    // required to read the page, which the rest of this describe block's
+    // assertions prove directly against the server-rendered HTML.
+    // Match tag+body pairs by POSITION, not by re-searching for the tag
+    // text -- two of the three <script> tags are byte-identical
+    // (`<script type="module">` with no distinguishing attribute), so a
+    // naive `html.indexOf(tag)` lookup for each would always resolve to
+    // the FIRST occurrence for both, silently comparing the same script
+    // against itself twice. `matchAll` walks the string once and yields
+    // each match's own real position, avoiding that trap entirely.
+    const scriptMatches = [...html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/gi)];
+    expect(scriptMatches).toHaveLength(3);
+    const scripts = scriptMatches.map((m) => ({ tag: `<script${m[1]}>`, body: m[2] ?? "" }));
 
     // Whether Astro inlines the Period-switcher's compiled module or
     // emits an external src="..." reference is its own bundler-size
     // decision (see this file's stripInlineScript docstring). The
-    // language-detect redirect is small enough to always inline, and its
-    // compiled body is distinctive (references navigator.language, which
-    // Period-switcher's own module never does) -- use that, not tag
-    // position, to tell the two apart reliably either way.
-    const languageDetectTag = scriptTags.find((tag) => {
-      const bodyMatch = html.slice(html.indexOf(tag)).match(/<script[^>]*>([\s\S]*?)<\/script>/);
-      return !tag.includes("src=") && bodyMatch?.[1]?.includes("navigator.language");
-    });
-    expect(languageDetectTag).toBeDefined();
+    // language-detect redirect and SW registration are small enough to
+    // always inline, and each has a distinctive compiled body
+    // (navigator.language for language-detect; navigator.serviceWorker
+    // for the SW registration, which Period-switcher's own module never
+    // references) -- use that, not tag position, to tell all three apart
+    // reliably either way.
+    const languageDetect = scripts.find(
+      (s) => !s.tag.includes("src=") && s.body.includes("navigator.language")
+    );
+    expect(languageDetect).toBeDefined();
 
-    const periodSwitcherTag = scriptTags.find((tag) => tag !== languageDetectTag);
-    if (!periodSwitcherTag) throw new Error("could not identify the Period-switcher <script> tag");
+    const swRegister = scripts.find(
+      (s) => !s.tag.includes("src=") && s.body.includes("navigator.serviceWorker")
+    );
+    expect(swRegister).toBeDefined();
+
+    const periodSwitcher = scripts.find((s) => s !== languageDetect && s !== swRegister);
+    if (!periodSwitcher) throw new Error("could not identify the Period-switcher <script> tag");
+    const periodSwitcherTag = periodSwitcher.tag;
     const isExternal = /<script[^>]+src=/i.test(periodSwitcherTag);
     if (isExternal) {
       const srcMatch = periodSwitcherTag.match(/src="([^"]+)"/);
@@ -771,5 +787,44 @@ describe("PWA installability (Story 5.1)", () => {
   it("never references Notification/PushManager/requestPermission/showNotification anywhere in the built output (AC3)", () => {
     const indexHtml = readFileSync(DIST_INDEX, "utf-8");
     expect(indexHtml).not.toMatch(/Notification|PushManager|requestPermission|showNotification/);
+  });
+});
+
+// Story 5.2 (AD-8): the service worker itself, and its registration
+// reaching every page. This block builds its own dist/ -- Story 5.1's
+// own Blind Hunter review caught a real bug where a different describe
+// block silently relied on a preceding, unrelated block having already
+// built dist/, so every build-dependent block in this file has its own
+// explicit build step.
+describe("Service worker registration (Story 5.2)", () => {
+  const SW_PATH = join(SITE_ROOT, "dist", "sw.js");
+
+  beforeAll(() => {
+    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+  }, 30000);
+
+  it("serves sw.js, copied byte-for-byte from public/", () => {
+    expect(existsSync(SW_PATH)).toBe(true);
+    const built = readFileSync(SW_PATH, "utf-8");
+    const source = readFileSync(join(SITE_ROOT, "public", "sw.js"), "utf-8");
+    expect(built).toBe(source);
+  });
+
+  it("registers the service worker from both / and a [lang]/[zone]/[period] route", () => {
+    const indexHtml = readFileSync(DIST_INDEX, "utf-8");
+    const routeHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "day.html"), "utf-8");
+
+    for (const pageHtml of [indexHtml, routeHtml]) {
+      expect(pageHtml).toMatch(/serviceWorker.{0,20}in navigator/);
+      expect(pageHtml).toMatch(/navigator\.serviceWorker\.register\(.\/sw\.js.\)/);
+    }
+  });
+
+  it("guards registration behind a serviceWorker-support feature check, and swallows a rejected registration", () => {
+    const indexHtml = readFileSync(DIST_INDEX, "utf-8");
+    // The registration call itself is chained with .catch(...) -- a
+    // rejected registration (unsupported browser, blocked context) must
+    // never surface as an uncaught error on the page.
+    expect(indexHtml).toMatch(/register\(.\/sw\.js.\)\.catch\(/);
   });
 });

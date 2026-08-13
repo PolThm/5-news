@@ -404,3 +404,25 @@ def test_a_normal_day_does_not_touch_the_budget() -> None:
 
     assert len(calls) == 1
     assert result.failures == []
+
+
+def test_the_daily_query_parenthesizes_its_ord_terms() -> None:
+    """GDELT rejects a bare OR'd query with "Queries containing OR'd terms
+    must be surrounded by ()." -- and it does so with HTTP 200 carrying an
+    error string, so the whole GDELT half of collection returns nothing
+    while the cycle still reports success.
+
+    That is exactly what happened on the first real cycle
+    (2026-08-13T20-13-17Z). Pinned here because every other test in this
+    file uses a single-term query with no OR, so nothing covered the one
+    query the pipeline actually ships.
+    """
+    import inspect
+
+    from pipeline.adapters import gdelt
+
+    source = inspect.getsource(gdelt.collect_world_day)
+
+    assert "(sourcelang:eng OR sourcelang:fra OR sourcelang:spa)" in source, (
+        "the shipped daily query must parenthesize its OR'd terms"
+    )

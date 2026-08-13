@@ -356,8 +356,15 @@ def collect_world_day(now: datetime | None = None) -> CollectionResult:
     client = GdeltClient(pace=True)
     # A query needs at least one real operator. Sorting by language rather than
     # keyword keeps the result set representative of general coverage.
+    #
+    # The parentheses are load-bearing, not cosmetic: GDELT rejects a bare
+    # OR'd query with "Queries containing OR'd terms must be surrounded by
+    # ()." That rejection arrives as HTTP 200 carrying an error string, so
+    # it degraded the cycle silently rather than raising -- the whole GDELT
+    # half of collection returned nothing on the first real cycle
+    # (2026-08-13T20-13-17Z) while the run still reported success.
     return client.collect(
-        query="sourcelang:eng OR sourcelang:fra OR sourcelang:spa", start=start, end=end
+        query="(sourcelang:eng OR sourcelang:fra OR sourcelang:spa)", start=start, end=end
     )
 
 

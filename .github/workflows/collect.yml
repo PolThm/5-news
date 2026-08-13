@@ -53,6 +53,12 @@ jobs:
           # degrades the cycle (one Cluster per dedupe group, no cross-language
           # merge) rather than failing it — set as a repository secret.
           COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
+          # Story 3.1: summarize calls Claude via the Batch API. Without this
+          # the cycle still completes, but every Cluster degrades to its
+          # Article title and NO Briefing is ever published — which is exactly
+          # what happened on the first real cycle (2026-08-13T20-13-17Z), where
+          # the secret existed in the repository but was never injected here.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: uv run python -m pipeline.stages.cycle
 
       - name: Commit the cycle's output

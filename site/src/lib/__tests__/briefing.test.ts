@@ -12,6 +12,7 @@ import {
   madLibsLeadIn,
   nextPeriod,
   nextZone,
+  offlineBannerText,
   OUTPUT_LANGUAGE_CYCLE,
   periodSentenceText,
   sourceListIntro,
@@ -424,5 +425,13 @@ describe("timestampPrefix", () => {
     expect(timestampPrefix("fr")).toBe("Mis à jour à");
     expect(timestampPrefix("en")).toBe("Updated at");
     expect(timestampPrefix("es")).toBe("Actualizado a las");
+  });
+});
+
+describe("offlineBannerText", () => {
+  it("returns independently-authored text for each language, matching period-switcher.ts's own mirror", () => {
+    expect(offlineBannerText("fr")).toBe("Vous consultez une version en cache d'un cycle précédent.");
+    expect(offlineBannerText("en")).toBe("You're viewing a cached version from an earlier cycle.");
+    expect(offlineBannerText("es")).toBe("Estás viendo una versión en caché de un ciclo anterior.");
   });
 });

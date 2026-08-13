@@ -25,6 +25,7 @@ import {
   madLibsLeadIn,
   nextPeriod,
   nextZone,
+  offlineBannerText,
   OUTPUT_LANGUAGE_CYCLE,
   periodSentenceText,
   sourceListIntro,
@@ -199,6 +200,27 @@ function formatTimestamp(iso: string): string {
         font-size: 14px;
         color: #8a3a2b;
         background: #f6dcd4;
+        border-radius: 3px;
+      }
+      /* Story 5.4 (AC1): an honest, calm disclosure ("here's why what
+         you're seeing isn't fresh"), not an error or warning -- both
+         accent colors (secondary #8a3a2b, tertiary #3d4a63) are already
+         reserved for one specific meaning each per DESIGN.md and must
+         never be reused here. Uses the neutral surface-container-high /
+         on-surface-variant pairing instead, matching the Discarded
+         Volume footer's own quiet, structural tone. Hidden by default;
+         revealed by sw-register.ts only when the offline-cache <meta>
+         marker is present in the document (a real network failure was
+         served from the cache fallback) -- a no-JS reader, or one whose
+         request succeeded normally, never sees this at all.
+       */
+      .offline-banner {
+        display: none;
+        margin-top: 10px;
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #4d4a42;
+        background: #e7e4dc;
         border-radius: 3px;
       }
       .timestamp {
@@ -385,6 +407,8 @@ function formatTimestamp(iso: string): string {
           }
         </div>
       </header>
+
+      <div class="offline-banner" id="offline-banner">{offlineBannerText(lang)}</div>
 
       <div class="sentence-block" id="sentence-block">
         <h1 id="mad-libs-sentence">

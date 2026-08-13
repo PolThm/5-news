@@ -1,8 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
+  buildOfflineFallbackHtml,
   cacheFirst,
   classifyRequest,
+  extractLangFromPath,
+  injectOfflineBannerMeta,
   networkFirst,
+  offlineBannerText,
   sanitizeCacheVersion,
   staleCacheNames,
   withTimeout,
@@ -22,8 +26,9 @@ function createFakeResponse(ok: boolean): ResponseLike & { id: number } {
     id,
     ok,
     clone() {
-      return { id, ok, clone: this.clone };
+      return { id, ok, clone: this.clone, text: this.text };
     },
+    text: async () => "",
   };
 }
 
@@ -42,6 +47,8 @@ function createFakeCacheStorage(): CacheStorageLike & {
       // response-producing helpers.
       store.set(request, response as ResponseLike & { id: number });
     },
+    keys: async () => [...store.keys()],
+    delete: async (request) => store.delete(request),
   };
   return {
     store,
@@ -156,14 +163,23 @@ describe("networkFirst", () => {
     vi.useRealTimers();
   });
 
-  it("returns the network response and caches it, on a fast success", async () => {
+  it("returns a network-success outcome and caches it, on a fast success", async () => {
     const storage = createFakeCacheStorage();
     const response = createFakeResponse(true);
     const fetchFn = vi.fn(async () => response);
 
-    const result = await networkFirst("/briefings/fr/world/day.json", "v1", 3000, fetchFn, storage);
+    const result = await networkFirst(
+      "/briefings/fr/world/day.json",
+      "v1",
+      3000,
+      fetchFn,
+      storage,
+      classifyRequest
+    );
 
-    expect(result).toBe(response);
+    expect(result.kind).toBe("network-success");
+    if (result.kind !== "network-success") throw new Error("unreachable");
+    expect(result.response).toBe(response);
     // The real Response.clone() (mirrored here) always returns a
     // distinct object, never the same reference -- compare by the
     // fake response's own `id` (assigned once per createFakeResponse
@@ -177,21 +193,58 @@ describe("networkFirst", () => {
     const storage = createFakeCacheStorage();
     const fetchFn = vi.fn(async () => createFakeResponse(false));
 
-    await networkFirst("/briefings/fr/world/day.json", "v1", 3000, fetchFn, storage);
+    await networkFirst("/briefings/fr/world/day.json", "v1", 3000, fetchFn, storage, classifyRequest);
 
     expect(storage.store.has("/briefings/fr/world/day.json")).toBe(false);
   });
 
-  it("falls back to the cache on a network timeout", async () => {
+  it("falls back to the cache on a network timeout, returning an offline-cache-hit outcome flagged as HTML for a page request", async () => {
+    const storage = createFakeCacheStorage();
+    const cachedResponse = createFakeResponse(true);
+    storage.store.set("/fr/world/day", cachedResponse);
+    const fetchFn = vi.fn(() => new Promise<ResponseLike>(() => {})); // never resolves
+
+    const resultPromise = networkFirst("/fr/world/day", "v1", 3000, fetchFn, storage, classifyRequest);
+    await vi.advanceTimersByTimeAsync(3000);
+
+    const result = await resultPromise;
+    expect(result.kind).toBe("offline-cache-hit");
+    if (result.kind !== "offline-cache-hit") throw new Error("unreachable");
+    expect(result.cachedResponse).toBe(cachedResponse);
+    expect(result.isHtml).toBe(true);
+  });
+
+  it("falls back to the cache on a network timeout, returning an offline-cache-hit outcome flagged as NOT HTML for a JSON request", async () => {
     const storage = createFakeCacheStorage();
     const cachedResponse = createFakeResponse(true);
     storage.store.set("/briefings/fr/world/day.json", cachedResponse);
-    const fetchFn = vi.fn(() => new Promise<ResponseLike>(() => {})); // never resolves
+    const fetchFn = vi.fn(() => new Promise<ResponseLike>(() => {}));
 
-    const resultPromise = networkFirst("/briefings/fr/world/day.json", "v1", 3000, fetchFn, storage);
+    const resultPromise = networkFirst(
+      "/briefings/fr/world/day.json",
+      "v1",
+      3000,
+      fetchFn,
+      storage,
+      classifyRequest
+    );
     await vi.advanceTimersByTimeAsync(3000);
 
-    await expect(resultPromise).resolves.toBe(cachedResponse);
+    const result = await resultPromise;
+    expect(result.kind).toBe("offline-cache-hit");
+    if (result.kind !== "offline-cache-hit") throw new Error("unreachable");
+    expect(result.isHtml).toBe(false);
+  });
+
+  it("returns an offline-no-cache outcome, with the language extracted from the request path, on a real network failure with nothing cached", async () => {
+    const storage = createFakeCacheStorage();
+    const fetchFn = vi.fn(() => Promise.reject(new Error("network down")));
+
+    const result = await networkFirst("/en/world/day", "v1", 3000, fetchFn, storage, classifyRequest);
+
+    expect(result.kind).toBe("offline-no-cache");
+    if (result.kind !== "offline-no-cache") throw new Error("unreachable");
+    expect(result.lang).toBe("en");
   });
 
   // Regression test for the real bug Blind Hunter review of Story 5.2
@@ -220,14 +273,69 @@ describe("networkFirst", () => {
     // cache on a slow-but-working connection: the read genuinely can't
     // complete faster than the network does, regardless of the 3s
     // timeout having already fired once.
-    const resultPromise = networkFirst("/briefings/fr/world/day.json", "v1", 3000, fetchFn, storage);
+    const resultPromise = networkFirst(
+      "/briefings/fr/world/day.json",
+      "v1",
+      3000,
+      fetchFn,
+      storage,
+      classifyRequest
+    );
     await vi.advanceTimersByTimeAsync(3000); // the timeout fires first, no cache entry yet
 
     resolveNetwork(slowResponse); // the slow fetch finally arrives, well after the timeout
-    const result = (await resultPromise) as ResponseLike & { id: number };
+    const result = await resultPromise;
 
-    expect(result.id).toBe(slowResponse.id);
+    expect(result.kind).toBe("network-success");
+    if (result.kind !== "network-success") throw new Error("unreachable");
+    expect((result.response as ResponseLike & { id: number }).id).toBe(slowResponse.id);
     expect(storage.store.get("/briefings/fr/world/day.json")?.id).toBe(slowResponse.id);
+  });
+
+  it("evicts other JSON entries when writing a new JSON entry, but never the currently-cached HTML page (the real bug Blind Hunter review of this story caught)", async () => {
+    const storage = createFakeCacheStorage();
+    // A page is currently displayed (cached from the real navigation
+    // that loaded it) and the reader has already clicked through one
+    // other Zone via a mad-libs click (an in-place JSON fetch, no real
+    // navigation, per period-switcher.ts's own history.pushState-based
+    // update) -- both must survive a THIRD click's own JSON write.
+    const currentPageHtml = createFakeResponse(true);
+    storage.store.set("/fr/world/day", currentPageHtml);
+    storage.store.set("/briefings/fr/europe/day.json", createFakeResponse(true));
+
+    const newJson = createFakeResponse(true);
+    const fetchFn = vi.fn(async () => newJson);
+
+    await networkFirst("/briefings/fr/japan/day.json", "v1", 3000, fetchFn, storage, classifyRequest);
+
+    // The page HTML must survive -- this is the exact scenario that
+    // regressed AC1 before the fix: without a separate JSON eviction
+    // pool, this JSON write would have evicted the page, leaving nothing
+    // to serve if the reader went offline and reloaded.
+    expect(storage.store.get("/fr/world/day")?.id).toBe(currentPageHtml.id);
+    expect(storage.store.has("/briefings/fr/europe/day.json")).toBe(false); // evicted
+    expect(storage.store.get("/briefings/fr/japan/day.json")?.id).toBe(newJson.id);
+  });
+
+  it("evicts every OTHER network-first entry once the new response is written, leaving cache-first entries untouched", async () => {
+    const storage = createFakeCacheStorage();
+    // Simulate a reader who previously viewed a different Zone -- an
+    // existing network-first entry from an earlier click -- plus a
+    // cache-first hashed asset that must never be evicted by this logic.
+    storage.store.set("/fr/europe/day", createFakeResponse(true));
+    storage.store.set("/_astro/foo.ABC123.js", createFakeResponse(true));
+
+    const newResponse = createFakeResponse(true);
+    const fetchFn = vi.fn(async () => newResponse);
+
+    await networkFirst("/fr/world/day", "v1", 3000, fetchFn, storage, classifyRequest);
+
+    expect(storage.store.has("/fr/europe/day")).toBe(false); // evicted
+    expect(storage.store.has("/_astro/foo.ABC123.js")).toBe(true); // untouched
+    expect(storage.store.get("/fr/world/day")?.id).toBe(newResponse.id); // the new entry
+    // Exactly one network-first entry survives, plus the untouched
+    // cache-first one -- never both Zones at once.
+    expect(storage.store.size).toBe(2);
   });
 });
 
@@ -303,5 +411,84 @@ describe("staleCacheNames", () => {
     const existing = ["some-other-unrelated-cache", "briefings-2026-08-12T05-30-00-000Z"];
     const result = staleCacheNames(existing, "briefings-2026-08-12T05-30-00-000Z");
     expect(result).toEqual(["some-other-unrelated-cache"]);
+  });
+});
+
+describe("extractLangFromPath", () => {
+  it("extracts the Output Language from a real [lang]/[zone]/[period] path", () => {
+    expect(extractLangFromPath("/fr/world/day")).toBe("fr");
+    expect(extractLangFromPath("/en/united-states/week")).toBe("en");
+    expect(extractLangFromPath("/es/japan/month")).toBe("es");
+  });
+
+  it("extracts the Output Language from a /briefings/*.json path", () => {
+    expect(extractLangFromPath("/briefings/en/world/day.json")).toBe("en");
+  });
+
+  it("falls back to French for the root path (no language segment at all)", () => {
+    expect(extractLangFromPath("/")).toBe("fr");
+  });
+
+  it("falls back to French for an unrecognized first segment", () => {
+    expect(extractLangFromPath("/de/world/day")).toBe("fr");
+    expect(extractLangFromPath("/sw.js")).toBe("fr");
+  });
+});
+
+describe("offlineBannerText", () => {
+  it("returns independently-authored, non-mechanically-translated text for each language", () => {
+    expect(offlineBannerText("fr")).toBe("Vous consultez une version en cache d'un cycle précédent.");
+    expect(offlineBannerText("en")).toBe("You're viewing a cached version from an earlier cycle.");
+    expect(offlineBannerText("es")).toBe("Estás viendo una versión en caché de un ciclo anterior.");
+  });
+});
+
+describe("buildOfflineFallbackHtml", () => {
+  it("produces a real, minimal HTML document stating the offline condition, per language", () => {
+    const fr = buildOfflineFallbackHtml("fr");
+    expect(fr).toContain("<html lang=\"fr\">");
+    expect(fr).toContain("Hors ligne");
+    expect(fr).toContain("Aucune connexion, et aucun Briefing n'est encore en cache sur cet appareil.");
+
+    const en = buildOfflineFallbackHtml("en");
+    expect(en).toContain("<html lang=\"en\">");
+    expect(en).toContain("Offline");
+    expect(en).toContain("No connection, and no Briefing is cached on this device yet.");
+
+    const es = buildOfflineFallbackHtml("es");
+    expect(es).toContain("<html lang=\"es\">");
+    expect(es).toContain("Sin conexión");
+    expect(es).toContain("Sin conexión, y aún no hay ningún Briefing en caché en este dispositivo.");
+  });
+
+  it("never contains an unescaped raw '<' from the message text that could break out of its own <p> tag", () => {
+    // A defensive sanity check, not a security-critical escaping
+    // requirement (the message text is 100% hardcoded, never
+    // reader-supplied) -- but confirms the template's own structure is
+    // well-formed HTML for each language's output.
+    for (const lang of ["fr", "en", "es"] as const) {
+      const html = buildOfflineFallbackHtml(lang);
+      expect(html).toMatch(/<p>[^<]*<\/p>/);
+    }
+  });
+});
+
+describe("injectOfflineBannerMeta", () => {
+  it("inserts the offline-cache meta tag right after the opening <head> tag", () => {
+    const html = '<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"></head><body></body></html>';
+    const result = injectOfflineBannerMeta(html);
+    expect(result).toContain('<head><meta name="offline-cache" content="true"><meta charset="utf-8">');
+  });
+
+  it("preserves the rest of the document unchanged", () => {
+    const html = '<html><head><title>5 News</title></head><body><h1>Hello</h1></body></html>';
+    const result = injectOfflineBannerMeta(html);
+    expect(result).toContain("<title>5 News</title>");
+    expect(result).toContain("<h1>Hello</h1>");
+  });
+
+  it("is a no-op (returns the input unchanged) when no <head> tag is present", () => {
+    const html = "<div>not a full document</div>";
+    expect(injectOfflineBannerMeta(html)).toBe(html);
   });
 });

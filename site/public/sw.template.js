@@ -17,12 +17,27 @@
 // placeholder token, so the stamping script's global substitution can't
 // accidentally rewrite this prose too.)
 //
+// Story 5.4: the cache holds at most ONE network-first entry (the
+// reader's single last-viewed Briefing/page) at any time -- never the
+// full 135-Briefing matrix a reader could accumulate one Zone/Period/
+// Language click at a time (AC2, NFR-6). On a real network failure with
+// nothing cached, a dedicated, per-language offline-fallback page is
+// synthesized entirely by this worker (AC3); on a real network failure
+// WITH a cached HTML page as fallback, this worker injects a <meta> tag
+// into that page's own markup (HTTP response headers aren't readable by
+// page JS after a real navigation has already completed, so the signal
+// has to live in the markup itself) -- the client-side banner script
+// (site/src/islands/sw-register.ts) checks for that tag to show an
+// honest "you're viewing an earlier cycle" disclosure (AC1).
+//
 // This file cannot import anything -- Astro copies site/public/ to
 // dist/ byte-for-byte, unprocessed, and a service worker script itself
 // runs in its own worker global scope with no bundler involved. The pure
-// functions below (classifyRequest, withTimeout, staleCacheNames) are a
-// hand-kept mirror of site/src/islands/sw-logic.ts, which exists ONLY
-// for that TypeScript file's own unit tests. (sw-logic.ts also has a
+// functions below (classifyRequest, withTimeout, staleCacheNames,
+// evictOtherNetworkFirstEntries, extractLangFromPath, offlineBannerText,
+// buildOfflineFallbackHtml, injectOfflineBannerMeta) are a hand-kept
+// mirror of site/src/islands/sw-logic.ts, which exists ONLY for that
+// TypeScript file's own unit tests. (sw-logic.ts also has a
 // sanitizeCacheVersion function, but it's build-time-only, run by the
 // Node stamping script and never at worker runtime -- its sanitized
 // output is baked directly into CACHE_NAME below as a string literal,
@@ -70,42 +85,154 @@ function withTimeout(promise, ms) {
   });
 }
 
+// Story 5.4 (AC3): every request path this site can ever produce carries
+// its Output Language as either the first segment (`/<lang>/...` for a
+// page navigation) or the second (`/briefings/<lang>/...` for a JSON
+// fetch) -- `/` itself has neither (Story 4.1's unconditional French
+// default).
+const SUPPORTED_OFFLINE_LANGUAGES = ["fr", "en", "es"];
+
+function extractLangFromPath(pathname) {
+  const segments = pathname.split("/");
+  const candidate = segments[1] === "briefings" ? segments[2] : segments[1];
+  return SUPPORTED_OFFLINE_LANGUAGES.find((lang) => lang === candidate) ?? "fr";
+}
+
+const OFFLINE_BANNER_TEXT = {
+  fr: "Vous consultez une version en cache d'un cycle précédent.",
+  en: "You're viewing a cached version from an earlier cycle.",
+  es: "Estás viendo una versión en caché de un ciclo anterior.",
+};
+
+function offlineBannerText(lang) {
+  return OFFLINE_BANNER_TEXT[lang];
+}
+
+const OFFLINE_FALLBACK_TITLE = { fr: "Hors ligne", en: "Offline", es: "Sin conexión" };
+const OFFLINE_FALLBACK_MESSAGE = {
+  fr: "Aucune connexion, et aucun Briefing n'est encore en cache sur cet appareil.",
+  en: "No connection, and no Briefing is cached on this device yet.",
+  es: "Sin conexión, y aún no hay ningún Briefing en caché en este dispositivo.",
+};
+
+// Story 5.4 (AC3): synthesized entirely by this worker, per request,
+// with zero network/cache dependency of its own. NEVER written into the
+// cache (see networkFirst's own call site) -- it's not a real Briefing.
+function buildOfflineFallbackHtml(lang) {
+  const title = OFFLINE_FALLBACK_TITLE[lang];
+  const message = OFFLINE_FALLBACK_MESSAGE[lang];
+  return (
+    `<!DOCTYPE html><html lang="${lang}"><head><meta charset="utf-8">` +
+    `<meta name="viewport" content="width=device-width, initial-scale=1">` +
+    `<title>${title} — 5 News</title></head><body>` +
+    `<h1>${title}</h1><p>${message}</p></body></html>`
+  );
+}
+
+// Story 5.4 (AC1): the marker this worker injects into a cached page's
+// own HTML when serving it from the offline-fallback path -- absent
+// from a normal network-success response's HTML. Inserted right after
+// the opening <head> tag, present in every real page's HTML
+// (BriefingPage.astro's own structure), so this insertion point is
+// always available regardless of which route was cached.
+const OFFLINE_BANNER_META_NAME = "offline-cache";
+
+function injectOfflineBannerMeta(html) {
+  return html.replace(/<head>/i, `<head><meta name="${OFFLINE_BANNER_META_NAME}" content="true">`);
+}
+
+// Story 5.4 (AC1, AC2, NFR-6): "network-first" is not a single eviction
+// pool -- a page navigation and a /briefings/*.json fetch are two
+// DIFFERENT representations of the same underlying Briefing (a mad-libs
+// click never triggers a real navigation, per period-switcher.ts's own
+// history.pushState-based update, so the fetch handler never re-caches
+// HTML for the new Zone/Period/Language). Each shape gets its own
+// eviction pool -- the cache holds at most one page entry AND at most
+// one JSON entry at a time, never accumulating either shape across
+// multiple combinations. Cache-first entries (hashed assets, manifest/
+// icons) are a completely separate concern, filtered out by the caller
+// before this function ever sees them.
+function isJsonBriefingFetch(url) {
+  const { pathname } = new URL(url);
+  return pathname.startsWith("/briefings/") && pathname.endsWith(".json");
+}
+
+function evictOtherNetworkFirstEntries(existingNetworkFirstKeys, newRequest) {
+  const newRequestIsJson = isJsonBriefingFetch(newRequest);
+  return existingNetworkFirstKeys.filter(
+    (key) => key !== newRequest && isJsonBriefingFetch(key) === newRequestIsJson
+  );
+}
+
 // Network-first, short-timeout, cache as fallback ONLY -- never
 // stale-while-revalidate (AD-8 explicitly forbids it for Briefing
 // content: serving a cached response while silently kicking off a
 // background revalidation would still guarantee the first paint is
-// whatever was previously cached). The only cache write here happens
-// AFTER a real, foreground, awaited network success.
+// whatever was previously cached).
+//
+// Story 5.4 (AC2): writes the new response FIRST, then evicts every
+// other network-first entry -- never the other order, so the cache is
+// never briefly empty (see sw-logic.ts's own comment for the full
+// reasoning: writing first means at most two entries exist transiently,
+// never zero, which matters for a cache whose entire purpose is being
+// the reader's offline safety net).
 async function networkFirst(request) {
   // The cache write is attached directly to the real fetch's own .then,
   // not gated behind whichever branch of the timeout race actually wins
   // -- a slow-but-eventually-successful fetch that loses the race to the
   // timeout must still update the cache when it finally arrives (Blind
-  // Hunter review of this story caught that the first version only
-  // cached the response on the branch that awaited it directly, silently
-  // leaving the cache stale on every timed-out-but-working visit; a
-  // later fully-offline visit would then serve an older Briefing than
-  // the reader had actually already seen).
-  const networkFetch = fetch(request).then((response) => {
+  // Hunter review of Story 5.2 caught that the first version only cached
+  // the response on the branch that awaited it directly, silently
+  // leaving the cache stale on every timed-out-but-working visit).
+  const networkFetch = fetch(request).then(async (response) => {
     if (response.ok) {
-      void caches.open(CACHE_NAME).then((cache) => cache.put(request, response.clone()));
+      const cache = await caches.open(CACHE_NAME);
+      await cache.put(request, response.clone());
+      const existingKeys = (await cache.keys()).map((req) => req.url);
+      const networkFirstKeys = existingKeys.filter((key) => classifyRequest(key) === "network-first");
+      const staleKeys = evictOtherNetworkFirstEntries(networkFirstKeys, request.url);
+      await Promise.all(staleKeys.map((key) => cache.delete(key)));
     }
     return response;
   });
 
   try {
-    return await withTimeout(networkFetch, NETWORK_TIMEOUT_MS);
+    const response = await withTimeout(networkFetch, NETWORK_TIMEOUT_MS);
+    return response;
   } catch {
     const cached = await caches.match(request);
-    if (cached) return cached;
-    // No cache entry and the network genuinely failed -- let the real
-    // failure propagate rather than fabricating a fake response. The
-    // browser's own offline/error handling takes over from here (Story
-    // 5.4 owns building a dedicated, honest offline UI on top of this).
-    // networkFetch (not a fresh fetch(request)) is reused here so a
-    // timeout-then-success still benefits from the cache-write .then
-    // already attached above, and no duplicate network request is made.
-    return networkFetch;
+    if (cached) {
+      // AC1: a real network failure occurred, and this is whatever the
+      // reader last successfully viewed, not fresh content. HTTP
+      // response headers aren't readable by page JS after a real
+      // navigation has already completed, so the signal has to live IN
+      // the page's own HTML -- only rewrite the body for an actual HTML
+      // response (a page navigation); a cached /briefings/*.json
+      // response is read directly by the client's own fetch() call
+      // site, which already has everything it needs without this
+      // rewrite.
+      const contentType = cached.headers.get("Content-Type") ?? "";
+      if (!contentType.includes("json")) {
+        const html = await cached.clone().text();
+        const tagged = injectOfflineBannerMeta(html);
+        return new Response(tagged, {
+          status: cached.status,
+          statusText: cached.statusText,
+          headers: cached.headers,
+        });
+      }
+      return cached;
+    }
+    // No cache entry and the network genuinely failed (AC3): nothing
+    // else can be relied on to be available, so synthesize a dedicated
+    // offline-fallback page entirely in-worker, in whichever Output
+    // Language the request path itself indicates. Never written into
+    // the cache -- it's not a real Briefing.
+    const lang = extractLangFromPath(new URL(request.url).pathname);
+    return new Response(buildOfflineFallbackHtml(lang), {
+      status: 200,
+      headers: { "Content-Type": "text/html; charset=utf-8" },
+    });
   }
 }
 

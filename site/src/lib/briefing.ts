@@ -527,3 +527,24 @@ const TIMESTAMP_PREFIX: Record<OutputLanguage, string> = {
 export function timestampPrefix(lang: OutputLanguage): string {
   return TIMESTAMP_PREFIX[lang];
 }
+
+// Story 5.4 (AC1): the "you're viewing a cached version from an earlier
+// cycle" disclosure -- rendered into every page's server-side markup
+// (hidden by default; see BriefingPage.astro's own .offline-banner CSS),
+// revealed only client-side by sw-register.ts when the page was actually
+// served from the offline-cache fallback. Each language's phrasing is
+// authored on its own terms, not a mechanical per-word translation,
+// matching every prior story's own standing per-language-content
+// discipline. Hand-mirrored in period-switcher.ts's own
+// OFFLINE_BANNER_TEXT for the same reason every other per-language
+// string in this codebase is duplicated there (see that file's own
+// module docstring).
+const OFFLINE_BANNER_TEXT: Record<OutputLanguage, string> = {
+  fr: "Vous consultez une version en cache d'un cycle précédent.",
+  en: "You're viewing a cached version from an earlier cycle.",
+  es: "Estás viendo una versión en caché de un ciclo anterior.",
+};
+
+export function offlineBannerText(lang: OutputLanguage): string {
+  return OFFLINE_BANNER_TEXT[lang];
+}

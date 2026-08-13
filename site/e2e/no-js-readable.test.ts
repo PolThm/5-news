@@ -894,4 +894,48 @@ describe("Service worker cycle invalidation (Story 5.3)", () => {
     expect(stamped).toMatch(/caches\.delete\(/);
     expect(stamped).toMatch(/clients\.claim\(\)/);
   });
+
+  it("includes the network-first cache-eviction logic and the offline-fallback synthesis (Story 5.4)", () => {
+    const stamped = stamp();
+    expect(stamped).toMatch(/function evictOtherNetworkFirstEntries/);
+    expect(stamped).toMatch(/function buildOfflineFallbackHtml/);
+    expect(stamped).toMatch(/function injectOfflineBannerMeta/);
+    expect(stamped).toContain('OFFLINE_BANNER_META_NAME = "offline-cache"');
+  });
+});
+
+// Story 5.4 (AC1, AC2, AC3): the honest-offline-experience UI. This
+// block builds its own dist/ -- every build-dependent block in this file
+// has its own explicit build step, per Stories 5.1/5.2's own Blind
+// Hunter-caught precedent.
+describe("Honest offline experience (Story 5.4)", () => {
+  beforeAll(() => {
+    execFileSync("node", ["scripts/stamp-service-worker.ts"], { cwd: SITE_ROOT, stdio: "pipe" });
+    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+  }, 30000);
+
+  it("renders the offline banner (hidden by default) with the correct per-language text on both / and a [lang]/[zone]/[period] route", () => {
+    const indexHtml = readFileSync(DIST_INDEX, "utf-8");
+    const enRouteHtml = readFileSync(join(SITE_ROOT, "dist", "en", "world", "day.html"), "utf-8");
+
+    expect(indexHtml).toContain('<div class="offline-banner" id="offline-banner"');
+    expect(indexHtml).toContain("Vous consultez une version en cache d&#39;un cycle précédent.");
+    expect(enRouteHtml).toContain("You&#39;re viewing a cached version from an earlier cycle.");
+
+    const css = resolveCss(indexHtml);
+    expect(css).toMatch(/\.offline-banner[^{]*\{[^}]*display:none/);
+  });
+
+  it("registers the offline-banner detection script (checks for the offline-cache meta marker) on both entry points", () => {
+    const indexHtml = readFileSync(DIST_INDEX, "utf-8");
+    const routeHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "day.html"), "utf-8");
+
+    for (const pageHtml of [indexHtml, routeHtml]) {
+      // Minification rewrites double-quoted string literals to
+      // backtick-quoted ones -- tolerate either quote character rather
+      // than assuming one.
+      expect(pageHtml).toMatch(/querySelector\(.meta\[name=.offline-cache.\]./);
+      expect(pageHtml).toMatch(/getElementById\(.offline-banner.\)/);
+    }
+  });
 });

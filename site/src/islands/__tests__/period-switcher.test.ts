@@ -4,15 +4,18 @@ import {
   attachChips,
   briefingJsonUrl,
   fallbackNoticeText,
+  languageAnnouncementText,
   nextLanguage,
   nextPeriod,
   nextZone,
   pageUrl,
+  periodAnnouncementText,
   periodSentenceText,
   renderDiscardedVolumeHtml,
   renderEndScreenHtml,
   renderFallbackNoticeHtml,
   renderItemListHtml,
+  zoneAnnouncementText,
   zoneSentenceLabel,
 } from "../period-switcher";
 
@@ -95,6 +98,59 @@ describe("zoneSentenceLabel", () => {
     // 4.7 caught this table's mirror had silently dropped
     // briefing.ts's `?? zone` fallback and Partial<Record<...>> typing).
     expect(zoneSentenceLabel("atlantis", "fr")).toBe("atlantis");
+  });
+});
+
+// Story 4.8 (AC2): pure functions producing the aria-live announcement
+// text for each axis. Match the AC's own example phrasing shape ("Zone,
+// World, button, cycles to Europe") for Zone/Period, since both are
+// cycle-by-one controls; Language deliberately does NOT use "cycles to"
+// wording, since Story 4.7 established it as a direct-jump control with
+// no "next value" concept -- forcing cycle language onto it would
+// misdescribe the actual interaction to a screen-reader user.
+describe("zoneAnnouncementText", () => {
+  it("announces role, current value, and the next value in the cycle, in each language", () => {
+    // Bare zone names throughout (matching the AC's own example exactly:
+    // "Zone, World, button, cycles to Europe") -- Blind Hunter review
+    // caught that reusing zoneSentenceLabel's preposition-inclusive form
+    // ("in the World", "in Europe") here doubled up with this
+    // announcement's own verb phrase, producing "cycles to in Europe".
+    expect(zoneAnnouncementText("world", "europe", "fr")).toBe(
+      "Zone, le Monde, bouton, passe à l'Europe"
+    );
+    expect(zoneAnnouncementText("world", "europe", "en")).toBe(
+      "Zone, the World, button, cycles to Europe"
+    );
+    expect(zoneAnnouncementText("world", "europe", "es")).toBe(
+      "Zona, el Mundo, botón, cambia a Europa"
+    );
+  });
+});
+
+describe("periodAnnouncementText", () => {
+  it("announces role, current value, and the next value in the cycle, in each language", () => {
+    expect(periodAnnouncementText("day", "week", "fr")).toBe(
+      "Période, aujourd'hui, bouton, passe à cette semaine"
+    );
+    expect(periodAnnouncementText("day", "week", "en")).toBe(
+      "Period, today, button, cycles to this week"
+    );
+    expect(periodAnnouncementText("day", "week", "es")).toBe(
+      "Período, hoy, botón, cambia a esta semana"
+    );
+  });
+});
+
+describe("languageAnnouncementText", () => {
+  it("announces role and the newly-selected language, IN THE PREVIOUS language (the one the reader could still read at the moment of the click), with no 'cycles to' phrasing since Language is a direct-jump control, not a cycle", () => {
+    // Announced in the PREVIOUS language, not the new one -- a reader who
+    // doesn't yet read the target language should still understand what
+    // just happened, matching how a sighted reader experiences the
+    // change (they see the switch happen while still looking at the old
+    // page, a beat before the new content replaces it).
+    expect(languageAnnouncementText("en", "fr")).toBe("Langue, Anglais");
+    expect(languageAnnouncementText("es", "en")).toBe("Language, Spanish");
+    expect(languageAnnouncementText("fr", "es")).toBe("Idioma, Francés");
   });
 });
 
@@ -887,6 +943,115 @@ describe("attachLanguageWords (via attach)", () => {
       // forever (href alone was updated, dataset.zone was not).
       expect(enLink.dataset.zone).toBe("europe");
       expect(esLink.dataset.zone).toBe("europe");
+    } finally {
+      globalThis.document = originalDocument;
+      globalThis.fetch = originalFetch;
+      globalThis.window = originalWindow;
+      globalThis.Node = originalNode;
+    }
+  });
+
+  // Story 4.8 (AC2): proves handleClick's successful Zone-swap path
+  // writes the correct aria-live announcement into #sr-announcer.
+  // Reuses the exact same fake-DOM shape as the Story 4.7 regression test
+  // above, extended with a fake #sr-announcer element.
+  it("writes the Zone announcement text into #sr-announcer after a Zone click's successful swap", async () => {
+    function createFakeWordLink(zone: string, period: string, lang: string) {
+      const dataset: Record<string, string> = { zone, period, lang };
+      const clickListeners: Array<(event: { preventDefault: () => void }) => void> = [];
+      const attributes = new Map<string, string>();
+      return {
+        dataset,
+        textContent: "",
+        href: "",
+        hasAttribute: (name: string) => attributes.has(name),
+        setAttribute: (name: string, value: string) => attributes.set(name, value),
+        addEventListener: (type: string, listener: (event: { preventDefault: () => void }) => void) => {
+          if (type === "click") clickListeners.push(listener);
+        },
+        dispatchClick: () => {
+          for (const listener of clickListeners) listener({ preventDefault: () => {} });
+        },
+      };
+    }
+    function createFakeElement() {
+      const classes = new Set<string>();
+      return {
+        textContent: "",
+        innerHTML: "",
+        href: "",
+        insertAdjacentHTML: () => {},
+        remove: () => {},
+        classList: {
+          toggle: (name: string, on: boolean) => (on ? classes.add(name) : classes.delete(name)),
+        },
+        setAttribute: () => {},
+        removeAttribute: () => {},
+      };
+    }
+
+    const leadInNode = { nodeType: 3, textContent: "Voici ce qui se passe " };
+    const zoneWordLink = createFakeWordLink("world", "day", "fr");
+    const periodWordLink = createFakeWordLink("world", "day", "fr");
+    const sentence = {
+      childNodes: [leadInNode],
+      querySelector: (selector: string) =>
+        selector.includes("zone") ? zoneWordLink : selector.includes("period") ? periodWordLink : null,
+      insertAdjacentHTML: () => {},
+    };
+    const itemList = createFakeElement();
+    const timestamp = createFakeElement();
+    const sentenceBlock = createFakeElement();
+    const discarded = createFakeElement();
+    const announcer = createFakeElement();
+    const enLink = createFakeLanguageLink("en", "fr");
+    const esLink = createFakeLanguageLink("es", "fr");
+
+    const originalDocument = globalThis.document;
+    const originalFetch = globalThis.fetch;
+    const originalWindow = globalThis.window;
+    const originalNode = globalThis.Node;
+    globalThis.Node = { TEXT_NODE: 3 } as unknown as typeof Node;
+    globalThis.document = {
+      getElementById: (id: string) =>
+        (
+          {
+            "mad-libs-sentence": sentence,
+            "item-list": itemList,
+            timestamp,
+            "sentence-block": sentenceBlock,
+            discarded,
+            "sr-announcer": announcer,
+          } as Record<string, unknown>
+        )[id] ?? null,
+      querySelectorAll: (selector: string) => (selector.includes("lang-word") ? [enLink, esLink] : []),
+      querySelector: (selector: string) => (selector.includes("zone-word") ? zoneWordLink : null),
+    } as unknown as Document;
+    globalThis.fetch = (() =>
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve({
+            zone: "europe",
+            served_zone: "europe",
+            generated_at: "2026-08-12T06:14:00Z",
+            discarded_ingested: 0,
+            discarded_kept: 0,
+            clusters: [],
+          }),
+      })) as unknown as typeof fetch;
+    globalThis.window = {
+      history: { pushState: () => {} },
+      location: { href: "" },
+    } as unknown as Window & typeof globalThis;
+
+    try {
+      attach();
+      zoneWordLink.dispatchClick(); // world -> europe, French
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      await new Promise((resolve) => setTimeout(resolve, 0));
+
+      expect(announcer.textContent).toBe(zoneAnnouncementText("world", "europe", "fr"));
     } finally {
       globalThis.document = originalDocument;
       globalThis.fetch = originalFetch;

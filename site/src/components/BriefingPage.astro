@@ -147,6 +147,18 @@ function formatTimestamp(iso: string): string {
         margin-left: 8px;
         color: #777265;
       }
+      /* Story 4.8 (AC1): a visible :focus-visible ring on every
+         interactive element -- reuses the existing `primary` accent
+         (#1f4d3d), which clears 3:1 contrast against every background
+         this page uses (9.12:1 on the page background, 8.12:1 on the
+         collapsed chip, 7.40:1 on the expanded chip/source-list), so no
+         new color is introduced. :focus-visible, not bare :focus, so a
+         mouse click doesn't show a ring -- only keyboard/programmatic
+         focus does. */
+      .lang a:focus-visible {
+        outline: 2px solid #1f4d3d;
+        outline-offset: 2px;
+      }
       .sentence-block {
         padding: 24px 0 8px;
       }
@@ -170,6 +182,10 @@ function formatTimestamp(iso: string): string {
       }
       h1 a.word {
         text-decoration-line: underline;
+      }
+      .word:focus-visible {
+        outline: 2px solid #1f4d3d;
+        outline-offset: 2px;
       }
       /* Exact values from mockups/briefing-fallback.html -- `secondary`
          (#8a3a2b text on #f6dcd4 background) is reserved for exactly this
@@ -206,9 +222,12 @@ function formatTimestamp(iso: string): string {
         margin-bottom: 12px;
       }
       /* .chip is a real <button> (native keyboard/Enter/Space activation,
-         focus styling, aria-expanded semantics for free) -- these
-         overrides strip the browser's default button chrome so it reads
-         identically to Story 4.1's original <span>. */
+         aria-expanded semantics for free) -- these overrides strip the
+         browser's default button chrome so it reads identically to Story
+         4.1's original <span>. `border: none` doesn't touch `outline`,
+         but nothing here relied on the browser's own default outline
+         rendering visibly either -- Story 4.8 adds an explicit
+         :focus-visible rule below rather than assuming it. */
       .chip {
         display: inline-block;
         border: none;
@@ -221,6 +240,10 @@ function formatTimestamp(iso: string): string {
         border-radius: 3px;
         padding: 4px 10px;
         margin-bottom: 10px;
+      }
+      .chip:focus-visible {
+        outline: 2px solid #1f4d3d;
+        outline-offset: 2px;
       }
       .chip .num {
         color: #1f4d3d;
@@ -282,6 +305,10 @@ function formatTimestamp(iso: string): string {
         text-decoration: underline;
         font-weight: 500;
       }
+      .attribution a:focus-visible {
+        outline: 2px solid #1f4d3d;
+        outline-offset: 2px;
+      }
       /* FR-8 -- always renders exactly once, even when both counts are 0
          (the real, currently-true state for every real pipeline Briefing
          today -- no pipeline stage populates non-zero values yet). Unlike
@@ -318,6 +345,18 @@ function formatTimestamp(iso: string): string {
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #4d4a42;
+      }
+      /* Story 4.8 (AC2): visually hidden but always present, so a screen
+         reader attached before any click already has something to
+         observe. position:absolute + clip (NOT display:none/
+         visibility:hidden) -- some screen readers ignore aria-live
+         updates on an element hidden either of those two ways. */
+      #sr-announcer {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
       }
     </style>
   </head>
@@ -428,6 +467,7 @@ function formatTimestamp(iso: string): string {
         )
       }
     </div>
+    <div id="sr-announcer" aria-live="polite"></div>
     <script src="../islands/period-switcher.ts"></script>
     <slot name="extra-scripts" />
   </body>

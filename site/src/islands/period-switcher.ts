@@ -233,6 +233,134 @@ export function isZoneFallback(briefing: Pick<BriefingLike, "zone" | "served_zon
   return briefing.served_zone !== briefing.zone;
 }
 
+// Story 4.8 (AC2): aria-live announcement text for each mad-libs axis --
+// role, current value, and (for the two cycle-by-one axes) what changing
+// it does. Match the AC's own example phrasing shape ("Zone, World,
+// button, cycles to Europe") for Zone/Period; Language deliberately does
+// NOT use "cycles to" wording, since it's a direct-jump control with no
+// "next value" concept (Story 4.7) -- forcing cycle language onto it
+// would misdescribe the actual interaction to a screen-reader user.
+// The AC's own example phrasing ("Zone, World, button, cycles to
+// Europe") uses BARE zone names, with no preposition -- ZONE_SENTENCE_LABEL
+// above bakes a preposition into every entry for its own mad-libs-sentence
+// use case ("in the World", "in Europe"), which would double up with this
+// announcement's own verb phrase ("cycles to in Europe") if reused
+// directly. A separate bare-name table avoids that, at the cost of a
+// third hand-mirrored lookup for the same 15 Zones.
+const ZONE_BARE_NAME: Record<LanguageSlug, Partial<Record<string, string>>> = {
+  fr: {
+    world: "le Monde",
+    europe: "l'Europe",
+    "north-america": "l'Amérique du Nord",
+    "south-america": "l'Amérique du Sud",
+    asia: "l'Asie",
+    africa: "l'Afrique",
+    oceania: "l'Océanie",
+    france: "la France",
+    "united-kingdom": "le Royaume-Uni",
+    germany: "l'Allemagne",
+    "united-states": "les États-Unis",
+    japan: "le Japon",
+    china: "la Chine",
+    india: "l'Inde",
+    brazil: "le Brésil",
+  },
+  en: {
+    world: "the World",
+    europe: "Europe",
+    "north-america": "North America",
+    "south-america": "South America",
+    asia: "Asia",
+    africa: "Africa",
+    oceania: "Oceania",
+    france: "France",
+    "united-kingdom": "the United Kingdom",
+    germany: "Germany",
+    "united-states": "the United States",
+    japan: "Japan",
+    china: "China",
+    india: "India",
+    brazil: "Brazil",
+  },
+  es: {
+    world: "el Mundo",
+    europe: "Europa",
+    "north-america": "América del Norte",
+    "south-america": "América del Sur",
+    asia: "Asia",
+    africa: "África",
+    oceania: "Oceanía",
+    france: "Francia",
+    "united-kingdom": "el Reino Unido",
+    germany: "Alemania",
+    "united-states": "Estados Unidos",
+    japan: "Japón",
+    china: "China",
+    india: "India",
+    brazil: "Brasil",
+  },
+};
+
+function zoneBareName(zone: string, lang: LanguageSlug): string {
+  return ZONE_BARE_NAME[lang][zone] ?? zone;
+}
+
+const ZONE_ANNOUNCEMENT_ROLE: Record<LanguageSlug, { role: string; verb: string }> = {
+  fr: { role: "Zone", verb: "passe à" },
+  en: { role: "Zone", verb: "cycles to" },
+  es: { role: "Zona", verb: "cambia a" },
+};
+
+export function zoneAnnouncementText(
+  currentZone: string,
+  nextZoneSlug: string,
+  lang: LanguageSlug
+): string {
+  const { role, verb } = ZONE_ANNOUNCEMENT_ROLE[lang];
+  return `${role}, ${zoneBareName(currentZone, lang)}, ${lang === "fr" ? "bouton" : lang === "es" ? "botón" : "button"}, ${verb} ${zoneBareName(nextZoneSlug, lang)}`;
+}
+
+const PERIOD_ANNOUNCEMENT_ROLE: Record<LanguageSlug, { role: string; verb: string }> = {
+  fr: { role: "Période", verb: "passe à" },
+  en: { role: "Period", verb: "cycles to" },
+  es: { role: "Período", verb: "cambia a" },
+};
+
+export function periodAnnouncementText(
+  currentPeriod: PeriodSlug,
+  nextPeriodSlug: PeriodSlug,
+  lang: LanguageSlug
+): string {
+  const { role, verb } = PERIOD_ANNOUNCEMENT_ROLE[lang];
+  return `${role}, ${periodSentenceText(currentPeriod, lang)}, ${lang === "fr" ? "bouton" : lang === "es" ? "botón" : "button"}, ${verb} ${periodSentenceText(nextPeriodSlug, lang)}`;
+}
+
+const LANGUAGE_ANNOUNCEMENT_ROLE: Record<LanguageSlug, string> = {
+  fr: "Langue",
+  en: "Language",
+  es: "Idioma",
+};
+
+// Every language's own name, as said IN each of the 3 languages -- e.g.
+// LANGUAGE_NAME.fr.en === "Anglais" (French for "English").
+const LANGUAGE_NAME: Record<LanguageSlug, Record<LanguageSlug, string>> = {
+  fr: { fr: "Français", en: "Anglais", es: "Espagnol" },
+  en: { fr: "French", en: "English", es: "Spanish" },
+  es: { fr: "Francés", en: "Inglés", es: "Español" },
+};
+
+// Announced IN the previous language (the one the reader could still
+// read at the moment of the click), not the new one -- a reader who
+// doesn't yet read the target language should still understand what
+// just happened, matching how a sighted reader experiences the change
+// (they see the switch happen while still looking at the old page, a
+// beat before the new content replaces it).
+export function languageAnnouncementText(targetLang: LanguageSlug, previousLang: LanguageSlug): string {
+  const role = LANGUAGE_ANNOUNCEMENT_ROLE[previousLang];
+  const targetName = LANGUAGE_NAME[previousLang][targetLang];
+  return `${role}, ${targetName}`;
+}
+
 /**
  * Mirrors briefing.ts's fallbackNoticeText exactly -- see that function's
  * own docstring for the grammar rules (article agreement, verb-number
@@ -712,6 +840,22 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
     existingEndScreen?.remove();
     const endScreenHtml = renderEndScreenHtml(briefing.clusters.length, targetPeriod, targetLang);
     if (endScreenHtml) discarded.insertAdjacentHTML("afterend", endScreenHtml);
+
+    // AC2's aria-live announcement -- exactly one axis changes per click
+    // (target.axis), so only that axis's announcement is written; the
+    // other two axes' values are unchanged and don't need announcing.
+    // Language is announced in the PREVIOUS language (lang, not
+    // targetLang) -- see languageAnnouncementText's own docstring.
+    const announcer = document.getElementById("sr-announcer");
+    if (announcer) {
+      if (target.axis === "zone") {
+        announcer.textContent = zoneAnnouncementText(zone, targetZone, targetLang);
+      } else if (target.axis === "period") {
+        announcer.textContent = periodAnnouncementText(period, targetPeriod, targetLang);
+      } else if (target.axis === "lang") {
+        announcer.textContent = languageAnnouncementText(targetLang, lang);
+      }
+    }
 
     window.history.pushState({}, "", pageUrl(targetLang, targetZone, targetPeriod));
     attach();

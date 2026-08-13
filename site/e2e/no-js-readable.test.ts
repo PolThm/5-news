@@ -40,6 +40,23 @@ function stripInlineScript(html: string): string {
   return html.replace(/<script[\s\S]*?<\/script>/gi, "");
 }
 
+// Astro inlines the page's compiled CSS directly into a <style> tag when
+// the stylesheet is small, but switches to an external
+// <link rel="stylesheet" href="..."> reference once it crosses its own
+// internal size threshold (observed when Story 4.8 added new
+// :focus-visible/aria-live rules) -- the same bundler-size decision
+// already documented above for the island's own JS, now also applying to
+// CSS. Resolves to whichever form is actually present so CSS-content
+// assertions don't need to assume one or the other.
+function resolveCss(html: string): string {
+  const inlineMatch = html.match(/<style[^>]*>([\s\S]*?)<\/style>/);
+  if (inlineMatch) return inlineMatch[1] ?? "";
+  const linkMatch = html.match(/<link rel="stylesheet" href="([^"]+)"/);
+  if (!linkMatch) return "";
+  const cssPath = join(SITE_ROOT, "dist", linkMatch[1] ?? "");
+  return existsSync(cssPath) ? readFileSync(cssPath, "utf-8") : "";
+}
+
 describe("no-JS readability of the built page", () => {
   let html: string;
 
@@ -123,11 +140,58 @@ describe("no-JS readability of the built page", () => {
     // selector prefix, not by this assertion's own logic). Assert the
     // property's value is the bare keyword, not merely absent of one
     // specific following word.
-    expect(html).toMatch(/\.attribution[^{]* a[^{]*\{[^}]*text-decoration:underline[;}]/);
+    const css = resolveCss(html);
+    expect(css).toMatch(/\.attribution[^{]* a[^{]*\{[^}]*text-decoration:underline[;}]/);
     // And confirm the mad-libs word's own rule is NOT bare "underline" --
     // proving this test would actually fail if attribution ever
     // regressed to share that rule's dotted styling.
-    expect(html).toMatch(/h1[^{]*\.word[^{]*\{[^}]*text-decoration:underline\s+\S/);
+    expect(css).toMatch(/h1[^{]*\.word[^{]*\{[^}]*text-decoration:underline\s+\S/);
+  });
+
+  // Story 4.8 (AC1): every interactive element needs a visible
+  // :focus-visible style -- an audit before this story found ZERO
+  // :focus/:focus-visible/outline rules anywhere in this stylesheet.
+  // Astro's data-astro-cid-* scoping attribute is appended to every
+  // selector, so `[^{]*` tolerance between the class/selector fragment
+  // and the opening `{` is required, per this file's own established
+  // pattern for every other CSS assertion.
+  it("gives every interactive element type a visible :focus-visible style, never outline:none (AC1)", () => {
+    // Astro appends its data-astro-cid-* scoping attribute BETWEEN the
+    // selector's own class/tag fragment and any trailing pseudo-class
+    // (e.g. `.word[data-astro-cid-72kvvfgf]:focus-visible`, not
+    // `.word:focus-visible[data-astro-cid-...]`) -- `[^{]*` tolerance
+    // must sit between the fragment and `:focus-visible` itself, not
+    // only between `:focus-visible` and the opening `{`.
+    const css = resolveCss(html);
+    // The two mad-libs Zone/Period words.
+    expect(css).toMatch(/\.word[^{]*:focus-visible[^{]*\{[^}]*outline/);
+    // The three Output Language options -- Astro's scoping attribute is
+    // injected between `.lang` and ` a` too (`.lang[data-astro-cid-...]
+    // a[data-astro-cid-...]:focus-visible`), so tolerance is needed there
+    // as well, not just before the pseudo-class.
+    expect(css).toMatch(/\.lang[^{]*\sa[^{]*:focus-visible[^{]*\{[^}]*outline/);
+    // The Consensus chip button.
+    expect(css).toMatch(/\.chip[^{]*:focus-visible[^{]*\{[^}]*outline/);
+    // The outbound attribution link -- same `.attribution ... a` gap.
+    expect(css).toMatch(/\.attribution[^{]*\sa[^{]*:focus-visible[^{]*\{[^}]*outline/);
+    // No rule anywhere disables the outline outright.
+    expect(css).not.toMatch(/outline:\s*none/);
+    expect(css).not.toMatch(/outline:\s*0(?:[;}]|\s)/);
+  });
+
+  // Story 4.8 (AC2): a screen-reader-reachable aria-live region, present
+  // in the initial server-rendered HTML for every route (not injected
+  // only after JS runs), so a screen reader attached before any click
+  // already has something to observe.
+  it("renders a visually-hidden aria-live=\"polite\" region in the initial HTML (AC2)", () => {
+    expect(html).toMatch(/<div id="sr-announcer" aria-live="polite"[^>]*><\/div>/);
+    // Visually hidden via clip/absolute positioning, NOT display:none or
+    // visibility:hidden -- some screen readers ignore live-region updates
+    // on an element hidden that way.
+    const css = resolveCss(html);
+    expect(css).toMatch(/#sr-announcer[^{]*\{[^}]*position:absolute/);
+    expect(css).not.toMatch(/#sr-announcer[^{]*\{[^}]*display:\s*none/);
+    expect(css).not.toMatch(/#sr-announcer[^{]*\{[^}]*visibility:\s*hidden/);
   });
 
   it("renders the attribution span as a sibling after the Consensus chip's source list, never nested inside it, and unconditionally regardless of that item's source-list length (AC1)", () => {
@@ -162,25 +226,32 @@ describe("no-JS readability of the built page", () => {
   });
 
   it("renders the End Screen with the outline-variant hairline and the correct item-count/period completion statement (AC2)", () => {
-    expect(html).toMatch(/\.rule[^{]*\{[^}]*background:#cac5b8/);
+    expect(resolveCss(html)).toMatch(/\.rule[^{]*\{[^}]*background:#cac5b8/);
     // day.json has 4 clusters, day period -> plural French grammar.
     expect(html).toContain("Vous avez atteint la fin. 4 sujets ont atteint le seuil aujourd&#39;hui.");
   });
 
   it("renders nothing after the End Screen (AC2's 'nothing further' clause)", () => {
     // The End Screen's own <p> completion statement must be the last piece
-    // of real page content before the .page container closes and the
+    // of real READING content before the .page container closes and the
     // island's <script> tag begins -- i.e. only the End Screen's own
-    // closing tags (</p></div>) and the .page/.body/.html closings separate
-    // it from <script>, with no other element's opening tag in between.
+    // closing tags (</p></div>), the .page/.body/.html closings, and
+    // Story 4.8's invisible #sr-announcer accessibility artifact (never
+    // visible, never reading content -- an aria-live region existing in
+    // the DOM is not the kind of "further content" this AC guards
+    // against) separate it from <script>, with no OTHER element's opening
+    // tag in between.
     const endScreenIndex = html.indexOf('id="end-screen"');
     expect(endScreenIndex).toBeGreaterThan(-1);
 
     const afterEndScreen = html.slice(endScreenIndex);
     const beforeScript = afterEndScreen.slice(0, afterEndScreen.indexOf("<script"));
-    // Only the rule div, the <p>, and their own closing tags should appear
-    // -- no further <div>/<span>/<a> opening tag past the <p> itself.
-    const afterCompletionStatement = beforeScript.slice(beforeScript.indexOf("</p>") + "</p>".length);
+    // Only the rule div, the <p>, their own closing tags, and the
+    // sr-announcer div should appear -- no further <div>/<span>/<a>
+    // opening tag past the <p> itself, other than that one exception.
+    const afterCompletionStatement = beforeScript
+      .slice(beforeScript.indexOf("</p>") + "</p>".length)
+      .replace(/<div id="sr-announcer" aria-live="polite"[^>]*><\/div>/, "");
     expect(afterCompletionStatement).not.toMatch(/<(div|span|a|p|h1|ul|li)[ >]/);
   });
 
@@ -315,8 +386,9 @@ describe("Continent-fallback notice (AC3)", () => {
         expect(html).toMatch(
           /<div class="fallback-notice" id="fallback-notice"[^>]*>Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui\.<\/div>/
         );
-        expect(html).toMatch(/\.fallback-notice[^{]*\{[^}]*color:#8a3a2b/);
-        expect(html).toMatch(/\.fallback-notice[^{]*\{[^}]*background:#f6dcd4/);
+        const css = resolveCss(html);
+        expect(css).toMatch(/\.fallback-notice[^{]*\{[^}]*color:#8a3a2b/);
+        expect(css).toMatch(/\.fallback-notice[^{]*\{[^}]*background:#f6dcd4/);
       } finally {
         writeFileSync(FIXTURE_PATH, originalFixture);
         // Rebuild once more with the restored fixture so dist/ never reflects
@@ -398,8 +470,13 @@ describe("variable item count (AC1, AC3)", () => {
         expect(html).toContain("dossier sensible.");
 
         // AC3: no CSS rule caps .item/.item-list height or clips overflow.
-        const styleMatch = html.match(/<style[^>]*>([\s\S]*?)<\/style>/);
-        const css = styleMatch?.[1] ?? "";
+        // Uses resolveCss, not a local inline-only extraction -- Story
+        // 4.8's own Blind Hunter review caught that this test's original
+        // hand-rolled <style> match silently returned "" once the
+        // stylesheet externalized (crossed Astro's inlining threshold),
+        // making this negative assertion vacuously true and unable to
+        // catch a real future regression.
+        const css = resolveCss(html);
         expect(css).not.toMatch(/\.item(?:-list)?\[[^\]]*\]\s*\{[^}]*(?:max-height|overflow)/);
       } finally {
         writeFileSync(FIXTURE_PATH, originalFixture);

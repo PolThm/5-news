@@ -1,0 +1,32 @@
+{
+  "articles_collected": 371,
+  "briefings_path": null,
+  "clusters_after_grouping": 358,
+  "clusters_selected": 0,
+  "completed": true,
+  "cycle_id": "2026-08-13T20-13-17Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-12T20:13:17.711823+00:00..2026-08-13T20:13:17.711823+00:00: query error: Queries containing OR'd terms must be surrounded by ()."
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for fr; see summarize.json"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for en; see summarize.json"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for es; see summarize.json"
+    }
+  ],
+  "groups_after_dedupe": 358,
+  "phase": "summarize_submit_failed",
+  "published": false,
+  "started_at": "2026-08-13T20:13:17.644999+00:00",
+  "summarize_batches": {}
+}

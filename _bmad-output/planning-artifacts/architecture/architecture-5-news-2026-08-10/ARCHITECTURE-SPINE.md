@@ -80,7 +80,8 @@ collect ─→ deduplicate ─→ cluster ─→ rank ─→ summarize ─→ pu
 
 - **Binds:** `pipeline/stages/summarize/`, FR-11, FR-13, FR-14
 - **Prevents:** model output leaking into selection, ordering, or counts through a "while you're there" prompt addition
-- **Rule:** The summarize stage's input is a Briefing that is already ordered and counted. Its output is Summary text keyed to Cluster identity. It may not add, remove, reorder, or renumber anything. A summarize failure for one Cluster degrades that item to its Article title and outbound link; it never fails the Briefing.
+- **Rule:** The summarize stage's input is a Briefing that is already ordered and counted. Its output is generated text keyed to Cluster identity — the Summary, and since Story 6.1 the Headline, both returned by the same constrained call. It may not add, remove, reorder, or renumber anything. A summarize failure for one Cluster degrades that item to its Article title and outbound link; it never fails the Briefing.
+- **Note on the Headline (Story 6.1):** adding a second generated field to the same prompt is exactly the shape this AD's "while you're there" clause warns about, so the distinction is worth stating. What that clause forbids is model output reaching *selection, ordering, or counts* — the things ranking decides. A Headline is neither: it is display text for a Cluster already selected and already counted, produced by the same call, under the same corroboration rule (FR-13), and degrading by the same path. The boundary AD-6 draws is intact; the stage's text output simply has two fields instead of one.
 
 ### AD-7 — A published Briefing is immutable; regeneration writes a new one
 
@@ -116,7 +117,7 @@ collect ─→ deduplicate ─→ cluster ─→ rank ─→ summarize ─→ pu
 
 - **Binds:** all of `pipeline/stages/`, AD-4, AD-5
 - **Prevents:** two stages each computing the same value from their own view of the data and disagreeing — most dangerously the Independent Source count, which is simultaneously the ranking input and the number displayed as proof
-- **Rule:** Every field in the published schema has exactly one producing stage. `dedupe` owns Independent Source and country counts; `cluster` owns Cluster membership and identity; `rank` owns ordering and inclusion; `summarize` owns Summary text only; `publish` owns the generation timestamp and cycle identifier. A stage that needs a value it does not own reads it from its input and passes it through unchanged. Recomputing a value another stage owns is a defect even when the result happens to match.
+- **Rule:** Every field in the published schema has exactly one producing stage. `dedupe` owns Independent Source and country counts; `cluster` owns Cluster membership and identity; `rank` owns ordering and inclusion; `summarize` owns generated text only -- the Summary and, since Story 6.1, the Headline; `publish` owns the generation timestamp and cycle identifier. A stage that needs a value it does not own reads it from its input and passes it through unchanged. Recomputing a value another stage owns is a defect even when the result happens to match.
 
 ### AD-13 — External services are reached only through adapters
 
@@ -128,7 +129,7 @@ collect ─→ deduplicate ─→ cluster ─→ rank ─→ summarize ─→ pu
 
 | Concern | Convention |
 | --- | --- |
-| Domain vocabulary | The PRD Glossary is binding in code: `Article`, `Source`, `IndependentSource`, `WireCopy`, `Cluster`, `QualifyingCluster`, `ConsensusScore`, `Zone`, `Period`, `Briefing`, `Summary`, `OutputLanguage`, `DiscardedVolume`. No synonyms in type names, file names, or JSON keys. |
+| Domain vocabulary | The PRD Glossary is binding in code: `Article`, `Source`, `IndependentSource`, `WireCopy`, `Cluster`, `QualifyingCluster`, `ConsensusScore`, `Zone`, `Period`, `Briefing`, `Summary`, `Headline`, `OutputLanguage`, `DiscardedVolume`. No synonyms in type names, file names, or JSON keys. |
 | Stage naming | One directory per stage under `pipeline/stages/`, named for the verb it performs: `collect`, `dedupe`, `cluster`, `rank`, `summarize`, `publish`. |
 | Identifiers | Zone and Period are lowercase slugs (`world`, `europe`, `france`; `day`, `week`, `month`). Output Language is a two-letter code (`fr`, `en`, `es`). A Briefing is addressed by the triple, in that order. |
 | Dates and times | UTC everywhere inside the pipeline. ISO-8601 with explicit offset in stored data. Never a naive local timestamp. |

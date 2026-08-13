@@ -11,11 +11,11 @@
   End Screen; Voice and Tone table).
   Canonical state: World / day, French, 4 items (a realistic qualifying
   count, not padded to 5 — FR-4), no Continent fallback active.
-  Post-4.1-scoping correction: no separate headline field exists in the
-  real BriefingRecord JSON schema (only `summary`) -- each item renders
-  as a single summary paragraph, not a bolded headline plus a separate
-  body sentence. Corrected here to match the pipeline's real data
-  contract rather than implying a field that doesn't exist.
+  Story 6.1: each item carries a generated `headline` above its Summary,
+  rendered as an <h2>. This restores the structure this mock originally
+  had -- the Post-4.1-scoping correction that merged the two into one
+  paragraph was a concession to a schema that had no headline field, and
+  Story 6.1 added the field (BriefingRecord schema_version 2).
 */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -82,10 +82,18 @@ h1 .word {
   border-bottom: 1px solid #e7e4dc;
 }
 .item:last-of-type { border-bottom: none; }
-.item p.summary {
+.item h2.headline {
   font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 19px;
-  line-height: 1.5;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: #1a1a18;
+}
+.item p.summary {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
   color: #1a1a18;
   margin-bottom: 12px;
 }
@@ -155,25 +163,29 @@ h1 .word {
 
   <div class="item-list">
     <div class="item">
-      <p class="summary">Un cessez-le-feu entre en vigueur après trois jours de négociations. Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.</p>
+      <h2 class="headline">Un cessez-le-feu entre en vigueur après trois jours de négociations</h2>
+      <p class="summary">Les délégations ont confirmé un accord prévoyant l'arrêt des hostilités à partir de minuit, sous supervision d'observateurs internationaux.</p>
       <span class="chip"><span class="num">7</span> sources indépendantes · <span class="num">5</span> pays</span><br>
       <span class="attribution">Rapporté par <em>Reuters</em> — <a href="#">lire l'article original →</a></span>
     </div>
 
     <div class="item">
-      <p class="summary">La banque centrale relève son taux directeur pour la troisième fois cette année. La décision, largement anticipée par les marchés, vise à contenir une inflation restée supérieure à l'objectif fixé.</p>
+      <h2 class="headline">La banque centrale relève son taux directeur pour la troisième fois cette année</h2>
+      <p class="summary">La décision, largement anticipée par les marchés, vise à contenir une inflation restée supérieure à l'objectif fixé.</p>
       <span class="chip"><span class="num">5</span> sources indépendantes · <span class="num">4</span> pays</span><br>
       <span class="attribution">Rapporté par <em>Le Monde</em> — <a href="#">lire l'article original →</a></span>
     </div>
 
     <div class="item">
-      <p class="summary">Une mission spatiale conjointe rapporte ses premiers échantillons. L'équipe scientifique évoque des résultats préliminaires prometteurs, sans encore confirmer d'ici combien de mois une analyse complète sera publiée.</p>
+      <h2 class="headline">Une mission spatiale conjointe rapporte ses premiers échantillons</h2>
+      <p class="summary">L'équipe scientifique évoque des résultats préliminaires prometteurs, sans encore confirmer d'ici combien de mois une analyse complète sera publiée.</p>
       <span class="chip"><span class="num">4</span> sources indépendantes · <span class="num">3</span> pays</span><br>
       <span class="attribution">Rapporté par <em>Associated Press</em> — <a href="#">lire l'article original →</a></span>
     </div>
 
     <div class="item">
-      <p class="summary">Un accord commercial régional est signé après deux ans de discussions. Le texte prévoit une réduction progressive des droits de douane entre les pays signataires sur une période de cinq ans.</p>
+      <h2 class="headline">Un accord commercial régional est signé après deux ans de discussions</h2>
+      <p class="summary">Le texte prévoit une réduction progressive des droits de douane entre les pays signataires sur une période de cinq ans.</p>
       <span class="chip"><span class="num">6</span> sources indépendantes · <span class="num">6</span> pays</span><br>
       <span class="attribution">Rapporté par <em>Deutsche Welle</em> — <a href="#">lire l'article original →</a></span>
     </div>

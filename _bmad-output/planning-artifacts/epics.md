@@ -31,7 +31,7 @@ FR-9: A reader can see which Sources and which countries make up an item's Conse
 FR-10: The system counts republished agency dispatches once, so Consensus Scores reflect independent coverage. Three layers, v1 requirement.
 FR-11: Every Briefing is generated in each supported Output Language, with Summaries written in that language irrespective of the languages of the underlying Articles.
 FR-12: A reader receives a Briefing in one of the supported Output Languages, and can change it.
-FR-13: A Summary states nothing that is not present in at least two concordant Articles within its Cluster.
+FR-13: A Summary or Headline states nothing that is not present in at least two concordant Articles within its Cluster.
 FR-14: Every item displays visible attribution and a prominent outbound link to an original Article.
 FR-15: The system generates all Briefings on a schedule and serves reader requests from the generated set (135 per cycle).
 FR-16: When a Zone has too few Qualifying Clusters, the system serves the containing Continent's Briefing and states the substitution.
@@ -60,12 +60,12 @@ Extracted from the Architecture spine. Each is an invariant that constrains how 
 - **AD-3 — Stage independence.** Each pipeline stage reads its input from disk and writes output to `data/intermediate/<stage>/`, and is invocable alone against a saved input. This is what makes the Build Order's inspection window possible.
 - **AD-4 — Deterministic ranking.** No model call, no randomness, no wall-clock read, no map-iteration-order dependence. Re-running on identical input produces byte-identical output.
 - **AD-5 — Count once, before ranking.** The dedupe stage is the only place that decides what counts as an Independent Source, and it runs before clustering. The count written into a Briefing is the count ranking used.
-- **AD-6 — AI stage is text-only.** Its input is an already-ordered, already-counted Briefing. It may not add, remove, reorder, or renumber. A per-Cluster failure degrades that item to title + link; it never fails the Briefing.
+- **AD-6 — AI stage is text-only.** Its input is an already-ordered, already-counted Briefing. Its output is generated text (Summary + Headline). It may not add, remove, reorder, or renumber. A per-Cluster failure degrades that item to title + link; it never fails the Briefing.
 - **AD-7 — Atomic publication.** The publish stage writes a complete Briefing set or nothing. A failed cycle leaves the previous set untouched.
 - **AD-8 / AD-9 — Cache precedence and invalidation.** Briefings network-first with short timeout, assets cache-first, stale-while-revalidate forbidden on Briefing content. Each cycle stamps a build identifier into the service worker so its bytes change; old caches are deleted by name, with `skipWaiting` + `clients.claim`.
 - **AD-10 — Partial-failure tolerance.** Every external adapter returns partial results plus a failure record. Only total ingestion failure aborts the cycle.
 - **AD-11 — Two-phase resumable cycle.** The Batch API is asynchronous (up to 24h) and a scheduled job must exit. Phase one submits and exits; phase two polls, collects, and publishes. Neither phase blocks on an external service.
-- **AD-12 — Single field ownership.** Every published field has exactly one producing stage: dedupe owns counts, cluster owns membership, rank owns ordering, summarize owns text, publish owns timestamps. Recomputing another stage's value is a defect even when the result matches.
+- **AD-12 — Single field ownership.** Every published field has exactly one producing stage: dedupe owns counts, cluster owns membership, rank owns ordering, summarize owns generated text (Summary + Headline), publish owns timestamps. Recomputing another stage's value is a defect even when the result matches.
 - **AD-13 — Adapter boundary.** Stages depend on adapter interfaces in domain terms, never on a vendor SDK type. Rate limiting, retry, pagination, and batching live inside the adapter.
 - **Stack (verified 2026-08-10):** Astro 7.2.0; GitHub Actions scheduled workflow; GDELT DOC 2.0 (no key, MAXRECORDS 250, ~1 req/5s); Cohere `embed-v4`; Claude `claude-haiku-4-5` via Batch API; HDBSCAN via scikit-learn ≥ 1.3.
 - **Deliberately excluded:** `@vite-pwa/astro` (abandoned), Workbox, NewsAPI.org, any database. Prompt caching is unavailable on this workload (Haiku 4.5 needs a 4096-token minimum prefix; the summarization prompt is far shorter and would silently not cache).
@@ -832,3 +832,47 @@ So that I am not misled about what is current.
 **Given** no connection and no cached Briefing
 **When** the reader opens the application
 **Then** they see a stated offline condition rather than a blank page or a browser error
+
+---
+
+## Epic 6: Scannable items
+
+Each item gains a generated headline above its Summary, so a reader can scan the five items and choose what to read rather than reading five paragraphs in full. This restores the structure the UX design originally specified: the headline was designed in, then removed during Story 4.1 scoping because `BriefingRecord` had no field to hold it. This epic adds the field.
+
+*UX design contract: `{planning_artifacts}/ux-designs/ux-5-news-2026-08-12/DESIGN.md` + `EXPERIENCE.md`. Both spines and both mockups were updated for this epic (see the `.memlog.md` override entry). Mockups: `mockups/briefing-world-day.html`, `mockups/briefing-fallback.html`.*
+
+### Story 6.1: Give every item a generated headline
+
+As a reader scanning five items,
+I want each item to open with a headline stating what happened,
+So that I can choose what to read without reading every Summary in full.
+
+**Acceptance Criteria:**
+
+**Given** a Cluster selected for a Briefing
+**When** the summarize stage runs
+**Then** it receives both a Headline and a Summary from the same batch call, each written in that Briefing's Output Language (FR-11)
+**And** the response shape is constrained rather than parsed out of free text, so a missing or malformed field is detected rather than silently rendered
+
+**Given** a generated Headline
+**When** it is checked against its Cluster
+**Then** it states nothing absent from at least two concordant Articles in that Cluster (FR-13, extended to Headlines by this story)
+**And** it carries no urgency, teaser, or "breaking" framing, and attributes no synthesized statement to a named outlet (PRD §7, FR-14)
+
+**Given** generation fails or returns a malformed response for one Cluster
+**When** the Briefing is assembled
+**Then** that item degrades to its Article title for both fields, the degrade is counted in the stage's metadata, and the Briefing still publishes (AD-6, AD-10)
+**And** the two fields never degrade independently — an item never shows a generated Headline beside a fallback Summary, or the reverse
+
+**Given** a published Briefing
+**When** it is written to disk
+**Then** each Cluster carries a `headline` alongside its `summary`, and the schema version is bumped rather than the field added silently (spine, Consistency Conventions)
+
+**Given** the page renders
+**When** its document outline is inspected
+**Then** each item's headline is a real `<h2>` beneath the mad-libs `<h1>`, with no skipped levels, so the item list is navigable by heading (NFR-4)
+**And** an item with no headline renders no heading at all rather than an empty one
+
+**Given** a Briefing published before this story (schema_version 1)
+**When** the page renders it
+**Then** it renders without headings rather than failing — the field is additive, not required

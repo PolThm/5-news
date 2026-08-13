@@ -71,6 +71,7 @@ Downstream workflows and readers use these terms exactly. Use the defined term e
 - **Zone** — a geographic scope for a Briefing. Exactly one of: World, a Continent, or a Country from the supported list.
 - **Period** — a time window for a Briefing. Exactly one of: day, week, month.
 - **Briefing** — the ordered list of 2 to 5 Clusters for one Zone × Period × Output Language combination, with their Summaries. The unit that is precomputed, cached, and served.
+- **Headline** — the AI-generated title for one Cluster within a Briefing, written in the Output Language. Distinct from an Article's own title: a Headline is generated for the Cluster as a whole, and is held to the same corroboration and non-fabrication rules as a Summary (FR-13).
 - **Summary** — the AI-generated text for one Cluster within a Briefing, written in the Output Language.
 - **Output Language** — the language a Briefing is generated in. v1 supports French, English, Spanish.
 - **Discarded Volume** — the count of Articles ingested for a Briefing minus those in its published Clusters. Displayed as the ratio that makes the filtering visible.
@@ -211,11 +212,12 @@ A reader receives a Briefing in one of the supported Output Languages, and can c
 
 #### FR-13: Two-source corroboration
 
-A Summary states nothing that is not present in at least two concordant Articles within its Cluster.
+A Summary or Headline states nothing that is not present in at least two concordant Articles within its Cluster.
 
 **Consequences (testable):**
-- A claim appearing in exactly one Article of a Cluster does not appear in the Summary.
+- A claim appearing in exactly one Article of a Cluster does not appear in the Summary or the Headline.
 - Clusters with fewer than 2 Independent Sources do not qualify for a Briefing (see FR-16).
+- The Headline carries the same register constraints as every other product-generated string (§7): no urgency, no teasers, no "breaking". A Headline written to earn a click is a defect, not a style preference — it is the most exposed generated text on the page, rendered directly above the outlet name FR-14 forbids attributing a synthesized statement to.
 
 #### FR-14: Attribution and outbound link
 

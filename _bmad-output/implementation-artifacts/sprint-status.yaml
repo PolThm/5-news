@@ -11,7 +11,7 @@
 # Epic keys use epic-N. Story keys use N-M-slug.
 # Build Order (PRD §10) governs sequence: pipeline first, page fifth, PWA last.
 
-last_updated: 2026-08-13 (Story 5.4 done -- Epic 5 complete)
+last_updated: 2026-08-13 (Story 6.1 done -- Epic 6 begun)
 
 development_status:
   epic-1: done
@@ -72,3 +72,10 @@ development_status:
   5-2-serve-fresh-content-first-cache-only-as-a-fallback: done
   5-3-invalidate-the-cache-on-every-published-cycle: done
   5-4-serve-an-honest-offline-experience: done
+
+  # Epic 6 was not in the original plan. It exists because the user chose to
+  # revisit the no-separate-headline decision recorded in the UX memlog --
+  # a decision whose own stated reason was a data-contract limit, not a
+  # product judgement. Story 6.1 removed that limit.
+  epic-6: in-progress
+  6-1-give-every-item-a-generated-headline: done

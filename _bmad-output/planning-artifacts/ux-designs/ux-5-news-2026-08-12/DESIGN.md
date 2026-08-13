@@ -115,6 +115,9 @@ spacing:
   margin-desktop: 48px
   section-gap: 40px
 components:
+  item-headline:
+    typography: '{typography.headline-md}'
+    color: '{colors.on-surface}'
   mad-libs-word:
     style: underline-dotted
     weight: '600'
@@ -133,7 +136,7 @@ components:
 
 5 News reads like a wire report a measurement produced, not a feed an algorithm curated. Every visual decision defers to one governing idea, already stated in the product's own architecture: ranking is a measurement, not an opinion. The page must look like it could be audited — numbers sit in the open, typography is restrained enough that a Consensus Score reads as data rather than decoration, and nothing on screen competes with the two facts a reader actually needs: what happened, and how many independent sources agree.
 
-The register is **Editorial Restraint** with a **Ledger** accent: a serif face for the mad-libs sentence and every item's Summary text (the voice of reporting — there is no separate headline field in the data; the AI-generated Summary is the entire display copy for an item, per its own domain definition as "a trailer, not a substitute"), a plain grotesque for controls and metadata (the voice of the interface), and a monospaced numeral face reserved *only* for the Consensus Score and Discarded Volume — so a reader's eye learns, within one visit, that monospace numbers are the thing worth trusting most on the page. No photography, no illustration, no decorative color. The palette is paper-and-ink: warm off-white surface, near-black ink, one desaturated forest green as the single interactive accent (the mad-libs words, the active Zone/Period state), one muted brick red reserved for a single meaning only — "this Zone fell back to its Continent" (FR-16) — so a reader learns the color itself signals substitution, never decoration.
+The register is **Editorial Restraint** with a **Ledger** accent: a serif face for the mad-libs sentence and every item's headline (the voice of reporting — each item carries a generated headline above its Summary, the two together forming its display copy, with the Summary still "a trailer, not a substitute" per its own domain definition), a plain grotesque for controls, metadata, and the Summary paragraph itself (the voice of the interface), and a monospaced numeral face reserved *only* for the Consensus Score and Discarded Volume — so a reader's eye learns, within one visit, that monospace numbers are the thing worth trusting most on the page. No photography, no illustration, no decorative color. The palette is paper-and-ink: warm off-white surface, near-black ink, one desaturated forest green as the single interactive accent (the mad-libs words, the active Zone/Period state), one muted brick red reserved for a single meaning only — "this Zone fell back to its Continent" (FR-16) — so a reader learns the color itself signals substitution, never decoration.
 
 ## Colors
 
@@ -146,7 +149,9 @@ The register is **Editorial Restraint** with a **Ledger** accent: a serif face f
 
 ## Typography
 
-- **Source Serif 4** carries the mad-libs sentence and every item's Summary text — the register of a printed dispatch. Set at `display-lg`/`display-lg-mobile` for the sentence itself (the page's single largest visual element, per FR-1/FR-2/FR-3's framing of the sentence as the primary control), `headline-sm` for the Summary text within each item (there is no separate headline field — the Summary is rendered in a single serif paragraph per item, not split into a bolded title plus a distinct body).
+- **Source Serif 4** carries the mad-libs sentence and every item's headline — the register of a printed dispatch. Set at `display-lg`/`display-lg-mobile` for the sentence itself (the page's single largest visual element, per FR-1/FR-2/FR-3's framing of the sentence as the primary control), and `headline-md` for the item headline. At 24px the headline stays below the sentence's 28px mobile size, so the sentence remains the most visually dominant element at every viewport (see Do's and Don'ts). The Summary paragraph sits beneath its headline in the grotesque at `body-lg`, not the serif: two stacked serif blocks read as one run-on paragraph, and the face change is what makes the headline scannable.
+
+  The headline is what makes a five-item list scannable — a reader decides which items to read from the headlines, then reads the Summaries of the ones they chose. This is the one place three text elements share an item (headline, Summary, Consensus chip); the ordering above is what keeps that from competing with the two facts the page exists to deliver (what happened, and how many independent sources agree): the headline answers "what happened" faster than the Summary can, and the chip stays typographically distinct from both.
 - **IBM Plex Sans** carries every other UI element: body copy (Summaries), labels, the language selector, the End Screen statement, attribution lines. Chosen for a grotesque that stays legible at small sizes without italics or condensed weights that would hurt the accessibility floor (NFR-4).
 - **IBM Plex Mono**, at the `numeral` token, is reserved *exclusively* for the Consensus Score ("**5** independent sources · **4** countries") and the Discarded Volume line ("**1,247** ingested → **5** kept"). This is the single typographic signal that a number on this page is a measurement result, not prose — never use the numeral face for a page number, a date, or any other digit that isn't a ranking output.
 - No italics anywhere except within a Summary's own prose (never for UI chrome) — italics in a serif headline face read as a stylistic flourish this product's register does not want.
@@ -168,6 +173,8 @@ Depth is almost entirely **tonal**, not shadow-based — this is a flat, paper-l
 ## Components
 
 - **Mad-libs word** (`components.mad-libs-word`): the two clickable words (Zone, Period) inside the title sentence render in `primary` with a dotted underline (not solid — a dotted underline signals "this text behaves differently" at a glance, distinct from a normal hyperlink's solid underline used for outbound attribution). On click, the word cycles to its next value; the whole sentence re-renders inline, no page reload flash beyond what static navigation requires.
+- **Item headline** (`components.item-headline`): the generated headline opening each item, set in Source Serif 4 at `headline-md`. Renders as a real `<h2>` — the page's only heading level below the mad-libs `<h1>` — so the item list is navigable by heading for screen-reader users. Absent entirely rather than empty when an item has no headline (a Briefing published before the field existed, or a Cluster whose generation degraded): an empty heading announces nothing and is an accessibility defect in its own right.
+
 - **Consensus chip** (`components.consensus-chip`): the "N independent sources · M countries" line, set in the `numeral` typography token on a `surface-container` background — visually distinct from the Summary prose above it, so it reads as a data readout appended to the item, not a continuation of the sentence.
 - **End Screen rule** (`components.end-screen-rule`): a full-width hairline in `outline-variant`, followed by the completion statement (FR-5) in `label-caps` — visually final, the one place on the page that explicitly says "stop scrolling, there is nothing further."
 - **Attribution link**: a solid-underlined `on-surface-variant` text link with the outlet name visible as plain text before it (never a bare "Source" label or icon-only link) — FR-14 requires this be present without interaction, so it is never hidden behind a hover state or a "read more" disclosure.
@@ -177,7 +184,8 @@ Depth is almost entirely **tonal**, not shadow-based — this is a flat, paper-l
 ## Do's and Don'ts
 
 - **Do** treat every number that comes from the ranking (Consensus Score, Discarded Volume, item count) as content worth its own typographic treatment.
-- **Do** keep the mad-libs sentence as the single largest, most visually dominant element on the page at every viewport.
+- **Do** keep the mad-libs sentence as the single largest, most visually dominant element on the page at every viewport. The item headline sits one step below it in the type scale (`headline-md`, 24px, against the sentence's 28px mobile floor) — never at or above it.
+- **Don't** let a headline become a hook. It states what happened, in the same plain and finite register as everything else the product writes: no urgency, no teasers, no "breaking", no question marks, no verbless fragments. A headline that would work on a wire desk is right; one written to make someone click is not, and would undo the register the rest of the page maintains.
 - **Don't** introduce a second accent color for anything other than the Continent-fallback notice — color scarcity is what makes the fallback notice legible as a distinct signal.
 - **Don't** add imagery, avatars, or per-outlet logos next to attribution — this is a text-and-number product; a logo grid would visually imply outlet ranking or endorsement the product does not make.
 - **Don't** animate the mad-libs word cycle beyond an instant content swap — no carousel-style slide transition, which would suggest "more options exist below/beside" when the click already fully expresses the available choices.

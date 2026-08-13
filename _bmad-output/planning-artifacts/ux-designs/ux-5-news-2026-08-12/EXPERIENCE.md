@@ -25,7 +25,7 @@ Within that one page, four regions stack top to bottom, always in this order:
 
 1. **Header** — Output Language control (top-right), site identity mark (top-left, minimal).
 2. **Mad-libs sentence** — the Zone/Period-selecting title ("Here's what's happening in **the World** **today**"), plus the Continent-fallback notice directly beneath it when FR-16 applies.
-3. **Item list** — 2 to 5 Briefing items, each: a single Summary paragraph (no separate headline field — the `BriefingRecord` JSON schema carries only `summary` per Cluster, not a distinct title), Consensus chip (expandable to source list), attribution + outbound link.
+3. **Item list** — 2 to 5 Briefing items, each: a generated headline (`<h2>`), a Summary paragraph beneath it, Consensus chip (expandable to source list), attribution + outbound link. The headline is what makes the list scannable — a reader picks which items to read from the headlines alone. Both text fields come from the pipeline (`BriefingRecord` carries `headline` and `summary` per Cluster as of schema_version 2); the page never derives one from the other.
 4. **Discarded Volume + End Screen** — the ingested/kept ratio (FR-8), then the hairline rule and completion statement (FR-5). Nothing renders below this.
 
 → Composition reference: `mockups/briefing-world-day.html` (World/day, 4 items, no fallback), `mockups/briefing-fallback.html` (a Country Zone showing its Continent-fallback notice, plus the Consensus chip's expanded state from Flow 3). Spine wins on conflict with either mock.
@@ -46,7 +46,7 @@ Microcopy. Brand voice and visual register live in `DESIGN.md.Brand & Style`.
 | Complete, declarative sentences. States a fact plainly. | Exclamation marks, emoji, urgency language, apology language. |
 | "Reported by *Le Monde*, *Reuters*, and 3 others." | "Sources: [icon][icon][icon]" |
 
-The voice never apologizes for showing fewer than 5 items, never encourages a return visit, and never frames the Discarded Volume ratio as a failure — a high discard count is the filter working, not the filter underperforming.
+The voice never apologizes for showing fewer than 5 items, never encourages a return visit, and never frames the Discarded Volume ratio as a failure — a high discard count is the filter working, not the filter underperforming. The same register binds the generated item headline: it states what happened, never teases what the reader will find by reading on. No urgency, no "breaking", no question marks — a headline written to earn a click would contradict everything else the page says about itself.
 
 ## Component Patterns
 
@@ -71,7 +71,7 @@ Behavioral. Visual specs live in `DESIGN.md.Components`.
 | Zone/Period change (JS present) | Mad-libs sentence + item list | Click swaps the sentence text and the item list in place, no full navigation flash; the URL updates via history push so back/forward and direct linking both work (FR-2/FR-3's "URL reflects the selection"). Latency bound matches first load (NFR-1) because the target Briefing's JSON is already a static asset — no network round-trip beyond fetching that one file. |
 | Zone/Period change (no JS) | Whole page | A normal link navigation to the equivalent static route; same content, full page load. |
 | Fewer than 5 items | Item list | Exactly as many items as qualified render — 2, 3, or 4 — with no placeholder, skeleton, or "loading more" affordance filling the gap (FR-4). The End Screen's rule sits directly beneath the last real item, regardless of count. |
-| Single dominating item | Item list | That one item's block takes whatever vertical space its content needs (full Summary paragraph + Consensus chip + attribution) rather than being height-capped to "look like" a multi-item layout — `DESIGN.md`'s content-driven block height. |
+| Single dominating item | Item list | That one item's block takes whatever vertical space its content needs (headline + full Summary paragraph + Consensus chip + attribution) rather than being height-capped to "look like" a multi-item layout — `DESIGN.md`'s content-driven block height. |
 | Continent fallback active | Beneath mad-libs sentence | Notice renders unconditionally whenever `served_zone != requested_zone` (per the pipeline's own `ZoneRanking.substituted` signal) — this is data-driven, not a client-side guess. |
 | Language not yet chosen (first visit) | Whole page | Output Language defaults from `Accept-Language` header at build/serve time if the header names a supported language, else English (FR-12). No language-picker modal interrupts first paint — the assumption in the default is a courtesy, not a gate. |
 | Language explicitly chosen | Whole page | Persisted for the session via the URL's language segment; a reader who bookmarks or shares a URL always gets that language back, regardless of the visiting browser's `Accept-Language` `[ASSUMPTION: no cookie/localStorage persistence in v1 -- the URL itself is the only persistence mechanism, consistent with AD-1's no-client-state-beyond-cache posture]`. |
@@ -83,13 +83,14 @@ Behavioral. Visual specs live in `DESIGN.md.Components`.
 - The mad-libs words are the *only* multi-value inline-cycling controls on the page — no other element uses this pattern, so a reader who learns it once (dotted underline = click to cycle) can apply it everywhere it appears.
 - The Consensus chip's expand/collapse is the only disclosure pattern on the page — no accordions, no tabs, no dropdown menus elsewhere.
 - **Banned:** infinite scroll or any "load more" trigger (Story 4.4 exists specifically to forbid this), autoplay of any kind, modal dialogs (the Consensus chip expands inline, never in an overlay), hover-only affordances for anything required by an AC (attribution, outbound links, and the fallback notice must all work with hover entirely absent, i.e. on touch).
-- Focus order follows visual/reading order top to bottom: header controls → mad-libs words in sentence order (Zone, then Period, matching "the World, today" word order) → item list top to bottom (per item: the Summary paragraph is not a separate focus stop, then the Consensus chip, then the attribution link) → Discarded Volume (not interactive) → End Screen (not interactive).
+- Focus order follows visual/reading order top to bottom: header controls → mad-libs words in sentence order (Zone, then Period, matching "the World, today" word order) → item list top to bottom (per item: neither the headline nor the Summary paragraph is a separate focus stop — the headline is a heading, navigable by heading shortcut but not by Tab — then the Consensus chip, then the attribution link) → Discarded Volume (not interactive) → End Screen (not interactive).
 
 ## Accessibility Floor
 
 Behavioral. Visual contrast lives in `DESIGN.md`.
 
 - WCAG 2.1 AA is the floor (NFR-4) — confirmed, not deferred: 4.5:1 minimum contrast for body text, 3:1 for the `numeral` Consensus figures at their minimum rendered size, visible focus ring (not `outline: none`) on every interactive element.
+- The document outline is exactly one `<h1>` (the mad-libs sentence) followed by one `<h2>` per item (its headline), with no skipped levels and nothing below `<h2>`. This is the page's primary non-visual navigation: a screen-reader user moves item to item by heading rather than reading every Summary in sequence. An item with no headline renders no heading at all rather than an empty one.
 - Every mad-libs word announces its role and current value to a screen reader (e.g. "Zone, World, button, cycles to Europe") — not just its visible text — since the word's function (a cycling control) is not obvious from static text alone (Story 4.8's explicit requirement).
 - The Consensus chip's expand/collapse announces its expanded state change (`aria-expanded`) and the newly revealed source list is reachable in the same tab sequence, not skipped.
 - Tap targets for both mad-libs words and the Output Language control meet a 44×44px minimum hit area even though their visible text may be smaller — padding, not visible size, satisfies this.

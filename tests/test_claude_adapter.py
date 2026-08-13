@@ -18,8 +18,8 @@ from __future__ import annotations
 
 import pytest
 from pipeline.adapters.claude import (
-    MODEL,
     _NO_FABRICATION_INSTRUCTION,
+    MODEL,
     _prompt_for,
     collect_batch,
     submit_batch,

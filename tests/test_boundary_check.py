@@ -125,10 +125,7 @@ def test_catches_a_violation_on_a_line_starting_with_a_multiplication_operator(
     comment-STRIPPING approach (not line-exclusion) must still catch this."""
     probe = sandbox / "site" / "src" / "_probe.ts"
     probe.parent.mkdir(parents=True, exist_ok=True)
-    probe.write_text(
-        "const weight = getBase()\n"
-        '  * fetchWeight("pipeline/rating-secret.json");\n'
-    )
+    probe.write_text('const weight = getBase()\n  * fetchWeight("pipeline/rating-secret.json");\n')
 
     result = run_check(sandbox)
     assert result.returncode != 0

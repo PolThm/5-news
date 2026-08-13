@@ -25,4 +25,8 @@ const FIXTURE_PATH = join(SITE_ROOT, "src", "fixtures", "day.json");
 const briefing = loadBriefing(REAL_PATH, FIXTURE_PATH);
 ---
 
-<BriefingPage briefing={briefing} lang="fr" zone="world" period="day" />
+<BriefingPage briefing={briefing} lang="fr" zone="world" period="day">
+  <div slot="extra-scripts">
+    <script src="../islands/language-detect.ts"></script>
+  </div>
+</BriefingPage>

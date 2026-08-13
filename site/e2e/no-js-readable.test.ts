@@ -47,20 +47,35 @@ describe("no-JS readability of the built page", () => {
     execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
     expect(existsSync(DIST_INDEX)).toBe(true);
     html = readFileSync(DIST_INDEX, "utf-8");
-  });
+  }, 30000);
 
-  it("ships exactly one <script> tag, the Period-switcher island (progressive enhancement only)", () => {
+  it("ships exactly two <script> tags on / -- the Period-switcher island and the opportunistic language-detect redirect (progressive enhancement only)", () => {
+    // Story 4.7 (AC1) adds a second script, present only on `/`: the
+    // browser-language-detection redirect. Both are progressive
+    // enhancement -- neither is required to read the page, which the rest
+    // of this describe block's assertions prove directly against the
+    // server-rendered HTML.
     const scriptTags = html.match(/<script[^>]*>/gi) ?? [];
-    expect(scriptTags).toHaveLength(1);
-    const scriptTag = scriptTags[0];
-    if (!scriptTag) throw new Error("unreachable: length asserted above");
-    // Whether Astro inlines the compiled module or emits an external
-    // src="..." reference is its own bundler-size decision (see this
-    // file's stripInlineScript docstring) -- assert on whichever form
-    // is present, not on inlining specifically.
-    const isExternal = /<script[^>]+src=/i.test(scriptTag);
+    expect(scriptTags).toHaveLength(2);
+
+    // Whether Astro inlines the Period-switcher's compiled module or
+    // emits an external src="..." reference is its own bundler-size
+    // decision (see this file's stripInlineScript docstring). The
+    // language-detect redirect is small enough to always inline, and its
+    // compiled body is distinctive (references navigator.language, which
+    // Period-switcher's own module never does) -- use that, not tag
+    // position, to tell the two apart reliably either way.
+    const languageDetectTag = scriptTags.find((tag) => {
+      const bodyMatch = html.slice(html.indexOf(tag)).match(/<script[^>]*>([\s\S]*?)<\/script>/);
+      return !tag.includes("src=") && bodyMatch?.[1]?.includes("navigator.language");
+    });
+    expect(languageDetectTag).toBeDefined();
+
+    const periodSwitcherTag = scriptTags.find((tag) => tag !== languageDetectTag);
+    if (!periodSwitcherTag) throw new Error("could not identify the Period-switcher <script> tag");
+    const isExternal = /<script[^>]+src=/i.test(periodSwitcherTag);
     if (isExternal) {
-      const srcMatch = scriptTag.match(/src="([^"]+)"/);
+      const srcMatch = periodSwitcherTag.match(/src="([^"]+)"/);
       if (!srcMatch) throw new Error("external <script> tag has no src attribute");
       const scriptPath = join(SITE_ROOT, "dist", srcMatch[1]);
       expect(existsSync(scriptPath)).toBe(true);
@@ -88,12 +103,12 @@ describe("no-JS readability of the built page", () => {
   });
 
   it("includes the outbound attribution link as a real <a href>, not a placeholder", () => {
-    expect(html).toMatch(/<a href="https:\/\/reuters\.com\/[^"]*"[^>]*>lire l'article original/);
+    expect(html).toMatch(/<a href="https:\/\/reuters\.com\/[^"]*"[^>]*>lire l&#39;article original/);
   });
 
   it("opens the outbound attribution link in a new tab with rel=noopener noreferrer (AC1)", () => {
     expect(html).toMatch(
-      /<a href="https:\/\/reuters\.com\/[^"]*" target="_blank" rel="noopener noreferrer"[^>]*>lire l'article original/
+      /<a href="https:\/\/reuters\.com\/[^"]*" target="_blank" rel="noopener noreferrer"[^>]*>lire l&#39;article original/
     );
   });
 
@@ -220,33 +235,45 @@ describe("Zone axis: Continent and Country pages (Story 4.3)", () => {
   const DIST_EUROPE_DAY = join(SITE_ROOT, "dist", "fr", "europe", "day.html");
   const DIST_JAPAN_DAY = join(SITE_ROOT, "dist", "fr", "japan", "day.html");
 
-  it("builds a Continent page (Europe) with the correct sentence label and Zone-word target", () => {
-    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-    const html = readFileSync(DIST_EUROPE_DAY, "utf-8");
-    expect(html).toMatch(
-      /<a class="word" data-zone-word data-lang="fr" data-zone="europe" data-period="day" href="\/fr\/north-america\/day"[^>]*>en Europe<\/a>/
-    );
-  });
+  // Story 4.7 tripled the routing enumeration to 135 pages (was 45), so a
+  // fresh `astro build` now runs noticeably longer -- these tests'
+  // explicit 30s timeout replaces vitest's 5s default, which the build
+  // started intermittently exceeding once the page count grew.
+  it(
+    "builds a Continent page (Europe) with the correct sentence label and Zone-word target",
+    () => {
+      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+      const html = readFileSync(DIST_EUROPE_DAY, "utf-8");
+      expect(html).toMatch(
+        /<a class="word" data-zone-word data-lang="fr" data-zone="europe" data-period="day" href="\/fr\/north-america\/day"[^>]*>en Europe<\/a>/
+      );
+    },
+    30000
+  );
 
-  it("builds a Country page (Japan) with the correct sentence label and Zone-word target, and no fallback notice (AC4)", () => {
-    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-    const html = readFileSync(DIST_JAPAN_DAY, "utf-8");
-    expect(html).toMatch(
-      /<a class="word" data-zone-word data-lang="fr" data-zone="japan" data-period="day" href="\/fr\/china\/day"[^>]*>au Japon<\/a>/
-    );
+  it(
+    "builds a Country page (Japan) with the correct sentence label and Zone-word target, and no fallback notice (AC4)",
+    () => {
+      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+      const html = readFileSync(DIST_JAPAN_DAY, "utf-8");
+      expect(html).toMatch(
+        /<a class="word" data-zone-word data-lang="fr" data-zone="japan" data-period="day" href="\/fr\/china\/day"[^>]*>au Japon<\/a>/
+      );
 
-    // Strip both <style> (the .fallback-notice CSS rule, always present)
-    // and <script> (the island's own compiled source, which carries the
-    // literal string `id="fallback-notice"` as part of its template-literal
-    // rendering logic, unrelated to whether an element was actually
-    // server-rendered -- the exact same false-positive class as AC6's
-    // `class="item"` check below).
-    const htmlWithoutStyleOrScript = stripInlineScript(html).replace(
-      /<style[\s\S]*?<\/style>/gi,
-      ""
-    );
-    expect(htmlWithoutStyleOrScript).not.toContain('id="fallback-notice"');
-  });
+      // Strip both <style> (the .fallback-notice CSS rule, always present)
+      // and <script> (the island's own compiled source, which carries the
+      // literal string `id="fallback-notice"` as part of its template-literal
+      // rendering logic, unrelated to whether an element was actually
+      // server-rendered -- the exact same false-positive class as AC6's
+      // `class="item"` check below).
+      const htmlWithoutStyleOrScript = stripInlineScript(html).replace(
+        /<style[\s\S]*?<\/style>/gi,
+        ""
+      );
+      expect(htmlWithoutStyleOrScript).not.toContain('id="fallback-notice"');
+    },
+    30000
+  );
 });
 
 // AC3: the Continent-fallback notice, actually rendered in a real build by
@@ -271,30 +298,38 @@ describe("Continent-fallback notice (AC3)", () => {
     if (existsSync(BACKUP_PATH)) rmSync(BACKUP_PATH);
   });
 
-  it("renders the exact French sentence with the secondary color styling for a fallback Briefing", () => {
-    const fallbackContent = readFileSync(FALLBACK_EXAMPLE_PATH, "utf-8");
-    writeFileSync(FIXTURE_PATH, fallbackContent);
+  // This test runs astro build TWICE (once for the fallback fixture, once
+  // more in the finally block to restore dist/) -- doubly exposed to
+  // Story 4.7's 3x larger page count, hence a longer explicit timeout than
+  // the single-build tests above.
+  it(
+    "renders the exact French sentence with the secondary color styling for a fallback Briefing",
+    () => {
+      const fallbackContent = readFileSync(FALLBACK_EXAMPLE_PATH, "utf-8");
+      writeFileSync(FIXTURE_PATH, fallbackContent);
 
-    try {
-      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+      try {
+        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
 
-      const html = readFileSync(join(SITE_ROOT, "dist", "fr", "france", "day.html"), "utf-8");
-      expect(html).toMatch(
-        /<div class="fallback-notice" id="fallback-notice"[^>]*>Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui\.<\/div>/
-      );
-      expect(html).toMatch(/\.fallback-notice[^{]*\{[^}]*color:#8a3a2b/);
-      expect(html).toMatch(/\.fallback-notice[^{]*\{[^}]*background:#f6dcd4/);
-    } finally {
-      writeFileSync(FIXTURE_PATH, originalFixture);
-      // Rebuild once more with the restored fixture so dist/ never reflects
-      // this test's temporary mutation for whichever test runs next (the
-      // real fix for the cross-block contamination this story's own review
-      // caught -- restoring the source file isn't enough on its own if a
-      // later test only reads a stale dist/ build instead of building
-      // fresh itself, so both disciplines now apply together).
-      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-    }
-  });
+        const html = readFileSync(join(SITE_ROOT, "dist", "fr", "france", "day.html"), "utf-8");
+        expect(html).toMatch(
+          /<div class="fallback-notice" id="fallback-notice"[^>]*>Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui\.<\/div>/
+        );
+        expect(html).toMatch(/\.fallback-notice[^{]*\{[^}]*color:#8a3a2b/);
+        expect(html).toMatch(/\.fallback-notice[^{]*\{[^}]*background:#f6dcd4/);
+      } finally {
+        writeFileSync(FIXTURE_PATH, originalFixture);
+        // Rebuild once more with the restored fixture so dist/ never reflects
+        // this test's temporary mutation for whichever test runs next (the
+        // real fix for the cross-block contamination this story's own review
+        // caught -- restoring the source file isn't enough on its own if a
+        // later test only reads a stale dist/ build instead of building
+        // fresh itself, so both disciplines now apply together).
+        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+      }
+    },
+    60000
+  );
 });
 
 // Story 4.4: AC1 (variable item count, no placeholders) and AC3 (a single
@@ -314,55 +349,65 @@ describe("variable item count (AC1, AC3)", () => {
     if (existsSync(BACKUP_PATH)) rmSync(BACKUP_PATH);
   });
 
-  it("renders exactly as many .item divs as clusters exist, for 3 and 4 clusters (existing fixtures)", () => {
-    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-
-    const dayHtml = readFileSync(DIST_INDEX, "utf-8"); // day.json: 4 clusters
-    const weekHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "week.html"), "utf-8"); // week.json: 3 clusters
-
-    // Count only server-rendered .item divs -- the island's own inlined
-    // <script> source carries the literal string `<div class="item">` as
-    // part of its client-side rendering template (renderItemListHtml),
-    // which would otherwise inflate this count by 1 regardless of the real
-    // server-rendered total (the same false-positive class Story 4.2/4.3
-    // already hit for `class="item"`/`id="fallback-notice"` -- strip
-    // <script> first, every time this pattern is checked).
-    const countItems = (html: string) =>
-      (stripInlineScript(html).match(/<div class="item"/g) ?? []).length;
-    expect(countItems(dayHtml)).toBe(4);
-    expect(countItems(weekHtml)).toBe(3);
-  });
-
-  it("renders exactly 1 .item div, with no height/overflow constraint, for a single-cluster Briefing (AC1, AC3)", () => {
-    const singleItemContent = readFileSync(SINGLE_ITEM_PATH, "utf-8");
-    writeFileSync(FIXTURE_PATH, singleItemContent);
-
-    try {
+  it(
+    "renders exactly as many .item divs as clusters exist, for 3 and 4 clusters (existing fixtures)",
+    () => {
       execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
 
-      const html = readFileSync(DIST_INDEX, "utf-8");
-      const htmlWithoutScripts = stripInlineScript(html);
-      const itemCount = (htmlWithoutScripts.match(/<div class="item"/g) ?? []).length;
-      expect(itemCount).toBe(1);
+      const dayHtml = readFileSync(DIST_INDEX, "utf-8"); // day.json: 4 clusters
+      const weekHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "week.html"), "utf-8"); // week.json: 3 clusters
 
-      // AC3: no placeholder/skeleton markup filling a gap, and the long
-      // (~260+ char) Summary is not truncated -- proves AC4's "nothing
-      // clips a long Summary" claim concretely, not just by CSS inspection.
-      expect(htmlWithoutScripts).not.toMatch(/skeleton|placeholder|loading-more/i);
-      expect(html).toContain(
-        "Une mission diplomatique de longue haleine aboutit enfin à un accord-cadre"
-      );
-      expect(html).toContain("dossier sensible.");
+      // Count only server-rendered .item divs -- the island's own inlined
+      // <script> source carries the literal string `<div class="item">` as
+      // part of its client-side rendering template (renderItemListHtml),
+      // which would otherwise inflate this count by 1 regardless of the real
+      // server-rendered total (the same false-positive class Story 4.2/4.3
+      // already hit for `class="item"`/`id="fallback-notice"` -- strip
+      // <script> first, every time this pattern is checked).
+      const countItems = (html: string) =>
+        (stripInlineScript(html).match(/<div class="item"/g) ?? []).length;
+      expect(countItems(dayHtml)).toBe(4);
+      expect(countItems(weekHtml)).toBe(3);
+    },
+    30000
+  );
 
-      // AC3: no CSS rule caps .item/.item-list height or clips overflow.
-      const styleMatch = html.match(/<style[^>]*>([\s\S]*?)<\/style>/);
-      const css = styleMatch?.[1] ?? "";
-      expect(css).not.toMatch(/\.item(?:-list)?\[[^\]]*\]\s*\{[^}]*(?:max-height|overflow)/);
-    } finally {
-      writeFileSync(FIXTURE_PATH, originalFixture);
-      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-    }
-  });
+  // Runs astro build twice (fixture swap + finally-block restore), like the
+  // Continent-fallback test above -- same 60s allowance.
+  it(
+    "renders exactly 1 .item div, with no height/overflow constraint, for a single-cluster Briefing (AC1, AC3)",
+    () => {
+      const singleItemContent = readFileSync(SINGLE_ITEM_PATH, "utf-8");
+      writeFileSync(FIXTURE_PATH, singleItemContent);
+
+      try {
+        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+
+        const html = readFileSync(DIST_INDEX, "utf-8");
+        const htmlWithoutScripts = stripInlineScript(html);
+        const itemCount = (htmlWithoutScripts.match(/<div class="item"/g) ?? []).length;
+        expect(itemCount).toBe(1);
+
+        // AC3: no placeholder/skeleton markup filling a gap, and the long
+        // (~260+ char) Summary is not truncated -- proves AC4's "nothing
+        // clips a long Summary" claim concretely, not just by CSS inspection.
+        expect(htmlWithoutScripts).not.toMatch(/skeleton|placeholder|loading-more/i);
+        expect(html).toContain(
+          "Une mission diplomatique de longue haleine aboutit enfin à un accord-cadre"
+        );
+        expect(html).toContain("dossier sensible.");
+
+        // AC3: no CSS rule caps .item/.item-list height or clips overflow.
+        const styleMatch = html.match(/<style[^>]*>([\s\S]*?)<\/style>/);
+        const css = styleMatch?.[1] ?? "";
+        expect(css).not.toMatch(/\.item(?:-list)?\[[^\]]*\]\s*\{[^}]*(?:max-height|overflow)/);
+      } finally {
+        writeFileSync(FIXTURE_PATH, originalFixture);
+        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+      }
+    },
+    60000
+  );
 });
 
 // AC6: an empty `clusters` array is a real, already-observed case (a real
@@ -391,64 +436,192 @@ describe("empty clusters array (AC6)", () => {
     if (existsSync(BACKUP_PATH)) rmSync(BACKUP_PATH);
   });
 
-  it("builds successfully and still renders the header and sentence", () => {
-    const emptyRecord = { ...JSON.parse(originalFixture), clusters: [] };
-    writeFileSync(FIXTURE_PATH, JSON.stringify(emptyRecord));
+  it(
+    "builds successfully and still renders the header and sentence",
+    () => {
+      const emptyRecord = { ...JSON.parse(originalFixture), clusters: [] };
+      writeFileSync(FIXTURE_PATH, JSON.stringify(emptyRecord));
 
-    try {
-      expect(() =>
-        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" })
-      ).not.toThrow();
+      try {
+        expect(() =>
+          execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" })
+        ).not.toThrow();
 
-      const html = readFileSync(DIST_INDEX, "utf-8");
-      expect(html).toContain("5 NEWS");
-      expect(html).toContain("Voici ce qui se passe");
-      const htmlWithoutScripts = stripInlineScript(html);
-      expect(htmlWithoutScripts).not.toMatch(/class="item"[ >]/);
-      // Story 4.4's own Blind Hunter review caught a real bug here: the End
-      // Screen originally rendered unconditionally, producing a
-      // nonsensical "0 sujets ont atteint le seuil..." for this exact
-      // input. It must be suppressed entirely for 0 clusters, not just
-      // avoid crashing.
-      expect(htmlWithoutScripts).not.toContain('id="end-screen"');
-      // Story 4.5's own Blind Hunter review flagged this combination
-      // (Discarded Volume + 0 clusters together) as claimed-tested but
-      // not actually exercised by any test -- Discarded Volume renders
-      // unconditionally (AC2), independent of item count, so it must
-      // still appear here using discarded_ingested/discarded_kept's own
-      // (unchanged, non-zero) values from the mutated fixture.
-      expect(htmlWithoutScripts).toMatch(
-        /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>1 384<\/span> articles examinés → <span class="num"[^>]*>4<\/span> conservés\.<\/div>/
-      );
-    } finally {
-      writeFileSync(FIXTURE_PATH, originalFixture);
-    }
+        const html = readFileSync(DIST_INDEX, "utf-8");
+        expect(html).toContain("5 NEWS");
+        expect(html).toContain("Voici ce qui se passe");
+        const htmlWithoutScripts = stripInlineScript(html);
+        expect(htmlWithoutScripts).not.toMatch(/class="item"[ >]/);
+        // Story 4.4's own Blind Hunter review caught a real bug here: the End
+        // Screen originally rendered unconditionally, producing a
+        // nonsensical "0 sujets ont atteint le seuil..." for this exact
+        // input. It must be suppressed entirely for 0 clusters, not just
+        // avoid crashing.
+        expect(htmlWithoutScripts).not.toContain('id="end-screen"');
+        // Story 4.5's own Blind Hunter review flagged this combination
+        // (Discarded Volume + 0 clusters together) as claimed-tested but
+        // not actually exercised by any test -- Discarded Volume renders
+        // unconditionally (AC2), independent of item count, so it must
+        // still appear here using discarded_ingested/discarded_kept's own
+        // (unchanged, non-zero) values from the mutated fixture.
+        expect(htmlWithoutScripts).toMatch(
+          /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>1 384<\/span> articles examinés → <span class="num"[^>]*>4<\/span> conservés\.<\/div>/
+        );
+      } finally {
+        writeFileSync(FIXTURE_PATH, originalFixture);
+      }
+    },
+    30000
+  );
+
+  it(
+    "renders the Discarded Volume correctly for the real 0 ingested / 0 kept case, combined with 0 clusters",
+    () => {
+      // The real, currently-shipped pipeline always produces 0/0 for these
+      // two fields (no stage populates them yet) -- this is the actual
+      // production state, tested here together with 0 clusters since both
+      // conditions are independent and both are real today.
+      const emptyRecord = {
+        ...JSON.parse(originalFixture),
+        clusters: [],
+        discarded_ingested: 0,
+        discarded_kept: 0,
+      };
+      writeFileSync(FIXTURE_PATH, JSON.stringify(emptyRecord));
+
+      try {
+        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+
+        const html = readFileSync(DIST_INDEX, "utf-8");
+        const htmlWithoutScripts = stripInlineScript(html);
+        expect(htmlWithoutScripts).toMatch(
+          /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>0<\/span> articles examinés → <span class="num"[^>]*>0<\/span> conservés\.<\/div>/
+        );
+        expect(htmlWithoutScripts).not.toContain('id="end-screen"');
+      } finally {
+        writeFileSync(FIXTURE_PATH, originalFixture);
+      }
+    },
+    30000
+  );
+});
+
+// Story 4.7 (AC2, AC3): the Output Language axis. Builds real /en/... and
+// /es/... static pages and asserts the language-specific UI copy renders
+// correctly, the control shows the right active/current element, and every
+// one of its 3 options is a real <a href> (no-JS case) -- the same
+// no-JS-readability proof this whole file exists for, extended to the new
+// third axis.
+describe("Output Language axis (Story 4.7)", () => {
+  let englishHtml: string;
+  let spanishHtml: string;
+
+  beforeAll(() => {
+    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+    englishHtml = readFileSync(join(SITE_ROOT, "dist", "en", "world", "day.html"), "utf-8");
+    spanishHtml = readFileSync(join(SITE_ROOT, "dist", "es", "world", "day.html"), "utf-8");
+  }, 30000);
+
+  it("renders the English mad-libs lead-in, Zone/Period words, and timestamp prefix as static text", () => {
+    expect(englishHtml).toContain("Here&#39;s what&#39;s happening");
+    expect(englishHtml).toMatch(
+      /<a class="word" data-zone-word data-lang="en" data-zone="world" data-period="day" href="\/en\/europe\/day"[^>]*>in the World<\/a>/
+    );
+    expect(englishHtml).toMatch(
+      /<a class="word" data-period-word data-lang="en" data-zone="world" data-period="day" href="\/en\/world\/week"[^>]*>today<\/a>/
+    );
+    expect(englishHtml).toContain("Updated at ");
   });
 
-  it("renders the Discarded Volume correctly for the real 0 ingested / 0 kept case, combined with 0 clusters", () => {
-    // The real, currently-shipped pipeline always produces 0/0 for these
-    // two fields (no stage populates them yet) -- this is the actual
-    // production state, tested here together with 0 clusters since both
-    // conditions are independent and both are real today.
-    const emptyRecord = {
-      ...JSON.parse(originalFixture),
-      clusters: [],
-      discarded_ingested: 0,
-      discarded_kept: 0,
-    };
-    writeFileSync(FIXTURE_PATH, JSON.stringify(emptyRecord));
+  it("renders the Spanish mad-libs lead-in, Zone/Period words, and timestamp prefix as static text", () => {
+    expect(spanishHtml).toContain("Esto es lo que está pasando");
+    expect(spanishHtml).toMatch(
+      /<a class="word" data-zone-word data-lang="es" data-zone="world" data-period="day" href="\/es\/europe\/day"[^>]*>en el Mundo<\/a>/
+    );
+    expect(spanishHtml).toMatch(
+      /<a class="word" data-period-word data-lang="es" data-zone="world" data-period="day" href="\/es\/world\/week"[^>]*>hoy<\/a>/
+    );
+    expect(spanishHtml).toContain("Actualizado a las ");
+  });
 
-    try {
-      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+  it("renders the English Consensus chip wording, attribution wording, and source-list intro", () => {
+    const htmlWithoutScripts = stripInlineScript(englishHtml);
+    expect(htmlWithoutScripts).toContain("independent sources");
+    expect(htmlWithoutScripts).toMatch(/<span class="num"[^>]*>\d+<\/span> countries/);
+    expect(htmlWithoutScripts).toContain("Contributing sources and countries:");
+    expect(htmlWithoutScripts).toMatch(/Reported by <em[^>]*>/);
+    expect(htmlWithoutScripts).toContain("read the original article");
+  });
 
-      const html = readFileSync(DIST_INDEX, "utf-8");
-      const htmlWithoutScripts = stripInlineScript(html);
-      expect(htmlWithoutScripts).toMatch(
-        /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>0<\/span> articles examinés → <span class="num"[^>]*>0<\/span> conservés\.<\/div>/
-      );
-      expect(htmlWithoutScripts).not.toContain('id="end-screen"');
-    } finally {
-      writeFileSync(FIXTURE_PATH, originalFixture);
-    }
+  it("renders the Spanish Consensus chip wording, attribution wording, and source-list intro", () => {
+    const htmlWithoutScripts = stripInlineScript(spanishHtml);
+    expect(htmlWithoutScripts).toContain("fuentes independientes");
+    expect(htmlWithoutScripts).toMatch(/<span class="num"[^>]*>\d+<\/span> países/);
+    expect(htmlWithoutScripts).toContain("Fuentes y países contribuyentes:");
+    expect(htmlWithoutScripts).toMatch(/Informado por <em[^>]*>/);
+    expect(htmlWithoutScripts).toContain("leer el artículo original");
+  });
+
+  it("renders the English Discarded Volume with comma-grouped counts and the English End Screen sentence", () => {
+    const htmlWithoutScripts = stripInlineScript(englishHtml);
+    expect(htmlWithoutScripts).toMatch(
+      /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>1,384<\/span> articles reviewed → <span class="num"[^>]*>4<\/span> kept\.<\/div>/
+    );
+    expect(htmlWithoutScripts).toContain("stories met the threshold today.");
+  });
+
+  it("renders the Spanish Discarded Volume with comma-grouped counts and the Spanish End Screen sentence", () => {
+    const htmlWithoutScripts = stripInlineScript(spanishHtml);
+    expect(htmlWithoutScripts).toMatch(
+      /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>1,384<\/span> artículos examinados → <span class="num"[^>]*>4<\/span> conservados\.<\/div>/
+    );
+    expect(htmlWithoutScripts).toContain("temas alcanzaron el umbral hoy.");
+  });
+
+  it("marks EN as the current language on /en/world/day, and every option as a real <a href> (no-JS case)", () => {
+    expect(englishHtml).toMatch(
+      /<a class="active" aria-current="true" data-lang-word data-target-lang="en" data-lang="en" data-zone="world" data-period="day" href="\/en\/world\/day"[^>]*>EN<\/a>/
+    );
+    expect(englishHtml).toMatch(
+      /<a class[^>]* data-lang-word data-target-lang="fr" data-lang="en" data-zone="world" data-period="day" href="\/fr\/world\/day"[^>]*>FR<\/a>/
+    );
+    expect(englishHtml).toMatch(
+      /<a class[^>]* data-lang-word data-target-lang="es" data-lang="en" data-zone="world" data-period="day" href="\/es\/world\/day"[^>]*>ES<\/a>/
+    );
+    // Only the active option carries aria-current -- FR/ES must not.
+    const activeCount = (englishHtml.match(/aria-current="true"/g) ?? []).length;
+    expect(activeCount).toBe(1);
+  });
+
+  it("marks ES as the current language on /es/world/day, and every option as a real <a href> (no-JS case)", () => {
+    expect(spanishHtml).toMatch(
+      /<a class="active" aria-current="true" data-lang-word data-target-lang="es" data-lang="es" data-zone="world" data-period="day" href="\/es\/world\/day"[^>]*>ES<\/a>/
+    );
+    expect(spanishHtml).toMatch(
+      /<a class[^>]* data-lang-word data-target-lang="fr" data-lang="es" data-zone="world" data-period="day" href="\/fr\/world\/day"[^>]*>FR<\/a>/
+    );
+    expect(spanishHtml).toMatch(
+      /<a class[^>]* data-lang-word data-target-lang="en" data-lang="es" data-zone="world" data-period="day" href="\/en\/world\/day"[^>]*>EN<\/a>/
+    );
+    const activeCount = (spanishHtml.match(/aria-current="true"/g) ?? []).length;
+    expect(activeCount).toBe(1);
+  });
+
+  // Scope's own explicitly-documented, non-blocking limitation: data/briefings/
+  // is empty today, so every language degrades to the same French-fixture
+  // Summary content -- the pipeline's per-language generation is correct in
+  // principle (_LANGUAGE_NAMES/_prompt_for in claude.py), just not exercised
+  // by a real cycle yet. This is expected, current behavior, not a bug --
+  // asserted explicitly here so a future story wiring up real per-language
+  // fixtures/pipeline data has a clear before/after to compare against.
+  it("renders /en/world/day and /es/world/day with the fixture-fallback's French-language Summary text alongside the new English/Spanish UI copy (documented current limitation)", () => {
+    expect(englishHtml).toContain("Here&#39;s what&#39;s happening");
+    expect(englishHtml).toContain(
+      "Un cessez-le-feu entre en vigueur après trois jours de négociations."
+    );
+    expect(spanishHtml).toContain("Esto es lo que está pasando");
+    expect(spanishHtml).toContain(
+      "Un cessez-le-feu entre en vigueur après trois jours de négociations."
+    );
   });
 });

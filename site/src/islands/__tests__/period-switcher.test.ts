@@ -4,10 +4,13 @@ import {
   attachChips,
   briefingJsonUrl,
   fallbackNoticeText,
+  nextLanguage,
   nextPeriod,
   nextZone,
   pageUrl,
   periodSentenceText,
+  renderDiscardedVolumeHtml,
+  renderEndScreenHtml,
   renderFallbackNoticeHtml,
   renderItemListHtml,
   zoneSentenceLabel,
@@ -16,8 +19,8 @@ import {
 // A minimal hand-rolled stand-in for the DOM surface attach() touches --
 // jsdom is not a dependency of this project (see Story 4.2's Dev Notes on
 // why Playwright/jsdom were judged disproportionate for one click handler,
-// a decision Story 4.3 re-confirms since it's the same shape of
-// interaction on a second axis), and this bug (listener accumulation
+// a decision Story 4.3/4.7 re-confirms since it's the same shape of
+// interaction on further axes), and this bug (listener accumulation
 // across repeated attach() calls) only needs
 // querySelector/hasAttribute/setAttribute/addEventListener to reproduce
 // and prove fixed.
@@ -49,10 +52,18 @@ describe("nextPeriod", () => {
 });
 
 describe("periodSentenceText", () => {
-  it("returns the French mad-libs word for each Period", () => {
-    expect(periodSentenceText("day")).toBe("aujourd'hui");
-    expect(periodSentenceText("week")).toBe("cette semaine");
-    expect(periodSentenceText("month")).toBe("ce mois");
+  it("returns the correct word for each Period, in each language", () => {
+    expect(periodSentenceText("day", "fr")).toBe("aujourd'hui");
+    expect(periodSentenceText("day", "en")).toBe("today");
+    expect(periodSentenceText("day", "es")).toBe("hoy");
+  });
+});
+
+describe("nextLanguage", () => {
+  it("cycles fr -> en -> es -> fr", () => {
+    expect(nextLanguage("fr")).toBe("en");
+    expect(nextLanguage("en")).toBe("es");
+    expect(nextLanguage("es")).toBe("fr");
   });
 });
 
@@ -64,44 +75,78 @@ describe("nextZone", () => {
 });
 
 describe("zoneSentenceLabel", () => {
-  it("mirrors briefing.ts's zoneSentenceLabel exactly for a sample of each preposition case", () => {
-    expect(zoneSentenceLabel("world")).toBe("dans le Monde");
-    expect(zoneSentenceLabel("europe")).toBe("en Europe");
-    expect(zoneSentenceLabel("united-kingdom")).toBe("au Royaume-Uni");
-    expect(zoneSentenceLabel("united-states")).toBe("aux États-Unis");
+  it("mirrors briefing.ts's zoneSentenceLabel exactly for a sample of each preposition case, in each language", () => {
+    expect(zoneSentenceLabel("world", "fr")).toBe("dans le Monde");
+    expect(zoneSentenceLabel("europe", "fr")).toBe("en Europe");
+    expect(zoneSentenceLabel("united-kingdom", "fr")).toBe("au Royaume-Uni");
+    expect(zoneSentenceLabel("united-states", "fr")).toBe("aux États-Unis");
+
+    expect(zoneSentenceLabel("world", "en")).toBe("in the World");
+    expect(zoneSentenceLabel("united-kingdom", "en")).toBe("in the United Kingdom");
+
+    expect(zoneSentenceLabel("world", "es")).toBe("en el Mundo");
+    expect(zoneSentenceLabel("united-kingdom", "es")).toBe("en el Reino Unido");
+  });
+
+  it("falls back to the raw slug for a zone outside the known 15, mirroring briefing.ts's own defensive fallback", () => {
+    // A malformed data-zone attribute or malformed fetched JSON could
+    // reach this with a value outside the 15 known Zones -- must degrade
+    // to the raw slug, not "undefined" (Blind Hunter review of Story
+    // 4.7 caught this table's mirror had silently dropped
+    // briefing.ts's `?? zone` fallback and Partial<Record<...>> typing).
+    expect(zoneSentenceLabel("atlantis", "fr")).toBe("atlantis");
   });
 });
 
 describe("fallbackNoticeText", () => {
-  it("mirrors briefing.ts's fallbackNoticeText exactly, including plural verb agreement", () => {
-    expect(fallbackNoticeText({ zone: "france", served_zone: "france" })).toBeNull();
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" })).toBe(
+  it("mirrors briefing.ts's fallbackNoticeText exactly, including plural verb agreement, in each language", () => {
+    expect(fallbackNoticeText({ zone: "france", served_zone: "france" }, "fr")).toBeNull();
+    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "fr")).toBe(
       "Affichage de l'Europe — la France n'a pas assez de couverture aujourd'hui."
     );
-    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" })).toBe(
+    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "fr")).toBe(
       "Affichage de l'Amérique du Nord — les États-Unis n'ont pas assez de couverture aujourd'hui."
+    );
+    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "en")).toBe(
+      "Showing Europe — France doesn't have enough coverage today."
+    );
+    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "en")).toBe(
+      "Showing North America — the United States don't have enough coverage today."
+    );
+    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "es")).toBe(
+      "Mostrando Europa — Francia no tiene suficiente cobertura hoy."
     );
   });
 });
 
 describe("renderFallbackNoticeHtml", () => {
   it("returns an empty string when there is no fallback", () => {
-    const html = renderFallbackNoticeHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [],
-    });
+    const html = renderFallbackNoticeHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [],
+      },
+      "fr"
+    );
     expect(html).toBe("");
   });
 
-  it("returns the notice div with escaped, exact French text when a fallback is active", () => {
-    const html = renderFallbackNoticeHtml({
-      zone: "france",
-      served_zone: "europe",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [],
-    });
+  it("returns the notice div with escaped, exact text when a fallback is active", () => {
+    const html = renderFallbackNoticeHtml(
+      {
+        zone: "france",
+        served_zone: "europe",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [],
+      },
+      "fr"
+    );
     expect(html).toBe(
       '<div class="fallback-notice" id="fallback-notice">Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui.</div>'
     );
@@ -122,25 +167,30 @@ describe("pageUrl", () => {
 
 describe("renderItemListHtml", () => {
   it("mirrors BriefingPage.astro's item markup for a cluster with full attribution", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "a",
-          summary: "Un cessez-le-feu entre en vigueur.",
-          independent_source_count: 2,
-          country_count: 2,
-          members: [
-            { source: "Reuters", source_country: "united-kingdom" },
-            { source: "Le Monde", source_country: "france" },
-          ],
-          outbound_url: "https://reuters.com/world/ceasefire-declared",
-          outbound_source: "Reuters",
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "a",
+            summary: "Un cessez-le-feu entre en vigueur.",
+            independent_source_count: 2,
+            country_count: 2,
+            members: [
+              { source: "Reuters", source_country: "united-kingdom" },
+              { source: "Le Monde", source_country: "france" },
+            ],
+            outbound_url: "https://reuters.com/world/ceasefire-declared",
+            outbound_source: "Reuters",
+          },
+        ],
+      },
+      "fr"
+    );
 
     expect(html).toContain('<p class="summary">Un cessez-le-feu entre en vigueur.</p>');
     expect(html).toContain('<span class="num">2</span> sources indépendantes');
@@ -151,62 +201,137 @@ describe("renderItemListHtml", () => {
     );
   });
 
+  it("renders the correct English chip/attribution/source-list wording", () => {
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "a",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "Reuters", source_country: "united-kingdom" }],
+            outbound_url: "https://reuters.com/x",
+            outbound_source: "Reuters",
+          },
+        ],
+      },
+      "en"
+    );
+
+    expect(html).toContain("independent sources");
+    expect(html).toContain("countries");
+    expect(html).toContain("Reported by <em>Reuters</em>");
+    expect(html).toContain("read the original article");
+    expect(html).toContain("Contributing sources and countries:");
+    expect(html).toContain("Reuters (United Kingdom)");
+  });
+
+  it("renders the correct Spanish chip/attribution/source-list wording", () => {
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "a",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "Reuters", source_country: "united-kingdom" }],
+            outbound_url: "https://reuters.com/x",
+            outbound_source: "Reuters",
+          },
+        ],
+      },
+      "es"
+    );
+
+    expect(html).toContain("fuentes independientes");
+    expect(html).toContain("países");
+    expect(html).toContain("Informado por <em>Reuters</em>");
+    expect(html).toContain("leer el artículo original");
+    expect(html).toContain("Fuentes y países contribuyentes:");
+    expect(html).toContain("Reuters (Reino Unido)");
+  });
+
   it("omits the summary paragraph when summary is absent from the cluster", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "b",
-          independent_source_count: 1,
-          country_count: 1,
-          members: [{ source: "Deutsche Welle", source_country: "germany" }],
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "b",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "Deutsche Welle", source_country: "germany" }],
+          },
+        ],
+      },
+      "fr"
+    );
 
     expect(html).not.toContain("<p class=\"summary\">");
     expect(html).toContain('<span class="num">1</span> sources indépendantes');
   });
 
   it("omits the attribution span when outbound_source is missing despite a valid url", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "c",
-          independent_source_count: 1,
-          country_count: 1,
-          members: [{ source: "Associated Press", source_country: "united-states" }],
-          outbound_url: "https://example.com/a",
-          outbound_source: null,
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "c",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "Associated Press", source_country: "united-states" }],
+            outbound_url: "https://example.com/a",
+            outbound_source: null,
+          },
+        ],
+      },
+      "fr"
+    );
 
     expect(html).not.toContain("Rapporté par");
   });
 
   it("escapes HTML-significant characters in summary and outbound_source", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "d",
-          summary: "<script>alert(1)</script>",
-          independent_source_count: 1,
-          country_count: 1,
-          members: [{ source: "<b>Evil Source</b>", source_country: "france" }],
-          outbound_url: "https://example.com/a",
-          outbound_source: "<b>Evil</b>",
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "d",
+            summary: "<script>alert(1)</script>",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "<b>Evil Source</b>", source_country: "france" }],
+            outbound_url: "https://example.com/a",
+            outbound_source: "<b>Evil</b>",
+          },
+        ],
+      },
+      "fr"
+    );
 
     expect(html).not.toContain("<script>alert(1)</script>");
     expect(html).toContain("&lt;script&gt;");
@@ -215,28 +340,33 @@ describe("renderItemListHtml", () => {
   });
 
   it("renders one item per cluster, in order, for multiple clusters", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "e",
-          independent_source_count: 1,
-          country_count: 1,
-          members: [{ source: "Kyodo News", source_country: "japan" }],
-        },
-        {
-          cluster_id: "f",
-          independent_source_count: 2,
-          country_count: 2,
-          members: [
-            { source: "Xinhua", source_country: "china" },
-            { source: "The Hindu", source_country: "india" },
-          ],
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "e",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "Kyodo News", source_country: "japan" }],
+          },
+          {
+            cluster_id: "f",
+            independent_source_count: 2,
+            country_count: 2,
+            members: [
+              { source: "Xinhua", source_country: "china" },
+              { source: "The Hindu", source_country: "india" },
+            ],
+          },
+        ],
+      },
+      "fr"
+    );
 
     const itemCount = (html.match(/<div class="item">/g) ?? []).length;
     expect(itemCount).toBe(2);
@@ -246,23 +376,28 @@ describe("renderItemListHtml", () => {
   });
 
   it("renders the Consensus chip as a button with aria-expanded/aria-controls, and the source list with exactly one <li> per member", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "g",
-          independent_source_count: 3,
-          country_count: 2,
-          members: [
-            { source: "Reuters", source_country: "united-kingdom" },
-            { source: "Le Monde", source_country: "france" },
-            { source: "Le Figaro", source_country: "france" },
-          ],
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "g",
+            independent_source_count: 3,
+            country_count: 2,
+            members: [
+              { source: "Reuters", source_country: "united-kingdom" },
+              { source: "Le Monde", source_country: "france" },
+              { source: "Le Figaro", source_country: "france" },
+            ],
+          },
+        ],
+      },
+      "fr"
+    );
 
     expect(html).toMatch(
       /<button type="button" class="chip" aria-expanded="false" aria-controls="source-list-g" data-consensus-chip>/
@@ -277,21 +412,81 @@ describe("renderItemListHtml", () => {
   });
 
   it("degrades to the raw slug for a source_country outside the 8 supported Countries", () => {
-    const html = renderItemListHtml({
-      zone: "world",
-      served_zone: "world",
-      generated_at: "2026-08-12T06:14:00Z",
-      clusters: [
-        {
-          cluster_id: "h",
-          independent_source_count: 1,
-          country_count: 1,
-          members: [{ source: "ABC News", source_country: "australia" }],
-        },
-      ],
-    });
+    const html = renderItemListHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 0,
+        discarded_kept: 0,
+        clusters: [
+          {
+            cluster_id: "h",
+            independent_source_count: 1,
+            country_count: 1,
+            members: [{ source: "ABC News", source_country: "australia" }],
+          },
+        ],
+      },
+      "fr"
+    );
 
     expect(html).toContain("ABC News (australia)");
+  });
+});
+
+describe("renderDiscardedVolumeHtml", () => {
+  it("renders the correct French-locale-formatted counts and wording", () => {
+    const html = renderDiscardedVolumeHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 1384,
+        discarded_kept: 4,
+        clusters: [],
+      },
+      "fr"
+    );
+    expect(html).toBe(
+      '<span class="num">1 384</span> articles examinés → <span class="num">4</span> conservés.'
+    );
+  });
+
+  it("renders the correct English-locale-formatted counts and wording", () => {
+    const html = renderDiscardedVolumeHtml(
+      {
+        zone: "world",
+        served_zone: "world",
+        generated_at: "2026-08-12T06:14:00Z",
+        discarded_ingested: 1384,
+        discarded_kept: 4,
+        clusters: [],
+      },
+      "en"
+    );
+    expect(html).toBe(
+      '<span class="num">1,384</span> articles reviewed → <span class="num">4</span> kept.'
+    );
+  });
+});
+
+describe("renderEndScreenHtml", () => {
+  it("returns an empty string for 0 items, in any language", () => {
+    expect(renderEndScreenHtml(0, "day", "fr")).toBe("");
+    expect(renderEndScreenHtml(0, "day", "en")).toBe("");
+  });
+
+  it("renders the correct singular/plural English sentence", () => {
+    expect(renderEndScreenHtml(1, "day", "en")).toBe(
+      '<div class="end-screen" id="end-screen"><div class="rule"></div><p>You&#39;ve reached the end. 1 story met the threshold today.</p></div>'
+    );
+    expect(renderEndScreenHtml(4, "day", "en")).toContain("4 stories met the threshold today.");
+  });
+
+  it("renders the correct singular/plural Spanish sentence", () => {
+    expect(renderEndScreenHtml(1, "day", "es")).toContain("1 tema alcanzó el umbral hoy.");
+    expect(renderEndScreenHtml(4, "day", "es")).toContain("4 temas alcanzaron el umbral hoy.");
   });
 });
 
@@ -310,9 +505,10 @@ describe("attach", () => {
     globalThis.document = {
       querySelector: (selector: string) =>
         selector.includes("zone") ? zoneAnchor : periodAnchor,
-      // attach() also calls attachChips(), which queries for chips --
-      // none exist in this stand-in DOM, so an empty NodeList-like value
-      // is enough for it to safely no-op.
+      // attach() also calls attachLanguageWords()/attachChips(), which
+      // query for language options/chips -- none exist in this stand-in
+      // DOM, so an empty NodeList-like value is enough for both to
+      // safely no-op.
       querySelectorAll: () => [],
     } as unknown as Document;
 
@@ -440,7 +636,7 @@ describe("attachChips", () => {
   });
 
   it("does not force-collapse an already-expanded chip when attachChips() is called again", () => {
-    // Reproduces the bug this story's own adversarial review caught: an
+    // Reproduces the bug Story 4.5's own adversarial review caught: an
     // earlier version collapsed every chip's source list unconditionally
     // on every call, regardless of whether the reader had already
     // expanded it -- desyncing aria-expanded="true" from a hidden source
@@ -466,6 +662,236 @@ describe("attachChips", () => {
       expect(sourceList.classList.contains("js-collapsed")).toBe(false);
     } finally {
       globalThis.document = originalDocument;
+    }
+  });
+});
+
+// A minimal hand-rolled fake language-option anchor, mirroring
+// createFakeAnchor's own reasoning -- this axis needs its own fake since
+// its click handling is genuinely different (a direct-jump target read
+// from data-target-lang, not a "next value" computation, and a real
+// no-op case for the already-active option).
+function createFakeLanguageLink(targetLang: string, currentLang: string) {
+  const dataset: Record<string, string> = {
+    targetLang,
+    lang: currentLang,
+    zone: "world",
+    period: "day",
+  };
+  const clickListeners: Array<(event: { preventDefault: () => void }) => void> = [];
+  const attributes = new Map<string, string>();
+  const classes = new Set<string>();
+  return {
+    dataset,
+    href: "",
+    hasAttribute: (name: string) => attributes.has(name),
+    setAttribute: (name: string, value: string) => attributes.set(name, value),
+    removeAttribute: (name: string) => attributes.delete(name),
+    classList: {
+      toggle: (name: string, on: boolean) => (on ? classes.add(name) : classes.delete(name)),
+      contains: (name: string) => classes.has(name),
+    },
+    addEventListener: (type: string, listener: (event: { preventDefault: () => void }) => void) => {
+      if (type === "click") clickListeners.push(listener);
+    },
+    dispatchClick: () => {
+      let defaultPrevented = false;
+      const event = {
+        preventDefault: () => {
+          defaultPrevented = true;
+        },
+      };
+      for (const listener of clickListeners) listener(event);
+      return defaultPrevented;
+    },
+    get clickListenerCount() {
+      return clickListeners.length;
+    },
+  };
+}
+
+describe("attachLanguageWords (via attach)", () => {
+  it("attaches exactly one click listener per language option even when attach() is called repeatedly", () => {
+    const link = createFakeLanguageLink("en", "fr");
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      querySelector: () => null,
+      querySelectorAll: (selector: string) => (selector.includes("lang") ? [link] : []),
+    } as unknown as Document;
+
+    try {
+      attach();
+      attach();
+      attach();
+
+      expect(link.clickListenerCount).toBe(1);
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  });
+
+  it("prevents default and would fetch when the target language differs from the current one", async () => {
+    const link = createFakeLanguageLink("en", "fr");
+    const originalDocument = globalThis.document;
+    const originalWindow = globalThis.window;
+    const originalFetch = globalThis.fetch;
+    globalThis.document = {
+      querySelector: () => null,
+      querySelectorAll: (selector: string) => (selector.includes("lang") ? [link] : []),
+    } as unknown as Document;
+    // handleClick's error path (no data/document elements match this bare
+    // fake DOM) falls through to a real navigation -- stub window/fetch
+    // just enough to observe that fall-through without crashing the test.
+    globalThis.window = { location: { href: "" } } as unknown as Window & typeof globalThis;
+    globalThis.fetch = (() => Promise.reject(new Error("no network in tests"))) as typeof fetch;
+
+    try {
+      attach();
+      const defaultPrevented = link.dispatchClick();
+      expect(defaultPrevented).toBe(true);
+      await new Promise((resolve) => setTimeout(resolve, 0));
+    } finally {
+      globalThis.document = originalDocument;
+      globalThis.window = originalWindow;
+      globalThis.fetch = originalFetch;
+    }
+  });
+
+  it("does NOT prevent default when clicking the already-active language (a real no-op, falls through to the href)", () => {
+    const link = createFakeLanguageLink("fr", "fr");
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      querySelector: () => null,
+      querySelectorAll: (selector: string) => (selector.includes("lang") ? [link] : []),
+    } as unknown as Document;
+
+    try {
+      attach();
+      const defaultPrevented = link.dispatchClick();
+      expect(defaultPrevented).toBe(false);
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  });
+
+  // Regression test for a real bug Blind Hunter review of Story 4.7 caught:
+  // handleClick's successful-fetch path updated every language link's
+  // href/data-lang, but never its data-zone/data-period -- and a
+  // SUBSEQUENT language click reads its target Zone/Period from exactly
+  // that link's own dataset. A reader who switches Zone and THEN switches
+  // Language would silently have their Zone choice discarded, reverting
+  // to whatever was on the page at initial load. This drives a real Zone
+  // click through attach()'s exported surface, with a fake DOM complete
+  // enough to satisfy every element handleClick's successful path reads,
+  // and a stubbed fetch resolving real JSON -- no prior test in this file
+  // drove handleClick all the way through a successful swap, which is how
+  // this bug shipped uncaught the first time.
+  it("updates every language link's data-zone (not just href/data-lang) after a Zone click's successful swap", async () => {
+    function createFakeWordLink(zone: string, period: string, lang: string) {
+      const dataset: Record<string, string> = { zone, period, lang };
+      const clickListeners: Array<(event: { preventDefault: () => void }) => void> = [];
+      const attributes = new Map<string, string>();
+      return {
+        dataset,
+        textContent: "",
+        href: "",
+        hasAttribute: (name: string) => attributes.has(name),
+        setAttribute: (name: string, value: string) => attributes.set(name, value),
+        addEventListener: (type: string, listener: (event: { preventDefault: () => void }) => void) => {
+          if (type === "click") clickListeners.push(listener);
+        },
+        dispatchClick: () => {
+          for (const listener of clickListeners) listener({ preventDefault: () => {} });
+        },
+      };
+    }
+    function createFakeElement() {
+      const classes = new Set<string>();
+      return {
+        textContent: "",
+        innerHTML: "",
+        href: "",
+        insertAdjacentHTML: () => {},
+        remove: () => {},
+        classList: {
+          toggle: (name: string, on: boolean) => (on ? classes.add(name) : classes.delete(name)),
+        },
+        setAttribute: () => {},
+        removeAttribute: () => {},
+      };
+    }
+
+    const leadInNode = { nodeType: 3, textContent: "Voici ce qui se passe " };
+    const zoneWordLink = createFakeWordLink("world", "day", "fr");
+    const periodWordLink = createFakeWordLink("world", "day", "fr");
+    const sentence = {
+      childNodes: [leadInNode],
+      querySelector: (selector: string) =>
+        selector.includes("zone") ? zoneWordLink : selector.includes("period") ? periodWordLink : null,
+      insertAdjacentHTML: () => {},
+    };
+    const itemList = createFakeElement();
+    const timestamp = createFakeElement();
+    const sentenceBlock = createFakeElement();
+    const discarded = createFakeElement();
+    const enLink = createFakeLanguageLink("en", "fr");
+    const esLink = createFakeLanguageLink("es", "fr");
+
+    const originalDocument = globalThis.document;
+    const originalFetch = globalThis.fetch;
+    const originalWindow = globalThis.window;
+    const originalNode = globalThis.Node;
+    // handleClick reads the real browser global Node.TEXT_NODE (always
+    // present in an actual browser) to find the sentence's lead-in text
+    // node -- stub it here since this test environment has no DOM.
+    globalThis.Node = { TEXT_NODE: 3 } as unknown as typeof Node;
+    globalThis.document = {
+      getElementById: (id: string) =>
+        (
+          {
+            "mad-libs-sentence": sentence,
+            "item-list": itemList,
+            timestamp,
+            "sentence-block": sentenceBlock,
+            discarded,
+          } as Record<string, unknown>
+        )[id] ?? null,
+      querySelectorAll: (selector: string) => (selector.includes("lang-word") ? [enLink, esLink] : []),
+      querySelector: (selector: string) => (selector.includes("zone-word") ? zoneWordLink : null),
+    } as unknown as Document;
+    globalThis.fetch = (() =>
+      Promise.resolve({
+        ok: true,
+        json: () =>
+          Promise.resolve({
+            zone: "europe",
+            served_zone: "europe",
+            generated_at: "2026-08-12T06:14:00Z",
+            discarded_ingested: 0,
+            discarded_kept: 0,
+            clusters: [],
+          }),
+      })) as unknown as typeof fetch;
+    globalThis.window = {
+      history: { pushState: () => {} },
+      location: { href: "" },
+    } as unknown as Window & typeof globalThis;
+
+    try {
+      attach(); // attaches the Zone word's click listener via document.querySelector above
+      zoneWordLink.dispatchClick(); // world -> europe
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      await new Promise((resolve) => setTimeout(resolve, 0));
+
+      // The actual regression: before the fix, these stayed "world"
+      // forever (href alone was updated, dataset.zone was not).
+      expect(enLink.dataset.zone).toBe("europe");
+      expect(esLink.dataset.zone).toBe("europe");
+    } finally {
+      globalThis.document = originalDocument;
+      globalThis.fetch = originalFetch;
+      globalThis.window = originalWindow;
+      globalThis.Node = originalNode;
     }
   });
 });

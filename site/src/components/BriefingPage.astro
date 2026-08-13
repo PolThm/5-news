@@ -14,21 +14,28 @@
 // addressed at, and the link must always point at the requested route,
 // not wherever the fallback happened to serve content from.
 import {
+  attributionText,
+  consensusChipText,
   countryLabel,
+  discardedVolumeText,
   endScreenText,
   fallbackNoticeText,
   formatCount,
   hasValidAttribution,
+  madLibsLeadIn,
   nextPeriod,
   nextZone,
+  OUTPUT_LANGUAGE_CYCLE,
   periodSentenceText,
+  sourceListIntro,
+  timestampPrefix,
   zoneSentenceLabel,
 } from "../lib/briefing";
-import type { BriefingRecord, Period } from "../lib/briefing";
+import type { BriefingRecord, OutputLanguage, Period } from "../lib/briefing";
 
 interface Props {
   briefing: BriefingRecord;
-  lang: string;
+  lang: OutputLanguage;
   zone: string;
   period: Period;
 }
@@ -41,8 +48,11 @@ const nextPeriodHref = `/${lang}/${zone}/${nextPeriod(period)}`;
 // a Continent-fallback page's Zone link must always advance from the
 // requested Zone, not wherever the fallback happened to serve content from.
 const nextZoneHref = `/${lang}/${nextZone(zone)}/${period}`;
-const fallbackNotice = fallbackNoticeText(briefing);
-const endScreenStatement = endScreenText(briefing.clusters.length, period);
+const fallbackNotice = fallbackNoticeText(briefing, lang);
+const endScreenStatement = endScreenText(briefing.clusters.length, period, lang);
+const consensusText = consensusChipText(lang);
+const attribution = attributionText(lang);
+const discardedText = discardedVolumeText(lang);
 
 // See index.astro's own history for why this is UTC-labeled, not silently
 // implied-local: this page has no client JS at build/initial-render time
@@ -51,7 +61,7 @@ function formatTimestamp(iso: string): string {
   const date = new Date(iso);
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
-  return `Mis à jour à ${hours}:${minutes} UTC`;
+  return `${timestampPrefix(lang)} ${hours}:${minutes} UTC`;
 }
 ---
 
@@ -101,18 +111,41 @@ function formatTimestamp(iso: string): string {
         font-size: 13px;
         letter-spacing: 0.08em;
       }
+      /* Story 4.7: real, independently-clickable <a> elements (one per
+         supported language), not a cycling mad-libs word -- see
+         period-switcher.ts's own comment on why this needs its own
+         click-handling shape. The visible text stays exactly as small as
+         before; padding (not font-size) grows the invisible hit area to
+         the 44x44px minimum (EXPERIENCE.md Accessibility Floor). The
+         active language is marked by both color AND aria-current (not
+         color alone -- EXPERIENCE.md: "the active Output Language is
+         both colored *and* marked current... not color alone"). A "·"
+         separator (CSS ::after, not a DOM text node) renders between
+         entries without needing a conditional last-child exception. */
       .lang {
         display: flex;
-        gap: 10px;
+        align-items: center;
         font-size: 11px;
         font-weight: 600;
         letter-spacing: 0.08em;
       }
-      .lang span {
+      .lang a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        padding: 0 4px;
         color: #777265;
+        text-decoration: none;
       }
-      .lang span.active {
+      .lang a.active {
         color: #1f4d3d;
+      }
+      .lang a:not(:last-child)::after {
+        content: "·";
+        margin-left: 8px;
+        color: #777265;
       }
       .sentence-block {
         padding: 24px 0 8px;
@@ -292,27 +325,42 @@ function formatTimestamp(iso: string): string {
     <div class="page">
       <header>
         <div class="mark">5 NEWS</div>
-        <div class="lang" aria-hidden="true">
-          <span class="active">FR</span><span>EN</span><span>ES</span>
+        <div class="lang" id="lang-control">
+          {
+            OUTPUT_LANGUAGE_CYCLE.map((candidateLang) => (
+              <a
+                class={candidateLang === lang ? "active" : ""}
+                aria-current={candidateLang === lang ? "true" : undefined}
+                data-lang-word
+                data-target-lang={candidateLang}
+                data-lang={lang}
+                data-zone={zone}
+                data-period={period}
+                href={`/${candidateLang}/${zone}/${period}`}
+              >
+                {candidateLang.toUpperCase()}
+              </a>
+            ))
+          }
         </div>
       </header>
 
       <div class="sentence-block" id="sentence-block">
         <h1 id="mad-libs-sentence">
-          Voici ce qui se passe <a
+          {madLibsLeadIn(lang)} <a
             class="word"
             data-zone-word
             data-lang={lang}
             data-zone={zone}
             data-period={period}
-            href={nextZoneHref}>{zoneSentenceLabel(zone)}</a
+            href={nextZoneHref}>{zoneSentenceLabel(zone, lang)}</a
           >, <a
             class="word"
             data-period-word
             data-lang={lang}
             data-zone={zone}
             data-period={period}
-            href={nextPeriodHref}>{periodSentenceText(period)}</a
+            href={nextPeriodHref}>{periodSentenceText(period, lang)}</a
           >.
         </h1>
         {
@@ -337,27 +385,27 @@ function formatTimestamp(iso: string): string {
                 aria-controls={`source-list-${cluster.cluster_id}`}
                 data-consensus-chip
               >
-                <span class="num">{cluster.independent_source_count}</span> sources
-                indépendantes · <span class="num">{cluster.country_count}</span> pays
+                <span class="num">{cluster.independent_source_count}</span> {consensusText.sources}{" "}
+                · <span class="num">{cluster.country_count}</span> {consensusText.countries}
                 <span class="chevron" aria-hidden="true">
                   ▾
                 </span>
               </button>
               <div class="source-list" id={`source-list-${cluster.cluster_id}`}>
-                Sources et pays contributeurs :
+                {sourceListIntro(lang)}
                 <ul>
                   {cluster.members.map((member) => (
                     <li>
-                      {member.source} ({countryLabel(member.source_country)})
+                      {member.source} ({countryLabel(member.source_country, lang)})
                     </li>
                   ))}
                 </ul>
               </div>
               {hasValidAttribution(cluster) && (
                 <span class="attribution">
-                  Rapporté par <em>{cluster.outbound_source}</em> —{" "}
+                  {attribution.reportedBy} <em>{cluster.outbound_source}</em> —{" "}
                   <a href={cluster.outbound_url} target="_blank" rel="noopener noreferrer">
-                    lire l'article original →
+                    {attribution.readOriginal}
                   </a>
                 </span>
               )}
@@ -367,8 +415,8 @@ function formatTimestamp(iso: string): string {
       </div>
 
       <div class="discarded" id="discarded">
-        <span class="num">{formatCount(briefing.discarded_ingested)}</span> articles examinés
-        → <span class="num">{formatCount(briefing.discarded_kept)}</span> conservés.
+        <span class="num">{formatCount(briefing.discarded_ingested, lang)}</span> {discardedText.reviewed}{" "}
+        → <span class="num">{formatCount(briefing.discarded_kept, lang)}</span> {discardedText.kept}
       </div>
 
       {
@@ -381,5 +429,6 @@ function formatTimestamp(iso: string): string {
       }
     </div>
     <script src="../islands/period-switcher.ts"></script>
+    <slot name="extra-scripts" />
   </body>
 </html>

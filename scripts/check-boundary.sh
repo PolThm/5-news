@@ -61,11 +61,48 @@ fi
 # --- 3. site/ reading pipeline files by path ---------------------------------
 # site/ may read data/briefings/ — that path contains no "pipeline/" substring,
 # so it needs no allowance here.
+#
+# Strips // line comments and /* */ block comments (preserving line counts,
+# by replacing each block comment's content with just its own embedded
+# newlines, via perl) before matching "pipeline/" -- a bare substring match
+# on the raw file also fires on prose in comments/docstrings that merely
+# *mention* "pipeline/" while explaining the boundary itself (e.g. "this
+# file must never import from pipeline/", or "pipeline/domain's own
+# documented range"), which this codebase's comments do extensively and
+# which are not real code references.
+#
+# An earlier version of this fix excluded whole lines whose trimmed content
+# started with `//` or `*` -- that missed two real cases an adversarial
+# review caught: (1) a real violation on the SAME line as a trailing
+# comment (e.g. `import x from "pipeline/y"; // ...`), which a whole-line
+# exclusion let through since the line also matched the comment-start
+# pattern; (2) a real violation on a continuation line that happens to
+# start with `*` for an unrelated reason (e.g. a multiplication operator
+# spanning two lines: `x\n  * fetchWeight("pipeline/secret")`), which a
+# bare `^\s*\*` heuristic cannot distinguish from a JSDoc continuation
+# line. Stripping comment *content* rather than excluding whole *lines*
+# closes both gaps: a real violation survives even next to a stripped
+# comment on the same line, and a non-comment line is never touched by the
+# stripping at all regardless of what character it starts with.
+#
+# Confirmed via tests/test_boundary_check.py, whose test_clean_tree_passes/
+# test_a_clean_site_with_only_briefings_json_references_passes regressed
+# silently across several stories once prose-in-comments became common,
+# with nothing catching it until this fix (Story 4.6).
 if [ -d site ]; then
-  hits=$(grep -rn 'pipeline/' \
-    --include='*.ts' --include='*.tsx' --include='*.js' --include='*.mjs' \
-    --include='*.astro' --include='*.svelte' "${EXCLUDE[@]}" \
-    site 2>/dev/null || true)
+  hits=""
+  while IFS= read -r -d '' file; do
+    file_hits=$(perl -0777 -pe 's{/\*.*?\*/}{ join("", ($& =~ /\n/g)) }gse' "$file" \
+      | sed -E 's#//.*$##' \
+      | grep -nE 'pipeline/' \
+      | sed "s#^#${file}:#")
+    if [ -n "$file_hits" ]; then
+      hits="${hits}${hits:+$'\n'}${file_hits}"
+    fi
+  done < <(find site \
+    \( -name node_modules -o -name dist -o -name .astro -o -name __pycache__ -o -name .venv \) -prune -o \
+    \( -name '*.ts' -o -name '*.tsx' -o -name '*.js' -o -name '*.mjs' -o -name '*.astro' -o -name '*.svelte' \) \
+    -type f -print0)
   if [ -n "$hits" ]; then
     report "site/ references pipeline/ by path" "$hits"
   fi

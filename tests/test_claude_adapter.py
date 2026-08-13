@@ -17,7 +17,13 @@ Story 3.4 split the old, poll-looping ``summarize_clusters`` into
 from __future__ import annotations
 
 import pytest
-from pipeline.adapters.claude import MODEL, _prompt_for, collect_batch, submit_batch
+from pipeline.adapters.claude import (
+    MODEL,
+    _NO_FABRICATION_INSTRUCTION,
+    _prompt_for,
+    collect_batch,
+    submit_batch,
+)
 from pipeline.domain import OutputLanguage
 
 
@@ -392,3 +398,29 @@ def test_an_unsupported_language_raises_rather_than_silently_falling_back() -> N
 
     with pytest.raises(KeyError):
         _prompt_for(cluster, "de")  # a real ISO code, but not a supported one
+
+
+def test_the_prompt_includes_the_no_fabrication_instruction_for_every_language() -> None:
+    """Story 4.6 AC2: no synthesized statement may be attributed to a named
+    outlet. The site cannot enforce this at render time -- cluster.summary
+    is free text the AI generates, and there is no structured signal to
+    check it against -- so the only real lever is this prompt instruction.
+    This test proves the instruction actually reaches every prompt, not
+    that the model obeys it: an LLM's compliance with an instruction is not
+    something a unit test can verify (see this story's own Dev Notes on
+    why a runtime content-scan was considered and rejected)."""
+    cluster = _cluster("a", [{"title": "Un evenement", "source": "lemonde.fr"}])
+
+    for language in (OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES):
+        prompt = _prompt_for(cluster, language)
+        assert _NO_FABRICATION_INSTRUCTION in prompt
+
+
+def test_the_no_fabrication_instruction_explicitly_names_the_outlet_attribution_case() -> None:
+    """Guards against the instruction's own wording drifting away from
+    AC2's exact scenario in a future edit -- if this instruction is ever
+    changed to a generic anti-hallucination clause that drops the
+    outlet-attribution wording, this test (not just a passing prompt-
+    inclusion check) should be the one to catch it."""
+    assert "named outlet" in _NO_FABRICATION_INSTRUCTION
+    assert "reports that" in _NO_FABRICATION_INSTRUCTION

@@ -356,7 +356,9 @@ function formatTimestamp(iso: string): string {
               {hasValidAttribution(cluster) && (
                 <span class="attribution">
                   Rapporté par <em>{cluster.outbound_source}</em> —{" "}
-                  <a href={cluster.outbound_url}>lire l'article original →</a>
+                  <a href={cluster.outbound_url} target="_blank" rel="noopener noreferrer">
+                    lire l'article original →
+                  </a>
                 </span>
               )}
             </div>

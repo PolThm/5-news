@@ -146,7 +146,9 @@ describe("renderItemListHtml", () => {
     expect(html).toContain('<span class="num">2</span> sources indépendantes');
     expect(html).toContain('<span class="num">2</span> pays');
     expect(html).toContain("Rapporté par <em>Reuters</em>");
-    expect(html).toContain('<a href="https://reuters.com/world/ceasefire-declared">');
+    expect(html).toContain(
+      '<a href="https://reuters.com/world/ceasefire-declared" target="_blank" rel="noopener noreferrer">'
+    );
   });
 
   it("omits the summary paragraph when summary is absent from the cluster", () => {

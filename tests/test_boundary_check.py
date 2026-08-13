@@ -94,6 +94,60 @@ def test_does_not_flag_stdlib_site_module(sandbox: Path) -> None:
     assert result.returncode == 0, result.stdout + result.stderr
 
 
+def test_ignores_prose_in_comments_mentioning_pipeline(sandbox: Path) -> None:
+    """Regression guard for the false-positive this check's own comment
+    stripping exists to avoid (Story 4.6): a comment that merely *mentions*
+    "pipeline/" while explaining the architectural boundary itself (this
+    codebase's own comments do this extensively) must never be flagged as
+    a real code reference."""
+    probe = sandbox / "site" / "src" / "_probe.ts"
+    probe.parent.mkdir(parents=True, exist_ok=True)
+    probe.write_text(
+        "// This file must never import from pipeline/ -- see AD-2.\n"
+        "/**\n"
+        " * pipeline/domain's own documented range for this field.\n"
+        " */\n"
+        "const clean = 1;\n"
+    )
+
+    result = run_check(sandbox)
+    assert result.returncode == 0, result.stdout + result.stderr
+
+
+def test_catches_a_violation_on_a_line_starting_with_a_multiplication_operator(
+    sandbox: Path,
+) -> None:
+    """Story 4.6's adversarial review caught a real gap in an earlier
+    version of this check's comment-exclusion fix: a whole-line exclusion
+    keyed on the line's leading character (`//` or `*`) cannot distinguish
+    a JSDoc continuation line from an unrelated continuation line that
+    happens to start with a multiplication operator. The current
+    comment-STRIPPING approach (not line-exclusion) must still catch this."""
+    probe = sandbox / "site" / "src" / "_probe.ts"
+    probe.parent.mkdir(parents=True, exist_ok=True)
+    probe.write_text(
+        "const weight = getBase()\n"
+        '  * fetchWeight("pipeline/rating-secret.json");\n'
+    )
+
+    result = run_check(sandbox)
+    assert result.returncode != 0
+    assert "references pipeline/ by path" in result.stdout
+
+
+def test_catches_a_violation_that_trails_a_same_line_comment(sandbox: Path) -> None:
+    """A real violation must still be caught even when a comment follows it
+    on the same line -- only the comment portion should be stripped, not
+    the whole line."""
+    probe = sandbox / "site" / "src" / "_probe.ts"
+    probe.parent.mkdir(parents=True, exist_ok=True)
+    probe.write_text('import x from "../pipeline/secret"; // trailing comment\n')
+
+    result = run_check(sandbox)
+    assert result.returncode != 0
+    assert "references pipeline/ by path" in result.stdout
+
+
 def test_catches_site_referencing_an_ai_provider(sandbox: Path) -> None:
     """Violation mode 4 (Story 3.6, AD-1): site/ must never call an AI,
     embedding, or ingestion provider -- its only input is the static JSON

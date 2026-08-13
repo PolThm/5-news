@@ -231,7 +231,7 @@ export function renderItemListHtml(briefing: BriefingLike): string {
         ? `<p class="summary">${escapeHtml(cluster.summary)}</p>`
         : "";
       const attributionHtml = hasValidAttribution(cluster)
-        ? `<span class="attribution">Rapporté par <em>${escapeHtml(cluster.outbound_source)}</em> — <a href="${escapeHtml(cluster.outbound_url)}">lire l'article original →</a></span>`
+        ? `<span class="attribution">Rapporté par <em>${escapeHtml(cluster.outbound_source)}</em> — <a href="${escapeHtml(cluster.outbound_url)}" target="_blank" rel="noopener noreferrer">lire l'article original →</a></span>`
         : "";
       const sourceListId = `source-list-${escapeHtml(cluster.cluster_id)}`;
       const membersHtml = cluster.members

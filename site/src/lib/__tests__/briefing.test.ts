@@ -70,7 +70,7 @@ describe("periodSentenceText", () => {
 });
 
 describe("ZONE_CYCLE", () => {
-  it("has exactly the 15 Zones from pipeline/config's ZONES, in the same order", () => {
+  it("has exactly the 15 Zones from the pipeline's config.ZONES, in the same order", () => {
     expect(ZONE_CYCLE).toEqual([
       "world",
       "europe",

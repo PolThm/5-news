@@ -91,6 +91,51 @@ describe("no-JS readability of the built page", () => {
     expect(html).toMatch(/<a href="https:\/\/reuters\.com\/[^"]*"[^>]*>lire l'article original/);
   });
 
+  it("opens the outbound attribution link in a new tab with rel=noopener noreferrer (AC1)", () => {
+    expect(html).toMatch(
+      /<a href="https:\/\/reuters\.com\/[^"]*" target="_blank" rel="noopener noreferrer"[^>]*>lire l'article original/
+    );
+  });
+
+  it("gives the attribution link a solid underline, distinct from the mad-libs words' dotted underline (AC1, UX-DR9)", () => {
+    // Bounded to exactly "underline" with nothing else following before
+    // the next `}`/`;` -- an adversarial review caught that a naive
+    // negative lookahead for "dotted" doesn't actually work against the
+    // real compiled CSS shorthand (`text-decoration:underline 2px dotted
+    // #8fc2ac` for the mad-libs word -- "dotted" is two tokens away from
+    // "underline", past the lookahead's reach), so this test previously
+    // passed for the wrong reason (saved only by the outer `.attribution`
+    // selector prefix, not by this assertion's own logic). Assert the
+    // property's value is the bare keyword, not merely absent of one
+    // specific following word.
+    expect(html).toMatch(/\.attribution[^{]* a[^{]*\{[^}]*text-decoration:underline[;}]/);
+    // And confirm the mad-libs word's own rule is NOT bare "underline" --
+    // proving this test would actually fail if attribution ever
+    // regressed to share that rule's dotted styling.
+    expect(html).toMatch(/h1[^{]*\.word[^{]*\{[^}]*text-decoration:underline\s+\S/);
+  });
+
+  it("renders the attribution span as a sibling after the Consensus chip's source list, never nested inside it, and unconditionally regardless of that item's source-list length (AC1)", () => {
+    // The ceasefire cluster (7 members, longest source list) and the
+    // trade-agreement cluster (3 members, no attribution at all -- a
+    // legitimate degrade case) both come from the same real fixture --
+    // this proves attribution rendering is structurally independent of
+    // both the chip's own disclosure state and that item's source-list
+    // size, not just checked for one convenient case.
+    const htmlWithoutScripts = stripInlineScript(html);
+    const itemBlocks = htmlWithoutScripts.match(/<div class="item"[^>]*>[\s\S]*?<\/div>(?=<div class="item"|<\/div><div class="discarded")/g);
+    expect(itemBlocks).not.toBeNull();
+
+    const ceasefireItem = itemBlocks!.find((block) => block.includes("source-list-ceasefire"));
+    expect(ceasefireItem).toBeDefined();
+    // The attribution span must appear strictly after the source-list's
+    // own closing </div>, never inside it or inside the chip's <button>.
+    const sourceListClose = ceasefireItem!.indexOf("</ul></div>");
+    const attributionOpen = ceasefireItem!.indexOf('<span class="attribution"');
+    expect(sourceListClose).toBeGreaterThan(-1);
+    expect(attributionOpen).toBeGreaterThan(sourceListClose);
+  });
+
   it("renders the mad-libs sentence's fixed lead-in as static text", () => {
     expect(html).toContain("Voici ce qui se passe");
   });

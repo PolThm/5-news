@@ -800,6 +800,13 @@ describe("Service worker registration (Story 5.2)", () => {
   const SW_PATH = join(SITE_ROOT, "dist", "sw.js");
 
   beforeAll(() => {
+    // Story 5.3: public/sw.js is now itself a generated file (stamped
+    // from public/sw.template.js) -- must run the stamping script BEFORE
+    // astro build, same as every other pre-build step this file's own
+    // build-dependent blocks already account for. A bare `astro build`
+    // alone (without this step) would build against whatever public/sw.js
+    // happened to be left on disk from a previous run, not a fresh stamp.
+    execFileSync("node", ["scripts/stamp-service-worker.ts"], { cwd: SITE_ROOT, stdio: "pipe" });
     execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
   }, 30000);
 
@@ -826,5 +833,65 @@ describe("Service worker registration (Story 5.2)", () => {
     // rejected registration (unsupported browser, blocked context) must
     // never surface as an uncaught error on the page.
     expect(indexHtml).toMatch(/register\(.\/sw\.js.\)\.catch\(/);
+  });
+});
+
+// Story 5.3 (AD-9): cycle-identifier stamping and the install/activate
+// lifecycle. This block runs the real pre-build stamping script and
+// asserts on its actual output -- byte-for-byte idempotence for the same
+// cycle, a real difference across cycles, and the 3 required lifecycle
+// behaviors (skipWaiting, stale-cache deletion, clients.claim), all
+// against the real built dist/sw.js, not the checked-in template.
+describe("Service worker cycle invalidation (Story 5.3)", () => {
+  const TEMPLATE_PATH = join(SITE_ROOT, "public", "sw.template.js");
+  const SW_JS_PATH = join(SITE_ROOT, "public", "sw.js");
+  const FIXTURE_PATH = join(SITE_ROOT, "src", "fixtures", "day.json");
+  const originalFixture = readFileSync(FIXTURE_PATH, "utf-8");
+
+  function stamp(): string {
+    execFileSync("node", ["scripts/stamp-service-worker.ts"], { cwd: SITE_ROOT, stdio: "pipe" });
+    return readFileSync(SW_JS_PATH, "utf-8");
+  }
+
+  it("never leaves the __CACHE_VERSION__ placeholder unsubstituted in the stamped output", () => {
+    const stamped = stamp();
+    expect(stamped).not.toContain("__CACHE_VERSION__");
+    // And confirm the template itself DOES still carry the placeholder --
+    // proving this test would fail if the substitution step were ever
+    // silently skipped, not just checking a string that happens to be
+    // permanently absent from an unrelated file.
+    const template = readFileSync(TEMPLATE_PATH, "utf-8");
+    expect(template).toContain("__CACHE_VERSION__");
+  });
+
+  it("produces byte-identical sw.js across two stamps of the same underlying cycle data", () => {
+    const first = stamp();
+    const second = stamp();
+    expect(first).toBe(second);
+  });
+
+  it("produces a different sw.js when the underlying cycle's generated_at changes", () => {
+    const beforeStamp = stamp();
+
+    try {
+      const modified = { ...JSON.parse(originalFixture), generated_at: "2099-01-01T00:00:00+00:00" };
+      writeFileSync(FIXTURE_PATH, JSON.stringify(modified));
+
+      const afterStamp = stamp();
+      expect(afterStamp).not.toBe(beforeStamp);
+      expect(afterStamp).toContain("2099-01-01T00-00-00-00-00");
+    } finally {
+      writeFileSync(FIXTURE_PATH, originalFixture);
+      stamp(); // restore sw.js to reflect the restored fixture too
+    }
+  });
+
+  it("includes skipWaiting on install, and stale-cache deletion + clients.claim on activate", () => {
+    const stamped = stamp();
+    expect(stamped).toMatch(/addEventListener\(.install.,[\s\S]{0,80}skipWaiting\(\)/);
+    expect(stamped).toMatch(/addEventListener\(.activate.,/);
+    expect(stamped).toMatch(/caches\s*\.\s*keys\(\)/);
+    expect(stamped).toMatch(/caches\.delete\(/);
+    expect(stamped).toMatch(/clients\.claim\(\)/);
   });
 });

@@ -141,3 +141,27 @@ export async function cacheFirst(
   }
   return response;
 }
+
+// Story 5.3 (AD-9): a cache-name-safe rendering of a Briefing's
+// `generated_at` ISO datetime, used as the per-cycle cache-version
+// suffix. Cache names are technically permitted to contain `:`/`.`, but
+// stripping them keeps the final name readable and avoids any
+// tooling/DevTools quoting friction with a colon-heavy string. Derived
+// ONLY from generated_at (cycle-derived), never from a build timestamp
+// (deploy-derived) -- see this story's own Dev Notes on why: a build
+// timestamp would make every rebuild look like a new cycle to a
+// reader's browser, forcing an unnecessary cache-clear on every deploy
+// regardless of whether the underlying content actually changed.
+export function sanitizeCacheVersion(generatedAt: string): string {
+  return generatedAt.replace(/[^0-9A-Za-z]/g, "-");
+}
+
+// Story 5.3 (AD-9): which existing cache names are from a PREVIOUS cycle
+// and must be deleted on activation -- every name except the current,
+// freshly-stamped one. This worker only ever creates one cache (the one
+// named CACHE_NAME at any given moment), so "not the current name"
+// correctly means "leftover from an earlier cycle's activation," not
+// something unrelated.
+export function staleCacheNames(existingNames: string[], currentCacheName: string): string[] {
+  return existingNames.filter((name) => name !== currentCacheName);
+}

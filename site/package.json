@@ -7,8 +7,8 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "dev": "node scripts/copy-briefings-to-public.ts && astro dev",
-    "build": "node scripts/copy-briefings-to-public.ts && astro build",
+    "dev": "node scripts/copy-briefings-to-public.ts && node scripts/stamp-service-worker.ts && astro dev",
+    "build": "node scripts/copy-briefings-to-public.ts && node scripts/stamp-service-worker.ts && astro build",
     "preview": "astro preview",
     "test": "vitest run"
   },

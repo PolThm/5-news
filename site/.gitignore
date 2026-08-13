@@ -5,3 +5,8 @@ dist/
 # hand-edited, never committed (mirrors data/intermediate/'s own
 # gitignored, regenerate-don't-track convention).
 public/briefings/
+# Generated at build time by scripts/stamp-service-worker.ts from
+# public/sw.template.js (the checked-in, placeholder-carrying source) --
+# never hand-edited, never committed. Same regenerate-don't-track
+# convention as public/briefings/ above.
+public/sw.js

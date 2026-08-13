@@ -3,20 +3,35 @@
 // JS-present reader fetches after a Zone/Period/Language click),
 // cache-first for hashed assets and the manifest/icon files.
 //
+// Story 5.3 (AD-9): this file (public/sw.template.js) is the checked-in
+// TEMPLATE, never the final artifact -- site/scripts/stamp-service-worker.ts
+// reads it, substitutes the CACHE_NAME placeholder token below (see that
+// constant's own declaration) with the current cycle's sanitized
+// generated_at, and writes the result to public/sw.js (gitignored,
+// regenerated every build, same convention as public/briefings/).
+// Different cycles produce different sw.js bytes, which is exactly the
+// mechanism that makes the browser notice an update at all; a rebuild
+// against the SAME cycle's data must substitute the same value every
+// time, or every redeploy would look like a new cycle to a reader's
+// browser. (This comment deliberately never spells out the literal
+// placeholder token, so the stamping script's global substitution can't
+// accidentally rewrite this prose too.)
+//
 // This file cannot import anything -- Astro copies site/public/ to
 // dist/ byte-for-byte, unprocessed, and a service worker script itself
-// runs in its own worker global scope with no bundler involved. The two
-// pure functions below (classifyRequest, withTimeout) are a hand-kept
-// mirror of site/src/islands/sw-logic.ts, which exists ONLY for that
-// TypeScript file's own unit tests -- the same "one owner conceptually,
-// two hand-kept copies practically" pattern already established for
-// briefing.ts <-> period-switcher.ts (Stories 4.2-4.7). Keep both copies
-// in sync by hand whenever either changes.
-//
-// AD-9's cycle-identifier-stamped cache versioning and cache-cleanup on
-// activation are Story 5.3's own scope, not this one's -- CACHE_NAME is
-// deliberately a single, simple constant here.
-const CACHE_NAME = "briefings-v1";
+// runs in its own worker global scope with no bundler involved. The pure
+// functions below (classifyRequest, withTimeout, staleCacheNames) are a
+// hand-kept mirror of site/src/islands/sw-logic.ts, which exists ONLY
+// for that TypeScript file's own unit tests. (sw-logic.ts also has a
+// sanitizeCacheVersion function, but it's build-time-only, run by the
+// Node stamping script and never at worker runtime -- its sanitized
+// output is baked directly into CACHE_NAME below as a string literal,
+// so there is nothing to mirror here for that one function
+// specifically.) The same "one owner conceptually, two hand-kept copies
+// practically" pattern already established for briefing.ts <->
+// period-switcher.ts (Stories 4.2-4.7). Keep both copies in sync by hand
+// whenever either changes.
+const CACHE_NAME = "briefings-__CACHE_VERSION__";
 const NETWORK_TIMEOUT_MS = 3000;
 
 const CACHE_FIRST_EXACT_PATHS = new Set(["/manifest.json", "/icon-192.png", "/icon-512.png"]);
@@ -108,6 +123,41 @@ async function cacheFirst(request) {
   }
   return response;
 }
+
+function staleCacheNames(existingNames, currentCacheName) {
+  return existingNames.filter((name) => name !== currentCacheName);
+}
+
+// Story 5.3 (AD-9): skipWaiting so a newly-installed worker (this one,
+// carrying the new cycle's own CACHE_NAME) doesn't wait for every
+// existing tab of this origin to close before activating -- the update
+// must land on the visit that discovers it, not the next one.
+self.addEventListener("install", () => {
+  self.skipWaiting();
+});
+
+// Story 5.3 (AD-9): on activation, delete every cache whose name doesn't
+// carry the CURRENT cycle's identifier (i.e. every cache from a previous
+// cycle -- this worker only ever creates one cache, the one named
+// CACHE_NAME at any given moment, so "not the current name" correctly
+// means "leftover from an earlier activation"), then claim every
+// already-open tab so this worker starts controlling them immediately.
+// Deletion is awaited (via Promise.all inside event.waitUntil) BEFORE
+// clients.claim() runs, so a freshly-claimed tab's very next fetch never
+// races a half-cleaned-up cache set -- by the time any client is
+// claimed, only the current cycle's cache can possibly exist.
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches
+      .keys()
+      .then((existingNames) =>
+        Promise.all(
+          staleCacheNames(existingNames, CACHE_NAME).map((name) => caches.delete(name))
+        )
+      )
+      .then(() => self.clients.claim())
+  );
+});
 
 self.addEventListener("fetch", (event) => {
   const requestClass = classifyRequest(event.request.url);

@@ -1,5 +1,12 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { cacheFirst, classifyRequest, networkFirst, withTimeout } from "../sw-logic";
+import {
+  cacheFirst,
+  classifyRequest,
+  networkFirst,
+  sanitizeCacheVersion,
+  staleCacheNames,
+  withTimeout,
+} from "../sw-logic";
 import type { CacheLike, CacheStorageLike, ResponseLike } from "../sw-logic";
 
 let nextResponseId = 0;
@@ -255,5 +262,46 @@ describe("cacheFirst", () => {
     await cacheFirst("/_astro/foo.ABC123.js", "v1", fetchFn, storage);
 
     expect(storage.store.has("/_astro/foo.ABC123.js")).toBe(false);
+  });
+});
+
+describe("sanitizeCacheVersion", () => {
+  it("strips colons and other non-alphanumeric characters from a real generated_at ISO datetime", () => {
+    expect(sanitizeCacheVersion("2026-08-12T05:30:00.000Z")).toBe("2026-08-12T05-30-00-000Z");
+  });
+
+  it("produces different output for different inputs (the whole point of stamping)", () => {
+    const a = sanitizeCacheVersion("2026-08-12T05:30:00.000Z");
+    const b = sanitizeCacheVersion("2026-08-13T05:30:00.000Z");
+    expect(a).not.toBe(b);
+  });
+
+  it("produces identical output for identical input (a rebuild against the same cycle must not spuriously differ)", () => {
+    const a = sanitizeCacheVersion("2026-08-12T05:30:00.000Z");
+    const b = sanitizeCacheVersion("2026-08-12T05:30:00.000Z");
+    expect(a).toBe(b);
+  });
+});
+
+describe("staleCacheNames", () => {
+  it("returns every cache name except the current one", () => {
+    const existing = ["briefings-2026-08-11T05-30-00-000Z", "briefings-2026-08-12T05-30-00-000Z"];
+    const result = staleCacheNames(existing, "briefings-2026-08-12T05-30-00-000Z");
+    expect(result).toEqual(["briefings-2026-08-11T05-30-00-000Z"]);
+  });
+
+  it("returns an empty array when only the current cache name exists", () => {
+    const result = staleCacheNames(["briefings-2026-08-12T05-30-00-000Z"], "briefings-2026-08-12T05-30-00-000Z");
+    expect(result).toEqual([]);
+  });
+
+  it("returns an empty array when no caches exist yet", () => {
+    expect(staleCacheNames([], "briefings-2026-08-12T05-30-00-000Z")).toEqual([]);
+  });
+
+  it("treats every non-matching name as stale, even one from an unrelated origin/cache", () => {
+    const existing = ["some-other-unrelated-cache", "briefings-2026-08-12T05-30-00-000Z"];
+    const result = staleCacheNames(existing, "briefings-2026-08-12T05-30-00-000Z");
+    expect(result).toEqual(["some-other-unrelated-cache"]);
   });
 });

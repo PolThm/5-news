@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
+  countryLabel,
   endScreenText,
   fallbackNoticeText,
+  formatCount,
   hasValidAttribution,
   isZoneFallback,
   nextPeriod,
@@ -212,5 +214,41 @@ describe("endScreenText", () => {
     // suppressed entirely for this input, not given invented copy no UX
     // spec defines.
     expect(endScreenText(0, "day")).toBeNull();
+  });
+});
+
+describe("formatCount", () => {
+  it("uses a space as the French-locale thousands separator, not a comma", () => {
+    expect(formatCount(1384)).toBe("1 384");
+  });
+
+  it("returns single- and double-digit numbers unchanged", () => {
+    expect(formatCount(4)).toBe("4");
+    expect(formatCount(42)).toBe("42");
+  });
+
+  it("handles 0 correctly (a real, currently-true state for discarded_ingested/kept)", () => {
+    expect(formatCount(0)).toBe("0");
+  });
+});
+
+describe("countryLabel", () => {
+  it("returns the bare French country name for each of the 8 supported Countries", () => {
+    expect(countryLabel("france")).toBe("France");
+    expect(countryLabel("united-kingdom")).toBe("Royaume-Uni");
+    expect(countryLabel("germany")).toBe("Allemagne");
+    expect(countryLabel("united-states")).toBe("États-Unis");
+    expect(countryLabel("japan")).toBe("Japon");
+    expect(countryLabel("china")).toBe("Chine");
+    expect(countryLabel("india")).toBe("Inde");
+    expect(countryLabel("brazil")).toBe("Brésil");
+  });
+
+  it("returns the slug itself for a country outside the 8 supported Countries (fixture realism, e.g. australia)", () => {
+    // Fixture data (Task 1) plausibly includes source_country values like
+    // "australia" that aren't among the 8 supported Countries this site
+    // routes to -- countryLabel must degrade to the raw slug rather than
+    // throwing or rendering "undefined" in the expanded source list.
+    expect(countryLabel("australia")).toBe("australia");
   });
 });

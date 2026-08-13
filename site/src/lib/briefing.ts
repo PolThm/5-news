@@ -246,3 +246,45 @@ export function endScreenText(itemCount: number, period: Period): string | null 
   const verb = itemCount === 1 ? "a" : "ont";
   return `Vous avez atteint la fin. ${itemCount} ${noun} ${verb} atteint le seuil ${periodSentenceText(period)}.`;
 }
+
+/**
+ * French-locale thousands-separator formatting (a space, not a comma) for
+ * the `numeral` typography token's numbers -- the Discarded Volume line and
+ * the Consensus chip both display ranking-derived counts (DESIGN.md:
+ * "treat every number that comes from the ranking... as content worth its
+ * own typographic treatment"). Matches mockups/briefing-world-day.html's
+ * own drafted French copy ("1 384 articles examinés"), not the English-gloss
+ * comma-separated example in epics.md/DESIGN.md's prose.
+ */
+export function formatCount(n: number): string {
+  // n.toLocaleString("fr-FR") produces a narrow no-break space (U+202F)
+  // as its thousands separator -- technically correct French typography,
+  // but an invisible-looking character that's easy to mistype/mismatch in
+  // source code and tests. Normalize to a plain space (U+0020), matching
+  // mockups/briefing-world-day.html's own literal "1 384" HTML.
+  return n.toLocaleString("fr-FR").replace(/\u202F/g, " ");
+}
+
+// Bare French country names (no article, no preposition) for the Consensus
+// chip's expanded source list -- distinct from ZONE_SENTENCE_LABEL (which
+// is preposition-inclusive, "en France") and ZONE_REQUESTED_LABEL (which is
+// subject-form with its own article, "la France") because the source
+// list's "Source (Country)" format needs neither: just the bare name. Only
+// the 8 supported Countries are listed; a source_country outside this set
+// (a real, fixture-observed case -- e.g. "australia", a real Article
+// origin that isn't one of the 8 site-routable Countries) degrades to its
+// own raw slug rather than throwing or rendering "undefined".
+const COUNTRY_LABEL: Partial<Record<string, string>> = {
+  france: "France",
+  "united-kingdom": "Royaume-Uni",
+  germany: "Allemagne",
+  "united-states": "États-Unis",
+  japan: "Japon",
+  china: "Chine",
+  india: "Inde",
+  brazil: "Brésil",
+};
+
+export function countryLabel(countrySlug: string): string {
+  return COUNTRY_LABEL[countrySlug] ?? countrySlug;
+}

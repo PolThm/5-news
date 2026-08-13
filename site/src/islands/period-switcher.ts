@@ -20,11 +20,17 @@
 // DOM/network, exercised by manual verification per Story 4.2/4.3's own
 // Playwright-deferral decision (see those stories' Dev Notes).
 
+export interface ClusterMemberLike {
+  source: string;
+  source_country: string;
+}
+
 export interface ClusterLike {
   cluster_id: string;
   summary?: string;
   independent_source_count: number;
   country_count: number;
+  members: ClusterMemberLike[];
   outbound_url?: string | null;
   outbound_source?: string | null;
 }
@@ -167,6 +173,23 @@ function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
 }
 
+// Mirrors briefing.ts's own countryLabel exactly, for the same reason as
+// the other hand-kept mirrors in this file.
+const COUNTRY_LABEL: Partial<Record<string, string>> = {
+  france: "France",
+  "united-kingdom": "Royaume-Uni",
+  germany: "Allemagne",
+  "united-states": "États-Unis",
+  japan: "Japon",
+  china: "Chine",
+  india: "Inde",
+  brazil: "Brésil",
+};
+
+function countryLabel(countrySlug: string): string {
+  return COUNTRY_LABEL[countrySlug] ?? countrySlug;
+}
+
 function hasValidAttribution(cluster: ClusterLike): cluster is ClusterLike & {
   outbound_url: string;
   outbound_source: string;
@@ -210,10 +233,21 @@ export function renderItemListHtml(briefing: BriefingLike): string {
       const attributionHtml = hasValidAttribution(cluster)
         ? `<span class="attribution">Rapporté par <em>${escapeHtml(cluster.outbound_source)}</em> — <a href="${escapeHtml(cluster.outbound_url)}">lire l'article original →</a></span>`
         : "";
+      const sourceListId = `source-list-${escapeHtml(cluster.cluster_id)}`;
+      const membersHtml = cluster.members
+        .map(
+          (member) =>
+            `<li>${escapeHtml(member.source)} (${escapeHtml(countryLabel(member.source_country))})</li>`
+        )
+        .join("");
       return (
         `<div class="item">${summaryHtml}` +
-        `<span class="chip"><span class="num">${cluster.independent_source_count}</span> sources indépendantes · ` +
-        `<span class="num">${cluster.country_count}</span> pays</span>${attributionHtml}</div>`
+        `<button type="button" class="chip" aria-expanded="false" aria-controls="${sourceListId}" data-consensus-chip>` +
+        `<span class="num">${cluster.independent_source_count}</span> sources indépendantes · ` +
+        `<span class="num">${cluster.country_count}</span> pays` +
+        `<span class="chevron" aria-hidden="true">▾</span></button>` +
+        `<div class="source-list js-collapsed" id="${sourceListId}">Sources et pays contributeurs :<ul>${membersHtml}</ul></div>` +
+        `${attributionHtml}</div>`
       );
     })
     .join("");
@@ -234,6 +268,7 @@ const ATTACHED_MARKER = "data-mad-libs-attached";
 export function attach(): void {
   attachWord("[data-zone-word]", "zone");
   attachWord("[data-period-word]", "period");
+  attachChips();
 }
 
 function attachWord(selector: string, axis: "zone" | "period"): void {
@@ -245,6 +280,55 @@ function attachWord(selector: string, axis: "zone" | "period"): void {
     event.preventDefault();
     void handleClick(link, axis);
   });
+}
+
+const CHIP_ATTACHED_MARKER = "data-chip-attached";
+
+/**
+ * Attaches the expand/collapse toggle to every Consensus chip currently in
+ * the document, and -- ONLY for chips not yet attached -- collapses their
+ * source list (EXPERIENCE.md's Cold Load pattern requires the source list
+ * present-and-visible in the initial server-rendered HTML for a no-JS
+ * reader; only *collapsing* it is a JS-present enhancement, done here on
+ * first attach). Called once on initial load and again after every
+ * Zone/Period swap, since `handleClick`'s wholesale `#item-list`
+ * replacement destroys the previous chips' listeners entirely (unlike the
+ * mad-libs words, which are mutated in place) -- every freshly-rendered
+ * chip starts collapsed, matching `renderItemListHtml`'s own
+ * `js-collapsed`-by-default output.
+ *
+ * The collapse step is gated behind the SAME `CHIP_ATTACHED_MARKER` guard
+ * as the listener attachment, not run unconditionally on every call --
+ * an adversarial review caught that an earlier version collapsed every
+ * chip's source list on every call regardless of prior state, which would
+ * force-collapse a reader's already-expanded chip (leaving `aria-expanded`
+ * desynced from the hidden content) the next time this function ran for
+ * any reason. Not exploitable today only because every current call site
+ * runs immediately after a full `#item-list` DOM replacement, so no
+ * previously-expanded node survives to be affected -- but a future call
+ * site without that property would silently reintroduce the bug, so the
+ * guard is real, not decorative.
+ */
+export function attachChips(): void {
+  const chips = document.querySelectorAll<HTMLButtonElement>("[data-consensus-chip]");
+  for (const chip of chips) {
+    if (chip.hasAttribute(CHIP_ATTACHED_MARKER)) continue;
+    chip.setAttribute(CHIP_ATTACHED_MARKER, "");
+
+    const sourceList = document.getElementById(chip.getAttribute("aria-controls") ?? "");
+    if (sourceList) sourceList.classList.add("js-collapsed");
+
+    chip.addEventListener("click", () => toggleChip(chip));
+  }
+}
+
+function toggleChip(chip: HTMLButtonElement): void {
+  const sourceList = document.getElementById(chip.getAttribute("aria-controls") ?? "");
+  if (!sourceList) return;
+
+  const expanded = chip.getAttribute("aria-expanded") === "true";
+  chip.setAttribute("aria-expanded", expanded ? "false" : "true");
+  sourceList.classList.toggle("js-collapsed", expanded);
 }
 
 async function handleClick(link: HTMLAnchorElement, axis: "zone" | "period"): Promise<void> {

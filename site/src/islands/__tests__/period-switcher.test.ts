@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   attach,
+  attachChips,
   briefingJsonUrl,
   fallbackNoticeText,
   nextPeriod,
@@ -129,8 +130,12 @@ describe("renderItemListHtml", () => {
         {
           cluster_id: "a",
           summary: "Un cessez-le-feu entre en vigueur.",
-          independent_source_count: 7,
-          country_count: 5,
+          independent_source_count: 2,
+          country_count: 2,
+          members: [
+            { source: "Reuters", source_country: "united-kingdom" },
+            { source: "Le Monde", source_country: "france" },
+          ],
           outbound_url: "https://reuters.com/world/ceasefire-declared",
           outbound_source: "Reuters",
         },
@@ -138,8 +143,8 @@ describe("renderItemListHtml", () => {
     });
 
     expect(html).toContain('<p class="summary">Un cessez-le-feu entre en vigueur.</p>');
-    expect(html).toContain('<span class="num">7</span> sources indépendantes');
-    expect(html).toContain('<span class="num">5</span> pays');
+    expect(html).toContain('<span class="num">2</span> sources indépendantes');
+    expect(html).toContain('<span class="num">2</span> pays');
     expect(html).toContain("Rapporté par <em>Reuters</em>");
     expect(html).toContain('<a href="https://reuters.com/world/ceasefire-declared">');
   });
@@ -149,11 +154,18 @@ describe("renderItemListHtml", () => {
       zone: "world",
       served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
-      clusters: [{ cluster_id: "b", independent_source_count: 3, country_count: 2 }],
+      clusters: [
+        {
+          cluster_id: "b",
+          independent_source_count: 1,
+          country_count: 1,
+          members: [{ source: "Deutsche Welle", source_country: "germany" }],
+        },
+      ],
     });
 
     expect(html).not.toContain("<p class=\"summary\">");
-    expect(html).toContain('<span class="num">3</span> sources indépendantes');
+    expect(html).toContain('<span class="num">1</span> sources indépendantes');
   });
 
   it("omits the attribution span when outbound_source is missing despite a valid url", () => {
@@ -164,8 +176,9 @@ describe("renderItemListHtml", () => {
       clusters: [
         {
           cluster_id: "c",
-          independent_source_count: 4,
-          country_count: 3,
+          independent_source_count: 1,
+          country_count: 1,
+          members: [{ source: "Associated Press", source_country: "united-states" }],
           outbound_url: "https://example.com/a",
           outbound_source: null,
         },
@@ -186,6 +199,7 @@ describe("renderItemListHtml", () => {
           summary: "<script>alert(1)</script>",
           independent_source_count: 1,
           country_count: 1,
+          members: [{ source: "<b>Evil Source</b>", source_country: "france" }],
           outbound_url: "https://example.com/a",
           outbound_source: "<b>Evil</b>",
         },
@@ -195,6 +209,7 @@ describe("renderItemListHtml", () => {
     expect(html).not.toContain("<script>alert(1)</script>");
     expect(html).toContain("&lt;script&gt;");
     expect(html).not.toContain("<b>Evil</b>");
+    expect(html).not.toContain("<b>Evil Source</b>");
   });
 
   it("renders one item per cluster, in order, for multiple clusters", () => {
@@ -203,8 +218,21 @@ describe("renderItemListHtml", () => {
       served_zone: "world",
       generated_at: "2026-08-12T06:14:00Z",
       clusters: [
-        { cluster_id: "e", independent_source_count: 1, country_count: 1 },
-        { cluster_id: "f", independent_source_count: 2, country_count: 2 },
+        {
+          cluster_id: "e",
+          independent_source_count: 1,
+          country_count: 1,
+          members: [{ source: "Kyodo News", source_country: "japan" }],
+        },
+        {
+          cluster_id: "f",
+          independent_source_count: 2,
+          country_count: 2,
+          members: [
+            { source: "Xinhua", source_country: "china" },
+            { source: "The Hindu", source_country: "india" },
+          ],
+        },
       ],
     });
 
@@ -213,6 +241,55 @@ describe("renderItemListHtml", () => {
     expect(html.indexOf('<span class="num">1</span>')).toBeLessThan(
       html.indexOf('<span class="num">2</span>')
     );
+  });
+
+  it("renders the Consensus chip as a button with aria-expanded/aria-controls, and the source list with exactly one <li> per member", () => {
+    const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
+      generated_at: "2026-08-12T06:14:00Z",
+      clusters: [
+        {
+          cluster_id: "g",
+          independent_source_count: 3,
+          country_count: 2,
+          members: [
+            { source: "Reuters", source_country: "united-kingdom" },
+            { source: "Le Monde", source_country: "france" },
+            { source: "Le Figaro", source_country: "france" },
+          ],
+        },
+      ],
+    });
+
+    expect(html).toMatch(
+      /<button type="button" class="chip" aria-expanded="false" aria-controls="source-list-g" data-consensus-chip>/
+    );
+    expect(html).toContain('id="source-list-g"');
+    expect(html).toContain('class="source-list js-collapsed"');
+    const liCount = (html.match(/<li>/g) ?? []).length;
+    expect(liCount).toBe(3);
+    expect(html).toContain("Reuters (Royaume-Uni)");
+    expect(html).toContain("Le Monde (France)");
+    expect(html).toContain("Le Figaro (France)");
+  });
+
+  it("degrades to the raw slug for a source_country outside the 8 supported Countries", () => {
+    const html = renderItemListHtml({
+      zone: "world",
+      served_zone: "world",
+      generated_at: "2026-08-12T06:14:00Z",
+      clusters: [
+        {
+          cluster_id: "h",
+          independent_source_count: 1,
+          country_count: 1,
+          members: [{ source: "ABC News", source_country: "australia" }],
+        },
+      ],
+    });
+
+    expect(html).toContain("ABC News (australia)");
   });
 });
 
@@ -228,11 +305,14 @@ describe("attach", () => {
     const zoneAnchor = createFakeAnchor();
     const periodAnchor = createFakeAnchor();
     const originalDocument = globalThis.document;
-    // @ts-expect-error -- minimal stand-in, see createFakeAnchor's docstring
     globalThis.document = {
       querySelector: (selector: string) =>
         selector.includes("zone") ? zoneAnchor : periodAnchor,
-    };
+      // attach() also calls attachChips(), which queries for chips --
+      // none exist in this stand-in DOM, so an empty NodeList-like value
+      // is enough for it to safely no-op.
+      querySelectorAll: () => [],
+    } as unknown as Document;
 
     try {
       attach();
@@ -241,6 +321,147 @@ describe("attach", () => {
 
       expect(zoneAnchor.clickListenerCount).toBe(1);
       expect(periodAnchor.clickListenerCount).toBe(1);
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  });
+});
+
+// A minimal hand-rolled fake chip button + source-list div, mirroring
+// createFakeAnchor's own reasoning: jsdom is not a dependency of this
+// project, and this bug class (listener accumulation, and the toggle logic
+// itself) only needs a handful of DOM methods to reproduce and prove
+// correct.
+function createFakeChip() {
+  // Seeded with the same initial attributes real server-rendered markup
+  // has (renderItemListHtml/BriefingPage.astro both emit aria-expanded=
+  // "false" from the start) -- attachChips() never sets this itself, only
+  // toggleChip() does, on click.
+  const attributes = new Map<string, string>([
+    ["aria-controls", "source-list-x"],
+    ["aria-expanded", "false"],
+  ]);
+  const clickListeners: Array<() => void> = [];
+  return {
+    getAttribute: (name: string) => attributes.get(name) ?? null,
+    setAttribute: (name: string, value: string) => attributes.set(name, value),
+    hasAttribute: (name: string) => attributes.has(name),
+    addEventListener: (type: string, listener: () => void) => {
+      if (type === "click") clickListeners.push(listener);
+    },
+    dispatchClick: () => {
+      for (const listener of clickListeners) listener();
+    },
+    get clickListenerCount() {
+      return clickListeners.length;
+    },
+  };
+}
+
+function createFakeSourceList() {
+  const classes = new Set<string>();
+  return {
+    classList: {
+      add: (name: string) => classes.add(name),
+      toggle: (name: string, force?: boolean) => {
+        const shouldHave = force ?? !classes.has(name);
+        if (shouldHave) classes.add(name);
+        else classes.delete(name);
+      },
+      contains: (name: string) => classes.has(name),
+    },
+  };
+}
+
+describe("attachChips", () => {
+  it("attaches exactly one click listener per chip even when called repeatedly", () => {
+    const chip = createFakeChip();
+    const sourceList = createFakeSourceList();
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      querySelectorAll: () => [chip],
+      getElementById: () => sourceList,
+    } as unknown as Document;
+
+    try {
+      attachChips();
+      attachChips();
+      attachChips();
+
+      expect(chip.clickListenerCount).toBe(1);
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  });
+
+  it("collapses the source list on attach (JS-present: hidden by default; no-JS: visible per the initial HTML)", () => {
+    const chip = createFakeChip();
+    const sourceList = createFakeSourceList();
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      querySelectorAll: () => [chip],
+      getElementById: () => sourceList,
+    } as unknown as Document;
+
+    try {
+      attachChips();
+      expect(sourceList.classList.contains("js-collapsed")).toBe(true);
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  });
+
+  it("toggles aria-expanded and the source list's collapsed class on click, independently across chips", () => {
+    const chip = createFakeChip();
+    const sourceList = createFakeSourceList();
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      querySelectorAll: () => [chip],
+      getElementById: () => sourceList,
+    } as unknown as Document;
+
+    try {
+      attachChips();
+      expect(chip.getAttribute("aria-expanded")).toBe("false");
+      expect(sourceList.classList.contains("js-collapsed")).toBe(true);
+
+      chip.dispatchClick();
+      expect(chip.getAttribute("aria-expanded")).toBe("true");
+      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
+
+      chip.dispatchClick();
+      expect(chip.getAttribute("aria-expanded")).toBe("false");
+      expect(sourceList.classList.contains("js-collapsed")).toBe(true);
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  });
+
+  it("does not force-collapse an already-expanded chip when attachChips() is called again", () => {
+    // Reproduces the bug this story's own adversarial review caught: an
+    // earlier version collapsed every chip's source list unconditionally
+    // on every call, regardless of whether the reader had already
+    // expanded it -- desyncing aria-expanded="true" from a hidden source
+    // list. The collapse step must be gated behind the same
+    // CHIP_ATTACHED_MARKER guard as the listener attachment, not run
+    // unconditionally.
+    const chip = createFakeChip();
+    const sourceList = createFakeSourceList();
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      querySelectorAll: () => [chip],
+      getElementById: () => sourceList,
+    } as unknown as Document;
+
+    try {
+      attachChips();
+      chip.dispatchClick(); // reader expands it
+      expect(chip.getAttribute("aria-expanded")).toBe("true");
+      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
+
+      attachChips(); // called again -- e.g. after some future re-render
+      expect(chip.getAttribute("aria-expanded")).toBe("true");
+      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
     } finally {
       globalThis.document = originalDocument;
     }

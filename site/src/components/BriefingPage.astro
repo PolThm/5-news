@@ -14,8 +14,10 @@
 // addressed at, and the link must always point at the requested route,
 // not wherever the fallback happened to serve content from.
 import {
+  countryLabel,
   endScreenText,
   fallbackNoticeText,
+  formatCount,
   hasValidAttribution,
   nextPeriod,
   nextZone,
@@ -170,8 +172,14 @@ function formatTimestamp(iso: string): string {
         color: #1a1a18;
         margin-bottom: 12px;
       }
+      /* .chip is a real <button> (native keyboard/Enter/Space activation,
+         focus styling, aria-expanded semantics for free) -- these
+         overrides strip the browser's default button chrome so it reads
+         identically to Story 4.1's original <span>. */
       .chip {
         display: inline-block;
+        border: none;
+        cursor: pointer;
         font-family: "IBM Plex Mono", "Courier New", monospace;
         font-size: 14px;
         font-weight: 500;
@@ -184,6 +192,53 @@ function formatTimestamp(iso: string): string {
       .chip .num {
         color: #1f4d3d;
       }
+      /* The chevron rotates 180deg when expanded -- the only visible
+         "this is clickable" affordance (neither mockup drafted one beyond
+         an invisible cursor: pointer). No new color: reuses .chip's own
+         text color. */
+      .chip .chevron {
+        display: inline-block;
+        margin-left: 4px;
+        transition: transform 0.15s ease;
+      }
+      .chip[aria-expanded="true"] {
+        background: #dde2ee;
+        margin-bottom: 0;
+        border-radius: 3px 3px 0 0;
+      }
+      .chip[aria-expanded="true"] .chevron {
+        transform: rotate(180deg);
+      }
+      /* Present in the initial server-rendered HTML always (a no-JS reader
+         sees this permanently expanded -- a legitimate degrade, not a
+         bug); the client-side island hides it by default when JS is
+         present and toggles visibility on chip click/Enter. Tertiary
+         accent (DESIGN.md: "reserved for the Consensus Score's expanded
+         source list") -- #dde2ee/#1a2438 are that token's container/
+         on-container tints, matching the only drafted expanded-state
+         mockup (briefing-fallback.html). */
+      .source-list {
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding: 12px 14px;
+        background: #dde2ee;
+        border-radius: 0 0 3px 3px;
+        font-size: 13px;
+        color: #1a2438;
+      }
+      .source-list ul {
+        margin-top: 6px;
+        padding-left: 18px;
+      }
+      .source-list li {
+        margin-bottom: 2px;
+      }
+      /* JS-present default: collapsed. Toggled by the client island
+         removing/adding this class on chip click/Enter -- see
+         period-switcher.ts's chip-toggle logic. */
+      .source-list.js-collapsed {
+        display: none;
+      }
       .attribution {
         display: block;
         font-size: 13px;
@@ -193,6 +248,21 @@ function formatTimestamp(iso: string): string {
         color: #1a1a18;
         text-decoration: underline;
         font-weight: 500;
+      }
+      /* FR-8 -- always renders exactly once, even when both counts are 0
+         (the real, currently-true state for every real pipeline Briefing
+         today -- no pipeline stage populates non-zero values yet). Unlike
+         the End Screen, there is no "suppress for zero" case here. */
+      .discarded {
+        padding: 20px 16px;
+        font-size: 13px;
+        color: #4d4a42;
+        border-top: 1px solid #e7e4dc;
+      }
+      .discarded .num {
+        font-family: "IBM Plex Mono", "Courier New", monospace;
+        font-weight: 500;
+        color: #1a1a18;
       }
       /* FR-5, UX-DR8 -- the one component whose entire job is to stop the
          page (EXPERIENCE.md). .rule is the outline-variant hairline;
@@ -260,10 +330,29 @@ function formatTimestamp(iso: string): string {
           briefing.clusters.map((cluster) => (
             <div class="item">
               {cluster.summary && <p class="summary">{cluster.summary}</p>}
-              <span class="chip">
+              <button
+                type="button"
+                class="chip"
+                aria-expanded="false"
+                aria-controls={`source-list-${cluster.cluster_id}`}
+                data-consensus-chip
+              >
                 <span class="num">{cluster.independent_source_count}</span> sources
                 indépendantes · <span class="num">{cluster.country_count}</span> pays
-              </span>
+                <span class="chevron" aria-hidden="true">
+                  ▾
+                </span>
+              </button>
+              <div class="source-list" id={`source-list-${cluster.cluster_id}`}>
+                Sources et pays contributeurs :
+                <ul>
+                  {cluster.members.map((member) => (
+                    <li>
+                      {member.source} ({countryLabel(member.source_country)})
+                    </li>
+                  ))}
+                </ul>
+              </div>
               {hasValidAttribution(cluster) && (
                 <span class="attribution">
                   Rapporté par <em>{cluster.outbound_source}</em> —{" "}
@@ -273,6 +362,11 @@ function formatTimestamp(iso: string): string {
             </div>
           ))
         }
+      </div>
+
+      <div class="discarded" id="discarded">
+        <span class="num">{formatCount(briefing.discarded_ingested)}</span> articles examinés
+        → <span class="num">{formatCount(briefing.discarded_kept)}</span> conservés.
       </div>
 
       {

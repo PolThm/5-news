@@ -22,15 +22,20 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 const SITE_ROOT = join(__dirname, "..");
 const DIST_INDEX = join(SITE_ROOT, "dist", "index.html");
 
-// The island's compiled JS is inlined directly into a <script> tag (Astro
-// does not emit an external src="..." reference -- see any built page's
-// output), and that JS's own template-literal rendering logic contains
-// literal strings (`<div class="item">`, `id="fallback-notice"`, etc.)
-// that collide with a naive presence/count check meant to inspect only
-// server-rendered content. Every assertion in this file that counts or
-// checks for the absence of such a string strips <script> content first --
-// centralized here after hitting this same false-positive three times
-// across Stories 4.2-4.4.
+// Astro inlines the island's compiled JS directly into a <script> tag when
+// the bundle is small, but switches to an external src="..." reference once
+// the bundle crosses its own internal size threshold (observed when Story
+// 4.5 grew period-switcher.ts with the chip-toggle logic) -- which mode it
+// picks is Astro's own bundler decision, not something this codebase
+// controls or should assume either way. When inlined, that JS's own
+// template-literal rendering logic contains literal strings (`<div
+// class="item">`, `id="fallback-notice"`, etc.) that collide with a naive
+// presence/count check meant to inspect only server-rendered content; when
+// externalized, the <script> tag is self-closing and carries no such text
+// at all. Stripping any <script>...</script> *pair* handles the inlined
+// case; a self-closing external <script src="..."/> has no closing tag for
+// that regex to match, so it's left alone -- correctly, since it contributes
+// no false-positive text either way.
 function stripInlineScript(html: string): string {
   return html.replace(/<script[\s\S]*?<\/script>/gi, "");
 }
@@ -47,11 +52,25 @@ describe("no-JS readability of the built page", () => {
   it("ships exactly one <script> tag, the Period-switcher island (progressive enhancement only)", () => {
     const scriptTags = html.match(/<script[^>]*>/gi) ?? [];
     expect(scriptTags).toHaveLength(1);
-    // Astro inlines the module's compiled body directly rather than an
-    // external src="..." reference (see the built output) -- assert on a
-    // symbol from the island's own compiled code instead of a filename.
-    expect(html).toContain("data-period-word");
-    expect(html).toMatch(/briefings\/\$\{|\/briefings\//);
+    const scriptTag = scriptTags[0];
+    if (!scriptTag) throw new Error("unreachable: length asserted above");
+    // Whether Astro inlines the compiled module or emits an external
+    // src="..." reference is its own bundler-size decision (see this
+    // file's stripInlineScript docstring) -- assert on whichever form
+    // is present, not on inlining specifically.
+    const isExternal = /<script[^>]+src=/i.test(scriptTag);
+    if (isExternal) {
+      const srcMatch = scriptTag.match(/src="([^"]+)"/);
+      if (!srcMatch) throw new Error("external <script> tag has no src attribute");
+      const scriptPath = join(SITE_ROOT, "dist", srcMatch[1]);
+      expect(existsSync(scriptPath)).toBe(true);
+      const scriptContent = readFileSync(scriptPath, "utf-8");
+      expect(scriptContent).toContain("data-period-word");
+      expect(scriptContent).toMatch(/briefings\/\$\{|\/briefings\//);
+    } else {
+      expect(html).toContain("data-period-word");
+      expect(html).toMatch(/briefings\/\$\{|\/briefings\//);
+    }
   });
 
   it("renders the Period word as a real <a href> to the equivalent static route, not a placeholder", () => {
@@ -103,6 +122,40 @@ describe("no-JS readability of the built page", () => {
     // -- no further <div>/<span>/<a> opening tag past the <p> itself.
     const afterCompletionStatement = beforeScript.slice(beforeScript.indexOf("</p>") + "</p>".length);
     expect(afterCompletionStatement).not.toMatch(/<(div|span|a|p|h1|ul|li)[ >]/);
+  });
+
+  it("renders the Discarded Volume once, at the foot of the item list, with French-locale-formatted counts (AC2)", () => {
+    expect(html).toMatch(
+      /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>1 384<\/span> articles examinés → <span class="num"[^>]*>4<\/span> conservés\.<\/div>/
+    );
+    expect((html.match(/id="discarded"/g) ?? []).length).toBe(1);
+  });
+
+  it("renders the Consensus chip as a real <button> with its source list already present and visible in the initial HTML (AC3, no-JS)", () => {
+    const htmlWithoutScripts = stripInlineScript(html);
+    expect(htmlWithoutScripts).toMatch(
+      /<button type="button" class="chip" aria-expanded="false" aria-controls="source-list-ceasefire-2026-08-11"[^>]*data-consensus-chip[^>]*>/
+    );
+    // Present and NOT hidden -- no js-collapsed class -- in the
+    // server-rendered HTML, since a no-JS reader must see it already
+    // expanded (this story's own Scope decision: only the client-side
+    // island collapses it, and that never executes without JS).
+    expect(htmlWithoutScripts).toMatch(
+      /<div class="source-list" id="source-list-ceasefire-2026-08-11"[^>]*>(?!.*js-collapsed)/
+    );
+  });
+
+  it("has exactly as many source-list entries as the chip's own displayed independent_source_count, for every item (AC3's hard guarantee)", () => {
+    // day.json's 4 clusters, after Task 1's fixture fix: 7, 5, 4, 3.
+    const expectedCounts = [7, 5, 4, 3];
+    const sourceListBlocks = stripInlineScript(html).match(
+      /<div class="source-list"[^>]*>.*?<\/div>/gs
+    );
+    expect(sourceListBlocks).toHaveLength(4);
+    sourceListBlocks!.forEach((block, index) => {
+      const liCount = (block.match(/<li[ >]/g) ?? []).length;
+      expect(liCount).toBe(expectedCounts[index]);
+    });
   });
 });
 
@@ -312,6 +365,42 @@ describe("empty clusters array (AC6)", () => {
       // nonsensical "0 sujets ont atteint le seuil..." for this exact
       // input. It must be suppressed entirely for 0 clusters, not just
       // avoid crashing.
+      expect(htmlWithoutScripts).not.toContain('id="end-screen"');
+      // Story 4.5's own Blind Hunter review flagged this combination
+      // (Discarded Volume + 0 clusters together) as claimed-tested but
+      // not actually exercised by any test -- Discarded Volume renders
+      // unconditionally (AC2), independent of item count, so it must
+      // still appear here using discarded_ingested/discarded_kept's own
+      // (unchanged, non-zero) values from the mutated fixture.
+      expect(htmlWithoutScripts).toMatch(
+        /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>1 384<\/span> articles examinés → <span class="num"[^>]*>4<\/span> conservés\.<\/div>/
+      );
+    } finally {
+      writeFileSync(FIXTURE_PATH, originalFixture);
+    }
+  });
+
+  it("renders the Discarded Volume correctly for the real 0 ingested / 0 kept case, combined with 0 clusters", () => {
+    // The real, currently-shipped pipeline always produces 0/0 for these
+    // two fields (no stage populates them yet) -- this is the actual
+    // production state, tested here together with 0 clusters since both
+    // conditions are independent and both are real today.
+    const emptyRecord = {
+      ...JSON.parse(originalFixture),
+      clusters: [],
+      discarded_ingested: 0,
+      discarded_kept: 0,
+    };
+    writeFileSync(FIXTURE_PATH, JSON.stringify(emptyRecord));
+
+    try {
+      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+
+      const html = readFileSync(DIST_INDEX, "utf-8");
+      const htmlWithoutScripts = stripInlineScript(html);
+      expect(htmlWithoutScripts).toMatch(
+        /<div class="discarded" id="discarded"[^>]*><span class="num"[^>]*>0<\/span> articles examinés → <span class="num"[^>]*>0<\/span> conservés\.<\/div>/
+      );
       expect(htmlWithoutScripts).not.toContain('id="end-screen"');
     } finally {
       writeFileSync(FIXTURE_PATH, originalFixture);

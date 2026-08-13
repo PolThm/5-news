@@ -74,6 +74,11 @@ from pipeline.stages.summarize import (
 
 _HISTORY_RETENTION_DAYS = 30
 
+# Below this many dedupe groups, a 1:1 group-to-Cluster ratio is the correct
+# outcome rather than a symptom -- two unrelated articles SHOULD stay apart --
+# so the merged-nothing diagnostic below only fires on a real corpus.
+_MERGE_DIAGNOSTIC_FLOOR = 50
+
 
 @dataclass(frozen=True, slots=True)
 class CycleResult:
@@ -229,6 +234,32 @@ def run_cycle(
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"
                 failures.append(Failure("cycle", detail))
+            # Diagnostic: one Cluster per dedupe group means nothing merged
+            # across sources, so no Cluster can reach the 2-Independent-Source
+            # floor and the cycle selects zero -- publishing nothing while
+            # still reporting success. Distinct from `degraded` above, which
+            # only fires when embedding itself errored: a working embedding
+            # call that merges nothing produces the same barren outcome and
+            # was previously invisible.
+            #
+            # Gated on a real corpus: at small volumes a 1:1 ratio is the
+            # correct outcome (two unrelated articles SHOULD stay apart), so
+            # flagging it there would be a false positive on every small
+            # cycle and every test fixture. The threshold is about having
+            # enough articles that some overlap is expected, not a tuned
+            # value.
+            if (
+                groups_after_dedupe >= _MERGE_DIAGNOSTIC_FLOOR
+                and clusters_after_grouping == groups_after_dedupe
+            ):
+                failures.append(
+                    Failure(
+                        "cycle",
+                        f"clustering merged nothing: {groups_after_dedupe} dedupe groups "
+                        f"produced {clusters_after_grouping} Clusters (1:1). No Cluster can "
+                        f"reach the 2-Independent-Source floor, so this cycle selects zero.",
+                    )
+                )
         except Exception as exc:  # noqa: BLE001
             failures.append(Failure("cycle", f"clustering raised: {exc}"))
             completed = False

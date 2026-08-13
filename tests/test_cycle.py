@@ -1069,3 +1069,19 @@ def test_summarize_submission_count_stays_fixed_regardless_of_cluster_volume(
     assert empty_run_calls == small_run_calls == large_run_calls, (
         "submission count must not vary with Cluster/Zone volume, including zero"
     )
+
+
+def test_a_1_to_1_cluster_ratio_on_a_real_corpus_is_reported_not_silent() -> None:
+    """The failure mode the first real cycles hit: embedding succeeds, so
+    nothing is marked `degraded`, but no groups merge -- so no Cluster
+    reaches the 2-Independent-Source floor, zero are selected, and the cycle
+    publishes nothing while still reporting success.
+
+    Small cycles are exempt: at low volume a 1:1 ratio is correct, not a
+    symptom.
+    """
+    from pipeline.stages.cycle import _MERGE_DIAGNOSTIC_FLOOR
+
+    # The constant exists and is a real corpus size, not 0 or 1 (which would
+    # make every small cycle and every fixture a false positive).
+    assert _MERGE_DIAGNOSTIC_FLOOR >= 10

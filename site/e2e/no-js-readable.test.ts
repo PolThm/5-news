@@ -702,3 +702,74 @@ describe("Output Language axis (Story 4.7)", () => {
     );
   });
 });
+
+// Story 5.1 (AC1): the web app manifest and its 2 required icon sizes,
+// referenced from every page. Astro copies site/public/ to dist/
+// byte-for-byte, unprocessed (unlike src/, which the bundler transforms)
+// -- this suite verifies that behavior directly against the real build
+// output rather than assuming it, per this story's own Dev Notes.
+describe("PWA installability (Story 5.1)", () => {
+  const MANIFEST_PATH = join(SITE_ROOT, "dist", "manifest.json");
+  const ICON_192_PATH = join(SITE_ROOT, "dist", "icon-192.png");
+  const ICON_512_PATH = join(SITE_ROOT, "dist", "icon-512.png");
+
+  // This block's own build -- do not rely on a preceding describe block
+  // having left dist/ populated. Blind Hunter review of this story caught
+  // that running this block in isolation (a clean dist/) made every test
+  // fail with ENOENT, since no build step of its own existed; every other
+  // build-dependent block in this file has one, this was the exception.
+  beforeAll(() => {
+    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+  }, 30000);
+
+  it("serves a valid manifest.json with the required fields", () => {
+    expect(existsSync(MANIFEST_PATH)).toBe(true);
+    const manifest = JSON.parse(readFileSync(MANIFEST_PATH, "utf-8"));
+
+    expect(manifest.name).toBe("5 News");
+    expect(manifest.display).toBe("standalone");
+    expect(manifest.start_url).toBe("/");
+    expect(manifest.theme_color).toBe("#1f4d3d");
+    expect(manifest.background_color).toBe("#faf9f6");
+    expect(Array.isArray(manifest.icons)).toBe(true);
+    const sizes = manifest.icons.map((icon: { sizes: string }) => icon.sizes);
+    expect(sizes).toContain("192x192");
+    expect(sizes).toContain("512x512");
+  });
+
+  it("copies both icon PNGs to dist/, unprocessed, at the correct real dimensions", () => {
+    expect(existsSync(ICON_192_PATH)).toBe(true);
+    expect(existsSync(ICON_512_PATH)).toBe(true);
+
+    // Verify structurally (real PNG dimensions read from the file's own
+    // IHDR chunk), not just "the file exists" -- Story 4.8's own Blind
+    // Hunter review is the reminder here: a file existing at a path is
+    // not proof its content is what it claims to be.
+    const readPngDimensions = (path: string) => {
+      const buf = readFileSync(path);
+      // PNG signature (8 bytes) + IHDR chunk length (4) + "IHDR" (4) = 16,
+      // then width (4 bytes BE) and height (4 bytes BE) follow directly.
+      const width = buf.readUInt32BE(16);
+      const height = buf.readUInt32BE(20);
+      return { width, height };
+    };
+
+    expect(readPngDimensions(ICON_192_PATH)).toEqual({ width: 192, height: 192 });
+    expect(readPngDimensions(ICON_512_PATH)).toEqual({ width: 512, height: 512 });
+  });
+
+  it("links the manifest and theme-color meta tag from both / and a [lang]/[zone]/[period] route", () => {
+    const indexHtml = readFileSync(DIST_INDEX, "utf-8");
+    const routeHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "day.html"), "utf-8");
+
+    for (const pageHtml of [indexHtml, routeHtml]) {
+      expect(pageHtml).toContain('<link rel="manifest" href="/manifest.json">');
+      expect(pageHtml).toContain('<meta name="theme-color" content="#1f4d3d">');
+    }
+  });
+
+  it("never references Notification/PushManager/requestPermission/showNotification anywhere in the built output (AC3)", () => {
+    const indexHtml = readFileSync(DIST_INDEX, "utf-8");
+    expect(indexHtml).not.toMatch(/Notification|PushManager|requestPermission|showNotification/);
+  });
+});

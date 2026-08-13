@@ -305,7 +305,13 @@ class Briefing:
 # --- The on-disk shape of a published Briefing --------------------------
 
 
-_BRIEFING_RECORD_SCHEMA_VERSION = 1
+# Story 6.1 bumped this 1 -> 2 when each Cluster gained a `headline` field.
+# The spine's rule is absolute: "A schema change is a version bump, never a
+# silent field edit." The addition is backward-compatible in practice (the
+# site treats a missing `headline` exactly as it treats a missing `summary`,
+# per briefing.ts's own "missing and null are identical" convention), so a
+# v1 file left on disk still renders -- it simply renders without headings.
+_BRIEFING_RECORD_SCHEMA_VERSION = 2
 
 
 def _zone_from_dict(data: dict[str, str | None]) -> Zone:

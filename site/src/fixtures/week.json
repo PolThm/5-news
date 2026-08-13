@@ -1,83 +1,7 @@
 {
-  "schema_version": 1,
-  "zone": "world",
-  "zone_kind": "world",
-  "zone_continent": null,
-  "served_zone": "world",
-  "served_zone_kind": "world",
-  "served_zone_continent": null,
-  "period": "week",
-  "language": "fr",
   "clusters": [
     {
       "cluster_id": "ceasefire-week-2026-08",
-      "members": [
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (ABC News)",
-          "url": "https://example-australia-0.test/ceasefire-week-2026-08",
-          "source": "ABC News",
-          "source_country": "australia",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (The Australian)",
-          "url": "https://example-australia-1.test/ceasefire-week-2026-08",
-          "source": "The Australian",
-          "source_country": "australia",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (Folha de S.Paulo)",
-          "url": "https://example-brazil-0.test/ceasefire-week-2026-08",
-          "source": "Folha de S.Paulo",
-          "source_country": "brazil",
-          "language": "pt"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (O Globo)",
-          "url": "https://example-brazil-1.test/ceasefire-week-2026-08",
-          "source": "O Globo",
-          "source_country": "brazil",
-          "language": "pt"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (Le Monde)",
-          "url": "https://example-france-0.test/ceasefire-week-2026-08",
-          "source": "Le Monde",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (Le Figaro)",
-          "url": "https://example-france-1.test/ceasefire-week-2026-08",
-          "source": "Le Figaro",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (Deutsche Welle)",
-          "url": "https://example-germany-0.test/ceasefire-week-2026-08",
-          "source": "Deutsche Welle",
-          "source_country": "germany",
-          "language": "de"
-        },
-        {
-          "title": "Coverage of ceasefire-week-2026-08 (Kyodo News)",
-          "url": "https://example-japan-0.test/ceasefire-week-2026-08",
-          "source": "Kyodo News",
-          "source_country": "japan",
-          "language": "ja"
-        },
-        {
-          "title": "Ceasefire holds after a week of negotiations",
-          "url": "https://reuters.com/world/ceasefire-week",
-          "source": "Reuters",
-          "source_country": "united-kingdom",
-          "language": "en"
-        }
-      ],
-      "independent_source_count": 9,
-      "country_count": 6,
       "countries": [
         "australia",
         "brazil",
@@ -86,60 +10,82 @@
         "japan",
         "united-kingdom"
       ],
+      "country_count": 6,
+      "headline": "Un cessez-le-feu entre en vigueur après trois jours de négociations",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "en",
+          "source": "ABC News",
+          "source_country": "australia",
+          "title": "Coverage of ceasefire-week-2026-08 (ABC News)",
+          "url": "https://example-australia-0.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "The Australian",
+          "source_country": "australia",
+          "title": "Coverage of ceasefire-week-2026-08 (The Australian)",
+          "url": "https://example-australia-1.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "pt",
+          "source": "Folha de S.Paulo",
+          "source_country": "brazil",
+          "title": "Coverage of ceasefire-week-2026-08 (Folha de S.Paulo)",
+          "url": "https://example-brazil-0.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "pt",
+          "source": "O Globo",
+          "source_country": "brazil",
+          "title": "Coverage of ceasefire-week-2026-08 (O Globo)",
+          "url": "https://example-brazil-1.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "fr",
+          "source": "Le Monde",
+          "source_country": "france",
+          "title": "Coverage of ceasefire-week-2026-08 (Le Monde)",
+          "url": "https://example-france-0.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "fr",
+          "source": "Le Figaro",
+          "source_country": "france",
+          "title": "Coverage of ceasefire-week-2026-08 (Le Figaro)",
+          "url": "https://example-france-1.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "de",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "title": "Coverage of ceasefire-week-2026-08 (Deutsche Welle)",
+          "url": "https://example-germany-0.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "ja",
+          "source": "Kyodo News",
+          "source_country": "japan",
+          "title": "Coverage of ceasefire-week-2026-08 (Kyodo News)",
+          "url": "https://example-japan-0.test/ceasefire-week-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Reuters",
+          "source_country": "united-kingdom",
+          "title": "Ceasefire holds after a week of negotiations",
+          "url": "https://reuters.com/world/ceasefire-week"
+        }
+      ],
       "origin_country": "united-kingdom",
-      "rank": 1,
-      "summary": "Le cessez-le-feu tient depuis une semaine malgré des accrochages isolés. Les observateurs internationaux rapportent une baisse continue des incidents le long de la ligne de contact.",
+      "outbound_source": "Reuters",
       "outbound_url": "https://reuters.com/world/ceasefire-week",
-      "outbound_source": "Reuters"
+      "rank": 1,
+      "summary": "Le cessez-le-feu tient depuis une semaine malgré des accrochages isolés. Les observateurs internationaux rapportent une baisse continue des incidents le long de la ligne de contact."
     },
     {
       "cluster_id": "central-bank-week-2026-08",
-      "members": [
-        {
-          "title": "Markets stabilize a week after the rate hike",
-          "url": "https://lemonde.fr/economie/marches-semaine",
-          "source": "Le Monde",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of central-bank-week-2026-08 (Le Figaro)",
-          "url": "https://example-france-1.test/central-bank-week-2026-08",
-          "source": "Le Figaro",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of central-bank-week-2026-08 (Deutsche Welle)",
-          "url": "https://example-germany-0.test/central-bank-week-2026-08",
-          "source": "Deutsche Welle",
-          "source_country": "germany",
-          "language": "de"
-        },
-        {
-          "title": "Coverage of central-bank-week-2026-08 (Kyodo News)",
-          "url": "https://example-japan-0.test/central-bank-week-2026-08",
-          "source": "Kyodo News",
-          "source_country": "japan",
-          "language": "ja"
-        },
-        {
-          "title": "Coverage of central-bank-week-2026-08 (Reuters)",
-          "url": "https://example-united-kingdom-0.test/central-bank-week-2026-08",
-          "source": "Reuters",
-          "source_country": "united-kingdom",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of central-bank-week-2026-08 (Associated Press)",
-          "url": "https://example-united-states-0.test/central-bank-week-2026-08",
-          "source": "Associated Press",
-          "source_country": "united-states",
-          "language": "en"
-        }
-      ],
-      "independent_source_count": 6,
-      "country_count": 5,
       "countries": [
         "france",
         "germany",
@@ -147,42 +93,90 @@
         "united-kingdom",
         "united-states"
       ],
+      "country_count": 5,
+      "headline": "La banque centrale confirme sa trajectoire de resserrement monétaire",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "Le Monde",
+          "source_country": "france",
+          "title": "Markets stabilize a week after the rate hike",
+          "url": "https://lemonde.fr/economie/marches-semaine"
+        },
+        {
+          "language": "fr",
+          "source": "Le Figaro",
+          "source_country": "france",
+          "title": "Coverage of central-bank-week-2026-08 (Le Figaro)",
+          "url": "https://example-france-1.test/central-bank-week-2026-08"
+        },
+        {
+          "language": "de",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "title": "Coverage of central-bank-week-2026-08 (Deutsche Welle)",
+          "url": "https://example-germany-0.test/central-bank-week-2026-08"
+        },
+        {
+          "language": "ja",
+          "source": "Kyodo News",
+          "source_country": "japan",
+          "title": "Coverage of central-bank-week-2026-08 (Kyodo News)",
+          "url": "https://example-japan-0.test/central-bank-week-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Reuters",
+          "source_country": "united-kingdom",
+          "title": "Coverage of central-bank-week-2026-08 (Reuters)",
+          "url": "https://example-united-kingdom-0.test/central-bank-week-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Associated Press",
+          "source_country": "united-states",
+          "title": "Coverage of central-bank-week-2026-08 (Associated Press)",
+          "url": "https://example-united-states-0.test/central-bank-week-2026-08"
+        }
+      ],
       "origin_country": "france",
-      "rank": 2,
-      "summary": "Les marchés se stabilisent une semaine après la hausse des taux. Les analystes révisent leurs prévisions d'inflation à la baisse pour le prochain trimestre.",
+      "outbound_source": "Le Monde",
       "outbound_url": "https://lemonde.fr/economie/marches-semaine",
-      "outbound_source": "Le Monde"
+      "rank": 2,
+      "summary": "Les marchés se stabilisent une semaine après la hausse des taux. Les analystes révisent leurs prévisions d'inflation à la baisse pour le prochain trimestre."
     },
     {
       "cluster_id": "trade-agreement-week-2026-08",
-      "members": [
-        {
-          "title": "Coverage of trade-agreement-week-2026-08 (Xinhua)",
-          "url": "https://example-china-0.test/trade-agreement-week-2026-08",
-          "source": "Xinhua",
-          "source_country": "china",
-          "language": "zh"
-        },
-        {
-          "title": "Coverage of trade-agreement-week-2026-08 (South China Morning Post)",
-          "url": "https://example-china-1.test/trade-agreement-week-2026-08",
-          "source": "South China Morning Post",
-          "source_country": "china",
-          "language": "en"
-        },
-        {
-          "title": "Trade agreement's first week shows early effects",
-          "url": "https://dw.com/economie/accord-semaine",
-          "source": "Deutsche Welle",
-          "source_country": "germany",
-          "language": "de"
-        }
-      ],
-      "independent_source_count": 3,
-      "country_count": 2,
       "countries": [
         "china",
         "germany"
+      ],
+      "country_count": 2,
+      "headline": "Un accord commercial est signé après dix-huit mois de pourparlers",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "zh",
+          "source": "Xinhua",
+          "source_country": "china",
+          "title": "Coverage of trade-agreement-week-2026-08 (Xinhua)",
+          "url": "https://example-china-0.test/trade-agreement-week-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "South China Morning Post",
+          "source_country": "china",
+          "title": "Coverage of trade-agreement-week-2026-08 (South China Morning Post)",
+          "url": "https://example-china-1.test/trade-agreement-week-2026-08"
+        },
+        {
+          "language": "de",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "title": "Trade agreement's first week shows early effects",
+          "url": "https://dw.com/economie/accord-semaine"
+        }
       ],
       "origin_country": "germany",
       "rank": 3
@@ -190,5 +184,14 @@
   ],
   "discarded_ingested": 8760,
   "discarded_kept": 3,
-  "generated_at": "2026-08-11T06:14:00+00:00"
+  "generated_at": "2026-08-11T06:14:00+00:00",
+  "language": "fr",
+  "period": "week",
+  "schema_version": 2,
+  "served_zone": "world",
+  "served_zone_continent": null,
+  "served_zone_kind": "world",
+  "zone": "world",
+  "zone_continent": null,
+  "zone_kind": "world"
 }

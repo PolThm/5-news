@@ -94,7 +94,8 @@ def test_schema_version_is_present_and_stable() -> None:
         generated_at=datetime(2026, 8, 11, 6, 0, tzinfo=UTC),
     )
 
-    assert record.to_dict()["schema_version"] == 1
+    # Bumped 1 -> 2 by Story 6.1, when each Cluster gained a `headline`.
+    assert record.to_dict()["schema_version"] == 2
 
 
 def test_a_fallback_records_both_the_requested_and_served_zone() -> None:

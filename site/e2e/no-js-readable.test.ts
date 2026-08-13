@@ -939,3 +939,68 @@ describe("Honest offline experience (Story 5.4)", () => {
     }
   });
 });
+
+describe("Item headlines and heading hierarchy (Story 6.1)", () => {
+  // Own build step, per this file's established convention (Stories 5.1/5.2
+  // Blind Hunter precedent: never rely on another block having populated
+  // dist/ first).
+  let html: string;
+
+  beforeAll(() => {
+    execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
+    html = readFileSync(DIST_INDEX, "utf-8");
+  }, 30000);
+
+  it("renders each item's headline as a real <h2> in the initial HTML, no JS required", () => {
+    // Astro appends its scoping attribute to the tag, so match the shape
+    // rather than a literal opening tag.
+    expect(html).toMatch(
+      /<h2 class="headline"[^>]*>Un cessez-le-feu entre en vigueur après trois jours de négociations<\/h2>/
+    );
+  });
+
+  it("keeps exactly one <h1> — the mad-libs sentence — with the item headlines one level below it", () => {
+    // The page's document outline: a single h1, then one h2 per item. This
+    // is the accessibility win of Story 6.1 (a screen-reader user can jump
+    // item to item), and it only holds if no second h1 sneaks in.
+    const h1Count = (html.match(/<h1[ >]/g) ?? []).length;
+    expect(h1Count).toBe(1);
+    expect(html).toMatch(/<h1 id="mad-libs-sentence"/);
+
+    // One h2 per item, and never a skipped level (no h3 without an h2).
+    const itemCount = (html.match(/<div class="item"/g) ?? []).length;
+    const h2Count = (html.match(/<h2[ >]/g) ?? []).length;
+    expect(h2Count).toBe(itemCount);
+    expect(html).not.toMatch(/<h3[ >]/);
+  });
+
+  it("renders the headline in the serif face above a grotesque summary, so the two levels are visually distinct", () => {
+    // Astro scopes component styles by injecting a data-astro-cid-* attribute
+    // into the selector, so `.item h2.headline` compiles to
+    // `.item[data-astro-cid-x] h2[data-astro-cid-x].headline` -- match
+    // tolerantly rather than pinning the generated hash.
+    const css = resolveCss(html);
+    expect(css).toMatch(/\.item[^{]*h2[^{]*\.headline\{[^}]*font-size:24px/);
+    expect(css).toMatch(/\.item[^{]*h2[^{]*\.headline\{[^}]*Source Serif 4/);
+    expect(css).toMatch(/\.item[^{]*p[^{]*\.summary\{[^}]*IBM Plex Sans/);
+  });
+
+  it("renders nothing after the End Screen — now including headings (closes a gap in the Story 4.4 check)", () => {
+    // The original assertion listed div|span|a|p|h1|ul|li but omitted h2,
+    // so a stray heading after the completion statement would have passed.
+    // Same slicing approach as the Story 4.4 check this extends: find the
+    // End Screen's completion <p>, then assert on everything after it. The
+    // sr-announcer div is the one documented exception.
+    const beforeScript = html.slice(0, html.indexOf("<script"));
+    // Anchor on the End Screen itself, then step past its completion <p>.
+    // (Slicing from the first "</p>" in the document would land inside the
+    // first item's summary instead -- item headlines legitimately follow it.)
+    const endScreenIndex = beforeScript.indexOf('<div class="end-screen"');
+    expect(endScreenIndex).toBeGreaterThan(-1);
+    const endScreen = beforeScript.slice(endScreenIndex);
+    const afterCompletionStatement = endScreen
+      .slice(endScreen.indexOf("</p>") + "</p>".length)
+      .replace(/<div id="sr-announcer" aria-live="polite"[^>]*><\/div>/, "");
+    expect(afterCompletionStatement).not.toMatch(/<(div|span|a|p|h1|h2|h3|ul|li)[ >]/);
+  });
+});

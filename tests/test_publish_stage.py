@@ -15,7 +15,12 @@ from pathlib import Path
 
 from pipeline.config import PERIODS, ZONES
 from pipeline.domain import BriefingRecord, OutputLanguage, Period
-from pipeline.stages.publish import assemble_briefings, publish_briefings
+from pipeline.stages.publish import (
+    _SUMMARIZE_OWNED_FIELDS,
+    _attach_summary,
+    assemble_briefings,
+    publish_briefings,
+)
 from pipeline.stages.rank import ZoneRanking
 
 
@@ -311,3 +316,50 @@ def test_main_exits_nonzero_and_explains_it_has_no_standalone_cli_input(capsys) 
     captured = capsys.readouterr()
     assert exit_code != 0
     assert "cycle" in captured.err
+
+
+def test_headline_survives_publish_the_summarize_owned_fields_whitelist() -> None:
+    """Story 6.1 regression guard, and the reason this test exists at all:
+    `_attach_summary` copies only the fields named in
+    `_SUMMARIZE_OWNED_FIELDS`, filtered by `if field in summarized`. A field
+    that summarize produces but that is missing from that tuple is dropped
+    SILENTLY -- no exception, no warning, just an absent key in the published
+    JSON that the site then renders as a missing heading.
+
+    Pinned here rather than left to the generic pass-through tests because
+    those assert that *cluster* fields survive; `headline` is a
+    summarize-owned field, so it travels the whitelist path instead and no
+    existing test covered it."""
+    cluster = _cluster("a")
+    summarized = {
+        "a": {
+            "cluster_id": "a",
+            "headline": "Un cessez-le-feu entre en vigueur",
+            "summary": "Les delegations ont confirme un accord.",
+            "outbound_url": "https://lemonde.fr/x",
+            "outbound_source": "Le Monde",
+        }
+    }
+
+    attached = _attach_summary(cluster, summarized)
+
+    assert attached["headline"] == "Un cessez-le-feu entre en vigueur"
+    assert attached["summary"] == "Les delegations ont confirme un accord."
+    # Every summarize-owned field must arrive together -- a partial copy is
+    # the failure mode this whitelist exists to make deliberate.
+    assert attached["outbound_source"] == "Le Monde"
+
+
+def test_every_summarize_owned_field_is_actually_copied() -> None:
+    """The whitelist and the copy loop must not drift: if a field is added
+    to `_SUMMARIZE_OWNED_FIELDS` but the producing stage never emits it, or
+    vice versa, this catches it without naming the fields a second time."""
+    cluster = _cluster("a")
+    summarized = {"a": {"cluster_id": "a", **{f: f"value-{f}" for f in _SUMMARIZE_OWNED_FIELDS}}}
+
+    attached = _attach_summary(cluster, summarized)
+
+    for field_name in _SUMMARIZE_OWNED_FIELDS:
+        assert attached[field_name] == f"value-{field_name}", (
+            f"{field_name!r} is in _SUMMARIZE_OWNED_FIELDS but was not copied by _attach_summary"
+        )

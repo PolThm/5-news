@@ -29,6 +29,9 @@ export interface ClusterMemberLike {
 
 export interface ClusterLike {
   cluster_id: string;
+  // Story 6.1 -- hand-mirrored from briefing.ts's own Cluster, per this
+  // file's established duplication convention (see the module docstring).
+  headline?: string;
   summary?: string;
   independent_source_count: number;
   country_count: number;
@@ -570,6 +573,13 @@ export function renderItemListHtml(briefing: BriefingLike, lang: LanguageSlug): 
 
   return briefing.clusters
     .map((cluster) => {
+      // Story 6.1: the headline is an <h2> -- the page's first real heading
+      // level below the mad-libs <h1>, giving screen-reader users a
+      // navigable item list. Rendered before the summary, mirroring
+      // BriefingPage.astro exactly.
+      const headlineHtml = cluster.headline
+        ? `<h2 class="headline">${escapeHtml(cluster.headline)}</h2>`
+        : "";
       const summaryHtml = cluster.summary
         ? `<p class="summary">${escapeHtml(cluster.summary)}</p>`
         : "";
@@ -584,7 +594,7 @@ export function renderItemListHtml(briefing: BriefingLike, lang: LanguageSlug): 
         )
         .join("");
       return (
-        `<div class="item">${summaryHtml}` +
+        `<div class="item">${headlineHtml}${summaryHtml}` +
         `<button type="button" class="chip" aria-expanded="false" aria-controls="${sourceListId}" data-consensus-chip>` +
         `<span class="num">${cluster.independent_source_count}</span> ${escapeHtml(chipText.sources)} · ` +
         `<span class="num">${cluster.country_count}</span> ${escapeHtml(chipText.countries)}` +

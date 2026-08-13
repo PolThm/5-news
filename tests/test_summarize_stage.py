@@ -18,7 +18,12 @@ import json
 from pathlib import Path
 
 from pipeline.adapters import Failure
-from pipeline.adapters.claude import BatchCollectResult, BatchSubmission, _prompt_for
+from pipeline.adapters.claude import (
+    BatchCollectResult,
+    BatchSubmission,
+    ClusterText,
+    _prompt_for,
+)
 from pipeline.domain import OutputLanguage
 from pipeline.stages import read_jsonl
 from pipeline.stages.summarize import collect_summarize, submit_summarize
@@ -142,7 +147,13 @@ def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> No
     clusters = [_ranked_cluster("a", rank=1), _ranked_cluster("b", rank=2)]
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
-        return BatchCollectResult(status="ended", summaries={"a": "Resume A.", "b": "Resume B."})
+        return BatchCollectResult(
+            status="ended",
+            texts={
+                "a": ClusterText(headline="Titre A", summary="Resume A."),
+                "b": ClusterText(headline="Titre B", summary="Resume B."),
+            },
+        )
 
     written = collect_summarize(
         "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
@@ -211,7 +222,7 @@ def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffecte
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
             status="ended",
-            summaries={"ok": "Tout va bien."},
+            texts={"ok": ClusterText(headline="Titre ok", summary="Tout va bien.")},
             failures=[Failure("claude", "cluster bad: batch result was 'errored'")],
         )
 
@@ -303,7 +314,10 @@ def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_
     )
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
-        return BatchCollectResult(status="ended", summaries={"a": "Un resume reel."})
+        return BatchCollectResult(
+            status="ended",
+            texts={"a": ClusterText(headline="Un titre reel", summary="Un resume reel.")},
+        )
 
     written = collect_summarize(
         "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
@@ -364,7 +378,10 @@ def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() 
     cluster = _ranked_cluster("history-only", rank=1, members=[])
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
-        return BatchCollectResult(status="ended", summaries={"history-only": "Un resume."})
+        return BatchCollectResult(
+            status="ended",
+            texts={"history-only": ClusterText(headline="Un titre", summary="Un resume.")},
+        )
 
     written = collect_summarize(
         "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
@@ -420,7 +437,11 @@ def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
-            status="ended", summaries={"ok": "Ca va.", "malformed": "Aussi resume."}
+            status="ended",
+            texts={
+                "ok": ClusterText(headline="Titre ok", summary="Ca va."),
+                "malformed": ClusterText(headline="Titre malformed", summary="Aussi resume."),
+            },
         )
 
     written = collect_summarize(
@@ -453,7 +474,9 @@ def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> N
     )
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
-        return BatchCollectResult(status="ended", summaries={"a": "Un resume."})
+        return BatchCollectResult(
+            status="ended", texts={"a": ClusterText(headline="Un titre", summary="Un resume.")}
+        )
 
     written = collect_summarize(
         "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
@@ -475,7 +498,11 @@ def test_metadata_records_how_many_clusters_lack_an_outbound_link() -> None:
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
-            status="ended", summaries={"linked": "Ok.", "unlinked": "Ok aussi."}
+            status="ended",
+            texts={
+                "linked": ClusterText(headline="Titre linked", summary="Ok."),
+                "unlinked": ClusterText(headline="Titre unlinked", summary="Ok aussi."),
+            },
         )
 
     written = collect_summarize(
@@ -599,3 +626,72 @@ def test_main_reports_a_submission_failure_on_stderr_instead_of_printing_none(
     assert exit_code == 0
     assert "None" not in captured.out
     assert "submission failed" in captured.err
+
+
+def test_a_cluster_receives_both_a_headline_and_a_summary(tmp_path: Path) -> None:
+    """Story 6.1: the two fields are distinct, and never swapped."""
+    clusters = [_ranked_cluster("a", rank=1)]
+
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended",
+            texts={"a": ClusterText(headline="Un cessez-le-feu", summary="Les delegations...")},
+        )
+
+    written = collect_summarize(
+        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+    )
+    out = list(read_jsonl(written.output_path))
+
+    assert out[0]["headline"] == "Un cessez-le-feu"
+    assert out[0]["summary"] == "Les delegations..."
+
+
+def test_a_degraded_cluster_gets_the_article_title_as_both_headline_and_summary() -> None:
+    """AD-6 prescribes exactly this for a failed Cluster: "degrades that item
+    to its Article title and outbound link." Story 6.1 keeps Story 3.1's
+    summary behavior unchanged and applies the same title to the headline --
+    a real Article title is a better headline than a fabricated one, at the
+    documented cost of being in the Article's own language rather than the
+    Output Language."""
+    clusters = [_ranked_cluster("failed", rank=1)]
+
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(status="ended", texts={})  # nothing came back
+
+    written = collect_summarize(
+        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+    )
+    out = list(read_jsonl(written.output_path))
+
+    # The representative member's own title, per _representative_member.
+    assert out[0]["headline"] == "title for failed"
+    assert out[0]["summary"] == "title for failed"
+
+    metadata = json.loads((written.output_path.parent / "summarize.json").read_text())
+    assert metadata["degraded_cluster_ids"] == ["failed"]
+    assert metadata["clusters_degraded"] == 1
+
+
+def test_headline_and_summary_degrade_together_never_one_without_the_other() -> None:
+    """The adapter never returns a half-populated ClusterText, so an item can
+    never end up with a real headline beside a fallback summary (or vice
+    versa) -- which would be invisible in the metadata, since one degrade
+    counter covers both fields."""
+    clusters = [_ranked_cluster("ok", rank=1), _ranked_cluster("failed", rank=2)]
+
+    def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
+        return BatchCollectResult(
+            status="ended",
+            texts={"ok": ClusterText(headline="Vrai titre", summary="Vrai resume.")},
+        )
+
+    written = collect_summarize(
+        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+    )
+    by_id = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
+
+    assert by_id["ok"]["headline"] == "Vrai titre"
+    assert by_id["ok"]["summary"] == "Vrai resume."
+    # Both degraded to the same title -- not one real, one fallback.
+    assert by_id["failed"]["headline"] == by_id["failed"]["summary"] == "title for failed"

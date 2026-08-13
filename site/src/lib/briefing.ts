@@ -29,9 +29,15 @@ export interface Cluster {
   rank: number;
   // Absent entirely (not just null) when the Cluster wasn't found in the
   // summarize pool -- publish.py's _attach_summary early-returns without
-  // adding any of these three keys in that case. Treat "missing" and
+  // adding any of these four keys in that case. Treat "missing" and
   // "present but null" identically: both mean "no outbound link, and/or
-  // no AI summary, for this item."
+  // no AI text, for this item."
+  //
+  // `headline` (Story 6.1) is additionally absent from every schema_version
+  // 1 file, so a Briefing published before that story renders without a
+  // heading rather than failing -- the same optional-field treatment
+  // `summary` already gets, which is why the schema bump is additive.
+  headline?: string;
   summary?: string;
   outbound_url?: string | null;
   outbound_source?: string | null;

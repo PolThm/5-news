@@ -19,6 +19,7 @@ real two-phase caller (``pipeline.stages.summarize``) exists to use the split.
 
 from __future__ import annotations
 
+import json
 import os
 from dataclasses import dataclass, field
 from typing import Any, Literal, Protocol
@@ -60,6 +61,40 @@ _NO_FABRICATION_INSTRUCTION = (
     "synthesized statement to a named outlet -- if you are not directly "
     "quoting an outlet, do not say '<outlet> reports that...'."
 )
+
+# Story 6.1: the headline is held to the SAME non-fabrication rule as the
+# Summary (FR-13, extended) -- it is the more exposed of the two fields,
+# being short, prominent, and rendered directly above the outlet name that
+# FR-14 forbids attributing a synthesized statement to. The register rule
+# restates PRD section 7's "no urgency, no teasers, no 'breaking'" verbatim
+# in prompt form: a generated headline is exactly where clickbait would
+# enter this product if nothing forbade it.
+_HEADLINE_INSTRUCTION = (
+    "The headline states what happened, in the same plain and finite "
+    "register: no urgency, no teasers, no 'breaking', no question marks, "
+    "no trailing punctuation, and never a verbless fragment. It is a "
+    "declarative sentence a wire editor would accept, not a hook. Target "
+    "about 70 characters."
+)
+
+# Story 6.1: the batch now returns two fields per Cluster instead of one
+# free-text paragraph, so the response is constrained by a JSON schema
+# rather than parsed as raw text. `additionalProperties: false` plus both
+# fields `required` is what makes the shape a guarantee rather than a
+# request -- see the Batches API's own support for output_config.
+#
+# A new schema costs a one-time compilation on its first request and is
+# then cached for 24h, so this does not add per-cycle latency beyond the
+# very first cycle after deploy.
+_SUMMARY_SCHEMA: dict = {
+    "type": "object",
+    "properties": {
+        "headline": {"type": "string"},
+        "summary": {"type": "string"},
+    },
+    "required": ["headline", "summary"],
+    "additionalProperties": False,
+}
 
 
 class _BatchResult(Protocol):
@@ -114,6 +149,25 @@ class BatchSubmission:
 
 
 @dataclass(frozen=True, slots=True)
+class ClusterText:
+    """The two pieces of generated text one Cluster receives (Story 6.1).
+
+    A dataclass rather than a bare ``tuple[str, str]`` so every call site
+    names which field it means -- the two are both short strings and would
+    otherwise be silently swappable, which is exactly the class of bug that
+    would put a Summary in a headline's place with no test noticing.
+
+    Both fields are non-optional here: a result that reached this type had
+    a schema-valid response carrying both. Partial or malformed responses
+    never construct a ``ClusterText`` -- they are reported as a per-Cluster
+    failure instead, and `summarize` degrades them (AD-6, AD-10).
+    """
+
+    headline: str
+    summary: str
+
+
+@dataclass(frozen=True, slots=True)
 class BatchCollectResult:
     """The outcome of checking one batch's status, once.
 
@@ -121,9 +175,9 @@ class BatchCollectResult:
     ``"pending"`` means the batch has not reached ``ended`` yet -- there is
     nothing to report, and the caller should check again later (via a new
     invocation, never a loop inside this call). ``"ended"`` means results
-    were collected (``summaries``/``failures`` populated per-Cluster exactly
+    were collected (``texts``/``failures`` populated per-Cluster exactly
     as a completed batch's outcome always has, including the mid-iteration-
-    failure-preserves-already-collected-summaries fix from Story 3.1).
+    failure-preserves-already-collected-results fix from Story 3.1).
 
     Deliberately not a reuse of the old ``SummarizeResult`` shape: a
     "pending" outcome is not "every Cluster failed" -- collapsing the two
@@ -132,7 +186,7 @@ class BatchCollectResult:
     """
 
     status: Literal["pending", "ended"]
-    summaries: dict[str, str] = field(default_factory=dict)
+    texts: dict[str, ClusterText] = field(default_factory=dict)
     failures: list[Failure] = field(default_factory=list)
 
 
@@ -172,12 +226,54 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     # instruction-following model should be expected to parse correctly.
     language_name = _LANGUAGE_NAMES[language]
     return (
-        f"Write one short paragraph, in {language_name}, summarizing the "
-        f"following news event for a reader who has not seen any of these "
-        f"Articles.\n\n"
+        f"Write a headline and one short paragraph, both in {language_name}, "
+        f"summarizing the following news event for a reader who has not seen "
+        f"any of these Articles.\n\n"
         f"Articles:\n{lines}\n\n"
-        f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}"
+        f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}\n"
+        f"{_HEADLINE_INSTRUCTION}"
     )
+
+
+def _parse_cluster_text(cluster_id: str, raw: str) -> tuple[ClusterText | None, Failure | None]:
+    """Parse one batch result's text into a ``ClusterText``, or report why
+    it could not be (Story 6.1).
+
+    Returns ``(text, None)`` on success and ``(None, failure)`` on any
+    malformed shape -- never raises, and never returns a half-populated
+    ``ClusterText``. A Cluster whose text fails to parse is degraded by
+    `summarize` exactly as one the batch never returned at all.
+
+    Both fields must be non-empty after stripping: `output_config`
+    guarantees the *keys* exist, but an empty string satisfies
+    ``{"type": "string"}`` and would render as a blank heading on the page.
+    """
+    try:
+        payload = json.loads(raw)
+    except (json.JSONDecodeError, TypeError) as exc:
+        return None, Failure(
+            ADAPTER,
+            f"cluster {cluster_id}: response was not valid JSON "
+            f"(likely truncated or refused): {exc}",
+        )
+
+    if not isinstance(payload, dict):
+        return None, Failure(
+            ADAPTER,
+            f"cluster {cluster_id}: response JSON was {type(payload).__name__}, not an object",
+        )
+
+    headline = payload.get("headline")
+    summary = payload.get("summary")
+    for name, value in (("headline", headline), ("summary", summary)):
+        if not isinstance(value, str) or not value.strip():
+            return None, Failure(
+                ADAPTER,
+                f"cluster {cluster_id}: {name!r} was missing, empty, or not a string",
+            )
+
+    assert isinstance(headline, str) and isinstance(summary, str)  # narrowed by the loop
+    return ClusterText(headline=headline.strip(), summary=summary.strip()), None
 
 
 def _client_or_degrade(client: Client | None) -> tuple[Client | None, Failure | None]:
@@ -234,6 +330,11 @@ def submit_batch(
                 params=MessageCreateParamsNonStreaming(
                     model=MODEL,
                     max_tokens=MAX_TOKENS,
+                    # Story 6.1: constrain the response to {headline, summary}
+                    # rather than parsing a free-text paragraph. The Batches
+                    # API supports every Messages API feature, so this is the
+                    # same output_config a non-batch call would take.
+                    output_config={"format": {"type": "json_schema", "schema": _SUMMARY_SCHEMA}},
                     messages=[
                         {"role": "user", "content": _prompt_for(cluster, language)},
                     ],
@@ -286,7 +387,7 @@ def collect_batch(
     # raised are reported as failed, matching this module's own claim that a
     # failure degrades only the affected Cluster, never everything already
     # collected.
-    summaries: dict[str, str] = {}
+    texts: dict[str, ClusterText] = {}
     failures: list[Failure] = []
     seen_custom_ids: set[str] = set()
     try:
@@ -294,7 +395,20 @@ def collect_batch(
             seen_custom_ids.add(item.custom_id)
             if item.result.type == "succeeded":
                 text_blocks = [b.text for b in item.result.message.content if b.type == "text"]
-                summaries[item.custom_id] = "".join(text_blocks)
+                raw = "".join(text_blocks)
+                # Story 6.1: output_config guarantees the shape when the
+                # response completes normally, but two real cases still
+                # produce text that isn't a valid {headline, summary}
+                # object: a truncated response (stop_reason "max_tokens")
+                # and a safety refusal, both of which are documented as
+                # NOT honouring the schema. Degrade that Cluster rather
+                # than raising past this adapter boundary (AD-6, AD-10) --
+                # the same treatment an outright failed result gets.
+                parsed, parse_failure = _parse_cluster_text(item.custom_id, raw)
+                if parsed is None:
+                    failures.append(parse_failure)
+                else:
+                    texts[item.custom_id] = parsed
             else:
                 failures.append(
                     Failure(
@@ -318,7 +432,7 @@ def collect_batch(
                 Failure(ADAPTER, f"cluster {cluster_id}: no result returned by the batch")
             )
 
-    return BatchCollectResult(status="ended", summaries=summaries, failures=failures)
+    return BatchCollectResult(status="ended", texts=texts, failures=failures)
 
 
 __all__ = [

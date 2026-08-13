@@ -226,10 +226,27 @@ def collect_summarize(
         # degrade-text and outbound-link derivations below.
         representative = _representative_member(cluster)
 
-        summary = result.summaries.get(cluster_id)
-        if summary is None:
-            summary = _degrade_title(cluster, representative)
+        # Story 6.1: headline and summary arrive together or not at all --
+        # the adapter never returns a half-populated ClusterText, so one
+        # degrade decision covers both fields rather than two independent
+        # ones that could leave an item with a real headline and a fallback
+        # summary (or vice versa) with no way to tell from the metadata.
+        text = result.texts.get(cluster_id)
+        if text is None:
+            # The representative Article's own title is the degrade text for
+            # BOTH fields: as a headline it is exactly what AD-6 prescribes
+            # ("degrades that item to its Article title and outbound link"),
+            # and as the summary it preserves Story 3.1's existing behavior
+            # unchanged. Note it is in the Article's own language, not the
+            # Output Language -- a stated shortfall, counted below, not a
+            # silent one.
+            degraded_title = _degrade_title(cluster, representative)
+            headline = degraded_title
+            summary = degraded_title
             degraded_cluster_ids.append(cluster_id)
+        else:
+            headline = text.headline
+            summary = text.summary
 
         # outbound_url/outbound_source (Story 3.3, FR-14) are attached
         # regardless of whether summarization degraded -- a reader always
@@ -242,6 +259,7 @@ def collect_summarize(
         summarized_out.append(
             {
                 **cluster,
+                "headline": headline,
                 "summary": summary,
                 "outbound_url": outbound_url,
                 "outbound_source": outbound_source,

@@ -1,104 +1,7 @@
 {
-  "schema_version": 1,
-  "zone": "world",
-  "zone_kind": "world",
-  "zone_continent": null,
-  "served_zone": "world",
-  "served_zone_kind": "world",
-  "served_zone_continent": null,
-  "period": "month",
-  "language": "fr",
   "clusters": [
     {
       "cluster_id": "ceasefire-month-2026-08",
-      "members": [
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (ABC News)",
-          "url": "https://example-australia-0.test/ceasefire-month-2026-08",
-          "source": "ABC News",
-          "source_country": "australia",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (The Australian)",
-          "url": "https://example-australia-1.test/ceasefire-month-2026-08",
-          "source": "The Australian",
-          "source_country": "australia",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Folha de S.Paulo)",
-          "url": "https://example-brazil-0.test/ceasefire-month-2026-08",
-          "source": "Folha de S.Paulo",
-          "source_country": "brazil",
-          "language": "pt"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (O Globo)",
-          "url": "https://example-brazil-1.test/ceasefire-month-2026-08",
-          "source": "O Globo",
-          "source_country": "brazil",
-          "language": "pt"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Xinhua)",
-          "url": "https://example-china-0.test/ceasefire-month-2026-08",
-          "source": "Xinhua",
-          "source_country": "china",
-          "language": "zh"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (South China Morning Post)",
-          "url": "https://example-china-1.test/ceasefire-month-2026-08",
-          "source": "South China Morning Post",
-          "source_country": "china",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Le Monde)",
-          "url": "https://example-france-0.test/ceasefire-month-2026-08",
-          "source": "Le Monde",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Le Figaro)",
-          "url": "https://example-france-1.test/ceasefire-month-2026-08",
-          "source": "Le Figaro",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Deutsche Welle)",
-          "url": "https://example-germany-0.test/ceasefire-month-2026-08",
-          "source": "Deutsche Welle",
-          "source_country": "germany",
-          "language": "de"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Wire Service)",
-          "url": "https://example-india-0.test/ceasefire-month-2026-08",
-          "source": "Wire Service",
-          "source_country": "india",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of ceasefire-month-2026-08 (Kyodo News)",
-          "url": "https://example-japan-0.test/ceasefire-month-2026-08",
-          "source": "Kyodo News",
-          "source_country": "japan",
-          "language": "ja"
-        },
-        {
-          "title": "A month into the ceasefire, talks move toward a lasting accord",
-          "url": "https://reuters.com/world/ceasefire-month",
-          "source": "Reuters",
-          "source_country": "united-kingdom",
-          "language": "en"
-        }
-      ],
-      "independent_source_count": 12,
-      "country_count": 8,
       "countries": [
         "australia",
         "brazil",
@@ -109,67 +12,103 @@
         "japan",
         "united-kingdom"
       ],
+      "country_count": 8,
+      "headline": "Un cessez-le-feu entre en vigueur après trois jours de négociations",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "en",
+          "source": "ABC News",
+          "source_country": "australia",
+          "title": "Coverage of ceasefire-month-2026-08 (ABC News)",
+          "url": "https://example-australia-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "The Australian",
+          "source_country": "australia",
+          "title": "Coverage of ceasefire-month-2026-08 (The Australian)",
+          "url": "https://example-australia-1.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "pt",
+          "source": "Folha de S.Paulo",
+          "source_country": "brazil",
+          "title": "Coverage of ceasefire-month-2026-08 (Folha de S.Paulo)",
+          "url": "https://example-brazil-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "pt",
+          "source": "O Globo",
+          "source_country": "brazil",
+          "title": "Coverage of ceasefire-month-2026-08 (O Globo)",
+          "url": "https://example-brazil-1.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "zh",
+          "source": "Xinhua",
+          "source_country": "china",
+          "title": "Coverage of ceasefire-month-2026-08 (Xinhua)",
+          "url": "https://example-china-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "South China Morning Post",
+          "source_country": "china",
+          "title": "Coverage of ceasefire-month-2026-08 (South China Morning Post)",
+          "url": "https://example-china-1.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "fr",
+          "source": "Le Monde",
+          "source_country": "france",
+          "title": "Coverage of ceasefire-month-2026-08 (Le Monde)",
+          "url": "https://example-france-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "fr",
+          "source": "Le Figaro",
+          "source_country": "france",
+          "title": "Coverage of ceasefire-month-2026-08 (Le Figaro)",
+          "url": "https://example-france-1.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "de",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "title": "Coverage of ceasefire-month-2026-08 (Deutsche Welle)",
+          "url": "https://example-germany-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Wire Service",
+          "source_country": "india",
+          "title": "Coverage of ceasefire-month-2026-08 (Wire Service)",
+          "url": "https://example-india-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "ja",
+          "source": "Kyodo News",
+          "source_country": "japan",
+          "title": "Coverage of ceasefire-month-2026-08 (Kyodo News)",
+          "url": "https://example-japan-0.test/ceasefire-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Reuters",
+          "source_country": "united-kingdom",
+          "title": "A month into the ceasefire, talks move toward a lasting accord",
+          "url": "https://reuters.com/world/ceasefire-month"
+        }
+      ],
       "origin_country": "united-kingdom",
-      "rank": 1,
-      "summary": "Un mois après le cessez-le-feu, les pourparlers avancent vers un accord durable. Les deux délégations doivent se retrouver le mois prochain pour une nouvelle série de négociations.",
+      "outbound_source": "Reuters",
       "outbound_url": "https://reuters.com/world/ceasefire-month",
-      "outbound_source": "Reuters"
+      "rank": 1,
+      "summary": "Un mois après le cessez-le-feu, les pourparlers avancent vers un accord durable. Les deux délégations doivent se retrouver le mois prochain pour une nouvelle série de négociations."
     },
     {
       "cluster_id": "central-bank-month-2026-08",
-      "members": [
-        {
-          "title": "A month of rate stability follows the August hike",
-          "url": "https://lemonde.fr/economie/mois-stabilite",
-          "source": "Le Monde",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of central-bank-month-2026-08 (Le Figaro)",
-          "url": "https://example-france-1.test/central-bank-month-2026-08",
-          "source": "Le Figaro",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of central-bank-month-2026-08 (Deutsche Welle)",
-          "url": "https://example-germany-0.test/central-bank-month-2026-08",
-          "source": "Deutsche Welle",
-          "source_country": "germany",
-          "language": "de"
-        },
-        {
-          "title": "Coverage of central-bank-month-2026-08 (Wire Service)",
-          "url": "https://example-india-0.test/central-bank-month-2026-08",
-          "source": "Wire Service",
-          "source_country": "india",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of central-bank-month-2026-08 (Kyodo News)",
-          "url": "https://example-japan-0.test/central-bank-month-2026-08",
-          "source": "Kyodo News",
-          "source_country": "japan",
-          "language": "ja"
-        },
-        {
-          "title": "Coverage of central-bank-month-2026-08 (Reuters)",
-          "url": "https://example-united-kingdom-0.test/central-bank-month-2026-08",
-          "source": "Reuters",
-          "source_country": "united-kingdom",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of central-bank-month-2026-08 (Associated Press)",
-          "url": "https://example-united-states-0.test/central-bank-month-2026-08",
-          "source": "Associated Press",
-          "source_country": "united-states",
-          "language": "en"
-        }
-      ],
-      "independent_source_count": 7,
-      "country_count": 6,
       "countries": [
         "france",
         "germany",
@@ -178,102 +117,158 @@
         "united-kingdom",
         "united-states"
       ],
+      "country_count": 6,
+      "headline": "La banque centrale a relevé ses taux à trois reprises en un mois",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "Le Monde",
+          "source_country": "france",
+          "title": "A month of rate stability follows the August hike",
+          "url": "https://lemonde.fr/economie/mois-stabilite"
+        },
+        {
+          "language": "fr",
+          "source": "Le Figaro",
+          "source_country": "france",
+          "title": "Coverage of central-bank-month-2026-08 (Le Figaro)",
+          "url": "https://example-france-1.test/central-bank-month-2026-08"
+        },
+        {
+          "language": "de",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "title": "Coverage of central-bank-month-2026-08 (Deutsche Welle)",
+          "url": "https://example-germany-0.test/central-bank-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Wire Service",
+          "source_country": "india",
+          "title": "Coverage of central-bank-month-2026-08 (Wire Service)",
+          "url": "https://example-india-0.test/central-bank-month-2026-08"
+        },
+        {
+          "language": "ja",
+          "source": "Kyodo News",
+          "source_country": "japan",
+          "title": "Coverage of central-bank-month-2026-08 (Kyodo News)",
+          "url": "https://example-japan-0.test/central-bank-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Reuters",
+          "source_country": "united-kingdom",
+          "title": "Coverage of central-bank-month-2026-08 (Reuters)",
+          "url": "https://example-united-kingdom-0.test/central-bank-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Associated Press",
+          "source_country": "united-states",
+          "title": "Coverage of central-bank-month-2026-08 (Associated Press)",
+          "url": "https://example-united-states-0.test/central-bank-month-2026-08"
+        }
+      ],
       "origin_country": "france",
-      "rank": 2,
-      "summary": "Un mois de stabilité des taux a suivi la hausse d'août. La banque centrale indique qu'elle maintiendra sa politique jusqu'à la prochaine réunion trimestrielle.",
+      "outbound_source": "Le Monde",
       "outbound_url": "https://lemonde.fr/economie/mois-stabilite",
-      "outbound_source": "Le Monde"
+      "rank": 2,
+      "summary": "Un mois de stabilité des taux a suivi la hausse d'août. La banque centrale indique qu'elle maintiendra sa politique jusqu'à la prochaine réunion trimestrielle."
     },
     {
       "cluster_id": "space-mission-month-2026-08",
-      "members": [
-        {
-          "title": "Coverage of space-mission-month-2026-08 (Le Monde)",
-          "url": "https://example-france-0.test/space-mission-month-2026-08",
-          "source": "Le Monde",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of space-mission-month-2026-08 (Le Figaro)",
-          "url": "https://example-france-1.test/space-mission-month-2026-08",
-          "source": "Le Figaro",
-          "source_country": "france",
-          "language": "fr"
-        },
-        {
-          "title": "Coverage of space-mission-month-2026-08 (Wire Service)",
-          "url": "https://example-india-0.test/space-mission-month-2026-08",
-          "source": "Wire Service",
-          "source_country": "india",
-          "language": "en"
-        },
-        {
-          "title": "Coverage of space-mission-month-2026-08 (Kyodo News)",
-          "url": "https://example-japan-0.test/space-mission-month-2026-08",
-          "source": "Kyodo News",
-          "source_country": "japan",
-          "language": "ja"
-        },
-        {
-          "title": "A month after launch, the mission reaches its target orbit",
-          "url": "https://apnews.com/science/mission-mois",
-          "source": "Associated Press",
-          "source_country": "united-states",
-          "language": "en"
-        }
-      ],
-      "independent_source_count": 5,
-      "country_count": 4,
       "countries": [
         "france",
         "india",
         "japan",
         "united-states"
       ],
+      "country_count": 4,
+      "headline": "Une mission spatiale conjointe rapporte ses premiers échantillons",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "Le Monde",
+          "source_country": "france",
+          "title": "Coverage of space-mission-month-2026-08 (Le Monde)",
+          "url": "https://example-france-0.test/space-mission-month-2026-08"
+        },
+        {
+          "language": "fr",
+          "source": "Le Figaro",
+          "source_country": "france",
+          "title": "Coverage of space-mission-month-2026-08 (Le Figaro)",
+          "url": "https://example-france-1.test/space-mission-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Wire Service",
+          "source_country": "india",
+          "title": "Coverage of space-mission-month-2026-08 (Wire Service)",
+          "url": "https://example-india-0.test/space-mission-month-2026-08"
+        },
+        {
+          "language": "ja",
+          "source": "Kyodo News",
+          "source_country": "japan",
+          "title": "Coverage of space-mission-month-2026-08 (Kyodo News)",
+          "url": "https://example-japan-0.test/space-mission-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "Associated Press",
+          "source_country": "united-states",
+          "title": "A month after launch, the mission reaches its target orbit",
+          "url": "https://apnews.com/science/mission-mois"
+        }
+      ],
       "origin_country": "united-states",
-      "rank": 3,
-      "summary": "Un mois après son lancement, la mission a atteint son orbite cible. Les premiers résultats scientifiques sont attendus dans les semaines à venir.",
+      "outbound_source": "Associated Press",
       "outbound_url": "https://apnews.com/science/mission-mois",
-      "outbound_source": "Associated Press"
+      "rank": 3,
+      "summary": "Un mois après son lancement, la mission a atteint son orbite cible. Les premiers résultats scientifiques sont attendus dans les semaines à venir."
     },
     {
       "cluster_id": "trade-agreement-month-2026-08",
-      "members": [
-        {
-          "title": "Coverage of trade-agreement-month-2026-08 (Xinhua)",
-          "url": "https://example-china-0.test/trade-agreement-month-2026-08",
-          "source": "Xinhua",
-          "source_country": "china",
-          "language": "zh"
-        },
-        {
-          "title": "Coverage of trade-agreement-month-2026-08 (South China Morning Post)",
-          "url": "https://example-china-1.test/trade-agreement-month-2026-08",
-          "source": "South China Morning Post",
-          "source_country": "china",
-          "language": "en"
-        },
-        {
-          "title": "One month in, the trade agreement's effects become measurable",
-          "url": "https://dw.com/economie/accord-mois",
-          "source": "Deutsche Welle",
-          "source_country": "germany",
-          "language": "de"
-        },
-        {
-          "title": "Coverage of trade-agreement-month-2026-08 (Der Spiegel)",
-          "url": "https://example-germany-1.test/trade-agreement-month-2026-08",
-          "source": "Der Spiegel",
-          "source_country": "germany",
-          "language": "de"
-        }
-      ],
-      "independent_source_count": 4,
-      "country_count": 2,
       "countries": [
         "china",
         "germany"
+      ],
+      "country_count": 2,
+      "headline": "Un accord commercial est signé après dix-huit mois de pourparlers",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "zh",
+          "source": "Xinhua",
+          "source_country": "china",
+          "title": "Coverage of trade-agreement-month-2026-08 (Xinhua)",
+          "url": "https://example-china-0.test/trade-agreement-month-2026-08"
+        },
+        {
+          "language": "en",
+          "source": "South China Morning Post",
+          "source_country": "china",
+          "title": "Coverage of trade-agreement-month-2026-08 (South China Morning Post)",
+          "url": "https://example-china-1.test/trade-agreement-month-2026-08"
+        },
+        {
+          "language": "de",
+          "source": "Deutsche Welle",
+          "source_country": "germany",
+          "title": "One month in, the trade agreement's effects become measurable",
+          "url": "https://dw.com/economie/accord-mois"
+        },
+        {
+          "language": "de",
+          "source": "Der Spiegel",
+          "source_country": "germany",
+          "title": "Coverage of trade-agreement-month-2026-08 (Der Spiegel)",
+          "url": "https://example-germany-1.test/trade-agreement-month-2026-08"
+        }
       ],
       "origin_country": "germany",
       "rank": 4
@@ -281,5 +276,14 @@
   ],
   "discarded_ingested": 37500,
   "discarded_kept": 4,
-  "generated_at": "2026-08-11T06:14:00+00:00"
+  "generated_at": "2026-08-11T06:14:00+00:00",
+  "language": "fr",
+  "period": "month",
+  "schema_version": 2,
+  "served_zone": "world",
+  "served_zone_continent": null,
+  "served_zone_kind": "world",
+  "zone": "world",
+  "zone_continent": null,
+  "zone_kind": "world"
 }

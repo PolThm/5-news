@@ -91,11 +91,18 @@ def assemble_briefings(
     return briefings
 
 
-# Every field summarize attaches, per AD-6/Story 3.3 -- the summary text
-# plus the outbound-link pair FR-14 requires. Named here, not derived from
-# the summarized dict's keys, so a future field summarize adds is a
-# deliberate addition to this list, not an accidental silent pass-through.
-_SUMMARIZE_OWNED_FIELDS = ("summary", "outbound_url", "outbound_source")
+# Every field summarize attaches, per AD-6/Story 3.3 -- the generated text
+# (headline + summary, Story 6.1) plus the outbound-link pair FR-14
+# requires. Named here, not derived from the summarized dict's keys, so a
+# future field summarize adds is a deliberate addition to this list, not an
+# accidental silent pass-through.
+#
+# Story 6.1 note: `_attach_summary` filters on `if field in summarized`, so
+# a field missing from this tuple is dropped SILENTLY at publish -- no
+# error, no failing test, just an absent key in the published JSON. Adding
+# a field to summarize's output without adding it here is the one change in
+# this pipeline that fails invisibly; the contract test below pins it.
+_SUMMARIZE_OWNED_FIELDS = ("headline", "summary", "outbound_url", "outbound_source")
 
 
 def _attach_summary(cluster: dict, summarized_by_id: dict[str, dict]) -> dict:

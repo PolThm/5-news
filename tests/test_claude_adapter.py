@@ -16,6 +16,8 @@ Story 3.4 split the old, poll-looping ``summarize_clusters`` into
 
 from __future__ import annotations
 
+import json
+
 import pytest
 from pipeline.adapters.claude import (
     _NO_FABRICATION_INSTRUCTION,
@@ -39,9 +41,21 @@ class _FakeTextBlock:
 
 
 class _FakeSucceededResult:
-    def __init__(self, text: str) -> None:
+    """A succeeded batch result.
+
+    Story 6.1: the real API now returns a JSON object (`output_config`
+    constrains it to `{headline, summary}`), not a bare paragraph. Callers
+    still pass the summary text they care about; the headline is derived so
+    every existing test keeps reading at its original level of detail. Pass
+    `raw=` instead to inject a deliberately malformed body.
+    """
+
+    def __init__(self, text: str | None = None, *, raw: str | None = None) -> None:
         self.type = "succeeded"
-        self.message = _FakeMessage(text)
+        if raw is None:
+            assert text is not None, "pass either text= or raw="
+            raw = json.dumps({"headline": f"Titre: {text}", "summary": text}, ensure_ascii=False)
+        self.message = _FakeMessage(raw)
 
 
 class _FakeErroredResult:
@@ -206,7 +220,7 @@ def test_collect_on_a_not_yet_ended_batch_makes_exactly_one_retrieve_call() -> N
     result = collect_batch("batch_1", clusters, client=client)
 
     assert result.status == "pending"
-    assert result.summaries == {}
+    assert result.texts == {}
     assert result.failures == []
     assert batches.retrieve_calls == 1
     assert batches.results_calls == 0
@@ -248,8 +262,9 @@ def test_collect_on_an_ended_batch_reassociates_results_by_custom_id_not_positio
     result = collect_batch("batch_1", clusters, client=client)
 
     assert result.status == "ended"
-    assert result.summaries["first"] == "Premier resume."
-    assert result.summaries["second"] == "Deuxieme resume."
+    assert result.texts["first"].summary == "Premier resume."
+    assert result.texts["first"].headline == "Titre: Premier resume."
+    assert result.texts["second"].summary == "Deuxieme resume."
 
 
 def test_collect_an_errored_result_is_reported_as_a_failure_scoped_to_its_cluster() -> None:
@@ -265,7 +280,8 @@ def test_collect_an_errored_result_is_reported_as_a_failure_scoped_to_its_cluste
 
     result = collect_batch("batch_1", clusters, client=client)
 
-    assert result.summaries == {"ok": "Ca va."}
+    assert list(result.texts) == ["ok"]
+    assert result.texts["ok"].summary == "Ca va."
     assert len(result.failures) == 1
     assert "bad" in result.failures[0].detail
 
@@ -285,7 +301,8 @@ def test_collect_a_custom_id_missing_from_results_is_reported_as_a_failure_not_a
 
     result = collect_batch("batch_1", clusters, client=client)
 
-    assert result.summaries == {"present": "Ok."}
+    assert list(result.texts) == ["present"]
+    assert result.texts["present"].summary == "Ok."
     assert len(result.failures) == 1
     assert "vanished" in result.failures[0].detail
 
@@ -312,7 +329,8 @@ def test_collect_a_failure_while_iterating_results_does_not_discard_already_coll
     result = collect_batch("batch_1", clusters, client=client)
 
     assert result.status == "ended"
-    assert result.summaries == {"a": "Resume A."}
+    assert list(result.texts) == ["a"]
+    assert result.texts["a"].summary == "Resume A."
     assert any("b" in f.detail for f in result.failures)
 
 
@@ -325,7 +343,7 @@ def test_collect_missing_api_key_with_no_injected_client_degrades_to_a_failure(
     result = collect_batch("batch_1", clusters)
 
     assert result.status == "ended"  # nothing to poll for -- fails immediately
-    assert result.summaries == {}
+    assert result.texts == {}
     assert len(result.failures) == 1
     assert "ANTHROPIC_API_KEY" in result.failures[0].detail
 
@@ -424,3 +442,116 @@ def test_the_no_fabrication_instruction_explicitly_names_the_outlet_attribution_
     inclusion check) should be the one to catch it."""
     assert "named outlet" in _NO_FABRICATION_INSTRUCTION
     assert "reports that" in _NO_FABRICATION_INSTRUCTION
+
+
+# --- Story 6.1: structured-output parsing and its degrade paths -----------
+
+
+def test_the_prompt_asks_for_a_headline_and_holds_it_to_the_same_rules() -> None:
+    """FR-13 as extended by Story 6.1: the headline is held to the same
+    non-fabrication rule as the Summary, and to PRD section 7's register
+    ("no urgency, no teasers, no 'breaking'") -- a generated headline is
+    exactly where clickbait would enter this product."""
+    cluster = _cluster("a", [{"title": "Un evenement", "source": "lemonde.fr"}])
+
+    prompt = _prompt_for(cluster, OutputLanguage.FR)
+
+    assert "headline" in prompt
+    # The anti-fabrication instruction still applies to the whole response,
+    # headline included -- not weakened to cover only the paragraph.
+    assert _NO_FABRICATION_INSTRUCTION in prompt
+    # The register constraints, stated explicitly rather than left to the
+    # model's defaults.
+    assert "no teasers" in prompt
+    assert "no 'breaking'" in prompt
+
+
+def test_submit_constrains_the_response_to_the_headline_summary_schema() -> None:
+    """The shape is a guarantee, not a request: both fields required and
+    additionalProperties false."""
+    clusters = [_cluster("a", [{"title": "X", "source": "y.com"}])]
+    batches = _FakeBatches()
+    client = _FakeClient(batches)
+
+    submit_batch(clusters, language=OutputLanguage.FR, client=client)
+
+    params = batches.create_calls[0]["requests"][0]["params"]
+    schema = params["output_config"]["format"]["schema"]
+    assert params["output_config"]["format"]["type"] == "json_schema"
+    assert set(schema["required"]) == {"headline", "summary"}
+    assert schema["additionalProperties"] is False
+
+
+def test_collect_a_truncated_or_refused_response_degrades_that_cluster_only() -> None:
+    """`output_config` guarantees the shape only when the response completes
+    normally -- a truncated response (max_tokens) and a safety refusal both
+    produce text that is not a valid object. That degrades one Cluster, not
+    the batch."""
+    batches = _FakeBatches(text_by_custom_id={"ok": "Ca va.", "truncated": "n/a"})
+
+    # Replace the truncated one's body with a half-written JSON object,
+    # exactly what a max_tokens cutoff produces.
+    def results(batch_id: str):
+        return [
+            _FakeBatchResult("ok", _FakeSucceededResult("Ca va.")),
+            _FakeBatchResult(
+                "truncated", _FakeSucceededResult(raw='{"headline": "Un titre", "sum')
+            ),
+        ]
+
+    batches.results = results  # type: ignore[method-assign]
+    client = _FakeClient(batches)
+
+    result = collect_batch(
+        "batch_1",
+        [_cluster("ok", []), _cluster("truncated", [])],
+        client=client,
+    )
+
+    assert result.status == "ended"
+    assert list(result.texts) == ["ok"]  # the good one survives
+    assert len(result.failures) == 1
+    assert "truncated" in result.failures[0].detail
+    assert "not valid JSON" in result.failures[0].detail
+
+
+def test_collect_an_empty_headline_is_rejected_rather_than_rendered_blank() -> None:
+    """An empty string satisfies {"type": "string"}, so the schema alone
+    does not stop a blank heading reaching the page."""
+    batches = _FakeBatches()
+
+    def results(batch_id: str):
+        return [
+            _FakeBatchResult(
+                "blank", _FakeSucceededResult(raw='{"headline": "   ", "summary": "Un resume."}')
+            )
+        ]
+
+    batches.results = results  # type: ignore[method-assign]
+    client = _FakeClient(batches)
+
+    result = collect_batch("batch_1", [_cluster("blank", [])], client=client)
+
+    assert result.texts == {}
+    assert len(result.failures) == 1
+    assert "'headline'" in result.failures[0].detail
+
+
+def test_collect_strips_surrounding_whitespace_from_both_fields() -> None:
+    batches = _FakeBatches()
+
+    def results(batch_id: str):
+        return [
+            _FakeBatchResult(
+                "a",
+                _FakeSucceededResult(raw='{"headline": "  Un titre  ", "summary": " Un resume. "}'),
+            )
+        ]
+
+    batches.results = results  # type: ignore[method-assign]
+    client = _FakeClient(batches)
+
+    result = collect_batch("batch_1", [_cluster("a", [])], client=client)
+
+    assert result.texts["a"].headline == "Un titre"
+    assert result.texts["a"].summary == "Un resume."

@@ -107,7 +107,7 @@ Every FR maps to exactly one owning epic. Where an FR is delivered incrementally
 | FR-10 | Epic 1 (layer 1) → Epic 2 (layers 2–3) | Syndication Detection, built in the order the PRD sequences |
 | FR-11 | Epic 3 | Multilingual Summary generation |
 | FR-12 | Epic 4 | Output Language selection |
-| FR-13 | Epic 3 | Two-source corroboration |
+| FR-13 | Epic 3 (Summaries) → Epic 6 (headlines) | Two-source corroboration, extended to cover generated headlines |
 | FR-14 | Epic 3 (data) → Epic 4 (display) | Attribution captured at summarize, rendered on the page |
 | FR-15 | Epic 1 (collection) → Epic 3 (full cycle) | Scheduled precomputation, completed once summarize and publish exist |
 | FR-16 | Epic 2 | Insufficient-coverage fallback to Continent |
@@ -164,6 +164,14 @@ The reading surface. A visitor arrives and the day's Briefing is already there; 
 **FRs covered:** FR-20, FR-21
 **Depends on:** Epic 4's page and Epic 3's real published cycles — FR-21's freshness rule can only be tested against actual cycle boundaries.
 **Standalone value:** the daily ritual gets an icon, and the commuter with no signal is served honestly rather than silently stale.
+
+### Epic 6: Scannable items
+
+Each item gains a generated headline above its Summary, so a reader can scan the five items before deciding which to read — restoring the structure the UX design originally specified and the data contract, not a product judgement, forced out.
+
+**FRs covered:** FR-13 (extended to cover headlines)
+**Depends on:** Epic 3's summarize stage and Epic 4's item rendering. The headline is produced by the same batch call that produces the Summary, and rendered in the same item block.
+**Standalone value:** the five-item list becomes scannable rather than requiring five paragraphs to be read in full, and the page gains its first real heading hierarchy — a direct accessibility win for screen-reader navigation.
 
 ---
 

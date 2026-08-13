@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { ClusterLike } from "../period-switcher";
 import {
   attach,
   attachChips,
@@ -1058,5 +1059,58 @@ describe("attachLanguageWords (via attach)", () => {
       globalThis.window = originalWindow;
       globalThis.Node = originalNode;
     }
+  });
+});
+
+describe("renderItemListHtml — headline (Story 6.1)", () => {
+  const briefingWith = (cluster: Partial<ClusterLike>) => ({
+    zone: "world",
+    served_zone: "world",
+    generated_at: "2026-08-12T06:14:00Z",
+    discarded_ingested: 0,
+    discarded_kept: 0,
+    clusters: [
+      {
+        cluster_id: "a",
+        independent_source_count: 2,
+        country_count: 2,
+        members: [{ source: "Reuters", source_country: "united-kingdom" }],
+        outbound_url: "https://reuters.com/x",
+        outbound_source: "Reuters",
+        ...cluster,
+      } as ClusterLike,
+    ],
+  });
+
+  it("renders the headline as an <h2> before the summary paragraph", () => {
+    const html = renderItemListHtml(
+      briefingWith({ headline: "Un cessez-le-feu entre en vigueur", summary: "Les délégations..." }),
+      "fr"
+    );
+
+    expect(html).toContain('<h2 class="headline">Un cessez-le-feu entre en vigueur</h2>');
+    // Order matters: the heading must precede its own summary, or the
+    // document outline no longer describes the item.
+    expect(html.indexOf('<h2 class="headline">')).toBeLessThan(html.indexOf('<p class="summary">'));
+  });
+
+  it("omits the heading entirely when headline is absent, rather than rendering an empty <h2>", () => {
+    // A schema_version 1 Briefing carries no headline at all. It must still
+    // render -- without an empty heading, which would be an accessibility
+    // defect (a heading announcing nothing).
+    const html = renderItemListHtml(briefingWith({ summary: "Un résumé sans titre." }), "fr");
+
+    expect(html).not.toContain("<h2");
+    expect(html).toContain('<p class="summary">Un résumé sans titre.</p>');
+  });
+
+  it("escapes HTML in the headline, exactly as it does in the summary", () => {
+    const html = renderItemListHtml(
+      briefingWith({ headline: '<script>alert("x")</script>', summary: "Sûr." }),
+      "fr"
+    );
+
+    expect(html).not.toContain("<script>");
+    expect(html).toContain("&lt;script&gt;");
   });
 });

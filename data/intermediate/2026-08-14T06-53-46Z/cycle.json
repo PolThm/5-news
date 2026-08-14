@@ -1,0 +1,44 @@
+{
+  "articles_collected": 363,
+  "briefings_path": null,
+  "clusters_after_grouping": 350,
+  "clusters_selected": 0,
+  "completed": true,
+  "cycle_id": "2026-08-14T06-53-46Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T06:53:46.909231+00:00..2026-08-13T18:53:46.909231+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T18:53:46.909231+00:00..2026-08-14T00:53:46.909231+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-14T00:53:46.909231+00:00..2026-08-14T06:53:46.909231+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "clustering merged nothing: 350 dedupe groups produced 350 Clusters (1:1). No Cluster can reach the 2-Independent-Source floor, so this cycle selects zero."
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for fr; see summarize.json"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for en; see summarize.json"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for es; see summarize.json"
+    }
+  ],
+  "groups_after_dedupe": 350,
+  "phase": "summarize_submit_failed",
+  "published": false,
+  "started_at": "2026-08-14T06:53:46.854301+00:00",
+  "summarize_batches": {}
+}

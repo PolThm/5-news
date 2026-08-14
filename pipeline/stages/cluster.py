@@ -59,9 +59,31 @@ EmbedFn = Callable[[list[str]], EmbeddingResult]
 
 
 # On L2-normalized vectors, Euclidean distance d and cosine similarity c
-# relate by d^2 = 2 - 2c, so d = 0.4 corresponds to c ~= 0.92 — headlines
+# relate by d^2 = 2 - 2c, so d = 0.748 corresponds to c ~= 0.72 — headlines
 # whose embeddings agree that closely are treated as the same Event.
-_SAME_EVENT_DISTANCE = 0.4
+#
+# Calibrated 2026-08-14 against a real 362-title corpus (11 RSS sources, 8
+# countries), not chosen by feel. The previous value (0.4, c ~= 0.92) was
+# picked to defeat single-linkage chaining and was never measured against
+# real cross-source headlines: it required near-verbatim titles, so nothing
+# merged. Three consecutive real cycles produced exactly one Cluster per
+# dedupe group (358:358, 358:358, 350:350), no Cluster ever reached the
+# 2-Independent-Source floor, and no Briefing was ever published.
+#
+# What the measurement showed on that corpus:
+#   - unrelated cross-source pairs: median c = 0.12, p99 = 0.32
+#   - genuine same-event pairs:     c = 0.71 to 0.95
+#   - a wide empty band between them, so the exact cut is not delicate
+#   - the same event in two languages lands lower than in one: EN/FR "aircraft
+#     carrier deployed" measured 0.60, BBC-EN/globo-PT on the same story 0.78
+# At c >= 0.72 that corpus yields 12 qualifying Clusters, every one a real
+# same-event group (hand-checked, zero false merges), with the largest
+# Cluster at 3 members. Loosening to 0.65 starts over-merging (largest
+# jumps to 5), so 0.72 sits inside the band rather than at its edge.
+#
+# Re-measure rather than nudge this if coverage looks wrong: the numbers
+# above are reproducible from `pipeline.adapters.rss` + `embed_titles`.
+_SAME_EVENT_DISTANCE = 0.748
 
 
 def _vectors_are_well_formed(vectors: list[list[float]]) -> bool:

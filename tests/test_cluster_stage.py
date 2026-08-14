@@ -374,3 +374,33 @@ def test_origin_country_compares_timestamps_semantically_not_lexicographically()
     coverage = coverage_for_cluster(groups)
 
     assert coverage.origin_country == "france"
+
+
+def test_the_threshold_admits_a_real_cross_source_same_event_pair() -> None:
+    """Regression guard for the calibration done on 2026-08-14.
+
+    The original threshold (d=0.4, c~=0.92) required near-verbatim titles.
+    Three consecutive real cycles merged nothing (358:358, 358:358, 350:350),
+    so no Cluster ever reached the 2-Independent-Source floor and no Briefing
+    was ever published.
+
+    These distances are computed from cosine similarities actually measured
+    with embed-v4 on that day's corpus, so this test fails if the threshold
+    is tightened back past the point where real same-event coverage merges --
+    without needing a live embedding call.
+    """
+    import numpy as np
+    from pipeline.stages.cluster import _SAME_EVENT_DISTANCE
+
+    def distance_for(cosine: float) -> float:
+        return float(np.sqrt(2 - 2 * cosine))
+
+    # Measured same-event pairs that MUST merge.
+    assert distance_for(0.955) <= _SAME_EVENT_DISTANCE, "Guardian/NDTV, Japan rain (verbatim-ish)"
+    assert distance_for(0.779) <= _SAME_EVENT_DISTANCE, "BBC-EN/globo-PT, Nobel on Putin"
+    assert distance_for(0.721) <= _SAME_EVENT_DISTANCE, "lemonde/francetvinfo, Putin visit"
+
+    # Measured unrelated-pair ceiling: the 99th percentile of cross-source
+    # pairs was 0.32. Merging at that similarity would inflate every
+    # Consensus Score, which is the product's central claim.
+    assert distance_for(0.60) > _SAME_EVENT_DISTANCE, "must stay well above the unrelated-pair band"

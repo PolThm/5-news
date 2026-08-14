@@ -10,9 +10,19 @@
 #
 # Do NOT simplify to `data/intermediate/*` — under that pattern cycle.json is
 # silently ignored and Story 3.4's resume logic breaks with no obvious cause.
+#
+# ranked.jsonl is committed for the same reason and is just as load-bearing:
+# _resume_cycle re-reads it to know WHICH Clusters the pending batches were
+# submitted for. A GitHub runner is a fresh machine, so anything the earlier
+# run left only on its own disk is gone -- and the resume path treats a
+# missing ranked.jsonl as zero Clusters, which silently discards the
+# generated text of batches that were already paid for. It is also the
+# smallest stage output by far (only the selected Clusters, 2-5 per Zone,
+# not the ~350 collected Articles).
 data/intermediate/**
 !data/intermediate/**/
 !data/intermediate/**/cycle.json
+!data/intermediate/rank/**/ranked.jsonl
 # Keeps the directory itself in a fresh clone; without this the stage contract
 # has nowhere to write on first run.
 !data/intermediate/.gitkeep

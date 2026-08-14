@@ -507,8 +507,24 @@ def _resume_cycle(
     for language_value, batch_info in list(remaining_batches.items()):
         language = OutputLanguage(language_value)
         batch_ranked_path = Path(batch_info["ranked_path"])
+        if not batch_ranked_path.is_file():
+            # Falling through with clusters=[] would call collect_summarize
+            # with nothing to attach the returned text to: the batch would be
+            # marked collected, its entry deleted from remaining_batches, and
+            # the generated text discarded -- silently, for work already paid
+            # for. Report it and leave the entry pending instead, so a later
+            # run can still publish if the file reappears.
+            failures.append(
+                Failure(
+                    "cycle",
+                    f"{language_value}: ranked.jsonl missing at {batch_ranked_path} — cannot "
+                    "attach this batch's text to its Clusters; leaving the batch pending",
+                )
+            )
+            record["last_checked_at"] = datetime.now(UTC).isoformat()
+            continue
         try:
-            clusters = list(read_jsonl(batch_ranked_path)) if batch_ranked_path.is_file() else []
+            clusters = list(read_jsonl(batch_ranked_path))
             collected = collect_summarize_fn(
                 batch_info["batch_id"],
                 clusters,

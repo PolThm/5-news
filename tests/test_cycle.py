@@ -1134,3 +1134,53 @@ def test_find_resumable_cycle_id_tolerates_a_missing_intermediate_directory(tmp_
     from pipeline.stages.cycle import find_resumable_cycle_id
 
     assert find_resumable_cycle_id(tmp_path / "nope") is None
+
+
+def test_a_missing_ranked_jsonl_leaves_the_batch_pending_instead_of_discarding_it(
+    tmp_path,
+) -> None:
+    """_resume_cycle re-reads ranked.jsonl to know which Clusters the pending
+    batches were submitted for. A GitHub runner is a fresh machine, so that
+    file only exists on the later run because it is committed.
+
+    Before this guard, a missing file fell through with clusters=[]: the batch
+    was marked collected, its entry deleted, and the generated text discarded
+    silently -- for work already paid for. It must stay pending and say so.
+    """
+    from pipeline.stages.cycle import run_cycle
+
+    cycle_id = "2026-08-14T09-00-00Z"
+    cycle_dir = tmp_path / "intermediate" / cycle_id
+    cycle_dir.mkdir(parents=True)
+    (cycle_dir / "cycle.json").write_text(
+        json.dumps(
+            {
+                "cycle_id": cycle_id,
+                "phase": "summarize_submitted",
+                "published": False,
+                "summarize_batches": {
+                    "fr": {
+                        "batch_id": "msgbatch_x",
+                        # deliberately absent
+                        "ranked_path": str(tmp_path / "nope" / "ranked.jsonl"),
+                    }
+                },
+            }
+        )
+    )
+
+    def must_not_be_called(*args, **kwargs):
+        raise AssertionError("collect_summarize must not run without ranked.jsonl")
+
+    result = run_cycle(
+        collect=lambda: CollectionResult(articles=[]),
+        cycle_id=cycle_id,
+        data_root=tmp_path,
+        collect_summarize_fn=must_not_be_called,
+    )
+
+    assert result.published is False
+    assert any("ranked.jsonl missing" in f.detail for f in result.failures)
+    # Still pending, so a later run can retry rather than losing the batch.
+    record = json.loads((cycle_dir / "cycle.json").read_text())
+    assert "fr" in record["summarize_batches"]

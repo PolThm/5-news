@@ -56,7 +56,14 @@ MAX_RECORDS = 250
 REQUEST_INTERVAL_SECONDS = 6.0
 
 # Below this, bisecting further buys nothing — accept truncation and say so.
-MIN_WINDOW = timedelta(minutes=1)
+#
+# Raised from 1 minute on 2026-08-14 against observed behavior: GDELT rejected
+# 22m30s windows outright with "Timespan is too short." (HTTP 200 carrying an
+# error string, so it costs a full request and a pacing wait to learn nothing).
+# The old floor let bisection descend into a range where every request was
+# guaranteed to fail, burning both the request budget and wall-clock. 30
+# minutes sits above the largest rejected window actually seen, with margin.
+MIN_WINDOW = timedelta(minutes=30)
 
 # Hard ceiling on requests per collection.
 #
@@ -71,6 +78,21 @@ MIN_WINDOW = timedelta(minutes=1)
 # coverage that gets killed. Exhausting the budget is recorded as a failure so
 # the shortfall is visible rather than silent.
 MAX_REQUESTS_PER_COLLECTION = 120
+
+# The request budget above bounds *requests*, never *time* — and that gap is
+# what killed a real cycle on 2026-08-14. A throttled window costs three
+# attempts with exponential backoff (6s*2 + 6s*4) plus pacing, so ~54s
+# rather than the ~6s the "120 requests is ~12 minutes" note above assumes.
+# With GDELT throttling broadly, 120 requests is up to ~108 minutes of
+# wall-clock; the workflow's `timeout-minutes: 30` killed the job mid-cycle
+# *after* it had already submitted its summarize batches, so the batch IDs
+# were never committed and that work was unrecoverable.
+#
+# This is the missing bound: collection stops when it has spent this long,
+# whatever the request count. Set well under the job timeout so the stages
+# after collect (dedupe, cluster, rank, summarize submit, commit) still have
+# room to finish and, critically, to persist their state.
+MAX_COLLECTION_SECONDS = 15 * 60
 
 
 # FIPS 10-4 country codes for the eight Country Zones (PRD FR-3).
@@ -295,13 +317,22 @@ class GdeltClient:
         collected: dict[str, dict[str, Any]] = {}
         failures: list[Failure] = []
         budget = [MAX_REQUESTS_PER_COLLECTION]
-        self._collect_into(query, start, end, collected, failures, budget)
+        deadline = time.monotonic() + MAX_COLLECTION_SECONDS
+        self._collect_into(query, start, end, collected, failures, budget, deadline)
         if budget[0] <= 0:
             failures.append(
                 Failure(
                     ADAPTER,
                     f"request budget of {MAX_REQUESTS_PER_COLLECTION} exhausted; "
                     "coverage for this cycle is incomplete",
+                )
+            )
+        if time.monotonic() >= deadline:
+            failures.append(
+                Failure(
+                    ADAPTER,
+                    f"collection deadline of {MAX_COLLECTION_SECONDS}s reached "
+                    "(upstream was throttling); coverage for this cycle is incomplete",
                 )
             )
         return CollectionResult(articles=list(collected.values()), failures=failures)
@@ -314,8 +345,14 @@ class GdeltClient:
         collected: dict[str, dict[str, Any]],
         failures: list[Failure],
         budget: list[int],
+        deadline: float,
     ) -> None:
-        if budget[0] <= 0:
+        # Two independent bounds. The request budget stops a saturating day
+        # from bisecting forever; the deadline stops a *throttled* day from
+        # spending an hour in backoff sleeps. Either one alone leaves the job
+        # killable by the workflow timeout, which loses everything the cycle
+        # has already done -- including batches it has already submitted.
+        if budget[0] <= 0 or time.monotonic() >= deadline:
             return
         budget[0] -= 1
         result = self.fetch_window(query, start, end)
@@ -342,7 +379,7 @@ class GdeltClient:
             return
 
         for half_start, half_end in halves:
-            self._collect_into(query, half_start, half_end, collected, failures, budget)
+            self._collect_into(query, half_start, half_end, collected, failures, budget, deadline)
 
 
 def collect_world_day(now: datetime | None = None) -> CollectionResult:

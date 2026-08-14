@@ -13,6 +13,7 @@ Verified against the live API on 2026-08-10/11. Three facts drive this design:
 
 from __future__ import annotations
 
+import json
 from datetime import UTC, datetime
 
 import pytest
@@ -426,3 +427,76 @@ def test_the_daily_query_parenthesizes_its_ord_terms() -> None:
     assert "(sourcelang:eng OR sourcelang:fra OR sourcelang:spa)" in source, (
         "the shipped daily query must parenthesize its OR'd terms"
     )
+
+
+def test_collection_stops_at_the_deadline_even_with_request_budget_left() -> None:
+    """Regression guard for the cycle killed on 2026-08-14.
+
+    The request budget bounds requests, not time. A throttled window costs
+    three attempts with exponential backoff (~54s) rather than the ~6s of
+    plain pacing, so 120 requests can mean ~108 minutes of wall-clock -- well
+    past the workflow's 30-minute timeout. That job was killed *after* it had
+    submitted its summarize batches, so the batch IDs were never committed
+    and the work was unrecoverable.
+
+    Driven by saturated responses (the case that actually bisects) with a
+    fake clock, so the bound is asserted without sleeping 15 real minutes.
+    """
+    from datetime import UTC, datetime, timedelta
+
+    from pipeline.adapters import gdelt
+
+    clock = {"now": 0.0}
+    calls = {"n": 0}
+    saturated_body = {
+        "articles": [
+            {
+                "url": f"https://example.test/{i}",
+                "title": f"t{i}",
+                "seendate": "20260814T000000Z",
+                "domain": "example.test",
+                "sourcecountry": "France",
+                "language": "French",
+            }
+            for i in range(gdelt.MAX_RECORDS)
+        ]
+    }
+
+    def saturating_fetch(url: str):
+        calls["n"] += 1
+        clock["now"] += 60.0  # each window costs a minute of the deadline
+        return FakeResponse(200, json.dumps(saturated_body))
+
+    client = gdelt.GdeltClient(fetch=saturating_fetch)
+    start = datetime(2026, 8, 14, tzinfo=UTC)
+
+    original = gdelt.time.monotonic
+    gdelt.time.monotonic = lambda: clock["now"]
+    try:
+        result = client.collect("(sourcelang:eng)", start, start + timedelta(days=1))
+    finally:
+        gdelt.time.monotonic = original
+
+    # Stopped on the deadline rather than exhausting the request budget.
+    assert calls["n"] < gdelt.MAX_REQUESTS_PER_COLLECTION
+    assert any("deadline" in f.detail for f in result.failures)
+    # Whatever it did fetch is still returned -- partial coverage that lands
+    # beats complete coverage that gets killed.
+    assert result.articles
+
+
+def test_bisection_stops_above_the_window_gdelt_actually_rejects() -> None:
+    """GDELT rejected 22m30s windows with "Timespan is too short." -- as an
+    HTTP 200 carrying an error string, so each one costs a request and a
+    pacing wait to learn nothing. The floor must sit above the largest
+    rejected window actually observed."""
+    from datetime import UTC, datetime, timedelta
+
+    from pipeline.adapters.gdelt import MIN_WINDOW, split_window
+
+    assert timedelta(minutes=23) <= MIN_WINDOW, (
+        "must exclude the 22m30s windows GDELT was observed to reject"
+    )
+
+    start = datetime(2026, 8, 14, tzinfo=UTC)
+    assert split_window(start, start + timedelta(minutes=22, seconds=30)) is None

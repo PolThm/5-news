@@ -13,20 +13,32 @@
     },
     {
       "adapter": "cycle",
-      "detail": "en: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl — cannot attach this batch's text to its Clusters; leaving the batch pending"
+      "detail": "en: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl \u2014 cannot attach this batch's text to its Clusters; leaving the batch pending"
     },
     {
       "adapter": "cycle",
-      "detail": "es: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl — cannot attach this batch's text to its Clusters; leaving the batch pending"
+      "detail": "es: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl \u2014 cannot attach this batch's text to its Clusters; leaving the batch pending"
     },
     {
       "adapter": "cycle",
-      "detail": "fr: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl — cannot attach this batch's text to its Clusters; leaving the batch pending"
+      "detail": "fr: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl \u2014 cannot attach this batch's text to its Clusters; leaving the batch pending"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "en: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl \u2014 the Clusters this batch was submitted for cannot be recovered, so its generated text is unusable; abandoning this cycle"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "es: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl \u2014 the Clusters this batch was submitted for cannot be recovered, so its generated text is unusable; abandoning this cycle"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "fr: ranked.jsonl missing at data/intermediate/rank/2026-08-14T08-40-15Z/ranked.jsonl \u2014 the Clusters this batch was submitted for cannot be recovered, so its generated text is unusable; abandoning this cycle"
     }
   ],
   "groups_after_dedupe": 351,
   "last_checked_at": "2026-08-14T08:48:24.234579+00:00",
-  "phase": "summarize_submitted",
+  "phase": "abandoned",
   "published": false,
   "started_at": "2026-08-14T08:40:15.755580+00:00",
   "summarize_batches": {

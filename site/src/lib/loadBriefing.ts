@@ -6,13 +6,16 @@ import type { BriefingRecord } from "./briefing";
  *
  * `realPath` is the pipeline's real output path
  * (`data/briefings/<lang>/<zone>/<period>.json`). `fixturePath` is a
- * committed fallback used when that file doesn't exist yet -- the real
- * production state today: `data/briefings/` contains only `.gitkeep`,
- * because no non-degraded scheduled cycle has run yet. This is a real
+ * committed fallback used when that file doesn't exist yet. This is a real
  * fallback behavior, not a test-only shim: it keeps `astro build`/`astro
  * dev` working before the pipeline has ever produced real output, and
  * continues to degrade gracefully if a future cycle run is ever missing
  * for some reason.
+ *
+ * The pipeline published its first real Briefing set on 2026-08-14, so the
+ * real path now normally exists for every combination and the fixtures are
+ * only reached on a fresh clone that has not pulled `data/briefings/`, or
+ * for a combination a future cycle somehow failed to write.
  *
  * Never reads across the pipeline/site boundary in the forbidden sense
  * (`scripts/check-boundary.sh`) -- both paths are supplied by the caller,

@@ -121,6 +121,8 @@ Two, both used only by the pipeline. See `.env` (gitignored) for what each one d
 
 The pipeline, the reading surface, and the PWA layer are built and tested. Deployed to Vercel from `main`.
 
-**The site currently renders committed fixtures, not real news.** No non-degraded cycle has published yet — the same-Event clustering threshold was calibrated against a real corpus on 2026-08-14 (it had been strict enough that nothing ever merged, so no story ever reached the 2-source floor), and the first cycles since that fix are still working through. Until one publishes, item text and outbound links come from development fixtures.
+**The pipeline published its first real Briefing set on 2026-08-14** — 135 files, real headlines and summaries written per language, real outbound links. Getting there took five distinct fixes, each hidden behind the previous one: the same-Event clustering threshold was strict enough that nothing ever merged (so no story reached the 2-source floor), collection was bounded by request count but not by wall-clock, AD-11's phase two was unreachable because every run minted a fresh cycle id, and the three files a resumed cycle re-reads were gitignored.
+
+Coverage is currently thin — typically 2 items rather than 5 — because GDELT has been returning HTTP 429 to every request for days, leaving only the 11 RSS feeds. That is the filter working as designed on a small corpus, not a fault: a Zone without enough qualifying coverage falls back to its Continent and says so. Volume will follow whenever GDELT is reachable again.
 
 Built with the [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD) — every epic and story, including the adversarial review findings and the decisions that were reversed along the way, is recorded under `_bmad-output/`.

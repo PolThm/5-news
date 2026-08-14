@@ -23,6 +23,22 @@ data/intermediate/**
 !data/intermediate/**/
 !data/intermediate/**/cycle.json
 !data/intermediate/rank/**/ranked.jsonl
+# zone_rankings.json and summarized.jsonl are the other two files _resume_cycle
+# reads, and they are load-bearing for exactly the same reason:
+#
+#   zone_rankings.json -- assemble_briefings needs the per-Zone x Period
+#     breakdown, which ranked.jsonl (the deduplicated union) does not carry.
+#     Without it the resumed run reaches publish and throws, landing in
+#     "publish_failed" with the batches already consumed.
+#   summarized.jsonl -- a language that collected on an earlier invocation
+#     left its text only here; the resuming run re-reads it rather than
+#     re-collecting a batch it already consumed.
+#
+# All three are small: the selected Clusters and their generated text, never
+# the ~350 collected Articles. Found by enumerating every path _resume_cycle
+# opens, after fixing ranked.jsonl alone proved insufficient.
+!data/intermediate/rank/**/zone_rankings.json
+!data/intermediate/summarize/**/summarized.jsonl
 # Keeps the directory itself in a fresh clone; without this the stage contract
 # has nowhere to write on first run.
 !data/intermediate/.gitkeep

@@ -147,6 +147,32 @@ def _should_resume(cycle_path: Path) -> bool:
     return not record.get("published", False)
 
 
+def find_resumable_cycle_id(data_root: Path = DEFAULT_DATA_ROOT) -> str | None:
+    """The most recent cycle_id with unfinished summarize/publish work, or
+    ``None`` when there is nothing to resume.
+
+    AD-11's two-phase cycle only completes if a *later* invocation picks up
+    the batches an earlier one submitted. Nothing did: the scheduled workflow
+    runs `python -m pipeline.stages.cycle` with no `--cycle-id`, so every run
+    minted a fresh id, `_should_resume` was asked about a path that had just
+    been created, and the pending cycle was silently abandoned along with the
+    batches it had already paid for. Phase two existed and was tested, but
+    was unreachable in production.
+
+    Newest-first because cycle ids are digit-first UTC timestamps and sort
+    lexicographically: if several cycles are somehow pending, the freshest is
+    the one whose batches are least likely to have expired (the Batch API
+    keeps results 29 days).
+    """
+    intermediate = data_root / "intermediate"
+    if not intermediate.is_dir():
+        return None
+    for candidate in sorted((p for p in intermediate.iterdir() if p.is_dir()), reverse=True):
+        if _should_resume(candidate / "cycle.json"):
+            return candidate.name
+    return None
+
+
 def run_cycle(
     collect: Callable[[], CollectionResult],
     cycle_id: str | None = None,
@@ -599,7 +625,18 @@ def main(argv: list[str] | None = None) -> int:
 
     from pipeline.stages.collect import collect_all
 
-    result = run_cycle(collect=collect_all, cycle_id=args.cycle_id, data_root=args.data_root)
+    # Phase two before phase one: if a previous invocation submitted batches
+    # and never got to publish, finish that cycle rather than starting a new
+    # one whose batches would queue behind it. An explicit --cycle-id always
+    # wins, so a human can still target one deliberately.
+    cycle_id = args.cycle_id
+    if cycle_id is None:
+        resumable = find_resumable_cycle_id(args.data_root)
+        if resumable is not None:
+            print(f"cycle: resuming {resumable} (batches pending from an earlier run)")
+            cycle_id = resumable
+
+    result = run_cycle(collect=collect_all, cycle_id=cycle_id, data_root=args.data_root)
 
     for failure in result.failures:
         print(f"cycle: degraded — {failure.adapter}: {failure.detail}", file=sys.stderr)

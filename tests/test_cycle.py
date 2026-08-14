@@ -1085,3 +1085,52 @@ def test_a_1_to_1_cluster_ratio_on_a_real_corpus_is_reported_not_silent() -> Non
     # The constant exists and is a real corpus size, not 0 or 1 (which would
     # make every small cycle and every fixture a false positive).
     assert _MERGE_DIAGNOSTIC_FLOOR >= 10
+
+
+def test_a_pending_cycle_is_found_and_resumed_without_an_explicit_cycle_id(tmp_path) -> None:
+    """AD-11's phase two was unreachable in production.
+
+    The scheduled workflow runs `python -m pipeline.stages.cycle` with no
+    `--cycle-id`, so every invocation minted a fresh id and `_should_resume`
+    was asked about a path that had just been created. A cycle that submitted
+    its batches was then abandoned, along with the batches it had already
+    paid for -- phase two existed and was tested, but nothing ever entered it.
+    """
+    from pipeline.stages.cycle import find_resumable_cycle_id
+
+    intermediate = tmp_path / "intermediate"
+
+    def write(cycle_id: str, phase: str, published: bool) -> None:
+        d = intermediate / cycle_id
+        d.mkdir(parents=True)
+        (d / "cycle.json").write_text(
+            json.dumps({"cycle_id": cycle_id, "phase": phase, "published": published})
+        )
+
+    # Nothing to resume yet.
+    assert find_resumable_cycle_id(tmp_path) is None
+
+    # A crashed-upstream cycle (never reached summarize) is NOT resumable --
+    # a fresh cycle_id starts over from collect, per AD-7.
+    write("2026-08-14T01-00-00Z", "collected", False)
+    assert find_resumable_cycle_id(tmp_path) is None
+
+    # An already-published cycle is finished.
+    write("2026-08-14T02-00-00Z", "published", True)
+    assert find_resumable_cycle_id(tmp_path) is None
+
+    # One with batches submitted but not published is the case that matters.
+    write("2026-08-14T03-00-00Z", "summarize_submitted", False)
+    assert find_resumable_cycle_id(tmp_path) == "2026-08-14T03-00-00Z"
+
+    # With several pending, the newest wins: its batches are least likely to
+    # have expired (the Batch API keeps results 29 days).
+    write("2026-08-14T04-00-00Z", "summarize_submitted", False)
+    assert find_resumable_cycle_id(tmp_path) == "2026-08-14T04-00-00Z"
+
+
+def test_find_resumable_cycle_id_tolerates_a_missing_intermediate_directory(tmp_path) -> None:
+    """First-ever run: nothing exists yet, and that is not an error."""
+    from pipeline.stages.cycle import find_resumable_cycle_id
+
+    assert find_resumable_cycle_id(tmp_path / "nope") is None

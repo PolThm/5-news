@@ -26,10 +26,14 @@
     {
       "adapter": "cycle",
       "detail": "publish raised: [Errno 2] No such file or directory: 'data/intermediate/rank/2026-08-14T08-57-53Z/zone_rankings.json'"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "abandoned by hand: batches were collected but summarized.jsonl and zone_rankings.json were still gitignored when this cycle ran, so the generated text did not survive to the publishing run. Fixed in f8e4789; a fresh cycle will publish."
     }
   ],
   "groups_after_dedupe": 352,
-  "phase": "publish_failed",
+  "phase": "abandoned",
   "published": false,
   "started_at": "2026-08-14T08:57:53.729650+00:00",
   "summarize_batches": {}

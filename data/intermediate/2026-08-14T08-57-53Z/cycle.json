@@ -1,0 +1,45 @@
+{
+  "articles_collected": 361,
+  "briefings_path": null,
+  "clusters_after_grouping": 346,
+  "clusters_selected": 2,
+  "completed": true,
+  "cycle_id": "2026-08-14T08-57-53Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T08:57:53.899980+00:00..2026-08-13T14:57:53.899980+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T14:57:53.899980+00:00..2026-08-13T17:57:53.899980+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T17:57:53.899980+00:00..2026-08-13T20:57:53.899980+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T20:57:53.899980+00:00..2026-08-14T08:57:53.899980+00:00: throttled (429) after 3 attempts"
+    }
+  ],
+  "groups_after_dedupe": 352,
+  "phase": "summarize_submitted",
+  "published": false,
+  "started_at": "2026-08-14T08:57:53.729650+00:00",
+  "summarize_batches": {
+    "en": {
+      "batch_id": "msgbatch_015sQXMP8QPo3kDG4ejDxCKt",
+      "ranked_path": "data/intermediate/rank/2026-08-14T08-57-53Z/ranked.jsonl"
+    },
+    "es": {
+      "batch_id": "msgbatch_01B7Ci4jgoWv7i7qRjdfW8Sx",
+      "ranked_path": "data/intermediate/rank/2026-08-14T08-57-53Z/ranked.jsonl"
+    },
+    "fr": {
+      "batch_id": "msgbatch_01GdjTi4jyahnE6JHED3JZxo",
+      "ranked_path": "data/intermediate/rank/2026-08-14T08-57-53Z/ranked.jsonl"
+    }
+  }
+}

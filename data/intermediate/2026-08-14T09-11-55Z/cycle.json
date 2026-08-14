@@ -1,0 +1,33 @@
+{
+  "articles_collected": 361,
+  "briefings_path": null,
+  "clusters_after_grouping": 348,
+  "clusters_selected": 2,
+  "completed": true,
+  "cycle_id": "2026-08-14T09-11-55Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "2026-08-13T09:11:55.750417+00:00..2026-08-14T09:11:55.750417+00:00: query error: {\"articles\": [ { \"url\": \"https://710wor.iheart.com/content/2026-08-13-kelce-says-wedding-to-swift-was-best-night-ever/\", \"url_mobile\": \"\", \"title\": \"Kelce Says Wedding To Swift Was Best Night Ever\", \""
+    }
+  ],
+  "groups_after_dedupe": 353,
+  "phase": "summarize_submitted",
+  "published": false,
+  "started_at": "2026-08-14T09:11:55.726567+00:00",
+  "summarize_batches": {
+    "en": {
+      "batch_id": "msgbatch_01FXmNXNQVN3N2iGJTL5xXBu",
+      "ranked_path": "data/intermediate/rank/2026-08-14T09-11-55Z/ranked.jsonl"
+    },
+    "es": {
+      "batch_id": "msgbatch_01XeL19jS37yEpoF4qsstZJD",
+      "ranked_path": "data/intermediate/rank/2026-08-14T09-11-55Z/ranked.jsonl"
+    },
+    "fr": {
+      "batch_id": "msgbatch_01G2xMEHnTdpuaxXLJnWuedN",
+      "ranked_path": "data/intermediate/rank/2026-08-14T09-11-55Z/ranked.jsonl"
+    }
+  }
+}

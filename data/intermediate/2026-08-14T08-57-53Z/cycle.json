@@ -22,24 +22,15 @@
     {
       "adapter": "gdelt",
       "detail": "2026-08-13T20:57:53.899980+00:00..2026-08-14T08:57:53.899980+00:00: throttled (429) after 3 attempts"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "publish raised: [Errno 2] No such file or directory: 'data/intermediate/rank/2026-08-14T08-57-53Z/zone_rankings.json'"
     }
   ],
   "groups_after_dedupe": 352,
-  "phase": "summarize_submitted",
+  "phase": "publish_failed",
   "published": false,
   "started_at": "2026-08-14T08:57:53.729650+00:00",
-  "summarize_batches": {
-    "en": {
-      "batch_id": "msgbatch_015sQXMP8QPo3kDG4ejDxCKt",
-      "ranked_path": "data/intermediate/rank/2026-08-14T08-57-53Z/ranked.jsonl"
-    },
-    "es": {
-      "batch_id": "msgbatch_01B7Ci4jgoWv7i7qRjdfW8Sx",
-      "ranked_path": "data/intermediate/rank/2026-08-14T08-57-53Z/ranked.jsonl"
-    },
-    "fr": {
-      "batch_id": "msgbatch_01GdjTi4jyahnE6JHED3JZxo",
-      "ranked_path": "data/intermediate/rank/2026-08-14T08-57-53Z/ranked.jsonl"
-    }
-  }
+  "summarize_batches": {}
 }

@@ -1193,3 +1193,34 @@ def test_a_missing_ranked_jsonl_abandons_the_cycle_instead_of_retrying_forever(
     record = json.loads((cycle_dir / "cycle.json").read_text())
     assert record["phase"] == "abandoned"
     assert find_resumable_cycle_id(tmp_path) is None
+
+
+def test_only_a_cycle_with_batches_actually_pending_is_resumable(tmp_path) -> None:
+    """Exhaustive over every phase the code can write.
+
+    find_resumable_cycle_id returns the newest resumable cycle on every run,
+    so any phase wrongly marked resumable blocks the pipeline permanently --
+    it retries that cycle forever and never collects again. Two real cycles
+    hit this within an hour: one abandoned, and one in
+    summarize_submit_failed with an empty summarize_batches (zero Clusters
+    selected, so nothing was ever submitted).
+
+    Written as a full enumeration rather than a case per phase so a newly
+    introduced phase fails here until it is classified deliberately.
+    """
+    from pipeline.stages.cycle import _should_resume
+
+    resumable_by_phase = {
+        None: False,  # crashed before reaching summarize
+        "collected": False,  # ditto, recorded
+        "summarize_submitted": True,  # the one real pending state
+        "summarize_submit_failed": False,  # no batch id exists to poll
+        "abandoned": False,  # Clusters unrecoverable
+        "published": False,  # finished
+    }
+
+    for phase, expected in resumable_by_phase.items():
+        path = tmp_path / f"{phase}" / "cycle.json"
+        path.parent.mkdir(parents=True)
+        path.write_text(json.dumps({"phase": phase, "published": phase == "published"}))
+        assert _should_resume(path) is expected, f"phase {phase!r} classified wrongly"

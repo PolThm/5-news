@@ -121,7 +121,26 @@ class CycleResult:
 # ranked.jsonl branch in _resume_cycle) -- without this, find_resumable_cycle_id
 # would return that dead cycle on every run and the pipeline would retry it
 # forever, never collecting again.
-_TERMINAL_PHASES = frozenset({None, "collected", "abandoned"})
+_TERMINAL_PHASES = frozenset(
+    {
+        None,
+        "collected",
+        # No useful work a later invocation could do:
+        #
+        # "abandoned" -- the Clusters this cycle's batches were submitted for
+        #   are gone for good (see the ranked.jsonl branch in _resume_cycle).
+        # "summarize_submit_failed" -- submission never produced a batch id,
+        #   so summarize_batches is empty and there is nothing to poll. A real
+        #   cycle sat in this phase (2026-08-14T06-53-46Z, zero Clusters
+        #   selected so nothing was submitted) and, without this entry, was
+        #   returned by find_resumable_cycle_id on every run -- blocking every
+        #   future cycle from collecting at all.
+        #
+        # A fresh cycle_id starts over from collect instead, per AD-7.
+        "abandoned",
+        "summarize_submit_failed",
+    }
+)
 
 
 def _should_resume(cycle_path: Path) -> bool:

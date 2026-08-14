@@ -1136,18 +1136,25 @@ def test_find_resumable_cycle_id_tolerates_a_missing_intermediate_directory(tmp_
     assert find_resumable_cycle_id(tmp_path / "nope") is None
 
 
-def test_a_missing_ranked_jsonl_leaves_the_batch_pending_instead_of_discarding_it(
+def test_a_missing_ranked_jsonl_abandons_the_cycle_instead_of_retrying_forever(
     tmp_path,
 ) -> None:
     """_resume_cycle re-reads ranked.jsonl to know which Clusters the pending
     batches were submitted for. A GitHub runner is a fresh machine, so that
-    file only exists on the later run because it is committed.
+    file only survives because it is committed.
 
-    Before this guard, a missing file fell through with clusters=[]: the batch
-    was marked collected, its entry deleted, and the generated text discarded
-    silently -- for work already paid for. It must stay pending and say so.
+    Two failure modes to avoid, in tension with each other:
+
+    - Falling through with clusters=[] consumes the batch and discards its
+      generated text silently, for work already paid for.
+    - Holding the cycle open forever makes find_resumable_cycle_id return it
+      on every run: the pipeline retries a dead cycle and never collects
+      again. (This is the one that briefly shipped.)
+
+    A missing ranked.jsonl is unrecoverable -- nothing can reconstruct it --
+    so the cycle is abandoned terminally and the next run starts fresh.
     """
-    from pipeline.stages.cycle import run_cycle
+    from pipeline.stages.cycle import find_resumable_cycle_id, run_cycle
 
     cycle_id = "2026-08-14T09-00-00Z"
     cycle_dir = tmp_path / "intermediate" / cycle_id
@@ -1161,7 +1168,6 @@ def test_a_missing_ranked_jsonl_leaves_the_batch_pending_instead_of_discarding_i
                 "summarize_batches": {
                     "fr": {
                         "batch_id": "msgbatch_x",
-                        # deliberately absent
                         "ranked_path": str(tmp_path / "nope" / "ranked.jsonl"),
                     }
                 },
@@ -1180,7 +1186,10 @@ def test_a_missing_ranked_jsonl_leaves_the_batch_pending_instead_of_discarding_i
     )
 
     assert result.published is False
-    assert any("ranked.jsonl missing" in f.detail for f in result.failures)
-    # Still pending, so a later run can retry rather than losing the batch.
+    assert result.summarize_phase == "abandoned"
+    assert any("cannot be recovered" in f.detail for f in result.failures)
+
+    # Terminal: the next run must not pick this cycle up again.
     record = json.loads((cycle_dir / "cycle.json").read_text())
-    assert "fr" in record["summarize_batches"]
+    assert record["phase"] == "abandoned"
+    assert find_resumable_cycle_id(tmp_path) is None

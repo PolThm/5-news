@@ -115,7 +115,13 @@ class CycleResult:
     briefings_path: Path | None = None
 
 
-_TERMINAL_PHASES = frozenset({None, "collected"})
+# "abandoned" is terminal for the same reason "collected" is: there is no
+# useful work a later invocation could do. A cycle reaches it when the
+# Clusters its batches were submitted for are gone for good (see the
+# ranked.jsonl branch in _resume_cycle) -- without this, find_resumable_cycle_id
+# would return that dead cycle on every run and the pipeline would retry it
+# forever, never collecting again.
+_TERMINAL_PHASES = frozenset({None, "collected", "abandoned"})
 
 
 def _should_resume(cycle_path: Path) -> bool:
@@ -496,6 +502,9 @@ def _resume_cycle(
 
     summaries_by_language: dict[OutputLanguage, dict[str, dict]] = {}
     remaining_batches = dict(record.get("summarize_batches", {}))
+    # Set when a batch's Clusters are gone for good -- see the ranked.jsonl
+    # branch below. Terminal: the cycle is abandoned rather than retried.
+    unrecoverable = False
     # The one shared union path every language was submitted against
     # (Story 3.5's fan-out decision) -- deliberately not re-derived from
     # whichever batch_info happens to be last-iterated below, since a
@@ -510,18 +519,30 @@ def _resume_cycle(
         if not batch_ranked_path.is_file():
             # Falling through with clusters=[] would call collect_summarize
             # with nothing to attach the returned text to: the batch would be
-            # marked collected, its entry deleted from remaining_batches, and
-            # the generated text discarded -- silently, for work already paid
-            # for. Report it and leave the entry pending instead, so a later
-            # run can still publish if the file reappears.
+            # marked collected, its entry deleted, and the generated text
+            # discarded -- silently, for work already paid for.
+            #
+            # But refusing forever is worse. ranked.jsonl is written by the
+            # submitting run and only survives because it is committed; if it
+            # is genuinely gone (a cycle submitted before that .gitignore fix,
+            # or a run that never pushed), no future run can reconstruct it,
+            # and holding the cycle open would make find_resumable_cycle_id
+            # return it on every invocation -- the pipeline would retry a dead
+            # cycle forever and never collect again.
+            #
+            # So: abandon it, loudly and terminally. `phase` becomes
+            # "abandoned", which _should_resume treats as not-resumable, and
+            # the next run starts a fresh cycle (AD-7: a failed cycle leaves
+            # the previous Briefing set in place).
             failures.append(
                 Failure(
                     "cycle",
-                    f"{language_value}: ranked.jsonl missing at {batch_ranked_path} — cannot "
-                    "attach this batch's text to its Clusters; leaving the batch pending",
+                    f"{language_value}: ranked.jsonl missing at {batch_ranked_path} — the "
+                    "Clusters this batch was submitted for cannot be recovered, so its "
+                    "generated text is unusable; abandoning this cycle",
                 )
             )
-            record["last_checked_at"] = datetime.now(UTC).isoformat()
+            unrecoverable = True
             continue
         try:
             clusters = list(read_jsonl(batch_ranked_path))
@@ -554,6 +575,30 @@ def _resume_cycle(
     record["summarize_batches"] = remaining_batches
     record["degraded"] = bool(failures)
     record["failures"] = [f.to_dict() for f in failures]
+
+    if unrecoverable:
+        # Terminal, and deliberately not "published": nothing was published.
+        # _should_resume treats any phase outside the pending set as
+        # not-resumable, so the next run starts a fresh cycle instead of
+        # retrying this one forever.
+        record["phase"] = "abandoned"
+        write_atomically(cycle_path, json.dumps(record, indent=2, sort_keys=True) + "\n")
+        return CycleResult(
+            cycle_id=cycle_id,
+            articles_collected=record.get("articles_collected", 0),
+            groups_after_dedupe=record.get("groups_after_dedupe", 0),
+            clusters_after_grouping=record.get("clusters_after_grouping", 0),
+            clusters_selected=record.get("clusters_selected", 0),
+            collect_path=output_dir_for("collect", cycle_id, root=data_root) / "articles.jsonl",
+            dedupe_path=None,
+            cluster_path=None,
+            rank_path=ranked_path if ranked_path.is_file() else None,
+            cycle_path=cycle_path,
+            failures=tuple(failures),
+            completed=True,
+            summarize_phase="abandoned",
+            published=False,
+        )
 
     published = False
     briefings_path: Path | None = None

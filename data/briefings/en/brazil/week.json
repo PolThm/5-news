@@ -1,14 +1,87 @@
 {
-  "clusters": [],
+  "clusters": [
+    {
+      "_linked_ids": [
+        "aba87089fa9f8a36",
+        "c1c681333350c534",
+        "fd543c9d23577f29",
+        "8d400fb630eeaf6a"
+      ],
+      "cluster_id": "aba87089fa9f8a36",
+      "countries": [
+        "brazil",
+        "china",
+        "germany"
+      ],
+      "country_count": 3,
+      "headline": "Kennedy Center board approves restoring Trump name to building facade",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "title": "Kennedy Center aprova volta do nome de Trump à fachada apesar de decisão judicial",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/14/kennedy-center-aprova-volta-do-nome-de-trump-a-fachada-apesar-de-decisao-judicial.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "title": "Kennedy Center board approves Trump name on facade, renovation plan",
+          "url": "https://www.dw.com/en/kennedy-center-board-approves-trump-name-on-facade-renovation-plan/a-78359935?maca=en-rss-en-world-4025-rdf"
+        }
+      ],
+      "origin_country": "germany",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/14/kennedy-center-aprova-volta-do-nome-de-trump-a-fachada-apesar-de-decisao-judicial.ghtml",
+      "rank": 1,
+      "summary": "The Kennedy Center's board has approved a plan to restore Donald Trump's name to the building's exterior and move forward with a renovation project. The decision comes despite a prior judicial ruling on the matter."
+    },
+    {
+      "_linked_ids": [
+        "c928ee6414968581"
+      ],
+      "cluster_id": "c928ee6414968581",
+      "countries": [
+        "brazil",
+        "india"
+      ],
+      "country_count": 2,
+      "headline": "Trump says he will declare Strait of Hormuz US territory",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "ndtv.com",
+          "source_country": "india",
+          "title": "Trump Says Will \"Soon\" Declare Strait Of Hormuz US Territory",
+          "url": "https://www.ndtv.com/world-news/donald-trump-says-will-soon-declare-strait-of-hormuz-us-territory-11912131#publisher=newsstand"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "title": "Trump diz que vai declarar Estreito de Ormuz como território dos EUA",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/14/trump-diz-que-vai-declarar-estreito-de-ormuz-como-territorio-dos-eua.ghtml"
+        }
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/14/trump-diz-que-vai-declarar-estreito-de-ormuz-como-territorio-dos-eua.ghtml",
+      "rank": 2,
+      "summary": "President Trump has stated that he intends to declare the Strait of Hormuz, a strategically important waterway between Iran and Oman, as United States territory. The announcement represents a significant policy position regarding one of the world's most critical shipping routes through which a large portion of global oil passes."
+    }
+  ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-14T09:11:55.726567+00:00",
+  "generated_at": "2026-08-15T05:50:58.348179+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,
-  "served_zone": "south-america",
-  "served_zone_continent": null,
-  "served_zone_kind": "continent",
+  "served_zone": "brazil",
+  "served_zone_continent": "south-america",
+  "served_zone_kind": "country",
   "zone": "brazil",
   "zone_continent": "south-america",
   "zone_kind": "country"

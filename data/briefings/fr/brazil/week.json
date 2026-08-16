@@ -1,14 +1,87 @@
 {
-  "clusters": [],
+  "clusters": [
+    {
+      "_linked_ids": [
+        "aba87089fa9f8a36",
+        "c1c681333350c534",
+        "fd543c9d23577f29",
+        "8d400fb630eeaf6a"
+      ],
+      "cluster_id": "aba87089fa9f8a36",
+      "countries": [
+        "brazil",
+        "china",
+        "germany"
+      ],
+      "country_count": 3,
+      "headline": "Le Kennedy Center approuve le retour du nom Trump sur sa façade",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "title": "Kennedy Center aprova volta do nome de Trump à fachada apesar de decisão judicial",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/14/kennedy-center-aprova-volta-do-nome-de-trump-a-fachada-apesar-de-decisao-judicial.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "title": "Kennedy Center board approves Trump name on facade, renovation plan",
+          "url": "https://www.dw.com/en/kennedy-center-board-approves-trump-name-on-facade-renovation-plan/a-78359935?maca=en-rss-en-world-4025-rdf"
+        }
+      ],
+      "origin_country": "germany",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/14/kennedy-center-aprova-volta-do-nome-de-trump-a-fachada-apesar-de-decisao-judicial.ghtml",
+      "rank": 1,
+      "summary": "Le conseil d'administration du Kennedy Center a approuvé le rétablissement du nom de Trump sur la façade du bâtiment ainsi que son plan de rénovation, malgré une décision judiciaire antérieure. Cette approbation intervient suite à des développements légaux et administratifs concernant la présence du nom de l'ancien président sur le célèbre centre culturel américain."
+    },
+    {
+      "_linked_ids": [
+        "c928ee6414968581"
+      ],
+      "cluster_id": "c928ee6414968581",
+      "countries": [
+        "brazil",
+        "india"
+      ],
+      "country_count": 2,
+      "headline": "Trump annonce son intention de déclarer le Détroit d'Ormuz territoire américain",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "ndtv.com",
+          "source_country": "india",
+          "title": "Trump Says Will \"Soon\" Declare Strait Of Hormuz US Territory",
+          "url": "https://www.ndtv.com/world-news/donald-trump-says-will-soon-declare-strait-of-hormuz-us-territory-11912131#publisher=newsstand"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "title": "Trump diz que vai declarar Estreito de Ormuz como território dos EUA",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/14/trump-diz-que-vai-declarar-estreito-de-ormuz-como-territorio-dos-eua.ghtml"
+        }
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/14/trump-diz-que-vai-declarar-estreito-de-ormuz-como-territorio-dos-eua.ghtml",
+      "rank": 2,
+      "summary": "Donald Trump a déclaré qu'il déclarerait prochainement le Détroit d'Ormuz comme territoire des États-Unis. Cette annonce, rapportée par plusieurs sources, suggère une position marquée de l'administration américaine concernant ce passage stratégique majeur situé entre l'Iran et Oman."
+    }
+  ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-14T09:11:55.726567+00:00",
+  "generated_at": "2026-08-15T05:50:58.348179+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,
-  "served_zone": "south-america",
-  "served_zone_continent": null,
-  "served_zone_kind": "continent",
+  "served_zone": "brazil",
+  "served_zone_continent": "south-america",
+  "served_zone_kind": "country",
   "zone": "brazil",
   "zone_continent": "south-america",
   "zone_kind": "country"

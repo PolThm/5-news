@@ -100,3 +100,68 @@ def test_missing_api_key_is_a_failure_not_a_crash(monkeypatch) -> None:
     assert result.vectors == []
     assert len(result.failures) == 1
     assert "COHERE_API_KEY" in result.failures[0].detail
+
+
+def test_batches_are_paced_to_stay_inside_the_token_budget() -> None:
+    """Trial keys cap at 100,000 tokens/minute, enforced as a hard 429.
+
+    The RSS corpus was ~350 titles (4 batches) and never came close. GDELT's
+    raw files bring ~8,800 titles — ~92 batches — which trips the limit
+    partway through. `embed_titles` is all-or-nothing, so the whole cycle then
+    degrades to one Cluster per dedupe group and publishes nothing, while
+    still reporting success.
+
+    Asserts the pacing happens rather than the wall-clock, so the test stays
+    fast and does not depend on real sleeping.
+    """
+    from pipeline.adapters import cohere_embed
+
+    slept: list[float] = []
+    original = cohere_embed.time.sleep
+    cohere_embed.time.sleep = slept.append
+    try:
+        cohere_embed.embed_titles(
+            [f"title {i}" for i in range(cohere_embed.MAX_TEXTS_PER_REQUEST * 3)],
+            client=_FakeClient(),
+        )
+    finally:
+        cohere_embed.time.sleep = original
+
+    # Three batches means two waits: the first batch never waits, and no wait
+    # trails the last one.
+    assert len(slept) == 2
+    assert all(s == cohere_embed.REQUEST_INTERVAL_SECONDS for s in slept)
+
+
+def test_pacing_can_be_disabled_for_tests_and_small_runs() -> None:
+    from pipeline.adapters import cohere_embed
+
+    slept: list[float] = []
+    original = cohere_embed.time.sleep
+    cohere_embed.time.sleep = slept.append
+    try:
+        cohere_embed.embed_titles(
+            [f"title {i}" for i in range(cohere_embed.MAX_TEXTS_PER_REQUEST * 3)],
+            client=_FakeClient(),
+            pace=False,
+        )
+    finally:
+        cohere_embed.time.sleep = original
+
+    assert slept == []
+
+
+def test_the_pacing_interval_actually_respects_the_documented_limit() -> None:
+    """Guards the arithmetic, not just its result: if any constant is edited,
+    the derived interval must still keep a full minute of batches inside the
+    token budget."""
+    from pipeline.adapters import cohere_embed
+
+    batches_per_minute = 60 / cohere_embed.REQUEST_INTERVAL_SECONDS
+    tokens_per_minute = (
+        batches_per_minute
+        * cohere_embed.MAX_TEXTS_PER_REQUEST
+        * cohere_embed.ESTIMATED_TOKENS_PER_TEXT
+    )
+
+    assert tokens_per_minute <= cohere_embed.TOKENS_PER_MINUTE

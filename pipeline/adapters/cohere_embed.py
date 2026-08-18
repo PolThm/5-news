@@ -16,6 +16,7 @@ cycle's clustering rather than crashing it.
 from __future__ import annotations
 
 import os
+import time
 from dataclasses import dataclass, field
 from typing import Any, Protocol
 
@@ -33,6 +34,27 @@ EMBEDDING_DIMENSION = 1024
 # Cohere's own per-request cap. A larger batch is rejected outright, not
 # truncated, so this must be enforced before the call, not discovered from it.
 MAX_TEXTS_PER_REQUEST = 96
+
+# Trial keys are capped at 100,000 tokens per minute, enforced as a hard 429
+# with body "trial token rate limit exceeded". At roughly 12 tokens per
+# headline a full batch is ~1,150 tokens, so ~87 batches fit in a minute.
+#
+# This only started mattering with Story 6.2. The RSS corpus was ~350 titles
+# (4 batches, nowhere near the ceiling); GDELT's raw files bring ~8,800, which
+# is ~92 batches — just past it. Without pacing the run trips the limit partway
+# through and `embed_titles` returns nothing, so the cycle degrades to one
+# Cluster per dedupe group and no Briefing is ever published. That failure is
+# silent in the sense that matters: the cycle still reports success.
+#
+# Pacing rather than retrying on 429: the limit is a rolling token budget, so
+# backing off after the fact still wastes the tokens already spent. Spacing the
+# calls keeps every request inside the budget instead.
+TOKENS_PER_MINUTE = 100_000
+ESTIMATED_TOKENS_PER_TEXT = 12
+_BATCH_TOKENS = MAX_TEXTS_PER_REQUEST * ESTIMATED_TOKENS_PER_TEXT
+# Seconds to leave between batches, with 15% headroom for longer-than-average
+# headlines. ~0.8s at the current constants.
+REQUEST_INTERVAL_SECONDS = (_BATCH_TOKENS / TOKENS_PER_MINUTE) * 60 * 1.15
 
 
 class _Embeddings(Protocol):
@@ -72,7 +94,9 @@ def _chunks(items: list[str], size: int) -> list[list[str]]:
     return [items[i : i + size] for i in range(0, len(items), size)]
 
 
-def embed_titles(titles: list[str], client: Client | None = None) -> EmbeddingResult:
+def embed_titles(
+    titles: list[str], client: Client | None = None, pace: bool = True
+) -> EmbeddingResult:
     """Embed titles for clustering, in batches of at most
     ``MAX_TEXTS_PER_REQUEST``, preserving input order.
 
@@ -104,7 +128,12 @@ def embed_titles(titles: list[str], client: Client | None = None) -> EmbeddingRe
     # than risk a subtler bug from partial alignment.
     vectors: list[list[float]] = []
     try:
-        for batch in _chunks(titles, MAX_TEXTS_PER_REQUEST):
+        for index, batch in enumerate(_chunks(titles, MAX_TEXTS_PER_REQUEST)):
+            # Pace every batch after the first — see REQUEST_INTERVAL_SECONDS.
+            # Sleeping before the call rather than after keeps the last batch
+            # from paying for a wait nothing follows.
+            if index and pace:
+                time.sleep(REQUEST_INTERVAL_SECONDS)
             response = client.embed(
                 model=MODEL,
                 texts=batch,

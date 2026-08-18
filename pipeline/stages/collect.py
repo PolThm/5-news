@@ -81,20 +81,28 @@ def write_collection(
 
 
 def collect_all() -> CollectionResult:
-    """Run every adapter and merge what they returned.
+    """Run collection and return what it produced.
 
-    Adapters are independent: GDELT being throttled does not stop RSS from
-    contributing, and vice versa. That is the whole reason there are two
-    (Story 1.3) — coverage should not depend on a single upstream whose limits
-    this project does not control.
+    One adapter, as of Story 6.2. There used to be two — GDELT's DOC 2.0 API
+    plus eleven RSS feeds (Story 1.3) — on the reasoning that coverage should
+    not depend on a single upstream. In practice the API was throttled in all
+    eight recorded cycles and RSS carried the product alone, which is the
+    opposite of the intended arrangement: a fallback doing all the work while
+    the primary contributed nothing.
 
-    Deduplicates on URL, because an outlet's own feed and GDELT's index of that
-    same outlet will overlap.
+    Moving to GDELT's raw files removes the throttle that caused it (static
+    files, no rate limit) and lifts the corpus from ~365 articles across 11
+    outlets to ~26,000 across thousands. Losing the second adapter is a real
+    tradeoff, taken deliberately: if the files become unreachable, this cycle
+    publishes nothing and the previous Briefing set stays in place (AD-7),
+    rather than degrading to partial coverage.
+
+    Still deduplicates on URL: the same article appears in more than one
+    15-minute slot, and in both the English and translingual files.
     """
     from pipeline.adapters.gdelt import collect_world_day
-    from pipeline.adapters.rss import RssClient
 
-    merged = CollectionResult.merge([collect_world_day(), RssClient().collect()])
+    merged = CollectionResult.merge([collect_world_day()])
 
     seen: set[str] = set()
     deduplicated: list[dict[str, Any]] = []

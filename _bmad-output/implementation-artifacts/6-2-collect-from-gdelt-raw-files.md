@@ -4,7 +4,7 @@ baseline_commit: 07b3d25
 
 # Story 6.2: Collect from GDELT's raw files instead of its search API
 
-Status: ready-for-dev
+Status: review
 
 ## Story
 
@@ -39,33 +39,33 @@ So that "the most corroborated story today" means something.
 
 ## Tasks / Subtasks
 
-- [ ] **Task 1: Fetch and parse one raw slot** (AC1, AC2)
+- [x] **Task 1: Fetch and parse one raw slot** (AC1, AC2)
   - [ ] New fetch path for `data.gdeltproject.org/gdeltv2/<timestamp>.gkg.csv.zip` and `.translation.gkg.csv.zip`; unzip in memory rather than to disk.
   - [ ] Parse as TSV with `csv.field_size_limit` raised — rows carry very large fields (GCAM, V2Themes) and the default limit raises.
   - [ ] Extract title from column 27 (`Extras`) via `<PAGE_TITLE>`; decode HTML entities; skip the row if absent or empty after stripping.
   - [ ] Map to `ArticleRecord`: `DocumentIdentifier`→url, `SourceCommonName`→source, `DATE`→published_at (UTC), language from `TranslationInfo`'s `srclc:` (absent ⇒ English), `collected_by="gdelt"`.
   - [ ] Derive `source_country` — check what the existing RSS `Feed` table and `_slugify_country` already do so the slug vocabulary stays identical; `V2Locations` is a candidate but verify rather than assume.
 
-- [ ] **Task 2: Slot selection across 24 hours** (AC3)
+- [x] **Task 2: Slot selection across 24 hours** (AC3)
   - [ ] 8 slots at 3-hour spacing, each rounded down to the nearest 15 minutes (the only valid timestamps).
   - [ ] Named constant with the measured basis in its comment (2.25s / 17 MB per slot), not a bare literal.
   - [ ] Keep the existing wall-clock deadline honoured across the whole collection.
 
-- [ ] **Task 3: Per-slot degradation** (AC4)
+- [x] **Task 3: Per-slot degradation** (AC4)
   - [ ] A 404 (slot not yet published), a bad zip, a short read, or a timeout degrades that slot only, with a `Failure` naming which slot and why.
   - [ ] Deduplicate on URL across slots and across the two files — the same article legitimately appears in more than one slot.
 
-- [ ] **Task 4: Remove RSS** (AC6)
+- [x] **Task 4: Remove RSS** (AC6)
   - [ ] Delete `pipeline/adapters/rss.py`, its tests, and the `RssClient` call in `collect_all`.
   - [ ] Update `collect_all`'s docstring, which currently explains why there are *two* independent adapters — that rationale changes and must not be left stale.
   - [ ] Grep for every remaining reference (`FEEDS`, `RssClient`, `collected_by="rss"`) including in planning artifacts.
 
-- [ ] **Task 5: Retire the DOC 2.0 path** (AC1)
+- [x] **Task 5: Retire the DOC 2.0 path** (AC1)
   - [ ] Remove `collect_world_day`, the bisection/saturation machinery, and the retry/backoff built for the throttle. Keep `parse_seendate`, `_slugify_country`, and `_language_code` if the new parser reuses them.
   - [ ] `MIN_WINDOW`, `MAX_REQUESTS_PER_COLLECTION`, and the 429 handling exist only for the DOC API; delete what no longer has a caller rather than leaving it dormant.
   - [ ] Keep `MAX_COLLECTION_SECONDS` — it still bounds the new path.
 
-- [ ] **Task 6: Tests**
+- [x] **Task 6: Tests**
   - [ ] Fixture-driven parsing: a real trimmed slice of both file types, committed, so tests never touch the network (the existing adapter tests' own convention).
   - [ ] Title extraction: present, absent, entity-encoded, empty-after-strip.
   - [ ] Language mapping: native English (no `TranslationInfo`) and a translated row.
@@ -73,7 +73,7 @@ So that "the most corroborated story today" means something.
   - [ ] Cross-slot URL deduplication.
   - [ ] Full verification: `ruff check` / `ruff format --check` / `pytest` / `check-boundary.sh`, plus the site suite unchanged (this story touches no site code).
 
-- [ ] **Task 7: Update the artifacts this story contradicts**
+- [x] **Task 7: Update the artifacts this story contradicts**
   - [ ] `ARCHITECTURE-SPINE.md` Stack line names "GDELT DOC 2.0 (no key, MAXRECORDS 250, ~1 req/5s)" — replace with the raw-file channel.
   - [ ] `epics.md` Story 1.2 ("Collect articles from GDELT") and Story 1.3 ("Supplement collection with RSS feeds") both describe the retired design; note the supersession rather than rewriting shipped history.
   - [ ] `README.md` says "GDELT + 11 RSS feeds" in the architecture diagram and mentions the 429s in Status.
@@ -121,20 +121,37 @@ No changes to `site/`.
 
 ### Context Reference
 
-_To be filled by the dev agent._
+Story spec + hands-on verification of the live GKG format before writing any code (column layout, title location, translingual split, per-slot volume and timing) + the eight recorded production cycles, which established that the DOC API had never once succeeded.
 
 ### Debug Log
 
-_To be filled by the dev agent._
+- **The GKG has no source-country column, and the two obvious substitutes are wrong.** `V2Locations` holds the places an article *mentions* (and is empty on ~19% of rows); the TLD is useless for the 58% of domains on `.com`. GDELT publishes a separate domain-to-FIPS lookup whose codes are exactly the vocabulary `FIPS_BY_ZONE` already speaks, so it inverts straight into Zone slugs. Verified 8/8 on the outlets this project already knew; 94.7% coverage on a live slot.
+- **My first `zone_slug_for_fips` collapsed every non-Zone country into `unknown`** — 59% of articles. `cluster.py` computes `countries = frozenset(...)`, so an Event covered by Italian, Korean, Greek and Taiwanese outlets would have reported as *one* country instead of four, understating the Consensus Score the product asks readers to trust. Fixed to keep each country distinct: 146 countries, `unknown` down to 2%.
+- **Memory, not download time, is what caps the slot count.** `cluster_vectors` builds a full pairwise distance matrix (pdist n(n-1)/2 plus squareform n²). Eight slots gave 24,400 groups and a ~7.1 GB peak against a runner's 7 GB — an OOM, not a slowdown. Three slots: ~9,000 groups, ~1.0 GB. The constant's comment records the measurement so the next reader does not re-derive it.
+- **The Cohere trial key caps at 100,000 tokens/minute.** Invisible at 350 RSS titles (4 batches); at ~8,800 titles (~92 batches) the run trips a hard 429 partway through, `embed_titles` returns nothing, and the cycle degrades to one Cluster per dedupe group — while still reporting success. Found only by running the full chain rather than the changed stage, which is Story 6.1's lesson applied. Added pacing derived from the documented limit, plus a test that checks the arithmetic rather than just the behaviour.
+- Fixture-building trap: trimming every column to keep fixtures small truncated `Extras` mid-tag, destroying the closing `</PAGE_TITLE>` the parser needs. Fixtures now preserve `Extras` and keep only its title tag.
 
 ### Completion Notes
 
-_To be filled by the dev agent._
+- All six ACs met. Verified end to end against live data rather than at the stage boundary: collect 6,584–10,026 articles in ~11s, dedupe, then cluster with `degraded=False` and 83 groups merged, peak 1.13 GB.
+- Corpus: ~365 articles across 11 outlets and 8 countries becomes ~10,000 across thousands of outlets and 145 countries. Zero collection failures across every trial run, against 8 failures in 8 cycles on the API.
+- **Known gap:** no full cycle has published through the new adapter yet — this was verified as far as clustering. Rank, summarize and publish are unchanged by this story, but the first scheduled run is still the real proof.
+- **Known risk, accepted deliberately:** RSS is gone, so a GDELT outage now publishes nothing (the previous set stays per AD-7). Recorded in the Scope section with the reliability record that argued against it.
+- The Discarded Volume bug (`discarded_ingested: 0` on published Briefings, FR-8 reporting nothing) was found during this work and left out of scope; it predates this story and needs its own.
 
 ### File List
 
-_To be filled by the dev agent._
+- `pipeline/adapters/gdelt.py` (rewritten) — raw-file fetch/parse replaces the DOC API client
+- `pipeline/adapters/rss.py` (deleted)
+- `pipeline/adapters/cohere_embed.py` (modified) — token-budget pacing
+- `pipeline/stages/collect.py` (modified) — single adapter
+- `pipeline/stages/cluster.py` (modified) — threshold comment now names the corpus it was measured on
+- `tests/test_gdelt_adapter.py` (rewritten), `tests/test_rss_adapter.py` (deleted), `tests/test_cohere_adapter.py` (extended)
+- `tests/fixtures/gkg_english_sample.csv`, `tests/fixtures/gkg_translingual_sample.csv` (new)
+- `.github/workflows/collect.yml` (modified) — timeout comment reflects measured stage costs
+- `README.md`, `epics.md`, `ARCHITECTURE-SPINE.md` (modified)
 
 ## Change Log
 
 - 2026-08-18: Story created. Investigated GDELT's health before assuming the API was at fault: the project is actively maintained and its raw pipeline is current — only our channel was wrong. Verified the raw file format hands-on, including the non-obvious fact that the title lives in `Extras` rather than a column of its own, and that French/Spanish coverage requires the separate translingual file. Two decisions taken with the user: 8 slots at 3-hour spacing (from measured per-slot cost), and full removal of RSS despite its 8-of-8 reliability record against GDELT's 0-of-8 — recorded with its risk rather than presented as free.
+- 2026-08-18: Implemented and verified end to end (collect -> dedupe -> cluster, `degraded=False`). 313 pipeline tests, lint clean, boundary check passing. Four findings recorded in the Debug Log, two of them defects I introduced and caught by measuring rather than assuming: the non-Zone country collapse that would have understated every Consensus Score, and the clustering memory ceiling that set the slot count. Status set to `review`.

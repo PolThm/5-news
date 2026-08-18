@@ -149,7 +149,7 @@ Verified current at authoring, 2026-08-10.
 | --- | --- |
 | Astro | 7.2.0 |
 | GitHub Actions (scheduled workflow) | — |
-| GDELT DOC 2.0 API | no key; `MAXRECORDS` 250/query; ~1 req/5s |
+| GDELT GKG 2.1 raw files | no key; 15-min slots at `data.gdeltproject.org/gdeltv2/`; no rate limit. Replaced the DOC 2.0 search API in Story 6.2, which was throttled in 8 of 8 recorded cycles. |
 | Cohere `embed-v4` | $0.01 / M tokens |
 | Claude `claude-haiku-4-5` | $1 / $5 per MTok, via Batch API (−50%) |
 | HDBSCAN | via `scikit-learn` ≥ 1.3 (`sklearn.cluster.HDBSCAN`) |
@@ -181,8 +181,7 @@ Prompt caching is not available on this workload: `claude-haiku-4-5` requires a 
 ```mermaid
 graph LR
   GH[GitHub Actions cron] --> P[pipeline]
-  GDELT[(GDELT DOC 2.0)] --> P
-  RSS[(RSS feeds)] --> P
+  GDELT[(GDELT GKG 2.1 raw files)] --> P
   P --> CO[Cohere embed-v4]
   P --> CL[Claude Haiku 4.5 Batch]
   P --> D[data/briefings commit]

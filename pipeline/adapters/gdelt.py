@@ -1,102 +1,145 @@
-"""GDELT DOC 2.0 adapter.
+"""GDELT GKG 2.1 raw-file adapter.
 
-The primary ingestion signal: free, no API key, 65 languages, with source
-country and language on every article. Verified against the live API on
-2026-08-10/11.
+The primary ingestion signal: free, no API key, worldwide, with a title and
+a language on every article. Verified against live files on 2026-08-18.
 
-Three properties of this API shape everything below, and each of them is a trap
-if you assume the obvious instead:
+**Why raw files rather than the DOC 2.0 API.** Story 6.2 replaced the search
+API with this. The API is an interactive search endpoint, and using it for
+ingestion earned a sticky per-IP throttle: measured on 2026-08-18, roughly
+one request in six succeeded even at the documented 6-second spacing, with
+no ``Retry-After`` header to pace against. Every one of the eight recorded
+production cycles carried a GDELT failure, so the corpus was in practice the
+eleven RSS feeds alone. GDELT's own 429 body says it plainly: "All
+high-traffic users should switch to our ngrams dataset." The project is
+healthy — its 15-minute file pipeline is current — only the channel was
+wrong. These files have no rate limit at all.
 
-**There is no pagination.** ``maxrecords`` caps at 250 and stops — no offset, no
-cursor, no page parameter. The only way past the ceiling is to split the query
-by time. Worse, a window returning exactly 250 is *truncated*, not complete, so
-250 must be read as a saturation signal and the window bisected. A collector
-that requests 250 and moves on silently loses everything past the cap on any
-busy day.
+Four properties of this format shape everything below, and each is a trap if
+you assume the obvious instead:
 
-**Query errors arrive as HTTP 200 with a plain-text body.** Asking for 500
-records returns ``200 A maximum of 250 records can be returned.`` — not JSON,
-not an error status. Trusting ``status_code == 200`` means ingesting an error
-message as if it were news.
+**There is no title column.** The GKG's 27 columns do not include one, which
+makes the format look unusable for this pipeline — ``ArticleRecord.title`` is
+required. The title is inside ``Extras`` (the last column) as
+``<PAGE_TITLE>...</PAGE_TITLE>``, present on 100% of rows in both files
+sampled, and carrying numeric HTML entities that must be decoded.
+
+**There are two files per slot, and the English one is not enough.**
+``.gkg.csv.zip`` is English-only (913 rows in the sampled slot).
+``.translation.gkg.csv.zip`` is the multilingual companion (3,442 rows) and
+is where French and Spanish coverage lives. A product publishing in three
+languages needs both.
+
+**The source's country is not in the file either.** ``V2Locations`` holds the
+places an article *mentions*, not where its outlet is; the TLD is useless for
+the 58% of domains on ``.com``. GDELT publishes a separate domain-to-country
+lookup (``DOMAIN_COUNTRY_URL`` below) whose second column is a FIPS code —
+the same vocabulary ``FIPS_BY_ZONE`` already speaks, so it inverts directly
+into Zone slugs. Measured coverage on a live slot: 94.7%.
 
 **Country codes are FIPS 10-4, not ISO 3166.** ``CH`` is China in FIPS and
 Switzerland in ISO; the UK is ``UK`` not ``GB``, Germany ``GM`` not ``DE``,
 Japan ``JA`` not ``JP``. Reusing an ISO table would mis-attribute articles to
 the wrong country — and country diversity is half the Consensus Score.
-
-The response is also asymmetric with the query: queries take codes, responses
-return full English names (``"sourcecountry": "France"``). Mapping back to Zone
-slugs happens here, so nothing downstream ever sees a vendor-shaped value
-(AD-13).
 """
 
 from __future__ import annotations
 
-import json
+import csv
+import html
+import io
+import re
+import sys
 import time
-import urllib.parse
+import urllib.error
 import urllib.request
+import zipfile
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
-from typing import Any, Protocol
+from typing import Protocol
 
 from pipeline.adapters import CollectionResult, Failure
 from pipeline.domain import ArticleRecord
 
 ADAPTER = "gdelt"
 
-ENDPOINT = "https://api.gdeltproject.org/api/v2/doc/doc"
+# The 15-minute file pipeline. Both names are needed per slot: the first is
+# English-only, the second carries every other language.
+FILE_BASE = "http://data.gdeltproject.org/gdeltv2"
+ENGLISH_SUFFIX = "gkg.csv.zip"
+TRANSLINGUAL_SUFFIX = "translation.gkg.csv.zip"
 
-# Verified ceiling. Requesting more returns HTTP 200 with a plain-text refusal.
-MAX_RECORDS = 250
-
-# The documented limit is one request per 5 seconds, but observed behavior is a
-# sticky per-IP cooldown that can persist far longer once tripped. Pacing well
-# clear of the stated limit is cheaper than being throttled for minutes.
-REQUEST_INTERVAL_SECONDS = 6.0
-
-# Below this, bisecting further buys nothing — accept truncation and say so.
+# GDELT's own domain -> FIPS country lookup ("Mapping The Media", May 2018).
+# 189,545 rows, ~5.4 MB, fetched in ~0.6s. Deliberately not vendored: it is a
+# published dataset that may be refreshed, and a stale committed copy would
+# silently mis-attribute countries with no signal that it had drifted.
 #
-# Raised from 1 minute on 2026-08-14 against observed behavior: GDELT rejected
-# 22m30s windows outright with "Timespan is too short." (HTTP 200 carrying an
-# error string, so it costs a full request and a pacing wait to learn nothing).
-# The old floor let bisection descend into a range where every request was
-# guaranteed to fail, burning both the request budget and wall-clock. 30
-# minutes sits above the largest rejected window actually seen, with margin.
-MIN_WINDOW = timedelta(minutes=30)
+# HTTP, not HTTPS: data.gdeltproject.org serves a certificate for
+# *.storage.googleapis.com. The same constraint already applies to the slot
+# files, so this adds no new exposure — and the payload is a public lookup
+# table, not a credential.
+DOMAIN_COUNTRY_URL = (
+    "http://data.gdeltproject.org/blog/2018-news-outlets-by-country-may2018-update"
+    "/MASTER-GDELTDOMAINSBYCOUNTRY-MAY2018.TXT"
+)
 
-# Hard ceiling on requests per collection.
-#
-# Bisecting a 24h window down to the 1-minute floor is 4095 requests, which at
-# the 6-second pacing below is ~410 minutes — far beyond any sane job timeout.
-# A busy news day is exactly when that happens, so without a cap the cycle gets
-# killed mid-write on precisely the days that matter most.
-#
-# 120 requests is ~12 minutes of pacing and covers a 24h window bisected to
-# roughly 11-minute slices. Past that the marginal article is not worth risking
-# the whole cycle: partial coverage that lands is worth more than complete
-# coverage that gets killed. Exhausting the budget is recorded as a failure so
-# the shortfall is visible rather than silent.
-MAX_REQUESTS_PER_COLLECTION = 120
+# Slots are published every 15 minutes; only :00/:15/:30/:45 timestamps exist.
+SLOT_MINUTES = 15
 
-# The request budget above bounds *requests*, never *time* — and that gap is
-# what killed a real cycle on 2026-08-14. A throttled window costs three
-# attempts with exponential backoff (6s*2 + 6s*4) plus pacing, so ~54s
-# rather than the ~6s the "120 requests is ~12 minutes" note above assumes.
-# With GDELT throttling broadly, 120 requests is up to ~108 minutes of
-# wall-clock; the workflow's `timeout-minutes: 30` killed the job mid-cycle
-# *after* it had already submitted its summarize batches, so the batch IDs
-# were never committed and that work was unrecoverable.
+# How much of the day to sample. All 96 slots would be ~418,000 articles and
+# ~1.7 GB — impossible inside the job's timeout.
 #
-# This is the missing bound: collection stops when it has spent this long,
-# whatever the request count. Set well under the job timeout so the stages
-# after collect (dedupe, cluster, rank, summarize submit, commit) still have
-# room to finish and, critically, to persist their state.
+# The binding constraint is not download time but **clustering memory**, and
+# it bites far sooner than the volume suggests. `cluster_vectors` builds a
+# full pairwise distance matrix: pdist gives n(n-1)/2 float64s and squareform
+# expands to n², so peak memory grows quadratically. Measured on live data:
+#
+#   8 slots / 3h apart -> 27,064 articles -> 24,400 groups -> ~7.1 GB peak
+#   3 slots / 8h apart -> 10,026 articles ->  ~9,000 groups -> ~1.0 GB peak
+#
+# A GitHub runner has 7 GB total, shared with Python, numpy, and the articles
+# themselves, so the 8-slot configuration OOMs rather than merely running
+# slowly. Three slots leave real headroom while still collecting 27x the
+# 11-feed RSS corpus this replaced.
+#
+# This is a coverage/cost decision, not a tuning constant: an Event breaking
+# between two sampled slots is seen by fewer outlets than full coverage would
+# show, so its Consensus Score understates reality. Spacing them evenly is
+# what keeps that bias from favouring one timezone. Raising the count means
+# recomputing the memory peak first — this is the constraint that decides it,
+# not download time.
+SLOTS_PER_COLLECTION = 3
+SLOT_SPACING_HOURS = 8
+
+# Politeness pacing between file fetches. These are static files with no
+# documented rate limit and none observed, so this is courtesy rather than a
+# constraint -- unlike the DOC API's 6s, which was a limit and still failed.
+REQUEST_INTERVAL_SECONDS = 1.0
+
+# Story 6.2 keeps the wall-clock bound Story 6.1 added: the request budget
+# that used to sit beside it counted DOC API calls and has no meaning here.
+# A cycle killed by the job timeout loses everything it has already done,
+# including batches it has already paid for.
 MAX_COLLECTION_SECONDS = 15 * 60
 
+# Rows carry very large fields (GCAM, V2Themes run to tens of kilobytes).
+# Python's default field limit raises on them, so raise it once at import
+# rather than per-parse.
+csv.field_size_limit(sys.maxsize)
 
-# FIPS 10-4 country codes for the eight Country Zones (PRD FR-3).
-# NOT ISO 3166 — see the module docstring.
+# GKG 2.1 column positions actually read. Named rather than inlined so a
+# format change fails somewhere legible.
+_COL_DATE = 1
+_COL_SOURCE = 3
+_COL_URL = 4
+_COL_TRANSLATION_INFO = 25
+_COL_EXTRAS = 26
+_GKG_COLUMNS = 27
+
+_PAGE_TITLE = re.compile(r"<PAGE_TITLE>(.*?)</PAGE_TITLE>", re.DOTALL)
+_SRCLC = re.compile(r"srclc:(\w+)")
+
+# FIPS 10-4 codes for the eight Country Zones (PRD FR-3). NOT ISO 3166 --
+# see the module docstring.
 FIPS_BY_ZONE: dict[str, str] = {
     "france": "FR",
     "united-kingdom": "UK",
@@ -108,98 +151,191 @@ FIPS_BY_ZONE: dict[str, str] = {
     "brazil": "BR",
 }
 
-# GDELT returns full English language names; the pipeline speaks two-letter
-# codes. Only the languages the pipeline can act on need an entry — anything
-# else falls back to a lowercased name, which is still honest data.
+# The lookup table speaks FIPS; Zone slugs are what the rest of the pipeline
+# speaks. Derived from the table above so the two can never drift.
+ZONE_BY_FIPS: dict[str, str] = {code: zone for zone, code in FIPS_BY_ZONE.items()}
+
+
+def zone_slug_for_fips(fips: str | None) -> str:
+    """A Zone slug for a FIPS code, or a stable slug for the rest of the world.
+
+    The eight Country Zones get their real slug, because those are the Zones a
+    reader can select. Every *other* country still gets a distinct value —
+    lowercased FIPS, e.g. ``as`` for Australia — rather than being flattened
+    into one bucket.
+
+    That distinction is load-bearing and easy to get wrong (I did, first
+    pass). ``cluster.py`` computes ``countries = frozenset(...)`` and the
+    Consensus Score reports how many *distinct* countries covered an Event.
+    Collapsing the ~36 non-Zone countries in a typical slot into a single
+    ``unknown`` would make an Event covered by Italian, Korean, Greek and
+    Taiwanese outlets report as one country instead of four — understating
+    the very number the product asks readers to trust.
+
+    ``unknown`` is reserved for a genuinely unresolved domain (~5% of rows),
+    where no country is known at all.
+    """
+    if not fips:
+        return "unknown"
+    return ZONE_BY_FIPS.get(fips, fips.strip().lower())
+
+
+# GDELT's translation info uses ISO 639-2/3 codes; the pipeline speaks
+# two-letter codes. Only the languages the pipeline can act on need an entry --
+# anything else falls back to the raw code, which is still honest data.
 LANGUAGE_CODES: dict[str, str] = {
-    "english": "en",
-    "french": "fr",
-    "spanish": "es",
-    "german": "de",
-    "portuguese": "pt",
-    "japanese": "ja",
-    "chinese": "zh",
-    "hindi": "hi",
-    "arabic": "ar",
-    "russian": "ru",
-    "italian": "it",
-    "dutch": "nl",
+    "eng": "en",
+    "fra": "fr",
+    "spa": "es",
+    "deu": "de",
+    "ger": "de",
+    "por": "pt",
+    "jpn": "ja",
+    "zho": "zh",
+    "chi": "zh",
+    "hin": "hi",
+    "ara": "ar",
+    "rus": "ru",
+    "ita": "it",
+    "nld": "nl",
 }
 
 
 class Response(Protocol):
-    """The subset of an HTTP response this adapter needs.
-
-    Narrow on purpose: it keeps the vendor client swappable and lets tests
-    supply a plain object instead of mocking a library.
-    """
-
     status_code: int
-    text: str
-    headers: dict[str, str]
+    content: bytes
 
 
 class _UrllibResponse:
-    def __init__(self, status_code: int, text: str, headers: dict[str, str]) -> None:
+    def __init__(self, status_code: int, content: bytes) -> None:
         self.status_code = status_code
-        self.text = text
-        self.headers = headers
+        self.content = content
 
 
 def _default_fetch(url: str) -> Response:
     request = urllib.request.Request(url, headers={"User-Agent": "5-news/0.1 (batch collector)"})
     try:
-        with urllib.request.urlopen(request, timeout=30) as handle:  # noqa: S310 - fixed https endpoint
-            body = handle.read().decode("utf-8", errors="replace")
-            return _UrllibResponse(handle.status, body, dict(handle.headers))
-    except urllib.error.HTTPError as exc:  # 429 and friends arrive here
-        body = exc.read().decode("utf-8", errors="replace")
-        return _UrllibResponse(exc.code, body, dict(exc.headers or {}))
+        with urllib.request.urlopen(request, timeout=60) as handle:  # noqa: S310 - fixed host
+            return _UrllibResponse(handle.status, handle.read())
+    except urllib.error.HTTPError as exc:
+        return _UrllibResponse(exc.code, b"")
 
 
 # --- Parsing -----------------------------------------------------------------
 
 
-def format_query_datetime(moment: datetime) -> str:
-    """Query format: 14 digits, UTC, no separators.
+def slot_timestamps(
+    now: datetime | None = None,
+    count: int = SLOTS_PER_COLLECTION,
+    spacing_hours: int = SLOT_SPACING_HOURS,
+) -> list[str]:
+    """The slot identifiers to fetch, newest first.
 
-    Deliberately distinct from the response format (``YYYYMMDDTHHMMSSZ``) —
-    confusing the two is a silent parse failure.
+    Each is floored to a real 15-minute boundary, because those are the only
+    timestamps that exist. The most recent boundary is skipped: a slot is
+    published a few minutes after its timestamp, so asking for the current one
+    is a reliable 404.
     """
-    return moment.astimezone(UTC).strftime("%Y%m%d%H%M%S")
+    moment = (now or datetime.now(UTC)).astimezone(UTC)
+    floored = moment.replace(
+        minute=(moment.minute // SLOT_MINUTES) * SLOT_MINUTES, second=0, microsecond=0
+    ) - timedelta(minutes=SLOT_MINUTES)
+    return [
+        (floored - timedelta(hours=spacing_hours * i)).strftime("%Y%m%d%H%M%S")
+        for i in range(count)
+    ]
 
 
-def parse_seendate(value: str) -> datetime:
-    """Response format: ``YYYYMMDDTHHMMSSZ``, UTC."""
-    return datetime.strptime(value, "%Y%m%dT%H%M%SZ").replace(tzinfo=UTC)
+def parse_domain_country(text: str) -> dict[str, str]:
+    """Parse the domain -> FIPS lookup into a dict.
+
+    Three tab-separated columns, no header: domain, FIPS code, English name.
+    The name is ignored -- Zone slugs come from ``ZONE_BY_FIPS``, not from
+    slugifying prose.
+    """
+    table: dict[str, str] = {}
+    for line in text.splitlines():
+        parts = line.split("\t")
+        if len(parts) >= 2 and parts[0] and parts[1]:
+            table[parts[0].strip().lower()] = parts[1].strip()
+    return table
 
 
-def _slugify_country(name: str) -> str:
-    """'United States' -> 'united-states', matching the Zone slugs."""
-    return name.strip().lower().replace(" ", "-")
+def country_for_domain(domain: str, table: dict[str, str]) -> str | None:
+    """FIPS code for a source domain, or ``None`` when unknown.
+
+    Falls back to progressively shorter suffixes because GDELT records the
+    registrable domain while the GKG sometimes reports a subdomain:
+    ``g1.globo.com`` is absent from the table, ``globo.com`` is present.
+    Measured: exact matching alone resolves 93.5%, the suffix fallback takes
+    it to 94.7%.
+    """
+    candidate = domain.strip().lower()
+    if not candidate:
+        return None
+    if candidate in table:
+        return table[candidate]
+    parts = candidate.split(".")
+    for i in range(1, len(parts) - 1):
+        suffix = ".".join(parts[i:])
+        if suffix in table:
+            return table[suffix]
+    return None
 
 
-def _language_code(name: str) -> str:
-    return LANGUAGE_CODES.get(name.strip().lower(), name.strip().lower())
+def parse_gkg_date(value: str) -> datetime:
+    """Slot timestamp format: ``YYYYMMDDHHMMSS``, UTC."""
+    return datetime.strptime(value.strip(), "%Y%m%d%H%M%S").replace(tzinfo=UTC)
 
 
-def parse_articles(payload: dict[str, Any]) -> list[ArticleRecord]:
-    """Turn a GDELT response into domain records.
+def _language_code(srclc: str | None) -> str:
+    """Two-letter code for a GKG source language.
 
-    A row missing required fields is skipped rather than failing the batch —
-    one malformed article should not cost a whole window's coverage.
+    ``TranslationInfo`` is blank for documents that were already in English,
+    which is the signal for English rather than missing data.
+    """
+    if not srclc:
+        return "en"
+    return LANGUAGE_CODES.get(srclc.strip().lower(), srclc.strip().lower())
+
+
+def parse_gkg(text: str, domain_country: dict[str, str]) -> list[ArticleRecord]:
+    """Turn one GKG file into domain records.
+
+    A row missing anything required is skipped rather than failing the file --
+    one malformed row should not cost a slot's coverage. A row whose title is
+    absent or blank after decoding is skipped too: an Article with no title
+    cannot be deduped, clustered, or summarized, and admitting a placeholder
+    would put that placeholder on the page.
     """
     records: list[ArticleRecord] = []
-    for raw in payload.get("articles", []):
+    for row in csv.reader(io.StringIO(text), delimiter="\t"):
+        if len(row) < _GKG_COLUMNS:
+            continue
+        match = _PAGE_TITLE.search(row[_COL_EXTRAS])
+        if not match:
+            continue
+        title = html.unescape(match.group(1)).strip()
+        if not title:
+            continue
+        source = row[_COL_SOURCE].strip()
+        fips = country_for_domain(source, domain_country)
+        srclc = _SRCLC.search(row[_COL_TRANSLATION_INFO] or "")
         try:
             records.append(
                 ArticleRecord(
-                    title=raw["title"],
-                    url=raw["url"],
-                    published_at=parse_seendate(raw["seendate"]),
-                    source=raw["domain"],
-                    source_country=_slugify_country(raw["sourcecountry"]),
-                    language=_language_code(raw["language"]),
+                    title=title,
+                    url=row[_COL_URL].strip(),
+                    published_at=parse_gkg_date(row[_COL_DATE]),
+                    source=source,
+                    # Real country for every resolved domain, Zone slug or
+                    # not -- see zone_slug_for_fips. An unresolved domain is
+                    # "unknown" rather than dropped: the Article is still
+                    # real coverage and still counts toward Independent
+                    # Sources; it just cannot contribute to country
+                    # diversity.
+                    source_country=zone_slug_for_fips(fips),
+                    language=_language_code(srclc.group(1) if srclc else None),
                     collected_by=ADAPTER,
                 )
             )
@@ -208,39 +344,33 @@ def parse_articles(payload: dict[str, Any]) -> list[ArticleRecord]:
     return records
 
 
-def is_saturated(article_count: int) -> bool:
-    """250 means the window was truncated, not that it held exactly 250."""
-    return article_count >= MAX_RECORDS
+def _unzip_single(payload: bytes) -> str:
+    """The one CSV inside a slot archive, decoded leniently.
 
-
-def split_window(
-    start: datetime, end: datetime
-) -> tuple[tuple[datetime, datetime], tuple[datetime, datetime]] | None:
-    """Bisect a time window, or return None when it is too narrow to matter."""
-    if end - start <= MIN_WINDOW:
-        return None
-    midpoint = start + (end - start) / 2
-    return (start, midpoint), (midpoint, end)
+    GKG files carry raw bytes from the open web; a strict decode raises on
+    the first malformed sequence and costs the whole slot.
+    """
+    with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+        name = archive.namelist()[0]
+        return archive.read(name).decode("utf-8", errors="replace")
 
 
 # --- Client ------------------------------------------------------------------
 
 
 class GdeltClient:
-    """Fetches article windows, respecting the ceiling and the throttle.
+    """Fetches raw GKG slot files.
 
-    ``fetch`` is injectable so tests can drive the error paths — HTTP 200 with
-    a text body, 429, a raised connection error — without a network.
+    ``fetch`` is injectable so tests can drive every error path -- a 404, a
+    corrupt archive, a raised connection error -- without a network.
     """
 
     def __init__(
         self,
-        fetch: Callable[[str], Response] | None = None,
-        max_retries: int = 2,
+        fetch: Callable[[str], Response] = _default_fetch,
         pace: bool = False,
     ) -> None:
-        self._fetch = fetch or _default_fetch
-        self._max_retries = max_retries
+        self._fetch = fetch
         self._pace = pace
         self._last_request_at: float | None = None
 
@@ -251,170 +381,112 @@ class GdeltClient:
         if elapsed < REQUEST_INTERVAL_SECONDS:
             time.sleep(REQUEST_INTERVAL_SECONDS - elapsed)
 
-    def _build_url(self, query: str, start: datetime, end: datetime) -> str:
-        params = {
-            "query": query,
-            "mode": "artlist",
-            "format": "json",
-            "maxrecords": str(MAX_RECORDS),
-            "sort": "dateasc",
-            "startdatetime": format_query_datetime(start),
-            "enddatetime": format_query_datetime(end),
-        }
-        return f"{ENDPOINT}?{urllib.parse.urlencode(params)}"
+    def fetch_file(self, url: str) -> tuple[str | None, Failure | None]:
+        """One archive, unzipped, or the reason it could not be. Never raises."""
+        self._wait_for_slot()
+        try:
+            response = self._fetch(url)
+        except Exception as exc:  # noqa: BLE001 - the boundary is the point (AD-10)
+            return None, Failure(ADAPTER, f"{url}: request failed: {exc}")
+        finally:
+            self._last_request_at = time.monotonic()
 
-    def fetch_window(self, query: str, start: datetime, end: datetime) -> CollectionResult:
-        """One request for one window. Never raises."""
-        url = self._build_url(query, start, end)
-        window = f"{start.isoformat()}..{end.isoformat()}"
+        if response.status_code != 200:
+            return None, Failure(ADAPTER, f"{url}: HTTP {response.status_code}")
+        try:
+            return _unzip_single(response.content), None
+        except (zipfile.BadZipFile, IndexError, OSError) as exc:
+            return None, Failure(ADAPTER, f"{url}: could not read archive: {exc}")
 
-        for attempt in range(self._max_retries + 1):
-            self._wait_for_slot()
-            try:
-                response = self._fetch(url)
-            except Exception as exc:  # noqa: BLE001 - the boundary is the point (AD-10)
-                return CollectionResult(
-                    failures=[Failure(ADAPTER, f"{window}: request failed: {exc}")]
-                )
-            finally:
-                self._last_request_at = time.monotonic()
+    def fetch_domain_country(self) -> tuple[dict[str, str], Failure | None]:
+        """The domain -> FIPS lookup, or an empty table plus a failure.
 
-            if response.status_code == 429:
-                if attempt < self._max_retries:
-                    # Observed cooldowns far exceed the documented 5s.
-                    time.sleep(REQUEST_INTERVAL_SECONDS * (2 ** (attempt + 1)))
-                    continue
-                return CollectionResult(
-                    failures=[
-                        Failure(ADAPTER, f"{window}: throttled (429) after {attempt + 1} attempts")
-                    ]
-                )
-
-            if response.status_code != 200:
-                return CollectionResult(
-                    failures=[Failure(ADAPTER, f"{window}: HTTP {response.status_code}")]
-                )
-
-            # HTTP 200 does not mean success — query errors come back as text.
-            try:
-                payload = json.loads(response.text) if response.text.strip() else {}
-            except json.JSONDecodeError:
-                detail = response.text.strip()[:200]
-                return CollectionResult(
-                    failures=[Failure(ADAPTER, f"{window}: query error: {detail}")]
-                )
-
-            return CollectionResult(articles=[r.to_dict() for r in parse_articles(payload)])
-
-        return CollectionResult(failures=[Failure(ADAPTER, f"{window}: exhausted retries")])
-
-    def collect(self, query: str, start: datetime, end: datetime) -> CollectionResult:
-        """Fetch a window, bisecting recursively wherever it saturates.
-
-        Deduplicates on URL: bisected windows share a boundary instant and can
-        return the same article twice.
+        Degrades rather than aborting: without it every Article lands in
+        ``source_country="unknown"``, so Zone Briefings thin out and country
+        diversity stops counting -- a visible, recorded shortfall, not a
+        crashed cycle (AD-10).
         """
-        collected: dict[str, dict[str, Any]] = {}
-        failures: list[Failure] = []
-        budget = [MAX_REQUESTS_PER_COLLECTION]
+        self._wait_for_slot()
+        try:
+            response = self._fetch(DOMAIN_COUNTRY_URL)
+        except Exception as exc:  # noqa: BLE001 - adapter boundary
+            return {}, Failure(ADAPTER, f"domain-country lookup failed: {exc}")
+        finally:
+            self._last_request_at = time.monotonic()
+
+        if response.status_code != 200:
+            return {}, Failure(ADAPTER, f"domain-country lookup: HTTP {response.status_code}")
+        table = parse_domain_country(response.content.decode("utf-8", errors="replace"))
+        if not table:
+            return {}, Failure(ADAPTER, "domain-country lookup was empty")
+        return table, None
+
+    def collect(self, now: datetime | None = None) -> CollectionResult:
+        """Fetch the sampled slots and return every Article they carry.
+
+        Deduplicates on URL: the same article appears in more than one slot,
+        and in both the English and translingual files.
+        """
         deadline = time.monotonic() + MAX_COLLECTION_SECONDS
-        self._collect_into(query, start, end, collected, failures, budget, deadline)
-        if budget[0] <= 0:
-            failures.append(
-                Failure(
-                    ADAPTER,
-                    f"request budget of {MAX_REQUESTS_PER_COLLECTION} exhausted; "
-                    "coverage for this cycle is incomplete",
+        failures: list[Failure] = []
+
+        domain_country, lookup_failure = self.fetch_domain_country()
+        if lookup_failure is not None:
+            failures.append(lookup_failure)
+
+        collected: dict[str, dict] = {}
+        for slot in slot_timestamps(now):
+            if time.monotonic() >= deadline:
+                failures.append(
+                    Failure(
+                        ADAPTER,
+                        f"collection deadline of {MAX_COLLECTION_SECONDS}s reached; "
+                        "remaining slots skipped and coverage is incomplete",
+                    )
                 )
-            )
-        if time.monotonic() >= deadline:
+                break
+            for suffix in (ENGLISH_SUFFIX, TRANSLINGUAL_SUFFIX):
+                url = f"{FILE_BASE}/{slot}.{suffix}"
+                text, failure = self.fetch_file(url)
+                if failure is not None:
+                    failures.append(failure)
+                    continue
+                for record in parse_gkg(text or "", domain_country):
+                    collected.setdefault(record.url, record.to_dict())
+
+        if not collected:
             failures.append(
-                Failure(
-                    ADAPTER,
-                    f"collection deadline of {MAX_COLLECTION_SECONDS}s reached "
-                    "(upstream was throttling); coverage for this cycle is incomplete",
-                )
+                Failure(ADAPTER, "no slot yielded any Article; coverage for this cycle is empty")
             )
         return CollectionResult(articles=list(collected.values()), failures=failures)
 
-    def _collect_into(
-        self,
-        query: str,
-        start: datetime,
-        end: datetime,
-        collected: dict[str, dict[str, Any]],
-        failures: list[Failure],
-        budget: list[int],
-        deadline: float,
-    ) -> None:
-        # Two independent bounds. The request budget stops a saturating day
-        # from bisecting forever; the deadline stops a *throttled* day from
-        # spending an hour in backoff sleeps. Either one alone leaves the job
-        # killable by the workflow timeout, which loses everything the cycle
-        # has already done -- including batches it has already submitted.
-        if budget[0] <= 0 or time.monotonic() >= deadline:
-            return
-        budget[0] -= 1
-        result = self.fetch_window(query, start, end)
-        failures.extend(result.failures)
-
-        if not is_saturated(len(result.articles)):
-            for article in result.articles:
-                collected.setdefault(article["url"], article)
-            return
-
-        halves = split_window(start, end)
-        if halves is None:
-            # Too narrow to bisect: keep what we have and say it is incomplete,
-            # rather than pretending 250 was the true count.
-            for article in result.articles:
-                collected.setdefault(article["url"], article)
-            failures.append(
-                Failure(
-                    ADAPTER,
-                    f"{start.isoformat()}..{end.isoformat()}: saturated at {MAX_RECORDS} "
-                    "and too narrow to split; coverage for this window is truncated",
-                )
-            )
-            return
-
-        for half_start, half_end in halves:
-            self._collect_into(query, half_start, half_end, collected, failures, budget, deadline)
-
 
 def collect_world_day(now: datetime | None = None) -> CollectionResult:
-    """The World / day collection the Build Order starts with.
+    """The day's collection: sampled slots from GDELT's raw file pipeline.
 
-    Widening to the full 15-Zone matrix is Story 1.5's scheduling concern; this
-    is the one combination the inspection window needs.
+    Name kept from the DOC 2.0 era so `collect_all` and its tests read the
+    same; the channel beneath it is entirely different.
     """
-    end = now or datetime.now(UTC)
-    start = end - timedelta(days=1)
-    client = GdeltClient(pace=True)
-    # A query needs at least one real operator. Sorting by language rather than
-    # keyword keeps the result set representative of general coverage.
-    #
-    # The parentheses are load-bearing, not cosmetic: GDELT rejects a bare
-    # OR'd query with "Queries containing OR'd terms must be surrounded by
-    # ()." That rejection arrives as HTTP 200 carrying an error string, so
-    # it degraded the cycle silently rather than raising -- the whole GDELT
-    # half of collection returned nothing on the first real cycle
-    # (2026-08-13T20-13-17Z) while the run still reported success.
-    return client.collect(
-        query="(sourcelang:eng OR sourcelang:fra OR sourcelang:spa)", start=start, end=end
-    )
+    return GdeltClient(pace=True).collect(now=now)
 
 
 __all__ = [
     "ADAPTER",
+    "DOMAIN_COUNTRY_URL",
     "FIPS_BY_ZONE",
-    "MAX_RECORDS",
-    "MAX_REQUESTS_PER_COLLECTION",
+    "LANGUAGE_CODES",
+    "MAX_COLLECTION_SECONDS",
+    "SLOTS_PER_COLLECTION",
+    "ZONE_BY_FIPS",
+    "ArticleRecord",
+    "CollectionResult",
+    "Failure",
     "GdeltClient",
     "collect_world_day",
-    "format_query_datetime",
-    "is_saturated",
-    "parse_articles",
-    "parse_seendate",
-    "split_window",
+    "country_for_domain",
+    "zone_slug_for_fips",
+    "parse_domain_country",
+    "parse_gkg",
+    "parse_gkg_date",
+    "slot_timestamps",
 ]

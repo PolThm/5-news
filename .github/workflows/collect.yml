@@ -23,13 +23,20 @@ jobs:
   collect:
     name: Collect, dedupe, and cluster
     runs-on: ubuntu-latest
-    # Sized against the adapter's own request budget rather than guessed:
-    # MAX_REQUESTS_PER_COLLECTION (120) at 6s pacing is ~12 minutes for GDELT,
-    # plus RSS fetches and 429 backoffs. 30 minutes leaves generous headroom
-    # while still failing fast if something hangs.
+    # Sized against measured stage costs rather than guessed. Story 6.2
+    # changed the shape of this: collection is no longer the slow part.
     #
-    # The budget is what makes this bound meaningful — without it a saturating
-    # day bisects into 4095 requests (~410 minutes) and no timeout is safe.
+    #   collect   ~15s  (3 GKG slots, static files, no throttle)
+    #   dedupe    ~30s
+    #   cluster   ~90s  (~92 Cohere batches, paced under a 100k tokens/min
+    #                    trial-key limit — this is now the long pole)
+    #   summarize   ~5s  (submits batches and exits, per AD-11)
+    #
+    # ~3 minutes typical. 30 leaves room for a slow upstream while still
+    # failing fast if something hangs. The bound matters: a job killed here
+    # loses everything it has done, including summarize batches already paid
+    # for (Story 6.1 lost two sets of three exactly that way), which is why
+    # the adapter also enforces its own MAX_COLLECTION_SECONDS well inside it.
     timeout-minutes: 30
 
     steps:

@@ -47,7 +47,7 @@ NFR-1: A Briefing reaches first contentful paint within 1 second at the 95th per
 NFR-2: Generation cost scales with the number of Briefings, not the number of readers.
 NFR-3: A failure or rate-limit block from any single upstream feed degrades coverage for the affected cycle without failing the pipeline or the served Briefings.
 NFR-4: The page is readable and navigable without JavaScript for its core content, and meets WCAG 2.1 AA for contrast and keyboard navigation. `[ASSUMPTION: AA target]`
-NFR-5: Content is acquired only via public APIs and published RSS feeds. No scraping.
+NFR-5: Content is acquired only via public APIs, published feeds, and GDELT's published bulk files. No scraping.
 NFR-6: Only the application shell and at most the reader's last-viewed Briefing are retained offline — never the full 135-Briefing matrix.
 
 ### Additional Requirements
@@ -67,7 +67,7 @@ Extracted from the Architecture spine. Each is an invariant that constrains how 
 - **AD-11 — Two-phase resumable cycle.** The Batch API is asynchronous (up to 24h) and a scheduled job must exit. Phase one submits and exits; phase two polls, collects, and publishes. Neither phase blocks on an external service.
 - **AD-12 — Single field ownership.** Every published field has exactly one producing stage: dedupe owns counts, cluster owns membership, rank owns ordering, summarize owns generated text (Summary + Headline), publish owns timestamps. Recomputing another stage's value is a defect even when the result matches.
 - **AD-13 — Adapter boundary.** Stages depend on adapter interfaces in domain terms, never on a vendor SDK type. Rate limiting, retry, pagination, and batching live inside the adapter.
-- **Stack (verified 2026-08-10):** Astro 7.2.0; GitHub Actions scheduled workflow; GDELT DOC 2.0 (no key, MAXRECORDS 250, ~1 req/5s); Cohere `embed-v4`; Claude `claude-haiku-4-5` via Batch API; HDBSCAN via scikit-learn ≥ 1.3.
+- **Stack (verified 2026-08-10):** Astro 7.2.0; GitHub Actions scheduled workflow; GDELT GKG 2.1 raw files (no key, 15-min slots, no rate limit -- replaced DOC 2.0 in Story 6.2); Cohere `embed-v4`; Claude `claude-haiku-4-5` via Batch API; HDBSCAN via scikit-learn ≥ 1.3.
 - **Deliberately excluded:** `@vite-pwa/astro` (abandoned), Workbox, NewsAPI.org, any database. Prompt caching is unavailable on this workload (Haiku 4.5 needs a 4096-token minimum prefix; the summarization prompt is far shorter and would silently not cache).
 - **Deferred by the spine, not to be invented in stories:** cross-cycle Cluster identity, deduplication layer internals and thresholds, intermediate-data retention, static hosting target, observability, archive/SEO surface.
 
@@ -203,6 +203,8 @@ So that the two halves cannot accidentally couple as the code grows.
 
 ### Story 1.2: Collect Articles from GDELT
 
+*Superseded by Story 6.2 (2026-08-18): the DOC 2.0 search API this story built against was throttled in 8 of 8 recorded cycles, so collection moved to GDELT's raw 15-minute GKG files. The acceptance criteria below describe the shipped-then-retired design and are kept as history, not as current behaviour.*
+
 As the developer,
 I want ingested Articles written to disk as JSON Lines,
 So that I can see what the world actually published before any judgment is applied to it.
@@ -226,6 +228,8 @@ So that I can see what the world actually published before any judgment is appli
 **And** the stage exits successfully (AD-10, NFR-3)
 
 ### Story 1.3: Supplement collection with RSS feeds
+
+*Superseded by Story 6.2 (2026-08-18): the RSS adapter was removed when GDELT's raw files lifted the corpus from ~365 articles across 11 outlets to ~10,000 across thousands. Kept as history — note the irony this story's own rationale records, that coverage should not depend on a single upstream: in practice RSS was carrying the product alone while the throttled primary contributed nothing.*
 
 As the developer,
 I want major outlets' RSS feeds ingested alongside GDELT,

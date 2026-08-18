@@ -81,8 +81,11 @@ EmbedFn = Callable[[list[str]], EmbeddingResult]
 # Cluster at 3 members. Loosening to 0.65 starts over-merging (largest
 # jumps to 5), so 0.72 sits inside the band rather than at its edge.
 #
-# Re-measure rather than nudge this if coverage looks wrong: the numbers
-# above are reproducible from `pipeline.adapters.rss` + `embed_titles`.
+# Re-measure rather than nudge this if coverage looks wrong. Note the numbers
+# above came from an 11-feed RSS corpus, the adapter Story 6.2 retired; the
+# corpus is now far larger and more varied, so the gap between the noise band
+# and the same-Event band may sit differently. Reproduce with
+# `pipeline.adapters.gdelt` + `embed_titles`.
 _SAME_EVENT_DISTANCE = 0.748
 
 

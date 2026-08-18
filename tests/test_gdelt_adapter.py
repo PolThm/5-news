@@ -1,502 +1,381 @@
-"""GDELT DOC 2.0 adapter.
+"""Tests for the GDELT raw-file adapter.
 
-Verified against the live API on 2026-08-10/11. Three facts drive this design:
+No real network call anywhere here — the client takes an injectable ``fetch``,
+exactly like every other adapter-boundary test in this pipeline, so these tests
+never touch data.gdeltproject.org.
 
-1. **There is no pagination.** `maxrecords` caps at 250 and stops. The only way
-   past it is splitting the query by time, and a slice returning exactly 250 is
-   *truncated*, not complete — it must be bisected.
-2. **Query-level errors come back as HTTP 200 with a plain-text body.** Trusting
-   the status code means silently ingesting an error message as if it were news.
-3. **Country codes are FIPS 10-4, not ISO 3166.** `CH` is China in FIPS and
-   Switzerland in ISO. Reusing an ISO table would mis-attribute every article.
+The two fixtures under ``tests/fixtures/`` are real trimmed slices of live GKG
+files captured 2026-08-18: the same 27-column shape, the same ``Extras``
+payload, the same entity encoding. Parsing tests run against real bytes rather
+than a hand-written approximation of the format, because every surprise in
+Story 6.2 came from the format not matching its documentation.
+
+Story 6.2 replaced the DOC 2.0 search API with these files. The API tests that
+used to live here (bisection, saturation, 429 backoff) went with it — that
+machinery existed only to work around a throttle these files do not have.
 """
 
 from __future__ import annotations
 
-import json
+import io
+import zipfile
 from datetime import UTC, datetime
+from pathlib import Path
 
 import pytest
 from pipeline.adapters.gdelt import (
+    DOMAIN_COUNTRY_URL,
     FIPS_BY_ZONE,
+    SLOTS_PER_COLLECTION,
+    ZONE_BY_FIPS,
     GdeltClient,
-    is_saturated,
-    parse_articles,
-    parse_seendate,
-    split_window,
+    country_for_domain,
+    parse_domain_country,
+    parse_gkg,
+    parse_gkg_date,
+    slot_timestamps,
+    zone_slug_for_fips,
 )
 
-# --- Response parsing --------------------------------------------------------
+FIXTURES = Path(__file__).parent / "fixtures"
 
 
-def test_parses_the_live_response_shape() -> None:
-    """Field names captured from a real API response, not guessed."""
-    payload = {
-        "articles": [
-            {
-                "url": "https://www.bfmtv.com/x.html",
-                "url_mobile": "",
-                "title": "Incendies, canicules",
-                "seendate": "20260810T114500Z",
-                "socialimage": "https://images.bfmtv.com/y.jpg",
-                "domain": "bfmtv.com",
-                "language": "French",
-                "sourcecountry": "France",
-            }
-        ]
-    }
-
-    records = parse_articles(payload)
-
-    assert len(records) == 1
-    assert records[0].title == "Incendies, canicules"
-    assert records[0].source == "bfmtv.com"
-    assert records[0].collected_by == "gdelt"
+def _fixture(name: str) -> str:
+    return (FIXTURES / name).read_text(encoding="utf-8")
 
 
-def test_maps_full_names_back_to_slugs() -> None:
-    """GDELT queries take codes but responses return full English names —
-    an asymmetry that would otherwise leak 'France' where the pipeline
-    expects the 'france' Zone slug."""
-    payload = {
-        "articles": [
-            {
-                "url": "https://example.com/a",
-                "title": "x",
-                "seendate": "20260810T114500Z",
-                "domain": "example.com",
-                "language": "French",
-                "sourcecountry": "France",
-            }
-        ]
-    }
-
-    record = parse_articles(payload)[0]
-
-    assert record.source_country == "france"
-    assert record.language == "fr"
-
-
-def test_unknown_country_is_preserved_not_dropped() -> None:
-    """An Article from a country outside the 15 Zones is still real coverage —
-    it counts toward World. Dropping it would understate Consensus Score."""
-    payload = {
-        "articles": [
-            {
-                "url": "https://example.com/a",
-                "title": "x",
-                "seendate": "20260810T114500Z",
-                "domain": "example.com",
-                "language": "Icelandic",
-                "sourcecountry": "Iceland",
-            }
-        ]
-    }
-
-    record = parse_articles(payload)[0]
-
-    assert record.source_country == "iceland"
-
-
-def test_empty_result_is_not_an_error() -> None:
-    assert parse_articles({"articles": []}) == []
-
-
-def test_missing_articles_key_is_not_an_error() -> None:
-    """GDELT sometimes returns an empty body for a zero-match query."""
-    assert parse_articles({}) == []
-
-
-def test_skips_an_article_missing_required_fields() -> None:
-    """One malformed row must not cost the whole batch."""
-    payload = {
-        "articles": [
-            {
-                "url": "https://example.com/good",
-                "title": "keep me",
-                "seendate": "20260810T114500Z",
-                "domain": "example.com",
-                "language": "English",
-                "sourcecountry": "United States",
-            },
-            {"url": "https://example.com/bad"},  # no title, no seendate
-        ]
-    }
-
-    records = parse_articles(payload)
-
-    assert len(records) == 1
-    assert records[0].title == "keep me"
-
-
-# --- seendate ----------------------------------------------------------------
-
-
-def test_seendate_uses_the_response_format_not_the_query_format() -> None:
-    """Queries take YYYYMMDDHHMMSS; responses return YYYYMMDDTHHMMSSZ.
-    Confusing the two is a silent parse failure."""
-    parsed = parse_seendate("20260810T114500Z")
-    assert parsed == datetime(2026, 8, 10, 11, 45, 0, tzinfo=UTC)
-    assert parsed.tzinfo is not None
-
-
-def test_malformed_seendate_raises() -> None:
-    with pytest.raises(ValueError):
-        parse_seendate("2026-08-10 11:45")
-
-
-# --- The 250 ceiling ---------------------------------------------------------
-
-
-def test_exactly_250_means_truncated() -> None:
-    """The single most important constraint: 250 is a saturation signal, never
-    a complete result."""
-    assert is_saturated(250) is True
-
-
-def test_fewer_than_250_is_complete() -> None:
-    assert is_saturated(249) is False
-    assert is_saturated(0) is False
-
-
-def test_window_bisects_for_recursive_narrowing() -> None:
-    start = datetime(2026, 8, 11, 0, 0, tzinfo=UTC)
-    end = datetime(2026, 8, 12, 0, 0, tzinfo=UTC)
-
-    first, second = split_window(start, end)
-
-    assert first == (start, datetime(2026, 8, 11, 12, 0, tzinfo=UTC))
-    assert second == (datetime(2026, 8, 11, 12, 0, tzinfo=UTC), end)
-
-
-def test_window_too_narrow_to_split_returns_none() -> None:
-    """Below a minute there is nothing left to bisect — accept truncation and
-    record it rather than recursing forever."""
-    start = datetime(2026, 8, 11, 0, 0, 0, tzinfo=UTC)
-    end = datetime(2026, 8, 11, 0, 0, 30, tzinfo=UTC)
-
-    assert split_window(start, end) is None
-
-
-# --- FIPS codes --------------------------------------------------------------
-
-
-def test_fips_codes_are_not_iso() -> None:
-    """The trap: CH is China in FIPS, Switzerland in ISO. UK not GB, GM not DE,
-    JA not JP."""
-    assert FIPS_BY_ZONE["china"] == "CH"
-    assert FIPS_BY_ZONE["united-kingdom"] == "UK"
-    assert FIPS_BY_ZONE["germany"] == "GM"
-    assert FIPS_BY_ZONE["japan"] == "JA"
-    assert FIPS_BY_ZONE["france"] == "FR"
-    assert FIPS_BY_ZONE["united-states"] == "US"
-    assert FIPS_BY_ZONE["india"] == "IN"
-    assert FIPS_BY_ZONE["brazil"] == "BR"
-
-
-def test_every_country_zone_has_a_fips_code() -> None:
-    from pipeline.config import ZONES
-    from pipeline.domain import ZoneKind
-
-    for zone in ZONES:
-        if zone.kind is ZoneKind.COUNTRY:
-            assert zone.slug in FIPS_BY_ZONE, f"no FIPS code for {zone.slug}"
-
-
-# --- Error handling ----------------------------------------------------------
+def _zipped(text: str, inner_name: str = "slot.csv") -> bytes:
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w") as archive:
+        archive.writestr(inner_name, text)
+    return buffer.getvalue()
 
 
 class FakeResponse:
-    def __init__(self, status: int, body: str, content_type: str = "application/json") -> None:
-        self.status_code = status
-        self.text = body
-        self.headers = {"Content-Type": content_type}
+    def __init__(self, status_code: int, content: bytes = b"") -> None:
+        self.status_code = status_code
+        self.content = content
 
 
-def test_http_200_with_a_text_error_body_is_a_failure_not_data() -> None:
-    """GDELT returns 200 + plain text for query errors. Trusting the status
-    would ingest 'A maximum of 250 records can be returned.' as an article."""
-    client = GdeltClient(
-        fetch=lambda url: FakeResponse(
-            200, "A maximum of 250 records can be returned.", "text/html"
-        )
+# --- Slot selection ----------------------------------------------------------
+
+
+def test_slots_are_spaced_across_the_day_and_land_on_real_boundaries() -> None:
+    """Only :00/:15/:30/:45 timestamps exist, and the most recent boundary is
+    skipped because a slot is published a few minutes after its timestamp."""
+    now = datetime(2026, 8, 18, 9, 7, 33, tzinfo=UTC)
+
+    slots = slot_timestamps(now)
+
+    assert len(slots) == SLOTS_PER_COLLECTION
+    # 09:07 floors to 09:00, minus one slot -> 08:45.
+    assert slots[0] == "20260818084500"
+    assert slots[1] == "20260818004500"  # SLOT_SPACING_HOURS earlier
+    for slot in slots:
+        assert len(slot) == 14
+        assert slot[-2:] == "00"  # seconds
+        assert int(slot[-4:-2]) % 15 == 0  # minutes land on a real boundary
+
+
+def test_slots_span_a_full_day_without_repeating() -> None:
+    slots = slot_timestamps(datetime(2026, 8, 18, 12, 0, tzinfo=UTC))
+
+    assert len(set(slots)) == len(slots)
+    # The sampled slots reach back into the previous day rather than
+    # clustering in the last few hours, so no timezone is over-represented.
+    assert slots[0].startswith("20260818")
+    assert slots[-1].startswith("20260817")
+
+
+# --- Domain -> country lookup -------------------------------------------------
+
+
+def test_the_lookup_is_parsed_from_three_tab_separated_columns() -> None:
+    table = parse_domain_country(
+        "bbc.co.uk\tUK\tUnited Kingdom\nlemonde.fr\tFR\tFrance\n\nbad-line\n"
     )
 
-    result = client.fetch_window(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, tzinfo=UTC),
-        end=datetime(2026, 8, 12, tzinfo=UTC),
-    )
-
-    assert result.articles == []
-    assert result.failures
-    assert "maximum of 250" in result.failures[0].detail
+    assert table == {"bbc.co.uk": "UK", "lemonde.fr": "FR"}
 
 
-def test_429_is_reported_as_a_failure_without_raising() -> None:
-    """AD-10: an adapter reports, it does not raise past its boundary."""
-    client = GdeltClient(
-        fetch=lambda url: FakeResponse(429, "Please limit requests to one every 5 seconds"),
-        max_retries=0,
-    )
+def test_a_subdomain_resolves_through_its_registrable_parent() -> None:
+    """GDELT records the registrable domain while the GKG sometimes reports a
+    subdomain: g1.globo.com is absent from the table, globo.com is present.
+    Without the suffix fallback that article loses its country."""
+    table = {"globo.com": "BR"}
 
-    result = client.fetch_window(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, tzinfo=UTC),
-        end=datetime(2026, 8, 12, tzinfo=UTC),
-    )
-
-    assert result.articles == []
-    assert result.failures
-    assert "429" in result.failures[0].detail
+    assert country_for_domain("g1.globo.com", table) == "BR"
+    assert country_for_domain("globo.com", table) == "BR"
+    assert country_for_domain("unknown-outlet.example", table) is None
+    assert country_for_domain("", table) is None
 
 
-def test_a_network_exception_becomes_a_failure_record() -> None:
-    def explode(url: str) -> FakeResponse:
-        raise ConnectionError("dns failure")
-
-    client = GdeltClient(fetch=explode, max_retries=0)
-
-    result = client.fetch_window(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, tzinfo=UTC),
-        end=datetime(2026, 8, 12, tzinfo=UTC),
-    )
-
-    assert result.articles == []
-    assert result.failures
-    assert "dns failure" in result.failures[0].detail
+def test_zone_slugs_come_from_fips_and_the_two_tables_cannot_drift() -> None:
+    assert {code: zone for zone, code in FIPS_BY_ZONE.items()} == ZONE_BY_FIPS
+    assert zone_slug_for_fips("UK") == "united-kingdom"
+    assert zone_slug_for_fips("BR") == "brazil"
 
 
-def test_successful_fetch_returns_records() -> None:
-    body = (
-        '{"articles": [{"url": "https://example.com/a", "title": "t", '
-        '"seendate": "20260810T114500Z", "domain": "example.com", '
-        '"language": "English", "sourcecountry": "United States"}]}'
-    )
-    client = GdeltClient(fetch=lambda url: FakeResponse(200, body))
+def test_a_country_outside_the_eight_zones_keeps_its_own_identity() -> None:
+    """The Consensus Score counts *distinct* countries. Collapsing every
+    non-Zone country into one bucket would make an Event covered by Italian,
+    Korean and Greek outlets report as one country instead of three --
+    understating the number the product asks readers to trust."""
+    assert zone_slug_for_fips("IT") == "it"
+    assert zone_slug_for_fips("AS") == "as"
+    assert zone_slug_for_fips("IT") != zone_slug_for_fips("AS")
 
-    result = client.fetch_window(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, tzinfo=UTC),
-        end=datetime(2026, 8, 12, tzinfo=UTC),
-    )
-
-    assert len(result.articles) == 1
-    assert result.failures == []
+    # Only a genuinely unresolved domain is "unknown".
+    assert zone_slug_for_fips(None) == "unknown"
+    assert zone_slug_for_fips("") == "unknown"
 
 
-def test_query_datetime_format_has_no_separators() -> None:
-    """Query format is YYYYMMDDHHMMSS — 14 digits, no T, no Z. The response
-    format differs, which is exactly why this is pinned."""
-    from pipeline.adapters.gdelt import format_query_datetime
-
-    assert format_query_datetime(datetime(2026, 8, 11, 6, 30, 15, tzinfo=UTC)) == "20260811063015"
+# --- Parsing ------------------------------------------------------------------
 
 
-def test_saturated_window_is_bisected_automatically() -> None:
-    """A window returning 250 is split and re-fetched, so coverage is not
-    silently capped at 250 for a busy day."""
+def test_parses_a_real_english_slice() -> None:
+    records = parse_gkg(_fixture("gkg_english_sample.csv"), {})
+
+    assert records
+    for record in records:
+        assert record.title.strip()
+        assert record.url.startswith("http")
+        assert record.language == "en"  # no TranslationInfo means English
+        assert record.collected_by == "gdelt"
+        assert record.published_at.tzinfo is not None
+
+
+def test_parses_a_real_translingual_slice_keeping_the_source_language() -> None:
+    """Every French and Spanish article comes from the translingual file.
+    Fetching only the English one would rebuild the exact language defect
+    reported on 2026-08-13, where Spanish pages carried French text."""
+    records = parse_gkg(_fixture("gkg_translingual_sample.csv"), {})
+
+    languages = {record.language for record in records}
+    assert "fr" in languages
+    assert "es" in languages
+
+
+def test_the_title_comes_from_extras_and_entities_are_decoded() -> None:
+    """The GKG has no title column -- the title is inside Extras, and its
+    numeric HTML entities would otherwise reach the page verbatim."""
+    row = _row(extras="<PAGE_TITLE>Canicule&#xA0;: l&#39;astuce confirm&#xE9;e</PAGE_TITLE>")
+
+    records = parse_gkg(row, {})
+
+    assert len(records) == 1
+    assert records[0].title == "Canicule\xa0: l'astuce confirmée"
+
+
+def test_a_row_without_a_usable_title_is_skipped_not_placeholdered() -> None:
+    """An Article with no title cannot be deduped, clustered, or summarized,
+    and a placeholder would end up rendered on the page."""
+    assert parse_gkg(_row(extras=""), {}) == []
+    assert parse_gkg(_row(extras="<PAGE_LINKS>https://x.test</PAGE_LINKS>"), {}) == []
+    assert parse_gkg(_row(extras="<PAGE_TITLE>   </PAGE_TITLE>"), {}) == []
+
+
+def test_a_short_row_is_skipped_rather_than_failing_the_file() -> None:
+    """One malformed row must not cost a whole slot's coverage."""
+    good = _row(extras="<PAGE_TITLE>Real headline</PAGE_TITLE>")
+
+    records = parse_gkg("too\tfew\tcolumns\n" + good, {})
+
+    assert len(records) == 1
+
+
+def test_source_country_uses_the_lookup() -> None:
+    row = _row(source="bbc.co.uk", extras="<PAGE_TITLE>Headline</PAGE_TITLE>")
+
+    records = parse_gkg(row, {"bbc.co.uk": "UK"})
+
+    assert records[0].source_country == "united-kingdom"
+
+
+def test_an_unresolved_domain_still_yields_an_article() -> None:
+    """It is real coverage and still counts toward Independent Sources; it
+    simply cannot contribute to country diversity."""
+    row = _row(source="nowhere.test", extras="<PAGE_TITLE>Headline</PAGE_TITLE>")
+
+    records = parse_gkg(row, {})
+
+    assert len(records) == 1
+    assert records[0].source_country == "unknown"
+
+
+def test_the_slot_date_is_parsed_as_utc() -> None:
+    assert parse_gkg_date("20260818093000") == datetime(2026, 8, 18, 9, 30, tzinfo=UTC)
+
+
+def test_a_row_with_an_unparseable_date_is_skipped() -> None:
+    row = _row(date="not-a-date", extras="<PAGE_TITLE>Headline</PAGE_TITLE>")
+
+    assert parse_gkg(row, {}) == []
+
+
+# --- Fetching and degradation --------------------------------------------------
+
+
+def test_a_missing_slot_degrades_that_slot_only() -> None:
+    """A slot published later than expected 404s. Every other slot must still
+    contribute (AD-10)."""
+    body = _zipped(_fixture("gkg_english_sample.csv"))
     calls: list[str] = []
 
     def fetch(url: str) -> FakeResponse:
         calls.append(url)
-        # First call saturates; each half then returns one distinct article.
-        if len(calls) == 1:
-            count, prefix = 250, "sat"
-        else:
-            count, prefix = 1, f"half{len(calls)}"
-        articles = ",".join(
-            f'{{"url": "https://example.com/{prefix}-{i}", "title": "t{i}", '
-            f'"seendate": "20260810T114500Z", "domain": "example.com", '
-            f'"language": "English", "sourcecountry": "United States"}}'
-            for i in range(count)
-        )
-        return FakeResponse(200, f'{{"articles": [{articles}]}}')
-
-    client = GdeltClient(fetch=fetch)
-
-    result = client.collect(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, 0, 0, tzinfo=UTC),
-        end=datetime(2026, 8, 12, 0, 0, tzinfo=UTC),
-    )
-
-    assert len(calls) == 3, "expected one saturated call plus two halves"
-    assert len(result.articles) == 2
-
-
-def test_collect_deduplicates_by_url_across_slices() -> None:
-    """Bisected windows can overlap at their boundary and repeat an article."""
-
-    def fetch(url: str) -> FakeResponse:
-        body = (
-            '{"articles": [{"url": "https://example.com/same", "title": "t", '
-            '"seendate": "20260810T114500Z", "domain": "example.com", '
-            '"language": "English", "sourcecountry": "United States"}]}'
-        )
+        if DOMAIN_COUNTRY_URL in url:
+            return FakeResponse(200, b"bbc.co.uk\tUK\tUnited Kingdom\n")
+        if url.endswith("translation.gkg.csv.zip"):
+            return FakeResponse(404)
         return FakeResponse(200, body)
 
-    client = GdeltClient(fetch=fetch)
+    result = GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
 
-    result = client.collect(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, tzinfo=UTC),
-        end=datetime(2026, 8, 12, tzinfo=UTC),
-    )
-
-    assert len(result.articles) == 1
+    assert result.articles
+    assert all("HTTP 404" in f.detail for f in result.failures)
+    assert len(result.failures) == SLOTS_PER_COLLECTION  # one per translingual file
 
 
-def test_collection_stops_at_the_request_budget() -> None:
-    """A fully-saturating day would bisect into 4095 requests — ~410 minutes at
-    the pacing this adapter uses, far past any job timeout. Without a cap the
-    cycle gets killed mid-write on exactly the busiest news days.
+def test_a_corrupt_archive_degrades_that_file_only() -> None:
+    def fetch(url: str) -> FakeResponse:
+        if DOMAIN_COUNTRY_URL in url:
+            return FakeResponse(200, b"bbc.co.uk\tUK\tUnited Kingdom\n")
+        if url.endswith("translation.gkg.csv.zip"):
+            return FakeResponse(200, b"not a zip at all")
+        return FakeResponse(200, _zipped(_fixture("gkg_english_sample.csv")))
 
-    Partial coverage that lands beats complete coverage that gets killed, so
-    the budget stops the recursion and records the shortfall.
-    """
-    from pipeline.adapters.gdelt import MAX_REQUESTS_PER_COLLECTION
+    result = GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
 
-    calls: list[str] = []
-
-    def always_saturated(url: str) -> FakeResponse:
-        calls.append(url)
-        articles = ",".join(
-            f'{{"url": "https://example.com/{len(calls)}-{i}", "title": "t", '
-            f'"seendate": "20260810T114500Z", "domain": "example.com", '
-            f'"language": "English", "sourcecountry": "United States"}}'
-            for i in range(250)
-        )
-        return FakeResponse(200, f'{{"articles": [{articles}]}}')
-
-    client = GdeltClient(fetch=always_saturated)
-    result = client.collect(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, 0, 0, tzinfo=UTC),
-        end=datetime(2026, 8, 12, 0, 0, tzinfo=UTC),
-    )
-
-    assert len(calls) <= MAX_REQUESTS_PER_COLLECTION, "budget must bound the recursion"
-    assert any("budget" in f.detail for f in result.failures), (
-        "an exhausted budget is a coverage shortfall and must be recorded, not silent"
-    )
+    assert result.articles
+    assert any("could not read archive" in f.detail for f in result.failures)
 
 
-def test_a_normal_day_does_not_touch_the_budget() -> None:
-    """The cap is a backstop for pathological days, not a routine constraint."""
-    calls: list[str] = []
+def test_a_raised_connection_error_degrades_rather_than_propagating() -> None:
+    def fetch(url: str) -> FakeResponse:
+        raise ConnectionError("boom")
 
-    def unsaturated(url: str) -> FakeResponse:
-        calls.append(url)
-        return FakeResponse(
-            200,
-            '{"articles": [{"url": "https://example.com/a", "title": "t", '
-            '"seendate": "20260810T114500Z", "domain": "example.com", '
-            '"language": "English", "sourcecountry": "United States"}]}',
-        )
+    result = GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
 
-    client = GdeltClient(fetch=unsaturated)
-    result = client.collect(
-        query="sourcelang:eng",
-        start=datetime(2026, 8, 11, tzinfo=UTC),
-        end=datetime(2026, 8, 12, tzinfo=UTC),
-    )
-
-    assert len(calls) == 1
-    assert result.failures == []
+    assert result.articles == []
+    assert any("request failed" in f.detail for f in result.failures)
+    assert any("no slot yielded any Article" in f.detail for f in result.failures)
 
 
-def test_the_daily_query_parenthesizes_its_ord_terms() -> None:
-    """GDELT rejects a bare OR'd query with "Queries containing OR'd terms
-    must be surrounded by ()." -- and it does so with HTTP 200 carrying an
-    error string, so the whole GDELT half of collection returns nothing
-    while the cycle still reports success.
+def test_a_failed_country_lookup_degrades_coverage_not_the_cycle() -> None:
+    """Without the lookup every Article lands in "unknown": Zone Briefings
+    thin out and country diversity stops counting. That is a recorded
+    shortfall, not a crashed cycle."""
 
-    That is exactly what happened on the first real cycle
-    (2026-08-13T20-13-17Z). Pinned here because every other test in this
-    file uses a single-term query with no OR, so nothing covered the one
-    query the pipeline actually ships.
-    """
-    import inspect
+    def fetch(url: str) -> FakeResponse:
+        if DOMAIN_COUNTRY_URL in url:
+            return FakeResponse(503)
+        return FakeResponse(200, _zipped(_fixture("gkg_english_sample.csv")))
 
-    from pipeline.adapters import gdelt
+    result = GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
 
-    source = inspect.getsource(gdelt.collect_world_day)
-
-    assert "(sourcelang:eng OR sourcelang:fra OR sourcelang:spa)" in source, (
-        "the shipped daily query must parenthesize its OR'd terms"
-    )
+    assert result.articles
+    assert all(a["source_country"] == "unknown" for a in result.articles)
+    assert any("domain-country lookup" in f.detail for f in result.failures)
 
 
-def test_collection_stops_at_the_deadline_even_with_request_budget_left() -> None:
-    """Regression guard for the cycle killed on 2026-08-14.
+def test_articles_are_deduplicated_across_slots_and_files() -> None:
+    """The same article appears in more than one 15-minute slot, and in both
+    the English and translingual files."""
+    body = _zipped(_fixture("gkg_english_sample.csv"))
 
-    The request budget bounds requests, not time. A throttled window costs
-    three attempts with exponential backoff (~54s) rather than the ~6s of
-    plain pacing, so 120 requests can mean ~108 minutes of wall-clock -- well
-    past the workflow's 30-minute timeout. That job was killed *after* it had
-    submitted its summarize batches, so the batch IDs were never committed
-    and the work was unrecoverable.
+    def fetch(url: str) -> FakeResponse:
+        if DOMAIN_COUNTRY_URL in url:
+            return FakeResponse(200, b"")
+        return FakeResponse(200, body)
 
-    Driven by saturated responses (the case that actually bisects) with a
-    fake clock, so the bound is asserted without sleeping 15 real minutes.
-    """
-    from datetime import UTC, datetime, timedelta
+    result = GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
 
+    urls = [a["url"] for a in result.articles]
+    assert len(urls) == len(set(urls))
+    # Every slot returned the same file, so the union is one file's worth.
+    assert len(urls) == len(parse_gkg(_fixture("gkg_english_sample.csv"), {}))
+
+
+def test_collection_stops_at_the_deadline() -> None:
+    """Story 6.1's bound survives the channel change: a cycle killed by the
+    job timeout loses everything it has already done, including batches it
+    has already paid for."""
     from pipeline.adapters import gdelt
 
     clock = {"now": 0.0}
-    calls = {"n": 0}
-    saturated_body = {
-        "articles": [
-            {
-                "url": f"https://example.test/{i}",
-                "title": f"t{i}",
-                "seendate": "20260814T000000Z",
-                "domain": "example.test",
-                "sourcecountry": "France",
-                "language": "French",
-            }
-            for i in range(gdelt.MAX_RECORDS)
-        ]
-    }
 
-    def saturating_fetch(url: str):
-        calls["n"] += 1
-        clock["now"] += 60.0  # each window costs a minute of the deadline
-        return FakeResponse(200, json.dumps(saturated_body))
-
-    client = gdelt.GdeltClient(fetch=saturating_fetch)
-    start = datetime(2026, 8, 14, tzinfo=UTC)
+    def fetch(url: str) -> FakeResponse:
+        clock["now"] += 400.0  # each fetch burns most of the budget
+        return FakeResponse(200, _zipped(_fixture("gkg_english_sample.csv")))
 
     original = gdelt.time.monotonic
     gdelt.time.monotonic = lambda: clock["now"]
     try:
-        result = client.collect("(sourcelang:eng)", start, start + timedelta(days=1))
+        result = GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
     finally:
         gdelt.time.monotonic = original
 
-    # Stopped on the deadline rather than exhausting the request budget.
-    assert calls["n"] < gdelt.MAX_REQUESTS_PER_COLLECTION
     assert any("deadline" in f.detail for f in result.failures)
-    # Whatever it did fetch is still returned -- partial coverage that lands
-    # beats complete coverage that gets killed.
+    # Partial coverage that lands beats complete coverage that gets killed.
     assert result.articles
 
 
-def test_bisection_stops_above_the_window_gdelt_actually_rejects() -> None:
-    """GDELT rejected 22m30s windows with "Timespan is too short." -- as an
-    HTTP 200 carrying an error string, so each one costs a request and a
-    pacing wait to learn nothing. The floor must sit above the largest
-    rejected window actually observed."""
-    from datetime import UTC, datetime, timedelta
+def test_both_files_are_requested_for_every_slot() -> None:
+    requested: list[str] = []
 
-    from pipeline.adapters.gdelt import MIN_WINDOW, split_window
+    def fetch(url: str) -> FakeResponse:
+        requested.append(url)
+        if DOMAIN_COUNTRY_URL in url:
+            return FakeResponse(200, b"")
+        return FakeResponse(200, _zipped(_fixture("gkg_english_sample.csv")))
 
-    assert timedelta(minutes=23) <= MIN_WINDOW, (
-        "must exclude the 22m30s windows GDELT was observed to reject"
+    GdeltClient(fetch=fetch).collect(now=datetime(2026, 8, 18, 9, 0, tzinfo=UTC))
+
+    slot_urls = [u for u in requested if DOMAIN_COUNTRY_URL not in u]
+    assert len(slot_urls) == SLOTS_PER_COLLECTION * 2
+    assert sum(1 for u in slot_urls if u.endswith("translation.gkg.csv.zip")) == (
+        SLOTS_PER_COLLECTION
     )
 
-    start = datetime(2026, 8, 14, tzinfo=UTC)
-    assert split_window(start, start + timedelta(minutes=22, seconds=30)) is None
+
+# --- helpers ------------------------------------------------------------------
+
+
+def _row(
+    *,
+    date: str = "20260818093000",
+    source: str = "example.test",
+    url: str = "https://example.test/article",
+    translation_info: str = "",
+    extras: str = "<PAGE_TITLE>Headline</PAGE_TITLE>",
+) -> str:
+    """One GKG row with only the columns this adapter reads populated."""
+    columns = [""] * 27
+    columns[1] = date
+    columns[3] = source
+    columns[4] = url
+    columns[25] = translation_info
+    columns[26] = extras
+    return "\t".join(columns) + "\n"
+
+
+def test_the_helper_row_matches_the_real_column_count() -> None:
+    """Guards the hand-built rows above against a format change: if the real
+    files gain or lose a column, these tests should fail loudly rather than
+    silently testing a shape that no longer exists."""
+    real = _fixture("gkg_english_sample.csv").splitlines()[0]
+
+    assert len(real.split("\t")) == len(_row().rstrip("\n").split("\t"))
+
+
+@pytest.mark.parametrize(
+    ("srclc", "expected"),
+    [("fra", "fr"), ("spa", "es"), ("zho", "zh"), ("xyz", "xyz")],
+)
+def test_language_codes_map_to_two_letters_with_an_honest_fallback(
+    srclc: str, expected: str
+) -> None:
+    row = _row(translation_info=f"srclc:{srclc};", extras="<PAGE_TITLE>T</PAGE_TITLE>")
+
+    assert parse_gkg(row, {})[0].language == expected

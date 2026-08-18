@@ -37,7 +37,7 @@ Available in French, English, and Spanish, with summaries written in the reader'
 Two halves that share nothing but a directory of JSON files.
 
 ```
-GDELT + 11 RSS feeds
+GDELT GKG 2.1 raw files (15-min slots)
         │
         ▼
    ┌──────────────────────────────────────────────┐
@@ -74,7 +74,7 @@ A cycle runs daily in GitHub Actions and is **two-phase**: the Batch API is asyn
 ## Repository layout
 
 ```
-pipeline/        stages/ (9) and adapters/ (GDELT, RSS, Cohere, Claude)
+pipeline/        stages/ (9) and adapters/ (GDELT, Cohere, Claude)
 site/            Astro app — components, islands, fixtures, e2e tests
 data/            briefings/ (published output), intermediate/, history/
 tests/           pipeline test suite
@@ -123,6 +123,6 @@ The pipeline, the reading surface, and the PWA layer are built and tested. Deplo
 
 **The pipeline published its first real Briefing set on 2026-08-14** — 135 files, real headlines and summaries written per language, real outbound links. Getting there took five distinct fixes, each hidden behind the previous one: the same-Event clustering threshold was strict enough that nothing ever merged (so no story reached the 2-source floor), collection was bounded by request count but not by wall-clock, AD-11's phase two was unreachable because every run minted a fresh cycle id, and the three files a resumed cycle re-reads were gitignored.
 
-Coverage is currently thin — typically 2 items rather than 5 — because GDELT has been returning HTTP 429 to every request for days, leaving only the 11 RSS feeds. That is the filter working as designed on a small corpus, not a fault: a Zone without enough qualifying coverage falls back to its Continent and says so. Volume will follow whenever GDELT is reachable again.
+Coverage was thin at first — 2 items rather than 5 — because GDELT's DOC 2.0 search API answered HTTP 429 to nearly every request, leaving only 11 RSS feeds behind it. Story 6.2 moved collection to GDELT's raw 15-minute files, which carry no rate limit: ~10,000 articles per cycle across thousands of outlets and 145 countries, against ~365 across 11 before. A Zone without enough qualifying coverage still falls back to its Continent and says so.
 
 Built with the [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD) — every epic and story, including the adversarial review findings and the decisions that were reversed along the way, is recorded under `_bmad-output/`.

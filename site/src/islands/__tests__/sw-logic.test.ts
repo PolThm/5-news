@@ -87,6 +87,10 @@ describe("classifyRequest", () => {
     expect(classifyRequest("/manifest.json")).toBe("cache-first");
     expect(classifyRequest("/icon-192.png")).toBe("cache-first");
     expect(classifyRequest("/icon-512.png")).toBe("cache-first");
+    expect(classifyRequest("/5news-logo/5news-favicon-16.png")).toBe("cache-first");
+    expect(classifyRequest("/5news-logo/5news-favicon-32.png")).toBe("cache-first");
+    expect(classifyRequest("/5news-logo/5news-icon-180.png")).toBe("cache-first");
+    expect(classifyRequest("/5news-logo/5news-icon-512.png")).toBe("cache-first");
   });
 
   it("classifies the service worker's own script as passthrough", () => {

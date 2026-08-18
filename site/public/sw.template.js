@@ -49,7 +49,15 @@
 const CACHE_NAME = "briefings-__CACHE_VERSION__";
 const NETWORK_TIMEOUT_MS = 3000;
 
-const CACHE_FIRST_EXACT_PATHS = new Set(["/manifest.json", "/icon-192.png", "/icon-512.png"]);
+const CACHE_FIRST_EXACT_PATHS = new Set([
+  "/manifest.json",
+  "/icon-192.png",
+  "/icon-512.png",
+  "/5news-logo/5news-favicon-16.png",
+  "/5news-logo/5news-favicon-32.png",
+  "/5news-logo/5news-icon-180.png",
+  "/5news-logo/5news-icon-512.png",
+]);
 
 function classifyRequest(url) {
   const { pathname } = new URL(url);

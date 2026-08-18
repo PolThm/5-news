@@ -818,6 +818,27 @@ describe("PWA installability (Story 5.1)", () => {
     for (const pageHtml of [indexHtml, routeHtml]) {
       expect(pageHtml).toContain('<link rel="manifest" href="/manifest.json">');
       expect(pageHtml).toContain('<meta name="theme-color" content="#1f4d3d">');
+      expect(pageHtml).toContain(
+        '<link rel="icon" type="image/png" sizes="32x32" href="/5news-logo/5news-favicon-32.png">'
+      );
+      expect(pageHtml).toContain(
+        '<link rel="icon" type="image/png" sizes="16x16" href="/5news-logo/5news-favicon-16.png">'
+      );
+      expect(pageHtml).toContain(
+        '<link rel="apple-touch-icon" sizes="180x180" href="/5news-logo/5news-icon-180.png">'
+      );
+    }
+  });
+
+  it("copies the 5news-logo icon set to dist/, unprocessed", () => {
+    for (const name of [
+      "5news-favicon-16.png",
+      "5news-favicon-32.png",
+      "5news-icon-180.png",
+      "5news-icon-512.png",
+      "5news-icon-1024.png",
+    ]) {
+      expect(existsSync(join(SITE_ROOT, "dist", "5news-logo", name))).toBe(true);
     }
   });
 

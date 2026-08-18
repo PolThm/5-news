@@ -20,7 +20,15 @@ export type RequestClass = "network-first" | "cache-first" | "passthrough";
 // hashed filename, since the hash itself is unpredictable ahead of a real
 // build). manifest.json and the icon files are unhashed but effectively
 // immutable between deploys (Story 5.1), so they're treated the same way.
-const CACHE_FIRST_EXACT_PATHS = new Set(["/manifest.json", "/icon-192.png", "/icon-512.png"]);
+const CACHE_FIRST_EXACT_PATHS = new Set([
+  "/manifest.json",
+  "/icon-192.png",
+  "/icon-512.png",
+  "/5news-logo/5news-favicon-16.png",
+  "/5news-logo/5news-favicon-32.png",
+  "/5news-logo/5news-icon-180.png",
+  "/5news-logo/5news-icon-512.png",
+]);
 
 export function classifyRequest(url: string): RequestClass {
   const { pathname } = new URL(url, "https://example.invalid");

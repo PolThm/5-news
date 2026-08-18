@@ -56,6 +56,15 @@ _BATCH_TOKENS = MAX_TEXTS_PER_REQUEST * ESTIMATED_TOKENS_PER_TEXT
 # headlines. ~0.8s at the current constants.
 REQUEST_INTERVAL_SECONDS = (_BATCH_TOKENS / TOKENS_PER_MINUTE) * 60 * 1.15
 
+# The SDK's own default (300s) discovered the hard way: a run that hung on
+# 2026-08-18 burned the job's entire 30-minute timeout without ever raising,
+# because nothing here bounded a single call shorter than that default. A
+# real batch call takes low single-digit seconds; 30s leaves generous room
+# for network jitter while still failing fast enough, across ~100+ batches,
+# that a stuck call degrades this cycle's clustering (AD-10) instead of
+# consuming the whole job budget in silence.
+REQUEST_TIMEOUT_SECONDS = 30.0
+
 
 class _Embeddings(Protocol):
     float_: list[list[float]]
@@ -117,7 +126,7 @@ def embed_titles(
             )
         import cohere
 
-        client = cohere.ClientV2(api_key=api_key)
+        client = cohere.ClientV2(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
 
     # Deliberately all-or-nothing, unlike CollectionResult's partial-results
     # convention: vectors are positional (index i is group i's embedding), and

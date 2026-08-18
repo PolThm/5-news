@@ -1,0 +1,37 @@
+{
+  "articles_collected": 10273,
+  "briefings_path": null,
+  "clusters_after_grouping": 9365,
+  "clusters_selected": 8,
+  "completed": true,
+  "cycle_id": "2026-08-18T13-45-39Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "cycle",
+      "detail": "clustering degraded: embedding failed, no cross-language merge"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "clustering merged nothing: 9365 dedupe groups produced 9365 Clusters (1:1). No Cluster can reach the 2-Independent-Source floor, so this cycle selects zero."
+    }
+  ],
+  "groups_after_dedupe": 9365,
+  "phase": "summarize_submitted",
+  "published": false,
+  "started_at": "2026-08-18T13:45:39.888783+00:00",
+  "summarize_batches": {
+    "en": {
+      "batch_id": "msgbatch_01XhFYnGwZz4z9fUUop93Lq1",
+      "ranked_path": "data/intermediate/rank/2026-08-18T13-45-39Z/ranked.jsonl"
+    },
+    "es": {
+      "batch_id": "msgbatch_01YNCQ6ag7xxLddoK6wQtgUW",
+      "ranked_path": "data/intermediate/rank/2026-08-18T13-45-39Z/ranked.jsonl"
+    },
+    "fr": {
+      "batch_id": "msgbatch_01Ki2vMU8RphE8rWva2jtZW7",
+      "ranked_path": "data/intermediate/rank/2026-08-18T13-45-39Z/ranked.jsonl"
+    }
+  }
+}

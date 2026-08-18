@@ -11,7 +11,7 @@
 # Epic keys use epic-N. Story keys use N-M-slug.
 # Build Order (PRD §10) governs sequence: pipeline first, page fifth, PWA last.
 
-last_updated: 2026-08-13 (Story 6.1 done -- Epic 6 begun)
+last_updated: 2026-08-18 (Story 6.2 ready-for-dev)
 
 development_status:
   epic-1: done
@@ -79,3 +79,8 @@ development_status:
   # product judgement. Story 6.1 removed that limit.
   epic-6: in-progress
   6-1-give-every-item-a-generated-headline: done
+  # Added 2026-08-18 after investigating why every cycle degraded: GDELT's
+  # DOC 2.0 API failed in 8 of 8 recorded cycles (sticky per-IP throttle),
+  # so the corpus was 11 RSS feeds rather than world coverage. GDELT itself
+  # is healthy -- the channel was wrong.
+  6-2-collect-from-gdelt-raw-files: ready-for-dev

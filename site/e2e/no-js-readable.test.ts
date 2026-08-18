@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { existsSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
@@ -21,6 +21,43 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const SITE_ROOT = join(__dirname, "..");
 const DIST_INDEX = join(SITE_ROOT, "dist", "index.html");
+
+// This whole file's premise is `loadBriefing`'s fixture fallback (see its own
+// docstring): every `it` below builds against `src/fixtures/*.json` and
+// asserts on that fixture's exact, known content. That fallback only fires
+// when `data/briefings/<lang>/<zone>/<period>.json` -- the pipeline's real
+// output -- does NOT exist for a given route. It didn't, for any route,
+// until the first real cycle published on 2026-08-14; every cycle since
+// (most recently 2026-08-18) has grown that tree to cover all 135 routes, so
+// a normal checkout now has real data everywhere and this suite was silently
+// asserting on ever-changing cycle content instead of the fixtures it was
+// written against -- correct in principle (`loadBriefing` does exactly what
+// its docstring says), wrong for a suite whose entire point is a controlled,
+// known input.
+//
+// Renaming the real directory aside for this file's duration -- rather than
+// rewriting every assertion to tolerate arbitrary cycle content, which would
+// defeat the point of asserting exact strings/counts at all -- restores that
+// controlled input without changing `loadBriefing` or either page's
+// production fallback behavior. Same backup-before-mutate, restore-in-
+// finally discipline already used below for the fixture files themselves;
+// scoped to this file only via one top-level beforeAll/afterAll rather than
+// per-`it`, since every build in this file needs the same isolation and
+// nothing here ever wants the real data.
+const REAL_BRIEFINGS_DIR = join(SITE_ROOT, "..", "data", "briefings");
+const REAL_BRIEFINGS_MOVED_ASIDE = `${REAL_BRIEFINGS_DIR}.e2e-hidden`;
+
+beforeAll(() => {
+  if (existsSync(REAL_BRIEFINGS_DIR)) {
+    renameSync(REAL_BRIEFINGS_DIR, REAL_BRIEFINGS_MOVED_ASIDE);
+  }
+});
+
+afterAll(() => {
+  if (existsSync(REAL_BRIEFINGS_MOVED_ASIDE)) {
+    renameSync(REAL_BRIEFINGS_MOVED_ASIDE, REAL_BRIEFINGS_DIR);
+  }
+});
 
 // Astro inlines the island's compiled JS directly into a <script> tag when
 // the bundle is small, but switches to an external src="..." reference once

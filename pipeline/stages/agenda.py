@@ -39,7 +39,7 @@ from sklearn.preprocessing import normalize
 
 from pipeline.adapters import Failure
 from pipeline.adapters.cohere_embed import EmbeddingResult, embed_titles
-from pipeline.adapters.editorial_agenda import EditorialEvent, collect_agenda
+from pipeline.adapters.editorial_agenda import EditorialEvent, Fetch, collect_agenda
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
     output_dir_for,
@@ -204,6 +204,7 @@ def run_agenda(
     data_root: Path = DEFAULT_DATA_ROOT,
     embed: EmbedFn = embed_titles,
     days: int = 7,
+    fetch: Fetch | None = None,
 ) -> WrittenAgenda:
     """Fetch the agenda, match it against this cycle's Clusters, write items.
 
@@ -219,7 +220,11 @@ def run_agenda(
     metadata_path = destination / f"{STAGE}.json"
 
     failures: list[Failure] = []
-    events, agenda_failures = collect_agenda(days=days)
+    events, agenda_failures = (
+        collect_agenda(days=days)
+        if fetch is None
+        else collect_agenda(days=days, fetch=fetch)
+    )
     failures.extend(agenda_failures)
     trace(f"agenda: {len(events)} editorial events over {days} days")
 

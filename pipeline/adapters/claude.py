@@ -206,6 +206,27 @@ def _member_lines(members: list[dict]) -> str:
 
 def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     members = cluster.get("members", [])
+    agenda_text = (cluster.get("agenda_text") or "").strip()
+
+    # An item from the editorial agenda that no Article in our own corpus
+    # covered has nothing to read, and asking anyway is how "Aucun article
+    # disponible pour cet événement" got published as a headline to six real
+    # Briefings on 2026-08-19 -- Claude answered honestly and the answer
+    # shipped. Such an item does have a factual basis: the chronicle's own
+    # one-sentence account of the event. Write from that instead.
+    if not members and agenda_text:
+        language_name = _LANGUAGE_NAMES[language]
+        return (
+            f"Write a headline and one short paragraph, both in {language_name}, "
+            f"reporting the following news event for a reader who has not heard "
+            f"of it.\n\n"
+            f'Event: "{_escape_quotes(agenda_text)}"\n\n'
+            f"This is the only account available -- report exactly what it states "
+            f"and nothing beyond it. Do not add context, causes or consequences "
+            f"it does not mention, and do not speculate about what happened "
+            f"next.\n{_NO_FABRICATION_INSTRUCTION}\n{_HEADLINE_INSTRUCTION}"
+        )
+
     lines = _member_lines(members)
     # A Cluster with fewer than 2 members is legitimate (a singleton Cluster
     # -- cluster.py's own docstring) and reachable via Continent fallback or

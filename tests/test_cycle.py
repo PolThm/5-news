@@ -11,6 +11,7 @@ A failed cycle must leave the previous cycle's committed output untouched
 
 from __future__ import annotations
 
+import hashlib
 import json
 from datetime import UTC, datetime
 from pathlib import Path
@@ -38,16 +39,32 @@ def _collection(*records: ArticleRecord, failures: list[Failure] | None = None) 
     return CollectionResult(articles=[r.to_dict() for r in records], failures=failures or [])
 
 
+_STUB_DIMENSION = 16
+
+
 def _no_op_embed(titles: list[str]) -> EmbeddingResult:
     """These tests exercise collect/dedupe/cycle-record behavior, not
     clustering — a stub embedding keeps them independent of Cohere and of
     Story 2.1's clustering logic, which has its own test module. Each title
     gets a distinct *direction* (not just a distinct magnitude, which
     normalizes away) so groups never accidentally merge, and no vector is
-    all-zero, which would trip the malformed-response guard."""
-    return EmbeddingResult(
-        vectors=[[1.0 if i == j else 0.0 for j in range(len(titles))] for i in range(len(titles))]
-    )
+    all-zero, which would trip the malformed-response guard.
+
+    Keyed on the TEXT at a FIXED width, not one-hot on position. Position-based
+    vectors were dimensioned by how many titles a call happened to carry, which
+    stopped being coherent once `memoize_embeddings` began requesting only the
+    titles it had not already cached: a later call asking for two titles got
+    one back at a different width, and two unrelated strings came out identical
+    -- silently making everything corroborate everything. A real model returns a
+    fixed width keyed on content, and so does this now.
+    """
+    vectors: list[list[float]] = []
+    for title in titles:
+        digest = hashlib.sha256(title.encode("utf-8")).digest()
+        # Centred on zero so directions spread over the sphere rather than
+        # crowding one quadrant, which would make everything look similar.
+        vectors.append([(digest[i] - 128) / 128.0 for i in range(_STUB_DIMENSION)])
+    return EmbeddingResult(vectors=vectors)
 
 
 def _no_op_submit_summarize(
@@ -146,7 +163,8 @@ def test_runs_collect_then_dedupe(tmp_path: Path) -> None:
     assert result.dedupe_path.exists()
 
 
-def test_writes_a_cycle_record(tmp_path: Path) -> None:
+def test_writes_a_cycle_record(tmp_path: Path, working_agenda) -> None:
+    working_agenda()
     """The cycle record is what a human reads weeks later to judge whether a
     thin day was a quiet news day or a broken upstream."""
     result = run_cycle(
@@ -184,7 +202,11 @@ def test_cycle_record_names_upstream_failures(tmp_path: Path) -> None:
     assert record["degraded"] is True
 
 
-def test_a_clean_cycle_is_not_marked_degraded(tmp_path: Path) -> None:
+def test_a_clean_cycle_is_not_marked_degraded(tmp_path: Path, working_agenda) -> None:
+    # A cycle whose editorial agenda is unavailable is NOT clean: it falls back
+    # to ranking Clusters by how widely they were rerun, which is the selection
+    # the agenda stage exists to replace, and the record has to show that.
+    working_agenda()
     result = run_cycle(
         collect=lambda: _collection(_record("A", "a.com")),
         cycle_id="2026-08-11T00-00-00Z",
@@ -227,7 +249,9 @@ def test_a_totally_failed_collection_still_completes_the_cycle(tmp_path: Path) -
     assert result.articles_collected == 0
     record = json.loads(result.cycle_path.read_text())
     assert record["degraded"] is True
-    assert len(record["failures"]) == 2
+    details = [f["detail"] for f in record["failures"]]
+    assert "unreachable" in " ".join(details)
+    assert "all feeds down" in " ".join(details)
 
 
 def test_a_new_cycle_does_not_touch_a_previous_one(tmp_path: Path) -> None:
@@ -1425,3 +1449,86 @@ def test_resume_only_still_finishes_a_pending_cycle(tmp_path: Path) -> None:
 
     # It resumed that same cycle rather than minting a new id.
     assert json.loads(pending.read_text())["phase"] != "summarize_submitted"
+
+
+def test_the_agenda_replaces_the_clusters_as_briefing_candidates(
+    tmp_path: Path, working_agenda
+) -> None:
+    """The switch this whole change is for: what reaches rank is what an editor
+    recorded, not what the long tail reran.
+
+    Measured before the switch, the Consensus Score published a ZZ Top
+    drummer's death and a suspended tennis player while the corpus held 2 of
+    the 19 events editors recorded. Clusters are still the evidence -- they
+    supply Articles, source lists and the score -- but they are no longer the
+    candidate set.
+    """
+    working_agenda(text="A Russian missile strike kills ten civilians in Kharkiv Oblast")
+
+    run_cycle(
+        collect=lambda: _collection(_record("Totally unrelated local story", "small.example")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    items = [
+        json.loads(line)
+        for line in (
+            tmp_path / "intermediate" / "agenda" / "2026-08-11T00-00-00Z" / "items.jsonl"
+        ).read_text().splitlines()
+        if line.strip()
+    ]
+
+    assert len(items) == 1
+    assert items[0]["agenda_text"].startswith("A Russian missile strike")
+    assert items[0]["agenda_category"] == "Armed conflicts and attacks"
+    # The unrelated local story did not corroborate it, so the item keeps the
+    # chronicle's own citation rather than borrowing an unrelated source.
+    assert items[0]["corroborated"] is False
+    assert items[0]["outbound_source"] == "apnews.com"
+
+
+def test_an_unavailable_agenda_degrades_instead_of_publishing_nothing(tmp_path: Path) -> None:
+    """AD-10/AD-7: losing the signal that decides importance must not lose the
+    cycle. It falls back to ranking Clusters directly -- exactly the behaviour
+    from before the stage existed -- and records that it did, because a reader
+    is then getting items chosen by syndication again.
+
+    The autouse fixture in conftest supplies the empty agenda here.
+    """
+    result = run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    record = json.loads(result.cycle_path.read_text())
+    assert record["degraded"] is True
+    assert any("agenda was empty" in f["detail"] for f in record["failures"])
+    # The cycle still ran end to end rather than aborting.
+    assert record["phase"] == "summarize_submitted"
+
+
+def test_an_agenda_that_raises_does_not_take_the_cycle_down(tmp_path: Path) -> None:
+    """A new stage between cluster and rank is a new way to lose a whole cycle.
+    It is guarded like every other adapter boundary here."""
+
+    def exploding_agenda(*_args, **_kwargs):
+        raise RuntimeError("wikipedia exploded")
+
+    result = run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        agenda_fn=exploding_agenda,
+    )
+
+    record = json.loads(result.cycle_path.read_text())
+    assert record["completed"] is True
+    assert any("agenda raised" in f["detail"] for f in record["failures"])

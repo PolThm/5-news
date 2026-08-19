@@ -59,6 +59,7 @@ from pipeline.stages import (
     write_atomically,
     write_jsonl,
 )
+from pipeline.stages.agenda import WrittenAgenda, run_agenda
 from pipeline.stages.briefing_matrix import build_period_pools, dedupe_union, rank_all_zones
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
@@ -256,6 +257,7 @@ def run_cycle(
     embed: EmbedFn = embed_titles,
     submit_summarize_fn: Callable[..., WrittenSubmission] = submit_summarize,
     collect_summarize_fn: Callable[..., WrittenSummarize | None] = collect_summarize,
+    agenda_fn: Callable[..., WrittenAgenda] = run_agenda,
 ) -> CycleResult:
     """Run collect, then dedupe, then cluster, then the 15 Zone x 3 Period
     ranking matrix, then history, then submit (or, on a resumed invocation,
@@ -341,6 +343,34 @@ def run_cycle(
                 f"cluster done -> {clusters_after_grouping} clusters, "
                 f"degraded={clustered.degraded}"
             )
+
+            # The editorial agenda replaces the Cluster list as the Briefing's
+            # candidate set. Clusters remain the evidence -- they supply the
+            # Articles, the source list and the Consensus Score -- but what
+            # counts as a candidate item is now what a human editor recorded,
+            # not what the long tail happened to rerun. See
+            # `pipeline.stages.agenda` for the measurements behind the switch.
+            #
+            # Degrading here leaves `clusters` in place, so a cycle whose
+            # agenda is unavailable behaves exactly as it did before this
+            # stage existed rather than publishing nothing.
+            try:
+                agenda = agenda_fn(
+                    cluster_path, cycle_id=cycle_id, data_root=data_root, embed=embed
+                )
+                agenda_items = list(read_jsonl(agenda.output_path))
+                if agenda_items:
+                    clusters = agenda_items
+                else:
+                    failures.append(
+                        Failure("cycle", "editorial agenda was empty; ranking Clusters directly")
+                    )
+                if agenda.degraded:
+                    failures.append(
+                        Failure("cycle", f"agenda degraded; see {agenda.metadata_path}")
+                    )
+            except Exception as exc:  # noqa: BLE001 - adapter boundary
+                failures.append(Failure("cycle", f"agenda raised: {exc}"))
             clusters = list(read_jsonl(cluster_path))
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"

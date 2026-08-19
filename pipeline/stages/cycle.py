@@ -344,7 +344,8 @@ def run_cycle(
                 embedding_by_id=embedding_by_id,
                 reference_date=started_at,
             )
-            trace(f"linking: pools ready ({ {p: len(v) for p, v in pools.items()} }); ranking zones")
+            sizes = {period: len(pool) for period, pool in pools.items()}
+            trace(f"linking: pools ready ({sizes}); ranking zones")
             for period, pool in pools.items():
                 zone_rankings[period] = rank_all_zones(pool)
                 trace(f"ranking: {period} done")

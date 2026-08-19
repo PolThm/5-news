@@ -73,11 +73,25 @@ def clique_partition(
         if i in claimed:
             continue
         clique = [i]
-        candidates = sorted(
-            (j for j in eligible_indices if j != i and j not in claimed),
-            key=lambda j: similarity(i, j),
-            reverse=True,
-        )
+        # Filter by `directly_qualifies` BEFORE ranking by `similarity`, not
+        # after. This is semantically identical -- `i` is already in `clique`,
+        # so the `all(...)` check below rejects any `j` that fails against it
+        # anyway -- but it stops `similarity` from being called on the whole
+        # eligible set just to establish a sort order.
+        #
+        # That cost was invisible while this function's docstring assumption
+        # held ("a handful of candidate items"): the RSS corpus put ~350
+        # titles through here. Story 6.2's GDELT corpus puts ~9,400 groups
+        # through it with `eligible=lambda _i: True` (dedupe layer 3), which
+        # turned the discarded sort keys into tens of millions of pairwise
+        # metric calls and ran the cycle past its 30-minute job timeout three
+        # times over -- publishing nothing each time.
+        candidates = [
+            j
+            for j in eligible_indices
+            if j != i and j not in claimed and directly_qualifies(j, i)
+        ]
+        candidates.sort(key=lambda j: similarity(i, j), reverse=True)
         for j in candidates:
             if all(directly_qualifies(j, member) for member in clique):
                 clique.append(j)

@@ -37,7 +37,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 import numpy as np
-from scipy.spatial.distance import cosine
+from sklearn.neighbors import radius_neighbors_graph
 from sklearn.preprocessing import normalize
 
 from pipeline.adapters.cohere_embed import EmbeddingResult, embed_titles
@@ -510,16 +510,42 @@ def merge_by_rewrite_detection(
 
     unit_vectors = normalize(np.asarray(result.vectors, dtype=float), copy=True)
 
-    def cosine_distance(i: int, j: int) -> float:
-        return cosine(unit_vectors[i], unit_vectors[j])
+    # Which pairs fall within REWRITE_SIMILARITY_FLOOR, resolved in one
+    # vectorized neighbor search rather than a scipy `cosine` call per pair.
+    #
+    # This layer sets `eligible=lambda _i: True`, so clique_partition asks
+    # about O(n^2) pairs. Per-pair Python metric calls were fine at the RSS
+    # corpus's ~350 titles; at Story 6.2's ~9,400 GDELT groups they became
+    # tens of millions of scipy round-trips and pushed the cycle past its
+    # 30-minute job timeout three runs in a row. `radius_neighbors_graph`
+    # does the same comparison in chunked BLAS and answers in seconds.
+    #
+    # `mode="connectivity"`, not `"distance"`: a distance-mode graph cannot
+    # represent a genuinely identical pair (distance exactly 0) as anything
+    # but a structural zero, so two identical titles would silently drop out
+    # of their own neighbor set -- the same trap cluster.py's
+    # `fill_diagonal` comment guards against. Connectivity stores 1.0 for
+    # every in-radius neighbor regardless of distance.
+    #
+    # sklearn's radius search is inclusive (`<= radius`), matching the
+    # comparison this replaces exactly.
+    neighbor_rows = radius_neighbors_graph(
+        unit_vectors,
+        radius=REWRITE_SIMILARITY_FLOOR,
+        metric="cosine",
+        mode="connectivity",
+        include_self=False,
+    ).tolil().rows
+    neighbors_of: list[set[int]] = [set(row) for row in neighbor_rows]
 
     def cosine_similarity(i: int, j: int) -> float:
         # 1 - cosine distance; higher means more similar, matching the other
         # merge layers' "similarity" convention despite the underlying metric
-        # being a distance. Reuses cosine_distance rather than recomputing
-        # the metric a second way, unlike an earlier version of this
-        # function that computed the same pair's cosine distance twice.
-        return 1.0 - cosine_distance(i, j)
+        # being a distance. For unit-normalized vectors that is exactly the
+        # dot product, so this stays a two-vector operation -- and, with
+        # clique_partition now filtering before it ranks, it is only ever
+        # asked about pairs already known to qualify.
+        return float(unit_vectors[i] @ unit_vectors[j])
 
     def directly_qualifies(i: int, j: int) -> bool:
         title_i = groups[i].representative.title
@@ -529,7 +555,7 @@ def merge_by_rewrite_detection(
             or len(title_j) < _REWRITE_MERGE_MIN_TITLE_LENGTH
         ):
             return False
-        return cosine_distance(i, j) <= REWRITE_SIMILARITY_FLOOR
+        return j in neighbors_of[i]
 
     merged = _clique_merge(
         groups,

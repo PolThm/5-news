@@ -32,9 +32,8 @@ from datetime import datetime
 from pathlib import Path
 
 import numpy as np
-from scipy.sparse import csr_matrix
 from scipy.sparse.csgraph import connected_components
-from scipy.spatial.distance import pdist, squareform
+from sklearn.neighbors import radius_neighbors_graph
 from sklearn.preprocessing import normalize
 
 from pipeline.adapters import Failure
@@ -155,13 +154,32 @@ def cluster_vectors(vectors: list[list[float]]) -> list[int]:
 
     array = np.asarray(vectors, dtype=float)
     unit_vectors = normalize(array, copy=True)
-    distances = squareform(pdist(unit_vectors))
-    # Two genuinely identical titles (distance 0) must still merge — only the
-    # diagonal (a point's distance to itself) is excluded, not zero-distance
-    # pairs in general.
-    adjacency = distances <= _SAME_EVENT_DISTANCE
-    np.fill_diagonal(adjacency, False)
-    _, labels = connected_components(csr_matrix(adjacency.astype(int)), directed=False)
+    # The threshold graph, built sparsely. This used to be
+    # `squareform(pdist(unit_vectors))` filtered into a boolean adjacency:
+    # correct, but it materialized two n-by-n float64 matrices (~700 MB each
+    # at Story 6.2's ~9,400 groups, plus another ~700 MB for an `astype(int)`
+    # copy csr_matrix never needed) and spent minutes doing it. The distances
+    # past the threshold are all discarded anyway, so there is no reason to
+    # compute or hold them.
+    #
+    # `metric="euclidean"` preserves pdist's default exactly -- the same
+    # metric _SAME_EVENT_DISTANCE was measured against -- and sklearn's
+    # radius search is inclusive (`<= radius`), matching the comparison it
+    # replaces. `include_self=False` stands in for the old `fill_diagonal`.
+    #
+    # `mode="connectivity"` matters for the reason the previous comment here
+    # already recorded: two genuinely identical titles sit at distance 0 and
+    # must still merge. A distance-mode graph could only store that as a
+    # structural zero, dropping the pair from its own neighbor set;
+    # connectivity stores 1.0 for every in-radius neighbor.
+    adjacency = radius_neighbors_graph(
+        unit_vectors,
+        radius=_SAME_EVENT_DISTANCE,
+        metric="euclidean",
+        mode="connectivity",
+        include_self=False,
+    )
+    _, labels = connected_components(adjacency, directed=False)
     return [int(label) for label in labels]
 
 

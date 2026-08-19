@@ -50,8 +50,7 @@ function createFakeAnchor() {
 describe("nextPeriod", () => {
   it("cycles day -> week -> month -> day", () => {
     expect(nextPeriod("day")).toBe("week");
-    expect(nextPeriod("week")).toBe("month");
-    expect(nextPeriod("month")).toBe("day");
+    expect(nextPeriod("week")).toBe("day");
   });
 });
 
@@ -72,9 +71,9 @@ describe("nextLanguage", () => {
 });
 
 describe("nextZone", () => {
-  it("cycles through all 15 Zones and wraps Brazil -> World", () => {
+  it("cycles through all 4 Zones and wraps Brazil -> World", () => {
     expect(nextZone("world")).toBe("europe");
-    expect(nextZone("brazil")).toBe("world");
+    expect(nextZone("spain")).toBe("world");
   });
 });
 
@@ -82,14 +81,10 @@ describe("zoneSentenceLabel", () => {
   it("mirrors briefing.ts's zoneSentenceLabel exactly for a sample of each preposition case, in each language", () => {
     expect(zoneSentenceLabel("world", "fr")).toBe("dans le Monde");
     expect(zoneSentenceLabel("europe", "fr")).toBe("en Europe");
-    expect(zoneSentenceLabel("united-kingdom", "fr")).toBe("au Royaume-Uni");
-    expect(zoneSentenceLabel("united-states", "fr")).toBe("aux États-Unis");
 
     expect(zoneSentenceLabel("world", "en")).toBe("in the World");
-    expect(zoneSentenceLabel("united-kingdom", "en")).toBe("in the United Kingdom");
 
     expect(zoneSentenceLabel("world", "es")).toBe("en el Mundo");
-    expect(zoneSentenceLabel("united-kingdom", "es")).toBe("en el Reino Unido");
   });
 
   it("falls back to the raw slug for a zone outside the known 15, mirroring briefing.ts's own defensive fallback", () => {
@@ -161,14 +156,14 @@ describe("fallbackNoticeText", () => {
     expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "fr")).toBe(
       "Affichage de l'Europe — la France n'a pas assez de couverture aujourd'hui."
     );
-    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "fr")).toBe(
-      "Affichage de l'Amérique du Nord — les États-Unis n'ont pas assez de couverture aujourd'hui."
+    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "fr")).toBe(
+      "Affichage de l'Europe — l'Espagne n'a pas assez de couverture aujourd'hui."
     );
     expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "en")).toBe(
       "Showing Europe — France doesn't have enough coverage today."
     );
-    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "en")).toBe(
-      "Showing North America — the United States don't have enough coverage today."
+    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "en")).toBe(
+      "Showing Europe — Spain doesn't have enough coverage today."
     );
     expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "es")).toBe(
       "Mostrando Europa — Francia no tiene suficiente cobertura hoy."
@@ -218,7 +213,7 @@ describe("briefingJsonUrl", () => {
 
 describe("pageUrl", () => {
   it("builds the equivalent static route path for a lang/zone/period", () => {
-    expect(pageUrl("fr", "world", "month")).toBe("/fr/world/month");
+    expect(pageUrl("fr", "world", "week")).toBe("/fr/world/week");
   });
 });
 

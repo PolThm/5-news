@@ -71,14 +71,14 @@ GENERATED_AT = datetime(2026, 8, 11, 6, 0, tzinfo=UTC)
 # --- assemble_briefings ------------------------------------------------------
 
 
-def test_assembles_exactly_135_briefings() -> None:
+def test_assembles_exactly_24_briefings() -> None:
     clusters = [_cluster("a")]
     zone_rankings = _full_zone_rankings(clusters)
     summaries_by_language = _full_summaries_by_language(["a"])
 
     briefings = assemble_briefings(zone_rankings, summaries_by_language, generated_at=GENERATED_AT)
 
-    assert len(briefings) == 15 * 3 * 3
+    assert len(briefings) == 4 * 2 * 3
 
 
 def test_every_briefing_carries_the_cycles_generated_at_not_wall_clock() -> None:

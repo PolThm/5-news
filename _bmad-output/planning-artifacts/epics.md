@@ -21,7 +21,7 @@ This document provides the complete epic and story breakdown for 5 News, decompo
 
 FR-1: Any visitor sees the World / day Briefing rendered on arrival, without authentication, configuration, or interaction.
 FR-2: A reader can change the Period by clicking the period words in the title sentence, cycling day → week → month.
-FR-3: A reader can change the Zone by clicking the zone words in the title sentence, selecting World, a Continent, or a supported Country (15 Zones in v1).
+FR-3: A reader can change the Zone by clicking the zone words in the title sentence, selecting World, a Continent, or a supported Country (4 Zones in v1, narrowed 2026-08-19).
 FR-4: A Briefing contains between 2 and 5 items, reflecting how many Events met the ranking threshold, never padded to a fixed count.
 FR-5: After the last item of every Briefing, the reader sees an explicit statement that the Briefing is complete.
 FR-6: The system orders Qualifying Clusters by Consensus Score and selects up to 5 for a Briefing. Deterministic, no AI. Independent Source volume leads; country count breaks ties.
@@ -33,7 +33,7 @@ FR-11: Every Briefing is generated in each supported Output Language, with Summa
 FR-12: A reader receives a Briefing in one of the supported Output Languages, and can change it.
 FR-13: A Summary or Headline states nothing that is not present in at least two concordant Articles within its Cluster.
 FR-14: Every item displays visible attribution and a prominent outbound link to an original Article.
-FR-15: The system generates all Briefings on a schedule and serves reader requests from the generated set (135 per cycle).
+FR-15: The system generates all Briefings on a schedule and serves reader requests from the generated set (24 per cycle).
 FR-16: When a Zone has too few Qualifying Clusters, the system serves the containing Continent's Briefing and states the substitution.
 FR-17: A Continent Briefing contains at most 2 items from the same country.
 FR-18: For week and month Periods, Articles describing the same ongoing Event across multiple ingest days belong to one Cluster.
@@ -48,7 +48,7 @@ NFR-2: Generation cost scales with the number of Briefings, not the number of re
 NFR-3: A failure or rate-limit block from any single upstream feed degrades coverage for the affected cycle without failing the pipeline or the served Briefings.
 NFR-4: The page is readable and navigable without JavaScript for its core content, and meets WCAG 2.1 AA for contrast and keyboard navigation. `[ASSUMPTION: AA target]`
 NFR-5: Content is acquired only via public APIs, published feeds, and GDELT's published bulk files. No scraping.
-NFR-6: Only the application shell and at most the reader's last-viewed Briefing are retained offline — never the full 135-Briefing matrix.
+NFR-6: Only the application shell and at most the reader's last-viewed Briefing are retained offline — never the full 24-Briefing matrix.
 
 ### Additional Requirements
 
@@ -79,7 +79,7 @@ Extracted from the Architecture spine. Each is an invariant that constrains how 
 - UX-DR2: Output Language control placed top-right of the page header, outside and above the mad-libs sentence, rendered as `label-caps` text options (e.g. "FR · EN · ES") — keeps the sentence at exactly two blanks (Zone, Period).
 - UX-DR3: Freshness timestamp rendered as literal text "Mis à jour à HH:MM" (in the reader's chosen Output Language, local time convention) — always real text content, never an icon-only tooltip (accessibility floor).
 - UX-DR4: WCAG 2.1 AA confirmed as the accessibility floor — 4.5:1 minimum contrast for body text, 3:1 for the monospace Consensus figures, visible focus ring on every interactive element, `aria-live` announcement on mad-libs word change, `aria-expanded` on the Consensus chip.
-- UX-DR5: Mad-libs word component — dotted underline in the `primary` accent color (the *only* interactive color on the page); click/`Enter`/`Space` cycles to the next value (Zone: World → 6 Continents → 8 Countries → World; Period: day → week → month → day); no-JS fallback renders as a plain link to the equivalent static route.
+- UX-DR5: Mad-libs word component — dotted underline in the `primary` accent color (the *only* interactive color on the page); click/`Enter`/`Space` cycles to the next value (Zone: World → Europe → France → Spain → World; Period: day → week → day); no-JS fallback renders as a plain link to the equivalent static route.
 - UX-DR6: Consensus chip component — collapsed by default in `numeral` (monospace) typography on a `surface-container` background; expands inline (never a modal) on click/`Enter` to list contributing Sources and their countries; the listed count must always equal the displayed number.
 - UX-DR7: Continent-fallback notice — a single `secondary`-colored (muted brick red) inline sentence directly beneath the mad-libs title, never a dismissible banner or toast; this is the *only* use of the secondary accent anywhere on the page.
 - UX-DR8: End Screen component — a full-width hairline rule in `outline-variant` followed by a `label-caps` completion statement; nothing renders below it (no related content, no infinite scroll trigger).
@@ -97,7 +97,7 @@ Every FR maps to exactly one owning epic. Where an FR is delivered incrementally
 | --- | --- | --- |
 | FR-1 | Epic 4 | World / day Briefing rendered on arrival, no configuration |
 | FR-2 | Epic 4 | Inline Period selector in the title sentence |
-| FR-3 | Epic 4 | Inline Zone selector, 15 Zones |
+| FR-3 | Epic 4 | Inline Zone selector, 4 Zones |
 | FR-4 | Epic 2 (rule) → Epic 4 (display) | Rank emits 2–5 items; the page renders however many it receives |
 | FR-5 | Epic 4 | End Screen after the last item |
 | FR-6 | Epic 2 | Deterministic ranking and selection |
@@ -146,7 +146,7 @@ Selected Clusters become Summaries in French, English, and Spanish. The cycle be
 
 **FRs covered:** FR-11, FR-13, FR-14 (data), FR-15 (full cycle), FR-19
 **Depends on:** Epic 2's ranked output.
-**Standalone value:** 135 complete Briefings exist as files, regenerated daily and survivable. Everything the product promises exists — it just has no reader-facing surface yet.
+**Standalone value:** 24 complete Briefings exist as files, regenerated daily and survivable. Everything the product promises exists — it just has no reader-facing surface yet.
 
 ### Epic 4: The mad-libs page
 
@@ -191,7 +191,7 @@ So that the two halves cannot accidentally couple as the code grows.
 **When** the skeleton is created
 **Then** `pipeline/domain/`, `pipeline/adapters/`, `pipeline/stages/`, `pipeline/config/`, `data/briefings/`, `data/intermediate/`, and `site/` exist
 **And** `data/intermediate/` is gitignored while `data/briefings/` is committed
-**And** `pipeline/config/` declares the 15 Zones, 3 Periods, and 3 Output Languages as data, so adding a Zone is a config edit (AD-13, spine conventions)
+**And** `pipeline/config/` declares the 4 Zones, 2 Periods, and 3 Output Languages as data, so adding a Zone is a config edit (AD-13, spine conventions)
 
 **Given** the skeleton exists
 **When** any module under `site/` imports from `pipeline/`, or any module under `pipeline/` imports from `site/`
@@ -480,7 +480,7 @@ So that I can read what a country's press converged on without reading that lang
 
 **Given** the full matrix
 **When** a cycle completes
-**Then** 135 Briefings exist: 15 Zones × 3 Periods × 3 Output Languages (FR-15)
+**Then** 24 Briefings exist: 4 Zones × 2 Periods × 3 Output Languages (FR-15)
 
 ### Story 3.3: Capture attribution and outbound links
 
@@ -635,7 +635,7 @@ So that following two places costs two clicks.
 
 **Given** a rendered Briefing
 **When** the reader clicks the zone word
-**Then** they can cycle through World, the 6 Continents, and the 8 supported Countries — 15 Zones (FR-3)
+**Then** they can cycle through World, Europe, France and Spain — 4 Zones (FR-3)
 **And** the Briefing is replaced and the URL reflects the selection
 
 **Given** a Country Zone that fell back to its Continent
@@ -831,7 +831,7 @@ So that I am not misled about what is current.
 
 **Given** the offline cache
 **When** its contents are inspected
-**Then** it holds the application shell and at most the reader's last-viewed Briefing — never the full 135-Briefing matrix (NFR-6)
+**Then** it holds the application shell and at most the reader's last-viewed Briefing — never the full 24-Briefing matrix (NFR-6)
 
 **Given** no connection and no cached Briefing
 **When** the reader opens the application

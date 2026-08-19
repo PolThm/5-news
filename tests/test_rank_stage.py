@@ -320,15 +320,16 @@ def test_relevance_is_derived_from_the_countries_list_not_a_new_signal() -> None
 
     france = zone_by_slug("france")
     europe = zone_by_slug("europe")
-    japan = zone_by_slug("japan")
-    asia = zone_by_slug("asia")
+    spain = zone_by_slug("spain")
 
     cluster = _zone_cluster("a", sources=2, countries=["france", "germany"])
 
     assert _is_relevant_to(cluster, france) is True
     assert _is_relevant_to(cluster, europe) is True  # france's continent
-    assert _is_relevant_to(cluster, japan) is False
-    assert _is_relevant_to(cluster, asia) is False
+    # Germany is in the corpus as a source country but is not a Zone, so it
+    # contributes nothing to Zone relevance; Spain is a Zone the Cluster does
+    # not touch.
+    assert _is_relevant_to(cluster, spain) is False
 
 
 def test_a_cluster_relevant_to_zero_of_the_target_countries_is_excluded() -> None:
@@ -392,18 +393,25 @@ def test_a_continent_with_too_few_qualifying_clusters_still_serves_itself() -> N
     assert len(result.ranked_clusters) == 1
 
 
-def test_a_cluster_spanning_two_continents_is_relevant_to_both() -> None:
-    """A Cluster covering countries in two different continents counts as
-    relevant to each independently -- the relevance rule is per-continent
-    membership, not exclusive assignment to one continent."""
+def test_relevance_is_membership_not_exclusive_assignment() -> None:
+    """A Cluster is relevant to every Zone it touches, independently -- being
+    relevant to one Country does not assign it away from that Country's
+    Continent, nor from World.
+
+    This used to be proven with a Cluster spanning two Continents (france +
+    japan -> europe and asia). The 2026-08-19 scope cut leaves one Continent,
+    so the same rule is now shown across the levels of the hierarchy instead:
+    a Cluster in France is relevant to France, to Europe, and to World at
+    once, and not to the sibling Country it never touches."""
     from pipeline.config import zone_by_slug
     from pipeline.stages.rank import _is_relevant_to
 
-    cluster = _zone_cluster("a", sources=2, countries=["france", "japan"])
+    cluster = _zone_cluster("a", sources=2, countries=["france", "germany"])
 
+    assert _is_relevant_to(cluster, zone_by_slug("france")) is True
     assert _is_relevant_to(cluster, zone_by_slug("europe")) is True
-    assert _is_relevant_to(cluster, zone_by_slug("asia")) is True
-    assert _is_relevant_to(cluster, zone_by_slug("north-america")) is False
+    assert _is_relevant_to(cluster, zone_by_slug("world")) is True
+    assert _is_relevant_to(cluster, zone_by_slug("spain")) is False
 
 
 def test_fallback_still_respects_the_five_item_cap() -> None:

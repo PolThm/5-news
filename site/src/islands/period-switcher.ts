@@ -49,7 +49,7 @@ export interface BriefingLike {
   generated_at: string;
 }
 
-const PERIOD_CYCLE = ["day", "week", "month"] as const;
+const PERIOD_CYCLE = ["day", "week"] as const;
 export type PeriodSlug = (typeof PERIOD_CYCLE)[number];
 
 const LANGUAGE_CYCLE = ["fr", "en", "es"] as const;
@@ -60,9 +60,9 @@ export type LanguageSlug = (typeof LANGUAGE_CYCLE)[number];
 // hand-kept mirror, not an import (Astro/Node-side lib code is not
 // bundled for the browser here).
 const PERIOD_SENTENCE_TEXT: Record<LanguageSlug, Record<PeriodSlug, string>> = {
-  fr: { day: "aujourd'hui", week: "cette semaine", month: "ce mois" },
-  en: { day: "today", week: "this week", month: "this month" },
-  es: { day: "hoy", week: "esta semana", month: "este mes" },
+  fr: { day: "aujourd'hui", week: "cette semaine" },
+  en: { day: "today", week: "this week" },
+  es: { day: "hoy", week: "esta semana" },
 };
 
 export function nextPeriod(current: PeriodSlug): PeriodSlug {
@@ -84,19 +84,8 @@ export function nextLanguage(current: LanguageSlug): LanguageSlug {
 const ZONE_CYCLE = [
   "world",
   "europe",
-  "north-america",
-  "south-america",
-  "asia",
-  "africa",
-  "oceania",
   "france",
-  "united-kingdom",
-  "germany",
-  "united-states",
-  "japan",
-  "china",
-  "india",
-  "brazil",
+  "spain",
 ] as const;
 export type ZoneSlug = (typeof ZONE_CYCLE)[number];
 
@@ -104,80 +93,32 @@ const ZONE_SENTENCE_LABEL: Record<LanguageSlug, Partial<Record<string, string>>>
   fr: {
     world: "dans le Monde",
     europe: "en Europe",
-    "north-america": "en Amérique du Nord",
-    "south-america": "en Amérique du Sud",
-    asia: "en Asie",
-    africa: "en Afrique",
-    oceania: "en Océanie",
     france: "en France",
-    "united-kingdom": "au Royaume-Uni",
-    germany: "en Allemagne",
-    "united-states": "aux États-Unis",
-    japan: "au Japon",
-    china: "en Chine",
-    india: "en Inde",
-    brazil: "au Brésil",
+    spain: "en Espagne",
   },
   en: {
     world: "in the World",
     europe: "in Europe",
-    "north-america": "in North America",
-    "south-america": "in South America",
-    asia: "in Asia",
-    africa: "in Africa",
-    oceania: "in Oceania",
     france: "in France",
-    "united-kingdom": "in the United Kingdom",
-    germany: "in Germany",
-    "united-states": "in the United States",
-    japan: "in Japan",
-    china: "in China",
-    india: "in India",
-    brazil: "in Brazil",
+    spain: "in Spain",
   },
   es: {
     world: "en el Mundo",
     europe: "en Europa",
-    "north-america": "en América del Norte",
-    "south-america": "en América del Sur",
-    asia: "en Asia",
-    africa: "en África",
-    oceania: "en Oceanía",
     france: "en Francia",
-    "united-kingdom": "en el Reino Unido",
-    germany: "en Alemania",
-    "united-states": "en Estados Unidos",
-    japan: "en Japón",
-    china: "en China",
-    india: "en India",
-    brazil: "en Brasil",
+    spain: "en España",
   },
 };
 
 const ZONE_SERVED_LABEL: Record<LanguageSlug, Partial<Record<ZoneSlug, string>>> = {
   fr: {
     europe: "l'Europe",
-    "north-america": "l'Amérique du Nord",
-    "south-america": "l'Amérique du Sud",
-    asia: "l'Asie",
-    africa: "l'Afrique",
-    oceania: "l'Océanie",
   },
   en: {
     europe: "Europe",
-    "north-america": "North America",
-    "south-america": "South America",
-    asia: "Asia",
-    africa: "Africa",
-    oceania: "Oceania",
   },
   es: {
     europe: "Europa",
-    "north-america": "América del Norte",
-    "south-america": "América del Sur",
-    asia: "Asia",
-    africa: "África",
-    oceania: "Oceanía",
   },
 };
 
@@ -189,33 +130,15 @@ interface RequestedLabel {
 const ZONE_REQUESTED_LABEL: Record<LanguageSlug, Partial<Record<ZoneSlug, RequestedLabel>>> = {
   fr: {
     france: { label: "la France", plural: false },
-    "united-kingdom": { label: "le Royaume-Uni", plural: false },
-    germany: { label: "l'Allemagne", plural: false },
-    "united-states": { label: "les États-Unis", plural: true },
-    japan: { label: "le Japon", plural: false },
-    china: { label: "la Chine", plural: false },
-    india: { label: "l'Inde", plural: false },
-    brazil: { label: "le Brésil", plural: false },
+    spain: { label: "l'Espagne", plural: false },
   },
   en: {
     france: { label: "France", plural: false },
-    "united-kingdom": { label: "the United Kingdom", plural: false },
-    germany: { label: "Germany", plural: false },
-    "united-states": { label: "the United States", plural: true },
-    japan: { label: "Japan", plural: false },
-    china: { label: "China", plural: false },
-    india: { label: "India", plural: false },
-    brazil: { label: "Brazil", plural: false },
+    spain: { label: "Spain", plural: false },
   },
   es: {
     france: { label: "Francia", plural: false },
-    "united-kingdom": { label: "el Reino Unido", plural: false },
-    germany: { label: "Alemania", plural: false },
-    "united-states": { label: "Estados Unidos", plural: true },
-    japan: { label: "Japón", plural: false },
-    china: { label: "China", plural: false },
-    india: { label: "India", plural: false },
-    brazil: { label: "Brasil", plural: false },
+    spain: { label: "España", plural: false },
   },
 };
 
@@ -254,53 +177,20 @@ const ZONE_BARE_NAME: Record<LanguageSlug, Partial<Record<string, string>>> = {
   fr: {
     world: "le Monde",
     europe: "l'Europe",
-    "north-america": "l'Amérique du Nord",
-    "south-america": "l'Amérique du Sud",
-    asia: "l'Asie",
-    africa: "l'Afrique",
-    oceania: "l'Océanie",
     france: "la France",
-    "united-kingdom": "le Royaume-Uni",
-    germany: "l'Allemagne",
-    "united-states": "les États-Unis",
-    japan: "le Japon",
-    china: "la Chine",
-    india: "l'Inde",
-    brazil: "le Brésil",
+    spain: "l'Espagne",
   },
   en: {
     world: "the World",
     europe: "Europe",
-    "north-america": "North America",
-    "south-america": "South America",
-    asia: "Asia",
-    africa: "Africa",
-    oceania: "Oceania",
     france: "France",
-    "united-kingdom": "the United Kingdom",
-    germany: "Germany",
-    "united-states": "the United States",
-    japan: "Japan",
-    china: "China",
-    india: "India",
-    brazil: "Brazil",
+    spain: "Spain",
   },
   es: {
     world: "el Mundo",
     europe: "Europa",
-    "north-america": "América del Norte",
-    "south-america": "América del Sur",
-    asia: "Asia",
-    africa: "África",
-    oceania: "Oceanía",
     france: "Francia",
-    "united-kingdom": "el Reino Unido",
-    germany: "Alemania",
-    "united-states": "Estados Unidos",
-    japan: "Japón",
-    china: "China",
-    india: "India",
-    brazil: "Brasil",
+    spain: "España",
   },
 };
 
@@ -417,9 +307,19 @@ function escapeHtml(value: string): string {
 
 // Mirrors briefing.ts's own countryLabel exactly, for the same reason as
 // the other hand-kept mirrors in this file.
+// Bare country names for the Consensus chip's source list, keyed on an
+// Article's `source_country`, per Output Language.
+//
+// Deliberately NOT trimmed when the routable Zones narrowed to
+// World/Europe/France/Spain on 2026-08-19: this is keyed on where an Article
+// came *from*, not where a reader can navigate to. A published cycle's
+// Articles span ~145 countries; an unlisted one renders as its raw slug in
+// the one place the product asks the reader to trust a count. Mirrors
+// briefing.ts's table.
 const COUNTRY_LABEL: Record<LanguageSlug, Partial<Record<string, string>>> = {
   fr: {
     france: "France",
+    spain: "Espagne",
     "united-kingdom": "Royaume-Uni",
     germany: "Allemagne",
     "united-states": "États-Unis",
@@ -430,6 +330,7 @@ const COUNTRY_LABEL: Record<LanguageSlug, Partial<Record<string, string>>> = {
   },
   en: {
     france: "France",
+    spain: "Spain",
     "united-kingdom": "United Kingdom",
     germany: "Germany",
     "united-states": "United States",
@@ -440,6 +341,7 @@ const COUNTRY_LABEL: Record<LanguageSlug, Partial<Record<string, string>>> = {
   },
   es: {
     france: "Francia",
+    spain: "España",
     "united-kingdom": "Reino Unido",
     germany: "Alemania",
     "united-states": "Estados Unidos",

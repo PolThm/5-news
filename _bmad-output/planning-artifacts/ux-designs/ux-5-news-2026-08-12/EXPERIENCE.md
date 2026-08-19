@@ -30,7 +30,7 @@ Within that one page, four regions stack top to bottom, always in this order:
 
 → Composition reference: `mockups/briefing-world-day.html` (World/day, 4 items, no fallback), `mockups/briefing-fallback.html` (a Country Zone showing its Continent-fallback notice, plus the Consensus chip's expanded state from Flow 3). Spine wins on conflict with either mock.
 
-Every Zone/Period/Language combination the pipeline generates (135 per cycle) is reachable from this one IA node — closure holds because the mad-libs sentence is a complete selector for all three axes, not a partial one.
+Every Zone/Period/Language combination the pipeline generates (24 per cycle) is reachable from this one IA node — closure holds because the mad-libs sentence is a complete selector for all three axes, not a partial one.
 
 ## Voice and Tone
 
@@ -54,8 +54,8 @@ Behavioral. Visual specs live in `DESIGN.md.Components`.
 
 | Component | Use | Behavioral rules |
 |---|---|---|
-| Mad-libs word (Zone) | Title sentence | Click/tap cycles World → 6 Continents → 8 Countries → World (FR-3). Keyboard: `Enter`/`Space` on focus advances one step, matching click; no separate multi-select control. Announces new value via `aria-live` on change (Story 4.8). |
-| Mad-libs word (Period) | Title sentence | Click/tap cycles day → week → month → day (FR-2). Same keyboard/announcement behavior as the Zone word. |
+| Mad-libs word (Zone) | Title sentence | Click/tap cycles World → Europe → France → Spain → World (FR-3). Keyboard: `Enter`/`Space` on focus advances one step, matching click; no separate multi-select control. Announces new value via `aria-live` on change (Story 4.8). |
+| Mad-libs word (Period) | Title sentence | Click/tap cycles day → week → day (FR-2). Same keyboard/announcement behavior as the Zone word. |
 | Consensus chip | Per item, below Summary | Collapsed by default, showing "N independent sources · M countries." Click/tap or `Enter` on focus expands inline (never a modal) to list contributing Sources + their countries (FR-9); the listed count always equals the displayed number — this is a rendering guarantee, not just a data one. Expand/collapse is per-item, independent of every other item's state. |
 | Attribution + outbound link | Per item, always visible | Outlet name as plain visible text, immediately followed by a solid-underlined link to the original Article (FR-14) — present on initial render, never behind hover, a menu, or the Consensus chip's expansion. |
 | Output Language control | Header, top-right | Three text options (the three supported languages); current selection visually distinct (`primary` color). Selecting one re-renders the whole page in that language and updates the URL (FR-12). Browser `Accept-Language` decides the *first* visit's default only; an explicit choice is not overridden by browser language on a later visit within the same session `[ASSUMPTION: persistence mechanism -- see State Patterns]`. |

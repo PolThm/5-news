@@ -62,10 +62,9 @@ describe("hasValidAttribution", () => {
 });
 
 describe("nextPeriod", () => {
-  it("cycles day -> week -> month -> day", () => {
+  it("cycles day -> week -> day", () => {
     expect(nextPeriod("day")).toBe("week");
-    expect(nextPeriod("week")).toBe("month");
-    expect(nextPeriod("month")).toBe("day");
+    expect(nextPeriod("week")).toBe("day");
   });
 });
 
@@ -79,57 +78,25 @@ describe("periodSentenceText", () => {
   it("returns the correct word for each Period, in each language", () => {
     expect(periodSentenceText("day", "fr")).toBe("aujourd'hui");
     expect(periodSentenceText("week", "fr")).toBe("cette semaine");
-    expect(periodSentenceText("month", "fr")).toBe("ce mois");
-
     expect(periodSentenceText("day", "en")).toBe("today");
     expect(periodSentenceText("week", "en")).toBe("this week");
-    expect(periodSentenceText("month", "en")).toBe("this month");
-
     expect(periodSentenceText("day", "es")).toBe("hoy");
     expect(periodSentenceText("week", "es")).toBe("esta semana");
-    expect(periodSentenceText("month", "es")).toBe("este mes");
   });
 });
 
 describe("ZONE_CYCLE", () => {
-  it("has exactly the 15 Zones from the pipeline's config.ZONES, in the same order", () => {
-    expect(ZONE_CYCLE).toEqual([
-      "world",
-      "europe",
-      "north-america",
-      "south-america",
-      "asia",
-      "africa",
-      "oceania",
-      "france",
-      "united-kingdom",
-      "germany",
-      "united-states",
-      "japan",
-      "china",
-      "india",
-      "brazil",
-    ]);
+  it("has exactly the 4 Zones from the pipeline's config.ZONES, in the same order", () => {
+    expect(ZONE_CYCLE).toEqual(["world", "europe", "france", "spain"]);
   });
 });
 
 describe("nextZone", () => {
-  it("cycles through all 15 Zones in order and wraps Brazil -> World", () => {
+  it("cycles through all 4 Zones in order and wraps Spain -> World", () => {
     expect(nextZone("world")).toBe("europe");
-    expect(nextZone("europe")).toBe("north-america");
-    expect(nextZone("north-america")).toBe("south-america");
-    expect(nextZone("south-america")).toBe("asia");
-    expect(nextZone("asia")).toBe("africa");
-    expect(nextZone("africa")).toBe("oceania");
-    expect(nextZone("oceania")).toBe("france");
-    expect(nextZone("france")).toBe("united-kingdom");
-    expect(nextZone("united-kingdom")).toBe("germany");
-    expect(nextZone("germany")).toBe("united-states");
-    expect(nextZone("united-states")).toBe("japan");
-    expect(nextZone("japan")).toBe("china");
-    expect(nextZone("china")).toBe("india");
-    expect(nextZone("india")).toBe("brazil");
-    expect(nextZone("brazil")).toBe("world");
+    expect(nextZone("europe")).toBe("france");
+    expect(nextZone("france")).toBe("spain");
+    expect(nextZone("spain")).toBe("world");
   });
 });
 
@@ -137,33 +104,22 @@ describe("zoneSentenceLabel", () => {
   it("returns the full preposition-inclusive French phrase for each Zone", () => {
     expect(zoneSentenceLabel("world", "fr")).toBe("dans le Monde");
     expect(zoneSentenceLabel("europe", "fr")).toBe("en Europe");
-    expect(zoneSentenceLabel("north-america", "fr")).toBe("en Amérique du Nord");
-    expect(zoneSentenceLabel("south-america", "fr")).toBe("en Amérique du Sud");
-    expect(zoneSentenceLabel("asia", "fr")).toBe("en Asie");
-    expect(zoneSentenceLabel("africa", "fr")).toBe("en Afrique");
-    expect(zoneSentenceLabel("oceania", "fr")).toBe("en Océanie");
     expect(zoneSentenceLabel("france", "fr")).toBe("en France");
-    expect(zoneSentenceLabel("united-kingdom", "fr")).toBe("au Royaume-Uni");
-    expect(zoneSentenceLabel("germany", "fr")).toBe("en Allemagne");
-    expect(zoneSentenceLabel("united-states", "fr")).toBe("aux États-Unis");
-    expect(zoneSentenceLabel("japan", "fr")).toBe("au Japon");
-    expect(zoneSentenceLabel("china", "fr")).toBe("en Chine");
-    expect(zoneSentenceLabel("india", "fr")).toBe("en Inde");
-    expect(zoneSentenceLabel("brazil", "fr")).toBe("au Brésil");
+    expect(zoneSentenceLabel("spain", "fr")).toBe("en Espagne");
   });
 
-  it("returns the correct English phrase for a sample of each preposition case", () => {
+  it("returns the correct English phrase for every Zone", () => {
     expect(zoneSentenceLabel("world", "en")).toBe("in the World");
     expect(zoneSentenceLabel("europe", "en")).toBe("in Europe");
-    expect(zoneSentenceLabel("united-kingdom", "en")).toBe("in the United Kingdom");
-    expect(zoneSentenceLabel("japan", "en")).toBe("in Japan");
+    expect(zoneSentenceLabel("france", "en")).toBe("in France");
+    expect(zoneSentenceLabel("spain", "en")).toBe("in Spain");
   });
 
-  it("returns the correct Spanish phrase for a sample of each preposition case", () => {
+  it("returns the correct Spanish phrase for every Zone", () => {
     expect(zoneSentenceLabel("world", "es")).toBe("en el Mundo");
     expect(zoneSentenceLabel("europe", "es")).toBe("en Europa");
-    expect(zoneSentenceLabel("united-kingdom", "es")).toBe("en el Reino Unido");
-    expect(zoneSentenceLabel("japan", "es")).toBe("en Japón");
+    expect(zoneSentenceLabel("france", "es")).toBe("en Francia");
+    expect(zoneSentenceLabel("spain", "es")).toBe("en España");
   });
 
   it("degrades to the raw slug for an unknown zone rather than returning undefined", () => {
@@ -207,27 +163,35 @@ describe("fallbackNoticeText", () => {
   });
 
   it("uses each country's correct subject-form article in the requested-zone clause", () => {
-    expect(fallbackNoticeText({ zone: "united-kingdom", served_zone: "europe" }, "fr")).toBe(
-      "Affichage de l'Europe — le Royaume-Uni n'a pas assez de couverture aujourd'hui."
+    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "fr")).toBe(
+      "Affichage de l'Europe — l'Espagne n'a pas assez de couverture aujourd'hui."
     );
-    expect(fallbackNoticeText({ zone: "japan", served_zone: "asia" }, "fr")).toBe(
-      "Affichage de l'Asie — le Japon n'a pas assez de couverture aujourd'hui."
+    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "es")).toBe(
+      "Mostrando Europa — España no tiene suficiente cobertura hoy."
     );
   });
 
-  it("agrees the verb in number for a grammatically plural country, in every language", () => {
-    // "les États-Unis"/"the United States"/"Estados Unidos" is treated as
-    // plural in this clause across all 3 languages -- the only one of the
-    // 8 supported Countries where this agreement matters.
-    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "fr")).toBe(
-      "Affichage de l'Amérique du Nord — les États-Unis n'ont pas assez de couverture aujourd'hui."
-    );
-    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "en")).toBe(
-      "Showing North America — the United States don't have enough coverage today."
-    );
-    expect(fallbackNoticeText({ zone: "united-states", served_zone: "north-america" }, "es")).toBe(
-      "Mostrando América del Norte — Estados Unidos no tienen suficiente cobertura hoy."
-    );
+  it("agrees the verb in the singular for every Zone that can currently fall back", () => {
+    // The `plural` flag on ZONE_REQUESTED_LABEL exists because "les
+    // États-Unis"/"the United States"/"Estados Unidos" takes a plural verb in
+    // all three languages. That was the only one of the 8 Countries where the
+    // agreement mattered, and the 2026-08-19 scope cut to
+    // World/Europe/France/Spain removed it -- so no current Zone reaches the
+    // plural branch, and this locks the singular form every remaining Zone
+    // does produce. The branch itself is kept rather than deleted: the next
+    // plural country ("les Pays-Bas") is one table entry away, and the
+    // agreement is easy to get wrong from scratch in three languages.
+    for (const zone of ["france", "spain"]) {
+      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "fr")).toContain(
+        "n'a pas assez de couverture"
+      );
+      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "en")).toContain(
+        "doesn't have enough coverage"
+      );
+      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "es")).toContain(
+        "no tiene suficiente cobertura"
+      );
+    }
   });
 
   it("returns null instead of throwing when zone/served_zone don't match either lookup table", () => {
@@ -283,7 +247,6 @@ describe("endScreenText", () => {
   it("reuses periodSentenceText's exact wording for each Period, in each language", () => {
     expect(endScreenText(3, "day", "fr")).toContain("aujourd'hui.");
     expect(endScreenText(3, "week", "fr")).toContain("cette semaine.");
-    expect(endScreenText(3, "month", "fr")).toContain("ce mois.");
     expect(endScreenText(3, "day", "en")).toContain("today.");
     expect(endScreenText(3, "day", "es")).toContain("hoy.");
   });
@@ -322,8 +285,12 @@ describe("formatCount", () => {
 });
 
 describe("countryLabel", () => {
-  it("returns the bare French country name for each of the 8 supported Countries", () => {
+  it("returns the bare French country name for every country it can name", () => {
+    // Not trimmed by the 2026-08-19 Zone cut: this is keyed on an Article's
+    // source_country, which spans ~145 countries in a published cycle, not on
+    // the 4 routable Zones. See COUNTRY_LABEL's own comment.
     expect(countryLabel("france", "fr")).toBe("France");
+    expect(countryLabel("spain", "fr")).toBe("Espagne");
     expect(countryLabel("united-kingdom", "fr")).toBe("Royaume-Uni");
     expect(countryLabel("germany", "fr")).toBe("Allemagne");
     expect(countryLabel("united-states", "fr")).toBe("États-Unis");
@@ -333,8 +300,9 @@ describe("countryLabel", () => {
     expect(countryLabel("brazil", "fr")).toBe("Brésil");
   });
 
-  it("returns the bare English country name for each of the 8 supported Countries", () => {
+  it("returns the bare English country name for each of the countries it can name", () => {
     expect(countryLabel("france", "en")).toBe("France");
+    expect(countryLabel("spain", "en")).toBe("Spain");
     expect(countryLabel("united-kingdom", "en")).toBe("United Kingdom");
     expect(countryLabel("germany", "en")).toBe("Germany");
     expect(countryLabel("united-states", "en")).toBe("United States");
@@ -344,8 +312,9 @@ describe("countryLabel", () => {
     expect(countryLabel("brazil", "en")).toBe("Brazil");
   });
 
-  it("returns the bare Spanish country name for each of the 8 supported Countries", () => {
+  it("returns the bare Spanish country name for each of the countries it can name", () => {
     expect(countryLabel("france", "es")).toBe("Francia");
+    expect(countryLabel("spain", "es")).toBe("España");
     expect(countryLabel("united-kingdom", "es")).toBe("Reino Unido");
     expect(countryLabel("germany", "es")).toBe("Alemania");
     expect(countryLabel("united-states", "es")).toBe("Estados Unidos");
@@ -355,9 +324,9 @@ describe("countryLabel", () => {
     expect(countryLabel("brazil", "es")).toBe("Brasil");
   });
 
-  it("returns the slug itself for a country outside the 8 supported Countries (fixture realism, e.g. australia)", () => {
+  it("returns the slug itself for a country outside the countries it can name (fixture realism, e.g. australia)", () => {
     // Fixture data plausibly includes source_country values like
-    // "australia" that aren't among the 8 supported Countries this site
+    // "australia" that aren't among the countries it can name this site
     // routes to -- countryLabel must degrade to the raw slug rather than
     // throwing or rendering "undefined" in the expanded source list.
     expect(countryLabel("australia", "fr")).toBe("australia");

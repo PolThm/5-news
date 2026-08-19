@@ -138,10 +138,19 @@ _GKG_COLUMNS = 27
 _PAGE_TITLE = re.compile(r"<PAGE_TITLE>(.*?)</PAGE_TITLE>", re.DOTALL)
 _SRCLC = re.compile(r"srclc:(\w+)")
 
-# FIPS 10-4 codes for the eight Country Zones (PRD FR-3). NOT ISO 3166 --
-# see the module docstring.
+# FIPS 10-4 codes for the countries this adapter can name. NOT ISO 3166 --
+# see the module docstring. Spain is SP, not ES, for exactly that reason.
+#
+# Deliberately NOT trimmed alongside `pipeline.config.ZONES` when the routable
+# Zones narrowed to World/Europe/France/Spain on 2026-08-19: this table does a
+# different job. It resolves an *Article's origin country* so a Cluster's
+# `countries` -- the "covered in N countries" proof shown to the reader -- can
+# read "germany" instead of the bare FIPS "gm" that `zone_slug_for_fips`
+# falls back to. Dropping a country here would not remove it from the corpus,
+# it would only make its name unreadable wherever it appears as a source.
 FIPS_BY_ZONE: dict[str, str] = {
     "france": "FR",
+    "spain": "SP",
     "united-kingdom": "UK",
     "germany": "GM",
     "united-states": "US",

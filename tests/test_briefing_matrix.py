@@ -1,12 +1,12 @@
 """Tests for the briefing_matrix mechanism: per-Period Cluster pools and the
-15-Zone ranking loop that produces them, plus the deduplicated Cluster union
+4-Zone ranking loop that produces them, plus the deduplicated Cluster union
 summarize is submitted against.
 
 Story 3.5 wires ``rank.py``'s ``rank_for_zone``/``link_across_days`` — both
 already unit-tested in isolation — into a real per-cycle loop for the first
 time. This module's own tests stay one level up from those: given a set of
 qualifying Clusters (or history entries), does the loop visit every Zone,
-does day/week/month diverge correctly, and does the union dedupe correctly.
+does day/week diverge correctly, and does the union dedupe correctly.
 """
 
 from __future__ import annotations
@@ -75,7 +75,7 @@ def test_day_pool_is_unaffected_by_history_entries() -> None:
     assert pools[Period.DAY] == today
 
 
-def test_week_pool_links_recent_history_but_not_month_only_entries() -> None:
+def test_week_pool_links_recent_history_but_not_entries_past_its_window() -> None:
     today = [_cluster("today1", sources=2, countries=["france", "germany"])]
     history = [
         _history_entry("recent", "2026-08-10T06-00-00Z", sources=2, countries=["france", "spain"]),
@@ -99,27 +99,7 @@ def test_week_pool_links_recent_history_but_not_month_only_entries() -> None:
     assert "old" not in week_ids
 
 
-def test_month_pool_links_history_the_week_pool_excludes() -> None:
-    today = [_cluster("today1", sources=2, countries=["france", "germany"])]
-    history = [
-        _history_entry("old", "2026-07-20T06-00-00Z", sources=2, countries=["france", "spain"]),
-    ]
-    embeddings = {"today1": [1.0, 0.0], "old": [0.99, 0.02]}
-
-    pools = build_period_pools(
-        today_clusters=today,
-        history_entries=history,
-        embedding_by_id=embeddings,
-        reference_date=datetime(2026, 8, 11, 6, 0, tzinfo=UTC),
-    )
-
-    month_ids = {
-        cid for c in pools[Period.MONTH] for cid in c.get("_linked_ids", [c["cluster_id"]])
-    }
-    assert "old" in month_ids
-
-
-def test_all_three_periods_are_always_present() -> None:
+def test_both_periods_are_always_present() -> None:
     pools = build_period_pools(today_clusters=[], history_entries=[], embedding_by_id={})
 
     assert set(pools.keys()) == set(PERIODS)
@@ -205,7 +185,7 @@ def test_dedupe_union_of_no_rankings_is_empty() -> None:
 def test_dedupe_union_keeps_the_first_seen_occurrence_across_periods() -> None:
     """Documents a known, deliberately accepted approximation: a Cluster
     that differs in shape between an unlinked (day) occurrence and a
-    linked (week/month, via link_across_days) occurrence is deduplicated
+    linked (week, via link_across_days) occurrence is deduplicated
     by first-seen order, not by any Period-aware merge -- see
     dedupe_union's own docstring for why this trade-off was accepted."""
     from pipeline.config import zone_by_slug

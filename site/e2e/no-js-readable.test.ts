@@ -28,7 +28,7 @@ const DIST_INDEX = join(SITE_ROOT, "dist", "index.html");
 // when `data/briefings/<lang>/<zone>/<period>.json` -- the pipeline's real
 // output -- does NOT exist for a given route. It didn't, for any route,
 // until the first real cycle published on 2026-08-14; every cycle since
-// (most recently 2026-08-18) has grown that tree to cover all 135 routes, so
+// (most recently 2026-08-18) has grown that tree to cover all 24 routes, so
 // a normal checkout now has real data everywhere and this suite was silently
 // asserting on ever-changing cycle content instead of the fixtures it was
 // written against -- correct in principle (`loadBriefing` does exactly what
@@ -357,9 +357,9 @@ describe("no-JS readability of the built page", () => {
 // rather than relying on describe-block ordering.
 describe("Zone axis: Continent and Country pages (Story 4.3)", () => {
   const DIST_EUROPE_DAY = join(SITE_ROOT, "dist", "fr", "europe", "day.html");
-  const DIST_JAPAN_DAY = join(SITE_ROOT, "dist", "fr", "japan", "day.html");
+  const DIST_SPAIN_DAY = join(SITE_ROOT, "dist", "fr", "spain", "day.html");
 
-  // Story 4.7 tripled the routing enumeration to 135 pages (was 45), so a
+  // Story 4.7 narrowed the routing enumeration to 24 pages (was 135), so a
   // fresh `astro build` now runs noticeably longer -- these tests'
   // explicit 30s timeout replaces vitest's 5s default, which the build
   // started intermittently exceeding once the page count grew.
@@ -369,19 +369,19 @@ describe("Zone axis: Continent and Country pages (Story 4.3)", () => {
       execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
       const html = readFileSync(DIST_EUROPE_DAY, "utf-8");
       expect(html).toMatch(
-        /<a class="word" data-zone-word data-lang="fr" data-zone="europe" data-period="day" href="\/fr\/north-america\/day"[^>]*>en Europe<\/a>/
+        /<a class="word" data-zone-word data-lang="fr" data-zone="europe" data-period="day" href="\/fr\/france\/day"[^>]*>en Europe<\/a>/
       );
     },
     30000
   );
 
   it(
-    "builds a Country page (Japan) with the correct sentence label and Zone-word target, and no fallback notice (AC4)",
+    "builds a Country page (Spain) with the correct sentence label and Zone-word target, and no fallback notice (AC4)",
     () => {
       execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-      const html = readFileSync(DIST_JAPAN_DAY, "utf-8");
+      const html = readFileSync(DIST_SPAIN_DAY, "utf-8");
       expect(html).toMatch(
-        /<a class="word" data-zone-word data-lang="fr" data-zone="japan" data-period="day" href="\/fr\/china\/day"[^>]*>au Japon<\/a>/
+        /<a class="word" data-zone-word data-lang="fr" data-zone="spain" data-period="day" href="\/fr\/world\/day"[^>]*>en Espagne<\/a>/
       );
 
       // Strip both <style> (the .fallback-notice CSS rule, always present)

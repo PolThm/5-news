@@ -24,7 +24,7 @@ export interface Combination {
   period: string;
 }
 
-const PERIODS = ["day", "week", "month"];
+const PERIODS = ["day", "week"];
 
 // Cross product of all 3 Languages x all 15 Zones (Story 4.3) x all 3
 // Periods = 135 entries, reusing briefing.ts's own OUTPUT_LANGUAGE_CYCLE/

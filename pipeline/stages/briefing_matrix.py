@@ -38,7 +38,6 @@ from pipeline.stages.rank import ZoneRanking, link_across_days, rank_for_zone
 # (a month window can never see further back than history itself retains).
 _WINDOW_DAYS: dict[Period, int] = {
     Period.WEEK: 7,
-    Period.MONTH: 30,
 }
 
 

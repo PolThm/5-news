@@ -108,7 +108,7 @@ A reader can change the Period by clicking the period words in the title sentenc
 A reader can change the Zone by clicking the zone words in the title sentence, selecting World, a Continent, or a supported Country. Realizes UJ-2.
 
 **Consequences (testable):**
-- v1 supports 15 Zones: World; the continents Europe, North America, South America, Asia, Africa, Oceania; and the countries France, United Kingdom, Germany, United States, Japan, China, India, Brazil.
+- v1 supports 4 Zones: World; the continent Europe; and the countries France and Spain. (Narrowed 2026-08-19 from 15 -- World, 6 Continents, 8 Countries. Two of those Continents, Africa and Oceania, never had a Country beneath them, and the brief's own guidance was that a few countries covered well beats the whole world covered badly. A Continent's coverage is geography, not a union of its Country Zones: see `pipeline.config.countries_in_continent`.)
 - Selecting a Zone replaces the displayed Briefing with the one for the new Zone and the current Period.
 - The selection is reflected in the URL.
 
@@ -239,7 +239,7 @@ Every item displays visible attribution and a prominent outbound link to an orig
 The system generates all Briefings on a schedule and serves reader requests from the generated set.
 
 **Consequences (testable):**
-- v1 generates 135 Briefings per cycle: 15 Zones × 3 Periods × 3 Output Languages.
+- v1 generates 24 Briefings per cycle: 4 Zones × 2 Periods × 3 Output Languages. (Was 135 = 15 × 3 × 3 before 2026-08-19; the month Period was dropped with the Zone cut.)
 - No reader-initiated request triggers an AI call, an embedding call, or an ingestion call.
 - A reader request for any supported Zone × Period × Output Language combination is served from precomputed content.
 
@@ -314,7 +314,7 @@ A reader with a working connection always sees the current Briefing, never a cac
 - **NFR-3 (Ingestion resilience).** A failure or rate-limit block from any single upstream feed degrades coverage for the affected cycle without failing the pipeline or the served Briefings.
 - **NFR-4 (Accessibility).** The page is readable and navigable without JavaScript for its core content, and meets WCAG 2.1 AA for contrast and keyboard navigation. `[ASSUMPTION: AA is the target; the reading-focused nature of the product makes it low-cost to meet.]`
 - **NFR-5 (Legality of ingestion).** Content is acquired only via public APIs and published RSS feeds. No scraping.
-- **NFR-6 (Offline scope).** Offline support is a safety net, not a feature surface. Only the application shell and at most the reader's last-viewed Briefing are retained for offline use — never the full 135-Briefing matrix, whose install cost is unbounded and whose contents expire daily.
+- **NFR-6 (Offline scope).** Offline support is a safety net, not a feature surface. Only the application shell and at most the reader's last-viewed Briefing are retained for offline use — never the full 24-Briefing matrix, whose install cost is unbounded and whose contents expire daily.
 
 ## 6. Constraints and Guardrails
 
@@ -357,7 +357,7 @@ AI spend is capped by FR-15 and NFR-2, independently of traffic. Embedding a few
 
 ### 9.1 In Scope
 
-All of FR-1 to FR-21 and NFR-1 to NFR-6, web only — installable as a PWA, but no native application — built in the order of §10. The scope boundary is the matrix: 15 Zones × 3 Periods × 3 Output Languages = 135 precomputed Briefings. Syndication Detection ships all three layers.
+All of FR-1 to FR-21 and NFR-1 to NFR-6, web only — installable as a PWA, but no native application — built in the order of §10. The scope boundary is the matrix: 4 Zones × 2 Periods × 3 Output Languages = 24 precomputed Briefings. Syndication Detection ships all three layers.
 
 ### 9.2 Out of Scope for MVP
 

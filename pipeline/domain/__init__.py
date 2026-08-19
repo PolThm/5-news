@@ -29,7 +29,6 @@ class Period(StrEnum):
 
     DAY = "day"
     WEEK = "week"
-    MONTH = "month"
 
 
 class OutputLanguage(StrEnum):

@@ -24,7 +24,7 @@ One sentence is the entire interface:
 
 > Here's what's happening **in the World**, **today**.
 
-The two bold words are controls. Clicking the first cycles through 15 zones (World, 6 continents, 8 countries); clicking the second cycles day → week → month. The URL always reflects the selection, so any combination is linkable, and the page works without JavaScript — every combination is also a real static route.
+The two bold words are controls. Clicking the first cycles through 4 zones (World, Europe, France, Spain); clicking the second cycles day → week. The URL always reflects the selection, so any combination is linkable, and the page works without JavaScript — every combination is also a real static route.
 
 When a country has too little coverage to fill a Briefing, it serves the containing continent's instead **and says so in a full sentence** rather than silently substituting.
 
@@ -49,7 +49,7 @@ GDELT GKG 2.1 raw files (15-min slots)
    │       detection   embed-v4  Consensus Score  │
    │                                              │
    │ → summarize (Claude Haiku 4.5, Batch API)    │
-   │ → publish   (atomic, 135 files)              │
+   │ → publish   (atomic, 24 files)              │
    └──────────────────────────────────────────────┘
         │
         ▼   data/briefings/<lang>/<zone>/<period>.json
@@ -121,7 +121,7 @@ Two, both used only by the pipeline. See `.env` (gitignored) for what each one d
 
 The pipeline, the reading surface, and the PWA layer are built and tested. Deployed to Vercel from `main`.
 
-**The pipeline published its first real Briefing set on 2026-08-14** — 135 files, real headlines and summaries written per language, real outbound links. Getting there took five distinct fixes, each hidden behind the previous one: the same-Event clustering threshold was strict enough that nothing ever merged (so no story reached the 2-source floor), collection was bounded by request count but not by wall-clock, AD-11's phase two was unreachable because every run minted a fresh cycle id, and the three files a resumed cycle re-reads were gitignored.
+**The pipeline published its first real Briefing set on 2026-08-14** — 135 files at the time, 24 since the scope narrowed on 2026-08-19 — real headlines and summaries written per language, real outbound links. Getting there took five distinct fixes, each hidden behind the previous one: the same-Event clustering threshold was strict enough that nothing ever merged (so no story reached the 2-source floor), collection was bounded by request count but not by wall-clock, AD-11's phase two was unreachable because every run minted a fresh cycle id, and the three files a resumed cycle re-reads were gitignored.
 
 Coverage was thin at first — 2 items rather than 5 — because GDELT's DOC 2.0 search API answered HTTP 429 to nearly every request, leaving only 11 RSS feeds behind it. Story 6.2 moved collection to GDELT's raw 15-minute files, which carry no rate limit: ~10,000 articles per cycle across thousands of outlets and 145 countries, against ~365 across 11 before. A Zone without enough qualifying coverage still falls back to its Continent and says so.
 

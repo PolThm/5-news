@@ -34,8 +34,8 @@ from pipeline.config import (
     MIN_COUNTRIES,
     MIN_INDEPENDENT_SOURCES,
     MIN_QUALIFYING_FOR_ZONE,
-    ZONES,
     continent_for,
+    countries_in_continent,
 )
 from pipeline.domain import Zone, ZoneKind
 from pipeline.stages import (
@@ -241,8 +241,14 @@ def _is_relevant_to(cluster: dict, zone: Zone) -> bool:
     if zone.kind == ZoneKind.COUNTRY:
         return zone.slug in cluster_countries
     # A Continent: relevant if any of its countries appears in the Cluster.
-    continent_countries = {z.slug for z in ZONES if z.continent == zone.slug}
-    return bool(cluster_countries & continent_countries)
+    #
+    # From the geography table, NOT from `{z.slug for z in ZONES if
+    # z.continent == zone.slug}` as this once did. That derivation made a
+    # continental Briefing mean "the Country Zones defined under this
+    # continent" -- so Europe already excluded Italy and the Netherlands, and
+    # the 2026-08-19 scope cut would have reduced it to France and Spain. A
+    # country does not need a Zone of its own to have happened in Europe.
+    return bool(cluster_countries & countries_in_continent(zone.slug))
 
 
 @dataclass(frozen=True, slots=True)

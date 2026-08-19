@@ -2,8 +2,8 @@
 // The dynamic [lang]/[zone]/[period] route the architecture spine names
 // explicitly (ARCHITECTURE-SPINE.md, Structural Seed). Story 4.2 built this
 // for World/fr, all 3 Periods; Story 4.3 extended getStaticPaths()'s
-// enumeration to all 15 Zones (45 combinations); Story 4.7 (Output
-// Language) extends it a third time, to all 3 Languages (135 combinations
+// enumeration to all 4 Zones (8 combinations); Story 4.7 (Output
+// Language) extends it a third time, to all 3 Languages (24 combinations
 // total). This file's rendering logic below was already written generic
 // across all three axes via BriefingPage.
 //
@@ -27,7 +27,7 @@ export function getStaticPaths(): { params: RouteParams }[] {
   // cross-reference); reused here rather than duplicating either list a
   // second time in this file, per Story 4.2's own "one owner, not
   // divergent copies" discipline.
-  const periods: Period[] = ["day", "week", "month"];
+  const periods: Period[] = ["day", "week"];
   return OUTPUT_LANGUAGE_CYCLE.flatMap((lang) =>
     ZONE_CYCLE.flatMap((zone) => periods.map((period) => ({ params: { lang, zone, period } })))
   );

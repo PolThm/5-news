@@ -131,7 +131,7 @@ collect ─→ deduplicate ─→ cluster ─→ rank ─→ summarize ─→ pu
 | --- | --- |
 | Domain vocabulary | The PRD Glossary is binding in code: `Article`, `Source`, `IndependentSource`, `WireCopy`, `Cluster`, `QualifyingCluster`, `ConsensusScore`, `Zone`, `Period`, `Briefing`, `Summary`, `Headline`, `OutputLanguage`, `DiscardedVolume`. No synonyms in type names, file names, or JSON keys. |
 | Stage naming | One directory per stage under `pipeline/stages/`, named for the verb it performs: `collect`, `dedupe`, `cluster`, `rank`, `summarize`, `publish`. |
-| Identifiers | Zone and Period are lowercase slugs (`world`, `europe`, `france`; `day`, `week`, `month`). Output Language is a two-letter code (`fr`, `en`, `es`). A Briefing is addressed by the triple, in that order. |
+| Identifiers | Zone and Period are lowercase slugs (`world`, `europe`, `france`; `day`, `week`). Output Language is a two-letter code (`fr`, `en`, `es`). A Briefing is addressed by the triple, in that order. |
 | Dates and times | UTC everywhere inside the pipeline. ISO-8601 with explicit offset in stored data. Never a naive local timestamp. |
 | Intermediate data | JSON Lines under `data/intermediate/<stage>/<cycle-id>/`, one record per line — greppable, diffable, and streamable during the inspection window. |
 | Published data | One JSON file per Briefing at `data/briefings/<lang>/<zone>/<period>.json`. Its schema is versioned and lives in `pipeline/domain/` — the single definition both `publish` writes against and the site reads against. A schema change is a version bump, never a silent field edit. |

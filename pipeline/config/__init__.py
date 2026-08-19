@@ -29,30 +29,36 @@ STAGE_NAMES: tuple[str, ...] = (
 
 # --- Zones -------------------------------------------------------------------
 
-# 15 Zones: World, 6 Continents, 8 Countries (FR-3).
+# 4 Zones: World, 1 Continent, 2 Countries (FR-3, narrowed 2026-08-19).
+#
+# Down from 15 (World, 6 Continents, 8 Countries). The original set was the
+# PRD's own invention rather than anything the brief asked for -- the brief's
+# guidance was that 5-10 countries covered *well* beats the whole world
+# covered badly, which is what this restores. Africa and Oceania never had a
+# single Country defined under them, so two of the six Continents could never
+# be reached by the Zone-word cycle's country hops at all.
 #
 # The `continent` field on a country is not decoration: FR-16 (Story 2.5)
 # serves a country's containing continent when the country has too few
-# Qualifying Clusters. Without the parent link there is nothing to fall back to.
+# Qualifying Clusters. Without the parent link there is nothing to fall back
+# to -- both Countries here point at Europe, so the fallback stays exercised.
+#
+# Note this is the set of *routable* Zones, not the set of countries the
+# pipeline can recognize as an Article's origin. Those are different concerns
+# and live apart: see `pipeline.adapters.gdelt.FIPS_BY_ZONE`, which still
+# names every country it can resolve so a Consensus Score can say "Germany"
+# rather than "gm".
 ZONES: tuple[Zone, ...] = (
     Zone("world", ZoneKind.WORLD),
     Zone("europe", ZoneKind.CONTINENT),
-    Zone("north-america", ZoneKind.CONTINENT),
-    Zone("south-america", ZoneKind.CONTINENT),
-    Zone("asia", ZoneKind.CONTINENT),
-    Zone("africa", ZoneKind.CONTINENT),
-    Zone("oceania", ZoneKind.CONTINENT),
     Zone("france", ZoneKind.COUNTRY, continent="europe"),
-    Zone("united-kingdom", ZoneKind.COUNTRY, continent="europe"),
-    Zone("germany", ZoneKind.COUNTRY, continent="europe"),
-    Zone("united-states", ZoneKind.COUNTRY, continent="north-america"),
-    Zone("japan", ZoneKind.COUNTRY, continent="asia"),
-    Zone("china", ZoneKind.COUNTRY, continent="asia"),
-    Zone("india", ZoneKind.COUNTRY, continent="asia"),
-    Zone("brazil", ZoneKind.COUNTRY, continent="south-america"),
+    Zone("spain", ZoneKind.COUNTRY, continent="europe"),
 )
 
-PERIODS: tuple[Period, ...] = (Period.DAY, Period.WEEK, Period.MONTH)
+# Narrowed from (day, week, month) on 2026-08-19. Month is gone: it was the
+# hardest window to fill honestly -- a 30-day pool needs 30 days of cycles
+# before it means anything -- and it cost a third of every publish.
+PERIODS: tuple[Period, ...] = (Period.DAY, Period.WEEK)
 
 OUTPUT_LANGUAGES: tuple[OutputLanguage, ...] = (
     OutputLanguage.FR,
@@ -172,7 +178,7 @@ def continent_for(zone: Zone) -> Zone | None:
 
 
 def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
-    """Every Briefing the pipeline generates per cycle: 15 x 3 x 3 = 135.
+    """Every Briefing the pipeline generates per cycle: 4 x 2 x 3 = 24.
 
     Yielded in the order a Briefing is addressed — language, zone, period —
     matching the published path ``<lang>/<zone>/<period>.json``.
@@ -183,6 +189,110 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
                 yield (language, zone, period)
 
 
+
+# --- Geography ---------------------------------------------------------------
+
+# Which FIPS 10-4 country codes count as Europe, for deciding whether a Cluster
+# belongs in the Europe Briefing.
+#
+# This exists because relevance used to be derived from ZONES itself
+# (`{z.slug for z in ZONES if z.continent == "europe"}`), which quietly made
+# the Europe Briefing mean "the Country Zones defined under Europe" rather than
+# "Europe". With 15 Zones that was France, the United Kingdom and Germany --
+# Italy, Belgium and the Netherlands were already excluded. Narrowing to 4
+# Zones on 2026-08-19 would have cut it to France and Spain, turning a
+# continental Briefing into a duplicate of its two countries, which is what
+# made the pre-existing flaw worth fixing rather than inheriting.
+#
+# Navigability and geography are now separate concerns: ZONES says where a
+# reader can go, this says where a story happened. A country needs no Zone of
+# its own to count toward its continent.
+#
+# Codes verified against GDELT's own published domain-to-country table (the
+# same file the adapter resolves sources with) rather than written from
+# memory, because FIPS is full of traps: Czechia is EZ, Denmark DA, Ireland
+# EI, Latvia LG, Lithuania LH, Portugal PO, Serbia RI, Slovakia LO, Spain SP,
+# Sweden SW, Switzerland SZ, Ukraine UP, Belarus BO.
+#
+# Russia and Turkey are included deliberately. Both straddle the continental
+# boundary, and both are treated as European news by the European press this
+# Briefing is written for -- excluding Russia in particular would drop the war
+# in Ukraine's other side out of a European Briefing.
+_EUROPE_FIPS: frozenset[str] = frozenset({
+    "AL",  # Albania
+    "AN",  # Andorra
+    "AU",  # Austria
+    "BE",  # Belgium
+    "BK",  # Bosnia-Herzegovina
+    "BO",  # Belarus
+    "BU",  # Bulgaria
+    "CY",  # Cyprus
+    "DA",  # Denmark
+    "EI",  # Ireland
+    "EN",  # Estonia
+    "EZ",  # Czech Republic
+    "FI",  # Finland
+    "FO",  # Faroe Islands
+    "FR",  # France
+    "GI",  # Gibraltar
+    "GK",  # Guernsey
+    "GM",  # Germany
+    "GR",  # Greece
+    "HR",  # Croatia
+    "HU",  # Hungary
+    "IC",  # Iceland
+    "IM",  # Isle of Man
+    "IT",  # Italy
+    "JE",  # Jersey
+    "KV",  # Kosovo
+    "LG",  # Latvia
+    "LH",  # Lithuania
+    "LO",  # Slovak Republic
+    "LS",  # Liechtenstein
+    "LU",  # Luxembourg
+    "MD",  # Moldova
+    "MJ",  # Montenegro
+    "MK",  # Macedonia
+    "MN",  # Monaco
+    "MT",  # Malta
+    "NL",  # Netherlands
+    "NO",  # Norway
+    "PL",  # Poland
+    "PO",  # Portugal
+    "RI",  # Serbia
+    "RO",  # Romania
+    "RS",  # Russia
+    "SI",  # Slovenia
+    "SM",  # San Marino
+    "SP",  # Spain
+    "SV",  # Svalbard
+    "SW",  # Sweden
+    "SZ",  # Switzerland
+    "TU",  # Turkey
+    "UK",  # United Kingdom
+    "UP",  # Ukraine
+    "VT",  # Vatican City
+})
+
+
+def countries_in_continent(continent_slug: str) -> frozenset[str]:
+    """Every ``source_country`` value that counts as part a continent.
+
+    Matches both forms an Article's ``source_country`` can take (see
+    ``pipeline.adapters.gdelt.zone_slug_for_fips``): a named slug when the
+    adapter recognizes the country ("germany"), or the lowercased FIPS code
+    when it does not ("it", "be"). Both are produced by the same cycle and
+    both appear in a Cluster's ``countries``, so both must resolve here or the
+    continent silently loses whichever half it does not match.
+    """
+    if continent_slug != "europe":
+        return frozenset()
+    from pipeline.adapters.gdelt import ZONE_BY_FIPS
+
+    named = {ZONE_BY_FIPS[code] for code in _EUROPE_FIPS if code in ZONE_BY_FIPS}
+    raw = {code.lower() for code in _EUROPE_FIPS}
+    return frozenset(named | raw)
+
 __all__ = [
     "CROSS_DAY_SIMILARITY_FLOOR",
     "MAX_PER_COUNTRY",
@@ -192,6 +302,7 @@ __all__ = [
     "MIN_QUALIFYING_FOR_ZONE",
     "REWRITE_SIMILARITY_FLOOR",
     "OUTPUT_LANGUAGES",
+    "countries_in_continent",
     "PERIODS",
     "STAGE_NAMES",
     "ZONES",

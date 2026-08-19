@@ -1532,3 +1532,74 @@ def test_an_agenda_that_raises_does_not_take_the_cycle_down(tmp_path: Path) -> N
     record = json.loads(result.cycle_path.read_text())
     assert record["completed"] is True
     assert any("agenda raised" in f["detail"] for f in record["failures"])
+
+
+def test_rank_actually_receives_the_agenda_items_not_the_clusters(tmp_path: Path) -> None:
+    """Asserts on what reached rank, which is the thing that was broken.
+
+    The first version of this coverage checked the agenda stage's own
+    items.jsonl and passed while the feature did nothing: cycle.py assigned the
+    agenda items to `clusters` and then, eleven lines later, the pre-existing
+    `clusters = list(read_jsonl(cluster_path))` overwrote them. Every Briefing
+    that run published was still selected by syndication. Checking a stage's
+    output proves the stage ran; only checking downstream proves it mattered.
+    """
+
+    def agenda_fn(_cluster_path: Path, cycle_id: str, data_root: Path, **_kwargs):
+        from pipeline.stages.agenda import WrittenAgenda
+
+        destination = data_root / "intermediate" / "agenda" / cycle_id
+        destination.mkdir(parents=True, exist_ok=True)
+        items_path = destination / "items.jsonl"
+        item = {
+            "cluster_id": "editorial-1",
+            "members": [
+                {
+                    "title": f"outlet {i} on the strike",
+                    "url": f"https://outlet{i}.example/x",
+                    "source": f"outlet{i}.example",
+                    "source_country": country,
+                    "language": "en",
+                }
+                for i, country in enumerate(("france", "spain"))
+            ],
+            "independent_source_count": 2,
+            "country_count": 2,
+            "countries": ["france", "spain"],
+            "mentioned_countries": ["france"],
+            "origin_country": "france",
+            "agenda_text": "A missile strike kills ten civilians",
+            "agenda_category": "Armed conflicts and attacks",
+            "agenda_day": "2026-08-11",
+            "agenda_sources": ["https://apnews.com/x"],
+            "corroborated": True,
+        }
+        items_path.write_text(json.dumps(item) + "\n", encoding="utf-8")
+        return WrittenAgenda(
+            output_path=items_path,
+            metadata_path=destination / "agenda.json",
+            items_out=1,
+            corroborated=1,
+            degraded=False,
+        )
+
+    result = run_cycle(
+        collect=lambda: _collection(_record("Some unrelated local story", "small.example")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        agenda_fn=agenda_fn,
+    )
+
+    ranked = [
+        json.loads(line)
+        for line in result.rank_path.read_text().splitlines()
+        if line.strip()
+    ]
+
+    assert ranked, "the editorial item should have been ranked and selected"
+    assert {r["cluster_id"] for r in ranked} == {"editorial-1"}
+    assert ranked[0]["agenda_category"] == "Armed conflicts and attacks"
+    # And the Cluster the corpus produced is NOT a candidate on its own.
+    assert not any("small.example" in json.dumps(r) for r in ranked)

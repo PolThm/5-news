@@ -344,6 +344,7 @@ def run_cycle(
                 f"degraded={clustered.degraded}"
             )
 
+            clusters = list(read_jsonl(cluster_path))
             # The editorial agenda replaces the Cluster list as the Briefing's
             # candidate set. Clusters remain the evidence -- they supply the
             # Articles, the source list and the Consensus Score -- but what
@@ -371,7 +372,6 @@ def run_cycle(
                     )
             except Exception as exc:  # noqa: BLE001 - adapter boundary
                 failures.append(Failure("cycle", f"agenda raised: {exc}"))
-            clusters = list(read_jsonl(cluster_path))
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"
                 failures.append(Failure("cycle", detail))

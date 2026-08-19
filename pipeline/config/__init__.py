@@ -189,7 +189,6 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
                 yield (language, zone, period)
 
 
-
 # --- Geography ---------------------------------------------------------------
 
 # Which FIPS 10-4 country codes count as Europe, for deciding whether a Cluster
@@ -229,59 +228,61 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
 #
 # Cyprus is kept for the mirror-image reason: geographically Asian, but an EU
 # member whose press is European by any editorial measure.
-_EUROPE_FIPS: frozenset[str] = frozenset({
-    "AL",  # Albania
-    "AN",  # Andorra
-    "AU",  # Austria
-    "BE",  # Belgium
-    "BK",  # Bosnia-Herzegovina
-    "BO",  # Belarus
-    "BU",  # Bulgaria
-    "CY",  # Cyprus
-    "DA",  # Denmark
-    "EI",  # Ireland
-    "EN",  # Estonia
-    "EZ",  # Czech Republic
-    "FI",  # Finland
-    "FO",  # Faroe Islands
-    "FR",  # France
-    "GI",  # Gibraltar
-    "GK",  # Guernsey
-    "GM",  # Germany
-    "GR",  # Greece
-    "HR",  # Croatia
-    "HU",  # Hungary
-    "IC",  # Iceland
-    "IM",  # Isle of Man
-    "IT",  # Italy
-    "JE",  # Jersey
-    "KV",  # Kosovo
-    "LG",  # Latvia
-    "LH",  # Lithuania
-    "LO",  # Slovak Republic
-    "LS",  # Liechtenstein
-    "LU",  # Luxembourg
-    "MD",  # Moldova
-    "MJ",  # Montenegro
-    "MK",  # Macedonia
-    "MN",  # Monaco
-    "MT",  # Malta
-    "NL",  # Netherlands
-    "NO",  # Norway
-    "PL",  # Poland
-    "PO",  # Portugal
-    "RI",  # Serbia
-    "RO",  # Romania
-    "SI",  # Slovenia
-    "SM",  # San Marino
-    "SP",  # Spain
-    "SV",  # Svalbard
-    "SW",  # Sweden
-    "SZ",  # Switzerland
-    "UK",  # United Kingdom
-    "UP",  # Ukraine
-    "VT",  # Vatican City
-})
+_EUROPE_FIPS: frozenset[str] = frozenset(
+    {
+        "AL",  # Albania
+        "AN",  # Andorra
+        "AU",  # Austria
+        "BE",  # Belgium
+        "BK",  # Bosnia-Herzegovina
+        "BO",  # Belarus
+        "BU",  # Bulgaria
+        "CY",  # Cyprus
+        "DA",  # Denmark
+        "EI",  # Ireland
+        "EN",  # Estonia
+        "EZ",  # Czech Republic
+        "FI",  # Finland
+        "FO",  # Faroe Islands
+        "FR",  # France
+        "GI",  # Gibraltar
+        "GK",  # Guernsey
+        "GM",  # Germany
+        "GR",  # Greece
+        "HR",  # Croatia
+        "HU",  # Hungary
+        "IC",  # Iceland
+        "IM",  # Isle of Man
+        "IT",  # Italy
+        "JE",  # Jersey
+        "KV",  # Kosovo
+        "LG",  # Latvia
+        "LH",  # Lithuania
+        "LO",  # Slovak Republic
+        "LS",  # Liechtenstein
+        "LU",  # Luxembourg
+        "MD",  # Moldova
+        "MJ",  # Montenegro
+        "MK",  # Macedonia
+        "MN",  # Monaco
+        "MT",  # Malta
+        "NL",  # Netherlands
+        "NO",  # Norway
+        "PL",  # Poland
+        "PO",  # Portugal
+        "RI",  # Serbia
+        "RO",  # Romania
+        "SI",  # Slovenia
+        "SM",  # San Marino
+        "SP",  # Spain
+        "SV",  # Svalbard
+        "SW",  # Sweden
+        "SZ",  # Switzerland
+        "UK",  # United Kingdom
+        "UP",  # Ukraine
+        "VT",  # Vatican City
+    }
+)
 
 
 # English country names -> FIPS, for reading a country out of prose written in
@@ -441,9 +442,7 @@ def country_slugs_in_english_text(text: str) -> list[str]:
             end = at + len(name)
             # Word boundaries, so "chinatown" is not China and "malia" not Mali.
             before_ok = at == 0 or not (haystack[at - 1].isalnum() or haystack[at - 1] == "-")
-            after_ok = end == len(haystack) or not (
-                haystack[end].isalnum() or haystack[end] == "-"
-            )
+            after_ok = end == len(haystack) or not (haystack[end].isalnum() or haystack[end] == "-")
             if not (before_ok and after_ok):
                 continue
             if any(cs <= at and end <= ce for cs, ce in consumed):
@@ -488,6 +487,7 @@ def countries_in_continent(continent_slug: str) -> frozenset[str]:
     named = {ZONE_BY_FIPS[code] for code in _EUROPE_FIPS if code in ZONE_BY_FIPS}
     raw = {code.lower() for code in _EUROPE_FIPS}
     return frozenset(named | raw)
+
 
 __all__ = [
     "CROSS_DAY_SIMILARITY_FLOOR",

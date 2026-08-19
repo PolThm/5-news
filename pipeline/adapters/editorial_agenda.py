@@ -66,8 +66,18 @@ API = "https://en.wikipedia.org/w/api.php"
 # themselves are worldwide and name their own countries.
 _PAGE = "Portal:Current events/{year} {month} {day}"
 _MONTHS = (
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
 )
 
 # A day's page nests three levels deep: `*` a running theme ("2026 Iran war"),

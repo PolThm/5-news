@@ -1475,9 +1475,9 @@ def test_the_agenda_replaces_the_clusters_as_briefing_candidates(
 
     items = [
         json.loads(line)
-        for line in (
-            tmp_path / "intermediate" / "agenda" / "2026-08-11T00-00-00Z" / "items.jsonl"
-        ).read_text().splitlines()
+        for line in (tmp_path / "intermediate" / "agenda" / "2026-08-11T00-00-00Z" / "items.jsonl")
+        .read_text()
+        .splitlines()
         if line.strip()
     ]
 
@@ -1593,9 +1593,7 @@ def test_rank_actually_receives_the_agenda_items_not_the_clusters(tmp_path: Path
     )
 
     ranked = [
-        json.loads(line)
-        for line in result.rank_path.read_text().splitlines()
-        if line.strip()
+        json.loads(line) for line in result.rank_path.read_text().splitlines() if line.strip()
     ]
 
     assert ranked, "the editorial item should have been ranked and selected"

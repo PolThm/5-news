@@ -353,8 +353,7 @@ def focus_countries(locations: str) -> tuple[str, ...]:
     kept = [
         code
         for code, n in ranked
-        if code == dominant
-        or (n / total >= FOCUS_MENTION_SHARE and n >= FOCUS_MIN_MENTIONS)
+        if code == dominant or (n / total >= FOCUS_MENTION_SHARE and n >= FOCUS_MIN_MENTIONS)
     ]
     return tuple(zone_slug_for_fips(code) for code in kept)
 

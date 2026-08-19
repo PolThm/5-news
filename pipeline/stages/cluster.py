@@ -365,11 +365,7 @@ def run_cluster(
                 # stays the Consensus Score's evidence. Empty when no member
                 # carried a usable location, which is ~20% of GKG rows.
                 "mentioned_countries": sorted(
-                    {
-                        country
-                        for m in members
-                        for country in (m.get("mentioned_countries") or ())
-                    }
+                    {country for m in members for country in (m.get("mentioned_countries") or ())}
                 ),
             }
         )

@@ -129,10 +129,11 @@ def build_items(
 
     items: list[dict] = []
     for index, event in enumerate(events):
-        covering = [
-            clusters[j]
-            for j in np.flatnonzero(distances[index] <= COVERAGE_DISTANCE)
-        ] if distances.shape[1] else []
+        covering = (
+            [clusters[j] for j in np.flatnonzero(distances[index] <= COVERAGE_DISTANCE)]
+            if distances.shape[1]
+            else []
+        )
         members = _members_from_clusters(covering)
 
         # Coverage comes from the Articles actually attached, never from the
@@ -148,11 +149,13 @@ def build_items(
         # can describe and count -- then the chronicle's citation, which is how
         # an event no outlet in our corpus covered still reaches a reader. Those
         # citations lean on AP, Reuters and the BBC, which GDELT cannot give us.
-        outbound_url = members[0].get("url") if members else (
-            event.sources[0] if event.sources else None
+        outbound_url = (
+            members[0].get("url") if members else (event.sources[0] if event.sources else None)
         )
-        outbound_source = members[0].get("source") if members else (
-            event.sources[0].split("/")[2] if event.sources else None
+        outbound_source = (
+            members[0].get("source")
+            if members
+            else (event.sources[0].split("/")[2] if event.sources else None)
         )
 
         items.append(
@@ -221,9 +224,7 @@ def run_agenda(
 
     failures: list[Failure] = []
     events, agenda_failures = (
-        collect_agenda(days=days)
-        if fetch is None
-        else collect_agenda(days=days, fetch=fetch)
+        collect_agenda(days=days) if fetch is None else collect_agenda(days=days, fetch=fetch)
     )
     failures.extend(agenda_failures)
     trace(f"agenda: {len(events)} editorial events over {days} days")
@@ -235,9 +236,7 @@ def run_agenda(
         # Titles, not summaries: the Clusters are represented by their first
         # member's headline, the same representative convention every other
         # stage uses.
-        cluster_titles = [
-            (c.get("members") or [{}])[0].get("title", "") for c in clusters
-        ]
+        cluster_titles = [(c.get("members") or [{}])[0].get("title", "") for c in clusters]
         result: EmbeddingResult = embed([e.text for e in events] + cluster_titles)
         expected = len(events) + len(cluster_titles)
         if result.failures or len(result.vectors) != expected:

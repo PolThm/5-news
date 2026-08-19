@@ -408,9 +408,7 @@ def test_an_incidental_single_mention_is_dropped() -> None:
 def test_a_genuinely_bi_national_story_keeps_both() -> None:
     """Trimming the tail must not collapse every article to one country -- a
     story really about two places keeps both."""
-    locations = (
-        "1#UK#UK#UK#54#-4#1;1#UK#UK#UK#54#-4#2;1#France#FR#FR#46#2#3;1#France#FR#FR#46#2#4"
-    )
+    locations = "1#UK#UK#UK#54#-4#1;1#UK#UK#UK#54#-4#2;1#France#FR#FR#46#2#3;1#France#FR#FR#46#2#4"
     assert set(focus_countries(locations)) == {"united-kingdom", "france"}
 
 

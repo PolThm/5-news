@@ -59,12 +59,10 @@ def test_the_page_title_matches_the_chronicle_s_own_naming() -> None:
     month spelled out, no zero padding. Getting it wrong yields missingtitle,
     which degrades silently into "no editorial signal today"."""
     assert (
-        page_title_for(datetime(2026, 8, 18, tzinfo=UTC))
-        == "Portal:Current events/2026 August 18"
+        page_title_for(datetime(2026, 8, 18, tzinfo=UTC)) == "Portal:Current events/2026 August 18"
     )
     assert (
-        page_title_for(datetime(2026, 1, 5, tzinfo=UTC))
-        == "Portal:Current events/2026 January 5"
+        page_title_for(datetime(2026, 1, 5, tzinfo=UTC)) == "Portal:Current events/2026 January 5"
     )
 
 
@@ -215,8 +213,11 @@ def _event(
     text: str, countries: tuple[str, ...] = (), sources: tuple[str, ...] = ()
 ) -> EditorialEvent:
     return EditorialEvent(
-        text=text, category="Armed conflicts and attacks", day="2026-08-19",
-        sources=sources, countries=countries,
+        text=text,
+        category="Armed conflicts and attacks",
+        day="2026-08-19",
+        sources=sources,
+        countries=countries,
     )
 
 
@@ -271,8 +272,13 @@ def test_an_uncorroborated_event_still_publishes_with_the_chronicle_s_citation()
     """The whole reason the agenda leads: an event no outlet in our corpus
     covered is still an event. Losing it would put us back to publishing only
     what the long tail happened to rerun."""
-    events = [_event("The Rapid Support Forces launches a crackdown in Nyala",
-                     countries=(), sources=("https://apnews.com/sudan",))]
+    events = [
+        _event(
+            "The Rapid Support Forces launches a crackdown in Nyala",
+            countries=(),
+            sources=("https://apnews.com/sudan",),
+        )
+    ]
 
     item = build_items(events, [], [[1.0, 0.0]], [])[0]
 

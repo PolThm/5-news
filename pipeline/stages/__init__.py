@@ -30,7 +30,6 @@ from typing import Any
 DEFAULT_DATA_ROOT = Path("data")
 
 
-
 _TRACE_STARTED_AT = time.monotonic()
 
 

@@ -82,9 +82,6 @@ _HISTORY_RETENTION_DAYS = 30
 _MERGE_DIAGNOSTIC_FLOOR = 50
 
 
-
-
-
 @dataclass(frozen=True, slots=True)
 class CycleResult:
     """What one cycle produced, and where it landed."""
@@ -340,8 +337,7 @@ def run_cycle(
             cluster_path = clustered.output_path
             clusters_after_grouping = clustered.clusters_out
             trace(
-                f"cluster done -> {clusters_after_grouping} clusters, "
-                f"degraded={clustered.degraded}"
+                f"cluster done -> {clusters_after_grouping} clusters, degraded={clustered.degraded}"
             )
 
             clusters = list(read_jsonl(cluster_path))
@@ -767,9 +763,7 @@ def _resume_cycle(
             # summarize batches. That is the cheaper side of the trade: the
             # previous Briefing set stays in place (AD-7) and the next cycle
             # starts clean under the current config.
-            failures.append(
-                Failure("cycle", f"publish impossible under the current config: {exc}")
-            )
+            failures.append(Failure("cycle", f"publish impossible under the current config: {exc}"))
             record["degraded"] = True
             record["failures"] = [f.to_dict() for f in failures]
             record["phase"] = "abandoned"

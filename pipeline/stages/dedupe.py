@@ -192,9 +192,7 @@ class ArticleGroup:
         located the story should not lose that just because another member
         did not. Distinct from `countries`, which is where the outlets sit.
         """
-        return frozenset(
-            country for a in self.articles for country in a.mentioned_countries
-        )
+        return frozenset(country for a in self.articles for country in a.mentioned_countries)
 
     @property
     def independent_source_count(self) -> int:
@@ -550,13 +548,17 @@ def merge_by_rewrite_detection(
     # sklearn's radius search is inclusive (`<= radius`), matching the
     # comparison this replaces exactly.
     trace(f"layer3: neighbor search over {len(groups)} groups")
-    neighbor_rows = radius_neighbors_graph(
-        unit_vectors,
-        radius=REWRITE_SIMILARITY_FLOOR,
-        metric="cosine",
-        mode="connectivity",
-        include_self=False,
-    ).tolil().rows
+    neighbor_rows = (
+        radius_neighbors_graph(
+            unit_vectors,
+            radius=REWRITE_SIMILARITY_FLOOR,
+            metric="cosine",
+            mode="connectivity",
+            include_self=False,
+        )
+        .tolil()
+        .rows
+    )
     neighbors_of: list[set[int]] = [set(row) for row in neighbor_rows]
     trace(f"layer3: {sum(len(n) for n in neighbors_of) // 2} in-radius pairs; partitioning")
 

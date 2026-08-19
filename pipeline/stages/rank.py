@@ -217,13 +217,17 @@ def link_across_days(
         if usable.sum() < 2:
             continue
         usable_indices = [index for index, ok in zip(group_indices, usable, strict=True) if ok]
-        adjacency = radius_neighbors_graph(
-            block[usable],
-            radius=CROSS_DAY_SIMILARITY_FLOOR,
-            metric="cosine",
-            mode="connectivity",
-            include_self=False,
-        ).tolil().rows
+        adjacency = (
+            radius_neighbors_graph(
+                block[usable],
+                radius=CROSS_DAY_SIMILARITY_FLOOR,
+                metric="cosine",
+                mode="connectivity",
+                include_self=False,
+            )
+            .tolil()
+            .rows
+        )
         for position, row in enumerate(adjacency):
             origin = usable_indices[position]
             neighbors_of[origin].update(usable_indices[neighbor] for neighbor in row)

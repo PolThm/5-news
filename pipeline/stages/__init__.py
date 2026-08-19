@@ -48,7 +48,8 @@ def trace(message: str) -> None:
     is under Actions), so buffered progress lines would arrive only at exit --
     exactly when they stop being useful.
     """
-    print(f"trace: [{time.monotonic() - _TRACE_STARTED_AT:7.1f}s] {message}", file=sys.stderr, flush=True)
+    elapsed = time.monotonic() - _TRACE_STARTED_AT
+    print(f"trace: [{elapsed:7.1f}s] {message}", file=sys.stderr, flush=True)
 
 
 def clique_partition(

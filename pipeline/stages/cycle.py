@@ -288,7 +288,10 @@ def run_cycle(
             )
             cluster_path = clustered.output_path
             clusters_after_grouping = clustered.clusters_out
-            trace(f"cluster done -> {clusters_after_grouping} clusters, degraded={clustered.degraded}")
+            trace(
+                f"cluster done -> {clusters_after_grouping} clusters, "
+                f"degraded={clustered.degraded}"
+            )
             clusters = list(read_jsonl(cluster_path))
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"

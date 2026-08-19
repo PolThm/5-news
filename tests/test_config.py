@@ -119,6 +119,25 @@ def test_a_continent_is_geography_not_the_zones_defined_under_it() -> None:
         assert slug not in europe, f"{slug} must not count toward Europe"
 
 
+def test_transcontinental_countries_are_decided_by_newsroom_not_landmass() -> None:
+    """Russia and Turkey are out; Ukraine and Cyprus are in.
+
+    The table is matched against `source_country` -- where an Article's outlet
+    is based, not where the event happened -- so including Russia would have
+    added Russian outlets on Russian domestic subjects rather than adding
+    coverage of the war in Ukraine. That war reaches Europe's Briefing through
+    Ukraine and through every European outlet covering it, neither of which
+    depends on Russia being listed. Cyprus is the mirror image: Asian by
+    geography, European by press.
+    """
+    europe = countries_in_continent("europe")
+
+    assert "up" in europe, "Ukraine (FIPS UP) must count toward Europe"
+    assert "cy" in europe, "Cyprus must count toward Europe"
+    assert "rs" not in europe, "Russia must not count toward Europe"
+    assert "tu" not in europe, "Turkey must not count toward Europe"
+
+
 def test_only_routable_continents_have_a_geography_table() -> None:
     """Continents that are no longer Zones resolve to nothing rather than
     guessing, so a stale caller gets an empty set instead of a wrong one."""

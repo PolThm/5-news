@@ -214,10 +214,21 @@ def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
 # EI, Latvia LG, Lithuania LH, Portugal PO, Serbia RI, Slovakia LO, Spain SP,
 # Sweden SW, Switzerland SZ, Ukraine UP, Belarus BO.
 #
-# Russia and Turkey are included deliberately. Both straddle the continental
-# boundary, and both are treated as European news by the European press this
-# Briefing is written for -- excluding Russia in particular would drop the war
-# in Ukraine's other side out of a European Briefing.
+# Russia and Turkey are deliberately EXCLUDED, and the reasoning matters
+# because it is easy to get backwards. This table is matched against
+# `source_country`, which is where an Article's *outlet* is based -- not where
+# the event happened. Including Russia would not add coverage of the war in
+# Ukraine; it would add Russian outlets writing about Russian domestic
+# politics, which is not what a reader opening a Europe Briefing is asking
+# for. The war stays in Europe's Briefing regardless, through Ukraine (UP,
+# below) and through every French, German and British outlet covering it.
+#
+# Both countries straddle the continental boundary, so neither is a clear-cut
+# exclusion on geography alone -- the deciding question was which set of
+# newsrooms belongs in this Briefing, not which landmass they sit on.
+#
+# Cyprus is kept for the mirror-image reason: geographically Asian, but an EU
+# member whose press is European by any editorial measure.
 _EUROPE_FIPS: frozenset[str] = frozenset({
     "AL",  # Albania
     "AN",  # Andorra
@@ -261,14 +272,12 @@ _EUROPE_FIPS: frozenset[str] = frozenset({
     "PO",  # Portugal
     "RI",  # Serbia
     "RO",  # Romania
-    "RS",  # Russia
     "SI",  # Slovenia
     "SM",  # San Marino
     "SP",  # Spain
     "SV",  # Svalbard
     "SW",  # Sweden
     "SZ",  # Switzerland
-    "TU",  # Turkey
     "UK",  # United Kingdom
     "UP",  # Ukraine
     "VT",  # Vatican City

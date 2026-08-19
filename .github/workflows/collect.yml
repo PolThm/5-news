@@ -7,30 +7,34 @@ name: Daily collection
 # would normally look. The exact hour matters less than its stability — cycles
 # at a consistent time make day-to-day diffs comparable.
 #
-# 06:30 UTC exists because summarize is a two-phase batch (AD-11): the 05:30
-# run submits its Claude batches and exits without waiting, so it can never
-# publish its own Briefings. Something has to come back for them. With only
-# one daily trigger that "something" was the *next day's* run, which meant
-# every Briefing shipped a day stale — the first real GDELT cycle
-# (2026-08-19) published only because a follow-up was fired by hand.
+# The other triggers exist because summarize is a two-phase batch (AD-11):
+# the 05:30 run submits its Claude batches and exits without waiting, so it can
+# never publish its own Briefings. Something has to come back for them. With a
+# single daily trigger that "something" was the *next day's* run, so every
+# Briefing shipped a day stale -- the first real GDELT cycle (2026-08-19)
+# published only because a follow-up was fired by hand.
 #
-# One follow-up, not several, and this is the reason: a run that finds no
-# pending cycle starts a fresh one from collect. So an extra trigger is free
-# only while there is something to resume. The steady state is exactly two
-# runs a day — 05:30 does the full pipeline and submits, 06:30 resumes and
-# publishes, and the published cycle is terminal so tomorrow's 05:30 starts
-# clean.
+# They are catch-ups, and `--resume-only` is what makes several of them safe.
+# A plain extra trigger is not free: a run with nothing pending starts a whole
+# new cycle from collect, paying for another round of embeddings and summaries.
+# With the flag, a catch-up that finds nothing to finish exits immediately, so
+# the ones that follow a successful 06:30 cost nothing at all.
 #
-# An hour is empirical, not a guarantee: the 2026-08-19 batches took ~29
-# minutes for 3x26 summaries, while the Batch API's own commitment is 24
-# hours. If 06:30 finds them unfinished it leaves the cycle pending and the
-# next day's run resumes it, which is the stale-by-a-day case again — rare,
-# self-correcting, and visible in cycle.json's `phase`. Watch for it before
-# reaching for a third trigger.
+# Why more than one: an hour is empirical, not a guarantee. The 2026-08-19
+# batches took ~29 minutes for 3x20 summaries, while the Batch API's own
+# commitment is 24 hours. A single follow-up meant one slow morning pushed
+# publication a full day; 06:30, 08:30 and 11:30 give the batches six hours to
+# land while the day's Briefings are still the day's.
+#
+# Only 05:30 may start a cycle, so the cost stays one cycle per day no matter
+# how many catch-ups are added. A manual dispatch keeps the full behaviour --
+# that is what makes it useful for testing.
 on:
   schedule:
-    - cron: "30 5 * * *"
-    - cron: "30 6 * * *"
+    - cron: "30 5 * * *" # the full cycle: collect through submit
+    - cron: "30 6 * * *" # catch-up
+    - cron: "30 8 * * *" # catch-up
+    - cron: "30 11 * * *" # catch-up, last chance before the day is stale
   workflow_dispatch: # manual trigger, for testing the cycle without waiting
 
 # One cycle at a time. Two concurrent runs would race on the same commit.
@@ -88,7 +92,18 @@ jobs:
           # what happened on the first real cycle (2026-08-13T20-13-17Z), where
           # the secret existed in the repository but was never injected here.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: uv run python -m pipeline.stages.cycle
+        # Only the 05:30 trigger may start a cycle. Every other schedule is a
+        # catch-up: it finishes a cycle whose batches are pending and does
+        # nothing when none is, so it costs nothing on the days the 06:30 run
+        # already published. A manual dispatch keeps the full behaviour, which
+        # is what makes it useful for testing.
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] \
+             && [ "${{ github.event.schedule }}" != "30 5 * * *" ]; then
+            uv run python -m pipeline.stages.cycle --resume-only
+          else
+            uv run python -m pipeline.stages.cycle
+          fi
 
       - name: Commit the cycle's output
         run: |

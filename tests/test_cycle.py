@@ -1383,3 +1383,45 @@ def test_a_scope_change_abandons_a_pending_cycle_instead_of_blocking_forever(
     # The decisive property: the next run must be free to collect a fresh
     # cycle rather than being handed this one again.
     assert _should_resume(cycle_path) is False
+
+
+def test_resume_only_does_nothing_when_there_is_nothing_pending(tmp_path: Path, capsys) -> None:
+    """A catch-up trigger must be free on the days it is not needed.
+
+    summarize submits and exits (AD-11), so a later run has to come back and
+    publish. But a plain extra trigger is not free: with nothing to resume it
+    starts a whole new cycle from collect, paying for another round of
+    embeddings and summaries. That cost is why there was only ever one
+    scheduled follow-up, and why one slow batch morning pushed publication a
+    full day. `--resume-only` removes it, so several catch-ups can be
+    scheduled to close that window.
+    """
+    from pipeline.stages.cycle import main
+
+    exit_code = main(["--data-root", str(tmp_path), "--resume-only"])
+
+    assert exit_code == 0
+    assert "nothing pending" in capsys.readouterr().out
+    # The decisive property: it collected nothing and wrote nothing.
+    assert not (tmp_path / "intermediate").exists()
+
+
+def test_resume_only_still_finishes_a_pending_cycle(tmp_path: Path) -> None:
+    """The flag must not turn the catch-up into a no-op in the case it exists
+    for -- a cycle whose batches are pending still gets published."""
+    from pipeline.stages.cycle import main
+
+    run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+    pending = tmp_path / "intermediate" / "2026-08-11T00-00-00Z" / "cycle.json"
+    assert json.loads(pending.read_text())["phase"] == "summarize_submitted"
+
+    assert main(["--data-root", str(tmp_path), "--resume-only"]) == 0
+
+    # It resumed that same cycle rather than minting a new id.
+    assert json.loads(pending.read_text())["phase"] != "summarize_submitted"

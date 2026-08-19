@@ -793,6 +793,14 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="pipeline.stages.cycle")
     parser.add_argument("--cycle-id", default=None)
     parser.add_argument("--data-root", default=DEFAULT_DATA_ROOT, type=Path)
+    parser.add_argument(
+        "--resume-only",
+        action="store_true",
+        help=(
+            "Finish a cycle whose batches are pending, and do nothing at all if "
+            "none is. For catch-up runs that must never start a fresh cycle."
+        ),
+    )
     args = parser.parse_args(argv)
 
     from pipeline.stages.collect import collect_all
@@ -807,6 +815,22 @@ def main(argv: list[str] | None = None) -> int:
         if resumable is not None:
             print(f"cycle: resuming {resumable} (batches pending from an earlier run)")
             cycle_id = resumable
+
+    # `--resume-only` exists so a catch-up trigger can be added for free.
+    #
+    # summarize is a two-phase batch (AD-11): the run that submits can never
+    # publish, so something has to come back later. But a plain extra trigger
+    # is not free -- a run with nothing to resume starts a whole new cycle
+    # from collect, paying for another round of embeddings and summaries. That
+    # is why there is exactly one scheduled follow-up rather than several, and
+    # why a slow batch (the API guarantees 24h, not the ~30min observed) pushed
+    # publication to the next day.
+    #
+    # With this flag a catch-up run is a no-op when there is nothing pending,
+    # so more of them can be scheduled to close that window at zero cost.
+    if args.resume_only and cycle_id is None:
+        print("cycle: nothing pending to resume; --resume-only means no new cycle")
+        return 0
 
     result = run_cycle(collect=collect_all, cycle_id=cycle_id, data_root=args.data_root)
 

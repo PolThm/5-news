@@ -57,6 +57,7 @@ def clique_partition(
     eligible: Callable[[int], bool],
     directly_qualifies: Callable[[int, int], bool],
     similarity: Callable[[int, int], float],
+    candidates_of: Callable[[int], Iterable[int]] | None = None,
 ) -> list[list[int]]:
     """Partition ``range(n)`` into cliques under an arbitrary pairwise
     qualification rule, returning each clique as a sorted-by-first-member
@@ -81,6 +82,16 @@ def clique_partition(
     every pair in the final group to pass, not just an edge to some member,
     closes the gap for real rather than moving it one hop over.
 
+    ``candidates_of`` narrows which indices are even considered as
+    partners for ``i``. It is an optimization, never a semantic change: any
+    index it omits must be one ``directly_qualifies`` would reject anyway.
+    Layers that can cheaply enumerate an index's only possible partners (a
+    metric neighborhood, a shared-key bucket) should pass it -- without it
+    this walks all ``n`` candidates for every unclaimed ``i``, which is
+    O(n^2) regardless of how few pairs can actually qualify. That was
+    invisible at the retired RSS corpus's ~350 titles and is not at Story
+    6.2's ~9,400 GDELT groups.
+
     Built greedily, not as a general maximum-clique solver — it does not
     need to be one: the input at every call site is a handful of candidate
     items, and a merge left too conservative (an item that could have joined
@@ -89,6 +100,7 @@ def clique_partition(
     layer that calls this is designed to prefer.
     """
     eligible_indices = [i for i in range(n) if eligible(i)]
+    eligible_set = set(eligible_indices)
 
     claimed: set[int] = set()
     cliques: list[list[int]] = []
@@ -96,6 +108,7 @@ def clique_partition(
     for i in sorted(eligible_indices):
         if i in claimed:
             continue
+        possible = eligible_indices if candidates_of is None else candidates_of(i)
         clique = [i]
         # Filter by `directly_qualifies` BEFORE ranking by `similarity`, not
         # after. This is semantically identical -- `i` is already in `clique`,
@@ -112,8 +125,8 @@ def clique_partition(
         # times over -- publishing nothing each time.
         candidates = [
             j
-            for j in eligible_indices
-            if j != i and j not in claimed and directly_qualifies(j, i)
+            for j in possible
+            if j != i and j not in claimed and j in eligible_set and directly_qualifies(j, i)
         ]
         candidates.sort(key=lambda j: similarity(i, j), reverse=True)
         for j in candidates:

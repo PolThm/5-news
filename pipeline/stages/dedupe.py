@@ -31,7 +31,7 @@ import json
 import re
 import sys
 import unicodedata
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass, replace
 from difflib import SequenceMatcher
 from pathlib import Path
@@ -352,6 +352,7 @@ def _clique_merge(
     directly_qualifies: Callable[[int, int], bool],
     similarity: Callable[[int, int], float],
     formed_by: str,
+    candidates_of: Callable[[int], Iterable[int]] | None = None,
 ) -> list[ArticleGroup]:
     """Merge ``ArticleGroup``s into cliques under an arbitrary pairwise
     qualification rule, using ``pipeline.stages.clique_partition`` for the
@@ -359,7 +360,9 @@ def _clique_merge(
     layer 1 (see that function's docstring for why cliques, not connected
     components).
     """
-    cliques = clique_partition(len(groups), eligible, directly_qualifies, similarity)
+    cliques = clique_partition(
+        len(groups), eligible, directly_qualifies, similarity, candidates_of=candidates_of
+    )
 
     merged: list[ArticleGroup] = []
     for clique in cliques:
@@ -551,11 +554,12 @@ def merge_by_rewrite_detection(
         return float(unit_vectors[i] @ unit_vectors[j])
 
     def directly_qualifies(i: int, j: int) -> bool:
-        title_i = groups[i].representative.title
-        title_j = groups[j].representative.title
+        # `titles` above, not `groups[i].representative.title`: that is a
+        # property recomputing a `min()` over the group's articles on every
+        # access, and this runs once per candidate pair.
         if (
-            len(title_i) < _REWRITE_MERGE_MIN_TITLE_LENGTH
-            or len(title_j) < _REWRITE_MERGE_MIN_TITLE_LENGTH
+            len(titles[i]) < _REWRITE_MERGE_MIN_TITLE_LENGTH
+            or len(titles[j]) < _REWRITE_MERGE_MIN_TITLE_LENGTH
         ):
             return False
         return j in neighbors_of[i]
@@ -566,6 +570,7 @@ def merge_by_rewrite_detection(
         directly_qualifies=directly_qualifies,
         similarity=cosine_similarity,
         formed_by="rewrite",
+        candidates_of=lambda i: neighbors_of[i],
     )
     trace(f"layer3: done -> {len(merged)} groups")
     return (merged, None) if return_degraded else merged

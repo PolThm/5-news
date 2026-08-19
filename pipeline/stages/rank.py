@@ -22,6 +22,10 @@ import json
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
+
+import numpy as np
+from sklearn.neighbors import radius_neighbors_graph
 
 from pipeline.config import (
     CROSS_DAY_SIMILARITY_FLOOR,
@@ -118,33 +122,79 @@ def link_across_days(
     def eligible(_i: int) -> bool:
         return True
 
-    def cosine_distance(i: int, j: int) -> float:
-        a = embedding_by_id[items[i]["cluster_id"]]
-        b = embedding_by_id[items[j]["cluster_id"]]
-        if len(a) != len(b):
-            # A vendor model upgrade between when a history row was embedded
-            # and today's embedding call would leave mismatched dimensions in
-            # embedding_by_id. Every other embedding boundary in this
-            # pipeline (cluster.py, dedupe.py) degrades rather than crashes
-            # on a malformed vector; treating a dimension mismatch as "not
-            # the same Event" does the same here, at zero cost -- two items
-            # that genuinely can't be compared simply don't link.
-            return 1.0
-        dot = sum(x * y for x, y in zip(a, b, strict=True))
-        norm_a = sum(x * x for x in a) ** 0.5
-        norm_b = sum(y * y for y in b) ** 0.5
-        if norm_a == 0 or norm_b == 0:
-            return 1.0
-        cosine_similarity = dot / (norm_a * norm_b)
-        return 1.0 - cosine_similarity
+    # Vectors are grouped by width before any comparison. A vendor model
+    # upgrade between when a history row was embedded and today's embedding
+    # call would leave mismatched dimensions in embedding_by_id; every other
+    # embedding boundary in this pipeline (cluster.py, dedupe.py) degrades
+    # rather than crashes on a malformed vector, so two items that genuinely
+    # cannot be compared simply never link -- which falls out of grouping by
+    # width and only ever searching within a group.
+    raw = [embedding_by_id[item["cluster_id"]] for item in items]
+    indices_by_width: dict[int, list[int]] = {}
+    for index, vector in enumerate(raw):
+        indices_by_width.setdefault(len(vector), []).append(index)
+
+    # The in-radius pairs, resolved by vectorized neighbor search per width
+    # group rather than a cosine per pair.
+    #
+    # This used to compute each pair's cosine in interpreted Python --
+    # `sum(x * y for x, y in zip(a, b))` plus two norms, so ~3x1024 float
+    # operations per pair -- from a clique_partition call with
+    # `eligible=lambda _i: True` and no candidate narrowing, i.e. across all
+    # O(n^2) pairs, once for the week Period and again for the month. At the
+    # retired RSS corpus's Cluster counts that was unnoticeable. At Story
+    # 6.2's ~6,700-9,400 Clusters it is ~22 million pairs per Period and it
+    # ran the cycle past its 30-minute job timeout with nothing published.
+    #
+    # sklearn's radius search is inclusive (`<= radius`), matching the
+    # comparison it replaces, and `mode="connectivity"` keeps a genuinely
+    # identical pair (distance exactly 0) inside its own neighbor set
+    # instead of losing it to a structural zero.
+    neighbors_of: list[set[int]] = [set() for _ in range(n)]
+    for width, group_indices in indices_by_width.items():
+        if width == 0 or len(group_indices) < 2:
+            continue
+        block = np.asarray([raw[index] for index in group_indices], dtype=float)
+        norms = np.linalg.norm(block, axis=1)
+        # A zero vector has no direction to compare, so it never links --
+        # the same verdict the previous per-pair guard reached.
+        usable = norms > 0
+        if usable.sum() < 2:
+            continue
+        usable_indices = [index for index, ok in zip(group_indices, usable, strict=True) if ok]
+        adjacency = radius_neighbors_graph(
+            block[usable],
+            radius=CROSS_DAY_SIMILARITY_FLOOR,
+            metric="cosine",
+            mode="connectivity",
+            include_self=False,
+        ).tolil().rows
+        for position, row in enumerate(adjacency):
+            origin = usable_indices[position]
+            neighbors_of[origin].update(usable_indices[neighbor] for neighbor in row)
+
+    unit_by_index: dict[int, Any] = {}
+    for width, group_indices in indices_by_width.items():
+        if width == 0:
+            continue
+        for index in group_indices:
+            vector = np.asarray(raw[index], dtype=float)
+            norm = np.linalg.norm(vector)
+            if norm > 0:
+                unit_by_index[index] = vector / norm
 
     def directly_qualifies(i: int, j: int) -> bool:
-        return cosine_distance(i, j) <= CROSS_DAY_SIMILARITY_FLOOR
+        return j in neighbors_of[i]
 
     def similarity(i: int, j: int) -> float:
-        return 1.0 - cosine_distance(i, j)
+        # Cosine similarity on unit vectors is their dot product. Only ever
+        # asked about pairs already known to be in radius, so both sides are
+        # present in `unit_by_index`.
+        return float(unit_by_index[i] @ unit_by_index[j])
 
-    cliques = clique_partition(n, eligible, directly_qualifies, similarity)
+    cliques = clique_partition(
+        n, eligible, directly_qualifies, similarity, candidates_of=lambda i: neighbors_of[i]
+    )
 
     linked: list[dict] = []
     for clique in cliques:

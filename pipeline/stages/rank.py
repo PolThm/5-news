@@ -223,15 +223,33 @@ def link_across_days(
         anchor = next((m for m in members if m.get("members")), None)
         if anchor is None:
             continue
-        countries = sorted({c for member in members for c in member["countries"]})
+        # Coverage stays the anchor's -- today's Cluster -- rather than being
+        # aggregated across the linked days.
+        #
+        # It used to take the max source count and the union of countries over
+        # every linked item. Those numbers were unshowable: a history entry
+        # stores counts but not the Articles behind them (see
+        # `pipeline.stages.history`), so the Consensus chip announced a total
+        # it could not list. Published week Briefings on 2026-08-19 read "7
+        # sources · 3 countries" above a source list with one line in it --
+        # and the suite has a test named for AC3's hard guarantee, that the
+        # list holds exactly as many entries as the chip claims. It passes,
+        # because it runs against fixtures rather than a real cycle.
+        #
+        # The whole product rests on that number being checkable: it is shown
+        # to the reader as proof, and a proof that cannot be inspected is
+        # worse than a smaller honest one. So cross-day linking keeps the job
+        # only it can do -- collapsing one ongoing Event into a single item
+        # instead of one per day it was covered -- and stops inflating a score
+        # it cannot substantiate.
         linked.append(
             {
                 **anchor,
                 "members": anchor.get("members", []),
-                "independent_source_count": max(m["independent_source_count"] for m in members),
-                "country_count": len(countries),
-                "countries": countries,
-                "_linked_ids": [m["cluster_id"] for m in members],
+                # `sorted(set(...))`: an Event selected on several cycles has
+                # one history row per cycle, all under the same cluster_id, so
+                # this listed the same id up to four times.
+                "_linked_ids": sorted({m["cluster_id"] for m in members}),
             }
         )
 

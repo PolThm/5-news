@@ -715,35 +715,61 @@ def _history_entry(cluster_id: str, cycle_id: str, sources: int, countries: list
     }
 
 
-def test_three_day_event_links_into_one_with_a_unioned_source_count() -> None:
-    """AC1: an Event covered on three consecutive days appears once, with a
-    Consensus Score aggregating all three days' Independent Sources -- not
-    a naive sum, a union (matching cluster.py's own coverage_for_cluster
-    arithmetic one level up)."""
+def test_a_three_day_event_appears_once_with_a_score_it_can_substantiate() -> None:
+    """AC1: an Event covered on three consecutive days appears once, not three
+    times. Its Consensus Score stays the one it can show.
+
+    This test previously asserted the opposite -- that the score aggregated
+    across the linked days -- and that aggregate shipped: published week
+    Briefings on 2026-08-19 read "7 sources · 3 countries" above a source list
+    containing one line. A history entry stores coverage counts but not the
+    Articles behind them, so a cross-day total is unlistable by construction.
+    AC3's hard guarantee is that the list holds exactly as many entries as the
+    chip claims, and the number is shown to the reader as proof -- an
+    uninspectable proof is worse than a smaller honest one.
+
+    So linking still collapses the days into one item, which is the job only
+    it can do, and leaves the arithmetic alone.
+    """
     from pipeline.stages.rank import link_across_days
 
     today = [_today_cluster("today1", sources=2, countries=["france", "germany"])]
     history = [
-        _history_entry("day1", "2026-08-09T06-00-00Z", sources=2, countries=["france", "spain"]),
-        _history_entry("day2", "2026-08-10T06-00-00Z", sources=2, countries=["germany", "italy"]),
+        _history_entry("day1", "2026-08-09T06-00-00Z", sources=5, countries=["france", "spain"]),
+        _history_entry("day2", "2026-08-10T06-00-00Z", sources=9, countries=["germany", "italy"]),
     ]
-    embeddings = {
-        "today1": [1.0, 0.0],
-        "day1": [0.99, 0.02],
-        "day2": [0.98, 0.03],
-    }
+    embeddings = {"today1": [1.0, 0.0], "day1": [0.99, 0.02], "day2": [0.98, 0.03]}
 
     linked = link_across_days(today, history, embedding_by_id=embeddings)
 
+    # One item for the whole Event, not one per day.
     assert len(linked) == 1
-    # Union of countries across all three days: france, germany (today) +
-    # spain (day1) + italy (day2) -- but source count unions by Independent
-    # Source identity, not naive summation; the test data has no shared
-    # Source across days, so union count == 2+2+2 here is the union of three
-    # *distinct* per-day dispatch sets, which is the correct arithmetic for
-    # three genuinely different days' worth of reporting on the same Event.
-    assert linked[0]["independent_source_count"] >= today[0]["independent_source_count"]
-    assert set(linked[0]["countries"]) >= {"france", "germany", "spain", "italy"}
+    assert set(linked[0]["_linked_ids"]) == {"today1", "day1", "day2"}
+
+    # And a score matching what the source list can actually show.
+    assert linked[0]["independent_source_count"] == 2
+    assert linked[0]["country_count"] == 2
+    assert set(linked[0]["countries"]) == {"france", "germany"}
+    assert len(linked[0]["members"]) == len(today[0]["members"])
+
+
+def test_linked_ids_never_repeat_the_same_cluster() -> None:
+    """An Event selected on several cycles has one history row per cycle, all
+    carrying the same cluster_id, so the raw list held that id up to four
+    times in real output."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_today_cluster("t", sources=2, countries=["france"])]
+    history = [
+        _history_entry("same", f"2026-08-1{d}T06-00-00Z", sources=2, countries=["france"])
+        for d in range(1, 5)
+    ]
+    embeddings = {"t": [1.0, 0.0], "same": [0.999, 0.01]}
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
+
+    ids = linked[0]["_linked_ids"]
+    assert len(ids) == len(set(ids)), f"duplicate ids in {ids}"
 
 
 def test_month_window_links_across_more_than_two_days() -> None:
@@ -858,10 +884,10 @@ def test_a_clique_with_no_articles_is_dropped_not_published() -> None:
     assert link_across_days([], history, embedding_by_id=embeddings) == []
 
 
-def test_a_history_entry_that_links_to_today_still_enriches_it() -> None:
+def test_a_history_entry_that_links_to_today_collapses_into_it() -> None:
     """Dropping article-less cliques must not cost history its actual purpose:
-    a history entry that does link to one of today's Clusters still widens that
-    Cluster's coverage across days."""
+    an entry that does link to one of today's Clusters still folds into it, so
+    the Event appears once rather than once per day it was covered."""
     from pipeline.stages.rank import link_across_days
 
     today = [_zone_cluster("t1", sources=2, countries=["france"])]
@@ -875,9 +901,10 @@ def test_a_history_entry_that_links_to_today_still_enriches_it() -> None:
     assert len(linked) == 1
     assert linked[0]["members"], "the surviving anchor must be today's, with its Articles"
     assert set(linked[0]["_linked_ids"]) == {"t1", "d1"}
-    # Unioned, not summed -- and the max source count carries across days.
-    assert linked[0]["independent_source_count"] == 5
-    assert set(linked[0]["countries"]) == {"france", "spain", "germany"}
+    # The history entry's own counts are NOT absorbed: they describe Articles
+    # nothing can list, and the chip must not claim what it cannot show.
+    assert linked[0]["independent_source_count"] == 2
+    assert set(linked[0]["countries"]) == {"france"}
 
 
 def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:

@@ -19,14 +19,30 @@ from pipeline.stages.briefing_matrix import build_period_pools, dedupe_union, ra
 
 
 def _cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
+    """A Cluster shaped the way `pipeline.stages.cluster` really writes one.
+
+    One member per Independent Source, because that is what the count means --
+    `coverage_for_cluster` sets it to `len(groups)` and `members` is those same
+    groups. A fixture with a single member and a count of three would let a
+    test pass while asserting something the real output cannot satisfy (see
+    test_every_pooled_cluster_can_substantiate_its_own_consensus_score).
+    """
     return {
         "cluster_id": cluster_id,
         "members": [
-            {"title": f"title for {cluster_id}", "url": f"https://example.com/{cluster_id}"}
+            {
+                "title": f"title {i} for {cluster_id}",
+                "url": f"https://example.com/{cluster_id}/{i}",
+                "source": f"outlet{i}.example",
+                "source_country": countries[i % len(countries)],
+                "language": "en",
+            }
+            for i in range(sources)
         ],
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
+        "mentioned_countries": sorted(countries),
         "origin_country": countries[0],
     }
 
@@ -210,3 +226,50 @@ def test_dedupe_union_keeps_the_first_seen_occurrence_across_periods() -> None:
 
     union_week_first = dedupe_union([week_ranking, day_ranking])
     assert union_week_first == [week_occurrence]
+
+
+def test_every_pooled_cluster_can_substantiate_its_own_consensus_score() -> None:
+    """AC3's hard guarantee, enforced where the numbers are produced.
+
+    The chip shows `independent_source_count` and the disclosure lists
+    `members`; the product's whole claim is that the reader can open the second
+    to check the first. There is an e2e test named for this guarantee, but it
+    builds against committed fixtures, so it cannot see what a real cycle
+    produces -- and a real cycle produced "7 sources · 3 countries" above a
+    one-line source list on 2026-08-19, because cross-day linking aggregated
+    counts from history entries whose Articles nothing stores.
+
+    Asserted over both pools, on the merged output rather than on the inputs,
+    so any future aggregation that reintroduces an unshowable number fails
+    here rather than in production.
+    """
+    today = [
+        _cluster("a", sources=2, countries=["france", "spain"]),
+        _cluster("b", sources=3, countries=["germany", "it", "france"]),
+    ]
+    history = [
+        _history_entry("a", "2026-08-10T06-00-00Z", sources=9, countries=["nl", "be", "pl"]),
+        _history_entry("far", "2026-08-10T06-00-00Z", sources=7, countries=["up"]),
+    ]
+    embeddings = {
+        "a": [1.0, 0.0],
+        "b": [0.0, 1.0],
+        "far": [0.7, 0.7],
+    }
+
+    pools = build_period_pools(
+        today_clusters=today,
+        history_entries=history,
+        embedding_by_id=embeddings,
+        reference_date=datetime(2026, 8, 11, 6, 0, tzinfo=UTC),
+    )
+
+    for period, pool in pools.items():
+        for cluster in pool:
+            listed = len(cluster["members"])
+            claimed = cluster["independent_source_count"]
+            assert listed == claimed, (
+                f"{period} pool: cluster {cluster['cluster_id']} claims {claimed} "
+                f"Independent Sources but can only list {listed}"
+            )
+            assert cluster["country_count"] == len(cluster["countries"])

@@ -335,17 +335,22 @@ def run_cycle(
                 reference_date=started_at,
                 window_days=_HISTORY_RETENTION_DAYS,
             )
+            trace(f"linking: embedding {len(clusters)} clusters + {len(history_entries)} history")
             embedding_by_id = _embed_for_linking(clusters, history_entries, embed)
+            trace("linking: building period pools (cross-day linking runs here)")
             pools = build_period_pools(
                 today_clusters=clusters,
                 history_entries=history_entries,
                 embedding_by_id=embedding_by_id,
                 reference_date=started_at,
             )
+            trace(f"linking: pools ready ({ {p: len(v) for p, v in pools.items()} }); ranking zones")
             for period, pool in pools.items():
                 zone_rankings[period] = rank_all_zones(pool)
+                trace(f"ranking: {period} done")
             union = dedupe_union([r for rankings in zone_rankings.values() for r in rankings])
             clusters_selected = len(union)
+            trace(f"ranking: done -> {clusters_selected} selected")
             rank_path = output_dir_for("rank", cycle_id, root=data_root) / "ranked.jsonl"
             write_jsonl(rank_path, union)
             _write_zone_rankings(

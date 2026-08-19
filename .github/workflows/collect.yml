@@ -6,9 +6,31 @@ name: Daily collection
 # 05:30 UTC: after European morning editions have published, before the author
 # would normally look. The exact hour matters less than its stability — cycles
 # at a consistent time make day-to-day diffs comparable.
+#
+# 06:30 UTC exists because summarize is a two-phase batch (AD-11): the 05:30
+# run submits its Claude batches and exits without waiting, so it can never
+# publish its own Briefings. Something has to come back for them. With only
+# one daily trigger that "something" was the *next day's* run, which meant
+# every Briefing shipped a day stale — the first real GDELT cycle
+# (2026-08-19) published only because a follow-up was fired by hand.
+#
+# One follow-up, not several, and this is the reason: a run that finds no
+# pending cycle starts a fresh one from collect. So an extra trigger is free
+# only while there is something to resume. The steady state is exactly two
+# runs a day — 05:30 does the full pipeline and submits, 06:30 resumes and
+# publishes, and the published cycle is terminal so tomorrow's 05:30 starts
+# clean.
+#
+# An hour is empirical, not a guarantee: the 2026-08-19 batches took ~29
+# minutes for 3x26 summaries, while the Batch API's own commitment is 24
+# hours. If 06:30 finds them unfinished it leaves the cycle pending and the
+# next day's run resumes it, which is the stale-by-a-day case again — rare,
+# self-correcting, and visible in cycle.json's `phase`. Watch for it before
+# reaching for a third trigger.
 on:
   schedule:
     - cron: "30 5 * * *"
+    - cron: "30 6 * * *"
   workflow_dispatch: # manual trigger, for testing the cycle without waiting
 
 # One cycle at a time. Two concurrent runs would race on the same commit.

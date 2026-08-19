@@ -202,6 +202,53 @@ def find_resumable_cycle_id(data_root: Path = DEFAULT_DATA_ROOT) -> str | None:
     return None
 
 
+def memoize_embeddings(embed: EmbedFn) -> EmbedFn:
+    """Wrap an ``EmbedFn`` so a title is only ever sent once per cycle.
+
+    A cycle embeds three times: dedupe layer 3 over its groups' titles,
+    cluster over the groups dedupe returned, and `_embed_for_linking` over
+    the Clusters cluster returned. Each set is a near-subset of the one
+    before -- the stages only ever merge, never invent titles -- so the same
+    strings were being paid for and waited on three times. Measured on the
+    2026-08-19 cycle: 103 + 98 + 97 batches, ~380s of a 396s run, i.e. the
+    overwhelming majority of the cycle spent re-deriving vectors it already
+    had.
+
+    Wrapping here rather than inside ``embed_titles`` keeps the cache's
+    lifetime exactly one cycle: a module-level cache would persist across a
+    resumed invocation and quietly serve vectors from a different corpus,
+    and ``embed_titles`` itself has no notion of a cycle to scope to. Every
+    stage already takes ``embed`` by injection, so nothing downstream
+    changes.
+
+    Three properties the callers depend on and this preserves:
+
+    - Positional alignment. Vectors come back in the order of ``titles``,
+      duplicates included, because every stage zips them against its own
+      input by index.
+    - All-or-nothing failure. A failed or short response is returned
+      untouched, never partially cached, so a stage still sees the failure
+      it would have seen and degrades the same way (AD-10).
+    - Nothing cached unverified. Only a response whose length matches the
+      request is stored, so a truncated one cannot poison later lookups.
+    """
+    cache: dict[str, list[float]] = {}
+
+    def embed_with_cache(titles: list[str]) -> EmbeddingResult:
+        # dict.fromkeys dedupes while preserving first-seen order, which also
+        # collapses repeats *within* one call -- two dedupe groups can share a
+        # representative title.
+        missing = [title for title in dict.fromkeys(titles) if title not in cache]
+        if missing:
+            result = embed(missing)
+            if result.failures or len(result.vectors) != len(missing):
+                return result
+            cache.update(zip(missing, result.vectors, strict=True))
+        return EmbeddingResult(vectors=[cache[title] for title in titles])
+
+    return embed_with_cache
+
+
 def run_cycle(
     collect: Callable[[], CollectionResult],
     cycle_id: str | None = None,
@@ -255,6 +302,8 @@ def run_cycle(
     clusters_after_grouping = 0
     clusters_selected = 0
     clusters: list[dict] = []
+
+    embed = memoize_embeddings(embed)
 
     # Every step below is guarded, because cycle.json is the only tracked file
     # and it is written last. A crash anywhere in here without a record leaves

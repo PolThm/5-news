@@ -18,7 +18,7 @@ from pathlib import Path
 from pipeline.adapters import CollectionResult, Failure
 from pipeline.adapters.cohere_embed import EmbeddingResult
 from pipeline.domain import ArticleRecord, OutputLanguage
-from pipeline.stages.cycle import CycleResult, run_cycle
+from pipeline.stages.cycle import CycleResult, memoize_embeddings, run_cycle
 from pipeline.stages.summarize import WrittenSubmission, WrittenSummarize
 
 
@@ -1224,3 +1224,98 @@ def test_only_a_cycle_with_batches_actually_pending_is_resumable(tmp_path) -> No
         path.parent.mkdir(parents=True)
         path.write_text(json.dumps({"phase": phase, "published": phase == "published"}))
         assert _should_resume(path) is expected, f"phase {phase!r} classified wrongly"
+
+
+# memoize_embeddings exists because a cycle embeds the same titles three times
+# (dedupe layer 3, cluster, cross-day linking), which was ~96% of the
+# 2026-08-19 cycle's wall clock. These lock the three properties every calling
+# stage depends on -- a cache that gets any of them wrong corrupts clustering
+# silently rather than failing.
+
+
+def test_a_title_is_sent_once_however_many_times_it_is_asked_for():
+    calls: list[list[str]] = []
+
+    def embed(titles: list[str]) -> EmbeddingResult:
+        calls.append(list(titles))
+        return EmbeddingResult(vectors=[[float(len(t))] for t in titles])
+
+    cached = memoize_embeddings(embed)
+    cached(["alpha", "beta"])
+    cached(["beta", "gamma"])
+    cached(["alpha", "gamma"])
+
+    # "beta" reached the adapter with the first call, "gamma" with the second,
+    # and the third call needed no request at all.
+    assert calls == [["alpha", "beta"], ["gamma"]]
+
+
+def test_vectors_come_back_aligned_to_the_request_including_duplicates():
+    # Every stage zips the returned vectors against its own input by index, so
+    # a cache that deduplicated the *response* would misalign every title
+    # after the first repeat -- clustering the wrong groups together with no
+    # error anywhere.
+    def embed(titles: list[str]) -> EmbeddingResult:
+        return EmbeddingResult(vectors=[[float(len(t))] for t in titles])
+
+    cached = memoize_embeddings(embed)
+    result = cached(["aa", "b", "aa", "cccc", "b"])
+
+    assert result.vectors == [[2.0], [1.0], [2.0], [4.0], [1.0]]
+    assert result.failures == []
+
+
+def test_a_failed_response_is_passed_through_untouched_and_not_cached():
+    attempts: list[list[str]] = []
+    failure = Failure("cohere_embed", "embedding request failed: boom")
+
+    def embed(titles: list[str]) -> EmbeddingResult:
+        attempts.append(list(titles))
+        if len(attempts) == 1:
+            return EmbeddingResult(failures=[failure])
+        return EmbeddingResult(vectors=[[1.0] for _ in titles])
+
+    cached = memoize_embeddings(embed)
+
+    first = cached(["alpha"])
+    assert first.failures == [failure]
+    assert first.vectors == []
+
+    # Nothing was cached from the failure, so a retry genuinely retries --
+    # a cache that stored the empty result would degrade every later cycle
+    # stage off one transient error.
+    second = cached(["alpha"])
+    assert second.vectors == [[1.0]]
+    assert attempts == [["alpha"], ["alpha"]]
+
+
+def test_a_short_response_is_never_cached():
+    # A response with fewer vectors than titles is the vendor-mismatch case
+    # cluster.py and dedupe.py both already degrade on. It must reach them
+    # intact, and must not leave half the batch cached against later lookups.
+    def embed(titles: list[str]) -> EmbeddingResult:
+        return EmbeddingResult(vectors=[[1.0]])  # one vector for two titles
+
+    cached = memoize_embeddings(embed)
+    result = cached(["alpha", "beta"])
+
+    assert len(result.vectors) == 1
+    assert cached(["alpha"]).vectors == [[1.0]]  # re-requested, not served stale
+
+
+def test_the_cache_does_not_outlive_one_wrapping():
+    # Scoped per call to memoize_embeddings, so a resumed invocation cannot be
+    # served vectors embedded from a different corpus.
+    def embed(titles: list[str]) -> EmbeddingResult:
+        return EmbeddingResult(vectors=[[1.0] for _ in titles])
+
+    calls = 0
+
+    def counting(titles: list[str]) -> EmbeddingResult:
+        nonlocal calls
+        calls += 1
+        return embed(titles)
+
+    memoize_embeddings(counting)(["alpha"])
+    memoize_embeddings(counting)(["alpha"])
+    assert calls == 2

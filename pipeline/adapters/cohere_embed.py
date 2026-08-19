@@ -36,26 +36,34 @@ EMBEDDING_DIMENSION = 1024
 # truncated, so this must be enforced before the call, not discovered from it.
 MAX_TEXTS_PER_REQUEST = 96
 
+# Spacing between batches, and why it is now zero by default.
+#
 # Trial keys are capped at 100,000 tokens per minute, enforced as a hard 429
-# with body "trial token rate limit exceeded". At roughly 12 tokens per
-# headline a full batch is ~1,150 tokens, so ~87 batches fit in a minute.
+# with body "trial token rate limit exceeded". That ceiling is what
+# REQUEST_INTERVAL_SECONDS was derived from: ~12 tokens per headline, ~1,150
+# per full batch, so ~87 batches fit in a minute and 0.79s of spacing kept a
+# run inside the budget. It mattered the moment Story 6.2 replaced the RSS
+# corpus (~350 titles, 4 batches) with GDELT's (~9,400 groups, ~100 batches).
 #
-# This only started mattering with Story 6.2. The RSS corpus was ~350 titles
-# (4 batches, nowhere near the ceiling); GDELT's raw files bring ~8,800, which
-# is ~92 batches — just past it. Without pacing the run trips the limit partway
-# through and `embed_titles` returns nothing, so the cycle degrades to one
-# Cluster per dedupe group and no Briefing is ever published. That failure is
-# silent in the sense that matters: the cycle still reports success.
+# The key became a production key on 2026-08-19, which removes that ceiling,
+# and the derived spacing became pure cost: ~81s per cycle spent sleeping
+# against a limit that no longer applies. Measured on the production key that
+# same day, with pacing off: 60 consecutive batches in 36.5s, then 115 in
+# 57.7s -- ~99 batches/min, ~9,500 inputs/min, zero 429s either time.
 #
-# Pacing rather than retrying on 429: the limit is a rolling token budget, so
-# backing off after the fact still wastes the tokens already spent. Spacing the
-# calls keeps every request inside the budget instead.
+# So the default is now no spacing, and the mechanism stays. Cohere's public
+# rate-limit page is inconsistent about the Embed endpoint (2,000 inputs/min
+# in one place, ~100 requests/min in another) and the trial-only headers we
+# saw are undocumented, so the number above is empirical, not promised. If
+# 429s ever reappear, set an interval rather than rediscovering why one
+# existed: `embed_titles` is all-or-nothing, so a single 429 costs the whole
+# cycle its cross-language merging and publishes no Briefing.
 TOKENS_PER_MINUTE = 100_000
 ESTIMATED_TOKENS_PER_TEXT = 12
-_BATCH_TOKENS = MAX_TEXTS_PER_REQUEST * ESTIMATED_TOKENS_PER_TEXT
-# Seconds to leave between batches, with 15% headroom for longer-than-average
-# headlines. ~0.8s at the current constants.
-REQUEST_INTERVAL_SECONDS = (_BATCH_TOKENS / TOKENS_PER_MINUTE) * 60 * 1.15
+TRIAL_KEY_INTERVAL_SECONDS = (
+    (MAX_TEXTS_PER_REQUEST * ESTIMATED_TOKENS_PER_TEXT) / TOKENS_PER_MINUTE
+) * 60 * 1.15
+REQUEST_INTERVAL_SECONDS = 0.0
 
 # The SDK's own default (300s) discovered the hard way: a run that hung on
 # 2026-08-18 burned the job's entire 30-minute timeout without ever raising,
@@ -144,7 +152,7 @@ def embed_titles(
             # Pace every batch after the first — see REQUEST_INTERVAL_SECONDS.
             # Sleeping before the call rather than after keeps the last batch
             # from paying for a wait nothing follows.
-            if index and pace:
+            if index and pace and REQUEST_INTERVAL_SECONDS:
                 time.sleep(REQUEST_INTERVAL_SECONDS)
             response = client.embed(
                 model=MODEL,

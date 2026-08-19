@@ -55,6 +55,7 @@ from pipeline.stages import (
     cycle_id_for,
     output_dir_for,
     read_jsonl,
+    trace,
     write_atomically,
     write_jsonl,
 )
@@ -78,6 +79,9 @@ _HISTORY_RETENTION_DAYS = 30
 # outcome rather than a symptom -- two unrelated articles SHOULD stay apart --
 # so the merged-nothing diagnostic below only fires on a real corpus.
 _MERGE_DIAGNOSTIC_FLOOR = 50
+
+
+
 
 
 @dataclass(frozen=True, slots=True)
@@ -258,6 +262,7 @@ def run_cycle(
     # prevent. A malformed line from a truncated earlier run is enough to
     # trigger it: read_jsonl raises, and so does ArticleRecord.from_dict.
     try:
+        trace(f"collected {len(collection.articles)} articles; writing")
         written = write_collection(collection, cycle_id=cycle_id, data_root=data_root)
         articles_path = written.articles_path
         articles_collected = written.article_count
@@ -267,6 +272,7 @@ def run_cycle(
 
     if completed:
         try:
+            trace(f"dedupe starting on {articles_collected} articles")
             deduped = run_dedupe(articles_path, cycle_id=cycle_id, data_root=data_root, embed=embed)
             dedupe_path = deduped.output_path
             groups_after_dedupe = deduped.groups_out
@@ -276,11 +282,13 @@ def run_cycle(
 
     if completed:
         try:
+            trace(f"dedupe done -> {groups_after_dedupe} groups; cluster starting")
             clustered = run_cluster(
                 dedupe_path, cycle_id=cycle_id, data_root=data_root, embed=embed
             )
             cluster_path = clustered.output_path
             clusters_after_grouping = clustered.clusters_out
+            trace(f"cluster done -> {clusters_after_grouping} clusters, degraded={clustered.degraded}")
             clusters = list(read_jsonl(cluster_path))
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"

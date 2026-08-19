@@ -20,12 +20,35 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
+import time
 from collections.abc import Callable, Iterable, Iterator
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 DEFAULT_DATA_ROOT = Path("data")
+
+
+
+_TRACE_STARTED_AT = time.monotonic()
+
+
+def trace(message: str) -> None:
+    """Emit a progress line, unbuffered, to stderr.
+
+    The cycle job has a 30-minute ceiling and, before this existed, printed
+    nothing at all until it finished. Three consecutive cycles were killed by
+    that ceiling in August 2026 with logs that could not say which stage had
+    been running, so every diagnosis cost another 30-minute run to test. A
+    boundary line with a wall-clock elapsed time makes the slow stage
+    self-evident from the log alone.
+
+    stderr, and flushed: stdout is block-buffered when it is a pipe (which it
+    is under Actions), so buffered progress lines would arrive only at exit --
+    exactly when they stop being useful.
+    """
+    print(f"trace: [{time.monotonic() - _TRACE_STARTED_AT:7.1f}s] {message}", file=sys.stderr, flush=True)
 
 
 def clique_partition(

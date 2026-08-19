@@ -50,6 +50,7 @@ from pipeline.stages import (
     output_dir_for,
     read_jsonl,
     stage_arg_parser,
+    trace,
     write_atomically,
     write_jsonl,
 )
@@ -529,6 +530,7 @@ def merge_by_rewrite_detection(
     #
     # sklearn's radius search is inclusive (`<= radius`), matching the
     # comparison this replaces exactly.
+    trace(f"layer3: neighbor search over {len(groups)} groups")
     neighbor_rows = radius_neighbors_graph(
         unit_vectors,
         radius=REWRITE_SIMILARITY_FLOOR,
@@ -537,6 +539,7 @@ def merge_by_rewrite_detection(
         include_self=False,
     ).tolil().rows
     neighbors_of: list[set[int]] = [set(row) for row in neighbor_rows]
+    trace(f"layer3: {sum(len(n) for n in neighbors_of) // 2} in-radius pairs; partitioning")
 
     def cosine_similarity(i: int, j: int) -> float:
         # 1 - cosine distance; higher means more similar, matching the other
@@ -564,6 +567,7 @@ def merge_by_rewrite_detection(
         similarity=cosine_similarity,
         formed_by="rewrite",
     )
+    trace(f"layer3: done -> {len(merged)} groups")
     return (merged, None) if return_degraded else merged
 
 

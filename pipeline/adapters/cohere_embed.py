@@ -21,6 +21,7 @@ from dataclasses import dataclass, field
 from typing import Any, Protocol
 
 from pipeline.adapters import Failure
+from pipeline.stages import trace
 
 ADAPTER = "cohere_embed"
 
@@ -136,6 +137,8 @@ def embed_titles(
     # a total one — one Cluster per dedupe group for the whole cycle — rather
     # than risk a subtler bug from partial alignment.
     vectors: list[list[float]] = []
+    total_batches = (len(titles) + MAX_TEXTS_PER_REQUEST - 1) // MAX_TEXTS_PER_REQUEST
+    trace(f"embed: {len(titles)} titles in {total_batches} batches")
     try:
         for index, batch in enumerate(_chunks(titles, MAX_TEXTS_PER_REQUEST)):
             # Pace every batch after the first — see REQUEST_INTERVAL_SECONDS.
@@ -152,6 +155,8 @@ def embed_titles(
                 truncate="END",
             )
             vectors.extend(response.embeddings.float_)
+            if index and index % 25 == 0:
+                trace(f"embed: {index}/{total_batches} batches")
     except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
         return EmbeddingResult(failures=[Failure(ADAPTER, f"embedding request failed: {exc}")])
 

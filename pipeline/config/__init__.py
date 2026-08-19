@@ -284,6 +284,193 @@ _EUROPE_FIPS: frozenset[str] = frozenset({
 })
 
 
+# English country names -> FIPS, for reading a country out of prose written in
+# English (the editorial agenda's chronicle entries name their countries in
+# wikilinks: "United Arab Emirates", "Ukraine", "Sudan").
+#
+# Built from the same code/name pairs as _EUROPE_FIPS above so the two cannot
+# drift, plus the countries the GDELT adapter can already name. Aliases cover
+# the forms the chronicle actually uses -- "UK" and "Britain" for the United
+# Kingdom, "Czechia" alongside "Czech Republic" -- because a name this table
+# misses silently costs that event its Zone.
+_FIPS_BY_ENGLISH_NAME: dict[str, str] = {
+    "albania": "AL",
+    "andorra": "AN",
+    "austria": "AU",
+    "belgium": "BE",
+    "bosnia-herzegovina": "BK",
+    "belarus": "BO",
+    "bulgaria": "BU",
+    "cyprus": "CY",
+    "denmark": "DA",
+    "ireland": "EI",
+    "estonia": "EN",
+    "czech republic": "EZ",
+    "finland": "FI",
+    "faroe islands": "FO",
+    "france": "FR",
+    "gibraltar": "GI",
+    "guernsey": "GK",
+    "germany": "GM",
+    "greece": "GR",
+    "croatia": "HR",
+    "hungary": "HU",
+    "iceland": "IC",
+    "isle of man": "IM",
+    "italy": "IT",
+    "jersey": "JE",
+    "kosovo": "KV",
+    "latvia": "LG",
+    "lithuania": "LH",
+    "slovak republic": "LO",
+    "liechtenstein": "LS",
+    "luxembourg": "LU",
+    "moldova": "MD",
+    "montenegro": "MJ",
+    "macedonia": "MK",
+    "monaco": "MN",
+    "malta": "MT",
+    "netherlands": "NL",
+    "norway": "NO",
+    "poland": "PL",
+    "portugal": "PO",
+    "serbia": "RI",
+    "romania": "RO",
+    "slovenia": "SI",
+    "san marino": "SM",
+    "spain": "SP",
+    "svalbard": "SV",
+    "sweden": "SW",
+    "switzerland": "SZ",
+    "united kingdom": "UK",
+    "ukraine": "UP",
+    "vatican city": "VT",
+    # Nationality adjectives, which is how prose usually names a country:
+    # "a Russian missile strike", "the Spanish government". Irregular enough to
+    # be worth listing rather than deriving, and cheap: each one is a country
+    # an event would otherwise lose. Restricted to the countries that can
+    # actually change a Zone decision (Europe, plus the named GDELT set) --
+    # everything else lands in World either way, so listing it buys nothing.
+    "french": "FR",
+    "spanish": "SP",
+    "german": "GM",
+    "british": "UK",
+    "english": "UK",
+    "scottish": "UK",
+    "welsh": "UK",
+    "italian": "IT",
+    "ukrainian": "UP",
+    "polish": "PL",
+    "dutch": "NL",
+    "belgian": "BE",
+    "portuguese": "PO",
+    "greek": "GR",
+    "swedish": "SW",
+    "norwegian": "NO",
+    "danish": "DA",
+    "finnish": "FI",
+    "swiss": "SZ",
+    "austrian": "AU",
+    "irish": "EI",
+    "romanian": "RO",
+    "hungarian": "HU",
+    "bulgarian": "BU",
+    "croatian": "HR",
+    "serbian": "RI",
+    "albanian": "AL",
+    "czech": "EZ",
+    "slovak": "LO",
+    "slovenian": "SI",
+    "lithuanian": "LH",
+    "latvian": "LG",
+    "estonian": "EN",
+    "icelandic": "IC",
+    "cypriot": "CY",
+    "maltese": "MT",
+    "moldovan": "MD",
+    "belarusian": "BO",
+    # Aliases and short forms seen in chronicle prose.
+    "uk": "UK",
+    "britain": "UK",
+    "great britain": "UK",
+    "england": "UK",
+    "scotland": "UK",
+    "wales": "UK",
+    "northern ireland": "UK",
+    "czechia": "EZ",
+    "slovakia": "LO",
+    "holland": "NL",
+    "the netherlands": "NL",
+    "vatican": "VT",
+    "holy see": "VT",
+    "north macedonia": "MK",
+    "bosnia and herzegovina": "BK",
+    "united states": "US",
+    "usa": "US",
+    "america": "US",
+    "japan": "JA",
+    "china": "CH",
+    "india": "IN",
+    "brazil": "BR",
+}
+
+
+def country_slugs_in_english_text(text: str) -> list[str]:
+    """Every recognized country named anywhere in English prose, longest first.
+
+    Complements reading wikilinks: a chronicle entry often names a country only
+    inside a larger linked title -- "Israel Defense Forces", "Prime Minister of
+    the United Kingdom" -- so the link target resolves to nothing while the
+    country is plainly there in the sentence.
+
+    Matched longest-name-first on word boundaries, because a shorter name can
+    sit inside a longer one ("Guinea" within "Papua New Guinea", "Ireland"
+    within "Northern Ireland") and the longer match is the right one. Once a
+    span is consumed it is not reconsidered.
+    """
+    haystack = text.casefold()
+    found: list[str] = []
+    consumed: list[tuple[int, int]] = []
+    for name in sorted(_FIPS_BY_ENGLISH_NAME, key=len, reverse=True):
+        start = 0
+        while True:
+            at = haystack.find(name, start)
+            if at < 0:
+                break
+            start = at + 1
+            end = at + len(name)
+            # Word boundaries, so "chinatown" is not China and "malia" not Mali.
+            before_ok = at == 0 or not (haystack[at - 1].isalnum() or haystack[at - 1] == "-")
+            after_ok = end == len(haystack) or not (
+                haystack[end].isalnum() or haystack[end] == "-"
+            )
+            if not (before_ok and after_ok):
+                continue
+            if any(cs <= at and end <= ce for cs, ce in consumed):
+                continue
+            consumed.append((at, end))
+            slug = country_slug_for_english_name(name)
+            if slug is not None and slug not in found:
+                found.append(slug)
+    return found
+
+
+def country_slug_for_english_name(name: str) -> str | None:
+    """The `source_country`-style slug for an English country name, or None.
+
+    None means "this is not a country name I recognize", which is the common
+    case: the agenda's wikilinks are mostly people, organisations and places
+    ("Andy Burnham", "Ministry of defence", "Kharkiv Oblast"). Callers filter on
+    it rather than treating the miss as an error.
+    """
+    fips = _FIPS_BY_ENGLISH_NAME.get(name.strip().casefold())
+    if fips is None:
+        return None
+    from pipeline.adapters.gdelt import zone_slug_for_fips
+
+    return zone_slug_for_fips(fips)
+
+
 def countries_in_continent(continent_slug: str) -> frozenset[str]:
     """Every ``source_country`` value that counts as part a continent.
 
@@ -312,6 +499,8 @@ __all__ = [
     "REWRITE_SIMILARITY_FLOOR",
     "OUTPUT_LANGUAGES",
     "countries_in_continent",
+    "country_slug_for_english_name",
+    "country_slugs_in_english_text",
     "PERIODS",
     "STAGE_NAMES",
     "ZONES",

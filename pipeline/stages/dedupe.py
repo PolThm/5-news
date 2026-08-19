@@ -184,6 +184,19 @@ class ArticleGroup:
         return frozenset(a.source_country for a in self.articles)
 
     @property
+    def mentioned_countries(self) -> frozenset[str]:
+        """Every country any Article in this group is *about*.
+
+        Unioned across the group rather than read off the representative:
+        which member happens to sort first is arbitrary, and an Article that
+        located the story should not lose that just because another member
+        did not. Distinct from `countries`, which is where the outlets sit.
+        """
+        return frozenset(
+            country for a in self.articles for country in a.mentioned_countries
+        )
+
+    @property
     def independent_source_count(self) -> int:
         """One, by definition of this layer.
 
@@ -242,6 +255,9 @@ class ArticleGroup:
             "country_count": self.country_count,
             "sources": sorted(self.sources),
             "countries": sorted(self.countries),
+            # Explicit, overriding the representative's own value that arrives
+            # via `**record.to_dict()` above -- this is the whole group's.
+            "mentioned_countries": sorted(self.mentioned_countries),
             "article_count": len(self.articles),
             "formed_by": self.formed_by,
         }

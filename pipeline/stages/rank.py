@@ -239,25 +239,39 @@ def link_across_days(
 
 
 def _is_relevant_to(cluster: dict, zone: Zone) -> bool:
-    """Whether a Cluster's coverage touches a given Zone.
+    """Whether a Cluster belongs in a given Zone's Briefing.
 
-    Relevant to a Country means the Cluster's ``countries`` list includes
-    that country's slug directly. Relevant to a Continent means relevant to
-    any Country belonging to it — a Cluster with no member in that
-    continent is not part of its Briefing regardless of how it ranks
-    globally. Derived entirely from ``countries`` (Story 2.5's prerequisite
-    addition to Cluster output); this is not a new signal, per that
-    story's AC4.
+    Decided on what the Event is *about* (``mentioned_countries``, from the
+    places the Articles name), not on where the reporting outlets sit
+    (``countries``, which stays the Consensus Score's evidence).
+
+    Those two were the same field until 2026-08-19, and conflating them made
+    "France Briefing" mean "what French newsrooms wrote about" rather than
+    "what happened in France". The published week Briefing for France carried
+    a cyclist hit by a bus in Stockholm, an American actress's death, and a
+    SpaceX lunar crater -- every one of them a French outlet writing about
+    somewhere else. The inverse was lost too: an American outlet covering a
+    British debate never reached the United Kingdom.
+
+    A Cluster whose Articles named no location at all is relevant only to
+    World. That is ~20% of GKG rows, and it is the honest reading -- there is
+    no evidence placing it anywhere. It still counts toward the Consensus
+    Score of the Cluster it corroborates; it just cannot put it on a map.
     """
     if zone.kind == ZoneKind.WORLD:
         # Everything is relevant to World -- there is no filtering to do,
         # and no country's `continent` field ever equals "world", so the
         # Continent branch below would otherwise wrongly find zero matches.
         return True
-    cluster_countries = set(cluster["countries"])
+    # `.get`, not `[...]`: Clusters written before this field existed, and
+    # history-derived records, legitimately lack it. Absent means unplaceable,
+    # which the World branch above has already allowed for.
+    about = set(cluster.get("mentioned_countries") or ())
+    if not about:
+        return False
     if zone.kind == ZoneKind.COUNTRY:
-        return zone.slug in cluster_countries
-    # A Continent: relevant if any of its countries appears in the Cluster.
+        return zone.slug in about
+    # A Continent: relevant if the Event is about any country in it.
     #
     # From the geography table, NOT from `{z.slug for z in ZONES if
     # z.continent == zone.slug}` as this once did. That derivation made a
@@ -265,7 +279,7 @@ def _is_relevant_to(cluster: dict, zone: Zone) -> bool:
     # continent" -- so Europe already excluded Italy and the Netherlands, and
     # the 2026-08-19 scope cut would have reduced it to France and Spain. A
     # country does not need a Zone of its own to have happened in Europe.
-    return bool(cluster_countries & countries_in_continent(zone.slug))
+    return bool(about & countries_in_continent(zone.slug))
 
 
 @dataclass(frozen=True, slots=True)

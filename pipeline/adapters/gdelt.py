@@ -53,6 +53,7 @@ import time
 import urllib.error
 import urllib.request
 import zipfile
+from collections import Counter
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from typing import Protocol
@@ -131,6 +132,14 @@ csv.field_size_limit(sys.maxsize)
 _COL_DATE = 1
 _COL_SOURCE = 3
 _COL_URL = 4
+# V2EnhancedLocations. Every place the article mentions, one entry per
+# occurrence, `;`-separated, fields `#`-separated with the FIPS country code
+# third. Repetition is the point: a country named eight times is what the
+# article is about, one named once is usually incidental, and the counts are
+# what `focus_countries` weighs. Verified against live files on 2026-08-19 --
+# populated on 80.2% of rows, with a median of 1 distinct country per article
+# and a median dominant share of 100%.
+_COL_LOCATIONS = 10
 _COL_TRANSLATION_INFO = 25
 _COL_EXTRAS = 26
 _GKG_COLUMNS = 27
@@ -292,6 +301,64 @@ def country_for_domain(domain: str, table: dict[str, str]) -> str | None:
     return None
 
 
+# A country must account for at least this share of an article's location
+# mentions to count as something the article is about. Measured on a live
+# slice (841 located articles): 98.5% of articles still keep a country at this
+# threshold, while it drops the incidental tail -- a tennis report from the
+# Cincinnati Open mentions the United States 50% of the time and Russia 20%
+# (the player's nationality), and only the former is what the piece covers.
+#
+# The dominant country is always kept regardless, so an article with locations
+# is never left unplaceable by arithmetic alone.
+FOCUS_MENTION_SHARE = 0.30
+
+# ...and be named more than once, unless it is the dominant country.
+#
+# The share test alone is weak when an article names few places: with three
+# mentions spread over three countries, every incidental one clears 30%. That
+# is how a suspended Australian tennis player reached the Europe Briefing on
+# 2026-08-19, on a single passing mention each of the United Kingdom and
+# Ukraine. Measured on a live slice, requiring two mentions lifts single-
+# country articles from 86% to 90% and drops exactly that tail: "Remember
+# Monday release new single" stops being about Switzerland (named once), and a
+# National Trust site in Northumberland stops being about the United States.
+#
+# The honest cost: where the signal is a genuine 1-1 tie ("Williams' Instagram
+# page revived to fight AI abuse", Australia once and the US once), this keeps
+# whichever sorts dominant and discards the other. At one mention apiece there
+# is no evidence to prefer either, so no threshold recovers that -- it trades
+# an arbitrary inclusion for an arbitrary omission, and the omission at least
+# keeps the Briefing's placements defensible.
+FOCUS_MIN_MENTIONS = 2
+
+
+def focus_countries(locations: str) -> tuple[str, ...]:
+    """The countries an article is about, from a V2EnhancedLocations field.
+
+    Returns Zone-style slugs (the same vocabulary as ``source_country``, via
+    ``zone_slug_for_fips``) ordered most-mentioned first, or an empty tuple
+    when the field carries no usable location -- which is the honest answer
+    for ~20% of GKG rows, not a failure.
+    """
+    counts: Counter[str] = Counter()
+    for entry in locations.split(";"):
+        fields = entry.split("#")
+        if len(fields) > 2 and fields[2].strip():
+            counts[fields[2].strip()] += 1
+    if not counts:
+        return ()
+    total = sum(counts.values())
+    ranked = counts.most_common()
+    dominant = ranked[0][0]
+    kept = [
+        code
+        for code, n in ranked
+        if code == dominant
+        or (n / total >= FOCUS_MENTION_SHARE and n >= FOCUS_MIN_MENTIONS)
+    ]
+    return tuple(zone_slug_for_fips(code) for code in kept)
+
+
 def parse_gkg_date(value: str) -> datetime:
     """Slot timestamp format: ``YYYYMMDDHHMMSS``, UTC."""
     return datetime.strptime(value.strip(), "%Y%m%d%H%M%S").replace(tzinfo=UTC)
@@ -346,6 +413,7 @@ def parse_gkg(text: str, domain_country: dict[str, str]) -> list[ArticleRecord]:
                     source_country=zone_slug_for_fips(fips),
                     language=_language_code(srclc.group(1) if srclc else None),
                     collected_by=ADAPTER,
+                    mentioned_countries=focus_countries(row[_COL_LOCATIONS]),
                 )
             )
         except (KeyError, ValueError):
@@ -483,6 +551,8 @@ __all__ = [
     "ADAPTER",
     "DOMAIN_COUNTRY_URL",
     "FIPS_BY_ZONE",
+    "FOCUS_MENTION_SHARE",
+    "FOCUS_MIN_MENTIONS",
     "LANGUAGE_CODES",
     "MAX_COLLECTION_SECONDS",
     "SLOTS_PER_COLLECTION",
@@ -492,6 +562,7 @@ __all__ = [
     "Failure",
     "GdeltClient",
     "collect_world_day",
+    "focus_countries",
     "country_for_domain",
     "zone_slug_for_fips",
     "parse_domain_country",

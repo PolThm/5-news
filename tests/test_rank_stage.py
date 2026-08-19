@@ -243,13 +243,25 @@ def test_empty_input(tmp_path: Path) -> None:
 # --- Zone-scoped ranking with Continent fallback (Story 2.5) -----------------
 
 
-def _zone_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
+def _zone_cluster(
+    cluster_id: str, sources: int, countries: list[str], about: list[str] | None = None
+) -> dict:
+    """A Cluster as `rank` sees it.
+
+    `countries` is where the reporting outlets sit (the Consensus Score's
+    evidence); `about` is what the Event is about (what places a Cluster in a
+    Zone, since 2026-08-19). They default to the same value here because most
+    of these tests predate the distinction and only care that placement works
+    at all -- the tests that exercise the difference pass `about` explicitly.
+    """
+    located = sorted(countries if about is None else about)
     return {
         "cluster_id": cluster_id,
         "members": [{"title": f"title-{cluster_id}", "url": f"https://example.com/{cluster_id}"}],
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
+        "mentioned_countries": located,
         # Arbitrary but deterministic and always a member of `countries` --
         # these Story 2.5 tests predate the anti-concentration cap (Story
         # 2.6) and don't care which one is "origin", only that the field
@@ -473,6 +485,7 @@ def test_real_cluster_output_is_consumable_by_rank_for_zone(tmp_path) -> None:
             "country_count": 1,
             "sources": ["a.com"],
             "countries": ["france"],
+            "mentioned_countries": ["france"],
             "article_count": 1,
         },
         {
@@ -524,6 +537,10 @@ def _origin_cluster(cluster_id: str, sources: int, origin: str, countries: list[
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
+        # These cap tests are about concentration, not placement, so the Event
+        # is about the same countries that report it -- enough for the Zone
+        # filter to let them through and reach the cap under test.
+        "mentioned_countries": sorted(countries),
         "origin_country": origin,
     }
 
@@ -682,6 +699,7 @@ def _today_cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
         "independent_source_count": sources,
         "country_count": len(countries),
         "countries": sorted(countries),
+        "mentioned_countries": sorted(countries),
         "origin_country": countries[0],
     }
 
@@ -882,3 +900,71 @@ def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:
     # what survives -- unmerged, which is the property under test.
     assert len(linked) == 1
     assert linked[0]["_linked_ids"] == ["today1"], "mismatched dimensions must not merge"
+
+
+# --- Placement is about the Event, not about the newsroom --------------------
+
+
+def test_a_zone_is_decided_by_what_happened_not_by_who_reported_it() -> None:
+    """The fix for the published week Briefings of 2026-08-19.
+
+    France's carried a cyclist hit by a bus in Stockholm, an American
+    actress's death, and a SpaceX lunar crater -- each a French outlet writing
+    about somewhere else, admitted because placement read `countries` (where
+    the outlets sit) instead of what the Event was about.
+    """
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import _is_relevant_to
+
+    # French newsrooms, Swedish story: not France's Briefing, but still
+    # Europe's, because Sweden is in Europe.
+    stockholm = _zone_cluster("s", sources=3, countries=["france"], about=["sw"])
+    assert _is_relevant_to(stockholm, zone_by_slug("france")) is False
+    assert _is_relevant_to(stockholm, zone_by_slug("europe")) is True
+    assert _is_relevant_to(stockholm, zone_by_slug("world")) is True
+
+    # French newsrooms, American story: neither France's nor Europe's.
+    spacex = _zone_cluster("x", sources=3, countries=["france"], about=["united-states"])
+    assert _is_relevant_to(spacex, zone_by_slug("france")) is False
+    assert _is_relevant_to(spacex, zone_by_slug("europe")) is False
+    assert _is_relevant_to(spacex, zone_by_slug("world")) is True
+
+    # The inverse, which the old rule lost entirely: an American outlet
+    # covering a French story belongs in France's Briefing.
+    from_abroad = _zone_cluster("f", sources=3, countries=["united-states"], about=["france"])
+    assert _is_relevant_to(from_abroad, zone_by_slug("france")) is True
+    assert _is_relevant_to(from_abroad, zone_by_slug("europe")) is True
+
+
+def test_an_unplaceable_cluster_reaches_world_only() -> None:
+    """~20% of GKG rows name no location. Absent evidence is not evidence of
+    absence, but it is not evidence of presence either -- such a Cluster can
+    corroborate a Consensus Score anywhere and be placed nowhere."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import _is_relevant_to
+
+    nowhere = _zone_cluster("n", sources=4, countries=["france", "spain"], about=[])
+
+    assert _is_relevant_to(nowhere, zone_by_slug("world")) is True
+    assert _is_relevant_to(nowhere, zone_by_slug("europe")) is False
+    assert _is_relevant_to(nowhere, zone_by_slug("france")) is False
+
+
+def test_a_cluster_written_before_this_field_existed_does_not_crash_rank() -> None:
+    """Clusters on disk from earlier cycles have no `mentioned_countries`, and
+    a cycle resuming across the change must degrade rather than KeyError --
+    the same discipline every other schema addition here follows."""
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import _is_relevant_to
+
+    legacy = {
+        "cluster_id": "old",
+        "members": [{"title": "t", "url": "https://a.com/x"}],
+        "independent_source_count": 3,
+        "country_count": 1,
+        "countries": ["france"],
+        "origin_country": "france",
+    }
+
+    assert _is_relevant_to(legacy, zone_by_slug("world")) is True
+    assert _is_relevant_to(legacy, zone_by_slug("france")) is False

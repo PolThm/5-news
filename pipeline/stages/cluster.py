@@ -359,6 +359,18 @@ def run_cluster(
                 "country_count": coverage.country_count,
                 "countries": sorted(coverage.countries),
                 "origin_country": coverage.origin_country,
+                # What this Event is *about*, unioned across the Cluster's
+                # groups -- the signal `rank` places a Cluster in a Zone with.
+                # Kept apart from `countries` (where the outlets sit), which
+                # stays the Consensus Score's evidence. Empty when no member
+                # carried a usable location, which is ~20% of GKG rows.
+                "mentioned_countries": sorted(
+                    {
+                        country
+                        for m in members
+                        for country in (m.get("mentioned_countries") or ())
+                    }
+                ),
             }
         )
 

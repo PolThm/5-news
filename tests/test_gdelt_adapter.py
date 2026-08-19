@@ -30,6 +30,7 @@ from pipeline.adapters.gdelt import (
     ZONE_BY_FIPS,
     GdeltClient,
     country_for_domain,
+    focus_countries,
     parse_domain_country,
     parse_gkg,
     parse_gkg_date,
@@ -349,12 +350,14 @@ def _row(
     url: str = "https://example.test/article",
     translation_info: str = "",
     extras: str = "<PAGE_TITLE>Headline</PAGE_TITLE>",
+    locations: str = "",
 ) -> str:
     """One GKG row with only the columns this adapter reads populated."""
     columns = [""] * 27
     columns[1] = date
     columns[3] = source
     columns[4] = url
+    columns[10] = locations
     columns[25] = translation_info
     columns[26] = extras
     return "\t".join(columns) + "\n"
@@ -379,3 +382,67 @@ def test_language_codes_map_to_two_letters_with_an_honest_fallback(
     row = _row(translation_info=f"srclc:{srclc};", extras="<PAGE_TITLE>T</PAGE_TITLE>")
 
     assert parse_gkg(row, {})[0].language == expected
+
+
+# --- What an article is about, not where its outlet sits ---------------------
+
+
+def test_the_dominant_country_is_always_kept() -> None:
+    """An article with any usable location must remain placeable: the
+    thresholds trim the tail, they never empty the result."""
+    assert focus_countries("1#India#IN#IN#20#77#1") == ("india",)
+
+
+def test_an_incidental_single_mention_is_dropped() -> None:
+    """The 2026-08-19 bug: a suspended Australian tennis player reached the
+    Europe Briefing on one passing mention each of the UK and Ukraine. With
+    three mentions across three countries the share test alone clears them
+    all, so a country must also be named more than once to count."""
+    locations = (
+        "1#Australia#AS#AS#-25#135#1;1#Australia#AS#AS#-25#135#2;"
+        "1#UK#UK#UK#54#-4#3;1#Ukraine#UP#UP#49#32#4"
+    )
+    assert focus_countries(locations) == ("as",)
+
+
+def test_a_genuinely_bi_national_story_keeps_both() -> None:
+    """Trimming the tail must not collapse every article to one country -- a
+    story really about two places keeps both."""
+    locations = (
+        "1#UK#UK#UK#54#-4#1;1#UK#UK#UK#54#-4#2;1#France#FR#FR#46#2#3;1#France#FR#FR#46#2#4"
+    )
+    assert set(focus_countries(locations)) == {"united-kingdom", "france"}
+
+
+def test_countries_come_back_as_zone_slugs_most_mentioned_first() -> None:
+    """Same vocabulary as `source_country`, so rank can compare them directly,
+    and ordered so the first entry is the article's own subject."""
+    locations = (
+        "1#Spain#SP#SP#40#-4#1;1#Spain#SP#SP#40#-4#2;1#Spain#SP#SP#40#-4#3;"
+        "1#Italy#IT#IT#42#12#4;1#Italy#IT#IT#42#12#5"
+    )
+    assert focus_countries(locations) == ("spain", "it")
+
+
+def test_an_absent_or_unparseable_location_field_yields_nothing() -> None:
+    """~20% of GKG rows carry no usable location. That is the honest answer,
+    not a failure -- such an Article corroborates a Cluster without placing
+    it (see pipeline.stages.rank._is_relevant_to)."""
+    assert focus_countries("") == ()
+    assert focus_countries("no-hashes-at-all") == ()
+    assert focus_countries("1#Somewhere##ADM#0#0#0") == ()
+
+
+def test_a_parsed_row_carries_what_it_is_about() -> None:
+    """End to end through parse_gkg, not just the helper: the field has to
+    survive onto the ArticleRecord for rank to ever see it."""
+    row = _row(
+        source="lemonde.fr",
+        extras="<PAGE_TITLE>Un titre</PAGE_TITLE>",
+        locations="1#Spain#SP#SP#40#-4#1;1#Spain#SP#SP#40#-4#2",
+    )
+    records = parse_gkg(row, {"lemonde.fr": "FR"})
+
+    assert len(records) == 1
+    assert records[0].source_country == "france", "where the outlet sits"
+    assert records[0].mentioned_countries == ("spain",), "what the article is about"

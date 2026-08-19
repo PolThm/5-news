@@ -88,6 +88,17 @@ class ArticleRecord:
     # it or attribute to a human byline rather than an agency. Absence is not
     # a failure; it means dedupe treats the Article as independent.
     wire_agency: str | None = None
+    # FIPS-derived slugs for the countries this Article is *about*, as opposed
+    # to `source_country`, which is where its outlet sits. The two answer
+    # different questions and a Briefing needs both: a French outlet writing
+    # about SpaceX has source_country="france" and mentioned_countries
+    # ("united-states",), and belongs in a France Briefing on neither ground
+    # but the Consensus Score's country count on the former.
+    #
+    # Empty when the upstream record carried no usable location (~20% of GKG
+    # rows). Such an Article can still corroborate a Cluster, it just cannot
+    # place it -- see `pipeline.stages.rank._is_relevant_to`.
+    mentioned_countries: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if self.published_at.tzinfo is None:
@@ -112,6 +123,10 @@ class ArticleRecord:
         # existed — the inspection window's diffs stay readable (AC4).
         if self.wire_agency is not None:
             data["wire_agency"] = self.wire_agency
+        # Same omit-when-absent discipline as wire_agency above, for the same
+        # reason: unchanged bytes for a record that has none.
+        if self.mentioned_countries:
+            data["mentioned_countries"] = list(self.mentioned_countries)
         return data
 
     @classmethod
@@ -125,6 +140,9 @@ class ArticleRecord:
             language=data["language"],
             collected_by=data["collected_by"],
             wire_agency=data.get("wire_agency"),
+            # Tolerates records written before this field existed, and any
+            # future row that legitimately has none.
+            mentioned_countries=tuple(data.get("mentioned_countries") or ()),
         )
 
 

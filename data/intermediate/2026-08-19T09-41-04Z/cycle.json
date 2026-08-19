@@ -10,24 +10,15 @@
     {
       "adapter": "gdelt",
       "detail": "http://data.gdeltproject.org/gdeltv2/20260819091500.translation.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "publish raised: \"unknown zone slug: 'north-america'\""
     }
   ],
   "groups_after_dedupe": 6075,
-  "phase": "summarize_submitted",
+  "phase": "publish_failed",
   "published": false,
   "started_at": "2026-08-19T09:41:04.555620+00:00",
-  "summarize_batches": {
-    "en": {
-      "batch_id": "msgbatch_01FJsfQpUovzhx8961Ktcowk",
-      "ranked_path": "data/intermediate/rank/2026-08-19T09-41-04Z/ranked.jsonl"
-    },
-    "es": {
-      "batch_id": "msgbatch_01RFrYH1VnC8vLRkRueZDdoj",
-      "ranked_path": "data/intermediate/rank/2026-08-19T09-41-04Z/ranked.jsonl"
-    },
-    "fr": {
-      "batch_id": "msgbatch_01AEBCu5drK9vFQWBsQGwheY",
-      "ranked_path": "data/intermediate/rank/2026-08-19T09-41-04Z/ranked.jsonl"
-    }
-  }
+  "summarize_batches": {}
 }

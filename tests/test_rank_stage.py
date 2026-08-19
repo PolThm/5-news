@@ -766,7 +766,12 @@ def test_unrelated_history_entries_do_not_link() -> None:
 
     linked = link_across_days(today, history, embedding_by_id=embeddings)
 
-    assert len(linked) == 2, "an unrelated historical Cluster must remain separate"
+    # Asserted on the linkage, not on a count: the unrelated history entry
+    # carries no Articles, so it is dropped rather than emitted as an item of
+    # its own (see test_a_clique_with_no_articles_is_dropped_not_published).
+    # What matters here is that it was not absorbed into today's Cluster.
+    assert len(linked) == 1
+    assert linked[0]["_linked_ids"] == ["today1"], "an unrelated entry must not merge in"
 
 
 def test_transitive_chaining_does_not_fold_a_non_clique_triple_together() -> None:
@@ -806,24 +811,55 @@ def test_no_history_within_window_leaves_todays_clusters_unchanged() -> None:
     assert linked[0]["cluster_id"] == "today1"
 
 
-def test_history_only_clique_still_carries_members() -> None:
-    """An adversarial review found that a clique with zero "today" members
-    (a completely ordinary case -- an ongoing Event goes uncovered for a day
-    within a week/month window) produced a merged record missing member
-    data entirely, since history entries never carry that field."""
+def test_a_clique_with_no_articles_is_dropped_not_published() -> None:
+    """A clique formed only from history entries must not become a Briefing
+    item.
+
+    This test used to assert the opposite -- that such a clique was emitted
+    with `"members": []` -- on the reasoning that an ongoing Event uncovered
+    for a day is ordinary and the record should still carry every field a
+    Cluster's consumers expect. That was wrong, and it shipped: a history
+    entry stores only an embedding and its coverage counts, never titles or
+    URLs, so the Cluster reached summarize with nothing to read and Claude's
+    honest "no articles were provided" answer was published as a headline to
+    six real week Briefings on 2026-08-19. One claimed 7 independent sources
+    across 3 countries, because history preserves the counts while discarding
+    the evidence behind them -- so the entry cleared the 2-source floor while
+    being impossible to write or to link.
+
+    A history entry enriches a Cluster it links to. It cannot be one alone.
+    """
     from pipeline.stages.rank import link_across_days
 
     history = [
-        _history_entry("d1", "2026-08-09T06-00-00Z", sources=2, countries=["france", "spain"]),
+        _history_entry("d1", "2026-08-09T06-00-00Z", sources=7, countries=["france", "spain"]),
         _history_entry("d2", "2026-08-10T06-00-00Z", sources=2, countries=["germany", "italy"]),
     ]
     embeddings = {"d1": [1.0, 0.0], "d2": [0.99, 0.02]}
 
-    linked = link_across_days([], history, embedding_by_id=embeddings)
+    assert link_across_days([], history, embedding_by_id=embeddings) == []
+
+
+def test_a_history_entry_that_links_to_today_still_enriches_it() -> None:
+    """Dropping article-less cliques must not cost history its actual purpose:
+    a history entry that does link to one of today's Clusters still widens that
+    Cluster's coverage across days."""
+    from pipeline.stages.rank import link_across_days
+
+    today = [_zone_cluster("t1", sources=2, countries=["france"])]
+    history = [
+        _history_entry("d1", "2026-08-10T06-00-00Z", sources=5, countries=["spain", "germany"]),
+    ]
+    embeddings = {"t1": [1.0, 0.0], "d1": [0.999, 0.01]}
+
+    linked = link_across_days(today, history, embedding_by_id=embeddings)
 
     assert len(linked) == 1
-    assert "members" in linked[0]
-    assert linked[0]["members"] == []
+    assert linked[0]["members"], "the surviving anchor must be today's, with its Articles"
+    assert set(linked[0]["_linked_ids"]) == {"t1", "d1"}
+    # Unioned, not summed -- and the max source count carries across days.
+    assert linked[0]["independent_source_count"] == 5
+    assert set(linked[0]["countries"]) == {"france", "spain", "germany"}
 
 
 def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:
@@ -841,4 +877,8 @@ def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:
 
     linked = link_across_days(today, history, embedding_by_id=embeddings)
 
-    assert len(linked) == 2, "mismatched dimensions must not crash or falsely merge"
+    # Two items that cannot be compared must not merge. The article-less
+    # history entry is then dropped on its own account, so today's Cluster is
+    # what survives -- unmerged, which is the property under test.
+    assert len(linked) == 1
+    assert linked[0]["_linked_ids"] == ["today1"], "mismatched dimensions must not merge"

@@ -199,13 +199,30 @@ def link_across_days(
     linked: list[dict] = []
     for clique in cliques:
         members = [items[index] for index in clique]
-        # Prefer a member that carries `members` (today's shape) as the
-        # anchor over a history-only member (which never has that field) --
-        # a clique with zero "today" members is a completely ordinary case
-        # (an ongoing Event that goes uncovered for a day within a week/month
-        # window), not an edge case, and the merged record must still carry
-        # every field a Cluster's consumers expect.
-        anchor = next((m for m in members if "members" in m), members[0])
+        # A clique with no "today" member carries no Articles at all, and is
+        # dropped rather than emitted.
+        #
+        # An earlier version anchored such a clique on a history entry and
+        # emitted it with `"members": []`, reasoning that an ongoing Event
+        # uncovered for a day is ordinary and the record should still carry
+        # every field a Cluster's consumers expect. Carrying the fields is not
+        # enough: a history entry stores only an embedding and its coverage
+        # counts (see `pipeline.stages.history`), never titles or URLs. So the
+        # Cluster reached summarize with nothing to read, Claude correctly
+        # answered that no articles had been provided, and that answer shipped
+        # as a headline -- "Aucun article disponible pour cet événement" was
+        # published to six real week Briefings on 2026-08-19, one of them
+        # claiming 7 independent sources across 3 countries. The Consensus
+        # counts survive in history while the evidence for them does not, so
+        # such an entry clears the 2-source floor while being unpublishable.
+        #
+        # A history entry's job is to enrich a Cluster it links to -- unioning
+        # countries, carrying the max source count across days. It cannot be
+        # one on its own, and the product's own promise ("lire l'article
+        # original") is unkeepable without an Article behind it.
+        anchor = next((m for m in members if m.get("members")), None)
+        if anchor is None:
+            continue
         countries = sorted({c for member in members for c in member["countries"]})
         linked.append(
             {

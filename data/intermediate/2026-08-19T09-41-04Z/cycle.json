@@ -1,0 +1,33 @@
+{
+  "articles_collected": 7383,
+  "briefings_path": null,
+  "clusters_after_grouping": 5978,
+  "clusters_selected": 29,
+  "completed": true,
+  "cycle_id": "2026-08-19T09-41-04Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20260819091500.translation.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 6075,
+  "phase": "summarize_submitted",
+  "published": false,
+  "started_at": "2026-08-19T09:41:04.555620+00:00",
+  "summarize_batches": {
+    "en": {
+      "batch_id": "msgbatch_01FJsfQpUovzhx8961Ktcowk",
+      "ranked_path": "data/intermediate/rank/2026-08-19T09-41-04Z/ranked.jsonl"
+    },
+    "es": {
+      "batch_id": "msgbatch_01RFrYH1VnC8vLRkRueZDdoj",
+      "ranked_path": "data/intermediate/rank/2026-08-19T09-41-04Z/ranked.jsonl"
+    },
+    "fr": {
+      "batch_id": "msgbatch_01AEBCu5drK9vFQWBsQGwheY",
+      "ranked_path": "data/intermediate/rank/2026-08-19T09-41-04Z/ranked.jsonl"
+    }
+  }
+}

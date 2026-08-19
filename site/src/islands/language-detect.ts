@@ -3,6 +3,13 @@
 // BriefingPage.astro, since every other route was an explicit language
 // choice the reader already made and must never be redirected away from).
 //
+// Extended since to consult the reader's stored preference FIRST: a
+// returning reader resumes their own last Zone/Period/Language, and only
+// a reader with no stored preference at all (a genuine first visit) gets
+// the browser-language guess. navigator.language is a guess about where
+// someone is; the stored preference is something they actually chose, so
+// the guess must never override it.
+//
 // AD-1 forbids computation at request time and this site is 100%
 // static-generated (no SSR adapter, no server to read Accept-Language) --
 // the only reachable signal for "what language does this reader prefer" is
@@ -13,9 +20,18 @@
 // existing unconditional French render -- a reader whose browser prefers
 // French (or has JS disabled) sees no redirect and no flash at all.
 
-type SupportedLanguage = "fr" | "en" | "es";
+import {
+  browserStorage,
+  LANGUAGE_CYCLE,
+  readPreference,
+  routePath,
+  type LanguageSlug,
+  type RoutePreference,
+} from "./preferences";
 
-const SUPPORTED: readonly SupportedLanguage[] = ["fr", "en", "es"];
+type SupportedLanguage = LanguageSlug;
+
+const SUPPORTED: readonly SupportedLanguage[] = LANGUAGE_CYCLE;
 
 // A simple 2-letter-prefix match against the 3 supported codes is
 // sufficient given only 3 languages exist today -- deliberately not a full
@@ -39,13 +55,39 @@ export function redirectTargetFor(resolvedLanguage: SupportedLanguage): string {
   return `/${resolvedLanguage}/world/day`;
 }
 
+// What `/` already renders with zero JS (index.astro): French, World,
+// today. A preference pointing here needs no redirect at all -- the
+// reader is already looking at exactly that Briefing.
+export const DEFAULT_ENTRY_PATH = "/fr/world/day";
+
+/**
+ * Where `/` should send this reader, or null to leave them on the French
+ * World/day page `/` already rendered.
+ *
+ * Stored preference wins outright when present; the browser-language
+ * guess is consulted only in its absence. Pure, so both branches are
+ * unit-testable without a browser.
+ */
+export function entryTargetFor(
+  stored: RoutePreference | null,
+  navigatorLanguage: string | undefined | null
+): string | null {
+  if (stored) {
+    const path = routePath(stored);
+    return path === DEFAULT_ENTRY_PATH ? null : path;
+  }
+
+  const resolved = resolveLanguage(navigatorLanguage);
+  return shouldRedirect(resolved) ? redirectTargetFor(resolved) : null;
+}
+
 export function runRedirect(): void {
-  const resolved = resolveLanguage(navigator.language);
-  if (!shouldRedirect(resolved)) return;
+  const target = entryTargetFor(readPreference(browserStorage()), navigator.language);
+  if (!target) return;
   // window.location.replace, not .href -- so the French `/` page never
   // enters browser history as an intermediate state a reader could land
   // back on by pressing Back.
-  window.location.replace(redirectTargetFor(resolved));
+  window.location.replace(target);
 }
 
 // Guarded so this module can be imported for unit-testing the pure

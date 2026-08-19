@@ -77,11 +77,33 @@ function formatTimestamp(iso: string): string {
     <link rel="apple-touch-icon" sizes="180x180" href="/5news-logo/5news-icon-180.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#1f4d3d" />
-    <style>
+    <style is:global>
       /*
         Governed by: DESIGN.md (Colors, Typography, Layout & Spacing,
         Shapes, Components) and EXPERIENCE.md (Information Architecture,
         State Patterns: "Cold load", Accessibility Floor).
+
+        `is:global`, NOT Astro's default scoping, and this is load-bearing.
+        Scoped styles compile every selector down to
+        `.item[data-astro-cid-<hash>]`, matching only elements Astro itself
+        rendered with that build-specific attribute. Half this page's DOM
+        is NOT rendered by Astro: period-switcher.ts rebuilds the item
+        list, fallback notice, Discarded Volume line and End Screen in the
+        browser after every Zone/Period/Language swap (a deliberate
+        hand-kept mirror of the markup below -- see that module's own
+        docstring), and plain innerHTML cannot reproduce a hash the island
+        has no way to know. Every one of those rebuilt elements therefore
+        matched NO rule at all: item hairline separators vanished, the
+        serif headline and grotesque summary fell back to browser
+        defaults, and -- worst -- `.source-list.js-collapsed{display:none}`
+        stopped applying, so every Consensus source list sprang open and
+        could not be closed again. This component renders the entire
+        document (html/head/body) and is the only component on the site,
+        so scoping bought nothing here in the first place; going global
+        makes the server-rendered and client-rendered halves of the page
+        genuinely identical. Do not revert to scoped styles without first
+        giving the island a way to stamp the scope attribute onto
+        everything it builds.
       */
       * {
         margin: 0;

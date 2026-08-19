@@ -22,6 +22,18 @@
 // DOM/network, exercised by manual verification per Story 4.2/4.3's own
 // Playwright-deferral decision (see those stories' Dev Notes).
 
+import {
+  browserStorage,
+  LANGUAGE_CYCLE,
+  PERIOD_CYCLE,
+  rememberCurrentRoute,
+  writePreference,
+  ZONE_CYCLE,
+  type LanguageSlug,
+  type PeriodSlug,
+  type ZoneSlug,
+} from "./preferences";
+
 export interface ClusterMemberLike {
   source: string;
   source_country: string;
@@ -49,11 +61,12 @@ export interface BriefingLike {
   generated_at: string;
 }
 
-const PERIOD_CYCLE = ["day", "week"] as const;
-export type PeriodSlug = (typeof PERIOD_CYCLE)[number];
-
-const LANGUAGE_CYCLE = ["fr", "en", "es"] as const;
-export type LanguageSlug = (typeof LANGUAGE_CYCLE)[number];
+// The three slug cycles (and their types) live in preferences.ts, which
+// owns the browser-side definition of "a real, routable Briefing address"
+// -- one copy shared by both islands rather than a second hand-mirror
+// here. Re-exported so this module's public surface is unchanged for its
+// existing importers/tests.
+export type { LanguageSlug, PeriodSlug, ZoneSlug };
 
 // Mirrors briefing.ts's own PERIOD_SENTENCE_TEXT/periodSentenceText
 // exactly -- see this file's module docstring for why this is a
@@ -79,16 +92,9 @@ export function nextLanguage(current: LanguageSlug): LanguageSlug {
   return LANGUAGE_CYCLE[(index + 1) % LANGUAGE_CYCLE.length];
 }
 
-// Mirrors briefing.ts's ZONE_CYCLE/nextZone/zoneSentenceLabel exactly, for
-// the same reason as the Period mirror above.
-const ZONE_CYCLE = [
-  "world",
-  "europe",
-  "france",
-  "spain",
-] as const;
-export type ZoneSlug = (typeof ZONE_CYCLE)[number];
-
+// Mirrors briefing.ts's zoneSentenceLabel exactly, for the same reason as
+// the Period mirror above (the Zone slug list itself now comes from
+// preferences.ts -- see the import at the top of this file).
 const ZONE_SENTENCE_LABEL: Record<LanguageSlug, Partial<Record<string, string>>> = {
   fr: {
     world: "dans le Monde",
@@ -769,7 +775,27 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
       }
     }
 
+    // The document's own language must follow the swap, not stay frozen
+    // at whatever `/[lang]/...` was server-rendered. Without this, a
+    // browser keeps applying the OLD language's font fallback, hyphenation
+    // and quote conventions to the new text, and a screen reader keeps
+    // announcing it in the old language's voice -- the swapped page ends
+    // up looking and sounding subtly different from the same page reached
+    // by a real navigation.
+    document.documentElement.lang = targetLang;
+
     window.history.pushState({}, "", pageUrl(targetLang, targetZone, targetPeriod));
+
+    // Persisted here as well as on page load (see this module's own
+    // bottom-of-file init): a swap only pushState's the URL, so the
+    // next load-time capture would never run for this choice -- close
+    // the app right after switching and the choice would be lost.
+    writePreference(browserStorage(), {
+      lang: targetLang,
+      zone: targetZone,
+      period: targetPeriod,
+    });
+
     attach();
   } catch {
     // Degrade to a real navigation rather than leaving the reader on a
@@ -782,4 +808,9 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
 
 if (typeof document !== "undefined") {
   attach();
+  // Every Briefing page load records where the reader is, so `/` can send
+  // them back here next time (language-detect.ts's entryTargetFor). Covers
+  // the paths a swap can't: a direct link, a bookmark, the no-JS `<a>`
+  // navigation, and handleClick's own degrade-to-navigation fallback.
+  rememberCurrentRoute(window.location.pathname);
 }

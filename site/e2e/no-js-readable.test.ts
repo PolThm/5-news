@@ -121,41 +121,36 @@ describe("no-JS readability of the built page", () => {
     expect(scriptMatches).toHaveLength(3);
     const scripts = scriptMatches.map((m) => ({ tag: `<script${m[1]}>`, body: m[2] ?? "" }));
 
-    // Whether Astro inlines the Period-switcher's compiled module or
-    // emits an external src="..." reference is its own bundler-size
-    // decision (see this file's stripInlineScript docstring). The
-    // language-detect redirect and SW registration are small enough to
-    // always inline, and each has a distinctive compiled body
-    // (navigator.language for language-detect; navigator.serviceWorker
-    // for the SW registration, which Period-switcher's own module never
-    // references) -- use that, not tag position, to tell all three apart
-    // reliably either way.
-    const languageDetect = scripts.find(
-      (s) => !s.tag.includes("src=") && s.body.includes("navigator.language")
-    );
+    // Whether Astro inlines a compiled module or emits an external
+    // src="..." reference is its own bundler-size decision (see this
+    // file's stripInlineScript docstring), and it re-decides per script
+    // as the modules change size -- language-detect crossed that
+    // threshold when it grew a preferences import. So resolve every
+    // script to its real code first, then tell the three apart by a
+    // distinctive marker each one alone contains (navigator.language for
+    // the language-detect redirect; navigator.serviceWorker for the SW
+    // registration; data-period-word for the Period-switcher island).
+    // Marker, not tag position and not inline-ness -- neither is stable.
+    const resolved = scripts.map((s) => {
+      const srcMatch = s.tag.match(/src="([^"]+)"/);
+      if (!srcMatch) return { ...s, code: s.body };
+      const scriptPath = join(SITE_ROOT, "dist", srcMatch[1] ?? "");
+      expect(existsSync(scriptPath)).toBe(true);
+      return { ...s, code: readFileSync(scriptPath, "utf-8") };
+    });
+
+    const languageDetect = resolved.find((s) => s.code.includes("navigator.language"));
     expect(languageDetect).toBeDefined();
 
-    const swRegister = scripts.find(
-      (s) => !s.tag.includes("src=") && s.body.includes("navigator.serviceWorker")
-    );
+    const swRegister = resolved.find((s) => s.code.includes("navigator.serviceWorker"));
     expect(swRegister).toBeDefined();
 
-    const periodSwitcher = scripts.find((s) => s !== languageDetect && s !== swRegister);
+    const periodSwitcher = resolved.find((s) => s.code.includes("data-period-word"));
     if (!periodSwitcher) throw new Error("could not identify the Period-switcher <script> tag");
-    const periodSwitcherTag = periodSwitcher.tag;
-    const isExternal = /<script[^>]+src=/i.test(periodSwitcherTag);
-    if (isExternal) {
-      const srcMatch = periodSwitcherTag.match(/src="([^"]+)"/);
-      if (!srcMatch) throw new Error("external <script> tag has no src attribute");
-      const scriptPath = join(SITE_ROOT, "dist", srcMatch[1]);
-      expect(existsSync(scriptPath)).toBe(true);
-      const scriptContent = readFileSync(scriptPath, "utf-8");
-      expect(scriptContent).toContain("data-period-word");
-      expect(scriptContent).toMatch(/briefings\/\$\{|\/briefings\//);
-    } else {
-      expect(html).toContain("data-period-word");
-      expect(html).toMatch(/briefings\/\$\{|\/briefings\//);
-    }
+    // All three must be genuinely distinct tags, not one tag matching
+    // several markers because the bundler merged entry points.
+    expect(new Set([languageDetect, swRegister, periodSwitcher]).size).toBe(3);
+    expect(periodSwitcher.code).toMatch(/briefings\/\$\{|\/briefings\//);
   });
 
   it("renders the Period word as a real <a href> to the equivalent static route, not a placeholder", () => {
@@ -199,6 +194,48 @@ describe("no-JS readability of the built page", () => {
     // proving this test would actually fail if attribution ever
     // regressed to share that rule's dotted styling.
     expect(css).toMatch(/h1[^{]*\.word[^{]*\{[^}]*text-decoration:underline\s+\S/);
+  });
+
+  // The page is rendered twice by two different owners: Astro renders it
+  // on the server, and period-switcher.ts rebuilds the item list, fallback
+  // notice, Discarded Volume line and End Screen in the browser after every
+  // Zone/Period/Language swap. Astro's DEFAULT style scoping silently
+  // breaks the second half: it compiles every selector to
+  // `.item[data-astro-cid-<hash>]`, matching only what Astro itself
+  // stamped, and plain innerHTML in the island cannot reproduce a
+  // build-specific hash it has no way to know. Every swapped-in element
+  // therefore matched NO rule at all -- item separators vanished, the
+  // headline/summary fell back to browser default fonts, and
+  // `.source-list.js-collapsed{display:none}` stopped applying, so every
+  // Consensus source list sprang open and could not be closed again.
+  //
+  // BriefingPage.astro's `<style is:global>` is what prevents that. This
+  // asserts the *outcome* (no scoping attribute survives into any
+  // selector) rather than the source spelling, so reverting to a scoped
+  // <style> fails here regardless of how the revert is written.
+  it("ships styles that match client-rendered markup too, not only Astro-stamped elements", () => {
+    const css = resolveCss(html);
+    expect(css).not.toContain("data-astro-cid-");
+
+    // Every class period-switcher.ts writes via innerHTML must be
+    // reachable by a bare class selector. `js-collapsed` is the one that
+    // failed most visibly for the reader, so it is asserted explicitly
+    // rather than left to the loop.
+    for (const className of [
+      "item",
+      "headline",
+      "summary",
+      "chip",
+      "source-list",
+      "end-screen",
+      "fallback-notice",
+      "attribution",
+      "num",
+      "rule",
+    ]) {
+      expect(css).toContain(`.${className}`);
+    }
+    expect(css).toMatch(/\.source-list\.js-collapsed\{[^}]*display:none/);
   });
 
   // Story 4.8 (AC1): every interactive element needs a visible

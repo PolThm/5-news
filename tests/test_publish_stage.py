@@ -363,3 +363,84 @@ def test_every_summarize_owned_field_is_actually_copied() -> None:
         assert attached[field_name] == f"value-{field_name}", (
             f"{field_name!r} is in _SUMMARIZE_OWNED_FIELDS but was not copied by _attach_summary"
         )
+
+
+# --- Only facts are published ------------------------------------------------
+
+
+def test_a_publishers_headline_never_reaches_a_published_briefing() -> None:
+    """The design constraint the RSS adapter is built around.
+
+    DSM Recital 57: press-publishers' rights do not extend to hyperlinking or to
+    "mere facts reported in press publications" -- but a headline is the
+    publisher's own expression and sits inside the right. So a headline is read,
+    embedded to group articles covering one event, and handed to the summarizer
+    that writes this project's own text, then dropped before anything is written
+    to disk. Infopaq is the authority for why the line sits at persistence: an
+    11-word extract failed the transient-copy exception once it was *printed*.
+
+    The reader loses nothing -- BriefingPage.astro renders only `member.source`
+    and `member.source_country`.
+    """
+    from pipeline.stages.publish import _attach_summary
+
+    cluster = {
+        "cluster_id": "c1",
+        "members": [
+            {
+                "title": "Hind Rajab: l'armée israélienne reconnaît avoir tiré",
+                "url": "https://www.lemonde.fr/x",
+                "source": "lemonde.fr",
+                "source_country": "france",
+                "language": "fr",
+            }
+        ],
+        "independent_source_count": 1,
+        "country_count": 1,
+    }
+
+    published = _attach_summary(cluster, {})
+    member = published["members"][0]
+
+    assert "title" not in member, "the publisher's headline must not be persisted"
+    # Everything that IS a fact survives, including the link.
+    assert member["url"] == "https://www.lemonde.fr/x"
+    assert member["source"] == "lemonde.fr"
+    assert member["source_country"] == "france"
+    assert member["language"] == "fr"
+
+
+def test_the_summary_and_outbound_link_still_attach_over_facts_only_members() -> None:
+    """Stripping headlines must not disturb what summarize owns."""
+    from pipeline.stages.publish import _attach_summary
+
+    cluster = {
+        "cluster_id": "c1",
+        "members": [{"title": "their words", "url": "https://a.example/x", "source": "a.example"}],
+    }
+    summarized = {
+        "c1": {
+            "headline": "our own headline",
+            "summary": "our own paragraph",
+            "outbound_url": "https://a.example/x",
+            "outbound_source": "a.example",
+        }
+    }
+
+    published = _attach_summary(cluster, summarized)
+
+    assert published["headline"] == "our own headline"
+    assert published["summary"] == "our own paragraph"
+    assert "title" not in published["members"][0]
+
+
+def test_a_member_missing_optional_fields_is_not_invented() -> None:
+    """Fields absent upstream stay absent rather than becoming empty strings --
+    a Briefing must not claim a language or country it was never told."""
+    from pipeline.stages.publish import _attach_summary
+
+    published = _attach_summary(
+        {"cluster_id": "c1", "members": [{"url": "https://a.example/x"}]}, {}
+    )
+
+    assert published["members"][0] == {"url": "https://a.example/x"}

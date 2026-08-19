@@ -105,12 +105,42 @@ def assemble_briefings(
 _SUMMARIZE_OWNED_FIELDS = ("headline", "summary", "outbound_url", "outbound_source")
 
 
+# What a published member carries. Everything here is a fact -- who reported it,
+# where that newsroom sits, what language, and the URL -- and the publisher's own
+# headline is deliberately not among them.
+#
+# DSM Recital 57, verbatim: press-publishers' rights "should not extend to acts
+# of hyperlinking" and "should also not extend to mere facts reported in press
+# publications." A headline is the publisher's expression and sits inside the
+# right; the fact that they reported an event, and the link to it, sit outside.
+# The CJEU brackets where the exposure changes: PRCA v NLA allowed the transient
+# copies made while viewing a page, while Infopaq failed precisely because an
+# 11-word extract was *printed*, so that "the deletion of that reproduction is
+# entirely dependent on the will of the user". The line is persistence, not
+# retrieval.
+#
+# So a headline is read, embedded to group articles covering one event, and
+# handed to the summarizer that writes this project's own text -- then dropped
+# here. The site never displayed it anyway: BriefingPage.astro renders only
+# `member.source` and `member.source_country`, so this costs the reader nothing
+# and removes the one piece of protected expression the output used to keep.
+_PUBLISHED_MEMBER_FIELDS = ("url", "source", "source_country", "language")
+
+
+def _facts_only(member: dict) -> dict:
+    return {field: member[field] for field in _PUBLISHED_MEMBER_FIELDS if field in member}
+
+
 def _attach_summary(cluster: dict, summarized_by_id: dict[str, dict]) -> dict:
     summarized = summarized_by_id.get(cluster["cluster_id"])
-    if summarized is None:
-        return cluster
-    return {
+    published = {
         **cluster,
+        "members": [_facts_only(member) for member in cluster.get("members", [])],
+    }
+    if summarized is None:
+        return published
+    return {
+        **published,
         **{field: summarized[field] for field in _SUMMARIZE_OWNED_FIELDS if field in summarized},
     }
 

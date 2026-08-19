@@ -23,7 +23,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from pipeline.adapters import CollectionResult
+from pipeline.adapters import CollectionResult, Failure
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
     cycle_id_for,
@@ -83,26 +83,42 @@ def write_collection(
 def collect_all() -> CollectionResult:
     """Run collection and return what it produced.
 
-    One adapter, as of Story 6.2. There used to be two — GDELT's DOC 2.0 API
-    plus eleven RSS feeds (Story 1.3) — on the reasoning that coverage should
-    not depend on a single upstream. In practice the API was throttled in all
-    eight recorded cycles and RSS carried the product alone, which is the
-    opposite of the intended arrangement: a fallback doing all the work while
-    the primary contributed nothing.
+    Two adapters, for two different jobs.
 
-    Moving to GDELT's raw files removes the throttle that caused it (static
-    files, no rate limit) and lifts the corpus from ~365 articles across 11
-    outlets to ~26,000 across thousands. Losing the second adapter is a real
-    tradeoff, taken deliberately: if the files become unreachable, this cycle
-    publishes nothing and the previous Briefing set stays in place (AD-7),
-    rather than degrading to partial coverage.
+    `rss` reads the feeds serious newsrooms publish themselves -- ~1,100
+    articles from Le Monde, Le Figaro, Libération, El País, the Guardian, the
+    BBC, Der Spiegel, Repubblica, ANSA and others. This is the editorial
+    substance. It was deleted in Story 6.2 and its absence was the single
+    biggest reason the published Briefings read like an aggregator: measured
+    2026-08-19, a GDELT-only cycle of 10,331 articles contained ZERO articles
+    from Le Monde, Le Figaro, Libération, Reuters, AP, the NYT, the FT, El
+    Mundo, Corriere or FAZ, while iheart.com alone supplied 298.
 
-    Still deduplicates on URL: the same article appears in more than one
-    15-minute slot, and in both the English and translingual files.
+    `gdelt` supplies breadth -- ~10,000 articles across thousands of outlets in
+    every language. On its own it is a long tail of local radio stations and
+    portals; alongside a curated set it is what corroborates an event across
+    countries, which is what the Consensus Score is for.
+
+    Both are needed and neither is sufficient. Losing either degrades the cycle
+    rather than failing it (AD-10): if the feeds are unreachable the corpus is
+    broad but shallow, if GDELT is unreachable it is serious but narrow, and
+    only losing both leaves nothing to publish (AD-7).
+
+    Deduplicates on URL: the same article appears in more than one GKG slot, in
+    both the English and translingual files, and in more than one feed of the
+    same outlet (a front page and a section front overlap by design).
     """
     from pipeline.adapters.gdelt import collect_world_day
+    from pipeline.adapters.rss import RssClient
 
-    merged = CollectionResult.merge([collect_world_day()])
+    results = []
+    for label, collect in (("rss", lambda: RssClient().collect()), ("gdelt", collect_world_day)):
+        try:
+            results.append(collect())
+        except Exception as exc:  # noqa: BLE001 - adapter boundary (AD-10)
+            results.append(CollectionResult(articles=[], failures=[Failure(label, str(exc))]))
+
+    merged = CollectionResult.merge(results)
 
     seen: set[str] = set()
     deduplicated: list[dict[str, Any]] = []

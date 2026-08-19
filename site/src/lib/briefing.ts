@@ -41,6 +41,17 @@ export interface Cluster {
   summary?: string;
   outbound_url?: string | null;
   outbound_source?: string | null;
+  // Editorial provenance, added when the agenda stage began supplying the
+  // Briefing's candidates. Absent on every earlier file, so both are optional
+  // and the page renders without them exactly as it did before.
+  //
+  // `corroborated` false means no Article in our own corpus covered this
+  // event: the item exists because a human editor recorded it, its Consensus
+  // Score is honestly zero, and the reader is sent to the source the chronicle
+  // cited. Such an item must show where it came from -- see
+  // `editorialAttribution`.
+  agenda_category?: string;
+  corroborated?: boolean;
 }
 
 export interface BriefingRecord {
@@ -108,6 +119,34 @@ export function hasValidAttribution(
   return (
     !!cluster.outbound_url && !!cluster.outbound_source && /^https?:\/\//i.test(cluster.outbound_url)
   );
+}
+
+/** Whether an item rests on the editorial chronicle rather than on our own
+ * sources, and so must be attributed.
+ *
+ * True only when the item came from the agenda AND nothing in our corpus
+ * corroborated it. A corroborated item is summarized from Articles we
+ * collected ourselves and needs no attribution; an uncorroborated one is
+ * summarized from the chronicle's own account of the event, which is CC BY-SA,
+ * so the page says so.
+ */
+export function needsEditorialAttribution(
+  cluster: Pick<Cluster, "agenda_category" | "corroborated">
+): boolean {
+  return !!cluster.agenda_category && cluster.corroborated === false;
+}
+
+// The attribution line itself, per Output Language. Names the source and its
+// licence, which is what CC BY-SA asks for, and stays one short sentence so it
+// reads as a citation rather than a disclaimer.
+const EDITORIAL_ATTRIBUTION: Record<OutputLanguage, string> = {
+  fr: "D'après la chronique Wikipédia des événements courants (CC BY-SA 4.0)",
+  en: "From Wikipedia's Current Events chronicle (CC BY-SA 4.0)",
+  es: "Según la crónica de actualidad de Wikipedia (CC BY-SA 4.0)",
+};
+
+export function editorialAttribution(lang: OutputLanguage): string {
+  return EDITORIAL_ATTRIBUTION[lang];
 }
 
 // The 15 Zones (World, 6 Continents, 8 Countries), in the exact cycle order

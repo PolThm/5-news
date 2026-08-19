@@ -1,23 +1,25 @@
 import { describe, expect, it } from "vitest";
 import {
+  OUTPUT_LANGUAGE_CYCLE,
+  ZONE_CYCLE,
   attributionText,
   consensusChipText,
   countryLabel,
   discardedVolumeText,
+  editorialAttribution,
   endScreenText,
   fallbackNoticeText,
   formatCount,
   hasValidAttribution,
   isZoneFallback,
   madLibsLeadIn,
+  needsEditorialAttribution,
   nextPeriod,
   nextZone,
   offlineBannerText,
-  OUTPUT_LANGUAGE_CYCLE,
   periodSentenceText,
   sourceListIntro,
   timestampPrefix,
-  ZONE_CYCLE,
   zoneSentenceLabel,
 } from "../briefing";
 
@@ -402,5 +404,47 @@ describe("offlineBannerText", () => {
     expect(offlineBannerText("fr")).toBe("Vous consultez une version en cache d'un cycle précédent.");
     expect(offlineBannerText("en")).toBe("You're viewing a cached version from an earlier cycle.");
     expect(offlineBannerText("es")).toBe("Estás viendo una versión en caché de un ciclo anterior.");
+  });
+});
+
+describe("editorial attribution", () => {
+  it("attributes an item that rests on the chronicle and nothing else", () => {
+    // Uncorroborated means no Article of ours covered the event: the summary is
+    // written from the chronicle's own CC BY-SA account, so the page says where
+    // it came from.
+    expect(
+      needsEditorialAttribution({
+        agenda_category: "Armed conflicts and attacks",
+        corroborated: false,
+      })
+    ).toBe(true);
+  });
+
+  it("does not attribute an item summarized from our own Articles", () => {
+    expect(
+      needsEditorialAttribution({
+        agenda_category: "Armed conflicts and attacks",
+        corroborated: true,
+      })
+    ).toBe(false);
+  });
+
+  it("does not attribute an item that never came from the chronicle", () => {
+    // The fallback path: when the agenda is unavailable the pipeline ranks
+    // Clusters directly, and those items carry no editorial fields at all.
+    expect(needsEditorialAttribution({})).toBe(false);
+    expect(needsEditorialAttribution({ corroborated: false })).toBe(false);
+  });
+
+  it("names the source and its licence in each language", () => {
+    // CC BY-SA asks for the source and the licence; one sentence keeps it a
+    // citation rather than a disclaimer.
+    for (const lang of ["fr", "en", "es"] as const) {
+      const line = editorialAttribution(lang);
+      expect(line).toMatch(/Wikip/);
+      expect(line).toContain("CC BY-SA 4.0");
+    }
+    expect(editorialAttribution("fr")).toContain("chronique");
+    expect(editorialAttribution("es")).toContain("crónica");
   });
 });

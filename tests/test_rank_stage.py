@@ -995,3 +995,118 @@ def test_a_cluster_written_before_this_field_existed_does_not_crash_rank() -> No
 
     assert _is_relevant_to(legacy, zone_by_slug("world")) is True
     assert _is_relevant_to(legacy, zone_by_slug("france")) is False
+
+
+# --- Editorial judgment as a route to publication ----------------------------
+
+
+def test_an_editorial_item_qualifies_without_corroboration() -> None:
+    """The measurement that forced this: of 105 chronicle events, 16 had any
+    coverage at all in a 10,000-article corpus, and the consensus floor alone
+    admitted 4 items -- keeping syndicated road accidents while dropping wars,
+    elections and diplomacy, because accidents get rerun and diplomacy gets
+    reported once.
+
+    A human editor deciding an event belongs in the record of a day is a
+    stronger claim about importance than any count of reruns, so it stands on
+    its own.
+    """
+    from pipeline.stages.rank import qualifies
+
+    uncorroborated = {
+        "cluster_id": "e1",
+        "independent_source_count": 0,
+        "country_count": 0,
+        "agenda_category": "Armed conflicts and attacks",
+    }
+    assert qualifies(uncorroborated) is True
+
+
+def test_a_cluster_with_no_editorial_backing_still_faces_the_consensus_floor() -> None:
+    """The original gate is not removed, only bypassed for items an editor
+    vouched for. An item nobody vouched for -- no editor, no second source --
+    must still be kept out."""
+    from pipeline.stages.rank import qualifies
+
+    def cluster(sources: int, countries: int) -> dict:
+        return {
+            "cluster_id": "c",
+            "independent_source_count": sources,
+            "country_count": countries,
+        }
+
+    assert qualifies(cluster(1, 1)) is False
+    assert qualifies(cluster(5, 1)) is False, "5 sources all in one country still fails"
+    assert qualifies(cluster(2, 2)) is True
+
+
+def test_todays_editorial_items_outrank_a_widely_syndicated_older_one() -> None:
+    """Consensus Score alone put the day upside down once the agenda supplied
+    candidates: an uncorroborated event scores zero, so today's war sorted below
+    a week-old road accident that happened to be rerun everywhere."""
+    from pipeline.stages.rank import rank_clusters
+
+    ordered = rank_clusters(
+        [
+            {
+                "cluster_id": "old-but-syndicated",
+                "independent_source_count": 9,
+                "country_count": 4,
+                "agenda_day": "2026-08-13",
+            },
+            {
+                "cluster_id": "today-uncorroborated",
+                "independent_source_count": 0,
+                "country_count": 0,
+                "agenda_day": "2026-08-19",
+            },
+        ]
+    )
+
+    assert [c["cluster_id"] for c in ordered] == ["today-uncorroborated", "old-but-syndicated"]
+
+
+def test_within_one_day_the_consensus_score_still_orders() -> None:
+    """Recency decides between days, not within one -- a better-corroborated
+    event from today still leads."""
+    from pipeline.stages.rank import rank_clusters
+
+    ordered = rank_clusters(
+        [
+            {
+                "cluster_id": "thin",
+                "independent_source_count": 0,
+                "country_count": 0,
+                "agenda_day": "2026-08-19",
+            },
+            {
+                "cluster_id": "well-covered",
+                "independent_source_count": 3,
+                "country_count": 2,
+                "agenda_day": "2026-08-19",
+            },
+        ]
+    )
+
+    assert [c["cluster_id"] for c in ordered] == ["well-covered", "thin"]
+
+
+def test_items_with_no_editorial_day_sort_last_and_by_score_alone() -> None:
+    """The fallback path -- Clusters ranked directly when the agenda is
+    unavailable -- must be ordered exactly as it was before this change."""
+    from pipeline.stages.rank import rank_clusters
+
+    ordered = rank_clusters(
+        [
+            {"cluster_id": "b", "independent_source_count": 2, "country_count": 2},
+            {"cluster_id": "a", "independent_source_count": 7, "country_count": 3},
+            {
+                "cluster_id": "dated",
+                "independent_source_count": 0,
+                "country_count": 0,
+                "agenda_day": "2026-08-19",
+            },
+        ]
+    )
+
+    assert [c["cluster_id"] for c in ordered] == ["dated", "a", "b"]

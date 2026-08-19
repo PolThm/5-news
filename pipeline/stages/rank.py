@@ -53,9 +53,32 @@ STAGE = "rank"
 
 
 def qualifies(cluster: dict) -> bool:
-    """PRD Glossary, Qualifying Cluster: at least 2 Independent Sources from
-    at least 2 distinct countries. Both floors are independent and both must
-    hold — 5 sources all from one country still fails."""
+    """Whether an item may be published.
+
+    Two independent routes, because there are two independent kinds of evidence
+    that a story matters.
+
+    **Editorial judgment.** An item carrying `agenda_category` came from the
+    editorial chronicle: a human editor decided the event belonged in the
+    record of a day, and filed it under a category. That is a stronger claim
+    about importance than any count of reruns, so it qualifies on its own. It
+    was measured: of 105 chronicle events, only 16 had any coverage at all in a
+    10,000-article corpus, and the consensus floor alone admitted 4 items --
+    dropping wars, elections and diplomacy while keeping road accidents,
+    because accidents get syndicated and diplomacy gets reported once.
+
+    **Corroborated consensus.** Otherwise the original floor stands (PRD
+    Glossary, Qualifying Cluster): at least 2 Independent Sources from at least
+    2 distinct countries, both independent and both required -- 5 sources all
+    from one country still fails. This is what keeps an item that nothing
+    vouched for out of a Briefing when no editor vouched for it either.
+
+    The Consensus Score is unaffected either way: it still reports exactly what
+    the item's own source list can show, which for an uncorroborated editorial
+    item is zero, and the reader is sent to the source the chronicle cited.
+    """
+    if cluster.get("agenda_category"):
+        return True
     return (
         cluster["independent_source_count"] >= MIN_INDEPENDENT_SOURCES
         and cluster["country_count"] >= MIN_COUNTRIES
@@ -63,20 +86,52 @@ def qualifies(cluster: dict) -> bool:
 
 
 def rank_clusters(clusters: list[dict]) -> list[dict]:
-    """Order Clusters by Consensus Score: Independent Source count descending,
-    then country count descending, then ``cluster_id`` ascending as a stable,
-    content-derived tiebreak.
+    """Order items: most recent editorial day first, then Consensus Score.
 
-    A single ``sorted()`` call with a tuple key is the whole mechanism — no
-    library heuristic, no multi-pass logic, nothing that could hide
-    non-determinism the way Story 2.1's HDBSCAN detour did. Negating the two
-    count fields yields descending order for both while keeping the
-    tiebreak's natural ascending order, all in one pass.
+    Recency leads because Consensus Score alone put the day the wrong way up
+    once the editorial agenda started supplying candidates. An uncorroborated
+    event has a score of zero, so sorting on score first buried today's war and
+    diplomacy under a week-old road accident that happened to be syndicated --
+    the same blindness that made the score a bad gate, showing up again as a
+    bad order.
+
+    Recency, deliberately, and not a ranking of the chronicle's categories.
+    Deciding that "Armed conflicts and attacks" outranks "Politics and
+    elections" would be this pipeline inventing an editorial hierarchy nobody
+    asked it to hold; what day something happened is a fact. Items with no
+    editorial day (Clusters ranked directly, when the agenda is unavailable)
+    sort together and fall back to score alone, so that path is unchanged.
+
+    Still a single ``sorted()`` call with a tuple key — no library heuristic,
+    no multi-pass logic, nothing that could hide non-determinism the way Story
+    2.1's HDBSCAN detour did. Negating the count fields yields descending order
+    while keeping the tiebreak's natural ascending order, in one pass.
     """
     return sorted(
         clusters,
-        key=lambda c: (-c["independent_source_count"], -c["country_count"], c["cluster_id"]),
+        key=lambda c: (
+            # Descending by day: "" (no agenda day) sorts last under reverse
+            # string comparison, which is why the whole tuple is negated-by-
+            # convention rather than reversed wholesale.
+            _descending_day(c.get("agenda_day") or ""),
+            -c["independent_source_count"],
+            -c["country_count"],
+            c["cluster_id"],
+        ),
     )
+
+
+def _descending_day(day: str) -> str:
+    """A sort key that puts later ISO dates first and undated items last.
+
+    Inverting each digit turns ascending string order into descending date
+    order without needing a separate reverse pass, and an empty day inverts to
+    an empty string, which sorts *before* everything -- so it is replaced with a
+    high sentinel to keep undated items at the end.
+    """
+    if not day:
+        return "~"  # sorts after digits and hyphens in ASCII
+    return "".join(chr(ord("9") - (ord(ch) - ord("0"))) if ch.isdigit() else ch for ch in day)
 
 
 def link_across_days(

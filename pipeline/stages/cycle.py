@@ -717,6 +717,32 @@ def _resume_cycle(
             published = True
             briefings_path = written.briefings_path
             record["phase"] = "published"
+        except KeyError as exc:
+            # A Zone or Period this cycle ranked no longer exists in
+            # `pipeline.config`. Publish can never succeed for it, however many
+            # times it is retried: the ranked output on disk was computed under
+            # the old configuration and nothing re-derives it.
+            #
+            # This is why the distinction from `publish_failed` below matters.
+            # `publish_failed` is deliberately resumable, so a transient
+            # failure (a full disk, a crash mid-staging) gets retried. A
+            # scope change is not transient, and leaving such a cycle
+            # resumable blocks every future cycle from collecting at all --
+            # the exact trap `_TERMINAL_PHASES` already records for
+            # `summarize_submit_failed`. Observed for real on 2026-08-19,
+            # when narrowing to 4 Zones left an in-flight cycle holding
+            # `north-america` rankings.
+            #
+            # Abandoning loses this cycle's Briefings and its already-paid
+            # summarize batches. That is the cheaper side of the trade: the
+            # previous Briefing set stays in place (AD-7) and the next cycle
+            # starts clean under the current config.
+            failures.append(
+                Failure("cycle", f"publish impossible under the current config: {exc}")
+            )
+            record["degraded"] = True
+            record["failures"] = [f.to_dict() for f in failures]
+            record["phase"] = "abandoned"
         except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
             failures.append(Failure("cycle", f"publish raised: {exc}"))
             record["degraded"] = True

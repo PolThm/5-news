@@ -1319,3 +1319,67 @@ def test_the_cache_does_not_outlive_one_wrapping():
     memoize_embeddings(counting)(["alpha"])
     memoize_embeddings(counting)(["alpha"])
     assert calls == 2
+
+
+def test_a_scope_change_abandons_a_pending_cycle_instead_of_blocking_forever(
+    tmp_path: Path,
+) -> None:
+    """A cycle whose ranked output names a Zone the config no longer has must
+    end as `abandoned`, not `publish_failed`.
+
+    `publish_failed` is resumable on purpose, so a transient publish crash
+    gets retried. A scope change is not transient: the ranked output on disk
+    was computed under the old configuration and nothing re-derives it, so
+    every retry raises the same KeyError. Left resumable, that cycle is
+    returned by find_resumable_cycle_id on every future run and blocks
+    collection entirely -- the same trap _TERMINAL_PHASES already records for
+    `summarize_submit_failed`.
+
+    Observed for real on 2026-08-19: narrowing to 4 Zones left an in-flight
+    cycle holding `north-america` rankings, and the resume failed with
+    `unknown zone slug: 'north-america'`.
+    """
+    from pipeline.stages.cycle import _should_resume
+
+    run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    import pipeline.stages.cycle as cycle_module
+
+    original = cycle_module.publish_briefings
+
+    def raising_publish(*args, **kwargs):
+        raise KeyError("unknown zone slug: 'north-america'")
+
+    cycle_module.publish_briefings = raising_publish
+    try:
+        result = run_cycle(
+            collect=lambda: _collection(_record("A", "a.com")),
+            cycle_id="2026-08-11T00-00-00Z",
+            data_root=tmp_path,
+            embed=_no_op_embed,
+            submit_summarize_fn=_no_op_submit_summarize,
+            collect_summarize_fn=_make_collect_that_completes_for(
+                OutputLanguage.FR, OutputLanguage.EN, OutputLanguage.ES
+            ),
+        )
+    finally:
+        cycle_module.publish_briefings = original
+
+    assert result.published is False
+    assert any("publish impossible under the current config" in f.detail for f in result.failures)
+
+    # Read the phase off cycle.json, not the return value: the file is the
+    # durable state a later invocation actually resumes from (AD-11).
+    cycle_path = tmp_path / "intermediate" / "2026-08-11T00-00-00Z" / "cycle.json"
+    record = json.loads(cycle_path.read_text(encoding="utf-8"))
+    assert record["phase"] == "abandoned"
+
+    # The decisive property: the next run must be free to collect a fresh
+    # cycle rather than being handed this one again.
+    assert _should_resume(cycle_path) is False

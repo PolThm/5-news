@@ -14,10 +14,14 @@
     {
       "adapter": "cycle",
       "detail": "publish raised: \"unknown zone slug: 'north-america'\""
+    },
+    {
+      "adapter": "cycle",
+      "detail": "publish impossible under the current config: unknown zone slug: 'north-america'. Ranked under the 15-Zone configuration; abandoned by hand on 2026-08-19 so it stops being returned by find_resumable_cycle_id and blocking every later cycle."
     }
   ],
   "groups_after_dedupe": 6075,
-  "phase": "publish_failed",
+  "phase": "abandoned",
   "published": false,
   "started_at": "2026-08-19T09:41:04.555620+00:00",
   "summarize_batches": {}

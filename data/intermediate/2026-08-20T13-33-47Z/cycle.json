@@ -1,0 +1,36 @@
+{
+  "articles_collected": 11837,
+  "briefings_path": null,
+  "clusters_after_grouping": 10359,
+  "clusters_selected": 15,
+  "completed": true,
+  "cycle_id": "2026-08-20T13-33-47Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: no items parsed from response"
+    },
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: no items parsed from response"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for fr; see summarize.json"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for en; see summarize.json"
+    },
+    {
+      "adapter": "cycle",
+      "detail": "summarize submission failed for es; see summarize.json"
+    }
+  ],
+  "groups_after_dedupe": 10549,
+  "phase": "summarize_submit_failed",
+  "published": false,
+  "started_at": "2026-08-20T13:33:47.441064+00:00",
+  "summarize_batches": {}
+}

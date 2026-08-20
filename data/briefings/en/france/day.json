@@ -1,16 +1,108 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-scouarnec-8f8412f6e9e3",
-      "coherence": 0.7041585021429209,
-      "consequence": 2,
+      "cluster_id": "subject-france-492b5c52b9ea",
+      "coherence": 0.5966363337072191,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Judicial investigation opened into 10 additional rape allegations against Le Scouarnec",
-      "independent_source_count": 4,
+      "headline": "France's heat wave becomes the longest on record, tying 1983",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/meteo/la-vague-de-chaleur-debutee-fin-juillet-en-france-devient-la-plus-longue-ex-aequo-avec-celle-de-1983-20260820"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260820-record-vague-chaleur-juillet-canicule-la-plus-longue-en-france-depuis-1983"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.fr",
+          "source_country": "france",
+          "url": "https://www.rtl.fr/actu/meteo/deja-23-jours-consecutifs-la-vague-de-chaleur-en-cours-est-la-plus-longue-jamais-enregistree-en-france-depuis-1983-7900663423"
+        },
+        {
+          "language": "fr",
+          "source": "vosgesmatin.fr",
+          "source_country": "france",
+          "url": "https://www.vosgesmatin.fr/environnement/2026/08/20/cette-vague-de-chaleur-est-desormais-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-1983"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5966,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.5496,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "c'est",
+        "france",
+        "francia",
+        "ligue",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "A heat wave that began in late July in France has now lasted 23 consecutive days, making it the longest heat wave ever recorded in the country, matching the duration of the heat wave from 1983.",
+      "takeaway": "France is experiencing its longest recorded heat wave in at least 40 years.",
+      "why_it_matters": "The prolonged heat affects public health, energy consumption, and agriculture across France during an extended period of extreme temperatures."
+    },
+    {
+      "cluster_id": "subject-scouarnec-9649b1d3db83",
+      "coherence": 0.6412471353719219,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Investigation opened into 10 additional rapes and 40 sexual assaults against former surgeon Le Scouarnec",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
@@ -32,9 +124,21 @@
         },
         {
           "language": "fr",
+          "source": "cnews.fr",
+          "source_country": "france",
+          "url": "https://www.cnews.fr/france/2026-08-19/affaire-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et"
+        },
+        {
+          "language": "fr",
+          "source": "femmeactuelle.fr",
+          "source_country": "france",
+          "url": "https://www.femmeactuelle.fr/actu/news-actu/affaire-joel-le-scouarnec-10-nouveaux-viols-et-40-agressions-sexuelles-mettent-en-cause-l-ex-chirurgien-deja-condamne-2210691"
+        },
+        {
+          "language": "fr",
           "source": "maville.com",
           "source_country": "france",
-          "url": "https://brignoles.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
+          "url": "https://laseyne.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
         }
       ],
       "mentioned_countries": [
@@ -43,7 +147,7 @@
       "origin_country": "france",
       "outbound_source": "la-croix.com",
       "outbound_url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "la-croix.com",
@@ -52,17 +156,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.7042,
+          "coherence": 0.6412,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.6,
+          "source_reliability": 0.6522
         },
-        "total": 0.6139,
+        "total": 0.5397,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "scouarnec",
@@ -70,147 +174,39 @@
         "scouarnec"
       ],
       "subject_newsroom_count": 3,
-      "summary": "French prosecutors have opened a judicial investigation into 10 new allegations of rape and 40 allegations of sexual assault against Joël Le Scouarnec, expanding an existing legal case against him.",
-      "takeaway": "A former public figure now faces investigation into substantially more allegations of sexual violence than previously documented.",
-      "why_it_matters": "The investigation widens the scope of criminal charges facing Le Scouarnec and potentially affects additional alleged victims seeking justice through the French court system."
+      "summary": "French authorities have opened a judicial investigation into allegations of 10 new rapes and 40 sexual assaults against Joël Le Scouarnec, a former surgeon who has already been convicted in connection with previous crimes. The new investigation represents an expansion of charges against the already-prosecuted defendant.",
+      "takeaway": "A former French surgeon facing prior convictions now faces investigation for dozens of new sexual assault allegations.",
+      "why_it_matters": "The investigation could result in additional criminal charges and sentencing for Le Scouarnec, potentially extending his legal consequences beyond his prior conviction."
     },
     {
-      "cluster_id": "subject-france-55dbb3652e8e",
-      "coherence": 0.5927013380263494,
+      "cluster_id": "subject-togo-a11dff3af632",
+      "coherence": null,
       "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "France's heat wave that began in late July becomes the longest on record, tying 1983",
-      "independent_source_count": 6,
+      "headline": "Two French filmmakers detained in Togo with a local collaborator",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/meteo/la-vague-de-chaleur-debutee-fin-juillet-en-france-devient-la-plus-longue-ex-aequo-avec-celle-de-1983-20260820"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/canicule-la-vague-de-chaleur-en-cours-devient-la-deuxieme-plus-longue-enregistree-en-france-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260820-record-vague-chaleur-juillet-canicule-la-plus-longue-en-france-depuis-1983"
-        },
-        {
-          "language": "fr",
-          "source": "notretemps.com",
-          "source_country": "france",
-          "url": "https://www.notretemps.com/depeches/france-la-vague-de-chaleur-debutee-fin-juillet-devient-la-plus-longue-ex-aequo-avec-1983-137553"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/canicule-la-vague-de-chaleur-en-cours-devient-la-deuxieme-plus-longue-enregistree-en-france-20260819",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5927,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.5621,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "paris"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "A heat wave that began in late July in France has become the longest on record, matching the duration of the heat wave from 1983. The ongoing heat wave has lasted at least 23 days, making it equal in length to the previous record set four decades ago.",
-      "takeaway": "France is now experiencing its longest heat wave since records began, matching a 1983 record that stood for four decades.",
-      "why_it_matters": "The prolonged extreme heat exposes France's population to sustained health risks and strain on energy and water resources during an extended period of dangerous temperatures."
-    },
-    {
-      "cluster_id": "subject-francois-fillon-1bc8c95ceb13",
-      "coherence": 0.5502201024541704,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Former French Prime Minister François Fillon suspended from Legion of Honor",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/francois-fillon-suspendu-de-la-legion-d-honneur-et-de-lordre-national-du-merite-20260820"
-        },
         {
           "language": "fr",
           "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/politique/200826/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs"
+          "url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/afrique/togo/nous-sommes-en-lien-avec-les-autorites-du-togo-pour-qu-ils-puissent-etre-liberes-au-plus-tot-assure-jean-noel-barrot-a-propos-des-deux-realisateurs-francais-detenus-dans-le-pays_8154128.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
-          "source": "maville.com",
+          "source": "radiofrance.fr",
           "source_country": "france",
-          "url": "https://draguignan.maville.com/actu/actudet_-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans_une-7445504_actu.Htm"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://hyeres.maville.com/actu/actudet_-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans_une-7445504_actu.Htm"
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-9149452"
         }
       ],
       "mentioned_countries": [
@@ -218,44 +214,42 @@
       ],
       "origin_country": "france",
       "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html#xtor=RSS-3-[lestitres]",
+      "outbound_url": "https://www.franceinfo.fr/monde/afrique/togo/nous-sommes-en-lien-avec-les-autorites-du-togo-pour-qu-ils-puissent-etre-liberes-au-plus-tot-assure-jean-noel-barrot-a-propos-des-deux-realisateurs-francais-detenus-dans-le-pays_8154128.html#xtor=RSS-3-%5Bgeneral%5D",
       "rank": 3,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr",
-        "mediapart.fr"
+        "mediapart.fr",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5502,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6667
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5427,
+        "total": 0.5114,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "francois fillon",
+      "subject_label": "togo",
       "subject_names": [
-        "francois fillon",
-        "legion"
+        "togo"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "François Fillon, the former Prime Minister of France, has been suspended from both the Legion of Honor and the National Order of Merit following his conviction for fictitious employment. The suspension came as a consequence of his legal condemnation related to the creation of fake jobs.",
-      "takeaway": "A criminal conviction for financial misconduct resulted in the removal of Fillon's state honors.",
-      "why_it_matters": "Fillon loses the honors and distinctions he previously held as recognition of his state service and public standing."
+      "subject_newsroom_count": 3,
+      "summary": "Two French film directors and a local collaborator have been arrested and detained in Togo. French government officials, including Minister Jean-Noël Barrot, have stated they are in contact with Togolese authorities to secure the filmmakers' release as soon as possible.",
+      "takeaway": "French filmmakers have been arrested in Togo while the French government works to obtain their release.",
+      "why_it_matters": "The detention affects the French nationals involved and their families, and involves ongoing diplomatic coordination between the French government and Togolese authorities."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T11:59:57.120100+00:00",
+  "generated_at": "2026-08-20T12:19:34.644240+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

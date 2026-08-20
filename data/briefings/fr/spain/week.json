@@ -2,111 +2,23 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-allemagne-8df11689696f",
-        "subject-allemagne-ad0285520b57"
-      ],
-      "cluster_id": "subject-allemagne-8df11689696f",
-      "coherence": 0.5023127870817421,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "germany"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-20",
-      "headline": "L'Allemagne et l'Espagne enregistrent des milliers de décès liés aux chaleurs extrêmes",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/allemagne-14-000-deces-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018-20260820_THJAHV2XVVBNLIOUGG7XM236UI/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "es",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/es/alemania-reporta-14000-muertes-vinculadas-al-calor-este-verano/a-78442548"
-        }
-      ],
-      "mentioned_countries": [
-        "germany",
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "dw.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5023,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6653,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "allemagne",
-      "subject_names": [
-        "alemania",
-        "allemagne",
-        "espagne",
-        "france",
-        "francia",
-        "paris"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Selon les chiffres compilés par les médias européens, l'Allemagne a dénombré environ 14 000 morts liées à la chaleur pendant l'été, tandis que l'Espagne en a enregistré près de 4 500. Ces bilans, en particulier celui de l'Allemagne, dépassent largement les records observés lors des vagues de chaleur précédentes, notamment en 2018.",
-      "takeaway": "L'Europe connaît une mortalité record liée aux chaleurs extrêmes de l'été, avec plusieurs dizaines de milliers de décès enregistrés.",
-      "why_it_matters": "Ces décès révèlent l'impact sanitaire majeur des températures extrêmes sur la population des pays européens, affectant des milliers de personnes notamment parmi les plus vulnérables."
-    },
-    {
-      "_linked_ids": [
         "subject-ceuta",
         "subject-ceuta-1cd6e3a82ec6",
         "subject-ceuta-6ed60370ecfa",
+        "subject-ceuta-c8cb825ecbfc",
         "subject-ceuta-f6ea089fc1ca"
       ],
-      "cluster_id": "subject-ceuta-1cd6e3a82ec6",
-      "coherence": 0.5074727562153463,
+      "cluster_id": "subject-ceuta-c8cb825ecbfc",
+      "coherence": 0.44312217947311916,
       "consequence": 2,
       "countries": [
-        "au",
         "brazil",
-        "france",
-        "germany",
-        "united-kingdom"
+        "france"
       ],
-      "country_count": 5,
+      "country_count": 2,
       "editorial_day": "2026-08-20",
-      "headline": "L'Espagne accepte de transférer 500 mineurs migrants de Ceuta vers le continent",
-      "independent_source_count": 7,
+      "headline": "L'Espagne accepte 500 mineures migrantes arrivées à Ceuta malgré l'opposition de l'UE",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
@@ -121,93 +33,241 @@
           "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-ceuta-l-espagne-veut-transf%C3%A9rer-500-mineures-migrantes"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/19/spain-allows-500-migrant-minors-in-ceuta-to-relocate-to-the-mainland-in-u-turn"
-        },
-        {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/08/19/espanha-vai-acolher-500-menores-imigrantes-do-marrocos-que-chegaram-em-ceuta.ghtml"
         },
         {
-          "language": "de",
-          "source": "rnz.de",
-          "source_country": "germany",
-          "url": "https://www.rnz.de/politik/nachrichten_artikel,-Spanische-Nordafrika-Exklave-Ceuta-Spanien-will-500-Minderjaehrige-aufs-Festland-bringen-_arid,2408104.html"
-        },
-        {
-          "language": "de",
-          "source": "muensterschezeitung.de",
-          "source_country": "germany",
-          "url": "https://www.muensterschezeitung.de/nachrichten/politik/ceuta-spanien-will-500-minderjaehrige-aufs-festland-bringen-3622731"
-        },
-        {
-          "language": "de",
-          "source": "kurier.at",
-          "source_country": "au",
-          "url": "https://kurier.at/politik/ausland/ceuta-spanien-will-500-minderjaehrige-aufs-festland-bringen/403184841"
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/international/espagne/ceuta-lespagne-refuse-de-renvoyer-500-jeunes-filles-au-maroc-contre-lavis-de-lunion-europeenne-19-08-2026-VE5OJHIKPZBDBC2VKIRVROMRAM.php"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "au",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/aug/19/spain-allows-500-migrant-minors-in-ceuta-to-relocate-to-the-mainland-in-u-turn",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "origin_country": "brazil",
+      "outbound_source": "leparisien.fr",
+      "outbound_url": "https://www.leparisien.fr/international/espagne/ceuta-lespagne-refuse-de-renvoyer-500-jeunes-filles-au-maroc-contre-lavis-de-lunion-europeenne-19-08-2026-VE5OJHIKPZBDBC2VKIRVROMRAM.php",
+      "rank": 1,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "france24.com",
         "globo.com",
-        "lefigaro.fr",
-        "theguardian.com"
+        "lefigaro.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5075,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4431,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.25,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
+          "novelty": 0.2,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.6129,
+        "total": 0.5499,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
+        "bruselas",
         "ceuta",
         "espana",
-        "marruecos"
+        "madrid",
+        "marruecos",
+        "sanchez",
+        "trampolin"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "L'Espagne a décidé de permettre à 500 enfants migrants présents à Ceuta, l'enclave espagnole du nord du Maroc, de se rendre en Espagne continentale. Cette décision représente un revirement dans la gestion de la crise migratoire à Ceuta et intervient dans un contexte de tensions entre l'Espagne et l'Union européenne sur le traitement des mineurs arrivés dans l'enclave.",
-      "takeaway": "L'Espagne change de position et accepte d'accueillir sur son territoire des mineurs migrants massés à Ceuta.",
-      "why_it_matters": "Cette mesure améliore la situation humanitaire de 500 enfants migrants qui sont actuellement à Ceuta, en leur permettant de quitter l'enclave surpeuplée."
+      "subject_newsroom_count": 20,
+      "summary": "Cinq cents jeunes filles migrantes arrivées à Ceuta sont restées sur le territoire espagnol, l'Espagne refusant de les renvoyer au Maroc malgré le désaccord de l'Union européenne, qui souhaitait une répartition de ces mineures entre les pays membres.",
+      "takeaway": "L'Espagne a décidé d'accueillir 500 mineures migrantes à Ceuta plutôt que de les renvoyer, créant un désaccord avec l'Union européenne sur la gestion de la crise migratoire.",
+      "why_it_matters": "L'Espagne maintient ces 500 mineures sur son sol au lieu de les transférer vers d'autres États membres de l'UE ou de les reconduire au Maroc."
     },
     {
       "_linked_ids": [
-        "89e8fe7963a0bfd1",
-        "subject-otan-5a5c955e87c6"
+        "subject-ceuta-048294f0f24d"
       ],
-      "cluster_id": "subject-otan-5a5c955e87c6",
+      "cluster_id": "subject-ceuta-048294f0f24d",
       "coherence": null,
-      "consequence": 1,
+      "consequence": 2,
       "countries": [
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 2,
+      "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Deux F-18 espagnols décollent en Roumanie après l'intrusion d'un drone",
+      "headline": "Bruxelles demande au gouvernement espagnol de rapatrier tous les migrants entrés illégalement à Ceuta",
       "independent_source_count": 3,
       "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/ultima-hora-ceuta-directo-decenas-inmigrantes-logran-20260818091559-di.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "be",
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/espana/ultima-hora-ceuta-directo-decenas-inmigrantes-logran-20260818091559-di.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "elespanol.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5448,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "marruecos",
+        "sanchez",
+        "trampolin"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Les autorités bruxelloises exigent que le gouvernement espagnol renvoie au Maroc l'ensemble des migrants qui sont entrés illégalement dans l'enclave de Ceuta. Bruxelles insiste également pour obtenir plus d'informations sur les plans du gouvernement espagnol concernant cette situation.",
+      "takeaway": "L'Union européenne exige le rapatriement des migrants arrivés illégalement à Ceuta et réclame des précisions au gouvernement espagnol.",
+      "why_it_matters": "Cette demande de Bruxelles crée une pression politique sur le gouvernement espagnol pour qu'il modifie sa gestion de la crise migratoire à Ceuta et renforce la coordination avec le Maroc."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-b290c5663d36"
+      ],
+      "cluster_id": "subject-ceuta-b290c5663d36",
+      "coherence": 0.48541398514879397,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "La police évacue des milliers de migrants de la plage du Trampoline à Ceuta",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/policia-despliega-dispositivo-desalojar-inmigrantes-playa-trampolin-20260820085008-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/policia-traslada-miles-migrantes-playa-ceuti-trampolin-nuevos-espacios-acogida_1_13456995.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/20/6a8695e8e85ece98148b4594.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-migrantes-playa-ceuti-trampolin-son-reubicados-centro-subsaharianos-otro-magrebies-20260820105123.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/20/6a8695e8e85ece98148b4594.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elmundo.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4854,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.4766,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "marruecos",
+        "sanchez",
+        "trampolin"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "La police a procédé à l'évacuation de plusieurs milliers de migrants, entre 3.000 et 4.000 selon les sources, de la plage du Trampoline à Ceuta. Les migrants, composés de ressortissants subsahariens et maghrébins, ont été transférés vers de nouveaux centres d'accueil mis en place spécifiquement pour ces populations.",
+      "takeaway": "Des milliers de migrants ont été évacués d'une plage ceutienne et transférés vers des centres d'accueil.",
+      "why_it_matters": "Cette opération de relocalisation change les conditions de vie des migrants en les transférant d'une zone de plage vers des espaces d'accueil désignés."
+    },
+    {
+      "_linked_ids": [
+        "subject-otan-7b3389a0ef47",
+        "subject-otan-9841512ca26d"
+      ],
+      "cluster_id": "subject-otan-9841512ca26d",
+      "coherence": 0.4386401806685254,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Des chasseurs F-18 espagnols interceptent un drone ayant violé l'espace aérien roumain",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260816/11614684/avion-combate-espanol-otan-derriba-dron-violaba-espacio-aereo-rumania.html"
+        },
         {
           "language": "es",
           "source": "lavanguardia.com",
@@ -216,44 +276,51 @@
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/f-18-espanoles-intervienen-rumania-por-entrada-un-dron-su-espacio-aereo_7027556_0.html"
+          "url": "https://www.eldiario.es/internacional/caza-espanol-otan-derriba-dron-vulnero-espacio-aereo-rumania_1_13449815.html"
         },
         {
           "language": "es",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://es.euronews.com/my-europe/2026/08/20/dos-f-18-espanoles-despegan-en-rumania-tras-la-incursion-de-un-dron-en-su-espacio-aereo"
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/observatorio-defensa/20260820/cazas-f-18-espanoles-intervienen-rumania-intrusion-dron-cerca-frontera-ucraniana/1003744358097_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/f-18-espanoles-intervienen-rumania-por-entrada-un-dron-su-espacio-aereo_7027556_0.html"
         }
       ],
       "mentioned_countries": [
-        "ro",
-        "spain"
+        "spain",
+        "ro"
       ],
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
-        "euronews.com",
+        "eldiario.es",
+        "elespanol.com",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4386,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.4714,
+        "total": 0.4636,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "otan",
@@ -261,82 +328,86 @@
         "otan",
         "rumania"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Deux chasseurs F-18 espagnols stationnés en Roumanie ont décollé en réaction à l'entrée d'un drone dans l'espace aérien roumain près de la frontière ukrainienne. Les articles confirment que cette intervention représente une réponse de défense aérienne à cette incursion, bien qu'aucun détail supplémentaire sur l'origine du drone ou les suites de l'opération ne soit fourni.",
-      "takeaway": "Des chasseurs espagnols ont intercepté une menace aérienne en Roumanie à la frontière de l'Ukraine.",
-      "why_it_matters": "Cette intervention démontre que les forces militaires présentes en Roumanie maintiennent une surveillance active de son espace aérien face aux risques liés au conflit ukrainien voisin."
+      "subject_newsroom_count": 7,
+      "summary": "Deux chasseurs F-18 espagnols en mission de l'OTAN en Roumanie ont décollé en réaction à un drone ayant traversé l'espace aérien roumain près de la frontière avec l'Ukraine. Les intercepteurs ont abattu le drone qui avait pénétré dans l'espace aérien du pays.",
+      "takeaway": "Des avions espagnols stationnés en Roumanie ont intercepté et abattu un drone intrus à la limite de la zone de conflit ukrainienne.",
+      "why_it_matters": "L'incident démontre l'activation des moyens de défense aérienne de l'OTAN en réponse aux intrusions près du territoire ukrainien en guerre."
     },
     {
       "_linked_ids": [
-        "76decac05d1eef58",
-        "a55ff30132b3986e",
-        "subject-granada-de4fc4d0fbfd"
+        "subject-curro-romero-67714e596194"
       ],
-      "cluster_id": "subject-granada-de4fc4d0fbfd",
+      "cluster_id": "subject-curro-romero-67714e596194",
       "coherence": null,
       "consequence": 0,
       "countries": [
-        "brazil",
-        "united-kingdom"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-18",
-      "headline": "Des tremblements de terre secouent Grenade en Espagne et font des blessés",
-      "independent_source_count": 2,
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Curro Romero, 92 ans, hospitalisé pour une pneumonie à Séville",
+      "independent_source_count": 3,
       "members": [
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/cultura/2026-08-20/curro-romero-de-92-anos-ingresado-de-nuevo-por-neumonia-en-un-hospital-sevillano.html"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/18/terremotos-atingem-granada-na-espanha-deixando-feridos-e-danos-video.ghtml"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/corazon/famosos/20260820/curro-romero-ingresado-anos-hospital-sevilla-neumonia/1003744357981_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/cultura/toros/2026/08/19/6a85fa0421efa0cf198b4593.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/18/terremotos-atingem-granada-na-espanha-deixando-feridos-e-danos-video.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 2,
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/cultura/toros/2026/08/19/6a85fa0421efa0cf198b4593.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "globo.com"
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.0,
-          "novelty": 0.3333,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.3461,
+        "total": 0.3714,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "granada",
+      "subject_label": "curro romero",
       "subject_names": [
-        "granada"
+        "curro romero"
       ],
       "subject_newsroom_count": 3,
-      "summary": "Plusieurs tremblements de terre ont frappé la ville historique de Grenade en Espagne, causant des blessures et des dégâts matériels à la région.",
-      "takeaway": "Grenade a connu une série de tremblements de terre causant des blessés et des dégâts.",
-      "why_it_matters": "Trois personnes ont été blessées par ces tremblements de terre qui ont endommagé des structures dans cette région historiquement importante."
+      "summary": "Le torero Curro Romero, âgé de 92 ans, a été admis d'urgence dans un hôpital de Séville pour traiter une pneumonie.",
+      "takeaway": "Une légende de la tauromachie se retrouve à nouveau aux soins intensifs en raison d'une infection pulmonaire.",
+      "why_it_matters": "Son hospitalisation intervient à un âge avancé où les complications respiratoires présentent des risques importants."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T11:59:57.120100+00:00",
+  "generated_at": "2026-08-20T12:19:34.644240+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

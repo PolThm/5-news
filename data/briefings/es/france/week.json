@@ -2,20 +2,118 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-scouarnec-440c46973e69",
-        "subject-scouarnec-8f8412f6e9e3",
-        "subject-scouarnec-aa46f9d99b04"
+        "subject-france-492b5c52b9ea",
+        "subject-france-55dbb3652e8e",
+        "subject-france-a29369d0679c"
       ],
-      "cluster_id": "subject-scouarnec-8f8412f6e9e3",
-      "coherence": 0.7041585021429209,
-      "consequence": 2,
+      "cluster_id": "subject-france-492b5c52b9ea",
+      "coherence": 0.5966363337072191,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Se abre investigación judicial contra Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales",
-      "independent_source_count": 4,
+      "headline": "Francia registra la ola de calor más larga desde 1983",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/meteo/la-vague-de-chaleur-debutee-fin-juillet-en-france-devient-la-plus-longue-ex-aequo-avec-celle-de-1983-20260820"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260820-record-vague-chaleur-juillet-canicule-la-plus-longue-en-france-depuis-1983"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.fr",
+          "source_country": "france",
+          "url": "https://www.rtl.fr/actu/meteo/deja-23-jours-consecutifs-la-vague-de-chaleur-en-cours-est-la-plus-longue-jamais-enregistree-en-france-depuis-1983-7900663423"
+        },
+        {
+          "language": "fr",
+          "source": "vosgesmatin.fr",
+          "source_country": "france",
+          "url": "https://www.vosgesmatin.fr/environnement/2026/08/20/cette-vague-de-chaleur-est-desormais-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-1983"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5966,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 0.3333,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.4829,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "c'est",
+        "france",
+        "francia",
+        "ligue",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "Una ola de calor que comenzó a finales de julio en Francia se ha convertido en la más larga jamás registrada en el país, igualando el récord de 1983 después de 23 días consecutivos de temperaturas extremas.",
+      "takeaway": "Francia está viviendo su ola de calor más prolongada en cuarenta años.",
+      "why_it_matters": "El evento establece un hito climático que afecta las condiciones meteorológicas extremas que experimenta Francia y marca un punto de referencia histórico para futuras comparaciones de fenómenos climáticos."
+    },
+    {
+      "_linked_ids": [
+        "subject-scouarnec-440c46973e69",
+        "subject-scouarnec-8f8412f6e9e3",
+        "subject-scouarnec-9649b1d3db83",
+        "subject-scouarnec-aa46f9d99b04"
+      ],
+      "cluster_id": "subject-scouarnec-9649b1d3db83",
+      "coherence": 0.6412471353719219,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Se abre investigación judicial contra Le Scouarnec por diez violaciones y cuarenta agresiones sexuales",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
@@ -37,9 +135,21 @@
         },
         {
           "language": "fr",
+          "source": "cnews.fr",
+          "source_country": "france",
+          "url": "https://www.cnews.fr/france/2026-08-19/affaire-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et"
+        },
+        {
+          "language": "fr",
+          "source": "femmeactuelle.fr",
+          "source_country": "france",
+          "url": "https://www.femmeactuelle.fr/actu/news-actu/affaire-joel-le-scouarnec-10-nouveaux-viols-et-40-agressions-sexuelles-mettent-en-cause-l-ex-chirurgien-deja-condamne-2210691"
+        },
+        {
+          "language": "fr",
           "source": "maville.com",
           "source_country": "france",
-          "url": "https://brignoles.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
+          "url": "https://laseyne.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
         }
       ],
       "mentioned_countries": [
@@ -48,7 +158,7 @@
       "origin_country": "france",
       "outbound_source": "la-croix.com",
       "outbound_url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "la-croix.com",
@@ -57,17 +167,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.7042,
+          "coherence": 0.6412,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "impact": 0.3333,
+          "novelty": 0.25,
+          "prominence": 0.6,
+          "source_reliability": 0.6522
         },
-        "total": 0.5606,
+        "total": 0.4713,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "scouarnec",
@@ -75,154 +185,42 @@
         "scouarnec"
       ],
       "subject_newsroom_count": 3,
-      "summary": "Una investigación judicial ha sido abierta contra Joël Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales, según reportan varios medios franceses.",
-      "takeaway": "La investigación judicial marca una expansión sustancial de los delitos sexuales imputados a Le Scouarnec más allá de los casos anteriormente conocidos.",
-      "why_it_matters": "Los nuevos cargos amplían significativamente las acusaciones previas contra Le Scouarnec en el sistema de justicia francés."
+      "summary": "Las autoridades francesas han abierto una investigación judicial contra Joël Le Scouarnec, ex cirujano ya condenado anteriormente, por diez nuevas acusaciones de violación y cuarenta agresiones sexuales.",
+      "takeaway": "Un médico francés previamente condenado enfrenta ahora investigación por crímenes sexuales adicionales de magnitud considerable.",
+      "why_it_matters": "El caso expande significativamente las acusaciones contra un profesional sanitario ya condenado, afectando potencialmente a más víctimas y revisando el alcance de sus delitos."
     },
     {
       "_linked_ids": [
-        "subject-france-55dbb3652e8e",
-        "subject-france-a29369d0679c"
+        "subject-togo-a11dff3af632"
       ],
-      "cluster_id": "subject-france-55dbb3652e8e",
-      "coherence": 0.5927013380263494,
+      "cluster_id": "subject-togo-a11dff3af632",
+      "coherence": null,
       "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La ola de calor en Francia igualó el récord de duración de 1983",
-      "independent_source_count": 6,
+      "headline": "Dos realizadores franceses y un colaborador local detenidos en Togo",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/meteo/la-vague-de-chaleur-debutee-fin-juillet-en-france-devient-la-plus-longue-ex-aequo-avec-celle-de-1983-20260820"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/canicule-la-vague-de-chaleur-en-cours-devient-la-deuxieme-plus-longue-enregistree-en-france-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260820-record-vague-chaleur-juillet-canicule-la-plus-longue-en-france-depuis-1983"
-        },
-        {
-          "language": "fr",
-          "source": "notretemps.com",
-          "source_country": "france",
-          "url": "https://www.notretemps.com/depeches/france-la-vague-de-chaleur-debutee-fin-juillet-devient-la-plus-longue-ex-aequo-avec-1983-137553"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/canicule-la-vague-de-chaleur-en-cours-devient-la-deuxieme-plus-longue-enregistree-en-france-20260819",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5927,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 0.5,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.4988,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "paris"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Una ola de calor que comenzó a finales de julio en Francia se ha convertido en la más larga registrada en el país, igualando la duración de la de 1983. Según los reportes, la onda de calor ha alcanzado veintitrés días de duración, lo que la posiciona al mismo nivel que el episodio extremo de hace cuatro décadas.",
-      "takeaway": "Francia está viviendo su ola de calor más larga en cuatro décadas.",
-      "why_it_matters": "Este evento climático afecta a la población francesa, que experimenta temperaturas extremas prolongadas durante casi un mes."
-    },
-    {
-      "_linked_ids": [
-        "subject-francois-fillon-1bc8c95ceb13"
-      ],
-      "cluster_id": "subject-francois-fillon-1bc8c95ceb13",
-      "coherence": 0.5502201024541704,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "François Fillon suspendido de la Legión de Honor tras condena por empleos ficticios",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/francois-fillon-suspendu-de-la-legion-d-honneur-et-de-lordre-national-du-merite-20260820"
-        },
         {
           "language": "fr",
           "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/politique/200826/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs"
+          "url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/afrique/togo/nous-sommes-en-lien-avec-les-autorites-du-togo-pour-qu-ils-puissent-etre-liberes-au-plus-tot-assure-jean-noel-barrot-a-propos-des-deux-realisateurs-francais-detenus-dans-le-pays_8154128.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
-          "source": "maville.com",
+          "source": "radiofrance.fr",
           "source_country": "france",
-          "url": "https://draguignan.maville.com/actu/actudet_-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans_une-7445504_actu.Htm"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://hyeres.maville.com/actu/actudet_-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans_une-7445504_actu.Htm"
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-9149452"
         }
       ],
       "mentioned_countries": [
@@ -230,44 +228,42 @@
       ],
       "origin_country": "france",
       "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html#xtor=RSS-3-[lestitres]",
+      "outbound_url": "https://www.franceinfo.fr/monde/afrique/togo/nous-sommes-en-lien-avec-les-autorites-du-togo-pour-qu-ils-puissent-etre-liberes-au-plus-tot-assure-jean-noel-barrot-a-propos-des-deux-realisateurs-francais-detenus-dans-le-pays_8154128.html#xtor=RSS-3-%5Bgeneral%5D",
       "rank": 3,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr",
-        "mediapart.fr"
+        "mediapart.fr",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5502,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6667
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.4894,
+        "total": 0.4581,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "francois fillon",
+      "subject_label": "togo",
       "subject_names": [
-        "francois fillon",
-        "legion"
+        "togo"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "El antiguo primer ministro francés François Fillon ha sido suspendido de la Legión de Honor y de la Orden Nacional del Mérito después de su condena por empleos ficticios. La suspensión representa una consecuencia directa de la sentencia judicial en su contra.",
-      "takeaway": "Fillon perdió sus honores nacionales como resultado de su condena judicial por fraude laboral.",
-      "why_it_matters": "La suspensión le priva de las distinciones honoríficas que había recibido anteriormente en Francia."
+      "subject_newsroom_count": 3,
+      "summary": "Dos realizadores franceses y un colaborador local han sido arrestados y detenidos en Togo. El ministro francés Jean-Noël Barrot ha confirmado que Francia está en contacto con las autoridades togolesas para lograr su liberación lo antes posible.",
+      "takeaway": "Dos cineastas franceses están detenidos en Togo mientras el gobierno francés negocia con las autoridades locales.",
+      "why_it_matters": "Los ciudadanos franceses se encuentran bajo detención en un país extranjero, lo que requiere intervención diplomática para asegurar su liberación."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T11:59:57.120100+00:00",
+  "generated_at": "2026-08-20T12:19:34.644240+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

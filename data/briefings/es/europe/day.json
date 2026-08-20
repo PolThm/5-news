@@ -1,17 +1,139 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-allemagne-8df11689696f",
-      "coherence": 0.5023127870817421,
-      "consequence": 3,
+      "cluster_id": "subject-fedorov-d31ff6e32436",
+      "coherence": 0.47942916872213626,
+      "consequence": 2,
       "countries": [
         "france",
-        "germany"
+        "spain",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-20",
+      "headline": "El exministro de Defensa de Ucrania Fedorov desafía a Zelensky y exige elecciones",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/ukraine-mykhailo-fedorov-lancien-fidele-qui-veut-defier-volodymyr-zelensky-20260819_OKQYQCXA25EWRLB7DIBE3LIKVA/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/en-ukraine-l-ex-ministre-de-la-defense-mykhailo-fedorov-entre-en-rebellion-et-appelle-aux-elections-20260819"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-en-ukraine-fedorov-appelle-aux-%C3%A9lections-un-pari-politique-risqu%C3%A9"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260819-pour-mykha%C3%AFlo-fedorov-ex-ministre-de-la-d%C3%A9fense-des-%C3%A9lections-sont-possibles-en-ukraine"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
+        },
+        {
+          "language": "en",
+          "source": "massachusettssun.com",
+          "source_country": "united-states",
+          "url": "http://www.massachusettssun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "orlandoecho.com",
+          "source_country": "united-states",
+          "url": "http://www.orlandoecho.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "phoenixherald.com",
+          "source_country": "united-states",
+          "url": "http://www.phoenixherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "heraldglobe.com",
+          "source_country": "united-states",
+          "url": "http://www.heraldglobe.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
+      "rank": 1,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4794,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7647
+        },
+        "total": 0.6667,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "fedorov",
+      "subject_names": [
+        "fedorov",
+        "kiev",
+        "mykhailo fedorov",
+        "roumanie",
+        "ucrania",
+        "ukraine",
+        "volodymyr zelensky",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Mykhaïlo Fedorov, quien fuera ministro de Defensa de Ucrania y fue destituido de su cargo, ha entrado en una posición de rebeldía contra el presidente Volodymyr Zelensky al llamar públicamente a la realización de elecciones en el país.",
+      "takeaway": "Un antiguo aliado cercano del presidente ucraniano ahora lo cuestiona directamente demandando que se celebren elecciones.",
+      "why_it_matters": "El desafío representa una ruptura política significativa dentro del liderazgo ucraniano, dividiendo a figuras que anteriormente trabajaban juntas durante la administración de Zelensky."
+    },
+    {
+      "cluster_id": "subject-allemagne-f5bb3706f8d1",
+      "coherence": 0.5096490663072435,
+      "consequence": 2,
+      "countries": [
+        "bg",
+        "france"
       ],
       "country_count": 2,
       "editorial_day": "2026-08-20",
-      "headline": "Alemania registra 14.000 muertes por calor extremo en el verano, superando récords anteriores",
-      "independent_source_count": 4,
+      "headline": "Alemania registra 14.000 muertes relacionadas con el calor durante el verano",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
@@ -32,188 +154,70 @@
           "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "es",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/es/alemania-reporta-14000-muertes-vinculadas-al-calor-este-verano/a-78442548"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-allemagne-14-000-morts-li%C3%A9es-%C3%A0-la-chaleur-des-%C3%A9pisodes-caniculaires-records"
+        },
+        {
+          "language": "en",
+          "source": "bssnews.net",
+          "source_country": "bg",
+          "url": "https://www.bssnews.net/international/416439"
         }
       ],
       "mentioned_countries": [
-        "germany",
-        "spain"
+        "germany"
       ],
-      "origin_country": "france",
+      "origin_country": "bg",
       "outbound_source": "lemonde.fr",
       "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "dw.com",
+        "france24.com",
         "francetvinfo.fr",
         "lemonde.fr",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5023,
+          "coherence": 0.5096,
           "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6953,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "allemagne",
-      "subject_names": [
-        "alemania",
-        "allemagne",
-        "espagne",
-        "france",
-        "francia",
-        "paris"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Durante el verano, Alemania ha registrado aproximadamente 14.000 muertes relacionadas con el calor extremo, una cifra significativamente superior al pico registrado en 2018. España reportó cerca de 4.500 muertes por las mismas causas. Estos números ilustran el impacto mortal de las olas de calor que afectaron a Europa durante la estación.",
-      "takeaway": "Europa experimentó muertes masivas por calor extremo en el verano, con Alemania registrando cifras récord de 14.000 fallecidos.",
-      "why_it_matters": "Las muertes por calor extremo demuestran el riesgo inmediato que representan las altas temperaturas para la población europea, particularmente en Alemania donde los registros superan ampliamente los de años anteriores."
-    },
-    {
-      "cluster_id": "subject-fedorov-d1cd4134be4e",
-      "coherence": 0.5500064025257356,
-      "consequence": 2,
-      "countries": [
-        "china",
-        "france",
-        "jm",
-        "spain",
-        "united-states",
-        "zi"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-08-20",
-      "headline": "El exministro de Defensa de Ucrania Fedorov desafía a Zelenski y reclama elecciones",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/ukraine-mykhailo-fedorov-lancien-fidele-qui-veut-defier-volodymyr-zelensky-20260819_OKQYQCXA25EWRLB7DIBE3LIKVA/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/en-ukraine-l-ex-ministre-de-la-defense-mykhailo-fedorov-entre-en-rebellion-et-appelle-aux-elections-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260819-pour-mykha%C3%AFlo-fedorov-ex-ministre-de-la-d%C3%A9fense-des-%C3%A9lections-sont-possibles-en-ukraine"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
-        },
-        {
-          "language": "en",
-          "source": "zimbabwestar.com",
-          "source_country": "zi",
-          "url": "http://www.zimbabwestar.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "jamaicantimes.com",
-          "source_country": "jm",
-          "url": "http://www.jamaicantimes.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "hongkongherald.com",
-          "source_country": "china",
-          "url": "http://www.hongkongherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "cincinnatisun.com",
-          "source_country": "united-states",
-          "url": "http://www.cincinnatisun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "oklahomacitysun.com",
-          "source_country": "united-states",
-          "url": "http://www.oklahomacitysun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "china",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "lavanguardia.com",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.55,
-          "corroboration": 0.75,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7333
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.6651,
+        "total": 0.6263,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "fedorov",
+      "subject_label": "allemagne",
       "subject_names": [
-        "fedorov",
-        "putin",
-        "rusia",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "volodymyr zelensky",
-        "zelenski"
+        "allemagne",
+        "espagne",
+        "germany"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Mykhaïlo Fedorov, antiguo ministro de Defensa de Ucrania que fue destituido de su cargo, ha entrado en abierta rebelión contra el presidente Volodymyr Zelenski al llamar públicamente a la celebración de elecciones en el país, desafiando así al liderazgo actual mientras Ucrania continúa en conflicto.",
-      "takeaway": "Un ex ministro de defensa derrocado está pidiendo elecciones para desafiar a Zelenski en Ucrania.",
-      "why_it_matters": "El llamado de Fedorov a elecciones cuestiona la autoridad de Zelenski en un momento crítico para Ucrania, planteando debates sobre la legitimidad del gobierno durante el periodo de guerra."
+      "subject_newsroom_count": 8,
+      "summary": "Durante el verano de este año, Alemania registró aproximadamente 14.000 muertes vinculadas al calor extremo, una cifra significativamente superior al pico registrado en 2018. España contabilizó cerca de 4.500 muertes por causas similares durante el mismo período. Estos números reflejan el impacto devastador de los episodios caniculares récord en Europa.",
+      "takeaway": "Las temperaturas extremas causaron miles de muertes en Alemania y España este verano, con cifras sin precedentes en años recientes.",
+      "why_it_matters": "Las olas de calor extremo se han convertido en una amenaza letal importante en Europa, causando decenas de miles de muertes en una sola temporada estival."
     },
     {
-      "cluster_id": "subject-ceuta-1cd6e3a82ec6",
-      "coherence": 0.5074727562153463,
+      "cluster_id": "subject-ceuta-c8cb825ecbfc",
+      "coherence": 0.44312217947311916,
       "consequence": 2,
       "countries": [
-        "au",
         "brazil",
-        "france",
-        "germany",
-        "united-kingdom"
+        "france"
       ],
-      "country_count": 5,
+      "country_count": 2,
       "editorial_day": "2026-08-20",
-      "headline": "España acuerda trasladar a 500 menores migrantes desde Ceuta al territorio peninsular",
-      "independent_source_count": 7,
+      "headline": "España rechaza devolver a Marruecos a 500 menores migrantes llegados a Ceuta",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
@@ -228,130 +232,35 @@
           "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-ceuta-l-espagne-veut-transf%C3%A9rer-500-mineures-migrantes"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/19/spain-allows-500-migrant-minors-in-ceuta-to-relocate-to-the-mainland-in-u-turn"
-        },
-        {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/08/19/espanha-vai-acolher-500-menores-imigrantes-do-marrocos-que-chegaram-em-ceuta.ghtml"
         },
         {
-          "language": "de",
-          "source": "rnz.de",
-          "source_country": "germany",
-          "url": "https://www.rnz.de/politik/nachrichten_artikel,-Spanische-Nordafrika-Exklave-Ceuta-Spanien-will-500-Minderjaehrige-aufs-Festland-bringen-_arid,2408104.html"
-        },
-        {
-          "language": "de",
-          "source": "muensterschezeitung.de",
-          "source_country": "germany",
-          "url": "https://www.muensterschezeitung.de/nachrichten/politik/ceuta-spanien-will-500-minderjaehrige-aufs-festland-bringen-3622731"
-        },
-        {
-          "language": "de",
-          "source": "kurier.at",
-          "source_country": "au",
-          "url": "https://kurier.at/politik/ausland/ceuta-spanien-will-500-minderjaehrige-aufs-festland-bringen/403184841"
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/international/espagne/ceuta-lespagne-refuse-de-renvoyer-500-jeunes-filles-au-maroc-contre-lavis-de-lunion-europeenne-19-08-2026-VE5OJHIKPZBDBC2VKIRVROMRAM.php"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "au",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/aug/19/spain-allows-500-migrant-minors-in-ceuta-to-relocate-to-the-mainland-in-u-turn",
+      "origin_country": "brazil",
+      "outbound_source": "leparisien.fr",
+      "outbound_url": "https://www.leparisien.fr/international/espagne/ceuta-lespagne-refuse-de-renvoyer-500-jeunes-filles-au-maroc-contre-lavis-de-lunion-europeenne-19-08-2026-VE5OJHIKPZBDBC2VKIRVROMRAM.php",
       "rank": 3,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "france24.com",
         "globo.com",
-        "lefigaro.fr",
-        "theguardian.com"
+        "lefigaro.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5075,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
-        },
-        "total": 0.6527,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "marruecos"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "España ha decidido permitir que 500 menores migrantes que llegaron a Ceuta sean trasladados al territorio continental español, en un cambio de posición sobre la gestión de la inmigración en la ciudad autónoma norteafricana.",
-      "takeaway": "España revierte su política anterior al aceptar distribuir menores migrantes desde su exclave norteafricano a territorio peninsular.",
-      "why_it_matters": "Esta decisión afecta directamente a 500 menores migrantes al permitirles abandonar las condiciones de hacinamiento en Ceuta e instalarse en la península ibérica."
-    },
-    {
-      "cluster_id": "subject-scouarnec-8f8412f6e9e3",
-      "coherence": 0.7041585021429209,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Se abre investigación judicial contra Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/affaire-le-scouarnec-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles-20260819_XTFYILYPWZBF3LXEI2HMFPS4ZM/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/france/200826/le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-quarante-agressions-sexuelles"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://brignoles.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "liberation.fr",
-        "mediapart.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7042,
-          "corroboration": 0.3333,
+          "coherence": 0.4431,
+          "corroboration": 0.5,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
@@ -360,255 +269,185 @@
           "prominence": 0.5,
           "source_reliability": 0.5789
         },
-        "total": 0.6139,
+        "total": 0.5992,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "scouarnec",
+      "subject_label": "ceuta",
       "subject_names": [
-        "scouarnec"
+        "bruselas",
+        "ceuta",
+        "espana",
+        "madrid",
+        "marruecos",
+        "sanchez",
+        "trampolin"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Una investigación judicial ha sido abierta contra Joël Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales, según reportan varios medios franceses.",
-      "takeaway": "La investigación judicial marca una expansión sustancial de los delitos sexuales imputados a Le Scouarnec más allá de los casos anteriormente conocidos.",
-      "why_it_matters": "Los nuevos cargos amplían significativamente las acusaciones previas contra Le Scouarnec en el sistema de justicia francés."
+      "subject_newsroom_count": 20,
+      "summary": "España se niega a repatriar a 500 menores migrantes que arribaron a la ciudad autónoma de Ceuta, en lugar de ello busca distribuirlas en su territorio. La decisión genera tensión entre España y la Unión Europea, que se opone a este plan de acogida.",
+      "takeaway": "España desafía la posición de la UE al decidir acoger y distribuir a menores migrantes en lugar de devolverlos a Marruecos.",
+      "why_it_matters": "El conflicto entre España y la UE determina si los menores serán devueltos a Marruecos o permanecerán en territorio español, afectando directamente el destino de estas 500 menores."
     },
     {
-      "cluster_id": "subject-meghan-94f74b74459f",
-      "coherence": 0.509724239333145,
-      "consequence": 0,
+      "cluster_id": "subject-ceuta-048294f0f24d",
+      "coherence": null,
+      "consequence": 2,
       "countries": [
-        "ei",
-        "germany",
-        "it",
-        "nl",
-        "spain",
-        "sy",
-        "sz",
-        "united-kingdom",
-        "united-states"
+        "spain"
       ],
-      "country_count": 9,
+      "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "El Príncipe Enrique y Meghan Markle regresan al Reino Unido tras seis años en Estados Unidos",
-      "independent_source_count": 27,
+      "headline": "Bruselas exige al Gobierno que devuelva a Marruecos a todos los migrantes que entraron ilegalmente en Ceuta",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://elpais.com/gente/2026-08-20/enrique-de-inglaterra-y-meghan-markle-se-mudan-al-reino-unido-seis-anos-despues-de-su-sonada-marcha-a-estados-unidos.html"
+          "url": "https://www.abc.es/espana/ultima-hora-ceuta-directo-decenas-inmigrantes-logran-20260818091559-di.html"
         },
         {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/harry-meghan-rueckkehr-grossbritannien-100.html"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
         },
         {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/harry-and-meghan-moving-back-to-britain-reports/a-78438052?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/19/news/harry_meghan_tornano_regno_unito_londra-425537173/?rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2627549"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/20/nx-s1-5939320/harry-meghan-return-uk"
-        },
-        {
-          "language": "en",
-          "source": "witneygazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.witneygazette.co.uk/news/26480792.harry-meghan-moving-back-uk-6-years/"
-        },
-        {
-          "language": "en",
-          "source": "aawsat.com",
-          "source_country": "sy",
-          "url": "https://english.aawsat.com/varieties/5309101-prince-harry-and-meghan-move-back-britain"
-        },
-        {
-          "language": "en",
-          "source": "express.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.express.co.uk/news/royal/2240860/prince-harry-meghan-markle-timeline"
-        },
-        {
-          "language": "en",
-          "source": "witneygazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.witneygazette.co.uk/news/26479887.prince-harry-meghan-move-back-uk-shock-return/"
-        },
-        {
-          "language": "en",
-          "source": "stourbridgenews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.stourbridgenews.co.uk/news/26480207.harry-meghan-moving-back-uk-6-years/"
-        },
-        {
-          "language": "de",
-          "source": "stuttgarter-nachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.stuttgarter-nachrichten.de/panorama/britische-royals-berichte-harry-und-meghan-vor-rueckzug-nach-grossbritannien-79398451.html"
-        },
-        {
-          "language": "en",
-          "source": "weartv.com",
-          "source_country": "united-states",
-          "url": "https://weartv.com/news/nation-world/prince-harry-and-meghan-plan-return-to-uk-children-to-start-british-school-in-september-prince-william-king-charles-iii-royal-family-sussexes-palace-spotify-netflix"
-        },
-        {
-          "language": "en",
-          "source": "abc7amarillo.com",
-          "source_country": "united-states",
-          "url": "https://abc7amarillo.com/news/nation-world/prince-harry-and-meghan-plan-return-to-uk-children-to-start-british-school-in-september-prince-william-king-charles-iii-royal-family-sussexes-palace-spotify-netflix"
-        },
-        {
-          "language": "en",
-          "source": "news8000.com",
-          "source_country": "united-states",
-          "url": "https://www.news8000.com/news/national-world/prince-harry-and-meghan-to-move-back-to-britain/article_a59d94d7-b535-5a89-895b-37e125aa817a.html"
-        },
-        {
-          "language": "en",
-          "source": "bignewsnetwork.com",
-          "source_country": "united-states",
-          "url": "http://www.bignewsnetwork.com/news/279252862/after-six-years-in-us-prince-harry-and-meghan-markle-to-move-back-to-britain"
-        },
-        {
-          "language": "en",
-          "source": "thegazette.com",
-          "source_country": "united-states",
-          "url": "http://www.thegazette.com/news/world/prince-harry-and-meghan-are-returning-to-the-uk-with-their-children/article_257958d7-6397-55a5-a504-61bd4630d8df.html"
-        },
-        {
-          "language": "en",
-          "source": "clydebankpost.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.clydebankpost.co.uk/news/national/26479683.harry-meghan-move-back-uk-shock-development-six-years-megxit/"
-        },
-        {
-          "language": "en",
-          "source": "usmagazine.com",
-          "source_country": "united-states",
-          "url": "https://www.usmagazine.com/celebrity-news/news/prince-harry-meghan-markle-plan-move-back-to-u-k-with-kids/"
-        },
-        {
-          "language": "en",
-          "source": "theargus.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.theargus.co.uk/news/national/26479683.harry-meghan-move-back-uk-shock-development-six-years-megxit/"
-        },
-        {
-          "language": "en",
-          "source": "sloughobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.sloughobserver.co.uk/news/national/26479683.harry-meghan-move-back-uk-shock-development-six-years-megxit/"
-        },
-        {
-          "language": "en",
-          "source": "fenlandcitizen.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.fenlandcitizen.co.uk/national/harry-and-meghan-to-move-back-to-uk-in-shock-development-six-years-after-megxit-170756/"
-        },
-        {
-          "language": "en",
-          "source": "kilburntimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.kilburntimes.co.uk/news/national/26479683.harry-meghan-move-back-uk-shock-development-six-years-megxit/"
-        },
-        {
-          "language": "en",
-          "source": "wjla.com",
-          "source_country": "united-states",
-          "url": "https://wjla.com/news/nation-world/prince-harry-and-meghan-plan-return-to-uk-children-to-start-british-school-in-september-prince-william-king-charles-iii-royal-family-sussexes-palace-spotify-netflix"
-        },
-        {
-          "language": "en",
-          "source": "goss.ie",
-          "source_country": "ei",
-          "url": "https://goss.ie/featured/prince-harry-and-meghan-markle-set-to-make-shock-move-back-to-uk-with-their-children-481049"
-        },
-        {
-          "language": "en",
-          "source": "nebraska.tv",
-          "source_country": "united-states",
-          "url": "https://nebraska.tv/news/nation-world/prince-harry-and-meghan-plan-return-to-uk-children-to-start-british-school-in-september-prince-william-king-charles-iii-royal-family-sussexes-palace-spotify-netflix"
-        },
-        {
-          "language": "en",
-          "source": "northwalespioneer.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.northwalespioneer.co.uk/news/national/26479683.harry-meghan-move-back-uk-shock-development-six-years-megxit/"
-        },
-        {
-          "language": "de",
-          "source": "bazonline.ch",
-          "source_country": "sz",
-          "url": "https://www.bazonline.ch/meghan-und-harry-rueckkehr-nach-grossbritannien-im-august-428285062161"
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
         }
       ],
       "mentioned_countries": [
-        "united-kingdom"
+        "be",
+        "spain"
       ],
-      "origin_country": "ei",
-      "outbound_source": "repubblica.it",
-      "outbound_url": "https://www.repubblica.it/esteri/2026/08/19/news/harry_meghan_tornano_regno_unito_londra-425537173/?rss",
-      "rank": 5,
-      "reference_newsroom_count": 6,
+      "origin_country": "spain",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/espana/ultima-hora-ceuta-directo-decenas-inmigrantes-logran-20260818091559-di.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "dw.com",
-        "elpais.com",
-        "nos.nl",
-        "npr.org",
-        "repubblica.it",
-        "tagesschau.de"
+        "20minutos.es",
+        "abc.es",
+        "elespanol.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5097,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.4286,
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.871,
-          "source_reliability": 0.8841
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5562,
+        "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "meghan",
+      "subject_label": "ceuta",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "marruecos",
+        "sanchez",
+        "trampolin"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Las instituciones de la Unión Europea han manifestado su expectativa de que el Gobierno español devuelva a Marruecos a la totalidad de los migrantes que entraron de forma ilegal en la ciudad autónoma de Ceuta. Bruselas ha insistido en esta posición y ha reclamado al Gobierno español que proporcione más información detallada sobre sus planes para ejecutar esta devolución.",
+      "takeaway": "La Unión Europea presiona al Gobierno para que repatrie a Marruecos a todos los migrantes que ingresaron ilegalmente en Ceuta.",
+      "why_it_matters": "La posición de Bruselas condiciona la respuesta que el Gobierno español debe dar respecto al tratamiento de los migrantes que cruzaron ilegalmente hacia territorio español."
+    },
+    {
+      "cluster_id": "subject-ukraine-7b5679fff45f",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-19",
+      "headline": "Rusia amenaza al Reino Unido por suministrar drones a Ucrania",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-la-russie-menace-le-royaume-uni-londres-replique-3BKU7HQKAVFGTIUCCRN65XYF24/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/18/ucrania-lanca-mais-de-600-drones-contra-moscou.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "globo.com",
+        "lavanguardia.com",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5763,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
       "subject_names": [
         "harry",
+        "kiev",
         "londres",
         "meghan",
+        "moscou",
+        "poutine",
         "reino unido",
-        "royaume-uni"
+        "roumanie",
+        "royaume-uni",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "El Príncipe Enrique y su esposa Meghan Markle se mudan de regreso al Reino Unido después de seis años viviendo en Estados Unidos. Según reportes, la pareja planea trasladarse con sus hijos, quienes comenzarán la escuela británica en septiembre, marcando un giro sorprendente seis años después de su controvertida partida que fue conocida como \"Megxit\".",
-      "takeaway": "La pareja que abandonó el Reino Unido en 2018 vuelve a establecerse allí con sus hijos después de una década en América del Norte.",
-      "why_it_matters": "Este regreso termina una separación de seis años entre el Príncipe Enrique y la familia real británica, reintegrando a sus hijos a la educación y vida en Reino Unido."
+      "subject_newsroom_count": 22,
+      "summary": "Rusia ha dirigido amenazas contra el Reino Unido tras suministrar drones a Ucrania, advirtiendo que cuanto mayor sea la implicación británica en el conflicto, mayores serán las consecuencias. Esta escalada de tensiones se produce después de que Ucrania lanzara ataques con drones contra Moscú.",
+      "takeaway": "Rusia amenaza al Reino Unido con represalias por ayudar militarmente a Ucrania.",
+      "why_it_matters": "Las amenazas rusas al Reino Unido elevan la temperatura diplomática entre Moscú y uno de los principales proveedores de armas a Ucrania, afectando directamente la dinámica del apoyo occidental al país ucraniano."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T11:59:57.120100+00:00",
+  "generated_at": "2026-08-20T12:19:34.644240+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

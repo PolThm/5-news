@@ -1,6 +1,6 @@
 {
   "articles_collected": 12184,
-  "briefings_path": null,
+  "briefings_path": "data/briefings",
   "clusters_after_grouping": 10488,
   "clusters_selected": 17,
   "completed": true,
@@ -13,21 +13,8 @@
     }
   ],
   "groups_after_dedupe": 10686,
-  "phase": "summarize_submitted",
-  "published": false,
+  "phase": "published",
+  "published": true,
   "started_at": "2026-08-20T12:19:34.644240+00:00",
-  "summarize_batches": {
-    "en": {
-      "batch_id": "msgbatch_019sGFTvSuvSZEN5KATjSq2f",
-      "ranked_path": "data/intermediate/rank/2026-08-20T12-19-34Z/ranked.jsonl"
-    },
-    "es": {
-      "batch_id": "msgbatch_01RRv1xzQmqTHNkNFAFq6xEd",
-      "ranked_path": "data/intermediate/rank/2026-08-20T12-19-34Z/ranked.jsonl"
-    },
-    "fr": {
-      "batch_id": "msgbatch_018s1Y7SuHZnPJd9s5BUJjtW",
-      "ranked_path": "data/intermediate/rank/2026-08-20T12-19-34Z/ranked.jsonl"
-    }
-  }
+  "summarize_batches": {}
 }

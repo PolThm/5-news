@@ -1,6 +1,54 @@
 {
   "clusters": [
     {
+      "agenda_category": "Health and environment",
+      "agenda_day": "2026-08-19",
+      "agenda_sources": [
+        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
+      ],
+      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
+      "cluster_id": "8ca917929193b72a",
+      "corroborated": true,
+      "countries": [
+        "france",
+        "pa",
+        "united-states"
+      ],
+      "country_count": 3,
+      "headline": "Moderna and Merck announce positive results for experimental skin cancer vaccine",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
+        },
+        {
+          "language": "en",
+          "source": "investors.com",
+          "source_country": "united-states",
+          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
+        },
+        {
+          "language": "es",
+          "source": "ultimahora.com",
+          "source_country": "pa",
+          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "spain",
+        "united-kingdom"
+      ],
+      "origin_country": "france",
+      "outbound_source": "investors.com",
+      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
+      "rank": 1,
+      "summary": "Moderna and Merck have reported positive results from late-stage trials of an experimental vaccine targeting advanced melanoma. The announcement drove significant stock increases for both companies, with Moderna's stock rising 90 percent. The vaccine represents progress in developing immunotherapy treatments for skin cancer."
+    },
+    {
       "agenda_category": "Disasters and accidents",
       "agenda_day": "2026-08-18",
       "agenda_sources": [
@@ -10,19 +58,12 @@
       "cluster_id": "76decac05d1eef58",
       "corroborated": true,
       "countries": [
-        "au",
         "united-kingdom"
       ],
-      "country_count": 2,
-      "headline": "Granada's Alhambra closes after earthquake damages historic site",
-      "independent_source_count": 2,
+      "country_count": 1,
+      "headline": "Earthquake strikes Granada in Spain, injuring three people",
+      "independent_source_count": 1,
       "members": [
-        {
-          "language": "de",
-          "source": "gmx.at",
-          "source_country": "au",
-          "url": "https://www.gmx.at/magazine/reise/alhambra-granada-zweitem-erdbeben-schaeden-geschlossen-42629280"
-        },
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -33,11 +74,11 @@
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "au",
+      "origin_country": "united-kingdom",
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
-      "rank": 1,
-      "summary": "An earthquake struck Granada, Spain, causing damage to the Alhambra palace and injuring three people. The historic site subsequently closed due to the structural damage sustained in the seismic event."
+      "rank": 2,
+      "summary": "An earthquake occurred in Granada, Spain's historic city, resulting in three people being injured. The seismic event affected the region, which is known for its cultural and historical significance."
     },
     {
       "agenda_category": "Armed conflicts and attacks",
@@ -52,7 +93,7 @@
         "spain"
       ],
       "country_count": 1,
-      "headline": "Spanish F-18 fighter jet shoots down drone over Romania",
+      "headline": "Spanish F-18 fighter jets shoot down drone over Romania",
       "independent_source_count": 1,
       "members": [
         {
@@ -76,8 +117,8 @@
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 2,
-      "summary": "Two Spanish F-18 fighter jets were deployed from their NATO mission in Romania after an alert concerning a drone near the Ukrainian border. During the operation, one of the Spanish fighters shot down a drone that had violated Romanian airspace."
+      "rank": 3,
+      "summary": "Two Spanish fighter jets conducting NATO operations in Romania scrambled in response to a drone alert near the Ukrainian border. One of the Spanish aircraft successfully shot down a drone that had violated Romanian airspace."
     },
     {
       "agenda_category": "Law and crime",
@@ -90,7 +131,7 @@
       "corroborated": false,
       "countries": [],
       "country_count": 0,
-      "headline": "Shooting in Spain kills three, including teenager, injures two",
+      "headline": "Shooting in Spanish town kills three including teenager",
       "independent_source_count": 0,
       "members": [],
       "mentioned_countries": [
@@ -99,8 +140,8 @@
       "origin_country": "unknown",
       "outbound_source": null,
       "outbound_url": null,
-      "rank": 3,
-      "summary": "Three people, including a teenager, were killed and two others were injured in a shooting in Isla Cristina, Andalusia, Spain. Police are investigating the attack as a possible dispute between rival drug-trafficking groups and are searching for the gunman."
+      "rank": 4,
+      "summary": "Three people, including a teenager, were killed and two others injured in a shooting in Isla Cristina, Andalusia, Spain. Police are investigating the attack as a possible dispute between rival drug-trafficking groups and are searching for the gunman."
     },
     {
       "agenda_category": "Law and crime",
@@ -110,66 +151,25 @@
       ],
       "agenda_text": "Police in Morocco arrest 111 migrants who attempted to enter Spain's autonomous community Ceuta, amidst tightened security on both sides of the border with Spain",
       "cluster_id": "f0356c75996613b2",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "Moroccan police arrest over 100 people at Ceuta border",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta"
-        }
-      ],
+      "corroborated": false,
+      "countries": [],
+      "country_count": 0,
+      "headline": "Morocco arrests 111 migrants attempting to enter Spanish enclave Ceuta",
+      "independent_source_count": 0,
+      "members": [],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/aug/15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta",
-      "rank": 4,
-      "summary": "Moroccan police arrested more than 100 people who were attempting to enter Ceuta, the Spanish autonomous city located on the North African coast. The arrest took place during what appears to be a coordinated effort by authorities to prevent illegal border crossings into the Spanish enclave."
-    },
-    {
-      "agenda_category": "Disasters and accidents",
-      "agenda_day": "2026-08-14",
-      "agenda_sources": [
-        "https://www.thenews.com.pk/latest/1412340-spain-rocked-by-48-magnitude-earthquake-with-epicentre-near-granada"
-      ],
-      "agenda_text": "A earthquake strikes the province of Granada in Spain, with damage reported in Granada and the surrounding area, and being felt in Madrid",
-      "cluster_id": "a55ff30132b3986e",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "Earthquake hits Granada, Spain, leaving three people injured",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
+      "origin_country": "unknown",
+      "outbound_source": null,
+      "outbound_url": null,
       "rank": 5,
-      "summary": "An earthquake struck the historic city of Granada in Spain, resulting in three people being injured in the event."
+      "summary": "Police in Morocco have arrested 111 migrants who attempted to enter Spain's autonomous community of Ceuta. The arrests occurred amid heightened security measures being enforced on both sides of the border between Morocco and Spain."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-19T19:40:29.821353+00:00",
+  "generated_at": "2026-08-20T05:56:31.051426+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

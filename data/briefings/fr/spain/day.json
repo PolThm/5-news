@@ -1,6 +1,54 @@
 {
   "clusters": [
     {
+      "agenda_category": "Health and environment",
+      "agenda_day": "2026-08-19",
+      "agenda_sources": [
+        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
+      ],
+      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
+      "cluster_id": "8ca917929193b72a",
+      "corroborated": true,
+      "countries": [
+        "france",
+        "pa",
+        "united-states"
+      ],
+      "country_count": 3,
+      "headline": "Moderna et Merck annoncent des résultats positifs pour un vaccin contre le cancer de la peau",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
+        },
+        {
+          "language": "en",
+          "source": "investors.com",
+          "source_country": "united-states",
+          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
+        },
+        {
+          "language": "es",
+          "source": "ultimahora.com",
+          "source_country": "pa",
+          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "spain",
+        "united-kingdom"
+      ],
+      "origin_country": "france",
+      "outbound_source": "investors.com",
+      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
+      "rank": 1,
+      "summary": "Les sociétés pharmaceutiques Moderna et Merck ont présenté des résultats positifs concernant un vaccin expérimental contre le mélanome avancé, le cancer de la peau. Cette annonce a provoqué une forte hausse du cours de l'action des deux entreprises, avec une augmentation de 90 pour cent pour Moderna et une progression pour Merck, signalant la confiance des investisseurs dans cette avancée thérapeutique."
+    },
+    {
       "agenda_category": "Disasters and accidents",
       "agenda_day": "2026-08-18",
       "agenda_sources": [
@@ -10,19 +58,12 @@
       "cluster_id": "76decac05d1eef58",
       "corroborated": true,
       "countries": [
-        "au",
         "united-kingdom"
       ],
-      "country_count": 2,
-      "headline": "Un tremblement de terre endomage l'Alhambra à Grenade",
-      "independent_source_count": 2,
+      "country_count": 1,
+      "headline": "Un séisme secoue la ville historique de Grenade en Espagne",
+      "independent_source_count": 1,
       "members": [
-        {
-          "language": "de",
-          "source": "gmx.at",
-          "source_country": "au",
-          "url": "https://www.gmx.at/magazine/reise/alhambra-granada-zweitem-erdbeben-schaeden-geschlossen-42629280"
-        },
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -33,11 +74,11 @@
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "au",
+      "origin_country": "united-kingdom",
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
-      "rank": 1,
-      "summary": "Un tremblement de terre a frappé Grenade en Espagne, causant des dégâts au palais historique de l'Alhambra et forçant sa fermeture. Trois personnes ont été blessées lors du séisme. Les autorités ont dû fermer le site en raison des dommages constatés."
+      "rank": 2,
+      "summary": "Un tremblement de terre a frappé Grenade, une ville historique du sud de l'Espagne, faisant trois blessés selon une dépêche de la BBC. Les détails précis sur l'ampleur du séisme et les dégâts matériels causés à cette ville andalouse ne sont pas spécifiés dans le rapport disponible."
     },
     {
       "agenda_category": "Armed conflicts and attacks",
@@ -52,7 +93,7 @@
         "spain"
       ],
       "country_count": 1,
-      "headline": "Un chasseur espagnol abat un drone dans l'espace aérien roumain",
+      "headline": "Un chasseur espagnol de l'OTAN abat un drone au-dessus de la Roumanie",
       "independent_source_count": 1,
       "members": [
         {
@@ -76,8 +117,8 @@
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 2,
-      "summary": "Deux chasseurs F-18 espagnols stationnés en Roumanie ont décollé suite à une alerte de drone près de la frontière avec l'Ukraine. L'un des appareils a intercepté et abattu le drone qui violait l'espace aérien roumain, dans le cadre d'une mission de l'OTAN."
+      "rank": 3,
+      "summary": "Deux F-18 espagnols stationnés en Roumanie ont décollé en réaction à une alerte concernant un drone détecté près de la frontière avec l'Ukraine. L'un de ces chasseurs a abattu le drone qui violait l'espace aéreo roumain dans le cadre de la mission de l'OTAN."
     },
     {
       "agenda_category": "Law and crime",
@@ -90,7 +131,7 @@
       "corroborated": false,
       "countries": [],
       "country_count": 0,
-      "headline": "Trois personnes, dont un adolescent, tuées dans une fusillade en Andalousie",
+      "headline": "Trois personnes tuées et deux blessées dans une fusillade en Andalousie",
       "independent_source_count": 0,
       "members": [],
       "mentioned_countries": [
@@ -99,8 +140,8 @@
       "origin_country": "unknown",
       "outbound_source": null,
       "outbound_url": null,
-      "rank": 3,
-      "summary": "Trois personnes, dont un adolescent, ont été tuées et deux autres blessées lors d'une fusillade à Isla Cristina, en Andalousie, en Espagne. La police enquête sur l'attaque comme un possible différend entre groupes rivaux de trafiquants de drogue et recherche le tireur."
+      "rank": 4,
+      "summary": "Une fusillade s'est produite à Isla Cristina, en Andalousie, en Espagne, faisant trois morts, dont un adolescent, et deux blessés. La police enquête sur l'attaque comme un possible différend entre des groupes rivaux de trafiquants de drogue et recherche le tireur."
     },
     {
       "agenda_category": "Law and crime",
@@ -110,66 +151,25 @@
       ],
       "agenda_text": "Police in Morocco arrest 111 migrants who attempted to enter Spain's autonomous community Ceuta, amidst tightened security on both sides of the border with Spain",
       "cluster_id": "f0356c75996613b2",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "La police marocaine arrête plus de 100 personnes à Ceuta",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta"
-        }
-      ],
+      "corroborated": false,
+      "countries": [],
+      "country_count": 0,
+      "headline": "Maroc: 111 migrants arrêtés lors d'une tentative d'entrée à Ceuta",
+      "independent_source_count": 0,
+      "members": [],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/aug/15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta",
-      "rank": 4,
-      "summary": "Les autorités marocaines ont interpellé plus de cent personnes qui tentaient de franchir la frontière pour entrer à Ceuta, l'enclave espagnole en Afrique du Nord. Cette opération s'inscrit dans le contexte des migrations clandestines régulières vers le territoire espagnol."
-    },
-    {
-      "agenda_category": "Disasters and accidents",
-      "agenda_day": "2026-08-14",
-      "agenda_sources": [
-        "https://www.thenews.com.pk/latest/1412340-spain-rocked-by-48-magnitude-earthquake-with-epicentre-near-granada"
-      ],
-      "agenda_text": "A earthquake strikes the province of Granada in Spain, with damage reported in Granada and the surrounding area, and being felt in Madrid",
-      "cluster_id": "a55ff30132b3986e",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "Un tremblement de terre secoue Granada en Espagne, trois personnes blessées",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
+      "origin_country": "unknown",
+      "outbound_source": null,
+      "outbound_url": null,
       "rank": 5,
-      "summary": "Un séisme a frappé la ville historique de Granada en Espagne, faisant trois blessés selon les informations rapportées par la BBC. Aucun détail supplémentaire sur l'ampleur du tremblement de terre, les circonstances exactes ou l'étendue des dégâts n'est fourni dans le reportage disponible."
+      "summary": "La police marocaine a procédé à l'arrestation de 111 migrants qui tentaient de pénétrer dans l'enclave espagnole autonome de Ceuta. Cette opération intervient dans un contexte de renforcement de la sécurité aux frontières des deux côtés de la frontière hispano-marocaine."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-19T19:40:29.821353+00:00",
+  "generated_at": "2026-08-20T05:56:31.051426+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

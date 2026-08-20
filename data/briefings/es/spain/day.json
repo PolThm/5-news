@@ -1,6 +1,54 @@
 {
   "clusters": [
     {
+      "agenda_category": "Health and environment",
+      "agenda_day": "2026-08-19",
+      "agenda_sources": [
+        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
+      ],
+      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
+      "cluster_id": "8ca917929193b72a",
+      "corroborated": true,
+      "countries": [
+        "france",
+        "pa",
+        "united-states"
+      ],
+      "country_count": 3,
+      "headline": "Moderna y Merck anuncian resultados positivos de vacuna contra el cáncer de piel",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
+        },
+        {
+          "language": "en",
+          "source": "investors.com",
+          "source_country": "united-states",
+          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
+        },
+        {
+          "language": "es",
+          "source": "ultimahora.com",
+          "source_country": "pa",
+          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "spain",
+        "united-kingdom"
+      ],
+      "origin_country": "france",
+      "outbound_source": "investors.com",
+      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
+      "rank": 1,
+      "summary": "Moderna y Merck han presentado resultados positivos en ensayos clínicos de fase tardía de una vacuna experimental contra el melanoma avanzado. El anuncio ha generado un impacto significativo en los mercados financieros, con el precio de las acciones de ambas empresas aumentando considerablemente. Este avance representa un progreso importante en el desarrollo de tratamientos innovadores contra el cáncer de piel."
+    },
+    {
       "agenda_category": "Disasters and accidents",
       "agenda_day": "2026-08-18",
       "agenda_sources": [
@@ -10,19 +58,12 @@
       "cluster_id": "76decac05d1eef58",
       "corroborated": true,
       "countries": [
-        "au",
         "united-kingdom"
       ],
-      "country_count": 2,
-      "headline": "Un terremoto causa daños en la Alhambra de Granada y deja heridos",
-      "independent_source_count": 2,
+      "country_count": 1,
+      "headline": "Un terremoto sacude la histórica ciudad de Granada en España",
+      "independent_source_count": 1,
       "members": [
-        {
-          "language": "de",
-          "source": "gmx.at",
-          "source_country": "au",
-          "url": "https://www.gmx.at/magazine/reise/alhambra-granada-zweitem-erdbeben-schaeden-geschlossen-42629280"
-        },
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -33,11 +74,11 @@
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "au",
+      "origin_country": "united-kingdom",
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
-      "rank": 1,
-      "summary": "Un terremoto afectó a Granada, España, causando daños en el histórico monumento de la Alhambra, que fue cerrado posteriormente debido a los desperfectos. El sismo resultó en al menos tres personas heridas. Los reportes confirman que el terremoto tuvo un impacto significativo en una de las estructuras históricas más importantes del país."
+      "rank": 2,
+      "summary": "Un terremoto afectó a Granada, la histórica ciudad española, dejando a tres personas heridas. El movimiento sísmico impactó la región, aunque los detalles específicos sobre la magnitud del terremoto y las circunstancias exactas de las lesiones no se precisan en la información disponible."
     },
     {
       "agenda_category": "Armed conflicts and attacks",
@@ -52,7 +93,7 @@
         "spain"
       ],
       "country_count": 1,
-      "headline": "Un caza español derriba un dron en el espacio aéreo rumano",
+      "headline": "Caza español derriba un dron en el espacio aéreo de Rumania",
       "independent_source_count": 1,
       "members": [
         {
@@ -76,8 +117,8 @@
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 2,
-      "summary": "Dos cazas F-18 españoles desplegados en Rumanía como parte de la misión de la OTAN despegaron tras una alerta de un dron cerca del límite con Ucrania. Durante esta operación, uno de los cazas españoles derribó el dron que estaba violando el espacio aéreo rumano."
+      "rank": 3,
+      "summary": "Dos F-18 españoles desplegados en Rumania como parte de la misión de la OTAN despegaron por una alerta de dron en el límite con Ucrania. Durante la operación, uno de los cazas españoles derribó un dron que estaba violando el espacio aéreo rumano."
     },
     {
       "agenda_category": "Law and crime",
@@ -90,7 +131,7 @@
       "corroborated": false,
       "countries": [],
       "country_count": 0,
-      "headline": "Tiroteo en Isla Cristina deja tres muertos, entre ellos un adolescente",
+      "headline": "Tiroteo en Isla Cristina deja tres muertos, incluido un adolescente",
       "independent_source_count": 0,
       "members": [],
       "mentioned_countries": [
@@ -99,8 +140,8 @@
       "origin_country": "unknown",
       "outbound_source": null,
       "outbound_url": null,
-      "rank": 3,
-      "summary": "Un tiroteo en Isla Cristina, Andalucía, España, resultó en la muerte de tres personas, incluido un adolescente, e hirió a dos más. La policía investiga el ataque como un posible enfrentamiento entre grupos rivales de traficantes de drogas y busca al responsable del disparo."
+      "rank": 4,
+      "summary": "Un tiroteo ocurrido en Isla Cristina, Andalucía, España, causó la muerte de tres personas, entre ellas un adolescente, e hirió a dos más. La policía investiga el ataque como posible disputa entre grupos rivales dedicados al tráfico de drogas y continúa la búsqueda del tirador responsable."
     },
     {
       "agenda_category": "Law and crime",
@@ -110,66 +151,25 @@
       ],
       "agenda_text": "Police in Morocco arrest 111 migrants who attempted to enter Spain's autonomous community Ceuta, amidst tightened security on both sides of the border with Spain",
       "cluster_id": "f0356c75996613b2",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "Policía marroquí detiene a más de 100 personas que intentaban entrar en Ceuta",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta"
-        }
-      ],
+      "corroborated": false,
+      "countries": [],
+      "country_count": 0,
+      "headline": "Marruecos detiene a 111 migrantes que intentaban entrar en Ceuta",
+      "independent_source_count": 0,
+      "members": [],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/aug/15/moroccan-police-arrest-more-than-100-people-as-they-attempt-to-enter-ceuta",
-      "rank": 4,
-      "summary": "Más de 100 personas fueron arrestadas por la policía marroquí mientras intentaban ingresar a Ceuta, la ciudad autónoma española ubicada en la costa norte de África. El incidente refleja la persistente presión migratoria en esta zona fronteriza, donde regularmente se registran intentos de entrada no autorizados."
-    },
-    {
-      "agenda_category": "Disasters and accidents",
-      "agenda_day": "2026-08-14",
-      "agenda_sources": [
-        "https://www.thenews.com.pk/latest/1412340-spain-rocked-by-48-magnitude-earthquake-with-epicentre-near-granada"
-      ],
-      "agenda_text": "A earthquake strikes the province of Granada in Spain, with damage reported in Granada and the surrounding area, and being felt in Madrid",
-      "cluster_id": "a55ff30132b3986e",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "Un terremoto sacude la histórica Granada en España e injuria a tres personas",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
+      "origin_country": "unknown",
+      "outbound_source": null,
+      "outbound_url": null,
       "rank": 5,
-      "summary": "Un terremoto afectó la ciudad de Granada, España, dejando a tres personas heridas. El evento impactó esta zona histórica del país, según informó BBC."
+      "summary": "La policía marroquí arrestó a 111 migrantes que intentaban ingresar a Ceuta, la comunidad autónoma española, en momentos en que ambos lados de la frontera entre Marruecos y España han incrementado sus medidas de seguridad."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-19T19:40:29.821353+00:00",
+  "generated_at": "2026-08-20T05:56:31.051426+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

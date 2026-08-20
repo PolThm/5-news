@@ -1547,3 +1547,69 @@ def test_every_profile_weighs_exactly_the_factors_the_score_computes() -> None:
             f"the {period} profile weighs {sorted(set(weights) - computed)} which nothing "
             f"computes, and ignores {sorted(computed - set(weights))} which it does"
         )
+
+
+def test_a_filled_item_that_matters_more_outranks_a_local_one_that_does_not() -> None:
+    """The top-up was first written as "the Zone's own items keep the top", and
+    the first Briefing it produced led France with a record heatwave and a moved
+    football fixture -- both scored consequence 0 -- while Ukraine's defence
+    minister demanding elections sat fifth.
+
+    `geographic_relevance` already prefers local, 1.0 against 0.5 for a
+    Continent item. That is the same preference expressed as a weight rather
+    than an override, and a weight can be outvoted.
+    """
+    from pipeline.config import MIN_QUALIFYING_FOR_ZONE, zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_for_zone
+
+    members = [_member("lemonde.fr"), _member("elpais.com", "spain")]
+    local_trivia = _scored(
+        cluster_id="pitch",
+        mentioned_countries=["france"],
+        reference_newsroom_count=3,
+        consequence=0,
+        independent_source_count=3,
+        country_count=2,
+        origin_country="france",
+        members=members,
+    )
+    european_substance = _scored(
+        cluster_id="ukraine",
+        mentioned_countries=["up"],
+        reference_newsroom_count=7,
+        consequence=3,
+        independent_source_count=10,
+        country_count=4,
+        origin_country="france",
+        members=members,
+    )
+
+    # Enough local items to clear the fallback floor, or the Briefing becomes
+    # Europe's outright (FR-16) and the top-up never runs at all.
+    padding = [
+        _scored(
+            cluster_id=f"local{position}",
+            mentioned_countries=["france"],
+            reference_newsroom_count=3,
+            consequence=1,
+            independent_source_count=3,
+            country_count=2,
+            origin_country="france",
+            members=members,
+        )
+        for position in range(MIN_QUALIFYING_FOR_ZONE)
+    ]
+
+    ranking = rank_for_zone(
+        [local_trivia, european_substance, *padding],
+        zone_by_slug("france"),
+        Period.DAY,
+        "2026-08-20",
+    )
+
+    assert ranking.served_zone.slug == "france", "not a fallback -- a topped-up own Briefing"
+    order = [c["cluster_id"] for c in ranking.ranked_clusters]
+    assert order.index("ukraine") < order.index("pitch")
+    filled = next(c for c in ranking.ranked_clusters if c["cluster_id"] == "ukraine")
+    assert filled["filled_from"] == "europe", "and it is still marked as filler"

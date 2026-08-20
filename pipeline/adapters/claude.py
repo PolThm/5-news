@@ -354,13 +354,13 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
         language_name = _LANGUAGE_NAMES[language]
         return (
             f"Write a headline and one short paragraph reporting the following "
-            f"news event for a reader who has not heard of it.\n"
-            f"{_language_instruction(language_name)}\n\n"
+            f"news event for a reader who has not heard of it.\n\n"
             f'Event: "{_escape_quotes(agenda_text)}"\n\n'
             f"This is the only account available -- report exactly what it states "
             f"and nothing beyond it. Do not add context, causes or consequences "
             f"it does not mention, and do not speculate about what happened "
-            f"next.\n{_NO_FABRICATION_INSTRUCTION}\n{_HEADLINE_INSTRUCTION}"
+            f"next.\n{_NO_FABRICATION_INSTRUCTION}\n{_HEADLINE_INSTRUCTION}\n"
+            f"{_language_instruction(language_name)}"
         )
 
     lines = _member_lines(members)
@@ -384,11 +384,24 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     language_name = _LANGUAGE_NAMES[language]
     return (
         f"Write a headline and one short paragraph summarizing the following "
-        f"news event for a reader who has not seen any of these Articles.\n"
-        f"{_language_instruction(language_name)}\n\n"
+        f"news event for a reader who has not seen any of these Articles.\n\n"
         f"Articles:\n{lines}\n\n"
         f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}\n"
-        f"{_HEADLINE_INSTRUCTION}\n{_CONSEQUENCE_INSTRUCTION}"
+        f"{_HEADLINE_INSTRUCTION}\n{_CONSEQUENCE_INSTRUCTION}\n"
+        # Last, not second.
+        #
+        # It was the second line, and the French Briefing published "La Comunidad
+        # de Madrid reconoce que algunos hospitales publicos no garantizan el
+        # aborto" as its headline AND summary. The angle for that same item came
+        # out in French, and the only difference between the two prompts was how
+        # far the instruction sat from the end -- four instructions and a list of
+        # Spanish titles here, one instruction there.
+        #
+        # That is a hypothesis about recency, not a proven cause: the fix is
+        # cheap and the position was arbitrary to begin with, so it is worth
+        # making either way. If a Spanish headline appears in the French output
+        # again, this comment is where to start doubting.
+        f"{_language_instruction(language_name)}"
     )
 
 
@@ -442,8 +455,8 @@ def _angle_prompt(cluster: dict, zone_slug: str, language: OutputLanguage) -> st
         f"If the honest answer is that it matters to {zone_name} only as part of "
         f"the wider world, say that plainly. Never invent a local connection -- "
         f"no consequence for {zone_name} that the Articles do not support.\n"
-        f"{_language_instruction(language_name)}\n"
-        f"{_CONSEQUENCE_INSTRUCTION}"
+        f"{_CONSEQUENCE_INSTRUCTION}\n"
+        f"{_language_instruction(language_name)}"
     )
 
 

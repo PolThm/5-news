@@ -762,11 +762,10 @@ def _rank_for_zone(
     # Romero, 92, hospitalised with pneumonia in Seville", which the consequence
     # scoring had correctly judged 0.
     #
-    # A national press review does carry the day's wider news; what it must not
-    # do is lead with it. So the Zone's OWN items keep their order at the top and
-    # the filler follows by score, marked with `filled_from` so the summarizer
-    # can write the angle for this territory rather than repeat the World text
-    # (that angle is what stops a France Briefing reading like the World one).
+    # Everything then competes on score, filler included, and `filled_from`
+    # marks what came from wider ground so the summarizer writes the angle for
+    # this territory rather than repeating the World text (that angle is what
+    # stops a France Briefing reading like the World one).
     ordered = _topped_up(ordered, clusters, serving_zone, period, reference_day)
 
     selected = ordered[:MAX_SELECTED_CLUSTERS]
@@ -836,7 +835,7 @@ def _topped_up(
                 break
             taken.add(cluster["cluster_id"])
             filled.append({**cluster, "filled_from": source_zone.slug})
-    return filled
+    return rank_by_score(filled, serving_zone, period, reference_day)
 
 
 def _apply_cap(ranked: list[dict], key: Callable[[dict], str | None], limit: int) -> list[dict]:

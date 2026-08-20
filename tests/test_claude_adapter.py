@@ -812,3 +812,41 @@ def test_an_angle_id_for_an_unknown_cluster_resolves_to_nothing() -> None:
     stray = angle_custom_id("subject-gone-0000", "france")
 
     assert parse_angle_custom_id(stray, [{"cluster_id": "subject-here-1111"}]) is None
+
+
+def test_the_language_instruction_is_the_last_thing_the_prompt_says() -> None:
+    """Position, not just presence.
+
+    It was the second line of the facts prompt, and the French Briefing published
+    "La Comunidad de Madrid reconoce que algunos hospitales publicos no garantizan
+    el aborto" as its headline AND summary. The angle for that same item came out
+    correctly in French, and the only difference between the two prompts was how
+    far the instruction sat from the end.
+
+    That is a hypothesis about recency rather than a proven cause -- but the
+    position was arbitrary to begin with, so pinning it costs nothing and stops
+    it drifting back. Asserted on all three prompts, including the agenda-only
+    branch, which was missing the instruction entirely once already.
+    """
+    from pipeline.adapters.claude import _angle_prompt, _language_instruction, _prompt_for
+
+    expected = _language_instruction("French")
+    spanish_sources = {
+        "members": [
+            {
+                "title": "La Comunidad de Madrid reconoce",
+                "source": "elpais.com",
+                "source_country": "spain",
+                "language": "es",
+                "url": "u",
+            }
+        ]
+    }
+    agenda_only = {"cluster_id": "x", "members": [], "agenda_text": "Something happened."}
+
+    for prompt in (
+        _prompt_for(spanish_sources, OutputLanguage.FR),
+        _prompt_for(agenda_only, OutputLanguage.FR),
+        _angle_prompt(spanish_sources, "france", OutputLanguage.FR),
+    ):
+        assert prompt.rstrip().endswith(expected.rstrip()), prompt[-120:]

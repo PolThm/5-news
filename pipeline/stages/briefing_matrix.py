@@ -29,7 +29,7 @@ from __future__ import annotations
 from datetime import UTC, datetime, timedelta
 
 from pipeline.config import ZONES
-from pipeline.domain import Period
+from pipeline.domain import Period, ZoneKind
 from pipeline.stages.history import cycle_date
 from pipeline.stages.rank import ZoneRanking, link_across_days, rank_for_zone
 
@@ -172,4 +172,30 @@ def dedupe_union(rankings: list[ZoneRanking]) -> list[dict]:
     return list(seen.values())
 
 
-__all__ = ["build_period_pools", "dedupe_union", "rank_all_zones"]
+def zone_angles(rankings: list[ZoneRanking]) -> list[tuple[dict, str]]:
+    """Every (item, Zone) pair that will actually be published, once each.
+
+    The angle is requested per pair, not per item, because a Country Briefing is
+    now topped up from wider ground and without an angle those filled items
+    would repeat the World Briefing's text verbatim.
+
+    Keyed on the SERVED Zone, not the requested one: a Briefing that fell back
+    (FR-16) is showing its Continent's selection, so the angle it needs is the
+    Continent's. Writing for a Zone the reader is not being served would put the
+    wrong territory's judgment on the page.
+
+    World is skipped. Its items already carry the shared `why_it_matters`, which
+    is written for no territory in particular -- which is exactly what a World
+    Briefing wants, and one fewer request per item.
+    """
+    pairs: dict[tuple[str, str], tuple[dict, str]] = {}
+    for ranking in rankings:
+        zone = ranking.served_zone
+        if zone.kind == ZoneKind.WORLD:
+            continue
+        for cluster in ranking.ranked_clusters:
+            pairs.setdefault((cluster["cluster_id"], zone.slug), (cluster, zone.slug))
+    return list(pairs.values())
+
+
+__all__ = ["build_period_pools", "dedupe_union", "rank_all_zones", "zone_angles"]

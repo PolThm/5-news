@@ -102,7 +102,11 @@ def _no_op_embed(titles: list[str]) -> EmbeddingResult:
 
 
 def _no_op_submit_summarize(
-    clusters: list[dict], language: OutputLanguage, cycle_id: str, data_root: Path
+    clusters: list[dict],
+    language: OutputLanguage,
+    cycle_id: str,
+    data_root: Path,
+    angles: list[tuple[dict, str]] | None = None,
 ) -> WrittenSubmission:
     """These tests exercise collect/dedupe/cluster/rank/history behavior,
     not summarization -- a stub submission keeps them independent of the
@@ -1095,7 +1099,11 @@ def test_summarize_submission_count_stays_fixed_regardless_of_cluster_volume(
         submit_calls: list[OutputLanguage] = []
 
         def counting_submit_summarize(
-            clusters_in: list[dict], language: OutputLanguage, cycle_id: str, data_root: Path
+            clusters_in: list[dict],
+            language: OutputLanguage,
+            cycle_id: str,
+            data_root: Path,
+            angles: list[tuple[dict, str]] | None = None,
         ) -> WrittenSubmission:
             submit_calls.append(language)
             return WrittenSubmission(

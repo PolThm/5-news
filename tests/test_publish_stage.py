@@ -506,3 +506,77 @@ def test_every_field_summarize_produces_is_declared_here() -> None:
         f"summarize produces {sorted(missing)} but publish does not declare them, "
         "so they would be dropped silently from every published Briefing"
     )
+
+
+def test_the_territorys_own_angle_replaces_the_shared_one() -> None:
+    """Facts shared, judgment per territory -- the whole point of topping a
+    Country Briefing up from wider ground. Without this, France's filled items
+    would repeat the World Briefing's text verbatim."""
+    from pipeline.stages.publish import _attach_summary
+
+    summarized = {
+        "a": {
+            "headline": "Evergrande's founder jailed for life",
+            "summary": "Les faits, ecrits une seule fois.",
+            "why_it_matters": "La portee generale.",
+            "takeaway": "Le point general.",
+            "angles": {
+                "france": {
+                    "why_it_matters": "Ce que cela change pour la France.",
+                    "takeaway": "Le point francais.",
+                },
+            },
+        }
+    }
+
+    published = _attach_summary(_cluster("a"), summarized, "france")
+
+    assert published["summary"] == "Les faits, ecrits une seule fois."
+    assert published["why_it_matters"] == "Ce que cela change pour la France."
+    assert published["angle_zone"] == "france"
+
+
+def test_a_zone_with_no_angle_keeps_the_shared_judgment() -> None:
+    """AD-10: a missing angle makes a Briefing thinner, never broken. Emptying
+    the fields instead would drop the consequence line entirely."""
+    from pipeline.stages.publish import _attach_summary
+
+    summarized = {
+        "a": {
+            "headline": "H",
+            "summary": "S",
+            "why_it_matters": "La portee generale.",
+            "takeaway": "Le point general.",
+            "angles": {"spain": {"why_it_matters": "ES", "takeaway": "ES"}},
+        }
+    }
+
+    published = _attach_summary(_cluster("a"), summarized, "france")
+
+    assert published["why_it_matters"] == "La portee generale."
+    assert "angle_zone" not in published
+
+
+def test_the_other_zones_angles_never_reach_the_page() -> None:
+    """One reader gets one angle. Shipping the whole map would let a France page
+    be read as Spain's, and would publish text written for a territory this
+    reader is not in."""
+    from pipeline.stages.publish import _attach_summary
+
+    summarized = {
+        "a": {
+            "headline": "H",
+            "summary": "S",
+            "why_it_matters": "W",
+            "takeaway": "T",
+            "angles": {
+                "france": {"why_it_matters": "FR", "takeaway": "FR"},
+                "spain": {"why_it_matters": "ES", "takeaway": "ES"},
+            },
+        }
+    }
+
+    published = _attach_summary(_cluster("a"), summarized, "france")
+
+    assert "angles" not in published
+    assert "ES" not in json.dumps(published, ensure_ascii=False)

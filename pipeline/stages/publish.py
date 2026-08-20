@@ -77,7 +77,13 @@ def assemble_briefings(
         ranking = rankings_by_zone_period.get((zone.slug, period))
         summarized = summaries_by_language.get(language, {})
         ranked_clusters = ranking.ranked_clusters if ranking else []
-        clusters = tuple(_attach_summary(cluster, summarized) for cluster in ranked_clusters)
+        # The SERVED Zone decides which angle to use, not the requested one: a
+        # Briefing that fell back (FR-16) is showing its Continent's selection,
+        # so the judgment on the page must be the Continent's.
+        served = (ranking.served_zone if ranking else zone).slug
+        clusters = tuple(
+            _attach_summary(cluster, summarized, served) for cluster in ranked_clusters
+        )
         briefings.append(
             BriefingRecord(
                 zone=zone,
@@ -138,7 +144,9 @@ def _facts_only(member: dict) -> dict:
     return {field: member[field] for field in _PUBLISHED_MEMBER_FIELDS if field in member}
 
 
-def _attach_summary(cluster: dict, summarized_by_id: dict[str, dict]) -> dict:
+def _attach_summary(
+    cluster: dict, summarized_by_id: dict[str, dict], zone_slug: str = "world"
+) -> dict:
     summarized = summarized_by_id.get(cluster["cluster_id"])
     published = {
         **cluster,
@@ -146,10 +154,29 @@ def _attach_summary(cluster: dict, summarized_by_id: dict[str, dict]) -> dict:
     }
     if summarized is None:
         return published
-    return {
+    attached = {
         **published,
         **{field: summarized[field] for field in _SUMMARIZE_OWNED_FIELDS if field in summarized},
     }
+    # The territory's own judgment replaces the shared one, where there is one.
+    #
+    # Facts stay shared -- headline and summary come from the single request per
+    # (item, language) -- and only `why_it_matters` and `takeaway` vary. That
+    # split is not a cost optimization: it is what makes it impossible for the
+    # France and Spain Briefings to state different facts about one event while
+    # their emphasis legitimately differs.
+    #
+    # Missing angle falls through to the shared text rather than emptying the
+    # fields: a Briefing without an angle is thinner, never broken (AD-10).
+    angle = (summarized.get("angles") or {}).get(zone_slug)
+    if angle:
+        attached["why_it_matters"] = angle["why_it_matters"]
+        attached["takeaway"] = angle["takeaway"]
+        attached["angle_zone"] = zone_slug
+    # The whole map is internal: the reader gets one angle, and shipping the
+    # other Zones' would let a France page be read as Spain's.
+    attached.pop("angles", None)
+    return attached
 
 
 @dataclass(frozen=True, slots=True)

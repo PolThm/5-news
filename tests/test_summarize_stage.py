@@ -74,7 +74,9 @@ def _ranked_cluster(
 def test_submit_writes_the_batch_id_and_returns_immediately(tmp_path: Path) -> None:
     clusters = [_ranked_cluster("a", rank=1), _ranked_cluster("b", rank=2)]
 
-    def fake_submit(clusters_in: list[dict], language: OutputLanguage) -> BatchSubmission:
+    def fake_submit(
+        clusters_in: list[dict], language: OutputLanguage, angles: list[tuple[dict, str]]
+    ) -> BatchSubmission:
         return BatchSubmission(batch_id="batch_xyz")
 
     written = submit_summarize(
@@ -96,7 +98,9 @@ def test_submit_writes_the_batch_id_and_returns_immediately(tmp_path: Path) -> N
 def test_submit_records_a_failure_when_submission_itself_fails(tmp_path: Path) -> None:
     clusters = [_ranked_cluster("a", rank=1)]
 
-    def fake_submit(clusters_in: list[dict], language: OutputLanguage) -> BatchSubmission:
+    def fake_submit(
+        clusters_in: list[dict], language: OutputLanguage, angles: list[tuple[dict, str]]
+    ) -> BatchSubmission:
         return BatchSubmission(failures=[Failure("claude", "ANTHROPIC_API_KEY is not set")])
 
     written = submit_summarize(

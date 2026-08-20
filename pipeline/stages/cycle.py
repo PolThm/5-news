@@ -63,7 +63,12 @@ from pipeline.stages import (
     write_jsonl,
 )
 from pipeline.stages.agenda import WrittenAgenda, run_agenda
-from pipeline.stages.briefing_matrix import build_period_pools, dedupe_union, rank_all_zones
+from pipeline.stages.briefing_matrix import (
+    build_period_pools,
+    dedupe_union,
+    rank_all_zones,
+    zone_angles,
+)
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
 from pipeline.stages.dedupe import run_dedupe
@@ -510,9 +515,17 @@ def run_cycle(
                 # its whole pool as stale.
                 zone_rankings[period] = rank_all_zones(pool, period, started_at.date().isoformat())
                 trace(f"ranking: {period} done")
-            union = dedupe_union([r for rankings in zone_rankings.values() for r in rankings])
+            flat_rankings = [r for rankings in zone_rankings.values() for r in rankings]
+            union = dedupe_union(flat_rankings)
+            # Which (item, Zone) pairs need an angle written for them. Computed
+            # here and threaded into submit, because summarize submits once per
+            # language and the pairs are the same for all three.
+            angle_pairs = zone_angles(flat_rankings)
             clusters_selected = len(union)
-            trace(f"ranking: done -> {clusters_selected} selected")
+            trace(
+                f"ranking: done -> {clusters_selected} selected, "
+                f"{len(angle_pairs)} zone angles to write"
+            )
             rank_path = output_dir_for("rank", cycle_id, root=data_root) / "ranked.jsonl"
             write_jsonl(rank_path, union)
             _write_zone_rankings(
@@ -559,7 +572,11 @@ def run_cycle(
         any_failed = False
         for language in OUTPUT_LANGUAGES:
             submission = submit_summarize_fn(
-                union, language=language, cycle_id=cycle_id, data_root=data_root
+                union,
+                language=language,
+                cycle_id=cycle_id,
+                data_root=data_root,
+                angles=angle_pairs,
             )
             if submission.batch_id is not None:
                 summarize_batches[language.value] = {

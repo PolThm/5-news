@@ -221,6 +221,50 @@ class ClusterText:
 
 
 @dataclass(frozen=True, slots=True)
+class ZoneAngle:
+    """Why one event matters to one Zone.
+
+    The facts are written once and shared -- see `ANGLE_SEPARATOR` -- so this
+    carries only the judgment that varies by territory. Iran seen from the World
+    is trade and China; seen from France it is energy prices and the budget. The
+    same pair of fields as `ClusterText`'s consequence half, so the page renders
+    them identically whether they came from here or from a shared summary.
+    """
+
+    why_it_matters: str
+    takeaway: str
+
+
+# What separates a cluster id from a Zone slug in a batch `custom_id`.
+#
+# Facts are requested once per (event, language) and keyed on the cluster id
+# alone; an angle is requested per (event, Zone, language) and keyed
+# `<cluster_id>@<zone_slug>`. One batch carries both, so the count of batches
+# does not grow with the number of Zones.
+#
+# This reverses Story 3.5's fan-out decision, which summarized once per (Cluster,
+# language) precisely to avoid this multiplication. The reason it is worth
+# reversing: a Country Briefing short of five items is now topped up from wider
+# ground, and without an angle those filled items would repeat the World
+# Briefing's text verbatim. The whole point of a national press review is that
+# the same event reads differently from Paris and from Madrid.
+#
+# `@` because a cluster id is a slug plus a hex digest and a Zone slug is
+# lower-case letters and hyphens, so neither can contain it.
+ANGLE_SEPARATOR = "@"
+
+_ANGLE_SCHEMA: dict = {
+    "type": "object",
+    "properties": {
+        "why_it_matters": {"type": "string"},
+        "takeaway": {"type": "string"},
+    },
+    "required": ["why_it_matters", "takeaway"],
+    "additionalProperties": False,
+}
+
+
+@dataclass(frozen=True, slots=True)
 class BatchCollectResult:
     """The outcome of checking one batch's status, once.
 
@@ -240,6 +284,8 @@ class BatchCollectResult:
 
     status: Literal["pending", "ended"]
     texts: dict[str, ClusterText] = field(default_factory=dict)
+    # Keyed `<cluster_id>@<zone_slug>`, the same custom_id the request used.
+    angles: dict[str, ZoneAngle] = field(default_factory=dict)
     failures: list[Failure] = field(default_factory=list)
 
 
@@ -307,6 +353,82 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
         f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}\n"
         f"{_HEADLINE_INSTRUCTION}\n{_CONSEQUENCE_INSTRUCTION}"
     )
+
+
+_ZONE_NAMES: dict[str, dict[str, str]] = {
+    "world": {"fr": "le monde", "en": "the world", "es": "el mundo"},
+    "europe": {"fr": "l'Europe", "en": "Europe", "es": "Europa"},
+    "france": {"fr": "la France", "en": "France", "es": "Francia"},
+    "spain": {"fr": "l'Espagne", "en": "Spain", "es": "España"},
+}
+
+
+def zone_reader_name(zone_slug: str, language: OutputLanguage) -> str:
+    """How to name a Zone to its own reader.
+
+    A slug in a prompt ("write for spain") is the same mistake as a bare
+    language code, which this module already fixed once: the model is being
+    asked to reason about a place, so it needs the place's name. An unknown slug
+    falls back to the slug itself rather than raising -- a Zone added to config
+    without a translation should thin the prompt, not fail the cycle.
+    """
+    return _ZONE_NAMES.get(zone_slug, {}).get(language.value, zone_slug)
+
+
+def _angle_prompt(cluster: dict, zone_slug: str, language: OutputLanguage) -> str:
+    """Why one event matters, written for one territory.
+
+    The facts are requested separately and shared across Zones, so this asks
+    only for the judgment. Splitting them is not a cost optimization: it is what
+    guarantees the same event cannot acquire different facts in the France and
+    Spain Briefings while its emphasis legitimately differs.
+
+    The instruction refuses two failure modes outright. Inventing a local
+    connection is the obvious one -- a reader in Madrid does not need to be told
+    that a Chinese property collapse "affects Spanish savers" if nobody reported
+    that. The subtler one is answering for the wrong place: asked to write for
+    France about an event in Ukraine, a model drifts into explaining the event
+    again instead of saying what it changes for this reader.
+    """
+    language_name = _LANGUAGE_NAMES[language]
+    zone_name = zone_reader_name(zone_slug, language)
+    lines = _member_lines(cluster.get("members", []))
+    agenda_text = (cluster.get("agenda_text") or "").strip()
+    basis = f"Articles:\n{lines}" if lines.strip() else f'Event: "{_escape_quotes(agenda_text)}"'
+    return (
+        f"You are writing one item of a serious press review edited for readers "
+        f"in {zone_name}.\n\n"
+        f"{basis}\n\n"
+        f"Do not summarize the event again -- the reader has just read what "
+        f"happened. Say what it CHANGES for {zone_name}: who there is affected, "
+        f"what is decided, what is at stake.\n"
+        f"If the honest answer is that it matters to {zone_name} only as part of "
+        f"the wider world, say that plainly. Never invent a local connection -- "
+        f"no consequence for {zone_name} that the Articles do not support.\n"
+        f"{_language_instruction(language_name)}\n"
+        f"{_CONSEQUENCE_INSTRUCTION}"
+    )
+
+
+def _parse_zone_angle(custom_id: str, raw: str) -> tuple[ZoneAngle | None, Failure | None]:
+    """Parse one angle result, or report why it could not be.
+
+    Mirrors `_parse_cluster_text` exactly, including deriving the required
+    fields from the schema rather than repeating them -- the trap that let
+    `why_it_matters` and `takeaway` be silently dropped from the summarize
+    contract once already.
+    """
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        return None, Failure(ADAPTER, f"angle {custom_id}: response was not JSON: {exc}")
+    if not isinstance(payload, dict):
+        return None, Failure(ADAPTER, f"angle {custom_id}: response was not an object")
+    fields = {name: payload.get(name) for name in _ANGLE_SCHEMA["required"]}
+    for name, value in fields.items():
+        if not isinstance(value, str) or not value.strip():
+            return None, Failure(ADAPTER, f"angle {custom_id}: {name} was missing or empty")
+    return ZoneAngle(**{name: value.strip() for name, value in fields.items()}), None
 
 
 def _parse_cluster_text(cluster_id: str, raw: str) -> tuple[ClusterText | None, Failure | None]:
@@ -515,6 +637,7 @@ def _client_or_degrade(client: Client | None) -> tuple[Client | None, Failure | 
 def submit_batch(
     clusters: list[dict],
     language: OutputLanguage,
+    angles: list[tuple[dict, str]] | None = None,
     client: Client | None = None,
 ) -> BatchSubmission:
     """Submit one Batch API request per Cluster and return immediately with
@@ -563,6 +686,25 @@ def submit_batch(
             )
             for cluster in clusters
         ]
+        # Angles ride in the SAME batch as the facts, keyed
+        # `<cluster_id>@<zone_slug>`. One batch per language whatever the number
+        # of Zones: the fan-out this reverses (Story 3.5) was about avoiding
+        # redundant *requests*, and this keeps the batch count flat while paying
+        # only for the text that actually differs per territory.
+        requests += [
+            Request(
+                custom_id=f"{cluster['cluster_id']}{ANGLE_SEPARATOR}{zone_slug}",
+                params=MessageCreateParamsNonStreaming(
+                    model=MODEL,
+                    max_tokens=MAX_TOKENS,
+                    output_config={"format": {"type": "json_schema", "schema": _ANGLE_SCHEMA}},
+                    messages=[
+                        {"role": "user", "content": _angle_prompt(cluster, zone_slug, language)},
+                    ],
+                ),
+            )
+            for cluster, zone_slug in (angles or [])
+        ]
         batch = client.messages.batches.create(requests=requests)
     except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
         return BatchSubmission(failures=[Failure(ADAPTER, f"batch submission failed: {exc}")])
@@ -609,6 +751,7 @@ def collect_batch(
     # failure degrades only the affected Cluster, never everything already
     # collected.
     texts: dict[str, ClusterText] = {}
+    angles: dict[str, ZoneAngle] = {}
     failures: list[Failure] = []
     seen_custom_ids: set[str] = set()
     try:
@@ -625,11 +768,21 @@ def collect_batch(
                 # NOT honouring the schema. Degrade that Cluster rather
                 # than raising past this adapter boundary (AD-6, AD-10) --
                 # the same treatment an outright failed result gets.
-                parsed, parse_failure = _parse_cluster_text(item.custom_id, raw)
-                if parsed is None:
-                    failures.append(parse_failure)
+                # Which kind of request this was is read off the custom_id
+                # rather than tracked separately: the id IS the record of what
+                # was asked, so the two cannot drift apart.
+                if ANGLE_SEPARATOR in item.custom_id:
+                    angle, angle_failure = _parse_zone_angle(item.custom_id, raw)
+                    if angle is None:
+                        failures.append(angle_failure)
+                    else:
+                        angles[item.custom_id] = angle
                 else:
-                    texts[item.custom_id] = parsed
+                    parsed, parse_failure = _parse_cluster_text(item.custom_id, raw)
+                    if parsed is None:
+                        failures.append(parse_failure)
+                    else:
+                        texts[item.custom_id] = parsed
             else:
                 failures.append(
                     Failure(
@@ -653,11 +806,14 @@ def collect_batch(
                 Failure(ADAPTER, f"cluster {cluster_id}: no result returned by the batch")
             )
 
-    return BatchCollectResult(status="ended", texts=texts, failures=failures)
+    return BatchCollectResult(status="ended", texts=texts, angles=angles, failures=failures)
 
 
 __all__ = [
     "ADAPTER",
+    "ANGLE_SEPARATOR",
+    "ZoneAngle",
+    "zone_reader_name",
     "MAX_TOKENS",
     "CONSEQUENCE_BATCH",
     "MODEL",

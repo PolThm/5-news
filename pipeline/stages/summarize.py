@@ -44,6 +44,7 @@ from pathlib import Path
 
 from pipeline.adapters import Failure
 from pipeline.adapters.claude import (
+    ANGLE_SEPARATOR,
     BatchCollectResult,
     BatchSubmission,
     collect_batch,
@@ -64,7 +65,11 @@ STAGE = "summarize"
 # submit_batch/collect_batch's real signatures also take optional `client`
 # for injection; these aliases only describe the shape every call site here
 # actually uses.
-SubmitFn = Callable[[list[dict], OutputLanguage], BatchSubmission]
+# The third argument is the (cluster, zone_slug) pairs whose angles this batch
+# should also carry. Part of the signature rather than optional-by-keyword so a
+# stub that has not been updated fails loudly instead of silently submitting a
+# batch with no angles in it.
+SubmitFn = Callable[[list[dict], OutputLanguage, list[tuple[dict, str]]], BatchSubmission]
 CollectFn = Callable[[str, list[dict]], BatchCollectResult]
 
 
@@ -143,6 +148,7 @@ def submit_summarize(
     cycle_id: str,
     data_root: Path = DEFAULT_DATA_ROOT,
     submit_fn: SubmitFn = submit_batch,
+    angles: list[tuple[dict, str]] | None = None,
 ) -> WrittenSubmission:
     """Submit a Batch API request for `clusters`, in `language`, and return
     immediately (AD-11) -- this never waits for the batch to complete.
@@ -156,13 +162,14 @@ def submit_summarize(
     destination = _destination(data_root, cycle_id, language)
     metadata_path = destination / "submitting.json"
 
-    submission = submit_fn(clusters, language)
+    submission = submit_fn(clusters, language, angles or [])
 
     metadata = {
         "stage": STAGE,
         "cycle_id": cycle_id,
         "language": language.value,
         "clusters_submitted": len(clusters),
+        "angles_submitted": len(angles or []),
         "batch_id": submission.batch_id,
         "failures": [f.to_dict() for f in submission.failures],
     }
@@ -273,6 +280,22 @@ def collect_summarize(
                 "takeaway": takeaway,
                 "outbound_url": outbound_url,
                 "outbound_source": outbound_source,
+                # Per-Zone angles, keyed by Zone slug. The facts above are
+                # shared; only the judgment varies by territory, which is what
+                # keeps a Country Briefing from repeating the World one while
+                # guaranteeing the two cannot state different facts.
+                #
+                # Empty when nothing was requested or every angle degraded, and
+                # publish then falls back to the shared `why_it_matters` --
+                # a Briefing without an angle is thinner, never broken.
+                "angles": {
+                    key.split(ANGLE_SEPARATOR, 1)[1]: {
+                        "why_it_matters": angle.why_it_matters,
+                        "takeaway": angle.takeaway,
+                    }
+                    for key, angle in result.angles.items()
+                    if key.split(ANGLE_SEPARATOR, 1)[0] == cluster_id
+                },
             }
         )
 
@@ -285,6 +308,7 @@ def collect_summarize(
         "clusters_in": len(clusters),
         "clusters_summarized": len(summarized_out) - len(degraded_cluster_ids),
         "clusters_degraded": len(degraded_cluster_ids),
+        "angles_collected": len(result.angles),
         "degraded_cluster_ids": sorted(degraded_cluster_ids),
         # A Cluster with no outbound link is a reader-facing shortfall in
         # its own right (Story 3.3) -- tracked here the same way

@@ -42,6 +42,7 @@ from pipeline.config import (
     continent_for,
     countries_in_continent,
     source_trust_tier,
+    zone_by_slug,
 )
 from pipeline.domain import Period, Zone, ZoneKind
 from pipeline.stages import (
@@ -752,6 +753,22 @@ def _rank_for_zone(
             reference_day=reference_day,
         )
 
+    # Fill the remaining places from wider ground, angled for this Zone.
+    #
+    # A Zone that clears the floor can still be short of five: measured on
+    # 2026-08-20, France had four qualifying items of its own and Spain five,
+    # while the pool held sixty-one events. The Briefing then either ran short
+    # or, worse, kept a fifth item nothing supported -- Spain published "Curro
+    # Romero, 92, hospitalised with pneumonia in Seville", which the consequence
+    # scoring had correctly judged 0.
+    #
+    # A national press review does carry the day's wider news; what it must not
+    # do is lead with it. So the Zone's OWN items keep their order at the top and
+    # the filler follows by score, marked with `filled_from` so the summarizer
+    # can write the angle for this territory rather than repeat the World text
+    # (that angle is what stops a France Briefing reading like the World one).
+    ordered = _topped_up(ordered, clusters, serving_zone, period, reference_day)
+
     selected = ordered[:MAX_SELECTED_CLUSTERS]
     ranked_out = [
         {**cluster, "rank": position} for position, cluster in enumerate(selected, start=1)
@@ -760,6 +777,66 @@ def _rank_for_zone(
     return ZoneRanking(
         requested_zone=requested_zone, served_zone=serving_zone, ranked_clusters=ranked_out
     )
+
+
+# The Zone every item is relevant to, resolved once. `_topped_up` walks up to it
+# as the last source of filler, so a Country short of five is filled from its
+# Continent first and only then from everything.
+_WORLD_ZONE = zone_by_slug("world")
+
+
+def _topped_up(
+    own: list[dict],
+    clusters: list[dict],
+    serving_zone: Zone,
+    period: Period,
+    reference_day: str,
+) -> list[dict]:
+    """`own` followed by the best qualifying items from wider ground.
+
+    Country Zones only, and deliberately. A Country is where the shortage is
+    (France had four of its own on 2026-08-20, Spain five, out of sixty-one
+    events) and where the angle idea means something: Iran seen from France is
+    energy prices and the budget. A Continent already ranks a wide pool, and
+    "Europe" topped up with news from Japan would be a Briefing about nothing --
+    so `_is_relevant_to` stays an absolute contract there, as its own tests
+    assert.
+
+    Fills from the Continent first, then from the whole pool, so the filler is
+    as close to the reader as the pool allows.
+
+    Items already selected are skipped by `cluster_id`, and each filler carries
+    `filled_from`: the Zone whose relevance admitted it. That field is what the
+    angle prompt reads, and what lets a page say where an item came from instead
+    of implying it is local news.
+    """
+    if serving_zone.kind != ZoneKind.COUNTRY:
+        return own
+
+    taken = {item["cluster_id"] for item in own}
+    filled = list(own)
+    wider: list[Zone] = []
+    parent = continent_for(serving_zone)
+    if parent is not None:
+        wider.append(parent)
+    wider.append(_WORLD_ZONE)
+
+    for source_zone in wider:
+        if len(filled) >= MAX_SELECTED_CLUSTERS:
+            break
+        candidates = [
+            cluster
+            for cluster in clusters
+            if cluster["cluster_id"] not in taken
+            and qualifies(cluster)
+            and _is_relevant_to(cluster, source_zone)
+        ]
+        for cluster in rank_by_score(candidates, serving_zone, period, reference_day):
+            if len(filled) >= MAX_SELECTED_CLUSTERS:
+                break
+            taken.add(cluster["cluster_id"])
+            filled.append({**cluster, "filled_from": source_zone.slug})
+    return filled
 
 
 def _apply_cap(ranked: list[dict], key: Callable[[dict], str | None], limit: int) -> list[dict]:

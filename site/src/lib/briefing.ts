@@ -74,6 +74,20 @@ export interface Cluster {
   // The page does not render it yet -- it exists so an ordering can be audited
   // from the file alone.
   score?: ClusterScore;
+  // Which Zone's angle this item carries, when it carries one.
+  //
+  // `why_it_matters` and `takeaway` are written per territory: the same event
+  // reads differently from Paris and from Madrid, and a Country Briefing topped
+  // up from wider ground would otherwise repeat the World Briefing verbatim.
+  // The facts (`headline`, `summary`) are written once and shared, so the two
+  // Briefings can never state different facts about one event.
+  //
+  // Absent when the shared judgment was used -- the World Briefing always, and
+  // any Zone whose angle failed to generate.
+  angle_zone?: string;
+  // Set when this item was not about the Zone itself but filled a remaining
+  // place from wider ground: the Zone whose relevance admitted it.
+  filled_from?: string;
 }
 
 export interface ClusterScore {

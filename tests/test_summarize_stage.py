@@ -141,7 +141,7 @@ def test_collect_returns_none_and_writes_nothing_when_batch_not_yet_ended(tmp_pa
 # --- collect_summarize: ended, carrying forward Stories 3.1-3.3's contract --
 
 
-def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> None:
+def test_every_cluster_receives_a_summary_field_and_nothing_else_changes(tmp_path: Path) -> None:
     """AD-6: summarize adds Summary text keyed to Cluster identity and may
     not add, remove, reorder, or renumber anything else."""
     clusters = [_ranked_cluster("a", rank=1), _ranked_cluster("b", rank=2)]
@@ -166,7 +166,12 @@ def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> No
         )
 
     written = collect_summarize(
-        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))
 
@@ -201,7 +206,9 @@ def test_the_prompt_receives_member_data_and_a_no_fabrication_instruction() -> N
     assert "named outlet" in prompt
 
 
-def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffected() -> None:
+def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffected(
+    tmp_path: Path,
+) -> None:
     """AC3: a summarize failure for one Cluster degrades that item to its
     title; every other Cluster in the same call keeps its real summary."""
     ok_cluster = _ranked_cluster("ok", rank=1)
@@ -244,7 +251,12 @@ def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffecte
         )
 
     written = collect_summarize(
-        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
 
@@ -258,7 +270,9 @@ def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffecte
     assert metadata["degraded_cluster_ids"] == ["bad"]
 
 
-def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_convention() -> None:
+def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_convention(
+    tmp_path: Path,
+) -> None:
     """cluster.py's coverage_for_cluster tiebreaks on (published_at, url) --
     NOT title -- when publish times tie. Constructed so title-order and
     url-order disagree: if this stage's degrade path used title as the
@@ -297,13 +311,16 @@ def test_degrade_tiebreak_on_equal_publish_time_matches_coverage_for_clusters_co
         language=OutputLanguage.FR,
         cycle_id="c1",
         collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))[0]
 
     assert out["summary"] == "Z later-sorting title"  # the (published_at, url)-earliest member
 
 
-def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_link() -> None:
+def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_link(
+    tmp_path: Path,
+) -> None:
     """AC1: every item carries an outbound link and Source name, selected by
     the same (published_at, url)-earliest convention the degrade path
     already uses -- applied here for the ordinary, non-degraded case too."""
@@ -344,7 +361,12 @@ def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_
         )
 
     written = collect_summarize(
-        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        [cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -353,7 +375,7 @@ def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_
     assert out["outbound_source"] == "earliest.com"
 
 
-def test_a_degraded_cluster_still_carries_a_correct_outbound_link() -> None:
+def test_a_degraded_cluster_still_carries_a_correct_outbound_link(tmp_path: Path) -> None:
     """The degrade path only replaces `summary` -- attribution fields must
     still point somewhere real, so a reader always has a link to click
     through to regardless of whether the AI text is real or a fallback."""
@@ -386,7 +408,12 @@ def test_a_degraded_cluster_still_carries_a_correct_outbound_link() -> None:
         )
 
     written = collect_summarize(
-        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        [cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -395,7 +422,9 @@ def test_a_degraded_cluster_still_carries_a_correct_outbound_link() -> None:
     assert out["outbound_source"] == "earliest.com"
 
 
-def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() -> None:
+def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash(
+    tmp_path: Path,
+) -> None:
     """The link_across_days history-only-clique case (Story 3.1's Task 0)
     legitimately produces a Cluster with an empty members list. There is no
     Article to link to -- degrade to None, don't crash, don't fabricate."""
@@ -415,7 +444,12 @@ def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() 
         )
 
     written = collect_summarize(
-        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        [cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -423,7 +457,9 @@ def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() 
     assert out["outbound_source"] is None
 
 
-def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields() -> None:
+def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields(
+    tmp_path: Path,
+) -> None:
     """The most degraded state a Cluster can be in: no members to link to,
     and summarization also failed. Both the summary-text fallback (its own
     cluster_id, per the None-representative branch) and the outbound-link
@@ -436,7 +472,12 @@ def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields()
         )
 
     written = collect_summarize(
-        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        [cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -445,7 +486,9 @@ def test_a_cluster_with_no_members_and_a_failed_summarize_degrades_both_fields()
     assert out["outbound_source"] is None
 
 
-def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle() -> None:
+def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle(
+    tmp_path: Path,
+) -> None:
     """AD-10's degrade-not-abort principle must hold here too: a malformed
     upstream member (missing `source`) must not crash the whole collect
     call -- it should degrade only that Cluster's outbound link."""
@@ -486,7 +529,12 @@ def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle
         )
 
     written = collect_summarize(
-        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
 
@@ -495,7 +543,7 @@ def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle
     assert out["malformed"]["outbound_source"] is None
 
 
-def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> None:
+def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link(tmp_path: Path) -> None:
     """A present-but-empty string is a different failure mode than a missing
     key -- both must degrade to None rather than pass through a falsy value
     that would render as a broken empty href on the display side."""
@@ -528,7 +576,12 @@ def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> N
         )
 
     written = collect_summarize(
-        "batch_1", [cluster], language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        [cluster],
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))[0]
 
@@ -536,7 +589,7 @@ def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> N
     assert out["outbound_source"] is None
 
 
-def test_metadata_records_how_many_clusters_lack_an_outbound_link() -> None:
+def test_metadata_records_how_many_clusters_lack_an_outbound_link(tmp_path: Path) -> None:
     """AD-6/AD-10's philosophy throughout this file is to state every
     visible shortfall in metadata, never degrade silently -- a Cluster with
     no outbound link is exactly this kind of reader-facing shortfall, and
@@ -570,6 +623,7 @@ def test_metadata_records_how_many_clusters_lack_an_outbound_link() -> None:
         language=OutputLanguage.FR,
         cycle_id="c1",
         collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     metadata = json.loads(written.metadata_path.read_text())
 
@@ -705,7 +759,12 @@ def test_a_cluster_receives_both_a_headline_and_a_summary(tmp_path: Path) -> Non
         )
 
     written = collect_summarize(
-        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))
 
@@ -713,7 +772,9 @@ def test_a_cluster_receives_both_a_headline_and_a_summary(tmp_path: Path) -> Non
     assert out[0]["summary"] == "Les delegations..."
 
 
-def test_a_degraded_cluster_gets_the_article_title_as_both_headline_and_summary() -> None:
+def test_a_degraded_cluster_gets_the_article_title_as_both_headline_and_summary(
+    tmp_path: Path,
+) -> None:
     """AD-6 prescribes exactly this for a failed Cluster: "degrades that item
     to its Article title and outbound link." Story 6.1 keeps Story 3.1's
     summary behavior unchanged and applies the same title to the headline --
@@ -726,7 +787,12 @@ def test_a_degraded_cluster_gets_the_article_title_as_both_headline_and_summary(
         return BatchCollectResult(status="ended", texts={})  # nothing came back
 
     written = collect_summarize(
-        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     out = list(read_jsonl(written.output_path))
 
@@ -739,7 +805,7 @@ def test_a_degraded_cluster_gets_the_article_title_as_both_headline_and_summary(
     assert metadata["clusters_degraded"] == 1
 
 
-def test_headline_and_summary_degrade_together_never_one_without_the_other() -> None:
+def test_headline_and_summary_degrade_together_never_one_without_the_other(tmp_path: Path) -> None:
     """The adapter never returns a half-populated ClusterText, so an item can
     never end up with a real headline beside a fallback summary (or vice
     versa) -- which would be invisible in the metadata, since one degrade
@@ -760,7 +826,12 @@ def test_headline_and_summary_degrade_together_never_one_without_the_other() -> 
         )
 
     written = collect_summarize(
-        "batch_1", clusters, language=OutputLanguage.FR, cycle_id="c1", collect_fn=fake_collect
+        "batch_1",
+        clusters,
+        language=OutputLanguage.FR,
+        cycle_id="c1",
+        collect_fn=fake_collect,
+        data_root=tmp_path,
     )
     by_id = {c["cluster_id"]: c for c in read_jsonl(written.output_path)}
 

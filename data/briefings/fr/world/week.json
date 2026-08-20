@@ -2,22 +2,24 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-trump-dc3074a06a35",
         "subject-trump-fa17c007877f"
       ],
-      "cluster_id": "subject-trump-fa17c007877f",
-      "coherence": 0.4194639460312616,
+      "cluster_id": "subject-trump-dc3074a06a35",
+      "coherence": 0.4819304597194789,
       "consequence": 3,
       "countries": [
-        "ar",
         "brazil",
+        "co",
         "france",
-        "germany",
-        "spain"
+        "it",
+        "spain",
+        "sz"
       ],
-      "country_count": 5,
+      "country_count": 6,
       "editorial_day": "2026-08-20",
-      "headline": "Trump menace de représailles économiques tout pays soutenant l'Iran",
-      "independent_source_count": 11,
+      "headline": "Trump menace d'une guerre économique contre l'Iran et les pays qui l'aideraient",
+      "independent_source_count": 16,
       "members": [
         {
           "language": "fr",
@@ -51,9 +53,27 @@
         },
         {
           "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260820/11617189/trump-anuncia-guerra-economica-iran-amenaza-paises-negocien-regimen.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/trump-anuncia-dia-d-iran-guerra-economica-aislamiento-precedentes_1_13456938.html"
+        },
+        {
+          "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
           "url": "https://www.europapress.es/internacional/noticia-trump-declara-mayor-guerra-economica-contra-iran-amenaza-todo-pais-permita-cualquier-ayuda-teheran-20260820014411.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-anuncia-una-ofensiva-economica-sin-precedentes-para-aislar-iran_7027493_0.html"
         },
         {
           "language": "pt",
@@ -63,105 +83,126 @@
         },
         {
           "language": "es",
-          "source": "diariopopular.com.ar",
-          "source_country": "ar",
-          "url": "https://www.diariopopular.com.ar/internacionales/tension-iran-trump-anuncio-una-guerra-economica-y-lanzo-una-fuerte-advertencia-n915704"
+          "source": "diariocordoba.com",
+          "source_country": "spain",
+          "url": "https://www.diariocordoba.com/internacional/2026/08/20/trump-declara-mayor-guerra-economica-iran-133502097.html"
         },
         {
           "language": "es",
-          "source": "antena3.com",
+          "source": "eltiempo.com",
+          "source_country": "co",
+          "url": "https://www.eltiempo.com/mundo/eeuu-y-canada/presidente-donald-trump-anuncia-una-guerra-economica-contra-iran-y-advierte-de-fuertes-consecuencias-para-los-paises-que-lo-intenten-apoyar-3579555"
+        },
+        {
+          "language": "es",
+          "source": "laprovincia.es",
           "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/mundo/trump-amenaza-sanciones-economicas-cualquier-pais-que-ayude-iran_202608206a86e4bd71b42a0b5dfa3c86.html"
+          "url": "https://www.laprovincia.es/mundo/2026/08/20/trump-declara-mayor-guerra-economica-iran-133502060.html"
         },
         {
-          "language": "de",
-          "source": "handelsblatt.com",
-          "source_country": "germany",
-          "url": "https://www.handelsblatt.com/politik/international/nahost-us-praesident-trump-droht-iran-mit-wirtschaftskrieg/100248438.html"
+          "language": "es",
+          "source": "diariodemallorca.es",
+          "source_country": "spain",
+          "url": "https://www.diariodemallorca.es/internacional/2026/08/20/trump-declara-mayor-guerra-economica-iran-133502069.html"
         },
         {
-          "language": "de",
-          "source": "shz.de",
-          "source_country": "germany",
-          "url": "https://www.shz.de/deutschland-welt/nahost-krieg/artikel/trump-droht-iran-mit-wirtschaftskrieg-was-steckt-dahinter-51180990"
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-20/donald-trump-ha-annunciato-una-guerra-economica-contro-liran-senza-precedenti/19586170/"
+        },
+        {
+          "language": "fr",
+          "source": "lematin.ch",
+          "source_country": "sz",
+          "url": "https://www.lematin.ch/story/guerre-au-moyen-orient-trump-menace-economiquement-tout-pays-qui-aiderait-l-iran-103619871"
         }
       ],
       "mentioned_countries": [
         "ir"
       ],
-      "origin_country": "ar",
+      "origin_country": "brazil",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml",
       "rank": 1,
-      "reference_newsroom_count": 7,
+      "reference_newsroom_count": 10,
       "reference_newsrooms": [
+        "20minutos.es",
         "abc.es",
         "challenges.fr",
+        "eldiario.es",
         "elpais.com",
         "europapress.es",
         "francetvinfo.fr",
         "globo.com",
+        "lavanguardia.com",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4195,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4667,
+          "coherence": 0.4819,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5556,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7838
+          "novelty": 0.5,
+          "prominence": 0.8,
+          "source_reliability": 0.8367
         },
-        "total": 0.7435,
+        "total": 0.772,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
       "subject_names": [
+        "canada",
         "casa blanca",
         "donald trump",
         "iran",
-        "oman",
-        "ormuz",
         "teheran",
         "trump"
       ],
-      "subject_newsroom_count": 30,
-      "summary": "Donald Trump a annoncé une guerre économique majeure contre l'Iran et a menacé de terribles conséquences à l'encontre de tout pays fournissant une aide financière ou un soutien au régime iranien. Selon les reportages, cette menace s'inscrit dans une escalade des tensions avec Téhéran et vise à exercer une pression économique maximale sur l'Iran ainsi que sur ses partenaires commerciaux.",
-      "takeaway": "Trump utilise les sanctions économiques comme levier dans le conflit avec l'Iran en ciblant également les nations qui le soutiendraient.",
-      "why_it_matters": "Les pays commerçant avec l'Iran ou lui apportant un soutien financier s'exposent à des sanctions économiques américaines, ce qui pourrait modifier les stratégies diplomatiques et commerciales internationales."
+      "subject_newsroom_count": 28,
+      "summary": "Donald Trump a annoncé une offensive économique sans précédents contre l'Iran, décrite par certains comme un « Jour J économique », et a menacé de « terribles répercussions économiques » tout pays qui fournirait une aide financière ou commerciale au régime iranien.",
+      "takeaway": "Trump déclare une campagne d'isolement économique maximal contre l'Iran en menaçant les pays partenaires.",
+      "why_it_matters": "Cette annonce expose les pays commerçant avec l'Iran à des conséquences économiques de la part des États-Unis, ce qui affecte les relations commerciales internationales et la politique de sanctions."
     },
     {
       "_linked_ids": [
         "subject-china",
         "subject-evergrande-4794118dd2bd",
         "subject-evergrande-577e845adc09",
+        "subject-evergrande-9657562a3117",
         "subject-evergrande-cbc223d67815",
         "subject-evergrande-cc722154110b",
         "subject-evergrande-e7a5254e0105",
         "subject-evergrande-fe6501ba213f"
       ],
-      "cluster_id": "subject-evergrande-577e845adc09",
-      "coherence": 0.49278009821061786,
+      "cluster_id": "subject-evergrande-9657562a3117",
+      "coherence": 0.49519109413563966,
       "consequence": 2,
       "countries": [
+        "bg",
         "brazil",
-        "co",
+        "ci",
         "france",
         "india",
         "it",
+        "japan",
         "nl",
+        "po",
+        "rs",
+        "sn",
         "spain",
         "sz",
         "united-kingdom",
-        "united-states"
+        "united-states",
+        "up"
       ],
-      "country_count": 10,
+      "country_count": 16,
       "editorial_day": "2026-08-20",
-      "headline": "Le fondateur du géant immobilier chinois Evergrande condamné à la prison à perpétuité",
-      "independent_source_count": 19,
+      "headline": "Le fondateur du géant immobilier chinois Evergrande Xu Jiayin condamné à la prison à vie",
+      "independent_source_count": 26,
       "members": [
         {
           "language": "fr",
@@ -243,57 +284,106 @@
         },
         {
           "language": "pt",
-          "source": "em.com.br",
+          "source": "globo.com",
           "source_country": "brazil",
-          "url": "http://www.em.com.br/internacional/2026/08/7483650-china-condena-fundador-da-evergrande-a-prisao-perpetua.html"
-        },
-        {
-          "language": "es",
-          "source": "elheraldo.co",
-          "source_country": "co",
-          "url": "https://www.elheraldo.co/mundo/2026/08/20/xu-jiayin-fundador-del-gigante-inmobiliario-chino-evergrande-condenado-a-cadena-perpetua/"
-        },
-        {
-          "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/my-europe/2026/08/20/lergastolo-al-fondatore-di-evergrande-non-restituisce-casa-e-investimenti-ai-cinesi-ma-e-l"
-        },
-        {
-          "language": "it",
-          "source": "rsi.ch",
-          "source_country": "sz",
-          "url": "https://www.rsi.ch/info/mondo/Ergastolo-per-il-fondatore-del-colosso-immobiliare-cinese-Evergrande--4001508.html"
+          "url": "https://g1.globo.com/economia/noticia/2026/08/20/de-homem-mais-rico-da-asia-a-condenado-a-prisao-perpetua-quem-e-o-fundador-da-evergrande.ghtml"
         },
         {
           "language": "en",
-          "source": "indiatimes.com",
+          "source": "thedailystar.net",
+          "source_country": "bg",
+          "url": "https://www.thedailystar.net/business/news/china-jails-evergrande-founder-life-fines-firm-more-us2-bn-4252491"
+        },
+        {
+          "language": "es",
+          "source": "biobiochile.cl",
+          "source_country": "ci",
+          "url": "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/20/fue-el-hombre-mas-rico-de-china-condenan-al-fundador-de-evergrande-a-pasar-su-vida-tras-las-rejas.shtml"
+        },
+        {
+          "language": "pt",
+          "source": "dn.pt",
+          "source_country": "po",
+          "url": "https://www.dn.pt/internacional/fundador-de-gigante-imobilirio-chins-foi-condenado-a-pena-de-priso-perptua"
+        },
+        {
+          "language": "ukr",
+          "source": "epravda.com.ua",
+          "source_country": "up",
+          "url": "https://epravda.com.ua/svit/zasnovnik-kitayskogo-zabudovnika-evergrande-otrimav-dovichne-824807/"
+        },
+        {
+          "language": "en",
+          "source": "nikkei.com",
+          "source_country": "japan",
+          "url": "https://asia.nikkei.com/business/markets/china-debt-crunch/china-evergrande-founder-hui-ka-yan-sentenced-to-life-in-prison"
+        },
+        {
+          "language": "en",
+          "source": "businesstimes.com.sg",
+          "source_country": "sn",
+          "url": "https://www.businesstimes.com.sg/property/china-evergrande-founder-sentenced-life-imprisonment-cctv-reports"
+        },
+        {
+          "language": "en",
+          "source": "freepressjournal.in",
           "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/news/international/business/china-evergrande-founder-hui-ka-yan-gets-life-in-prison-as-property-giants-saga-ends/articleshow/133364633.cms"
+          "url": "https://www.freepressjournal.in/business/china-evergrande-founder-hui-ka-yan-sentenced-to-life-imprisonment-over-300-billion-debt-crisis"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/justicia-china-condena-fundador-evergrande-cadena-perpetua-20260820073342-nt.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/economia/noticia/2026/08/20/fundador-da-evergrande-e-condenado-a-prisao-perpetua.ghtml"
+        },
+        {
+          "language": "ru",
+          "source": "news.mail.ru",
+          "source_country": "rs",
+          "url": "https://news.mail.ru/society/72055402/"
         },
         {
           "language": "it",
-          "source": "lanazione.it",
+          "source": "tg.la7.it",
           "source_country": "it",
-          "url": "https://www.lanazione.it/ultimaora/fondatore-del-colosso-immobiliare-cinese-ef1cf01a"
+          "url": "https://tg.la7.it/esteri/cina-ergastolo-evergrande-xu-jianyin-multa-20-08-2026-261429"
+        },
+        {
+          "language": "it",
+          "source": "ilsole24ore.com",
+          "source_country": "it",
+          "url": "https://www.ilsole24ore.com/art/evergrande-fondatore-colosso-immobiliare-cinese-condannato-all-ergastolo-AJGWEGq"
+        },
+        {
+          "language": "it",
+          "source": "tio.ch",
+          "source_country": "sz",
+          "url": "https://www.tio.ch/dal-mondo/economia/1944927/evergrande-tribunale-xu-condannato-ergastolo-jiayin-colosso-fondatore"
         }
       ],
       "mentioned_countries": [
         "china"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "indiatimes.com",
-      "outbound_url": "https://economictimes.indiatimes.com/news/international/business/china-evergrande-founder-hui-ka-yan-gets-life-in-prison-as-property-giants-saga-ends/articleshow/133364633.cms",
+      "origin_country": "bg",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html",
       "rank": 2,
-      "reference_newsroom_count": 14,
+      "reference_newsroom_count": 15,
       "reference_newsrooms": [
         "20minutos.es",
+        "abc.es",
         "bbc.co.uk",
         "eldiario.es",
         "elpais.com",
-        "euronews.com",
         "expansion.com",
         "francetvinfo.fr",
+        "globo.com",
         "lemonde.fr",
         "liberation.fr",
         "nos.nl",
@@ -304,289 +394,133 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4928,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.6364,
+          "coherence": 0.4952,
+          "corroboration": 0.8889,
+          "editorial_weight": 0.6522,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.1429,
-          "prominence": 0.8261,
-          "source_reliability": 0.8667
+          "novelty": 0.125,
+          "prominence": 0.8667,
+          "source_reliability": 0.8974
         },
-        "total": 0.7128,
+        "total": 0.7271,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "evergrande",
       "subject_names": [
         "chine",
         "chinese",
-        "evergrande"
+        "etats-unis",
+        "evergrande",
+        "jiayin"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Xu Jiayin, fondateur du groupe Evergrande, a été condamné à la prison à vie par la justice chinoise pour fraude fiscale à grande échelle. Cette condamnation intervient après que le géant immobilier, autrefois l'un des plus importants du pays, s'est effondré, laissant de nombreux investisseurs et clients sans leurs maisons ou leurs économies.",
-      "takeaway": "Le fondateur de l'une des plus grandes crises immobiliaires chinoises purgera le reste de sa vie en prison.",
-      "why_it_matters": "Cette sentence met fin à une ère pour le secteur immobilier chinois et affecte directement les millions de Chinois qui ont perdu leurs investissements et leurs logements dans l'effondrement d'Evergrande."
+      "subject_newsroom_count": 15,
+      "summary": "Xu Jiayin, ancien président et fondateur du géant immobilier chinois Evergrande, a été condamné à la prison à perpétuité pour fraude fiscale à grande échelle. La cour a également infligé à l'entreprise une amende de plus de 2 milliards de dollars. Plusieurs autres cadres de la société ont reçu des peines variant de 6 à 18 ans d'emprisonnement.",
+      "takeaway": "L'homme qui était autrefois l'une des plus grandes fortunes d'Asie se verra passer le reste de sa vie en prison pour fraude fiscale.",
+      "why_it_matters": "Cette condamnation intervient suite à l'effondrement d'Evergrande, l'une des plus grandes crises immobilières en Chine, qui a généré une dette dépassant 300 milliards de dollars."
     },
     {
       "_linked_ids": [
-        "subject-colombia-8f30e140d8d6"
+        "subject-ormuz-324cef744693"
       ],
-      "cluster_id": "subject-colombia-8f30e140d8d6",
-      "coherence": 0.599811081181072,
+      "cluster_id": "subject-ormuz-324cef744693",
+      "coherence": 0.41327972766699395,
       "consequence": 3,
       "countries": [
-        "germany",
-        "pe",
-        "spain"
+        "france",
+        "spain",
+        "united-states"
       ],
       "country_count": 3,
-      "editorial_day": "2026-08-20",
-      "headline": "La Colombie décrète l'état d'urgence économique, sociale et écologique suite à un tremblement de terre",
+      "editorial_day": "2026-08-18",
+      "headline": "Trump menace de bombarder Oman s'il obstrue les négociations sur le détroit d'Ormuz",
       "independent_source_count": 4,
       "members": [
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260817.OBS117462/guerre-en-iran-trump-menace-de-bombarder-oman-s-il-entrave-un-accord-sur-le-detroit-d-ormuz.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/amerique/moyen-orient-pourquoi-donald-trump-menace-de-bombarder-oman-un-allie-historique-des-etats-unis-C2EBPOURCVACXD2ZRETBRWJCHQ/"
+        },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260820/11616934/espriella-decreta-emergencia-economica-social-ecologica-terremoto.html"
+          "url": "https://www.lavanguardia.com/internacional/20260817/11615462/trump-amenaza-bombardear-oman-interpone-negociacion-reabrir-ormuz.html"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/espriella-decreta-estado-emergencia-economica-social-ecologica-colombia-por-terremoto_7027499_0.html"
-        },
-        {
-          "language": "es",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/es/colombia-decreta-emergencia-econ%C3%B3mica-social-y-ecol%C3%B3gica/a-78438063"
-        },
-        {
-          "language": "es",
-          "source": "rpp.pe",
-          "source_country": "pe",
-          "url": "https://rpp.pe/mundo/colombia/colombia-abelardo-de-la-espriella-decreta-estado-de-emergencia-economica-social-y-ecologica-por-terremoto-noticia-1702588"
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/why-is-trump-threatening-to-bomb-oman"
         }
       ],
       "mentioned_countries": [
-        "co"
+        "ir"
       ],
-      "origin_country": "germany",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/espriella-decreta-estado-emergencia-economica-social-ecologica-colombia-por-terremoto_7027499_0.html",
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260817.OBS117462/guerre-en-iran-trump-menace-de-bombarder-oman-s-il-entrave-un-accord-sur-le-detroit-d-ormuz.html",
       "rank": 3,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
-        "dw.com",
-        "lavanguardia.com"
+        "lavanguardia.com",
+        "lexpress.fr",
+        "nouvelobs.com",
+        "pbs.org"
       ],
       "score": {
         "components": {
-          "coherence": 0.5998,
+          "coherence": 0.4133,
           "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "editorial_weight": 0.3333,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.5789
+          "source_reliability": 0.6
         },
-        "total": 0.6854,
+        "total": 0.6686,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "colombia",
+      "subject_label": "ormuz",
       "subject_names": [
-        "colombia",
-        "espriella",
-        "venezuela"
+        "canada",
+        "casa blanca",
+        "donald trump",
+        "oman",
+        "ormuz",
+        "trump"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Le vice-président colombien Abelardo de la Espriella a déclaré un état d'urgence économique, social et écologique en réaction à un tremblement de terre survenu en Colombie. Cette déclaration officielle reconnaît les impacts multiples du séisme sur l'économie, la société et l'environnement du pays.",
-      "takeaway": "La Colombie active un cadre juridique d'urgence pour répondre aux effets d'un tremblement de terre touchant l'économie, la société et l'environnement.",
-      "why_it_matters": "Cette déclaration d'urgence permet aux autorités colombiennes de mobiliser des ressources et de mettre en place des mesures exceptionnelles pour faire face aux conséquences du séisme dans les domaines économique, social et écologique."
+      "subject_newsroom_count": 9,
+      "summary": "Donald Trump a proféré des menaces de frappes aériennes contre Oman, un allié historique des États-Unis, s'il venait à entraver les négociations visant à rouvrir le détroit d'Ormuz. Ces menaces interviennent dans un contexte de tensions au Moyen-Orient et de enjeux cruciaux autour du contrôle de cette voie navigable stratégique.",
+      "takeaway": "Trump a menacé un allié traditionnel des États-Unis pour assurer sa domination dans les négociations relatives à une voie commerciale cruciale.",
+      "why_it_matters": "Ces menaces mettent en danger les relations diplomatiques entre Washington et un partenaire régional établi de longue date, tout en reflétant l'escalade des tensions géopolitiques autour du détroit d'Ormuz."
     },
     {
       "_linked_ids": [
-        "5f2c0c66b2bdf61f",
-        "9d54a26933a4ecd4",
-        "f29cf613d0b68d9c",
-        "subject-gaza-0929e1f13a3f",
-        "subject-gaza-25905b2430ba",
-        "subject-gaza-2923476c5215",
-        "subject-gaza-386466c20134",
-        "subject-gaza-4603da765837",
-        "subject-gaza-c033ae655fa1"
+        "subject-etats-unis-70438f9c49d2",
+        "subject-etats-unis-ceb48a6c6c10"
       ],
-      "cluster_id": "subject-gaza-0929e1f13a3f",
-      "coherence": 0.4862297146200272,
-      "consequence": 2,
-      "countries": [
-        "ar",
-        "brazil",
-        "france",
-        "is",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-08-20",
-      "headline": "L'armée israélienne reconnaît avoir tiré sur la voiture de la fillette Hind Rajab à Gaza",
-      "independent_source_count": 13,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/guerre-a-gaza-deux-ans-apres-la-mort-de-la-petite-hind-rajab-5-ans-israel-annonce-louverture-dune-enquete-20260819_UNRIFWBNTNE57HJKII6RHYZNM4/"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/200826/l-armee-israelienne-reconnait-avoir-tire-sur-la-voiture-de-hind-rajab-tuee-5-ans-gaza"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-gaza-deux-ans-apr%C3%A8s-l-arm%C3%A9e-isra%C3%A9lienne-admet-avoir-tir%C3%A9-sur-hind-rajab"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/moyen-orient/20260819-l-arm%C3%A9e-isra%C3%A9lienne-reconna%C3%AEt-avoir-tir%C3%A9-sur-la-voiture-de-hind-rajab-tu%C3%A9e-%C3%A0-cinq-ans-%C3%A0-gaza"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-19/el-ejercito-de-israel-admite-que-disparo-contra-el-coche-de-la-nina-palestina-hind-rajab-en-gaza-y-abre-una-investigacion-penal-por-su-muerte.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260819/11616564/ejercito-israeli-admite-ataco-coche-nina-hind-rajab-muerta-gaza-2024.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/israel-abre-investigacion-penal-asesinato-gaza-nina-cinco-anos-hind-rajab-familia_1_13455758.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ejercito-israel-admite-que-disparo-contra-coche-nina-hind-rajab-abre-una-investigacion_7027362_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/19/israel-admits-it-soldiers-fired-at-car-in-which-hind-rajab-was-killed"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/us-news/2026/aug/20/first-thing-israel-admits-its-soldiers-opened-fire-at-car-carrying-five-year-old-hind-rajab"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/19/israel-abre-investigacao-sobre-morte-de-hind-rajab-menina-de-5-anos-alvejada-dentro-de-carro-em-gaza.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "mdzol.com",
-          "source_country": "ar",
-          "url": "https://www.mdzol.com/mundo/israel-confirma-que-disparo-contra-el-vehiculo-el-que-viajaba-la-nina-5-anos-hind-rajab-gaza-n1589026"
-        },
-        {
-          "language": "en",
-          "source": "middleeasteye.net",
-          "source_country": "is",
-          "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-admits-it-fired-vehicle-carrying-five-year-old-hind-rajab"
-        }
-      ],
-      "mentioned_countries": [
-        "is",
-        "gz"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/israel-abre-investigacion-penal-asesinato-gaza-nina-cinco-anos-hind-rajab-familia_1_13455758.html",
-      "rank": 4,
-      "reference_newsroom_count": 11,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "elpais.com",
-        "france24.com",
-        "globo.com",
-        "lavanguardia.com",
-        "liberation.fr",
-        "mediapart.fr",
-        "rfi.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4862,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5789,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.1111,
-          "prominence": 0.7647,
-          "source_reliability": 0.8333
-        },
-        "total": 0.6825,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "gaza",
-      "subject_names": [
-        "ben gvir",
-        "gaza",
-        "hind rajab",
-        "israel"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Deux ans après la mort de Hind Rajab, une enfant palestinienne de cinq ans tuée à Gaza, l'armée israélienne a reconnu que ses soldats ont ouvert le feu sur le véhicule dans lequel elle se trouvait. Cette admission a conduit l'armée israélienne à ouvrir une enquête pénale sur les circonstances de sa mort.",
-      "takeaway": "Après deux ans, Israël admet officiellement que ses troupes ont tiré sur la voiture transportant Hind Rajab.",
-      "why_it_matters": "Cette reconnaissance officielle établit la responsabilité de l'armée israélienne dans la mort de l'enfant et déclenche un processus d'enquête criminelle."
-    },
-    {
-      "_linked_ids": [
-        "subject-etats-unis-70438f9c49d2"
-      ],
-      "cluster_id": "subject-etats-unis-70438f9c49d2",
-      "coherence": 0.5044818157336812,
+      "cluster_id": "subject-etats-unis-ceb48a6c6c10",
+      "coherence": 0.5981008019147924,
       "consequence": 3,
       "countries": [
         "france",
-        "germany",
-        "it"
+        "sz"
       ],
-      "country_count": 3,
+      "country_count": 2,
       "editorial_day": "2026-08-20",
-      "headline": "La dette des États-Unis dépasse les 40 000 milliards de dollars",
-      "independent_source_count": 4,
+      "headline": "La dette publique américaine franchit les 40 000 milliards de dollars",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
@@ -601,62 +535,150 @@
           "url": "https://www.la-croix.com/economie/etats-unis-la-dette-depasse-les-40-000-milliards-de-dollars-un-record-20260820"
         },
         {
-          "language": "it",
-          "source": "corriere.it",
-          "source_country": "it",
-          "url": "https://www.corriere.it/economia/finanza/26_agosto_20/debito-usa-da-record-40-mila-miliardi-di-dollari-perche-ora-e-un-problema-per-l-america-bf467f51-fcbb-42c4-8532-371b11029xlk.shtml"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-%C3%A9tats-unis-la-dette-publique-franchit-le-seuil-historique-des-40-000-milliards"
         },
         {
-          "language": "de",
-          "source": "handelsblatt.com",
-          "source_country": "germany",
-          "url": "https://www.handelsblatt.com/politik/international/usa-us-staatsverschuldung-steigt-auf-ueber-40-billionen-dollar/29669594.html"
+          "language": "fr",
+          "source": "lematin.ch",
+          "source_country": "sz",
+          "url": "https://www.lematin.ch/story/etats-unis-la-dette-americaine-depasse-les-40-000-milliards-de-dollars-103619870"
+        },
+        {
+          "language": "fr",
+          "source": "boursorama.com",
+          "source_country": "france",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/la-dette-des-etats-unis-franchit-le-seuil-des-40-000-milliards-de-dollars-b20fe86ced4ce73ce28a8817c02725ec"
         }
       ],
       "mentioned_countries": [
         "united-states"
       ],
       "origin_country": "france",
-      "outbound_source": "handelsblatt.com",
-      "outbound_url": "https://www.handelsblatt.com/politik/international/usa-us-staatsverschuldung-steigt-auf-ueber-40-billionen-dollar/29669594.html",
-      "rank": 5,
+      "outbound_source": "boursorama.com",
+      "outbound_url": "https://www.boursorama.com/actualite-economique/actualites/la-dette-des-etats-unis-franchit-le-seuil-des-40-000-milliards-de-dollars-b20fe86ced4ce73ce28a8817c02725ec",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "corriere.it",
+        "france24.com",
         "la-croix.com",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5045,
-          "corroboration": 0.6,
+          "coherence": 0.5981,
+          "corroboration": 0.5,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "novelty": 0.5,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.6739,
+        "total": 0.6648,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "etats-unis",
       "subject_names": [
+        "chine",
         "eeuu",
         "estados unidos",
-        "etats-unis",
-        "usa"
+        "etats-unis"
       ],
       "subject_newsroom_count": 10,
-      "summary": "La dette publique américaine a franchi un nouveau record en dépassant les 40 000 milliards de dollars, selon plusieurs sources internationales.",
-      "takeaway": "Les États-Unis atteignent un niveau d'endettement sans précédent à plus de 40 000 milliards de dollars.",
-      "why_it_matters": "Ce seuil record marque une étape significative dans l'augmentation continue de l'endettement américain, soulevant des préoccupations quant à la soutenabilité des finances publiques des États-Unis."
+      "summary": "La dette des États-Unis a dépassé le seuil historique de 40 000 milliards de dollars, établissant un nouveau record selon plusieurs sources d'information.",
+      "takeaway": "Les États-Unis ont atteint un nouveau record historique d'endettement public en franchissant la barre des 40 000 milliards de dollars.",
+      "why_it_matters": "Ce franchissement représente un niveau d'endettement sans précédent pour les États-Unis, mettant en lumière l'ampleur croissante de la dette publique américaine."
+    },
+    {
+      "_linked_ids": [
+        "subject-ukraine-7b5679fff45f"
+      ],
+      "cluster_id": "subject-ukraine-7b5679fff45f",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-19",
+      "headline": "La Russie menace le Royaume-Uni après des livraisons de drones à l'Ukraine",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-la-russie-menace-le-royaume-uni-londres-replique-3BKU7HQKAVFGTIUCCRN65XYF24/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/18/ucrania-lanca-mais-de-600-drones-contra-moscou.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "globo.com",
+        "lavanguardia.com",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6629,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "inglaterra",
+        "meghan markle",
+        "putin",
+        "reino unido",
+        "roumanie",
+        "rusia",
+        "russia",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "La Russie a adressé des menaces au Royaume-Uni en réaction à son soutien militaire à l'Ukraine, notamment la fourniture de drones, avertissant que plus l'implication britannique augmente, plus le prix à payer sera élevé.",
+      "takeaway": "La Russie répond par des menaces aux pays qui renforcent leur aide militaire à l'Ukraine.",
+      "why_it_matters": "Les menaces russes visent directement le Royaume-Uni en tant que fournisseur de systèmes d'armes à l'Ukraine, ce qui établit des conséquences potentielles pour les pays soutenant militairement Kyïv."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T13:49:54.400993+00:00",
+  "generated_at": "2026-08-20T14:27:44.648642+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

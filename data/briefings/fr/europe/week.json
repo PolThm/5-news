@@ -2,22 +2,106 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-ukraine-7b5679fff45f"
+      ],
+      "angle_zone": "europe",
+      "cluster_id": "subject-ukraine-7b5679fff45f",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-19",
+      "headline": "La Russie menace le Royaume-Uni après des livraisons de drones à l'Ukraine",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-la-russie-menace-le-royaume-uni-londres-replique-3BKU7HQKAVFGTIUCCRN65XYF24/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/18/ucrania-lanca-mais-de-600-drones-contra-moscou.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "globo.com",
+        "lavanguardia.com",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6629,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "inglaterra",
+        "meghan markle",
+        "putin",
+        "reino unido",
+        "roumanie",
+        "rusia",
+        "russia",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "La Russie a adressé des menaces au Royaume-Uni en réaction à son soutien militaire à l'Ukraine, notamment la fourniture de drones, avertissant que plus l'implication britannique augmente, plus le prix à payer sera élevé.",
+      "takeaway": "La Russie franchit une ligne en menaçant directement un État occidental pour son aide à l'Ukraine, signalant qu'elle considère le soutien occidental comme une implication directe dans le conflit.",
+      "why_it_matters": "Les menaces russes contre le Royaume-Uni pour son soutien militaire à l'Ukraine créent une tension directe entre une puissance nucléaire et un allié européen clé, risquant d'escalader le conflit au-delà des frontières ukrainiennes et d'impliquer davantage les pays européens dans une confrontation avec la Russie."
+    },
+    {
+      "_linked_ids": [
         "subject-allemagne-5e8a47a3c4fe",
         "subject-allemagne-8df11689696f",
         "subject-allemagne-a6adb41ba021",
         "subject-allemagne-ad0285520b57",
+        "subject-allemagne-d5d9e058c8f4",
         "subject-allemagne-f5bb3706f8d1"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
-      "coherence": 0.585785931746241,
+      "cluster_id": "subject-allemagne-d5d9e058c8f4",
+      "coherence": 0.5786023501285367,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "L'Europe compte environ 18 500 morts liés aux chaleurs extrêmes cet été",
+      "headline": "L'Europe recense des milliers de décès liés aux chaleurs extrêmes de l'été",
       "independent_source_count": 4,
       "members": [
         {
@@ -36,7 +120,7 @@
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
@@ -52,7 +136,7 @@
       "origin_country": "france",
       "outbound_source": "lemonde.fr",
       "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "france24.com",
@@ -62,17 +146,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5858,
+          "coherence": 0.5786,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.2,
+          "novelty": 0.1667,
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.646,
+        "total": 0.6444,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "allemagne",
@@ -81,349 +165,286 @@
         "espagne"
       ],
       "subject_newsroom_count": 5,
-      "summary": "L'Allemagne a enregistré environ 14 000 décès liés à la chaleur durant l'été, un chiffre largement supérieur au pic observé en 2018, tandis que l'Espagne en a dénombré près de 4 500. Ces décès résultent des températures extrêmes qui ont frappé l'Europe au cours de la période estivale.",
-      "takeaway": "La canicule tue à une échelle jamais mesurée en Europe de l'Ouest, forçant le continent à reconnaître la chaleur extrême comme une menace sanitaire majeure.",
-      "why_it_matters": "Ces décès massifs en Allemagne et en Espagne imposent à l'Europe d'adapter ses systèmes de santé publique et ses politiques de prévention face à des phénomènes météorologiques qui s'intensifient et affectent déjà des dizaines de milliers de citoyens européens."
+      "summary": "L'Allemagne a enregistré environ 14 000 décès attribués à la chaleur au cours de l'été, un chiffre largement supérieur au pic observé en 2018, tandis que l'Espagne en a compté près de 4 500 pendant la même période. Ces chiffres reflètent l'impact dévastateur des vagues de chaleur exceptionnelles qui ont frappé l'Europe durant cette saison.",
+      "takeaway": "L'Europe doit réorganiser ses politiques de protection sanitaire face à un phénomène climatique qui tue désormais à l'échelle des épidémies.",
+      "why_it_matters": "Ces décès massifs révèlent que les systèmes de santé publique européens, même dans les pays riches comme l'Allemagne et l'Espagne, ne sont pas préparés aux vagues de chaleur extrême qui se répètent et s'intensifient."
     },
     {
       "_linked_ids": [
-        "subject-bruselas-7e209cdede1a",
-        "subject-ceuta-6e88afa6c27f"
+        "subject-madrid-85ffa0a2c8a1"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-bruselas-7e209cdede1a",
-      "coherence": 0.5004742462798809,
+      "cluster_id": "subject-madrid-85ffa0a2c8a1",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Bruxelles approuve un consortium espagnol pour concourir à une gigafabrique européenne d'IA",
-      "independent_source_count": 4,
+      "headline": "La Communauté de Madrid reconnaît que certains hôpitaux publics ne garantissent pas le droit à l'avortement",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-08-20/bruselas-aprueba-la-propuesta-espanola-para-optar-a-una-de-las-gigafactorias-de-ia-europeas.html"
+          "url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html"
+          "url": "https://www.eldiario.es/madrid/comunidad-madrid-reconoce-derecho-aborto-no-asegurar-hospitales-publicos_1_13457079.html"
         },
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/2026/08/20/6a86e188468aeb6d7f8b4595.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/economia/20260820/11617160/bruselas-avala-operacion-acs-telefonica-santander-gobierno-optar-gigafactoria.html"
+          "url": "https://www.europapress.es/madrid/noticia-comunidad-dice-no-puede-asegurar-derecho-aborto-algunos-hospitales-publicos-eso-deriva-privada-20260820141034.html"
         }
       ],
       "mentioned_countries": [
-        "be",
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "eldiario.es",
         "elpais.com",
-        "expansion.com",
-        "lavanguardia.com"
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5005,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6417,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bruselas",
-      "subject_names": [
-        "acs",
-        "bruselas",
-        "santander",
-        "telefonica"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Bruxelles a donné son feu vert à un consortium formé par ACS, Telefónica et Santander, soutenu par le gouvernement espagnol, pour participer à la sélection d'une gigafabrique européenne d'intelligence artificielle.",
-      "takeaway": "L'Europe concentre ses capacités d'IA en gigafactories et contrôle l'accès à ce pouvoir technologique par approbation réglementaire.",
-      "why_it_matters": "La Commission européenne autorise un consortium espagnol majeur (ACS, Telefónica, Santander) à concourir pour une gigafactory d'IA européenne, ce qui détermine qui peut participer à la construction de l'infrastructure d'intelligence artificielle continentale."
-    },
-    {
-      "_linked_ids": [
-        "subject-kiev-689e62d3a5d9"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-kiev-689e62d3a5d9",
-      "coherence": 0.3938224297049441,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "La Russie lance une attaque massive à la roquette et aux drones contre Kiev",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1636-point-conflit-ukrainien-poutine-aujourdhui-20260820"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-ukraine-les-missiles-russes-embrasent-le-ciel-de-kiev"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-ukraine-des-missiles-russes-hypersoniques-et-pr%C3%A8s-de-168-drones-frappent-kiev"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260816.OBS117436/nouveaux-tirs-de-missiles-russes-sur-kiev-drones-ukrainiens-sur-moscou.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-kiev-bombardee-un-drone-secrase-en-roumanie-le-point-sur-lattaque-nocturne-de-la-2YMRJJW7XFBBXMGORVEA6ANOGI/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260816.OBS117436/nouveaux-tirs-de-missiles-russes-sur-kiev-drones-ukrainiens-sur-moscou.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3938,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.6415,
+        "total": 0.6314,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "kiev",
+      "subject_label": "madrid",
       "subject_names": [
-        "kiev",
-        "kyiv",
-        "londres",
-        "moscou",
-        "poutine",
-        "putin",
-        "roumanie",
-        "rumania",
-        "rusia",
-        "russia",
-        "russian",
-        "russie",
-        "ucrania",
-        "ukraine"
+        "ayuso",
+        "barcelona",
+        "comunidad",
+        "madrid",
+        "mallorca"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "La Russie a mené une attaque nocturne d'envergure sur Kiev, utilisant des missiles hypersoniques et près de 168 drones. Selon les articles, l'Ukraine a intercepté un drone en mer Noire et des drones ukrainiens ont été signalés en direction de Moscou, tandis qu'un drone s'est écrasé en Roumanie. L'attaque a provoqué des frappes meurtrières dans la capitale ukrainienne.",
-      "takeaway": "La Russie maintient une campagne de bombardement intensif sur Kiev malgré les pertes, testant les limites de la résilience ukrainienne et la cohésion occidentale.",
-      "why_it_matters": "Ces attaques massives à la capitale ukrainienne relancent les craintes européennes concernant la sécurité énergétique et l'escalade du conflit aux portes de l'Union, notamment avec le risque documenté de débris de drones s'écrasant en territoire roumain (membre de l'UE)."
+      "subject_newsroom_count": 11,
+      "summary": "La Communauté de Madrid a admis par écrit que le droit à l'avortement ne peut pas être garanti dans certains hôpitaux publics, ce qui l'oblige à orienter les femmes vers des établissements privés pour accéder à ce service.",
+      "takeaway": "Une région espagnole admet par écrit son incapacité à offrir légalement l'accès à l'avortement dans ses hôpitaux publics.",
+      "why_it_matters": "La Communauté de Madrid met en lumière une défaillance systémique du système de santé public espagnol dans la garantie d'un droit légal, ce qui affecte les femmes qui dépendent du secteur public et soulève des questions sur l'application égale des droits reproductifs au sein de l'Union européenne."
     },
     {
       "_linked_ids": [
-        "89e8fe7963a0bfd1",
-        "subject-otan-5a5c955e87c6",
-        "subject-roumanie-d8125431454f",
-        "subject-rumania-d8125431454f"
+        "subject-bruselas-67fbb0e2a8c4",
+        "subject-ceuta-dc915f99b085"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-rumania-d8125431454f",
-      "coherence": 0.5060830740184099,
+      "cluster_id": "subject-bruselas-67fbb0e2a8c4",
+      "coherence": 0.4876404902464202,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Deux chasseurs F-18 espagnols abattent un drone qui a violé l'espace aérien roumain",
-      "independent_source_count": 4,
+      "headline": "Bruxelles demande à l'Espagne de renvoyer tous les migrants irréguliers de Ceuta tout en protégeant les mineurs",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html"
+          "url": "https://elpais.com/espana/2026-08-20/bruselas-recalca-el-deber-de-espana-de-proteger-a-menores-vulnerables-en-ceuta-pese-a-reclamar-el-retorno-de-los-migrantes-irregulares.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/caza-espanol-otan-derriba-dron-vulnero-espacio-aereo-rumania_1_13449815.html"
+          "url": "https://www.abc.es/espana/bruselas-vuelve-insistir-espana-peticion-devolver-irregulares-20260820142205-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/20/6a86edd4fc6c836e7f8b458d.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/observatorio-defensa/20260820/cazas-f-18-espanoles-intervienen-rumania-intrusion-dron-cerca-frontera-ucraniana/1003744358097_0.html"
+          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/f-18-espanoles-intervienen-rumania-por-entrada-un-dron-su-espacio-aereo_7027556_0.html"
+          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
+        },
+        {
+          "language": "es",
+          "source": "lacronicabadajoz.com",
+          "source_country": "spain",
+          "url": "https://www.lacronicabadajoz.com/nacional/2026/08/20/bruselas-exige-espana-proteger-menores-migrantes-ceuta-devolucion-irregulares-marruecos-133515827.html"
         }
       ],
       "mentioned_countries": [
         "spain",
-        "ro"
+        "be"
       ],
       "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html",
       "rank": 4,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "20minutos.es",
-        "eldiario.es",
+        "abc.es",
         "elespanol.com",
-        "lavanguardia.com"
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5061,
+          "coherence": 0.4876,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.25,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "novelty": 0.5,
+          "prominence": 0.6364,
+          "source_reliability": 0.7143
         },
-        "total": 0.5507,
+        "total": 0.5862,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "rumania",
+      "subject_label": "bruselas",
       "subject_names": [
-        "otan",
-        "roumanie",
-        "rumania"
+        "bruselas",
+        "ceuta",
+        "espana",
+        "feijoo",
+        "guardia civil",
+        "junta",
+        "marruecos",
+        "trampolin",
+        "vivas"
       ],
       "subject_newsroom_count": 9,
-      "summary": "Deux avions de chasse F-18 espagnols stationnés en Roumanie ont décollé et abattu un drone qui avait pénétré dans l'espace aérien roumain près de la frontière avec l'Ukraine. L'incident illustre les opérations de surveillance et de défense menées par l'OTAN dans la région face aux menaces aériennes.",
-      "takeaway": "L'Espagne participe désormais aux opérations de contrôle aérien routinier de l'OTAN en Roumanie, une responsabilité collective face aux incursions venant du conflit ukrainien.",
-      "why_it_matters": "L'incident démontre que l'OTAN maintient une surveillance active de son flanc oriental face aux violations d'espace aérien, impliquant directement les forces espagnoles dans la défense du périmètre de l'Alliance à la frontière ukrainienne."
+      "summary": "La Commission européenne insiste auprès du gouvernement espagnol pour qu'il procède au retour de tous les migrants en situation irrégulière arrivés à Ceuta, tout en réaffirmant que l'Espagne a l'obligation de protéger les mineurs vulnérables présents dans la ville autonome. Bruxelles a également demandé au gouvernement espagnol de fournir davantage d'informations sur ses plans d'action concernant cette question.",
+      "takeaway": "Bruxelles impose à Madrid de choisir entre protéger les enfants migrants et expulser les adultes irréguliers, sans offrir de solution à cette contradiction.",
+      "why_it_matters": "La Commission européenne renforce sa pression sur l'Espagne pour qu'elle accepte le retour de tous les migrants irréguliers à Maroc tout en garantissant la protection des mineurs à Ceuta, créant une tension entre les obligations de droit humanitaire et les demandes de contrôle migratoire que les États membres doivent désormais concilier."
     },
     {
       "_linked_ids": [
-        "subject-ukrainian-53bec682a9f8"
+        "subject-fedorov-06d2772a4948",
+        "subject-fedorov-6e46be2fb1ca",
+        "subject-fedorov-d1cd4134be4e",
+        "subject-fedorov-d31ff6e32436",
+        "subject-zelenski-2543d8d9558c"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-ukrainian-53bec682a9f8",
-      "coherence": null,
+      "cluster_id": "subject-zelenski-2543d8d9558c",
+      "coherence": 0.4343485395391129,
       "consequence": 2,
       "countries": [
-        "it",
-        "united-kingdom"
+        "france",
+        "spain"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-19",
-      "headline": "Un deuxième Ukrainien arrêté en Croatie dans l'affaire des explosions du Nord Stream",
-      "independent_source_count": 2,
+      "editorial_day": "2026-08-20",
+      "headline": "L'ex-ministre de la Défense Fedorov demande l'organisation d'élections en Ukraine",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c78gp7l5348o?at_medium=RSS&at_campaign=rss"
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/19/second-ukrainian-arrested-in-connection-with-nord-stream-pipeline-explosions"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/exministro-defensa-destituido-por-zelenski-exige-elecciones-presidenciales-ucrania-plena-guerra_7027411_0.html"
+        },
+        {
+          "language": "es",
+          "source": "heraldo.es",
+          "source_country": "spain",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/08/20/exministro-fedorov-planta-cara-zelenski-con-exigencia-elecciones-2045961.html"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/19/second-ukrainian-arrested-in-connection-with-nord-stream-pipeline-explosions",
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
       "rank": 5,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com"
+        "20minutos.es",
+        "lavanguardia.com",
+        "lexpress.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.4343,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "novelty": 0.2,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.5369,
+        "total": 0.5489,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukrainian",
+      "subject_label": "zelenski",
       "subject_names": [
-        "ukrainian",
-        "volodymyr zelensky"
+        "roumanie",
+        "ucrania",
+        "ukraine",
+        "volodymyr zelensky",
+        "zelenski"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Deux hommes ukrainiens ont été arrêtés en Croatie en lien avec les explosions des gazoducs Nord Stream. Les articles confirment qu'une deuxième arrestation a eu lieu suite à l'enquête sur ces explosions.",
-      "takeaway": "Les enquêtes judiciaires commencent à identifier des suspects spécifiques, transformant l'incident de Nord Stream d'événement géopolitique en cas criminel international.",
-      "why_it_matters": "Les arrestations soulèvent des questions sur la responsabilité ukrainienne dans les explosions, un sujet politiquement sensible en Europe où le soutien à l'Ukraine doit être concilié avec l'enquête sur les sabotages d'infrastructure énergétique européenne."
+      "subject_newsroom_count": 7,
+      "summary": "Mykhaïlo Fedorov, ancien ministre de la Défense révoqué par Volodymyr Zelensky, défie le président et réclame la tenue d'élections présidentielles en Ukraine, une demande formulée alors que le pays poursuit sa guerre contre la Russie.",
+      "takeaway": "Un ancien ministre déchu remet en cause la légitimité de Zelenski pendant que l'Ukraine combat une invasion.",
+      "why_it_matters": "La contestation interne du pouvoir ukrainien affaiblit l'unité politique que l'Europe compte maintenir pour soutenir militairement et financièrement l'Ukraine face à la Russie."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T13:49:54.400993+00:00",
+  "generated_at": "2026-08-20T14:27:44.648642+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

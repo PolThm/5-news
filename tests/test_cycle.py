@@ -1759,3 +1759,35 @@ def test_a_failed_consequence_call_costs_the_ordering_not_the_cycle(
     )
     assert ranked, "the cycle still selects"
     assert all(item["score"]["components"]["impact"] == 0.5 for item in ranked)
+
+
+def test_zone_rankings_json_round_trips_articles_ingested(tmp_path: Path, working_agenda) -> None:
+    """FR-8's Discarded Volume was published as 0/0 on 2026-08-20 despite
+    `rank_for_zone` computing the real count correctly -- `_write_zone_rankings`
+    and `_read_zone_rankings` are a serialization path parallel to `ZoneRanking`
+    itself, written before `articles_ingested` existed and never updated when it
+    was added. This round-trips through the real files a resumed cycle reads,
+    not just the dataclass, which is what a unit test on `rank_for_zone` alone
+    would have missed.
+    """
+    run_cycle(
+        collect=lambda: _collection(*_subject_corpus()),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    written = json.loads(
+        (
+            tmp_path / "intermediate" / "rank" / "2026-08-11T00-00-00Z" / "zone_rankings.json"
+        ).read_text()
+    )
+    # The fixture's one event is dated a day before the cycle's own reference
+    # day, so it lands in the WEEK pool, not DAY -- confirmed by tracing a real
+    # run of this fixture before writing this assertion, not assumed.
+    week_rankings = written["week"]
+    assert any(r.get("articles_ingested", 0) > 0 for r in week_rankings), (
+        "articles_ingested must be written, not silently dropped -- got "
+        f"{[r.get('articles_ingested') for r in week_rankings]}"
+    )

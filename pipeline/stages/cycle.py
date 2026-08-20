@@ -667,6 +667,7 @@ def _write_zone_rankings(path: Path, zone_rankings: dict[Period, list[ZoneRankin
                 "requested_zone": r.requested_zone.slug,
                 "served_zone": r.served_zone.slug,
                 "ranked_clusters": r.ranked_clusters,
+                "articles_ingested": r.articles_ingested,
             }
             for r in rankings
         ]
@@ -683,6 +684,12 @@ def _read_zone_rankings(path: Path) -> dict[Period, list[ZoneRanking]]:
                 requested_zone=zone_by_slug(r["requested_zone"]),
                 served_zone=zone_by_slug(r["served_zone"]),
                 ranked_clusters=r["ranked_clusters"],
+                # `.get`, not `[...]`: a `zone_rankings.json` written before
+                # FR-8's wiring existed has no such key, and a resumed cycle
+                # reading it must degrade to 0 rather than raise (AD-10) --
+                # not the count going stale, but the file predating the field
+                # entirely.
+                articles_ingested=r.get("articles_ingested", 0),
             )
             for r in rankings
         ]

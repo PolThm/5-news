@@ -140,6 +140,18 @@ _COL_URL = 4
 # populated on 80.2% of rows, with a median of 1 distinct country per article
 # and a median dominant share of 100%.
 _COL_LOCATIONS = 10
+# V2EnhancedPersons / Organizations. Read for the same reason
+# `_COL_LOCATIONS` is -- repetition marks what an article is about -- but at a
+# granularity `focus_countries` deliberately throws away. Verified populated on
+# live 2026-08-20 files: persons 75.1%, organizations 71.7%.
+#
+# V2EnhancedThemes (column 8, populated 93.4%) is deliberately NOT read. It
+# carries GDELT's own taxonomy codes, and measured on a live sample the twelve
+# most frequent in one quarter-hour -- GENERAL_GOVERNMENT, GENERAL_HEALTH,
+# TAX_ECON_PRICE -- are the twelve most frequent in every quarter-hour. A code
+# that labels a tenth of all coverage cannot name one subject.
+_COL_PERSONS = 12
+_COL_ORGANIZATIONS = 14
 _COL_TRANSLATION_INFO = 25
 _COL_EXTRAS = 26
 _GKG_COLUMNS = 27
@@ -358,6 +370,68 @@ def focus_countries(locations: str) -> tuple[str, ...]:
     return tuple(zone_slug_for_fips(code) for code in kept)
 
 
+# A place coarser than this cannot name a subject. GKG location types:
+# 1=country, 2=US state, 3=US city, 4=world city, 5=world state. Countries are
+# excluded because `focus_countries` already reads them and because "United
+# States" is named by everything -- measured, it was the single most frequent
+# entity in a live sample, ahead of Gaza, and says nothing about what happened.
+_SUBJECT_LOCATION_TYPES = frozenset({"2", "3", "4", "5"})
+
+# An entity counts as a subject key for an article when it is named at least
+# this share of as often as the article's most-named entity. The same
+# repetition logic as FOCUS_MENTION_SHARE, at a higher bar: a location
+# mentioned once in passing is incidental, and a subject key that is merely
+# incidental attaches an article to a story it is not about.
+SUBJECT_MENTION_SHARE = 0.50
+SUBJECT_MIN_MENTIONS = 2
+
+
+def _counted_names(field: str) -> Counter[str]:
+    """Names from a `;`-separated field whose entries are `Name,offset`."""
+    counts: Counter[str] = Counter()
+    for entry in field.split(";"):
+        name = entry.split(",")[0].strip()
+        if name:
+            counts[name] += 1
+    return counts
+
+
+def _counted_places(locations: str) -> Counter[str]:
+    """Place names finer than a country, from V2EnhancedLocations.
+
+    The full name is `City, Region, Country`; only the first component is
+    kept, so "Ceuta, Ceuta, Spain" and "Ceuta, Spain" agree on "Ceuta".
+    """
+    counts: Counter[str] = Counter()
+    for entry in locations.split(";"):
+        fields = entry.split("#")
+        if len(fields) > 1 and fields[0].strip() in _SUBJECT_LOCATION_TYPES:
+            name = fields[1].split(",")[0].strip()
+            if name:
+                counts[name] += 1
+    return counts
+
+
+def salient_entities(locations: str, persons: str, organizations: str) -> tuple[str, ...]:
+    """The named things an article is about, most-mentioned first.
+
+    Places, people and organizations share one ranking rather than being
+    returned per kind: a subject is keyed on whatever names it, and whether
+    "Ceuta" is a place and "Hind Rajab" a person makes no difference to which
+    articles belong together.
+
+    Empty is a legitimate answer -- an article naming nothing specific cannot
+    key a subject, and forcing one out of a generic theme code is how "GENERAL
+    _GOVERNMENT" would become a headline.
+    """
+    counts = _counted_places(locations) + _counted_names(persons) + _counted_names(organizations)
+    if not counts:
+        return ()
+    ranked = counts.most_common()
+    floor = max(SUBJECT_MIN_MENTIONS, SUBJECT_MENTION_SHARE * ranked[0][1])
+    return tuple(name for name, n in ranked if n >= floor)
+
+
 def parse_gkg_date(value: str) -> datetime:
     """Slot timestamp format: ``YYYYMMDDHHMMSS``, UTC."""
     return datetime.strptime(value.strip(), "%Y%m%d%H%M%S").replace(tzinfo=UTC)
@@ -413,6 +487,9 @@ def parse_gkg(text: str, domain_country: dict[str, str]) -> list[ArticleRecord]:
                     language=_language_code(srclc.group(1) if srclc else None),
                     collected_by=ADAPTER,
                     mentioned_countries=focus_countries(row[_COL_LOCATIONS]),
+                    entities=salient_entities(
+                        row[_COL_LOCATIONS], row[_COL_PERSONS], row[_COL_ORGANIZATIONS]
+                    ),
                 )
             )
         except (KeyError, ValueError):

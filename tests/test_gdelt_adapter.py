@@ -34,6 +34,7 @@ from pipeline.adapters.gdelt import (
     parse_domain_country,
     parse_gkg,
     parse_gkg_date,
+    salient_entities,
     slot_timestamps,
     zone_slug_for_fips,
 )
@@ -351,6 +352,8 @@ def _row(
     translation_info: str = "",
     extras: str = "<PAGE_TITLE>Headline</PAGE_TITLE>",
     locations: str = "",
+    persons: str = "",
+    organizations: str = "",
 ) -> str:
     """One GKG row with only the columns this adapter reads populated."""
     columns = [""] * 27
@@ -358,6 +361,8 @@ def _row(
     columns[3] = source
     columns[4] = url
     columns[10] = locations
+    columns[12] = persons
+    columns[14] = organizations
     columns[25] = translation_info
     columns[26] = extras
     return "\t".join(columns) + "\n"
@@ -444,3 +449,80 @@ def test_a_parsed_row_carries_what_it_is_about() -> None:
     assert len(records) == 1
     assert records[0].source_country == "france", "where the outlet sits"
     assert records[0].mentioned_countries == ("spain",), "what the article is about"
+
+
+# --- salient_entities (subject keys, Story: subject formation) ----------------
+
+
+def test_a_country_is_never_a_subject_key() -> None:
+    """`focus_countries` already reads countries, and they cannot name a
+    subject: measured on a live sample, "United States" was the single most
+    frequent entity in the corpus -- ahead of Gaza -- and says nothing about
+    what happened. Only location types 2-5 (state, city) qualify."""
+    locations = (
+        "1#United States#US#US####1;1#United States#US#US####2;1#United States#US#US####3;"
+        "4#Ceuta, Ceuta, Spain#SP#SP58####4;4#Ceuta, Spain#SP#SP58####5"
+    )
+
+    # Named three times to two -- it would win any ranking that admitted it.
+    assert salient_entities(locations, "", "") == ("Ceuta",)
+
+
+def test_the_same_place_named_two_ways_counts_once() -> None:
+    """GKG writes a full name as `City, Region, Country`, and the same city
+    appears with and without the region across entries. Keying on the first
+    component makes "Ceuta, Ceuta, Spain" and "Ceuta, Spain" agree."""
+    locations = "4#Ceuta, Ceuta, Spain#SP#SP58####1;4#Ceuta, Spain#SP#SP58####2"
+
+    assert salient_entities(locations, "", "") == ("Ceuta",)
+
+
+def test_places_people_and_organizations_share_one_ranking() -> None:
+    """A subject is keyed on whatever names it. Whether "Ceuta" is a place and
+    "Pedro Sanchez" a person makes no difference to which articles belong
+    together, so they compete in one ranking rather than being returned per
+    kind."""
+    entities = salient_entities(
+        "4#Ceuta, Spain#SP#SP58####1;4#Ceuta, Spain#SP#SP58####2;4#Ceuta, Spain#SP#SP58####3",
+        "Pedro Sanchez,10;Pedro Sanchez,44",
+        "Frontex,80;Frontex,90",
+    )
+
+    assert entities[0] == "Ceuta", "most-named first, across kinds"
+    assert set(entities) == {"Ceuta", "Pedro Sanchez", "Frontex"}
+
+
+def test_an_entity_named_once_in_passing_is_not_a_subject_key() -> None:
+    """A key that is merely incidental attaches an article to a story it is not
+    about -- the failure mode that makes a false subject worse than a missed
+    one. SUBJECT_MIN_MENTIONS is the floor."""
+    entities = salient_entities(
+        "4#Ceuta, Spain#SP#SP58####1;4#Ceuta, Spain#SP#SP58####2;4#Lisbon, Portugal#PO#PO####3",
+        "",
+        "",
+    )
+
+    assert entities == ("Ceuta",), "Lisbon named once is incidental"
+
+
+def test_naming_nothing_specific_yields_no_key_rather_than_a_guess() -> None:
+    """An article that names nothing specific cannot key a subject. Returning
+    a generic theme code instead is how "GENERAL_GOVERNMENT" would become a
+    headline."""
+    assert salient_entities("", "", "") == ()
+    assert salient_entities("1#France#FR#FR####1", "", "") == ()
+
+
+def test_entities_reach_the_article_record() -> None:
+    """The extraction is wired, not merely available -- a stage bug this
+    project has already paid for once, when the agenda stage ran and changed
+    nothing because its output was overwritten downstream."""
+    row = _row(
+        extras="<PAGE_TITLE>L'Espagne ouvre des centres d'accueil a Ceuta</PAGE_TITLE>",
+        locations="4#Ceuta, Spain#SP#SP58####1;4#Ceuta, Spain#SP#SP58####2",
+        persons="Pedro Sanchez,10;Pedro Sanchez,44",
+    )
+
+    records = parse_gkg(row, {})
+
+    assert records[0].entities == ("Ceuta", "Pedro Sanchez")

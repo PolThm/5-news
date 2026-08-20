@@ -99,6 +99,23 @@ class ArticleRecord:
     # rows). Such an Article can still corroborate a Cluster, it just cannot
     # place it -- see `pipeline.stages.rank._is_relevant_to`.
     mentioned_countries: tuple[str, ...] = ()
+    # The named things this Article is about: places finer than a country,
+    # people, organizations. What `mentioned_countries` is for placing an
+    # Article, these are for identifying its SUBJECT.
+    #
+    # Needed because grouping by title similarity cannot form a subject.
+    # Measured on the 2026-08-20 corpus: of the 49 articles about Ceuta, the
+    # same-Event threshold admitted 1.2% of their pairs, and loosening it
+    # enough to catch the rest is impossible -- within-story distances (p25
+    # 0.95-1.14 euclidean) and between-story distances (p5 1.18-1.30) leave a
+    # band too thin to sit a threshold in without collapsing the whole corpus
+    # into one component. What separates Ceuta from Hormuz is not proximity;
+    # it is that every one of those articles names Ceuta.
+    #
+    # Empty for adapters with no entity data of their own (RSS): such an
+    # Article still corroborates a subject by naming it in its title, which is
+    # how the reference press weighs in without publishing structured entities.
+    entities: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if self.published_at.tzinfo is None:
@@ -127,6 +144,9 @@ class ArticleRecord:
         # reason: unchanged bytes for a record that has none.
         if self.mentioned_countries:
             data["mentioned_countries"] = list(self.mentioned_countries)
+        # Same omit-when-absent discipline again.
+        if self.entities:
+            data["entities"] = list(self.entities)
         return data
 
     @classmethod
@@ -143,6 +163,7 @@ class ArticleRecord:
             # Tolerates records written before this field existed, and any
             # future row that legitimately has none.
             mentioned_countries=tuple(data.get("mentioned_countries") or ()),
+            entities=tuple(data.get("entities") or ()),
         )
 
 

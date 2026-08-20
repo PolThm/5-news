@@ -512,6 +512,61 @@ def countries_in_continent(continent_slug: str) -> frozenset[str]:
     return frozenset(named | raw)
 
 
+# --- Source reliability ------------------------------------------------------
+
+# Domains that republish other newsrooms' work rather than reporting. They are
+# not fraudulent and not excluded -- they genuinely carry the story -- but three
+# aggregators agreeing is one newsroom's reporting seen three times, and the
+# Consensus Score exists to measure the opposite.
+#
+# Named from real published output: the 2026-08-20 World Briefing counted
+# bignewsnetwork.com alongside lemonde.fr and theguardian.com at equal weight.
+# Deliberately a short, evidenced list rather than a heuristic -- "looks like an
+# aggregator" is not something a domain name reveals.
+_REPUBLISHER_DOMAINS: frozenset[str] = frozenset(
+    {
+        "bignewsnetwork.com",
+        "zazoom.it",
+        "iheart.com",
+        "drimble.nl",
+        "menafn.com",
+        "newsbreak.com",
+        "msn.com",
+        "news.yahoo.com",
+        "flipboard.com",
+        "smartnews.com",
+    }
+)
+
+TIER_REFERENCE = 3
+TIER_ORDINARY = 2
+TIER_REPUBLISHER = 1
+
+
+def source_trust_tier(domain: str) -> int:
+    """How much one outlet's coverage is worth as corroboration.
+
+    Three tiers, kept coarse on purpose. A finer scale would be a ranking of
+    newsrooms this project has no basis to publish, whereas these three
+    distinctions rest on facts about the source's role: it is a newsroom we
+    deliberately subscribe to, it is some other outlet, or it republishes.
+
+    The reference tier is DERIVED from the RSS adapter's own feed list rather
+    than restated here, so adding a feed cannot silently leave its outlet
+    scored as an unknown. That list is the one place a curated newsroom is
+    declared.
+    """
+    normalized = domain.strip().lower()
+    if normalized in _REPUBLISHER_DOMAINS:
+        return TIER_REPUBLISHER
+
+    from pipeline.adapters.rss import FEEDS
+
+    if normalized in {feed.source for feed in FEEDS}:
+        return TIER_REFERENCE
+    return TIER_ORDINARY
+
+
 __all__ = [
     "CROSS_DAY_SIMILARITY_FLOOR",
     "MAX_PER_CATEGORY",
@@ -522,7 +577,11 @@ __all__ = [
     "MIN_QUALIFYING_FOR_ZONE",
     "REWRITE_SIMILARITY_FLOOR",
     "OUTPUT_LANGUAGES",
+    "TIER_ORDINARY",
+    "TIER_REFERENCE",
+    "TIER_REPUBLISHER",
     "countries_in_continent",
+    "source_trust_tier",
     "country_slug_for_english_name",
     "country_slugs_in_english_text",
     "PERIODS",

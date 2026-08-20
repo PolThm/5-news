@@ -38,6 +38,7 @@ from pipeline.config import (
     MIN_QUALIFYING_FOR_ZONE,
     continent_for,
     countries_in_continent,
+    source_trust_tier,
 )
 from pipeline.domain import Zone, ZoneKind
 from pipeline.stages import (
@@ -116,10 +117,35 @@ def rank_clusters(clusters: list[dict]) -> list[dict]:
             # string comparison, which is why the whole tuple is negated-by-
             # convention rather than reversed wholesale.
             _descending_day(c.get("agenda_day") or ""),
+            # Reliability-weighted before the raw count: on 2026-08-20 the
+            # World Briefing scored bignewsnetwork.com equal to lemonde.fr, so
+            # an item carried by three republishers outranked one carried by two
+            # newsrooms. The raw count stays as the next key, so among items of
+            # equal weight broader coverage still wins.
+            -trust_weight(c),
             -c["independent_source_count"],
             -c["country_count"],
             c["cluster_id"],
         ),
+    )
+
+
+def trust_weight(cluster: dict) -> int:
+    """The corroboration an item's sources are actually worth.
+
+    A plain count treats three aggregators reprinting one dispatch as three
+    confirmations, which is the inflation this whole pipeline exists to remove.
+    Summing tiers keeps the count's shape -- more, better sources score higher --
+    while letting a newsroom outweigh a republisher.
+
+    Not shown to the reader and not a substitute for the Consensus Score: that
+    number stays a plain, checkable count of what the source list holds. This
+    only decides order.
+    """
+    return sum(
+        source_trust_tier(member.get("source", ""))
+        for member in cluster.get("members", [])
+        if member.get("source")
     )
 
 

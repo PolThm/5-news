@@ -1175,3 +1175,119 @@ def test_the_country_cap_still_behaves_exactly_as_before() -> None:
     ]
 
     assert [c["cluster_id"] for c in apply_anti_concentration_cap(ranked)] == ["a", "b", "d"]
+
+
+# --- Source reliability ------------------------------------------------------
+
+
+def _member(source: str, country: str = "france") -> dict:
+    return {
+        "title": f"headline from {source}",
+        "url": f"https://{source}/x",
+        "source": source,
+        "source_country": country,
+        "language": "en",
+    }
+
+
+def test_newsrooms_outrank_republishers_at_equal_source_count() -> None:
+    """The inflation this pipeline exists to remove, in its last hiding place.
+
+    On 2026-08-20 the World Briefing scored bignewsnetwork.com equal to
+    lemonde.fr, so three aggregators reprinting one dispatch outranked two
+    newsrooms reporting independently -- three confirmations that are really one
+    story seen three times.
+    """
+    from pipeline.stages.rank import rank_clusters
+
+    ordered = rank_clusters(
+        [
+            {
+                "cluster_id": "republished",
+                "members": [
+                    _member("bignewsnetwork.com"),
+                    _member("iheart.com"),
+                    _member("zazoom.it"),
+                ],
+                "independent_source_count": 3,
+                "country_count": 3,
+                "agenda_day": "2026-08-20",
+            },
+            {
+                "cluster_id": "reported",
+                "members": [_member("lemonde.fr"), _member("theguardian.com")],
+                "independent_source_count": 2,
+                "country_count": 2,
+                "agenda_day": "2026-08-20",
+            },
+        ]
+    )
+
+    assert [c["cluster_id"] for c in ordered] == ["reported", "republished"]
+
+
+def test_broader_coverage_still_wins_among_equally_trusted_sources() -> None:
+    """Reliability reorders, it does not replace the count: two newsrooms still
+    beat one."""
+    from pipeline.stages.rank import rank_clusters
+
+    ordered = rank_clusters(
+        [
+            {
+                "cluster_id": "one-newsroom",
+                "members": [_member("lemonde.fr")],
+                "independent_source_count": 1,
+                "country_count": 1,
+                "agenda_day": "2026-08-20",
+            },
+            {
+                "cluster_id": "two-newsrooms",
+                "members": [_member("lemonde.fr"), _member("elpais.com", "spain")],
+                "independent_source_count": 2,
+                "country_count": 2,
+                "agenda_day": "2026-08-20",
+            },
+        ]
+    )
+
+    assert [c["cluster_id"] for c in ordered] == ["two-newsrooms", "one-newsroom"]
+
+
+def test_recency_still_leads_over_reliability() -> None:
+    """Ordering stays hierarchical: today's news first, then how well sourced it
+    is. A well-sourced item from last week must not displace today."""
+    from pipeline.stages.rank import rank_clusters
+
+    ordered = rank_clusters(
+        [
+            {
+                "cluster_id": "old-and-well-sourced",
+                "members": [_member("lemonde.fr"), _member("theguardian.com")],
+                "independent_source_count": 2,
+                "country_count": 2,
+                "agenda_day": "2026-08-14",
+            },
+            {
+                "cluster_id": "today-thin",
+                "members": [],
+                "independent_source_count": 0,
+                "country_count": 0,
+                "agenda_day": "2026-08-20",
+            },
+        ]
+    )
+
+    assert [c["cluster_id"] for c in ordered] == ["today-thin", "old-and-well-sourced"]
+
+
+def test_the_reference_tier_is_derived_from_the_feed_list() -> None:
+    """Adding a feed must not leave its outlet scored as an unknown. The RSS
+    adapter's feed list is the single place a curated newsroom is declared, so
+    the tier reads from it rather than restating it."""
+    from pipeline.adapters.rss import FEEDS
+    from pipeline.config import TIER_ORDINARY, TIER_REFERENCE, source_trust_tier
+
+    for feed in FEEDS:
+        assert source_trust_tier(feed.source) == TIER_REFERENCE, feed.source
+
+    assert source_trust_tier("some-local-paper.example") == TIER_ORDINARY

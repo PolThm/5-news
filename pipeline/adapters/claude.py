@@ -77,6 +77,7 @@ _HEADLINE_INSTRUCTION = (
     "about 70 characters."
 )
 
+
 # What separates a review from a list of links: not more text, but stated
 # consequence. A reader who finishes an item should know why it was worth their
 # attention, and that is a judgment the summary's register deliberately avoids
@@ -93,6 +94,27 @@ _HEADLINE_INSTRUCTION = (
 # and where they disagree -- and this pipeline does not build that dossier yet.
 # Asking a model for uncertainties it has no material to derive would produce
 # invented hedging, which is worse than none.
+# The output language binds EVERY field, and says so explicitly.
+#
+# The prompt used to say "a headline and one short paragraph, both in French",
+# written when the schema had exactly those two fields. Extending the schema to
+# four left that sentence covering half of them, and on 2026-08-20 the French
+# Briefing published a Spanish headline -- "Un avion de combate espanol derriba
+# un dron..." -- above a French summary, for an item about a Spanish jet. The
+# same batch's `en` and `es` items were both correct, so nothing was crossed:
+# the model simply followed the subject's language where the instruction had
+# stopped binding.
+#
+# Stated once, naming the constraint rather than the fields, so extending the
+# schema again cannot silently narrow it.
+def _language_instruction(language_name: str) -> str:
+    return (
+        f"Write every field in {language_name}. This holds regardless of the "
+        f"language of the Articles, and regardless of which country the event "
+        f"concerns -- an event in Spain is still reported in {language_name}."
+    )
+
+
 _CONSEQUENCE_INSTRUCTION = (
     "'why_it_matters' is one sentence naming a concrete consequence the "
     "Articles actually support -- who is affected, what changes, what is at "
@@ -248,9 +270,9 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     if not members and agenda_text:
         language_name = _LANGUAGE_NAMES[language]
         return (
-            f"Write a headline and one short paragraph, both in {language_name}, "
-            f"reporting the following news event for a reader who has not heard "
-            f"of it.\n\n"
+            f"Write a headline and one short paragraph reporting the following "
+            f"news event for a reader who has not heard of it.\n"
+            f"{_language_instruction(language_name)}\n\n"
             f'Event: "{_escape_quotes(agenda_text)}"\n\n'
             f"This is the only account available -- report exactly what it states "
             f"and nothing beyond it. Do not add context, causes or consequences "
@@ -278,9 +300,9 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
     # instruction-following model should be expected to parse correctly.
     language_name = _LANGUAGE_NAMES[language]
     return (
-        f"Write a headline and one short paragraph, both in {language_name}, "
-        f"summarizing the following news event for a reader who has not seen "
-        f"any of these Articles.\n\n"
+        f"Write a headline and one short paragraph summarizing the following "
+        f"news event for a reader who has not seen any of these Articles.\n"
+        f"{_language_instruction(language_name)}\n\n"
         f"Articles:\n{lines}\n\n"
         f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}\n"
         f"{_HEADLINE_INSTRUCTION}\n{_CONSEQUENCE_INSTRUCTION}"

@@ -378,6 +378,48 @@ def test_the_prompt_names_the_language_not_the_bare_code() -> None:
                 assert other_name not in prompt
 
 
+def test_the_language_instruction_binds_every_field_the_schema_requires() -> None:
+    """The instruction used to enumerate the fields it applied to -- "a headline
+    and one short paragraph, both in French" -- written when the schema had
+    exactly those two. Extending it to four left that sentence covering half of
+    them, and the French Briefing published a Spanish headline above a French
+    summary on 2026-08-20 for an item about a Spanish jet. The same batch's `en`
+    and `es` items were both correct, so nothing was crossed: the model followed
+    the subject's language where the instruction had stopped binding.
+
+    Asserting on the phrasing rather than on a field list is the point -- a
+    prompt that names fields can be narrowed by adding one, which is exactly
+    what happened. Derived from `_SUMMARY_SCHEMA` so a fifth field cannot be
+    added without this test having something to say about it.
+    """
+    from pipeline.adapters.claude import _SUMMARY_SCHEMA
+
+    required = _SUMMARY_SCHEMA["required"]
+    assert len(required) >= 4, "guard assumes the schema outgrew headline+summary"
+
+    for cluster in (
+        _cluster("a", [{"title": "Un evenement", "source": "lemonde.fr"}]),
+        # The agenda-only branch is a separate prompt string and was missing
+        # the same coverage.
+        {"cluster_id": "b", "members": [], "agenda_text": "Something happened."},
+    ):
+        prompt = _prompt_for(cluster, OutputLanguage.FR)
+        assert "Write every field in French" in prompt
+        # No enumeration that a new field could fall outside of.
+        assert "both in French" not in prompt
+
+
+def test_the_language_instruction_survives_a_subject_in_another_language() -> None:
+    """The published failure was an item about Spain, so the instruction names
+    that case rather than leaving the model to infer it."""
+    cluster = _cluster("a", [{"title": "Un avion espanol", "source": "elpais.com"}])
+
+    prompt = _prompt_for(cluster, OutputLanguage.FR)
+
+    assert "regardless of the language of the Articles" in prompt
+    assert "an event in Spain is still reported in French" in prompt
+
+
 def test_the_same_member_data_is_embedded_regardless_of_target_language() -> None:
     """The facts available to ground a Summary must not vary by language --
     only the language of the resulting prose should differ."""

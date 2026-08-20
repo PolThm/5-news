@@ -444,3 +444,30 @@ def test_a_member_missing_optional_fields_is_not_invented() -> None:
     )
 
     assert published["members"][0] == {"url": "https://a.example/x"}
+
+
+def test_every_field_summarize_produces_is_declared_here() -> None:
+    """Closes the gap the neighbouring comment claims is already pinned.
+
+    `_attach_summary` copies `if field in summarized`, so a field summarize
+    emits but this tuple omits is dropped SILENTLY -- no error, no failing test,
+    just an absent key in the published JSON. The existing contract test checks
+    the other direction (every declared field is copied), which passes happily
+    while a newly produced field vanishes.
+
+    Verified by removing `why_it_matters` and `takeaway` from the tuple: the
+    whole suite still passed. It does not any more.
+
+    Derived from the LLM's own output schema plus the two link fields summarize
+    attaches itself, so adding a field to that schema without declaring it here
+    fails right here.
+    """
+    from pipeline.adapters.claude import _SUMMARY_SCHEMA
+
+    produced = set(_SUMMARY_SCHEMA["required"]) | {"outbound_url", "outbound_source"}
+    missing = produced - set(_SUMMARIZE_OWNED_FIELDS)
+
+    assert not missing, (
+        f"summarize produces {sorted(missing)} but publish does not declare them, "
+        "so they would be dropped silently from every published Briefing"
+    )

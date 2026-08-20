@@ -39,6 +39,14 @@ export interface Cluster {
   // `summary` already gets, which is why the schema bump is additive.
   headline?: string;
   summary?: string;
+  // The consequence and the point, added when the output contract grew beyond
+  // headline+summary. Optional because every earlier Briefing lacks them, and
+  // because a DEGRADED item carries them as empty strings on purpose -- there
+  // is no generated judgment to show, and repeating the headline under "why it
+  // matters" would state one nothing produced. The page omits the line rather
+  // than rendering an empty label.
+  why_it_matters?: string;
+  takeaway?: string;
   outbound_url?: string | null;
   outbound_source?: string | null;
   // Editorial provenance, added when the agenda stage began supplying the
@@ -119,6 +127,19 @@ export function hasValidAttribution(
   return (
     !!cluster.outbound_url && !!cluster.outbound_source && /^https?:\/\//i.test(cluster.outbound_url)
   );
+}
+
+// The two labels a review uses to separate fact from consequence. Kept as
+// plain sentence-case prefixes rather than headings: the item is a paragraph a
+// reader scans, not a form with fields.
+const CONSEQUENCE_LABELS: Record<OutputLanguage, { why: string; takeaway: string }> = {
+  fr: { why: "Pourquoi c'est important", takeaway: "À retenir" },
+  en: { why: "Why it matters", takeaway: "The takeaway" },
+  es: { why: "Por qué importa", takeaway: "Para recordar" },
+};
+
+export function consequenceLabels(lang: OutputLanguage): { why: string; takeaway: string } {
+  return CONSEQUENCE_LABELS[lang];
 }
 
 /** Whether an item rests on the editorial chronicle rather than on our own

@@ -150,8 +150,18 @@ def test_every_cluster_receives_a_summary_field_and_nothing_else_changes() -> No
         return BatchCollectResult(
             status="ended",
             texts={
-                "a": ClusterText(headline="Titre A", summary="Resume A."),
-                "b": ClusterText(headline="Titre B", summary="Resume B."),
+                "a": ClusterText(
+                    headline="Titre A",
+                    summary="Resume A.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                ),
+                "b": ClusterText(
+                    headline="Titre B",
+                    summary="Resume B.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                ),
             },
         )
 
@@ -222,7 +232,14 @@ def test_a_failed_cluster_degrades_to_its_earliest_member_title_others_unaffecte
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
             status="ended",
-            texts={"ok": ClusterText(headline="Titre ok", summary="Tout va bien.")},
+            texts={
+                "ok": ClusterText(
+                    headline="Titre ok",
+                    summary="Tout va bien.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                )
+            },
             failures=[Failure("claude", "cluster bad: batch result was 'errored'")],
         )
 
@@ -316,7 +333,14 @@ def test_a_non_degraded_cluster_carries_the_earliest_published_members_outbound_
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
             status="ended",
-            texts={"a": ClusterText(headline="Un titre reel", summary="Un resume reel.")},
+            texts={
+                "a": ClusterText(
+                    headline="Un titre reel",
+                    summary="Un resume reel.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                )
+            },
         )
 
     written = collect_summarize(
@@ -380,7 +404,14 @@ def test_a_cluster_with_no_members_degrades_outbound_link_to_none_not_a_crash() 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
             status="ended",
-            texts={"history-only": ClusterText(headline="Un titre", summary="Un resume.")},
+            texts={
+                "history-only": ClusterText(
+                    headline="Un titre",
+                    summary="Un resume.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                )
+            },
         )
 
     written = collect_summarize(
@@ -439,8 +470,18 @@ def test_a_member_missing_source_degrades_that_clusters_link_not_the_whole_cycle
         return BatchCollectResult(
             status="ended",
             texts={
-                "ok": ClusterText(headline="Titre ok", summary="Ca va."),
-                "malformed": ClusterText(headline="Titre malformed", summary="Aussi resume."),
+                "ok": ClusterText(
+                    headline="Titre ok",
+                    summary="Ca va.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                ),
+                "malformed": ClusterText(
+                    headline="Titre malformed",
+                    summary="Aussi resume.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                ),
             },
         )
 
@@ -475,7 +516,15 @@ def test_an_empty_string_url_or_source_degrades_to_none_not_a_broken_link() -> N
 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
-            status="ended", texts={"a": ClusterText(headline="Un titre", summary="Un resume.")}
+            status="ended",
+            texts={
+                "a": ClusterText(
+                    headline="Un titre",
+                    summary="Un resume.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                )
+            },
         )
 
     written = collect_summarize(
@@ -500,8 +549,18 @@ def test_metadata_records_how_many_clusters_lack_an_outbound_link() -> None:
         return BatchCollectResult(
             status="ended",
             texts={
-                "linked": ClusterText(headline="Titre linked", summary="Ok."),
-                "unlinked": ClusterText(headline="Titre unlinked", summary="Ok aussi."),
+                "linked": ClusterText(
+                    headline="Titre linked",
+                    summary="Ok.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                ),
+                "unlinked": ClusterText(
+                    headline="Titre unlinked",
+                    summary="Ok aussi.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                ),
             },
         )
 
@@ -635,7 +694,14 @@ def test_a_cluster_receives_both_a_headline_and_a_summary(tmp_path: Path) -> Non
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
             status="ended",
-            texts={"a": ClusterText(headline="Un cessez-le-feu", summary="Les delegations...")},
+            texts={
+                "a": ClusterText(
+                    headline="Un cessez-le-feu",
+                    summary="Les delegations...",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                )
+            },
         )
 
     written = collect_summarize(
@@ -683,7 +749,14 @@ def test_headline_and_summary_degrade_together_never_one_without_the_other() -> 
     def fake_collect(batch_id: str, clusters_in: list[dict]) -> BatchCollectResult:
         return BatchCollectResult(
             status="ended",
-            texts={"ok": ClusterText(headline="Vrai titre", summary="Vrai resume.")},
+            texts={
+                "ok": ClusterText(
+                    headline="Vrai titre",
+                    summary="Vrai resume.",
+                    why_it_matters="Cela change X.",
+                    takeaway="Le point a retenir.",
+                )
+            },
         )
 
     written = collect_summarize(

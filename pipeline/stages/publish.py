@@ -102,7 +102,14 @@ def assemble_briefings(
 # error, no failing test, just an absent key in the published JSON. Adding
 # a field to summarize's output without adding it here is the one change in
 # this pipeline that fails invisibly; the contract test below pins it.
-_SUMMARIZE_OWNED_FIELDS = ("headline", "summary", "outbound_url", "outbound_source")
+_SUMMARIZE_OWNED_FIELDS = (
+    "headline",
+    "summary",
+    "why_it_matters",
+    "takeaway",
+    "outbound_url",
+    "outbound_source",
+)
 
 
 # What a published member carries. Everything here is a fact -- who reported it,

@@ -4,6 +4,7 @@ import {
   ZONE_CYCLE,
   attributionText,
   consensusChipText,
+  consequenceLabels,
   countryLabel,
   discardedVolumeText,
   editorialAttribution,
@@ -446,5 +447,25 @@ describe("editorial attribution", () => {
     }
     expect(editorialAttribution("fr")).toContain("chronique");
     expect(editorialAttribution("es")).toContain("crónica");
+  });
+});
+
+describe("consequenceLabels", () => {
+  it("labels the consequence and the takeaway in each language", () => {
+    expect(consequenceLabels("fr")).toEqual({
+      why: "Pourquoi c'est important",
+      takeaway: "À retenir",
+    });
+    expect(consequenceLabels("en").why).toBe("Why it matters");
+    expect(consequenceLabels("es").takeaway).toBe("Para recordar");
+  });
+
+  it("gives every language both labels", () => {
+    // A missing label would render as "undefined :" in front of real prose.
+    for (const lang of ["fr", "en", "es"] as const) {
+      const { why, takeaway } = consequenceLabels(lang);
+      expect(why.length).toBeGreaterThan(0);
+      expect(takeaway.length).toBeGreaterThan(0);
+    }
   });
 });

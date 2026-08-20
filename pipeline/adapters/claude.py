@@ -77,6 +77,33 @@ _HEADLINE_INSTRUCTION = (
     "about 70 characters."
 )
 
+# What separates a review from a list of links: not more text, but stated
+# consequence. A reader who finishes an item should know why it was worth their
+# attention, and that is a judgment the summary's register deliberately avoids
+# making inside the facts.
+#
+# Both are held to the same non-fabrication rule as the rest, and the risk is
+# specific to them: "why it matters" is exactly where a model reaches for
+# geopolitical significance nobody reported, and a takeaway is exactly where it
+# reaches for a moral. So both are bounded to what the Articles support, and
+# told to stay flat.
+#
+# `uncertainties` from the spec is deliberately NOT requested. It is meant to
+# surface the divergences a factual dossier records -- which source says what,
+# and where they disagree -- and this pipeline does not build that dossier yet.
+# Asking a model for uncertainties it has no material to derive would produce
+# invented hedging, which is worse than none.
+_CONSEQUENCE_INSTRUCTION = (
+    "'why_it_matters' is one sentence naming a concrete consequence the "
+    "Articles actually support -- who is affected, what changes, what is at "
+    "stake. Never reach for wider significance nobody reported, and never "
+    "speculate about what happens next. If the Articles support no consequence "
+    "beyond the event itself, say plainly what the event decides or ends.\n"
+    "'takeaway' is one short sentence a reader would remember: the point of "
+    "the item, stated flatly. Not a moral, not advice, not a rhetorical "
+    "question, and never a restatement of the headline in other words."
+)
+
 # Story 6.1: the batch now returns two fields per Cluster instead of one
 # free-text paragraph, so the response is constrained by a JSON schema
 # rather than parsed as raw text. `additionalProperties: false` plus both
@@ -91,8 +118,10 @@ _SUMMARY_SCHEMA: dict = {
     "properties": {
         "headline": {"type": "string"},
         "summary": {"type": "string"},
+        "why_it_matters": {"type": "string"},
+        "takeaway": {"type": "string"},
     },
-    "required": ["headline", "summary"],
+    "required": ["headline", "summary", "why_it_matters", "takeaway"],
     "additionalProperties": False,
 }
 
@@ -165,6 +194,8 @@ class ClusterText:
 
     headline: str
     summary: str
+    why_it_matters: str
+    takeaway: str
 
 
 @dataclass(frozen=True, slots=True)
@@ -252,7 +283,7 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
         f"any of these Articles.\n\n"
         f"Articles:\n{lines}\n\n"
         f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}\n"
-        f"{_HEADLINE_INSTRUCTION}"
+        f"{_HEADLINE_INSTRUCTION}\n{_CONSEQUENCE_INSTRUCTION}"
     )
 
 
@@ -284,17 +315,17 @@ def _parse_cluster_text(cluster_id: str, raw: str) -> tuple[ClusterText | None, 
             f"cluster {cluster_id}: response JSON was {type(payload).__name__}, not an object",
         )
 
-    headline = payload.get("headline")
-    summary = payload.get("summary")
-    for name, value in (("headline", headline), ("summary", summary)):
+    fields = {name: payload.get(name) for name in _SUMMARY_SCHEMA["required"]}
+    for name, value in fields.items():
         if not isinstance(value, str) or not value.strip():
             return None, Failure(
                 ADAPTER,
                 f"cluster {cluster_id}: {name!r} was missing, empty, or not a string",
             )
 
-    assert isinstance(headline, str) and isinstance(summary, str)  # narrowed by the loop
-    return ClusterText(headline=headline.strip(), summary=summary.strip()), None
+    # Every value is a non-empty str by the loop above; read from the schema's
+    # own required list so adding a field cannot leave it unvalidated here.
+    return ClusterText(**{name: str(value).strip() for name, value in fields.items()}), None
 
 
 def _client_or_degrade(client: Client | None) -> tuple[Client | None, Failure | None]:

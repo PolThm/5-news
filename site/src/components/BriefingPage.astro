@@ -16,6 +16,7 @@
 import {
   attributionText,
   consensusChipText,
+  consequenceLabels,
   countryLabel,
   editorialAttribution,
   needsEditorialAttribution,
@@ -342,6 +343,21 @@ function formatTimestamp(iso: string): string {
          source list") -- #dde2ee/#1a2438 are that token's container/
          on-container tints, matching the only drafted expanded-state
          mockup (briefing-fallback.html). */
+      /* The consequence lines. Same grotesque face and measure as the summary
+         they follow, with the label carrying the only emphasis -- a reader
+         scans for "why it matters", then reads on. */
+      .consequence {
+        margin: 10px 0 0;
+        font-family: "IBM Plex Sans", system-ui, sans-serif;
+        font-size: 15px;
+        line-height: 1.55;
+        color: #2f2c26;
+      }
+
+      .consequence strong {
+        font-weight: 600;
+      }
+
       /* The editorial-provenance line, for an item that exists because a human
          editor recorded the event and that nothing in our own corpus covered.
          Styled like .attribution rather than like a warning: it is a citation,
@@ -524,6 +540,16 @@ function formatTimestamp(iso: string): string {
                   ))}
                 </ul>
               </div>
+              {cluster.why_it_matters && (
+                <p class="consequence">
+                  <strong>{consequenceLabels(lang).why} :</strong> {cluster.why_it_matters}
+                </p>
+              )}
+              {cluster.takeaway && (
+                <p class="consequence">
+                  <strong>{consequenceLabels(lang).takeaway} :</strong> {cluster.takeaway}
+                </p>
+              )}
               {needsEditorialAttribution(cluster) && (
                 <span class="editorial-source">{editorialAttribution(lang)}</span>
               )}

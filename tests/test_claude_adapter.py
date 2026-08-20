@@ -54,7 +54,15 @@ class _FakeSucceededResult:
         self.type = "succeeded"
         if raw is None:
             assert text is not None, "pass either text= or raw="
-            raw = json.dumps({"headline": f"Titre: {text}", "summary": text}, ensure_ascii=False)
+            raw = json.dumps(
+                {
+                    "headline": f"Titre: {text}",
+                    "summary": text,
+                    "why_it_matters": "Cela change X.",
+                    "takeaway": "Le point a retenir.",
+                },
+                ensure_ascii=False,
+            )
         self.message = _FakeMessage(raw)
 
 
@@ -467,7 +475,7 @@ def test_the_prompt_asks_for_a_headline_and_holds_it_to_the_same_rules() -> None
 
 
 def test_submit_constrains_the_response_to_the_headline_summary_schema() -> None:
-    """The shape is a guarantee, not a request: both fields required and
+    """The shape is a guarantee, not a request: every field required and
     additionalProperties false."""
     clusters = [_cluster("a", [{"title": "X", "source": "y.com"}])]
     batches = _FakeBatches()
@@ -478,7 +486,12 @@ def test_submit_constrains_the_response_to_the_headline_summary_schema() -> None
     params = batches.create_calls[0]["requests"][0]["params"]
     schema = params["output_config"]["format"]["schema"]
     assert params["output_config"]["format"]["type"] == "json_schema"
-    assert set(schema["required"]) == {"headline", "summary"}
+    assert set(schema["required"]) == {
+        "headline",
+        "summary",
+        "why_it_matters",
+        "takeaway",
+    }
     assert schema["additionalProperties"] is False
 
 
@@ -523,7 +536,13 @@ def test_collect_an_empty_headline_is_rejected_rather_than_rendered_blank() -> N
     def results(batch_id: str):
         return [
             _FakeBatchResult(
-                "blank", _FakeSucceededResult(raw='{"headline": "   ", "summary": "Un resume."}')
+                "blank",
+                _FakeSucceededResult(
+                    raw=(
+                        '{"headline": "   ", "summary": "Un resume.",'
+                        ' "why_it_matters": "X.", "takeaway": "Y."}'
+                    )
+                ),
             )
         ]
 
@@ -544,7 +563,12 @@ def test_collect_strips_surrounding_whitespace_from_both_fields() -> None:
         return [
             _FakeBatchResult(
                 "a",
-                _FakeSucceededResult(raw='{"headline": "  Un titre  ", "summary": " Un resume. "}'),
+                _FakeSucceededResult(
+                    raw=(
+                        '{"headline": "  Un titre  ", "summary": " Un resume. ",'
+                        ' "why_it_matters": " Cela change X. ", "takeaway": " Le point. "}'
+                    )
+                ),
             )
         ]
 

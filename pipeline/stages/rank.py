@@ -22,6 +22,7 @@ import json
 import sys
 from collections.abc import Callable
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -36,11 +37,13 @@ from pipeline.config import (
     MIN_COUNTRIES,
     MIN_INDEPENDENT_SOURCES,
     MIN_QUALIFYING_FOR_ZONE,
+    SCORE_WEIGHTS,
+    SCORE_WEIGHTS_VERSION,
     continent_for,
     countries_in_continent,
     source_trust_tier,
 )
-from pipeline.domain import Zone, ZoneKind
+from pipeline.domain import Period, Zone, ZoneKind
 from pipeline.stages import (
     DEFAULT_DATA_ROOT,
     clique_partition,
@@ -86,6 +89,151 @@ def qualifies(cluster: dict) -> bool:
         cluster["independent_source_count"] >= MIN_INDEPENDENT_SOURCES
         and cluster["country_count"] >= MIN_COUNTRIES
     )
+
+
+# --- Explainable scoring -----------------------------------------------------
+
+# Where each factor saturates. A raw count has no ceiling, and a score must be
+# comparable between items, so each is normalised against the point past which
+# more stops meaning better for a Briefing of at most 5 items.
+_PROMINENCE_SATURATION = 6  # outlets; beyond this an event is simply "widely covered"
+_CORROBORATION_SATURATION = 3  # countries
+_RELIABILITY_SATURATION = 9  # summed tiers, i.e. ~3 reference newsrooms
+_FRESHNESS_HALFLIFE_DAYS = 2.0
+
+
+def _clamp(value: float) -> float:
+    return max(0.0, min(1.0, value))
+
+
+def _freshness(item: dict, reference_day: str) -> float:
+    """1.0 for today, decaying by half every `_FRESHNESS_HALFLIFE_DAYS`.
+
+    Decay rather than a cliff: an event from yesterday is not worthless, and a
+    hard window would make the ordering jump discontinuously at midnight.
+    Undated items (the fallback path, when the agenda is unavailable) score 0.5
+    -- neither promoted nor buried on a dimension nothing measured for them.
+    """
+    day = item.get("agenda_day")
+    if not day or not reference_day:
+        return 0.5
+    try:
+        age = (date.fromisoformat(reference_day) - date.fromisoformat(day)).days
+    except ValueError:
+        return 0.5
+    return _clamp(0.5 ** (max(0, age) / _FRESHNESS_HALFLIFE_DAYS))
+
+
+def _prominence(item: dict) -> float:
+    """How many distinct outlets carried it, saturating."""
+    return _clamp(item.get("independent_source_count", 0) / _PROMINENCE_SATURATION)
+
+
+def _corroboration(item: dict) -> float:
+    """Confirmation from more than one country's press.
+
+    Distinct from prominence on purpose: six outlets in one country is a
+    national story well covered, while three across three countries is
+    independent confirmation, and the spec weights them separately for that
+    reason.
+    """
+    return _clamp(item.get("country_count", 0) / _CORROBORATION_SATURATION)
+
+
+def _source_reliability(item: dict) -> float:
+    """The tier-weighted worth of the sources, saturating."""
+    return _clamp(trust_weight(item) / _RELIABILITY_SATURATION)
+
+
+def _geographic_relevance(item: dict, zone: Zone) -> float:
+    """How directly the event belongs to this Zone.
+
+    A Country Zone rewards an event about that country outright, and gives
+    partial credit to one about its continent -- a European decision genuinely
+    concerns France, just less than a French one does. World is 1.0 for
+    everything, since everything is world news; scoring it otherwise would make
+    the World Briefing rank by how narrowly local a story is.
+    """
+    if zone.kind == ZoneKind.WORLD:
+        return 1.0
+    about = set(item.get("mentioned_countries") or ())
+    if not about:
+        return 0.0
+    if zone.kind == ZoneKind.COUNTRY:
+        if zone.slug in about:
+            return 1.0
+        parent = zone.continent
+        return 0.5 if parent and (about & countries_in_continent(parent)) else 0.0
+    return 1.0 if about & countries_in_continent(zone.slug) else 0.0
+
+
+def _novelty(item: dict) -> float:
+    """Whether this is a development or a story already told.
+
+    Read off cross-day linking: an item linked to several days of history has
+    been in the Briefing before, and the spec asks for "a significant
+    development, rather than repetition of an old subject". One linked id means
+    the item stands alone today, which is as novel as this pipeline can observe.
+    """
+    linked = item.get("_linked_ids") or []
+    if len(linked) <= 1:
+        return 1.0
+    return _clamp(1.0 / len(linked))
+
+
+def score_item(item: dict, zone: Zone, period: Period, reference_day: str) -> dict:
+    """The weighted score and every component that produced it.
+
+    Returned rather than just a number because the spec's §5.3 asks for a score
+    an operator can explain: "une équipe doit pouvoir expliquer pourquoi un
+    sujet est n°2". The components and the weights version travel on the item,
+    so a published ordering stays accountable after the fact.
+    """
+    weights = SCORE_WEIGHTS[period.value]
+    components = {
+        "freshness": _freshness(item, reference_day),
+        "prominence": _prominence(item),
+        "corroboration": _corroboration(item),
+        "geographic_relevance": _geographic_relevance(item, zone),
+        "source_reliability": _source_reliability(item),
+        "novelty": _novelty(item),
+    }
+    total = sum(weights[name] * value for name, value in components.items())
+    return {
+        "total": round(total, 4),
+        "components": {name: round(value, 4) for name, value in components.items()},
+        "weights_version": SCORE_WEIGHTS_VERSION,
+    }
+
+
+def rank_by_score(items: list[dict], zone: Zone, period: Period, reference_day: str) -> list[dict]:
+    """Order items by weighted score, attaching the score to each.
+
+    Replaces the hierarchical sort for the real ranking path. That sort could
+    only express priorities as a strict order -- recency, then reliability, then
+    count -- so a marginal edge on an early key beat any margin on a later one:
+    an item one day fresher outranked one carried by three more newsrooms, with
+    no way to say the second mattered more. A weighted sum trades that off
+    continuously, and the spec's §7.2 varies the weights by Period precisely
+    because the right trade differs between a daily and a weekly review.
+
+    The score is written onto the item under `score` -- no leading underscore,
+    unlike `_linked_ids` and the other internals this pipeline keeps out of
+    published output. That is deliberate: a score whose breakdown is discarded
+    before anyone can read it is not an explainable one, and §5.3 asks that "une
+    équipe doit pouvoir expliquer pourquoi un sujet est n°2". The components and
+    the weights version reach the published Briefing, so an ordering can be
+    re-derived from the file long after the cycle that produced it.
+
+    Nothing third-party travels in it -- these are our own numbers about our own
+    selection, so publishing them raises none of the questions `_facts_only`
+    exists to answer.
+
+    Ties fall back to `cluster_id` so the order stays deterministic, which the
+    cross-day tests depend on.
+    """
+    scored = [{**item, "score": score_item(item, zone, period, reference_day)} for item in items]
+    return sorted(scored, key=lambda c: (-c["score"]["total"], c["cluster_id"]))
 
 
 def rank_clusters(clusters: list[dict]) -> list[dict]:
@@ -409,7 +557,12 @@ class ZoneRanking:
         return self.served_zone != self.requested_zone
 
 
-def rank_for_zone(clusters: list[dict], zone: Zone) -> ZoneRanking:
+def rank_for_zone(
+    clusters: list[dict],
+    zone: Zone,
+    period: Period = Period.DAY,
+    reference_day: str = "",
+) -> ZoneRanking:
     """Rank Clusters relevant to ``zone``, falling back to its Continent
     (FR-16) if fewer than ``MIN_QUALIFYING_FOR_ZONE`` Clusters both qualify
     and are relevant.
@@ -424,7 +577,14 @@ def rank_for_zone(clusters: list[dict], zone: Zone) -> ZoneRanking:
     A Continent (or World) Zone never falls back further — there is nothing
     above it to substitute, regardless of how thin its own coverage is.
     """
-    return _rank_for_zone(clusters, requested_zone=zone, serving_zone=zone, visited=frozenset())
+    return _rank_for_zone(
+        clusters,
+        requested_zone=zone,
+        serving_zone=zone,
+        visited=frozenset(),
+        period=period,
+        reference_day=reference_day,
+    )
 
 
 def _rank_for_zone(
@@ -432,6 +592,8 @@ def _rank_for_zone(
     requested_zone: Zone,
     serving_zone: Zone,
     visited: frozenset[str],
+    period: Period = Period.DAY,
+    reference_day: str = "",
 ) -> ZoneRanking:
     """Recursion helper: ``requested_zone`` stays fixed across fallback hops
     while ``serving_zone`` walks up the Continent chain, so the returned
@@ -455,7 +617,7 @@ def _rank_for_zone(
     relevant = [c for c in clusters if _is_relevant_to(c, serving_zone)]
     qualifying_relevant = [c for c in relevant if qualifies(c)]
 
-    ordered = rank_clusters(qualifying_relevant)
+    ordered = rank_by_score(qualifying_relevant, serving_zone, period, reference_day)
     if serving_zone.kind == ZoneKind.CONTINENT:
         # FR-17: applied before the top-5 slice, not after -- capping after
         # would just shrink a Briefing that could have had 5 items down to
@@ -489,6 +651,8 @@ def _rank_for_zone(
             requested_zone=requested_zone,
             serving_zone=parent,
             visited=visited | {serving_zone.slug},
+            period=period,
+            reference_day=reference_day,
         )
 
     selected = ordered[:MAX_SELECTED_CLUSTERS]

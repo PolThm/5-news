@@ -273,3 +273,45 @@ def test_every_pooled_cluster_can_substantiate_its_own_consensus_score() -> None
                 f"Independent Sources but can only list {listed}"
             )
             assert cluster["country_count"] == len(cluster["countries"])
+
+
+def test_the_day_pool_holds_the_days_own_events_not_the_whole_agenda() -> None:
+    """A "today" Briefing must not lead on something from five days ago.
+
+    The pool was `today_clusters` unfiltered, which was right while that meant
+    one cycle's Clusters. Since the editorial agenda supplies candidates it means
+    seven days of them, so a stale event could top the daily Briefing -- and did,
+    until scoring made it visible. The spec puts the daily window at 24-36h
+    (§7.2).
+    """
+    reference = datetime(2026, 8, 20, 6, 0, tzinfo=UTC)
+    pools = build_period_pools(
+        today_clusters=[
+            {**_cluster("today", sources=2, countries=["france"]), "agenda_day": "2026-08-20"},
+            {**_cluster("yesterday", sources=2, countries=["france"]), "agenda_day": "2026-08-19"},
+            {**_cluster("stale", sources=9, countries=["france"]), "agenda_day": "2026-08-15"},
+        ],
+        history_entries=[],
+        embedding_by_id={},
+        reference_date=reference,
+    )
+
+    day_ids = {c["cluster_id"] for c in pools[Period.DAY]}
+    assert day_ids == {"today", "yesterday"}, "the well-covered stale event must not lead today"
+    # The week pool still sees everything in its own window.
+    assert {c["cluster_id"] for c in pools[Period.WEEK]} >= {"today", "yesterday", "stale"}
+
+
+def test_an_item_with_no_editorial_day_stays_in_the_day_pool() -> None:
+    """The fallback path -- Clusters ranked directly when the agenda is
+    unavailable -- comes from this cycle's own collection by definition, so it IS
+    today's. Filtering it out would empty the daily Briefing exactly when the
+    agenda is already missing."""
+    pools = build_period_pools(
+        today_clusters=[_cluster("undated", sources=2, countries=["france"])],
+        history_entries=[],
+        embedding_by_id={},
+        reference_date=datetime(2026, 8, 20, 6, 0, tzinfo=UTC),
+    )
+
+    assert [c["cluster_id"] for c in pools[Period.DAY]] == ["undated"]

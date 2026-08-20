@@ -567,8 +567,62 @@ def source_trust_tier(domain: str) -> int:
     return TIER_ORDINARY
 
 
+# --- Ranking weights ---------------------------------------------------------
+
+# How much each factor counts, per Period. Versioned, because changing a weight
+# changes what a reader sees and a Briefing must be explainable after the fact:
+# the version is written onto every scored item alongside its components.
+SCORE_WEIGHTS_VERSION = "2026-08-20.1"
+
+# The spec's §7.1 opens with `0.28 x impact` -- people and territory affected,
+# severity, economic or legal effect -- and it is deliberately ABSENT here.
+#
+# Impact at that weight needs structured data this pipeline does not ingest:
+# casualty counts, sums of money, populations under an order. The available
+# substitute would be the chronicle's category, i.e. deciding that armed
+# conflict outranks elections, which is an editorial hierarchy this project has
+# no basis to publish and has already declined to invent once (see
+# `rank_clusters`). A named gap beats a fabricated proxy: a weight labelled
+# "impact" that actually measures "category we guessed matters" would be worse
+# than not scoring impact at all, because it would look justified.
+#
+# So the spec's remaining six weights are renormalised to sum to 1, keeping
+# their relative proportions, and impact stays on the deferred list.
+#
+# Freshness is the one factor the spec itself varies by Period ("très forte" for
+# daily, "modérée" for weekly, §7.2), so the two profiles differ there and the
+# rest is rebalanced around it. A weekly review is a record of the week, where
+# an event's corroboration matters more than which day it landed on.
+SCORE_WEIGHTS: Final[dict[str, dict[str, float]]] = {
+    "day": {
+        "freshness": 0.30,
+        "prominence": 0.18,
+        "corroboration": 0.18,
+        "geographic_relevance": 0.12,
+        "source_reliability": 0.12,
+        "novelty": 0.10,
+    },
+    "week": {
+        "freshness": 0.10,
+        "prominence": 0.24,
+        "corroboration": 0.24,
+        "geographic_relevance": 0.16,
+        "source_reliability": 0.16,
+        "novelty": 0.10,
+    },
+}
+
+# Weights that do not sum to 1 make a score incomparable between Periods, which
+# is exactly the bug a reader would never see and an operator could never
+# explain. Caught at import rather than as a puzzling ordering later.
+for _period, _weights in SCORE_WEIGHTS.items():
+    _total = sum(_weights.values())
+    assert abs(_total - 1.0) < 1e-9, f"{_period} weights sum to {_total}, not 1"
+
 __all__ = [
     "CROSS_DAY_SIMILARITY_FLOOR",
+    "SCORE_WEIGHTS",
+    "SCORE_WEIGHTS_VERSION",
     "MAX_PER_CATEGORY",
     "MAX_PER_COUNTRY",
     "MAX_SELECTED_CLUSTERS",

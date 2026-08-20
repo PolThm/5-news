@@ -422,7 +422,11 @@ def run_cycle(
             sizes = {period: len(pool) for period, pool in pools.items()}
             trace(f"linking: pools ready ({sizes}); ranking zones")
             for period, pool in pools.items():
-                zone_rankings[period] = rank_all_zones(pool)
+                # The cycle's own start date is the reference for freshness,
+                # not "now": a resumed invocation must score the day it
+                # collected, or a cycle finished the next morning would rank
+                # its whole pool as stale.
+                zone_rankings[period] = rank_all_zones(pool, period, started_at.date().isoformat())
                 trace(f"ranking: {period} done")
             union = dedupe_union([r for rankings in zone_rankings.values() for r in rankings])
             clusters_selected = len(union)

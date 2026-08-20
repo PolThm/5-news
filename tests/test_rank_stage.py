@@ -649,7 +649,12 @@ def test_cap_before_slice_backfills_from_beyond_the_top_five() -> None:
     result = rank_for_zone(clusters, zone_by_slug("europe"))
 
     ids = [c["cluster_id"] for c in result.ranked_clusters]
-    assert ids == ["fr0", "fr1", "de1", "uk1"], (
+    # Asserted as a SET, not a sequence: what this test is about is which
+    # candidates survive capping, and the order among them is the scorer's
+    # business (and changes with the weights, which are versioned). Pinning the
+    # sequence here made this test fail on a weight change that did not affect
+    # the backfill it exists to prove.
+    assert set(ids) == {"fr0", "fr1", "de1", "uk1"}, (
         "fr2/fr3 capped away; uk1 (rank 6) backfills a freed slot only "
         "reachable if the cap ran before the top-5 slice"
     )
@@ -1291,3 +1296,148 @@ def test_the_reference_tier_is_derived_from_the_feed_list() -> None:
         assert source_trust_tier(feed.source) == TIER_REFERENCE, feed.source
 
     assert source_trust_tier("some-local-paper.example") == TIER_ORDINARY
+
+
+# --- Explainable scoring -----------------------------------------------------
+
+
+def _scored(**over) -> dict:
+    base = {
+        "cluster_id": "c",
+        "members": [_member("lemonde.fr")],
+        "independent_source_count": 1,
+        "country_count": 1,
+        "mentioned_countries": ["france"],
+        "agenda_day": "2026-08-20",
+        "_linked_ids": ["c"],
+    }
+    return {**base, **over}
+
+
+def test_a_score_reports_every_component_that_produced_it() -> None:
+    """§5.3 asks for a score an operator can explain -- "une équipe doit pouvoir
+    expliquer pourquoi un sujet est n°2". A bare number cannot be argued with,
+    so the components and the weights version travel with it."""
+    from pipeline.config import SCORE_WEIGHTS, SCORE_WEIGHTS_VERSION, zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import score_item
+
+    score = score_item(_scored(), zone_by_slug("france"), Period.DAY, "2026-08-20")
+
+    assert set(score["components"]) == set(SCORE_WEIGHTS["day"])
+    assert score["weights_version"] == SCORE_WEIGHTS_VERSION
+    assert 0.0 <= score["total"] <= 1.0
+
+
+def test_freshness_decays_rather_than_falling_off_a_cliff() -> None:
+    """A hard window would make the ordering jump at midnight, and an event from
+    yesterday is not worthless."""
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import score_item
+
+    def freshness(day: str) -> float:
+        item = _scored(agenda_day=day)
+        return score_item(item, zone_by_slug("france"), Period.DAY, "2026-08-20")["components"][
+            "freshness"
+        ]
+
+    assert freshness("2026-08-20") == 1.0
+    assert 0.4 < freshness("2026-08-18") < 0.6, "two days ~= half"
+    assert freshness("2026-08-14") < freshness("2026-08-18")
+    # Undated items sit mid-scale: neither promoted nor buried on a dimension
+    # nothing measured for them.
+    assert (
+        score_item(_scored(agenda_day=None), zone_by_slug("france"), Period.DAY, "2026-08-20")[
+            "components"
+        ]["freshness"]
+        == 0.5
+    )
+
+
+def test_the_two_period_profiles_trade_freshness_against_coverage_differently() -> None:
+    """The spec varies freshness by Period (§7.2): "très forte" daily, "modérée"
+    weekly. That is only meaningful if it can change an ordering, so this pins a
+    case that actually flips.
+
+    Both items are inside the daily window -- since the day pool is now bounded
+    to one day, a five-day-old item cannot appear there at all. The difference is
+    a day of age against one more outlet: a daily review leads with today, a
+    weekly one with the better-covered event.
+
+    Source counts differ while `members` are held identical, so the only factors
+    in play are freshness and prominence; mixing in reliability would test three
+    things at once and prove none.
+    """
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_by_score
+
+    members = [_member("lemonde.fr"), _member("elpais.com", "spain")]
+    today_slightly_thinner = _scored(
+        cluster_id="today", agenda_day="2026-08-20", independent_source_count=5, members=members
+    )
+    yesterday_better_covered = _scored(
+        cluster_id="yesterday",
+        agenda_day="2026-08-19",
+        independent_source_count=6,
+        members=members,
+    )
+    pool = [today_slightly_thinner, yesterday_better_covered]
+
+    daily = rank_by_score(pool, zone_by_slug("france"), Period.DAY, "2026-08-20")
+    weekly = rank_by_score(pool, zone_by_slug("france"), Period.WEEK, "2026-08-20")
+
+    assert daily[0]["cluster_id"] == "today"
+    assert weekly[0]["cluster_id"] == "yesterday"
+
+
+def test_geographic_relevance_prefers_the_country_over_its_continent() -> None:
+    """A European decision genuinely concerns France, just less than a French
+    one does -- so it earns partial credit rather than none or full."""
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import score_item
+
+    def relevance(about: list[str], zone: str) -> float:
+        return score_item(
+            _scored(mentioned_countries=about), zone_by_slug(zone), Period.DAY, "2026-08-20"
+        )["components"]["geographic_relevance"]
+
+    assert relevance(["france"], "france") == 1.0
+    assert relevance(["germany"], "france") == 0.5, "European, not French"
+    assert relevance(["japan"], "france") == 0.0
+    # World takes everything: ranking it by how narrowly local a story is would
+    # invert what a World Briefing is for.
+    assert relevance(["japan"], "world") == 1.0
+
+
+def test_a_story_told_across_several_days_scores_less_novel() -> None:
+    """The spec asks for "a significant development, rather than repetition of
+    an old subject"; cross-day linking is where that is observable."""
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import score_item
+
+    def novelty(linked: list[str]) -> float:
+        return score_item(
+            _scored(_linked_ids=linked), zone_by_slug("france"), Period.DAY, "2026-08-20"
+        )["components"]["novelty"]
+
+    assert novelty(["c"]) == 1.0
+    assert novelty(["c", "d"]) == 0.5
+    assert novelty(["c", "d", "e", "f"]) == 0.25
+
+
+def test_ordering_stays_deterministic_when_scores_tie() -> None:
+    """Two items scoring identically must not swap between runs -- the cross-day
+    tests and a resumed cycle both depend on a stable order."""
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_by_score
+
+    items = [_scored(cluster_id="zzz"), _scored(cluster_id="aaa")]
+    ordered = rank_by_score(items, zone_by_slug("france"), Period.DAY, "2026-08-20")
+
+    assert [c["cluster_id"] for c in ordered] == ["aaa", "zzz"]
+    assert ordered[0]["score"]["total"] == ordered[1]["score"]["total"]

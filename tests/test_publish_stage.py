@@ -134,6 +134,41 @@ def test_a_clusters_outbound_link_survives_into_the_published_briefing() -> None
     assert world_day_fr.clusters[0]["outbound_source"] == "example.com"
 
 
+def test_the_score_that_decided_the_order_survives_into_the_published_briefing() -> None:
+    """§5.3 asks that a team be able to explain why an item is n°2. That is only
+    true if the score reaches the file: computing a breakdown and dropping it
+    before publish would leave an ordering nobody can re-derive.
+
+    Publish keeps it because `_attach_summary` spreads the whole cluster, so
+    this pins the behaviour rather than adding to it: it fails if publish ever
+    grows an allowlist for cluster fields the way it has one for member fields.
+    It says nothing about the name `rank` writes -- the rank tests own that.
+    """
+    scored = {
+        **_cluster("a"),
+        "score": {
+            "total": 0.7531,
+            "components": {"freshness": 0.1768, "prominence": 1.0},
+            "weights_version": "2026-08-20.1",
+        },
+    }
+    briefings = assemble_briefings(
+        _full_zone_rankings([scored]),
+        _full_summaries_by_language(["a"]),
+        generated_at=GENERATED_AT,
+    )
+
+    published = next(
+        b
+        for b in briefings
+        if b.language == OutputLanguage.FR and b.zone.slug == "world" and b.period == Period.DAY
+    ).clusters[0]
+
+    assert published["score"]["total"] == 0.7531
+    assert published["score"]["weights_version"] == "2026-08-20.1"
+    assert published["score"]["components"]["freshness"] == 0.1768
+
+
 def test_a_cluster_present_in_multiple_zones_is_not_summarized_twice_but_appears_in_both() -> None:
     """The dedup-union fan-out decision (Story 3.5): one Cluster, summarized
     once per language, must still show up correctly in every Zone/Period

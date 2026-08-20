@@ -77,7 +77,26 @@ def build_period_pools(
     linkable = [c for c in today_clusters if c["cluster_id"] in embedding_by_id]
     unlinkable = [c for c in today_clusters if c["cluster_id"] not in embedding_by_id]
 
-    pools: dict[Period, list[dict]] = {Period.DAY: today_clusters}
+    # The day pool is the day's own events, not everything on hand.
+    #
+    # It used to be `today_clusters` unfiltered, which was right while that
+    # meant one cycle's Clusters. Since the editorial agenda supplies
+    # candidates it means seven days of them, so a "today" Briefing could lead
+    # on something from five days ago -- and did, until scoring made it visible.
+    # The spec puts the daily window at 24-36h (§7.2); one calendar day of the
+    # chronicle is the closest thing this pipeline can state exactly.
+    #
+    # Items with no editorial day (the fallback path, when the agenda is
+    # unavailable) are kept: they come from this cycle's own collection by
+    # definition, so they ARE today's.
+    pools: dict[Period, list[dict]] = {
+        Period.DAY: [
+            cluster
+            for cluster in today_clusters
+            if not cluster.get("agenda_day")
+            or cluster["agenda_day"] >= (reference - timedelta(days=1)).date().isoformat()
+        ]
+    }
     for period, window_days in _WINDOW_DAYS.items():
         window_history = _within_window(history_entries, reference, window_days)
         pools[period] = [
@@ -105,14 +124,18 @@ def _within_window(
     return result
 
 
-def rank_all_zones(clusters: list[dict]) -> list[ZoneRanking]:
+def rank_all_zones(
+    clusters: list[dict],
+    period: Period = Period.DAY,
+    reference_day: str = "",
+) -> list[ZoneRanking]:
     """Run ``rank_for_zone`` for all 15 Zones against one Period's pool.
 
     One call per Zone -- ``rank_for_zone`` already handles FR-16's Continent
     fallback and FR-17's anti-concentration cap internally; this function
     adds nothing but the loop across Zones.
     """
-    return [rank_for_zone(clusters, zone) for zone in ZONES]
+    return [rank_for_zone(clusters, zone, period, reference_day) for zone in ZONES]
 
 
 def dedupe_union(rankings: list[ZoneRanking]) -> list[dict]:

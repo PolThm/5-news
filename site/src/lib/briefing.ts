@@ -12,7 +12,11 @@ export type OutputLanguage = "fr" | "en" | "es";
 export const OUTPUT_LANGUAGE_CYCLE: readonly OutputLanguage[] = ["fr", "en", "es"];
 
 export interface ClusterMember {
-  title: string;
+  // No `title`. The pipeline reads publisher headlines to group Articles and
+  // then drops them at publish time (`_PUBLISHED_MEMBER_FIELDS`), so a
+  // published file has never carried one since that change -- this interface
+  // declared it for a while after it had stopped arriving. Nothing here read
+  // it: the page shows `source` and `source_country`.
   url: string;
   source: string;
   source_country: string;
@@ -60,6 +64,29 @@ export interface Cluster {
   // `editorialAttribution`.
   agenda_category?: string;
   corroborated?: boolean;
+  // Why this item sits where it sits. Published on purpose rather than kept
+  // internal: the ranking is a weighted sum of six factors, and a score whose
+  // breakdown is discarded before anyone can read it is not explainable.
+  // `weights_version` identifies which profile produced the ordering, so a
+  // later weight change does not silently rewrite the past.
+  //
+  // Optional, like every field added after a Briefing shipped without it.
+  // The page does not render it yet -- it exists so an ordering can be audited
+  // from the file alone.
+  score?: ClusterScore;
+}
+
+export interface ClusterScore {
+  total: number;
+  components: {
+    freshness: number;
+    prominence: number;
+    corroboration: number;
+    geographic_relevance: number;
+    source_reliability: number;
+    novelty: number;
+  };
+  weights_version: string;
 }
 
 export interface BriefingRecord {

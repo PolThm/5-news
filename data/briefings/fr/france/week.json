@@ -2,80 +2,6 @@
   "clusters": [
     {
       "_linked_ids": [
-        "8ca917929193b72a"
-      ],
-      "agenda_category": "Health and environment",
-      "agenda_day": "2026-08-19",
-      "agenda_sources": [
-        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
-      ],
-      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
-      "cluster_id": "8ca917929193b72a",
-      "corroborated": true,
-      "countries": [
-        "france",
-        "pa",
-        "united-states"
-      ],
-      "country_count": 3,
-      "headline": "Moderna et Merck annoncent des résultats positifs pour un vaccin contre le cancer de la peau",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
-        },
-        {
-          "language": "en",
-          "source": "investors.com",
-          "source_country": "united-states",
-          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.com",
-          "source_country": "pa",
-          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "spain",
-        "united-kingdom"
-      ],
-      "origin_country": "france",
-      "outbound_source": "investors.com",
-      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
-      "rank": 1,
-      "summary": "Les sociétés pharmaceutiques Moderna et Merck ont présenté des résultats positifs concernant un vaccin expérimental contre le mélanome avancé, le cancer de la peau. Cette annonce a provoqué une forte hausse du cours de l'action des deux entreprises, avec une augmentation de 90 pour cent pour Moderna et une progression pour Merck, signalant la confiance des investisseurs dans cette avancée thérapeutique."
-    },
-    {
-      "agenda_category": "International relations",
-      "agenda_day": "2026-08-17",
-      "agenda_sources": [
-        "https://www.reuters.com/world/middle-east/iran-says-two-french-embassy-employees-barred-returning-2026-08-17/"
-      ],
-      "agenda_text": "Iran says it barred two French embassy employees from returning for allegedly violating the Vienna Convention through activities supporting Iranian civil society. France says their work involved programs for civil society, students, and artists",
-      "cluster_id": "a08dcfdf0c6575a7",
-      "corroborated": false,
-      "countries": [],
-      "country_count": 0,
-      "headline": "L'Iran empêche deux employés de l'ambassade française de revenir",
-      "independent_source_count": 0,
-      "members": [],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "unknown",
-      "outbound_source": null,
-      "outbound_url": null,
-      "rank": 2,
-      "summary": "L'Iran affirme avoir interdit à deux employés de l'ambassade de France de retourner au pays, les accusant d'avoir violé la Convention de Vienne par des activités soutenant la société civile iranienne. La France déclare que leur travail concernait des programmes destinés à la société civile, aux étudiants et aux artistes."
-    },
-    {
-      "_linked_ids": [
         "62ea1adba6b2c592"
       ],
       "agenda_category": "Disasters and accidents",
@@ -90,7 +16,7 @@
         "spain"
       ],
       "country_count": 1,
-      "headline": "Une famille française secourue après plus de 16 heures en dérive en Thaïlande",
+      "headline": "Une famille française rescapée après plus de 16 heures à la dérive près des côtes thaïlandaises",
       "independent_source_count": 1,
       "members": [
         {
@@ -106,8 +32,59 @@
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260815/11614437/rescatada-familia-francesa-pasar-mas-16-horas-deriva-frente-costas-tailandia.html",
-      "rank": 3,
-      "summary": "Une famille française a été sauvée après avoir passé plus de 16 heures à la dérive au large des côtes thaïlandaises. Les membres de la famille, qui se trouvaient en mer, ont été secourus et sont sortis de danger."
+      "rank": 1,
+      "score": {
+        "components": {
+          "corroboration": 0.3333,
+          "freshness": 0.125,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.2,
+          "source_reliability": 0.2727
+        },
+        "total": 0.4441,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Une famille française a été secourue après avoir passé plus de seize heures à la dérive en mer près des côtes de Thaïlande. L'opération de sauvetage a permis de ramener sains et saufs les membres de cette famille qui se trouvaient en détresse.",
+      "takeaway": "Les secours thaïlandais ont ramené en sécurité une famille française après plus d'une journée passée à la dérive.",
+      "why_it_matters": "Cette opération de secours illustre l'importance des interventions coordonnées des garde-côtes pour sauver des vies en mer en situation d'urgence."
+    },
+    {
+      "agenda_category": "International relations",
+      "agenda_day": "2026-08-17",
+      "agenda_sources": [
+        "https://www.reuters.com/world/middle-east/iran-says-two-french-embassy-employees-barred-returning-2026-08-17/"
+      ],
+      "agenda_text": "Iran says it barred two French embassy employees from returning for allegedly violating the Vienna Convention through activities supporting Iranian civil society. France says their work involved programs for civil society, students, and artists",
+      "cluster_id": "a08dcfdf0c6575a7",
+      "corroborated": false,
+      "countries": [],
+      "country_count": 0,
+      "headline": "L'Iran refuse le retour de deux employés de l'ambassade française",
+      "independent_source_count": 0,
+      "members": [],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "unknown",
+      "outbound_source": null,
+      "outbound_url": null,
+      "rank": 2,
+      "score": {
+        "components": {
+          "corroboration": 0.0,
+          "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.0,
+          "source_reliability": 0.0
+        },
+        "total": 0.2954,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "L'Iran a déclaré avoir interdit à deux employés de l'ambassade française de revenir au pays, les accusant de violer la Convention de Vienne par des activités en soutien à la société civile iranienne. La France affirme que leur travail impliquait des programmes destinés à la société civile, aux étudiants et aux artistes.",
+      "takeaway": "Deux employés français ne peuvent pas retourner en Iran suite aux accusations de violation de la Convention de Vienne, tandis que la France conteste ces accusations en décrivant leurs activités comme des programmes légitimes de soutien civil.",
+      "why_it_matters": "Le différend met en évidence les tensions diplomatiques entre la France et l'Iran concernant les activités de soutien à la société civile et l'interprétation des obligations légales internationales en matière de diplomatie."
     },
     {
       "agenda_category": "Law and crime",
@@ -121,7 +98,7 @@
       "corroborated": false,
       "countries": [],
       "country_count": 0,
-      "headline": "Le Conseil constitutionnel rejette un projet d'interdiction des réseaux sociaux pour les mineurs de moins de 15 ans",
+      "headline": "Le Conseil constitutionnel bloque un projet d'interdiction des réseaux sociaux pour les mineurs de moins de 15 ans",
       "independent_source_count": 0,
       "members": [],
       "mentioned_countries": [
@@ -130,13 +107,27 @@
       "origin_country": "unknown",
       "outbound_source": null,
       "outbound_url": null,
-      "rank": 4,
-      "summary": "Le Conseil constitutionnel français a bloqué un projet de loi proposant d'interdire l'accès aux réseaux sociaux aux mineurs de moins de 15 ans. Le président Emmanuel Macron a ordonné au premier ministre Sébastien Lecornu de retravailler le projet de législation et de le soumettre à nouveau au Conseil."
+      "rank": 3,
+      "score": {
+        "components": {
+          "corroboration": 0.0,
+          "freshness": 0.125,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.0,
+          "source_reliability": 0.0
+        },
+        "total": 0.2725,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Le Conseil constitutionnel français a rejeté un projet de loi proposant une interdiction d'accès aux réseaux sociaux pour les mineurs de moins de 15 ans. Le président Emmanuel Macron a ordonné au Premier ministre Sébastien Lecornu de retravailler le projet de législation et de le soumettre à nouveau au Conseil.",
+      "takeaway": "Le gouvernement français devra modifier sa proposition législative concernant l'accès des mineurs aux réseaux sociaux pour obtenir l'approbation du Conseil constitutionnel.",
+      "why_it_matters": "Cette décision du Conseil constitutionnel signifie que la mesure proposée ne peut pas être appliquée dans sa forme actuelle, nécessitant une révision avant de pouvoir être réexaminée par l'instance constitutionnelle."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T05:56:31.051426+00:00",
+  "generated_at": "2026-08-20T09:33:22.974036+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

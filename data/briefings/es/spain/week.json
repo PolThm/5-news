@@ -2,63 +2,76 @@
   "clusters": [
     {
       "_linked_ids": [
-        "8ca917929193b72a"
+        "89e8fe7963a0bfd1"
       ],
-      "agenda_category": "Health and environment",
-      "agenda_day": "2026-08-19",
+      "agenda_category": "Armed conflicts and attacks",
+      "agenda_day": "2026-08-16",
       "agenda_sources": [
-        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
+        "https://www.politico.eu/article/nato-fighter-jet-shoot-drone-romania/"
       ],
-      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
-      "cluster_id": "8ca917929193b72a",
+      "agenda_text": "A Spanish F/A-18 Hornet jet shoots down a Russian drone in Romanian airspace. The drone was downed near Galați after entering from Moldova",
+      "cluster_id": "89e8fe7963a0bfd1",
       "corroborated": true,
       "countries": [
-        "france",
-        "pa",
-        "united-states"
+        "spain"
       ],
-      "country_count": 3,
-      "headline": "Moderna y Merck anuncian resultados positivos de vacuna contra el cáncer de piel",
-      "independent_source_count": 3,
+      "country_count": 1,
+      "headline": "Un caza español de la OTAN derriba un dron que violaba el espacio aéreo de Rumanía",
+      "independent_source_count": 2,
       "members": [
         {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
-        },
-        {
-          "language": "en",
-          "source": "investors.com",
-          "source_country": "united-states",
-          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html"
         },
         {
           "language": "es",
-          "source": "ultimahora.com",
-          "source_country": "pa",
-          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/f-18-espanoles-intervienen-rumania-por-entrada-un-dron-su-espacio-aereo_7027556_0.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260816/11614684/avion-combate-espanol-otan-derriba-dron-violaba-espacio-aereo-rumania.html"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "spain",
-        "united-kingdom"
+        "md",
+        "ro",
+        "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "investors.com",
-      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
+      "origin_country": "spain",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/f-18-espanoles-intervienen-rumania-por-entrada-un-dron-su-espacio-aereo_7027556_0.html",
       "rank": 1,
-      "summary": "Moderna y Merck han presentado resultados positivos en ensayos clínicos de fase tardía de una vacuna experimental contra el melanoma avanzado. El anuncio ha generado un impacto significativo en los mercados financieros, con el precio de las acciones de ambas empresas aumentando considerablemente. Este avance representa un progreso importante en el desarrollo de tratamientos innovadores contra el cáncer de piel."
+      "score": {
+        "components": {
+          "corroboration": 0.3333,
+          "freshness": 0.25,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5297,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Dos F-18 españoles desplegados en Rumanía como parte de la misión de la OTAN despegaron en respuesta a una alerta por la entrada de un dron no identificado en el espacio aéreo rumano cerca del límite con Ucrania. Uno de los cazas españoles interceptó y derribó el dron que había violado la soberanía aérea rumana.",
+      "takeaway": "La defensa aérea de Rumanía requiere intervención activa de cazas aliados para proteger su espacio aéreo en la región fronteriza con Ucrania.",
+      "why_it_matters": "El incidente muestra que las fuerzas aéreas de la OTAN están interviniendo activamente para proteger el espacio aéreo rumano en una región con tensiones derivadas del conflicto en Ucrania."
     },
     {
       "_linked_ids": [
-        "76decac05d1eef58"
+        "76decac05d1eef58",
+        "a55ff30132b3986e"
       ],
       "agenda_category": "Disasters and accidents",
       "agenda_day": "2026-08-18",
       "agenda_sources": [
-        "https://amp.expansion.com/sociedad/2026/08/18/6a843492468aebd60e8b4596.html"
+        "https://www.bbc.com/news/articles/cdx755dyy1yo"
       ],
       "agenda_text": "A second earthquake strikes the province of Granada, in Spain. Damage and injures are reported in Granada and the surrounding area, while the Alhambra is evacuated",
       "cluster_id": "76decac05d1eef58",
@@ -67,7 +80,7 @@
         "united-kingdom"
       ],
       "country_count": 1,
-      "headline": "Un terremoto sacude la histórica ciudad de Granada en España",
+      "headline": "Un terremoto sacude la histórica Granada en España",
       "independent_source_count": 1,
       "members": [
         {
@@ -84,50 +97,21 @@
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
       "rank": 2,
-      "summary": "Un terremoto afectó a Granada, la histórica ciudad española, dejando a tres personas heridas. El movimiento sísmico impactó la región, aunque los detalles específicos sobre la magnitud del terremoto y las circunstancias exactas de las lesiones no se precisan en la información disponible."
-    },
-    {
-      "_linked_ids": [
-        "89e8fe7963a0bfd1"
-      ],
-      "agenda_category": "Armed conflicts and attacks",
-      "agenda_day": "2026-08-16",
-      "agenda_sources": [
-        "https://www.politico.eu/article/nato-fighter-jet-shoot-drone-romania/"
-      ],
-      "agenda_text": "A Spanish F/A-18 Hornet jet shoots down a Russian drone in Romanian airspace. The drone was downed near Galați after entering from Moldova",
-      "cluster_id": "89e8fe7963a0bfd1",
-      "corroborated": true,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "headline": "Caza español derriba un dron en el espacio aéreo de Rumania",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html"
+      "score": {
+        "components": {
+          "corroboration": 0.3333,
+          "freshness": 0.5,
+          "geographic_relevance": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.2,
+          "source_reliability": 0.2727
         },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260816/11614684/avion-combate-espanol-otan-derriba-dron-violaba-espacio-aereo-rumania.html"
-        }
-      ],
-      "mentioned_countries": [
-        "md",
-        "ro",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 3,
-      "summary": "Dos F-18 españoles desplegados en Rumania como parte de la misión de la OTAN despegaron por una alerta de dron en el límite con Ucrania. Durante la operación, uno de los cazas españoles derribó un dron que estaba violando el espacio aéreo rumano."
+        "total": 0.4316,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Un terremoto ha afectado a la ciudad de Granada, España, causando tres lesionados según reporta la BBC. El sismo impactó esta zona histórica, aunque los detalles específicos sobre la magnitud y otras consecuencias no se detallan en la información disponible.",
+      "takeaway": "Un terremoto en Granada, España dejó tres heridos.",
+      "why_it_matters": "El terremoto resultó en al menos tres personas lesionadas en una ciudad de importancia histórica."
     },
     {
       "agenda_category": "Law and crime",
@@ -140,7 +124,7 @@
       "corroborated": false,
       "countries": [],
       "country_count": 0,
-      "headline": "Tiroteo en Isla Cristina deja tres muertos, incluido un adolescente",
+      "headline": "Tiroteo en Isla Cristina deja tres muertos e investigación de tráfico de drogas",
       "independent_source_count": 0,
       "members": [],
       "mentioned_countries": [
@@ -149,48 +133,27 @@
       "origin_country": "unknown",
       "outbound_source": null,
       "outbound_url": null,
-      "rank": 4,
-      "summary": "Un tiroteo ocurrido en Isla Cristina, Andalucía, España, causó la muerte de tres personas, entre ellas un adolescente, e hirió a dos más. La policía investiga el ataque como posible disputa entre grupos rivales dedicados al tráfico de drogas y continúa la búsqueda del tirador responsable."
-    },
-    {
-      "_linked_ids": [
-        "a55ff30132b3986e"
-      ],
-      "agenda_category": "Disasters and accidents",
-      "agenda_day": "2026-08-14",
-      "agenda_sources": [
-        "https://www.thenews.com.pk/latest/1412340-spain-rocked-by-48-magnitude-earthquake-with-epicentre-near-granada"
-      ],
-      "agenda_text": "A earthquake strikes the province of Granada in Spain, with damage reported in Granada and the surrounding area, and being felt in Madrid",
-      "cluster_id": "a55ff30132b3986e",
-      "corroborated": true,
-      "countries": [
-        "united-kingdom"
-      ],
-      "country_count": 1,
-      "headline": "Un terremoto sacude la histórica Granada en España e injuria a tres personas",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
-      "summary": "Un terremoto afectó a la ciudad de Granada en España, dejando a tres personas heridas. El seísmo impactó la región histórica, generando preocupación entre los residentes y las autoridades locales."
+      "rank": 3,
+      "score": {
+        "components": {
+          "corroboration": 0.0,
+          "freshness": 0.25,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.0,
+          "source_reliability": 0.0
+        },
+        "total": 0.285,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Un tiroteo en Isla Cristina, Andalucía, España, dejó tres personas muertas, entre ellas un adolescente, y dos heridas. La policía investiga el ataque como un posible enfrentamiento entre grupos rivales de traficantes de drogas y busca al autor de los disparos.",
+      "takeaway": "Tres personas, incluyendo un menor de edad, fueron asesinadas en un tiroteo en Isla Cristina mientras la policía investiga una posible conexión con rivalidades en el tráfico de drogas.",
+      "why_it_matters": "Este incidente refleja la violencia asociada con actividades delictivas en la región y destaca la respuesta investigativa de las autoridades locales ante crímenes graves."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T05:56:31.051426+00:00",
+  "generated_at": "2026-08-20T09:33:22.974036+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

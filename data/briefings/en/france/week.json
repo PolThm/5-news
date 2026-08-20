@@ -2,80 +2,6 @@
   "clusters": [
     {
       "_linked_ids": [
-        "8ca917929193b72a"
-      ],
-      "agenda_category": "Health and environment",
-      "agenda_day": "2026-08-19",
-      "agenda_sources": [
-        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
-      ],
-      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
-      "cluster_id": "8ca917929193b72a",
-      "corroborated": true,
-      "countries": [
-        "france",
-        "pa",
-        "united-states"
-      ],
-      "country_count": 3,
-      "headline": "Moderna and Merck announce positive results for experimental skin cancer vaccine",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
-        },
-        {
-          "language": "en",
-          "source": "investors.com",
-          "source_country": "united-states",
-          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.com",
-          "source_country": "pa",
-          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "spain",
-        "united-kingdom"
-      ],
-      "origin_country": "france",
-      "outbound_source": "investors.com",
-      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
-      "rank": 1,
-      "summary": "Moderna and Merck have reported positive results from late-stage trials of an experimental vaccine targeting advanced melanoma. The announcement drove significant stock increases for both companies, with Moderna's stock rising 90 percent. The vaccine represents progress in developing immunotherapy treatments for skin cancer."
-    },
-    {
-      "agenda_category": "International relations",
-      "agenda_day": "2026-08-17",
-      "agenda_sources": [
-        "https://www.reuters.com/world/middle-east/iran-says-two-french-embassy-employees-barred-returning-2026-08-17/"
-      ],
-      "agenda_text": "Iran says it barred two French embassy employees from returning for allegedly violating the Vienna Convention through activities supporting Iranian civil society. France says their work involved programs for civil society, students, and artists",
-      "cluster_id": "a08dcfdf0c6575a7",
-      "corroborated": false,
-      "countries": [],
-      "country_count": 0,
-      "headline": "Iran bars two French embassy employees from returning",
-      "independent_source_count": 0,
-      "members": [],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "unknown",
-      "outbound_source": null,
-      "outbound_url": null,
-      "rank": 2,
-      "summary": "Iran said it prevented two French embassy employees from returning to the country, accusing them of violating the Vienna Convention through activities that supported Iranian civil society. France stated that the employees' work involved programs for civil society, students, and artists."
-    },
-    {
-      "_linked_ids": [
         "62ea1adba6b2c592"
       ],
       "agenda_category": "Disasters and accidents",
@@ -90,7 +16,7 @@
         "spain"
       ],
       "country_count": 1,
-      "headline": "French family rescued after drifting off Thailand coast for 16 hours",
+      "headline": "French family rescued after drifting for more than 16 hours off Thailand coast",
       "independent_source_count": 1,
       "members": [
         {
@@ -106,8 +32,59 @@
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260815/11614437/rescatada-familia-francesa-pasar-mas-16-horas-deriva-frente-costas-tailandia.html",
-      "rank": 3,
-      "summary": "A French family was rescued after spending more than 16 hours adrift off the coast of Thailand, according to a report from La Vanguardia. The family was recovered following what appears to have been a maritime incident, though specific details about their situation and rescue operation are not provided in the available reporting."
+      "rank": 1,
+      "score": {
+        "components": {
+          "corroboration": 0.3333,
+          "freshness": 0.125,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.2,
+          "source_reliability": 0.2727
+        },
+        "total": 0.4441,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "A French family was rescued after spending more than 16 hours adrift off the coast of Thailand, according to reporting from La Vanguardia.",
+      "takeaway": "A French family spent over 16 hours drifting off Thailand before being rescued.",
+      "why_it_matters": "The rescue ended a prolonged maritime emergency involving a family at sea."
+    },
+    {
+      "agenda_category": "International relations",
+      "agenda_day": "2026-08-17",
+      "agenda_sources": [
+        "https://www.reuters.com/world/middle-east/iran-says-two-french-embassy-employees-barred-returning-2026-08-17/"
+      ],
+      "agenda_text": "Iran says it barred two French embassy employees from returning for allegedly violating the Vienna Convention through activities supporting Iranian civil society. France says their work involved programs for civil society, students, and artists",
+      "cluster_id": "a08dcfdf0c6575a7",
+      "corroborated": false,
+      "countries": [],
+      "country_count": 0,
+      "headline": "Iran blocks two French embassy staff from returning",
+      "independent_source_count": 0,
+      "members": [],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "unknown",
+      "outbound_source": null,
+      "outbound_url": null,
+      "rank": 2,
+      "score": {
+        "components": {
+          "corroboration": 0.0,
+          "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.0,
+          "source_reliability": 0.0
+        },
+        "total": 0.2954,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Iran said it barred two French embassy employees from returning to the country, saying they violated the Vienna Convention through activities supporting Iranian civil society. France stated their work involved programs for civil society, students, and artists.",
+      "takeaway": "Iran and France have different accounts of what the two French embassy employees were doing, with Iran citing Vienna Convention violations while France describes their role as supporting cultural and educational programs.",
+      "why_it_matters": "The incident highlights diplomatic tensions between Iran and France regarding the conduct of embassy personnel and their engagement with Iranian civil society."
     },
     {
       "agenda_category": "Law and crime",
@@ -121,7 +98,7 @@
       "corroborated": false,
       "countries": [],
       "country_count": 0,
-      "headline": "France's Constitutional Council rejects social media ban for minors under 15",
+      "headline": "France's Constitutional Council blocks social media ban for minors under 15",
       "independent_source_count": 0,
       "members": [],
       "mentioned_countries": [
@@ -130,13 +107,27 @@
       "origin_country": "unknown",
       "outbound_source": null,
       "outbound_url": null,
-      "rank": 4,
-      "summary": "France's Constitutional Council has blocked legislation that would have prohibited social media access for children under the age of 15. Following the rejection, President Emmanuel Macron has instructed Prime Minister Sebastian Lecornu to revise the draft bill and resubmit it to the Council for further review."
+      "rank": 3,
+      "score": {
+        "components": {
+          "corroboration": 0.0,
+          "freshness": 0.125,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.0,
+          "source_reliability": 0.0
+        },
+        "total": 0.2725,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "France's Constitutional Council has rejected a bill that would have prohibited social media access for people under 15 years old. Following this decision, President Emmanuel Macron has instructed Prime Minister Sebastian Lecornu to revise the draft legislation and submit it again to the Council for review.",
+      "takeaway": "The French government must now redraft its proposed social media restrictions for minors to address the Constitutional Council's concerns before resubmission.",
+      "why_it_matters": "The outcome demonstrates how constitutional review processes can block proposed legislation, even when initiated by the executive branch, and shows the iterative process sometimes required to develop legally compliant policies."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T05:56:31.051426+00:00",
+  "generated_at": "2026-08-20T09:33:22.974036+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

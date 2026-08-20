@@ -1,142 +1,172 @@
 {
   "clusters": [
     {
-      "agenda_category": "Health and environment",
+      "agenda_category": "Disasters and accidents",
       "agenda_day": "2026-08-19",
       "agenda_sources": [
-        "https://www.cnbc.com/2026/08/19/moderna-merck-cancer-vaccine-shows-initial-late-stage-melanoma-data.html"
+        "https://www.nbcnews.com/news/us-news/4-americans-killed-helicopter-crash-kenya-rcna593384"
       ],
-      "agenda_text": "Merck and Moderna reports that their cancer vaccine candidate showed positive results in their late-stage trial in preventing a recurrence of melanoma, including in high-risk patients",
-      "cluster_id": "8ca917929193b72a",
+      "agenda_text": "Six passengers, including Ecuadorian intelligence head Michele Sensi-Contugi and his wife, and the pilot are killed in a helicopter crash in Samburu County, Kenya",
+      "cluster_id": "225b673380aa75ee",
       "corroborated": true,
       "countries": [
-        "france",
-        "pa",
-        "united-states"
+        "brazil",
+        "it",
+        "rs",
+        "unknown",
+        "vm"
       ],
-      "country_count": 3,
-      "headline": "Moderna and Merck announce positive results for experimental skin cancer vaccine",
-      "independent_source_count": 3,
+      "country_count": 5,
+      "headline": "Tourist helicopter crashes in Kenya, killing Ecuador intelligence chief and six others",
+      "independent_source_count": 6,
       "members": [
         {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/sante/cancer-de-la-peau-moderna-et-merck-annoncent-les-resultats-positifs-d-un-vaccin-experimental-30304119.php"
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-19/ce-stato-un-incidente-in-elicottero-in-kenya-sono-morte-sette-persone-tra-cui-il-direttore-dellintelligence-dellecuador/19585035/"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/19/helicoptero-turistico-cai-no-quenia-e-deixa-7-mortos.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "tctelevision.com",
+          "source_country": "unknown",
+          "url": "https://tctelevision.com/lo-ultimo/michel-sensi-contugi-y-su-esposa-mueren-en-accidente-aereo-en-kenia/"
+        },
+        {
+          "language": "es",
+          "source": "rt.com",
+          "source_country": "rs",
+          "url": "https://actualidad.rt.com/actualidad/623142-morir-jefe-inteligencia-ecuador-accidente-kenia"
         },
         {
           "language": "en",
-          "source": "investors.com",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/08/19/seven-dead-after-tourist-helicopter-crashes-in-northern-kenya"
+        },
+        {
+          "language": "vie",
+          "source": "thanhnien.vn",
+          "source_country": "vm",
+          "url": "https://thanhnien.vn/truc-thang-roi-o-kenya-truong-tinh-bao-ecuador-cung-5-nguoi-my-chet-185260820071600181.htm"
+        }
+      ],
+      "mentioned_countries": [
+        "ec",
+        "it",
+        "ke"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/2026/08/19/seven-dead-after-tourist-helicopter-crashes-in-northern-kenya",
+      "rank": 1,
+      "score": {
+        "components": {
+          "corroboration": 0.7143,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.619
+        },
+        "total": 0.743,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "A tourist helicopter crashed in northern Kenya, resulting in seven deaths including Michel Sensi-Contugi, the head of Ecuador's intelligence agency, and his wife who was a stylist. The aircraft went down during what was described as a tourist flight.",
+      "takeaway": "Ecuador's top intelligence official died in a helicopter accident in Kenya along with six other people, including his spouse.",
+      "why_it_matters": "The death of Ecuador's intelligence chief removes a key government security official and creates a significant leadership gap in the country's intelligence operations."
+    },
+    {
+      "agenda_category": "Armed conflicts and attacks",
+      "agenda_day": "2026-08-19",
+      "agenda_sources": [
+        "https://abcnews.com/International/massive-russian-missile-strike-kyiv-kills-12-people/story?id=135797221"
+      ],
+      "agenda_text": "Ukrainian president Volodymyr Zelenskyy says that a Russian missile and drone attack on Kyiv killed at least 12 people and injured 40 others, damaging residential buildings, a children's hospital, and a school",
+      "cluster_id": "d144092235b756a6",
+      "corroborated": true,
+      "countries": [
+        "aj",
+        "eg",
+        "nl",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 5,
+      "headline": "Russian missile attack on Kyiv kills at least 12, wounds dozens",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "ar",
+          "source": "youm7.com",
+          "source_country": "eg",
+          "url": "https://www.youm7.com/story/2026/8/20/12-%D9%82%D8%AA%D9%8A%D9%84%D8%A7-%D9%8840-%D9%85%D8%B5%D8%A7%D8%A8%D8%A7-%D9%81%D9%8A-%D9%87%D8%AC%D9%88%D9%85-%D8%B1%D9%88%D8%B3%D9%8A-%D9%88%D8%A7%D8%B3%D8%B9-%D8%B9%D9%84%D9%89-%D9%83%D9%8A%D9%8A%D9%81/7519087"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2627552"
+        },
+        {
+          "language": "axe",
+          "source": "azadliq.org",
+          "source_country": "aj",
+          "url": "https://www.azadliq.org/a/rusiya-kiyevi-vurub/33834185.html"
+        },
+        {
+          "language": "en",
+          "source": "nypost.com",
           "source_country": "united-states",
-          "url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/"
+          "url": "https://nypost.com/2026/08/20/world-news/russian-missile-barrage-across-ukraines-capital-kills-at-least-12-and-wounds-33/"
         },
         {
           "language": "es",
-          "source": "ultimahora.com",
-          "source_country": "pa",
-          "url": "https://www.ultimahora.com/moderna-y-merck-avanzan-en-vacuna-contra-el-cancer-de-piel-con-melanoma-avanzado"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "spain",
-        "united-kingdom"
-      ],
-      "origin_country": "france",
-      "outbound_source": "investors.com",
-      "outbound_url": "https://www.investors.com/news/technology/moderna-stock-skyrockets-over-60-merck-jumpslate-stage-cancer-vaccine-trial-win/",
-      "rank": 1,
-      "summary": "Moderna and Merck have reported positive results from late-stage trials of an experimental vaccine targeting advanced melanoma. The announcement drove significant stock increases for both companies, with Moderna's stock rising 90 percent. The vaccine represents progress in developing immunotherapy treatments for skin cancer."
-    },
-    {
-      "agenda_category": "International relations",
-      "agenda_day": "2026-08-17",
-      "agenda_sources": [
-        "https://www.reuters.com/world/middle-east/iran-says-two-french-embassy-employees-barred-returning-2026-08-17/"
-      ],
-      "agenda_text": "Iran says it barred two French embassy employees from returning for allegedly violating the Vienna Convention through activities supporting Iranian civil society. France says their work involved programs for civil society, students, and artists",
-      "cluster_id": "a08dcfdf0c6575a7",
-      "corroborated": false,
-      "countries": [],
-      "country_count": 0,
-      "headline": "Iran bars two French embassy employees from returning",
-      "independent_source_count": 0,
-      "members": [],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "unknown",
-      "outbound_source": null,
-      "outbound_url": null,
-      "rank": 2,
-      "summary": "Iran said it prevented two French embassy employees from returning to the country, accusing them of violating the Vienna Convention through activities that supported Iranian civil society. France stated that the employees' work involved programs for civil society, students, and artists."
-    },
-    {
-      "agenda_category": "Disasters and accidents",
-      "agenda_day": "2026-08-14",
-      "agenda_sources": [
-        "https://www.cbsnews.com/news/thailand-jet-ski-family-rescue/"
-      ],
-      "agenda_text": "Thai rescuers find a French tourist and his two sons alive after they spend more than 16 hours at sea when their rented jet ski capsizes off Ko Samui. The family receives medical checks and is discharged",
-      "cluster_id": "62ea1adba6b2c592",
-      "corroborated": true,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "headline": "French family rescued after drifting off Thailand coast for 16 hours",
-      "independent_source_count": 1,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260815/11614437/rescatada-familia-francesa-pasar-mas-16-horas-deriva-frente-costas-tailandia.html"
+          "url": "https://www.20minutos.es/internacional/un-ataque-ruso-gran-escala-contra-kiev-provoca-menos-cuatro-muertos_7027498_0.html"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "rs",
+        "up"
       ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260815/11614437/rescatada-familia-francesa-pasar-mas-16-horas-deriva-frente-costas-tailandia.html",
-      "rank": 3,
-      "summary": "A French family was rescued after spending more than 16 hours adrift off the coast of Thailand, according to a report from La Vanguardia. The family was recovered following what appears to have been a maritime incident, though specific details about their situation and rescue operation are not provided in the available reporting."
-    },
-    {
-      "agenda_category": "Law and crime",
-      "agenda_day": "2026-08-14",
-      "agenda_sources": [
-        "https://www.rfi.fr/en/france/20260814-top-french-court-scraps-social-media-ban-for-children-under-15",
-        "https://www.businessoffashion.com/news/media/frances-top-court-blocks-social-media-ban-for-under-15s/"
-      ],
-      "agenda_text": "The Constitutional Council of France blocks a bill proposing a ban social media access for minors under the age of 15. President Emmanuel Macron orders prime minister Sebastien Lecornu to re-work the draft legislation and resubmit it to the Council",
-      "cluster_id": "0535c3562f88cdc9",
-      "corroborated": false,
-      "countries": [],
-      "country_count": 0,
-      "headline": "France's Constitutional Council rejects social media ban for minors under 15",
-      "independent_source_count": 0,
-      "members": [],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "unknown",
-      "outbound_source": null,
-      "outbound_url": null,
-      "rank": 4,
-      "summary": "France's Constitutional Council has blocked legislation that would have prohibited social media access for children under the age of 15. Following the rejection, President Emmanuel Macron has instructed Prime Minister Sebastian Lecornu to revise the draft bill and resubmit it to the Council for further review."
+      "origin_country": "aj",
+      "outbound_source": "nos.nl",
+      "outbound_url": "https://nos.nl/l/2627552",
+      "rank": 2,
+      "score": {
+        "components": {
+          "corroboration": 0.7143,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6
+        },
+        "total": 0.7327,
+        "weights_version": "2026-08-20.2"
+      },
+      "summary": "Russia launched a large-scale missile attack across Ukraine's capital and other areas of the country, resulting in at least 12 deaths and between 33 and 40 injured. The attack struck multiple targets including a children's hospital in Kyiv.",
+      "takeaway": "A major Russian bombardment of Kyiv caused significant casualties among the civilian population.",
+      "why_it_matters": "Civilians in Ukraine's capital continue to face direct harm from Russian military strikes, including vulnerable populations such as hospitalized children."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T05:56:31.051426+00:00",
+  "generated_at": "2026-08-20T09:33:22.974036+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,
-  "served_zone": "france",
-  "served_zone_continent": "europe",
-  "served_zone_kind": "country",
+  "served_zone": "europe",
+  "served_zone_continent": null,
+  "served_zone_kind": "continent",
   "zone": "france",
   "zone_continent": "europe",
   "zone_kind": "country"

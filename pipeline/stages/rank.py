@@ -58,6 +58,16 @@ from pipeline.stages import (
 STAGE = "rank"
 
 
+# How many reference newsrooms make an item publishable on their own.
+#
+# Three, not two: two is what the subject stage already requires to call
+# something an event, so qualifying at two would make this route admit every
+# event and the floor would stop meaning anything. Three independent serious
+# newsrooms leading with the same story is the smallest number that cannot be
+# one newsroom's preoccupation plus an aggregator.
+MIN_REFERENCE_NEWSROOMS_TO_QUALIFY = 3
+
+
 def qualifies(cluster: dict) -> bool:
     """Whether an item may be published.
 
@@ -73,17 +83,34 @@ def qualifies(cluster: dict) -> bool:
     dropping wars, elections and diplomacy while keeping road accidents,
     because accidents get syndicated and diplomacy gets reported once.
 
+    **Reference newsrooms.** An item that this many serious newsrooms led with
+    has been vouched for by editors, the same kind of claim the chronicle route
+    makes and a stronger one than a rerun count.
+
+    This route exists because the two-country floor below structurally excludes
+    domestic news. `country_count` counts where the OUTLETS sit, so a French
+    court case carried by Le Monde, Le Figaro and Liberation has a count of one
+    and failed -- however serious the story. Measured on 2026-08-20: of 45
+    events, exactly one cleared the floor for France and one for Spain, so both
+    country Briefings fell back to Europe and served an item about Harry and
+    Meghan. A national press review that cannot publish national news is not
+    one.
+
     **Corroborated consensus.** Otherwise the original floor stands (PRD
     Glossary, Qualifying Cluster): at least 2 Independent Sources from at least
     2 distinct countries, both independent and both required -- 5 sources all
     from one country still fails. This is what keeps an item that nothing
-    vouched for out of a Briefing when no editor vouched for it either.
+    vouched for out of a Briefing when no editor vouched for it either. It is
+    still the only route open to an item with no editorial provenance at all.
 
-    The Consensus Score is unaffected either way: it still reports exactly what
-    the item's own source list can show, which for an uncorroborated editorial
-    item is zero, and the reader is sent to the source the chronicle cited.
+    The Consensus Score is unaffected by any of this: it still reports exactly
+    what the item's own source list can show, which for an uncorroborated
+    editorial item is zero, and the reader is sent to the source the chronicle
+    cited.
     """
     if cluster.get("agenda_category"):
+        return True
+    if cluster.get("reference_newsroom_count", 0) >= MIN_REFERENCE_NEWSROOMS_TO_QUALIFY:
         return True
     return (
         cluster["independent_source_count"] >= MIN_INDEPENDENT_SOURCES

@@ -55,6 +55,7 @@ from typing import Protocol
 from xml.etree import ElementTree
 
 from pipeline.adapters import CollectionResult, Failure
+from pipeline.config import country_slugs_in_text
 from pipeline.domain import ArticleRecord
 
 ADAPTER = "rss"
@@ -345,6 +346,20 @@ def _record_from(
         language=language,
         collected_by=ADAPTER,
         wire_agency=wire_agency,
+        # Read out of the headline, because RSS publishes no locations at all.
+        #
+        # That absence had a cost: measured on 2026-08-20, 0 of 1,151 reference
+        # articles carried `mentioned_countries` against 8,790 of 11,120 from
+        # GDELT, so an event covered only by the French press -- a French court
+        # case, the thing a France Briefing exists for -- could not be placed in
+        # France. Both country Briefings fell back to Europe and served an item
+        # about Harry and Meghan.
+        #
+        # The headline, not the whole entry: a summary or a category list names
+        # countries the article merely mentions, and `mentioned_countries` is
+        # meant to say what a piece is ABOUT. A headline naming a country is
+        # about that country.
+        mentioned_countries=tuple(country_slugs_in_text(title)),
     )
 
 

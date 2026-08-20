@@ -2,18 +2,105 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-france-a29369d0679c"
+        "subject-scouarnec-440c46973e69",
+        "subject-scouarnec-8f8412f6e9e3",
+        "subject-scouarnec-aa46f9d99b04"
       ],
-      "cluster_id": "subject-france-a29369d0679c",
-      "coherence": 0.5832277077818396,
+      "cluster_id": "subject-scouarnec-8f8412f6e9e3",
+      "coherence": 0.7041585021429209,
+      "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La ola de calor iniciada a finales de julio se convierte en la más larga registrada en Francia",
+      "headline": "Se abre investigación judicial contra Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/affaire-le-scouarnec-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles-20260819_XTFYILYPWZBF3LXEI2HMFPS4ZM/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/france/200826/le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-quarante-agressions-sexuelles"
+        },
+        {
+          "language": "fr",
+          "source": "maville.com",
+          "source_country": "france",
+          "url": "https://brignoles.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "liberation.fr",
+        "mediapart.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.7042,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.3333,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5606,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "scouarnec",
+      "subject_names": [
+        "scouarnec"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Una investigación judicial ha sido abierta contra Joël Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales, según reportan varios medios franceses.",
+      "takeaway": "La investigación judicial marca una expansión sustancial de los delitos sexuales imputados a Le Scouarnec más allá de los casos anteriormente conocidos.",
+      "why_it_matters": "Los nuevos cargos amplían significativamente las acusaciones previas contra Le Scouarnec en el sistema de justicia francés."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-55dbb3652e8e",
+        "subject-france-a29369d0679c"
+      ],
+      "cluster_id": "subject-france-55dbb3652e8e",
+      "coherence": 0.5927013380263494,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "La ola de calor en Francia igualó el récord de duración de 1983",
       "independent_source_count": 6,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
+        },
         {
           "language": "fr",
           "source": "lefigaro.fr",
@@ -40,15 +127,9 @@
         },
         {
           "language": "fr",
-          "source": "franceinfo.fr",
+          "source": "notretemps.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html"
-        },
-        {
-          "language": "fr",
-          "source": "republicain-lorrain.fr",
-          "source_country": "france",
-          "url": "https://www.republicain-lorrain.fr/environnement/2026/08/20/cette-vague-de-chaleur-est-desormais-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-1983"
+          "url": "https://www.notretemps.com/depeches/france-la-vague-de-chaleur-debutee-fin-juillet-devient-la-plus-longue-ex-aequo-avec-1983-137553"
         }
       ],
       "mentioned_countries": [
@@ -57,201 +138,136 @@
       "origin_country": "france",
       "outbound_source": "la-croix.com",
       "outbound_url": "https://www.la-croix.com/societe/canicule-la-vague-de-chaleur-en-cours-devient-la-deuxieme-plus-longue-enregistree-en-france-20260819",
-      "rank": 1,
-      "reference_newsroom_count": 4,
+      "rank": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "france24.com",
         "francetvinfo.fr",
         "la-croix.com",
-        "lefigaro.fr"
+        "lefigaro.fr",
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5832,
+          "coherence": 0.5927,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "novelty": 1.0,
+          "impact": 0.3333,
+          "novelty": 0.5,
           "prominence": 0.6,
-          "source_reliability": 0.6667
+          "source_reliability": 0.68
         },
-        "total": 0.5746,
-        "weights_version": "2026-08-20.3"
+        "total": 0.4988,
+        "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
         "france",
+        "francia",
         "paris"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Una ola de calor que comenzó a finales de julio en Francia se ha convertido en la más larga jamás registrada en el país, igualando la duración de la ola de calor de julio de 1983, con una duración de veintitrés días.",
-      "takeaway": "La ola de calor actual iguala el récord histórico francés de duración más larga desde 1983.",
-      "why_it_matters": "Este récord confirma la intensidad y extensión sin precedentes de los eventos de calor extremo que experimenta Francia en la actualidad."
+      "subject_newsroom_count": 12,
+      "summary": "Una ola de calor que comenzó a finales de julio en Francia se ha convertido en la más larga registrada en el país, igualando la duración de la de 1983. Según los reportes, la onda de calor ha alcanzado veintitrés días de duración, lo que la posiciona al mismo nivel que el episodio extremo de hace cuatro décadas.",
+      "takeaway": "Francia está viviendo su ola de calor más larga en cuatro décadas.",
+      "why_it_matters": "Este evento climático afecta a la población francesa, que experimenta temperaturas extremas prolongadas durante casi un mes."
     },
     {
       "_linked_ids": [
-        "subject-scouarnec-440c46973e69",
-        "subject-scouarnec-aa46f9d99b04"
+        "subject-francois-fillon-1bc8c95ceb13"
       ],
-      "cluster_id": "subject-scouarnec-aa46f9d99b04",
-      "coherence": 0.6885743703101614,
+      "cluster_id": "subject-francois-fillon-1bc8c95ceb13",
+      "coherence": 0.5502201024541704,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Se abre investigación judicial contra Le Scouarnec por diez violaciones y cuarenta agresiones sexuales adicionales",
+      "headline": "François Fillon suspendido de la Legión de Honor tras condena por empleos ficticios",
       "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/affaire-le-scouarnec-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles-20260819_XTFYILYPWZBF3LXEI2HMFPS4ZM/"
+          "url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819"
+          "url": "https://www.la-croix.com/politique/francois-fillon-suspendu-de-la-legion-d-honneur-et-de-lordre-national-du-merite-20260820"
         },
         {
           "language": "fr",
           "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/france/200826/le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-quarante-agressions-sexuelles"
+          "url": "https://www.mediapart.fr/journal/politique/200826/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "maville.com",
           "source_country": "france",
-          "url": "https://saint-brieuc.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
+          "url": "https://draguignan.maville.com/actu/actudet_-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans_une-7445504_actu.Htm"
         },
         {
           "language": "fr",
-          "source": "laprovence.com",
+          "source": "maville.com",
           "source_country": "france",
-          "url": "https://www.laprovence.com/article/faits-divers-justice/1414881345283714/affaire-joel-le-scouarnec-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles"
+          "url": "https://hyeres.maville.com/actu/actudet_-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans_une-7445504_actu.Htm"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/politique/francois-fillon/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs_8154512.html#xtor=RSS-3-[lestitres]",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "francetvinfo.fr",
         "la-croix.com",
         "liberation.fr",
         "mediapart.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6886,
+          "coherence": 0.5502,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "novelty": 0.5,
+          "impact": 0.3333,
+          "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.619
+          "source_reliability": 0.6667
         },
-        "total": 0.5462,
-        "weights_version": "2026-08-20.3"
+        "total": 0.4894,
+        "weights_version": "2026-08-20.4"
       },
-      "subject_label": "scouarnec",
+      "subject_label": "francois fillon",
       "subject_names": [
-        "scouarnec"
+        "francois fillon",
+        "legion"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Las autoridades judiciales han abierto una investigación formal contra Joël Le Scouarnec por diez nuevos casos de violación y cuarenta agresiones sexuales, según reportes de múltiples medios franceses. Esta acción representa una ampliación significativa de los cargos en el caso que ya estaba siendo perseguido.",
-      "takeaway": "Las autoridades francesas han iniciado formalmente investigación contra Le Scouarnec por docenas de delitos sexuales adicionales no previamente procesados.",
-      "why_it_matters": "La apertura de esta investigación judicial formal expone a Le Scouarnec a nuevos procedimientos legales que podrían resultar en cargos y sentencias adicionales más allá de los que ya enfrentaba."
-    },
-    {
-      "_linked_ids": [
-        "subject-france",
-        "subject-france-af599d511af1"
-      ],
-      "cluster_id": "subject-france-af599d511af1",
-      "coherence": null,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-19",
-      "headline": "Francia y Alemania condenan declaraciones de un ministro israelí sobre Gaza",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/19/appels-d-itamar-ben-gvir-a-des-meurtres-a-gaza-la-france-et-l-allemagne-condamnent-les-propos-du-ministre-israelien_6749862_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/eliminez-en-30-ou-40-chaque-nuit-a-gaza-la-france-et-lallemagne-denoncent-les-propos-inhumains-dun-ministre-israelien-20260819_2DXG2G3FI5HCRFWE742PLQF4YU/"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/moyen-orient/20260819-des-gens-qui-ne-devraient-pas-%C3%AAtre-en-vie-la-france-d%C3%A9nonce-les-propos-du-ministre-ben-gvir-sur-gaza"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "germany",
-        "is"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/19/appels-d-itamar-ben-gvir-a-des-meurtres-a-gaza-la-france-et-l-allemagne-condamnent-les-propos-du-ministre-israelien_6749862_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "lemonde.fr",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.4852,
-        "weights_version": "2026-08-20.3"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "ben gvir",
-        "france",
-        "gaza",
-        "hind rajab",
-        "israel",
-        "paris"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "El ministro de extrema derecha israelí Itamar Ben Gvir ha hecho declaraciones que Francia y Alemania han catalogado como inhumanas e insoportables. Las declaraciones se refieren a habitantes de Gaza, y Francia ha denunciado específicamente sus comentarios sobre personas que según él no deberían estar vivas.",
-      "takeaway": "Dos gobiernos europeos importantes rechazaron públicamente las palabras de un ministro israelí sobre Gaza.",
-      "why_it_matters": "Las condenas de Francia y Alemania señalan una ruptura diplomática respecto a las declaraciones de un funcionario de alto nivel del gobierno israelí."
+      "subject_newsroom_count": 4,
+      "summary": "El antiguo primer ministro francés François Fillon ha sido suspendido de la Legión de Honor y de la Orden Nacional del Mérito después de su condena por empleos ficticios. La suspensión representa una consecuencia directa de la sentencia judicial en su contra.",
+      "takeaway": "Fillon perdió sus honores nacionales como resultado de su condena judicial por fraude laboral.",
+      "why_it_matters": "La suspensión le priva de las distinciones honoríficas que había recibido anteriormente en Francia."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T11:40:00.646375+00:00",
+  "generated_at": "2026-08-20T11:59:57.120100+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

@@ -2,28 +2,25 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-trump-5f4725914f53"
+        "subject-trump-05692ebafd7d"
       ],
-      "cluster_id": "subject-trump-5f4725914f53",
-      "coherence": 0.45140150939265034,
+      "cluster_id": "subject-trump-05692ebafd7d",
+      "coherence": 0.45637621215141977,
       "consequence": 3,
       "countries": [
-        "china",
-        "france",
+        "brazil",
+        "germany",
+        "india",
+        "mx",
         "spain",
-        "unknown"
+        "sy",
+        "united-states"
       ],
-      "country_count": 4,
+      "country_count": 7,
       "editorial_day": "2026-08-20",
-      "headline": "Trump anuncia una guerra económica sin precedentes contra Irán",
-      "independent_source_count": 9,
+      "headline": "Trump anuncia una guerra económica contra Irán con amenazas a países que proporcionen apoyo",
+      "independent_source_count": 12,
       "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/amerique/donald-trump-contre-liran-sa-nouvelle-campagne-economique-pour-isoler-teheran-KHMO5JJXPBBFVBDCWDKYVC6UKY/"
-        },
         {
           "language": "es",
           "source": "elpais.com",
@@ -55,30 +52,60 @@
           "url": "https://www.20minutos.es/internacional/trump-anuncia-una-ofensiva-economica-sin-precedentes-para-aislar-iran_7027493_0.html"
         },
         {
-          "language": "fr",
-          "source": "boursorama.com",
-          "source_country": "france",
-          "url": "https://www.boursorama.com/actualite-economique/actualites/contre-l-iran-trump-veut-mener-une-guerre-economique-sans-precedent-7f6fcda45254e15c3ad8b374fc00576b"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml"
         },
         {
           "language": "en",
-          "source": "italian.cri.cn",
-          "source_country": "china",
-          "url": "https://italian.cri.cn/2026/08/20/ARTI1787194972528179"
+          "source": "siasat.com",
+          "source_country": "india",
+          "url": "https://www.siasat.com/trump-announces-most-crushing-economic-operation-against-iran-3527638/"
+        },
+        {
+          "language": "en",
+          "source": "wcti12.com",
+          "source_country": "united-states",
+          "url": "https://wcti12.com/news/nation-world/trump-says-most-crushing-us-economic-operation-against-iran-is-underway-economic-operation-negotiations-strait-of-hormuz-water-trade-war-tehran-truth-social-oil-economic-consequences"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://oglobo.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-ira-e-ameaca-parceiros-com-represalias.ghtml"
+        },
+        {
+          "language": "de",
+          "source": "kreiszeitung.de",
+          "source_country": "germany",
+          "url": "https://www.kreiszeitung.de/politik/iran-krieg-trump-droht-mit-vernichtendster-wirtschaftsoperation-zr-94451423.html"
+        },
+        {
+          "language": "de",
+          "source": "finanzen.net",
+          "source_country": "germany",
+          "url": "https://www.finanzen.net/nachricht/aktien/roundup-2-trump-droht-iran-mit-wirtschaftskrieg-15888965"
         },
         {
           "language": "es",
-          "source": "noticiaslatam.lat",
-          "source_country": "unknown",
-          "url": "https://noticiaslatam.lat/20260820/trump-anuncia-una-guerra-economica-y-un-aislamiento-sin-precedentes-contra-iran-1174736829.html"
+          "source": "hispantv.com",
+          "source_country": "sy",
+          "url": "https://www.hispantv.com/noticias/ee-uu-/649009/trump-fracasado-campo-militar-anuncia-guerra-exonomica-devastadora-iran"
+        },
+        {
+          "language": "es",
+          "source": "globalmedia.mx",
+          "source_country": "mx",
+          "url": "https://www.globalmedia.mx/articles/trump_anuncia_guerra_economica_contra_iran"
         }
       ],
       "mentioned_countries": [
         "ir"
       ],
-      "origin_country": "china",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/trump-anuncia-una-ofensiva-economica-sin-precedentes-para-aislar-iran_7027493_0.html",
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml",
       "rank": 1,
       "reference_newsroom_count": 6,
       "reference_newsrooms": [
@@ -87,255 +114,62 @@
         "eldiario.es",
         "elpais.com",
         "europapress.es",
-        "lexpress.fr"
+        "globo.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4514,
-          "corroboration": 0.6667,
+          "coherence": 0.4564,
+          "corroboration": 0.7778,
           "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
+          "prominence": 0.75,
+          "source_reliability": 0.8049
         },
-        "total": 0.7286,
+        "total": 0.7493,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
       "subject_names": [
+        "casa blanca",
         "donald trump",
         "iran",
         "teheran",
         "trump"
       ],
-      "subject_newsroom_count": 30,
-      "summary": "Donald Trump ha anunciado una campaña económica de gran envergadura contra Irán, a la que ha denominado un \"día D económico\". La ofensiva incluye medidas de aislamiento económico descritas como sin precedentes y amenazas de consecuencias graves para cualquier país que proporcione apoyo financiero a Teherán.",
-      "takeaway": "Trump declara una ofensiva económica extrema contra Irán con advertencias para cualquier nación que lo apoye financieramente.",
-      "why_it_matters": "Las medidas buscan aislar económicamente a Irán y disuadir a otros países de brindarle asistencia financiera, lo que afectaría las relaciones comerciales internacionales de la república islámica."
-    },
-    {
-      "_linked_ids": [
-        "subject-china",
-        "subject-evergrande-cbc223d67815",
-        "subject-evergrande-cc722154110b",
-        "subject-evergrande-e7a5254e0105",
-        "subject-evergrande-fe6501ba213f"
-      ],
-      "cluster_id": "subject-evergrande-cbc223d67815",
-      "coherence": 0.528805996525004,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "nl",
-        "rs",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-08-20",
-      "headline": "Xu Jiayin, fundador del gigante inmobiliario chino Evergrande, condenado a cadena perpetua",
-      "independent_source_count": 20,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/en-chine-le-fondateur-d-evergrande-geant-immobilier-tombe-en-faillite-condamne-a-la-prison-a-vie_6750612_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/asie-pacifique/chine-xi-jiayin-fondateur-du-geant-immobilier-evergrande-condamne-a-la-prison-a-vie-20260820_BZ4HP7A3WVHJPFECOOPKFGG6AQ/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/chine/en-chine-le-fondateur-du-geant-immobilier-d-evergrande-condamne-a-la-prison-a-vie_8154677.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/asie-pacifique/20260820-le-fondateur-du-g%C3%A9ant-immobilier-evergrande-condamn%C3%A9-%C3%A0-la-prison-%C3%A0-vie-en-chine"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/asie-pacifique/20260820-chine-le-fondateur-du-g%C3%A9ant-de-l-immobilier-evergrande-xu-jiayin-condamn%C3%A9-%C3%A0-la-prison-%C3%A0-perp%C3%A9tuit%C3%A9"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-08-20/china-condena-a-cadena-perpetua-al-fundador-del-gigante-inmobiliario-evergrande.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/cadena-perpetua-fundador-gigante-inmobiliario-evergrande-cara-crisis-ladrillo-china_1_13456994.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/inmobiliario/2026/08/20/6a86cbf1468aeba1278b4582.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/business/2026/aug/20/evergrande-founder-jailed-life-fraud-hui-ka-yan"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2627589"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/20/nx-s1-5939335/chinese-sentence-founder-evergrande"
-        },
-        {
-          "language": "en",
-          "source": "local10.com",
-          "source_country": "united-states",
-          "url": "https://www.local10.com/news/2026/08/20/chinese-court-sentences-founder-of-troubled-property-developer-evergrande-to-life-in-prison/"
-        },
-        {
-          "language": "en",
-          "source": "kawc.org",
-          "source_country": "united-states",
-          "url": "https://www.kawc.org/npr-news/2026-08-20/chinese-court-sentences-founder-of-property-developer-evergrande-to-life-in-prison"
-        },
-        {
-          "language": "en",
-          "source": "clickondetroit.com",
-          "source_country": "united-states",
-          "url": "https://www.clickondetroit.com/news/2026/08/20/chinese-court-sentences-founder-of-troubled-property-developer-evergrande-to-life-in-prison/"
-        },
-        {
-          "language": "fr",
-          "source": "laprovence.com",
-          "source_country": "france",
-          "url": "https://www.laprovence.com/article/france-monde/36768496246404/chine-le-fondateur-du-geant-dechu-evergrande-condamne-a-la-prison-a-vie"
-        },
-        {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/internacional/cadena-perpetua-fundador-gigante-evergrande-cinco-claves-crisis-inmobiliaria-que-sacude-china_202608206a86e703a5690f047384bb77.html"
-        },
-        {
-          "language": "es",
-          "source": "crhoy.com",
-          "source_country": "united-states",
-          "url": "https://crhoy.com:443/mundo/china-condena-al-fundador-del-gigante-inmobiliario-evergrande-a-cadena-perpetua/"
-        },
-        {
-          "language": "ru",
-          "source": "m24.ru",
-          "source_country": "rs",
-          "url": "https://www.m24.ru/news/20082026/932666"
-        }
-      ],
-      "mentioned_countries": [
-        "china"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/en-chine-le-fondateur-d-evergrande-geant-immobilier-tombe-en-faillite-condamne-a-la-prison-a-vie_6750612_3210.html",
-      "rank": 2,
-      "reference_newsroom_count": 13,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "elpais.com",
-        "expansion.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "nos.nl",
-        "npr.org",
-        "rfi.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5288,
-          "corroboration": 0.75,
-          "editorial_weight": 0.619,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.2,
-          "prominence": 0.8333,
-          "source_reliability": 0.8689
-        },
-        "total": 0.7028,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "evergrande",
-      "subject_names": [
-        "china",
-        "chine",
-        "chinese",
-        "evergrande",
-        "india"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "Xu Jiayin, fundador del gigante inmobiliario Evergrande, ha sido condenado a cadena perpetua en China. La sentencia se produce tras su declaración de culpabilidad por fraude fiscal a gran escala. Evergrande, una de las mayores empresas inmobiliarias del país, colapsó financieramente y se convirtió en símbolo de la crisis del sector inmobiliario chino.",
-      "takeaway": "El fundador de Evergrande enfrentará cadena perpetua por fraude fiscal tras el colapso de su imperio inmobiliario.",
-      "why_it_matters": "La condena marca un punto final en uno de los casos más emblemáticos de la crisis inmobiliaria china, que ha afectado a millones de compradores de viviendas y propietarios en el país."
+      "subject_newsroom_count": 31,
+      "summary": "El presidente Trump ha anunciado una ofensiva económica de gran escala contra Irán, describiéndola como la más devastadora y sin precedentes. La campaña incluye un aislamiento económico extremo de Teherán y amenazas de represalias contra cualquier país o entidad que brinde apoyo financiero al régimen iraní.",
+      "takeaway": "Trump busca aislar económicamente a Irán mediante presión sobre sus socios comerciales y financieros.",
+      "why_it_matters": "Los países que mantienen relaciones comerciales o financieras con Irán enfrentan ahora la amenaza de consecuencias económicas por parte de Estados Unidos, lo que potencialmente restringe el acceso de Irán a recursos financieros internacionales."
     },
     {
       "_linked_ids": [
         "5f2c0c66b2bdf61f",
         "9d54a26933a4ecd4",
         "f29cf613d0b68d9c",
+        "subject-gaza-25905b2430ba",
         "subject-gaza-2923476c5215",
         "subject-gaza-386466c20134",
         "subject-gaza-4603da765837",
         "subject-gaza-c033ae655fa1"
       ],
-      "cluster_id": "subject-gaza-2923476c5215",
-      "coherence": 0.47490655471402354,
+      "cluster_id": "subject-gaza-25905b2430ba",
+      "coherence": 0.488871669719102,
       "consequence": 2,
       "countries": [
+        "be",
         "brazil",
         "france",
+        "gh",
         "spain",
-        "tu",
-        "united-kingdom",
-        "united-states"
+        "sz",
+        "united-kingdom"
       ],
-      "country_count": 6,
+      "country_count": 7,
       "editorial_day": "2026-08-20",
-      "headline": "El ejército israelí admite que disparó contra el coche de Hind Rajab, niña de 5 años muerta en Gaza",
+      "headline": "El ejército israelí reconoce haber disparado contra el coche de Hind Rajab",
       "independent_source_count": 14,
       "members": [
         {
@@ -412,31 +246,31 @@
         },
         {
           "language": "en",
-          "source": "hurriyetdailynews.com",
-          "source_country": "tu",
-          "url": "https://www.hurriyetdailynews.com/israel-army-admits-firing-on-car-in-gaza-death-of-five-year-old-225848"
-        },
-        {
-          "language": "en",
-          "source": "kvoa.com",
-          "source_country": "united-states",
-          "url": "https://www.kvoa.com/news/national/israeli-military-admits-for-first-time-to-firing-on-car-carrying-5-year-old-hind/article_6d0e9ed2-3180-56d2-9af4-55c6e71b5376.html"
+          "source": "thechronicle.com.gh",
+          "source_country": "gh",
+          "url": "https://thechronicle.com.gh/israel-confirms-it-opened-fire-on-vehicle-carrying-five-year-old-hind-rajab-in-gaza/"
         },
         {
           "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/international/moyen-orient/gaza/mort-de-hind-rajab-a-gaza-l-armee-israelienne-reconnait-avoir-ouvert-le-feu-sur-la-voiture-ou-se-trouvait-la-fillette-de-cinq-ans-30308978.php"
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/international/moyen-orient/2026/08/19/larmee-israelienne-reconnait-avoir-tire-sur-la-voiture-de-hind-rajab-tuee-a-5-ans-a-gaza-4EFQM2AS4RG3PCVDT2IQPHRSKY/"
+        },
+        {
+          "language": "fr",
+          "source": "rts.ch",
+          "source_country": "sz",
+          "url": "https://www.rts.ch/info/monde/2026/article/gaza-l-armee-israelienne-reconnait-avoir-tire-sur-hind-rajab-29332802.html"
         }
       ],
       "mentioned_countries": [
         "is",
         "gz"
       ],
-      "origin_country": "brazil",
+      "origin_country": "be",
       "outbound_source": "eldiario.es",
       "outbound_url": "https://www.eldiario.es/internacional/israel-abre-investigacion-penal-asesinato-gaza-nina-cinco-anos-hind-rajab-familia_1_13455758.html",
-      "rank": 3,
+      "rank": 2,
       "reference_newsroom_count": 11,
       "reference_newsrooms": [
         "20minutos.es",
@@ -453,17 +287,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4749,
-          "corroboration": 0.75,
+          "coherence": 0.4889,
+          "corroboration": 0.7778,
           "editorial_weight": 0.5789,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.1429,
+          "novelty": 0.125,
           "prominence": 0.7778,
           "source_reliability": 0.84
         },
-        "total": 0.6825,
+        "total": 0.6877,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "gaza",
@@ -473,17 +307,187 @@
         "hind rajab",
         "israel"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "Dos años después de la muerte de Hind Rajab en Gaza, el ejército israelí ha reconocido por primera vez que sus soldados dispararon contra el vehículo en el que se encontraba la niña de cinco años. El reconocimiento ha llevado a las autoridades militares a abrir una investigación penal sobre los hechos que causaron su muerte.",
-      "takeaway": "Después de dos años, Israel admite formalmente que sus fuerzas dispararon contra el coche donde murió una niña palestina de cinco años e inicia una investigación penal al respecto.",
-      "why_it_matters": "El reconocimiento oficial del ejército israelí establece responsabilidad militar en la muerte de la menor y activa un proceso de investigación criminal que podría determinar las circunstancias y responsables del incidente."
+      "subject_newsroom_count": 24,
+      "summary": "Dos años después de la muerte de la niña palestina de cinco años Hind Rajab en Gaza, el ejército israelí ha admitido que sus soldados abrieron fuego contra el vehículo en el que se encontraba. La confirmación de los disparos ha llevado al ejército a abrir una investigación penal sobre la muerte de la menor.",
+      "takeaway": "Israel ha reconocido oficialmente que sus soldados dispararon contra el coche en el que viajaba Hind Rajab hace dos años en Gaza.",
+      "why_it_matters": "La investigación criminal abierta por el ejército israelí determina ahora responsabilidades legales por los hechos que causaron la muerte de la niña."
+    },
+    {
+      "_linked_ids": [
+        "subject-fedorov-06d2772a4948",
+        "subject-fedorov-6e46be2fb1ca",
+        "subject-fedorov-d1cd4134be4e",
+        "subject-fedorov-d31ff6e32436"
+      ],
+      "cluster_id": "subject-fedorov-06d2772a4948",
+      "coherence": 0.5876243835607925,
+      "consequence": 2,
+      "countries": [
+        "as",
+        "france",
+        "it",
+        "pk",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-08-20",
+      "headline": "El exministro de Defensa destituido de Ucrania, Mykhailo Fedorov, exige elecciones presidenciales",
+      "independent_source_count": 16,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/en-ukraine-l-ex-ministre-de-la-defense-mykhailo-fedorov-entre-en-rebellion-et-appelle-aux-elections-20260819"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-en-ukraine-fedorov-appelle-aux-%C3%A9lections-un-pari-politique-risqu%C3%A9"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260819-pour-mykha%C3%AFlo-fedorov-ex-ministre-de-la-d%C3%A9fense-des-%C3%A9lections-sont-possibles-en-ukraine"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/19/sacked-ukrainian-defence-minister-mykhailo-fedorov-calls-for-presidential-elections"
+        },
+        {
+          "language": "en",
+          "source": "milwaukeesun.com",
+          "source_country": "united-states",
+          "url": "http://www.milwaukeesun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "tennesseedaily.com",
+          "source_country": "united-states",
+          "url": "http://www.tennesseedaily.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "stlouisstar.com",
+          "source_country": "united-states",
+          "url": "http://www.stlouisstar.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "londonmercury.com",
+          "source_country": "united-kingdom",
+          "url": "http://www.londonmercury.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "2lt.com.au",
+          "source_country": "as",
+          "url": "https://www.2lt.com.au/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says/"
+        },
+        {
+          "language": "en",
+          "source": "sanantoniopost.com",
+          "source_country": "united-states",
+          "url": "http://www.sanantoniopost.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "pakistantelegraph.com",
+          "source_country": "pk",
+          "url": "http://www.pakistantelegraph.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "laosnews.net",
+          "source_country": "united-states",
+          "url": "http://www.laosnews.net/news/279252223/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says"
+        },
+        {
+          "language": "en",
+          "source": "caribbeanherald.com",
+          "source_country": "united-states",
+          "url": "http://www.caribbeanherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "as",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
+      "rank": 3,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "france24.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5876,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.25,
+          "prominence": 0.8,
+          "source_reliability": 0.8298
+        },
+        "total": 0.6752,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "fedorov",
+      "subject_names": [
+        "fedorov",
+        "krieg",
+        "mykhailo fedorov",
+        "russia",
+        "ucrania",
+        "ukraine",
+        "ukrainian",
+        "volodymyr zelensky",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Mykhailo Fedorov, quien fuera ministro de Defensa de Ucrania y fue cesado de su cargo, ha desafiado públicamente al presidente Volodymyr Zelensky y ha llamado a la celebración de elecciones presidenciales en el país. Según los reportes, Fedorov argumenta que Ucrania enfrenta una crisis de gobernanza y que las elecciones son posibles y necesarias.",
+      "takeaway": "Un ex ministro de Defensa despedido desafía públicamente al presidente ucraniano al exigir elecciones presidenciales.",
+      "why_it_matters": "El llamado de un exfuncionario destituido a elecciones representa un desafío político directo a la autoridad del presidente Zelensky durante un período crítico para el país."
     },
     {
       "_linked_ids": [
         "subject-ormuz-324cef744693"
       ],
       "cluster_id": "subject-ormuz-324cef744693",
-      "coherence": 0.4099568146944633,
+      "coherence": 0.41832689586345884,
       "consequence": 3,
       "countries": [
         "france",
@@ -492,7 +496,7 @@
       ],
       "country_count": 3,
       "editorial_day": "2026-08-18",
-      "headline": "Trump amenaza con bombardear Omán si obstaculiza negociaciones sobre el estrecho de Ormuz",
+      "headline": "Trump amenaza con bombardear Omán si interfiere en negociaciones del Estrecho de Ormuz",
       "independent_source_count": 4,
       "members": [
         {
@@ -536,7 +540,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.41,
+          "coherence": 0.4183,
           "corroboration": 0.6,
           "editorial_weight": 0.3333,
           "freshness": 0.5,
@@ -546,22 +550,21 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6682,
+        "total": 0.6692,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ormuz",
       "subject_names": [
+        "casa blanca",
         "donald trump",
-        "iran",
         "oman",
         "ormuz",
-        "teheran",
         "trump"
       ],
       "subject_newsroom_count": 9,
-      "summary": "Donald Trump ha amenazado con bombardear Omán si el país se interpone en las negociaciones para reapertura del estrecho de Ormuz. La amenaza va dirigida hacia un aliado histórico de Estados Unidos en la región del Golfo Pérsico, en el contexto de tensiones más amplias en Oriente Medio relacionadas con conflictos en Irán.",
-      "takeaway": "Trump utilizó una amenaza militar extrema contra un aliado estadounidense como herramienta de presión en negociaciones sobre control del estrecho de Ormuz.",
-      "why_it_matters": "La amenaza afecta directamente las relaciones diplomáticas entre Estados Unidos y Omán, un aliado clave para la estabilidad regional y el control de una de las rutas comerciales más importantes del mundo."
+      "summary": "Donald Trump ha amenazado con bombardear Omán si el país se interpone en las negociaciones para reabrirEl Estrecho de Ormuz. Las amenazas apuntan a un aliado histórico de Estados Unidos en el Medio Oriente, en el contexto de tensiones más amplias en la región relacionadas con conflictos en Irán.",
+      "takeaway": "Trump vincula explícitamente su disposición a usar la fuerza militar con el resultado de las negociaciones estratégicas sobre una ruta comercial crítica.",
+      "why_it_matters": "Las amenazas marcan un cambio significativo en la relación entre Estados Unidos y uno de sus aliados tradicionales en la región del Golfo Pérsico, pudiendo afectar la estabilidad de las negociaciones sobre el control del Estrecho de Ormuz."
     },
     {
       "_linked_ids": [
@@ -569,7 +572,7 @@
         "subject-kim-jong-un-d099dcb46a67"
       ],
       "cluster_id": "subject-kim-jong-un-d099dcb46a67",
-      "coherence": 0.42216013054591506,
+      "coherence": 0.4303571010905506,
       "consequence": 3,
       "countries": [
         "brazil",
@@ -578,7 +581,7 @@
       ],
       "country_count": 3,
       "editorial_day": "2026-08-17",
-      "headline": "Trump ordena reducir ejercicios militares conjuntos con Corea del Sur",
+      "headline": "Trump ordena reducir los ejercicios militares conjuntos entre Estados Unidos y Corea del Sur",
       "independent_source_count": 4,
       "members": [
         {
@@ -622,7 +625,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4222,
+          "coherence": 0.4304,
           "corroboration": 0.6,
           "editorial_weight": 0.3333,
           "freshness": 0.3536,
@@ -632,28 +635,28 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6567,
+        "total": 0.6577,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "kim jong-un",
       "subject_names": [
+        "casa blanca",
         "corea",
         "coree",
         "donald trump",
         "kim jong",
         "kim jong-un",
-        "seoul",
         "trump"
       ],
       "subject_newsroom_count": 12,
-      "summary": "Donald Trump ha ordenado la reducción de los ejercicios militares conjuntos entre Estados Unidos y Corea del Sur, justificando esta decisión en su relación positiva con el líder norcoreano Kim Jong-un. Según los reportes, Trump ha afirmado haber conversado con Kim Jong-un y sostiene que esta medida hará que Corea del Sur esté más segura.",
-      "takeaway": "Trump vincula su decisión de reducir ejercicios militares con Seúl a su relación personal con el líder norcoreano.",
-      "why_it_matters": "La reducción de maniobras militares entre Estados Unidos y Corea del Sur modifica directamente la postura defensiva conjunta entre ambos países en la península coreana."
+      "summary": "Donald Trump ha ordenado la reducción de los ejercicios militares conjuntos entre Estados Unidos y Corea del Sur, justificando la medida por su relación positiva con Kim Jong-un. Trump afirma que la reducción de estas maniobras hará que Corea del Sur esté más segura y atribuye la decisión a las conversaciones que ha mantenido con el líder norcoreano.",
+      "takeaway": "Trump vincula directamente su estrategia de defensa en Corea del Sur a su relación diplomática con Kim Jong-un.",
+      "why_it_matters": "La decisión reduce la actividad militar coordinada entre Washington y Seúl en la península coreana, alterando un elemento central de la disuasión de seguridad estadounidense en la región."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T12:19:34.644240+00:00",
+  "generated_at": "2026-08-20T13:39:19.216447+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

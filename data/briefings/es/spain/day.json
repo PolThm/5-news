@@ -1,16 +1,251 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ceuta-c8cb825ecbfc",
-      "coherence": 0.44312217947311916,
+      "angle_zone": "spain",
+      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
+      "coherence": 0.585423854282703,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Alemania reporta 14.000 muertes por calor durante el verano, España cerca de 4.500",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/allemagne-14-000-deces-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018-20260820_THJAHV2XVVBNLIOUGG7XM236UI/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260820-canicule-europe-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-chaleur-allemagne-4-500-espagne"
+        }
+      ],
+      "mentioned_countries": [
+        "germany",
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5854,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6886,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "allemagne",
+      "subject_names": [
+        "allemagne",
+        "espagne"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Durante el verano de este año, Alemania registró aproximadamente 14.000 muertes relacionadas con el calor extremo, una cifra significativamente superior al pico registrado en 2018, mientras que España contabilizó cerca de 4.500 fallecimientos por las mismas causas. Estos números forman parte de un recuento más amplio de muertes por olas de calor que afectaron a varios países europeos durante la temporada estival.",
+      "takeaway": "España registró casi 4.500 muertes por calor extremo este verano, revelando que el país es especialmente vulnerable a las olas de calor que asolan Europa.",
+      "why_it_matters": "La cifra de muertes por calor en España—cerca de 4.500—sitúa al país como uno de los más afectados de Europa, comparable solo a Alemania, lo que expone la vulnerabilidad de la población española a eventos climáticos extremos que se intensifican."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-6e88afa6c27f",
+      "coherence": 0.46254379907289955,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Bruselas aprueba el consorcio español de ACS, Telefónica y Santander para una gigafactoría de IA",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-08-20/bruselas-aprueba-la-propuesta-espanola-para-optar-a-una-de-las-gigafactorias-de-ia-europeas.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/2026/08/20/6a86e188468aeb6d7f8b4595.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/noticia-bruselas-aprueba-joint-venture-acs-telefonica-santander-gobierno-centros-datos-espana-20260820121730.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "be"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4625,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6738,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "acs",
+        "bruselas",
+        "ceuta",
+        "espana",
+        "sanchez",
+        "santander",
+        "telefonica",
+        "trampolin",
+        "vivas"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Las autoridades europeas han dado luz verde a una asociación entre las empresas españolas ACS, Telefónica y Santander para optar a una de las gigafactorías de inteligencia artificial que Europa planea desarrollar. El proyecto cuenta con el respaldo del Gobierno español y se enfoca en centros de datos en territorio nacional.",
+      "takeaway": "El consorcio español de grandes corporaciones obtiene el acceso oficial a la competencia por la gigafactoría europea de IA.",
+      "why_it_matters": "España compite ahora con otros consorcios europeos por una inversión multimillonaria en infraestructura de inteligencia artificial que podría ubicarse en el territorio español y beneficiar a las empresas participantes (ACS, Telefónica, Santander) y a la economía nacional."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-madrid-85ffa0a2c8a1",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "La Comunidad de Madrid reconoce que no puede garantizar el derecho al aborto en algunos hospitales públicos",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/madrid/comunidad-madrid-reconoce-derecho-aborto-no-asegurar-hospitales-publicos_1_13457079.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/madrid/noticia-comunidad-dice-no-puede-asegurar-derecho-aborto-algunos-hospitales-publicos-eso-deriva-privada-20260820141034.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6581,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "madrid",
+      "subject_names": [
+        "comunidad",
+        "madrid"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "La Comunidad de Madrid ha reconocido por escrito que algunos de sus hospitales públicos no pueden garantizar el derecho al aborto, lo que ha llevado a que estos casos sean derivados a centros privados.",
+      "takeaway": "La Comunidad de Madrid admite que no puede asegurar el acceso al aborto en su red pública, creando de facto un sistema de dos velocidades.",
+      "why_it_matters": "Las mujeres que buscan abortar en hospitales públicos de Madrid se enfrentan a la incapacidad administrativa de garantizar este derecho legal, lo que las obliga a derivarse al sistema privado con los costos que ello implica."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-13b6b3d99b68",
+      "coherence": 0.43761375966895333,
       "consequence": 2,
       "countries": [
         "brazil",
-        "france"
+        "france",
+        "it"
       ],
-      "country_count": 2,
+      "country_count": 3,
       "editorial_day": "2026-08-20",
-      "headline": "España rechaza devolver a Marruecos a 500 menores migrantes llegados a Ceuta",
+      "headline": "España planea trasladar 500 menores migrantes desde Ceuta al territorio peninsular",
       "independent_source_count": 4,
       "members": [
         {
@@ -26,44 +261,45 @@
           "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-ceuta-l-espagne-veut-transf%C3%A9rer-500-mineures-migrantes"
         },
         {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/19/spain-ignores-eu-and-prepares-urgent-transfer-of-500-migrant-girls-from-ceuta-to-mainland"
+        },
+        {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/08/19/espanha-vai-acolher-500-menores-imigrantes-do-marrocos-que-chegaram-em-ceuta.ghtml"
-        },
-        {
-          "language": "fr",
-          "source": "leparisien.fr",
-          "source_country": "france",
-          "url": "https://www.leparisien.fr/international/espagne/ceuta-lespagne-refuse-de-renvoyer-500-jeunes-filles-au-maroc-contre-lavis-de-lunion-europeenne-19-08-2026-VE5OJHIKPZBDBC2VKIRVROMRAM.php"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "brazil",
-      "outbound_source": "leparisien.fr",
-      "outbound_url": "https://www.leparisien.fr/international/espagne/ceuta-lespagne-refuse-de-renvoyer-500-jeunes-filles-au-maroc-contre-lavis-de-lunion-europeenne-19-08-2026-VE5OJHIKPZBDBC2VKIRVROMRAM.php",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/19/spain-ignores-eu-and-prepares-urgent-transfer-of-500-migrant-girls-from-ceuta-to-mainland",
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "euronews.com",
         "france24.com",
         "globo.com",
         "lefigaro.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4431,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4376,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.5789
+          "source_reliability": 0.6
         },
-        "total": 0.5992,
+        "total": 0.6242,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
@@ -71,186 +307,29 @@
         "bruselas",
         "ceuta",
         "espana",
-        "madrid",
-        "marruecos",
+        "junta",
         "sanchez",
-        "trampolin"
+        "trampolin",
+        "vivas"
       ],
       "subject_newsroom_count": 20,
-      "summary": "España se niega a repatriar a 500 menores migrantes que arribaron a la ciudad autónoma de Ceuta, en lugar de ello busca distribuirlas en su territorio. La decisión genera tensión entre España y la Unión Europea, que se opone a este plan de acogida.",
-      "takeaway": "España desafía la posición de la UE al decidir acoger y distribuir a menores migrantes en lugar de devolverlos a Marruecos.",
-      "why_it_matters": "El conflicto entre España y la UE determina si los menores serán devueltos a Marruecos o permanecerán en territorio español, afectando directamente el destino de estas 500 menores."
+      "summary": "España ha decidido transferir aproximadamente 500 menores migrantes que llegaron a Ceuta, principalmente desde Marruecos, hacia el territorio continental español. Esta decisión representa una medida urgente para gestionar la llegada de estos menores en la ciudad autónoma norteafricana.",
+      "takeaway": "España actúa sin esperar el acuerdo de la UE en la redistribución de menores migrantes, priorizando resolver su crisis de hacinamiento en Ceuta sobre la armonía con Bruselas.",
+      "why_it_matters": "La decisión de España de trasladar unilateralmente a 500 menores migrantes desde Ceuta al territorio peninsular genera una ruptura con la posición de la UE y cuestiona la coordinación europea en materia de migraciones, dejando a España enfrentada a sus socios comunitarios en una cuestión que afecta directamente a su capacidad de gestión de fronteras."
     },
     {
-      "cluster_id": "subject-ceuta-048294f0f24d",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Bruselas exige al Gobierno que devuelva a Marruecos a todos los migrantes que entraron ilegalmente en Ceuta",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/ultima-hora-ceuta-directo-decenas-inmigrantes-logran-20260818091559-di.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "be",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/espana/ultima-hora-ceuta-directo-decenas-inmigrantes-logran-20260818091559-di.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5848,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "bruselas",
-        "ceuta",
-        "marruecos",
-        "sanchez",
-        "trampolin"
-      ],
-      "subject_newsroom_count": 20,
-      "summary": "Las instituciones de la Unión Europea han manifestado su expectativa de que el Gobierno español devuelva a Marruecos a la totalidad de los migrantes que entraron de forma ilegal en la ciudad autónoma de Ceuta. Bruselas ha insistido en esta posición y ha reclamado al Gobierno español que proporcione más información detallada sobre sus planes para ejecutar esta devolución.",
-      "takeaway": "La Unión Europea presiona al Gobierno para que repatrie a Marruecos a todos los migrantes que ingresaron ilegalmente en Ceuta.",
-      "why_it_matters": "La posición de Bruselas condiciona la respuesta que el Gobierno español debe dar respecto al tratamiento de los migrantes que cruzaron ilegalmente hacia territorio español."
-    },
-    {
-      "cluster_id": "subject-ceuta-b290c5663d36",
-      "coherence": 0.48541398514879397,
+      "angle_zone": "spain",
+      "cluster_id": "subject-roumanie-d8125431454f",
+      "coherence": 0.50565895634433,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La Policía desaloja a miles de migrantes de la playa del Trampolín en Ceuta",
+      "headline": "Cazas F-18 españoles derriban dron que ingresó en espacio aéreo rumano",
       "independent_source_count": 4,
       "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/policia-despliega-dispositivo-desalojar-inmigrantes-playa-trampolin-20260820085008-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/policia-traslada-miles-migrantes-playa-ceuti-trampolin-nuevos-espacios-acogida_1_13456995.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/20/6a8695e8e85ece98148b4594.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-migrantes-playa-ceuti-trampolin-son-reubicados-centro-subsaharianos-otro-magrebies-20260820105123.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/08/20/6a8695e8e85ece98148b4594.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elmundo.es",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4854,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5299,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "bruselas",
-        "ceuta",
-        "marruecos",
-        "sanchez",
-        "trampolin"
-      ],
-      "subject_newsroom_count": 20,
-      "summary": "La Policía ha desalojado entre 3.000 y 4.000 inmigrantes de la playa del Trampolín en Ceuta, trasladándolos a nuevos espacios de acogida habilitados para subsaharianos y magrebíes.",
-      "takeaway": "Miles de personas fueron desalojadas de una playa ceutí y trasladadas a centros de acogida.",
-      "why_it_matters": "Los migrantes que ocupaban la playa son reubicados en centros de acogida organizados por nacionalidad de origen."
-    },
-    {
-      "cluster_id": "subject-otan-9841512ca26d",
-      "coherence": 0.4386401806685254,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Cazas españoles de la OTAN derriban un dron que entró en el espacio aéreo rumano",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260816/11614684/avion-combate-espanol-otan-derriba-dron-violaba-espacio-aereo-rumania.html"
-        },
         {
           "language": "es",
           "source": "lavanguardia.com",
@@ -283,7 +362,7 @@
       "origin_country": "spain",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 4,
+      "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
@@ -293,7 +372,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4386,
+          "coherence": 0.5057,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -301,93 +380,27 @@
           "impact": 0.3333,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6522
+          "source_reliability": 0.6
         },
-        "total": 0.5269,
+        "total": 0.5323,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "otan",
+      "subject_label": "roumanie",
       "subject_names": [
+        "noire",
         "otan",
+        "roumanie",
         "rumania"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Dos aviones F-18 españoles, que forman parte de una misión de la OTAN en Rumanía, despegaron y derribaron un dron que violó el espacio aéreo rumano cerca de la frontera con Ucrania.",
-      "takeaway": "España participó activamente en la defensa del espacio aéreo de un aliado de la OTAN frente a una amenaza no identificada.",
-      "why_it_matters": "La intervención muestra la capacidad de respuesta de las fuerzas de la OTAN ante intrusiones aéreas en países miembros situados cerca de la zona de conflicto."
-    },
-    {
-      "cluster_id": "subject-curro-romero-67714e596194",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Curro Romero ingresado en un hospital de Sevilla por neumonía a los 92 años",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-08-20/curro-romero-de-92-anos-ingresado-de-nuevo-por-neumonia-en-un-hospital-sevillano.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/corazon/famosos/20260820/curro-romero-ingresado-anos-hospital-sevilla-neumonia/1003744357981_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/cultura/toros/2026/08/19/6a85fa0421efa0cf198b4593.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/cultura/toros/2026/08/19/6a85fa0421efa0cf198b4593.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.4381,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "curro romero",
-      "subject_names": [
-        "curro romero"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "El torero Curro Romero ha sido ingresado de urgencia en un hospital sevillano por una neumonía. Según los reportes, se trata de una nueva hospitalización para el nonagenario.",
-      "takeaway": "A los 92 años, Curro Romero fue hospitalizado nuevamente, esta vez por neumonía.",
-      "why_it_matters": "El ingreso requirió atención médica de urgencia en el hospital, lo que refleja la gravedad de la complicación respiratoria en su estado de salud."
+      "subject_newsroom_count": 10,
+      "summary": "Dos cazas F-18 españoles de la OTAN despegaron desde Rumanía y derribaron un dron que vulneró el espacio aéreo rumano cerca del límite con Ucrania. Los aviones de combate españoles intervinieron tras la intrusión del aparato no tripulado en territorio rumano.",
+      "takeaway": "Los F-18 españoles están presentes en primera línea de las incursiones derivadas del conflicto ucraniano.",
+      "why_it_matters": "España participa activamente en la defensa del espacio aéreo de la OTAN en la frontera con Ucrania, demostrando su rol militar en una zona de tensión creciente que afecta directamente a la estabilidad de Europa Oriental."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T12:19:34.644240+00:00",
+  "generated_at": "2026-08-20T13:39:19.216447+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

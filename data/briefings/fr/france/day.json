@@ -1,16 +1,174 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-492b5c52b9ea",
-      "coherence": 0.5966363337072191,
-      "consequence": 1,
+      "angle_zone": "france",
+      "cluster_id": "subject-europa-6d192cf68f70",
+      "coherence": 0.4616205891131383,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-20",
+      "headline": "Les chercheurs prévoient une augmentation majeure des surfaces brûlées par les incendies en Europe",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/environnement/changement-climatique-les-surfaces-brulees-par-les-incendies-vont-augmenter-en-europe-previennent-des-chercheurs-20260820_DQD2MT2E7ZAZHA6GJHLEBSREBE/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/incendie/les-surfaces-brulees-en-europe-pourraient-augmenter-de-39-a-192-a-cause-du-changement-climatique-previennent-des-chercheurs_8154806.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "efe.com",
+          "source_country": "united-states",
+          "url": "https://efe.com/medio-ambiente/2026-08-20/superficie-quemada-incendios-europa-podria-triplicarse-final-siglo/"
+        },
+        {
+          "language": "es",
+          "source": "publico.es",
+          "source_country": "spain",
+          "url": "https://www.publico.es/sociedad/m-ambiente/superficie-quemada-incendios-europa-podria-aumentar-192-final-siglo.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/faits-divers/incendie/les-surfaces-brulees-en-europe-pourraient-augmenter-de-39-a-192-a-cause-du-changement-climatique-previennent-des-chercheurs_8154806.html#xtor=RSS-3-[lestitres]",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4616,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5556
+        },
+        "total": 0.6662,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "europa",
+      "subject_names": [
+        "europa",
+        "europe"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "Des chercheurs avertissent que le changement climatique entraînera une augmentation significative des surfaces brûlées par les incendies en Europe. Selon les études citées, les zones touchées par les feux pourraient augmenter de 39 à 192 pour cent, voire tripler d'ici la fin du siècle, en raison du réchauffement climatique.",
+      "takeaway": "Les chercheurs prédisent un quasi-triplement des surfaces brûlées en Europe d'ici la fin du siècle sous l'effet du changement climatique.",
+      "why_it_matters": "La France, exposée à des risques d'incendies croissants dans ses régions méditerranéennes et du sud-ouest, devra s'adapter à une augmentation significative des surfaces brûlées et des feux plus intenses si les projections climatiques se réalisent."
+    },
+    {
+      "angle_zone": "france",
+      "cluster_id": "subject-trump-23320d646861",
+      "coherence": 0.4253116856769644,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "france",
+        "it",
+        "spain"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-20",
+      "headline": "Trump déclare que la Corée du Nord possède 57 armes nucléaires et prévoit une rencontre avant la fin de l'année",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-anuncia-que-preve-reunirse-con-kim-jong-un-antes-que-acabe-ano-tiene-57-armas-nucleares-muy-poderosas_7027470_0.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/19/news/trump_accorcia_esercitazioni_corea_del_sud_vuole_incontrare_kim_jong_un_leader_corea_del_nord_autunno-425536130/?rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/20/coreia-do-sul-estima-que-coreia-do-norte-tem-ate-120-ogivas-nucleares-trump-havia-citado-57-armas.ghtml"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/coree-du-nord/donald-trump-affirme-que-la-coree-du-nord-possede-57-armes-nucleaires_8154152.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "repubblica.it",
+      "outbound_url": "https://www.repubblica.it/esteri/2026/08/19/news/trump_accorcia_esercitazioni_corea_del_sud_vuole_incontrare_kim_jong_un_leader_corea_del_nord_autunno-425536130/?rss",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "globo.com",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4253,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6138,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "casa blanca",
+        "donald trump",
+        "trump"
+      ],
+      "subject_newsroom_count": 31,
+      "summary": "Donald Trump a annoncé son intention de rencontrer le leader nord-coréen avant la fin de l'année, affirmant que la Corée du Nord dispose de 57 armes nucléaires très puissantes. Selon les estimations sud-coréennes citées dans ces articles, le nombre réel pourrait atteindre jusqu'à 120 ogives nucléaires.",
+      "takeaway": "Trump envisage des pourparlers directs avec Kim Jong-un, ce qui marque un changement de méthode dans la gestion de la crise nucléaire nord-coréenne.",
+      "why_it_matters": "La France, comme puissance nucléaire et membre permanent du Conseil de sécurité de l'ONU, est concernée par tout engagement américain avec la Corée du Nord, qui pourrait modifier les équilibres géopolitiques mondiaux et les stratégies de non-prolifération que Paris défend."
+    },
+    {
+      "angle_zone": "france",
+      "cluster_id": "subject-france-8f99250a4e0c",
+      "coherence": 0.6868110516827894,
+      "consequence": 0,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La vague de chaleur en France égale le record de 1983 en tant que plus longue jamais enregistrée",
-      "independent_source_count": 6,
+      "headline": "La vague de chaleur en France devient la plus longue depuis 1983",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
@@ -38,15 +196,9 @@
         },
         {
           "language": "fr",
-          "source": "rtl.fr",
+          "source": "ouest-france.fr",
           "source_country": "france",
-          "url": "https://www.rtl.fr/actu/meteo/deja-23-jours-consecutifs-la-vague-de-chaleur-en-cours-est-la-plus-longue-jamais-enregistree-en-france-depuis-1983-7900663423"
-        },
-        {
-          "language": "fr",
-          "source": "vosgesmatin.fr",
-          "source_country": "france",
-          "url": "https://www.vosgesmatin.fr/environnement/2026/08/20/cette-vague-de-chaleur-est-desormais-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-1983"
+          "url": "https://www.ouest-france.fr/meteo/canicule/france-la-vague-de-chaleur-debutee-fin-juillet-devient-la-plus-longue-ex-aequo-avec-1983-b59ba284-9c98-11f1-bac9-b701f4b3457c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
         }
       ],
       "mentioned_countries": [
@@ -55,201 +207,289 @@
       "origin_country": "france",
       "outbound_source": "francetvinfo.fr",
       "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 4,
+      "rank": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "france24.com",
         "francetvinfo.fr",
         "lefigaro.fr",
-        "lemonde.fr"
+        "lemonde.fr",
+        "ouest-france.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5966,
+          "coherence": 0.6868,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.5496,
+        "total": 0.4973,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
-        "c'est",
         "france",
         "francia",
-        "ligue",
+        "french",
         "marseille",
         "paris"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "La vague de chaleur qui a débuté fin juillet en France a atteint sa vingt-troisième journée consécutive, devenant ainsi la plus longue jamais enregistrée dans le pays, à égalité avec celle de juillet 1983.",
-      "takeaway": "La canicule actuelle rivalize avec le record de durée datant de quarante ans.",
-      "why_it_matters": "Cet événement climatique établit un nouveau repère historique en matière de durée de chaleur extrême en France depuis les débuts des enregistrements modernes."
+      "subject_newsroom_count": 20,
+      "summary": "La vague de chaleur qui a débuté fin juillet en France est devenue la plus longue jamais enregistrée, égalant le record établi en 1983. Selon les sources, cette période de température exceptionnellement élevée a duré au moins vingt-trois jours.",
+      "takeaway": "La France vit désormais sa plus longue vague de chaleur depuis quarante et un ans, établissant un nouveau repère climatique national.",
+      "why_it_matters": "Ce record de durée affecte les secteurs français dépendants de l'eau et de l'électricité, avec des risques accrus de pénuries et de restrictions, tandis que les populations vulnérables font face à des risques sanitaires intensifiés."
     },
     {
-      "cluster_id": "subject-scouarnec-9649b1d3db83",
-      "coherence": 0.6412471353719219,
-      "consequence": 1,
+      "angle_zone": "france",
+      "cluster_id": "subject-ligue-88b873f83535",
+      "coherence": 0.5168301642724901,
+      "consequence": 0,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Une information judiciaire ouverte contre l'ex-chirurgien Le Scouarnec pour dix nouveaux viols",
-      "independent_source_count": 6,
+      "headline": "Le match PSG-Rennes est déplacé à Rennes en raison de l'état de la pelouse du Parc des Princes",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/affaire-le-scouarnec-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles-20260819_XTFYILYPWZBF3LXEI2HMFPS4ZM/"
+          "url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/france/200826/le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-quarante-agressions-sexuelles"
-        },
-        {
-          "language": "fr",
-          "source": "cnews.fr",
-          "source_country": "france",
-          "url": "https://www.cnews.fr/france/2026-08-19/affaire-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et"
-        },
-        {
-          "language": "fr",
-          "source": "femmeactuelle.fr",
-          "source_country": "france",
-          "url": "https://www.femmeactuelle.fr/actu/news-actu/affaire-joel-le-scouarnec-10-nouveaux-viols-et-40-agressions-sexuelles-mettent-en-cause-l-ex-chirurgien-deja-condamne-2210691"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://laseyne.maville.com/actu/actudet_-affaire-joel-le-scouarnec-une-information-judiciaire-ouverte-pour-10-nouveaux-viols-et-40-agressions-sexuelles_fil-7445089_actu.Htm"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/affaire-le-scouarnec-information-judiciaire-ouverte-pour-dix-nouveaux-viols-et-40-agressions-sexuelles-20260819",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "liberation.fr",
-        "mediapart.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6412,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5397,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "scouarnec",
-      "subject_names": [
-        "scouarnec"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Une information judiciaire a été ouverte contre Joël Le Scouarnec, ancien chirurgien déjà condamné, pour dix nouveaux viols et quarante agressions sexuelles. Ces accusations s'ajoutent aux condamnations précédentes prononcées contre le praticien.",
-      "takeaway": "Un chirurgien déjà condamné pour des crimes sexuels fait face à des accusations pour dix viols et quarante agressions supplémentaires.",
-      "why_it_matters": "Cette nouvelle procédure judiciaire expose davantage de victimes potentielles d'agressions sexuelles et élargit le périmètre des accusations contre un professionnel de santé autrefois en position d'autorité."
-    },
-    {
-      "cluster_id": "subject-togo-a11dff3af632",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Deux réalisateurs français arrêtés et détenus au Togo avec un collaborateur local",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local"
+          "url": "https://www.la-croix.com/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes-20260819"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/afrique/togo/nous-sommes-en-lien-avec-les-autorites-du-togo-pour-qu-ils-puissent-etre-liberes-au-plus-tot-assure-jean-noel-barrot-a-propos-des-deux-realisateurs-francais-detenus-dans-le-pays_8154128.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.franceinfo.fr/sports/foot/ligue-1/ligue-1-en-raison-de-l-etat-de-la-pelouse-du-parc-des-princes-le-match-psg-stade-rennais-est-inverse-et-se-jouera-a-rennes-dimanche_8154575.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "radiofrance.fr",
+          "source": "larepubliquedespyrenees.fr",
           "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-9149452"
+          "url": "https://www.larepubliquedespyrenees.fr:443/societe/afp/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes-30308779.php"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/afrique/togo/nous-sommes-en-lien-avec-les-autorites-du-togo-pour-qu-ils-puissent-etre-liberes-au-plus-tot-assure-jean-noel-barrot-a-propos-des-deux-realisateurs-francais-detenus-dans-le-pays_8154128.html#xtor=RSS-3-%5Bgeneral%5D",
-      "rank": 3,
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "mediapart.fr",
-        "radiofrance.fr"
+        "la-croix.com",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5168,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.5114,
+        "total": 0.4448,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "togo",
+      "subject_label": "ligue",
       "subject_names": [
-        "togo"
+        "ligue",
+        "princes"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Deux réalisateurs français ont été arrêtés et sont actuellement détenus au Togo avec un collaborateur local. Le ministre Jean-Noël Barrot affirme que les autorités françaises sont en contact avec les autorités togolaises pour faciliter leur libération dans les meilleurs délais.",
-      "takeaway": "Deux cinéastes français sont détenus au Togo tandis que le gouvernement français négocie avec les autorités locales pour les faire libérer.",
-      "why_it_matters": "La détention des deux réalisateurs affecte les ressortissants français au Togo et mobilise l'intervention diplomatique du gouvernement français pour leur libération."
+      "subject_newsroom_count": 4,
+      "summary": "La pelouse du Parc des Princes, endommagée par la canicule, s'est dégradée au point que le match de Ligue 1 entre le PSG et le Stade Rennais a dû être inversé. Le PSG jouera donc à domicile du Stade Rennais dimanche, plutôt que de recevoir l'équipe bretonne au Parc des Princes.",
+      "takeaway": "La canicule a forcé l'inversion d'un match de Ligue 1, donnant un avantage inattendu à Rennes sur le PSG.",
+      "why_it_matters": "Le PSG, club français majeur de Ligue 1, jouera dimanche chez son concurrent rennais au lieu de recevoir à domicile, ce qui désavantage le club parisien en le privant de l'avantage du terrain."
+    },
+    {
+      "angle_zone": "france",
+      "cluster_id": "subject-fedorov-06d2772a4948",
+      "coherence": 0.5876243835607925,
+      "consequence": 2,
+      "countries": [
+        "as",
+        "france",
+        "it",
+        "pk",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-08-20",
+      "filled_from": "europe",
+      "headline": "L'ex-ministre ukrainien de la Défense Fedorov appelle à des élections présidentielles",
+      "independent_source_count": 16,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/en-ukraine-l-ex-ministre-de-la-defense-mykhailo-fedorov-entre-en-rebellion-et-appelle-aux-elections-20260819"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-en-ukraine-fedorov-appelle-aux-%C3%A9lections-un-pari-politique-risqu%C3%A9"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260819-pour-mykha%C3%AFlo-fedorov-ex-ministre-de-la-d%C3%A9fense-des-%C3%A9lections-sont-possibles-en-ukraine"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/19/sacked-ukrainian-defence-minister-mykhailo-fedorov-calls-for-presidential-elections"
+        },
+        {
+          "language": "en",
+          "source": "milwaukeesun.com",
+          "source_country": "united-states",
+          "url": "http://www.milwaukeesun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "tennesseedaily.com",
+          "source_country": "united-states",
+          "url": "http://www.tennesseedaily.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "stlouisstar.com",
+          "source_country": "united-states",
+          "url": "http://www.stlouisstar.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "londonmercury.com",
+          "source_country": "united-kingdom",
+          "url": "http://www.londonmercury.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "2lt.com.au",
+          "source_country": "as",
+          "url": "https://www.2lt.com.au/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says/"
+        },
+        {
+          "language": "en",
+          "source": "sanantoniopost.com",
+          "source_country": "united-states",
+          "url": "http://www.sanantoniopost.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "pakistantelegraph.com",
+          "source_country": "pk",
+          "url": "http://www.pakistantelegraph.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        },
+        {
+          "language": "en",
+          "source": "laosnews.net",
+          "source_country": "united-states",
+          "url": "http://www.laosnews.net/news/279252223/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says"
+        },
+        {
+          "language": "en",
+          "source": "caribbeanherald.com",
+          "source_country": "united-states",
+          "url": "http://www.caribbeanherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "as",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
+      "rank": 5,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "france24.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5876,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.8,
+          "source_reliability": 0.8298
+        },
+        "total": 0.6624,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "fedorov",
+      "subject_names": [
+        "fedorov",
+        "krieg",
+        "mykhailo fedorov",
+        "russia",
+        "ucrania",
+        "ukraine",
+        "ukrainian",
+        "volodymyr zelensky",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Mykhaïlo Fedorov, ancien ministre de la Défense d'Ukraine, a été limogé de son poste et lance depuis un appel public aux élections présidentielles, contestant ainsi indirectement le maintien au pouvoir du président Volodymyr Zelensky. Son positionnement représente une rupture notable avec la direction actuelle du pays et suscite des débats sur la légitimité du gouvernement ukrainien en période de conflit.",
+      "takeaway": "Un ancien ministre de la Défense ukrainien conteste publiquement la légitimité de Zelensky en pleine guerre, exposant des tensions au sommet du pouvoir que la France ne peut ignorer.",
+      "why_it_matters": "Cette rébellion interne au sein du leadership ukrainien affaiblit l'unité politique de Kyiv au moment critique où la France et l'Europe doivent décider de leur engagement auprès d'une Ukraine dont la cohésion gouvernementale se fissure."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T12:19:34.644240+00:00",
+  "generated_at": "2026-08-20T13:39:19.216447+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

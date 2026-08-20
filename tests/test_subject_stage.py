@@ -336,3 +336,50 @@ def test_the_event_carries_its_own_newsroom_count_not_the_subjects() -> None:
     assert [i["reference_newsroom_count"] for i in by_count] == [4, 2]
     # The subject's own count travels alongside, for provenance.
     assert all(i["subject_newsroom_count"] == 4 for i in items)
+
+
+def test_a_country_mentioned_once_in_passing_does_not_claim_the_event() -> None:
+    """`mentioned_countries` is a union over the event's articles, and a union
+    makes any stray mention decisive. Measured on 2026-08-20, a Florida Senate
+    primary reached the Spain Briefing because La Vanguardia covered it and
+    something in the group mentioned Spain once: the item came out
+    ['united-states', 'spain', 'is'] and `_is_relevant_to` only asks whether the
+    Zone's country is in the list.
+
+    Same rule and same numbers as the GDELT adapter's `focus_countries`.
+    """
+    articles = [
+        _article("Angie Nixon remporte la primaire en Floride", src, about=("united-states",))
+        for src in _REFERENCE[:3]
+    ]
+    # One article out of four also mentions Spain, in passing.
+    articles.append(_article("Angie Nixon: reaccion desde Madrid", _REFERENCE[3], about=("spain",)))
+
+    items = build_items(articles)
+
+    assert items[0]["mentioned_countries"] == ["united-states"]
+
+
+def test_the_most_named_country_is_always_kept() -> None:
+    """So an event is never left unplaceable by its own share test."""
+    articles = [
+        _article("Un helicoptere s'ecrase a Nairobi", src, about=("kenya",))
+        for src in _REFERENCE[:3]
+    ]
+
+    items = build_items(articles)
+
+    assert items[0]["mentioned_countries"] == ["kenya"]
+
+
+def test_a_country_named_across_a_third_of_the_event_still_counts() -> None:
+    """A genuinely bi-national story -- Spanish jets over Romania, Ceuta and
+    Morocco -- must keep both, or the Zone that is half the story loses it."""
+    articles = [
+        _article("Un caza espanol derriba un dron en Rumania", src, about=("spain", "ro"))
+        for src in _REFERENCE[:3]
+    ]
+
+    items = build_items(articles)
+
+    assert set(items[0]["mentioned_countries"]) == {"spain", "ro"}

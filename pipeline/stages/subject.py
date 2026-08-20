@@ -142,6 +142,23 @@ EVENT_DISTANCE = 0.90
 # on each of its events.
 MIN_EVENT_NEWSROOMS = 2
 
+# What share of an event's country mentions a country needs before the event
+# counts as being ABOUT it.
+#
+# `mentioned_countries` is a union over the event's articles, and a union makes
+# any stray mention decisive. Measured on 2026-08-20, a Florida Senate primary
+# reached the Spain Briefing because La Vanguardia covered it and something in
+# the group mentioned Spain once: the item's countries came out
+# ['united-states', 'spain', 'is'] and `_is_relevant_to` only asks whether the
+# Zone's country is in the list.
+#
+# Same rule and same numbers as the GDELT adapter's `focus_countries`, for the
+# same reason: a country named once in passing is incidental, and one named
+# repeatedly is the subject. The most-named country is always kept, so an event
+# is never left unplaceable.
+COUNTRY_MENTION_SHARE = 0.30
+COUNTRY_MIN_MENTIONS = 2
+
 # Two events built from different subjects are the same event when their article
 # sets overlap this much, as a Jaccard ratio.
 #
@@ -535,6 +552,22 @@ def _event_id(label: str, group: Sequence[dict]) -> str:
     return f"subject-{fold(label).replace(' ', '-')}-{digest}"
 
 
+def _dominant_countries(counts: Counter[str]) -> list[str]:
+    """The countries an event is about, most-named first, dropping the passing
+    mentions that a plain union would treat as decisive."""
+    if not counts:
+        return []
+    total = sum(counts.values())
+    ranked = counts.most_common()
+    dominant = ranked[0][0]
+    return [
+        country
+        for country, mentions in ranked
+        if country == dominant
+        or (mentions / total >= COUNTRY_MENTION_SHARE and mentions >= COUNTRY_MIN_MENTIONS)
+    ]
+
+
 def _latest_day(group: Sequence[dict]) -> str:
     """The most recent day any of a subject's articles carries.
 
@@ -624,7 +657,7 @@ def build_items(
                     # never where their outlets sit. Ordered most-named first so
                     # a Zone's relevance test reads the event's own centre of
                     # gravity rather than an alphabetical accident.
-                    "mentioned_countries": [country for country, _ in about.most_common()],
+                    "mentioned_countries": _dominant_countries(about),
                     "outbound_url": group[0].get("url"),
                     "outbound_source": group[0].get("source"),
                     # When it last moved, from its own articles. Named

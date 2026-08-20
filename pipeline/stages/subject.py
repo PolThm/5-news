@@ -48,6 +48,7 @@ publish need no knowledge of where an item came from (AD-13).
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import unicodedata
@@ -58,6 +59,7 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+from sklearn.cluster import AgglomerativeClustering
 from sklearn.preprocessing import normalize
 
 from pipeline.config import source_trust_tier
@@ -111,6 +113,48 @@ MERGE_OVERLAP = 0.40
 # Set against the same corpus's between-subject floor of 1.18 euclidean, so this
 # sits comfortably inside it rather than at its edge.
 CENTROID_DISTANCE = 0.95
+
+# How far apart two articles about the same event sit, in euclidean distance on
+# unit vectors.
+#
+# A subject is a container, not an item. "China" held both Evergrande's founder
+# being jailed for life and a hotel fire killing nine in India, and the
+# summarizer welded them into one headline because it was handed both. Splitting
+# the subject into events is what stops that.
+#
+# Measured inside the "china" subject on 2026-08-20. At 0.90 the Evergrande
+# story forms one group of 12 articles spanning Spanish, English and German --
+# the cross-language merge is the point, and at 0.80 it breaks into one group
+# per language. Going looser than 0.90 starts pulling in China's robotics
+# coverage.
+#
+# Note this is far looser than `cluster.py`'s same-Event threshold of 0.748, and
+# safely so: these articles already share a subject, so the only question left is
+# which event within it, not whether they are related at all.
+EVENT_DISTANCE = 0.90
+
+# An event needs this many reference newsrooms of its own.
+#
+# Applied to the event, not the subject it came from: a subject clearing the
+# floor says the press is covering Ceuta, and an item has to say which
+# development. Lower than the subject floor because splitting divides the
+# newsrooms among the events -- three newsrooms on one subject cannot be three
+# on each of its events.
+MIN_EVENT_NEWSROOMS = 2
+
+# Two events built from different subjects are the same event when their article
+# sets overlap this much, as a Jaccard ratio.
+#
+# An article belongs to every subject it names, so one event surfaces once per
+# subject that touches it. Measured on 2026-08-20, "Gaza" and "Hind Rajab" both
+# produced the identical 14-source event, as did "Fedorov" and "Ukraine",
+# "Trump" and "Canada", "China" and "Evergrande" -- six duplicate pairs among 88
+# events. Left in, a Briefing would run the same story twice under two labels.
+#
+# Higher than MERGE_OVERLAP because this is a different claim: that one is "two
+# names for one subject", where a partial overlap is evidence; this one is "two
+# descriptions of one event", where it has to be near-identity.
+EVENT_DEDUPE_OVERLAP = 0.70
 
 # A capitalized word is not a proper noun when it merely starts a sentence, and
 # a headline is one sentence. Function words that can open a headline in the
@@ -425,6 +469,72 @@ def coherence_of(unit: np.ndarray, rows: Sequence[int], baseline: dict[int, floa
     return max(0.0, min(1.0, 1.0 - observed / expected))
 
 
+def split_into_events(unit: np.ndarray, rows: Sequence[int]) -> list[list[int]]:
+    """Partition a subject's articles into the events inside it.
+
+    Average linkage, not the connected components `cluster.py` uses: within one
+    subject there is no chain of unrelated articles to guard against, and
+    average linkage is what merges the same event told in three languages
+    without also merging the subject's other stories.
+    """
+    if len(rows) < 2:
+        return [list(rows)]
+    labels = AgglomerativeClustering(
+        n_clusters=None,
+        distance_threshold=EVENT_DISTANCE,
+        metric="euclidean",
+        linkage="average",
+    ).fit_predict(unit[list(rows)])
+    grouped: defaultdict[int, list[int]] = defaultdict(list)
+    for position, label in enumerate(labels):
+        grouped[int(label)].append(rows[position])
+    return [sorted(group) for group in grouped.values()]
+
+
+def _without_source_duplicates(articles: Sequence[dict]) -> list[dict]:
+    """Drop the same headline appearing twice from the same source.
+
+    GDELT indexes some pages repeatedly, and a few of those pages are not
+    articles at all: measured on 2026-08-20 the corpus carried "Making sure
+    you're not a bot!" 33 times from one source, and two celebrity headlines 36
+    times each. They cannot inflate `independent_source_count`, which counts
+    distinct sources, but they do drag a subject's centroid and so its coherence.
+
+    Keyed on (source, title), so genuine syndication survives untouched -- the
+    same wire piece run by eleven different outlets is eleven real sources.
+    """
+    seen: set[tuple[str, str]] = set()
+    kept: list[dict] = []
+    for article in articles:
+        key = (article.get("source") or "", fold(article.get("title") or ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        kept.append(article)
+    return kept
+
+
+def _newsrooms_of(articles: Iterable[dict]) -> set[str]:
+    """The reference newsrooms among a set of articles."""
+    return {
+        article["source"]
+        for article in articles
+        if article.get("source") and source_trust_tier(article["source"]) >= 3
+    }
+
+
+def _event_id(label: str, group: Sequence[dict]) -> str:
+    """A stable id for one event, keyed on its articles.
+
+    Keyed on the URLs rather than the subject label, because one subject now
+    yields several items and a label-derived id would collide. Sorted first, so
+    the id does not depend on the order the corpus happened to arrive in.
+    """
+    urls = ";".join(sorted(article.get("url", "") for article in group))
+    digest = hashlib.sha256(urls.encode("utf-8")).hexdigest()[:12]
+    return f"subject-{fold(label).replace(' ', '-')}-{digest}"
+
+
 def _latest_day(group: Sequence[dict]) -> str:
     """The most recent day any of a subject's articles carries.
 
@@ -467,65 +577,148 @@ def build_items(
 
     items: list[dict] = []
     for label, names, indices in subjects:
-        group = [articles[i] for i in indices]
-        newsrooms = {
-            a.get("source")
-            for a in group
-            if a.get("source") and source_trust_tier(a["source"]) >= 3
-        }
+        subject_rows = [i for i in indices if unit is None or i < len(unit)]
+        subject_newsrooms = _newsrooms_of(articles[i] for i in subject_rows)
         # The editorial floor is re-checked against the MERGED subject, not the
         # winning name alone: merging can only add newsrooms, and a subject that
         # clears the floor only by absorbing a near-duplicate name has not been
         # led with by three independent newsrooms.
-        if len(newsrooms) < min_newsrooms:
+        if len(subject_newsrooms) < min_newsrooms:
             continue
 
-        sources = {a.get("source") for a in group if a.get("source")}
-        countries = sorted({a.get("source_country") for a in group if a.get("source_country")})
-        about: Counter[str] = Counter()
-        for article in group:
-            about.update(article.get("mentioned_countries") or ())
+        # A subject is a container; an item is an event inside it. Without this
+        # split, "China" was handed both Evergrande's founder being jailed and a
+        # hotel fire in India, and the summarizer welded them into one headline.
+        #
+        # It also disposes of the country-shaped subjects that no amount of
+        # score tuning could demote. Measured on 2026-08-20, "Espana" held 40
+        # articles that split into 40 events of one article each: 40 unrelated
+        # Spanish stories, not a subject with events in it. None clears the
+        # floor, so the container simply stops producing items.
+        events = split_into_events(unit, subject_rows) if unit is not None else [subject_rows]
+        for rows in events:
+            group = _without_source_duplicates([articles[i] for i in rows])
+            newsrooms = _newsrooms_of(group)
+            if len(newsrooms) < MIN_EVENT_NEWSROOMS:
+                continue
 
-        items.append(
-            {
-                "cluster_id": f"subject-{fold(label).replace(' ', '-')}",
-                "members": group,
-                "independent_source_count": len(sources),
-                "country_count": len(countries),
-                "countries": countries,
-                "origin_country": countries[0] if countries else "unknown",
-                # What the subject is ABOUT: the countries its articles name,
-                # never where their outlets sit. Ordered most-named first so a
-                # Zone's relevance test reads the subject's own centre of
-                # gravity rather than an alphabetical accident.
-                "mentioned_countries": [country for country, _ in about.most_common()],
-                "outbound_url": group[0].get("url"),
-                "outbound_source": group[0].get("source"),
-                # When the subject last moved, from its own articles. Named
-                # `editorial_day` rather than reusing the agenda's field: the
-                # two answer the same question for the ranking (how fresh is
-                # this) and would be confusing under one name, since one is a
-                # chronicle's dateline and this is our corpus's own.
-                "editorial_day": _latest_day(group),
-                # How much tighter than chance these articles sit: the signal
-                # that separates a story from a country-shaped container.
-                # Computed here because this is where the vectors are; the rank
-                # stage stays vector-free.
-                "coherence": (
-                    coherence_of(unit, [i for i in indices if i < len(unit)], baseline)
-                    if unit is not None
-                    else None
-                ),
-                "subject_label": label,
-                "subject_names": sorted(names),
-                # The editorial weight, kept on the item so a ranking can use
-                # it and a reader can be told how many serious newsrooms led
-                # with this.
-                "reference_newsroom_count": len(newsrooms),
-                "reference_newsrooms": sorted(newsrooms),
-            }
-        )
-    return items
+            sources = {a.get("source") for a in group if a.get("source")}
+            countries = sorted({a.get("source_country") for a in group if a.get("source_country")})
+            about: Counter[str] = Counter()
+            for article in group:
+                about.update(article.get("mentioned_countries") or ())
+
+            items.append(
+                {
+                    # Keyed on the articles, not the subject label: one subject
+                    # now yields several items and they must not collide. Stable
+                    # across a resumed cycle, which AD-11's two-phase summarize
+                    # depends on.
+                    "cluster_id": _event_id(label, group),
+                    "members": group,
+                    "independent_source_count": len(sources),
+                    "country_count": len(countries),
+                    "countries": countries,
+                    "origin_country": countries[0] if countries else "unknown",
+                    # What the event is ABOUT: the countries its articles name,
+                    # never where their outlets sit. Ordered most-named first so
+                    # a Zone's relevance test reads the event's own centre of
+                    # gravity rather than an alphabetical accident.
+                    "mentioned_countries": [country for country, _ in about.most_common()],
+                    "outbound_url": group[0].get("url"),
+                    "outbound_source": group[0].get("source"),
+                    # When it last moved, from its own articles. Named
+                    # `editorial_day` rather than reusing the agenda's field:
+                    # the two answer the same question for the ranking, but one
+                    # is a chronicle's dateline and this is our corpus's own.
+                    "editorial_day": _latest_day(group),
+                    # Measured on the EVENT, not the subject. A container's
+                    # dispersion says nothing about the event pulled out of it.
+                    "coherence": (coherence_of(unit, rows, baseline) if unit is not None else None),
+                    # The editorial weight that decides the ranking, counted on
+                    # this event. A subject clearing the floor says the press is
+                    # covering Ceuta; an item has to say which development.
+                    "reference_newsroom_count": len(newsrooms),
+                    "reference_newsrooms": sorted(newsrooms),
+                    # Kept for provenance: which subject this came out of, and
+                    # how widely that subject was led with.
+                    "subject_label": label,
+                    "subject_names": sorted(names),
+                    "subject_newsroom_count": len(subject_newsrooms),
+                    # Internal: which corpus rows this event holds, so the
+                    # duplicate pass can compare centroids. Stripped before the
+                    # item leaves this function.
+                    "_rows": list(rows),
+                }
+            )
+    centroids = None
+    if unit is not None:
+        centroids = {
+            item["cluster_id"]: normalize(
+                unit[[row for row in item["_rows"] if row < len(unit)]].mean(axis=0).reshape(1, -1)
+            )[0]
+            for item in items
+            if item["_rows"]
+        }
+    deduped = _without_duplicate_events(items, centroids)
+    for item in deduped:
+        item.pop("_rows", None)
+    return deduped
+
+
+def _without_duplicate_events(
+    items: list[dict], centroids: dict[str, np.ndarray] | None = None
+) -> list[dict]:
+    """Collapse events that different subjects built from the same story.
+
+    Keeps the one the most reference newsrooms led with, and records the labels
+    it absorbed -- the alternative is a Briefing running "Gaza" and "Hind Rajab"
+    as two items off one set of fourteen sources.
+
+    Two tests, for the same reason `merge_phrases` needs two: shared articles
+    catch the ordinary case, and centroid proximity catches the one where a
+    story split by language shares no article at all. Measured, "Evergrande"
+    (French and English) and "China" (Spanish) were the same sentencing and
+    overlapped on nothing; so were "Fedorov" and "Ukraine".
+    """
+    ordered = sorted(
+        items,
+        key=lambda item: (
+            -item["reference_newsroom_count"],
+            -item["independent_source_count"],
+            item["cluster_id"],
+        ),
+    )
+    kept: list[dict] = []
+    kept_urls: list[set[str]] = []
+    for item in ordered:
+        urls = {member.get("url", "") for member in item["members"]}
+        here = (centroids or {}).get(item["cluster_id"])
+        duplicate_of = None
+        for position, seen in enumerate(kept_urls):
+            union = urls | seen
+            if union and len(urls & seen) / len(union) >= EVENT_DEDUPE_OVERLAP:
+                duplicate_of = position
+                break
+            there = (centroids or {}).get(kept[position]["cluster_id"])
+            close = (
+                here is not None
+                and there is not None
+                and float(np.linalg.norm(here - there)) <= EVENT_DISTANCE
+            )
+            if close:
+                duplicate_of = position
+                break
+        if duplicate_of is None:
+            kept.append(item)
+            kept_urls.append(urls)
+        else:
+            # Provenance, not decoration: an operator reading the item should be
+            # able to see it was reached from more than one subject.
+            other = kept[duplicate_of]
+            merged = sorted({*other["subject_names"], *item["subject_names"]})
+            other["subject_names"] = merged
+    return kept
 
 
 def run_subjects(

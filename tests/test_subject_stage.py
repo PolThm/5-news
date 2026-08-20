@@ -248,3 +248,91 @@ def test_membership_matching_only_scans_articles_that_share_the_first_token() ->
     found = members_by_phrase(articles, ["ceuta", "absent"])
 
     assert found == {"ceuta": [0]}
+
+
+def test_a_subject_is_split_into_the_events_inside_it() -> None:
+    """A subject is a container; an item is an event. Without the split, "China"
+    was handed both Evergrande's founder being jailed for life and a hotel fire
+    killing nine in India, and the summarizer welded them into one headline:
+    "Le fondateur d'Evergrande condamne a perpetuite et un incendie d'hotel tue
+    neuf personnes en Inde". That item was published.
+    """
+    verdict = [_article("Le fondateur d'Evergrande condamne", src) for src in _REFERENCE[:3]]
+    fire = [_article("Un incendie d'hotel tue neuf personnes", src) for src in _REFERENCE[:3]]
+    # Both name the subject, and each event's articles sit together.
+    for article in verdict + fire:
+        article["title"] += " en Chine"
+    vectors = np.array([[1.0, 0.0, 0.0]] * 3 + [[0.0, 1.0, 0.0]] * 3)
+
+    items = build_items(verdict + fire, vectors)
+
+    assert len(items) == 2, "one item per event, not one welded item"
+    titles = {item["members"][0]["title"] for item in items}
+    assert any("Evergrande" in t for t in titles)
+    assert any("incendie" in t for t in titles)
+
+
+def test_a_country_shaped_container_stops_producing_items() -> None:
+    """What no amount of score tuning could fix. Measured on 2026-08-20,
+    "Espana" held 40 articles that split into 40 events of one article each --
+    40 unrelated Spanish stories, not a subject with events in it. None clears
+    the per-event floor, so the container simply stops producing."""
+    # Five newsrooms all naming Espana, each about something different.
+    articles = [
+        _article(f"En Espana, un fait divers numero {i}", src) for i, src in enumerate(_REFERENCE)
+    ]
+    vectors = np.eye(len(articles))[:, :5].astype(float)
+
+    items = build_items(articles, vectors)
+
+    assert items == [], "five unrelated stories are not an event"
+
+
+def test_one_event_reached_from_two_subjects_is_published_once() -> None:
+    """An article belongs to every subject it names, so one event surfaces once
+    per subject that touches it. Measured, "Gaza" and "Hind Rajab" both produced
+    the identical 14-source event, as did "Fedorov" and "Ukraine" and "China"
+    and "Evergrande" -- six duplicate pairs among 88 events. Left in, a Briefing
+    runs the same story twice under two labels.
+    """
+    articles = [
+        _article("A Gaza, deux ans apres la mort de Hind Rajab", src) for src in _REFERENCE[:3]
+    ]
+    vectors = np.array([[1.0, 0.0]] * 3)
+
+    items = build_items(articles, vectors)
+
+    assert len(items) == 1
+    # Both names travel with the surviving item, so the provenance is not lost.
+    assert {"gaza", "hind rajab"} <= set(items[0]["subject_names"])
+
+
+def test_the_same_headline_twice_from_one_source_is_dropped() -> None:
+    """GDELT indexes some pages repeatedly, and a few are not articles: the
+    2026-08-20 corpus carried "Making sure you're not a bot!" 33 times from one
+    source. They cannot inflate `independent_source_count`, which counts
+    distinct sources, but they drag a subject's centroid and so its coherence.
+    Genuine syndication -- one wire piece run by eleven outlets -- survives."""
+    repeated = [_article("Crise a Ceuta", _REFERENCE[0]) for _ in range(8)]
+    syndicated = [_article("Crise a Ceuta", src) for src in _REFERENCE[1:4]]
+
+    items = build_items(repeated + syndicated)
+
+    assert len(items[0]["members"]) == 4, "one per source, not one per indexing"
+    assert items[0]["independent_source_count"] == 4
+
+
+def test_the_event_carries_its_own_newsroom_count_not_the_subjects() -> None:
+    """A subject clearing the floor says the press is covering Ceuta; an item has
+    to say which development. Splitting divides the newsrooms among the events,
+    so the count that decides the ranking is measured on the event."""
+    big = [_article("Ceuta: transfert de 500 mineurs", src) for src in _REFERENCE[:4]]
+    small = [_article("Ceuta: la police evacue les plages", src) for src in _REFERENCE[:2]]
+    vectors = np.array([[1.0, 0.0]] * 4 + [[0.0, 1.0]] * 2)
+
+    items = build_items(big + small, vectors)
+
+    by_count = sorted(items, key=lambda i: -i["reference_newsroom_count"])
+    assert [i["reference_newsroom_count"] for i in by_count] == [4, 2]
+    # The subject's own count travels alongside, for provenance.
+    assert all(i["subject_newsroom_count"] == 4 for i in items)

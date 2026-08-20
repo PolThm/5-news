@@ -53,9 +53,14 @@ def _subject_corpus(name: str = "Ceuta") -> tuple[ArticleRecord, ...]:
     # those two would form a subject and rank nothing, which is a fallback path
     # dressed up as a success.
     countries = ("france", "spain", "germany")
+    # One headline, three newsrooms: the articles must form ONE event, not three.
+    # `_no_op_embed` keys a vector on the title text, so three different titles
+    # are three orthogonal points and the event split -- correctly -- separates
+    # them into three single-article events that clear no floor. Real syndication
+    # looks like this too.
     return tuple(
         ArticleRecord(
-            title=f"La crise a {name} s'aggrave, jour {i}",
+            title=f"La crise a {name} s'aggrave",
             url=f"https://{source}/{i}",
             published_at=datetime(2026, 8, 11, 6, 0, tzinfo=UTC),
             source=source,
@@ -207,7 +212,11 @@ def test_writes_a_cycle_record(tmp_path: Path, working_agenda) -> None:
     record = json.loads(result.cycle_path.read_text())
     assert record["cycle_id"] == "2026-08-11T00-00-00Z"
     assert record["articles_collected"] == len(_REFERENCE_NEWSROOMS)
-    assert record["groups_after_dedupe"] == len(_REFERENCE_NEWSROOMS)
+    # One group, not three: the fixture is one headline run by three newsrooms,
+    # which is exactly what Syndication Detection collapses. The subject stage
+    # still sees all three, because it reads the collect output rather than the
+    # dedupe output -- three independent sources on one event.
+    assert record["groups_after_dedupe"] == 1
     assert record["failures"] == []
     assert "started_at" in record
 

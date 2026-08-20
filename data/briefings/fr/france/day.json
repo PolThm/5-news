@@ -2,161 +2,268 @@
   "clusters": [
     {
       "angle_zone": "france",
-      "cluster_id": "subject-yves-foulon-24716195b2e2",
-      "coherence": 0.6834343675146937,
-      "consequence": 1,
+      "cluster_id": "subject-france-e9a9ba0f75b8",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
-        "france"
+        "ci",
+        "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Yves Foulon, maire d'Arcachon, condamné à 5 000 euros d'amende pour menaces et violences",
-      "independent_source_count": 5,
+      "country_count": 2,
+      "editorial_day": "2026-08-19",
+      "headline": "La France enregistre plusieurs milliers de décès supplémentaires liés aux vagues de chaleur estivales",
+      "independent_source_count": 3,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/08/20/yves-foulon-maire-d-arcachon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant-aux-municipales_6751011_823448.html"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/clima-y-medio-ambiente/2026-08-19/francia-registra-7300-muertes-adicionales-durante-las-olas-de-calor-desde-mayo.html"
         },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/segunda-ola-calor-francia-registro-un-1-243-muertes-relacionadas-con-las-altas-temperaturas_7027432_0.html"
+        },
+        {
+          "language": "es",
+          "source": "biobiochile.cl",
+          "source_country": "ci",
+          "url": "https://www.biobiochile.cl/noticias/internacional/europa/2026/08/19/ola-de-calor-extremo-en-francia-ha-dejado-hasta-7-300-muertes-extras-en-el-ultimo-verano.shtml"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "ci",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/segunda-ola-calor-francia-registro-un-1-243-muertes-relacionadas-con-las-altas-temperaturas_7027432_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.6207,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "belgique",
+        "france",
+        "francia",
+        "macron",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "La France a connu des vagues de chaleur extrêmes depuis mai qui ont provoqué environ 7.300 décès supplémentaires. La deuxième vague de chaleur à elle seule a été responsable de plus de 1.200 décès liés aux températures élevées.",
+      "takeaway": "La France doit repenser ses stratégies de protection sanitaire et d'adaptation au changement climatique pour réduire la mortalité lors des prochaines vagues de chaleur.",
+      "why_it_matters": "Ces décès massifs révèlent la vulnérabilité de la population française aux extrêmes climatiques et questionnent l'efficacité des systèmes de prévention sanitaire face aux vagues de chaleur répétées."
+    },
+    {
+      "angle_zone": "france",
+      "cluster_id": "subject-legion-b60095096763",
+      "coherence": 0.5705355096575244,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "unknown"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-20",
+      "headline": "François Fillon suspendu de la Légion d'honneur et de l'ordre national du Mérite",
+      "independent_source_count": 8,
+      "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/le-maire-darcachon-yves-foulon-condamne-pour-menaces-et-violences-contre-son-opposant-ecologiste-20260820_YHSRV4LX4JHTJNXTA27IUYRHU4/"
+          "url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/justice/le-maire-d-arcachon-yves-foulon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant_8154986.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.la-croix.com/politique/francois-fillon-suspendu-de-la-legion-d-honneur-et-de-lordre-national-du-merite-20260820"
         },
         {
           "language": "fr",
-          "source": "laprovence.com",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.laprovence.com/article/faits-divers-justice/2134025686105214/le-maire-d-arcachon-yves-foulon-condamne-pour-menaces-et-violences-envers-son-principal-opposant"
+          "url": "https://www.mediapart.fr/journal/politique/200826/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs"
         },
         {
           "language": "fr",
-          "source": "franceinfo.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/justice/le-maire-d-arcachon-yves-foulon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant_8154986.html"
+          "url": "https://www.nouvelobs.com/politique/20260820.OBS117528/penelopegate-francois-fillon-suspendu-de-la-legion-d-honneur-un-an-apres-sa-condamnation.html"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-8810458"
+        },
+        {
+          "language": "fr",
+          "source": "midilibre.fr",
+          "source_country": "france",
+          "url": "https://www.midilibre.fr/2026/08/20/emplois-fictifs-de-francois-fillon-lhomme-politique-suspendu-de-la-legion-dhonneur-plus-dun-an-apres-sa-condamnation-13515529.php"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.fr",
+          "source_country": "france",
+          "url": "https://www.rtl.fr/actu/politique/penelopegate-apres-sa-condamnation-pour-emplois-fictifs-francois-fillon-suspendu-de-la-legion-d-honneur-7900663334"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/politique/ancien-premier-ministre-francois-fillon-suspendu-par-decret-de-la-legion-d-honneur-et-de-l-ordre-national-du-merite-pour-une-duree-de-dix-ans-2459369.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/societe/justice/le-maire-d-arcachon-yves-foulon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant_8154986.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/",
+      "rank": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "la-croix.com",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6834,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5705,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "prominence": 0.6667,
+          "source_reliability": 0.7241
         },
-        "total": 0.5418,
+        "total": 0.5803,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "yves foulon",
+      "subject_label": "legion",
       "subject_names": [
-        "yves foulon"
+        "francois fillon",
+        "legion"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Yves Foulon, maire d'Arcachon, a été condamné à une amende de 5 000 euros pour menaces et violences envers son principal opposant aux élections municipales.",
-      "takeaway": "Un magistrat français sanctionne pour la première fois un élu local condamné pénalement pour des violences commises contre son adversaire électoral.",
-      "why_it_matters": "Cette condamnation d'un maire pour menaces et violences envers un opposant politique expose les risques de débordements dans les campagnes électorales locales en France et questionne le respect des règles démocratiques de débat pacifique."
+      "subject_newsroom_count": 6,
+      "summary": "Plus d'un an après sa condamnation pour emplois fictifs de son épouse, François Fillon a été suspendu de la Légion d'honneur et de l'ordre national du Mérite par décret pour une durée de dix ans, selon plusieurs sources médiatiques rapportant cette sanction administrative.",
+      "takeaway": "La justice a exécuté sa décision par une sanction administrative qui efface symboliquement la reconnaissance d'État accordée à Fillon.",
+      "why_it_matters": "Cette suspension de dix ans prive Fillon de deux distinctions honorifiques majeures en France, marquant une conséquence administrative directe de sa condamnation pour emplois fictifs."
     },
     {
       "angle_zone": "france",
-      "cluster_id": "subject-france-2e6daaf138ae",
-      "coherence": null,
+      "cluster_id": "subject-togo-f9da304869ed",
+      "coherence": 0.500229142142131,
       "consequence": 1,
       "countries": [
-        "france"
+        "ca",
+        "france",
+        "united-states"
       ],
-      "country_count": 1,
+      "country_count": 3,
       "editorial_day": "2026-08-20",
-      "headline": "La vague de chaleur en France égale le record de durée établi en 1983",
-      "independent_source_count": 3,
+      "headline": "Deux réalisateurs français arrêtés au Togo pour violations présumées des règles d'immigration",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260820-record-vague-chaleur-juillet-canicule-la-plus-longue-en-france-depuis-1983"
+          "url": "https://www.france24.com/fr/info-en-continu/20260820-inqui%C3%A9tudes-pour-deux-r%C3%A9alisateurs-fran%C3%A7ais-arr%C3%AAt%C3%A9s-et-d%C3%A9tenus-au-togo-avec-un-collaborateur-local"
+        },
+        {
+          "language": "en",
+          "source": "lancasteronline.com",
+          "source_country": "united-states",
+          "url": "https://lancasteronline.com/news/world/togo-detains-french-filmmakers-over-alleged-immigration-violations-advocacy-group-says/article_a3386801-740c-567a-91e6-59615bcb6f19.html"
+        },
+        {
+          "language": "en",
+          "source": "wsls.com",
+          "source_country": "united-states",
+          "url": "https://www.wsls.com/news/world/2026/08/20/togo-detains-french-filmmakers-over-alleged-immigration-violations-advocacy-group-says/"
+        },
+        {
+          "language": "en",
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/world/2026/08/20/togo-detains-french-filmmakers-over-alleged-immigration-violations-advocacy-group-says"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "france",
+        "to"
       ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "origin_country": "ca",
+      "outbound_source": "mediapart.fr",
+      "outbound_url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local",
+      "rank": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr"
+        "mediapart.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5002,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5556,
+          "source_reliability": 0.6
         },
-        "total": 0.5114,
+        "total": 0.528,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "togo",
       "subject_names": [
-        "france",
-        "francia",
-        "marseille",
-        "paris"
+        "togo"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Une vague de chaleur qui a débuté fin juillet en France s'étire maintenant sur vingt-trois jours, égalant ainsi le record de la plus longue vague de chaleur jamais enregistrée dans le pays, établi en juillet 1983.",
-      "takeaway": "La France connaît désormais les vagues de chaleur les plus longues de son histoire moderne, établissant un nouveau régime climatique auquel le pays doit s'adapter.",
-      "why_it_matters": "Cette égalité avec le record de 1983 marque un tournant climatique qui expose la France à des risques accrus pour l'agriculture, l'infrastructure énergétique et la santé publique, particulièrement chez les populations vulnérables."
+      "subject_newsroom_count": 4,
+      "summary": "Deux réalisateurs français et un collaborateur local ont été arrêtés et détenus au Togo selon une source d'advocacy. L'arrestation serait liée à des violations présumées des règles d'immigration, bien que les articles ne précisent pas les détails exacts des accusations ou le contexte du projet sur lequel travaillaient les réalisateurs.",
+      "takeaway": "Deux réalisateurs français sont emprisonnés au Togo pour des violations présumées du code de l'immigration, forçant Paris à agir.",
+      "why_it_matters": "La France doit intervenir diplomatiquement auprès des autorités togolaises pour la libération de deux citoyens français et d'un collaborateur local actuellement détenus, mettant en question la sécurité des ressortissants français en mission à l'étranger."
     },
     {
       "angle_zone": "france",
-      "cluster_id": "subject-allemagne-d5d9e058c8f4",
-      "coherence": 0.5786023501285367,
+      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
+      "coherence": 0.5834268248746377,
       "consequence": 3,
       "countries": [
         "france"
@@ -164,7 +271,7 @@
       "country_count": 1,
       "editorial_day": "2026-08-20",
       "filled_from": "europe",
-      "headline": "L'Europe recense des milliers de décès liés aux chaleurs extrêmes de l'été",
+      "headline": "L'Allemagne enregistre 14 000 décès liés à la chaleur cet été, l'Espagne près de 4 500",
       "independent_source_count": 4,
       "members": [
         {
@@ -183,7 +290,7 @@
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
@@ -199,7 +306,7 @@
       "origin_country": "france",
       "outbound_source": "lemonde.fr",
       "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 3,
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "france24.com",
@@ -209,7 +316,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5786,
+          "coherence": 0.5834,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -219,7 +326,7 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6378,
+        "total": 0.6383,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "allemagne",
@@ -227,10 +334,10 @@
         "allemagne",
         "espagne"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "L'Allemagne a enregistré environ 14 000 décès attribués à la chaleur au cours de l'été, un chiffre largement supérieur au pic observé en 2018, tandis que l'Espagne en a compté près de 4 500 pendant la même période. Ces chiffres reflètent l'impact dévastateur des vagues de chaleur exceptionnelles qui ont frappé l'Europe durant cette saison.",
-      "takeaway": "L'Europe découvre l'ampleur réelle de la mortalité des canicules, mais sans chiffres fiables pour la France.",
-      "why_it_matters": "Ces décès massifs en Allemagne et en Espagne révèlent que la France, exposée aux mêmes phénomènes climatiques, ne dispose pas de données comparables sur sa propre mortalité liée aux chaleurs extrêmes, compromettant l'anticipation des risques sanitaires futurs."
+      "subject_newsroom_count": 6,
+      "summary": "Cet été, l'Europe a connu des vagues de chaleur extrême causant un bilan humain considérable. L'Allemagne a dénombré environ 14 000 morts liées aux chaleurs, un chiffre largement supérieur au pic enregistré en 2018, tandis que l'Espagne en a compté près de 4 500.",
+      "takeaway": "La France découvre que ses voisins européens ne sont pas mieux préparés qu'elle à affronter des décès massifs dus à la chaleur extrême.",
+      "why_it_matters": "Ces chiffres sans précédent en Allemagne et en Espagne confirment que les canicules meurtrières deviennent régulières en Europe, ce qui remet en question l'efficacité des plans français de prévention et d'adaptation face aux vagues de chaleur."
     },
     {
       "angle_zone": "france",
@@ -271,7 +378,7 @@
       "origin_country": "spain",
       "outbound_source": "elpais.com",
       "outbound_url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html",
-      "rank": 4,
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "eldiario.es",
@@ -295,97 +402,19 @@
       },
       "subject_label": "madrid",
       "subject_names": [
-        "ayuso",
         "barcelona",
         "comunidad",
-        "madrid",
-        "mallorca"
+        "madrid"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "La Communauté de Madrid a admis par écrit que le droit à l'avortement ne peut pas être garanti dans certains hôpitaux publics, ce qui l'oblige à orienter les femmes vers des établissements privés pour accéder à ce service.",
-      "takeaway": "Madrid admet officiellement que des hôpitaux publics ne garantissent pas l'accès à l'avortement, contournant ainsi une obligation légale en orientant les patientes vers le secteur privé.",
-      "why_it_matters": "Cet événement intéresse la France surtout comme indicateur du recul du droit à l'avortement dans un pays voisin de l'UE, rappelant que l'accès à ce droit n'est pas acquis même en démocratie occidentale."
-    },
-    {
-      "angle_zone": "france",
-      "cluster_id": "subject-ligue-6372108f7845",
-      "coherence": 0.5127553475886757,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "La pelouse du Parc des Princes, endommagée par la canicule, force le PSG à jouer son match à Rennes",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/foot/ligue-1/ligue-1-en-raison-de-l-etat-de-la-pelouse-du-parc-des-princes-le-match-psg-stade-rennais-est-inverse-et-se-jouera-a-rennes-dimanche_8154575.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "corsematin.com",
-          "source_country": "france",
-          "url": "https://www.corsematin.com/article/francemonde/1552745478788/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5128,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.4443,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ligue",
-      "subject_names": [
-        "ligue",
-        "princes"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "En raison de l'état catastrophique de la pelouse du Parc des Princes causé par la canicule, le match de Ligue 1 entre le PSG et le Stade Rennais, initialement prévu au Parc des Princes, a été déplacé à Rennes et se jouera dimanche.",
-      "takeaway": "La canicule force la Ligue 1 à inverser le lieu du match PSG-Rennes pour préserver l'intégrité sportive.",
-      "why_it_matters": "Le match de Ligue 1 entre le PSG et Rennes, prévu au Parc des Princes, se déroule désormais en Bretagne en raison de l'état dégradé de la pelouse parisienne, ce qui affecte l'organisation du calendrier et les conditions de jeu des deux équipes françaises."
+      "subject_newsroom_count": 8,
+      "summary": "La Communauté de Madrid a admis par écrit que le droit à l'avortement ne peut pas être assuré dans certains hôpitaux publics de la région. Face à cette impossibilité, l'administration dérive les femmes demandant un avortement vers des établissements privés pour garantir l'accès à ce service.",
+      "takeaway": "La Communauté de Madrid avoue ne pas pouvoir assurer l'accès à l'avortement dans tous ses hôpitaux publics.",
+      "why_it_matters": "Cet événement en Espagne illustre comment un gouvernement régional reconnaît publiquement son incapacité à garantir un droit fondamental dans ses services publics, un scénario qui interpelle les lecteurs français sur la vulnérabilité des droits reproductifs en Europe même dans les pays démocratiques."
     }
   ],
   "discarded_ingested": 0,
-  "discarded_kept": 0,
-  "generated_at": "2026-08-20T14:27:44.648642+00:00",
+  "discarded_kept": 5,
+  "generated_at": "2026-08-20T15:23:24.321362+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

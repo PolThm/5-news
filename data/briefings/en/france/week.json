@@ -2,166 +2,275 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-yves-foulon-24716195b2e2"
+        "subject-france-e9a9ba0f75b8"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-yves-foulon-24716195b2e2",
-      "coherence": 0.6834343675146937,
-      "consequence": 1,
+      "cluster_id": "subject-france-e9a9ba0f75b8",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
-        "france"
+        "ci",
+        "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Arcachon mayor Yves Foulon convicted of threats and violence against political opponent",
-      "independent_source_count": 5,
+      "country_count": 2,
+      "editorial_day": "2026-08-19",
+      "headline": "France records thousands of excess deaths during summer heat waves",
+      "independent_source_count": 3,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/08/20/yves-foulon-maire-d-arcachon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant-aux-municipales_6751011_823448.html"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/clima-y-medio-ambiente/2026-08-19/francia-registra-7300-muertes-adicionales-durante-las-olas-de-calor-desde-mayo.html"
         },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/segunda-ola-calor-francia-registro-un-1-243-muertes-relacionadas-con-las-altas-temperaturas_7027432_0.html"
+        },
+        {
+          "language": "es",
+          "source": "biobiochile.cl",
+          "source_country": "ci",
+          "url": "https://www.biobiochile.cl/noticias/internacional/europa/2026/08/19/ola-de-calor-extremo-en-francia-ha-dejado-hasta-7-300-muertes-extras-en-el-ultimo-verano.shtml"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "ci",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/segunda-ola-calor-francia-registro-un-1-243-muertes-relacionadas-con-las-altas-temperaturas_7027432_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.63,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "belgique",
+        "france",
+        "francia",
+        "macron",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "France experienced multiple heat waves between May and the end of summer, resulting in thousands of additional deaths linked to high temperatures. One heat wave alone caused 1,243 heat-related deaths, while overall excess mortality during this period reached approximately 7,300 deaths above normal levels.",
+      "takeaway": "Excessive heat deaths expose France's vulnerability to climate extremes and force a reckoning with how the country protects its most at-risk citizens.",
+      "why_it_matters": "France faces urgent pressure to strengthen public health responses to extreme heat, as thousands of preventable deaths reveal gaps in warning systems and care for vulnerable populations during summer months."
+    },
+    {
+      "_linked_ids": [
+        "subject-francois-fillon-1bc8c95ceb13",
+        "subject-legion-186d345bfc89",
+        "subject-legion-b60095096763"
+      ],
+      "angle_zone": "france",
+      "cluster_id": "subject-legion-b60095096763",
+      "coherence": 0.5705355096575244,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "unknown"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-20",
+      "headline": "François Fillon suspended from Legion of Honor after conviction for fictitious jobs",
+      "independent_source_count": 8,
+      "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/le-maire-darcachon-yves-foulon-condamne-pour-menaces-et-violences-contre-son-opposant-ecologiste-20260820_YHSRV4LX4JHTJNXTA27IUYRHU4/"
+          "url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/justice/le-maire-d-arcachon-yves-foulon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant_8154986.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.la-croix.com/politique/francois-fillon-suspendu-de-la-legion-d-honneur-et-de-lordre-national-du-merite-20260820"
         },
         {
           "language": "fr",
-          "source": "laprovence.com",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.laprovence.com/article/faits-divers-justice/2134025686105214/le-maire-d-arcachon-yves-foulon-condamne-pour-menaces-et-violences-envers-son-principal-opposant"
+          "url": "https://www.mediapart.fr/journal/politique/200826/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs"
         },
         {
           "language": "fr",
-          "source": "franceinfo.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/justice/le-maire-d-arcachon-yves-foulon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant_8154986.html"
+          "url": "https://www.nouvelobs.com/politique/20260820.OBS117528/penelopegate-francois-fillon-suspendu-de-la-legion-d-honneur-un-an-apres-sa-condamnation.html"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-8810458"
+        },
+        {
+          "language": "fr",
+          "source": "midilibre.fr",
+          "source_country": "france",
+          "url": "https://www.midilibre.fr/2026/08/20/emplois-fictifs-de-francois-fillon-lhomme-politique-suspendu-de-la-legion-dhonneur-plus-dun-an-apres-sa-condamnation-13515529.php"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.fr",
+          "source_country": "france",
+          "url": "https://www.rtl.fr/actu/politique/penelopegate-apres-sa-condamnation-pour-emplois-fictifs-francois-fillon-suspendu-de-la-legion-d-honneur-7900663334"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/politique/ancien-premier-ministre-francois-fillon-suspendu-par-decret-de-la-legion-d-honneur-et-de-l-ordre-national-du-merite-pour-une-duree-de-dix-ans-2459369.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/societe/justice/le-maire-d-arcachon-yves-foulon-condamne-a-5-000-euros-d-amende-pour-menaces-et-violences-envers-son-principal-opposant_8154986.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/",
+      "rank": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "la-croix.com",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6834,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5705,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "novelty": 0.3333,
+          "prominence": 0.6667,
+          "source_reliability": 0.7241
         },
-        "total": 0.4884,
+        "total": 0.5203,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "yves foulon",
+      "subject_label": "legion",
       "subject_names": [
-        "yves foulon"
+        "francois fillon",
+        "legion"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Yves Foulon, the mayor of Arcachon, has been convicted and fined 5,000 euros for making threats and committing acts of violence against his main political opponent in the municipal elections, specifically an ecologist candidate.",
-      "takeaway": "French judges are willing to punish incumbent mayors who resort to threats and violence against electoral opponents.",
-      "why_it_matters": "A French mayor convicted of menaces and violence against a political opponent establishes that judicial consequences now apply to such conduct during municipal campaigns, affecting how local politicians can behave toward rivals."
+      "subject_newsroom_count": 6,
+      "summary": "Former French politician François Fillon has been suspended from the Legion of Honor and the National Order of Merit for ten years, more than a year after his conviction in the \"Penelopegate\" scandal involving fictitious employment positions. The suspension was imposed by governmental decree following his legal condemnation for the scheme.",
+      "takeaway": "A former prime minister and presidential candidate loses his honors a year after conviction, ending a chapter in France's most serious recent political integrity scandal.",
+      "why_it_matters": "The suspension strips Fillon of honors that symbolize official recognition of his public service, marking the completion of legal consequences for the scandal that destroyed his 2017 presidential campaign and damaged confidence in French political institutions."
     },
     {
       "_linked_ids": [
-        "subject-france-2e6daaf138ae",
-        "subject-france-492b5c52b9ea",
-        "subject-france-55dbb3652e8e",
-        "subject-france-8f99250a4e0c",
-        "subject-france-a29369d0679c"
+        "subject-togo-a11dff3af632",
+        "subject-togo-f9da304869ed"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-france-2e6daaf138ae",
-      "coherence": null,
+      "cluster_id": "subject-togo-f9da304869ed",
+      "coherence": 0.500229142142131,
       "consequence": 1,
       "countries": [
-        "france"
+        "ca",
+        "france",
+        "united-states"
       ],
-      "country_count": 1,
+      "country_count": 3,
       "editorial_day": "2026-08-20",
-      "headline": "France experiences longest heat wave since 1983",
-      "independent_source_count": 3,
+      "headline": "Togo detains two French filmmakers and local collaborator for immigration violations",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/article/2026/08/20/la-vague-de-chaleur-commencee-a-la-fin-de-juillet-devient-la-plus-longue-ex-aequo-avec-1983_6750962_3244.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260820-record-vague-chaleur-juillet-canicule-la-plus-longue-en-france-depuis-1983"
+          "url": "https://www.france24.com/fr/info-en-continu/20260820-inqui%C3%A9tudes-pour-deux-r%C3%A9alisateurs-fran%C3%A7ais-arr%C3%AAt%C3%A9s-et-d%C3%A9tenus-au-togo-avec-un-collaborateur-local"
+        },
+        {
+          "language": "en",
+          "source": "lancasteronline.com",
+          "source_country": "united-states",
+          "url": "https://lancasteronline.com/news/world/togo-detains-french-filmmakers-over-alleged-immigration-violations-advocacy-group-says/article_a3386801-740c-567a-91e6-59615bcb6f19.html"
+        },
+        {
+          "language": "en",
+          "source": "wsls.com",
+          "source_country": "united-states",
+          "url": "https://www.wsls.com/news/world/2026/08/20/togo-detains-french-filmmakers-over-alleged-immigration-violations-advocacy-group-says/"
+        },
+        {
+          "language": "en",
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/world/2026/08/20/togo-detains-french-filmmakers-over-alleged-immigration-violations-advocacy-group-says"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "france",
+        "to"
       ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "origin_country": "ca",
+      "outbound_source": "mediapart.fr",
+      "outbound_url": "https://www.mediapart.fr/journal/international/200826/deux-realisateurs-francais-arretes-et-detenus-au-togo-avec-un-collaborateur-local",
+      "rank": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr"
+        "mediapart.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5002,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
-          "novelty": 0.2,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "novelty": 0.5,
+          "prominence": 0.5556,
+          "source_reliability": 0.6
         },
-        "total": 0.4421,
+        "total": 0.4754,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "togo",
       "subject_names": [
-        "france",
-        "francia",
-        "marseille",
-        "paris"
+        "togo"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "A heat wave that began in late July has become the longest on record in France, tying the duration of the heat wave that occurred in July 1983. The current heat wave has lasted twenty-three days, matching the previous record set over four decades ago.",
-      "takeaway": "The longest heat wave in four decades is testing France's infrastructure and resources designed for cooler conditions.",
-      "why_it_matters": "France's agricultural sector, water supplies, and public health services face intensifying strain as the heat wave matching 1983's duration continues to stress irrigation, crop yields, and hospital capacity across the country."
+      "subject_newsroom_count": 4,
+      "summary": "Two French filmmakers and a local collaborator have been arrested and detained in Togo on allegations of immigration violations, according to reports from advocacy groups and news outlets monitoring the situation.",
+      "takeaway": "France's ability to operate freely in West Africa faces a practical test when its citizens can be held by host governments without immediately clear legal grounds.",
+      "why_it_matters": "French filmmakers and their work are now subject to detention in Togo on immigration grounds, creating immediate risk for French nationals doing documentary work in the country and raising questions about French diplomatic protections for citizens abroad."
     },
     {
       "_linked_ids": [
@@ -179,7 +288,7 @@
       "country_count": 3,
       "editorial_day": "2026-08-19",
       "filled_from": "europe",
-      "headline": "Russia threatens Britain over military support for Ukraine",
+      "headline": "Russia threatens Britain over military support to Ukraine",
       "independent_source_count": 3,
       "members": [
         {
@@ -208,7 +317,7 @@
       "origin_country": "brazil",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
-      "rank": 3,
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "globo.com",
@@ -232,20 +341,22 @@
       },
       "subject_label": "ukraine",
       "subject_names": [
-        "inglaterra",
-        "meghan markle",
-        "putin",
+        "harry",
+        "kiev",
+        "meghan",
+        "moscou",
         "reino unido",
         "roumanie",
         "rusia",
         "russia",
+        "russie",
         "ucrania",
         "ukraine"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Russia has threatened the United Kingdom in response to British military assistance to Ukraine, specifically over the supply of drones. Russian officials warned that increased British involvement in the conflict would come at a higher cost, following Ukrainian drone attacks on Moscow.",
-      "takeaway": "Russia is making explicit threats against individual NATO countries to deter military support for Ukraine, testing whether the alliance will fracture under pressure.",
-      "why_it_matters": "France, as a NATO member and supporter of Ukraine, faces the same risk of Russian threats and escalation over military aid that now directly targets Britain, raising the stakes for all Western suppliers of weapons to Kyiv."
+      "subject_newsroom_count": 23,
+      "summary": "Russia has issued threats against the United Kingdom in response to British military aid, specifically drones, being supplied to Ukraine. The threats escalate warnings about the consequences of increasing Western involvement in the conflict, with Russia suggesting that greater British participation will result in greater costs or consequences.",
+      "takeaway": "Russia's threats reveal it now views Western military support to Ukraine as direct participation in the conflict, raising the stakes for all NATO countries involved.",
+      "why_it_matters": "France faces the same escalating Russian threats as its NATO ally Britain, since France also supplies military aid to Ukraine and could become a similar target of Russian retaliation rhetoric."
     },
     {
       "_linked_ids": [
@@ -257,8 +368,8 @@
         "subject-allemagne-f5bb3706f8d1"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-allemagne-d5d9e058c8f4",
-      "coherence": 0.5786023501285367,
+      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
+      "coherence": 0.5834268248746377,
       "consequence": 3,
       "countries": [
         "france"
@@ -266,7 +377,7 @@
       "country_count": 1,
       "editorial_day": "2026-08-20",
       "filled_from": "europe",
-      "headline": "Europe counts thousands of heat-related deaths this summer across major nations",
+      "headline": "Europe records thousands of heat-related deaths during summer extreme temperatures",
       "independent_source_count": 4,
       "members": [
         {
@@ -285,7 +396,7 @@
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
@@ -301,7 +412,7 @@
       "origin_country": "france",
       "outbound_source": "lemonde.fr",
       "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 4,
+      "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "france24.com",
@@ -311,7 +422,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5786,
+          "coherence": 0.5834,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -321,7 +432,7 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.5844,
+        "total": 0.585,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "allemagne",
@@ -329,96 +440,15 @@
         "allemagne",
         "espagne"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Germany recorded approximately 14,000 deaths linked to extreme heat this summer, a figure significantly exceeding the previous peak from 2018, while Spain reported nearly 4,500 heat-related deaths during the same period. These numbers reflect the severe toll of the heat wave that affected Europe during the summer months.",
-      "takeaway": "Record heat deaths in Germany and Spain expose the lethal vulnerability of European populations to climate extremes that France shares.",
-      "why_it_matters": "The death toll from heat in neighbouring Germany and Spain demonstrates the scale of extreme temperature risk across Western Europe, including for France, where similar demographic and health vulnerabilities exist during future heat waves."
-    },
-    {
-      "_linked_ids": [
-        "subject-ligue-34fe8e1bbf29",
-        "subject-ligue-6372108f7845",
-        "subject-ligue-88b873f83535"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-ligue-6372108f7845",
-      "coherence": 0.5127553475886757,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "PSG-Rennes match moved from Parc des Princes due to heat damage to pitch",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/foot/ligue-1/ligue-1-en-raison-de-l-etat-de-la-pelouse-du-parc-des-princes-le-match-psg-stade-rennais-est-inverse-et-se-jouera-a-rennes-dimanche_8154575.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "corsematin.com",
-          "source_country": "france",
-          "url": "https://www.corsematin.com/article/francemonde/1552745478788/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5128,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 0.3333,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.3643,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ligue",
-      "subject_names": [
-        "ligue",
-        "princes"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "The Ligue 1 match between Paris Saint-Germain and Stade Rennais has been relocated from PSG's home stadium, the Parc des Princes, to Rennes' stadium because extreme heat has left the pitch at the Parc des Princes in unplayable condition. The match will now take place in Rennes on Sunday.",
-      "takeaway": "Extreme heat has become a material factor in French professional football operations.",
-      "why_it_matters": "The decision to play PSG's match at Rennes instead of Paris affects French football scheduling and the logistics of Ligue 1 clubs this weekend, with the fixture reversed due to stadium conditions beyond anyone's control."
+      "subject_newsroom_count": 6,
+      "summary": "European nations are tallying the human cost of extreme heat this summer, with Germany reporting approximately 14,000 deaths linked to the heat—significantly higher than the 2018 peak—and Spain recording nearly 4,500 heat-related deaths.",
+      "takeaway": "Europe's deadliest heat waves are proving far more lethal than previously measured, demanding a reckoning with climate risk across the continent.",
+      "why_it_matters": "These death tolls from heat in neighboring European countries underscore the severity of extreme temperature events that France also experiences, reinforcing the urgency for French public health authorities to strengthen heat-wave preparedness and protection for vulnerable populations."
     }
   ],
   "discarded_ingested": 0,
-  "discarded_kept": 0,
-  "generated_at": "2026-08-20T14:27:44.648642+00:00",
+  "discarded_kept": 5,
+  "generated_at": "2026-08-20T15:23:24.321362+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

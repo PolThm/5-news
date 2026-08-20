@@ -131,7 +131,11 @@ def _freshness(item: dict, reference_day: str) -> float:
     Undated items (the fallback path, when the agenda is unavailable) score 0.5
     -- neither promoted nor buried on a dimension nothing measured for them.
     """
-    day = item.get("agenda_day")
+    # `editorial_day` is the subject stage's own field, `agenda_day` the
+    # chronicle's. One reader for both: they answer the same question -- when
+    # did this last move -- and a ranking that only knew one would score every
+    # item from the other source at the undated default.
+    day = item.get("editorial_day") or item.get("agenda_day")
     if not day or not reference_day:
         return 0.5
     try:

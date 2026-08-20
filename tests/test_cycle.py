@@ -39,6 +39,35 @@ def _collection(*records: ArticleRecord, failures: list[Failure] | None = None) 
     return CollectionResult(articles=[r.to_dict() for r in records], failures=failures or [])
 
 
+# Three reference newsrooms naming one subject: the smallest corpus in which the
+# subject stage's editorial floor can be met. A cycle whose corpus forms no
+# subject falls back to the agenda and is correctly marked degraded, so a test
+# about anything else has to clear the floor first or it is testing the fallback.
+_REFERENCE_NEWSROOMS = ("lemonde.fr", "elpais.com", "theguardian.com")
+
+
+def _subject_corpus(name: str = "Ceuta") -> tuple[ArticleRecord, ...]:
+    # Three countries, not one: `qualifies` holds a subject to two Independent
+    # Sources AND two countries, and `_is_relevant_to` places it by
+    # `mentioned_countries`. A corpus that clears the editorial floor but not
+    # those two would form a subject and rank nothing, which is a fallback path
+    # dressed up as a success.
+    countries = ("france", "spain", "germany")
+    return tuple(
+        ArticleRecord(
+            title=f"La crise a {name} s'aggrave, jour {i}",
+            url=f"https://{source}/{i}",
+            published_at=datetime(2026, 8, 11, 6, 0, tzinfo=UTC),
+            source=source,
+            source_country=country,
+            language="fr",
+            collected_by="rss",
+            mentioned_countries=("spain",),
+        )
+        for i, (source, country) in enumerate(zip(_REFERENCE_NEWSROOMS, countries, strict=True))
+    )
+
+
 _STUB_DIMENSION = 16
 
 
@@ -168,7 +197,7 @@ def test_writes_a_cycle_record(tmp_path: Path, working_agenda) -> None:
     """The cycle record is what a human reads weeks later to judge whether a
     thin day was a quiet news day or a broken upstream."""
     result = run_cycle(
-        collect=lambda: _collection(_record("A", "a.com")),
+        collect=lambda: _collection(*_subject_corpus()),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
         embed=_no_op_embed,
@@ -177,8 +206,8 @@ def test_writes_a_cycle_record(tmp_path: Path, working_agenda) -> None:
 
     record = json.loads(result.cycle_path.read_text())
     assert record["cycle_id"] == "2026-08-11T00-00-00Z"
-    assert record["articles_collected"] == 1
-    assert record["groups_after_dedupe"] == 1
+    assert record["articles_collected"] == len(_REFERENCE_NEWSROOMS)
+    assert record["groups_after_dedupe"] == len(_REFERENCE_NEWSROOMS)
     assert record["failures"] == []
     assert "started_at" in record
 
@@ -208,7 +237,7 @@ def test_a_clean_cycle_is_not_marked_degraded(tmp_path: Path, working_agenda) ->
     # the agenda stage exists to replace, and the record has to show that.
     working_agenda()
     result = run_cycle(
-        collect=lambda: _collection(_record("A", "a.com")),
+        collect=lambda: _collection(*_subject_corpus()),
         cycle_id="2026-08-11T00-00-00Z",
         data_root=tmp_path,
         embed=_no_op_embed,
@@ -1601,3 +1630,59 @@ def test_rank_actually_receives_the_agenda_items_not_the_clusters(tmp_path: Path
     assert ranked[0]["agenda_category"] == "Armed conflicts and attacks"
     # And the Cluster the corpus produced is NOT a candidate on its own.
     assert not any("small.example" in json.dumps(r) for r in ranked)
+
+
+def test_subjects_are_the_candidates_when_the_reference_press_forms_any(
+    tmp_path: Path, working_agenda
+) -> None:
+    """The order of preference: subjects, then the chronicle, then Clusters.
+
+    Subjects lead because Clusters cannot be candidates -- the same-Event
+    threshold is a near-duplicate threshold, so 49 articles about Ceuta fragment
+    into 45 Clusters that each weigh nothing. The chronicle was grafted on to
+    work around that and brought its own flaw: it records incidents, so we
+    published helicopter crashes while the corpus held 170 articles on the
+    Strait of Hormuz.
+
+    A working agenda is available here on purpose -- the assertion is that it
+    is NOT used when subjects exist.
+    """
+    working_agenda()
+
+    run_cycle(
+        collect=lambda: _collection(*_subject_corpus()),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    from pipeline.stages import read_jsonl
+
+    ranked = list(
+        read_jsonl(tmp_path / "intermediate" / "rank" / "2026-08-11T00-00-00Z" / "ranked.jsonl")
+    )
+    assert ranked, "a subject clearing the floor must reach the ranking"
+    assert all("subject_label" in item for item in ranked)
+    assert not any("agenda_text" in item for item in ranked), "the chronicle was not consulted"
+
+
+def test_a_corpus_with_no_reference_press_falls_back_to_the_chronicle(
+    tmp_path: Path, working_agenda
+) -> None:
+    """A whole day's reference feeds failing is the case the fallback exists
+    for, and it is a degradation, not a clean cycle: selection reverts to a
+    signal that was measured publishing a ZZ Top drummer's death."""
+    working_agenda()
+
+    result = run_cycle(
+        collect=lambda: _collection(_record("Une depeche", "some-wire.example")),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    record = json.loads(result.cycle_path.read_text())
+    assert record["degraded"] is True
+    assert any("no subject cleared the editorial floor" in f["detail"] for f in record["failures"])

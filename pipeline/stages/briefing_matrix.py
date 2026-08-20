@@ -93,8 +93,9 @@ def build_period_pools(
         Period.DAY: [
             cluster
             for cluster in today_clusters
-            if not cluster.get("agenda_day")
-            or cluster["agenda_day"] >= (reference - timedelta(days=1)).date().isoformat()
+            if not (cluster.get("editorial_day") or cluster.get("agenda_day"))
+            or (cluster.get("editorial_day") or cluster["agenda_day"])
+            >= (reference - timedelta(days=1)).date().isoformat()
         ]
     }
     for period, window_days in _WINDOW_DAYS.items():

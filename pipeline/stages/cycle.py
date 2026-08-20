@@ -46,6 +46,8 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 
+import numpy as np
+
 from pipeline.adapters import CollectionResult, Failure
 from pipeline.adapters.cohere_embed import EmbeddingResult, embed_titles
 from pipeline.config import OUTPUT_LANGUAGES, zone_by_slug
@@ -67,6 +69,7 @@ from pipeline.stages.dedupe import run_dedupe
 from pipeline.stages.history import append_history, read_history
 from pipeline.stages.publish import WrittenPublish, assemble_briefings, publish_briefings
 from pipeline.stages.rank import ZoneRanking
+from pipeline.stages.subject import run_subjects
 from pipeline.stages.summarize import (
     WrittenSubmission,
     WrittenSummarize,
@@ -341,33 +344,75 @@ def run_cycle(
             )
 
             clusters = list(read_jsonl(cluster_path))
-            # The editorial agenda replaces the Cluster list as the Briefing's
-            # candidate set. Clusters remain the evidence -- they supply the
-            # Articles, the source list and the Consensus Score -- but what
-            # counts as a candidate item is now what a human editor recorded,
-            # not what the long tail happened to rerun. See
-            # `pipeline.stages.agenda` for the measurements behind the switch.
+            # What counts as a candidate item, in order of preference.
             #
-            # Degrading here leaves `clusters` in place, so a cycle whose
-            # agenda is unavailable behaves exactly as it did before this
-            # stage existed rather than publishing nothing.
+            # 1. Subjects, formed from what the reference press leads with.
+            # 2. The Wikipedia chronicle, if no subject clears the editorial
+            #    floor -- a whole day's reference feeds failing is the case
+            #    that leaves.
+            # 3. The Clusters themselves, if neither is available.
+            #
+            # Subjects lead because Clusters cannot be candidates: the
+            # same-Event threshold is a near-duplicate threshold, so 49
+            # articles about Ceuta fragment into 45 Clusters that each weigh
+            # nothing (see `pipeline.stages.subject` for the measurements). The
+            # chronicle was grafted on to work around exactly that, and brought
+            # its own flaw -- it records incidents, so we published helicopter
+            # crashes while the corpus held 170 articles on the Strait of
+            # Hormuz.
+            #
+            # Each fallback degrades rather than fails (AD-10): a cycle with no
+            # candidates at all publishes nothing and leaves the previous
+            # Briefings in place (AD-7), which is the honest outcome.
             try:
-                agenda = agenda_fn(
-                    cluster_path, cycle_id=cycle_id, data_root=data_root, embed=embed
-                )
-                agenda_items = list(read_jsonl(agenda.output_path))
-                if agenda_items:
-                    clusters = agenda_items
+                subject_titles = [a.get("title") or "" for a in read_jsonl(articles_path)]
+                # Embedding is memoized for the cycle, so the titles dedupe and
+                # cluster already sent cost nothing here; only the ones they
+                # collapsed away are new.
+                vectors = None
+                embedded = embed(subject_titles)
+                if not embedded.failures and len(embedded.vectors) == len(subject_titles):
+                    vectors = np.asarray(embedded.vectors, dtype=float)
                 else:
+                    # Names alone still form subjects; only the cross-language
+                    # merge ("China" with "Chine") is lost.
                     failures.append(
-                        Failure("cycle", "editorial agenda was empty; ranking Clusters directly")
+                        Failure("cycle", "subject embedding failed; no cross-language merge")
                     )
-                if agenda.degraded:
-                    failures.append(
-                        Failure("cycle", f"agenda degraded; see {agenda.metadata_path}")
+                subjects = run_subjects(
+                    articles_path, cycle_id=cycle_id, data_root=data_root, vectors=vectors
+                )
+                subject_items = list(read_jsonl(subjects.output_path))
+            except Exception as exc:  # noqa: BLE001 - stage boundary
+                subject_items = []
+                failures.append(Failure("cycle", f"subject stage raised: {exc}"))
+
+            if subject_items:
+                clusters = subject_items
+                trace(f"subject: {len(subject_items)} subjects are this cycle's candidates")
+            else:
+                failures.append(
+                    Failure("cycle", "no subject cleared the editorial floor; trying the agenda")
+                )
+                try:
+                    agenda = agenda_fn(
+                        cluster_path, cycle_id=cycle_id, data_root=data_root, embed=embed
                     )
-            except Exception as exc:  # noqa: BLE001 - adapter boundary
-                failures.append(Failure("cycle", f"agenda raised: {exc}"))
+                    agenda_items = list(read_jsonl(agenda.output_path))
+                    if agenda_items:
+                        clusters = agenda_items
+                    else:
+                        failures.append(
+                            Failure(
+                                "cycle", "editorial agenda was empty; ranking Clusters directly"
+                            )
+                        )
+                    if agenda.degraded:
+                        failures.append(
+                            Failure("cycle", f"agenda degraded; see {agenda.metadata_path}")
+                        )
+                except Exception as exc:  # noqa: BLE001 - adapter boundary
+                    failures.append(Failure("cycle", f"agenda raised: {exc}"))
             if clustered.degraded:
                 detail = "clustering degraded: embedding failed, no cross-language merge"
                 failures.append(Failure("cycle", detail))

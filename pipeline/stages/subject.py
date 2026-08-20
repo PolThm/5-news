@@ -367,6 +367,19 @@ def merge_phrases(
     return subjects
 
 
+def _latest_day(group: Sequence[dict]) -> str:
+    """The most recent day any of a subject's articles carries.
+
+    Most recent, not median: a subject the press returned to today is today's
+    however long it has been running, and the ranking's own novelty factor is
+    what distinguishes a development from a repetition.
+    """
+    days = [
+        (article.get("published_at") or "")[:10] for article in group if article.get("published_at")
+    ]
+    return max(days) if days else ""
+
+
 def build_items(
     articles: Sequence[dict],
     vectors: np.ndarray | None = None,
@@ -424,6 +437,12 @@ def build_items(
                 "mentioned_countries": [country for country, _ in about.most_common()],
                 "outbound_url": group[0].get("url"),
                 "outbound_source": group[0].get("source"),
+                # When the subject last moved, from its own articles. Named
+                # `editorial_day` rather than reusing the agenda's field: the
+                # two answer the same question for the ranking (how fresh is
+                # this) and would be confusing under one name, since one is a
+                # chronicle's dateline and this is our corpus's own.
+                "editorial_day": _latest_day(group),
                 "subject_label": label,
                 "subject_names": sorted(names),
                 # The editorial weight, kept on the item so a ranking can use

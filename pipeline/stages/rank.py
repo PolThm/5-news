@@ -111,6 +111,10 @@ def qualifies(cluster: dict) -> bool:
 _PROMINENCE_HALF = 4.0  # outlets
 _CORROBORATION_HALF = 2.0  # countries
 _RELIABILITY_HALF = 8.0  # summed tiers, i.e. ~3 reference newsrooms
+# Reference newsrooms. Half-saturation at 8 because the observed range on a real
+# corpus is 3 (the editorial floor) to 23, so 8 puts the interesting part of that
+# range in the steep part of the curve rather than at its flat top.
+_EDITORIAL_HALF = 8.0
 _FRESHNESS_HALFLIFE_DAYS = 2.0
 
 
@@ -202,6 +206,30 @@ def _novelty(item: dict) -> float:
     return _clamp(1.0 / len(linked))
 
 
+def _editorial_weight(item: dict) -> float:
+    """How many reference newsrooms led with this subject.
+
+    The strongest signal this pipeline has, and the one the score was missing
+    when subjects first shipped: what a serious newsroom puts in a headline is
+    editorial judgment, where a wire source count is only volume. An item from a
+    source with no such count -- a chronicle event, a bare Cluster -- scores 0
+    here rather than being credited with judgment nothing recorded.
+    """
+    return _saturating(item.get("reference_newsroom_count", 0), _EDITORIAL_HALF)
+
+
+def _coherence(item: dict) -> float:
+    """How much tighter than chance the item's articles sit.
+
+    Computed by the subject stage, which has the vectors. Absent for items from
+    any other source, and those score 0.5 -- neither promoted nor buried on a
+    dimension nothing measured for them, the same convention `_freshness` uses
+    for an undated item.
+    """
+    value = item.get("coherence")
+    return _clamp(float(value)) if value is not None else 0.5
+
+
 def score_item(item: dict, zone: Zone, period: Period, reference_day: str) -> dict:
     """The weighted score and every component that produced it.
 
@@ -212,6 +240,8 @@ def score_item(item: dict, zone: Zone, period: Period, reference_day: str) -> di
     """
     weights = SCORE_WEIGHTS[period.value]
     components = {
+        "editorial_weight": _editorial_weight(item),
+        "coherence": _coherence(item),
         "freshness": _freshness(item, reference_day),
         "prominence": _prominence(item),
         "corroboration": _corroboration(item),

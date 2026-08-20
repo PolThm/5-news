@@ -572,7 +572,7 @@ def source_trust_tier(domain: str) -> int:
 # How much each factor counts, per Period. Versioned, because changing a weight
 # changes what a reader sees and a Briefing must be explainable after the fact:
 # the version is written onto every scored item alongside its components.
-SCORE_WEIGHTS_VERSION = "2026-08-20.2"
+SCORE_WEIGHTS_VERSION = "2026-08-20.3"
 
 # The spec's §7.1 opens with `0.28 x impact` -- people and territory affected,
 # severity, economic or legal effect -- and it is deliberately ABSENT here.
@@ -594,27 +594,43 @@ SCORE_WEIGHTS_VERSION = "2026-08-20.2"
 # rest is rebalanced around it. A weekly review is a record of the week, where
 # an event's corroboration matters more than which day it landed on.
 SCORE_WEIGHTS: Final[dict[str, dict[str, float]]] = {
+    # `editorial_weight` leads both profiles, and its absence is why the first
+    # subject-based Briefing was wrong. The score had six factors and none of
+    # them was the count of reference newsrooms -- the entire reason the subject
+    # stage exists -- so selection still ran on raw wire volume. Measured on
+    # 2026-08-20 it published "sonia bellina" (5 newsrooms) and "etats-unis" (8)
+    # while dropping Hind Rajab (14), Evergrande (13), Kyiv (9) and Hormuz (8).
+    #
+    # `prominence` is what is left of that volume signal, kept small. It still
+    # says something -- a subject two outlets carried is not a subject 189 did
+    # -- but it was measured selecting a ZZ Top drummer's death when it led.
+    #
+    # `coherence` demotes a subject that is a container rather than a story.
+    # Without it "Espana" and "Europa" outrank Ceuta, and the summarizer welds
+    # unrelated events into one item.
     "day": {
-        "freshness": 0.30,
-        "prominence": 0.18,
-        "corroboration": 0.18,
+        "editorial_weight": 0.26,
+        "coherence": 0.16,
+        "freshness": 0.16,
+        "corroboration": 0.12,
         "geographic_relevance": 0.12,
-        "source_reliability": 0.12,
-        "novelty": 0.10,
+        "source_reliability": 0.08,
+        "prominence": 0.06,
+        "novelty": 0.04,
     },
+    # The weekly profile trades freshness away almost entirely -- within a week
+    # every item is recent enough -- and buys corroboration and reach with it.
     "week": {
-        "freshness": 0.10,
-        "prominence": 0.24,
-        "corroboration": 0.24,
-        "geographic_relevance": 0.16,
-        "source_reliability": 0.16,
-        "novelty": 0.10,
+        "editorial_weight": 0.28,
+        "coherence": 0.16,
+        "corroboration": 0.16,
+        "geographic_relevance": 0.14,
+        "source_reliability": 0.10,
+        "prominence": 0.08,
+        "freshness": 0.04,
+        "novelty": 0.04,
     },
 }
-
-# Weights that do not sum to 1 make a score incomparable between Periods, which
-# is exactly the bug a reader would never see and an operator could never
-# explain. Caught at import rather than as a puzzling ordering later.
 for _period, _weights in SCORE_WEIGHTS.items():
     _total = sum(_weights.values())
     assert abs(_total - 1.0) < 1e-9, f"{_period} weights sum to {_total}, not 1"

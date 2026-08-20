@@ -1446,3 +1446,80 @@ def test_ordering_stays_deterministic_when_scores_tie() -> None:
 
     assert [c["cluster_id"] for c in ordered] == ["aaa", "zzz"]
     assert ordered[0]["score"]["total"] == ordered[1]["score"]["total"]
+
+
+def test_the_score_reads_how_many_reference_newsrooms_led_with_the_item() -> None:
+    """The signal the score was missing when subjects first shipped, and the
+    reason that Briefing was wrong: six factors, none of them the count of
+    reference newsrooms -- the entire reason the subject stage exists -- so
+    selection still ran on raw wire volume. Measured on 2026-08-20 it published
+    "sonia bellina" (5 newsrooms, 8 sources) and dropped Hind Rajab (14).
+    """
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_by_score
+
+    members = [_member("lemonde.fr"), _member("elpais.com", "spain")]
+    well_led = _scored(
+        cluster_id="led",
+        reference_newsroom_count=14,
+        independent_source_count=21,
+        members=members,
+    )
+    merely_loud = _scored(
+        cluster_id="loud",
+        reference_newsroom_count=5,
+        independent_source_count=189,
+        members=members,
+    )
+
+    ranked = rank_by_score([merely_loud, well_led], zone_by_slug("world"), Period.DAY, "2026-08-20")
+
+    assert ranked[0]["cluster_id"] == "led", "judgment outranks volume"
+    assert (
+        ranked[0]["score"]["components"]["editorial_weight"]
+        > (ranked[1]["score"]["components"]["editorial_weight"])
+    )
+
+
+def test_an_item_with_no_newsroom_count_is_not_credited_with_judgment() -> None:
+    """A chronicle event or a bare Cluster carries no newsroom count. It scores
+    zero on that factor rather than the undated-field default of 0.5: nothing
+    measured editorial judgment for it, and 0.5 would invent some."""
+    from pipeline.stages.rank import _editorial_weight
+
+    assert _editorial_weight({}) == 0.0
+    assert _editorial_weight({"reference_newsroom_count": 0}) == 0.0
+
+
+def test_a_container_subject_is_demoted_below_a_focused_one() -> None:
+    """Coherence is what tells a story from a container. A subject named after a
+    country collects everything that country appears in, and the summarizer then
+    welds unrelated events together -- a real Briefing said "Evergrande's founder
+    jailed for life and a hotel fire kills nine in India" because both sat under
+    "china". Measured, the size-normalized tightness separates them: Hind Rajab
+    0.59 and Ceuta 0.79 against "Espana" 0.93 and "Europa" 0.89.
+    """
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_by_score
+
+    members = [_member("lemonde.fr"), _member("elpais.com", "spain")]
+    common = {"reference_newsroom_count": 11, "independent_source_count": 40, "members": members}
+    focused = _scored(cluster_id="focused", coherence=0.40, **common)
+    container = _scored(cluster_id="container", coherence=0.07, **common)
+
+    ranked = rank_by_score([container, focused], zone_by_slug("world"), Period.DAY, "2026-08-20")
+
+    assert ranked[0]["cluster_id"] == "focused"
+
+
+def test_an_item_with_no_coherence_measure_sits_in_the_middle() -> None:
+    """Absent for every item that did not come from the subject stage. 0.5 --
+    neither promoted nor buried on a dimension nothing measured, the same
+    convention `_freshness` uses for an undated item."""
+    from pipeline.stages.rank import _coherence
+
+    assert _coherence({}) == 0.5
+    assert _coherence({"coherence": None}) == 0.5
+    assert _coherence({"coherence": 0.4}) == 0.4

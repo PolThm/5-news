@@ -367,6 +367,64 @@ def merge_phrases(
     return subjects
 
 
+# How many random samples per size when calibrating dispersion, and which
+# sizes. Raw dispersion around a centroid rises with the number of articles, so
+# comparing a 22-article subject to a 358-article one on it directly measures
+# size, not coherence. Calibrating against random samples of the SAME size
+# removes that: what is left is how much tighter than chance the subject is.
+_BASELINE_TRIALS = 8
+_BASELINE_SIZES = (4, 8, 16, 32, 64, 128, 256, 512)
+
+
+def _dispersion(unit: np.ndarray) -> float:
+    """Mean distance from a set of unit vectors to their own centroid."""
+    centroid = normalize(unit.mean(axis=0).reshape(1, -1))[0]
+    return float(np.mean(np.linalg.norm(unit - centroid, axis=1)))
+
+
+def _baseline_dispersion(unit: np.ndarray, seed: int = 0) -> dict[int, float]:
+    """Dispersion a random subset of each size would show, for calibration."""
+    rng = np.random.default_rng(seed)
+    baseline: dict[int, float] = {}
+    for size in _BASELINE_SIZES:
+        if size > len(unit):
+            break
+        trials = [
+            _dispersion(unit[rng.choice(len(unit), size, replace=False)])
+            for _ in range(_BASELINE_TRIALS)
+        ]
+        baseline[size] = float(np.mean(trials))
+    return baseline
+
+
+def coherence_of(unit: np.ndarray, rows: Sequence[int], baseline: dict[int, float]) -> float | None:
+    """How much tighter than chance a subject's articles sit, 0 to 1.
+
+    This is what tells a story from a container. Measured on 2026-08-20, the
+    size-normalized ratio separates them cleanly: Hind Rajab 0.59, Evergrande
+    0.62, Kyiv 0.69, Hormuz 0.79 and Ceuta 0.79 on one side, and "Espana" 0.93,
+    "France" 0.90, "Europa" 0.89, "Etats-Unis" 0.88 on the other. A subject
+    named after a country collects everything that country appears in, and the
+    summarizer then welds unrelated events into one item -- a real Briefing said
+    "Evergrande's founder jailed for life and a hotel fire kills nine in India"
+    because both sat under "china".
+
+    Returns None when there is too little to judge: a two-article subject has
+    no meaningful dispersion, and inventing a number for it would rank it on
+    noise.
+    """
+    if len(rows) < 4 or not baseline:
+        return None
+    observed = _dispersion(unit[rows])
+    nearest = min(baseline, key=lambda size: abs(size - len(rows)))
+    expected = baseline[nearest]
+    if expected <= 0:
+        return None
+    # 1 - ratio, so more is better and the factor reads the same way as every
+    # other one. Clamped: a subject can be tighter than any random sample.
+    return max(0.0, min(1.0, 1.0 - observed / expected))
+
+
 def _latest_day(group: Sequence[dict]) -> str:
     """The most recent day any of a subject's articles carries.
 
@@ -400,6 +458,12 @@ def build_items(
     weight = {phrase: len(sources) for phrase, sources in vocabulary.items()}
     members = members_by_phrase(articles, vocabulary)
     subjects = merge_phrases(members, weight, vectors)
+
+    unit = None
+    baseline: dict[int, float] = {}
+    if vectors is not None and len(vectors):
+        unit = normalize(np.asarray(vectors, dtype=float))
+        baseline = _baseline_dispersion(unit)
 
     items: list[dict] = []
     for label, names, indices in subjects:
@@ -443,6 +507,15 @@ def build_items(
                 # this) and would be confusing under one name, since one is a
                 # chronicle's dateline and this is our corpus's own.
                 "editorial_day": _latest_day(group),
+                # How much tighter than chance these articles sit: the signal
+                # that separates a story from a country-shaped container.
+                # Computed here because this is where the vectors are; the rank
+                # stage stays vector-free.
+                "coherence": (
+                    coherence_of(unit, [i for i in indices if i < len(unit)], baseline)
+                    if unit is not None
+                    else None
+                ),
                 "subject_label": label,
                 "subject_names": sorted(names),
                 # The editorial weight, kept on the item so a ranking can use

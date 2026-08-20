@@ -170,19 +170,6 @@ export function hasValidAttribution(
   );
 }
 
-// The two labels a review uses to separate fact from consequence. Kept as
-// plain sentence-case prefixes rather than headings: the item is a paragraph a
-// reader scans, not a form with fields.
-const CONSEQUENCE_LABELS: Record<OutputLanguage, { why: string; takeaway: string }> = {
-  fr: { why: "Pourquoi c'est important", takeaway: "À retenir" },
-  en: { why: "Why it matters", takeaway: "The takeaway" },
-  es: { why: "Por qué importa", takeaway: "Para recordar" },
-};
-
-export function consequenceLabels(lang: OutputLanguage): { why: string; takeaway: string } {
-  return CONSEQUENCE_LABELS[lang];
-}
-
 /** Whether an item rests on the editorial chronicle rather than on our own
  * sources, and so must be attributed.
  *

@@ -81,3 +81,45 @@ def test_only_the_headline_is_read_not_the_whole_entry() -> None:
     records = parse_feed(body, "lemonde.fr", "france", "fr")
 
     assert records[0].mentioned_countries == ()
+
+
+def test_a_headline_naming_a_city_places_the_article_in_its_country() -> None:
+    """A headline names a place far more often than a country. "Ceuta : bras de
+    fer entre Pedro Sanchez et Bruxelles" is about Spain and never says so, and
+    measured on 2026-08-20 that left 62% of articles from French newsrooms placed
+    nowhere at all.
+
+    The table is cities and regions, not every place name: "playa del Tarajal"
+    is a beach in Ceuta and is absent, so that headline places nothing. Adding
+    every locality would be a larger table with more chances to be wrong, and an
+    event is placed by all its articles rather than by any one of them.
+    """
+    for title, expected in (
+        ("Ceuta : bras de fer entre Pedro Sanchez et Bruxelles", "spain"),
+        ("Retraites : Matignon recule", "france"),
+        ("La Policia desaloja a 4.000 inmigrantes en Ceuta", "spain"),
+        ("El Gobierno aprueba el decreto en Madrid", "spain"),
+        ("Le parc nucleaire sous tension a Bordeaux", "france"),
+    ):
+        assert expected in _one(title).mentioned_countries, title
+
+
+def test_a_city_name_that_two_countries_share_is_left_out() -> None:
+    """A wrong entry mis-places an event, so ambiguous names are absent by
+    design: Ohio has a Toledo, Argentina a Cordoba, Venezuela a Valencia, Chile
+    a Santiago and Nicaragua a Granada. Placing those in Spain would put a US
+    local story in the Spain Briefing -- which a plain union of mentions already
+    did once, with a Florida primary."""
+    for ambiguous in ("Toledo", "Cordoba", "Valencia", "Santiago", "Granada"):
+        placed = _one(f"Un fait divers a {ambiguous}").mentioned_countries
+        assert placed == (), f"{ambiguous} is ambiguous and must not place anything"
+
+
+def test_the_outlets_own_country_is_never_inferred_from_silence() -> None:
+    """The rejected alternative, recorded so it is not tried again. Inferring
+    "France" whenever a French newsroom's headline names no country was sampled
+    on sixteen such articles and would have mis-placed roughly 40% of them: a
+    Guinean activist's sentence, whales off New York, a COP17 opening, Meta's
+    trial. Empty is the honest answer."""
+    assert _one("Le recit d'une nuit blanche").mentioned_countries == ()
+    assert _one("Guinee : l'activiste condamne a six mois").mentioned_countries != ("france",)

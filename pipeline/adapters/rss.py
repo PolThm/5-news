@@ -153,6 +153,29 @@ FEEDS: tuple[Feed, ...] = (
     Feed("https://www.francetvinfo.fr/monde.rss", "francetvinfo.fr", "france", "fr"),
     Feed("https://www.france24.com/fr/rss", "france24.com", "france", "fr"),
     Feed("https://www.rfi.fr/fr/rss", "rfi.fr", "france", "fr"),
+    # More French newsrooms, because a France Briefing was thin for a
+    # structural reason rather than a quiet news day.
+    #
+    # An event needs two reference newsrooms to exist and three to qualify on
+    # editorial weight alone. With eight French sources -- two of which,
+    # France 24 and RFI, are outward-facing international services -- French
+    # domestic news had about six newsrooms to draw three from, and measured on
+    # 2026-08-20 only three French events cleared the floor out of a 53-event
+    # pool. The corpus was too thin on exactly the country a country Briefing is
+    # for.
+    #
+    # Verified responding with parseable items on 2026-08-20, item counts as
+    # measured then. Several obvious candidates are absent because they refuse
+    # us: Les Echos, Le Point, Sud Ouest and Marianne all answer 403, Le
+    # Parisien and La Tribune parse to zero items, and L'Humanite and L'Opinion
+    # 404. Courrier International responds but is deliberately excluded -- it
+    # translates and republishes other newsrooms, which is the republisher tier,
+    # not an independent editorial judgment.
+    Feed("https://www.nouvelobs.com/rss.xml", "nouvelobs.com", "france", "fr"),  # 200
+    Feed("https://www.lexpress.fr/rss/alaune.xml", "lexpress.fr", "france", "fr"),  # 100
+    Feed("https://www.challenges.fr/rss.xml", "challenges.fr", "france", "fr"),  # 50
+    Feed("https://www.radiofrance.fr/franceinter/rss", "radiofrance.fr", "france", "fr"),  # 20
+    Feed("https://www.ouest-france.fr/rss/une", "ouest-france.fr", "france", "fr"),  # 10
     # --- Spain ---
     Feed(
         "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
@@ -170,6 +193,22 @@ FEEDS: tuple[Feed, ...] = (
     Feed("https://www.abc.es/rss/feeds/abc_Internacional.xml", "abc.es", "spain", "es"),
     Feed("https://www.lavanguardia.com/rss/internacional.xml", "lavanguardia.com", "spain", "es"),
     Feed("https://www.eldiario.es/rss/internacional/", "eldiario.es", "spain", "es"),
+    # More Spanish newsrooms, for the same structural reason as the French block
+    # above: five sources gave Spanish domestic news too few newsrooms to draw
+    # three from, and only four Spain events cleared the floor on 2026-08-20.
+    #
+    # Verified on 2026-08-20 with the item counts shown. Absent because they
+    # refuse or return nothing: La Razon, Publico, La Voz de Galicia and Heraldo
+    # 404, Nius 403, El Periodico parses to zero.
+    Feed("https://www.eldiario.es/rss/", "eldiario.es", "spain", "es"),  # 90, front page
+    Feed("https://e00-expansion.uecdn.es/rss/portada.xml", "expansion.com", "spain", "es"),  # 67
+    Feed("https://e00-elmundo.uecdn.es/elmundo/rss/espana.xml", "elmundo.es", "spain", "es"),  # 54
+    Feed("https://www.infolibre.es/rss/", "infolibre.es", "spain", "es"),  # 50
+    Feed("https://api2.rtve.es/rss/temas_noticias.xml", "rtve.es", "spain", "es"),  # 40
+    Feed("https://www.elespanol.com/rss/", "elespanol.com", "spain", "es"),  # 30
+    Feed("https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml", "elmundo.es", "spain", "es"),  # 29
+    Feed("https://rss.elconfidencial.com/espana/", "elconfidencial.com", "spain", "es"),  # 15
+    Feed("https://www.europapress.es/rss/rss.aspx", "europapress.es", "spain", "es"),  # 10
     Feed("https://www.20minutos.es/rss/internacional/", "20minutos.es", "spain", "es"),
     # --- Europe and the wider world ---
     Feed("https://www.theguardian.com/world/rss", "theguardian.com", "united-kingdom", "en"),

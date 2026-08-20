@@ -1613,3 +1613,49 @@ def test_a_filled_item_that_matters_more_outranks_a_local_one_that_does_not() ->
     assert order.index("ukraine") < order.index("pitch")
     filled = next(c for c in ranking.ranked_clusters if c["cluster_id"] == "ukraine")
     assert filled["filled_from"] == "europe", "and it is still marked as filler"
+
+
+def test_the_zones_own_items_lead_even_when_filler_scores_higher() -> None:
+    """A reader who asks for France expects France. That the day's biggest story
+    is elsewhere does not change what they asked for.
+
+    An editorial decision, not a scoring one -- which is why it is an ordering
+    rule rather than another weight. The filler still publishes, below.
+    """
+    from pipeline.config import MIN_QUALIFYING_FOR_ZONE, zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_for_zone
+
+    members = [_member("lemonde.fr"), _member("elpais.com", "spain")]
+
+    def _item(cluster_id: str, countries: list[str], consequence: int, newsrooms: int) -> dict:
+        return _scored(
+            cluster_id=cluster_id,
+            mentioned_countries=countries,
+            reference_newsroom_count=newsrooms,
+            consequence=consequence,
+            independent_source_count=newsrooms,
+            country_count=2,
+            origin_country="france",
+            members=members,
+        )
+
+    # Local news that matters, but less than the European story.
+    local = [
+        _item(f"local{position}", ["france"], 1, 3) for position in range(MIN_QUALIFYING_FOR_ZONE)
+    ]
+    # Wider news that outscores every one of them.
+    bigger_elsewhere = _item("ukraine", ["up"], 3, 12)
+
+    ranking = rank_for_zone(
+        [*local, bigger_elsewhere], zone_by_slug("france"), Period.DAY, "2026-08-20"
+    )
+
+    order = [c["cluster_id"] for c in ranking.ranked_clusters]
+    assert ranking.served_zone.slug == "france"
+    assert order[-1] == "ukraine", "the filler publishes, but last"
+    assert all(cid.startswith("local") for cid in order[:-1])
+    # And it outscores what precedes it, which is the point of the rule: the
+    # ordering is editorial, not a claim that the local items scored better.
+    scores = {c["cluster_id"]: c["score"]["total"] for c in ranking.ranked_clusters}
+    assert scores["ukraine"] > max(v for k, v in scores.items() if k != "ukraine")

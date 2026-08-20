@@ -835,7 +835,20 @@ def _topped_up(
                 break
             taken.add(cluster["cluster_id"])
             filled.append({**cluster, "filled_from": source_zone.slug})
-    return rank_by_score(filled, serving_zone, period, reference_day)
+
+    # Three tiers, each already in score order: the Zone's own substantive
+    # items, then the filler, then the Zone's own items that change nothing.
+    # Written as three lists rather than a sort key because that is what the
+    # editorial rule actually says.
+    scored = rank_by_score(filled, serving_zone, period, reference_day)
+    own_substantive = [
+        item for item in scored if not item.get("filled_from") and item.get("consequence") != 0
+    ]
+    from_wider = [item for item in scored if item.get("filled_from")]
+    own_trivial = [
+        item for item in scored if not item.get("filled_from") and item.get("consequence") == 0
+    ]
+    return [*own_substantive, *from_wider, *own_trivial]
 
 
 def _apply_cap(ranked: list[dict], key: Callable[[dict], str | None], limit: int) -> list[dict]:

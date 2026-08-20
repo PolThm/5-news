@@ -580,3 +580,26 @@ def test_the_other_zones_angles_never_reach_the_page() -> None:
 
     assert "angles" not in published
     assert "ES" not in json.dumps(published, ensure_ascii=False)
+
+
+def test_discarded_volume_reaches_the_published_briefing_from_the_ranking() -> None:
+    """FR-8, wired end to end: `assemble_briefings` must read the real
+    per-Zone-per-Period count `rank_for_zone` computed rather than leaving the
+    domain's own 0-default in place, which would silently keep the figure dead
+    even though the ranking now knows the real number."""
+    clusters = [_cluster("a"), _cluster("b")]
+    zone_rankings = _full_zone_rankings(clusters)
+    for rankings in zone_rankings.values():
+        for ranking in rankings:
+            object.__setattr__(ranking, "articles_ingested", 42)
+    summaries_by_language = _full_summaries_by_language(["a", "b"])
+
+    briefings = assemble_briefings(zone_rankings, summaries_by_language, generated_at=GENERATED_AT)
+
+    world_day_fr = next(
+        b
+        for b in briefings
+        if b.language == OutputLanguage.FR and b.zone.slug == "world" and b.period == Period.DAY
+    )
+    assert world_day_fr.discarded_ingested == 42
+    assert world_day_fr.discarded_kept == 2

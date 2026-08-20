@@ -646,6 +646,16 @@ class ZoneRanking:
     requested_zone: Zone
     served_zone: Zone
     ranked_clusters: list[dict]
+    # FR-8's Discarded Volume: how many Articles this Zone x Period's own
+    # candidate pool held before the floor and the top-5 cut discarded the rest.
+    #
+    # Counted from `relevant` -- every Cluster/event `_is_relevant_to` admitted
+    # for the SERVING Zone, before `qualifies` or the cap -- because the PRD
+    # defines "ingested" as "Articles retrieved for that Zone x Period", and this
+    # is what was actually retrieved for it. Counting only what qualified would
+    # make Discarded Volume report nothing was discarded whenever the floor did
+    # the discarding, which is exactly the case the figure exists to surface.
+    articles_ingested: int = 0
 
     @property
     def substituted(self) -> bool:
@@ -713,6 +723,7 @@ def _rank_for_zone(
         )
 
     relevant = [c for c in clusters if _is_relevant_to(c, serving_zone)]
+    articles_ingested = sum(len(cluster.get("members") or ()) for cluster in relevant)
     qualifying_relevant = [c for c in relevant if qualifies(c)]
 
     ordered = rank_by_score(qualifying_relevant, serving_zone, period, reference_day)
@@ -774,7 +785,10 @@ def _rank_for_zone(
     ]
 
     return ZoneRanking(
-        requested_zone=requested_zone, served_zone=serving_zone, ranked_clusters=ranked_out
+        requested_zone=requested_zone,
+        served_zone=serving_zone,
+        ranked_clusters=ranked_out,
+        articles_ingested=articles_ingested,
     )
 
 

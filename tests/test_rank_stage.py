@@ -1659,3 +1659,52 @@ def test_the_zones_own_items_lead_even_when_filler_scores_higher() -> None:
     # ordering is editorial, not a claim that the local items scored better.
     scores = {c["cluster_id"]: c["score"]["total"] for c in ranking.ranked_clusters}
     assert scores["ukraine"] > max(v for k, v in scores.items() if k != "ukraine")
+
+
+def test_articles_ingested_counts_every_relevant_events_own_members() -> None:
+    """FR-8's Discarded Volume: "the count of Articles ingested for a Briefing
+    minus those in its published Clusters". Counted from every event
+    `_is_relevant_to` admits for the Zone -- before the floor and the top-5 cut
+    -- not from what qualified, or the figure would report nothing was
+    discarded whenever the floor did the discarding."""
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_for_zone
+
+    qualifying = _zone_cluster("a", sources=2, countries=["france", "spain"])
+    qualifying["members"] = [_member("lemonde.fr"), _member("elpais.com", "spain")]
+    below_floor = _zone_cluster("b", sources=1, countries=["france"])
+    below_floor["members"] = [_member("lefigaro.fr")]
+    unrelated = _zone_cluster("c", sources=5, countries=["japan", "china"])
+    unrelated["members"] = [_member(f"src{i}.jp") for i in range(5)]
+
+    ranking = rank_for_zone(
+        [qualifying, below_floor, unrelated], zone_by_slug("france"), Period.DAY, "2026-08-20"
+    )
+
+    assert ranking.articles_ingested == 3, "2 relevant events, 2+1 members -- not the unrelated one"
+
+
+def test_a_fallen_back_zone_reports_the_continents_own_pool() -> None:
+    """After FR-16's fallback, `articles_ingested` must reflect what was
+    actually retrieved for the Zone that is actually SERVED -- the recursive
+    call recomputes it against the parent's relevance, not the child's."""
+    from pipeline.config import zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import rank_for_zone
+
+    # One France item -- below MIN_QUALIFYING_FOR_ZONE, forces a fallback --
+    # plus a European item that is not about France.
+    france_item = _zone_cluster("a", sources=2, countries=["france", "spain"])
+    france_item["members"] = [_member("lemonde.fr")]
+    europe_item = _zone_cluster("b", sources=2, countries=["germany", "italy"])
+    europe_item["members"] = [_member(f"src{i}.de") for i in range(4)]
+
+    ranking = rank_for_zone(
+        [france_item, europe_item], zone_by_slug("france"), Period.DAY, "2026-08-20"
+    )
+
+    assert ranking.substituted
+    assert ranking.served_zone.slug == "europe"
+    # Both items are relevant to Europe, so the Continent's own pool counts both.
+    assert ranking.articles_ingested == 5

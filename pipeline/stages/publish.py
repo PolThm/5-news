@@ -92,6 +92,12 @@ def assemble_briefings(
                 language=language,
                 clusters=clusters,
                 generated_at=generated_at,
+                # FR-8: what this Zone x Period's own candidate pool held before
+                # the floor and the top-5 cut discarded the rest. 0 when there
+                # is no ranking at all (should not happen once rank has run),
+                # matching every other absent-ranking fallback here.
+                discarded_ingested=ranking.articles_ingested if ranking else 0,
+                discarded_kept=len(clusters),
             )
         )
     return briefings

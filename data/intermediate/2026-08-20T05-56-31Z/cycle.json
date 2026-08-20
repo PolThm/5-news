@@ -1,0 +1,33 @@
+{
+  "articles_collected": 11652,
+  "briefings_path": null,
+  "clusters_after_grouping": 10230,
+  "clusters_selected": 18,
+  "completed": true,
+  "cycle_id": "2026-08-20T05-56-31Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: no items parsed from response"
+    }
+  ],
+  "groups_after_dedupe": 10427,
+  "phase": "summarize_submitted",
+  "published": false,
+  "started_at": "2026-08-20T05:56:31.051426+00:00",
+  "summarize_batches": {
+    "en": {
+      "batch_id": "msgbatch_01KWugwsV6toUsTMzT3bLGaU",
+      "ranked_path": "data/intermediate/rank/2026-08-20T05-56-31Z/ranked.jsonl"
+    },
+    "es": {
+      "batch_id": "msgbatch_01MLveCwcRt8sNRMRfgmKzad",
+      "ranked_path": "data/intermediate/rank/2026-08-20T05-56-31Z/ranked.jsonl"
+    },
+    "fr": {
+      "batch_id": "msgbatch_01V4WvUacgiC7XbgzvrNezrM",
+      "ranked_path": "data/intermediate/rank/2026-08-20T05-56-31Z/ranked.jsonl"
+    }
+  }
+}

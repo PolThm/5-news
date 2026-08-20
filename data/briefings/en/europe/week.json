@@ -2,6 +2,120 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-allemagne-15982e066f44",
+        "subject-allemagne-5e8a47a3c4fe",
+        "subject-allemagne-8df11689696f",
+        "subject-allemagne-a6adb41ba021",
+        "subject-allemagne-ad0285520b57",
+        "subject-allemagne-d5d9e058c8f4",
+        "subject-allemagne-f5bb3706f8d1"
+      ],
+      "angle_zone": "europe",
+      "cluster_id": "subject-allemagne-15982e066f44",
+      "coherence": 0.51010078304246,
+      "consequence": 3,
+      "countries": [
+        "ci",
+        "france",
+        "gt",
+        "spain"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-20",
+      "headline": "Germany records 14,000 heat-related deaths this summer, Spain counts nearly 4,500",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/allemagne-14-000-deces-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018-20260820_THJAHV2XVVBNLIOUGG7XM236UI/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260820-canicule-europe-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-chaleur-allemagne-4-500-espagne"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/alemania-estima-que-ya-se-han-producido-14-000-muertes-por-calor-este-verano_7027767_0.html"
+        },
+        {
+          "language": "es",
+          "source": "dca.gob.gt",
+          "source_country": "gt",
+          "url": "https://dca.gob.gt/noticias-guatemala-diario-centro-america/alemania-estima-en-mas-de-14000-las-muertes-por-el-calor-de-este-verano/"
+        },
+        {
+          "language": "es",
+          "source": "radioagricultura.cl",
+          "source_country": "ci",
+          "url": "https://www.radioagricultura.cl/noticias/internacional/reportan-casi-14-000-personas-muertas-por-ola-de-calor-en-alemania_20260820/"
+        }
+      ],
+      "mentioned_countries": [
+        "germany",
+        "spain"
+      ],
+      "origin_country": "ci",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5101,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.1429,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.704,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "allemagne",
+      "subject_names": [
+        "alemania",
+        "allemagne",
+        "espagne",
+        "france",
+        "francia",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Multiple European news outlets report that Germany has documented approximately 14,000 deaths linked to extreme heat during the summer, a figure significantly higher than the previous peak recorded in 2018. Spain has reported close to 4,500 heat-related deaths during the same period. These figures reflect the deadly toll of extreme temperatures that have swept across Europe.",
+      "takeaway": "This summer's heat deaths in Germany and Spain establish new benchmarks for climate-related mortality in wealthy European nations.",
+      "why_it_matters": "Europe's most developed economies are registering heat death tolls substantially higher than previously documented peaks, forcing health systems and governments across the continent to reckon with climate mortality as a persistent policy challenge rather than an exceptional occurrence."
+    },
+    {
+      "_linked_ids": [
         "subject-ukraine-7b5679fff45f"
       ],
       "angle_zone": "europe",
@@ -44,7 +158,7 @@
       "origin_country": "brazil",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "globo.com",
@@ -69,107 +183,122 @@
       "subject_label": "ukraine",
       "subject_names": [
         "harry",
-        "kiev",
+        "londres",
         "meghan",
-        "moscou",
+        "putin",
         "reino unido",
         "roumanie",
-        "rusia",
+        "royaume-uni",
         "russia",
         "russie",
         "ucrania",
         "ukraine"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "Russia has issued threats against the United Kingdom in response to British military aid, specifically drones, being supplied to Ukraine. The threats escalate warnings about the consequences of increasing Western involvement in the conflict, with Russia suggesting that greater British participation will result in greater costs or consequences.",
-      "takeaway": "Russia is making good on warnings that it views Western military support to Ukraine as a direct threat warranting consequences against the supplier nations themselves.",
-      "why_it_matters": "Russia's explicit threats to the UK for arming Ukraine signal that NATO members supplying weapons now face direct Russian retaliation risks, raising the stakes for European countries deciding whether to follow Britain's lead in military aid."
+      "subject_newsroom_count": 20,
+      "summary": "Russia has threatened the United Kingdom in response to British military aid to Ukraine, including the supply of drones. Russian officials have warned that increased British involvement in the conflict will result in serious consequences, with statements indicating that the level of the price paid will correspond to the extent of British participation.",
+      "takeaway": "Europe's weapons deliveries to Ukraine now carry explicit Russian warnings of consequences.",
+      "why_it_matters": "Russia's threats against Britain for supplying drones to Ukraine signal escalating risks for European NATO members who are similarly arming Kyiv, with Moscow explicitly linking military aid to potential retaliation."
     },
     {
       "_linked_ids": [
-        "subject-allemagne-5e8a47a3c4fe",
-        "subject-allemagne-8df11689696f",
-        "subject-allemagne-a6adb41ba021",
-        "subject-allemagne-ad0285520b57",
-        "subject-allemagne-d5d9e058c8f4",
-        "subject-allemagne-f5bb3706f8d1"
+        "subject-bruselas-5580e3f46b8a",
+        "subject-bruselas-7e209cdede1a",
+        "subject-ceuta-6e88afa6c27f",
+        "subject-ceuta-87782888966b"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
-      "coherence": 0.5834268248746377,
+      "cluster_id": "subject-ceuta-87782888966b",
+      "coherence": 0.5162199840461188,
       "consequence": 3,
       "countries": [
-        "france"
+        "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Europe records thousands of heat-related deaths during summer extreme temperatures",
-      "independent_source_count": 4,
+      "headline": "Brussels approves Spanish consortium bid for European AI gigafactory",
+      "independent_source_count": 6,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-08-20/bruselas-aprueba-la-propuesta-espanola-para-optar-a-una-de-las-gigafactorias-de-ia-europeas.html"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/allemagne-14-000-deces-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018-20260820_THJAHV2XVVBNLIOUGG7XM236UI/"
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/2026/08/20/6a86e188468aeb6d7f8b4595.html"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260820-canicule-europe-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-chaleur-allemagne-4-500-espagne"
+          "language": "es",
+          "source": "canarias7.es",
+          "source_country": "spain",
+          "url": "https://www.canarias7.es/economia/bruselas-autoriza-alianza-espanola-opta-gigafactoria-ia-20260820150957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "larioja.com",
+          "source_country": "spain",
+          "url": "https://www.larioja.com/economia/bruselas-autoriza-alianza-espanola-opta-gigafactoria-ia-20260820150957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/bruselas-autoriza-sociedad-conjunta-santander-telefonica-acs-20260820164011-nt.html"
         }
       ],
       "mentioned_countries": [
-        "germany",
-        "spain"
+        "spain",
+        "be"
       ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 2,
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html",
+      "rank": 3,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5834,
+          "coherence": 0.5162,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.1667,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "novelty": 0.25,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.645,
+        "total": 0.6449,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "allemagne",
+      "subject_label": "ceuta",
       "subject_names": [
-        "allemagne",
-        "espagne"
+        "acs",
+        "bruselas",
+        "ceuta",
+        "espana",
+        "santander",
+        "telefonica",
+        "trampolin"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "European nations are tallying the human cost of extreme heat this summer, with Germany reporting approximately 14,000 deaths linked to the heat—significantly higher than the 2018 peak—and Spain recording nearly 4,500 heat-related deaths.",
-      "takeaway": "Europe's wealthiest nations are still counting thousands of preventable deaths from heat each summer.",
-      "why_it_matters": "These deaths reveal that European public health systems face recurring spikes in heat-related mortality without yet implementing the systematic preventive measures that would reduce casualties in future summers."
+      "subject_newsroom_count": 22,
+      "summary": "The European Commission has authorized a joint venture between Spanish companies Telefónica, Santander, and ACS, along with state entity SEPI digital, to compete for one of Europe's planned artificial intelligence gigafactories.",
+      "takeaway": "Europe is attempting to build its own AI manufacturing capacity by backing national consortia rather than importing chips from abroad.",
+      "why_it_matters": "Spain now has a credible contestant in the European Commission's competition to build an AI gigafactory on the continent, bringing potential investment and technological capacity to Europe rather than ceding such infrastructure to the United States or China."
     },
     {
       "_linked_ids": [
@@ -184,7 +313,7 @@
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Madrid acknowledges some public hospitals cannot guarantee abortion access",
+      "headline": "Madrid acknowledges that some public hospitals cannot guarantee abortion access",
       "independent_source_count": 3,
       "members": [
         {
@@ -212,7 +341,7 @@
       "origin_country": "spain",
       "outbound_source": "elpais.com",
       "outbound_url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html",
-      "rank": 3,
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "eldiario.es",
@@ -240,216 +369,109 @@
         "comunidad",
         "madrid"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "The Community of Madrid has formally admitted in writing that certain public hospitals are unable to guarantee the right to abortion, and consequently directs patients seeking the procedure to private facilities instead.",
-      "takeaway": "An EU member state's government has formally acknowledged it cannot enforce a legal right within its public healthcare system.",
-      "why_it_matters": "Madrid's admission that public hospitals cannot guarantee abortion access creates a precedent that other EU regions with similar healthcare constraints may cite to justify reduced abortion availability, potentially fragmenting a right already unevenly protected across Europe."
+      "subject_newsroom_count": 9,
+      "summary": "The Community of Madrid has officially recognized in writing that certain public hospitals in the region are unable to guarantee the right to abortion, leading to patients being referred to private facilities instead.",
+      "takeaway": "A Spanish regional government has officially documented that it cannot ensure a constitutionally protected right in its public health system.",
+      "why_it_matters": "The Madrid regional government's written admission that public hospitals cannot guarantee abortion access signals a fracture in Spain's right to abortion that may set a precedent affecting other European regions where similar institutional resistance exists."
     },
     {
       "_linked_ids": [
-        "subject-france-e9a9ba0f75b8"
+        "subject-kiev-349713791d21"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-france-e9a9ba0f75b8",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-kiev-349713791d21",
+      "coherence": 0.4010964490110537,
+      "consequence": 2,
       "countries": [
-        "ci",
+        "ar",
         "spain"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-19",
-      "headline": "France records thousands of excess deaths during summer heat waves",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/clima-y-medio-ambiente/2026-08-19/francia-registra-7300-muertes-adicionales-durante-las-olas-de-calor-desde-mayo.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/segunda-ola-calor-francia-registro-un-1-243-muertes-relacionadas-con-las-altas-temperaturas_7027432_0.html"
-        },
-        {
-          "language": "es",
-          "source": "biobiochile.cl",
-          "source_country": "ci",
-          "url": "https://www.biobiochile.cl/noticias/internacional/europa/2026/08/19/ola-de-calor-extremo-en-francia-ha-dejado-hasta-7-300-muertes-extras-en-el-ultimo-verano.shtml"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "ci",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/segunda-ola-calor-francia-registro-un-1-243-muertes-relacionadas-con-las-altas-temperaturas_7027432_0.html",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.63,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "belgique",
-        "france",
-        "francia",
-        "macron",
-        "marseille",
-        "paris"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "France experienced multiple heat waves between May and the end of summer, resulting in thousands of additional deaths linked to high temperatures. One heat wave alone caused 1,243 heat-related deaths, while overall excess mortality during this period reached approximately 7,300 deaths above normal levels.",
-      "takeaway": "France counted thousands of excess deaths from summer heat waves, establishing a documented baseline for how vulnerable European societies remain to heat despite awareness of climate risks.",
-      "why_it_matters": "France's heat-related deaths expose the vulnerability of Europe's healthcare systems and elderly populations to extreme temperatures, with implications for public health policy across the continent as climate patterns intensify."
-    },
-    {
-      "_linked_ids": [
-        "subject-bruselas-67fbb0e2a8c4",
-        "subject-bruselas-b6f358f44134",
-        "subject-ceuta-dc915f99b085"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-bruselas-b6f358f44134",
-      "coherence": 0.4867446296432323,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "EU urges Spain to return all irregular migrants from Ceuta while protecting minors",
-      "independent_source_count": 10,
+      "headline": "Russia launches major missile attack on Kyiv, killing at least 15 people",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-20/bruselas-recalca-el-deber-de-espana-de-proteger-a-menores-vulnerables-en-ceuta-pese-a-reclamar-el-retorno-de-los-migrantes-irregulares.html"
+          "url": "https://elpais.com/internacional/2026-08-20/varios-muertos-y-decenas-de-heridos-en-un-ataque-ruso-contra-kiev.html"
         },
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/bruselas-vuelve-insistir-espana-peticion-devolver-irregulares-20260820142205-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/20/6a86edd4fc6c836e7f8b458d.html"
+          "url": "https://www.eldiario.es/internacional/doce-muertos-34-heridos-ataque-nocturno-rusia-kiev_1_13457057.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html"
+          "url": "https://www.elespanol.com/mundo/europa/20260820/rusia-lanza-nueva-oleada-misiles-kiev-muertos-escuela-hospital-infantil-danados/1003744357909_0.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
+          "url": "https://www.20minutos.es/internacional/un-ataque-ruso-gran-escala-contra-kiev-provoca-menos-cuatro-muertos_7027498_0.html"
         },
         {
           "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/politica/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "elperiodicodearagon.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodicodearagon.com/espana/2026/08/20/bruselas-exige-espana-proteger-menores-migrantes-ceuta-devolucion-irregulares-marruecos-133515825.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosur.es",
-          "source_country": "spain",
-          "url": "https://www.diariosur.es/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "hoy.es",
-          "source_country": "spain",
-          "url": "https://www.hoy.es/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
+          "source": "clarin.com",
+          "source_country": "ar",
+          "url": "https://www.clarin.com/mundo/rusia-lanzo-ataque-masivo-nocturno-kiev-16-muertos-39-heridos_0_8EaeZFxj99.html"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "be"
+        "rs",
+        "up"
       ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html",
+      "origin_country": "ar",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/un-ataque-ruso-gran-escala-contra-kiev-provoca-menos-cuatro-muertos_7027498_0.html",
       "rank": 5,
-      "reference_newsroom_count": 6,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
+        "eldiario.es",
         "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4867,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
+          "coherence": 0.4011,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.5876,
+        "total": 0.5799,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "bruselas",
+      "subject_label": "kiev",
       "subject_names": [
-        "bruselas",
-        "ceuta",
-        "espana",
-        "marruecos",
-        "trampolin"
+        "kiev",
+        "putin",
+        "roumanie",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "European Union officials have reiterated their position that Spain must send back all irregular migrants who arrived in the autonomous city of Ceuta to Morocco, while simultaneously emphasizing Spain's obligation to protect vulnerable children in the city. Brussels has requested additional information from the Spanish government about its plans regarding the migrant situation.",
-      "takeaway": "Brussels is demanding Spain do two things at once—care for vulnerable minors and expel all irregular migrants—without clarifying how to resolve the conflict between them.",
-      "why_it_matters": "The European Commission's insistence that Spain both protect migrant children in Ceuta and return all irregular migrants to Morocco exposes the tension at the EU's external border between child safeguarding obligations and member-state pressure to limit irregular arrivals, setting a precedent for how Brussels balances these competing demands across European territory."
+      "subject_newsroom_count": 13,
+      "summary": "Russia conducted a large-scale nighttime missile attack on Kyiv that killed between 15 and 16 people and wounded dozens more. The assault damaged critical civilian infrastructure including a school and a children's hospital, according to multiple reports.",
+      "takeaway": "Russia is sustaining a campaign of mass bombardment against Kiev with no sign of restraint or negotiation.",
+      "why_it_matters": "Russia's continued large-scale strikes on Ukrainian civilian infrastructure signal no imminent change in the conflict that European nations are militarily supporting and economically sanctioning, while the toll on civilians underscores the humanitarian stakes of the war on Europe's eastern border."
     }
   ],
-  "discarded_ingested": 0,
+  "discarded_ingested": 156,
   "discarded_kept": 5,
-  "generated_at": "2026-08-20T15:23:24.321362+00:00",
+  "generated_at": "2026-08-20T15:31:59.555997+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

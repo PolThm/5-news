@@ -2,16 +2,19 @@
   "clusters": [
     {
       "angle_zone": "europe",
-      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
-      "coherence": 0.5834268248746377,
+      "cluster_id": "subject-allemagne-15982e066f44",
+      "coherence": 0.51010078304246,
       "consequence": 3,
       "countries": [
-        "france"
+        "ci",
+        "france",
+        "gt",
+        "spain"
       ],
-      "country_count": 1,
+      "country_count": 4,
       "editorial_day": "2026-08-20",
-      "headline": "L'Allemagne enregistre 14 000 décès liés à la chaleur cet été, l'Espagne près de 4 500",
-      "independent_source_count": 4,
+      "headline": "L'Allemagne enregistre 14 000 décès liés à la chaleur pendant l'été",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
@@ -36,18 +39,37 @@
           "source": "france24.com",
           "source_country": "france",
           "url": "https://www.france24.com/fr/europe/20260820-canicule-europe-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-chaleur-allemagne-4-500-espagne"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/alemania-estima-que-ya-se-han-producido-14-000-muertes-por-calor-este-verano_7027767_0.html"
+        },
+        {
+          "language": "es",
+          "source": "dca.gob.gt",
+          "source_country": "gt",
+          "url": "https://dca.gob.gt/noticias-guatemala-diario-centro-america/alemania-estima-en-mas-de-14000-las-muertes-por-el-calor-de-este-verano/"
+        },
+        {
+          "language": "es",
+          "source": "radioagricultura.cl",
+          "source_country": "ci",
+          "url": "https://www.radioagricultura.cl/noticias/internacional/reportan-casi-14-000-personas-muertas-por-ola-de-calor-en-alemania_20260820/"
         }
       ],
       "mentioned_countries": [
         "germany",
         "spain"
       ],
-      "origin_country": "france",
+      "origin_country": "ci",
       "outbound_source": "lemonde.fr",
       "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
       "rank": 1,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
+        "20minutos.es",
         "france24.com",
         "francetvinfo.fr",
         "lemonde.fr",
@@ -55,28 +77,128 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5834,
+          "coherence": 0.5101,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.7345,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "allemagne",
+      "subject_names": [
+        "alemania",
+        "allemagne",
+        "espagne",
+        "france",
+        "francia",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "L'Europe a connu un été meurtrier marqué par des vagues de chaleur extrêmes, avec environ 14 000 morts attribuées à la chaleur en Allemagne et près de 4 500 en Espagne. Le bilan allemand dépasse largement le pic précédent enregistré en 2018.",
+      "takeaway": "L'Europe doit reconnaître que ses villes et ses institutions ne sont pas préparées à gérer régulièrement des événements climatiques qui tuent des dizaines de milliers de personnes.",
+      "why_it_matters": "Ces décès massifs en Allemagne et en Espagne exposent la vulnérabilité des populations européennes aux canicules, remettant en question l'adéquation des systèmes de santé et d'alerte face aux températures extrêmes."
+    },
+    {
+      "angle_zone": "europe",
+      "cluster_id": "subject-ceuta-87782888966b",
+      "coherence": 0.5162199840461188,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Bruxelles approuve le consortium espagnol pour candidater à une gigafabrique européenne d'IA",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-08-20/bruselas-aprueba-la-propuesta-espanola-para-optar-a-una-de-las-gigafactorias-de-ia-europeas.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/2026/08/20/6a86e188468aeb6d7f8b4595.html"
+        },
+        {
+          "language": "es",
+          "source": "canarias7.es",
+          "source_country": "spain",
+          "url": "https://www.canarias7.es/economia/bruselas-autoriza-alianza-espanola-opta-gigafactoria-ia-20260820150957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "larioja.com",
+          "source_country": "spain",
+          "url": "https://www.larioja.com/economia/bruselas-autoriza-alianza-espanola-opta-gigafactoria-ia-20260820150957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/bruselas-autoriza-sociedad-conjunta-santander-telefonica-acs-20260820164011-nt.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "be"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5162,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.6883,
+        "total": 0.6866,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "allemagne",
+      "subject_label": "ceuta",
       "subject_names": [
-        "allemagne",
-        "espagne"
+        "acs",
+        "bruselas",
+        "ceuta",
+        "espana",
+        "santander",
+        "telefonica",
+        "trampolin"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Cet été, l'Europe a connu des vagues de chaleur extrême causant un bilan humain considérable. L'Allemagne a dénombré environ 14 000 morts liées aux chaleurs, un chiffre largement supérieur au pic enregistré en 2018, tandis que l'Espagne en a compté près de 4 500.",
-      "takeaway": "L'Europe découvre que la chaleur tue à grande échelle, bien au-delà de ce qu'on mesure habituellement.",
-      "why_it_matters": "Ces décès massifs révèlent l'ampleur des risques sanitaires que les vagues de chaleur extrême posent désormais régulièrement aux populations européennes, sans que les systèmes de santé publique aient encore mis en place des réponses proportionnées à cette menace."
+      "subject_newsroom_count": 22,
+      "summary": "Bruxelles a autorisé une alliance entre Telefónica, Santander, ACS et SEPI Digital à se présenter comme candidat pour l'une des gigafabriques d'intelligence artificielle que l'Europe souhaite développer sur le continent.",
+      "takeaway": "La Commission européenne valide le consortium espagnol comme candidat viable pour une gigafactorique d'IA, réaffirmant sa volonté de construire une capacité d'IA souveraine en Europe.",
+      "why_it_matters": "Cette autorisation bruxelloise permet à l'Espagne de se positionner dans la compétition européenne pour l'infrastructure d'IA de pointe, enjeu stratégique que l'Union européenne cherche à maîtriser face à la domination américaine et chinoise."
     },
     {
       "angle_zone": "europe",
@@ -88,7 +210,7 @@
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La Communauté de Madrid reconnaît que certains hôpitaux publics ne garantissent pas le droit à l'avortement",
+      "headline": "La Communauté de Madrid reconnaît que le droit à l'avortement n'est pas garanti dans certains hôpitaux publics",
       "independent_source_count": 3,
       "members": [
         {
@@ -116,7 +238,7 @@
       "origin_country": "spain",
       "outbound_source": "elpais.com",
       "outbound_url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html",
-      "rank": 2,
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "eldiario.es",
@@ -144,10 +266,10 @@
         "comunidad",
         "madrid"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "La Communauté de Madrid a admis par écrit que le droit à l'avortement ne peut pas être assuré dans certains hôpitaux publics de la région. Face à cette impossibilité, l'administration dérive les femmes demandant un avortement vers des établissements privés pour garantir l'accès à ce service.",
-      "takeaway": "Madrid admet par écrit qu'elle ne peut pas assurer le droit à l'avortement dans ses hôpitaux publics.",
-      "why_it_matters": "Cette reconnaissance officielle d'une incapacité à garantir un droit légal en Espagne expose une fracture dans l'accès aux services de santé reproductive au sein de l'UE, questionnant la cohérence des droits fondamentaux entre États membres."
+      "subject_newsroom_count": 9,
+      "summary": "La Communauté de Madrid a admis par écrit que certains hôpitaux publics de la région ne peuvent pas assurer le droit à l'avortement. Face à cette impossibilité, l'administration dérive les patientes vers le secteur privé pour accéder à ce service.",
+      "takeaway": "Madrid admet par écrit que le droit à l'avortement n'est pas assuré partout dans ses hôpitaux publics et contourne le problème en renvoyant les femmes vers le secteur privé.",
+      "why_it_matters": "La reconnaissance par Madrid que certains hôpitaux publics ne garantissent pas l'accès à l'avortement met en lumière une fragmentation des droits reproductifs en Europe, où l'application concrète d'un droit légal dépend désormais de la région espagnole où réside la femme."
     },
     {
       "angle_zone": "europe",
@@ -161,7 +283,7 @@
       ],
       "country_count": 3,
       "editorial_day": "2026-08-19",
-      "headline": "La Russie menace le Royaume-Uni pour son soutien militaire à l'Ukraine",
+      "headline": "La Russie menace le Royaume-Uni après l'approvisionnement en drones pour l'Ukraine",
       "independent_source_count": 3,
       "members": [
         {
@@ -190,7 +312,7 @@
       "origin_country": "brazil",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
-      "rank": 3,
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "globo.com",
@@ -215,154 +337,34 @@
       "subject_label": "ukraine",
       "subject_names": [
         "harry",
-        "kiev",
+        "londres",
         "meghan",
-        "moscou",
+        "putin",
         "reino unido",
         "roumanie",
-        "rusia",
+        "royaume-uni",
         "russia",
         "russie",
         "ucrania",
         "ukraine"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "La Russie a lancé des menaces contre le Royaume-Uni après que l'Ukraine ait lancé une attaque de drones contre Moscou, accusant Londres d'être responsable en raison de son approvisionnement en drones à l'Ukraine. Moscou a avertir que plus l'implication britannique augmentera, plus le prix à payer sera élevé.",
-      "takeaway": "La Russie utilise des menaces directes contre les alliés occidentaux pour dissuader le soutien militaire à l'Ukraine.",
-      "why_it_matters": "Les menaces russes contre le Royaume-Uni escaladent la tension dans le conflit ukrainien et mettent en évidence les risques auxquels s'exposent les pays européens qui fournissent des armes à Kyïv."
+      "subject_newsroom_count": 20,
+      "summary": "La Russie a adressé des menaces au Royaume-Uni en raison de son soutien militaire à l'Ukraine, notamment la fourniture de drones, avertissant que plus l'implication britannique augmente, plus les conséquences seront graves. Ces menaces interviennent après que l'Ukraine a lancé une attaque aux drones contre Moscou.",
+      "takeaway": "La Russie signifie à ses fournisseurs d'armes qu'il y a un prix à payer pour chaque niveau d'engagement contre elle.",
+      "why_it_matters": "Les menaces russes contre le Royaume-Uni pour son soutien militaire à l'Ukraine démontrent que Moscou considère l'aide occidentale comme une participation directe à la guerre, ce qui élève le risque d'escalade entre puissances nucléaires en Europe."
     },
     {
       "angle_zone": "europe",
-      "cluster_id": "subject-bruselas-b6f358f44134",
-      "coherence": 0.4867446296432323,
+      "cluster_id": "subject-ceuta-125b435ebeaa",
+      "coherence": 0.584130507157425,
       "consequence": 2,
       "countries": [
-        "spain"
+        "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Bruxelles demande à l'Espagne de renvoyer tous les migrants irréguliers de Ceuta tout en protégeant les mineurs",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-20/bruselas-recalca-el-deber-de-espana-de-proteger-a-menores-vulnerables-en-ceuta-pese-a-reclamar-el-retorno-de-los-migrantes-irregulares.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/bruselas-vuelve-insistir-espana-peticion-devolver-irregulares-20260820142205-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/20/6a86edd4fc6c836e7f8b458d.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/politica/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "elperiodicodearagon.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodicodearagon.com/espana/2026/08/20/bruselas-exige-espana-proteger-menores-migrantes-ceuta-devolucion-irregulares-marruecos-133515825.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosur.es",
-          "source_country": "spain",
-          "url": "https://www.diariosur.es/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "hoy.es",
-          "source_country": "spain",
-          "url": "https://www.hoy.es/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "be"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4867,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6409,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bruselas",
-      "subject_names": [
-        "bruselas",
-        "ceuta",
-        "espana",
-        "marruecos",
-        "trampolin"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "La Commission européenne a rappelé à l'Espagne son obligation de protéger les mineurs vulnérables à Ceuta, tout en insistant pour que le gouvernement espagnol procède au retour de tous les migrants irréguliers arrivés dans l'enclave nord-africaine vers le Maroc. Bruxelles a également demandé au gouvernement plus d'informations sur ses plans concernant la crise migratoire.",
-      "takeaway": "Bruxelles impose à Madrid de choisir entre l'obligation humanitaire de protéger les enfants migrants et la demande de renvoi systématique de tous les adultes.",
-      "why_it_matters": "La Commission européenne exerce une pression directe sur l'Espagne pour qu'elle rapatrie tous les migrants irréguliers à Ceuta vers le Maroc, ce qui teste la capacité des États membres à gérer les arrivées massives aux frontières extérieures de l'UE et redéfinit les responsabilités entre protection de mineurs et expulsion."
-    },
-    {
-      "angle_zone": "europe",
-      "cluster_id": "subject-ceuta-3151b5f3900c",
-      "coherence": 0.5064202606478314,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "po"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-20",
-      "headline": "L'Espagne ouvre des centres d'hébergement pour 1800 migrants à Ceuta",
-      "independent_source_count": 5,
+      "headline": "L'Espagne ouvre des centres d'hébergement pour 1 800 migrants à Ceuta",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
@@ -387,12 +389,6 @@
           "source": "rfi.fr",
           "source_country": "france",
           "url": "https://www.rfi.fr/fr/europe/20260820-espagne-1800-places-d-h%C3%A9bergements-pour-les-migrants-encore-%C3%A0-ceuta-500-mineures-isol%C3%A9es-prises-en-charge"
-        },
-        {
-          "language": "pt",
-          "source": "sapo.pt",
-          "source_country": "po",
-          "url": "https://sapo.pt/artigo/ceuta-transfere-migrantes-para-instalacoes-com-capacidade-para-1800-pessoas-6a870d02871de6321d527bfa"
         }
       ],
       "mentioned_countries": [
@@ -411,35 +407,35 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5064,
-          "corroboration": 0.5,
+          "coherence": 0.5841,
+          "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.6259,
+        "total": 0.6151,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
+        "bruselas",
         "ceuta",
         "espana",
-        "marruecos",
         "trampolin"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "Face à une crise humanitaire à Ceuta, l'Espagne a ouvert plusieurs centres d'hébergement pouvant accueillir 1800 migrants, dont 500 mineurs isolés qui bénéficient d'une prise en charge spécifique.",
-      "takeaway": "L'Europe cherche des solutions locales à Ceuta plutôt que de redistribuer les migrants vers d'autres États membres.",
-      "why_it_matters": "L'Espagne absorbe sur son territoire une charge migratoire qui relève désormais de la responsabilité européenne collective, puisque Ceuta est un enclave européen en Afrique du Nord où convergent les flux migratoires méditerranéens."
+      "subject_newsroom_count": 22,
+      "summary": "Face à une crise humanitaire, l'Espagne a ouvert plusieurs centres d'accueil destinés à héberger les 1 800 migrants encore présents à Ceuta, parmi lesquels figurent environ 500 mineurs isolés désormais pris en charge.",
+      "takeaway": "Madrid cherche une solution d'urgence à Ceuta, mais cela ne change rien aux responsabilités inégales du contrôle migratoire aux frontières extérieures de l'Europe.",
+      "why_it_matters": "L'Espagne, État frontière de l'UE face à l'Afrique du Nord, répond à une crise migratoire qui teste la capacité des pays méditerranéens à gérer seuls l'accueil sans soutien coordonné européen."
     }
   ],
-  "discarded_ingested": 0,
+  "discarded_ingested": 154,
   "discarded_kept": 5,
-  "generated_at": "2026-08-20T15:23:24.321362+00:00",
+  "generated_at": "2026-08-20T15:31:59.555997+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

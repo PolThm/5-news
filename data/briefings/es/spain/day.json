@@ -2,16 +2,19 @@
   "clusters": [
     {
       "angle_zone": "spain",
-      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
-      "coherence": 0.5834268248746377,
+      "cluster_id": "subject-allemagne-15982e066f44",
+      "coherence": 0.51010078304246,
       "consequence": 3,
       "countries": [
-        "france"
+        "ci",
+        "france",
+        "gt",
+        "spain"
       ],
-      "country_count": 1,
+      "country_count": 4,
       "editorial_day": "2026-08-20",
-      "headline": "Alemania registra 14.000 muertes por calor en verano, España cerca de 4.500",
-      "independent_source_count": 4,
+      "headline": "Alemania registra aproximadamente 14.000 muertes por calor en el verano, España cerca de 4.500",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
@@ -36,18 +39,37 @@
           "source": "france24.com",
           "source_country": "france",
           "url": "https://www.france24.com/fr/europe/20260820-canicule-europe-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-chaleur-allemagne-4-500-espagne"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/alemania-estima-que-ya-se-han-producido-14-000-muertes-por-calor-este-verano_7027767_0.html"
+        },
+        {
+          "language": "es",
+          "source": "dca.gob.gt",
+          "source_country": "gt",
+          "url": "https://dca.gob.gt/noticias-guatemala-diario-centro-america/alemania-estima-en-mas-de-14000-las-muertes-por-el-calor-de-este-verano/"
+        },
+        {
+          "language": "es",
+          "source": "radioagricultura.cl",
+          "source_country": "ci",
+          "url": "https://www.radioagricultura.cl/noticias/internacional/reportan-casi-14-000-personas-muertas-por-ola-de-calor-en-alemania_20260820/"
         }
       ],
       "mentioned_countries": [
         "germany",
         "spain"
       ],
-      "origin_country": "france",
+      "origin_country": "ci",
       "outbound_source": "lemonde.fr",
       "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
       "rank": 1,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
+        "20minutos.es",
         "france24.com",
         "francetvinfo.fr",
         "lemonde.fr",
@@ -55,28 +77,128 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5834,
+          "coherence": 0.5101,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.7345,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "allemagne",
+      "subject_names": [
+        "alemania",
+        "allemagne",
+        "espagne",
+        "france",
+        "francia",
+        "marseille",
+        "paris"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Durante el verano europeo, Alemania ha contabilizado alrededor de 14.000 muertes relacionadas con las olas de calor extremo, mientras que España ha registrado aproximadamente 4.500. Estas cifras en Alemania superan ampliamente el récord anterior establecido en 2018, reflejando la severidad de las condiciones climáticas extremas que han afectado a Europa durante esta temporada.",
+      "takeaway": "La ola de calor de este verano ha dejado constancia de que los países europeos, incluida España, no están preparados para la magnitud mortal de los extremos climáticos actuales.",
+      "why_it_matters": "Los datos alemanes de casi 14.000 muertes por calor subrayan la vulnerabilidad de España, que registró cerca de 4.500 fallecidos por la misma causa, mostrando que ambos países enfrentan sistemas de alerta y protección insuficientes ante olas de calor cada vez más letales."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-87782888966b",
+      "coherence": 0.5162199840461188,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Bruselas autoriza el consorcio español de Telefónica, Santander y ACS para optar a una gigafactoría de IA",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-08-20/bruselas-aprueba-la-propuesta-espanola-para-optar-a-una-de-las-gigafactorias-de-ia-europeas.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/2026/08/20/6a86e188468aeb6d7f8b4595.html"
+        },
+        {
+          "language": "es",
+          "source": "canarias7.es",
+          "source_country": "spain",
+          "url": "https://www.canarias7.es/economia/bruselas-autoriza-alianza-espanola-opta-gigafactoria-ia-20260820150957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "larioja.com",
+          "source_country": "spain",
+          "url": "https://www.larioja.com/economia/bruselas-autoriza-alianza-espanola-opta-gigafactoria-ia-20260820150957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/bruselas-autoriza-sociedad-conjunta-santander-telefonica-acs-20260820164011-nt.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "be"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/tecnologia/bruselas-da-luz-verde-consorcio-espanol-acs-telefonica-santander-optar-gigafactoria-ia-europea_1_13457665.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5162,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.6883,
+        "total": 0.6866,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "allemagne",
+      "subject_label": "ceuta",
       "subject_names": [
-        "allemagne",
-        "espagne"
+        "acs",
+        "bruselas",
+        "ceuta",
+        "espana",
+        "santander",
+        "telefonica",
+        "trampolin"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Durante el verano de este año, Alemania contabilizó aproximadamente 14.000 muertes relacionadas con las temperaturas extremas, cifra muy superior al récord anterior registrado en 2018, mientras que España registró cerca de 4.500 fallecimientos por calor.",
-      "takeaway": "España sufre miles de muertes por calor cada verano, comparable a países del norte de Europa, lo que demuestra que el problema no es exclusivo de poblaciones desacostumbradas al calor sino una crisis de salud pública que afecta a toda Europa.",
-      "why_it_matters": "Los datos de mortalidad por calor en Alemania (14.000 muertes) y España (cerca de 4.500) revelan que España, a pesar de su clima más cálido, registra proporciones significativas de fallecimientos que demuestran la vulnerabilidad de la población española ante olas de calor extremas y subrayan la necesidad de medidas de protección ante eventos climáticos extremos."
+      "subject_newsroom_count": 22,
+      "summary": "La Comisión Europea ha aprobado la propuesta de una alianza estratégica formada por Telefónica, Santander y ACS, junto con la SEPI digital, para que España pueda competir por una de las gigafactorías europeas de inteligencia artificial que la Unión Europea planea establecer en el continente.",
+      "takeaway": "Bruselas permitió que el consorcio español compita por ser elegido para instalar una de las gigafactorías de IA europeas, pero la decisión final sobre quién la construye aún no se ha tomado.",
+      "why_it_matters": "España tiene ahora una oportunidad real de construir infraestructura crítica de inteligencia artificial en territorio europeo, con participación de tres grandes empresas españolas (Telefónica, Santander y ACS) y respaldo público de la SEPI digital, en competencia con otros países de la UE por una inversión que determinará la capacidad tecnológica estratégica europea."
     },
     {
       "angle_zone": "spain",
@@ -88,7 +210,7 @@
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La Comunidad de Madrid admite que no puede garantizar el derecho al aborto en algunos hospitales públicos",
+      "headline": "Madrid reconoce que algunos hospitales públicos no garantizan el derecho al aborto",
       "independent_source_count": 3,
       "members": [
         {
@@ -116,7 +238,7 @@
       "origin_country": "spain",
       "outbound_source": "elpais.com",
       "outbound_url": "https://elpais.com/espana/madrid/2026-08-20/la-comunidad-de-madrid-reconoce-por-escrito-que-algunos-hospitales-publicos-no-garantizan-el-derecho-al-aborto-no-se-puede-asegurar.html",
-      "rank": 2,
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "eldiario.es",
@@ -144,143 +266,23 @@
         "comunidad",
         "madrid"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "La Comunidad de Madrid ha reconocido por escrito que algunos de sus hospitales públicos no garantizan el acceso al derecho al aborto, situación que según los reportes ha llevado a que deriven a pacientes hacia centros privados para poder acceder a este servicio.",
-      "takeaway": "Madrid reconoce formalmente que no puede asegurar un derecho legal en su sistema sanitario público.",
-      "why_it_matters": "La Comunidad de Madrid ha admitido por escrito la incapacidad de garantizar el acceso al aborto en hospitales públicos, lo que obliga a las mujeres afectadas a recurrir a centros privados para ejercer un derecho que la ley española reconoce."
+      "subject_newsroom_count": 9,
+      "summary": "La Comunidad de Madrid ha reconocido por escrito que ciertos hospitales públicos de la región no pueden asegurar el derecho al aborto, por lo que deriva a las mujeres que solicitan este servicio hacia centros privados.",
+      "takeaway": "La administración madrileña admite por escrito que no cumple la ley de acceso al aborto en su red sanitaria pública.",
+      "why_it_matters": "Las mujeres que solicitan un aborto en hospitales públicos de la Comunidad de Madrid enfrentan la imposibilidad de acceder a este derecho garantizado por ley en algunos centros, viéndose obligadas a recurrir a clínicas privadas con el coste que ello implica."
     },
     {
       "angle_zone": "spain",
-      "cluster_id": "subject-bruselas-b6f358f44134",
-      "coherence": 0.4867446296432323,
+      "cluster_id": "subject-ceuta-125b435ebeaa",
+      "coherence": 0.584130507157425,
       "consequence": 2,
       "countries": [
-        "spain"
+        "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Bruselas exige a España que devuelva a todos los migrantes irregulares de Ceuta y proteja a los menores",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-20/bruselas-recalca-el-deber-de-espana-de-proteger-a-menores-vulnerables-en-ceuta-pese-a-reclamar-el-retorno-de-los-migrantes-irregulares.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/bruselas-vuelve-insistir-espana-peticion-devolver-irregulares-20260820142205-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/20/6a86edd4fc6c836e7f8b458d.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/politica/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "elperiodicodearagon.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodicodearagon.com/espana/2026/08/20/bruselas-exige-espana-proteger-menores-migrantes-ceuta-devolucion-irregulares-marruecos-133515825.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosur.es",
-          "source_country": "spain",
-          "url": "https://www.diariosur.es/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "hoy.es",
-          "source_country": "spain",
-          "url": "https://www.hoy.es/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "be"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-bruselas-recalca-deber-espana-proteger-menores-ceuta-pide-devolucion-todos-irregulares-20260820133131.html",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4867,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6409,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bruselas",
-      "subject_names": [
-        "bruselas",
-        "ceuta",
-        "espana",
-        "marruecos",
-        "trampolin"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Las instituciones europeas han reiterado su posición ante el Gobierno español sobre la situación migratoria en Ceuta, demandando simultáneamente dos acciones: la devolución de todos los migrantes irregulares que llegaron a la ciudad autónoma a Marruecos, y el cumplimiento del deber de proteger a los menores migrantes vulnerables. Bruselas además ha solicitado más información sobre los planes del Gobierno español respecto a esta cuestión.",
-      "takeaway": "Bruselas reclama simultáneamente que España proteja a los menores migrantes y devuelva a todos los adultos irregulares a Marruecos, imponiendo una exigencia de cumplimiento dual que pone en tensión los compromisos humanitarios y de control migratorio.",
-      "why_it_matters": "España enfrenta una presión institucional que la obliga a equilibrar la obligación legal de proteger a menores vulnerables en Ceuta con una exigencia de la UE de devolución de migrantes irregulares, lo que afecta directamente a las políticas de acogida y retorno que el Gobierno debe implementar en la ciudad autónoma."
-    },
-    {
-      "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-3151b5f3900c",
-      "coherence": 0.5064202606478314,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "po"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-20",
       "headline": "España abre centros de alojamiento para 1.800 migrantes en Ceuta",
-      "independent_source_count": 5,
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
@@ -305,12 +307,6 @@
           "source": "rfi.fr",
           "source_country": "france",
           "url": "https://www.rfi.fr/fr/europe/20260820-espagne-1800-places-d-h%C3%A9bergements-pour-les-migrants-encore-%C3%A0-ceuta-500-mineures-isol%C3%A9es-prises-en-charge"
-        },
-        {
-          "language": "pt",
-          "source": "sapo.pt",
-          "source_country": "po",
-          "url": "https://sapo.pt/artigo/ceuta-transfere-migrantes-para-instalacoes-com-capacidade-para-1800-pessoas-6a870d02871de6321d527bfa"
         }
       ],
       "mentioned_countries": [
@@ -329,93 +325,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5064,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6259,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "marruecos",
-        "trampolin"
-      ],
-      "subject_newsroom_count": 23,
-      "summary": "España ha abierto varios centros de acogida en Ceuta con capacidad para alojar a 1.800 migrantes que se encuentran en la ciudad autónoma, incluyendo 500 menores no acompañados que reciben atención especial, con el objetivo de aliviar la crisis humanitaria que afecta a la región.",
-      "takeaway": "El Gobierno español despliega infraestructura de emergencia para gestionar la crisis migratoria en su territorio norteafricano.",
-      "why_it_matters": "España asume la responsabilidad de albergar y atender a 1.800 migrantes en Ceuta, incluyendo 500 menores no acompañados, con centros de acogida que alivian la saturación humanitaria en la ciudad autónoma."
-    },
-    {
-      "angle_zone": "spain",
-      "cluster_id": "subject-otan-9841512ca26d",
-      "coherence": 0.44392905647451086,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Cazas españoles de la OTAN derriban un dron que penetró el espacio aéreo rumano",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260816/11614684/avion-combate-espanol-otan-derriba-dron-violaba-espacio-aereo-rumania.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/caza-espanol-otan-derriba-dron-vulnero-espacio-aereo-rumania_1_13449815.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/observatorio-defensa/20260820/cazas-f-18-espanoles-intervienen-rumania-intrusion-dron-cerca-frontera-ucraniana/1003744358097_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/f-18-espanoles-intervienen-rumania-por-entrada-un-dron-su-espacio-aereo_7027556_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "ro"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260813/11613354/dos-f-18-espanoles-rumania-despegan-alerta-dron-limite-ucrania.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elespanol.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4439,
+          "coherence": 0.5841,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -423,25 +333,113 @@
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6522
+          "source_reliability": 0.6
         },
-        "total": 0.6009,
+        "total": 0.6151,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "otan",
+      "subject_label": "ceuta",
       "subject_names": [
-        "otan",
-        "rumania"
+        "bruselas",
+        "ceuta",
+        "espana",
+        "trampolin"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Dos F-18 españoles desplegados en una misión de la OTAN en Rumanía fueron alertados e intervinieron para derribar un dron que violó el espacio aéreo rumano cerca de la frontera con Ucrania.",
-      "takeaway": "Los cazas españoles cumplen con sus obligaciones de vigilancia en el flanco oriental de la OTAN, operando en uno de los puntos más sensibles de Europa.",
-      "why_it_matters": "España demuestra operatividad en su misión de defensa aérea de la OTAN en Rumanía, mostrando capacidad de respuesta inmediata ante violaciones del espacio aéreo en una zona de riesgo próxima al conflicto ucraniano."
+      "subject_newsroom_count": 22,
+      "summary": "España ha abierto varios centros de acogida para alojar a 1.800 migrantes que permanecen en Ceuta, una medida que incluye la atención específica de 500 menores no acompañados, con el objetivo de aliviar la crisis humanitaria que afecta al enclave español.",
+      "takeaway": "Madrid responde a la crisis migratoria en Ceuta con infraestructura de alojamiento en lugar de dejar a los migrantes en condiciones de emergencia.",
+      "why_it_matters": "España asume la responsabilidad inmediata de alojar y atender a 1.800 migrantes en Ceuta, incluyendo 500 menores no acompañados, transfiriendo la carga humanitaria de una situación de emergencia en la ciudad autónoma a centros de acogida coordinados por el Estado."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-6e4fefb67fe8",
+      "coherence": 0.4432711984551112,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Bruselas insiste en que España devuelva a Marruecos a todos los migrantes llegados a Ceuta",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/bruselas-vuelve-insistir-espana-peticion-devolver-irregulares-20260820142205-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20260820/bruselas-insiste-devolver-rabat-migrantes-ceuta-exige-gobierno-informacion-planes/1003744358396_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html"
+        },
+        {
+          "language": "es",
+          "source": "hispanidad.com",
+          "source_country": "spain",
+          "url": "https://www.hispanidad.com/politica/espana/invasion-ceuta-bruselas-insiste-en-hay-devolver-invasores-marruecos_12069953_102.html"
+        },
+        {
+          "language": "es",
+          "source": "larioja.com",
+          "source_country": "spain",
+          "url": "https://www.larioja.com/nacional/bruselas-insiste-migrantes-llegados-ceuta-deben-devueltos-20260820162726-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "be",
+        "mo"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/bruselas-espera-que-gobierno-devuelva-todos-los-migrantes-que-entraron-ceuta-le-exige-mas-informacion-sobre-sus-planes_7027689_0.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "elespanol.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4433,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.5863,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "espana",
+        "trampolin"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Las instituciones europeas han reiterado su demanda al Gobierno español para que repatrie a todos los migrantes que ingresaron irregularmente en la ciudad autónoma de Ceuta y le han solicitado más información sobre los planes que tiene para cumplir con esta exigencia.",
+      "takeaway": "Bruselas intensifica su exigencia a España de devolver todos los migrantes a Marruecos y demanda más transparencia sobre cómo el Gobierno piensa ejecutarlo.",
+      "why_it_matters": "La presión de Bruselas sobre la devolución de migrantes afecta directamente a la política migratoria del Gobierno español en Ceuta, obligándole a justificar públicamente sus planes ante la Unión Europea en un tema que genera tensión tanto con Marruecos como internamente."
     }
   ],
-  "discarded_ingested": 0,
+  "discarded_ingested": 48,
   "discarded_kept": 5,
-  "generated_at": "2026-08-20T15:23:24.321362+00:00",
+  "generated_at": "2026-08-20T15:31:59.555997+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

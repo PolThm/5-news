@@ -44,7 +44,6 @@ from pathlib import Path
 
 from pipeline.adapters import Failure
 from pipeline.adapters.claude import (
-    ANGLE_SEPARATOR,
     BatchCollectResult,
     BatchSubmission,
     collect_batch,
@@ -289,12 +288,12 @@ def collect_summarize(
                 # publish then falls back to the shared `why_it_matters` --
                 # a Briefing without an angle is thinner, never broken.
                 "angles": {
-                    key.split(ANGLE_SEPARATOR, 1)[1]: {
+                    zone_slug: {
                         "why_it_matters": angle.why_it_matters,
                         "takeaway": angle.takeaway,
                     }
-                    for key, angle in result.angles.items()
-                    if key.split(ANGLE_SEPARATOR, 1)[0] == cluster_id
+                    for (angled_id, zone_slug), angle in result.angles.items()
+                    if angled_id == cluster_id
                 },
             }
         )

@@ -19,6 +19,7 @@ real two-phase caller (``pipeline.stages.summarize``) exists to use the split.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from dataclasses import dataclass, field
@@ -224,7 +225,7 @@ class ClusterText:
 class ZoneAngle:
     """Why one event matters to one Zone.
 
-    The facts are written once and shared -- see `ANGLE_SEPARATOR` -- so this
+    The facts are written once and shared -- see `angle_custom_id` -- so this
     carries only the judgment that varies by territory. Iran seen from the World
     is trade and China; seen from France it is energy prices and the budget. The
     same pair of fields as `ClusterText`'s consequence half, so the page renders
@@ -235,12 +236,22 @@ class ZoneAngle:
     takeaway: str
 
 
-# What separates a cluster id from a Zone slug in a batch `custom_id`.
+# How an angle request is keyed in a batch.
 #
-# Facts are requested once per (event, language) and keyed on the cluster id
-# alone; an angle is requested per (event, Zone, language) and keyed
-# `<cluster_id>@<zone_slug>`. One batch carries both, so the count of batches
-# does not grow with the number of Zones.
+# Facts are requested once per (event, language) under the cluster id alone; an
+# angle is requested per (event, Zone, language) and needs an id carrying both.
+# One batch carries both kinds, so the batch count does not grow with the number
+# of Zones.
+#
+# The obvious `<cluster_id>@<zone_slug>` is not available: the Batch API requires
+# `^[a-zA-Z0-9_-]{1,64}$`, which rejects `@` outright and caps the length at 64 --
+# and the first live submission failed on exactly that. Concatenating the two
+# would also risk the cap, since a cluster id already runs to 45 characters.
+#
+# So the cluster id is carried as a 12-hex digest and the parts are joined with
+# `_`, which neither a cluster id nor a Zone slug contains. `a_` prefixes it so a
+# facts id can never be mistaken for an angle id. Total length ~25, whatever the
+# subject was called.
 #
 # This reverses Story 3.5's fan-out decision, which summarized once per (Cluster,
 # language) precisely to avoid this multiplication. The reason it is worth
@@ -248,10 +259,35 @@ class ZoneAngle:
 # ground, and without an angle those filled items would repeat the World
 # Briefing's text verbatim. The whole point of a national press review is that
 # the same event reads differently from Paris and from Madrid.
-#
-# `@` because a cluster id is a slug plus a hex digest and a Zone slug is
-# lower-case letters and hyphens, so neither can contain it.
-ANGLE_SEPARATOR = "@"
+ANGLE_PREFIX = "a_"
+
+
+def angle_custom_id(cluster_id: str, zone_slug: str) -> str:
+    """The batch `custom_id` for one (event, Zone) angle request."""
+    digest = hashlib.sha256(cluster_id.encode("utf-8")).hexdigest()[:12]
+    return f"{ANGLE_PREFIX}{digest}_{zone_slug}"
+
+
+def parse_angle_custom_id(custom_id: str, clusters: list[dict]) -> tuple[str, str] | None:
+    """`(cluster_id, zone_slug)` for an angle id, or None if it is not one.
+
+    Reverses the digest against the clusters the caller already has, so nothing
+    has to be carried between the submit and collect phases -- which matters
+    because those are separate process invocations (AD-11) and a resumed cycle
+    reads only `ranked.jsonl`.
+    """
+    if not custom_id.startswith(ANGLE_PREFIX):
+        return None
+    parts = custom_id.split("_", 2)
+    if len(parts) != 3:
+        return None
+    _, digest, zone_slug = parts
+    for cluster in clusters:
+        cluster_id = cluster.get("cluster_id", "")
+        if hashlib.sha256(cluster_id.encode("utf-8")).hexdigest()[:12] == digest:
+            return cluster_id, zone_slug
+    return None
+
 
 _ANGLE_SCHEMA: dict = {
     "type": "object",
@@ -284,8 +320,9 @@ class BatchCollectResult:
 
     status: Literal["pending", "ended"]
     texts: dict[str, ClusterText] = field(default_factory=dict)
-    # Keyed `<cluster_id>@<zone_slug>`, the same custom_id the request used.
-    angles: dict[str, ZoneAngle] = field(default_factory=dict)
+    # Keyed `(cluster_id, zone_slug)` -- resolved from the request's custom_id,
+    # so a caller never has to know how that id is built.
+    angles: dict[tuple[str, str], ZoneAngle] = field(default_factory=dict)
     failures: list[Failure] = field(default_factory=list)
 
 
@@ -693,7 +730,7 @@ def submit_batch(
         # only for the text that actually differs per territory.
         requests += [
             Request(
-                custom_id=f"{cluster['cluster_id']}{ANGLE_SEPARATOR}{zone_slug}",
+                custom_id=angle_custom_id(cluster["cluster_id"], zone_slug),
                 params=MessageCreateParamsNonStreaming(
                     model=MODEL,
                     max_tokens=MAX_TOKENS,
@@ -751,7 +788,7 @@ def collect_batch(
     # failure degrades only the affected Cluster, never everything already
     # collected.
     texts: dict[str, ClusterText] = {}
-    angles: dict[str, ZoneAngle] = {}
+    angles: dict[tuple[str, str], ZoneAngle] = {}
     failures: list[Failure] = []
     seen_custom_ids: set[str] = set()
     try:
@@ -771,12 +808,13 @@ def collect_batch(
                 # Which kind of request this was is read off the custom_id
                 # rather than tracked separately: the id IS the record of what
                 # was asked, so the two cannot drift apart.
-                if ANGLE_SEPARATOR in item.custom_id:
+                pair = parse_angle_custom_id(item.custom_id, clusters)
+                if pair is not None:
                     angle, angle_failure = _parse_zone_angle(item.custom_id, raw)
                     if angle is None:
                         failures.append(angle_failure)
                     else:
-                        angles[item.custom_id] = angle
+                        angles[pair] = angle
                 else:
                     parsed, parse_failure = _parse_cluster_text(item.custom_id, raw)
                     if parsed is None:
@@ -811,7 +849,9 @@ def collect_batch(
 
 __all__ = [
     "ADAPTER",
-    "ANGLE_SEPARATOR",
+    "ANGLE_PREFIX",
+    "angle_custom_id",
+    "parse_angle_custom_id",
     "ZoneAngle",
     "zone_reader_name",
     "MAX_TOKENS",

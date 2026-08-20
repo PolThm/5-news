@@ -17,6 +17,7 @@ Story 3.4 split the old, poll-looping ``summarize_clusters`` into
 from __future__ import annotations
 
 import json
+import re
 
 import pytest
 from pipeline.adapters.claude import (
@@ -756,3 +757,58 @@ def test_the_prompt_says_outright_that_coverage_is_not_the_question() -> None:
 
     assert "NOT the question" in prompt
     assert "celebrity and royal lives" in prompt
+
+
+# --- angle custom ids --------------------------------------------------------
+
+_BATCH_CUSTOM_ID = re.compile(r"^[a-zA-Z0-9_-]{1,64}$")
+
+
+def test_every_custom_id_matches_what_the_batch_api_accepts() -> None:
+    """The Batch API requires `^[a-zA-Z0-9_-]{1,64}$`, and the first live
+    submission of angles failed on exactly that: the obvious
+    `<cluster_id>@<zone_slug>` uses a rejected character AND risks the 64-char
+    cap, since a cluster id already runs to 45.
+
+    Asserted against the longest real cluster id observed on 2026-08-20, so a
+    future id shape that overflows fails here rather than in production.
+    """
+    from pipeline.adapters.claude import angle_custom_id
+
+    longest_real = "subject-republica-centroafricana-844281344353"
+    for zone_slug in ("world", "europe", "france", "spain", "united-kingdom"):
+        custom_id = angle_custom_id(longest_real, zone_slug)
+        assert _BATCH_CUSTOM_ID.match(custom_id), custom_id
+        assert len(custom_id) <= 64
+
+
+def test_an_angle_id_resolves_back_without_anything_carried_between_phases() -> None:
+    """Submit and collect are separate process invocations (AD-11), and a
+    resumed cycle reads only `ranked.jsonl` -- so the id has to be reversible
+    against the clusters alone, with no side table to lose."""
+    from pipeline.adapters.claude import angle_custom_id, parse_angle_custom_id
+
+    clusters = [{"cluster_id": "subject-ceuta-0123456789ab"}, {"cluster_id": "subject-gaza-ff00"}]
+    custom_id = angle_custom_id("subject-gaza-ff00", "spain")
+
+    assert parse_angle_custom_id(custom_id, clusters) == ("subject-gaza-ff00", "spain")
+
+
+def test_a_facts_id_is_never_mistaken_for_an_angle_id() -> None:
+    """Both kinds share one batch, so the id is the only record of what was
+    asked. A facts result parsed as an angle would silently lose the headline."""
+    from pipeline.adapters.claude import parse_angle_custom_id
+
+    clusters = [{"cluster_id": "subject-ceuta-0123456789ab"}]
+
+    assert parse_angle_custom_id("subject-ceuta-0123456789ab", clusters) is None
+
+
+def test_an_angle_id_for_an_unknown_cluster_resolves_to_nothing() -> None:
+    """Rather than attaching a territory's judgment to whatever happens to be
+    first in the list."""
+    from pipeline.adapters.claude import angle_custom_id, parse_angle_custom_id
+
+    stray = angle_custom_id("subject-gone-0000", "france")
+
+    assert parse_angle_custom_id(stray, [{"cluster_id": "subject-here-1111"}]) is None

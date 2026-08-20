@@ -2,25 +2,41 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-trump-05692ebafd7d"
+        "subject-trump-fa17c007877f"
       ],
-      "cluster_id": "subject-trump-05692ebafd7d",
-      "coherence": 0.45637621215141977,
+      "cluster_id": "subject-trump-fa17c007877f",
+      "coherence": 0.4194639460312616,
       "consequence": 3,
       "countries": [
+        "ar",
         "brazil",
+        "france",
         "germany",
-        "india",
-        "mx",
-        "spain",
-        "sy",
-        "united-states"
+        "spain"
       ],
-      "country_count": 7,
+      "country_count": 5,
       "editorial_day": "2026-08-20",
-      "headline": "Trump annonce une « guerre économique » sans précédent contre l'Iran",
-      "independent_source_count": 12,
+      "headline": "Trump menace de représailles économiques tout pays soutenant l'Iran",
+      "independent_source_count": 11,
       "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/moyen-orient/trump-menace-liran-et-ses-partenaires-commerciaux-de-terribles-repercussions-economiques-20260820_3C4I4XAGO5CLXKPMO2ZH67DQ64/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/usa/presidentielle/donald-trump/donald-trump-menace-de-terribles-repercussions-economiques-tout-pays-qui-aiderait-l-iran_8154581.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/monde/un-d-day-economique-donald-trump-menace-de-terribles-repercussions-tout-pays-qui-aiderait-liran_645277"
+        },
         {
           "language": "es",
           "source": "elpais.com",
@@ -35,21 +51,9 @@
         },
         {
           "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-anuncia-dia-d-iran-guerra-economica-aislamiento-precedentes_1_13456938.html"
-        },
-        {
-          "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
           "url": "https://www.europapress.es/internacional/noticia-trump-declara-mayor-guerra-economica-contra-iran-amenaza-todo-pais-permita-cualquier-ayuda-teheran-20260820014411.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/trump-anuncia-una-ofensiva-economica-sin-precedentes-para-aislar-iran_7027493_0.html"
         },
         {
           "language": "pt",
@@ -58,77 +62,60 @@
           "url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml"
         },
         {
-          "language": "en",
-          "source": "siasat.com",
-          "source_country": "india",
-          "url": "https://www.siasat.com/trump-announces-most-crushing-economic-operation-against-iran-3527638/"
-        },
-        {
-          "language": "en",
-          "source": "wcti12.com",
-          "source_country": "united-states",
-          "url": "https://wcti12.com/news/nation-world/trump-says-most-crushing-us-economic-operation-against-iran-is-underway-economic-operation-negotiations-strait-of-hormuz-water-trade-war-tehran-truth-social-oil-economic-consequences"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://oglobo.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-ira-e-ameaca-parceiros-com-represalias.ghtml"
-        },
-        {
-          "language": "de",
-          "source": "kreiszeitung.de",
-          "source_country": "germany",
-          "url": "https://www.kreiszeitung.de/politik/iran-krieg-trump-droht-mit-vernichtendster-wirtschaftsoperation-zr-94451423.html"
-        },
-        {
-          "language": "de",
-          "source": "finanzen.net",
-          "source_country": "germany",
-          "url": "https://www.finanzen.net/nachricht/aktien/roundup-2-trump-droht-iran-mit-wirtschaftskrieg-15888965"
+          "language": "es",
+          "source": "diariopopular.com.ar",
+          "source_country": "ar",
+          "url": "https://www.diariopopular.com.ar/internacionales/tension-iran-trump-anuncio-una-guerra-economica-y-lanzo-una-fuerte-advertencia-n915704"
         },
         {
           "language": "es",
-          "source": "hispantv.com",
-          "source_country": "sy",
-          "url": "https://www.hispantv.com/noticias/ee-uu-/649009/trump-fracasado-campo-militar-anuncia-guerra-exonomica-devastadora-iran"
+          "source": "antena3.com",
+          "source_country": "spain",
+          "url": "https://www.antena3.com/noticias/mundo/trump-amenaza-sanciones-economicas-cualquier-pais-que-ayude-iran_202608206a86e4bd71b42a0b5dfa3c86.html"
         },
         {
-          "language": "es",
-          "source": "globalmedia.mx",
-          "source_country": "mx",
-          "url": "https://www.globalmedia.mx/articles/trump_anuncia_guerra_economica_contra_iran"
+          "language": "de",
+          "source": "handelsblatt.com",
+          "source_country": "germany",
+          "url": "https://www.handelsblatt.com/politik/international/nahost-us-praesident-trump-droht-iran-mit-wirtschaftskrieg/100248438.html"
+        },
+        {
+          "language": "de",
+          "source": "shz.de",
+          "source_country": "germany",
+          "url": "https://www.shz.de/deutschland-welt/nahost-krieg/artikel/trump-droht-iran-mit-wirtschaftskrieg-was-steckt-dahinter-51180990"
         }
       ],
       "mentioned_countries": [
         "ir"
       ],
-      "origin_country": "brazil",
+      "origin_country": "ar",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml",
       "rank": 1,
-      "reference_newsroom_count": 6,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "20minutos.es",
         "abc.es",
-        "eldiario.es",
+        "challenges.fr",
         "elpais.com",
         "europapress.es",
-        "globo.com"
+        "francetvinfo.fr",
+        "globo.com",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4564,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4286,
+          "coherence": 0.4195,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4667,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.75,
-          "source_reliability": 0.8049
+          "prominence": 0.7333,
+          "source_reliability": 0.7838
         },
-        "total": 0.7493,
+        "total": 0.7435,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
@@ -136,41 +123,319 @@
         "casa blanca",
         "donald trump",
         "iran",
+        "oman",
+        "ormuz",
         "teheran",
         "trump"
       ],
-      "subject_newsroom_count": 31,
-      "summary": "Le président américain Donald Trump a déclaré le lancement d'une offensive économique majeure contre l'Iran, qualifiée de « jour J économique » et de « guerre économique » sans précédent. Trump a également menacé de conséquences graves tout pays ou partenaire qui fournirait un soutien financier au régime iranien.",
-      "takeaway": "Les États-Unis intensifient leur pression économique sur l'Iran et menaçent d'isoler tout pays qui l'aiderait.",
-      "why_it_matters": "Cette annonce d'isolement économique et de représailles affecte directement les relations commerciales et diplomatiques entre les États-Unis et l'Iran, ainsi que les pays qui maintiennent des liens financiers avec Téhéran."
+      "subject_newsroom_count": 30,
+      "summary": "Donald Trump a annoncé une guerre économique majeure contre l'Iran et a menacé de terribles conséquences à l'encontre de tout pays fournissant une aide financière ou un soutien au régime iranien. Selon les reportages, cette menace s'inscrit dans une escalade des tensions avec Téhéran et vise à exercer une pression économique maximale sur l'Iran ainsi que sur ses partenaires commerciaux.",
+      "takeaway": "Trump utilise les sanctions économiques comme levier dans le conflit avec l'Iran en ciblant également les nations qui le soutiendraient.",
+      "why_it_matters": "Les pays commerçant avec l'Iran ou lui apportant un soutien financier s'exposent à des sanctions économiques américaines, ce qui pourrait modifier les stratégies diplomatiques et commerciales internationales."
+    },
+    {
+      "_linked_ids": [
+        "subject-china",
+        "subject-evergrande-4794118dd2bd",
+        "subject-evergrande-577e845adc09",
+        "subject-evergrande-cbc223d67815",
+        "subject-evergrande-cc722154110b",
+        "subject-evergrande-e7a5254e0105",
+        "subject-evergrande-fe6501ba213f"
+      ],
+      "cluster_id": "subject-evergrande-577e845adc09",
+      "coherence": 0.49278009821061786,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "co",
+        "france",
+        "india",
+        "it",
+        "nl",
+        "spain",
+        "sz",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 10,
+      "editorial_day": "2026-08-20",
+      "headline": "Le fondateur du géant immobilier chinois Evergrande condamné à la prison à perpétuité",
+      "independent_source_count": 19,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/economie/article/2026/08/20/en-chine-l-ex-patron-du-geant-de-l-immobilier-evergrande-condamne-a-la-prison-a-vie_6750977_3234.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/asie-pacifique/chine-xi-jiayin-fondateur-du-geant-immobilier-evergrande-condamne-a-la-prison-a-vie-20260820_BZ4HP7A3WVHJPFECOOPKFGG6AQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/chine/en-chine-le-fondateur-du-geant-immobilier-d-evergrande-condamne-a-la-prison-a-vie_8154677.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/asie-pacifique/20260820-chine-le-fondateur-du-g%C3%A9ant-de-l-immobilier-evergrande-xu-jiayin-condamn%C3%A9-%C3%A0-la-prison-%C3%A0-perp%C3%A9tuit%C3%A9"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-2959840"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-08-20/china-condena-a-cadena-perpetua-al-fundador-del-gigante-inmobiliario-evergrande.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/cadena-perpetua-fundador-gigante-inmobiliario-evergrande-cara-crisis-ladrillo-china_1_13456994.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/financial-times/2026/08/20/6a86ee9d468aebaa088b45a0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/business/2026/aug/20/evergrande-founder-jailed-life-fraud-hui-ka-yan"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2627589"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/08/20/nx-s1-5939335/chinese-sentence-founder-evergrande"
+        },
+        {
+          "language": "pt",
+          "source": "em.com.br",
+          "source_country": "brazil",
+          "url": "http://www.em.com.br/internacional/2026/08/7483650-china-condena-fundador-da-evergrande-a-prisao-perpetua.html"
+        },
+        {
+          "language": "es",
+          "source": "elheraldo.co",
+          "source_country": "co",
+          "url": "https://www.elheraldo.co/mundo/2026/08/20/xu-jiayin-fundador-del-gigante-inmobiliario-chino-evergrande-condenado-a-cadena-perpetua/"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/20/lergastolo-al-fondatore-di-evergrande-non-restituisce-casa-e-investimenti-ai-cinesi-ma-e-l"
+        },
+        {
+          "language": "it",
+          "source": "rsi.ch",
+          "source_country": "sz",
+          "url": "https://www.rsi.ch/info/mondo/Ergastolo-per-il-fondatore-del-colosso-immobiliare-cinese-Evergrande--4001508.html"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/international/business/china-evergrande-founder-hui-ka-yan-gets-life-in-prison-as-property-giants-saga-ends/articleshow/133364633.cms"
+        },
+        {
+          "language": "it",
+          "source": "lanazione.it",
+          "source_country": "it",
+          "url": "https://www.lanazione.it/ultimaora/fondatore-del-colosso-immobiliare-cinese-ef1cf01a"
+        }
+      ],
+      "mentioned_countries": [
+        "china"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "indiatimes.com",
+      "outbound_url": "https://economictimes.indiatimes.com/news/international/business/china-evergrande-founder-hui-ka-yan-gets-life-in-prison-as-property-giants-saga-ends/articleshow/133364633.cms",
+      "rank": 2,
+      "reference_newsroom_count": 14,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "expansion.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "nos.nl",
+        "npr.org",
+        "radiofrance.fr",
+        "rfi.fr",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4928,
+          "corroboration": 0.8333,
+          "editorial_weight": 0.6364,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.1429,
+          "prominence": 0.8261,
+          "source_reliability": 0.8667
+        },
+        "total": 0.7128,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "evergrande",
+      "subject_names": [
+        "chine",
+        "chinese",
+        "evergrande"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "Xu Jiayin, fondateur du groupe Evergrande, a été condamné à la prison à vie par la justice chinoise pour fraude fiscale à grande échelle. Cette condamnation intervient après que le géant immobilier, autrefois l'un des plus importants du pays, s'est effondré, laissant de nombreux investisseurs et clients sans leurs maisons ou leurs économies.",
+      "takeaway": "Le fondateur de l'une des plus grandes crises immobiliaires chinoises purgera le reste de sa vie en prison.",
+      "why_it_matters": "Cette sentence met fin à une ère pour le secteur immobilier chinois et affecte directement les millions de Chinois qui ont perdu leurs investissements et leurs logements dans l'effondrement d'Evergrande."
+    },
+    {
+      "_linked_ids": [
+        "subject-colombia-8f30e140d8d6"
+      ],
+      "cluster_id": "subject-colombia-8f30e140d8d6",
+      "coherence": 0.599811081181072,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "pe",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-20",
+      "headline": "La Colombie décrète l'état d'urgence économique, sociale et écologique suite à un tremblement de terre",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260820/11616934/espriella-decreta-emergencia-economica-social-ecologica-terremoto.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/espriella-decreta-estado-emergencia-economica-social-ecologica-colombia-por-terremoto_7027499_0.html"
+        },
+        {
+          "language": "es",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/es/colombia-decreta-emergencia-econ%C3%B3mica-social-y-ecol%C3%B3gica/a-78438063"
+        },
+        {
+          "language": "es",
+          "source": "rpp.pe",
+          "source_country": "pe",
+          "url": "https://rpp.pe/mundo/colombia/colombia-abelardo-de-la-espriella-decreta-estado-de-emergencia-economica-social-y-ecologica-por-terremoto-noticia-1702588"
+        }
+      ],
+      "mentioned_countries": [
+        "co"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/espriella-decreta-estado-emergencia-economica-social-ecologica-colombia-por-terremoto_7027499_0.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "dw.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5998,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6854,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "colombia",
+      "subject_names": [
+        "colombia",
+        "espriella",
+        "venezuela"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Le vice-président colombien Abelardo de la Espriella a déclaré un état d'urgence économique, social et écologique en réaction à un tremblement de terre survenu en Colombie. Cette déclaration officielle reconnaît les impacts multiples du séisme sur l'économie, la société et l'environnement du pays.",
+      "takeaway": "La Colombie active un cadre juridique d'urgence pour répondre aux effets d'un tremblement de terre touchant l'économie, la société et l'environnement.",
+      "why_it_matters": "Cette déclaration d'urgence permet aux autorités colombiennes de mobiliser des ressources et de mettre en place des mesures exceptionnelles pour faire face aux conséquences du séisme dans les domaines économique, social et écologique."
     },
     {
       "_linked_ids": [
         "5f2c0c66b2bdf61f",
         "9d54a26933a4ecd4",
         "f29cf613d0b68d9c",
+        "subject-gaza-0929e1f13a3f",
         "subject-gaza-25905b2430ba",
         "subject-gaza-2923476c5215",
         "subject-gaza-386466c20134",
         "subject-gaza-4603da765837",
         "subject-gaza-c033ae655fa1"
       ],
-      "cluster_id": "subject-gaza-25905b2430ba",
-      "coherence": 0.488871669719102,
+      "cluster_id": "subject-gaza-0929e1f13a3f",
+      "coherence": 0.4862297146200272,
       "consequence": 2,
       "countries": [
-        "be",
+        "ar",
         "brazil",
         "france",
-        "gh",
+        "is",
         "spain",
-        "sz",
         "united-kingdom"
       ],
-      "country_count": 7,
+      "country_count": 6,
       "editorial_day": "2026-08-20",
-      "headline": "L'armée israélienne reconnaît avoir tiré sur la voiture de Hind Rajab, une enfant de cinq ans tuée à Gaza",
-      "independent_source_count": 14,
+      "headline": "L'armée israélienne reconnaît avoir tiré sur la voiture de la fillette Hind Rajab à Gaza",
+      "independent_source_count": 13,
       "members": [
         {
           "language": "fr",
@@ -245,32 +510,26 @@
           "url": "https://g1.globo.com/mundo/noticia/2026/08/19/israel-abre-investigacao-sobre-morte-de-hind-rajab-menina-de-5-anos-alvejada-dentro-de-carro-em-gaza.ghtml"
         },
         {
+          "language": "es",
+          "source": "mdzol.com",
+          "source_country": "ar",
+          "url": "https://www.mdzol.com/mundo/israel-confirma-que-disparo-contra-el-vehiculo-el-que-viajaba-la-nina-5-anos-hind-rajab-gaza-n1589026"
+        },
+        {
           "language": "en",
-          "source": "thechronicle.com.gh",
-          "source_country": "gh",
-          "url": "https://thechronicle.com.gh/israel-confirms-it-opened-fire-on-vehicle-carrying-five-year-old-hind-rajab-in-gaza/"
-        },
-        {
-          "language": "fr",
-          "source": "lalibre.be",
-          "source_country": "be",
-          "url": "https://www.lalibre.be/international/moyen-orient/2026/08/19/larmee-israelienne-reconnait-avoir-tire-sur-la-voiture-de-hind-rajab-tuee-a-5-ans-a-gaza-4EFQM2AS4RG3PCVDT2IQPHRSKY/"
-        },
-        {
-          "language": "fr",
-          "source": "rts.ch",
-          "source_country": "sz",
-          "url": "https://www.rts.ch/info/monde/2026/article/gaza-l-armee-israelienne-reconnait-avoir-tire-sur-hind-rajab-29332802.html"
+          "source": "middleeasteye.net",
+          "source_country": "is",
+          "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-admits-it-fired-vehicle-carrying-five-year-old-hind-rajab"
         }
       ],
       "mentioned_countries": [
         "is",
         "gz"
       ],
-      "origin_country": "be",
+      "origin_country": "ar",
       "outbound_source": "eldiario.es",
       "outbound_url": "https://www.eldiario.es/internacional/israel-abre-investigacion-penal-asesinato-gaza-nina-cinco-anos-hind-rajab-familia_1_13455758.html",
-      "rank": 2,
+      "rank": 4,
       "reference_newsroom_count": 11,
       "reference_newsrooms": [
         "20minutos.es",
@@ -287,17 +546,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4889,
-          "corroboration": 0.7778,
+          "coherence": 0.4862,
+          "corroboration": 0.75,
           "editorial_weight": 0.5789,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.125,
-          "prominence": 0.7778,
-          "source_reliability": 0.84
+          "novelty": 0.1111,
+          "prominence": 0.7647,
+          "source_reliability": 0.8333
         },
-        "total": 0.6877,
+        "total": 0.6825,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "gaza",
@@ -308,355 +567,96 @@
         "israel"
       ],
       "subject_newsroom_count": 24,
-      "summary": "Deux ans après la mort de Hind Rajab à Gaza, l'armée israélienne a reconnu que ses soldats ont ouvert le feu sur le véhicule dans lequel se trouvait l'enfant de cinq ans. Cette reconnaissance s'accompagne de l'ouverture d'une enquête pénale par les autorités militaires israéliennes concernant les circonstances de la mort de la jeune fille.",
-      "takeaway": "Israël admet que ses troupes ont tiré sur la voiture où a péri Hind Rajab.",
-      "why_it_matters": "Cette reconnaissance établit une responsabilité directe des forces israéliennes dans la mort de l'enfant et déclenche une investigation officielle sur les faits."
+      "summary": "Deux ans après la mort de Hind Rajab, une enfant palestinienne de cinq ans tuée à Gaza, l'armée israélienne a reconnu que ses soldats ont ouvert le feu sur le véhicule dans lequel elle se trouvait. Cette admission a conduit l'armée israélienne à ouvrir une enquête pénale sur les circonstances de sa mort.",
+      "takeaway": "Après deux ans, Israël admet officiellement que ses troupes ont tiré sur la voiture transportant Hind Rajab.",
+      "why_it_matters": "Cette reconnaissance officielle établit la responsabilité de l'armée israélienne dans la mort de l'enfant et déclenche un processus d'enquête criminelle."
     },
     {
       "_linked_ids": [
-        "subject-fedorov-06d2772a4948",
-        "subject-fedorov-6e46be2fb1ca",
-        "subject-fedorov-d1cd4134be4e",
-        "subject-fedorov-d31ff6e32436"
+        "subject-etats-unis-70438f9c49d2"
       ],
-      "cluster_id": "subject-fedorov-06d2772a4948",
-      "coherence": 0.5876243835607925,
-      "consequence": 2,
+      "cluster_id": "subject-etats-unis-70438f9c49d2",
+      "coherence": 0.5044818157336812,
+      "consequence": 3,
       "countries": [
-        "as",
         "france",
-        "it",
-        "pk",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "germany",
+        "it"
       ],
-      "country_count": 7,
+      "country_count": 3,
       "editorial_day": "2026-08-20",
-      "headline": "L'ex-ministre ukrainien de la Défense Fedorov appelle à des élections présidentielles",
-      "independent_source_count": 16,
+      "headline": "La dette des États-Unis dépasse les 40 000 milliards de dollars",
+      "independent_source_count": 4,
       "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/la-dette-des-etats-unis-depasse-desormais-les-40-000-milliards-de-dollars-20260820_TSRMWRRQQNDTNNHBI6E7GEJZKU/"
+        },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/en-ukraine-l-ex-ministre-de-la-defense-mykhailo-fedorov-entre-en-rebellion-et-appelle-aux-elections-20260819"
+          "url": "https://www.la-croix.com/economie/etats-unis-la-dette-depasse-les-40-000-milliards-de-dollars-un-record-20260820"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-en-ukraine-fedorov-appelle-aux-%C3%A9lections-un-pari-politique-risqu%C3%A9"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260819-pour-mykha%C3%AFlo-fedorov-ex-ministre-de-la-d%C3%A9fense-des-%C3%A9lections-sont-possibles-en-ukraine"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
+          "language": "it",
+          "source": "corriere.it",
           "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/19/sacked-ukrainian-defence-minister-mykhailo-fedorov-calls-for-presidential-elections"
+          "url": "https://www.corriere.it/economia/finanza/26_agosto_20/debito-usa-da-record-40-mila-miliardi-di-dollari-perche-ora-e-un-problema-per-l-america-bf467f51-fcbb-42c4-8532-371b11029xlk.shtml"
         },
         {
-          "language": "en",
-          "source": "milwaukeesun.com",
-          "source_country": "united-states",
-          "url": "http://www.milwaukeesun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "tennesseedaily.com",
-          "source_country": "united-states",
-          "url": "http://www.tennesseedaily.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "stlouisstar.com",
-          "source_country": "united-states",
-          "url": "http://www.stlouisstar.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "londonmercury.com",
-          "source_country": "united-kingdom",
-          "url": "http://www.londonmercury.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "2lt.com.au",
-          "source_country": "as",
-          "url": "https://www.2lt.com.au/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says/"
-        },
-        {
-          "language": "en",
-          "source": "sanantoniopost.com",
-          "source_country": "united-states",
-          "url": "http://www.sanantoniopost.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "pakistantelegraph.com",
-          "source_country": "pk",
-          "url": "http://www.pakistantelegraph.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "laosnews.net",
-          "source_country": "united-states",
-          "url": "http://www.laosnews.net/news/279252223/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says"
-        },
-        {
-          "language": "en",
-          "source": "caribbeanherald.com",
-          "source_country": "united-states",
-          "url": "http://www.caribbeanherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
+          "language": "de",
+          "source": "handelsblatt.com",
+          "source_country": "germany",
+          "url": "https://www.handelsblatt.com/politik/international/usa-us-staatsverschuldung-steigt-auf-ueber-40-billionen-dollar/29669594.html"
         }
       ],
       "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "as",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
-      "rank": 3,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "france24.com",
-        "la-croix.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5876,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.25,
-          "prominence": 0.8,
-          "source_reliability": 0.8298
-        },
-        "total": 0.6752,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "fedorov",
-      "subject_names": [
-        "fedorov",
-        "krieg",
-        "mykhailo fedorov",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "volodymyr zelensky",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Mykhaïlo Fedorov, ancien ministre de la Défense d'Ukraine, a été limogé de son poste et lance depuis un appel public aux élections présidentielles, contestant ainsi indirectement le maintien au pouvoir du président Volodymyr Zelensky. Son positionnement représente une rupture notable avec la direction actuelle du pays et suscite des débats sur la légitimité du gouvernement ukrainien en période de conflit.",
-      "takeaway": "Un ancien ministre ukrainien défait le président en exercice en exigeant l'organisation d'élections.",
-      "why_it_matters": "Cet appel aux élections d'un ancien ministre de haut rang met en lumière des tensions internes au sein du leadership ukrainien et relance la question de la légitimité démocratique du gouvernement dans un contexte de crise prolongée."
-    },
-    {
-      "_linked_ids": [
-        "subject-ormuz-324cef744693"
-      ],
-      "cluster_id": "subject-ormuz-324cef744693",
-      "coherence": 0.41832689586345884,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain",
         "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-08-18",
-      "headline": "Trump menace de bombarder Oman en cas d'entrave aux négociations sur le détroit d'Ormuz",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260817.OBS117462/guerre-en-iran-trump-menace-de-bombarder-oman-s-il-entrave-un-accord-sur-le-detroit-d-ormuz.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/amerique/moyen-orient-pourquoi-donald-trump-menace-de-bombarder-oman-un-allie-historique-des-etats-unis-C2EBPOURCVACXD2ZRETBRWJCHQ/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260817/11615462/trump-amenaza-bombardear-oman-interpone-negociacion-reabrir-ormuz.html"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/why-is-trump-threatening-to-bomb-oman"
-        }
-      ],
-      "mentioned_countries": [
-        "ir"
-      ],
       "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260817.OBS117462/guerre-en-iran-trump-menace-de-bombarder-oman-s-il-entrave-un-accord-sur-le-detroit-d-ormuz.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
+      "outbound_source": "handelsblatt.com",
+      "outbound_url": "https://www.handelsblatt.com/politik/international/usa-us-staatsverschuldung-steigt-auf-ueber-40-billionen-dollar/29669594.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "pbs.org"
+        "corriere.it",
+        "la-croix.com",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4183,
+          "coherence": 0.5045,
           "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.5789
         },
-        "total": 0.6692,
+        "total": 0.6739,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ormuz",
+      "subject_label": "etats-unis",
       "subject_names": [
-        "casa blanca",
-        "donald trump",
-        "oman",
-        "ormuz",
-        "trump"
+        "eeuu",
+        "estados unidos",
+        "etats-unis",
+        "usa"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Le président américain Donald Trump a menacé de bombarder Oman s'il entravait un accord relatif au détroit d'Ormuz. Cette menace intervient dans un contexte de tensions au Moyen-Orient et de négociations américaines visant à réouvrir ou sécuriser le passage stratégique du détroit d'Ormuz, Oman étant un allié historique des États-Unis.",
-      "takeaway": "Trump a utilisé la menace militaire contre un allié traditionnel pour forcer sa coopération sur une négociation stratégique au Moyen-Orient.",
-      "why_it_matters": "Cette menace crée une pression diplomatique directe sur Oman, un partenaire clé américain, le menaçant de frappes militaires s'il ne coopère pas aux objectifs américains concernant le détroit d'Ormuz."
-    },
-    {
-      "_linked_ids": [
-        "2a4d0b6daccbceb0",
-        "subject-kim-jong-un-d099dcb46a67"
-      ],
-      "cluster_id": "subject-kim-jong-un-d099dcb46a67",
-      "coherence": 0.4303571010905506,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-17",
-      "headline": "Trump ordonne la réduction des exercices militaires conjoints avec la Corée du Sud",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/asie/donald-trump-veut-reduire-les-exercices-militaires-avec-la-coree-du-sud-pour-menager-kim-jong-un-DL7SLTPZOZA65CZUBQ7PMSCRLA/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260817/11615036/trump-reduce-ejercicios-militares-corea-sur-buena-relacion-kim-jong.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-ordena-reducir-ejercicios-militares-conjuntos-corea-sur-buena-relacion-kim-jong_1_13451190.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/17/trump-afirma-que-coreia-do-sul-ficara-mais-segura-com-reducao-de-exercicios-militares-dos-eua.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "ks"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/asie/donald-trump-veut-reduire-les-exercices-militaires-avec-la-coree-du-sud-pour-menager-kim-jong-un-DL7SLTPZOZA65CZUBQ7PMSCRLA/",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4304,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.3536,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6577,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kim jong-un",
-      "subject_names": [
-        "casa blanca",
-        "corea",
-        "coree",
-        "donald trump",
-        "kim jong",
-        "kim jong-un",
-        "trump"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Donald Trump a décidé de réduire les exercices militaires entre les États-Unis et la Corée du Sud, justifiant cette mesure par sa bonne relation avec Kim Jong-un. Selon Trump, cette réduction rendra la Corée du Sud plus sûre et reflète les échanges qu'il a eus avec le leader nord-coréen.",
-      "takeaway": "Trump privilégie sa relation diplomatique avec la Corée du Nord sur les exercices militaires traditionnels avec la Corée du Sud.",
-      "why_it_matters": "Cette décision modifie directement la posture militaire des États-Unis en Asie du Nord-Est et affecte les opérations de défense conjointe entre Washington et Séoul."
+      "subject_newsroom_count": 10,
+      "summary": "La dette publique américaine a franchi un nouveau record en dépassant les 40 000 milliards de dollars, selon plusieurs sources internationales.",
+      "takeaway": "Les États-Unis atteignent un niveau d'endettement sans précédent à plus de 40 000 milliards de dollars.",
+      "why_it_matters": "Ce seuil record marque une étape significative dans l'augmentation continue de l'endettement américain, soulevant des préoccupations quant à la soutenabilité des finances publiques des États-Unis."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T13:39:19.216447+00:00",
+  "generated_at": "2026-08-20T13:49:54.400993+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

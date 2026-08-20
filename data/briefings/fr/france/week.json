@@ -2,168 +2,89 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-europa",
-        "subject-europa-6d192cf68f70",
-        "subject-europa-c208a5fa0602"
+        "subject-allemagne-5e8a47a3c4fe",
+        "subject-allemagne-8df11689696f",
+        "subject-allemagne-a6adb41ba021",
+        "subject-allemagne-ad0285520b57",
+        "subject-allemagne-f5bb3706f8d1"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-europa-6d192cf68f70",
-      "coherence": 0.4616205891131383,
+      "cluster_id": "subject-allemagne-5e8a47a3c4fe",
+      "coherence": 0.585785931746241,
       "consequence": 3,
       "countries": [
-        "france",
-        "spain",
-        "united-states"
+        "france"
       ],
-      "country_count": 3,
+      "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Les chercheurs prévoient une augmentation majeure des surfaces brûlées par les incendies en Europe",
+      "filled_from": "europe",
+      "headline": "L'Europe compte environ 18 500 morts liés aux chaleurs extrêmes cet été",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
+        },
+        {
+          "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/environnement/changement-climatique-les-surfaces-brulees-par-les-incendies-vont-augmenter-en-europe-previennent-des-chercheurs-20260820_DQD2MT2E7ZAZHA6GJHLEBSREBE/"
+          "url": "https://www.liberation.fr/international/europe/allemagne-14-000-deces-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018-20260820_THJAHV2XVVBNLIOUGG7XM236UI/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/incendie/les-surfaces-brulees-en-europe-pourraient-augmenter-de-39-a-192-a-cause-du-changement-climatique-previennent-des-chercheurs_8154806.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/en-allemagne-environ-14-000-morts-lies-a-la-chaleur-cet-ete-pire-que-le-record-de-2018_8154671.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
-          "language": "es",
-          "source": "efe.com",
-          "source_country": "united-states",
-          "url": "https://efe.com/medio-ambiente/2026-08-20/superficie-quemada-incendios-europa-podria-triplicarse-final-siglo/"
-        },
-        {
-          "language": "es",
-          "source": "publico.es",
-          "source_country": "spain",
-          "url": "https://www.publico.es/sociedad/m-ambiente/superficie-quemada-incendios-europa-podria-aumentar-192-final-siglo.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260820-canicule-europe-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-chaleur-allemagne-4-500-espagne"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "germany",
+        "spain"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/faits-divers/incendie/les-surfaces-brulees-en-europe-pourraient-augmenter-de-39-a-192-a-cause-du-changement-climatique-previennent-des-chercheurs_8154806.html#xtor=RSS-3-[lestitres]",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
       "rank": 1,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
+        "lemonde.fr",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4616,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
+          "coherence": 0.5858,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
+          "geographic_relevance": 0.5,
           "impact": 1.0,
-          "novelty": 0.3333,
+          "novelty": 0.2,
           "prominence": 0.5,
-          "source_reliability": 0.5556
+          "source_reliability": 0.6
         },
-        "total": 0.6368,
+        "total": 0.586,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "europa",
+      "subject_label": "allemagne",
       "subject_names": [
-        "europa",
-        "europe"
+        "allemagne",
+        "espagne"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "Des chercheurs avertissent que le changement climatique entraînera une augmentation significative des surfaces brûlées par les incendies en Europe. Selon les études citées, les zones touchées par les feux pourraient augmenter de 39 à 192 pour cent, voire tripler d'ici la fin du siècle, en raison du réchauffement climatique.",
-      "takeaway": "Les chercheurs prédisent un quasi-triplement des surfaces brûlées en Europe d'ici la fin du siècle sous l'effet du changement climatique.",
-      "why_it_matters": "La France, exposée à des risques d'incendies croissants dans ses régions méditerranéennes et du sud-ouest, devra s'adapter à une augmentation significative des surfaces brûlées et des feux plus intenses si les projections climatiques se réalisent."
-    },
-    {
-      "_linked_ids": [
-        "subject-trump-23320d646861"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-trump-23320d646861",
-      "coherence": 0.4253116856769644,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "it",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-20",
-      "headline": "Trump déclare que la Corée du Nord possède 57 armes nucléaires et prévoit une rencontre avant la fin de l'année",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/trump-anuncia-que-preve-reunirse-con-kim-jong-un-antes-que-acabe-ano-tiene-57-armas-nucleares-muy-poderosas_7027470_0.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/19/news/trump_accorcia_esercitazioni_corea_del_sud_vuole_incontrare_kim_jong_un_leader_corea_del_nord_autunno-425536130/?rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/20/coreia-do-sul-estima-que-coreia-do-norte-tem-ate-120-ogivas-nucleares-trump-havia-citado-57-armas.ghtml"
-        },
-        {
-          "language": "fr",
-          "source": "franceinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/coree-du-nord/donald-trump-affirme-que-la-coree-du-nord-possede-57-armes-nucleaires_8154152.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "repubblica.it",
-      "outbound_url": "https://www.repubblica.it/esteri/2026/08/19/news/trump_accorcia_esercitazioni_corea_del_sud_vuole_incontrare_kim_jong_un_leader_corea_del_nord_autunno-425536130/?rss",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "globo.com",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4253,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5871,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "casa blanca",
-        "donald trump",
-        "trump"
-      ],
-      "subject_newsroom_count": 31,
-      "summary": "Donald Trump a annoncé son intention de rencontrer le leader nord-coréen avant la fin de l'année, affirmant que la Corée du Nord dispose de 57 armes nucléaires très puissantes. Selon les estimations sud-coréennes citées dans ces articles, le nombre réel pourrait atteindre jusqu'à 120 ogives nucléaires.",
-      "takeaway": "Trump envisage des pourparlers directs avec Kim Jong-un, ce qui marque un changement de méthode dans la gestion de la crise nucléaire nord-coréenne.",
-      "why_it_matters": "La France, comme puissance nucléaire et membre permanent du Conseil de sécurité de l'ONU, est concernée par tout engagement américain avec la Corée du Nord, qui pourrait modifier les équilibres géopolitiques mondiaux et les stratégies de non-prolifération que Paris défend."
+      "subject_newsroom_count": 5,
+      "summary": "L'Allemagne a enregistré environ 14 000 décès liés à la chaleur durant l'été, un chiffre largement supérieur au pic observé en 2018, tandis que l'Espagne en a dénombré près de 4 500. Ces décès résultent des températures extrêmes qui ont frappé l'Europe au cours de la période estivale.",
+      "takeaway": "L'Europe connaît des vagues de chaleur tellement meurtrières qu'elles deviennent des catastrophes sanitaires comparables aux épidémies.",
+      "why_it_matters": "Ces chiffres de mortalité records en Allemagne et en Espagne démontrent que les canicules extrêmes deviennent meurtrières à l'échelle continentale, ce qui expose la France aux mêmes risques sanitaires et contraint ses autorités à repenser les systèmes de protection des populations vulnérables face à une menace climatique désormais tangible et récurrente."
     },
     {
       "_linked_ids": [
@@ -174,14 +95,14 @@
       ],
       "angle_zone": "france",
       "cluster_id": "subject-france-8f99250a4e0c",
-      "coherence": 0.6868110516827894,
-      "consequence": 0,
+      "coherence": 0.6869582672081831,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "La vague de chaleur en France devient la plus longue depuis 1983",
+      "headline": "La vague de chaleur française depuis fin juillet devient la plus longue depuis 1983",
       "independent_source_count": 5,
       "members": [
         {
@@ -221,7 +142,7 @@
       "origin_country": "france",
       "outbound_source": "francetvinfo.fr",
       "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/vagues-de-chaleur-canicules/la-vague-de-chaleur-en-cours-devient-la-plus-longue-jamais-enregistree-en-france-ex-aequo-avec-juillet-1983_8154740.html#xtor=RSS-3-[lestitres]",
-      "rank": 3,
+      "rank": 2,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "france24.com",
@@ -232,17 +153,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.6868,
+          "coherence": 0.687,
           "corroboration": 0.3333,
           "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.3333,
           "novelty": 0.25,
           "prominence": 0.5556,
           "source_reliability": 0.6522
         },
-        "total": 0.4157,
+        "total": 0.5024,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
@@ -251,27 +172,219 @@
         "francia",
         "french",
         "marseille",
-        "paris"
+        "paris",
+        "var"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "La vague de chaleur qui a débuté fin juillet en France est devenue la plus longue jamais enregistrée, égalant le record établi en 1983. Selon les sources, cette période de température exceptionnellement élevée a duré au moins vingt-trois jours.",
-      "takeaway": "La France vit désormais sa plus longue vague de chaleur depuis quarante et un ans, établissant un nouveau repère climatique national.",
-      "why_it_matters": "Ce record de durée affecte les secteurs français dépendants de l'eau et de l'électricité, avec des risques accrus de pénuries et de restrictions, tandis que les populations vulnérables font face à des risques sanitaires intensifiés."
+      "subject_newsroom_count": 22,
+      "summary": "La vague de chaleur qui a débuté à la fin du mois de juillet en France est devenue la plus longue jamais enregistrée, égalant le record établi en juillet 1983 avec une durée de vingt-trois jours.",
+      "takeaway": "La France connaît désormais ses conditions météorologiques extrêmes les plus durables depuis quarante ans.",
+      "why_it_matters": "Cette chaleur prolongée met à l'épreuve les ressources en eau, les infrastructures énergétiques et la santé des populations vulnérables en France, tandis que les secteurs agricole et touristique subissent des perturbations directes."
     },
     {
       "_linked_ids": [
+        "subject-francois-fillon-1bc8c95ceb13",
+        "subject-legion-186d345bfc89"
+      ],
+      "angle_zone": "france",
+      "cluster_id": "subject-legion-186d345bfc89",
+      "coherence": 0.5905569803302343,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "François Fillon suspendu de la Légion d'honneur pour dix ans",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/politique/francois-fillon-suspendu-de-la-legion-dhonneur-et-de-lordre-national-du-merite-20260820_SQA5XAPV7RGYBCM6ZHTSFNHVYU/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/francois-fillon-suspendu-de-la-legion-d-honneur-et-de-lordre-national-du-merite-20260820"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/politique/200826/francois-fillon-suspendu-de-la-legion-d-honneur-apres-sa-condamnation-pour-emplois-fictifs"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20260820.OBS117528/penelopegate-francois-fillon-suspendu-de-la-legion-d-honneur-un-an-apres-sa-condamnation.html"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-8810458"
+        },
+        {
+          "language": "fr",
+          "source": "huffingtonpost.fr",
+          "source_country": "france",
+          "url": "https://www.huffingtonpost.fr/politique/article/francois-fillon-suspendu-de-la-legion-d-honneur-plus-d-un-an-apres-sa-condamnation_307793.html"
+        },
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr/politique/francois-fillon/condamne-dans-l-affaire-des-emplois-fictifs-de-son-epouse-francois-fillon-suspendu-de-la-legion-d-honneur-pour-dix-ans-30311031.php"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "huffingtonpost.fr",
+      "outbound_url": "https://www.huffingtonpost.fr/politique/article/francois-fillon-suspendu-de-la-legion-d-honneur-plus-d-un-an-apres-sa-condamnation_307793.html",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "radiofrance.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5906,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 0.5,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.5008,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "legion",
+      "subject_names": [
+        "francois fillon",
+        "legion"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "François Fillon a été suspendu de la Légion d'honneur et de l'ordre national du Mérite suite à sa condamnation dans l'affaire des emplois fictifs de son épouse, une sanction intervenue plus d'un an après le jugement qui l'avait reconnu coupable.",
+      "takeaway": "Un ancien chef de file de la droite française perd officiellement ses distinctions nationales suite à sa condamnation judiciaire, marquant l'aboutissement de la procédure disciplinaire engagée par l'État.",
+      "why_it_matters": "Cette suspension de dix ans de la Légion d'honneur et de l'ordre national du Mérite met fin à l'honneur institutionnel d'un ancien candidat à la présidence, instituant une conséquence administrative définitive au scandale politique des emplois fictifs de Penelope Fillon."
+    },
+    {
+      "_linked_ids": [
+        "subject-sonia-bellina-cf42330277a8"
+      ],
+      "angle_zone": "france",
+      "cluster_id": "subject-sonia-bellina-cf42330277a8",
+      "coherence": 0.48710228243542364,
+      "consequence": 1,
+      "countries": [
+        "it"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-20",
+      "headline": "Une influenceuse française retrouvée morte carbonisée dans une vigne du sud de la France",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/19/charred-body-found-in-southern-france-identified-as-influencer-sonia-bellina"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/20/news/nuda_carbonizzata_trovato_vigne_francia_corpo_influencer_sonia_bellina_due_fermi-425537738/?rss"
+        },
+        {
+          "language": "it",
+          "source": "corriere.it",
+          "source_country": "it",
+          "url": "https://www.corriere.it/cronache/26_agosto_20/sonia-bellina-l-influencer-francese-trovata-morta-il-corpo-carbonizzato-tra-le-vigne-del-sud-della-francia-fermati-due-uomini-c6fb2e01-da6a-4f50-b8fe-7c27919c4xlk.shtml"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-20/linfluencer-sonia-bellina-trovata-morta-carbonizzata-tra-le-vigne-in-francia-fermati-due-uomini-e-aperta-uninchiesta/19587759/"
+        },
+        {
+          "language": "it",
+          "source": "spotandweb.it",
+          "source_country": "it",
+          "url": "https://www.spotandweb.it/news/915213/trovata-morta-linfluencer-sonia-bellina-il-corpo-bruciato-era-in-una-vigna-fermati-due-uomini.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/19/charred-body-found-in-southern-france-identified-as-influencer-sonia-bellina",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "corriere.it",
+        "euronews.com",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4871,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6
+        },
+        "total": 0.4639,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "sonia bellina",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "marseille",
+        "paris",
+        "sonia bellina",
+        "var"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Le corps de l'influenceuse française Sonia Bellina a été découvert carbonisé dans une vigne du sud de la France. Deux hommes ont été arrêtés dans le cadre de cette affaire qui a donné lieu à une enquête.",
+      "takeaway": "Un crime commis en France contre une personnalité publique place le système judiciaire français face à une affaire de violence extrême qui exige des réponses.",
+      "why_it_matters": "Le meurtre d'une influenceuse française dans le sud du pays relance les questions sur la sécurité des femmes en zone rurale et mobilise les autorités judiciaires locales dans une enquête pour homicide."
+    },
+    {
+      "_linked_ids": [
+        "subject-ligue-34fe8e1bbf29",
         "subject-ligue-88b873f83535"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-ligue-88b873f83535",
-      "coherence": 0.5168301642724901,
+      "cluster_id": "subject-ligue-34fe8e1bbf29",
+      "coherence": 0.459422891350574,
       "consequence": 0,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-20",
-      "headline": "Le match PSG-Rennes est déplacé à Rennes en raison de l'état de la pelouse du Parc des Princes",
+      "headline": "Le match PSG-Rennes de Ligue 1 est déplacé au Roazhon en raison de l'état de la pelouse du Parc des Princes",
       "independent_source_count": 4,
       "members": [
         {
@@ -294,9 +407,9 @@
         },
         {
           "language": "fr",
-          "source": "larepubliquedespyrenees.fr",
+          "source": "maville.com",
           "source_country": "france",
-          "url": "https://www.larepubliquedespyrenees.fr:443/societe/afp/ligue-1-la-pelouse-du-parc-victime-de-la-canicule-le-psg-debutera-dimanche-a-rennes-30308779.php"
+          "url": "https://redon.maville.com/actu/actudet_-stade-rennais-la-premiere-journee-de-ligue-1-face-au-paris-sg-inversee-avec-match-au-roazhon-park_fil-7445059_actu.Htm"
         }
       ],
       "mentioned_countries": [
@@ -305,7 +418,7 @@
       "origin_country": "france",
       "outbound_source": "liberation.fr",
       "outbound_url": "https://www.liberation.fr/sports/football/ligue-1-la-pelouse-du-parc-des-princes-est-dans-un-etat-catastrophique-a-cause-de-la-canicule-le-match-psg-rennes-deplace-20260819_VNFXLJTILVH4LEY2BFULNMPQOY/",
-      "rank": 4,
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "francetvinfo.fr",
@@ -314,17 +427,17 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5168,
+          "coherence": 0.4594,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.0,
-          "novelty": 1.0,
+          "novelty": 0.5,
           "prominence": 0.5,
           "source_reliability": 0.5789
         },
-        "total": 0.3781,
+        "total": 0.3612,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ligue",
@@ -333,186 +446,14 @@
         "princes"
       ],
       "subject_newsroom_count": 4,
-      "summary": "La pelouse du Parc des Princes, endommagée par la canicule, s'est dégradée au point que le match de Ligue 1 entre le PSG et le Stade Rennais a dû être inversé. Le PSG jouera donc à domicile du Stade Rennais dimanche, plutôt que de recevoir l'équipe bretonne au Parc des Princes.",
-      "takeaway": "La canicule a forcé l'inversion d'un match de Ligue 1, donnant un avantage inattendu à Rennes sur le PSG.",
-      "why_it_matters": "Le PSG, club français majeur de Ligue 1, jouera dimanche chez son concurrent rennais au lieu de recevoir à domicile, ce qui désavantage le club parisien en le privant de l'avantage du terrain."
-    },
-    {
-      "_linked_ids": [
-        "subject-fedorov-06d2772a4948",
-        "subject-fedorov-6e46be2fb1ca",
-        "subject-fedorov-d1cd4134be4e",
-        "subject-fedorov-d31ff6e32436"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-fedorov-06d2772a4948",
-      "coherence": 0.5876243835607925,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "france",
-        "it",
-        "pk",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-08-20",
-      "filled_from": "europe",
-      "headline": "L'ex-ministre ukrainien de la Défense Fedorov appelle à des élections présidentielles",
-      "independent_source_count": 16,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/en-ukraine-l-ex-ministre-de-la-defense-mykhailo-fedorov-entre-en-rebellion-et-appelle-aux-elections-20260819"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260820-en-ukraine-fedorov-appelle-aux-%C3%A9lections-un-pari-politique-risqu%C3%A9"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/podcasts/invit%C3%A9-international/20260819-pour-mykha%C3%AFlo-fedorov-ex-ministre-de-la-d%C3%A9fense-des-%C3%A9lections-sont-possibles-en-ukraine"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/19/sacked-ukrainian-defence-minister-mykhailo-fedorov-calls-for-presidential-elections"
-        },
-        {
-          "language": "en",
-          "source": "milwaukeesun.com",
-          "source_country": "united-states",
-          "url": "http://www.milwaukeesun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "tennesseedaily.com",
-          "source_country": "united-states",
-          "url": "http://www.tennesseedaily.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "stlouisstar.com",
-          "source_country": "united-states",
-          "url": "http://www.stlouisstar.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "londonmercury.com",
-          "source_country": "united-kingdom",
-          "url": "http://www.londonmercury.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "2lt.com.au",
-          "source_country": "as",
-          "url": "https://www.2lt.com.au/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says/"
-        },
-        {
-          "language": "en",
-          "source": "sanantoniopost.com",
-          "source_country": "united-states",
-          "url": "http://www.sanantoniopost.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "pakistantelegraph.com",
-          "source_country": "pk",
-          "url": "http://www.pakistantelegraph.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "laosnews.net",
-          "source_country": "united-states",
-          "url": "http://www.laosnews.net/news/279252223/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says"
-        },
-        {
-          "language": "en",
-          "source": "caribbeanherald.com",
-          "source_country": "united-states",
-          "url": "http://www.caribbeanherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "as",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
-      "rank": 5,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "france24.com",
-        "la-croix.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5876,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 0.25,
-          "prominence": 0.8,
-          "source_reliability": 0.8298
-        },
-        "total": 0.6152,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "fedorov",
-      "subject_names": [
-        "fedorov",
-        "krieg",
-        "mykhailo fedorov",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "volodymyr zelensky",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Mykhaïlo Fedorov, ancien ministre de la Défense d'Ukraine, a été limogé de son poste et lance depuis un appel public aux élections présidentielles, contestant ainsi indirectement le maintien au pouvoir du président Volodymyr Zelensky. Son positionnement représente une rupture notable avec la direction actuelle du pays et suscite des débats sur la légitimité du gouvernement ukrainien en période de conflit.",
-      "takeaway": "Un ancien ministre de la Défense ukrainien conteste publiquement la légitimité de Zelensky en pleine guerre, exposant des tensions au sommet du pouvoir que la France ne peut ignorer.",
-      "why_it_matters": "Cette rébellion interne au sein du leadership ukrainien affaiblit l'unité politique de Kyiv au moment critique où la France et l'Europe doivent décider de leur engagement auprès d'une Ukraine dont la cohésion gouvernementale se fissure."
+      "summary": "La pelouse du Parc des Princes s'est dégradée à cause de la canicule, rendant le terrain impraticable pour accueillir le match de Ligue 1 entre le Paris Saint-Germain et le Stade Rennais. En conséquence, la première journée de championnat entre ces deux clubs s'inversera et se jouera à Rennes.",
+      "takeaway": "La canicule a forcé le déplacement d'un match de prestige vers une ville de province, illustrant l'impact des conditions climatiques sur le calendrier du football français.",
+      "why_it_matters": "Le match d'ouverture du PSG, club français majeur, se jouera exceptionnellement en Bretagne au lieu de Paris, ce qui modifie l'accueil habituel des supporters parisiens et les conditions de jeu de la première journée de Ligue 1."
     }
   ],
   "discarded_ingested": 0,
   "discarded_kept": 0,
-  "generated_at": "2026-08-20T13:39:19.216447+00:00",
+  "generated_at": "2026-08-20T13:49:54.400993+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

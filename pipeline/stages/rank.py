@@ -142,6 +142,9 @@ _RELIABILITY_HALF = 8.0  # summed tiers, i.e. ~3 reference newsrooms
 # corpus is 3 (the editorial floor) to 23, so 8 puts the interesting part of that
 # range in the steep part of the curve rather than at its flat top.
 _EDITORIAL_HALF = 8.0
+# The top of `score_consequence`'s ordinal, so `_impact` normalises against the
+# scale the adapter actually answers on rather than a number repeated here.
+_CONSEQUENCE_MAX = 3.0
 _FRESHNESS_HALFLIFE_DAYS = 2.0
 
 
@@ -245,6 +248,21 @@ def _editorial_weight(item: dict) -> float:
     return _saturating(item.get("reference_newsroom_count", 0), _EDITORIAL_HALF)
 
 
+def _impact(item: dict) -> float:
+    """What the event changes, from `score_consequence`'s four-step ordinal.
+
+    The spec's heaviest factor, and the only one this pipeline cannot read off
+    its own corpus: coverage counts measure attention, not consequence. An item
+    with no verdict scores 0.5 -- neither promoted nor buried on a dimension
+    nothing measured for it, so a failed scoring call costs the ordering its
+    sharpness and never the cycle (AD-10).
+    """
+    value = item.get("consequence")
+    if value is None:
+        return 0.5
+    return _clamp(float(value) / _CONSEQUENCE_MAX)
+
+
 def _coherence(item: dict) -> float:
     """How much tighter than chance the item's articles sit.
 
@@ -268,6 +286,7 @@ def score_item(item: dict, zone: Zone, period: Period, reference_day: str) -> di
     weights = SCORE_WEIGHTS[period.value]
     components = {
         "editorial_weight": _editorial_weight(item),
+        "impact": _impact(item),
         "coherence": _coherence(item),
         "freshness": _freshness(item, reference_day),
         "prominence": _prominence(item),

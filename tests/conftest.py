@@ -1,5 +1,6 @@
 """Shared test setup.
 
+
 Exists for one reason: `run_cycle` now consults the editorial agenda, which
 reaches Wikipedia over the network. Left alone, every cycle test would make
 seven HTTP requests -- the suite went from 9s to 78s the moment the stage was
@@ -89,3 +90,20 @@ def empty_agenda():
         )
 
     return agenda_fn
+
+
+@pytest.fixture(autouse=True)
+def _no_consequence_scoring(monkeypatch):
+    """Every cycle test scores consequence unless it says otherwise, and the real
+    scorer is a network call. Stubbed to "nothing judged", which the rank stage
+    treats neutrally -- so a test that does not care about the ordering is
+    unaffected, and one that does must supply its own verdicts.
+
+    Patched on the module attribute, which works only because `run_cycle`
+    resolves `consequence_fn or score_consequence` in its body. As a default
+    argument it would be bound at import and this fixture would do nothing --
+    the exact trap the agenda's `_default_fetch` fell into.
+    """
+    monkeypatch.setattr(
+        "pipeline.stages.cycle.score_consequence", lambda events, **kwargs: ({}, [])
+    )

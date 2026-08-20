@@ -1695,3 +1695,59 @@ def test_a_corpus_with_no_reference_press_falls_back_to_the_chronicle(
     record = json.loads(result.cycle_path.read_text())
     assert record["degraded"] is True
     assert any("no subject cleared the editorial floor" in f["detail"] for f in record["failures"])
+
+
+def test_the_consequence_verdict_reaches_the_ranking(tmp_path: Path, working_agenda) -> None:
+    """The wiring, not just the adapter. This project has shipped a stage that
+    ran and changed nothing twice -- the agenda stage, whose output was
+    overwritten eleven lines downstream, and the language instruction that
+    covered half its fields -- so the assertion is on what rank received.
+    """
+    from pipeline.stages import read_jsonl
+
+    run_cycle(
+        collect=lambda: _collection(*_subject_corpus()),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        consequence_fn=lambda events, **kwargs: ({event_id: 3 for event_id, _ in events}, []),
+    )
+
+    ranked = list(
+        read_jsonl(tmp_path / "intermediate" / "rank" / "2026-08-11T00-00-00Z" / "ranked.jsonl")
+    )
+    assert ranked
+    assert all(item["consequence"] == 3 for item in ranked)
+    assert all(item["score"]["components"]["impact"] == 1.0 for item in ranked)
+
+
+def test_a_failed_consequence_call_costs_the_ordering_not_the_cycle(
+    tmp_path: Path, working_agenda
+) -> None:
+    """AD-10. An item with no verdict scores 0.5 on impact -- neither promoted
+    nor buried on a dimension nothing measured -- so the Briefing still
+    publishes, less sharply ordered. The failure is recorded rather than
+    swallowed, because a silently unsharpened ranking is worse than a loud one.
+    """
+    from pipeline.stages import read_jsonl
+
+    def raises(events, **kwargs):
+        raise RuntimeError("upstream down")
+
+    result = run_cycle(
+        collect=lambda: _collection(*_subject_corpus()),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        consequence_fn=raises,
+    )
+
+    record = json.loads(result.cycle_path.read_text())
+    assert any("consequence scoring raised" in f["detail"] for f in record["failures"])
+    ranked = list(
+        read_jsonl(tmp_path / "intermediate" / "rank" / "2026-08-11T00-00-00Z" / "ranked.jsonl")
+    )
+    assert ranked, "the cycle still selects"
+    assert all(item["score"]["components"]["impact"] == 0.5 for item in ranked)

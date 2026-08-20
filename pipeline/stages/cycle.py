@@ -49,6 +49,7 @@ from pathlib import Path
 import numpy as np
 
 from pipeline.adapters import CollectionResult, Failure
+from pipeline.adapters.claude import score_consequence
 from pipeline.adapters.cohere_embed import EmbeddingResult, embed_titles
 from pipeline.config import OUTPUT_LANGUAGES, zone_by_slug
 from pipeline.domain import OutputLanguage, Period
@@ -258,6 +259,12 @@ def run_cycle(
     submit_summarize_fn: Callable[..., WrittenSubmission] = submit_summarize,
     collect_summarize_fn: Callable[..., WrittenSummarize | None] = collect_summarize,
     agenda_fn: Callable[..., WrittenAgenda] = run_agenda,
+    # None, not `score_consequence`, and deliberately: a default argument is
+    # evaluated at import and binds the object, so patching the module attribute
+    # afterwards changes nothing. This project has already paid for that once --
+    # the agenda's `_default_fetch` was bound the same way, and the test suite
+    # spent a week hitting the live network while appearing to be stubbed.
+    consequence_fn: Callable[..., tuple[dict[str, int], list[Failure]]] | None = None,
 ) -> CycleResult:
     """Run collect, then dedupe, then cluster, then the 15 Zone x 3 Period
     ranking matrix, then history, then submit (or, on a resumed invocation,
@@ -390,6 +397,36 @@ def run_cycle(
             if subject_items:
                 clusters = subject_items
                 trace(f"subject: {len(subject_items)} subjects are this cycle's candidates")
+                # What each candidate CHANGES, before anything is ordered.
+                #
+                # Coverage counts cannot answer this: nine reference newsrooms
+                # put Harry and Meghan's return on their front pages, so every
+                # other signal ranked it above Evergrande, Trump's threats
+                # against Iran and Israel's admission over Hind Rajab. This is
+                # the spec's `impact` factor, and the only one that is asked for
+                # rather than measured.
+                #
+                # Synchronous and headline-only, which is the one exception to
+                # NFR-2's batch-everything rule -- see
+                # tests/test_batch_api_boundary.py's `_SYNCHRONOUS_ALLOWED` for
+                # why it is bounded independently of corpus size. Failure leaves
+                # every verdict absent, which the rank stage scores neutrally
+                # (AD-10): the ordering loses its sharpness, never the cycle.
+                try:
+                    judge = consequence_fn or score_consequence
+                    verdicts, consequence_failures = judge(
+                        [
+                            (item["cluster_id"], (item.get("members") or [{}])[0].get("title", ""))
+                            for item in clusters
+                        ]
+                    )
+                    failures.extend(consequence_failures)
+                    for item in clusters:
+                        if item["cluster_id"] in verdicts:
+                            item["consequence"] = verdicts[item["cluster_id"]]
+                    trace(f"consequence: {len(verdicts)}/{len(clusters)} candidates judged")
+                except Exception as exc:  # noqa: BLE001 - adapter boundary
+                    failures.append(Failure("cycle", f"consequence scoring raised: {exc}"))
             else:
                 failures.append(
                     Failure("cycle", "no subject cleared the editorial floor; trying the agenda")

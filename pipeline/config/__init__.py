@@ -992,7 +992,7 @@ def source_trust_tier(domain: str) -> int:
 # How much each factor counts, per Period. Versioned, because changing a weight
 # changes what a reader sees and a Briefing must be explainable after the fact:
 # the version is written onto every scored item alongside its components.
-SCORE_WEIGHTS_VERSION = "2026-08-20.3"
+SCORE_WEIGHTS_VERSION = "2026-08-20.4"
 
 # The spec's §7.1 opens with `0.28 x impact` -- people and territory affected,
 # severity, economic or legal effect -- and it is deliberately ABSENT here.
@@ -1014,41 +1014,50 @@ SCORE_WEIGHTS_VERSION = "2026-08-20.3"
 # rest is rebalanced around it. A weekly review is a record of the week, where
 # an event's corroboration matters more than which day it landed on.
 SCORE_WEIGHTS: Final[dict[str, dict[str, float]]] = {
-    # `editorial_weight` leads both profiles, and its absence is why the first
-    # subject-based Briefing was wrong. The score had six factors and none of
-    # them was the count of reference newsrooms -- the entire reason the subject
-    # stage exists -- so selection still ran on raw wire volume. Measured on
-    # 2026-08-20 it published "sonia bellina" (5 newsrooms) and "etats-unis" (8)
-    # while dropping Hind Rajab (14), Evergrande (13), Kyiv (9) and Hormuz (8).
+    # `impact` is the spec's own heaviest factor (§7.1, 0.28) and was omitted at
+    # first because nothing this pipeline ingested measured it. Coverage counts
+    # cannot: nine reference newsrooms put Harry and Meghan's return on their
+    # front pages, so every signal available ranked it above Evergrande, Trump's
+    # threats against Iran and Israel's admission over Hind Rajab. GDELT's themes
+    # were measured as a substitute and rejected -- they separate the two classes
+    # only through occupation tags (PRINCE, DUCHESS, QUEEN, ACTRESS), which is a
+    # list of royals, and the hard-news side comes out as water management and
+    # levees. It is a topic taxonomy, not a news-value one.
     #
-    # `prominence` is what is left of that volume signal, kept small. It still
-    # says something -- a subject two outlets carried is not a subject 189 did
-    # -- but it was measured selecting a ZZ Top drummer's death when it led.
+    # So it is asked for: `score_consequence` judges what each event CHANGES,
+    # from its headline, on a four-step ordinal.
     #
-    # `coherence` demotes a subject that is a container rather than a story.
-    # Without it "Espana" and "Europa" outrank Ceuta, and the summarizer welds
-    # unrelated events into one item.
+    # `editorial_weight` still leads, because judgment about what to cover is the
+    # signal the subject stage exists to produce. `impact` sits just under it:
+    # between them they say a serious newsroom led with this AND it changes
+    # something, which is the pair the earlier profiles could not express.
+    #
+    # `prominence` is what is left of raw wire volume, kept small. It still says
+    # something, and it was measured selecting a ZZ Top drummer's death when it
+    # led.
     "day": {
-        "editorial_weight": 0.26,
-        "coherence": 0.16,
-        "freshness": 0.16,
-        "corroboration": 0.12,
-        "geographic_relevance": 0.12,
-        "source_reliability": 0.08,
-        "prominence": 0.06,
-        "novelty": 0.04,
+        "editorial_weight": 0.24,
+        "impact": 0.22,
+        "coherence": 0.12,
+        "freshness": 0.12,
+        "corroboration": 0.10,
+        "geographic_relevance": 0.10,
+        "source_reliability": 0.05,
+        "prominence": 0.03,
+        "novelty": 0.02,
     },
     # The weekly profile trades freshness away almost entirely -- within a week
-    # every item is recent enough -- and buys corroboration and reach with it.
+    # every item is recent enough -- and buys impact and corroboration with it.
     "week": {
-        "editorial_weight": 0.28,
-        "coherence": 0.16,
-        "corroboration": 0.16,
-        "geographic_relevance": 0.14,
-        "source_reliability": 0.10,
-        "prominence": 0.08,
-        "freshness": 0.04,
-        "novelty": 0.04,
+        "editorial_weight": 0.24,
+        "impact": 0.26,
+        "coherence": 0.12,
+        "corroboration": 0.14,
+        "geographic_relevance": 0.12,
+        "source_reliability": 0.05,
+        "prominence": 0.03,
+        "novelty": 0.02,
+        "freshness": 0.02,
     },
 }
 for _period, _weights in SCORE_WEIGHTS.items():

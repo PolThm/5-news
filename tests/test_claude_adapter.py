@@ -621,3 +621,138 @@ def test_collect_strips_surrounding_whitespace_from_both_fields() -> None:
 
     assert result.texts["a"].headline == "Un titre"
     assert result.texts["a"].summary == "Un resume."
+
+
+# --- score_consequence -------------------------------------------------------
+
+
+class _StubMessages:
+    """Records what it was asked and answers with whatever was queued."""
+
+    def __init__(self, replies: list[object]) -> None:
+        self.replies = list(replies)
+        self.prompts: list[str] = []
+        self.max_tokens: list[int] = []
+
+    def create(self, **kwargs):  # noqa: ANN003, ANN201
+        self.prompts.append(kwargs["messages"][0]["content"])
+        self.max_tokens.append(kwargs["max_tokens"])
+        reply = self.replies.pop(0)
+        if isinstance(reply, Exception):
+            raise reply
+        return reply
+
+
+class _StubClient:
+    def __init__(self, replies: list[object]) -> None:
+        self.messages = _StubMessages(replies)
+
+
+def _reply(payload: dict):  # noqa: ANN202
+    class _Part:
+        type = "text"
+        text = json.dumps(payload)
+
+    class _Response:
+        content = [_Part()]
+
+    return _Response()
+
+
+def test_the_prompt_uses_short_ids_and_maps_them_back() -> None:
+    """A cluster_id is a slug plus a twelve-hex digest, and repeating fifty of
+    them costs more output tokens than the verdicts do -- which is what
+    truncated the first working version, reported as "Unterminated string". It
+    also removes the hallucinated-id risk: an invented id resolves to nothing.
+    """
+    from pipeline.adapters.claude import score_consequence
+
+    client = _StubClient([_reply({"verdicts": [{"id": "e0", "consequence": 3}]})])
+
+    verdicts, failures = score_consequence(
+        [("subject-ceuta-0123456789ab", "Ceuta : bras de fer avec l'UE")], client=client
+    )
+
+    assert failures == []
+    assert verdicts == {"subject-ceuta-0123456789ab": 3}
+    assert "subject-ceuta-0123456789ab" not in client.messages.prompts[0]
+    assert "e0:" in client.messages.prompts[0]
+
+
+def test_an_invented_id_is_dropped_rather_than_attached_to_another_event() -> None:
+    from pipeline.adapters.claude import score_consequence
+
+    client = _StubClient(
+        [
+            _reply(
+                {
+                    "verdicts": [
+                        {"id": "e0", "consequence": 2},
+                        {"id": "e99", "consequence": 3},
+                    ]
+                }
+            )
+        ]
+    )
+
+    verdicts, _ = score_consequence([("real", "Un titre")], client=client)
+
+    assert verdicts == {"real": 2}
+
+
+def test_a_verdict_outside_the_scale_is_dropped() -> None:
+    """The output schema cannot express a range -- structured output rejects
+    `minimum`/`maximum` on an integer -- so it is checked here instead. An
+    out-of-range value would otherwise scale past 1.0 in `_impact`."""
+    from pipeline.adapters.claude import score_consequence
+
+    client = _StubClient([_reply({"verdicts": [{"id": "e0", "consequence": 9}]})])
+
+    verdicts, _ = score_consequence([("real", "Un titre")], client=client)
+
+    assert verdicts == {}
+
+
+def test_the_output_budget_is_sized_from_the_batch_not_from_a_summary() -> None:
+    """`MAX_TOKENS` is sized for one summary and truncated the JSON mid-string,
+    losing 50 of 53 verdicts."""
+    from pipeline.adapters.claude import (
+        CONSEQUENCE_BATCH,
+        MAX_TOKENS,
+        score_consequence,
+    )
+
+    client = _StubClient([_reply({"verdicts": []})])
+    score_consequence([("a", "x")], client=client)
+
+    assert client.messages.max_tokens[0] > MAX_TOKENS
+    assert client.messages.max_tokens[0] >= 24 * CONSEQUENCE_BATCH
+
+
+def test_one_failed_chunk_does_not_lose_the_others() -> None:
+    """AD-10 at the chunk level: fifty candidates are several calls, and one
+    transient error must not discard the verdicts the rest returned."""
+    from pipeline.adapters.claude import CONSEQUENCE_BATCH, score_consequence
+
+    events = [(f"id{position}", f"Titre {position}") for position in range(CONSEQUENCE_BATCH + 1)]
+    client = _StubClient(
+        [RuntimeError("upstream down"), _reply({"verdicts": [{"id": "e0", "consequence": 1}]})]
+    )
+
+    verdicts, failures = score_consequence(events, client=client)
+
+    assert len(failures) == 1
+    assert verdicts == {f"id{CONSEQUENCE_BATCH}": 1}
+
+
+def test_the_prompt_says_outright_that_coverage_is_not_the_question() -> None:
+    """The confusion this scoring exists to fix: nine reference newsrooms put
+    Harry and Meghan's return on their front pages, so every other signal ranked
+    it above Evergrande, Trump's threats against Iran and Israel's admission over
+    Hind Rajab. Coverage is measured elsewhere."""
+    from pipeline.adapters.claude import _consequence_prompt
+
+    prompt = _consequence_prompt([("e0", "Un titre")])
+
+    assert "NOT the question" in prompt
+    assert "celebrity and royal lives" in prompt

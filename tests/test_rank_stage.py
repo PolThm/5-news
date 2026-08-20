@@ -1523,3 +1523,27 @@ def test_an_item_with_no_coherence_measure_sits_in_the_middle() -> None:
     assert _coherence({}) == 0.5
     assert _coherence({"coherence": None}) == 0.5
     assert _coherence({"coherence": 0.4}) == 0.4
+
+
+def test_every_profile_weighs_exactly_the_factors_the_score_computes() -> None:
+    """A weight table and a component dict that drift apart fail in one of two
+    ways, and one of them is silent.
+
+    Removing a weight raises `KeyError` at scoring time -- which is how this
+    test came to exist: dropping `novelty` from the profiles while `score_item`
+    still computed it broke 29 tests at once. Adding a component with no weight
+    is worse: the factor is computed, never read, and nothing complains.
+    """
+    from pipeline.config import SCORE_WEIGHTS, zone_by_slug
+    from pipeline.domain import Period
+    from pipeline.stages.rank import score_item
+
+    computed = set(
+        score_item(_scored(), zone_by_slug("world"), Period.DAY, "2026-08-20")["components"]
+    )
+
+    for period, weights in SCORE_WEIGHTS.items():
+        assert set(weights) == computed, (
+            f"the {period} profile weighs {sorted(set(weights) - computed)} which nothing "
+            f"computes, and ignores {sorted(computed - set(weights))} which it does"
+        )

@@ -38,6 +38,37 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PIPELINE_ROOT = REPO_ROOT / "pipeline"
 
 
+# The one function allowed to reach the synchronous endpoint, and why.
+#
+# NFR-2's concern is cost-independence: per-request billing that scales with the
+# corpus. Summarization is exactly that shape -- one call per published item,
+# every cycle, forever -- so it must be batched, and the tripwire above exists
+# because a single copy-pasted synchronous call would quietly undo it.
+#
+# `score_consequence` is a different shape. The ranking cannot order anything
+# until it knows what each event changes, and the Batch API's own commitment is
+# 24 hours: batching it would mean a third phase in every cycle and a Briefing
+# published half a day after the news. It sends headlines only, batched
+# `CONSEQUENCE_BATCH` at a time, so the call count is ceil(candidates / 25) --
+# two or three per cycle whether the corpus holds 12,000 articles or 120,000.
+# That is bounded independently of volume, which is what NFR-2 is protecting.
+#
+# Named exactly, not pattern-matched: any OTHER synchronous call still fails,
+# including a second one added inside this same module.
+_SYNCHRONOUS_ALLOWED = {("pipeline/adapters/claude.py", "score_consequence")}
+
+
+def _enclosing_function(tree: ast.AST, lineno: int) -> str | None:
+    """The name of the innermost function containing a line."""
+    best: tuple[int, str] | None = None
+    for node in ast.walk(tree):
+        if isinstance(node, ast.FunctionDef | ast.AsyncFunctionDef):
+            end = getattr(node, "end_lineno", node.lineno)
+            if node.lineno <= lineno <= end and (best is None or node.lineno > best[0]):
+                best = (node.lineno, node.name)
+    return best[1] if best else None
+
+
 def _synchronous_messages_create_calls(source: str, filename: str) -> list[str]:
     """Every call in `source` shaped like `<expr>.messages.create(...)` --
     the synchronous endpoint -- as opposed to `<expr>.messages.batches.create(...)`,
@@ -64,15 +95,62 @@ def test_no_pipeline_file_calls_the_synchronous_messages_api() -> None:
     for path in PIPELINE_ROOT.rglob("*.py"):
         if "__pycache__" in path.parts:
             continue
-        violations.extend(_synchronous_messages_create_calls(path.read_text(), str(path)))
+        source = path.read_text()
+        relative = path.relative_to(REPO_ROOT).as_posix()
+        tree = ast.parse(source, filename=relative)
+        for found in _synchronous_messages_create_calls(source, relative):
+            lineno = int(found.rsplit(":", 1)[1])
+            if (relative, _enclosing_function(tree, lineno)) in _SYNCHRONOUS_ALLOWED:
+                continue
+            violations.append(found)
 
     assert violations == [], (
         "found a synchronous client.messages.create(...) call outside the "
         f"Batch API: {violations}. Every Claude call in this pipeline must "
         "go through client.messages.batches.create/.retrieve/.results "
         "(NFR-2) -- see pipeline/adapters/claude.py's submit_batch/"
-        "collect_batch."
+        "collect_batch. The one allowlisted exception is recorded in "
+        "_SYNCHRONOUS_ALLOWED, with the reason it is bounded independently "
+        "of corpus size; add to it deliberately or not at all."
     )
+
+
+def test_the_allowlist_names_functions_that_actually_exist() -> None:
+    """An allowlist entry that no longer matches anything is worse than no
+    entry: it reads as a live exception while silently protecting nothing, and
+    the next synchronous call added to that file inherits the exemption."""
+    for relative, function in _SYNCHRONOUS_ALLOWED:
+        source = (REPO_ROOT / relative).read_text()
+        tree = ast.parse(source, filename=relative)
+        names = {
+            node.name
+            for node in ast.walk(tree)
+            if isinstance(node, ast.FunctionDef | ast.AsyncFunctionDef)
+        }
+        assert function in names, f"{relative} has no function {function}"
+
+
+def test_a_second_synchronous_call_in_the_allowlisted_file_is_still_caught() -> None:
+    """The exemption is one function, not one file. A shortcut added elsewhere in
+    the adapter must fail exactly as it would anywhere else."""
+    planted = """
+def score_consequence(client):
+    return client.messages.create(model="x", messages=[])
+
+
+def something_else(client):
+    return client.messages.create(model="x", messages=[])
+"""
+    tree = ast.parse(planted, filename="pipeline/adapters/claude.py")
+    found = _synchronous_messages_create_calls(planted, "pipeline/adapters/claude.py")
+    unexempt = [
+        hit
+        for hit in found
+        if ("pipeline/adapters/claude.py", _enclosing_function(tree, int(hit.rsplit(":", 1)[1])))
+        not in _SYNCHRONOUS_ALLOWED
+    ]
+    assert len(found) == 2
+    assert unexempt == ["pipeline/adapters/claude.py:7"]
 
 
 def test_the_detector_actually_catches_a_planted_synchronous_call() -> None:

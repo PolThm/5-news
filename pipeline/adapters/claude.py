@@ -350,6 +350,153 @@ def _parse_cluster_text(cluster_id: str, raw: str) -> tuple[ClusterText | None, 
     return ClusterText(**{name: str(value).strip() for name, value in fields.items()}), None
 
 
+# --- Consequence scoring ------------------------------------------------------
+
+# How many events go into one classification call. Small enough that the model
+# holds the whole list in view and returns one verdict per item, large enough
+# that a cycle's ~50 candidates take two or three calls, not fifty.
+CONSEQUENCE_BATCH = 25
+
+# Output budget for one classification call.
+#
+# `MAX_TOKENS` is sized for one summary and truncated the JSON mid-string, so 50
+# of 53 verdicts were lost and the failure read as "Unterminated string" -- a
+# parse error standing in for a budget that was simply too small. Sized from the
+# batch instead: each verdict is a two-character id and one digit, so ~24 tokens
+# with the JSON around it, plus headroom.
+_CONSEQUENCE_MAX_TOKENS = 64 * CONSEQUENCE_BATCH
+
+# The ordinal the model answers on, and what each step means.
+#
+# Ordinal rather than a free 0-1 score: asked for a number, a model returns 0.7
+# for almost everything, and the ranking needs the gaps to be real. Four steps
+# because that is as fine a distinction as the question supports.
+_CONSEQUENCE_SCALE = {
+    3: "decides or changes something for a population, an institution, a market "
+    "or a state: a war, a ruling, a law, an election, an economic shock, a "
+    "diplomatic rupture",
+    2: "a real development inside an ongoing story of that kind -- a new figure, "
+    "a new phase, an official admission",
+    1: "notable, but consequential only for those directly involved: a crime, an "
+    "accident, a local incident, a company's own troubles",
+    0: "of interest but changes nothing beyond the individuals concerned: "
+    "celebrity and royal lives, personal affairs, entertainment, sports results",
+}
+
+_CONSEQUENCE_SCHEMA: dict[str, Any] = {
+    "type": "object",
+    "additionalProperties": False,
+    "required": ["verdicts"],
+    "properties": {
+        "verdicts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "required": ["id", "consequence"],
+                "properties": {
+                    "id": {"type": "string"},
+                    # No `minimum`/`maximum`: structured output rejects them on
+                    # an integer ("For 'integer' type, properties maximum,
+                    # minimum are not supported"). The range is enforced where it
+                    # was already enforced anyway -- on the parsed verdict below,
+                    # which has to check the echoed id in any case.
+                    "consequence": {"type": "integer"},
+                },
+            },
+        }
+    },
+}
+
+
+def _consequence_prompt(events: list[tuple[str, str]]) -> str:
+    """One call, one list, one verdict per line.
+
+    The instruction says outright that wide coverage is not the question, because
+    that is exactly the confusion this scoring exists to fix: nine reference
+    newsrooms put Harry and Meghan's return on their front pages, so every signal
+    this pipeline had ranked it above Evergrande, Trump's threats against Iran
+    and Israel's admission over Hind Rajab. Coverage is already measured
+    elsewhere; this asks only what the event changes.
+    """
+    scale = "\n".join(
+        f"{value} = {meaning}" for value, meaning in sorted(_CONSEQUENCE_SCALE.items())
+    )
+    listing = "\n".join(
+        f'{event_id}: "{_escape_quotes(headline)}"' for event_id, headline in events
+    )
+    return (
+        "You are triaging news events for a serious daily press review. For each "
+        "event below, judge only how much it CHANGES -- who is affected, what is "
+        "decided, what is at stake.\n\n"
+        "How widely the event is covered is NOT the question and must not enter "
+        "your answer. A story every newspaper leads with can still change "
+        "nothing; a story reported once can change a great deal.\n\n"
+        f"Scale:\n{scale}\n\n"
+        f"Events:\n{listing}\n\n"
+        "Return one verdict per event, using the id exactly as given. Judge from "
+        "the headline alone -- do not assume facts it does not state."
+    )
+
+
+def score_consequence(
+    events: list[tuple[str, str]],
+    client: Client | None = None,
+) -> tuple[dict[str, int], list[Failure]]:
+    """How much each event changes, on `_CONSEQUENCE_SCALE`.
+
+    Synchronous, not batched, and that is the whole reason this is usable: the
+    ranking needs the answer before it orders anything, and the Batch API's
+    commitment is 24 hours. Headlines only, so a cycle's ~50 candidates cost a
+    couple of small calls rather than a second summarize.
+
+    Returns what it could score plus the failures. A missing verdict is not an
+    error for the caller to raise on -- the rank stage scores an unjudged item
+    neutrally, so a failed call costs the ordering its sharpness and never the
+    cycle (AD-10).
+    """
+    client, failure = _client_or_degrade(client)
+    if client is None:
+        return {}, [failure] if failure else []
+
+    verdicts: dict[str, int] = {}
+    failures: list[Failure] = []
+    for start in range(0, len(events), CONSEQUENCE_BATCH):
+        # Short ids in the prompt, mapped back here. A cluster_id is a slug plus
+        # a twelve-hex digest, and repeating fifty of them costs more output
+        # tokens than the verdicts themselves -- which is what truncated the
+        # first working version. It also removes the hallucinated-id risk
+        # entirely: an id the model invents is simply not in this mapping.
+        chunk_events = events[start : start + CONSEQUENCE_BATCH]
+        by_short = {f"e{position}": event_id for position, (event_id, _) in enumerate(chunk_events)}
+        chunk = [
+            (short, headline) for short, (_, headline) in zip(by_short, chunk_events, strict=True)
+        ]
+        try:
+            response = client.messages.create(
+                model=MODEL,
+                max_tokens=_CONSEQUENCE_MAX_TOKENS,
+                output_config={"format": {"type": "json_schema", "schema": _CONSEQUENCE_SCHEMA}},
+                messages=[{"role": "user", "content": _consequence_prompt(chunk)}],
+            )
+            payload = json.loads(
+                "".join(part.text for part in response.content if part.type == "text")
+            )
+        except Exception as exc:  # noqa: BLE001 - adapter boundary, must not raise past it
+            failures.append(Failure(ADAPTER, f"consequence scoring failed: {exc}"))
+            continue
+        for verdict in payload.get("verdicts", []):
+            event_id = by_short.get(verdict.get("id", ""))
+            value = verdict.get("consequence")
+            # The id is echoed by the model, so it is looked up rather than
+            # trusted: one it invents resolves to nothing instead of attaching a
+            # verdict to another event. The range is checked here because the
+            # output schema cannot express it.
+            if event_id is not None and isinstance(value, int) and 0 <= value <= 3:
+                verdicts[event_id] = value
+    return verdicts, failures
+
+
 def _client_or_degrade(client: Client | None) -> tuple[Client | None, Failure | None]:
     """Resolve the injected client, or build the real one from
     ``ANTHROPIC_API_KEY`` -- shared by both ``submit_batch`` and
@@ -512,7 +659,9 @@ def collect_batch(
 __all__ = [
     "ADAPTER",
     "MAX_TOKENS",
+    "CONSEQUENCE_BATCH",
     "MODEL",
+    "score_consequence",
     "BatchCollectResult",
     "BatchSubmission",
     "Client",

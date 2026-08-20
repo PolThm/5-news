@@ -103,6 +103,29 @@ MIN_QUALIFYING_FOR_ZONE: Final[int] = 2
 # Briefings specifically).
 MAX_PER_COUNTRY: Final[int] = 2
 
+# At most this many items from one editorial category in a Briefing, so a Top 5
+# is not five variations on one kind of news.
+#
+# The need was measured, not assumed: a real Briefing on 2026-08-19 gave Spain
+# two separate items about earthquakes in Granada, and World four items out of
+# five filed under "Disasters and accidents". The chronicle's own taxonomy
+# ("Armed conflicts and attacks", "Politics and elections", "Disasters and
+# accidents") is the category, so this needs no topic model of its own.
+#
+# Deliberately NOT solved by deduplicating similar events, which was tried and
+# rejected on evidence: two updates of one story (both Granada earthquakes) sit
+# at cosine distance 0.315, while two genuinely distinct events of the same kind
+# (wildfires in Zamora and in Ourense) sit at 0.155 -- closer. Semantic
+# similarity cannot tell "same story" from "same kind of story", so merging on
+# it would fuse unrelated events, which is a worse failure than showing two
+# related ones. Capping the category caps the symptom without ever claiming two
+# events are one.
+#
+# 2 rather than 1 because a genuinely heavy news day can legitimately be mostly
+# one category -- a war week is mostly conflict -- and the cap must trim
+# monotony, not rewrite the day.
+MAX_PER_CATEGORY: Final[int] = 2
+
 # If this ever failed, a Zone could never avoid falling back even after
 # selecting a full Briefing — MIN_QUALIFYING_FOR_ZONE is checked against the
 # pre-selection count in pipeline.stages.rank._rank_for_zone, so raising it
@@ -491,6 +514,7 @@ def countries_in_continent(continent_slug: str) -> frozenset[str]:
 
 __all__ = [
     "CROSS_DAY_SIMILARITY_FLOOR",
+    "MAX_PER_CATEGORY",
     "MAX_PER_COUNTRY",
     "MAX_SELECTED_CLUSTERS",
     "MIN_COUNTRIES",

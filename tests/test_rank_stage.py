@@ -1110,3 +1110,68 @@ def test_items_with_no_editorial_day_sort_last_and_by_score_alone() -> None:
     )
 
     assert [c["cluster_id"] for c in ordered] == ["dated", "a", "b"]
+
+
+# --- Editorial diversity -----------------------------------------------------
+
+
+def test_a_briefing_is_not_five_variations_on_one_kind_of_news() -> None:
+    """Measured on the real 2026-08-19 output: the World Briefing was four of
+    five items under "Disasters and accidents", so a reader got a run of fatal
+    accidents rather than a picture of the day."""
+    from pipeline.stages.rank import apply_category_cap
+
+    ranked = [
+        {"cluster_id": f"d{i}", "agenda_category": "Disasters and accidents"} for i in range(4)
+    ] + [
+        {"cluster_id": "h", "agenda_category": "Health and environment"},
+        {"cluster_id": "a", "agenda_category": "Armed conflicts and attacks"},
+    ]
+
+    kept = apply_category_cap(ranked)
+
+    assert [c["cluster_id"] for c in kept] == ["d0", "d1", "h", "a"]
+    assert len([c for c in kept if c["agenda_category"] == "Disasters and accidents"]) == 2
+
+
+def test_the_cap_preserves_rank_order_and_drops_in_place() -> None:
+    """Excess items are removed, never reordered: the caller slices the top N
+    afterwards, so a dropped item is replaced by the next eligible one rather
+    than shuffling what was already chosen."""
+    from pipeline.stages.rank import apply_category_cap
+
+    ranked = [
+        {"cluster_id": "1", "agenda_category": "A"},
+        {"cluster_id": "2", "agenda_category": "B"},
+        {"cluster_id": "3", "agenda_category": "A"},
+        {"cluster_id": "4", "agenda_category": "A"},
+        {"cluster_id": "5", "agenda_category": "B"},
+    ]
+
+    assert [c["cluster_id"] for c in apply_category_cap(ranked)] == ["1", "2", "3", "5"]
+
+
+def test_items_with_no_category_are_never_capped_together() -> None:
+    """The fallback path -- Clusters ranked directly when the agenda is
+    unavailable -- carries no category. Treating "absent" as a shared bucket
+    would cap that whole path down to two items and silently gut it."""
+    from pipeline.stages.rank import apply_category_cap
+
+    legacy = [{"cluster_id": str(i), "origin_country": "france"} for i in range(5)]
+
+    assert len(apply_category_cap(legacy)) == 5
+
+
+def test_the_country_cap_still_behaves_exactly_as_before() -> None:
+    """Both caps now share one helper; this pins the per-country behaviour that
+    predates it so the refactor cannot have changed FR-17."""
+    from pipeline.stages.rank import apply_anti_concentration_cap
+
+    ranked = [
+        {"cluster_id": "a", "origin_country": "france"},
+        {"cluster_id": "b", "origin_country": "france"},
+        {"cluster_id": "c", "origin_country": "france"},
+        {"cluster_id": "d", "origin_country": "spain"},
+    ]
+
+    assert [c["cluster_id"] for c in apply_anti_concentration_cap(ranked)] == ["a", "b", "d"]

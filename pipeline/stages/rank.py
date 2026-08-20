@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import sys
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -29,6 +30,7 @@ from sklearn.neighbors import radius_neighbors_graph
 
 from pipeline.config import (
     CROSS_DAY_SIMILARITY_FLOOR,
+    MAX_PER_CATEGORY,
     MAX_PER_COUNTRY,
     MAX_SELECTED_CLUSTERS,
     MIN_COUNTRIES,
@@ -449,6 +451,11 @@ def _rank_for_zone(
         # Zone genuinely fill a Briefing on its own, cap included.
         ordered = apply_anti_concentration_cap(ordered)
 
+    # Every Zone, and before the fallback floor for the same reason the
+    # per-country cap is: a floor measured on the pre-cap count would let a Zone
+    # pass, then be capped below it with nowhere left to fall back to.
+    ordered = apply_category_cap(ordered)
+
     parent = continent_for(serving_zone)
     if len(ordered) < MIN_QUALIFYING_FOR_ZONE and parent is not None:
         return _rank_for_zone(
@@ -468,6 +475,48 @@ def _rank_for_zone(
     )
 
 
+def _apply_cap(ranked: list[dict], key: Callable[[dict], str | None], limit: int) -> list[dict]:
+    """Keep at most ``limit`` items sharing a ``key``, in rank order.
+
+    Relative order of what survives is preserved, and excess items are dropped
+    in place rather than reordering anything -- the caller applies the top-N
+    slice afterwards, so a dropped item is replaced by the next eligible one.
+
+    An item whose key is None is never capped: absent information must not be
+    treated as a shared bucket, or every item missing a category would compete
+    against every other one for the same two slots.
+    """
+    kept: list[dict] = []
+    seen: dict[str, int] = {}
+    for item in ranked:
+        bucket = key(item)
+        if bucket is None:
+            kept.append(item)
+            continue
+        count = seen.get(bucket, 0)
+        if count >= limit:
+            continue
+        seen[bucket] = count + 1
+        kept.append(item)
+    return kept
+
+
+def apply_category_cap(ranked: list[dict]) -> list[dict]:
+    """At most ``MAX_PER_CATEGORY`` items from one editorial category.
+
+    Applied to every Zone, unlike the per-country cap, because the monotony it
+    fixes was measured everywhere: on 2026-08-19 the World Briefing was four
+    items out of five under "Disasters and accidents", and Spain's carried two
+    separate earthquakes in Granada.
+
+    The category is the chronicle's own taxonomy, so this needs no topic model.
+    Items with no category -- Clusters ranked directly when the agenda is
+    unavailable -- pass through untouched, leaving that fallback path exactly as
+    it was.
+    """
+    return _apply_cap(ranked, lambda c: c.get("agenda_category") or None, MAX_PER_CATEGORY)
+
+
 def apply_anti_concentration_cap(ranked: list[dict]) -> list[dict]:
     """FR-17: at most ``MAX_PER_COUNTRY`` Clusters from the same
     ``origin_country`` survive, in rank order. Everything else's relative
@@ -480,16 +529,7 @@ def apply_anti_concentration_cap(ranked: list[dict]) -> list[dict]:
     function drops can be replaced by whatever the next-ranked, still-
     eligible Cluster is.
     """
-    kept: list[dict] = []
-    seen_per_country: dict[str, int] = {}
-    for cluster in ranked:
-        origin = cluster["origin_country"]
-        count = seen_per_country.get(origin, 0)
-        if count >= MAX_PER_COUNTRY:
-            continue
-        seen_per_country[origin] = count + 1
-        kept.append(cluster)
-    return kept
+    return _apply_cap(ranked, lambda c: c["origin_country"], MAX_PER_COUNTRY)
 
 
 @dataclass(frozen=True, slots=True)

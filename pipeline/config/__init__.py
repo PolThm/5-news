@@ -572,7 +572,7 @@ def source_trust_tier(domain: str) -> int:
 # How much each factor counts, per Period. Versioned, because changing a weight
 # changes what a reader sees and a Briefing must be explainable after the fact:
 # the version is written onto every scored item alongside its components.
-SCORE_WEIGHTS_VERSION = "2026-08-20.1"
+SCORE_WEIGHTS_VERSION = "2026-08-20.2"
 
 # The spec's §7.1 opens with `0.28 x impact` -- people and territory affected,
 # severity, economic or legal effect -- and it is deliberately ABSENT here.

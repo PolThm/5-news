@@ -1362,8 +1362,13 @@ def test_the_two_period_profiles_trade_freshness_against_coverage_differently() 
 
     Both items are inside the daily window -- since the day pool is now bounded
     to one day, a five-day-old item cannot appear there at all. The difference is
-    a day of age against one more outlet: a daily review leads with today, a
+    a day of age against far wider coverage: a daily review leads with today, a
     weekly one with the better-covered event.
+
+    2 outlets against 12 is the spread the real corpus shows (its published
+    items run 0 to 12). A one-outlet gap no longer flips anything, which is the
+    saturating curve behaving as intended -- the eleventh outlet moves the score
+    much less than the third.
 
     Source counts differ while `members` are held identical, so the only factors
     in play are freshness and prominence; mixing in reliability would test three
@@ -1375,12 +1380,12 @@ def test_the_two_period_profiles_trade_freshness_against_coverage_differently() 
 
     members = [_member("lemonde.fr"), _member("elpais.com", "spain")]
     today_slightly_thinner = _scored(
-        cluster_id="today", agenda_day="2026-08-20", independent_source_count=5, members=members
+        cluster_id="today", agenda_day="2026-08-20", independent_source_count=2, members=members
     )
     yesterday_better_covered = _scored(
         cluster_id="yesterday",
         agenda_day="2026-08-19",
-        independent_source_count=6,
+        independent_source_count=12,
         members=members,
     )
     pool = [today_slightly_thinner, yesterday_better_covered]

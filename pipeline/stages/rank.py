@@ -93,17 +93,34 @@ def qualifies(cluster: dict) -> bool:
 
 # --- Explainable scoring -----------------------------------------------------
 
-# Where each factor saturates. A raw count has no ceiling, and a score must be
-# comparable between items, so each is normalised against the point past which
-# more stops meaning better for a Briefing of at most 5 items.
-_PROMINENCE_SATURATION = 6  # outlets; beyond this an event is simply "widely covered"
-_CORROBORATION_SATURATION = 3  # countries
-_RELIABILITY_SATURATION = 9  # summed tiers, i.e. ~3 reference newsrooms
+# Half-saturation points: the count at which a factor reaches 0.5.
+#
+# These used to be hard ceilings -- `min(1.0, count / K)` -- and measuring the
+# real output showed why that fails. With the ceilings at 6 outlets and 3
+# countries, 44% of the items a Briefing actually selects hit the corroboration
+# cap and 22% hit prominence, so the top four items of the World Briefing scored
+# an identical 0.912 and were ordered by `cluster_id`: an arbitrary tie exactly
+# where the ranking matters most. Raising the ceilings would only move the
+# plateau, and picking one from an 18-item sample would be fitting noise.
+#
+# `count / (count + k)` has no ceiling to hit. It still gives diminishing
+# returns -- the eleventh outlet counts for far less than the third, which is
+# the real intuition behind saturating at all -- but it stays strictly
+# increasing, so more coverage always breaks a tie instead of vanishing into a
+# clamp. Values: at `k` outlets the factor is 0.5, at `3k` it is 0.75.
+_PROMINENCE_HALF = 4.0  # outlets
+_CORROBORATION_HALF = 2.0  # countries
+_RELIABILITY_HALF = 8.0  # summed tiers, i.e. ~3 reference newsrooms
 _FRESHNESS_HALFLIFE_DAYS = 2.0
 
 
 def _clamp(value: float) -> float:
     return max(0.0, min(1.0, value))
+
+
+def _saturating(count: float, half: float) -> float:
+    """`count / (count + half)`: 0 at nothing, 0.5 at `half`, never reaching 1."""
+    return count / (count + half) if count > 0 else 0.0
 
 
 def _freshness(item: dict, reference_day: str) -> float:
@@ -125,8 +142,8 @@ def _freshness(item: dict, reference_day: str) -> float:
 
 
 def _prominence(item: dict) -> float:
-    """How many distinct outlets carried it, saturating."""
-    return _clamp(item.get("independent_source_count", 0) / _PROMINENCE_SATURATION)
+    """How many distinct outlets carried it, with diminishing returns."""
+    return _saturating(item.get("independent_source_count", 0), _PROMINENCE_HALF)
 
 
 def _corroboration(item: dict) -> float:
@@ -137,12 +154,12 @@ def _corroboration(item: dict) -> float:
     independent confirmation, and the spec weights them separately for that
     reason.
     """
-    return _clamp(item.get("country_count", 0) / _CORROBORATION_SATURATION)
+    return _saturating(item.get("country_count", 0), _CORROBORATION_HALF)
 
 
 def _source_reliability(item: dict) -> float:
-    """The tier-weighted worth of the sources, saturating."""
-    return _clamp(trust_weight(item) / _RELIABILITY_SATURATION)
+    """The tier-weighted worth of the sources, with diminishing returns."""
+    return _saturating(trust_weight(item), _RELIABILITY_HALF)
 
 
 def _geographic_relevance(item: dict, zone: Zone) -> float:

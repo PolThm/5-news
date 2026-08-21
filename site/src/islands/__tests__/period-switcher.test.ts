@@ -455,7 +455,7 @@ describe("renderItemListHtml", () => {
       /<button type="button" class="chip" aria-expanded="false" aria-controls="source-list-g" data-consensus-chip>/
     );
     expect(html).toContain('id="source-list-g"');
-    expect(html).toContain('class="source-list js-collapsed"');
+    expect(html).toContain('class="source-list"');
     const liCount = (html.match(/<li>/g) ?? []).length;
     expect(liCount).toBe(3);
     expect(html).toContain("Reuters (Royaume-Uni)");
@@ -644,7 +644,14 @@ describe("attachChips", () => {
     }
   });
 
-  it("collapses the source list on attach (JS-present: hidden by default; no-JS: visible per the initial HTML)", () => {
+  it("does not touch the source list's class on attach (collapsed-by-default is a plain CSS rule, not JS-applied)", () => {
+    // Regression test for the "flickering" bug: an earlier version added
+    // a `js-collapsed` class here, which meant the source list rendered
+    // open for one paint (server HTML has no collapsing class) and then
+    // snapped shut the moment attachChips() ran -- a visible flicker on
+    // every page load. Collapsed-by-default is now a plain
+    // `.source-list { display: none }` CSS rule in BriefingPage.astro, so
+    // attachChips() must leave the source list's classes untouched.
     const chip = createFakeChip();
     const sourceList = createFakeSourceList();
     const originalDocument = globalThis.document;
@@ -655,13 +662,14 @@ describe("attachChips", () => {
 
     try {
       attachChips();
-      expect(sourceList.classList.contains("js-collapsed")).toBe(true);
+      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
+      expect(sourceList.classList.contains("js-expanded")).toBe(false);
     } finally {
       globalThis.document = originalDocument;
     }
   });
 
-  it("toggles aria-expanded and the source list's collapsed class on click, independently across chips", () => {
+  it("toggles aria-expanded and the source list's expanded class on click, independently across chips", () => {
     const chip = createFakeChip();
     const sourceList = createFakeSourceList();
     const originalDocument = globalThis.document;
@@ -673,15 +681,15 @@ describe("attachChips", () => {
     try {
       attachChips();
       expect(chip.getAttribute("aria-expanded")).toBe("false");
-      expect(sourceList.classList.contains("js-collapsed")).toBe(true);
+      expect(sourceList.classList.contains("js-expanded")).toBe(false);
 
       chip.dispatchClick();
       expect(chip.getAttribute("aria-expanded")).toBe("true");
-      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
+      expect(sourceList.classList.contains("js-expanded")).toBe(true);
 
       chip.dispatchClick();
       expect(chip.getAttribute("aria-expanded")).toBe("false");
-      expect(sourceList.classList.contains("js-collapsed")).toBe(true);
+      expect(sourceList.classList.contains("js-expanded")).toBe(false);
     } finally {
       globalThis.document = originalDocument;
     }
@@ -692,9 +700,9 @@ describe("attachChips", () => {
     // earlier version collapsed every chip's source list unconditionally
     // on every call, regardless of whether the reader had already
     // expanded it -- desyncing aria-expanded="true" from a hidden source
-    // list. The collapse step must be gated behind the same
-    // CHIP_ATTACHED_MARKER guard as the listener attachment, not run
-    // unconditionally.
+    // list. attachChips() must never touch the source list's classes at
+    // all (see the test above), so this can no longer regress, but the
+    // test stays as a guard against a future reintroduction.
     const chip = createFakeChip();
     const sourceList = createFakeSourceList();
     const originalDocument = globalThis.document;
@@ -707,11 +715,11 @@ describe("attachChips", () => {
       attachChips();
       chip.dispatchClick(); // reader expands it
       expect(chip.getAttribute("aria-expanded")).toBe("true");
-      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
+      expect(sourceList.classList.contains("js-expanded")).toBe(true);
 
       attachChips(); // called again -- e.g. after some future re-render
       expect(chip.getAttribute("aria-expanded")).toBe("true");
-      expect(sourceList.classList.contains("js-collapsed")).toBe(false);
+      expect(sourceList.classList.contains("js-expanded")).toBe(true);
     } finally {
       globalThis.document = originalDocument;
     }

@@ -206,8 +206,8 @@ describe("no-JS readability of the built page", () => {
   // build-specific hash it has no way to know. Every swapped-in element
   // therefore matched NO rule at all -- item separators vanished, the
   // headline/summary fell back to browser default fonts, and
-  // `.source-list.js-collapsed{display:none}` stopped applying, so every
-  // Consensus source list sprang open and could not be closed again.
+  // `.source-list{display:none}` stopped applying, so every Consensus
+  // source list sprang open and could not be closed again.
   //
   // BriefingPage.astro's `<style is:global>` is what prevents that. This
   // asserts the *outcome* (no scoping attribute survives into any
@@ -218,9 +218,10 @@ describe("no-JS readability of the built page", () => {
     expect(css).not.toContain("data-astro-cid-");
 
     // Every class period-switcher.ts writes via innerHTML must be
-    // reachable by a bare class selector. `js-collapsed` is the one that
-    // failed most visibly for the reader, so it is asserted explicitly
-    // rather than left to the loop.
+    // reachable by a bare class selector. `source-list` is the one that
+    // failed most visibly for the reader (it carries the collapsed-by-
+    // default rule directly now, not via a `js-collapsed` modifier
+    // class), so it is asserted explicitly rather than left to the loop.
     for (const className of [
       "item",
       "headline",
@@ -235,7 +236,7 @@ describe("no-JS readability of the built page", () => {
     ]) {
       expect(css).toContain(`.${className}`);
     }
-    expect(css).toMatch(/\.source-list\.js-collapsed\{[^}]*display:none/);
+    expect(css).toMatch(/\.source-list\{[^}]*display:none/);
   });
 
   // Story 4.8 (AC1): every interactive element needs a visible
@@ -352,15 +353,18 @@ describe("no-JS readability of the built page", () => {
     expect((html.match(/id="discarded"/g) ?? []).length).toBe(1);
   });
 
-  it("renders the Consensus chip as a real <button> with its source list already present and visible in the initial HTML (AC3, no-JS)", () => {
+  it("renders the Consensus chip as a real <button> with its source list already present in the initial HTML (AC3, no-JS)", () => {
     const htmlWithoutScripts = stripInlineScript(html);
     expect(htmlWithoutScripts).toMatch(
       /<button type="button" class="chip" aria-expanded="false" aria-controls="source-list-ceasefire-2026-08-11"[^>]*data-consensus-chip[^>]*>/
     );
-    // Present and NOT hidden -- no js-collapsed class -- in the
-    // server-rendered HTML, since a no-JS reader must see it already
-    // expanded (this story's own Scope decision: only the client-side
-    // island collapses it, and that never executes without JS).
+    // Present in the DOM -- no js-collapsed/js-expanded modifier class on
+    // the markup itself -- in the server-rendered HTML either way. Its
+    // *visibility* is governed by a plain CSS rule (`.source-list {
+    // display: none }`, overridden back to visible by a <noscript> rule
+    // later in the page) rather than by a class the server stamps here,
+    // so a no-JS reader still sees the full list despite this element
+    // having no distinguishing class of its own.
     expect(htmlWithoutScripts).toMatch(
       /<div class="source-list" id="source-list-ceasefire-2026-08-11"[^>]*>(?!.*js-collapsed)/
     );

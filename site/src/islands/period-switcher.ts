@@ -507,7 +507,7 @@ export function renderItemListHtml(briefing: BriefingLike, lang: LanguageSlug): 
         `<span class="num">${cluster.independent_source_count}</span> ${escapeHtml(chipText.sources)} · ` +
         `<span class="num">${cluster.country_count}</span> ${escapeHtml(chipText.countries)}` +
         `<span class="chevron" aria-hidden="true">▾</span></button>` +
-        `<div class="source-list js-collapsed" id="${sourceListId}">${escapeHtml(intro)}<ul>${membersHtml}</ul></div>` +
+        `<div class="source-list" id="${sourceListId}">${escapeHtml(intro)}<ul>${membersHtml}</ul></div>` +
         `${attributionHtml}</div>`
       );
     })
@@ -615,37 +615,27 @@ const CHIP_ATTACHED_MARKER = "data-chip-attached";
 
 /**
  * Attaches the expand/collapse toggle to every Consensus chip currently in
- * the document, and -- ONLY for chips not yet attached -- collapses their
- * source list (EXPERIENCE.md's Cold Load pattern requires the source list
- * present-and-visible in the initial server-rendered HTML for a no-JS
- * reader; only *collapsing* it is a JS-present enhancement, done here on
- * first attach). Called once on initial load and again after every
- * Zone/Period/Language swap, since `handleClick`'s wholesale `#item-list`
- * replacement destroys the previous chips' listeners entirely (unlike the
- * mad-libs words, which are mutated in place) -- every freshly-rendered
- * chip starts collapsed, matching `renderItemListHtml`'s own
- * `js-collapsed`-by-default output.
+ * the document. The source list starts collapsed via a plain CSS rule
+ * (`.source-list { display: none }` in BriefingPage.astro) present in the
+ * server-rendered HTML itself, NOT via a class this function adds after
+ * the fact -- an earlier version added a `js-collapsed` class here, which
+ * meant the source list rendered open for one paint and then snapped
+ * shut the moment this ran, a visible "flicker" on every page load. A
+ * `<noscript>` override restores the EXPERIENCE.md Cold Load requirement
+ * (source list readable with zero client-side execution) for the reader
+ * this function never runs for.
  *
- * The collapse step is gated behind the SAME `CHIP_ATTACHED_MARKER` guard
- * as the listener attachment, not run unconditionally on every call --
- * an adversarial review caught that an earlier version collapsed every
- * chip's source list on every call regardless of prior state, which would
- * force-collapse a reader's already-expanded chip (leaving `aria-expanded`
- * desynced from the hidden content) the next time this function ran for
- * any reason. Not exploitable today only because every current call site
- * runs immediately after a full `#item-list` DOM replacement, so no
- * previously-expanded node survives to be affected -- but a future call
- * site without that property would silently reintroduce the bug, so the
- * guard is real, not decorative.
+ * Called once on initial load and again after every Zone/Period/Language
+ * swap, since `handleClick`'s wholesale `#item-list` replacement destroys
+ * the previous chips' listeners entirely (unlike the mad-libs words,
+ * which are mutated in place) -- every freshly-rendered chip starts
+ * collapsed, matching that same base CSS rule.
  */
 export function attachChips(): void {
   const chips = document.querySelectorAll<HTMLButtonElement>("[data-consensus-chip]");
   for (const chip of chips) {
     if (chip.hasAttribute(CHIP_ATTACHED_MARKER)) continue;
     chip.setAttribute(CHIP_ATTACHED_MARKER, "");
-
-    const sourceList = document.getElementById(chip.getAttribute("aria-controls") ?? "");
-    if (sourceList) sourceList.classList.add("js-collapsed");
 
     chip.addEventListener("click", () => toggleChip(chip));
   }
@@ -657,7 +647,7 @@ function toggleChip(chip: HTMLButtonElement): void {
 
   const expanded = chip.getAttribute("aria-expanded") === "true";
   chip.setAttribute("aria-expanded", expanded ? "false" : "true");
-  sourceList.classList.toggle("js-collapsed", expanded);
+  sourceList.classList.toggle("js-expanded", !expanded);
 }
 
 interface ClickTarget {

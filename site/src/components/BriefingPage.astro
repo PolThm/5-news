@@ -355,7 +355,22 @@ function formatTimestamp(iso: string): string {
         color: #6b6455;
       }
 
+      /* Collapsed by default in the server-rendered HTML itself (`display:
+         none` right here), not only once the client island's
+         attachChips() adds .js-collapsed after paint -- that JS-applied-
+         after-paint version is exactly what produced the "flickering" bug
+         reports: the source list rendered open, then snapped shut once
+         period-switcher.ts ran a moment later. .js-collapsed is still
+         toggled by the client island on chip click/Enter (see
+         period-switcher.ts's chip-toggle logic) to re-collapse an
+         expanded list; expanding removes it, but this bare selector's
+         `display: none` would then win again, so `attachChips()` also
+         flips display via the class below. The <noscript> rule further
+         down restores the no-JS Cold Load reader's requirement
+         (EXPERIENCE.md: source list must be readable with zero
+         client-side execution) by unhiding it when JS never runs. */
       .source-list {
+        display: none;
         margin-top: 0;
         margin-bottom: 10px;
         padding: 12px 14px;
@@ -364,18 +379,15 @@ function formatTimestamp(iso: string): string {
         font-size: 13px;
         color: #1a2438;
       }
+      .source-list.js-expanded {
+        display: block;
+      }
       .source-list ul {
         margin-top: 6px;
         padding-left: 18px;
       }
       .source-list li {
         margin-bottom: 2px;
-      }
-      /* JS-present default: collapsed. Toggled by the client island
-         removing/adding this class on chip click/Enter -- see
-         period-switcher.ts's chip-toggle logic. */
-      .source-list.js-collapsed {
-        display: none;
       }
       .attribution {
         display: block;
@@ -556,6 +568,27 @@ function formatTimestamp(iso: string): string {
       }
     </div>
     <div id="sr-announcer" aria-live="polite"></div>
+    <noscript>
+      <style>
+        /* Cold Load, no JS: nothing else ever removes the base
+           `.source-list { display: none }` rule up in the page's <head>
+           (that removal is normally attachChips()'s job on chip
+           click/Enter), so without this override the source list would
+           render but stay permanently hidden and unreachable --
+           violating EXPERIENCE.md's requirement that it be readable with
+           zero client-side execution. `<noscript>` content only ever
+           renders when scripting is disabled, so this is inert whenever
+           the client island runs and owns the real collapse/expand
+           toggle. Placed here, at the end of body rather than beside the
+           main stylesheet in <head>, only so it stays the *second*
+           `<style>` tag on the page -- test tooling that resolves "the
+           page's CSS" by grabbing the first `<style>` block must keep
+           finding the real one. */
+        .source-list {
+          display: block !important;
+        }
+      </style>
+    </noscript>
     <script src="../islands/period-switcher.ts"></script>
     <script src="../islands/sw-register.ts"></script>
     <slot name="extra-scripts" />

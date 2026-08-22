@@ -2,475 +2,433 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-togo-41be63fc5b28",
-        "subject-togo-abc92df779be"
+        "subject-france-9aa08f7697ef"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-togo-41be63fc5b28",
-      "coherence": null,
-      "consequence": 1,
+      "cluster_id": "subject-france-9aa08f7697ef",
+      "coherence": 0.41091837092828964,
+      "consequence": 2,
       "countries": [
         "france",
+        "germany",
+        "spain",
         "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-20",
-      "headline": "Dos periodistas franceses permanecen detenidos en Togo con acusaciones de falsas declaraciones",
-      "independent_source_count": 3,
+      "country_count": 4,
+      "editorial_day": "2026-08-21",
+      "headline": "Francia alerta sobre decenas de miles de preservativos defectuosos vendidos en el mercado",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/deux-journalistes-francais-detenus-au-togo-pour-fausses-declarations-paris-tente-de-les-faire-liberer-20260820"
+          "url": "https://www.franceinfo.fr/sante/des-dizaines-de-milliers-de-preservatifs-non-conformes-vendus-en-france-ces-derniers-mois-les-autorites-recommandent-des-depistages-et-tests-de-grossesse_8156171.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "mediapart.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/200826/un-des-deux-journalistes-francais-detenus-au-togo-ete-place-en-residence-surveillee"
+          "url": "https://www.nouvelobs.com/economie/20260821.OBS117554/des-milliers-de-preservatifs-non-conformes-vendus-en-france-les-autorites-appellent-au-depistage-des-ist.html"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-1369329"
         },
         {
           "language": "es",
-          "source": "euronews.com",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/francia-detecta-decenas-miles-preservativos-vendidos-con-riesgo-romperse-con-perforaciones_7028084_0.html"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/france-issues-warning-over-thousands-of-substandard-condoms/a-78462877?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "medscape.com",
           "source_country": "united-states",
-          "url": "https://es.euronews.com/2026/08/20/togo-mantiene-detenidos-a-dos-periodistas-franceses-pese-a-la-preocupacion-por-la-salud-de"
+          "url": "https://www.medscape.com/s/viewarticle/france-warns-300-000-potentially-unsafe-condoms-2026a1000t9f"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/international/deux-journalistes-francais-detenus-au-togo-pour-fausses-declarations-paris-tente-de-les-faire-liberer-20260820",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/francia-detecta-decenas-miles-preservativos-vendidos-con-riesgo-romperse-con-perforaciones_7028084_0.html",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "euronews.com",
-        "la-croix.com",
-        "mediapart.fr"
+        "20minutos.es",
+        "dw.com",
+        "francetvinfo.fr",
+        "nouvelobs.com",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4109,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
         },
-        "total": 0.4656,
+        "total": 0.6144,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "togo",
+      "subject_label": "france",
       "subject_names": [
-        "togo"
+        "france",
+        "francia",
+        "paris"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Francia intenta lograr la liberación de dos periodistas franceses detenidos en Togo, acusados de hacer falsas declaraciones. Según los reportes, uno de los dos periodistas ha sido trasladado a una situación de residencia vigilada, mientras que ambos permanecen bajo custodia togolesa.",
-      "takeaway": "El encarcelamiento de periodistas franceses en Togo obliga a París a negociar la liberación de sus ciudadanos ante un gobierno que no respeta la libertad de prensa.",
-      "why_it_matters": "Francia debe intervenir diplomáticamente para obtener la liberación de dos ciudadanos franceses detenidos por el Togo, lo que pone a prueba su capacidad de protección consular en la región."
+      "subject_newsroom_count": 17,
+      "summary": "Las autoridades sanitarias francesas han identificado decenas de miles de preservativos no conformes comercializados en Francia en los últimos meses, que presentan riesgos de rotura y perforaciones. Los organismos competentes recomiendan a las personas que hayan utilizado estos productos que se realicen pruebas de detección de infecciones de transmisión sexual y pruebas de embarazo.",
+      "takeaway": "Francia advierte que decenas de miles de preservativos no conformes vendidos recientemente presentan riesgos de rotura que comprometen su eficacia anticonceptiva y de prevención.",
+      "why_it_matters": "Las autoridades francesas recomiendan pruebas de detección de infecciones de transmisión sexual y pruebas de embarazo a las personas que hayan utilizado los preservativos defectuosos, lo que afecta a potencialmente decenas de miles de usuarios en Francia."
     },
     {
       "_linked_ids": [
-        "subject-sonia-bellina-a3c34dd5008d",
-        "subject-sonia-bellina-cf42330277a8"
+        "subject-edouard-philippe-57b7b55c2ab5"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-sonia-bellina-a3c34dd5008d",
-      "coherence": 0.49879029916629936,
-      "consequence": 1,
+      "cluster_id": "subject-edouard-philippe-57b7b55c2ab5",
+      "coherence": 0.4185096021156244,
+      "consequence": 2,
       "countries": [
-        "it"
+        "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-20",
-      "headline": "Identifican en Francia a la influencer Sonia Bellina hallada carbonizada en viñedos",
-      "independent_source_count": 4,
+      "editorial_day": "2026-08-21",
+      "headline": "Édouard Philippe presenta propuestas sobre inmigración en Mayotte al retomar su actividad política",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/19/charred-body-found-in-southern-france-identified-as-influencer-sonia-bellina"
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/mayotte-est-il-possible-de-fermer-totalement-l-immigration-comme-le-propose-edouard-philippe-20260821"
         },
         {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/20/news/nuda_carbonizzata_trovato_vigne_francia_corpo_influencer_sonia_bellina_due_fermi-425537738/?rss"
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/politique/200826/avant-son-depart-pour-mayotte-edouard-philippe-droite-toute-sur-l-immigration"
         },
         {
-          "language": "it",
-          "source": "corriere.it",
-          "source_country": "it",
-          "url": "https://www.corriere.it/cronache/26_agosto_20/sonia-bellina-l-influencer-francese-trovata-morta-il-corpo-carbonizzato-tra-le-vigne-del-sud-della-francia-fermati-due-uomini-c6fb2e01-da6a-4f50-b8fe-7c27919c4xlk.shtml"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/edouard-philippe/edouard-philippe-fait-sa-rentree-politique-a-mayotte-et-promet-de-mettre-fin-a-l-appel-d-air-de-l-immigration_8156786.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-08-20/linfluencer-sonia-bellina-trovata-morta-carbonizzata-tra-le-vigne-in-francia-fermati-due-uomini-e-aperta-uninchiesta/19587759/"
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-8130411"
+        },
+        {
+          "language": "fr",
+          "source": "midilibre.fr",
+          "source_country": "france",
+          "url": "https://www.midilibre.fr/2026/08/21/demandes-dasile-suspension-du-droit-du-sol-les-mesures-dedouard-philippe-sur-limmigration-pour-stopper-lappel-dair-a-mayotte-13517353.php"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/19/charred-body-found-in-southern-france-identified-as-influencer-sonia-bellina",
+      "origin_country": "france",
+      "outbound_source": "mediapart.fr",
+      "outbound_url": "https://www.mediapart.fr/journal/politique/200826/avant-son-depart-pour-mayotte-edouard-philippe-droite-toute-sur-l-immigration",
       "rank": 2,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "corriere.it",
-        "euronews.com",
-        "repubblica.it"
+        "francetvinfo.fr",
+        "la-croix.com",
+        "mediapart.fr",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4988,
+          "coherence": 0.4185,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.5556
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.4456,
+        "total": 0.5528,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sonia bellina",
+      "subject_label": "edouard philippe",
       "subject_names": [
-        "francia",
-        "sonia bellina"
+        "edouard philippe",
+        "mayotte"
       ],
       "subject_newsroom_count": 6,
-      "summary": "El cuerpo carbonizado de la influencer francesa Sonia Bellina fue encontrado en los viñedos del sur de Francia. Dos hombres han sido detenidos en relación con el caso y se ha abierto una investigación.",
-      "takeaway": "Una influencer francesa fue encontrada muerta carbonizada en un viñedo del sur de Francia, y dos hombres han sido detenidos en relación con su muerte.",
-      "why_it_matters": "La investigación francesa sobre la muerte de Sonia Bellina afecta directamente a Francia, donde los dos hombres detenidos serán juzgados según las leyes francesas y donde la opinión pública sigue el caso de una influencer muerta en circunstancias violentas."
+      "summary": "Édouard Philippe realizó una visita a Mayotte donde propuso medidas para reducir la inmigración, incluyendo la suspensión del derecho del suelo y otras acciones destinadas a detener lo que describe como un \"efecto llamada\" migratorio. Sus propuestas buscan cerrar completamente la inmigración hacia la isla francesa, marcando un posicionamiento claro a la derecha en temas de migración durante su regreso a la escena política.",
+      "takeaway": "El ex primer ministro Édouard Philippe marca su regreso político con una posición restrictiva sobre inmigración que busca cerrar las vías de llegada a Mayotte.",
+      "why_it_matters": "Philippe propone suspender medidas de asilo y el derecho de suelo en Mayotte, lo que afectaría directamente a los migrantes y solicitantes de asilo en el territorio francés, así como a las políticas de migración que Francia aplicaría en sus departamentos de ultramar."
     },
     {
       "_linked_ids": [
-        "subject-ukraine-7b5679fff45f"
+        "subject-bordeaux-2fc9a1558034"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-ukraine-7b5679fff45f",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-bordeaux-2fc9a1558034",
+      "coherence": 0.4442447095180856,
+      "consequence": 2,
       "countries": [
-        "brazil",
-        "france",
-        "spain"
+        "france"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-08-19",
-      "filled_from": "europe",
-      "headline": "Rusia amenaza a Reino Unido por suministrar drones a Ucrania",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-la-russie-menace-le-royaume-uni-londres-replique-3BKU7HQKAVFGTIUCCRN65XYF24/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/18/ucrania-lanca-mais-de-600-drones-contra-moscou.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.5,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5988,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "londres",
-        "meghan markle",
-        "moscou",
-        "putin",
-        "reino unido",
-        "royaume-uni",
-        "rusia",
-        "russia",
-        "russie",
-        "ucraina",
-        "ucrania",
-        "ukraine",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Rusia ha emitido amenazas contra Reino Unido en respuesta al suministro de drones a Ucrania, advirtiendo que cuanto mayor sea la implicación británica en el conflicto, mayor será el precio que pagará. Las amenazas rusas surgen después de que Ucrania lanzara ataques con drones contra Moscú.",
-      "takeaway": "Rusia advierte que cada aumento de la ayuda occidental a Ucrania traerá consecuencias más graves.",
-      "why_it_matters": "La escalada de amenazas rusas contra Reino Unido por su apoyo militar a Ucrania afecta a Francia como miembro de la OTAN, exponiendo el riesgo de una confrontación directa entre Rusia y los aliados occidentales que podría requerir una respuesta coordinada europea."
-    },
-    {
-      "_linked_ids": [
-        "subject-allemagne-15982e066f44",
-        "subject-allemagne-56a0314c8c49",
-        "subject-allemagne-5e8a47a3c4fe",
-        "subject-allemagne-8df11689696f",
-        "subject-allemagne-a6adb41ba021",
-        "subject-allemagne-ad0285520b57",
-        "subject-allemagne-d5d9e058c8f4",
-        "subject-allemagne-f5bb3706f8d1"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-allemagne-56a0314c8c49",
-      "coherence": 0.45750765753179323,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain",
-        "ve"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-20",
-      "filled_from": "europe",
-      "headline": "Alemania registra 14.000 muertes por calor durante el verano",
+      "country_count": 1,
+      "editorial_day": "2026-08-22",
+      "headline": "El tribunal administrativo de París confirma la exclusión de los Girondins de Bordeaux de los campeonatos nacionales",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
+          "url": "https://www.lemonde.fr/sport/article/2026/08/22/les-girondins-de-bordeaux-de-plus-en-plus-proches-de-la-liquidation-apres-une-decision-du-tribunal-administratif_6752662_3242.html"
         },
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260820-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-%C3%A0-la-chaleur-en-allemagne-un-record-de-morts-et-des-questions"
+          "url": "https://www.franceinfo.fr/sports/foot/girondins-de-bordeaux/l-exclusion-des-girondins-de-bordeaux-des-championnats-nationaux-confirmee-par-le-tribunal-administratif-de-paris_8156651.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/entreprise/sports/confirmee-par-la-justice-lexclusion-des-girondins-de-bordeaux-des-championnats-nationaux-de-football-pousse-le-club-au-bord-du-precipice_645294"
+        },
+        {
+          "language": "fr",
+          "source": "foot-national.com",
+          "source_country": "france",
+          "url": "https://www.foot-national.com/foot-amateur/bordeaux-le-tribunal-administratif-a-tranche-les-girondins-nintegrent-pas-les-championnats-nationaux-953921"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/sports/foot/girondins-de-bordeaux/l-exclusion-des-girondins-de-bordeaux-des-championnats-nationaux-confirmee-par-le-tribunal-administratif-de-paris_8156651.html#xtor=RSS-3-[lestitres]",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "francetvinfo.fr",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4442,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5427,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bordeaux",
+      "subject_names": [
+        "bordeaux",
+        "girondins"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "El tribunal administrativo de París ha confirmado la decisión que excluye a los Girondins de Bordeaux de los campeonatos nacionales de fútbol. Esta resolución judicial acerca al histórico club francés a una posible liquidación.",
+      "takeaway": "El tribunal administrativo ha cerrado la vía legal última para que Bordeaux compita en las divisiones nacionales francesas.",
+      "why_it_matters": "La exclusión judicial confirmada de los Girondins de Bordeaux de los campeonatos nacionales franceses pone fin a la participación del club en la competición profesional francesa, lo que afecta a los jugadores, entrenadores y empleados del club que pierden sus fuentes de ingresos."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-75214f87988c"
+      ],
+      "angle_zone": "france",
+      "cluster_id": "subject-ceuta-75214f87988c",
+      "coherence": 0.4792315742416262,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-21",
+      "filled_from": "europe",
+      "headline": "Marruecos reclama la soberanía sobre Ceuta y Melilla mientras España rechaza sus reivindicaciones",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/20260821/marruecos-ceuta-melilla-reclama-derecho-historico-geografico-retorno-seno-patria/1003744359954_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-traslada-marruecos-rechazo-reivindicaciones-soberania-ceuta-melilla-son-espanolas-20260821225316.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/alemania-estima-que-ya-se-han-producido-14-000-muertes-por-calor-este-verano_7027767_0.html"
+          "url": "https://www.20minutos.es/internacional/marruecos-reivindicar-derecho-historico-geografico-ceuta-melilla-cuestion-espana_7028264_0.html"
         },
         {
           "language": "es",
-          "source": "avn.info.ve",
-          "source_country": "ve",
-          "url": "https://avn.info.ve/alemania-registra-14-000-muertes-por-olas-de-calor/"
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/nacional/gobierno-traslada-marruecos-su-rechazo-sus-reivindicaciones-soberania-ceuta-melilla-son-espanolas_7028274_0.html"
         }
       ],
       "mentioned_countries": [
-        "germany"
+        "mo",
+        "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/20260821/marruecos-ceuta-melilla-reclama-derecho-historico-geografico-retorno-seno-patria/1003744359954_0.html",
       "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "20minutos.es",
-        "lemonde.fr",
-        "rfi.fr"
+        "elespanol.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4575,
-          "corroboration": 0.6,
+          "coherence": 0.4792,
+          "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 0.5,
           "impact": 1.0,
-          "novelty": 0.125,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
         },
-        "total": 0.5849,
+        "total": 0.5666,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "allemagne",
+      "subject_label": "ceuta",
       "subject_names": [
-        "alemania",
-        "allemagne",
-        "espagne"
+        "ceuta",
+        "espana",
+        "marruecos",
+        "melilla",
+        "trampolin"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Alemania ha contabilizado aproximadamente 14.000 muertes relacionadas con las olas de calor durante el verano, mientras que España ha registrado cerca de 4.500 decesos por la misma causa. Estas cifras representan un récord de mortalidad atribuida al calor extremo en ambos países.",
-      "takeaway": "Europa occidental enfrenta un desafío de salud pública sin precedentes en la gestión de temperaturas extremas.",
-      "why_it_matters": "Las cifras de muertes por calor en Alemania y España demuestran la magnitud del riesgo climático que también afecta a Francia, donde sistemas de vigilancia y planes de respuesta a olas de calor serán sometidos a mayor escrutinio y posible refuerzo."
+      "subject_newsroom_count": 21,
+      "summary": "Marruecos ha reiterado su reivindicación sobre Ceuta y Melilla argumentando derechos históricos y geográficos, pidiendo que estas ciudades autónomas retornen a territorio marroquí. El Gobierno español ha respondido rechazando categóricamente estas reclamaciones de soberanía, reafirmando que Ceuta y Melilla son españolas.",
+      "takeaway": "Marruecos renueva sus demandas territoriales sobre dos enclaves españoles mientras España rechaza categóricamente cualquier negociación sobre su soberanía.",
+      "why_it_matters": "Francia está interesada en el conflicto sobre Ceuta y Melilla porque afecta la estabilidad del Mediterráneo occidental y las relaciones entre dos de sus vecinos, especialmente en una región donde Francia mantiene intereses comerciales y de seguridad."
     },
     {
       "_linked_ids": [
-        "subject-fedorov-06d2772a4948",
-        "subject-fedorov-6e46be2fb1ca",
-        "subject-fedorov-9a4c37a0d280",
-        "subject-fedorov-d1cd4134be4e",
-        "subject-fedorov-d31ff6e32436",
-        "subject-zelenski-2543d8d9558c"
+        "subject-julian-alaphilippe-808a2e2dc8a6"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-fedorov-9a4c37a0d280",
-      "coherence": 0.5913701577932524,
-      "consequence": 2,
+      "cluster_id": "subject-julian-alaphilippe-808a2e2dc8a6",
+      "coherence": 0.5257337774975943,
+      "consequence": 0,
       "countries": [
-        "ei",
-        "france",
-        "india",
-        "it",
-        "japan",
-        "nl",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "france"
       ],
-      "country_count": 9,
-      "editorial_day": "2026-08-20",
-      "filled_from": "europe",
-      "headline": "El exministro de Defensa de Ucrania Mykhailo Fedorov pide elecciones presidenciales",
-      "independent_source_count": 10,
+      "country_count": 1,
+      "editorial_day": "2026-08-21",
+      "headline": "El ciclista francés Julian Alaphilippe anuncia su retiro a los 34 años",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
+          "url": "https://www.la-croix.com/sport/cyclisme-julian-alaphilippe-le-double-champion-du-monde-annonce-sa-retraite-20260821"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260819/11616409/el-exministro-de-defensa-destituido-fedorov-desafia-a-zelenski-y-pide-elecciones-en-ucrania.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/sports/cyclisme/julian-alaphilippe/j-ai-donne-tout-ce-que-j-avais-et-le-cyclisme-m-a-tout-donne-en-retour-julian-alaphilippe-annonce-officiellement-sa-retraite-a-34-ans_8155913.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/sports/20260821-cyclisme-l-ancien-champion-du-monde-julian-alaphilippe-annonce-la-fin-de-sa-carri%C3%A8re-sportive"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/19/sacked-ukrainian-defence-minister-mykhailo-fedorov-calls-for-presidential-elections"
-        },
-        {
-          "language": "en",
-          "source": "albuquerqueexpress.com",
-          "source_country": "united-states",
-          "url": "http://www.albuquerqueexpress.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "calcuttanews.net",
-          "source_country": "india",
-          "url": "http://www.calcuttanews.net/news/279252223/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says"
-        },
-        {
-          "language": "en",
-          "source": "irishsun.com",
-          "source_country": "ei",
-          "url": "http://www.irishsun.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "japanherald.com",
-          "source_country": "japan",
-          "url": "http://www.japanherald.com/news/279252223/mykhailo-fedorov-urges-ukraine-to-hold-elections-during-war"
-        },
-        {
-          "language": "en",
-          "source": "britainnews.net",
-          "source_country": "united-kingdom",
-          "url": "http://www.britainnews.net/news/279252223/ukraine-facing-governance-crisis-needs-elections-ousted-fedorov-says"
-        },
-        {
-          "language": "nl",
-          "source": "rd.nl",
-          "source_country": "nl",
-          "url": "https://www.rd.nl/artikel/1159920-ontslagen-fedorov-daagt-zelensky-uit-met-oproep-tot-verkiezingen"
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/sports/20260821-cyclisme-le-fran%C3%A7ais-julian-alaphilippe-annonce-la-fin-de-sa-carri%C3%A8re-sportive"
         }
       ],
       "mentioned_countries": [
-        "up"
+        "france"
       ],
-      "origin_country": "ei",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/sports/cyclisme/julian-alaphilippe/j-ai-donne-tout-ce-que-j-avais-et-le-cyclisme-m-a-tout-donne-en-retour-julian-alaphilippe-annonce-officiellement-sa-retraite-a-34-ans_8155913.html#xtor=RSS-3-[lestitres]",
       "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "lavanguardia.com",
-        "lexpress.fr"
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5914,
-          "corroboration": 0.8182,
+          "coherence": 0.5257,
+          "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 0.1667,
-          "prominence": 0.7143,
-          "source_reliability": 0.75
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.5752,
+        "total": 0.3889,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "fedorov",
+      "subject_label": "julian alaphilippe",
       "subject_names": [
-        "fedorov",
-        "russia",
-        "russie",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zelensky"
+        "julian alaphilippe"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Mykhailo Fedorov, destituido de su cargo como ministro de Defensa de Ucrania, ha desafiado públicamente al presidente Volodymyr Zelensky al exigir la celebración de elecciones presidenciales en el país.",
-      "takeaway": "Un exministro destituido desafía al presidente Zelenski en un momento en que Ucrania necesita unidad institucional ante la guerra con Rusia.",
-      "why_it_matters": "La crisis política en Ucrania afecta a Francia como miembro de la UE y socio de seguridad europea, ya que la estabilidad del liderazgo ucraniano es crucial para la coordinación de la ayuda occidental y las negociaciones de paz."
+      "subject_newsroom_count": 4,
+      "summary": "Julian Alaphilippe, dos veces campeón mundial de ciclismo, ha anunciado oficialmente el fin de su carrera deportiva a los 34 años, expresando que ha dado todo lo que tenía y que el ciclismo le ha dado todo a cambio.",
+      "takeaway": "El doble campeón del mundo francés cierra su carrera profesional a los 34 años después de haber dominado el ciclismo de ruta durante más de una década.",
+      "why_it_matters": "Francia pierde a uno de sus ciclistas más exitosos de las últimas décadas, lo que reduce su capacidad competitiva en las grandes competiciones internacionales donde Alaphilippe era un referente constante."
     }
   ],
-  "discarded_ingested": 13,
+  "discarded_ingested": 19,
   "discarded_kept": 5,
-  "generated_at": "2026-08-21T05:57:41.906387+00:00",
+  "generated_at": "2026-08-22T05:52:57.877612+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

@@ -2,43 +2,382 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-congo-938a159a2212"
+      ],
+      "cluster_id": "subject-congo-938a159a2212",
+      "coherence": 0.4873333745547387,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "it",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-21",
+      "headline": "UN warns Ebola epidemic in Democratic Republic of Congo is growing exponentially",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260821-l-%C3%A9pid%C3%A9mie-d-ebola-en-rdc-progresse-de-fa%C3%A7on-exponentielle-alerte-l-onu"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/afrique/20260821-ebola-en-rdc-avec-plus-de-2-500-morts-l-%C3%A9pid%C3%A9mie-progresse-de-fa%C3%A7on-exponentielle-alerte-l-onu"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260821/11617714/onu-alerta-ebola-rd-congo-crece-exponencialmente.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/08/21/ebola-outbreak-in-democratic-republic-of-the-congo-growing-exponentially-un-warns"
+        }
+      ],
+      "mentioned_countries": [],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/2026/08/21/ebola-outbreak-in-democratic-republic-of-the-congo-growing-exponentially-un-warns",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "france24.com",
+        "lavanguardia.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4873,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6816,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "congo",
+      "subject_names": [
+        "congo",
+        "rdc"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "The Ebola outbreak in the Democratic Republic of Congo has killed more than 2,500 people and is expanding at an exponential rate, according to a UN alert. Multiple international news organizations have reported the UN's warning that the epidemic is progressing exponentially in the affected region.",
+      "takeaway": "An Ebola epidemic in the Democratic Republic of Congo has reached over 2,500 deaths and the UN says it is spreading exponentially.",
+      "why_it_matters": "The exponential growth of the outbreak means the death toll and scale of the health crisis will continue to rise significantly without intervention."
+    },
+    {
+      "_linked_ids": [
+        "subject-hong-kong-02c88b8842d5"
+      ],
+      "cluster_id": "subject-hong-kong-02c88b8842d5",
+      "coherence": 0.45949990674604524,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-08-21",
+      "headline": "Two Hong Kong activists convicted of inciting subversion for organizing Tiananmen vigils",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/hong-kong-deux-militants-de-la-memoire-de-tiananmen-reconnus-coupables-d-incitation-a-la-subversion-20260820"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/chine/hong-kong/a-hong-kong-deux-militants-de-la-memoire-de-tiananmen-reconnus-coupables-d-incitation-a-la-subversion_8156192.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-7741913"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-21/hong-kong-declara-culpables-de-incitacion-a-la-subversion-a-los-guardianes-de-la-memoria-de-tiananmen.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/hong-kong-condena-activistas-vigilia-tiananmen-incitar-20260821110403-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260821/11617665/hong-kong-declara-culpables-subversion-dos-lideres-conmemoracion-tiananmen.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/21/tiananmen-square-vigil-hong-kong-alliance-activists-guilty-verdict-lee-cheuk-yan-chow-hang-tung"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/21/news/hong_kong_cina_arrestati_due_attivisti_per_commemorazioni_della_strage_piazza_tienammen-425539750/?rss"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/2-organizers-of-hong-kongs-tiananmen-vigils-convicted-in-national-security-case"
+        }
+      ],
+      "mentioned_countries": [
+        "china"
+      ],
+      "origin_country": "france",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss",
+      "rank": 2,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "abc.es",
+        "bbc.co.uk",
+        "elpais.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lavanguardia.com",
+        "pbs.org",
+        "radiofrance.fr",
+        "repubblica.it",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4595,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5556,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6769,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "hong kong",
+      "subject_names": [
+        "hong kong",
+        "tiananmen"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Two organizers of Hong Kong's annual candlelight vigils commemorating the 1989 Tiananmen Square crackdown have been found guilty of inciting subversion under Hong Kong's national security law. The convictions represent escalating government action against those who have maintained public remembrance of the event.",
+      "takeaway": "Hong Kong authorities are using national security charges to suppress memorial activities related to Tiananmen Square.",
+      "why_it_matters": "The convictions demonstrate how Hong Kong's national security law is being applied to restrict commemoration of historical events and limit space for activist organizing in the city."
+    },
+    {
+      "_linked_ids": [
+        "subject-netanyahu-d98912dd2e89"
+      ],
+      "cluster_id": "subject-netanyahu-d98912dd2e89",
+      "coherence": 0.48213640115920753,
+      "consequence": 2,
+      "countries": [
+        "be",
+        "brazil",
+        "france",
+        "it",
+        "nl",
+        "pk",
+        "spain",
+        "sz"
+      ],
+      "country_count": 8,
+      "editorial_day": "2026-08-21",
+      "headline": "Turkey issues international arrest warrant for Netanyahu over Gaza flotilla incident",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20260821-flottille-pour-gaza-la-turquie-lance-un-mandat-d-arr%C3%AAt-d-international-contre-netanyahu"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/moyen-orient/20260821-passe-d-armes-entre-la-turquie-et-isra%C3%ABl-apr%C3%A8s-un-mandat-d-arr%C3%AAt-international-%C3%A9mis-contre-netanyahu"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-21/turquia-solicita-a-interpol-la-detencion-de-netanyahu-por-el-asalto-a-la-flotilla-con-destino-a-gaza.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/turquia-emite-orden-detencion-internacional-netanyahu-20260821154334-nt.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/22/news/turchia_contro_israele_mandato_arresto_netanyahu_mandato_arresto-425540822/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2627793"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/21/turquia-emite-ordem-de-prisao-contra-netanyahu-por-detencao-de-ativistas.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "samaa.tv",
+          "source_country": "pk",
+          "url": "https://www.samaa.tv/2087355578-t-rkiye-issues-arrest-warrant-for-netanyahu-over-alleged-genocide"
+        },
+        {
+          "language": "fr",
+          "source": "bfmtv.com",
+          "source_country": "france",
+          "url": "https://www.bfmtv.com/international/moyen-orient/turquie/flottille-pour-gaza-la-turquie-emet-un-mandat-d-arret-international-contre-benjamin-netanyahu_AD-202608210373.html"
+        },
+        {
+          "language": "fr",
+          "source": "rtbf.be",
+          "source_country": "be",
+          "url": "https://www.rtbf.be/article/flottille-pour-gaza-la-turquie-emet-un-mandat-d-arret-d-international-contre-netanyahu-11773491"
+        },
+        {
+          "language": "it",
+          "source": "larena.it",
+          "source_country": "it",
+          "url": "https://www.larena.it/news/mondo/turchia-emette-mandato-d-arresto-per-netanyahu-per-la-flotilla-1.13102733"
+        },
+        {
+          "language": "it",
+          "source": "ilgiornale.it",
+          "source_country": "it",
+          "url": "https://www.ilgiornale.it/news/politica-estera/mandato-di-arresto-internazionale-contro-netanyahu-laffondo-della-turchia-sul-caso-flotilla/"
+        },
+        {
+          "language": "it",
+          "source": "rsi.ch",
+          "source_country": "sz",
+          "url": "https://www.rsi.ch/info/mondo/Mandato-d%E2%80%99arresto-internazionale-per-Netanyahu-da-parte-della-Turchia--4004127.html"
+        }
+      ],
+      "mentioned_countries": [
+        "tu",
+        "is"
+      ],
+      "origin_country": "be",
+      "outbound_source": "bfmtv.com",
+      "outbound_url": "https://www.bfmtv.com/international/moyen-orient/turquie/flottille-pour-gaza-la-turquie-emet-un-mandat-d-arret-international-contre-benjamin-netanyahu_AD-202608210373.html",
+      "rank": 3,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "abc.es",
+        "elpais.com",
+        "france24.com",
+        "globo.com",
+        "nos.nl",
+        "repubblica.it",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4821,
+          "corroboration": 0.8,
+          "editorial_weight": 0.4667,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.8049
+        },
+        "total": 0.6725,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "netanyahu",
+      "subject_names": [
+        "erdogan",
+        "flottille",
+        "gaza",
+        "netanyahu",
+        "turquia",
+        "turquie"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Turkey has issued an international arrest warrant against Israeli Prime Minister Benjamin Netanyahu through Interpol, citing alleged crimes related to the assault on a flotilla bound for Gaza. The move follows the 2010 incident in which Israeli forces intercepted a Turkish-led flotilla attempting to deliver humanitarian aid to Gaza, resulting in the deaths of Turkish activists.",
+      "takeaway": "Turkey has formalized its legal challenge to Netanyahu by seeking his arrest through international channels over an incident from more than a decade ago.",
+      "why_it_matters": "The arrest warrant creates potential legal complications for Netanyahu's international travel and escalates diplomatic tensions between Turkey and Israel over the flotilla incident."
+    },
+    {
+      "_linked_ids": [
         "subject-trump-a1028fb14e29",
+        "subject-trump-b84d6f94136e",
         "subject-trump-dc3074a06a35",
         "subject-trump-fa17c007877f"
       ],
-      "cluster_id": "subject-trump-a1028fb14e29",
-      "coherence": 0.4239078091039572,
+      "cluster_id": "subject-trump-b84d6f94136e",
+      "coherence": 0.40288511947601124,
       "consequence": 3,
       "countries": [
-        "ar",
         "brazil",
-        "dr",
         "france",
         "spain",
-        "united-kingdom"
+        "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-08-20",
-      "headline": "Trump announces sweeping economic war against Iran and threatens sanctions on supporting nations",
-      "independent_source_count": 11,
+      "country_count": 4,
+      "editorial_day": "2026-08-21",
+      "headline": "Trump announces economic war against Iran with threats to allied nations",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "challenges.fr",
           "source_country": "france",
           "url": "https://www.challenges.fr/monde/un-d-day-economique-donald-trump-menace-de-terribles-repercussions-tout-pays-qui-aiderait-liran_645277"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-20/trump-proclama-la-mayor-guerra-economica-contra-iran.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/trump-anuncia-dia-economico-iran-amenaza-enormes-20260820072018-nt.html"
         },
         {
           "language": "es",
@@ -53,12 +392,6 @@
           "url": "https://www.eldiario.es/internacional/trump-anuncia-dia-d-iran-guerra-economica-aislamiento-precedentes_1_13456938.html"
         },
         {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-trump-declara-mayor-guerra-economica-contra-iran-amenaza-todo-pais-permita-cualquier-ayuda-teheran-20260820014411.html"
-        },
-        {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
@@ -66,494 +399,137 @@
         },
         {
           "language": "en",
-          "source": "britainnews.net",
-          "source_country": "united-kingdom",
-          "url": "http://www.britainnews.net/news/279253601/trump-warns-of-economic-measures-for-countries-supporting-iran"
+          "source": "wcbe.org",
+          "source_country": "united-states",
+          "url": "https://www.wcbe.org/2026-08-21/trump-says-u-s-will-impose-economic-d-day-against-iran"
         },
         {
-          "language": "es",
-          "source": "eldia.com.do",
-          "source_country": "dr",
-          "url": "https://eldia.com.do/trump-anuncia-una-ofensiva-economica-sin-precedentes-para-aislar-a-iran/"
-        },
-        {
-          "language": "es",
-          "source": "diariopopular.com.ar",
-          "source_country": "ar",
-          "url": "https://www.diariopopular.com.ar/internacionales/tension-iran-trump-anuncio-una-guerra-economica-y-lanzo-una-fuerte-advertencia-n915704"
-        },
-        {
-          "language": "es",
-          "source": "antena3.com",
-          "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/mundo/trump-amenaza-sanciones-economicas-cualquier-pais-que-ayude-iran_202608206a86e4bd71b42a0b5dfa3c86.html"
+          "language": "en",
+          "source": "wjct.org",
+          "source_country": "united-states",
+          "url": "https://news.wjct.org/2026-08-21/trump-says-u-s-will-impose-economic-d-day-against-iran"
         }
       ],
       "mentioned_countries": [
         "ir"
       ],
-      "origin_country": "ar",
+      "origin_country": "brazil",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 7,
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "abc.es",
         "challenges.fr",
         "eldiario.es",
-        "elpais.com",
-        "europapress.es",
         "globo.com",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4239,
-          "corroboration": 0.75,
-          "editorial_weight": 0.4667,
+          "coherence": 0.4029,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.7333,
-          "source_reliability": 0.7838
+          "novelty": 0.25,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.7299,
+        "total": 0.6722,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
       "subject_names": [
-        "canada",
-        "casa blanca",
+        "ariana grande",
         "donald trump",
         "iran",
+        "moyen-orient",
         "teheran",
-        "trump"
+        "trump",
+        "washington"
       ],
-      "subject_newsroom_count": 27,
-      "summary": "Donald Trump has announced an unprecedented economic offensive against Iran, describing it as a major economic war or \"economic D-Day.\" He has threatened severe economic consequences for any country that provides financial support or conducts business with the Iranian regime, warning of what he called \"terrible repercussions\" and \"enormous consequences\" for nations that assist Tehran.",
-      "takeaway": "Trump is moving to economically isolate Iran by penalizing any nation that continues to support or do business with the regime.",
-      "why_it_matters": "Countries that maintain economic ties with Iran or provide financial support face the threat of economic sanctions from the United States, which could affect their own trade and diplomatic relationships."
+      "subject_newsroom_count": 25,
+      "summary": "Donald Trump announced plans for a major economic campaign against Iran, using rhetoric comparing it to a D-Day operation. He threatened serious consequences for any countries that provide assistance to the Iranian regime or negotiate with it, framing the effort as unprecedented economic isolation.",
+      "takeaway": "Trump is preparing to use economic pressure and international isolation as his primary tools against Iran.",
+      "why_it_matters": "Countries conducting trade or diplomatic relations with Iran face potential retaliation from the United States under this policy."
     },
     {
       "_linked_ids": [
-        "subject-china",
-        "subject-evergrande-00f6eafed0fc",
-        "subject-evergrande-4794118dd2bd",
-        "subject-evergrande-577e845adc09",
-        "subject-evergrande-5a25b428d872",
-        "subject-evergrande-9657562a3117",
-        "subject-evergrande-cbc223d67815",
-        "subject-evergrande-cc722154110b",
-        "subject-evergrande-dd7df05feeb9",
-        "subject-evergrande-e7a5254e0105",
-        "subject-evergrande-fe6501ba213f"
+        "subject-panama-abb7967dac95"
       ],
-      "cluster_id": "subject-evergrande-00f6eafed0fc",
-      "coherence": 0.5331642258462438,
-      "consequence": 2,
+      "cluster_id": "subject-panama-abb7967dac95",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
-        "brazil",
-        "co",
-        "france",
-        "id",
-        "nl",
-        "sn",
+        "it",
         "spain",
-        "united-kingdom",
         "united-states"
       ],
-      "country_count": 9,
-      "editorial_day": "2026-08-20",
-      "headline": "Founder of Chinese property developer Evergrande sentenced to life in prison",
-      "independent_source_count": 15,
+      "country_count": 3,
+      "editorial_day": "2026-08-21",
+      "headline": "Panama Canal reduces daily ship transits due to drought from El Niño",
+      "independent_source_count": 2,
       "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-08-20/china-condena-a-cadena-perpetua-al-fundador-del-gigante-inmobiliario-evergrande.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/cadena-perpetua-fundador-gigante-inmobiliario-evergrande-cara-crisis-ladrillo-china_1_13456994.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/financial-times/2026/08/20/6a86ee9d468aebaa088b45a0.html"
-        },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html"
+          "url": "https://www.20minutos.es/internacional/canal-panama-reduce-transito-diario-buques-para-enfrentar-nino_7027917_0.html"
         },
         {
           "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/business/2026/aug/20/evergrande-founder-jailed-life-fraud-hui-ka-yan"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/08/21/panama-canal-to-reduce-shipping-as-el-nino-fuels-drought-in-lakes-that-feed-waterway"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2627589"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
+          "language": "it",
+          "source": "euronews.com",
           "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/20/nx-s1-5939335/chinese-sentence-founder-evergrande"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/economia/noticia/2026/08/20/de-homem-mais-rico-da-asia-a-condenado-a-prisao-perpetua-quem-e-o-fundador-da-evergrande.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "dailymail.com",
-          "source_country": "united-states",
-          "url": "https://www.dailymail.com/money/markets/article-16067967/Founder-collapsed-Chinese-property-giant-Evergrande-jailed-life-fraud-bribery-charges.html"
-        },
-        {
-          "language": "en",
-          "source": "asiaone.com",
-          "source_country": "sn",
-          "url": "https://www.asiaone.com/china/hui-ka-yan-china-evergrande-prison"
-        },
-        {
-          "language": "en",
-          "source": "thejakartapost.com",
-          "source_country": "id",
-          "url": "http://www.thejakartapost.com/world/2026/08/20/china-evergrande-founder-sentenced-to-life-in-prison"
-        },
-        {
-          "language": "pt",
-          "source": "em.com.br",
-          "source_country": "brazil",
-          "url": "http://www.em.com.br/internacional/2026/08/7483650-china-condena-fundador-da-evergrande-a-prisao-perpetua.html"
-        },
-        {
-          "language": "es",
-          "source": "elheraldo.co",
-          "source_country": "co",
-          "url": "https://www.elheraldo.co/mundo/2026/08/20/xu-jiayin-fundador-del-gigante-inmobiliario-chino-evergrande-condenado-a-cadena-perpetua/"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-2959840"
+          "url": "https://it.euronews.com/2026/08/21/canale-di-panama-riduce-il-traffico-navale-per-la-siccita-provocata-da-el-nino"
         }
       ],
       "mentioned_countries": [
         "china"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 10,
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/2026/08/21/panama-canal-to-reduce-shipping-as-el-nino-fuels-drought-in-lakes-that-feed-waterway",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "20minutos.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "elpais.com",
-        "expansion.com",
-        "globo.com",
-        "nos.nl",
-        "npr.org",
-        "radiofrance.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5332,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.5556,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.0909,
-          "prominence": 0.7895,
-          "source_reliability": 0.8333
-        },
-        "total": 0.6865,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "evergrande",
-      "subject_names": [
-        "chinese",
-        "evergrande"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Xu Jiayin, the founder of Evergrande, one of China's largest real estate companies, has been sentenced to life in prison after pleading guilty to fraud and bribery charges. The conviction marks a dramatic downfall for the executive who was once among Asia's wealthiest individuals and represents a significant moment in China's ongoing property sector crisis.",
-      "takeaway": "The founder of one of China's biggest property companies has been sentenced to life in prison for fraud and bribery.",
-      "why_it_matters": "The sentencing reflects China's crackdown on corporate misconduct in the struggling real estate industry and signals consequences for executives behind major developer collapses that have affected property buyers and investors across the country."
-    },
-    {
-      "_linked_ids": [
-        "subject-syrie-e69b1714d449"
-      ],
-      "cluster_id": "subject-syrie-e69b1714d449",
-      "coherence": 0.7576016042721608,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-21",
-      "headline": "Syrian Kurdish administration integrated into state structures",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/syrie-l-administration-kurde-desormais-integree-dans-celle-de-l-etat_6751362_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/revolte-en-syrie/en-syrie-l-administration-kurde-est-desormais-integree-dans-celle-de-l-etat_8155802.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/info-en-continu/20260820-en-syrie-l-administration-kurde-d%C3%A9sormais-int%C3%A9gr%C3%A9e-dans-celle-de-l-etat"
-        }
-      ],
-      "mentioned_countries": [
-        "sy"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/syrie-l-administration-kurde-desormais-integree-dans-celle-de-l-etat_6751362_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7576,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6624,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "syrie",
-      "subject_names": [
-        "syrie",
-        "turquie"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Syria's Kurdish-led autonomous administration has been formally integrated into the structures of the Syrian state, marking the end of Kurdish hopes for autonomous governance in the region.",
-      "takeaway": "Syria's Kurds have lost their independent administrative status as their government structures merge with the state.",
-      "why_it_matters": "The integration eliminates the separate administrative framework the Kurds had maintained, dissolving their practical autonomy within Syria."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-7b5679fff45f"
-      ],
-      "cluster_id": "subject-ukraine-7b5679fff45f",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-19",
-      "headline": "Russia threatens Britain over military support to Ukraine",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-la-russie-menace-le-royaume-uni-londres-replique-3BKU7HQKAVFGTIUCCRN65XYF24/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/18/ucrania-lanca-mais-de-600-drones-contra-moscou.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260818/11615794/rusia-amenaza-reino-unido-suministrar-drones-ucrania-cuanto-mayor-sea-implicacion-mas-alto-sera-precio.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr"
+        "euronews.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6588,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "londres",
-        "meghan markle",
-        "moscou",
-        "putin",
-        "reino unido",
-        "royaume-uni",
-        "rusia",
-        "russia",
-        "russie",
-        "ucraina",
-        "ucrania",
-        "ukraine",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Russia has threatened the United Kingdom in response to British military aid to Ukraine, particularly the supply of drones. According to reports, Russian officials warned that increased British involvement in the conflict would result in serious consequences, with one statement indicating that the greater Britain's involvement, the higher the price it would face.",
-      "takeaway": "Russia is using threats to deter Western nations from deepening their military support for Ukraine.",
-      "why_it_matters": "The threat escalates tensions between Russia and NATO-aligned countries that are actively supplying weapons to Ukraine, potentially increasing the risk of direct confrontation between Russia and Britain."
-    },
-    {
-      "_linked_ids": [
-        "subject-allemagne-15982e066f44",
-        "subject-allemagne-56a0314c8c49",
-        "subject-allemagne-5e8a47a3c4fe",
-        "subject-allemagne-8df11689696f",
-        "subject-allemagne-a6adb41ba021",
-        "subject-allemagne-ad0285520b57",
-        "subject-allemagne-d5d9e058c8f4",
-        "subject-allemagne-f5bb3706f8d1"
-      ],
-      "cluster_id": "subject-allemagne-56a0314c8c49",
-      "coherence": 0.45750765753179323,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain",
-        "ve"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-20",
-      "headline": "Germany records 14,000 heat-related deaths during summer",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260820-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-%C3%A0-la-chaleur-en-allemagne-un-record-de-morts-et-des-questions"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/alemania-estima-que-ya-se-han-producido-14-000-muertes-por-calor-este-verano_7027767_0.html"
-        },
-        {
-          "language": "es",
-          "source": "avn.info.ve",
-          "source_country": "ve",
-          "url": "https://avn.info.ve/alemania-registra-14-000-muertes-por-olas-de-calor/"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4575,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.125,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.5294
         },
-        "total": 0.6449,
+        "total": 0.6426,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "allemagne",
+      "subject_label": "panama",
       "subject_names": [
-        "alemania",
-        "allemagne",
-        "espagne"
+        "panama"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Germany has recorded approximately 14,000 deaths linked to heat during the summer months, marking a record number of heat-related fatalities. Spain has documented roughly 4,500 deaths from similar causes during the same period. These figures represent a significant spike in mortality attributed to extreme temperatures across both countries.",
-      "takeaway": "Extreme heat caused record-breaking mortality in Germany and Spain this summer.",
-      "why_it_matters": "The death toll demonstrates the severe public health impact of extreme heat events on European populations, with tens of thousands of lives lost in a single summer season."
+      "subject_newsroom_count": 4,
+      "summary": "The Panama Canal is reducing the number of ships it allows to transit daily through its locks because drought conditions caused by El Niño have lowered water levels in the lakes that supply the waterway with the freshwater needed to operate.",
+      "takeaway": "El Niño-driven drought is forcing the canal to slow traffic flow to conserve limited freshwater supplies.",
+      "why_it_matters": "The restriction limits the volume of global cargo that can move through one of the world's most critical shipping routes, affecting international trade and commerce that depends on the canal's passage."
     }
   ],
-  "discarded_ingested": 284,
+  "discarded_ingested": 276,
   "discarded_kept": 5,
-  "generated_at": "2026-08-21T05:57:41.906387+00:00",
+  "generated_at": "2026-08-22T05:52:57.877612+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

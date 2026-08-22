@@ -1,39 +1,147 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-a1028fb14e29",
-      "coherence": 0.4239078091039572,
+      "cluster_id": "subject-hong-kong-02c88b8842d5",
+      "coherence": 0.45949990674604524,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-08-21",
+      "headline": "Hong Kong condena a dos activistas de la vigilia de Tiananmén por incitación a la subversión",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/hong-kong-deux-militants-de-la-memoire-de-tiananmen-reconnus-coupables-d-incitation-a-la-subversion-20260820"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/chine/hong-kong/a-hong-kong-deux-militants-de-la-memoire-de-tiananmen-reconnus-coupables-d-incitation-a-la-subversion_8156192.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-7741913"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-21/hong-kong-declara-culpables-de-incitacion-a-la-subversion-a-los-guardianes-de-la-memoria-de-tiananmen.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/hong-kong-condena-activistas-vigilia-tiananmen-incitar-20260821110403-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260821/11617665/hong-kong-declara-culpables-subversion-dos-lideres-conmemoracion-tiananmen.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/21/tiananmen-square-vigil-hong-kong-alliance-activists-guilty-verdict-lee-cheuk-yan-chow-hang-tung"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/21/news/hong_kong_cina_arrestati_due_attivisti_per_commemorazioni_della_strage_piazza_tienammen-425539750/?rss"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/2-organizers-of-hong-kongs-tiananmen-vigils-convicted-in-national-security-case"
+        }
+      ],
+      "mentioned_countries": [
+        "china"
+      ],
+      "origin_country": "france",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss",
+      "rank": 1,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "abc.es",
+        "bbc.co.uk",
+        "elpais.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lavanguardia.com",
+        "pbs.org",
+        "radiofrance.fr",
+        "repubblica.it",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4595,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5556,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6723,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "hong kong",
+      "subject_names": [
+        "hong kong",
+        "tiananmen"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Dos organizadores de las conmemoraciones anuales de la masacre de Tiananmén en Hong Kong fueron declarados culpables de incitación a la subversión bajo la Ley de Seguridad Nacional, en un juicio que refleja el endurecimiento de las autoridades frente a las manifestaciones de disidencia política en la ciudad.",
+      "takeaway": "Las autoridades de Hong Kong utilizan las leyes de seguridad nacional para silenciar a quienes organizan actos de memoria sobre sucesos políticos del pasado.",
+      "why_it_matters": "La condena restringe la capacidad de los hongkoneses para conmemorar públicamente eventos históricos considerados sensibles por las autoridades, marcando una reducción significativa de las libertades de expresión y asociación en Hong Kong."
+    },
+    {
+      "cluster_id": "subject-trump-b84d6f94136e",
+      "coherence": 0.40288511947601124,
       "consequence": 3,
       "countries": [
-        "ar",
         "brazil",
-        "dr",
         "france",
         "spain",
-        "united-kingdom"
+        "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-08-20",
-      "headline": "Trump anuncia una guerra económica contra Irán y amenaza sanciones a países que apoyen al régimen",
-      "independent_source_count": 11,
+      "country_count": 4,
+      "editorial_day": "2026-08-21",
+      "headline": "Trump anuncia una guerra económica contra Irán con amenazas a países aliados",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "challenges.fr",
           "source_country": "france",
           "url": "https://www.challenges.fr/monde/un-d-day-economique-donald-trump-menace-de-terribles-repercussions-tout-pays-qui-aiderait-liran_645277"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-20/trump-proclama-la-mayor-guerra-economica-contra-iran.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/trump-anuncia-dia-economico-iran-amenaza-enormes-20260820072018-nt.html"
         },
         {
           "language": "es",
@@ -48,12 +156,6 @@
           "url": "https://www.eldiario.es/internacional/trump-anuncia-dia-d-iran-guerra-economica-aislamiento-precedentes_1_13456938.html"
         },
         {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-trump-declara-mayor-guerra-economica-contra-iran-amenaza-todo-pais-permita-cualquier-ayuda-teheran-20260820014411.html"
-        },
-        {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
@@ -61,610 +163,369 @@
         },
         {
           "language": "en",
-          "source": "britainnews.net",
-          "source_country": "united-kingdom",
-          "url": "http://www.britainnews.net/news/279253601/trump-warns-of-economic-measures-for-countries-supporting-iran"
+          "source": "wcbe.org",
+          "source_country": "united-states",
+          "url": "https://www.wcbe.org/2026-08-21/trump-says-u-s-will-impose-economic-d-day-against-iran"
         },
         {
-          "language": "es",
-          "source": "eldia.com.do",
-          "source_country": "dr",
-          "url": "https://eldia.com.do/trump-anuncia-una-ofensiva-economica-sin-precedentes-para-aislar-a-iran/"
-        },
-        {
-          "language": "es",
-          "source": "diariopopular.com.ar",
-          "source_country": "ar",
-          "url": "https://www.diariopopular.com.ar/internacionales/tension-iran-trump-anuncio-una-guerra-economica-y-lanzo-una-fuerte-advertencia-n915704"
-        },
-        {
-          "language": "es",
-          "source": "antena3.com",
-          "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/mundo/trump-amenaza-sanciones-economicas-cualquier-pais-que-ayude-iran_202608206a86e4bd71b42a0b5dfa3c86.html"
+          "language": "en",
+          "source": "wjct.org",
+          "source_country": "united-states",
+          "url": "https://news.wjct.org/2026-08-21/trump-says-u-s-will-impose-economic-d-day-against-iran"
         }
       ],
       "mentioned_countries": [
         "ir"
       ],
-      "origin_country": "ar",
+      "origin_country": "brazil",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/19/trump-anuncia-guerra-economica-contra-o-ira-e-ameaca-paises-que-ajudarem-o-regime.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 7,
+      "rank": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "abc.es",
         "challenges.fr",
         "eldiario.es",
-        "elpais.com",
-        "europapress.es",
         "globo.com",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4239,
-          "corroboration": 0.75,
-          "editorial_weight": 0.4667,
+          "coherence": 0.4029,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7838
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.7239,
+        "total": 0.6712,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
       "subject_names": [
-        "canada",
-        "casa blanca",
+        "ariana grande",
         "donald trump",
         "iran",
+        "moyen-orient",
         "teheran",
-        "trump"
+        "trump",
+        "washington"
       ],
-      "subject_newsroom_count": 27,
-      "summary": "Donald Trump ha proclamado una ofensiva económica contra Irán, denominada como un \"Día D económico\", y ha advertido con \"enormes consecuencias\" y \"aislamiento sin precedentes\" a cualquier país que proporcione apoyo financiero o negocie con el régimen iraní.",
-      "takeaway": "Trump busca aislar económicamente a Irán mediante presión sobre los países que lo apoyen financieramente.",
-      "why_it_matters": "Las amenazas de Trump afectan directamente a las naciones que mantienen relaciones comerciales o financieras con Irán, enfrentándose a posibles sanciones económicas estadounidenses."
+      "subject_newsroom_count": 25,
+      "summary": "Donald Trump anunció que Estados Unidos impondrá un \"día D económico\" contra Irán, describiendo una estrategia de guerra económica e aislamiento sin precedentes del régimen. La amenaza incluye represalias contra cualquier país que negocie o ayude al régimen iraní.",
+      "takeaway": "Trump promete aislar económicamente a Irán y castigar a sus aliados comerciales.",
+      "why_it_matters": "Los países que mantengan relaciones comerciales o diplomáticas con Irán enfrentarán terribles repercusiones económicas según las advertencias de Trump."
     },
     {
-      "cluster_id": "subject-evergrande-00f6eafed0fc",
-      "coherence": 0.5331642258462438,
-      "consequence": 2,
+      "cluster_id": "subject-congo-938a159a2212",
+      "coherence": 0.4873333745547387,
+      "consequence": 3,
       "countries": [
-        "brazil",
-        "co",
         "france",
-        "id",
-        "nl",
-        "sn",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "it",
+        "spain"
       ],
-      "country_count": 9,
-      "editorial_day": "2026-08-20",
-      "headline": "Xu Jiayin, fundador de Evergrande, es condenado a cadena perpetua por fraude y corrupción",
-      "independent_source_count": 15,
+      "country_count": 3,
+      "editorial_day": "2026-08-21",
+      "headline": "La ONU advierte que el ébola en la República Democrática del Congo avanza exponencialmente",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-08-20/china-condena-a-cadena-perpetua-al-fundador-del-gigante-inmobiliario-evergrande.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/cadena-perpetua-fundador-gigante-inmobiliario-evergrande-cara-crisis-ladrillo-china_1_13456994.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/financial-times/2026/08/20/6a86ee9d468aebaa088b45a0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/business/2026/aug/20/evergrande-founder-jailed-life-fraud-hui-ka-yan"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2627589"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/20/nx-s1-5939335/chinese-sentence-founder-evergrande"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/economia/noticia/2026/08/20/de-homem-mais-rico-da-asia-a-condenado-a-prisao-perpetua-quem-e-o-fundador-da-evergrande.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "dailymail.com",
-          "source_country": "united-states",
-          "url": "https://www.dailymail.com/money/markets/article-16067967/Founder-collapsed-Chinese-property-giant-Evergrande-jailed-life-fraud-bribery-charges.html"
-        },
-        {
-          "language": "en",
-          "source": "asiaone.com",
-          "source_country": "sn",
-          "url": "https://www.asiaone.com/china/hui-ka-yan-china-evergrande-prison"
-        },
-        {
-          "language": "en",
-          "source": "thejakartapost.com",
-          "source_country": "id",
-          "url": "http://www.thejakartapost.com/world/2026/08/20/china-evergrande-founder-sentenced-to-life-in-prison"
-        },
-        {
-          "language": "pt",
-          "source": "em.com.br",
-          "source_country": "brazil",
-          "url": "http://www.em.com.br/internacional/2026/08/7483650-china-condena-fundador-da-evergrande-a-prisao-perpetua.html"
-        },
-        {
-          "language": "es",
-          "source": "elheraldo.co",
-          "source_country": "co",
-          "url": "https://www.elheraldo.co/mundo/2026/08/20/xu-jiayin-fundador-del-gigante-inmobiliario-chino-evergrande-condenado-a-cadena-perpetua/"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260821-l-%C3%A9pid%C3%A9mie-d-ebola-en-rdc-progresse-de-fa%C3%A7on-exponentielle-alerte-l-onu"
         },
         {
           "language": "fr",
-          "source": "radiofrance.fr",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-2959840"
+          "url": "https://www.rfi.fr/fr/afrique/20260821-ebola-en-rdc-avec-plus-de-2-500-morts-l-%C3%A9pid%C3%A9mie-progresse-de-fa%C3%A7on-exponentielle-alerte-l-onu"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260821/11617714/onu-alerta-ebola-rd-congo-crece-exponencialmente.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/08/21/ebola-outbreak-in-democratic-republic-of-the-congo-growing-exponentially-un-warns"
         }
       ],
-      "mentioned_countries": [
-        "china"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/fundador-gigante-inmobiliario-chino-evergrande-condenado-cadena-perpetua_7027509_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 10,
+      "mentioned_countries": [],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/2026/08/21/ebola-outbreak-in-democratic-republic-of-the-congo-growing-exponentially-un-warns",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "elpais.com",
-        "expansion.com",
-        "globo.com",
-        "nos.nl",
-        "npr.org",
-        "radiofrance.fr",
-        "theguardian.com"
+        "euronews.com",
+        "france24.com",
+        "lavanguardia.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5332,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.5556,
+          "coherence": 0.4873,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7895,
-          "source_reliability": 0.8333
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.696,
+        "total": 0.6683,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "evergrande",
+      "subject_label": "congo",
       "subject_names": [
-        "chinese",
-        "evergrande"
+        "congo",
+        "rdc"
       ],
       "subject_newsroom_count": 11,
-      "summary": "Xu Jiayin, fundador del gigante inmobiliario chino Evergrande, ha sido condenado a cadena perpetua tras declararse culpable de fraude y soborno. La sentencia marca el derrumbe de uno de los mayores promotores inmobiliarios de China y de su fundador, quien fue considerado el hombre más rico de Asia.",
-      "takeaway": "El fundador de Evergrande, que alguna vez fue uno de los empresarios más ricos de Asia, ahora enfrenta prisión de por vida tras pleitos legales relacionados con fraude.",
-      "why_it_matters": "La condena representa el fin judicial de la crisis del sector inmobiliario chino, personificada en el colapso de Evergrande, una de las mayores desarrolladoras de viviendas del país."
+      "summary": "El brote de ébola en la República Democrática del Congo continúa propagándose con rapidez acelerada, habiendo causado más de 2.500 muertes, según alertó la Organización de las Naciones Unidas.",
+      "takeaway": "El ébola en la República Democrática del Congo está creciendo más rápidamente de lo que se estaba controlando.",
+      "why_it_matters": "La aceleración exponencial de la epidemia significa que el número de casos y muertes está aumentando a un ritmo cada vez más rápido, lo que intensifica la presión sobre los sistemas de salud y las medidas de contención en la región afectada."
     },
     {
-      "cluster_id": "subject-syrie-e69b1714d449",
-      "coherence": 0.7576016042721608,
+      "cluster_id": "subject-canada-14b304280b7d",
+      "coherence": 0.4011481480183887,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-21",
-      "headline": "La administración kurda de Siria se integra en la administración estatal",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/syrie-l-administration-kurde-desormais-integree-dans-celle-de-l-etat_6751362_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/revolte-en-syrie/en-syrie-l-administration-kurde-est-desormais-integree-dans-celle-de-l-etat_8155802.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/info-en-continu/20260820-en-syrie-l-administration-kurde-d%C3%A9sormais-int%C3%A9gr%C3%A9e-dans-celle-de-l-etat"
-        }
-      ],
-      "mentioned_countries": [
-        "sy"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/syrie-l-administration-kurde-desormais-integree-dans-celle-de-l-etat_6751362_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7576,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.689,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "syrie",
-      "subject_names": [
-        "syrie",
-        "turquie"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Los artículos reportan que la administración kurda en Siria ha sido integrada en la administración del Estado sirio, marcando el fin de los esperados planes de autonomía para esta minoría en el país.",
-      "takeaway": "Los kurdos sirios ven desaparecer sus instituciones administrativas independientes tras la integración con el Estado.",
-      "why_it_matters": "Los kurdos pierden las estructuras administrativas autónomas que habían establecido, quedando bajo el control directo de la administración estatal siria."
-    },
-    {
-      "cluster_id": "subject-peru-c8df3cbdc4c8",
-      "coherence": 0.5186137825057404,
-      "consequence": 1,
-      "countries": [
-        "ar",
-        "brazil",
-        "co",
-        "dr",
-        "mx",
-        "pe",
-        "pm",
-        "spain",
-        "united-states",
-        "ve"
-      ],
-      "country_count": 10,
-      "editorial_day": "2026-08-21",
-      "headline": "Terremoto de magnitud 7,2 sacude la región de Ayacucho en el sur de Perú",
-      "independent_source_count": 25,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/america/2026-08-20/un-terremoto-de-magnitud-72-sacude-la-region-andina-de-ayacucho-en-el-sur-de-peru.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/terremoto-magnitud-sacude-ayacucho-sur-peru-20260820204639-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260821/11617483/peru-supera-grandes-danos-terremoto-7-2-sacudio-ayacucho.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260820/11617304/terremoto-magnitud-7-2-sacude-region-andina-ayacucho-sur-peru.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/terremoto-magnitud-7-2-sacude-region-andina-ayacucho-sur-peru_1_13458803.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/20260820/terremoto-magnitud-sacude-region-ayacucho-sur-peru-ahora-no-ocurrido-critico/1003744358901_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/08/20/6a874cf5fc6c83507c8b4570.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-registrado-terremoto-magnitud-72-sur-peru-20260820203642.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-terremoto-magnitud-7-2-sacude-sur-peru_7027871_0.html"
-        },
-        {
-          "language": "es",
-          "source": "critica.com.pa",
-          "source_country": "pm",
-          "url": "https://www.critica.com.pa/mundo/un-terremoto-de-magnitud-72-sacude-la-region-de-ayacucho-al-sur-de-peru-514979"
-        },
-        {
-          "language": "es",
-          "source": "diariolibre.com",
-          "source_country": "united-states",
-          "url": "https://www.diariolibre.com/mundo/america-latina/2026/08/20/terremoto-ayacucho-de-magnitud-72-se-siente-en-peru/3634771"
-        },
-        {
-          "language": "es",
-          "source": "proceso.com.mx",
-          "source_country": "mx",
-          "url": "https://www.proceso.com.mx/internacional/2026/8/20/peru-registra-terremoto-de-magnitud-72-378406.html"
-        },
-        {
-          "language": "es",
-          "source": "sinmordaza.com",
-          "source_country": "ar",
-          "url": "https://sinmordaza.com/noticia/516210-fuerte-sismo-de-72-de-magnitud-sacudio-el-sur-de-peru.html"
-        },
-        {
-          "language": "es",
-          "source": "rionegro.com.ar",
-          "source_country": "ar",
-          "url": "https://www.rionegro.com.ar/mundo/fuerte-sismo-en-peru-un-temblor-de-magnitud-72-sacudio-a-coracora-ica-y-arequipa-4691160/"
-        },
-        {
-          "language": "es",
-          "source": "laverdad.com",
-          "source_country": "ve",
-          "url": "https://laverdad.com/reportan-deslizamientos-de-tierra-tras-el-terremoto-de-magnitud-72-en-peru/"
-        },
-        {
-          "language": "es",
-          "source": "el-carabobeno.com",
-          "source_country": "ve",
-          "url": "https://www.el-carabobeno.com/terremoto-de-72-en-peru-fue-percibido-fuerte-sin-que-se-reporten-danos-hasta-ahora/"
-        },
-        {
-          "language": "es",
-          "source": "elesquiu.com",
-          "source_country": "ar",
-          "url": "https://www.elesquiu.com/internacionales/2026/8/20/un-fuerte-sismo-de-magnitud-72-sacudio-la-region-peruana-de-ayacucho-593500.html"
-        },
-        {
-          "language": "es",
-          "source": "rpp.pe",
-          "source_country": "pe",
-          "url": "https://rpp.pe/peru/actualidad/terremoto-de-magnitud-72-en-ayacucho-afecto-viviendas-locales-de-salud-y-una-institucion-educativa-noticia-1702729"
-        },
-        {
-          "language": "es",
-          "source": "elviajero.com.do",
-          "source_country": "dr",
-          "url": "https://elviajero.com.do/index.php/2026/08/20/terremoto-de-7-2-sacude-a-peru-sin-que-se-reporten-danos-hasta-ahora/"
-        },
-        {
-          "language": "es",
-          "source": "elbuho.pe",
-          "source_country": "pe",
-          "url": "https://elbuho.pe/2026/08/terremoto-de-7-2-en-ayacucho-se-sintio-en-arequipa-cusco-y-moquegua/"
-        },
-        {
-          "language": "es",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://es.euronews.com/2026/08/20/un-fuerte-terremoto-de-magnitud-72-sacude-el-sur-de-peru"
-        },
-        {
-          "language": "es",
-          "source": "pulsoslp.com.mx",
-          "source_country": "mx",
-          "url": "https://pulsoslp.com.mx/mundo/peru-registra-terremoto-72-en-ayacucho-sin-victimas/2078055"
-        },
-        {
-          "language": "es",
-          "source": "colombia.com",
-          "source_country": "co",
-          "url": "https://www.colombia.com/actualidad/internacionales/terremoto-en-peru-primeras-imagenes-tras-el-sismo-de-magnitud-72-596915"
-        },
-        {
-          "language": "es",
-          "source": "pregon.com.ar",
-          "source_country": "ar",
-          "url": "https://www.pregon.com.ar/nota/-70600/2026/08/peru--fuerte-sismo-de-magnitud-72-en-la-region-de-ayacucho"
-        },
-        {
-          "language": "es",
-          "source": "laverdad.com",
-          "source_country": "ve",
-          "url": "https://laverdad.com/terremoto-de-magnitud-72-sacude-la-region-andina-de-ayacucho-en-peru/"
-        },
-        {
-          "language": "es",
-          "source": "larazon.pe",
-          "source_country": "pe",
-          "url": "https://larazon.pe/sismo-de-magnitud-7-2-remecio-ayacucho-y-fue-percibido-en-lima/"
-        },
-        {
-          "language": "pt",
-          "source": "tribunadonorte.com.br",
-          "source_country": "brazil",
-          "url": "https://tribunadonorte.com.br/internacional/terremoto-de-magnitude-72-atinge-sul-do-peru/"
-        }
-      ],
-      "mentioned_countries": [
-        "pe"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260820/11617304/terremoto-magnitud-7-2-sacude-region-andina-ayacucho-sur-peru.html",
-      "rank": 4,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "euronews.com",
-        "europapress.es",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5186,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.8621,
-          "source_reliability": 0.8889
-        },
-        "total": 0.6563,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "peru",
-      "subject_names": [
-        "ayacucho",
-        "peru"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Un terremoto de magnitud 7,2 golpeó la región andina de Ayacucho en el sur de Perú, siendo percibido también en otras zonas como Arequipa, Cusco, Ica y Lima. Aunque el sismo causó daños leves en infraestructuras, viviendas, establecimientos de salud e instituciones educativas, así como algunos desprendimientos de rocas, Perú superó el evento sin grandes consecuencias ni víctimas fatales reportadas.",
-      "takeaway": "Un sismo de considerable magnitud sacudió el sur de Perú con impactos limitados en construcciones e infraestructuras locales.",
-      "why_it_matters": "El terremoto afectó infraestructuras, viviendas y servicios de salud en la región, aunque sin generar víctimas mortales según los reportes."
-    },
-    {
-      "cluster_id": "subject-allemagne-56a0314c8c49",
-      "coherence": 0.45750765753179323,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain",
-        "ve"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-20",
-      "headline": "Alemania registra 14.000 muertes por calor durante el verano",
+      "editorial_day": "2026-08-22",
+      "headline": "Canadá y Estados Unidos no alcanzan acuerdo sobre aranceles y Ottawa promete represalias",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/08/22/apres-l-echec-des-negociations-de-la-derniere-chance-les-nouveaux-droits-de-douane-americains-entrent-en-vigueur-contre-le-canada_6752728_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/droits-de-douane-pas-d-accord-de-derniere-minute-entre-le-canada-et-les-etats-unis-20260822"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260822-droits-de-douane-ottawa-et-washington-dans-l-impasse-carney-promet-de-r%C3%A9pliquer-au-dollar-pr%C3%A8s"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/amerique/canada-les-concessions-de-mark-carney-pour-eviter-les-droits-de-douane-de-donald-trump-6VFFBDMPDBHBBBC6WE7ESRE3ZU/"
+        }
+      ],
+      "mentioned_countries": [
+        "ca",
+        "united-states"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/amerique/canada-les-concessions-de-mark-carney-pour-eviter-les-droits-de-douane-de-donald-trump-6VFFBDMPDBHBBBC6WE7ESRE3ZU/",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4011,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6665,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "canada",
+      "subject_names": [
+        "ariana grande",
+        "canada",
+        "carney",
+        "donald trump",
+        "etats-unis",
+        "trump",
+        "usa",
+        "washington"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Las negociaciones de última hora entre Canadá y Estados Unidos para evitar nuevos aranceles fracasaron. El gobierno canadiense, representado por Mark Carney, ha prometido imponer contramedidas comerciales equivalentes a las que Washington pretende aplicar, con el objetivo de mantener la paridad en la represalia.",
+      "takeaway": "Canadá responderá a los aranceles estadounidenses con aranceles de igual magnitud, sin que se haya logrado una solución negociada entre ambas naciones.",
+      "why_it_matters": "El fracaso de las negociaciones significa que ambos países procederán con medidas arancelarias recíprocas que afectarán a sus respectivos sectores comerciales y económicos."
+    },
+    {
+      "cluster_id": "subject-netanyahu-d98912dd2e89",
+      "coherence": 0.48213640115920753,
+      "consequence": 2,
+      "countries": [
+        "be",
+        "brazil",
+        "france",
+        "it",
+        "nl",
+        "pk",
+        "spain",
+        "sz"
+      ],
+      "country_count": 8,
+      "editorial_day": "2026-08-21",
+      "headline": "Turquía emite orden de detención internacional contra Netanyahu por el caso de la Flotilla para Gaza",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20260821-flottille-pour-gaza-la-turquie-lance-un-mandat-d-arr%C3%AAt-d-international-contre-netanyahu"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260820-14-000-d%C3%A9c%C3%A8s-li%C3%A9s-%C3%A0-la-chaleur-en-allemagne-un-record-de-morts-et-des-questions"
+          "url": "https://www.rfi.fr/fr/moyen-orient/20260821-passe-d-armes-entre-la-turquie-et-isra%C3%ABl-apr%C3%A8s-un-mandat-d-arr%C3%AAt-international-%C3%A9mis-contre-netanyahu"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/alemania-estima-que-ya-se-han-producido-14-000-muertes-por-calor-este-verano_7027767_0.html"
+          "url": "https://elpais.com/internacional/2026-08-21/turquia-solicita-a-interpol-la-detencion-de-netanyahu-por-el-asalto-a-la-flotilla-con-destino-a-gaza.html"
         },
         {
           "language": "es",
-          "source": "avn.info.ve",
-          "source_country": "ve",
-          "url": "https://avn.info.ve/alemania-registra-14-000-muertes-por-olas-de-calor/"
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/turquia-emite-orden-detencion-internacional-netanyahu-20260821154334-nt.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/22/news/turchia_contro_israele_mandato_arresto_netanyahu_mandato_arresto-425540822/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2627793"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/21/turquia-emite-ordem-de-prisao-contra-netanyahu-por-detencao-de-ativistas.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "samaa.tv",
+          "source_country": "pk",
+          "url": "https://www.samaa.tv/2087355578-t-rkiye-issues-arrest-warrant-for-netanyahu-over-alleged-genocide"
+        },
+        {
+          "language": "fr",
+          "source": "bfmtv.com",
+          "source_country": "france",
+          "url": "https://www.bfmtv.com/international/moyen-orient/turquie/flottille-pour-gaza-la-turquie-emet-un-mandat-d-arret-international-contre-benjamin-netanyahu_AD-202608210373.html"
+        },
+        {
+          "language": "fr",
+          "source": "rtbf.be",
+          "source_country": "be",
+          "url": "https://www.rtbf.be/article/flottille-pour-gaza-la-turquie-emet-un-mandat-d-arret-d-international-contre-netanyahu-11773491"
+        },
+        {
+          "language": "it",
+          "source": "larena.it",
+          "source_country": "it",
+          "url": "https://www.larena.it/news/mondo/turchia-emette-mandato-d-arresto-per-netanyahu-per-la-flotilla-1.13102733"
+        },
+        {
+          "language": "it",
+          "source": "ilgiornale.it",
+          "source_country": "it",
+          "url": "https://www.ilgiornale.it/news/politica-estera/mandato-di-arresto-internazionale-contro-netanyahu-laffondo-della-turchia-sul-caso-flotilla/"
+        },
+        {
+          "language": "it",
+          "source": "rsi.ch",
+          "source_country": "sz",
+          "url": "https://www.rsi.ch/info/mondo/Mandato-d%E2%80%99arresto-internazionale-per-Netanyahu-da-parte-della-Turchia--4004127.html"
         }
       ],
       "mentioned_countries": [
-        "germany"
+        "tu",
+        "is"
       ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/08/20/canicule-en-allemagne-14-000-morts-liees-a-la-chaleur-cet-ete_6750821_3210.html",
+      "origin_country": "be",
+      "outbound_source": "bfmtv.com",
+      "outbound_url": "https://www.bfmtv.com/international/moyen-orient/turquie/flottille-pour-gaza-la-turquie-emet-un-mandat-d-arret-international-contre-benjamin-netanyahu_AD-202608210373.html",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "20minutos.es",
-        "lemonde.fr",
+        "abc.es",
+        "elpais.com",
+        "france24.com",
+        "globo.com",
+        "nos.nl",
+        "repubblica.it",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4575,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4821,
+          "corroboration": 0.8,
+          "editorial_weight": 0.4667,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.7647,
+          "source_reliability": 0.8049
         },
-        "total": 0.6492,
+        "total": 0.6646,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "allemagne",
+      "subject_label": "netanyahu",
       "subject_names": [
-        "alemania",
-        "allemagne",
-        "espagne"
+        "erdogan",
+        "flottille",
+        "gaza",
+        "netanyahu",
+        "turquia",
+        "turquie"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Alemania ha contabilizado aproximadamente 14.000 muertes relacionadas con las olas de calor durante el verano, mientras que España ha registrado cerca de 4.500 decesos por la misma causa. Estas cifras representan un récord de mortalidad atribuida al calor extremo en ambos países.",
-      "takeaway": "Las olas de calor del verano causaron miles de muertes en Alemania y España, con Alemania registrando cifras récord de mortalidad relacionada con temperaturas extremas.",
-      "why_it_matters": "El aumento significativo de muertes por calor extremo afecta directamente a la población vulnerable de Europa y pone de relieve los impactos mortales del calor sin precedentes en estos países."
+      "subject_newsroom_count": 11,
+      "summary": "Turquía ha emitido un mandato de arresto internacional contra Benjamin Netanyahu a través de Interpol, acusándolo de crímenes contra la humanidad y genocidio relacionados con un asalto a una flotilla destinada a Gaza. La medida ha generado una confrontación diplomática entre Turquía e Israel.",
+      "takeaway": "Turquía buscó formalmente la detención de Netanyahu mediante un proceso legal internacional basado en el incidente de la flotilla.",
+      "why_it_matters": "La orden de captura internacional podría afectar la movilidad de Netanyahu en países que reconozcan el mandato de Interpol, complicando sus viajes internacionales."
     }
   ],
-  "discarded_ingested": 252,
+  "discarded_ingested": 247,
   "discarded_kept": 5,
-  "generated_at": "2026-08-21T05:57:41.906387+00:00",
+  "generated_at": "2026-08-22T05:52:57.877612+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

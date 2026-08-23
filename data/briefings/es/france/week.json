@@ -2,40 +2,28 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-france-9aa08f7697ef"
+        "subject-france-9aa08f7697ef",
+        "subject-france-b22fcd882a9a"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-france-9aa08f7697ef",
-      "coherence": 0.41091837092828964,
+      "cluster_id": "subject-france-b22fcd882a9a",
+      "coherence": null,
       "consequence": 2,
       "countries": [
         "france",
         "germany",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 4,
+      "country_count": 3,
       "editorial_day": "2026-08-21",
-      "headline": "Francia alerta sobre decenas de miles de preservativos defectuosos vendidos en el mercado",
-      "independent_source_count": 6,
+      "headline": "Francia detecta miles de preservativos defectuosos vendidos en el mercado",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sante/des-dizaines-de-milliers-de-preservatifs-non-conformes-vendus-en-france-ces-derniers-mois-les-autorites-recommandent-des-depistages-et-tests-de-grossesse_8156171.html#xtor=RSS-3-[lestitres]"
-        },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
           "url": "https://www.nouvelobs.com/economie/20260821.OBS117554/des-milliers-de-preservatifs-non-conformes-vendus-en-france-les-autorites-appellent-au-depistage-des-ist.html"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-1369329"
         },
         {
           "language": "es",
@@ -48,12 +36,6 @@
           "source": "dw.com",
           "source_country": "germany",
           "url": "https://www.dw.com/en/france-issues-warning-over-thousands-of-substandard-condoms/a-78462877?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "medscape.com",
-          "source_country": "united-states",
-          "url": "https://www.medscape.com/s/viewarticle/france-warns-300-000-potentially-unsafe-condoms-2026a1000t9f"
         }
       ],
       "mentioned_countries": [
@@ -63,372 +45,374 @@
       "outbound_source": "20minutos.es",
       "outbound_url": "https://www.20minutos.es/internacional/francia-detecta-decenas-miles-preservativos-vendidos-con-riesgo-romperse-con-perforaciones_7028084_0.html",
       "rank": 1,
-      "reference_newsroom_count": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "20minutos.es",
         "dw.com",
-        "francetvinfo.fr",
-        "nouvelobs.com",
-        "radiofrance.fr"
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4109,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
+          "novelty": 0.5,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.6144,
+        "total": 0.5621,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
+        "c'est",
+        "conseil",
         "france",
         "francia",
-        "paris"
+        "french",
+        "legion",
+        "marseille",
+        "paris",
+        "royaume-uni"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Las autoridades sanitarias francesas han identificado decenas de miles de preservativos no conformes comercializados en Francia en los últimos meses, que presentan riesgos de rotura y perforaciones. Los organismos competentes recomiendan a las personas que hayan utilizado estos productos que se realicen pruebas de detección de infecciones de transmisión sexual y pruebas de embarazo.",
-      "takeaway": "Francia advierte que decenas de miles de preservativos no conformes vendidos recientemente presentan riesgos de rotura que comprometen su eficacia anticonceptiva y de prevención.",
-      "why_it_matters": "Las autoridades francesas recomiendan pruebas de detección de infecciones de transmisión sexual y pruebas de embarazo a las personas que hayan utilizado los preservativos defectuosos, lo que afecta a potencialmente decenas de miles de usuarios en Francia."
+      "subject_newsroom_count": 22,
+      "summary": "Las autoridades francesas identificaron miles de preservativos no conformes que fueron vendidos en Francia, algunos con riesgo de rotura y perforaciones. Las autoridades han hecho un llamado a la población a realizarse pruebas de detección de infecciones de transmisión sexual.",
+      "takeaway": "Un lote de preservativos defectuosos vendidos en Francia obliga a las autoridades a advertir a la población sobre riesgos de rotura y a promover pruebas de IST.",
+      "why_it_matters": "Las autoridades sanitarias francesas han lanzado un llamamiento al dépistage de infecciones de transmisión sexual entre los consumidores afectados, lo que implica una movilización de recursos de salud pública y la necesidad de que miles de personas accedan a pruebas médicas."
     },
     {
       "_linked_ids": [
-        "subject-edouard-philippe-57b7b55c2ab5"
+        "subject-edouard-philippe-57b7b55c2ab5",
+        "subject-edouard-philippe-d4ffa884beaa"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-edouard-philippe-57b7b55c2ab5",
-      "coherence": 0.4185096021156244,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-21",
-      "headline": "Édouard Philippe presenta propuestas sobre inmigración en Mayotte al retomar su actividad política",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/mayotte-est-il-possible-de-fermer-totalement-l-immigration-comme-le-propose-edouard-philippe-20260821"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/politique/200826/avant-son-depart-pour-mayotte-edouard-philippe-droite-toute-sur-l-immigration"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/edouard-philippe/edouard-philippe-fait-sa-rentree-politique-a-mayotte-et-promet-de-mettre-fin-a-l-appel-d-air-de-l-immigration_8156786.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-8130411"
-        },
-        {
-          "language": "fr",
-          "source": "midilibre.fr",
-          "source_country": "france",
-          "url": "https://www.midilibre.fr/2026/08/21/demandes-dasile-suspension-du-droit-du-sol-les-mesures-dedouard-philippe-sur-limmigration-pour-stopper-lappel-dair-a-mayotte-13517353.php"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "mediapart.fr",
-      "outbound_url": "https://www.mediapart.fr/journal/politique/200826/avant-son-depart-pour-mayotte-edouard-philippe-droite-toute-sur-l-immigration",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "mediapart.fr",
-        "radiofrance.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4185,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.5528,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "edouard philippe",
-      "subject_names": [
-        "edouard philippe",
-        "mayotte"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Édouard Philippe realizó una visita a Mayotte donde propuso medidas para reducir la inmigración, incluyendo la suspensión del derecho del suelo y otras acciones destinadas a detener lo que describe como un \"efecto llamada\" migratorio. Sus propuestas buscan cerrar completamente la inmigración hacia la isla francesa, marcando un posicionamiento claro a la derecha en temas de migración durante su regreso a la escena política.",
-      "takeaway": "El ex primer ministro Édouard Philippe marca su regreso político con una posición restrictiva sobre inmigración que busca cerrar las vías de llegada a Mayotte.",
-      "why_it_matters": "Philippe propone suspender medidas de asilo y el derecho de suelo en Mayotte, lo que afectaría directamente a los migrantes y solicitantes de asilo en el territorio francés, así como a las políticas de migración que Francia aplicaría en sus departamentos de ultramar."
-    },
-    {
-      "_linked_ids": [
-        "subject-bordeaux-2fc9a1558034"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-bordeaux-2fc9a1558034",
-      "coherence": 0.4442447095180856,
+      "cluster_id": "subject-edouard-philippe-d4ffa884beaa",
+      "coherence": null,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-22",
-      "headline": "El tribunal administrativo de París confirma la exclusión de los Girondins de Bordeaux de los campeonatos nacionales",
-      "independent_source_count": 4,
+      "headline": "Édouard Philippe promete cerrar la inmigración en Mayotte en campaña presidencial de 2027",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/sport/article/2026/08/22/les-girondins-de-bordeaux-de-plus-en-plus-proches-de-la-liquidation-apres-une-decision-du-tribunal-administratif_6752662_3242.html"
+          "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/08/22/presidentielle-2027-a-mayotte-edouard-philippe-promet-de-fermer-les-vannes-de-l-immigration-a-des-elus-lasses-par-les-promesses_6753542_6205049.html"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/foot/girondins-de-bordeaux/l-exclusion-des-girondins-de-bordeaux-des-championnats-nationaux-confirmee-par-le-tribunal-administratif-de-paris_8156651.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.liberation.fr/politique/a-mayotte-edouard-philippe-promet-de-mettre-fin-a-lappel-dair-de-limmigration-et-tacle-melenchon-20260822_E5LS3534OZBMTA22WOD7NKTNJE/"
         },
         {
           "language": "fr",
-          "source": "challenges.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.challenges.fr/entreprise/sports/confirmee-par-la-justice-lexclusion-des-girondins-de-bordeaux-des-championnats-nationaux-de-football-pousse-le-club-au-bord-du-precipice_645294"
-        },
-        {
-          "language": "fr",
-          "source": "foot-national.com",
-          "source_country": "france",
-          "url": "https://www.foot-national.com/foot-amateur/bordeaux-le-tribunal-administratif-a-tranche-les-girondins-nintegrent-pas-les-championnats-nationaux-953921"
+          "url": "https://www.la-croix.com/politique/mayotte-est-il-possible-de-fermer-totalement-l-immigration-comme-le-propose-edouard-philippe-20260821"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/sports/foot/girondins-de-bordeaux/l-exclusion-des-girondins-de-bordeaux-des-championnats-nationaux-confirmee-par-le-tribunal-administratif-de-paris_8156651.html#xtor=RSS-3-[lestitres]",
-      "rank": 3,
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/politique/mayotte-est-il-possible-de-fermer-totalement-l-immigration-comme-le-propose-edouard-philippe-20260821",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "challenges.fr",
-        "francetvinfo.fr",
-        "lemonde.fr"
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4442,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5427,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bordeaux",
-      "subject_names": [
-        "bordeaux",
-        "girondins"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "El tribunal administrativo de París ha confirmado la decisión que excluye a los Girondins de Bordeaux de los campeonatos nacionales de fútbol. Esta resolución judicial acerca al histórico club francés a una posible liquidación.",
-      "takeaway": "El tribunal administrativo ha cerrado la vía legal última para que Bordeaux compita en las divisiones nacionales francesas.",
-      "why_it_matters": "La exclusión judicial confirmada de los Girondins de Bordeaux de los campeonatos nacionales franceses pone fin a la participación del club en la competición profesional francesa, lo que afecta a los jugadores, entrenadores y empleados del club que pierden sus fuentes de ingresos."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-75214f87988c"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-ceuta-75214f87988c",
-      "coherence": 0.4792315742416262,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-21",
-      "filled_from": "europe",
-      "headline": "Marruecos reclama la soberanía sobre Ceuta y Melilla mientras España rechaza sus reivindicaciones",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/20260821/marruecos-ceuta-melilla-reclama-derecho-historico-geografico-retorno-seno-patria/1003744359954_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-gobierno-traslada-marruecos-rechazo-reivindicaciones-soberania-ceuta-melilla-son-espanolas-20260821225316.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/marruecos-reivindicar-derecho-historico-geografico-ceuta-melilla-cuestion-espana_7028264_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/nacional/gobierno-traslada-marruecos-su-rechazo-sus-reivindicaciones-soberania-ceuta-melilla-son-espanolas_7028274_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "mo",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/espana/20260821/marruecos-ceuta-melilla-reclama-derecho-historico-geografico-retorno-seno-patria/1003744359954_0.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elespanol.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4792,
+          "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.5,
           "prominence": 0.4286,
-          "source_reliability": 0.6
+          "source_reliability": 0.5294
         },
-        "total": 0.5666,
+        "total": 0.5289,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "edouard philippe",
       "subject_names": [
-        "ceuta",
-        "espana",
-        "marruecos",
-        "melilla",
-        "trampolin"
+        "edouard philippe",
+        "jean-luc melenchon",
+        "mayotte"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "Marruecos ha reiterado su reivindicación sobre Ceuta y Melilla argumentando derechos históricos y geográficos, pidiendo que estas ciudades autónomas retornen a territorio marroquí. El Gobierno español ha respondido rechazando categóricamente estas reclamaciones de soberanía, reafirmando que Ceuta y Melilla son españolas.",
-      "takeaway": "Marruecos renueva sus demandas territoriales sobre dos enclaves españoles mientras España rechaza categóricamente cualquier negociación sobre su soberanía.",
-      "why_it_matters": "Francia está interesada en el conflicto sobre Ceuta y Melilla porque afecta la estabilidad del Mediterráneo occidental y las relaciones entre dos de sus vecinos, especialmente en una región donde Francia mantiene intereses comerciales y de seguridad."
+      "subject_newsroom_count": 6,
+      "summary": "El candidato presidencial francés Édouard Philippe visitó Mayotte y prometió a los electores locales poner fin al «llamado» migratorio cerrando las \"compuertas de la inmigración\", argumentando que esto resolvería los problemas que aquejan a la región debido a las promesas incumplidas de años anteriores.",
+      "takeaway": "Un candidato presidencial francés promete cerrar completamente la inmigración en Mayotte, lo que refleja la presión política sobre esta cuestión en los territorios de ultramar franceses.",
+      "why_it_matters": "Las propuestas de Philippe sobre inmigración en Mayotte representan un posicionamiento político en la carrera presidencial francesa de 2027 que podría influir en el debate nacional sobre políticas migratorias, afectando potencialmente a territorios ultramarinos dependientes de Francia y a la definición de sus fronteras."
     },
     {
       "_linked_ids": [
-        "subject-julian-alaphilippe-808a2e2dc8a6"
+        "subject-palestine-1150602c85ba"
       ],
       "angle_zone": "france",
-      "cluster_id": "subject-julian-alaphilippe-808a2e2dc8a6",
-      "coherence": 0.5257337774975943,
-      "consequence": 0,
+      "cluster_id": "subject-palestine-1150602c85ba",
+      "coherence": 0.3924603658878528,
+      "consequence": 1,
       "countries": [
-        "france"
+        "france",
+        "united-kingdom"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-21",
-      "headline": "El ciclista francés Julian Alaphilippe anuncia su retiro a los 34 años",
-      "independent_source_count": 4,
+      "country_count": 2,
+      "editorial_day": "2026-08-22",
+      "headline": "Antiguos diplomáticos franceses y británicos piden a sus gobiernos que hagan respetar el derecho internacional en Palestina",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/sport/cyclisme-julian-alaphilippe-le-double-champion-du-monde-annonce-sa-retraite-20260821"
+          "url": "https://www.lemonde.fr/idees/article/2026/08/22/la-france-et-le-royaume-uni-doivent-agir-ensemble-pour-faire-respecter-le-droit-international-en-palestine-l-appel-d-anciens-ambassadeurs-francais-et-britanniques_6752961_3232.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/moyen-orient/territoires-palestiniens-danciens-diplomates-appellent-paris-et-londres-a-faire-respecter-le-droit-20260822_DODBBGYUDZG5HL7G536PQUNOA4/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/cyclisme/julian-alaphilippe/j-ai-donne-tout-ce-que-j-avais-et-le-cyclisme-m-a-tout-donne-en-retour-julian-alaphilippe-annonce-officiellement-sa-retraite-a-34-ans_8155913.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/palestine/la-palestine-s-efface-sous-nos-yeux-des-ex-diplomates-appellent-paris-et-londres-a-faire-respecter-le-droit-dans-les-territoires-palestiniens_8157176.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/sports/20260821-cyclisme-l-ancien-champion-du-monde-julian-alaphilippe-annonce-la-fin-de-sa-carri%C3%A8re-sportive"
+          "url": "https://www.france24.com/fr/moyen-orient/20260822-la-palestine-s-efface-sous-nos-yeux-l-appel-d-une-centaine-de-diplomates"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/22/uk-france-diplomats-israel-palestine"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/idees/article/2026/08/22/la-france-et-le-royaume-uni-doivent-agir-ensemble-pour-faire-respecter-le-droit-international-en-palestine-l-appel-d-anciens-ambassadeurs-francais-et-britanniques_6752961_3232.html",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3925,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
+        },
+        "total": 0.4995,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "palestine",
+      "subject_names": [
+        "c'est",
+        "conseil",
+        "france",
+        "francia",
+        "french",
+        "legion",
+        "londres",
+        "marseille",
+        "palestine",
+        "paris",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Alrededor de un centenar de antiguos diplomáticos de Francia y Reino Unido han lanzado un llamamiento conjunto para que ambos gobiernos actúen en defensa del derecho internacional en Gaza y Cisjordania, expresando su preocupación por lo que describen como la desaparición de Palestina.",
+      "takeaway": "Antiguos diplomáticos europeos exigen que Francia y Reino Unido actúen juntos para frenar lo que describen como la desaparición de Palestina bajo ocupación israelí.",
+      "why_it_matters": "El llamado de diplomáticos antiguos franceses y británicos presiona a ambos gobiernos para que tomen posición conjunta sobre el respeto del derecho internacional en Palestina, lo que afecta la política exterior francesa en Oriente Próximo."
+    },
+    {
+      "_linked_ids": [
+        "subject-togo-447bf3c30280"
+      ],
+      "angle_zone": "france",
+      "cluster_id": "subject-togo-447bf3c30280",
+      "coherence": 0.5262599420622621,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-22",
+      "headline": "Togo afirma tener pruebas contra dos realizadores franceses detenidos",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/afrique/article/2026/08/22/journalistes-francais-detenus-au-togo-lome-affirme-disposer-d-indices-graves-et-concordants-a-leur-encontre_6753474_3212.html"
         },
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/sports/20260821-cyclisme-le-fran%C3%A7ais-julian-alaphilippe-annonce-la-fin-de-sa-carri%C3%A8re-sportive"
+          "url": "https://www.franceinfo.fr/monde/afrique/togo/la-justice-dispose-d-indices-graves-a-l-encontre-des-realisateurs-francais-detenus-au-togo-selon-lome_8157692.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/afrique/20260822-le-togo-confirme-des-poursuites-contre-deux-r%C3%A9alisateurs-fran%C3%A7ais-d%C3%A9tenus"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/sports/cyclisme/julian-alaphilippe/j-ai-donne-tout-ce-que-j-avais-et-le-cyclisme-m-a-tout-donne-en-retour-julian-alaphilippe-annonce-officiellement-sa-retraite-a-34-ans_8155913.html#xtor=RSS-3-[lestitres]",
-      "rank": 5,
-      "reference_newsroom_count": 4,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/afrique/article/2026/08/22/journalistes-francais-detenus-au-togo-lome-affirme-disposer-d-indices-graves-et-concordants-a-leur-encontre_6753474_3212.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "france24.com",
         "francetvinfo.fr",
-        "la-croix.com",
-        "rfi.fr"
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5257,
+          "coherence": 0.5263,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.3889,
+        "total": 0.4554,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "julian alaphilippe",
+      "subject_label": "togo",
       "subject_names": [
-        "julian alaphilippe"
+        "lome",
+        "togo"
       ],
       "subject_newsroom_count": 4,
-      "summary": "Julian Alaphilippe, dos veces campeón mundial de ciclismo, ha anunciado oficialmente el fin de su carrera deportiva a los 34 años, expresando que ha dado todo lo que tenía y que el ciclismo le ha dado todo a cambio.",
-      "takeaway": "El doble campeón del mundo francés cierra su carrera profesional a los 34 años después de haber dominado el ciclismo de ruta durante más de una década.",
-      "why_it_matters": "Francia pierde a uno de sus ciclistas más exitosos de las últimas décadas, lo que reduce su capacidad competitiva en las grandes competiciones internacionales donde Alaphilippe era un referente constante."
+      "summary": "Las autoridades de Togo confirmaron que mantienen detenidos a dos realizadores franceses y aseguran disponer de índices graves y concordantes en su contra, según comunicaron funcionarios togoleses.",
+      "takeaway": "Francia enfrenta una crisis diplomática con Togo por la encarcelación de sus ciudadanos sin confirmación clara de los delitos imputados.",
+      "why_it_matters": "La detención de dos realizadores franceses en Togo y la confirmación de cargos graves contra ellos afecta directamente a Francia, que debe negociar su liberación o defenderlos ante un proceso judicial extranjero, mientras sus familias y productoras esperan resolución."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-cf94f1990dbe"
+      ],
+      "angle_zone": "france",
+      "cluster_id": "subject-france-cf94f1990dbe",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-22",
+      "headline": "París anuncia la acogida de 253 personas desalojadas de un campamento en el centro de la ciudad",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/immigration/la-ville-de-paris-annonce-la-mise-a-labri-de-253-personnes-dun-campement-du-centre-de-la-capitale-20260822_DJYDVENB5JCKFMALGBE5PEGUUU/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/la-ville-de-paris-annonce-la-mise-a-l-abri-de-253-personnes-d-un-campement-20260822"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/migrants/la-ville-de-paris-annonce-la-mise-a-l-abri-de-253-personnes-installees-dans-la-capitale-apres-l-evacuation-de-leur-campement_8157338.html#xtor=RSS-3-%5Bgeneral%5D"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/societe/immigration/la-ville-de-paris-annonce-la-mise-a-labri-de-253-personnes-dun-campement-du-centre-de-la-capitale-20260822_DJYDVENB5JCKFMALGBE5PEGUUU/",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.4523,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "c'est",
+        "conseil",
+        "france",
+        "francia",
+        "french",
+        "legion",
+        "marseille",
+        "paris",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "La ciudad de París ha anunciado \"la puesta a resguardo\" de 253 personas que estaban instaladas en un campamento del centro de la capital francesa, tras la evacuación de dicho asentamiento.",
+      "takeaway": "La ciudad de París procede a albergar a los ocupantes de un campamento evacuado en lugar de dispersarlos sin recursos.",
+      "why_it_matters": "París anuncia el alojamiento de 253 personas sin hogar tras desmantelar un campamento en el centro de la capital, lo que representa una respuesta municipal a la crisis de vivienda en la ciudad pero sin consecuencias directas reportadas para Francia más allá de este acto administrativo local."
     }
   ],
   "discarded_ingested": 19,
   "discarded_kept": 5,
-  "generated_at": "2026-08-22T05:52:57.877612+00:00",
+  "generated_at": "2026-08-23T05:54:23.796896+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

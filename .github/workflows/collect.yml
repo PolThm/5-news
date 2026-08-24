@@ -27,8 +27,10 @@ name: Daily collection
 # land while the day's Briefings are still the day's.
 #
 # Only 05:30 may start a cycle, so the cost stays one cycle per day no matter
-# how many catch-ups are added. A manual dispatch keeps the full behaviour --
-# that is what makes it useful for testing.
+# how many catch-ups are added. A manual dispatch defaults to the full
+# behaviour -- that is what makes it useful for testing -- and can request a
+# catch-up instead with the resume_only input, for the morning when the
+# scheduled catch-ups do not fire and batches are left unclaimed.
 on:
   schedule:
     - cron: "30 5 * * *" # the full cycle: collect through submit
@@ -36,6 +38,11 @@ on:
     - cron: "30 8 * * *" # catch-up
     - cron: "30 11 * * *" # catch-up, last chance before the day is stale
   workflow_dispatch: # manual trigger, for testing the cycle without waiting
+    inputs:
+      resume_only:
+        description: "Finish a pending cycle instead of starting a new one"
+        type: boolean
+        default: false
 
 # One cycle at a time. Two concurrent runs would race on the same commit.
 concurrency:
@@ -95,11 +102,26 @@ jobs:
         # Only the 05:30 trigger may start a cycle. Every other schedule is a
         # catch-up: it finishes a cycle whose batches are pending and does
         # nothing when none is, so it costs nothing on the days the 06:30 run
-        # already published. A manual dispatch keeps the full behaviour, which
-        # is what makes it useful for testing.
+        # already published.
+        #
+        # A manual dispatch defaults to the full behaviour, which is what
+        # makes it useful for testing -- but it can now ask for a catch-up
+        # instead, via the resume_only input. That gap was not theoretical:
+        # on 2026-08-24 the 05:30 run submitted its batches and every
+        # scheduled catch-up that day failed to fire, leaving three paid-for
+        # batches unclaimed with no way to collect them by hand. The only
+        # manual option was a full cycle, which abandons those batches and
+        # pays for three more.
         run: |
-          if [ "${{ github.event_name }}" = "schedule" ] \
-             && [ "${{ github.event.schedule }}" != "30 5 * * *" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            resume_only="${{ inputs.resume_only }}"
+          elif [ "${{ github.event.schedule }}" != "30 5 * * *" ]; then
+            resume_only=true
+          else
+            resume_only=false
+          fi
+
+          if [ "$resume_only" = "true" ]; then
             uv run python -m pipeline.stages.cycle --resume-only
           else
             uv run python -m pipeline.stages.cycle

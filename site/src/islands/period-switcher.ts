@@ -377,11 +377,193 @@ const TIMESTAMP_PREFIX: Record<LanguageSlug, string> = {
   es: "Actualizado a las",
 };
 
-function formatTimestamp(iso: string, lang: LanguageSlug): string {
+// The server renders this timestamp in UTC because a statically prerendered
+// page cannot know the reader's timezone (see BriefingPage.astro's own
+// comment). Here in the browser it *is* knowable, so the reader gets their
+// own wall clock instead of having to convert one in their head: a Paris
+// reader sees "07:54 CEST", a Madrid reader the same, a New York reader
+// "01:54 EDT" -- and the abbreviation follows the season on its own, which
+// is the half a hardcoded "CEST" would get wrong for five months of the year.
+
+// Why the abbreviation is derived here rather than taken from Intl.
+//
+// `timeZoneName: "short"` is the obvious way to get "CEST", and it does not
+// work for the zone this site cares most about. CLDR has no short
+// abbreviation for Europe/Paris in most locales, so Intl falls back to an
+// offset, and *which* fallback you get depends on the locale:
+//
+//   fr -> "UTC+2"    en -> "GMT+2"    es -> "CEST"
+//
+// So the reader's label would change with the Output Language for the same
+// instant in the same city, and French -- the primary language -- would be
+// the one that never shows "CEST" at all. Deriving it from the UTC offset
+// gives every language the same, expected abbreviation.
+//
+// The table covers Central/Western/Eastern Europe, which is what this site's
+// Zones (france, spain, europe, world) actually put readers in. Anywhere
+// else falls through to Intl's own short name, which is correct for the
+// Americas ("EDT", "PST") and degrades to a readable "GMT+9" elsewhere --
+// better than inventing an abbreviation for a zone we have not reasoned about.
+const EUROPEAN_ZONE_ABBREVIATIONS: Record<string, { standard: string; daylight: string }> = {
+  "Europe/Paris": { standard: "CET", daylight: "CEST" },
+  "Europe/Madrid": { standard: "CET", daylight: "CEST" },
+  "Europe/Brussels": { standard: "CET", daylight: "CEST" },
+  "Europe/Berlin": { standard: "CET", daylight: "CEST" },
+  "Europe/Rome": { standard: "CET", daylight: "CEST" },
+  "Europe/Amsterdam": { standard: "CET", daylight: "CEST" },
+  "Europe/Vienna": { standard: "CET", daylight: "CEST" },
+  "Europe/Zurich": { standard: "CET", daylight: "CEST" },
+  "Europe/Warsaw": { standard: "CET", daylight: "CEST" },
+  "Europe/Prague": { standard: "CET", daylight: "CEST" },
+  "Europe/Stockholm": { standard: "CET", daylight: "CEST" },
+  "Europe/Oslo": { standard: "CET", daylight: "CEST" },
+  "Europe/Copenhagen": { standard: "CET", daylight: "CEST" },
+  "Europe/Budapest": { standard: "CET", daylight: "CEST" },
+  "Europe/Lisbon": { standard: "WET", daylight: "WEST" },
+  "Europe/London": { standard: "GMT", daylight: "BST" },
+  "Europe/Dublin": { standard: "GMT", daylight: "IST" },
+  "Europe/Athens": { standard: "EET", daylight: "EEST" },
+  "Europe/Helsinki": { standard: "EET", daylight: "EEST" },
+  "Europe/Bucharest": { standard: "EET", daylight: "EEST" },
+};
+
+/** The zone's offset from UTC, in minutes, at a given instant. */
+function zoneOffsetMinutes(date: Date, timeZone: string): number {
+  // Intl has no "give me the offset" call, so read the wall clock in the
+  // target zone and diff it against the same instant read as UTC. `en-CA`
+  // for its ISO-shaped output, which parses back reliably.
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    hour12: false,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).formatToParts(date);
+
+  const field = (type: string): number => Number(parts.find((part) => part.type === type)?.value);
+  // Hour 24 is how some engines spell midnight here; Date.UTC handles the
+  // rollover correctly, so it needs no special-casing beyond being allowed.
+  const asUtc = Date.UTC(
+    field("year"),
+    field("month") - 1,
+    field("day"),
+    field("hour"),
+    field("minute"),
+    field("second")
+  );
+
+  // date.getTime() carries milliseconds the formatted parts above dropped, so
+  // floor both to the second before diffing -- otherwise a stamp like
+  // ...:12.555Z yields a fractional offset that rounds unpredictably.
+  return Math.round((asUtc - Math.floor(date.getTime() / 1000) * 1000) / 60_000);
+}
+
+/**
+ * Whether daylight saving is in force in `timeZone` at `date`.
+ *
+ * Compares the instant's offset against January's and July's: the larger of
+ * those two is the daylight offset, and a zone that does not observe DST has
+ * both equal, so this correctly reports false for it.
+ */
+function isDaylightSaving(date: Date, timeZone: string): boolean {
+  const year = Number(
+    new Intl.DateTimeFormat("en-CA", { timeZone, year: "numeric" }).format(date)
+  );
+  const january = zoneOffsetMinutes(new Date(Date.UTC(year, 0, 1, 12)), timeZone);
+  const july = zoneOffsetMinutes(new Date(Date.UTC(year, 6, 1, 12)), timeZone);
+
+  return zoneOffsetMinutes(date, timeZone) > Math.min(january, july);
+}
+
+/** The zone abbreviation to print -- "CEST", "EDT", "GMT+9". */
+export function zoneAbbreviation(date: Date, timeZone: string): string {
+  const european = EUROPEAN_ZONE_ABBREVIATIONS[timeZone];
+  if (european) {
+    return isDaylightSaving(date, timeZone) ? european.daylight : european.standard;
+  }
+
+  // Pinned to en-US rather than the reader's language, for the same reason
+  // the table above exists: the short name is locale-dependent, and only
+  // en-US reliably yields the real abbreviation where one exists ("EDT",
+  // "PST"). Asking in French for New York gives "UTC−4" instead. Zones with
+  // no abbreviation at all still degrade to a readable "GMT+9".
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    timeZoneName: "short",
+  }).formatToParts(date);
+
+  return parts.find((part) => part.type === "timeZoneName")?.value ?? "UTC";
+}
+
+// The fallback below matters more than it looks: `resolvedOptions().timeZone`
+// is empty on some older engines and a bad TZ throws from the Intl
+// constructor, and a Briefing header reading UTC is a far better outcome than
+// one that renders nothing.
+export function formatTimestamp(iso: string, lang: LanguageSlug, timeZone?: string): string {
   const date = new Date(iso);
+
+  try {
+    const zone = timeZone ?? new Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (zone) {
+      const parts = new Intl.DateTimeFormat(lang, {
+        timeZone: zone,
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+      }).formatToParts(date);
+
+      const hour = parts.find((part) => part.type === "hour")?.value;
+      const minute = parts.find((part) => part.type === "minute")?.value;
+
+      if (hour && minute) {
+        const abbreviation = zoneAbbreviation(date, zone);
+        return `${TIMESTAMP_PREFIX[lang]} ${hour}:${minute} ${abbreviation}`;
+      }
+    }
+  } catch {
+    // Fall through to UTC below.
+  }
+
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
   return `${TIMESTAMP_PREFIX[lang]} ${hours}:${minutes} UTC`;
+}
+
+/**
+ * Rewrite the server-rendered UTC timestamp into the reader's own timezone.
+ *
+ * The server-side markup carries UTC and a `data-generated-at` ISO stamp;
+ * this reads that stamp and replaces the text in place. Runs at module load
+ * alongside attach(), so a direct link, a bookmark and a back-navigation all
+ * get it, not only a mad-libs swap.
+ *
+ * No-ops when the element or the stamp is missing, which is what keeps a
+ * no-JS reader (and the pre-hydration paint) on the honest UTC string rather
+ * than a blank or a wrong local time.
+ */
+export function localiseTimestamp(): void {
+  // Guarded rather than called straight: this runs from attach(), which the
+  // suite drives against hand-built stand-in documents (this module is
+  // deliberately jsdom-free -- see the module docstring), and a Briefing
+  // page must not lose its header to a DOM that is missing a method.
+  if (typeof document === "undefined" || typeof document.getElementById !== "function") {
+    return;
+  }
+
+  const timestamp = document.getElementById("timestamp");
+  if (!timestamp) return;
+
+  const iso = timestamp.dataset?.generatedAt;
+  const lang = timestamp.dataset?.lang as LanguageSlug | undefined;
+  if (!iso || !lang) return;
+
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return;
+
+  timestamp.textContent = formatTimestamp(iso, lang);
 }
 
 const CONSENSUS_CHIP_TEXT: Record<LanguageSlug, { sources: string; countries: string }> = {
@@ -561,6 +743,7 @@ export function attach(): void {
   attachWord("[data-period-word]", "period");
   attachLanguageWords();
   attachChips();
+  localiseTimestamp();
 }
 
 function attachWord(selector: string, axis: "zone" | "period"): void {
@@ -742,6 +925,12 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
 
     itemList.innerHTML = renderItemListHtml(briefing, targetLang);
     discarded.innerHTML = renderDiscardedVolumeHtml(briefing, targetLang);
+    // Keep the dataset in step with the text. attach() runs at the end of
+    // this handler and calls localiseTimestamp(), which re-derives the text
+    // from these attributes -- leaving them stale would let the *previous*
+    // Briefing's timestamp overwrite the one just rendered.
+    timestamp.setAttribute("data-generated-at", briefing.generated_at);
+    timestamp.setAttribute("data-lang", targetLang);
     timestamp.textContent = formatTimestamp(briefing.generated_at, targetLang);
 
     const existingEndScreen = document.getElementById("end-screen");

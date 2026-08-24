@@ -5,6 +5,9 @@ import {
   attachChips,
   briefingJsonUrl,
   fallbackNoticeText,
+  formatTimestamp,
+  localiseTimestamp,
+  zoneAbbreviation,
   languageAnnouncementText,
   nextLanguage,
   nextPeriod,
@@ -1115,5 +1118,132 @@ describe("renderItemListHtml — headline (Story 6.1)", () => {
 
     expect(html).not.toContain("<script>");
     expect(html).toContain("&lt;script&gt;");
+  });
+});
+
+
+describe("formatTimestamp", () => {
+  // The cycle timestamp from a real Briefing: 05:54 UTC.
+  const iso = "2026-08-20T05:54:12.000Z";
+
+  it("converts UTC into the reader's own wall clock", () => {
+    // The whole point of the change: a Paris reader stops doing the +2 in
+    // their head. 05:54 UTC is 07:54 there in August.
+    expect(formatTimestamp(iso, "fr", "Europe/Paris")).toBe("Mis à jour à 07:54 CEST");
+  });
+
+  it("follows the season instead of hardcoding one abbreviation", () => {
+    // The half a literal "CEST" would get wrong for five months of the year.
+    expect(formatTimestamp("2026-01-20T05:54:12.000Z", "fr", "Europe/Paris")).toBe(
+      "Mis à jour à 06:54 CET"
+    );
+  });
+
+  it("switches at the real DST boundary, not a date approximation", () => {
+    // Europe/Paris springs forward at exactly 01:00 UTC on 2026-03-29.
+    expect(formatTimestamp("2026-03-29T00:59:00.000Z", "fr", "Europe/Paris")).toBe(
+      "Mis à jour à 01:59 CET"
+    );
+    expect(formatTimestamp("2026-03-29T01:01:00.000Z", "fr", "Europe/Paris")).toBe(
+      "Mis à jour à 03:01 CEST"
+    );
+  });
+
+  it("gives every Output Language the same abbreviation for the same instant", () => {
+    // Intl would not: asked for Europe/Paris it answers "UTC+2" in fr,
+    // "GMT+2" in en and "CEST" in es. The reader's language must not change
+    // what timezone they appear to be in.
+    expect(formatTimestamp(iso, "fr", "Europe/Paris")).toBe("Mis à jour à 07:54 CEST");
+    expect(formatTimestamp(iso, "en", "Europe/Paris")).toBe("Updated at 07:54 CEST");
+    expect(formatTimestamp(iso, "es", "Europe/Paris")).toBe("Actualizado a las 07:54 CEST");
+  });
+
+  it("reads correctly outside Europe", () => {
+    expect(formatTimestamp(iso, "fr", "America/New_York")).toBe("Mis à jour à 01:54 EDT");
+    expect(formatTimestamp("2026-01-20T05:54:12.000Z", "fr", "America/New_York")).toBe(
+      "Mis à jour à 00:54 EST"
+    );
+    expect(formatTimestamp(iso, "fr", "UTC")).toBe("Mis à jour à 05:54 UTC");
+  });
+
+  it("degrades to a readable offset for a zone with no abbreviation", () => {
+    expect(formatTimestamp(iso, "fr", "Asia/Tokyo")).toBe("Mis à jour à 14:54 GMT+9");
+  });
+
+  it("falls back to UTC rather than rendering nothing on a bad timezone", () => {
+    // A Briefing header reading UTC beats one that throws during hydration.
+    expect(formatTimestamp(iso, "fr", "Not/AZone")).toBe("Mis à jour à 05:54 UTC");
+  });
+});
+
+describe("zoneAbbreviation", () => {
+  it("reports standard time for a zone that does not observe DST", () => {
+    // Tokyo's January and July offsets are equal, so the min-of-both
+    // comparison must not read it as permanently on daylight time.
+    expect(zoneAbbreviation(new Date("2026-08-20T05:54:12.000Z"), "Asia/Tokyo")).toBe("GMT+9");
+  });
+
+  it("handles a southern-hemisphere zone, where DST spans the new year", () => {
+    const january = zoneAbbreviation(new Date("2026-01-20T05:54:12.000Z"), "Australia/Sydney");
+    const july = zoneAbbreviation(new Date("2026-07-20T05:54:12.000Z"), "Australia/Sydney");
+    expect(january).not.toBe(july);
+  });
+});
+
+describe("localiseTimestamp", () => {
+  /** A stand-in for the server-rendered timestamp <div>, jsdom-free. */
+  function createFakeTimestamp(dataset: Record<string, string>) {
+    return {
+      dataset,
+      textContent: "Mis à jour à 05:54 UTC",
+    };
+  }
+
+  function withDocument(element: unknown, run: () => void): void {
+    const originalDocument = globalThis.document;
+    globalThis.document = {
+      getElementById: () => element,
+    } as unknown as Document;
+    try {
+      run();
+    } finally {
+      globalThis.document = originalDocument;
+    }
+  }
+
+  it("rewrites the server-rendered UTC text from the element's dataset", () => {
+    const element = createFakeTimestamp({
+      generatedAt: "2026-08-20T05:54:12.000Z",
+      lang: "fr",
+    });
+
+    withDocument(element, () => localiseTimestamp());
+
+    expect(element.textContent).toMatch(/^Mis à jour à \d{2}:\d{2} .+$/);
+    expect(element.textContent).not.toBe("Mis à jour à 05:54 UTC");
+  });
+
+  it("leaves the UTC text alone when the stamp is missing", () => {
+    // A no-JS reader keeps this string; so must a hydration that finds no
+    // data to work from, rather than blanking the header.
+    const element = createFakeTimestamp({});
+
+    withDocument(element, () => localiseTimestamp());
+
+    expect(element.textContent).toBe("Mis à jour à 05:54 UTC");
+  });
+
+  it("leaves the text alone when the stamp is unparseable", () => {
+    const element = createFakeTimestamp({ generatedAt: "not-a-date", lang: "fr" });
+
+    withDocument(element, () => localiseTimestamp());
+
+    expect(element.textContent).toBe("Mis à jour à 05:54 UTC");
+  });
+
+  it("no-ops when the element is absent", () => {
+    withDocument(null, () => {
+      expect(() => localiseTimestamp()).not.toThrow();
+    });
   });
 });

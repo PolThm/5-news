@@ -60,6 +60,14 @@ const discardedText = discardedVolumeText(lang);
 // See index.astro's own history for why this is UTC-labeled, not silently
 // implied-local: this page has no client JS at build/initial-render time
 // capable of knowing a reader's real timezone.
+//
+// This stays UTC, and stays correct: it is what a no-JS reader keeps, and
+// what the page paints before hydration. period-switcher.ts's own
+// localiseTimestamp() rewrites it into the reader's real timezone
+// ("07:54 CEST", "01:54 EDT") once the browser -- which does know the
+// timezone -- has it. The data-generated-at/data-lang attributes on the
+// element below are what it reads to do that; the rendered text alone has
+// lost the date by then.
 function formatTimestamp(iso: string): string {
   const date = new Date(iso);
   const hours = String(date.getUTCHours()).padStart(2, "0");
@@ -505,7 +513,14 @@ function formatTimestamp(iso: string): string {
             </div>
           )
         }
-        <div class="timestamp" id="timestamp">{formatTimestamp(briefing.generated_at)}</div>
+        <div
+          class="timestamp"
+          id="timestamp"
+          data-generated-at={briefing.generated_at}
+          data-lang={lang}
+        >
+          {formatTimestamp(briefing.generated_at)}
+        </div>
       </div>
 
       <div class="item-list" id="item-list">

@@ -31,7 +31,8 @@ import {
   OUTPUT_LANGUAGE_CYCLE,
   periodSentenceText,
   sourceListIntro,
-  timestampPrefix,
+  dateLocale,
+  timestampWithDate,
   zoneSentenceLabel,
 } from "../lib/briefing";
 import type { BriefingRecord, OutputLanguage, Period } from "../lib/briefing";
@@ -66,13 +67,23 @@ const discardedText = discardedVolumeText(lang);
 // localiseTimestamp() rewrites it into the reader's real timezone
 // ("07:54 CEST", "01:54 EDT") once the browser -- which does know the
 // timezone -- has it. The data-generated-at/data-lang attributes on the
-// element below are what it reads to do that; the rendered text alone has
-// lost the date by then.
+// element below are what it reads to do that; the rendered text alone is a
+// formatted string by then, not a parseable instant.
+//
+// The date is rendered alongside the time so a stalled cycle is visible: a
+// time on its own reads as "this morning" however old it really is.
 function formatTimestamp(iso: string): string {
   const date = new Date(iso);
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
-  return `${timestampPrefix(lang)} ${hours}:${minutes} UTC`;
+  const day = new Intl.DateTimeFormat(dateLocale(lang), {
+    timeZone: "UTC",
+    day: "numeric",
+    month: "short",
+  }).format(date);
+  const { lead, join } = timestampWithDate(lang);
+
+  return `${lead} ${day} ${join} ${hours}:${minutes} UTC`;
 }
 ---
 

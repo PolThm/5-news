@@ -19,7 +19,7 @@ import {
   offlineBannerText,
   periodSentenceText,
   sourceListIntro,
-  timestampPrefix,
+  timestampWithDate,
   zoneSentenceLabel,
 } from "../briefing";
 
@@ -391,11 +391,13 @@ describe("discardedVolumeText", () => {
   });
 });
 
-describe("timestampPrefix", () => {
-  it("returns the correct timestamp prefix for each language", () => {
-    expect(timestampPrefix("fr")).toBe("Mis à jour à");
-    expect(timestampPrefix("en")).toBe("Updated at");
-    expect(timestampPrefix("es")).toBe("Actualizado a las");
+describe("timestampWithDate", () => {
+  it("returns the date-carrying connector words for each language", () => {
+    // Authored per language rather than interpolated from one template:
+    // Spanish needs "el ... a las", English "on ... at", French "le ... à".
+    expect(timestampWithDate("fr")).toEqual({ lead: "Mis à jour le", join: "à" });
+    expect(timestampWithDate("en")).toEqual({ lead: "Updated on", join: "at" });
+    expect(timestampWithDate("es")).toEqual({ lead: "Actualizado el", join: "a las" });
   });
 });
 

@@ -371,10 +371,33 @@ function hasValidAttribution(cluster: ClusterLike): cluster is ClusterLike & {
   );
 }
 
-const TIMESTAMP_PREFIX: Record<LanguageSlug, string> = {
-  fr: "Mis à jour à",
-  en: "Updated at",
-  es: "Actualizado a las",
+// The date-carrying phrasing: "Mis à jour le 24 août à 08:03 CEST".
+//
+// The header used to show a time alone, which reads as "this morning" no
+// matter how old it actually is -- a Briefing stuck for four days looked
+// exactly like a fresh one. The date is what makes a stalled cycle visible
+// (2026-08-24: the 05:30 run submitted its batches, every scheduled catch-up
+// failed to fire, and nothing in the UI said so).
+//
+// Each language gets its own connector words rather than one interpolated
+// template, for the same reason every other per-language string here is
+// authored on its own terms: Spanish needs "el ... a las", English "on ...
+// at", and French "le ... à". The date itself comes from Intl, which spells
+// the month correctly per language.
+// Date formatting locale, per Output Language. "en" alone resolves to en-US
+// and renders "Aug 11" -- month-first, alone among the three languages and
+// wrong for a European news site whose other two read "11 août" / "11 ago".
+// en-GB gives the day-first order the rest of the header already uses.
+const DATE_LOCALE: Record<LanguageSlug, string> = {
+  fr: "fr",
+  en: "en-GB",
+  es: "es",
+};
+
+const TIMESTAMP_WITH_DATE: Record<LanguageSlug, { lead: string; join: string }> = {
+  fr: { lead: "Mis à jour le", join: "à" },
+  en: { lead: "Updated on", join: "at" },
+  es: { lead: "Actualizado el", join: "a las" },
 };
 
 // The server renders this timestamp in UTC because a statically prerendered
@@ -520,16 +543,35 @@ export function formatTimestamp(iso: string, lang: LanguageSlug, timeZone?: stri
 
       if (hour && minute) {
         const abbreviation = zoneAbbreviation(date, zone);
-        return `${TIMESTAMP_PREFIX[lang]} ${hour}:${minute} ${abbreviation}`;
+        // The date is read in the same zone as the clock, so a Briefing
+        // generated late in the UTC evening does not show tomorrow's date
+        // beside tonight's time for a reader west of UTC.
+        const day = new Intl.DateTimeFormat(DATE_LOCALE[lang], {
+          timeZone: zone,
+          day: "numeric",
+          month: "short",
+        }).format(date);
+        const { lead, join } = TIMESTAMP_WITH_DATE[lang];
+
+        return `${lead} ${day} ${join} ${hour}:${minute} ${abbreviation}`;
       }
     }
   } catch {
     // Fall through to UTC below.
   }
 
+  // The fallback carries the date too. It is what a bad timezone lands on,
+  // and a stalled cycle is no less worth seeing there.
   const hours = String(date.getUTCHours()).padStart(2, "0");
   const minutes = String(date.getUTCMinutes()).padStart(2, "0");
-  return `${TIMESTAMP_PREFIX[lang]} ${hours}:${minutes} UTC`;
+  const day = new Intl.DateTimeFormat(DATE_LOCALE[lang], {
+    timeZone: "UTC",
+    day: "numeric",
+    month: "short",
+  }).format(date);
+  const { lead, join } = TIMESTAMP_WITH_DATE[lang];
+
+  return `${lead} ${day} ${join} ${hours}:${minutes} UTC`;
 }
 
 /**

@@ -546,18 +546,48 @@ export function discardedVolumeText(lang: OutputLanguage): { reviewed: string; k
   return DISCARDED_VOLUME_TEXT[lang];
 }
 
-// The header timestamp's "Mis à jour à {h}:{m} UTC" wording, per Output
-// Language -- moved here from BriefingPage.astro's own formatTimestamp
-// (Story 4.7), which now only formats the hours/minutes and delegates the
-// surrounding phrase to this function.
-const TIMESTAMP_PREFIX: Record<OutputLanguage, string> = {
-  fr: "Mis à jour à",
-  en: "Updated at",
-  es: "Actualizado a las",
+// The header timestamp's wording, per Output Language -- moved here from
+// BriefingPage.astro's own formatTimestamp (Story 4.7), which formats the
+// date and clock and delegates the surrounding phrase to this module.
+//
+// The time-only phrasing this replaced ("Mis à jour à {h}:{m}") is gone
+// rather than kept beside it: nothing renders a bare time any more, and a
+// second unused wording would read as a live alternative.
+
+// The date-carrying phrasing: "Mis à jour le 24 août à 08:03 CEST".
+//
+// A time alone reads as "this morning" however old it really is, so a
+// Briefing whose cycle stalled looked exactly like a fresh one -- which is
+// what happened on 2026-08-24, when the 05:30 run submitted its batches,
+// every scheduled catch-up failed to fire, and nothing in the header said so.
+//
+// Each language gets its own connector words rather than one interpolated
+// template: Spanish needs "el ... a las", English "on ... at", French
+// "le ... à". Hand-mirrored in period-switcher.ts's own TIMESTAMP_WITH_DATE,
+// like every other per-language string here (see that file's module
+// docstring for why that duplication is accepted rather than fixed).
+// Date formatting locale, per Output Language. "en" alone resolves to en-US
+// and renders "Aug 11" -- month-first, alone among the three languages and
+// wrong for a European news site whose other two read "11 août" / "11 ago".
+// en-GB gives the day-first order the rest of the header already uses.
+const DATE_LOCALE: Record<OutputLanguage, string> = {
+  fr: "fr",
+  en: "en-GB",
+  es: "es",
 };
 
-export function timestampPrefix(lang: OutputLanguage): string {
-  return TIMESTAMP_PREFIX[lang];
+export function dateLocale(lang: OutputLanguage): string {
+  return DATE_LOCALE[lang];
+}
+
+const TIMESTAMP_WITH_DATE: Record<OutputLanguage, { lead: string; join: string }> = {
+  fr: { lead: "Mis à jour le", join: "à" },
+  en: { lead: "Updated on", join: "at" },
+  es: { lead: "Actualizado el", join: "a las" },
+};
+
+export function timestampWithDate(lang: OutputLanguage): { lead: string; join: string } {
+  return TIMESTAMP_WITH_DATE[lang];
 }
 
 // Story 5.4 (AC1): the "you're viewing a cached version from an earlier

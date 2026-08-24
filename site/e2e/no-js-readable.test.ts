@@ -701,7 +701,11 @@ describe("Output Language axis (Story 4.7)", () => {
     expect(englishHtml).toMatch(
       /<a class="word" data-period-word data-lang="en" data-zone="world" data-period="day" href="\/en\/world\/week"[^>]*>today<\/a>/
     );
-    expect(englishHtml).toContain("Updated at ");
+    // The date is asserted alongside the prefix: rendering it is the point
+    // (a time alone reads as "this morning" however stale the cycle is), and
+    // day-first is what pins "en" to en-GB rather than letting it resolve to
+    // en-US's "Aug 11", alone among the three languages.
+    expect(englishHtml).toContain("Updated on 11 Aug at 06:14 UTC");
   });
 
   it("renders the Spanish mad-libs lead-in, Zone/Period words, and timestamp prefix as static text", () => {
@@ -712,7 +716,7 @@ describe("Output Language axis (Story 4.7)", () => {
     expect(spanishHtml).toMatch(
       /<a class="word" data-period-word data-lang="es" data-zone="world" data-period="day" href="\/es\/world\/week"[^>]*>hoy<\/a>/
     );
-    expect(spanishHtml).toContain("Actualizado a las ");
+    expect(spanishHtml).toContain("Actualizado el 11 ago a las 06:14 UTC");
   });
 
   it("renders the English Consensus chip wording, attribution wording, and source-list intro", () => {

@@ -2,431 +2,485 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-emmanuel-macron-c7f871428b4f"
+        "subject-zelensky-a0351200d5b4"
       ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-emmanuel-macron-c7f871428b4f",
-      "coherence": 0.4783419020977788,
-      "consequence": 3,
+      "cluster_id": "subject-zelensky-a0351200d5b4",
+      "coherence": 0.4997253301378968,
+      "consequence": 2,
       "countries": [
+        "brazil",
         "france",
+        "germany",
         "it",
-        "lo",
-        "ro"
+        "md",
+        "mx",
+        "spain",
+        "united-kingdom",
+        "united-states",
+        "ve"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-08-22",
-      "headline": "Macron anuncia el envío de nuevos misiles interceptores a Ucrania",
-      "independent_source_count": 7,
+      "country_count": 10,
+      "editorial_day": "2026-08-24",
+      "headline": "Zelensky rechaza celebrar elecciones durante la guerra en Ucrania",
+      "independent_source_count": 14,
       "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-pour-le-pays-20260823_E24VNGNPWFCDXJWPAE2KAV6OVA/"
+        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-annonce-l-envoi-de-nouveaux-missiles-intercepteurs-a-l-ukraine-au-lendemain-d-une-frappe-russe-meurtriere-sur-un-centre-commercial_8157410.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260823-des-%C3%A9lections-en-ukraine-un-tsunami-qui-fracturerait-le-pays-dit-zelensky"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260823.OBS117602/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-qui-fracturerait-le-pays.html"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-emmanuel-macron-promet-lenvoi-de-missiles-intercepteurs-a-kiev-apres-la-frappe-meurtriere-de-D67ZHNA7QFGK7N2UIEJ67GDFXQ/"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/22/france-to-give-new-interceptor-missiles-to-ukraine-macron-says"
-        },
-        {
-          "language": "slk",
-          "source": "24hod.sk",
-          "source_country": "lo",
-          "url": "https://www.24hod.sk/macron-zrychluje-pomoc-kyjevu-doda-mu-nove-protiraketove-strely-na-obranu-pred-utokmi-cl830116.html"
-        },
-        {
-          "language": "ron",
-          "source": "stiripesurse.ro",
-          "source_country": "ro",
-          "url": "https://www.stiripesurse.ro/macron-raspunde-atacurilor-lui-putin-franta-trimite-noi-rachete-interceptoare-ucrainei_3914142"
-        },
-        {
-          "language": "fr",
-          "source": "bfmtv.com",
-          "source_country": "france",
-          "url": "https://www.bfmtv.com/international/europe/ukraine/guerre-en-ukraine-emmanuel-macron-annonce-de-nouveaux-missiles-intercepteurs-pour-kiev-au-lendemain-de-nouvelles-frappes-russes-meurtrieres_AN-202608220232.html"
-        },
-        {
-          "language": "fr",
-          "source": "boursorama.com",
-          "source_country": "france",
-          "url": "https://www.boursorama.com/actualite-economique/actualites/macron-promet-l-envoi-d-intercepteurs-a-l-ukraine-apres-la-frappe-de-kryvyi-rih-fd9e87db0d2f549a59de32dab7c4d46a"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-annonce-l-envoi-de-nouveaux-missiles-intercepteurs-a-l-ukraine-au-lendemain-d-une-frappe-russe-meurtriere-sur-un-centre-commercial_8157410.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "francetvinfo.fr",
-        "lexpress.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4783,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
-        },
-        "total": 0.6834,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "emmanuel macron",
-      "subject_names": [
-        "angriffen",
-        "emmanuel macron",
-        "kiev",
-        "kyiv",
-        "macron",
-        "russia",
-        "russian",
-        "ukraine",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Emmanuel Macron ha anunciado que Francia enviará nuevos misiles interceptores a Ucrania. Este anuncio se produce después de que ataques rusos causaran bajas mortales en ciudades ucranianas como Kryvyi Rih, reforzando así la asistencia militar francesa al país en conflicto.",
-      "takeaway": "Macron respalda a Ucrania con sistemas de defensa contra misiles tras ataques rusos masivos.",
-      "why_it_matters": "Francia intensifica su apoyo militar directo a Ucrania con armas de defensa aérea, lo que marca una escalada europea en la intervención en el conflicto ruso-ucraniano."
-    },
-    {
-      "_linked_ids": [
-        "subject-banca-generali-2dc062e36487"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-banca-generali-2dc062e36487",
-      "coherence": 0.5082602036478204,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-21",
-      "headline": "Monte dei Paschi propone intercambios con Banco BPM y Banca Generali para rechazar oferta de Intesa",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/guerra-opas-italia-monte-dei-paschi-lanza-banca-generali-bpm-evitar-comprada-intesa_1_13459493.html"
-        },
-        {
-          "language": "en",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/english/news/business/2026/08/21/mps-launches-banco-bpm-banca-generali-swaps-to-fend-off-intesa_cec98904-44da-40d9-8c38-1218d9928f08.html"
-        },
-        {
-          "language": "en",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/english/news/business/2026/08/20/mps-oks-banco-bpm-banca-generali-swaps-to-fend-off-intesa_481e6b63-56ae-4b53-a811-4c95556213a3.html"
-        },
-        {
-          "language": "en",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/english/news/business/2026/08/20/mps-weighing-banco-bpm-banca-generali-swaps-to-fend-off-intesa_435f0eb3-f3f4-44c3-b891-169e6a5a6330.html"
-        }
-      ],
-      "mentioned_countries": [
-        "it"
-      ],
-      "origin_country": "it",
-      "outbound_source": "ansa.it",
-      "outbound_url": "https://www.ansa.it/english/news/business/2026/08/20/mps-weighing-banco-bpm-banca-generali-swaps-to-fend-off-intesa_435f0eb3-f3f4-44c3-b891-169e6a5a6330.html",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "ansa.it",
-        "eldiario.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5083,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.6
-        },
-        "total": 0.629,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "banca generali",
-      "subject_names": [
-        "banca generali"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Monte dei Paschi, banco italiano que enfrenta una oferta de compra de Intesa, ha lanzado una estrategia defensiva mediante el planteamiento de posibles intercambios de acciones con otras dos instituciones financieras italianas: Banco BPM y Banca Generali. Esta maniobra busca crear una alternativa que le permita evitar ser absorbido por Intesa.",
-      "takeaway": "Monte dei Paschi busca alternativas de fusión para evitar ser absorbida por Intesa, lo que redefine el panorama de consolidación bancaria en Italia.",
-      "why_it_matters": "Los accionistas de Monte dei Paschi decidirán sobre posibles fusiones con Banco BPM o Banca Generali, lo que determina la estructura del sector bancario italiano y afecta a la exposición de inversores europeos a estas instituciones."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-18d838439583"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-ceuta-18d838439583",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-21",
-      "headline": "La UE aumentará la financiación a Marruecos para la gestión de migraciones tras la crisis de Ceuta",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/08/21/6a883a75e5fdea1c4a8b4592.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/20/exclusive-eu-to-boost-funding-for-moroccos-migration-management-after-ceuta-crisis"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/20/exclusive-eu-to-boost-funding-for-moroccos-migration-management-after-ceuta-crisis",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6194,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "marruecos",
-        "vivas"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Tras la crisis migratoria en Ceuta, la Unión Europea ha decidido incrementar los fondos destinados a Marruecos para mejorar el control de su frontera y la gestión de migraciones.",
-      "takeaway": "Europa opta por pagar a terceros países para contener la migración en origen en lugar de gestionar la llegada de migrantes en su propio territorio.",
-      "why_it_matters": "La UE aumentará su financiación a Marruecos para la gestión migratoria, lo que significa más recursos destinados a reforzar el control fronterizo marroquí en lugar de inversiones internas europeas en integración o acogida."
-    },
-    {
-      "_linked_ids": [
-        "subject-palestine-4f201cf64457",
-        "subject-ukraine-7b5679fff45f"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-palestine-4f201cf64457",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-19",
-      "headline": "Rusia amenaza al Reino Unido si continúa suministrando drones a Ucrania",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-la-russie-menace-le-royaume-uni-londres-replique-3BKU7HQKAVFGTIUCCRN65XYF24/"
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-volodymyr-zelensky-met-en-garde-contre-des-elections-en-temps-de-guerre-qui-detruiraient-le-WF4WKPJZEFCBVOJOUMR3MYNZSM/"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260819/11616205/rusia-amenaza-londres-sigue-enviando-drones-kyiv.html"
+          "url": "https://www.lavanguardia.com/internacional/20260824/11618571/zelenski-dice-elecciones-ucrania-serian-tsunami-dividiria-pais.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/23/ukraine-election-wartime-risk-russia-zelenskyy"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "ntn24.com",
+          "source_country": "ve",
+          "url": "https://www.ntn24.com/noticias-actualidad/en-este-momento-elecciones-serian-tsunami-zelenski-rechaza-elecciones-plena-guerra-644058"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-24/zelensky-dice-che-organizzare-nuove-elezioni-distruggerebbe-lucraina/19599058/"
+        },
+        {
+          "language": "es",
+          "source": "eldiariony.com",
+          "source_country": "united-states",
+          "url": "https://eldiariony.com/2026/08/23/zelenski-rechaza-celebrar-elecciones-durante-la-guerra-y-advierte-que-dividirian-a-ucrania/"
+        },
+        {
+          "language": "es",
+          "source": "eleconomista.com.mx",
+          "source_country": "mx",
+          "url": "https://www.eleconomista.com.mx/internacionales/zelenski-rechaza-elecciones-plena-guerra-fracturarian-ucrania-20260823-829731.html"
+        },
+        {
+          "language": "ron",
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/56950255"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]",
+      "rank": 1,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "dw.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "rfi.fr",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4997,
+          "corroboration": 0.8333,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.8182
+        },
+        "total": 0.7013,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "zelensky",
+      "subject_names": [
+        "fedorov",
+        "kiev",
+        "ucraina",
+        "ucrania",
+        "ukraine",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "El presidente ucraniano Volodymyr Zelensky ha declarado que organizar elecciones mientras el país está en guerra sería un tsunami que fracturaría y destruiría a Ucrania, argumentando que en este momento la nación no puede permitirse tal proceso electoral.",
+      "takeaway": "Zelensky estima que las elecciones en tiempos de guerra causarían daño irreparable a la unidad nacional ucraniana.",
+      "why_it_matters": "La posición de Zelensky determina que Ucrania mantendrá su actual liderazgo sin someterse a comicios electorales mientras persista el conflicto armado."
+    },
+    {
+      "_linked_ids": [
+        "subject-royaume-uni-2c652e3f3759"
+      ],
+      "angle_zone": "europe",
+      "cluster_id": "subject-royaume-uni-2c652e3f3759",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-23",
+      "headline": "Rusia retira a su embajador en Reino Unido por deterioro de relaciones bilaterales",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/la-russie-met-fin-a-la-mission-de-son-ambassadeur-au-royaume-uni-et-pointe-la-deterioration-des-relations-bilaterales_8158448.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html"
         }
       ],
       "mentioned_countries": [
         "united-kingdom",
-        "up",
         "rs"
       ],
       "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260819/11616205/rusia-amenaza-londres-sigue-enviando-drones-kyiv.html",
-      "rank": 4,
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html",
+      "rank": 2,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "lavanguardia.com",
-        "lexpress.fr"
+        "20minutos.es",
+        "francetvinfo.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.25,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.5,
+          "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6044,
+        "total": 0.6236,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "palestine",
+      "subject_label": "royaume-uni",
       "subject_names": [
-        "angriffen",
-        "kiev",
-        "kyiv",
         "londres",
-        "palestine",
-        "russia",
-        "russian",
-        "ukraine",
-        "zelenski"
+        "putin",
+        "royaume-uni",
+        "rusia",
+        "russia"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Rusia ha dirigido amenazas hacia Londres en respuesta al envío de drones británicos a Kyiv, y el Reino Unido ha replicado ante estas advertencias rusas.",
-      "takeaway": "La amenaza rusa a Reino Unido por su apoyo militar a Ucrania marca un punto de ruptura en la contención del conflicto fuera del territorio ucraniano.",
-      "why_it_matters": "Los países europeos que proporcionan armas a Ucrania, como Reino Unido, enfrentan ahora amenazas directas de Rusia que elevan el riesgo de escalada del conflicto más allá de las fronteras ucranianas."
+      "subject_newsroom_count": 6,
+      "summary": "Rusia ha puesto fin a la misión de su embajador en el Reino Unido, citando el deterioro de las relaciones bilaterales entre los dos países. Según los artículos, esta medida busca presionar a Londres para que reconsidere su apoyo a Ucrania.",
+      "takeaway": "Rusia cierra su representación diplomática en Reino Unido como castigo por el apoyo británico a Ucrania.",
+      "why_it_matters": "La retirada del embajador ruso marca el cierre de un canal diplomático clave entre Moscú y Londres, lo que deja a Europa sin una vía directa de negociación entre dos potencias nucleares enfrentadas sobre Ucrania."
     },
     {
       "_linked_ids": [
-        "subject-ceuta-8218d18d86f2"
+        "subject-russia-dbfd5f0de516"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-ceuta-8218d18d86f2",
-      "coherence": 0.5719122724934163,
+      "cluster_id": "subject-russia-dbfd5f0de516",
+      "coherence": 0.40478530576313054,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "ro",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-08-24",
+      "headline": "Zelenski advierte que Putin planea movilizar 300.000 soldados adicionales en Ucrania",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/putin-quer-recrutar-300-mil-novos-soldados-afirma-zelensky.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "wesh.com",
+          "source_country": "united-states",
+          "url": "https://www.wesh.com/article/russia-300000-troops-ukraine-war-zelenskyy/73503965"
+        },
+        {
+          "language": "en",
+          "source": "express.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.express.co.uk/news/world/2241685/putin-russia-mobilisation-ukraine-war"
+        },
+        {
+          "language": "ron",
+          "source": "antena3.ro",
+          "source_country": "ro",
+          "url": "https://www.antena3.ro/externe/rusia-se-pregateste-de-o-noua-mobilizare-militara-zelenski-spune-ca-300-000-de-noi-recruti-urmeaza-a-fi-concentrati-in-armata-rusa-800455.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "elpais.com",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4048,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6
+        },
+        "total": 0.5766,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russia",
+      "subject_names": [
+        "fedorov",
+        "putin",
+        "rusia",
+        "russia",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "El presidente ucraniano Volodímir Zelenski ha advertido que Rusia tiene planeado movilizar a 300.000 militares adicionales para su guerra en Ucrania, según informes de múltiples fuentes internacionales. Zelenski ha afirmado que también Rusia busca aumentar su producción de misiles para la contienda.",
+      "takeaway": "Rusia prepara una nueva movilización masiva que obligaría a Europa a decidir cuánto más está dispuesta a invertir en sostener la defensa ucraniana.",
+      "why_it_matters": "Un aumento de 300.000 soldados rusos intensificaría la presión militar sobre Ucrania, prolongando la guerra en la frontera oriental de Europa y aumentando la demanda de apoyo militar y recursos occidentales para Kiev."
+    },
+    {
+      "_linked_ids": [
+        "subject-guardia-civil-1f66b34f5c27"
+      ],
+      "cluster_id": "subject-guardia-civil-1f66b34f5c27",
+      "coherence": 0.44730571796470053,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-22",
-      "headline": "Marruecos pide a España que devuelva a los migrantes y los fallecidos tras el cruce a Ceuta",
-      "independent_source_count": 5,
+      "editorial_day": "2026-08-23",
+      "headline": "Moreno reclama al Gobierno reactivar una unidad de élite de la Guardia Civil contra el narcotráfico",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/marruecos-pide-oficialmente-espana-devuelva-migrantes-cruzaron-ceuta-muertos_1_13461755.html"
+          "url": "https://elpais.com/espana/2026-08-23/moreno-pide-al-gobierno-que-reactive-la-unidad-de-la-guardia-civil-contra-el-narcotrafico.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/22/6a89b954fc6c8329228b4572.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-22/marruecos-migrantes-ceuta-repatriacion-1tps_4409908/"
+          "url": "https://www.elmundo.es/andalucia/2026/08/23/6a8aad10e4d4d8da458b457a.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html"
+          "url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "elperiodicodearagon.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta_7028408_0.html"
+          "url": "https://www.elperiodicodearagon.com/espana/2026/08/23/moreno-exige-sanchez-reactivar-unidad-elite-guardia-civil-luchar-narcotrafico-133584091.html"
         }
       ],
       "mentioned_countries": [
-        "mo",
         "spain"
       ],
       "origin_country": "spain",
       "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html",
-      "rank": 5,
-      "reference_newsroom_count": 5,
+      "outbound_url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "20minutos.es",
-        "elconfidencial.com",
-        "eldiario.es",
         "elmundo.es",
+        "elpais.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5719,
+          "coherence": 0.4473,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.5844,
+        "total": 0.5372,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "guardia civil",
       "subject_names": [
-        "bruselas",
-        "ceuta",
-        "espana",
-        "marruecos",
-        "melilla",
-        "spain",
-        "vivas"
+        "andalucia",
+        "guardia civil",
+        "moreno",
+        "vox"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Marruecos ha solicitado a España que devuelva tanto a los migrantes supervivientes que lograron cruzar hacia Ceuta, incluidos los menores, como a los cuerpos de los fallecidos durante el paso. Según algunos reportes, Marruecos ha condicionado su aceptación de los cadáveres a que España le devuelva a los menores que se encuentran en Ceuta.",
-      "takeaway": "Marruecos condiciona la repatriación de cadáveres a que España devuelva a los menores migrantes, poniendo en el centro del conflicto bilateral la custodia de menores no acompañados.",
-      "why_it_matters": "España enfrenta una negociación con Marruecos sobre la gestión de migrantes y víctimas mortales en Ceuta, lo que afecta la política migratoria europea en la frontera sur y la capacidad de los estados miembros para coordinar respuestas en puntos fronterizos críticos."
+      "subject_newsroom_count": 5,
+      "summary": "El presidente de la Junta de Andalucía, Juanma Moreno, ha pedido al Gobierno nacional que reactive una unidad especializada de la Guardia Civil dedicada a combatir el narcotráfico que fue desmantelada por el Ministerio del Interior en 2022. Según los artículos, Montero, miembro del Gobierno, respondió acusando a Moreno de \"sembrar miedo\".",
+      "takeaway": "Un dirigente político regional demanda la restauración de una capacidad de seguridad que el Gobierno central eliminó hace dos años.",
+      "why_it_matters": "El estado de los recursos disponibles para combatir el narcotráfico en España determina la capacidad operativa de las fuerzas de seguridad en este ámbito crítico."
+    },
+    {
+      "_linked_ids": [
+        "subject-kyiv-e19936d53836"
+      ],
+      "angle_zone": "europe",
+      "cluster_id": "subject-kyiv-e19936d53836",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-21",
+      "headline": "Ataques rusos dejan daños en Kyiv y obligan rescates de residentes",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/c8dnn05e90lo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/21/kyiv-residents-search-through-the-wreckage-after-russias-deadly-barrage"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/20/kyiv-residents-rescued-as-russian-strikes-damage-buildings-across-the-city"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "it",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/videos/c8dnn05e90lo?at_medium=RSS&at_campaign=rss",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5349,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "kyiv",
+      "subject_names": [
+        "kyiv",
+        "russian"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Rusia lanzó una lluvia de ataques contra la capital ucraniana Kyiv, causando daños generalizados en edificios y dejando un mercado en llamas. Los rescatistas extrajeron a residentes de entre los escombros mientras la ciudad sufría los efectos de los bombardeos.",
+      "takeaway": "Rusia continúa bombardeando objetivos civiles en Kyiv mientras la población civil soporta ataques indiscriminados sin fin aparente.",
+      "why_it_matters": "Los ataques rusos contra civiles en Kyiv intensifican la crisis humanitaria que afecta a Europa a través de flujos de refugiados y la presión sobre sistemas de asilo en países miembros de la UE."
     }
   ],
-  "discarded_ingested": 103,
+  "discarded_ingested": 124,
   "discarded_kept": 5,
-  "generated_at": "2026-08-23T05:54:23.796896+00:00",
+  "generated_at": "2026-08-24T06:03:29.496587+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

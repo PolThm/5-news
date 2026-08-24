@@ -1,6 +1,6 @@
 {
   "articles_collected": 8119,
-  "briefings_path": null,
+  "briefings_path": "data/briefings",
   "clusters_after_grouping": 7375,
   "clusters_selected": 20,
   "completed": true,
@@ -10,24 +10,79 @@
     {
       "adapter": "rss",
       "detail": "euronews.com: no items parsed from response"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-canada-a35ec2958866: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_4479c13beac2_spain: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_8717c9df3e88_france: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_d3c822437665_france: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-guinea-5a13b2f48164: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_c45c567ffc8d_europe: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-cincinnati-cbd2f81851b9: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-italia-378b857d3667: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_e09f4c375e88_spain: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_e09f4c375e88_europe: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-trump-e1c39deaa74c: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_c0c53abcba84_europe: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-aragon-1de4be0bb766: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_d3c822437665_france: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_e09f4c375e88_spain: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-aragon-1de4be0bb766: batch result was 'errored', not succeeded"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster a_c0c53abcba84_spain: batch result was 'errored', not succeeded"
     }
   ],
   "groups_after_dedupe": 7508,
-  "phase": "summarize_submitted",
-  "published": false,
+  "phase": "published",
+  "published": true,
   "started_at": "2026-08-24T06:03:29.496587+00:00",
-  "summarize_batches": {
-    "en": {
-      "batch_id": "msgbatch_01VE9MTYBzsLjjmGDfECghNu",
-      "ranked_path": "data/intermediate/rank/2026-08-24T06-03-29Z/ranked.jsonl"
-    },
-    "es": {
-      "batch_id": "msgbatch_018bPA45fyjPPhbwpwpdMJ4Z",
-      "ranked_path": "data/intermediate/rank/2026-08-24T06-03-29Z/ranked.jsonl"
-    },
-    "fr": {
-      "batch_id": "msgbatch_01Uh1dtAciMSw9M18PaJwFJN",
-      "ranked_path": "data/intermediate/rank/2026-08-24T06-03-29Z/ranked.jsonl"
-    }
-  }
+  "summarize_batches": {}
 }

@@ -1,440 +1,275 @@
 {
   "clusters": [
     {
-      "angle_zone": "europe",
-      "cluster_id": "subject-emmanuel-macron-c7f871428b4f",
-      "coherence": 0.4783419020977788,
-      "consequence": 3,
+      "cluster_id": "subject-zelensky-a0351200d5b4",
+      "coherence": 0.4997253301378968,
+      "consequence": 2,
       "countries": [
+        "brazil",
         "france",
+        "germany",
         "it",
-        "lo",
-        "ro"
+        "md",
+        "mx",
+        "spain",
+        "united-kingdom",
+        "united-states",
+        "ve"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-08-22",
-      "headline": "Macron anuncia el envío de nuevos misiles interceptores a Ucrania",
-      "independent_source_count": 7,
+      "country_count": 10,
+      "editorial_day": "2026-08-24",
+      "headline": "Zelensky rechaza celebrar elecciones durante la guerra en Ucrania",
+      "independent_source_count": 14,
       "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-pour-le-pays-20260823_E24VNGNPWFCDXJWPAE2KAV6OVA/"
+        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-annonce-l-envoi-de-nouveaux-missiles-intercepteurs-a-l-ukraine-au-lendemain-d-une-frappe-russe-meurtriere-sur-un-centre-commercial_8157410.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260823-des-%C3%A9lections-en-ukraine-un-tsunami-qui-fracturerait-le-pays-dit-zelensky"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260823.OBS117602/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-qui-fracturerait-le-pays.html"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-emmanuel-macron-promet-lenvoi-de-missiles-intercepteurs-a-kiev-apres-la-frappe-meurtriere-de-D67ZHNA7QFGK7N2UIEJ67GDFXQ/"
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-volodymyr-zelensky-met-en-garde-contre-des-elections-en-temps-de-guerre-qui-detruiraient-le-WF4WKPJZEFCBVOJOUMR3MYNZSM/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260824/11618571/zelenski-dice-elecciones-ucrania-serian-tsunami-dividiria-pais.html"
         },
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/22/france-to-give-new-interceptor-missiles-to-ukraine-macron-says"
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/23/ukraine-election-wartime-risk-russia-zelenskyy"
         },
         {
-          "language": "slk",
-          "source": "24hod.sk",
-          "source_country": "lo",
-          "url": "https://www.24hod.sk/macron-zrychluje-pomoc-kyjevu-doda-mu-nove-protiraketove-strely-na-obranu-pred-utokmi-cl830116.html"
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "ntn24.com",
+          "source_country": "ve",
+          "url": "https://www.ntn24.com/noticias-actualidad/en-este-momento-elecciones-serian-tsunami-zelenski-rechaza-elecciones-plena-guerra-644058"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-24/zelensky-dice-che-organizzare-nuove-elezioni-distruggerebbe-lucraina/19599058/"
+        },
+        {
+          "language": "es",
+          "source": "eldiariony.com",
+          "source_country": "united-states",
+          "url": "https://eldiariony.com/2026/08/23/zelenski-rechaza-celebrar-elecciones-durante-la-guerra-y-advierte-que-dividirian-a-ucrania/"
+        },
+        {
+          "language": "es",
+          "source": "eleconomista.com.mx",
+          "source_country": "mx",
+          "url": "https://www.eleconomista.com.mx/internacionales/zelenski-rechaza-elecciones-plena-guerra-fracturarian-ucrania-20260823-829731.html"
         },
         {
           "language": "ron",
-          "source": "stiripesurse.ro",
-          "source_country": "ro",
-          "url": "https://www.stiripesurse.ro/macron-raspunde-atacurilor-lui-putin-franta-trimite-noi-rachete-interceptoare-ucrainei_3914142"
-        },
-        {
-          "language": "fr",
-          "source": "bfmtv.com",
-          "source_country": "france",
-          "url": "https://www.bfmtv.com/international/europe/ukraine/guerre-en-ukraine-emmanuel-macron-annonce-de-nouveaux-missiles-intercepteurs-pour-kiev-au-lendemain-de-nouvelles-frappes-russes-meurtrieres_AN-202608220232.html"
-        },
-        {
-          "language": "fr",
-          "source": "boursorama.com",
-          "source_country": "france",
-          "url": "https://www.boursorama.com/actualite-economique/actualites/macron-promet-l-envoi-d-intercepteurs-a-l-ukraine-apres-la-frappe-de-kryvyi-rih-fd9e87db0d2f549a59de32dab7c4d46a"
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/56950255"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
-      "origin_country": "france",
+      "origin_country": "brazil",
       "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-annonce-l-envoi-de-nouveaux-missiles-intercepteurs-a-l-ukraine-au-lendemain-d-une-frappe-russe-meurtriere-sur-un-centre-commercial_8157410.html#xtor=RSS-3-[lestitres]",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 9,
       "reference_newsrooms": [
-        "euronews.com",
+        "dw.com",
         "francetvinfo.fr",
-        "lexpress.fr"
+        "globo.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "rfi.fr",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4783,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
-        },
-        "total": 0.6675,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "emmanuel macron",
-      "subject_names": [
-        "angriffen",
-        "emmanuel macron",
-        "kiev",
-        "kyiv",
-        "macron",
-        "russia",
-        "russian",
-        "ukraine",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Emmanuel Macron ha anunciado que Francia enviará nuevos misiles interceptores a Ucrania. Este anuncio se produce después de que ataques rusos causaran bajas mortales en ciudades ucranianas como Kryvyi Rih, reforzando así la asistencia militar francesa al país en conflicto.",
-      "takeaway": "Macron respalda a Ucrania con sistemas de defensa contra misiles tras ataques rusos masivos.",
-      "why_it_matters": "Francia intensifica su apoyo militar directo a Ucrania con armas de defensa aérea, lo que marca una escalada europea en la intervención en el conflicto ruso-ucraniano."
-    },
-    {
-      "angle_zone": "europe",
-      "cluster_id": "subject-ceuta-8218d18d86f2",
-      "coherence": 0.5719122724934163,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-22",
-      "headline": "Marruecos pide a España que devuelva a los migrantes y los fallecidos tras el cruce a Ceuta",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/marruecos-pide-oficialmente-espana-devuelva-migrantes-cruzaron-ceuta-muertos_1_13461755.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/22/6a89b954fc6c8329228b4572.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-22/marruecos-migrantes-ceuta-repatriacion-1tps_4409908/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta_7028408_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "mo",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elconfidencial.com",
-        "eldiario.es",
-        "elmundo.es",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5719,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "coherence": 0.4997,
+          "corroboration": 0.8333,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.7778,
+          "source_reliability": 0.8182
         },
-        "total": 0.5951,
+        "total": 0.7213,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "zelensky",
       "subject_names": [
-        "bruselas",
-        "ceuta",
-        "espana",
-        "marruecos",
-        "melilla",
-        "spain",
-        "vivas"
+        "fedorov",
+        "kiev",
+        "ucraina",
+        "ucrania",
+        "ukraine",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Marruecos ha solicitado a España que devuelva tanto a los migrantes supervivientes que lograron cruzar hacia Ceuta, incluidos los menores, como a los cuerpos de los fallecidos durante el paso. Según algunos reportes, Marruecos ha condicionado su aceptación de los cadáveres a que España le devuelva a los menores que se encuentran en Ceuta.",
-      "takeaway": "Marruecos condiciona la repatriación de cadáveres a que España devuelva a los menores migrantes, poniendo en el centro del conflicto bilateral la custodia de menores no acompañados.",
-      "why_it_matters": "España enfrenta una negociación con Marruecos sobre la gestión de migrantes y víctimas mortales en Ceuta, lo que afecta la política migratoria europea en la frontera sur y la capacidad de los estados miembros para coordinar respuestas en puntos fronterizos críticos."
+      "subject_newsroom_count": 18,
+      "summary": "El presidente ucraniano Volodymyr Zelensky ha declarado que organizar elecciones mientras el país está en guerra sería un tsunami que fracturaría y destruiría a Ucrania, argumentando que en este momento la nación no puede permitirse tal proceso electoral.",
+      "takeaway": "Zelensky estima que las elecciones en tiempos de guerra causarían daño irreparable a la unidad nacional ucraniana.",
+      "why_it_matters": "La posición de Zelensky determina que Ucrania mantendrá su actual liderazgo sin someterse a comicios electorales mientras persista el conflicto armado."
     },
     {
       "angle_zone": "europe",
-      "cluster_id": "subject-suede-54081380a05d",
-      "coherence": 0.4609778689034839,
-      "consequence": 1,
+      "cluster_id": "subject-royaume-uni-2c652e3f3759",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
-        "brazil",
         "france",
-        "po",
-        "spain",
-        "sz"
+        "spain"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-08-22",
-      "headline": "Un ataque con espada en un instituto de Suecia causa una muerte y tres heridos",
-      "independent_source_count": 10,
+      "country_count": 2,
+      "editorial_day": "2026-08-23",
+      "headline": "Rusia retira a su embajador en Reino Unido por deterioro de relaciones bilaterales",
+      "independent_source_count": 2,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/22/en-suede-la-victime-tuee-dans-une-attaque-a-l-epee-dans-un-lycee-etait-une-eleve-de-17-ans_6753336_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/21/en-suede-une-attaque-a-l-epee-dans-un-lycee-fait-plusieurs-blesses-l-auteur-presume-interpelle_6752220_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/plusieurs-blesses-apres-une-attaque-a-larme-blanche-dans-un-lycee-de-suede-20260821_BWV2XQ6RABGFXCR7X3XSRCXWNI/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260822-l-attaque-%C3%A0-l-%C3%A9p%C3%A9e-dans-un-lyc%C3%A9e-en-su%C3%A8de-fait-un-mort-et-trois-bless%C3%A9s"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/victima-ataque-espada-instituto-suecia-alumna-anos-20260822174652-nt.html"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/la-russie-met-fin-a-la-mission-de-son-ambassadeur-au-royaume-uni-et-pointe-la-deterioration-des-relations-bilaterales_8158448.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/varios-heridos-un-instituto-suecia-tras-ataque-un-hombre-con-una-espada_7028172_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/21/ataque-com-espada-em-escola-da-suecia-deixa-varios-feridos-suspeito-e-detido.ghtml"
-        },
-        {
-          "language": "fr",
-          "source": "rtn.ch",
-          "source_country": "sz",
-          "url": "https://www.rtn.ch/rtn/Actualite/Monde/Attaque-a-l-epee-en-Suede-la-personne-decedee-est-une-eleve.html"
-        },
-        {
-          "language": "fr",
-          "source": "bfmtv.com",
-          "source_country": "france",
-          "url": "https://www.bfmtv.com/international/europe/attaque-a-l-epee-dans-un-lycee-en-suede-la-victime-etait-une-eleve-de-17-ans_AN-202608220227.html"
-        },
-        {
-          "language": "pt",
-          "source": "executivedigest.sapo.pt",
-          "source_country": "po",
-          "url": "https://executivedigest.sapo.pt/vitima-mortal-de-ataque-com-espada-na-suecia-e-uma-aluna-de-17-anos/"
-        },
-        {
-          "language": "pt",
-          "source": "em.com.br",
-          "source_country": "brazil",
-          "url": "http://www.em.com.br/internacional/2026/08/7485150-vitima-de-ataque-com-espada-em-escola-na-suecia-e-uma-aluna-de-17-anos.html"
+          "url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html"
         }
       ],
       "mentioned_countries": [
-        "sw"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/21/ataque-com-espada-em-escola-da-suecia-deixa-varios-feridos-suspeito-e-detido.ghtml",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "france24.com",
-        "globo.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.461,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7838
-        },
-        "total": 0.5684,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "suede",
-      "subject_names": [
-        "suecia",
-        "suede",
-        "sweden",
-        "swedish"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Un hombre, identificado como exalumno, atacó con una espada a estudiantes en un liceo sueco, matando a una alumna de 17 años e hiriendo a tres personas más. El atacante fue detenido por la policía en el lugar de los hechos.",
-      "takeaway": "Europa continúa enfrentando episodios de violencia extrema en sus escuelas, independientemente de los sistemas de seguridad implementados.",
-      "why_it_matters": "Un ataque mortal en una escuela sueca con arma blanca subraya la persistencia de la violencia en centros educativos europeos, afectando la seguridad de menores en instituciones que se consideran espacios protegidos."
-    },
-    {
-      "angle_zone": "europe",
-      "cluster_id": "subject-edouard-philippe-d4ffa884beaa",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-22",
-      "headline": "Édouard Philippe promete cerrar la inmigración en Mayotte en campaña presidencial de 2027",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/election-presidentielle-2027/article/2026/08/22/presidentielle-2027-a-mayotte-edouard-philippe-promet-de-fermer-les-vannes-de-l-immigration-a-des-elus-lasses-par-les-promesses_6753542_6205049.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/a-mayotte-edouard-philippe-promet-de-mettre-fin-a-lappel-dair-de-limmigration-et-tacle-melenchon-20260822_E5LS3534OZBMTA22WOD7NKTNJE/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/mayotte-est-il-possible-de-fermer-totalement-l-immigration-comme-le-propose-edouard-philippe-20260821"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
+        "united-kingdom",
+        "rs"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/politique/mayotte-est-il-possible-de-fermer-totalement-l-immigration-comme-le-propose-edouard-philippe-20260821",
-      "rank": 4,
-      "reference_newsroom_count": 3,
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
+        "20minutos.es",
+        "francetvinfo.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.5496,
+        "total": 0.6143,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "edouard philippe",
+      "subject_label": "royaume-uni",
       "subject_names": [
-        "edouard philippe",
-        "jean-luc melenchon",
-        "mayotte"
+        "londres",
+        "putin",
+        "royaume-uni",
+        "rusia",
+        "russia"
       ],
       "subject_newsroom_count": 6,
-      "summary": "El candidato presidencial francés Édouard Philippe visitó Mayotte y prometió a los electores locales poner fin al «llamado» migratorio cerrando las \"compuertas de la inmigración\", argumentando que esto resolvería los problemas que aquejan a la región debido a las promesas incumplidas de años anteriores.",
-      "takeaway": "Un candidato político francés se posiciona endureciendo la retórica sobre inmigración en Mayotte, reflejando la tensión electoral en torno a este tema en Europa.",
-      "why_it_matters": "Las promesas de cierre migratorio de un potencial candidato presidencial francés afectan a la política migratoria del espacio Schengen y la presión sobre los países europeos receptores de migrantes desde el Atlántico Sur."
+      "summary": "Rusia ha puesto fin a la misión de su embajador en el Reino Unido, citando el deterioro de las relaciones bilaterales entre los dos países. Según los artículos, esta medida busca presionar a Londres para que reconsidere su apoyo a Ucrania.",
+      "takeaway": "Rusia cierra su representación diplomática en Reino Unido como castigo por el apoyo británico a Ucrania.",
+      "why_it_matters": "La retirada del embajador ruso marca el cierre de un canal diplomático clave entre Moscú y Londres, lo que deja a Europa sin una vía directa de negociación entre dos potencias nucleares enfrentadas sobre Ucrania."
     },
     {
       "angle_zone": "europe",
-      "cluster_id": "subject-ucrania-47de6a981286",
-      "coherence": 0.4404969645709814,
-      "consequence": 1,
+      "cluster_id": "subject-russia-dbfd5f0de516",
+      "coherence": 0.40478530576313054,
+      "consequence": 2,
       "countries": [
         "brazil",
-        "spain"
+        "ro",
+        "spain",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-22",
-      "headline": "Ataque ruso en un centro comercial de Ucrania mata al menos 15 personas e hiere a 130",
-      "independent_source_count": 4,
+      "country_count": 5,
+      "editorial_day": "2026-08-24",
+      "headline": "Zelenski advierte que Putin planea movilizar 300.000 soldados adicionales en Ucrania",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/ataque-ruso-centro-comercial-ucrania-deja-muertos-20260821213737-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/rusia-ataca-con-fuerza-un-centro-comercial-ucrania-hay-menos-seis-muertos-mas-cien-heridos_7028227_0.html"
+          "url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html"
         },
         {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/21/drones-da-russia-atacam-shopping-na-ucrania-e-deixam-mortos.ghtml"
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/putin-quer-recrutar-300-mil-novos-soldados-afirma-zelensky.ghtml"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/20/ataque-russo-a-capital-da-ucrania-deixa-15-mortos-apos-atingir-escola-hospital-infantil-e-creche.ghtml"
+          "language": "en",
+          "source": "wesh.com",
+          "source_country": "united-states",
+          "url": "https://www.wesh.com/article/russia-300000-troops-ukraine-war-zelenskyy/73503965"
         },
         {
-          "language": "pt",
-          "source": "cartacapital.com.br",
-          "source_country": "brazil",
-          "url": "https://www.cartacapital.com.br/mundo/ataque-russo-contra-um-shopping-deixa-16-mortos-na-ucrania/"
+          "language": "en",
+          "source": "express.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.express.co.uk/news/world/2241685/putin-russia-mobilisation-ukraine-war"
+        },
+        {
+          "language": "ron",
+          "source": "antena3.ro",
+          "source_country": "ro",
+          "url": "https://www.antena3.ro/externe/rusia-se-pregateste-de-o-noua-mobilizare-militara-zelenski-spune-ca-300-000-de-noi-recruti-urmeaza-a-fi-concentrati-in-armata-rusa-800455.html"
         }
       ],
       "mentioned_countries": [
@@ -442,52 +277,223 @@
         "rs"
       ],
       "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/20/ataque-russo-a-capital-da-ucrania-deixa-15-mortos-apos-atingir-escola-hospital-infantil-e-creche.ghtml",
-      "rank": 5,
-      "reference_newsroom_count": 3,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
+        "elpais.com",
         "globo.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4405,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "coherence": 0.4048,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
+          "prominence": 0.5556,
+          "source_reliability": 0.6
         },
-        "total": 0.4933,
+        "total": 0.6013,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ucrania",
+      "subject_label": "russia",
       "subject_names": [
-        "angriffen",
-        "kiev",
-        "kyiv",
+        "fedorov",
         "putin",
         "rusia",
         "russia",
-        "russian",
-        "ucrania",
-        "ukraine",
-        "zelenski"
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Rusia atacó un centro comercial en Ucrania con drones, causando al menos 15 muertos y 130 heridos. Los ataques también impactaron otras infraestructuras civiles incluyendo una escuela, un hospital infantil y una guardería.",
-      "takeaway": "Rusia sigue atacando deliberadamente infraestructuras civiles en Ucrania después de casi tres años de guerra, sin cambios en la estrategia ni en las capacidades de defensa aérea ucraniana.",
-      "why_it_matters": "El ataque demuestra la continuidad de la capacidad ofensiva rusa contra objetivos civiles en Ucrania, lo que reafirma para Europa la persistencia de una amenaza regional que ya ha generado flujos masivos de refugiados y presión sobre recursos humanitarios en países miembros de la UE."
+      "subject_newsroom_count": 14,
+      "summary": "El presidente ucraniano Volodímir Zelenski ha advertido que Rusia tiene planeado movilizar a 300.000 militares adicionales para su guerra en Ucrania, según informes de múltiples fuentes internacionales. Zelenski ha afirmado que también Rusia busca aumentar su producción de misiles para la contienda.",
+      "takeaway": "Rusia prepara una nueva movilización masiva que obligaría a Europa a decidir cuánto más está dispuesta a invertir en sostener la defensa ucraniana.",
+      "why_it_matters": "Un aumento de 300.000 soldados rusos intensificaría la presión militar sobre Ucrania, prolongando la guerra en la frontera oriental de Europa y aumentando la demanda de apoyo militar y recursos occidentales para Kiev."
+    },
+    {
+      "angle_zone": "europe",
+      "cluster_id": "subject-crans-montana-00c9c00e6e78",
+      "coherence": 0.4908983811948223,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-24",
+      "headline": "Jacques Moretti, sospechoso principal en incendio de Crans-Montana, puesto en detención provisional por violencias contra su esposa",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/faits-divers/crans-montana-jacques-moretti-place-en-detention-provisoire-apres-des-violences-presumees-sur-son-epouse-jessica-20260823"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/incendie-a-crans-montana-jacques-moretti-en-detention-provisoire-pour-violences-conjugales-20260824_37DCTOYYCVEH3DQGIXF2355GGQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/violences-faites-aux-femmes/jacques-moretti-principal-suspect-dans-l-incendie-de-crans-montana-place-en-detention-provisoire-pour-violences-conjugales_8158871.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260823-incendie-de-crans-montana-le-principal-suspect-en-d%C3%A9tention-pour-violences-conjugales"
+        },
+        {
+          "language": "it",
+          "source": "ilpost.it",
+          "source_country": "it",
+          "url": "https://www.ilpost.it/2026/08/23/jacques-moretti-proprietario-del-locale-andato-a-fuoco-a-capodanno-a-crans-montana-e-stato-arrestato-con-laccusa-di-violenze-sulla-moglie/"
+        },
+        {
+          "language": "it",
+          "source": "ansa.it",
+          "source_country": "it",
+          "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/23/crans-montana-jacques-moretti-arrestato-per-violenze-sulla-moglie-jessica_0df3a494-bef0-44df-972d-0999738921a3.html"
+        },
+        {
+          "language": "it",
+          "source": "quotidiano.net",
+          "source_country": "it",
+          "url": "https://www.quotidiano.net/cronaca/crans-montana-jacques-moretti-arrestato-per-violenze-sulla-moglie-jessica-jus9h0g7"
+        }
+      ],
+      "mentioned_countries": [
+        "sz"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/societe/violences-faites-aux-femmes/jacques-moretti-principal-suspect-dans-l-incendie-de-crans-montana-place-en-detention-provisoire-pour-violences-conjugales_8158871.html#xtor=RSS-3-[lestitres]",
+      "rank": 4,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "ansa.it",
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4909,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.5688,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "crans-montana",
+      "subject_names": [
+        "crans-montana",
+        "incendie",
+        "jacques moretti"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Jacques Moretti, propietario del local que se incendió en Crans-Montana en Año Nuevo, ha sido detenido y puesto en detención provisional tras acusaciones de violencias contra su esposa Jessica. Las autoridades lo consideran el principal sospechoso del incendio, aunque su detención actual responde específicamente a los cargos de agresiones domésticas.",
+      "takeaway": "Un sospechoso clave del incendio de Año Nuevo en los Alpes suizos enfrenta cargos de violencia doméstica mientras se desarrolla la investigación del fuego.",
+      "why_it_matters": "El arresto de Jacques Moretti por violencias conjugales detiene temporalmente la investigación sobre el incendio de Crans-Montana y afecta a las víctimas del siniestro que aguardan respuestas sobre las causas y responsabilidades."
+    },
+    {
+      "cluster_id": "subject-guardia-civil-1f66b34f5c27",
+      "coherence": 0.44730571796470053,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-23",
+      "headline": "Moreno reclama al Gobierno reactivar una unidad de élite de la Guardia Civil contra el narcotráfico",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-23/moreno-pide-al-gobierno-que-reactive-la-unidad-de-la-guardia-civil-contra-el-narcotrafico.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/andalucia/2026/08/23/6a8aad10e4d4d8da458b457a.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html"
+        },
+        {
+          "language": "es",
+          "source": "elperiodicodearagon.com",
+          "source_country": "spain",
+          "url": "https://www.elperiodicodearagon.com/espana/2026/08/23/moreno-exige-sanchez-reactivar-unidad-elite-guardia-civil-luchar-narcotrafico-133584091.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4473,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5479,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "guardia civil",
+      "subject_names": [
+        "andalucia",
+        "guardia civil",
+        "moreno",
+        "vox"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "El presidente de la Junta de Andalucía, Juanma Moreno, ha pedido al Gobierno nacional que reactive una unidad especializada de la Guardia Civil dedicada a combatir el narcotráfico que fue desmantelada por el Ministerio del Interior en 2022. Según los artículos, Montero, miembro del Gobierno, respondió acusando a Moreno de \"sembrar miedo\".",
+      "takeaway": "Un dirigente político regional demanda la restauración de una capacidad de seguridad que el Gobierno central eliminó hace dos años.",
+      "why_it_matters": "El estado de los recursos disponibles para combatir el narcotráfico en España determina la capacidad operativa de las fuerzas de seguridad en este ámbito crítico."
     }
   ],
-  "discarded_ingested": 72,
+  "discarded_ingested": 116,
   "discarded_kept": 5,
-  "generated_at": "2026-08-23T05:54:23.796896+00:00",
+  "generated_at": "2026-08-24T06:03:29.496587+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

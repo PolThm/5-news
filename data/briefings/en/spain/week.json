@@ -2,87 +2,101 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ceuta-18d838439583"
+        "subject-guardia-civil-1f66b34f5c27"
       ],
       "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-18d838439583",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-guardia-civil-1f66b34f5c27",
+      "coherence": 0.44730571796470053,
+      "consequence": 2,
       "countries": [
-        "it",
         "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-21",
-      "headline": "EU will increase funding to Morocco for border and migration control following Ceuta crisis",
-      "independent_source_count": 2,
+      "country_count": 1,
+      "editorial_day": "2026-08-23",
+      "headline": "Andalusian regional leader calls on Spanish government to restore elite Civil Guard unit against drug trafficking",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/08/21/6a883a75e5fdea1c4a8b4592.html"
+          "url": "https://elpais.com/espana/2026-08-23/moreno-pide-al-gobierno-que-reactive-la-unidad-de-la-guardia-civil-contra-el-narcotrafico.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/20/exclusive-eu-to-boost-funding-for-moroccos-migration-management-after-ceuta-crisis"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/andalucia/2026/08/23/6a8aad10e4d4d8da458b457a.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html"
+        },
+        {
+          "language": "es",
+          "source": "elperiodicodearagon.com",
+          "source_country": "spain",
+          "url": "https://www.elperiodicodearagon.com/espana/2026/08/23/moreno-exige-sanchez-reactivar-unidad-elite-guardia-civil-luchar-narcotrafico-133584091.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/20/exclusive-eu-to-boost-funding-for-moroccos-migration-management-after-ceuta-crisis",
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html",
       "rank": 1,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "euronews.com",
-        "expansion.com"
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
+          "coherence": 0.4473,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.6194,
+        "total": 0.5372,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "guardia civil",
       "subject_names": [
-        "ceuta",
-        "marruecos",
-        "vivas"
+        "andalucia",
+        "guardia civil",
+        "moreno",
+        "vox"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "The European Union has decided to provide additional financial support to Morocco to strengthen its management of migration and border control following a migration crisis in Ceuta. The funding increase comes as a response to the border tensions that occurred, with the EU aiming to enhance Morocco's capacity to address migration pressures.",
-      "takeaway": "The EU is paying Morocco to do border work that Spain cannot do alone.",
-      "why_it_matters": "Spain's external border management depends partly on Morocco's capacity and willingness to control migration flows, so increased EU funding to Moroccan authorities directly affects pressure on Spanish entry points like Ceuta and the southern coast."
+      "subject_newsroom_count": 5,
+      "summary": "Juanma Moreno, the regional leader of Andalusia, has called on the Spanish central government to reactivate an elite unit of the Civil Guard that was dismantled by the Interior Ministry in 2022. According to the articles, Moreno argues that restoring this specialized anti-narcotics unit is necessary to combat drug trafficking more effectively. A government official, María Jesús Montero, responded by accusing Moreno of attempting to spread fear.",
+      "takeaway": "Spain's drug enforcement capacity remains a live political battle between regional and central authorities with no resolution in sight.",
+      "why_it_matters": "The dispute reflects a growing partisan conflict over drug enforcement strategy in Andalucía, with the regional PP leader demanding the central Socialist government restore a counter-narcotics unit it dissolved, while the government accuses him of political fearmongering rather than proposing viable alternatives."
     },
     {
       "_linked_ids": [
+        "subject-ceuta-0bbc2721b24c",
         "subject-ceuta-8218d18d86f2"
       ],
       "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-8218d18d86f2",
-      "coherence": 0.5719122724934163,
+      "cluster_id": "subject-ceuta-0bbc2721b24c",
+      "coherence": null,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-22",
-      "headline": "Morocco demands Spain return migrant survivors and bodies from Ceuta crossing",
-      "independent_source_count": 5,
+      "headline": "Morocco requests Spain return migrant survivors and deceased from Ceuta crossing",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
@@ -98,18 +112,6 @@
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-22/marruecos-migrantes-ceuta-repatriacion-1tps_4409908/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html"
-        },
-        {
-          "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
           "url": "https://www.20minutos.es/internacional/marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta_7028408_0.html"
@@ -120,30 +122,28 @@
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/internacional/noticia-marruecos-pide-espana-devuelva-migrantes-supervivientes-fallecidos-paso-ceuta-20260822165043.html",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/marruecos-pide-oficialmente-espana-devuelva-migrantes-cruzaron-ceuta-muertos_1_13461755.html",
       "rank": 2,
-      "reference_newsroom_count": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "20minutos.es",
-        "elconfidencial.com",
         "eldiario.es",
-        "elmundo.es",
-        "europapress.es"
+        "elmundo.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5719,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "editorial_weight": 0.2727,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "novelty": 0.5,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5844,
+        "total": 0.5248,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
@@ -152,253 +152,253 @@
         "ceuta",
         "espana",
         "marruecos",
-        "melilla",
-        "spain",
-        "vivas"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Following a migration incident in which people crossed from Morocco to Spain's enclave of Ceuta, Morocco has demanded that Spain return both the surviving migrants and the deceased to Moroccan territory. According to the reports, Morocco has indicated it will accept the bodies of deceased migrants if Spain returns the minors among those who reached Ceuta.",
-      "takeaway": "Morocco is conditioning its acceptance of migrant bodies on Spain's return of minors, effectively linking a humanitarian issue to immigration policy negotiations.",
-      "why_it_matters": "Morocco's demand to return survivors and bodies creates an immediate diplomatic and practical challenge for Spain regarding the disposition of deceased migrants and the status of unaccompanied minors currently in Spanish custody in Ceuta."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-59affe15cc34"
-      ],
-      "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-59affe15cc34",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-19",
-      "headline": "Spain to relocate 500 migrant children from Ceuta to mainland",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/19/spain-allows-500-migrant-minors-in-ceuta-to-relocate-to-the-mainland-in-u-turn"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/19/espanha-vai-acolher-500-menores-imigrantes-do-marrocos-que-chegaram-em-ceuta.ghtml"
-        }
-      ],
-      "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/aug/19/spain-allows-500-migrant-minors-in-ceuta-to-relocate-to-the-mainland-in-u-turn",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "globo.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.25,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.5278,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "marruecos",
-        "vivas"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Spain has agreed to allow 500 immigrant children who arrived in the North African enclave of Ceuta to move to mainland Spain. This represents a policy shift by the Spanish government regarding the handling of migrant minors in the territory.",
-      "takeaway": "Spain is moving children out of Ceuta rather than keeping them at the border.",
-      "why_it_matters": "Spain has reversed course on its immigration policy in the North African enclave by committing to relocate 500 migrant children from Ceuta to the mainland, shifting responsibility and resources away from the border city where overcrowding had created a humanitarian crisis."
+      "subject_newsroom_count": 16,
+      "summary": "Morocco has asked Spain to return both surviving migrants, including minors, and the bodies of those who died while attempting to cross to the Spanish enclave of Ceuta.",
+      "takeaway": "Morocco is demanding Spain return both living migrants and bodies from the Ceuta crossing incident, forcing Spain to respond to a direct claim on its custody of these individuals.",
+      "why_it_matters": "Spain faces a formal diplomatic demand that challenges its handling of irregular migrants and deceased persons who reached Ceuta, potentially complicating bilateral relations and Spain's migration management at its North African border."
     },
     {
       "_linked_ids": [
-        "subject-supremo-90e120efcbfd"
+        "subject-veguellina-13b27455545c"
       ],
       "angle_zone": "spain",
-      "cluster_id": "subject-supremo-90e120efcbfd",
-      "coherence": 0.4889815853562841,
+      "cluster_id": "subject-veguellina-13b27455545c",
+      "coherence": 0.5055354993760415,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-22",
-      "headline": "Spain's Supreme Court rejects PP request to force ministers to appear in Senate in August",
-      "independent_source_count": 4,
+      "editorial_day": "2026-08-23",
+      "headline": "Two men found dead on street in Veguellina de Órbigo in Spain",
+      "independent_source_count": 5,
       "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/supremo-rechaza-forzar-comparecencia-urgente-ministros-senado-agosto-pidio-pp_1_13461342.html"
-        },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/22/6a8965e1e85ece431c8b4586.html"
+          "url": "https://www.elmundo.es/espana/2026/08/23/6a8ad36d21efa07b098b4590.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-supremo-rechaza-medida-pidio-pp-incomparecencia-ministros-senado-mes-ceuta-20260822104252.html"
+          "url": "https://www.elespanol.com/castilla-y-leon/region/leon/20260823/hallan-muertos-hombres-plena-calle-veguellina-orbigo-guardia-civil-investiga-hechos/1003744360634_0.html"
         },
         {
           "language": "es",
-          "source": "libertaddigital.com",
+          "source": "elperiodicodearagon.com",
           "source_country": "spain",
-          "url": "https://www.libertaddigital.com/espana/2026-08-22/el-supremo-rechaza-la-medida-cautelarisima-del-pp-para-que-los-ministros-acudan-al-senado-en-agosto-7450741/"
+          "url": "https://www.elperiodicodearagon.com/sucesos/2026/08/23/investiga-muerte-hombres-57-59-anos-via-publica-veguellina-orbigo-leon-133586612.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/castilla-y-leon/2026-08-23/guardia-civil-muerte-veguellina-orbigo-1tna-1tps_4410061/"
+        },
+        {
+          "language": "es",
+          "source": "laprovincia.es",
+          "source_country": "spain",
+          "url": "https://www.laprovincia.es/sucesos/2026/08/23/investiga-muerte-hombres-57-59-anos-via-publica-veguellina-orbigo-leon-133586626.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/politica/supremo-rechaza-forzar-comparecencia-urgente-ministros-senado-agosto-pidio-pp_1_13461342.html",
-      "rank": 4,
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/23/6a8ad36d21efa07b098b4590.html",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "europapress.es"
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.489,
+          "coherence": 0.5055,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.4556,
+        "total": 0.4612,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "supremo",
+      "subject_label": "veguellina",
       "subject_names": [
-        "ceuta",
-        "marruecos",
-        "senado",
-        "supremo",
-        "vivas"
+        "leon",
+        "orbigo",
+        "veguellina"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Spain's Supreme Court has rejected a request from the opposition People's Party (PP) to compel government ministers to make an urgent appearance in the Senate before the end of August to address the crisis in Ceuta. The PP had sought this emergency measure to pressure ministers into explaining their response to the situation, but the court declined to impose the requirement.",
-      "takeaway": "Spain's highest court declined to override normal parliamentary procedures at the opposition's request.",
-      "why_it_matters": "The PP's attempt to force an emergency Senate appearance by ministers over the Ceuta crisis has been blocked, leaving the government free to handle the parliamentary response on its own schedule rather than under court pressure."
+      "subject_newsroom_count": 3,
+      "summary": "Two men, ages 57 and 59, were discovered dead on a public street in Veguellina de Órbigo in the province of León, Spain. According to reports, the men were friends, and no signs of violence were apparent on their bodies. The Guardia Civil is investigating the circumstances of their deaths.",
+      "takeaway": "Two middle-aged men found dead in a León street without apparent violence have triggered an official inquiry whose outcome will inform how Spanish authorities classify and respond to similar cases.",
+      "why_it_matters": "The Guardia Civil's investigation into the sudden deaths of two men in a rural León municipality will determine whether Spain's death classification and public health protocols require adjustment based on the findings."
     },
     {
       "_linked_ids": [
-        "subject-act-53bce77cb1df"
+        "subject-italia-378b857d3667"
       ],
       "angle_zone": "spain",
-      "cluster_id": "subject-act-53bce77cb1df",
-      "coherence": 0.4087292782244435,
+      "cluster_id": "subject-italia-378b857d3667",
+      "coherence": null,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-22",
-      "headline": "Far-right Save Europe Act rally in Barcelona draws minimal attendance while counter-protests draw larger crowds",
-      "independent_source_count": 4,
+      "editorial_day": "2026-08-23",
+      "headline": "Buscan a un empresario español que cayó de su barco en aguas de Italia",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/catalunya/2026-08-22/barcelona-muestra-su-rechazo-a-la-marcha-ultra-y-racista-save-europe-act.html"
+          "url": "https://elpais.com/espana/2026-08-23/desaparecido-un-empresario-espanol-tras-caer-de-su-barco-entre-italia-y-grecia.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/decenas-antifascistas-concentran-barcelona-protestar-manifestacion-ultra-save-europe_1_13461487.html"
+          "url": "https://www.20minutos.es/internacional/buscan-empresario-espanol-cayo-barco-aguas-italia_7028485_0.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/cataluna/2026/08/22/6a89eb26e9cf4ae6028b4597.html"
-        },
-        {
-          "language": "es",
-          "source": "publico.es",
-          "source_country": "spain",
-          "url": "https://www.publico.es/sociedad/grupo-supremacista-save-europe-act-pincha-barcelona-concentracion-antifascista-supera-gran-numero-ultras.html"
+          "url": "https://www.elconfidencial.com/espana/2026-08-23/salvamento-maritimo-empresario-desaparecido-1tna-1tps_4410087/"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "spain",
+        "it",
+        "gr"
       ],
       "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/catalunya/2026-08-22/barcelona-muestra-su-rechazo-a-la-marcha-ultra-y-racista-save-europe-act.html",
-      "rank": 5,
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/buscan-empresario-espanol-cayo-barco-aguas-italia_7028485_0.html",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
+        "20minutos.es",
+        "elconfidencial.com",
         "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4087,
+          "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.4459,
+        "total": 0.4523,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "act",
+      "subject_label": "italia",
       "subject_names": [
-        "act",
-        "allemagne",
-        "barcelona",
-        "europa",
-        "europe",
-        "germany",
-        "save europe"
+        "grece",
+        "grecia",
+        "italia",
+        "italie",
+        "mediterraneo"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "A demonstration by the far-right group Save Europe Act calling for border closures and mass remigration drew only dozens of participants to Barcelona, while a counter-demonstration in opposition attracted significantly more attendees, according to reports from Spanish media outlets.",
-      "takeaway": "A marginal European far-right group's attempt to establish itself in Spain collapsed under the weight of organized public opposition.",
-      "why_it_matters": "The failed mobilization demonstrates that far-right extremist movements lack significant organizational capacity or grassroots support in Spain, while Spain's civil society capacity for rapid counter-mobilization remains strong."
+      "subject_newsroom_count": 12,
+      "summary": "Buscan a un empresario español que cayó de su barco en aguas de Italia",
+      "takeaway": "The incident underscores the risks maritime travel poses to Spanish nationals in international waters where coordination between European jurisdictions becomes essential.",
+      "why_it_matters": "A Spanish citizen's family and those involved in search-and-rescue operations are affected as authorities coordinate a response across Italian and Greek waters."
+    },
+    {
+      "_linked_ids": [
+        "subject-aragon-1de4be0bb766"
+      ],
+      "cluster_id": "subject-aragon-1de4be0bb766",
+      "coherence": null,
+      "consequence": 0,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-23",
+      "headline": "Spain places multiple regions under weather alerts for rain and storms",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/22/6a895969e9cf4a26378b4587.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/aragon/actualidad/20260823/alerta-naranja-aragon-lluvias-tormentas-zonas-huesca-teruel-afectadas/1003744360479_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-23/avisos-lluvias-tormentas-comunidades-1tps_4410034/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/22/6a895969e9cf4a26378b4587.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.3656,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "aragon",
+      "subject_names": [
+        "aragon",
+        "cataluna"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Heavy rain and thunderstorms are affecting eastern Spain, with Aragón and Cataluña placed under orange-level alerts. Tarragona is among the hardest hit areas, along with affected zones in Huesca and Teruel within Aragón. Baleares and Comunidad Valenciana are also under weather warnings for the same weather system.",
+      "takeaway": "Eastern Spain is experiencing widespread severe weather that has triggered emergency alerts across seven autonomous communities.",
+      "why_it_matters": "The orange alert level indicates significant danger to residents and infrastructure in these regions, requiring precautionary measures from authorities and the public."
     }
   ],
-  "discarded_ingested": 28,
+  "discarded_ingested": 35,
   "discarded_kept": 5,
-  "generated_at": "2026-08-23T05:54:23.796896+00:00",
+  "generated_at": "2026-08-24T06:03:29.496587+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

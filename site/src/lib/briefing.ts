@@ -581,9 +581,9 @@ export function dateLocale(lang: OutputLanguage): string {
 }
 
 const TIMESTAMP_WITH_DATE: Record<OutputLanguage, { lead: string; join: string }> = {
-  fr: { lead: "Mis à jour le", join: "à" },
-  en: { lead: "Updated on", join: "at" },
-  es: { lead: "Actualizado el", join: "a las" },
+  fr: { lead: "Mis à jour le", join: ", à" },
+  en: { lead: "Updated on", join: ", at" },
+  es: { lead: "Actualizado el", join: ", a las" },
 };
 
 export function timestampWithDate(lang: OutputLanguage): { lead: string; join: string } {

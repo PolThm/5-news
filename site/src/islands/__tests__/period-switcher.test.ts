@@ -1129,23 +1129,23 @@ describe("formatTimestamp", () => {
   it("converts UTC into the reader's own wall clock", () => {
     // The whole point of the change: a Paris reader stops doing the +2 in
     // their head. 05:54 UTC is 07:54 there in August.
-    expect(formatTimestamp(iso, "fr", "Europe/Paris")).toBe("Mis à jour le 20 août à 07:54 CEST");
+    expect(formatTimestamp(iso, "fr", "Europe/Paris")).toBe("Mis à jour le 20 août, à 07:54 CEST");
   });
 
   it("follows the season instead of hardcoding one abbreviation", () => {
     // The half a literal "CEST" would get wrong for five months of the year.
     expect(formatTimestamp("2026-01-20T05:54:12.000Z", "fr", "Europe/Paris")).toBe(
-      "Mis à jour le 20 janv. à 06:54 CET"
+      "Mis à jour le 20 janv., à 06:54 CET"
     );
   });
 
   it("switches at the real DST boundary, not a date approximation", () => {
     // Europe/Paris springs forward at exactly 01:00 UTC on 2026-03-29.
     expect(formatTimestamp("2026-03-29T00:59:00.000Z", "fr", "Europe/Paris")).toBe(
-      "Mis à jour le 29 mars à 01:59 CET"
+      "Mis à jour le 29 mars, à 01:59 CET"
     );
     expect(formatTimestamp("2026-03-29T01:01:00.000Z", "fr", "Europe/Paris")).toBe(
-      "Mis à jour le 29 mars à 03:01 CEST"
+      "Mis à jour le 29 mars, à 03:01 CEST"
     );
   });
 
@@ -1153,28 +1153,28 @@ describe("formatTimestamp", () => {
     // Intl would not: asked for Europe/Paris it answers "UTC+2" in fr,
     // "GMT+2" in en and "CEST" in es. The reader's language must not change
     // what timezone they appear to be in.
-    expect(formatTimestamp(iso, "fr", "Europe/Paris")).toBe("Mis à jour le 20 août à 07:54 CEST");
-    expect(formatTimestamp(iso, "en", "Europe/Paris")).toBe("Updated on 20 Aug at 07:54 CEST");
-    expect(formatTimestamp(iso, "es", "Europe/Paris")).toBe("Actualizado el 20 ago a las 07:54 CEST");
+    expect(formatTimestamp(iso, "fr", "Europe/Paris")).toBe("Mis à jour le 20 août, à 07:54 CEST");
+    expect(formatTimestamp(iso, "en", "Europe/Paris")).toBe("Updated on 20 Aug, at 07:54 CEST");
+    expect(formatTimestamp(iso, "es", "Europe/Paris")).toBe("Actualizado el 20 ago, a las 07:54 CEST");
   });
 
   it("reads correctly outside Europe", () => {
-    expect(formatTimestamp(iso, "fr", "America/New_York")).toBe("Mis à jour le 20 août à 01:54 EDT");
+    expect(formatTimestamp(iso, "fr", "America/New_York")).toBe("Mis à jour le 20 août, à 01:54 EDT");
     expect(formatTimestamp("2026-01-20T05:54:12.000Z", "fr", "America/New_York")).toBe(
-      "Mis à jour le 20 janv. à 00:54 EST"
+      "Mis à jour le 20 janv., à 00:54 EST"
     );
-    expect(formatTimestamp(iso, "fr", "UTC")).toBe("Mis à jour le 20 août à 05:54 UTC");
+    expect(formatTimestamp(iso, "fr", "UTC")).toBe("Mis à jour le 20 août, à 05:54 UTC");
   });
 
   it("reads the date in the display zone, not in UTC", () => {
     // 23:30 UTC is already the next day in Tokyo. Showing the UTC date beside
     // a Tokyo clock would pair tomorrow's date with tonight's time.
     expect(formatTimestamp("2026-08-20T23:30:00.000Z", "fr", "Asia/Tokyo")).toBe(
-      "Mis à jour le 21 août à 08:30 GMT+9"
+      "Mis à jour le 21 août, à 08:30 GMT+9"
     );
     // ...and the mirror case west of UTC, where it is still the previous day.
     expect(formatTimestamp("2026-08-20T02:30:00.000Z", "fr", "America/New_York")).toBe(
-      "Mis à jour le 19 août à 22:30 EDT"
+      "Mis à jour le 19 août, à 22:30 EDT"
     );
   });
 
@@ -1192,18 +1192,18 @@ describe("formatTimestamp", () => {
     const fresh = formatTimestamp("2026-08-24T06:03:29.000Z", "fr", "Europe/Paris");
     const stale = formatTimestamp("2026-08-20T15:31:59.000Z", "fr", "Europe/Paris");
 
-    expect(fresh).toBe("Mis à jour le 24 août à 08:03 CEST");
-    expect(stale).toBe("Mis à jour le 20 août à 17:31 CEST");
+    expect(fresh).toBe("Mis à jour le 24 août, à 08:03 CEST");
+    expect(stale).toBe("Mis à jour le 20 août, à 17:31 CEST");
     expect(fresh).not.toBe(stale);
   });
 
   it("degrades to a readable offset for a zone with no abbreviation", () => {
-    expect(formatTimestamp(iso, "fr", "Asia/Tokyo")).toBe("Mis à jour le 20 août à 14:54 GMT+9");
+    expect(formatTimestamp(iso, "fr", "Asia/Tokyo")).toBe("Mis à jour le 20 août, à 14:54 GMT+9");
   });
 
   it("falls back to UTC rather than rendering nothing on a bad timezone", () => {
     // A Briefing header reading UTC beats one that throws during hydration.
-    expect(formatTimestamp(iso, "fr", "Not/AZone")).toBe("Mis à jour le 20 août à 05:54 UTC");
+    expect(formatTimestamp(iso, "fr", "Not/AZone")).toBe("Mis à jour le 20 août, à 05:54 UTC");
   });
 });
 
@@ -1250,7 +1250,7 @@ describe("localiseTimestamp", () => {
 
     withDocument(element, () => localiseTimestamp());
 
-    expect(element.textContent).toMatch(/^Mis à jour le .+ à \d{2}:\d{2} .+$/);
+    expect(element.textContent).toMatch(/^Mis à jour le .+, à \d{2}:\d{2} .+$/);
     expect(element.textContent).not.toBe("Mis à jour à 05:54 UTC");
   });
 

@@ -83,7 +83,7 @@ function formatTimestamp(iso: string): string {
   }).format(date);
   const { lead, join } = timestampWithDate(lang);
 
-  return `${lead} ${day} ${join} ${hours}:${minutes} UTC`;
+  return `${lead} ${day}${join} ${hours}:${minutes} UTC`;
 }
 ---
 

@@ -395,9 +395,9 @@ const DATE_LOCALE: Record<LanguageSlug, string> = {
 };
 
 const TIMESTAMP_WITH_DATE: Record<LanguageSlug, { lead: string; join: string }> = {
-  fr: { lead: "Mis à jour le", join: "à" },
-  en: { lead: "Updated on", join: "at" },
-  es: { lead: "Actualizado el", join: "a las" },
+  fr: { lead: "Mis à jour le", join: ", à" },
+  en: { lead: "Updated on", join: ", at" },
+  es: { lead: "Actualizado el", join: ", a las" },
 };
 
 // The server renders this timestamp in UTC because a statically prerendered
@@ -553,7 +553,7 @@ export function formatTimestamp(iso: string, lang: LanguageSlug, timeZone?: stri
         }).format(date);
         const { lead, join } = TIMESTAMP_WITH_DATE[lang];
 
-        return `${lead} ${day} ${join} ${hour}:${minute} ${abbreviation}`;
+        return `${lead} ${day}${join} ${hour}:${minute} ${abbreviation}`;
       }
     }
   } catch {
@@ -571,7 +571,7 @@ export function formatTimestamp(iso: string, lang: LanguageSlug, timeZone?: stri
   }).format(date);
   const { lead, join } = TIMESTAMP_WITH_DATE[lang];
 
-  return `${lead} ${day} ${join} ${hours}:${minutes} UTC`;
+  return `${lead} ${day}${join} ${hours}:${minutes} UTC`;
 }
 
 /**

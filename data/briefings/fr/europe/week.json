@@ -2,47 +2,141 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-ukraine-bd586e3f02bd"
+      ],
+      "angle_zone": "europe",
+      "cluster_id": "subject-ukraine-bd586e3f02bd",
+      "coherence": 0.4299843913904433,
+      "consequence": 3,
+      "countries": [
+        "ca",
+        "it",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-25",
+      "headline": "Le Royaume-Uni partagera les plans des missiles SCALP avec l'Ukraine",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/scalp-misil-largo-alcance-reino-unido-ayudara-20260824141222-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/londres-entega-ucrania-planos-fabricar-misiles-largo-20260824111940-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260824/11619165/londres-ayudara-kyiv-fabricar-misiles-alcance-escasez-patriots.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/24/uk-to-share-scalp-missile-blueprints-with-ukraine-as-coalition-of-the-willing-meets-in-kyi"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/08/25/nx-s1-5944059/the-uk-will-help-ukraine-make-long-range-missiles-by-sharing-classified-tech-information"
+        },
+        {
+          "language": "es",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://es.euronews.com/my-europe/2026/08/24/reino-unido-facilitara-a-ucrania-los-planos-de-misiles-scalp-mientras-los-aliados-se-reune"
+        },
+        {
+          "language": "en",
+          "source": "cbc.ca",
+          "source_country": "ca",
+          "url": "https://www.cbc.ca/news/world/russia-ukraine-war-1642-9.7317926"
+        },
+        {
+          "language": "es",
+          "source": "infodefensa.com",
+          "source_country": "spain",
+          "url": "https://www.infodefensa.com/texto-diario/mostrar/5991751/reino-unido-autoriza-mbda-ceda-informacion-clasificada-ucrania-pueda-fabricar-misiles-largo-alcance-scalp"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "united-kingdom"
+      ],
+      "origin_country": "ca",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/londres-entega-ucrania-planos-fabricar-misiles-largo-20260824111940-nt.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "euronews.com",
+        "lavanguardia.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.43,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7333
+        },
+        "total": 0.6996,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "coalition",
+        "kiev",
+        "kyiv",
+        "londres",
+        "reino unido",
+        "royaume-uni",
+        "russia",
+        "russie",
+        "ucraina",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 28,
+      "summary": "Le Royaume-Uni autorisera le partage de plans et d'informations techniques classifiées relatives aux missiles de long portée SCALP avec l'Ukraine, permettant à Kyiv de fabriquer ces armes sur son territoire. Cette initiative vise à pallier la pénurie de missiles Patriot et s'inscrit dans les efforts d'une coalition internationale réunie à Kyiv pour soutenir la défense ukrainienne.",
+      "takeaway": "Le Royaume-Uni autorise l'Ukraine à fabriquer elle-même des armes sophistiquées en partageant des plans classifiés, bouleversant le modèle traditionnel de dépendance aux importations d'armements.",
+      "why_it_matters": "La Grande-Bretagne transfère à l'Ukraine la capacité de produire des missiles de long portée, renforçant sa capacité de dissuasion face à la Russie et marquant une escalade qualitative dans le soutien militaire occidental que les autres nations européennes devront évaluer."
+    },
+    {
+      "_linked_ids": [
+        "subject-ukraine-6a78cb2b8b92",
         "subject-zelensky-a0351200d5b4"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-zelensky-a0351200d5b4",
-      "coherence": 0.4997253301378968,
+      "cluster_id": "subject-ukraine-6a78cb2b8b92",
+      "coherence": 0.45408928237918833,
       "consequence": 2,
       "countries": [
         "brazil",
         "france",
         "germany",
-        "it",
-        "md",
-        "mx",
-        "spain",
-        "united-kingdom",
-        "united-states",
-        "ve"
+        "spain"
       ],
-      "country_count": 10,
+      "country_count": 4,
       "editorial_day": "2026-08-24",
-      "headline": "Zelensky rejette l'organisation d'élections pendant la guerre en Ukraine",
-      "independent_source_count": 14,
+      "headline": "Zelensky rejette la tenue d'élections en temps de guerre en Ukraine",
+      "independent_source_count": 5,
       "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-pour-le-pays-20260823_E24VNGNPWFCDXJWPAE2KAV6OVA/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260823-des-%C3%A9lections-en-ukraine-un-tsunami-qui-fracturerait-le-pays-dit-zelensky"
-        },
         {
           "language": "fr",
           "source": "nouvelobs.com",
@@ -63,12 +157,6 @@
         },
         {
           "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/23/ukraine-election-wartime-risk-russia-zelenskyy"
-        },
-        {
-          "language": "en",
           "source": "dw.com",
           "source_country": "germany",
           "url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf"
@@ -78,411 +166,318 @@
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "ntn24.com",
-          "source_country": "ve",
-          "url": "https://www.ntn24.com/noticias-actualidad/en-este-momento-elecciones-serian-tsunami-zelenski-rechaza-elecciones-plena-guerra-644058"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-08-24/zelensky-dice-che-organizzare-nuove-elezioni-distruggerebbe-lucraina/19599058/"
-        },
-        {
-          "language": "es",
-          "source": "eldiariony.com",
-          "source_country": "united-states",
-          "url": "https://eldiariony.com/2026/08/23/zelenski-rechaza-celebrar-elecciones-durante-la-guerra-y-advierte-que-dividirian-a-ucrania/"
-        },
-        {
-          "language": "es",
-          "source": "eleconomista.com.mx",
-          "source_country": "mx",
-          "url": "https://www.eleconomista.com.mx/internacionales/zelenski-rechaza-elecciones-plena-guerra-fracturarian-ucrania-20260823-829731.html"
-        },
-        {
-          "language": "ron",
-          "source": "news.yam.md",
-          "source_country": "md",
-          "url": "https://news.yam.md/ro/story/56950255"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
       "origin_country": "brazil",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 9,
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf",
+      "rank": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "dw.com",
-        "francetvinfo.fr",
         "globo.com",
         "lavanguardia.com",
         "lexpress.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "rfi.fr",
-        "theguardian.com"
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4997,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
+          "coherence": 0.4541,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.8182
+          "novelty": 0.5,
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.7013,
+        "total": 0.6069,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "zelensky",
+      "subject_label": "ukraine",
       "subject_names": [
-        "fedorov",
+        "coalition",
         "kiev",
+        "kyiv",
+        "russia",
+        "russie",
         "ucraina",
         "ucrania",
         "ukraine",
+        "volodymyr zelensky",
         "zelenski",
-        "zelensky",
-        "zelenskyy"
+        "zelensky"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Le président ukrainien Volodymyr Zelensky affirme que l'organisation d'élections en temps de guerre constituerait un tsunami qui fracturerait et détruirait le pays, justifiant son rejet de cette possibilité.",
-      "takeaway": "Zelensky estime que les élections fracturedaient le pays en guerre, ce qui signifie que l'Ukraine restera dirigée sans scrutin démocratique jusqu'à la fin du conflit.",
-      "why_it_matters": "Le refus de Zelensky d'organiser des élections en temps de guerre maintient l'incertitude sur la légitimité démocratique de la direction ukrainienne, une question qui affecte les négociations futures avec l'Europe sur le soutien militaire et financier continu."
+      "subject_newsroom_count": 28,
+      "summary": "Le président ukrainien Volodymyr Zelensky s'oppose à la tenue d'élections pendant la guerre, avertissant que ce processus provoque­rait des divisions majeures dans le pays et le déstabiliserait gravement, qu'il compare à un tsunami dévastateur.",
+      "takeaway": "L'Ukraine reste gouvernée sans processus électoral, ce qui pose à l'Europe la question de la reconnaissance politique durable de ses interlocuteurs ukrainiens.",
+      "why_it_matters": "La position de Zelensky contre les élections en temps de guerre maintient l'incertitude sur la légitimité démocratique du leadership ukrainien, ce qui complique les négociations diplomatiques que l'Europe devrait mener avec Kiev pour un règlement du conflit."
     },
     {
       "_linked_ids": [
-        "subject-royaume-uni-2c652e3f3759"
+        "subject-burnham-baccfcca6263"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-royaume-uni-2c652e3f3759",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-23",
-      "headline": "La Russie retire son ambassadeur au Royaume-Uni en raison de la détérioration des relations",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/la-russie-met-fin-a-la-mission-de-son-ambassadeur-au-royaume-uni-et-pointe-la-deterioration-des-relations-bilaterales_8158448.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "francetvinfo.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6236,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "royaume-uni",
-      "subject_names": [
-        "londres",
-        "putin",
-        "royaume-uni",
-        "rusia",
-        "russia"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "La Russie a mis fin à la mission de son ambassadeur au Royaume-Uni, justifiant cette décision par une détérioration des relations bilatérales. Cette action intervient dans un contexte où la Russie cherche à exercer une pression sur Londres pour que le Royaume-Uni reconsidère son soutien à l'Ukraine.",
-      "takeaway": "La Russie durcit son isolement diplomatique en Europe en retirant sa représentation d'un pays clé de l'alliance occidentale.",
-      "why_it_matters": "L'ambassadeur russe au Royaume-Uni n'étant plus à son poste, Moscou ferme un canal diplomatique majeur avec un membre central de l'OTAN et du soutien occidental à l'Ukraine, ce qui réduit les possibilités de négociation directe sur le conflit ukrainien qui affecte la sécurité européenne."
-    },
-    {
-      "_linked_ids": [
-        "subject-russia-dbfd5f0de516"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-russia-dbfd5f0de516",
-      "coherence": 0.40478530576313054,
+      "cluster_id": "subject-burnham-baccfcca6263",
+      "coherence": 0.4365340881689971,
       "consequence": 2,
       "countries": [
-        "brazil",
-        "ro",
+        "it",
         "spain",
-        "united-kingdom",
-        "united-states"
+        "sy",
+        "united-kingdom"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-08-24",
-      "headline": "Zelenski avertit que Poutine prévoit de mobiliser 300 000 soldats supplémentaires en Ukraine",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/putin-quer-recrutar-300-mil-novos-soldados-afirma-zelensky.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "wesh.com",
-          "source_country": "united-states",
-          "url": "https://www.wesh.com/article/russia-300000-troops-ukraine-war-zelenskyy/73503965"
-        },
-        {
-          "language": "en",
-          "source": "express.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.express.co.uk/news/world/2241685/putin-russia-mobilisation-ukraine-war"
-        },
-        {
-          "language": "ron",
-          "source": "antena3.ro",
-          "source_country": "ro",
-          "url": "https://www.antena3.ro/externe/rusia-se-pregateste-de-o-noua-mobilizare-militara-zelenski-spune-ca-300-000-de-noi-recruti-urmeaza-a-fi-concentrati-in-armata-rusa-800455.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "elpais.com",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4048,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.5766,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "russia",
-      "subject_names": [
-        "fedorov",
-        "putin",
-        "rusia",
-        "russia",
-        "zelenski",
-        "zelensky",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "Selon plusieurs sources internationales, le président ukrainien Volodymyr Zelenski a averti que la Russie s'apprête à mobiliser 300 000 soldats supplémentaires pour poursuivre sa guerre en Ukraine, une annonce faite dans le contexte des élections de septembre. Zelenski a réagi à cette menace en déclarant qu'il viendrait à bout de ces nouvelles troupes.",
-      "takeaway": "Poutine préparerait une conscription massive pour prolonger la guerre, ce qui engage l'Europe dans un soutien durable à l'Ukraine face à une Russie qui ne cède pas.",
-      "why_it_matters": "Une mobilisation russe d'ampleur affecte directement les pays européens de l'OTAN limitrophes de l'Ukraine, qui doivent anticiper une intensification prolongée du conflit à leurs frontières et ajuster leur aide militaire en conséquence."
-    },
-    {
-      "_linked_ids": [
-        "subject-guardia-civil-1f66b34f5c27"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-guardia-civil-1f66b34f5c27",
-      "coherence": 0.44730571796470053,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-23",
-      "headline": "Moreno demande au gouvernement de réactiver une unité élite de la Garde civile contre le narcotrafic",
+      "country_count": 4,
+      "editorial_day": "2026-08-25",
+      "headline": "Le nouveau Premier ministre britannique Andy Burnham se rend à Kyiv et réaffirme le soutien du Royaume-Uni à l'Ukraine",
       "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-23/moreno-pide-al-gobierno-que-reactive-la-unidad-de-la-guardia-civil-contra-el-narcotrafico.html"
+          "url": "https://www.lavanguardia.com/internacional/20260824/11618856/reino-unido-proporcionara-ucrania-planos-fabricar-misiles-alcance.html"
         },
         {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/andalucia/2026/08/23/6a8aad10e4d4d8da458b457a.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/24/new-uk-pm-andy-burnham-to-visit-kyiv-on-first-foreign-trip-reaffirms-support-to-ukraine"
         },
         {
-          "language": "es",
-          "source": "elperiodicodearagon.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodicodearagon.com/espana/2026/08/23/moreno-exige-sanchez-reactivar-unidad-elite-guardia-civil-luchar-narcotrafico-133584091.html"
+          "language": "en",
+          "source": "globalsecurity.org",
+          "source_country": "sy",
+          "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/08/ukraine-260824-ukgov01.htm"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "united-kingdom",
+        "up"
       ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html",
-      "rank": 4,
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/24/new-uk-pm-andy-burnham-to-visit-kyiv-on-first-foreign-trip-reaffirms-support-to-ukraine",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4473,
-          "corroboration": 0.3333,
+          "coherence": 0.4365,
+          "corroboration": 0.6667,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5,
           "source_reliability": 0.5789
         },
-        "total": 0.5372,
+        "total": 0.5885,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "guardia civil",
+      "subject_label": "burnham",
       "subject_names": [
-        "andalucia",
-        "guardia civil",
-        "moreno",
-        "vox"
+        "burnham",
+        "coalition",
+        "kiev",
+        "kyiv",
+        "russia",
+        "russie",
+        "ucraina",
+        "ucrania",
+        "ukraine"
       ],
       "subject_newsroom_count": 5,
-      "summary": "Le président andalou Juanma Moreno exige que le gouvernement espagnol réactive une unité spécialisée de la Garde civile dans la lutte contre le narcotrafic, dismantled by the Interior Ministry in 2022. Le gouvernement a réagi en accusant Moreno de semer la peur.",
-      "takeaway": "L'Espagne demeure divisée sur ses priorités sécuritaires face au narcotrafic, sans décision immédiate du gouvernement central sur le renforcement des moyens.",
-      "why_it_matters": "La controverse sur les capacités espagnoles à combattre le narcotrafic dans le sud de l'Andalousie affecte directement les pays européens confrontés aux mêmes routes de trafic de drogue depuis l'Afrique du Nord vers le continent."
+      "summary": "Andy Burnham, récemment devenu Premier ministre du Royaume-Uni, a effectué son premier voyage international en se rendant à Kyiv, où il a réaffirmé le soutien britannique à l'Ukraine face aux menaces russes. Cette visite s'est déroulée le jour de l'indépendance ukrainienne, symbolisant l'engagement du gouvernement britannique auprès du pays.",
+      "takeaway": "La Grande-Bretagne réaffirme son soutien sans réserve à l'Ukraine au moment où le conflit reste gelé et où les alliés occidentaux doivent maintenir leur cohésion.",
+      "why_it_matters": "La visite du nouveau Premier ministre britannique à Kyiv le jour de l'indépendance ukrainienne confirme la continuité de l'engagement militaire et diplomatique du Royaume-Uni aux côtés de l'Ukraine, ce qui renforce les appuis occidentaux face à la Russie dans un conflit qui affecte la sécurité européenne."
     },
     {
       "_linked_ids": [
-        "subject-kyiv-e19936d53836"
+        "subject-fedorov-06d2772a4948",
+        "subject-fedorov-6e46be2fb1ca",
+        "subject-fedorov-9a4c37a0d280",
+        "subject-fedorov-a61e1224f51a",
+        "subject-zelenski-2543d8d9558c"
       ],
       "angle_zone": "europe",
-      "cluster_id": "subject-kyiv-e19936d53836",
+      "cluster_id": "subject-fedorov-a61e1224f51a",
       "coherence": null,
       "consequence": 2,
       "countries": [
-        "it",
-        "united-kingdom"
+        "france",
+        "germany"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-21",
-      "headline": "Les frappes russes causent des dégâts importants à Kyiv",
-      "independent_source_count": 2,
+      "editorial_day": "2026-08-24",
+      "headline": "Mykhaïlo Fedorov réclame l'organisation d'élections en Ukraine",
+      "independent_source_count": 3,
       "members": [
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/c8dnn05e90lo?at_medium=RSS&at_campaign=rss"
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/24/en-ukraine-l-appel-de-mykhailo-fedorov-a-organiser-des-elections-froidement-accueilli_6754889_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/"
         },
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/video/2026/08/21/kyiv-residents-search-through-the-wreckage-after-russias-deadly-barrage"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/video/2026/08/20/kyiv-residents-rescued-as-russian-strikes-damage-buildings-across-the-city"
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/could-ukraine-s-mykhailo-fedorov-challenge-zelenskyy/a-78469496?maca=en-rss-en-world-4025-rdf"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
-      "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/c8dnn05e90lo?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-mykhailo-fedorov-defie-volodymyr-zelensky-et-reclame-la-tenue-delections-4RYFXPBODZDPPG3ZMEYQLLOZLM/",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com"
+        "dw.com",
+        "lemonde.fr",
+        "lexpress.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.3536,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.2,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5463,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "fedorov",
+      "subject_names": [
+        "coalition",
+        "fedorov",
+        "kiev",
+        "kyiv",
+        "mykhailo fedorov",
+        "russia",
+        "russie",
+        "ucraina",
+        "ucrania",
+        "ukraine",
+        "volodymyr zelensky",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Le vice-premier ministre ukrainien Mykhaïlo Fedorov a appelé à la tenue d'élections en Ukraine, une demande qui a été accueillie froidement. Cet appel représente une forme de défi envers le président Volodymyr Zelensky et soulève des questions sur les tensions internes au sein de la direction ukrainienne.",
+      "takeaway": "Un désaccord public sur la direction politique de l'Ukraine affaiblit l'unité que l'Occident attendait de ses partenaires.",
+      "why_it_matters": "Cette fracture au sein de la direction ukrainienne complique la position de négociation de l'Ukraine auprès de l'UE et des alliés occidentaux au moment où la question du règlement du conflit devient centrale dans les débats européens."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-b095d961ebdb"
+      ],
+      "angle_zone": "europe",
+      "cluster_id": "subject-ceuta-b095d961ebdb",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-25",
+      "headline": "Le gouvernement espagnol annonce une direction unique et un plan d'aide pour la crise de Ceuta",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-25/sanchez-da-un-giro-a-la-gestion-de-la-crisis-de-ceuta-casi-un-mes-despues-con-un-mando-unico-y-un-plan-economico.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/sanchez-acepta-mando-unico-ceuta-mes-despues-crisis-acelera-medidas-choque_1_13464207.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/08/24/6a8c5fcfe5fdea8d758b4594.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/economia/2026/08/24/6a8c5fcfe5fdea8d758b4594.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.3333,
+          "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5349,
+        "total": 0.5448,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "kyiv",
+      "subject_label": "ceuta",
       "subject_names": [
-        "kyiv",
-        "russian"
+        "ceuta",
+        "gobierno",
+        "marruecos",
+        "psoe",
+        "robles",
+        "sanchez",
+        "seguridad nacional"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "La Russie a mené une série de frappes sur Kyiv, endommageant des bâtiments à travers la ville et frappant un marché qui reste en feu. Des habitants ont dû être secourus des décombres suite aux attaques.",
-      "takeaway": "La capacité de la Russie à frapper les centres urbains ukrainiens reste intacte, prolongeant une guerre qui pèse sur la stabilité économique et énergétique européenne.",
-      "why_it_matters": "Ces frappes russes intensifiées sur Kyiv confirment l'escalade de la guerre en Ukraine, qui affecte directement les approvisionnements énergétiques et alimentaires de l'Europe via les interruptions de corridors logistiques et les chocs de marché."
+      "subject_newsroom_count": 17,
+      "summary": "Près d'un mois après le début de la crise à Ceuta, le gouvernement espagnol a accepté la mise en place d'un commandement unifié et a lancé un plan d'aide d'urgence comprenant des mesures économiques et des aides destinées aux entreprises affectées par la situation.",
+      "takeaway": "Madrid réorganise enfin sa réponse à une crise frontalière qui expose les lacunes du contrôle migratoire européen.",
+      "why_it_matters": "La crise de Ceuta, où l'Espagne a tardé à réagir pendant un mois, affecte les États européens frontaliers et révèle les faiblesses de la gestion des crises migratoires aux frontières de l'Union."
     }
   ],
-  "discarded_ingested": 124,
+  "discarded_ingested": 120,
   "discarded_kept": 5,
-  "generated_at": "2026-08-24T06:03:29.496587+00:00",
+  "generated_at": "2026-08-25T05:57:31.149478+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

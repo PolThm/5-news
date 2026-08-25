@@ -2,148 +2,390 @@
   "clusters": [
     {
       "angle_zone": "france",
-      "cluster_id": "subject-togo-5c03cfcc7639",
-      "coherence": null,
+      "cluster_id": "subject-aude-b72cae80b98c",
+      "coherence": 0.5439384523001937,
       "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-23",
-      "headline": "La justice togolaise affirme disposer d'indices graves contre des réalisateurs français détenus",
-      "independent_source_count": 3,
+      "editorial_day": "2026-08-25",
+      "headline": "Une tornade ravage le village de Pomas dans l'Aude, faisant plus de 40 blessés",
+      "independent_source_count": 6,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/08/24/une-tornade-frappe-l-aude-et-cause-26-blesses-une-centaine-d-habitations-touchees_6755657_3245.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/meteo/aude-les-images-impressionnantes-d-une-tornade-pres-de-carcassonne-20260824"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/meteo/toitures-arrachees-maisons-soufflees-les-images-desolantes-du-village-de-pomas-dans-l-aude-ravage-par-une-tornade-20260825"
+        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/afrique/realisateurs-francais-detenus-au-togo-la-justice-evoque-des-indices-graves-et-concordants-20260823_7QD5N45FD5HHZCWJLXBAJYCWNA/"
+          "url": "https://www.liberation.fr/environnement/climat/dans-laude-le-village-de-pomas-devaste-par-une-tornade-20260824_YWIYY6Q6VZFELC2LZXKJWGEPTM/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/au-togo-la-justice-dispose-d-indices-graves-contre-les-journalistes-francais-detenus-20260823"
+          "url": "https://www.la-croix.com/un-village-de-l-aude-devaste-par-une-tornade-20260824"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260823.OBS117594/realisateurs-francais-detenus-au-togo-la-justice-togolaise-dit-disposer-d-indices-graves-a-leur-encontre.html"
+          "url": "https://www.franceinfo.fr/environnement/meteo/une-tornade-touche-la-commune-de-pomas-dans-l-aude-et-endommage-plusieurs-habitations_8160002.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/orages-une-impressionnante-tornade-balaye-l-aude_8160017.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260824-un-village-de-l-aude-dans-le-sud-de-la-france-d%C3%A9vast%C3%A9-par-une-tornade"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/international/afrique/realisateurs-francais-detenus-au-togo-la-justice-evoque-des-indices-graves-et-concordants-20260823_7QD5N45FD5HHZCWJLXBAJYCWNA/",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/france/20260824-un-village-de-l-aude-dans-le-sud-de-la-france-d%C3%A9vast%C3%A9-par-une-tornade",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
         "la-croix.com",
-        "liberation.fr",
-        "nouvelobs.com"
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5439,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.75
         },
-        "total": 0.4763,
+        "total": 0.5703,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "togo",
+      "subject_label": "aude",
       "subject_names": [
-        "togo"
+        "aude",
+        "pomas"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Plusieurs réalisateurs français sont actuellement détenus au Togo, et la justice togolaise déclare avoir réuni des indices graves et concordants contre eux, selon les informations rapportées par les médias français.",
-      "takeaway": "La justice togolaise affirme avoir des charges, mais sans transparence sur leur nature, ce qui rend impossible d'évaluer si la France doit intervenir ou accepter une procédure régulière.",
-      "why_it_matters": "La situation des réalisateurs français détenus dépend désormais de la solidité juridique des preuves togolaises : le gouvernement français devra évaluer si ces « indices graves et concordants » justifient une action diplomatique ou si la détention relève d'une instrumentalisation politique."
+      "subject_newsroom_count": 7,
+      "summary": "Un phénomène de tornade s'est abattu sur le village de Pomas, situé dans le département de l'Aude en France du Sud. Le sinistre a endommagé environ 300 habitations, détruite partiellement le village selon les témoignages locaux, et a fait au moins 41 blessés. Les dégâts observés incluent des toitures arrachées et des maisons soufflées.",
+      "takeaway": "Un événement climatique exceptionnel frappe une commune rurale du sud de la France, illustrant la vulnérabilité des villages aux phénomènes météorologiques extrêmes.",
+      "why_it_matters": "Une tornade a détruit partiellement le village de Pomas en Aude, laissant plus de 40 blessés et 300 habitations endommagées, ce qui mobilisera les services de secours et les autorités locales pour les opérations de sauvetage et de reconstruction."
     },
     {
       "angle_zone": "france",
-      "cluster_id": "subject-raphael-glucksmann-de9def90fe82",
-      "coherence": 0.45838910687786216,
-      "consequence": 0,
+      "cluster_id": "subject-bally-bagayoko-f2fab931783c",
+      "coherence": 0.6012719620703304,
+      "consequence": 1,
       "countries": [
-        "france",
-        "germany",
-        "it",
-        "ro"
+        "france"
       ],
-      "country_count": 4,
+      "country_count": 1,
       "editorial_day": "2026-08-24",
-      "headline": "Raphaël Glucksmann annonce sa candidature à la présidentielle 2027",
-      "independent_source_count": 14,
+      "headline": "Bally Bagayoko, maire de Saint-Denis, visé par une enquête pour détournement de fonds publics",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/presidentielle-2027-raphael-glucksmann-peut-il-atteindre-le-second-tour-20260823"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/presidentielle-2027-raphael-glucksmann-se-lance-dans-la-course-20260823"
+          "url": "https://www.lemonde.fr/societe/article/2026/08/24/bally-bagayoko-maire-de-saint-denis-vise-par-une-enquete-pour-detournement-de-fonds-publics-concernant-son-emploi-a-la-ratp_6755547_3224.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/politique/elections/presidentielle-raphael-glucksmann-est-bel-et-bien-candidat-20260823_V7X7J7ANVJERPODYUI6LSLQOSI/"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/idees-et-debats/editorial/raphael-glucksmann-en-campagne-pour-2027-ce-nest-pas-le-tout-detre-candidat-20260823_RIVXGSGFNZA3XHVH6JZVX2SHXM/"
+          "url": "https://www.liberation.fr/politique/bally-bagayoko-vise-par-une-enquete-du-parquet-national-financier-pour-detournement-de-fonds-publics-20260824_Y57MGUQWWZC57APB5MMQ3LCAIY/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/politique/presidentielle-2027-raphael-glucksmann-annonce-sa-candidature-pour-relever-la-france-20260823"
+          "url": "https://www.la-croix.com/politique/bally-bagayoko-a-la-ratp-la-justice-enquete-sur-des-soupcons-de-detournement-de-fonds-publics-20260824"
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/politique/presidentielle-2027-raphael-glucksmann-sur-le-chemin-d-une-candidature-20260823"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/raphael-glucksmann/soutiens-sondages-programme-sur-quoi-s-appuie-la-candidature-de-raphael-glucksmann-qui-lance-sa-campagne-pour-la-presidentielle-2027_8153303.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.mediapart.fr/journal/politique/240826/bally-bagayoko-maire-lfi-de-saint-denis-vise-par-une-enquete-pour-detournement-de-fonds-publics"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/le-cofondateur-de-place-publique-raphael-glucksmann-officialise-sa-candidature-a-l-election-presidentielle-pour-relever-la-france_8158841.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/politique/le-maire-lfi-de-saint-denis-bally-bagayoko-vise-par-une-enquete-pour-detournement-de-fonds-publics_8159837.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260823-rapha%C3%ABl-glucksmann-annonce-sa-candidature-%C3%A0-la-pr%C3%A9sidentielle-de-2027"
+          "url": "https://www.france24.com/fr/france/20260824-bally-bagayoko-maire-lfi-de-saint-denis-vis%C3%A9-par-une-enqu%C3%AAte-pour-d%C3%A9tournement-de-fonds-publics"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/justice/20260824.OBS117634/emploi-de-bally-bagayoko-a-la-ratp-le-maire-lfi-de-saint-denis-vise-par-une-enquete-pour-detournement-de-fonds-publics.html"
+        },
+        {
+          "language": "fr",
+          "source": "linternaute.com",
+          "source_country": "france",
+          "url": "https://www.linternaute.com/actualite/politique/11223746-bally-bagayoko-vise-par-une-enquete-pour-detournement-de-fonds-ce-que-l-on-sait/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/societe/article/2026/08/24/bally-bagayoko-maire-de-saint-denis-vise-par-une-enquete-pour-detournement-de-fonds-publics-concernant-son-emploi-a-la-ratp_6755547_3224.html",
+      "rank": 2,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6013,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4667,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7419
+        },
+        "total": 0.5528,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bally bagayoko",
+      "subject_names": [
+        "bally bagayoko",
+        "lfi",
+        "ratp",
+        "saint-denis"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Bally Bagayoko, maire de Saint-Denis affilié à La France insoumise, fait l'objet d'une enquête du Parquet national financier concernant des soupçons de détournement de fonds publics relatifs à son emploi à la RATP.",
+      "takeaway": "Un élu de La France insoumise, en charge d'une grande ville, fait l'objet d'une investigation judiciaire pour détournement de deniers publics.",
+      "why_it_matters": "L'enquête du Parquet national financier sur les conditions d'emploi du maire de Saint-Denis à la RATP expose une probable gestion irrégulière de fonds publics dans une collectivité francilienne de premier plan."
+    },
+    {
+      "angle_zone": "france",
+      "cluster_id": "subject-paris-9237279342ec",
+      "coherence": 0.43468916174438366,
+      "consequence": 0,
+      "countries": [
+        "france",
+        "it",
+        "mx",
+        "nl",
+        "spain"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-08-25",
+      "headline": "L'Arabie saoudite financera trois parcs d'attractions près de Paris pour 6 milliards d'euros",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/25/a-l-occasion-de-la-visite-du-prince-heritier-saoudien-mbs-un-projet-colossal-de-parc-d-attractions-pres-de-paris-a-ete-devoile_6756088_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/24/l-arabie-saoudite-prevoit-d-investir-6-milliards-d-euros-pour-creer-trois-parcs-d-attractions-pres-de-paris-annonce-emmanuel-macron_6755620_3211.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/du-jamais-vu-depuis-disneyland-paris-macron-annonce-trois-parcs-dattraction-en-ile-de-france-finances-par-larabie-saoudite-20260824_25WRU3GYUNE3LPHQV6SGA6IQFU/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/economie/6-milliards-d-euros-et-22-000-emplois-potentiels-le-projet-saoudien-d-un-nouveau-parc-d-attraction-en-region-parisienne_8159990.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20260824-pr%C3%A8s-de-paris-l-arabie-saoudite-va-financer-trois-parcs-d-attractions"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260823-france-rapha%C3%ABl-glucksmann-annonce-officiellement-sa-candidature-%C3%A0-l-%C3%A9lection-pr%C3%A9sidentielle-2027"
+          "url": "https://www.rfi.fr/fr/france/20260824-du-jamais-vu-depuis-disneyland-la-france-et-l-arabie-saoudite-vont-cr%C3%A9er-trois-parcs-d-attractions-pr%C3%A8s-de-paris"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/economie/20260824.OBS117639/parcs-d-attractions-pres-de-paris-les-details-de-macron-et-du-prince-ben-salmane.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-24/macron-anuncia-tres-parques-como-disneyland-en-paris-financiados-por-arabia-saudi.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/24/saudi-arabia-to-pump-6-billion-into-building-three-theme-parks-near-paris"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2628196"
+        },
+        {
+          "language": "es",
+          "source": "eleconomista.com.mx",
+          "source_country": "mx",
+          "url": "https://www.eleconomista.com.mx/internacionales/arabia-saudita-invertira-7-000-millones-dolares-parques-tematicos-cerca-paris-20260824-829915.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "sa"
+      ],
+      "origin_country": "france",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/moyen-orient/20260824-pr%C3%A8s-de-paris-l-arabie-saoudite-va-financer-trois-parcs-d-attractions",
+      "rank": 3,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "elpais.com",
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "nos.nl",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4347,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.8
+        },
+        "total": 0.5521,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "paris",
+      "subject_names": [
+        "disneyland",
+        "dragon ball",
+        "emmanuel macron",
+        "macron",
+        "mohammed",
+        "paris",
+        "salmane"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "Emmanuel Macron a annoncé lors de la visite du prince héritier saoudien Mohammed Ben Salman un investissement colossal de 6 milliards d'euros pour construire trois parcs d'attractions en Île-de-France, un projet décrit comme inédit depuis la création de Disneyland Paris et devant créer environ 22 000 emplois.",
+      "takeaway": "L'Arabie saoudite s'impose comme investisseur structurant dans le secteur français du divertissement de masse, changeant l'équilibre économique de la région parisienne.",
+      "why_it_matters": "La création de trois parcs d'attractions en Île-de-France, financés par 6 milliards d'euros saoudiens, représente un investissement direct majeur dans la région francilienne qui devrait générer 22 000 emplois et réorienter les flux touristiques loin de Disneyland Paris établi depuis 30 ans."
+    },
+    {
+      "angle_zone": "france",
+      "cluster_id": "subject-raphael-glucksmann-a49953b70972",
+      "coherence": 0.42646057992445385,
+      "consequence": 0,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-25",
+      "headline": "Raphaël Glucksmann se prépare à la présidentielle 2027 en rivalisant avec Mélenchon",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/presidentielle-2027-raphael-glucksmann-un-homme-de-conviction-qui-va-devoir-parler-aux-francais-20260824"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/a-vif/presidentielle-2027-raphael-glucksmann-et-jean-luc-melenchon-deux-gauches-inconciliables-20260824"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/presidentielle-2027-entre-melenchon-et-glucksmann-la-gauche-se-prepare-a-jouer-desunie-20260824"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/raphael-glucksmann-segolene-royal-qui-sont-a-ce-stade-les-candidats-a-la-primaire-socialiste-pour-la-presidentielle-2027_8159171.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260824-france-presidentielle-2027-raphael-glucksman-veut-remporter-primaire-socialiste-sur-une-ligne-anti-lfi"
         },
         {
           "language": "fr",
@@ -158,364 +400,162 @@
           "url": "https://www.lexpress.fr/politique/presidentielle-2027-raphael-glucksmann-face-a-lui-meme-WZMKSD6X2VALRGCCX5DUD3JLSI/"
         },
         {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/politique/raphael-glucksmann-candidat-a-la-presidentielle-pour-relever-la-france-de-la-georgie-a-bruxelles-lascension-du-pari-elyseen-de-la-social-democratie_645305"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/politik/ausland/2026-08/raphael-glucksmann-praesidentschaft-frankreich-place-publique-ps"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/23/news/raphael_glucksmann_sono_candidato_alle_elezioni_presidenziali-425543461/?rss"
-        },
-        {
-          "language": "fr",
-          "source": "nicematin.com",
-          "source_country": "france",
-          "url": "https://www.nicematin.com/societe/politique/presidentielle-2027-raphael-glucksmann-candidat-pour-relever-la-france-10710760"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://toulon.maville.com/actu/actudet_-presidentielle-2027-raphael-glucksmann-candidat-voici-sa-lettre-aux-francais_fil-7448999_actu.Htm"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://toulon.maville.com/actu/actudet_-presidentielle-2027-raphael-glucksmann-annonce-sa-candidature-en-passant-par-la-primaire-des-sociaux-democrates_fil-7448992_actu.Htm"
-        },
-        {
-          "language": "ron",
-          "source": "stiripesurse.ro",
-          "source_country": "ro",
-          "url": "https://www.stiripesurse.ro/alegeri-prezidentiale-in-franta-raphael-glucksmann-isi-anunta-candidatura-pentru-2027_3914386"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20260825/guerra-izquierda-francia-glucksmann-compite-melenchon-rivalizar-imparable-pen/1003744361852_0.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/politique/raphael-glucksmann-candidat-a-la-presidentielle-pour-relever-la-france-de-la-georgie-a-bruxelles-lascension-du-pari-elyseen-de-la-social-democratie_645305",
-      "rank": 2,
-      "reference_newsroom_count": 11,
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/politique/presidentielle-2027-raphael-glucksmann-face-a-lui-meme-WZMKSD6X2VALRGCCX5DUD3JLSI/",
+      "rank": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "challenges.fr",
+        "elespanol.com",
         "france24.com",
         "francetvinfo.fr",
         "la-croix.com",
-        "lefigaro.fr",
         "lexpress.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "repubblica.it",
-        "rfi.fr",
-        "zeit.de"
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4584,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.5789,
+          "coherence": 0.4265,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.8689
+          "prominence": 0.6,
+          "source_reliability": 0.75
         },
-        "total": 0.5674,
+        "total": 0.4995,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "raphael glucksmann",
       "subject_names": [
-        "c'est",
+        "belgique",
+        "edouard philippe",
         "france",
-        "francia",
-        "paris",
-        "raphael glucksmann"
+        "french",
+        "glucksmann",
+        "jean-luc melenchon",
+        "melenchon",
+        "pen",
+        "philippe bouvard",
+        "raphael glucksmann",
+        "yannick jadot"
       ],
       "subject_newsroom_count": 14,
-      "summary": "Raphaël Glucksmann, cofondateur du mouvement Place publique, a officialisé sa candidature à l'élection présidentielle française de 2027 avec l'ambition de « relever la France ». Il participera à la primaire organisée par le Parti socialiste pour accéder au second tour et rassembler la gauche autour de son projet.",
-      "takeaway": "Raphaël Glucksmann ne sera pas un candidat dissident mais passera par l'institution socialiste pour conquérir l'élection.",
-      "why_it_matters": "La candidature de Glucksmann par la voie d'une primaire avec le Parti socialiste remodèle le paysage de la gauche française à dix-huit mois de la présidentielle, en offrant aux électeurs socialistes et progressistes un choix interne avant la compétition générale."
+      "summary": "Raphaël Glucksmann s'apprête à affronter Jean-Luc Mélenchon pour remporter la primaire socialiste en vue de l'élection présidentielle de 2027. Ces deux figures de gauche représentent des visions inconciliables, Glucksmann cherchant notamment à se positionner contre la France insoumise. Cette division à gauche intervient dans un contexte où Marine Le Pen apparaît comme une candidate redoutable pour la droite.",
+      "takeaway": "La gauche française aborde la présidentielle 2027 sans stratégie unitaire, engagée dans une bataille interne qui privilégie les divergences idéologiques à la construction d'une alternative cohérente au pouvoir.",
+      "why_it_matters": "La division persistante de la gauche française entre la ligne de Glucksmann et celle de Mélenchon risque de fragmenter l'électorat de gauche en 2027, affaiblissant sa capacité à rivaliser contre la droite et l'extrême droite aux élections présidentielles."
     },
     {
       "angle_zone": "france",
-      "cluster_id": "subject-rennes-7c0a5e503d7c",
-      "coherence": 0.4836272196408318,
-      "consequence": 0,
-      "countries": [
-        "brazil",
-        "france",
-        "mx",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-24",
-      "headline": "Ferran Torres sauve le PSG avec un doublé contre Rennes en ouverture de Ligue 1",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/sport/article/2026/08/24/ligue-1-le-psg-arrache-le-nul-a-rennes-grace-a-ferran-torres-lille-demarre-fort-courte-victoire-pour-monaco_6754673_3242.html"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20260824-ligue-1-ferran-torres-sauve-paris-saint-germain-rennes"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/sports/20260823-football-auteur-d-un-doubl%C3%A9-ferran-torres-arrache-le-nul-pour-le-psg-contre-rennes"
-        },
-        {
-          "language": "fr",
-          "source": "sofoot.com",
-          "source_country": "france",
-          "url": "https://www.sofoot.com/articles/ligue-1-ferran-torres-sauve-le-psg-a-rennes"
-        },
-        {
-          "language": "pt",
-          "source": "em.com.br",
-          "source_country": "brazil",
-          "url": "http://www.em.com.br/internacional/2026/08/7485587-ferran-torres-salva-empate-na-visita-do-psg-ao-rennes-2-2-pela-1-rodada-da-ligue-1.html"
-        },
-        {
-          "language": "es",
-          "source": "pulsoslp.com.mx",
-          "source_country": "mx",
-          "url": "https://pulsoslp.com.mx/meta/psg-empata-2-2-con-rennes-en-el-debut-de-ferran-torres/2078988"
-        },
-        {
-          "language": "es",
-          "source": "mundodeportivo.com",
-          "source_country": "spain",
-          "url": "https://www.mundodeportivo.com/futbol/ligue-1/20260823/1004219010/ferran-torres-resucita-psg-frente-rennes.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/sports/20260823-football-auteur-d-un-doubl%C3%A9-ferran-torres-arrache-le-nul-pour-le-psg-contre-rennes",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4836,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
-        },
-        "total": 0.4832,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "rennes",
-      "subject_names": [
-        "ferran torres",
-        "ligue",
-        "psg",
-        "rennes"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Le PSG a obtenu un match nul 2-2 contre Rennes lors de la première journée de Ligue 1, grâce à Ferran Torres qui a inscrit un doublé pour arracher l'égalité. Pendant ce temps, Lille a bien démarré sa saison et Monaco a remporté une courte victoire.",
-      "takeaway": "Ferran Torres sauve le PSG d'une débâcle inaugurale, mais le club parisien commence déjà à la traîne.",
-      "why_it_matters": "Le PSG, favori du championnat de France, commence sa saison sans victoire et voit son déficit face aux rivaux directs potentiels s'agrandir dès la première journée."
-    },
-    {
-      "angle_zone": "france",
-      "cluster_id": "subject-cincinnati-cbd2f81851b9",
-      "coherence": 0.5815647480124679,
+      "cluster_id": "subject-sophie-adenot-770b9778b67a",
+      "coherence": 0.47464058526405095,
       "consequence": 0,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-24",
-      "headline": "Arthur Fils remporte le Masters 1000 de Cincinnati",
-      "independent_source_count": 4,
+      "editorial_day": "2026-08-25",
+      "headline": "Sophie Adenot effectue sa deuxième sortie dans l'espace",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/sport/article/2026/08/24/arthur-fils-remporte-le-masters-1000-de-cincinnati-le-premier-sacre-d-un-francais-dans-cette-categorie-de-tournoi-depuis-2014_6754640_3242.html"
+          "url": "https://www.lemonde.fr/sciences/article/2026/08/25/sophie-adenot-effectue-mardi-sa-deuxieme-sortie-dans-l-espace-pour-parachever-le-changement-d-une-antenne_6755922_1650684.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/sports/tennis/tennis-a-une-semaine-de-lus-open-arthur-fils-fait-le-plein-de-confiance-en-remportant-le-masters-1000-de-cincinnati-20260824_E7U5KJ6WMNAG3IIGO4ENJTI5ZI/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/sports/20260823-tennis-le-fran%C3%A7ais-arthur-fils-remporte-le-masters-1000-de-cincinnati"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/sports/20260823-tennis-%C3%A0-cincinnati-arthur-fils-signe-la-premi%C3%A8re-victoire-fran%C3%A7aise-dans-un-masters-1000-depuis-2014"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/sports/20260823-tennis-le-fran%C3%A7ais-arthur-fils-remporte-le-masters-1000-de-cincinnati",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5816,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.4681,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "cincinnati",
-      "subject_names": [
-        "arthur fils",
-        "cincinnati",
-        "masters",
-        "tennis"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Le joueur français Arthur Fils a remporté le Masters 1000 de Cincinnati, marquant la première victoire française dans cette catégorie du circuit ATP depuis 2014. Cette victoire intervient une semaine avant le début de l'US Open.",
-      "takeaway": "La France retrouve un champion capable de remporter les plus grands tournois du circuit.",
-      "why_it_matters": "Arthur Fils retrouve la confiance à une semaine de l'US Open, ce qui améliore les chances d'un tennis français de briller lors du Grand Chelem américain."
-    },
-    {
-      "angle_zone": "france",
-      "cluster_id": "subject-france-ff950f5f9ea0",
-      "coherence": 0.480957794295081,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-24",
-      "headline": "La France remporte le titre de championne d'Europe de cécifoot en battant l'Angleterre",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/sport/cecifoot-la-france-conserve-son-titre-de-championne-d-europe-face-a-langleterre-20260824"
+          "url": "https://www.liberation.fr/sciences/espace/sophie-adenot-va-effectuer-une-nouvelle-sortie-dans-lespace-ce-mardi-20260825_2LCM3W2U2BHETOB2ASUYAW7NNE/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/sport/euro-de-cecifoot-la-france-defiera-l-angleterre-en-finale-20260822"
+          "url": "https://www.la-croix.com/societe/sophie-adenot-de-retour-dans-l-espace-comment-les-astronautes-preparent-ils-leurs-sorties-en-orbite-20260824"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/championne-paralympique-en-titre-l-equipe-de-france-de-cecifoot-conserve-son-titre-de-championne-d-europe-a-domicile-en-battant-l-angleterre_8158736.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/sophie-adenot-dans-l-espace/quelle-sera-la-mission-de-sophie-adenot-lors-de-sa-deuxieme-sortie-dans-l-espace-mardi_8156420.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/direct-nouvelle-sortie-dans-l-espace-de-sophie-adenot-l-astronaute-francaise-retourne-hors-de-la-station-spatiale-internationale_8159321.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/sports/20260823-c%C3%A9cifoot-l-%C3%A9quipe-de-france-conserve-son-titre-europ%C3%A9en-face-%C3%A0-l-angleterre"
+          "url": "https://www.rfi.fr/fr/science/20260825-une-semaine-apr%C3%A8s-sa-premi%C3%A8re-sortie-hors-de-l-iss-sophie-adenot-retourne-dans-l-espace"
         },
         {
           "language": "fr",
-          "source": "sofoot.com",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.sofoot.com/breves/euro-de-cecifoot-la-france-bat-langleterre-et-est-championne-deurope-de-cecifoot"
+          "url": "https://www.nouvelobs.com/sciences/20260818.OBS117475/sophie-adenot-premiere-francaise-a-effectuer-une-sortie-dans-l-espace-elle-connait-le-moindre-geste-a-faire-jusqu-au-nombre-de-tours-d-ecrous.html"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "united-kingdom"
+        "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/sport/euro-de-cecifoot-la-france-defiera-l-angleterre-en-finale-20260822",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/sciences/20260818.OBS117475/sophie-adenot-premiere-francaise-a-effectuer-une-sortie-dans-l-espace-elle-connait-le-moindre-geste-a-faire-jusqu-au-nombre-de-tours-d-ecrous.html",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "francetvinfo.fr",
         "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "nouvelobs.com",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.481,
+          "coherence": 0.4746,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
+          "prominence": 0.6,
+          "source_reliability": 0.7241
         },
-        "total": 0.4433,
+        "total": 0.4874,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "sophie adenot",
       "subject_names": [
-        "c'est",
-        "france",
-        "francia",
-        "paris"
+        "sophie adenot"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "L'équipe de France de cécifoot a conservé son titre de championne d'Europe en battant l'Angleterre en finale à domicile, remportant ainsi la compétition continentale.",
-      "takeaway": "Le sport paralympique français démontre une excellence durable au plus haut niveau continental.",
-      "why_it_matters": "La France consolide son statut de puissance dominante du cécifoot européen en conservant son titre continental, ce qui renforce le prestige international de son programme paralympique."
+      "subject_newsroom_count": 6,
+      "summary": "L'astronaute française Sophie Adenot a réalisé une deuxième sortie extravéhiculaire depuis la Station spatiale internationale une semaine après sa première, afin de parachever le changement d'une antenne.",
+      "takeaway": "La France démontre sa capacité technique à former et déployer des astronautes pour les opérations les plus difficiles de l'exploration spatiale.",
+      "why_it_matters": "Sophie Adenot consolide le statut de la France comme nation spatiale capable d'envoyer ses astronautes accomplir des missions complexes en orbite, renforçant la légitimité française au sein des programmes spatiaux internationaux."
     }
   ],
-  "discarded_ingested": 44,
+  "discarded_ingested": 50,
   "discarded_kept": 5,
-  "generated_at": "2026-08-24T06:03:29.496587+00:00",
+  "generated_at": "2026-08-25T05:57:31.149478+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

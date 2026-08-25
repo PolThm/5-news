@@ -2,44 +2,221 @@
   "clusters": [
     {
       "angle_zone": "europe",
-      "cluster_id": "subject-zelensky-a0351200d5b4",
-      "coherence": 0.4997253301378968,
+      "cluster_id": "subject-ukraine-bd586e3f02bd",
+      "coherence": 0.4299843913904433,
+      "consequence": 3,
+      "countries": [
+        "ca",
+        "it",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-25",
+      "headline": "Britain will share classified SCALP missile blueprints with Ukraine",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/scalp-misil-largo-alcance-reino-unido-ayudara-20260824141222-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/londres-entega-ucrania-planos-fabricar-misiles-largo-20260824111940-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260824/11619165/londres-ayudara-kyiv-fabricar-misiles-alcance-escasez-patriots.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/24/uk-to-share-scalp-missile-blueprints-with-ukraine-as-coalition-of-the-willing-meets-in-kyi"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/08/25/nx-s1-5944059/the-uk-will-help-ukraine-make-long-range-missiles-by-sharing-classified-tech-information"
+        },
+        {
+          "language": "es",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://es.euronews.com/my-europe/2026/08/24/reino-unido-facilitara-a-ucrania-los-planos-de-misiles-scalp-mientras-los-aliados-se-reune"
+        },
+        {
+          "language": "en",
+          "source": "cbc.ca",
+          "source_country": "ca",
+          "url": "https://www.cbc.ca/news/world/russia-ukraine-war-1642-9.7317926"
+        },
+        {
+          "language": "es",
+          "source": "infodefensa.com",
+          "source_country": "spain",
+          "url": "https://www.infodefensa.com/texto-diario/mostrar/5991751/reino-unido-autoriza-mbda-ceda-informacion-clasificada-ucrania-pueda-fabricar-misiles-largo-alcance-scalp"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "united-kingdom"
+      ],
+      "origin_country": "ca",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/londres-entega-ucrania-planos-fabricar-misiles-largo-20260824111940-nt.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "euronews.com",
+        "lavanguardia.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.43,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7333
+        },
+        "total": 0.7129,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "coalition",
+        "kiev",
+        "kyiv",
+        "londres",
+        "reino unido",
+        "royaume-uni",
+        "russia",
+        "russie",
+        "ucraina",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 28,
+      "summary": "The United Kingdom has authorized technology transfer to Ukraine that will enable the country to manufacture long-range SCALP missiles domestically. The decision involves sharing classified technical information and blueprints, allowing Ukraine to produce these weapons to address shortages of other long-range systems. This assistance was discussed as part of a Coalition of the Willing meeting held in Kyiv.",
+      "takeaway": "The UK is shifting from supplying finished weapons to Ukraine to enabling domestic production of long-range missiles through technology transfer.",
+      "why_it_matters": "Britain's transfer of classified missile manufacturing technology to Ukraine establishes a precedent for allied nations sharing sensitive defense blueprints, potentially reshaping how Western partners coordinate arms production within European security frameworks."
+    },
+    {
+      "angle_zone": "europe",
+      "cluster_id": "subject-burnham-baccfcca6263",
+      "coherence": 0.4365340881689971,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "spain",
+        "sy",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-25",
+      "headline": "UK Prime Minister Andy Burnham visits Kyiv on first foreign trip to reaffirm support for Ukraine",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260824/11618856/reino-unido-proporcionara-ucrania-planos-fabricar-misiles-alcance.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/24/new-uk-pm-andy-burnham-to-visit-kyiv-on-first-foreign-trip-reaffirms-support-to-ukraine"
+        },
+        {
+          "language": "en",
+          "source": "globalsecurity.org",
+          "source_country": "sy",
+          "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/08/ukraine-260824-ukgov01.htm"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "up"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/24/new-uk-pm-andy-burnham-to-visit-kyiv-on-first-foreign-trip-reaffirms-support-to-ukraine",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4365,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6151,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "burnham",
+      "subject_names": [
+        "burnham",
+        "coalition",
+        "kiev",
+        "kyiv",
+        "russia",
+        "russie",
+        "ucraina",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "New British Prime Minister Andy Burnham traveled to Kyiv for his first international visit, timing his trip to coincide with Ukrainian Independence Day and delivering a message of steadfast British support for Ukraine in the face of Russian threats.",
+      "takeaway": "Britain's new government has eliminated any ambiguity about the UK's position in the Ukraine conflict.",
+      "why_it_matters": "Burnham's immediate reaffirmation of unconditional British support for Ukraine and personal visit to Kyiv during Russian threats signals continuity in NATO's largest European military contributor, reassuring European allies that UK commitment to the alliance remains unchanged despite domestic political transition."
+    },
+    {
+      "angle_zone": "europe",
+      "cluster_id": "subject-ukraine-6a78cb2b8b92",
+      "coherence": 0.45408928237918833,
       "consequence": 2,
       "countries": [
         "brazil",
         "france",
         "germany",
-        "it",
-        "md",
-        "mx",
-        "spain",
-        "united-kingdom",
-        "united-states",
-        "ve"
+        "spain"
       ],
-      "country_count": 10,
+      "country_count": 4,
       "editorial_day": "2026-08-24",
-      "headline": "Zelenskyy warns that holding elections during wartime would damage Ukraine",
-      "independent_source_count": 14,
+      "headline": "Zelensky opposes holding elections during Ukraine's ongoing war",
+      "independent_source_count": 5,
       "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-pour-le-pays-20260823_E24VNGNPWFCDXJWPAE2KAV6OVA/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260823-des-%C3%A9lections-en-ukraine-un-tsunami-qui-fracturerait-le-pays-dit-zelensky"
-        },
         {
           "language": "fr",
           "source": "nouvelobs.com",
@@ -60,12 +237,6 @@
         },
         {
           "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/23/ukraine-election-wartime-risk-russia-zelenskyy"
-        },
-        {
-          "language": "en",
           "source": "dw.com",
           "source_country": "germany",
           "url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf"
@@ -75,426 +246,239 @@
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "ntn24.com",
-          "source_country": "ve",
-          "url": "https://www.ntn24.com/noticias-actualidad/en-este-momento-elecciones-serian-tsunami-zelenski-rechaza-elecciones-plena-guerra-644058"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-08-24/zelensky-dice-che-organizzare-nuove-elezioni-distruggerebbe-lucraina/19599058/"
-        },
-        {
-          "language": "es",
-          "source": "eldiariony.com",
-          "source_country": "united-states",
-          "url": "https://eldiariony.com/2026/08/23/zelenski-rechaza-celebrar-elecciones-durante-la-guerra-y-advierte-que-dividirian-a-ucrania/"
-        },
-        {
-          "language": "es",
-          "source": "eleconomista.com.mx",
-          "source_country": "mx",
-          "url": "https://www.eleconomista.com.mx/internacionales/zelenski-rechaza-elecciones-plena-guerra-fracturarian-ucrania-20260823-829731.html"
-        },
-        {
-          "language": "ron",
-          "source": "news.yam.md",
-          "source_country": "md",
-          "url": "https://news.yam.md/ro/story/56950255"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
       "origin_country": "brazil",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-estime-qu-organiser-des-elections-provoquerait-un-tsunami-qui-fracturerait-l-ukraine_8158199.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 9,
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf",
+      "rank": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "dw.com",
-        "francetvinfo.fr",
         "globo.com",
         "lavanguardia.com",
         "lexpress.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "rfi.fr",
-        "theguardian.com"
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4997,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.8182
-        },
-        "total": 0.7213,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "zelensky",
-      "subject_names": [
-        "fedorov",
-        "kiev",
-        "ucraina",
-        "ucrania",
-        "ukraine",
-        "zelenski",
-        "zelensky",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Ukrainian President Volodymyr Zelenskyy has stated that organizing elections while the country is at war would be destructive to Ukraine, using the metaphor of a \"tsunami\" to describe the impact. He argues that elections conducted during wartime would fracture and divide the nation rather than strengthen it.",
-      "takeaway": "Ukraine's leader has closed off the possibility of elections during active warfare, entrenching the current government's authority for the duration of the conflict.",
-      "why_it_matters": "Zelensky's rejection of wartime elections signals that Ukraine will remain governed without electoral renewal during the conflict, affecting European allies' diplomatic engagement and the timeline for post-war democratic reconstruction that many Western partners are preparing to support."
-    },
-    {
-      "angle_zone": "europe",
-      "cluster_id": "subject-royaume-uni-2c652e3f3759",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-23",
-      "headline": "Russia withdraws its ambassador to Britain amid deteriorating bilateral relations",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/la-russie-met-fin-a-la-mission-de-son-ambassadeur-au-royaume-uni-et-pointe-la-deterioration-des-relations-bilaterales_8158448.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/rusia-retira-embajador-reino-unido-presionar-londres-apoyo-ucrania_7028497_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "francetvinfo.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "coherence": 0.4541,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
           "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6143,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "royaume-uni",
-      "subject_names": [
-        "londres",
-        "putin",
-        "royaume-uni",
-        "rusia",
-        "russia"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Russia has ended the mission of its ambassador to the United Kingdom, citing deterioration in relations between the two countries. The withdrawal appears designed to pressure London to reconsider its support for Ukraine.",
-      "takeaway": "Moscow is using ambassadorial recall as a tool to signal resolve and attempt coercion against individual Western governments rather than pursuing broader diplomatic engagement.",
-      "why_it_matters": "Russia's withdrawal of its ambassador signals an escalation in its pressure campaign on Britain specifically, which as a leading NATO member and major weapons supplier to Ukraine is a key target of Russian diplomatic isolation in Europe."
-    },
-    {
-      "angle_zone": "europe",
-      "cluster_id": "subject-russia-dbfd5f0de516",
-      "coherence": 0.40478530576313054,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "ro",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-08-24",
-      "headline": "Zelenskyy warns of planned Russian military mobilization of 300,000 troops",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/putin-quer-recrutar-300-mil-novos-soldados-afirma-zelensky.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "wesh.com",
-          "source_country": "united-states",
-          "url": "https://www.wesh.com/article/russia-300000-troops-ukraine-war-zelenskyy/73503965"
-        },
-        {
-          "language": "en",
-          "source": "express.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.express.co.uk/news/world/2241685/putin-russia-mobilisation-ukraine-war"
-        },
-        {
-          "language": "ron",
-          "source": "antena3.ro",
-          "source_country": "ro",
-          "url": "https://www.antena3.ro/externe/rusia-se-pregateste-de-o-noua-mobilizare-militara-zelenski-spune-ca-300-000-de-noi-recruti-urmeaza-a-fi-concentrati-in-armata-rusa-800455.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-08-23/zelenski-alerta-de-que-putin-preve-movilizar-a-300000-militares-adicionales-en-ucrania-tras-las-elecciones-de-septiembre.html",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "elpais.com",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4048,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.6
+          "source_reliability": 0.6522
         },
-        "total": 0.6013,
+        "total": 0.6143,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "russia",
+      "subject_label": "ukraine",
       "subject_names": [
-        "fedorov",
-        "putin",
-        "rusia",
+        "coalition",
+        "kiev",
+        "kyiv",
         "russia",
+        "russie",
+        "ucraina",
+        "ucrania",
+        "ukraine",
+        "volodymyr zelensky",
         "zelenski",
-        "zelensky",
-        "zelenskyy"
+        "zelensky"
       ],
-      "subject_newsroom_count": 14,
-      "summary": "Ukrainian President Volodymyr Zelenskyy has warned that Russia plans to mobilize an additional 300,000 military personnel for its war in Ukraine, with reports suggesting this mobilization is expected to occur following September elections. Zelenskyy has vowed to counter this military buildup.",
-      "takeaway": "Russia appears to be preparing for prolonged warfare rather than negotiated settlement, raising the stakes for European support to Ukraine and the costs of the conflict's continuation.",
-      "why_it_matters": "The potential deployment of 300,000 additional Russian troops signals escalating military pressure on Ukraine at a moment when European nations are sustaining military aid commitments and managing energy security risks tied to the conflict's duration and intensity."
-    },
-    {
-      "cluster_id": "subject-crans-montana-00c9c00e6e78",
-      "coherence": 0.4908983811948223,
-      "consequence": 1,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-24",
-      "headline": "Jacques Moretti held in custody on domestic violence charges related to wife",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/faits-divers/crans-montana-jacques-moretti-place-en-detention-provisoire-apres-des-violences-presumees-sur-son-epouse-jessica-20260823"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/incendie-a-crans-montana-jacques-moretti-en-detention-provisoire-pour-violences-conjugales-20260824_37DCTOYYCVEH3DQGIXF2355GGQ/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/violences-faites-aux-femmes/jacques-moretti-principal-suspect-dans-l-incendie-de-crans-montana-place-en-detention-provisoire-pour-violences-conjugales_8158871.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260823-incendie-de-crans-montana-le-principal-suspect-en-d%C3%A9tention-pour-violences-conjugales"
-        },
-        {
-          "language": "it",
-          "source": "ilpost.it",
-          "source_country": "it",
-          "url": "https://www.ilpost.it/2026/08/23/jacques-moretti-proprietario-del-locale-andato-a-fuoco-a-capodanno-a-crans-montana-e-stato-arrestato-con-laccusa-di-violenze-sulla-moglie/"
-        },
-        {
-          "language": "it",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/23/crans-montana-jacques-moretti-arrestato-per-violenze-sulla-moglie-jessica_0df3a494-bef0-44df-972d-0999738921a3.html"
-        },
-        {
-          "language": "it",
-          "source": "quotidiano.net",
-          "source_country": "it",
-          "url": "https://www.quotidiano.net/cronaca/crans-montana-jacques-moretti-arrestato-per-violenze-sulla-moglie-jessica-jus9h0g7"
-        }
-      ],
-      "mentioned_countries": [
-        "sz"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/societe/violences-faites-aux-femmes/jacques-moretti-principal-suspect-dans-l-incendie-de-crans-montana-place-en-detention-provisoire-pour-violences-conjugales_8158871.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "ansa.it",
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4909,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7037
-        },
-        "total": 0.5688,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "crans-montana",
-      "subject_names": [
-        "crans-montana",
-        "incendie",
-        "jacques moretti"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Jacques Moretti, the principal suspect in a New Year's Day fire at Crans-Montana, has been placed in pre-trial detention following allegations of violence against his wife Jessica. Multiple news outlets across French, Italian, and international media have reported his arrest on charges of domestic violence, though his legal representatives have characterized the matter as a private dispute.",
-      "takeaway": "The main suspect in a major fire has been arrested for assaulting his wife.",
-      "why_it_matters": "Moretti's detention affects the investigation into the Crans-Montana fire, as the primary suspect is now in custody pending trial on related charges."
+      "subject_newsroom_count": 28,
+      "summary": "Ukrainian President Volodymyr Zelensky has warned against conducting elections while the country remains at war, characterizing such a move as a destructive force that would divide the nation. He used the image of a tsunami to describe the destabilizing impact wartime elections would have on Ukraine.",
+      "takeaway": "Ukraine will not hold elections while fighting, shutting down a potential path to a negotiated peace that some European governments have considered.",
+      "why_it_matters": "Zelensky's rejection of wartime elections removes a near-term pressure on European capitals to broker a political settlement in Ukraine and sustains the current military-focused approach to the conflict."
     },
     {
       "angle_zone": "europe",
-      "cluster_id": "subject-guardia-civil-1f66b34f5c27",
-      "coherence": 0.44730571796470053,
+      "cluster_id": "subject-ceuta-b095d961ebdb",
+      "coherence": null,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-23",
-      "headline": "Andalusian regional leader calls on Spanish government to restore elite Civil Guard unit against drug trafficking",
-      "independent_source_count": 4,
+      "editorial_day": "2026-08-25",
+      "headline": "Spanish government implements unified command and economic support plan for Ceuta crisis",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-23/moreno-pide-al-gobierno-que-reactive-la-unidad-de-la-guardia-civil-contra-el-narcotrafico.html"
+          "url": "https://elpais.com/espana/2026-08-25/sanchez-da-un-giro-a-la-gestion-de-la-crisis-de-ceuta-casi-un-mes-despues-con-un-mando-unico-y-un-plan-economico.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/andalucia/2026/08/23/6a8aad10e4d4d8da458b457a.html"
+          "url": "https://www.eldiario.es/politica/sanchez-acepta-mando-unico-ceuta-mes-despues-crisis-acelera-medidas-choque_1_13464207.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html"
-        },
-        {
-          "language": "es",
-          "source": "elperiodicodearagon.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodicodearagon.com/espana/2026/08/23/moreno-exige-sanchez-reactivar-unidad-elite-guardia-civil-luchar-narcotrafico-133584091.html"
+          "url": "https://www.expansion.com/economia/2026/08/24/6a8c5fcfe5fdea8d758b4594.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/esandalucia/sevilla/noticia-moreno-reclama-sanchez-reactive-unidad-elite-guardia-civil-luchar-contra-narcotrafico-20260823095657.html",
-      "rank": 5,
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/economia/2026/08/24/6a8c5fcfe5fdea8d758b4594.html",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elmundo.es",
+        "eldiario.es",
         "elpais.com",
-        "europapress.es"
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4473,
+          "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5479,
+        "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "guardia civil",
+      "subject_label": "ceuta",
       "subject_names": [
-        "andalucia",
-        "guardia civil",
-        "moreno",
-        "vox"
+        "ceuta",
+        "gobierno",
+        "marruecos",
+        "psoe",
+        "robles",
+        "sanchez",
+        "seguridad nacional"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Juanma Moreno, the regional leader of Andalusia, has called on the Spanish central government to reactivate an elite unit of the Civil Guard that was dismantled by the Interior Ministry in 2022. According to the articles, Moreno argues that restoring this specialized anti-narcotics unit is necessary to combat drug trafficking more effectively. A government official, María Jesús Montero, responded by accusing Moreno of attempting to spread fear.",
-      "takeaway": "A Spanish regional leader is forcing a debate over whether Madrid deliberately weakened anti-drug capacity, signaling political divisions at a moment when European drug interdiction depends on coordinated Spanish action.",
-      "why_it_matters": "Spain's internal political dispute over drug-enforcement capacity matters to Europe because the narcotráfico networks operating through Andalusia supply cocaine to EU markets, and the operational readiness of Spanish law enforcement units directly affects supply chains across the continent."
+      "subject_newsroom_count": 17,
+      "summary": "Nearly a month after a migration crisis in Ceuta, Spain's government has announced a shift in management approach, establishing a unified command structure and introducing emergency economic measures to support affected businesses in the region.",
+      "takeaway": "Spain took nearly a month to establish unified command of its migration crisis, illustrating European governments' difficulty in mounting rapid institutional responses to border emergencies.",
+      "why_it_matters": "Spain's delayed institutional response to the Ceuta migration crisis—involving a unified command structure and economic aid—signals to other European border states that even established EU members struggle with coordinated crisis management when migration pressures spike unexpectedly."
+    },
+    {
+      "angle_zone": "europe",
+      "cluster_id": "subject-aude-b72cae80b98c",
+      "coherence": 0.5439384523001937,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-25",
+      "headline": "Tornado devastates village of Pomas in southern France, injuring dozens",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/08/24/une-tornade-frappe-l-aude-et-cause-26-blesses-une-centaine-d-habitations-touchees_6755657_3245.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/meteo/aude-les-images-impressionnantes-d-une-tornade-pres-de-carcassonne-20260824"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/meteo/toitures-arrachees-maisons-soufflees-les-images-desolantes-du-village-de-pomas-dans-l-aude-ravage-par-une-tornade-20260825"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/environnement/climat/dans-laude-le-village-de-pomas-devaste-par-une-tornade-20260824_YWIYY6Q6VZFELC2LZXKJWGEPTM/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/un-village-de-l-aude-devaste-par-une-tornade-20260824"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/meteo/une-tornade-touche-la-commune-de-pomas-dans-l-aude-et-endommage-plusieurs-habitations_8160002.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/orages-une-impressionnante-tornade-balaye-l-aude_8160017.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260824-un-village-de-l-aude-dans-le-sud-de-la-france-d%C3%A9vast%C3%A9-par-une-tornade"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/france/20260824-un-village-de-l-aude-dans-le-sud-de-la-france-d%C3%A9vast%C3%A9-par-une-tornade",
+      "rank": 5,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5439,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.75
+        },
+        "total": 0.5703,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "aude",
+      "subject_names": [
+        "aude",
+        "pomas"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "A tornado struck the village of Pomas in the Aude department of southern France, destroying or damaging approximately 300 homes and leaving more than 40 people injured. Local officials described the damage as severe, with roofs torn off and houses destroyed, leaving roughly half the village in ruins.",
+      "takeaway": "A tornado destroyed a French village and injured dozens, demonstrating the destructive power of extreme weather in populated European areas.",
+      "why_it_matters": "The tornado in the Aude region of southern France affected European Union territory and local residents, marking a severe weather event in one of France's established settlements, though the Articles do not report transnational consequences or policy changes beyond France."
     }
   ],
-  "discarded_ingested": 116,
+  "discarded_ingested": 114,
   "discarded_kept": 5,
-  "generated_at": "2026-08-24T06:03:29.496587+00:00",
+  "generated_at": "2026-08-25T05:57:31.149478+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

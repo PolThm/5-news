@@ -36,13 +36,16 @@ rather than crashing or rendering a broken link.
 from __future__ import annotations
 
 import json
+import os
 import sys
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime
+from functools import partial
 from pathlib import Path
 
 from pipeline.adapters import Failure
+from pipeline.adapters import gateway as gateway_adapter
 from pipeline.adapters.claude import (
     BatchCollectResult,
     BatchSubmission,
@@ -70,6 +73,53 @@ STAGE = "summarize"
 # batch with no angles in it.
 SubmitFn = Callable[[list[dict], OutputLanguage, list[tuple[dict, str]]], BatchSubmission]
 CollectFn = Callable[[str, list[dict]], BatchCollectResult]
+
+
+# Which model provider summarizes. Claude stays the default: switching the
+# provider changes what every reader sees, so it is opt-in per environment
+# rather than a silent consequence of deploying this module.
+#
+# `SUMMARIZE_PROVIDER=gateway` selects `adapters.gateway` (GPT-5-mini via
+# Vercel AI Gateway) -- see that module's docstring for the benchmark that
+# chose it, and for why its "submit" phase takes ~45 minutes rather than
+# seconds. Any other value, or none, keeps Claude.
+#
+# The gateway adapter needs `data_root`/`cycle_id` that `claude`'s does not
+# (it parks its synchronous results on disk for the collect phase to read),
+# so those are bound here rather than widened into SubmitFn/CollectFn --
+# every existing call site and stub keeps working unchanged.
+PROVIDER_ENV_VAR = "SUMMARIZE_PROVIDER"
+GATEWAY_PROVIDER = "gateway"
+
+
+def provider_name() -> str:
+    return os.environ.get(PROVIDER_ENV_VAR, "").strip().lower()
+
+
+def _resolve_submit_fn(submit_fn: SubmitFn, cycle_id: str, data_root: Path) -> SubmitFn:
+    """The submit function to use, given the configured provider.
+
+    An explicitly-injected `submit_fn` always wins -- tests pass stubs
+    through this same path, and a stub must never be silently replaced by a
+    real network call.
+    """
+    if submit_fn is not submit_batch or provider_name() != GATEWAY_PROVIDER:
+        return submit_fn
+    return partial(gateway_adapter.submit_batch, cycle_id=cycle_id, data_root=data_root)
+
+
+def _resolve_collect_fn(collect_fn: CollectFn, batch_id: str, data_root: Path) -> CollectFn:
+    """The collect function to use.
+
+    Keyed on the batch id's own prefix rather than on the env var: a cycle
+    that submitted through the gateway must be collected through it even if
+    the variable changed between the two phases, and vice versa.
+    """
+    if collect_fn is not collect_batch:
+        return collect_fn
+    if not batch_id.startswith(gateway_adapter.BATCH_ID_PREFIX):
+        return collect_fn
+    return partial(gateway_adapter.collect_batch, data_root=data_root)
 
 
 def _representative_member(cluster: dict) -> dict | None:
@@ -161,7 +211,9 @@ def submit_summarize(
     destination = _destination(data_root, cycle_id, language)
     metadata_path = destination / "submitting.json"
 
-    submission = submit_fn(clusters, language, angles or [])
+    submission = _resolve_submit_fn(submit_fn, cycle_id, data_root)(
+        clusters, language, angles or []
+    )
 
     metadata = {
         "stage": STAGE,
@@ -215,7 +267,9 @@ def collect_summarize(
     this `batch_id` -- `collect_batch` reassociates results by `cluster_id`
     against exactly this list.
     """
-    result: BatchCollectResult = collect_fn(batch_id, clusters)
+    result: BatchCollectResult = _resolve_collect_fn(collect_fn, batch_id, data_root)(
+        batch_id, clusters
+    )
     if result.status == "pending":
         return None
 

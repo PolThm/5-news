@@ -62,15 +62,30 @@ jobs:
     #   collect   ~15s  (3 GKG slots, static files, no throttle)
     #   dedupe    ~30s
     #   cluster   ~90s  (~92 Cohere batches, paced under a 100k tokens/min
-    #                    trial-key limit — this is now the long pole)
-    #   summarize   ~5s  (submits batches and exits, per AD-11)
+    #                    trial-key limit)
+    #   summarize  ~46m  (SUMMARIZE_PROVIDER=gateway; see below)
+    #                ~5s (Claude: submits batches and exits, per AD-11)
     #
-    # ~3 minutes typical. 30 leaves room for a slow upstream while still
-    # failing fast if something hangs. The bound matters: a job killed here
-    # loses everything it has done, including summarize batches already paid
-    # for (Story 6.1 lost two sets of three exactly that way), which is why
-    # the adapter also enforces its own MAX_COLLECTION_SECONDS well inside it.
-    timeout-minutes: 30
+    # summarize is the long pole now, and only under the gateway provider.
+    # The AI Gateway has no batch endpoint, so that adapter calls the model
+    # synchronously -- and its free tier admits ~5 calls before refusing for
+    # ~5 minutes, absorbed by retrying on a flat 60s interval. Measured
+    # 2026-08-26: 20 calls took 15.4 minutes, so a ~60-call cycle runs ~46
+    # minutes. 120 leaves ~2.5x headroom, which matters because the limit is
+    # shared across the free tier and a busy day at Vercel is slower than the
+    # measurement. The adapter also enforces its own MAX_PHASE_SECONDS (90m)
+    # inside this bound.
+    #
+    # The bound still matters for the reason it always did: a job killed here
+    # loses everything it has done, including summaries already generated
+    # (Story 6.1 lost two sets of three exactly that way). Under the gateway
+    # provider that window is ~46 minutes rather than ~3, which is the real
+    # cost of the free tier -- not money, but exposure.
+    #
+    # On Claude this whole job is back to ~3 minutes; the raised bound is
+    # inert there, since a job that finishes early is not billed for the
+    # ceiling.
+    timeout-minutes: 120
 
     steps:
       - uses: actions/checkout@v7
@@ -99,6 +114,18 @@ jobs:
           # what happened on the first real cycle (2026-08-13T20-13-17Z), where
           # the secret existed in the repository but was never injected here.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Selects which model summarizes. Unset (or any other value) keeps
+          # Claude -- switching provider changes what every reader sees, so
+          # it is opt-in rather than a consequence of deploying the adapter.
+          # Set this to `gateway` as a repository variable to move summaries
+          # to GPT-5-mini via AI Gateway.
+          SUMMARIZE_PROVIDER: ${{ vars.SUMMARIZE_PROVIDER }}
+          # Story: summarize via AI Gateway. Only read when
+          # SUMMARIZE_PROVIDER=gateway; a missing key degrades that provider
+          # the same way a missing ANTHROPIC_API_KEY degrades Claude -- no
+          # Briefing is published, which is why it is set as a secret before
+          # the variable above is flipped.
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
         # Only the 05:30 trigger may start a cycle. Every other schedule is a
         # catch-up: it finishes a cycle whose batches are pending and does
         # nothing when none is, so it costs nothing on the days the 06:30 run

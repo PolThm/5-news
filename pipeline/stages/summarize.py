@@ -108,6 +108,24 @@ def _resolve_submit_fn(submit_fn: SubmitFn, cycle_id: str, data_root: Path) -> S
     return partial(gateway_adapter.submit_batch, cycle_id=cycle_id, data_root=data_root)
 
 
+def gateway_consequence_fn_or_none():
+    """The gateway scorer when that provider is configured, else `None`.
+
+    Returns `None` rather than Claude's scorer so the caller keeps its own
+    default as a module attribute the cycle tests can monkeypatch -- a unit
+    test that reached the network would be a worse outcome than this small
+    indirection.
+
+    Separate from the summarize resolvers because scoring is not batched and
+    carries no cycle_id/data_root -- but it reads the same variable, so that
+    `SUMMARIZE_PROVIDER=gateway` leaves no Anthropic call anywhere in a cycle
+    rather than only moving the summaries.
+    """
+    if provider_name() == GATEWAY_PROVIDER:
+        return gateway_adapter.score_consequence
+    return None
+
+
 def _resolve_collect_fn(collect_fn: CollectFn, batch_id: str, data_root: Path) -> CollectFn:
     """The collect function to use.
 

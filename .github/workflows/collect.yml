@@ -113,6 +113,10 @@ jobs:
           # Article title and NO Briefing is ever published — which is exactly
           # what happened on the first real cycle (2026-08-13T20-13-17Z), where
           # the secret existed in the repository but was never injected here.
+          # Only read when SUMMARIZE_PROVIDER is unset/not `gateway`. Under
+          # the gateway provider no Anthropic call is made at all -- summaries
+          # and consequence scoring both route to AI Gateway -- so the secret
+          # can be removed entirely once that variable is set.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           # Selects which model summarizes. Unset (or any other value) keeps
           # Claude -- switching provider changes what every reader sees, so

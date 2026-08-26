@@ -53,10 +53,14 @@ from typing import Any, Protocol
 from pipeline.adapters import Failure
 from pipeline.adapters.claude import (
     _ANGLE_SCHEMA,
+    _CONSEQUENCE_MAX_TOKENS,
+    _CONSEQUENCE_SCHEMA,
     _SUMMARY_SCHEMA,
+    CONSEQUENCE_BATCH,
     BatchCollectResult,
     BatchSubmission,
     _angle_prompt,
+    _consequence_prompt,
     _parse_cluster_text,
     _parse_zone_angle,
     _prompt_for,
@@ -179,7 +183,7 @@ def _requests_for(
 
 
 def _post_once(
-    client: HttpClient, api_key: str, request: _Request
+    client: HttpClient, api_key: str, request: _Request, max_tokens: int = MAX_TOKENS
 ) -> tuple[str | None, Failure | None, bool]:
     """One HTTP attempt. Returns ``(text, failure, retryable)``.
 
@@ -196,7 +200,7 @@ def _post_once(
             json={
                 "model": MODEL,
                 "messages": [{"role": "user", "content": request.prompt}],
-                "max_tokens": MAX_TOKENS,
+                "max_tokens": max_tokens,
                 "reasoning": {"effort": REASONING_EFFORT},
                 "response_format": {
                     "type": "json_schema",
@@ -236,12 +240,13 @@ def _send_with_retry(
     deadline: float,
     sleep=time.sleep,
     now=time.monotonic,
+    max_tokens: int = MAX_TOKENS,
 ) -> tuple[str | None, Failure | None]:
     """Retry a retryable refusal on a flat interval until it lands, the
     per-request ceiling is reached, or the phase deadline passes."""
     last_failure: Failure | None = None
     for attempt in range(MAX_ATTEMPTS):
-        text, failure, retryable = _post_once(client, api_key, request)
+        text, failure, retryable = _post_once(client, api_key, request, max_tokens=max_tokens)
         if text is not None:
             return text, None
         last_failure = failure
@@ -390,6 +395,82 @@ def collect_batch(
     return BatchCollectResult(status="ended", texts=texts, angles=angles, failures=failures)
 
 
+def score_consequence(
+    events: list[tuple[str, str]],
+    client: HttpClient | None = None,
+    sleep=time.sleep,
+    now=time.monotonic,
+) -> tuple[dict[str, int], list[Failure]]:
+    """How much each event changes, on ``claude._CONSEQUENCE_SCALE``.
+
+    The gateway twin of ``claude.score_consequence``, so a deployment that
+    sets ``SUMMARIZE_PROVIDER=gateway`` needs no Anthropic key at all. Same
+    prompt, same schema, same short-id indirection -- only the transport and
+    the rate-limit handling differ.
+
+    Unlike summarize, this is on the cycle's critical path: `rank` needs the
+    verdicts before it orders anything. A cycle's ~50 candidates take two or
+    three calls, so even at the free tier's worst measured pace this adds
+    minutes, not tens of minutes.
+
+    Returns what it could score plus the failures. A missing verdict is not
+    an error for the caller to raise on -- `rank` scores an unjudged item
+    neutrally, so a failed call costs the ordering its sharpness and never
+    the cycle (AD-10).
+    """
+    client, degrade = _client_or_degrade(client)
+    if client is None:
+        return {}, [degrade] if degrade else []
+
+    api_key = os.environ.get("AI_GATEWAY_API_KEY", "")
+    deadline = now() + MAX_PHASE_SECONDS
+    verdicts: dict[str, int] = {}
+    failures: list[Failure] = []
+
+    for start in range(0, len(events), CONSEQUENCE_BATCH):
+        chunk_events = events[start : start + CONSEQUENCE_BATCH]
+        by_short = {f"e{position}": event_id for position, (event_id, _) in enumerate(chunk_events)}
+        chunk = [
+            (short, headline) for short, (_, headline) in zip(by_short, chunk_events, strict=True)
+        ]
+        request = _Request(
+            custom_id=f"consequence-{start}",
+            prompt=_consequence_prompt(chunk),
+            schema=_CONSEQUENCE_SCHEMA,
+        )
+        raw, failure = _send_with_retry(
+            client,
+            api_key,
+            request,
+            deadline,
+            sleep=sleep,
+            now=now,
+            max_tokens=_CONSEQUENCE_MAX_TOKENS,
+        )
+        if raw is None:
+            if failure is not None:
+                failures.append(failure)
+            continue
+
+        try:
+            payload = json.loads(raw)
+        except (json.JSONDecodeError, TypeError) as exc:
+            failures.append(Failure(ADAPTER, f"consequence scoring returned invalid JSON: {exc}"))
+            continue
+
+        for verdict in payload.get("verdicts", []):
+            event_id = by_short.get(verdict.get("id", ""))
+            value = verdict.get("consequence")
+            # The id is echoed by the model, so it is looked up rather than
+            # trusted: one it invents resolves to nothing instead of attaching
+            # a verdict to another event. The range is checked here because the
+            # output schema cannot express it.
+            if event_id is not None and isinstance(value, int) and 0 <= value <= 3:
+                verdicts[event_id] = value
+
+    return verdicts, failures
+
+
 __all__ = [
     "ADAPTER",
     "BATCH_ID_PREFIX",
@@ -401,5 +482,6 @@ __all__ = [
     "batch_id_for",
     "collect_batch",
     "results_path",
+    "score_consequence",
     "submit_batch",
 ]

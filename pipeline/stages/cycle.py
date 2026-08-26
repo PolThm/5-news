@@ -80,6 +80,7 @@ from pipeline.stages.summarize import (
     WrittenSubmission,
     WrittenSummarize,
     collect_summarize,
+    gateway_consequence_fn_or_none,
     submit_summarize,
 )
 
@@ -418,7 +419,17 @@ def run_cycle(
                 # every verdict absent, which the rank stage scores neutrally
                 # (AD-10): the ordering loses its sharpness, never the cycle.
                 try:
-                    judge = consequence_fn or score_consequence
+                    # Same provider switch summarize uses, for the same
+                    # reason it exists there: `SUMMARIZE_PROVIDER=gateway`
+                    # must leave no Anthropic call anywhere, or the key is
+                    # still required by a deployment that thought it had moved
+                    # off Claude entirely.
+                    #
+                    # `score_consequence` stays a module attribute rather than
+                    # being resolved away: the cycle tests monkeypatch it, and
+                    # a scorer that reached the network from a unit test would
+                    # be a worse outcome than this small indirection.
+                    judge = consequence_fn or gateway_consequence_fn_or_none() or score_consequence
                     verdicts, consequence_failures = judge(
                         [
                             (item["cluster_id"], (item.get("members") or [{}])[0].get("title", ""))

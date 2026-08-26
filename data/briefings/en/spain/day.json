@@ -2,7 +2,103 @@
   "clusters": [
     {
       "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-b095d961ebdb",
+      "cluster_id": "subject-ceuta-2f63bfe9fb0a",
+      "coherence": 0.4280584392650787,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-26",
+      "headline": "Spain's Defense and Interior ministers clash over whether intelligence service warned of Ceuta crisis",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-26/robles-indigna-al-resto-del-gobierno-al-chocar-con-marlaska-y-plantear-que-el-cni-si-aviso-de-que-venia-un-gran-salto-en-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/08/25/6a8dd594e5fdeaeb478b456e.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/25/6a8de9ece9cf4a13208b45b3.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-25/robles-dice-que-el-cni-compartio-su-informacion-en-ceuta-y-que-el-control-de-fronteras-compete-a-interior_4411199/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-robles-subraya-cni-hizo-trabajo-ceuta-informo-delegacion-gobierno-20260825132106.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/robles-afirma-cni-hizo-labor-ceuta-compartio-fuerzas-seguridad-gobierno_1_2235455.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elconfidencial.com",
+      "outbound_url": "https://www.elconfidencial.com/espana/2026-08-25/robles-dice-que-el-cni-compartio-su-informacion-en-ceuta-y-que-el-control-de-fronteras-compete-a-interior_4411199/",
+      "rank": 1,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4281,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.5535,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "cni",
+        "interior",
+        "marlaska",
+        "marruecos",
+        "robles",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "Spain's Defense Minister Robles has publicly contradicted Interior Minister Marlaska over whether the CNI intelligence agency provided advance warning of a major influx of migrants into the Spanish enclave of Ceuta. Robles asserts that the CNI did its job and shared information about the impending crisis with security forces and the Government, while Marlaska denies that such a warning was issued, creating a significant rift between the two government departments.",
+      "takeaway": "The Spanish government's internal disagreement about what the CNI knew beforehand signals that accountability for the Ceuta crisis remains unsettled between key ministers.",
+      "why_it_matters": "The public breach between Defence Minister Robles and Interior Minister Marlaska over whether the CNI warned of the Ceuta crisis exposes a fractured government response to border security and undermines public confidence in whether Spain's intelligence and security apparatus are functioning as a coordinated unit during emergencies."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-f8c103bb58a8",
       "coherence": null,
       "consequence": 2,
       "countries": [
@@ -10,474 +106,306 @@
       ],
       "country_count": 1,
       "editorial_day": "2026-08-25",
-      "headline": "Spanish government implements unified command and economic support plan for Ceuta crisis",
+      "headline": "Moroccan minister invokes sovereignty over Ceuta and Melilla before King Mohamed VI",
       "independent_source_count": 3,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-25/sanchez-da-un-giro-a-la-gestion-de-la-crisis-de-ceuta-casi-un-mes-despues-con-un-mando-unico-y-un-plan-economico.html"
+          "url": "https://www.elmundo.es/espana/2026/08/25/6a8d74f1e85ece475a8b4571.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/sanchez-acepta-mando-unico-ceuta-mes-despues-crisis-acelera-medidas-choque_1_13464207.html"
+          "url": "https://www.europapress.es/nacional/noticia-ministro-marroqui-habla-liberacion-ceuta-melilla-mohamed-vi-celebracion-religiosa-20260825120003.html"
         },
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/08/24/6a8c5fcfe5fdea8d758b4594.html"
+          "url": "https://www.20minutos.es/internacional/ministro-marroqui-asuntos-religiosos-reivindica-soberania-ceuta-melilla-ante-rey-mohamed-vi-su-heredero_7029162_0.html"
         }
       ],
       "mentioned_countries": [
+        "mo",
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/economia/2026/08/24/6a8c5fcfe5fdea8d758b4594.html",
-      "rank": 1,
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-ministro-marroqui-habla-liberacion-ceuta-melilla-mohamed-vi-celebracion-religiosa-20260825120003.html",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "expansion.com"
+        "20minutos.es",
+        "elmundo.es",
+        "europapress.es"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5848,
+        "total": 0.5496,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
         "ceuta",
-        "gobierno",
         "marruecos",
-        "psoe",
-        "robles",
-        "sanchez",
-        "seguridad nacional"
+        "melilla",
+        "mohamed",
+        "sanchez"
       ],
       "subject_newsroom_count": 17,
-      "summary": "Nearly a month after a migration crisis in Ceuta, Spain's government has announced a shift in management approach, establishing a unified command structure and introducing emergency economic measures to support affected businesses in the region.",
-      "takeaway": "The Spanish government is finally centralizing its crisis response after weeks of fragmented management, shifting from reactive to coordinated action.",
-      "why_it_matters": "The creation of a unified command and the emergency economic measures will direct state resources and administrative authority toward stabilizing Ceuta's businesses and public services, which have been destabilized for nearly a month and depend heavily on government intervention."
+      "summary": "Morocco's Minister of Religious Affairs raised the issue of Ceuta and Melilla during a religious celebration in the presence of King Mohamed VI and his heir, asserting Morocco's claim to these Spanish-controlled North African territories.",
+      "takeaway": "Morocco's government continues to assert claims to Spanish territory at the highest levels despite ongoing diplomatic relations between the countries.",
+      "why_it_matters": "A senior Moroccan minister with the king's direct audience has publicly renewed territorial claims over Ceuta and Melilla before Mohamed VI and the heir, signaling official-level persistence of a dispute that affects Spain's sovereignty over these enclaves and their strategic position on Spain's southern border."
     },
     {
       "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-03fd2bea3bc6",
-      "coherence": 0.5502003677957357,
+      "cluster_id": "subject-ayuso-9920a57bffa1",
+      "coherence": 0.47757111313520584,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-24",
-      "headline": "Spain convenes national security council to address Ceuta migration crisis",
-      "independent_source_count": 7,
+      "editorial_day": "2026-08-25",
+      "headline": "Madrid official pointed to in penthouse purchase request appearance before assembly",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/08/24/6a8c415ce5fdeaed228b4577.html"
+          "url": "https://elpais.com/espana/madrid/2026-08-25/el-consejero-senalado-por-ayuso-para-dar-explicaciones-sobre-el-atico-el-gobierno-de-madrid-ya-ha-dado-sobradas-explicaciones.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/24/6a8c43c6fdddffbf2a8b4596.html"
+          "url": "https://www.abc.es/espana/madrid/consejero-ayuso-responsable-compra-atico-pide-comparecer-20260825013640-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/madrid/consejero-senalado-ayuso-compra-atico-chamberi-comparecera-peticion-propia-asamblea_1_13466305.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-sanchez-convoca-manana-forma-extraordinaria-consejo-seguridad-nacional-abordar-crisis-ceuta-20260824155022.html"
-        },
-        {
-          "language": "es",
-          "source": "cope.es",
-          "source_country": "spain",
-          "url": "https://www.cope.es/actualidad/espana/noticias/sanchez-convoca-consejo-seguridad-nacional-crisis-ceuta-mes-asalto-masivo-20260824_3424051.html"
-        },
-        {
-          "language": "es",
-          "source": "antena3.com",
-          "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/espana/sanchez-convoca-consejo-seguridad-nacional-casi-mes-despues-asalto-masivo-ceuta_202608246a8c405f7b9bc81c9ed73bd3.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/nacional/2026/08/24/2694931/sanchez-convoca-consejo-seguridad-nacional-para-analizar-situacion-ceuta.html"
-        },
-        {
-          "language": "es",
-          "source": "infodefensa.com",
-          "source_country": "spain",
-          "url": "https://www.infodefensa.com/texto-diario/mostrar/5992169/sanchez-convoca-consejo-seguridad-nacional-analizar-situacion-ceuta-casi-mes-despues-crisis-migratoria"
+          "url": "https://www.europapress.es/madrid/noticia-garcia-martin-pide-comparecer-peticion-propia-pleno-asamblea-atico-chamberi-20260825162718.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/economia/politica/2026/08/24/6a8c415ce5fdeaed228b4577.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/madrid/2026-08-25/el-consejero-senalado-por-ayuso-para-dar-explicaciones-sobre-el-atico-el-gobierno-de-madrid-ya-ha-dado-sobradas-explicaciones.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elmundo.es",
-        "europapress.es",
-        "expansion.com"
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5502,
+          "coherence": 0.4776,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.4961,
+        "total": 0.4938,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "ayuso",
       "subject_names": [
-        "ceuta",
-        "gobierno",
-        "marruecos",
-        "psoe",
-        "robles",
-        "sanchez",
-        "seguridad nacional"
+        "argelia",
+        "asamblea",
+        "ayuso",
+        "barcelona",
+        "espana",
+        "feijoo",
+        "madrid"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Spanish Prime Minister Pedro Sánchez has called an extraordinary meeting of the National Security Council for Tuesday to analyze the situation in Ceuta, nearly a month after a mass migrant crossing into the autonomous city. The council will address the territorial integrity concerns raised by the influx of migrants who entered Ceuta from Morocco.",
-      "takeaway": "Spain's delayed institutional response to the Ceuta crisis indicates the government is still developing its strategy for managing the border and migrant pressure.",
-      "why_it_matters": "The Spanish government's convening of the National Security Council signals an acknowledgment that the mass migrant assault on Ceuta nearly a month prior demands a formal security response, though the articles provide no specifics about what decisions will be made or implemented."
+      "subject_newsroom_count": 8,
+      "summary": "A senior adviser in the Madrid regional government has requested to appear before the regional assembly to explain his role in a public company's purchase of a penthouse in the Chamberí neighborhood of Madrid. The official, identified as García Martín, has been indicated by Madrid's regional president Ayuso and national party leader Feijóo in connection with the property acquisition. His appearance before the assembly will address the public company Planifica Madrid's involvement in the transaction.",
+      "takeaway": "A senior Madrid official accused of impropriety in a public property deal is taking the unusual step of requesting a parliamentary hearing to defend himself.",
+      "why_it_matters": "García Martín's appearance before the Madrid Assembly will determine whether the adviser can clear his name in a high-profile property purchase scandal that has exposed divisions within the regional government between Ayuso and Feijóo, or whether testimony reveals further details that deepen the political crisis."
     },
     {
       "angle_zone": "spain",
-      "cluster_id": "subject-ukraine-bd586e3f02bd",
-      "coherence": 0.4299843913904433,
-      "consequence": 3,
+      "cluster_id": "subject-leipzig-00de0354f1d8",
+      "coherence": 0.42833545113635685,
+      "consequence": 2,
       "countries": [
-        "ca",
-        "it",
-        "spain",
-        "united-states"
+        "france",
+        "spain"
       ],
-      "country_count": 4,
+      "country_count": 2,
       "editorial_day": "2026-08-25",
       "filled_from": "europe",
-      "headline": "Britain will share classified SCALP missile blueprints with Ukraine",
-      "independent_source_count": 6,
+      "headline": "Germany discovers third drone with explosives near Leipzig airport",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/scalp-misil-largo-alcance-reino-unido-ayudara-20260824141222-nt.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/en-allemagne-la-presse-revele-qu-un-troisieme-drone-charge-d-explosifs-a-ete-retrouve-pres-de-l-aeroport-de-leipzig_8160866.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/londres-entega-ucrania-planos-fabricar-misiles-largo-20260824111940-nt.html"
+          "url": "https://www.abc.es/internacional/dron-explosivo-confirma-aeropuerto-leipzig-planeo-gran-20260825102629-nt.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260824/11619165/londres-ayudara-kyiv-fabricar-misiles-alcance-escasez-patriots.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/24/uk-to-share-scalp-missile-blueprints-with-ukraine-as-coalition-of-the-willing-meets-in-kyi"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/25/nx-s1-5944059/the-uk-will-help-ukraine-make-long-range-missiles-by-sharing-classified-tech-information"
+          "url": "https://www.lavanguardia.com/internacional/20260825/11619633/alemania-halla-tercer-dron-presuntos-explosivos-aeropuerto-leipzig.html"
         },
         {
           "language": "es",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://es.euronews.com/my-europe/2026/08/24/reino-unido-facilitara-a-ucrania-los-planos-de-misiles-scalp-mientras-los-aliados-se-reune"
-        },
-        {
-          "language": "en",
-          "source": "cbc.ca",
-          "source_country": "ca",
-          "url": "https://www.cbc.ca/news/world/russia-ukraine-war-1642-9.7317926"
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/hallan-otro-dron-explosivos-ligados-presunto-intento-atentado-leipzig_7029086_0.html"
         },
         {
           "language": "es",
           "source": "infodefensa.com",
           "source_country": "spain",
-          "url": "https://www.infodefensa.com/texto-diario/mostrar/5991751/reino-unido-autoriza-mbda-ceda-informacion-clasificada-ucrania-pueda-fabricar-misiles-largo-alcance-scalp"
+          "url": "https://www.infodefensa.com/texto-diario/mostrar/5992993/alemania-descubre-tercer-dron-explosivo-militar-relacionado-intento-ataque-aeropuerto-leipzig"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "united-kingdom"
+        "germany"
       ],
-      "origin_country": "ca",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/londres-entega-ucrania-planos-fabricar-misiles-largo-20260824111940-nt.html",
-      "rank": 3,
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260825/11619633/alemania-halla-tercer-dron-presuntos-explosivos-aeropuerto-leipzig.html",
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "20minutos.es",
         "abc.es",
-        "euronews.com",
-        "lavanguardia.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.43,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.7333
-        },
-        "total": 0.6629,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "coalition",
-        "kiev",
-        "kyiv",
-        "londres",
-        "reino unido",
-        "royaume-uni",
-        "russia",
-        "russie",
-        "ucraina",
-        "ucrania",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 28,
-      "summary": "The United Kingdom has authorized technology transfer to Ukraine that will enable the country to manufacture long-range SCALP missiles domestically. The decision involves sharing classified technical information and blueprints, allowing Ukraine to produce these weapons to address shortages of other long-range systems. This assistance was discussed as part of a Coalition of the Willing meeting held in Kyiv.",
-      "takeaway": "Britain is moving from supplying weapons to teaching an ally to manufacture them, shifting the calculus of military support in the Ukraine war.",
-      "why_it_matters": "Spain, as a NATO member with defense industry ties to the UK and MBDA, is affected by the precedent of allied nations sharing classified weapons technology and production capabilities, which has implications for NATO standardization, industrial partnerships, and the terms of military aid to Ukraine."
-    },
-    {
-      "angle_zone": "spain",
-      "cluster_id": "subject-burnham-baccfcca6263",
-      "coherence": 0.4365340881689971,
-      "consequence": 2,
-      "countries": [
-        "it",
-        "spain",
-        "sy",
-        "united-kingdom"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-25",
-      "filled_from": "europe",
-      "headline": "UK Prime Minister Andy Burnham visits Kyiv on first foreign trip to reaffirm support for Ukraine",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260824/11618856/reino-unido-proporcionara-ucrania-planos-fabricar-misiles-alcance.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/24/new-uk-pm-andy-burnham-to-visit-kyiv-on-first-foreign-trip-reaffirms-support-to-ukraine"
-        },
-        {
-          "language": "en",
-          "source": "globalsecurity.org",
-          "source_country": "sy",
-          "url": "https://www.globalsecurity.org/wmd/library/news/ukraine/2026/08/ukraine-260824-ukgov01.htm"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "up"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/24/new-uk-pm-andy-burnham-to-visit-kyiv-on-first-foreign-trip-reaffirms-support-to-ukraine",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
+        "francetvinfo.fr",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4365,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5651,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "burnham",
-      "subject_names": [
-        "burnham",
-        "coalition",
-        "kiev",
-        "kyiv",
-        "russia",
-        "russie",
-        "ucraina",
-        "ucrania",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "New British Prime Minister Andy Burnham traveled to Kyiv for his first international visit, timing his trip to coincide with Ukrainian Independence Day and delivering a message of steadfast British support for Ukraine in the face of Russian threats.",
-      "takeaway": "A new British government's first act abroad was to pledge unwavering Ukraine support, reinforcing the Western coalition Spain depends on for its own security.",
-      "why_it_matters": "Britain's reaffirmed commitment to Ukraine under a new prime minister signals continued NATO-European unity on Russia policy that affects Spain's strategic alignment and defense calculations within the alliance."
-    },
-    {
-      "angle_zone": "spain",
-      "cluster_id": "subject-ukraine-6a78cb2b8b92",
-      "coherence": 0.45408928237918833,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "germany",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-24",
-      "filled_from": "europe",
-      "headline": "Zelensky opposes holding elections during Ukraine's ongoing war",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260823.OBS117602/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-qui-fracturerait-le-pays.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-volodymyr-zelensky-met-en-garde-contre-des-elections-en-temps-de-guerre-qui-detruiraient-le-WF4WKPJZEFCBVOJOUMR3MYNZSM/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260824/11618571/zelenski-dice-elecciones-ucrania-serian-tsunami-dividiria-pais.html"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "dw.com",
-      "outbound_url": "https://www.dw.com/en/ukraine-zelenskyy-rejects-wartime-elections/a-78475087?maca=en-rss-en-world-4025-rdf",
-      "rank": 5,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "dw.com",
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4541,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
+          "coherence": 0.4283,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 0.5,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "source_reliability": 0.6364
         },
-        "total": 0.5643,
+        "total": 0.5314,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "leipzig",
       "subject_names": [
-        "coalition",
-        "kiev",
-        "kyiv",
-        "russia",
-        "russie",
-        "ucraina",
-        "ucrania",
-        "ukraine",
-        "volodymyr zelensky",
-        "zelenski",
-        "zelensky"
+        "alemania",
+        "allemagne",
+        "leipzig"
       ],
-      "subject_newsroom_count": 28,
-      "summary": "Ukrainian President Volodymyr Zelensky has warned against conducting elections while the country remains at war, characterizing such a move as a destructive force that would divide the nation. He used the image of a tsunami to describe the destabilizing impact wartime elections would have on Ukraine.",
-      "takeaway": "Zelensky is betting that preserving internal stability during war matters more than maintaining democratic procedures, a choice that tests how Western allies define legitimate governance.",
-      "why_it_matters": "Spain's role as a European Union member means it will face questions about recognizing the legitimacy of any Ukrainian government that does not hold elections during the war, potentially affecting EU unity on Ukraine policy and recognition of Ukrainian authority in post-war settlements."
+      "subject_newsroom_count": 6,
+      "summary": "German authorities have found a third drone carrying explosives near Leipzig airport, indicating a planned large-scale attack on the facility. The discovery of multiple explosive-laden drones linked to what officials are treating as an attempted attack on the airport represents an escalation in the scope and coordination of the threat.",
+      "takeaway": "A planned attack using military-grade explosives and multiple drones was foiled in Germany, raising alarms across European aviation and security systems.",
+      "why_it_matters": "The discovery of a coordinated drone-and-explosives plot at a major European airport signals a security threat affecting all EU member states, including Spain, which must assess vulnerabilities at its own critical infrastructure and coordinate with German and other European authorities on counterterrorism response."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-vaticano-395210c77219",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-25",
+      "filled_from": "europe",
+      "headline": "Vatican envoy visits Moscow and calls for end to Ukraine war",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/25/news/monsignor_gallagher_visita_mosca_guerra_ucraina_negoziati_vaticano-425546698/?rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/08/25/enviado-do-vaticano-vai-a-moscou-e-exige-fim-da-guerra-a-chanceler-de-putin.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "vt"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/08/25/enviado-do-vaticano-vai-a-moscou-e-exige-fim-da-guerra-a-chanceler-de-putin.ghtml",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "globo.com",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.4909,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "vaticano",
+      "subject_names": [
+        "vaticano"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "A Vatican official traveled to Moscow to meet with Russian officials and urged negotiations to end the war in Ukraine, indicating the Vatican's willingness to participate in peace efforts.",
+      "takeaway": "The Vatican's direct intervention in peace negotiations signals a shift in diplomatic channels that may complicate rather than simplify the geopolitical positions Spain and its allies have maintained.",
+      "why_it_matters": "Spain, as a NATO member and EU state supporting Ukraine sanctions, faces potential diplomatic pressure if Vatican mediation attempts to broker a negotiated settlement that could alter the international consensus on conditions for Ukrainian peace."
     }
   ],
-  "discarded_ingested": 27,
+  "discarded_ingested": 18,
   "discarded_kept": 5,
-  "generated_at": "2026-08-25T05:57:31.149478+00:00",
+  "generated_at": "2026-08-26T05:59:42.415516+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

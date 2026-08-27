@@ -52,20 +52,15 @@ from typing import Any, Protocol
 
 from pipeline.adapters import Failure
 from pipeline.adapters.claude import (
-    _ANGLE_SCHEMA,
     _CONSEQUENCE_MAX_TOKENS,
     _CONSEQUENCE_SCHEMA,
     _SUMMARY_SCHEMA,
     CONSEQUENCE_BATCH,
     BatchCollectResult,
     BatchSubmission,
-    _angle_prompt,
     _consequence_prompt,
     _parse_cluster_text,
-    _parse_zone_angle,
     _prompt_for,
-    angle_custom_id,
-    parse_angle_custom_id,
 )
 from pipeline.domain import OutputLanguage
 
@@ -162,14 +157,9 @@ def _client_or_degrade(client: HttpClient | None) -> tuple[HttpClient | None, Fa
     return httpx.Client(), None
 
 
-def _requests_for(
-    clusters: list[dict],
-    language: OutputLanguage,
-    angles: list[tuple[dict, str]],
-) -> list[_Request]:
-    """Facts first, then angles -- the same two request kinds, keyed the same
-    way, that ride in one Claude batch."""
-    requests = [
+def _requests_for(clusters: list[dict], language: OutputLanguage) -> list[_Request]:
+    """One request per Cluster, keyed the way `claude`'s batch requests are."""
+    return [
         _Request(
             custom_id=cluster["cluster_id"],
             prompt=_prompt_for(cluster, language),
@@ -177,15 +167,6 @@ def _requests_for(
         )
         for cluster in clusters
     ]
-    requests += [
-        _Request(
-            custom_id=angle_custom_id(cluster["cluster_id"], zone_slug),
-            prompt=_angle_prompt(cluster, zone_slug, language),
-            schema=_ANGLE_SCHEMA,
-        )
-        for cluster, zone_slug in angles
-    ]
-    return requests
 
 
 def _post_once(
@@ -275,7 +256,6 @@ def _send_with_retry(
 def submit_batch(
     clusters: list[dict],
     language: OutputLanguage,
-    angles: list[tuple[dict, str]] | None = None,
     client: HttpClient | None = None,
     data_root: Path | None = None,
     cycle_id: str | None = None,
@@ -293,7 +273,7 @@ def submit_batch(
     that individually failed is recorded in the results file and degrades one
     Cluster later, exactly as a Claude batch's per-Cluster failure does.
     """
-    if not clusters and not angles:
+    if not clusters:
         return BatchSubmission()
     if data_root is None or cycle_id is None:
         return BatchSubmission(
@@ -305,7 +285,7 @@ def submit_batch(
         return BatchSubmission(failures=[degrade] if degrade else [])
 
     api_key = os.environ.get("AI_GATEWAY_API_KEY", "")
-    requests = _requests_for(clusters, language, angles or [])
+    requests = _requests_for(clusters, language)
     deadline = now() + MAX_PHASE_SECONDS
 
     texts: dict[str, str] = {}
@@ -382,23 +362,14 @@ def collect_batch(
 
     failures = [Failure(ADAPTER, f["detail"]) for f in payload.get("failures", [])]
     texts = {}
-    angles = {}
     for custom_id, raw in payload.get("texts", {}).items():
-        angle_key = parse_angle_custom_id(custom_id, clusters)
-        if angle_key is not None:
-            angle, failure = _parse_zone_angle(custom_id, raw)
-            if angle is not None:
-                angles[angle_key] = angle
-            elif failure is not None:
-                failures.append(failure)
-            continue
         text, failure = _parse_cluster_text(custom_id, raw)
         if text is not None:
             texts[custom_id] = text
         elif failure is not None:
             failures.append(failure)
 
-    return BatchCollectResult(status="ended", texts=texts, angles=angles, failures=failures)
+    return BatchCollectResult(status="ended", texts=texts, failures=failures)
 
 
 def score_consequence(

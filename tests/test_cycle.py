@@ -106,7 +106,6 @@ def _no_op_submit_summarize(
     language: OutputLanguage,
     cycle_id: str,
     data_root: Path,
-    angles: list[tuple[dict, str]] | None = None,
 ) -> WrittenSubmission:
     """These tests exercise collect/dedupe/cluster/rank/history behavior,
     not summarization -- a stub submission keeps them independent of the
@@ -1137,7 +1136,6 @@ def test_summarize_submission_count_stays_fixed_regardless_of_cluster_volume(
             language: OutputLanguage,
             cycle_id: str,
             data_root: Path,
-            angles: list[tuple[dict, str]] | None = None,
         ) -> WrittenSubmission:
             submit_calls.append(language)
             return WrittenSubmission(

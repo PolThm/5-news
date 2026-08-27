@@ -809,8 +809,9 @@ def _topped_up(
 
     Country Zones only, and deliberately. A Country is where the shortage is
     (France had four of its own on 2026-08-20, Spain five, out of sixty-one
-    events) and where the angle idea means something: Iran seen from France is
-    energy prices and the budget. A Continent already ranks a wide pool, and
+    events) and where a wider item still reads as relevant: Iran seen from
+    France is energy prices and the budget. A Continent already ranks a wide
+    pool, and
     "Europe" topped up with news from Japan would be a Briefing about nothing --
     so `_is_relevant_to` stays an absolute contract there, as its own tests
     assert.
@@ -819,9 +820,8 @@ def _topped_up(
     as close to the reader as the pool allows.
 
     Items already selected are skipped by `cluster_id`, and each filler carries
-    `filled_from`: the Zone whose relevance admitted it. That field is what the
-    angle prompt reads, and what lets a page say where an item came from instead
-    of implying it is local news.
+    `filled_from`: the Zone whose relevance admitted it. That field is what lets
+    a page say where an item came from instead of implying it is local news.
     """
     if serving_zone.kind != ZoneKind.COUNTRY:
         return own

@@ -75,23 +75,6 @@ def _summary_payload(
     }
 
 
-def _angle_payload() -> dict:
-    return {
-        "choices": [
-            {
-                "message": {
-                    "content": json.dumps(
-                        {
-                            "why_it_matters": "What it changes here.",
-                            "takeaway": "The local point.",
-                        }
-                    )
-                }
-            }
-        ]
-    }
-
-
 class _RecordingClient:
     """Returns queued responses in order and records every request body."""
 
@@ -139,7 +122,6 @@ def test_submit_sends_the_configured_model_and_reasoning_effort(tmp_path):
     submit_batch(
         [_cluster()],
         OutputLanguage.FR,
-        angles=[],
         client=client,
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -160,7 +142,6 @@ def test_submit_parks_results_and_collect_reads_them_back(tmp_path):
     submission = submit_batch(
         [cluster],
         OutputLanguage.FR,
-        angles=[],
         client=client,
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -175,29 +156,6 @@ def test_submit_parks_results_and_collect_reads_them_back(tmp_path):
     # caller that waits for this batch would wait forever.
     assert result.status == "ended"
     assert result.texts[cluster["cluster_id"]].headline == "Parked and found"
-
-
-def test_submit_carries_angles_alongside_facts(tmp_path):
-    cluster = _cluster()
-    client = _RecordingClient(
-        [_FakeResponse(200, _summary_payload()), _FakeResponse(200, _angle_payload())]
-    )
-
-    submission = submit_batch(
-        [cluster],
-        OutputLanguage.FR,
-        angles=[(cluster, "france")],
-        client=client,
-        data_root=tmp_path,
-        cycle_id=CYCLE_ID,
-    )
-    result = collect_batch(submission.batch_id, [cluster], data_root=tmp_path)
-
-    assert len(client.requests) == 2
-    assert result.texts[cluster["cluster_id"]].headline
-    assert (
-        result.angles[(cluster["cluster_id"], "france")].why_it_matters == "What it changes here."
-    )
 
 
 def test_a_rate_limited_request_is_retried_on_the_flat_interval(tmp_path):
@@ -217,7 +175,6 @@ def test_a_rate_limited_request_is_retried_on_the_flat_interval(tmp_path):
     submission = submit_batch(
         [cluster],
         OutputLanguage.FR,
-        angles=[],
         client=client,
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -248,7 +205,6 @@ def test_a_transport_exception_is_retried_too(tmp_path):
     submission = submit_batch(
         [cluster],
         OutputLanguage.FR,
-        angles=[],
         client=_FlakyClient(),
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -270,7 +226,6 @@ def test_a_non_429_http_error_is_not_retried(tmp_path):
     submission = submit_batch(
         [cluster],
         OutputLanguage.FR,
-        angles=[],
         client=client,
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -299,7 +254,6 @@ def test_a_request_that_never_lands_gives_up_after_the_attempt_ceiling(tmp_path)
     submission = submit_batch(
         [cluster],
         OutputLanguage.FR,
-        angles=[],
         client=client,
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -326,7 +280,6 @@ def test_the_phase_deadline_stops_retrying_before_the_job_is_killed(tmp_path):
     submission = submit_batch(
         [cluster],
         OutputLanguage.FR,
-        angles=[],
         client=client,
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
@@ -366,7 +319,6 @@ def test_submit_without_a_key_degrades_rather_than_raising(tmp_path, monkeypatch
     submission = submit_batch(
         [_cluster()],
         OutputLanguage.FR,
-        angles=[],
         data_root=tmp_path,
         cycle_id=CYCLE_ID,
     )

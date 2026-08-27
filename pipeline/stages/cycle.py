@@ -67,7 +67,6 @@ from pipeline.stages.briefing_matrix import (
     build_period_pools,
     dedupe_union,
     rank_all_zones,
-    zone_angles,
 )
 from pipeline.stages.cluster import EmbedFn, run_cluster
 from pipeline.stages.collect import write_collection
@@ -532,12 +531,8 @@ def run_cycle(
             # Which (item, Zone) pairs need an angle written for them. Computed
             # here and threaded into submit, because summarize submits once per
             # language and the pairs are the same for all three.
-            angle_pairs = zone_angles(flat_rankings)
             clusters_selected = len(union)
-            trace(
-                f"ranking: done -> {clusters_selected} selected, "
-                f"{len(angle_pairs)} zone angles to write"
-            )
+            trace(f"ranking: done -> {clusters_selected} selected")
             rank_path = output_dir_for("rank", cycle_id, root=data_root) / "ranked.jsonl"
             write_jsonl(rank_path, union)
             _write_zone_rankings(
@@ -588,7 +583,6 @@ def run_cycle(
                 language=language,
                 cycle_id=cycle_id,
                 data_root=data_root,
-                angles=angle_pairs,
             )
             if submission.batch_id is not None:
                 summarize_batches[language.value] = {

@@ -69,23 +69,25 @@ jobs:
     # summarize is the long pole now, and only under the gateway provider.
     # The AI Gateway has no batch endpoint, so that adapter calls the model
     # synchronously -- and its free tier admits ~5 calls before refusing for
-    # ~5 minutes, absorbed by retrying on a flat 60s interval. Measured
-    # 2026-08-26: 20 calls took 15.4 minutes, so a ~60-call cycle runs ~46
-    # minutes. 120 leaves ~2.5x headroom, which matters because the limit is
-    # shared across the free tier and a busy day at Vercel is slower than the
-    # measurement. The adapter also enforces its own MAX_PHASE_SECONDS (90m)
-    # inside this bound.
+    # ~5 minutes, absorbed by retrying on a flat 60s interval. A 20-call
+    # measurement (2026-08-26) predicted ~46 minutes for a ~60-call cycle;
+    # the first real production cycle (2026-08-27, 18 Clusters x 3 languages
+    # plus per-Zone angles -- more calls than that sample, and the free
+    # tier's limit only gets tighter as the day goes on) actually took ~2h,
+    # right up against the 120-minute bound this replaced. The adapter's own
+    # MAX_PHASE_SECONDS (200m) is what stops a slow day from running past
+    # this timeout instead of degrading gracefully inside it.
     #
     # The bound still matters for the reason it always did: a job killed here
     # loses everything it has done, including summaries already generated
-    # (Story 6.1 lost two sets of three exactly that way). Under the gateway
-    # provider that window is ~46 minutes rather than ~3, which is the real
-    # cost of the free tier -- not money, but exposure.
+    # (Story 6.1 lost two sets of three exactly that way; the gateway
+    # adapter's first production run lost two hours of them the same way,
+    # which is what pushed this from 120 to 240).
     #
     # On Claude this whole job is back to ~3 minutes; the raised bound is
     # inert there, since a job that finishes early is not billed for the
     # ceiling.
-    timeout-minutes: 120
+    timeout-minutes: 240
 
     steps:
       - uses: actions/checkout@v7

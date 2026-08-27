@@ -28,6 +28,7 @@ import pytest
 from pipeline.adapters.gateway import (
     BATCH_ID_PREFIX,
     MAX_ATTEMPTS,
+    MAX_PHASE_SECONDS,
     MODEL,
     REASONING_EFFORT,
     RETRY_WAIT_SECONDS,
@@ -313,7 +314,12 @@ def test_a_request_that_never_lands_gives_up_after_the_attempt_ceiling(tmp_path)
 def test_the_phase_deadline_stops_retrying_before_the_job_is_killed(tmp_path):
     # Reaching the ceiling must degrade the remaining requests, not run the
     # job into a hard kill -- which would lose the summaries already written.
-    clock = iter([0.0] + [10_000.0] * 50)
+    # Derived from MAX_PHASE_SECONDS rather than a fixed constant: a fixed
+    # number here silently stops testing "past the deadline" the moment the
+    # constant is raised past it, which is exactly what happened when the
+    # first real production cycle pushed the ceiling from 90m to 200m.
+    past_deadline = MAX_PHASE_SECONDS * 2
+    clock = iter([0.0] + [past_deadline] * 50)
     client = _RecordingClient([_FakeResponse(429)])
     cluster = _cluster()
 

@@ -93,11 +93,17 @@ RETRY_WAIT_SECONDS = 60
 # cycle forever. The measured worst case was 6 attempts.
 MAX_ATTEMPTS = 20
 
-# Whole-phase ceiling, well inside the workflow's 2h timeout. Reaching it
+# Whole-phase ceiling, well inside the workflow's 4h timeout. Reaching it
 # means the free tier is far slower than measured; remaining requests degrade
 # rather than run the job into a hard kill, which would lose the ones already
 # done.
-MAX_PHASE_SECONDS = 90 * 60
+#
+# Raised from 90m after the first real production cycle (2026-08-27, 18
+# Clusters x 3 languages plus per-Zone angles) took ~2h against a 20-call
+# measurement that predicted ~46m -- a full cycle makes far more calls than
+# that sample did, and the free tier's rate limit only gets tighter as the
+# day goes on. 200m keeps a real margin below the job's own 240m timeout.
+MAX_PHASE_SECONDS = 200 * 60
 
 # How a local, results-on-disk submission is marked. `collect_batch` accepts
 # only ids carrying this prefix, so a Claude batch id can never be mistaken

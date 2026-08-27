@@ -1,28 +1,28 @@
 {
   "articles_collected": 13521,
-  "briefings_path": null,
+  "briefings_path": "data/briefings",
   "clusters_after_grouping": 11497,
   "clusters_selected": 18,
   "completed": true,
   "cycle_id": "2026-08-27T00-21-50Z",
-  "degraded": false,
-  "failures": [],
-  "groups_after_dedupe": 11779,
-  "phase": "summarize_submitted",
-  "published": false,
-  "started_at": "2026-08-27T00:21:50.001531+00:00",
-  "summarize_batches": {
-    "en": {
-      "batch_id": "gateway-local:2026-08-27T00-21-50Z:en",
-      "ranked_path": "data/intermediate/rank/2026-08-27T00-21-50Z/ranked.jsonl"
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gateway",
+      "detail": "could not read results at data/intermediate/summarize/2026-08-27T00-21-50Z/en/gateway_results.json: [Errno 2] No such file or directory: 'data/intermediate/summarize/2026-08-27T00-21-50Z/en/gateway_results.json'"
     },
-    "es": {
-      "batch_id": "gateway-local:2026-08-27T00-21-50Z:es",
-      "ranked_path": "data/intermediate/rank/2026-08-27T00-21-50Z/ranked.jsonl"
+    {
+      "adapter": "gateway",
+      "detail": "could not read results at data/intermediate/summarize/2026-08-27T00-21-50Z/es/gateway_results.json: [Errno 2] No such file or directory: 'data/intermediate/summarize/2026-08-27T00-21-50Z/es/gateway_results.json'"
     },
-    "fr": {
-      "batch_id": "gateway-local:2026-08-27T00-21-50Z:fr",
-      "ranked_path": "data/intermediate/rank/2026-08-27T00-21-50Z/ranked.jsonl"
+    {
+      "adapter": "gateway",
+      "detail": "could not read results at data/intermediate/summarize/2026-08-27T00-21-50Z/fr/gateway_results.json: [Errno 2] No such file or directory: 'data/intermediate/summarize/2026-08-27T00-21-50Z/fr/gateway_results.json'"
     }
-  }
+  ],
+  "groups_after_dedupe": 11779,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-08-27T00:21:50.001531+00:00",
+  "summarize_batches": {}
 }

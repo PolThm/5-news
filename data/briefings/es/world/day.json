@@ -1,512 +1,810 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-e123efe53b63",
-      "coherence": 0.480586320270207,
+      "cluster_id": "subject-nepal-c71a855cac15",
+      "coherence": 0.4784216497097009,
       "consequence": 3,
       "countries": [
-        "ar",
-        "brazil",
-        "germany",
-        "it",
-        "ni",
-        "united-states"
+        "ci",
+        "france",
+        "mx",
+        "spain",
+        "united-states",
+        "ve"
       ],
       "country_count": 6,
-      "editorial_day": "2026-08-26",
-      "headline": "Trump planea revocar hasta 200.000 visas de solicitantes de asilo",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/us-trump-administration-plans-to-revoke-up-to-200-000-visas-from-asylum-seekers/a-78491300?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/2026/08/25/trump-administration-plans-to-revoke-200000-visas-of-asylum-seekers"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/25/news/trump_usa_revoca_visti_richiedenti_asilo-425545428/?rss"
-        },
-        {
-          "language": "en",
-          "source": "punchng.com",
-          "source_country": "ni",
-          "url": "https://punchng.com/trump-moves-to-revoke-nearly-200000-asylum-seekers-visas/"
-        },
-        {
-          "language": "en",
-          "source": "latintimes.com",
-          "source_country": "united-states",
-          "url": "https://www.latintimes.com/trump-plans-revoke-200000-us-tourist-visas-who-targeted-what-happens-next-598770"
-        },
-        {
-          "language": "es",
-          "source": "losandes.com.ar",
-          "source_country": "ar",
-          "url": "https://www.losandes.com.ar/mundo/trump-prepara-una-revocacion-masiva-visas-extranjeros-que-solicitaron-asilo-estados-unidos-n6003540"
-        },
-        {
-          "language": "pt",
-          "source": "ig.com.br",
-          "source_country": "brazil",
-          "url": "https://ultimosegundo.ig.com.br/agencias/dw/2026-08-25/governo-trump-prepara-revogacao-em-massa-de-vistos-de-estrangeiros-que-pediram-asilo.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states",
-        "co"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/2026/08/25/trump-administration-plans-to-revoke-200000-visas-of-asylum-seekers",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "dw.com",
-        "euronews.com",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4806,
-          "corroboration": 0.75,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
-        },
-        "total": 0.7112,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "trump",
-        "washington"
-      ],
-      "subject_newsroom_count": 27,
-      "summary": "La administración Trump ha anunciado planes para revocar entre 200.000 visas de personas que solicitaron asilo en Estados Unidos. Según reportes internacionales, esta medida representaría una de las revocaciones más masivas en la historia estadounidense.",
-      "takeaway": "El gobierno Trump busca eliminar de forma masiva el estatus migratorio de solicitantes de asilo que ya han obtenido visas.",
-      "why_it_matters": "La revocación afectaría a decenas de miles de extranjeros que actualmente poseen visas válidas en Estados Unidos tras haber solicitado protección por asilo."
-    },
-    {
-      "cluster_id": "subject-canada-bcbd45669d8d",
-      "coherence": 0.47492247533154963,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "md",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-25",
-      "headline": "Canadá anuncia aranceles de hasta 50% sobre productos estadounidenses en represalia comercial",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/droits-de-douane-le-canada-repondra-a-trump-mardi-20260825"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/canada/le-canada-en-pleine-guerre-commerciale-avec-les-etats-unis-riposte-avec-des-surtaxes-de-15-a-50-sur-une-serie-de-produits_8161196.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260825-le-canada-r%C3%A9pond-%C3%A0-washington-et-annonce-jusqu-%C3%A0-50-de-droits-de-douane-sur-des-produits-am%C3%A9ricains"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/monde/droits-de-douane-de-50-riposte-au-dollar-pres-entre-les-etats-unis-et-le-canada-la-guerre-commerciale-est-relancee_645295"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/canada-responde-guerra-comercial-trump-anuncia-aranceles-20260825174222-nt.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/economia/noticia/2026/08/24/trump-anuncia-tarifas-de-50percent-sobre-produtos-do-canada-em-2027.ghtml"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/22/trump-tarifas-importacoes-canada-fracasso-de-negociacoes-retaliacao.ghtml"
-        },
-        {
-          "language": "ron",
-          "source": "protv.md",
-          "source_country": "md",
-          "url": "https://protv.md/international/razboiul-economic-dintre-sua-si-canada-escaladeaza-trump-a-anuntat-ca-impune-noi-taxe-vamale-de-50-cu-ce-raspuns-au-venit-canadienii---2765845.html"
-        },
-        {
-          "language": "fr",
-          "source": "leprogres.fr",
-          "source_country": "france",
-          "url": "https://www.leprogres.fr/defense-guerre-conflit/2026/08/25/le-canada-riposte-aux-etats-unis-en-imposant-des-surtaxes-de-15-a-50"
-        }
-      ],
-      "mentioned_countries": [
-        "ca",
-        "united-states"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/22/trump-tarifas-importacoes-canada-fracasso-de-negociacoes-retaliacao.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "abc.es",
-        "challenges.fr",
-        "francetvinfo.fr",
-        "globo.com",
-        "la-croix.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4749,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4286,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7576
-        },
-        "total": 0.7092,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "canada",
-      "subject_names": [
-        "amerique",
-        "canada",
-        "carney",
-        "donald trump",
-        "eeuu",
-        "estados unidos",
-        "etats-unis",
-        "mark carney",
-        "trump",
-        "washington"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "En respuesta a los aranceles impuestos por Estados Unidos, Canadá ha anunciado la imposición de derechos arancelarios de entre 15% y 50% sobre una serie de productos estadounidenses, intensificando la guerra comercial entre ambos países tras el fracaso de las negociaciones.",
-      "takeaway": "La escalada de aranceles muestra que la disputa comercial entre Estados Unidos y Canadá se profundiza sin resolución a la vista.",
-      "why_it_matters": "Los consumidores y empresas en ambos países enfrentarán aumentos de precios en productos importados, mientras que los sectores exportadores de cada nación se verán directamente afectados por estas medidas de represalia."
-    },
-    {
-      "cluster_id": "subject-syrie-e981406a63d0",
-      "coherence": 0.47560991294074406,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-26",
-      "headline": "Las fuerzas kurdas de Siria anuncian su disolución tras acuerdo con Damasco",
-      "independent_source_count": 5,
+      "editorial_day": "2026-08-27",
+      "headline": "Una riada deja al menos 160 muertos y cientos de turistas y peregrinos desaparecidos en Nepal y Tíbet",
+      "independent_source_count": 15,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/26/absolument-historique-en-syrie-le-chef-des-puissantes-forces-kurdes-annonce-leur-dissolution_6756696_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/08/26/la-crue-devastatrice-au-nepal-et-au-tibet-a-fait-au-moins-160-morts-et-des-centaines-de-disparus_6757359_3211.html"
         },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/revolte-en-syrie/en-syrie-le-chef-des-puissantes-forces-kurdes-annonce-leur-dissolution_8161823.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/moyen-orient/20260825-syrie-les-forces-kurdes-annoncent-leur-dissolution-suite-%C3%A0-l-accord-avec-damas"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/moyen-orient/20260825-syrie-le-chef-des-forces-kurdes-annonce-officiellement-leur-dissolution"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/kurdish-led-group-in-syria-says-it-has-dissolved-after-merging-with-the-army"
-        }
-      ],
-      "mentioned_countries": [
-        "sy"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/moyen-orient/20260825-syrie-les-forces-kurdes-annoncent-leur-dissolution-suite-%C3%A0-l-accord-avec-damas",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "pbs.org",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4756,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.7087,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "syrie",
-      "subject_names": [
-        "syria",
-        "syrie"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Los líderes de las poderosas fuerzas armadas kurdas en Siria han anunciado oficialmente su disolución después de llegar a un acuerdo con el gobierno sirio. Según los reportes, las fuerzas kurdas se han fusionado con el ejército sirio como parte de esta resolución.",
-      "takeaway": "Las fuerzas kurdo-sirias ceden su autonomía militar al gobierno central sirio mediante un acuerdo de integración.",
-      "why_it_matters": "La disolución de las fuerzas kurdas sirias marca el fin de una estructura militar independiente que había operado en el país, alterando significativamente el panorama político y militar sirio."
-    },
-    {
-      "cluster_id": "subject-trump-9e6f38c7927d",
-      "coherence": 0.369702759734973,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "co",
-        "it",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-26",
-      "headline": "La Corte Suprema de Estados Unidos autoriza a Trump a limitar parcialmente el voto por correo",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/supremo-eeuu-anade-incertidumbre-midterms-permitir-trump-avance-plan-restringir-voto-correo_1_13464975.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/supremo-respalda-trump-su-reforma-para-limitar-voto-por-correo-dos-meses-las-midterms_7029005_0.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/25/news/corte_suprema_trump_limitare_voto_posta-425546732/?rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/24/suprema-corte-dos-eua-da-vitoria-a-trump-em-disputa-sobre-voto-pelo-correio.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "eltiempo.com",
-          "source_country": "co",
-          "url": "https://www.eltiempo.com/mundo/eeuu-y-canada/la-corte-suprema-de-estados-unidos-autorizo-que-donald-trump-implemente-de-forma-parcial-un-decreto-que-pretende-limitar-el-voto-por-correo-3580930"
-        }
-      ],
-      "mentioned_countries": [
-        "ir"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/24/suprema-corte-dos-eua-da-vitoria-a-trump-em-disputa-sobre-voto-pelo-correio.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "globo.com",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3697,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6995,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "supremo",
-        "trump",
-        "washington"
-      ],
-      "subject_newsroom_count": 27,
-      "summary": "La Corte Suprema de Estados Unidos respaldó un decreto de Donald Trump que permite restringir el voto por correo, autorizando su implementación parcial apenas dos meses antes de las elecciones legislativas estadounidenses. Esta decisión introduce incertidumbre en el proceso electoral al permitir que avance la reforma que pretende limitar esta modalidad de votación.",
-      "takeaway": "La Corte Suprema favoreció a Trump en su intento de restringir el voto por correo en plena campaña electoral.",
-      "why_it_matters": "La decisión afecta directamente el acceso al voto por correo en las próximas elecciones intermedias, modificando las reglas electorales durante el período de campaña y potencialmente impactando a los votantes que dependen de esta modalidad."
-    },
-    {
-      "cluster_id": "subject-spacex-0ee88b7e6304",
-      "coherence": 0.4776598645411251,
-      "consequence": 2,
-      "countries": [
-        "al",
-        "france",
-        "germany",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-08-26",
-      "headline": "SpaceX planea construir la mayor base de lanzamiento espacial del mundo en Luisiana",
-      "independent_source_count": 9,
-      "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/sciences/article/2026/08/26/spacex-annonce-vouloir-construire-en-louisiane-le-plus-grand-site-de-lancement-spatial-au-monde_6756729_1650684.html"
+          "url": "https://www.lemonde.fr/international/video/2026/08/26/nepal-les-images-des-inondations-massives-qui-ont-fait-au-moins-72-morts-et-384-touristes-disparus_6757393_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/spacex-annonce-vouloir-construire-une-base-spatiale-pour-100-milliards-de-dollars-en-louisiane-des-milliers-de-vols-par-an-de-starship-prevus-20260825_YYRQUWHKCJHLTLPAWTIWQRNRHE/"
+          "url": "https://www.liberation.fr/environnement/coulees-de-boues-au-nepal-8-morts-et-384-personnes-portes-disparues-20260826_T5645WCW3ZF5DG462RWDNCOOD4/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/spacex-annonce-vouloir-construire-une-base-spatiale-pour-100-milliards-de-dollars-en-louisiane-20260825"
+          "url": "https://www.la-croix.com/international/nepal-au-moins-19-morts-et-384-touristes-portes-disparus-apres-de-violentes-inondations-20260826"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9co-tech/20260826-spacex-elon-musk-compte-construire-gigantesque-base-spatiale-louisiane-starship"
+          "url": "https://www.franceinfo.fr/monde/asie/des-inondations-massives-dans-le-nord-du-nepal-font-au-moins-huit-morts_8162150.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-26/una-fuerte-riada-causa-varios-muertos-en-nepal-y-un-numero-indeterminado-de-victimas-en-tibet.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260826/11620308/crecida-rio-deja-8-muertos-nepal-desaparecidos-tibet.html"
         },
         {
           "language": "es",
           "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia-digital/companias/2026/08/25/6a8df13ae5fdeab4728b4596.html"
+          "url": "https://www.expansion.com/sociedad/2026/08/26/6a8f14c7e5fdeaab5d8b457f.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/asia/20260826/terremoto-himalaya-provoca-riada-masiva-deja-cientos-desaparecidos-frontera-nepal-tibet/1003744363656_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/08/26/6a8eaf12e4d4d807778b457d.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/muertos-desaparecidos-nepal-tras-una-riada-frontera-con-china_7029545_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theepochtimes.com",
+          "source_country": "united-states",
+          "url": "https://www.theepochtimes.com/world/at-least-160-dead-hundreds-missing-after-flood-devastates-nepal-tibet-border-6079993"
+        },
+        {
+          "language": "es",
+          "source": "planoinformativo.com",
+          "source_country": "mx",
+          "url": "https://planoinformativo.com/1165694/riada-devasta-a-nepal-160-muertos-y-800-desaparecidos"
+        },
+        {
+          "language": "es",
+          "source": "lasillarota.com",
+          "source_country": "mx",
+          "url": "https://lasillarota.com/mundo/2026/8/26/inundacion-en-nepal-reportan-160-muertos-y-403-desaparecidos-525938.html"
+        },
+        {
+          "language": "es",
+          "source": "globovision.com",
+          "source_country": "ve",
+          "url": "https://www.globovision.com/internacional/60865/al-menos-16-muertos-y-400-sin-contacto-en-nepal-tras-una-riada-en-la-frontera-con-china"
+        },
+        {
+          "language": "es",
+          "source": "lanacion.cl",
+          "source_country": "ci",
+          "url": "https://www.lanacion.cl/al-menos-16-muertos-y-400-sin-contacto-en-nepal-luego-de-una-riada-en-la-frontera-con-china/"
+        }
+      ],
+      "mentioned_countries": [
+        "china",
+        "np"
+      ],
+      "origin_country": "ci",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260826/11620308/crecida-rio-deja-8-muertos-nepal-desaparecidos-tibet.html",
+      "rank": 1,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "expansion.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4784,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7895,
+          "source_reliability": 0.8431
+        },
+        "total": 0.7916,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "nepal",
+      "subject_names": [
+        "china",
+        "chine",
+        "himalaya",
+        "nepal",
+        "taiwan",
+        "tibet"
+      ],
+      "subject_newsroom_count": 27,
+      "summary": "Una riada deja al menos 160 muertos y cientos de turistas y peregrinos desaparecidos en Nepal y Tíbet",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "cluster_id": "subject-pakistan-99669c9dca48",
+      "coherence": 0.5170399089105666,
+      "consequence": 3,
+      "countries": [
+        "au",
+        "ci",
+        "france",
+        "germany",
+        "it",
+        "my",
+        "pk",
+        "spain",
+        "sz",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 11,
+      "editorial_day": "2026-08-26",
+      "headline": "Al menos 14 recién nacidos mueren en el incendio de un hospital de Pakistán",
+      "independent_source_count": 28,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/ninos-muertos-incendio-hospital-islamabad-pakistan-20260826072528-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260826/11620204/mueren-15-recien-nacidos-pakistan-incendio-hospital-islamabad.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/menos-15-recien-nacidos-mueren-incendio-un-hospital-pakistan-segun-un-medio-local_7029367_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/26/newborn-babies-die-fire-pakistan-hospital-maternity-ward"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/czdz13elezlo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "de",
           "source": "tagesschau.de",
           "source_country": "germany",
-          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/spacex-weltraumbahnhof-100.html"
+          "url": "https://www.tagesschau.de/ausland/asien/brand-kinderkrankenhaus-islamabad-100.html"
         },
         {
           "language": "en",
-          "source": "avweb.com",
-          "source_country": "united-states",
-          "url": "https://avweb.com/aviation-news/space-flight/spacex-plans-10-pad-louisiana-launch-site/"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/08/26/fire-kills-14-newborns-at-major-hospital-in-pakistan-officials-say"
         },
         {
-          "language": "sqi",
-          "source": "albeu.com",
-          "source_country": "al",
-          "url": "https://albeu.com/teknologji/spacex-planifikon-investim-prej-100-miliarde-dollaresh-per-portin-me-te-madh-hapesinor-ne-bote-ne-luiziana/985098/"
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/26/news/pakistan_15_neonati_morti_incendio_ospedale-425547334/?rss"
+        },
+        {
+          "language": "en",
+          "source": "theepochtimes.com",
+          "source_country": "united-states",
+          "url": "https://www.theepochtimes.com/world/at-least-14-newborns-killed-in-pakistan-hospital-nursery-fire-6079712"
+        },
+        {
+          "language": "en",
+          "source": "breitbart.com",
+          "source_country": "united-states",
+          "url": "https://www.breitbart.com/europe/2026/08/26/pakistan-islamabad-hospital-fire-kills-14-newborn-babies/"
+        },
+        {
+          "language": "es",
+          "source": "lanacion.cl",
+          "source_country": "ci",
+          "url": "https://www.lanacion.cl/al-menos-14-recien-nacidos-fallecen-en-pakistan-luego-de-un-incendio-en-un-hospital/"
         },
         {
           "language": "fr",
-          "source": "sudouest.fr",
+          "source": "martinique.franceantilles.fr",
           "source_country": "france",
-          "url": "https://www.sudouest.fr/sciences-et-technologie/espace/spacex-annonce-vouloir-construire-une-base-spatiale-pour-100-milliards-de-dollars-en-louisiane-30367869.php"
+          "url": "https://www.martinique.franceantilles.fr/actualite/international/desespoir-et-colere-apres-la-mort-de-14-bebes-dans-lincendie-dun-hopital-au-pakistan-1090943.php"
+        },
+        {
+          "language": "en",
+          "source": "gdnonline.com",
+          "source_country": "united-states",
+          "url": "https://www.gdnonline.com:443/Details/1404474/At-least-15-infants-killed-in-Islamabad-hospital-fire,-local-TV-reports"
+        },
+        {
+          "language": "en",
+          "source": "radio.gov.pk",
+          "source_country": "pk",
+          "url": "https://www.radio.gov.pk/26-08-2026/14-new-born-babies-killed-in-fire-at-pims-hospital-islamabad"
+        },
+        {
+          "language": "en",
+          "source": "arynews.tv",
+          "source_country": "pk",
+          "url": "https://arynews.tv/15-infants-killed-as-fire-breaks-out-at-pims-hospital"
+        },
+        {
+          "language": "en",
+          "source": "tribune.com.pk",
+          "source_country": "pk",
+          "url": "https://tribune.com.pk/story/2625930/14-newborns-killed-in-fire-at-pims-hospital-in-islamabad"
+        },
+        {
+          "language": "de",
+          "source": "rhein-zeitung.de",
+          "source_country": "germany",
+          "url": "https://www.rhein-zeitung.de/deutschland-welt/panorama/14-babys-tot-feuer-in-saeuglingsstation-in-pakistan_arid-4150254.html"
+        },
+        {
+          "language": "de",
+          "source": "bild.de",
+          "source_country": "germany",
+          "url": "https://www.bild.de/news/ausland/feuer-tragoedie-in-pakistan-14-babys-sterben-bei-klinik-brand-6a8e786ec3692834ff6dcd28"
+        },
+        {
+          "language": "de",
+          "source": "vol.at",
+          "source_country": "au",
+          "url": "https://www.vol.at/tragoedie-im-krankenhaus-15-saeuglinge-sterben-bei-brand-in-islamabad/10415099"
+        },
+        {
+          "language": "de",
+          "source": "srf.ch",
+          "source_country": "sz",
+          "url": "https://www.srf.ch/news/international/islamabad-14-babys-sterben-bei-brand-in-spital"
+        },
+        {
+          "language": "de",
+          "source": "weser-kurier.de",
+          "source_country": "germany",
+          "url": "https://www.weser-kurier.de/deutschland-welt/14-babys-tot-feuer-in-saeuglingsstation-in-pakistan-doc87bmq1w4cr6kxys8jey"
+        },
+        {
+          "language": "de",
+          "source": "nordkurier.de",
+          "source_country": "germany",
+          "url": "https://www.nordkurier.de/panorama/14-babys-tot-feuer-in-saeuglingsstation-in-pakistan-4809107"
+        },
+        {
+          "language": "de",
+          "source": "spiegel.de",
+          "source_country": "germany",
+          "url": "https://www.spiegel.de/panorama/krankenhaus-in-pakistan-mindestens-14-babys-sterben-bei-brand-a-03f34c74-ce57-4784-a08b-5b21a413607c"
+        },
+        {
+          "language": "de",
+          "source": "volksstimme.de",
+          "source_country": "germany",
+          "url": "https://www.volksstimme.de/panorama/14-babys-tot-feuer-in-sauglingsstation-in-pakistan-4307774"
+        },
+        {
+          "language": "es",
+          "source": "diariocordoba.com",
+          "source_country": "spain",
+          "url": "https://www.diariocordoba.com/internacional/2026/08/26/mueren-14-bebes-incendio-sala-133660792.html"
+        },
+        {
+          "language": "it",
+          "source": "sardanews.it",
+          "source_country": "it",
+          "url": "https://sardanews.it/notizie/pakistan-incendio-in-un-ospedale-di-islamabad-morti-almeno-14-neonati"
+        },
+        {
+          "language": "it",
+          "source": "stabiachannel.it",
+          "source_country": "it",
+          "url": "https://www.stabiachannel.it/Mondo/pakistan-incendio-in-un-reparto-di-ginecologia-14-neonati-morti-a-islamabad/116631"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/26/news/pakistan_15_neonati_morti_incendio_ospedale-425547334/"
+        },
+        {
+          "language": "msa",
+          "source": "utusan.com.my",
+          "source_country": "my",
+          "url": "https://www.utusan.com.my/terkini/2026/08/14-bayi-maut-dalam-kebakaran-wad-bersalin-di-pakistan/"
+        }
+      ],
+      "mentioned_countries": [
+        "pk"
+      ],
+      "origin_country": "au",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/menos-15-recien-nacidos-mueren-incendio-un-hospital-pakistan-segun-un-medio-local_7029367_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com",
+        "repubblica.it",
+        "spiegel.de",
+        "tagesschau.de",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.517,
+          "corroboration": 0.8462,
+          "editorial_weight": 0.5294,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.875,
+          "source_reliability": 0.8947
+        },
+        "total": 0.7696,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "pakistan",
+      "subject_names": [
+        "islamabad",
+        "pakistan"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Al menos 14 recién nacidos mueren en el incendio de un hospital de Pakistán",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "cluster_id": "subject-meta-8cb12abf1db3",
+      "coherence": 0.5052530357508909,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "po",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-27",
+      "headline": "Meta pagará hasta 18.000 millones de dólares para cerrar los casos por adicción entre menores  a las redes",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/tecnologia/2026-08-26/meta-pagara-casi-17000-millones-de-dolares-para-resolver-las-demandas-por-la-adiccion-de-los-adolescentes-a-sus-herramientas.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia-digital/2026/08/26/6a8ee87a468aeb3e148b457a.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/internacional/meta-acuerda-pagar-16-680-millones-evitar-juicio-adiccion-redes_1_2235512.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/empresas/20260826/meta-pagara-millones-euros-evitar-juicio-adiccion-menores-redes/1003744363798_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/portaltic/socialmedia/noticia-meta-acuerda-pagar-18000-millones-resolver-juicio-dano-hacen-redes-sociales-adolescentes-20260826162818.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/meta-llega-un-acuerdo-casi-17-000-millones-dolares-para-zanjar-las-demandas-por-adiccion-menores-sus-redes-sociales_7029631_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/tecnologia/noticia/2026/08/26/meta-vai-pagar-us-bilhoes-em-acordo-por-alegacoes-de-vicio-de-criancas-em-redes-sociais-nos-eua.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "sapo.pt",
+          "source_country": "po",
+          "url": "https://sapo.pt/artigo/meta-faz-acordo-nos-eua-e-vai-pagar-cerca-de-14-mil-milhoes-de-euros-para-por-fim-a-julgamento-sobre-prejuizo-das-redes-sociais-para-criancas-e-jovens-6a8f713fe736401c971c0738"
+        },
+        {
+          "language": "es",
+          "source": "elnortedecastilla.es",
+          "source_country": "spain",
+          "url": "https://www.elnortedecastilla.es/sociedad/meta-acuerda-pagar-16680-millones-dolares-poner-20260826155640-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "libertaddigital.com",
+          "source_country": "spain",
+          "url": "https://www.libertaddigital.com/ciencia-tecnologia/internet/2026-08-26/meta-pagara-16-680-millones-para-cerrar-el-caso-de-la-adiccion-de-menores-7451802/"
+        },
+        {
+          "language": "es",
+          "source": "antena3.com",
+          "source_country": "spain",
+          "url": "https://www.antena3.com/noticias/tecnologia/meta-pagara-16000-millones-resolver-demandas-adiccion-adolescentes-redes-sociales_202608266a8eebd3ae2f3735da1525b0.html"
+        },
+        {
+          "language": "es",
+          "source": "heraldo.es",
+          "source_country": "spain",
+          "url": "https://www.heraldo.es/noticias/economia/2026/08/26/meta-pagar-millones-juicio-adiccion-redes-2047368.html"
+        },
+        {
+          "language": "es",
+          "source": "mundiario.com",
+          "source_country": "spain",
+          "url": "https://www.mundiario.com/articulo/tecnologia-ciencia/meta-pagara-16680-millones-dolares-cerrar-demandas-dano-redes-menores/20260826154532437562.html"
+        },
+        {
+          "language": "cat",
+          "source": "ara.cat",
+          "source_country": "spain",
+          "url": "https://www.ara.cat/economia/tecnologia/meta-pagara-prop-17-000-milions-dolars-esquivar-judici-l-addicio-dels-menors-xarxes_1_5832720.html"
+        },
+        {
+          "language": "pt",
+          "source": "sapo.pt",
+          "source_country": "po",
+          "url": "https://sapo.pt/artigo/meta-paga-ate-18-mil-milhoes-de-dolares-e-impoe-limites-ao-uso-do-facebook-e-instagram-por-menores-6a8efe70e736401c970bd361"
         }
       ],
       "mentioned_countries": [
         "united-states"
       ],
-      "origin_country": "al",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/international/spacex-annonce-vouloir-construire-une-base-spatiale-pour-100-milliards-de-dollars-en-louisiane-20260825",
-      "rank": 5,
-      "reference_newsroom_count": 6,
+      "origin_country": "brazil",
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/economia-digital/2026/08/26/6a8ee87a468aeb3e148b457a.html",
+      "rank": 3,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
+        "20minutos.es",
+        "elespanol.com",
+        "elpais.com",
+        "europapress.es",
         "expansion.com",
-        "france24.com",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "tagesschau.de"
+        "globo.com",
+        "infolibre.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4777,
-          "corroboration": 0.7143,
+          "coherence": 0.5053,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.8222
+        },
+        "total": 0.7571,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "meta",
+      "subject_names": [
+        "etats",
+        "facebook",
+        "instagram",
+        "meta"
+      ],
+      "subject_newsroom_count": 23,
+      "summary": "Meta pagará hasta 18.000 millones de dólares para cerrar los casos por adicción entre menores  a las redes",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "cluster_id": "subject-cia-f2027f23bbad",
+      "coherence": 0.4186952525872617,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "it",
+        "rs",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-08-26",
+      "headline": "El director de la CIA visita Moscú en un viaje lleno de misterio",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/pourquoi-le-patron-de-la-cia-s-est-rendu-discretement-a-moscou-en-pleine-crise-entre-les-etats-unis-et-la-russie-20260826"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/pourquoi-le-patron-de-la-cia-s-est-rendu-a-moscou_8164205.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260826-russie-le-directeur-de-la-cia-en-visite-%C3%A0-moscou"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/visite-surprise-du-patron-de-la-cia-a-moscou-un-avertissement-adresse-a-vladimir-poutine-L5A3EGITQJEBBM3DRHWHVFBDP4/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260825/11619944/el-director-de-la-cia-visita-moscu-en-una-viaje-lleno-de-misterio.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/director-cia-viaja-moscu-todo-que-se-sabe-sobre-su-visita-sorpresa-capital-rusa_7029556_0.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/26/news/capo_cia_viaggio_mosca_paura_escalation-425547190/?rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/25/o-que-pode-estar-por-tras-da-visita-do-diretor-da-cia-a-moscou.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "oilprice.com",
+          "source_country": "united-states",
+          "url": "https://oilprice.com/Energy/Energy-General/CIA-Directors-Surprise-Moscow-Trip-Raises-Questions-Over-Iran-and-Ukraine.html"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/26/il-capo-della-cia-a-mosca-per-incontrare-i-vertici-dei-servizi-segreti-russi"
+        },
+        {
+          "language": "en",
+          "source": "themoscowtimes.com",
+          "source_country": "rs",
+          "url": "https://www.themoscowtimes.com/2026/08/25/cia-director-makes-rare-visit-to-moscow-a93574"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinfo/podcasts/franceinfo-monde/franceinfo-monde-du-mercredi-26-aout-2026-1681893"
+        }
+      ],
+      "mentioned_countries": [
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260825/11619944/el-director-de-la-cia-visita-moscu-en-una-viaje-lleno-de-misterio.html",
+      "rank": 4,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "lavanguardia.com",
+        "lefigaro.fr",
+        "lexpress.fr",
+        "radiofrance.fr",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4187,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5556,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.75,
+          "source_reliability": 0.8095
+        },
+        "total": 0.7464,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cia",
+      "subject_names": [
+        "cia",
+        "donald trump",
+        "kremlin",
+        "moscou",
+        "moscow",
+        "moscu",
+        "putin",
+        "rusia",
+        "russia",
+        "russie",
+        "trump",
+        "washington"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "El director de la CIA visita Moscú en un viaje lleno de misterio",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "cluster_id": "subject-caen-8bb0d87a3cd9",
+      "coherence": 0.549367054462039,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "unknown"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-27",
+      "headline": "Une voiture fonce sur un groupe de personnes à Caen : au moins un mort et plusieurs victimes en urgence absolue",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/08/27/une-voiture-fonce-dans-la-foule-a-caen-11-victimes-dont-au-moins-un-mort_6757563_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/faits-divers/caen-un-automobiliste-fonce-dans-un-abribus-pres-de-la-gare-au-moins-un-mort-et-huit-blesses-20260826"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/un-automobiliste-fonce-sur-la-foule-a-caen-et-fait-un-mort-et-plusieurs-blesses-quatre-personnes-en-urgence-absolue_8164277.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260826-france-caen-voiture-belier-fonce-foule-victimes-mort-blesses"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260826-france-une-voiture-fonce-dans-la-foule-%C3%A0-caen-faisant-au-moins-un-mort-et-une-dizaine-de-bless%C3%A9s"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/faits-divers/accidents/un-vehicule-aurait-fonce-sur-la-foule-a-caen-une-personne-decedee-plusieurs-sont-en-urgence-absolue-d0324394-a195-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/un-automobiliste-fonce-sur-la-foule-a-caen-et-fait-un-mort-et-plusieurs-blesses-quatre-personnes-en-urgence-absolue_8164277.html"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/justice-faits-divers/caen-une-voiture-fonce-dans-la-foule-onze-victimes-dont-au-moins-un-mort-2460641.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "ouest-france.fr",
+      "outbound_url": "https://www.ouest-france.fr/faits-divers/accidents/un-vehicule-aurait-fonce-sur-la-foule-a-caen-une-personne-decedee-plusieurs-sont-en-urgence-absolue-d0324394-a195-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "rank": 5,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5494,
+          "corroboration": 0.5,
           "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
         },
-        "total": 0.6765,
+        "total": 0.7354,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "spacex",
+      "subject_label": "caen",
       "subject_names": [
-        "louisiane",
-        "spacex"
+        "caen"
       ],
       "subject_newsroom_count": 6,
-      "summary": "SpaceX ha anunciado su intención de construir una gigantesca base espacial en Luisiana con una inversión de entre 85.500 millones y 100 mil millones de dólares, que permitiría realizar miles de vuelos anuales de su cohete Starship desde una instalación con múltiples plataformas de lanzamiento.",
-      "takeaway": "SpaceX busca establecer en Luisiana la instalación de lanzamiento espacial más grande del mundo para incrementar drásticamente su cadencia de vuelos con Starship.",
-      "why_it_matters": "Este proyecto representa una inversión masiva en infraestructura espacial estadounidense que transformaría las capacidades de lanzamiento comercial y consolidaría la posición de SpaceX como actor dominante en la industria aeroespacial."
+      "summary": "Une voiture fonce sur un groupe de personnes à Caen : au moins un mort et plusieurs victimes en urgence absolue",
+      "takeaway": "",
+      "why_it_matters": ""
     }
   ],
-  "discarded_ingested": 496,
+  "discarded_ingested": 341,
   "discarded_kept": 5,
-  "generated_at": "2026-08-26T05:59:42.415516+00:00",
+  "generated_at": "2026-08-27T00:21:50.001531+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

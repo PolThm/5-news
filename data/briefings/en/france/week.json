@@ -2,381 +2,383 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-france-532cfa7a7f8b"
+        "subject-caen-8bb0d87a3cd9"
       ],
-      "angle_zone": "france",
-      "cluster_id": "subject-france-532cfa7a7f8b",
-      "coherence": 0.4428304391210761,
-      "consequence": 1,
+      "cluster_id": "subject-caen-8bb0d87a3cd9",
+      "coherence": 0.549367054462039,
+      "consequence": 3,
       "countries": [
-        "ar",
-        "spain"
+        "france",
+        "unknown"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-25",
-      "headline": "Violent tornado strikes southern France, injuring dozens",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/clima-y-medio-ambiente/2026-08-25/un-violento-tornado-arrasa-un-pueblo-en-el-sur-de-francia-y-deja-39-heridos.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/tornado-provoca-heridos-sur-francia-20260825131037-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260825/11619557/tornado-deja-41-heridos-sur-francia-fuertes-tormentas.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-tornado-causa-danos-heridos-sur-francia-azotada-por-un-frente-tormentas_7028944_0.html"
-        },
-        {
-          "language": "es",
-          "source": "lanacion.com.ar",
-          "source_country": "ar",
-          "url": "https://www.lanacion.com.ar/el-mundo/un-tornado-de-inusual-violencia-arraso-un-pueblo-de-francia-y-dejo-decenas-de-heridos-nid25082026/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/un-tornado-causa-danos-heridos-sur-francia-azotada-por-un-frente-tormentas_7028944_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4428,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.4924,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "french"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "A tornado of unusual intensity swept through a town in southern France, leaving between 39 and 41 people injured and affecting approximately 300 homes in the area during severe storms.",
-      "takeaway": "An unusually severe tornado struck a French town, overwhelming local emergency response capacity with mass casualties and widespread property damage.",
-      "why_it_matters": "A violent tornado in southern France has injured dozens of people and damaged around 300 homes, creating immediate humanitarian and reconstruction demands for French authorities and emergency services in an affected region."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-6a78cb2b8b92",
-        "subject-ukraine-d87333fdaa78",
-        "subject-zelensky-a0351200d5b4"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-ukraine-d87333fdaa78",
-      "coherence": 0.5230491950146292,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-24",
-      "filled_from": "europe",
-      "headline": "Zelensky warns that holding elections during wartime would fracture Ukraine",
-      "independent_source_count": 4,
+      "editorial_day": "2026-08-27",
+      "headline": "Une voiture fonce sur un groupe de personnes à Caen : au moins un mort et plusieurs victimes en urgence absolue",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260823.OBS117602/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-qui-fracturerait-le-pays.html"
+          "url": "https://www.lemonde.fr/societe/article/2026/08/27/une-voiture-fonce-dans-la-foule-a-caen-11-victimes-dont-au-moins-un-mort_6757563_3224.html"
         },
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-volodymyr-zelensky-met-en-garde-contre-des-elections-en-temps-de-guerre-qui-detruiraient-le-WF4WKPJZEFCBVOJOUMR3MYNZSM/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260824/11618571/zelenski-dice-elecciones-ucrania-serian-tsunami-dividiria-pais.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.523,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.5,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5218,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Ukrainian President Volodymyr Zelensky has cautioned against conducting elections while the country is at war, arguing that doing so would act as a destructive force that would divide the nation. The president characterized such an election as a \"tsunami\" that would undermine Ukrainian unity during an active conflict.",
-      "takeaway": "Zelensky's refusal to hold wartime elections removes a potential legitimacy question from Ukraine's leadership but deepens uncertainty about how the country will govern its territorial disputes and reconstruction.",
-      "why_it_matters": "France, as a Western ally supporting Ukraine and invested in its post-war stability and democratic restoration, faces the prospect of a more fractured Ukrainian state that will be harder to integrate into European structures and defense partnerships."
-    },
-    {
-      "_linked_ids": [
-        "subject-paris-8955324921c4"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-paris-8955324921c4",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "po",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-25",
-      "headline": "Dragon Ball themed park to be built near Paris",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/transporte/2026/08/25/6a8d98aee5fdea71088b4585.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c8r6xy3ryndo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "theportugalnews.com",
-          "source_country": "po",
-          "url": "https://www.theportugalnews.com/news/2026-08-25/europe-to-have-a-theme-park-dedicated-to-dragon-ball/1075472"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "po",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/c8r6xy3ryndo?at_medium=RSS&at_campaign=rss",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.384,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "paris",
-      "subject_names": [
-        "dragon ball",
-        "macron",
-        "paris"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "A theme park dedicated to the anime and manga series Dragon Ball will be constructed near Paris, marking the first such park dedicated to the franchise in Europe.",
-      "takeaway": "A Dragon Ball-themed park near Paris will establish France as host to a major anime-franchise destination for European visitors.",
-      "why_it_matters": "France gains a major entertainment facility that will attract tourists and generate employment in the Paris region, marking Europe's first dedicated Dragon Ball theme park."
-    },
-    {
-      "_linked_ids": [
-        "subject-dolly-parton-eaa11dea71c2"
-      ],
-      "angle_zone": "france",
-      "cluster_id": "subject-dolly-parton-eaa11dea71c2",
-      "coherence": 0.46657882106324566,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-26",
-      "headline": "Ridley Scott directs post-apocalyptic film The Dog Stars",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/culture/cinema/dans-the-dog-stars-ridley-scott-ny-met-pas-du-chien-20260825_T3DKSBJO25FMDBZHALFPVQYQMM/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/culture/the-dog-stars-une-fin-du-monde-violente-vue-par-ridley-scott-20260825"
+          "url": "https://www.lefigaro.fr/faits-divers/caen-un-automobiliste-fonce-dans-un-abribus-pres-de-la-gare-au-moins-un-mort-et-huit-blesses-20260826"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/cinema/sorties-de-films/the-dog-stars-ridley-scott-de-retour-avec-un-film-post-apocalyptique-planant_8160647.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/faits-divers/un-automobiliste-fonce-sur-la-foule-a-caen-et-fait-un-mort-et-plusieurs-blesses-quatre-personnes-en-urgence-absolue_8164277.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "maville.com",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://toulon.maville.com/actu/actudet_-entretien-ridley-scott-revient-avec-the-dog-stars-les-hommes-ne-savent-pas-s-unir-pour-eviter-les-catastrophes_fil-7451256_actu.Htm"
+          "url": "https://www.france24.com/fr/france/20260826-france-caen-voiture-belier-fonce-foule-victimes-mort-blesses"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260826-france-une-voiture-fonce-dans-la-foule-%C3%A0-caen-faisant-au-moins-un-mort-et-une-dizaine-de-bless%C3%A9s"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/faits-divers/accidents/un-vehicule-aurait-fonce-sur-la-foule-a-caen-une-personne-decedee-plusieurs-sont-en-urgence-absolue-d0324394-a195-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/un-automobiliste-fonce-sur-la-foule-a-caen-et-fait-un-mort-et-plusieurs-blesses-quatre-personnes-en-urgence-absolue_8164277.html"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/justice-faits-divers/caen-une-voiture-fonce-dans-la-foule-onze-victimes-dont-au-moins-un-mort-2460641.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/culture/cinema/dans-the-dog-stars-ridley-scott-ny-met-pas-du-chien-20260825_T3DKSBJO25FMDBZHALFPVQYQMM/",
-      "rank": 4,
-      "reference_newsroom_count": 3,
+      "outbound_source": "ouest-france.fr",
+      "outbound_url": "https://www.ouest-france.fr/faits-divers/accidents/un-vehicule-aurait-fonce-sur-la-foule-a-caen-une-personne-decedee-plusieurs-sont-en-urgence-absolue-d0324394-a195-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "rank": 1,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr"
+        "lefigaro.fr",
+        "lemonde.fr",
+        "ouest-france.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4666,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5494,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
         },
-        "total": 0.3721,
+        "total": 0.7154,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "dolly parton",
+      "subject_label": "caen",
       "subject_names": [
-        "dolly parton",
-        "parton",
-        "ridley scott",
-        "stars"
+        "caen"
       ],
-      "subject_newsroom_count": 22,
-      "summary": "Ridley Scott has returned with a new film titled \"The Dog Stars,\" a post-apocalyptic science fiction work that depicts a violent end of the world. The film explores themes about humanity's inability to unite in the face of existential crisis.",
-      "takeaway": "Scott's new film offers French viewers another cinematic take on themes of human division and survival in a collapsed world.",
-      "why_it_matters": "French audiences will decide whether Ridley Scott's return to science fiction filmmaking with a post-apocalyptic narrative resonates with their tastes, affecting box office returns and the director's standing in the French market."
+      "subject_newsroom_count": 6,
+      "summary": "Une voiture fonce sur un groupe de personnes à Caen : au moins un mort et plusieurs victimes en urgence absolue",
+      "takeaway": "",
+      "why_it_matters": ""
     },
     {
       "_linked_ids": [
-        "subject-sophie-adenot-e6c30608647a"
+        "subject-france-3a084f79d719"
       ],
-      "angle_zone": "france",
-      "cluster_id": "subject-sophie-adenot-e6c30608647a",
-      "coherence": 0.42928087900343814,
-      "consequence": 0,
+      "cluster_id": "subject-france-3a084f79d719",
+      "coherence": 0.4135923175733123,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-25",
+      "headline": "Moment tornado tears through southern France",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/ckg8wkd0j7do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c0m3npvpgdno?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/25/video-shows-tornado-forming-over-village-in-france"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/25/tornado-rips-through-french-village-injuring-at-least-31"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/a-tornado-tears-through-a-village-in-southern-france-wrecking-300-homes"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/videos/ckg8wkd0j7do?at_medium=RSS&at_campaign=rss",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4136,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.5,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6522
+        },
+        "total": 0.5679,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "paris",
+        "thomas legrand"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "Moment tornado tears through southern France",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "_linked_ids": [
+        "subject-mayotte-381f08ebb55d"
+      ],
+      "cluster_id": "subject-mayotte-381f08ebb55d",
+      "coherence": 0.5057851414908886,
+      "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-26",
-      "headline": "French astronaut Sophie Adenot completes second spacewalk",
+      "headline": "Mayotte : Sébastien Lecornu veut conditionner l’aide au développement pour les Comores à une meilleure collaboration dans la lutte contre l’immigration clandestine",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/outre-mer/article/2026/08/26/mayotte-sebastien-lecornu-veut-conditionner-l-aide-au-developpement-pour-les-comores-a-une-meilleure-collaboration-dans-la-lutte-contre-l-immigration-clandestine_6757390_1840826.html"
+        },
+        {
+          "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/sophie-adenot-de-retour-dans-l-espace-comment-les-astronautes-preparent-ils-leurs-sorties-en-orbite-20260824"
+          "url": "https://www.la-croix.com/lecornu-veut-hater-la-reconstruction-de-mayotte-un-an-et-demi-apres-le-cyclone-chido-20260825"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260825-sophie-adenot-retourne-dans-l-espace-pour-une-deuxi%C3%A8me-sortie-extrav%C3%A9hiculaire"
+          "url": "https://www.rfi.fr/fr/france/20260826-la-france-veut-conditionner-l-aide-au-d%C3%A9veloppement-pour-sept-pays-africains-%C3%A0-la-lutte-contre-l-immigration-%C3%A0-mayotte"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "sudouest.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260825-espace-nouvelle-sortie-extrav%C3%A9hiculaire-pour-sophie-adenot"
+          "url": "https://www.sudouest.fr:443/economie/mayotte-le-gouvernement-veut-conditionner-l-aide-au-developpement-a-la-lutte-contre-l-immigration-30374324.php"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/outre-mer/article/2026/08/26/mayotte-sebastien-lecornu-veut-conditionner-l-aide-au-developpement-pour-les-comores-a-une-meilleure-collaboration-dans-la-lutte-contre-l-immigration-clandestine_6757390_1840826.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lemonde.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5058,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5442,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "mayotte",
+      "subject_names": [
+        "mayotte",
+        "sebastien lecornu"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Mayotte : Sébastien Lecornu veut conditionner l’aide au développement pour les Comores à une meilleure collaboration dans la lutte contre l’immigration clandestine",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "_linked_ids": [
+        "subject-italia-37fa41c7bae1"
+      ],
+      "cluster_id": "subject-italia-37fa41c7bae1",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "it",
+        "unknown"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-27",
+      "headline": "French driver, 46, detained in Italy after three Akeron missiles found in van",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/italie-un-francais-arrete-avec-trois-missiles-dans-sa-camionnette-20260826_JTQ7JXDGT5COHESMJMELZJWYGU/"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/25/french-driver-46-detained-in-italy-after-three-akeron-missiles-found-in-van"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/justice-faits-divers/italie-un-francais-arrete-avec-trois-missiles-dans-camionnette-et-place-en-detention-provisoire-2460619.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "it"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/25/french-driver-46-detained-in-italy-after-three-akeron-missiles-found-in-van",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.4765,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "italia",
+      "subject_names": [
+        "italia",
+        "italie",
+        "italy"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "French driver, 46, detained in Italy after three Akeron missiles found in van",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "_linked_ids": [
+        "subject-france-d0ca525cc4b2"
+      ],
+      "cluster_id": "subject-france-d0ca525cc4b2",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-26",
+      "headline": "A Paris, un automobiliste poignarde un cycliste après un différend sur la route, son pronostic vital engagé",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/un-cycliste-poignarde-par-un-automobiliste-a-paris-apres-une-altercation-son-pronostic-vital-engage-20260826_LPFPYGPJEJCBFEEIXQKGHGZEZQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/accident/paris-un-cycliste-poignarde-au-cou-par-un-automobiliste-apres-un-differend-sur-la-route_8161955.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/sciences/20260818.OBS117475/sophie-adenot-premiere-francaise-a-effectuer-une-sortie-dans-l-espace-elle-connait-le-moindre-geste-a-faire-jusqu-au-nombre-de-tours-d-ecrous.html"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://toulon.maville.com/actu/actudet_-l-astronaute-francaise-sophie-adenot-a-mene-a-bien-sa-deuxieme-mission-dans-l-espace-apres-plus-de-six-heures-de-travail_fil-7451252_actu.Htm"
+          "url": "https://www.nouvelobs.com/faits-divers/20260826.OBS117676/a-paris-un-automobiliste-poignarde-un-cycliste-apres-un-differend-sur-la-route-son-pronostic-vital-engage.html"
         }
       ],
       "mentioned_countries": [
@@ -384,42 +386,46 @@
       ],
       "origin_country": "france",
       "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/sciences/20260818.OBS117475/sophie-adenot-premiere-francaise-a-effectuer-une-sortie-dans-l-espace-elle-connait-le-moindre-geste-a-faire-jusqu-au-nombre-de-tours-d-ecrous.html",
+      "outbound_url": "https://www.nouvelobs.com/faits-divers/20260826.OBS117676/a-paris-un-automobiliste-poignarde-un-cycliste-apres-un-differend-sur-la-route-son-pronostic-vital-engage.html",
       "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
+        "francetvinfo.fr",
+        "liberation.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4293,
+          "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.3705,
+        "total": 0.4523,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sophie adenot",
+      "subject_label": "france",
       "subject_names": [
-        "sophie adenot"
+        "france",
+        "francia",
+        "french",
+        "paris",
+        "thomas legrand"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Sophie Adenot, the first French woman to conduct a spacewalk, has successfully completed a second extravehicular activity in space. The articles describe how astronauts prepare extensively for such missions, with Adenot demonstrating the precise training and knowledge required to perform every task in orbit, from specific hand movements to technical procedures like fastening bolts.",
-      "takeaway": "France has a spacewalking astronaut capable of executing complex orbital operations.",
-      "why_it_matters": "Sophie Adenot's successful second spacewalk demonstrates France's continued capacity to participate in international space missions and reinforces French presence in human spaceflight, marking achievement for the French space sector."
+      "subject_newsroom_count": 17,
+      "summary": "A Paris, un automobiliste poignarde un cycliste après un différend sur la route, son pronostic vital engagé",
+      "takeaway": "",
+      "why_it_matters": ""
     }
   ],
-  "discarded_ingested": 19,
+  "discarded_ingested": 33,
   "discarded_kept": 5,
-  "generated_at": "2026-08-26T05:59:42.415516+00:00",
+  "generated_at": "2026-08-27T00:21:50.001531+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

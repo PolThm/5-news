@@ -1,296 +1,283 @@
 {
   "clusters": [
     {
-      "angle_zone": "france",
-      "cluster_id": "subject-france-532cfa7a7f8b",
-      "coherence": 0.4428304391210761,
-      "consequence": 1,
+      "cluster_id": "subject-caen-8bb0d87a3cd9",
+      "coherence": 0.549367054462039,
+      "consequence": 3,
       "countries": [
-        "ar",
-        "spain"
+        "france",
+        "unknown"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-25",
-      "headline": "Un tornado azota el sur de Francia y causa decenas de heridos",
-      "independent_source_count": 5,
+      "editorial_day": "2026-08-27",
+      "headline": "Une voiture fonce sur un groupe de personnes à Caen : au moins un mort et plusieurs victimes en urgence absolue",
+      "independent_source_count": 8,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/clima-y-medio-ambiente/2026-08-25/un-violento-tornado-arrasa-un-pueblo-en-el-sur-de-francia-y-deja-39-heridos.html"
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/08/27/une-voiture-fonce-dans-la-foule-a-caen-11-victimes-dont-au-moins-un-mort_6757563_3224.html"
         },
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/tornado-provoca-heridos-sur-francia-20260825131037-nt.html"
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/faits-divers/caen-un-automobiliste-fonce-dans-un-abribus-pres-de-la-gare-au-moins-un-mort-et-huit-blesses-20260826"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260825/11619557/tornado-deja-41-heridos-sur-francia-fuertes-tormentas.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/un-automobiliste-fonce-sur-la-foule-a-caen-et-fait-un-mort-et-plusieurs-blesses-quatre-personnes-en-urgence-absolue_8164277.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-tornado-causa-danos-heridos-sur-francia-azotada-por-un-frente-tormentas_7028944_0.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260826-france-caen-voiture-belier-fonce-foule-victimes-mort-blesses"
         },
         {
-          "language": "es",
-          "source": "lanacion.com.ar",
-          "source_country": "ar",
-          "url": "https://www.lanacion.com.ar/el-mundo/un-tornado-de-inusual-violencia-arraso-un-pueblo-de-francia-y-dejo-decenas-de-heridos-nid25082026/"
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260826-france-une-voiture-fonce-dans-la-foule-%C3%A0-caen-faisant-au-moins-un-mort-et-une-dizaine-de-bless%C3%A9s"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/faits-divers/accidents/un-vehicule-aurait-fonce-sur-la-foule-a-caen-une-personne-decedee-plusieurs-sont-en-urgence-absolue-d0324394-a195-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/un-automobiliste-fonce-sur-la-foule-a-caen-et-fait-un-mort-et-plusieurs-blesses-quatre-personnes-en-urgence-absolue_8164277.html"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/justice-faits-divers/caen-une-voiture-fonce-dans-la-foule-onze-victimes-dont-au-moins-un-mort-2460641.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "ar",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/un-tornado-causa-danos-heridos-sur-francia-azotada-por-un-frente-tormentas_7028944_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4428,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.5098,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "french"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Un tornado de violencia inusual arrasó un pueblo en el sur de Francia, dejando entre 39 y 41 personas heridas y afectando aproximadamente 300 casas en la zona.",
-      "takeaway": "Los tornados extremos, considerados raros en Francia, ahora representan un riesgo meteorológico concreto para las poblaciones del sur.",
-      "why_it_matters": "Un tornado de violencia inusual ha afectado directamente a una comunidad francesa, dejando decenas de heridos y cientos de viviendas dañadas en el sur del país."
-    },
-    {
-      "angle_zone": "france",
-      "cluster_id": "subject-leipzig-00de0354f1d8",
-      "coherence": 0.42833545113635685,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-25",
-      "filled_from": "europe",
-      "headline": "Alemania descubre un tercer dron cargado de explosivos cerca del aeropuerto de Leipzig",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/en-allemagne-la-presse-revele-qu-un-troisieme-drone-charge-d-explosifs-a-ete-retrouve-pres-de-l-aeroport-de-leipzig_8160866.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/dron-explosivo-confirma-aeropuerto-leipzig-planeo-gran-20260825102629-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260825/11619633/alemania-halla-tercer-dron-presuntos-explosivos-aeropuerto-leipzig.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/hallan-otro-dron-explosivos-ligados-presunto-intento-atentado-leipzig_7029086_0.html"
-        },
-        {
-          "language": "es",
-          "source": "infodefensa.com",
-          "source_country": "spain",
-          "url": "https://www.infodefensa.com/texto-diario/mostrar/5992993/alemania-descubre-tercer-dron-explosivo-militar-relacionado-intento-ataque-aeropuerto-leipzig"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
       "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260825/11619633/alemania-halla-tercer-dron-presuntos-explosivos-aeropuerto-leipzig.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "outbound_source": "ouest-france.fr",
+      "outbound_url": "https://www.ouest-france.fr/faits-divers/accidents/un-vehicule-aurait-fonce-sur-la-foule-a-caen-une-personne-decedee-plusieurs-sont-en-urgence-absolue-d0324394-a195-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "rank": 1,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
+        "france24.com",
         "francetvinfo.fr",
-        "lavanguardia.com"
+        "lefigaro.fr",
+        "lemonde.fr",
+        "ouest-france.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4283,
+          "coherence": 0.5494,
           "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
         },
-        "total": 0.5314,
+        "total": 0.7354,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "leipzig",
+      "subject_label": "caen",
       "subject_names": [
-        "alemania",
-        "allemagne",
-        "leipzig"
+        "caen"
       ],
       "subject_newsroom_count": 6,
-      "summary": "Las autoridades alemanas hallaron un tercer dron equipado con explosivos de uso militar en las proximidades del aeropuerto de Leipzig, confirmando que se planeaba un ataque de mayor envergadura en esa instalación.",
-      "takeaway": "Alemania enfrenta una amenaza de ataque múltiple planificado contra infraestructura civil de transporte aéreo.",
-      "why_it_matters": "El descubrimiento de un tercer dron explosivo en Leipzig revela la escala de una conspiración de ataque coordinado en Alemania, lo que afecta a la seguridad aeroportuaria en toda Europa y refuerza la necesidad de Francia de vigilancia reforzada en infraestructuras críticas similares."
+      "summary": "Une voiture fonce sur un groupe de personnes à Caen : au moins un mort et plusieurs victimes en urgence absolue",
+      "takeaway": "",
+      "why_it_matters": ""
     },
     {
-      "angle_zone": "france",
-      "cluster_id": "subject-dolly-parton-eaa11dea71c2",
-      "coherence": 0.46657882106324566,
-      "consequence": 0,
+      "cluster_id": "subject-mayotte-381f08ebb55d",
+      "coherence": 0.5057851414908886,
+      "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-26",
-      "headline": "Ridley Scott estrena la película de ciencia ficción postapocalíptica The Dog Stars",
+      "headline": "Mayotte : Sébastien Lecornu veut conditionner l’aide au développement pour les Comores à une meilleure collaboration dans la lutte contre l’immigration clandestine",
       "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/outre-mer/article/2026/08/26/mayotte-sebastien-lecornu-veut-conditionner-l-aide-au-developpement-pour-les-comores-a-une-meilleure-collaboration-dans-la-lutte-contre-l-immigration-clandestine_6757390_1840826.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/lecornu-veut-hater-la-reconstruction-de-mayotte-un-an-et-demi-apres-le-cyclone-chido-20260825"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260826-la-france-veut-conditionner-l-aide-au-d%C3%A9veloppement-pour-sept-pays-africains-%C3%A0-la-lutte-contre-l-immigration-%C3%A0-mayotte"
+        },
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr:443/economie/mayotte-le-gouvernement-veut-conditionner-l-aide-au-developpement-a-la-lutte-contre-l-immigration-30374324.php"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/outre-mer/article/2026/08/26/mayotte-sebastien-lecornu-veut-conditionner-l-aide-au-developpement-pour-les-comores-a-une-meilleure-collaboration-dans-la-lutte-contre-l-immigration-clandestine_6757390_1840826.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lemonde.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5058,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5549,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "mayotte",
+      "subject_names": [
+        "mayotte",
+        "sebastien lecornu"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Mayotte : Sébastien Lecornu veut conditionner l’aide au développement pour les Comores à une meilleure collaboration dans la lutte contre l’immigration clandestine",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "cluster_id": "subject-italia-37fa41c7bae1",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "it",
+        "unknown"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-27",
+      "headline": "French driver, 46, detained in Italy after three Akeron missiles found in van",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/culture/cinema/dans-the-dog-stars-ridley-scott-ny-met-pas-du-chien-20260825_T3DKSBJO25FMDBZHALFPVQYQMM/"
+          "url": "https://www.liberation.fr/societe/police-justice/italie-un-francais-arrete-avec-trois-missiles-dans-sa-camionnette-20260826_JTQ7JXDGT5COHESMJMELZJWYGU/"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/25/french-driver-46-detained-in-italy-after-three-akeron-missiles-found-in-van"
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/culture/the-dog-stars-une-fin-du-monde-violente-vue-par-ridley-scott-20260825"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/cinema/sorties-de-films/the-dog-stars-ridley-scott-de-retour-avec-un-film-post-apocalyptique-planant_8160647.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://toulon.maville.com/actu/actudet_-entretien-ridley-scott-revient-avec-the-dog-stars-les-hommes-ne-savent-pas-s-unir-pour-eviter-les-catastrophes_fil-7451256_actu.Htm"
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/justice-faits-divers/italie-un-francais-arrete-avec-trois-missiles-dans-camionnette-et-place-en-detention-provisoire-2460619.html"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "france",
+        "it"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/culture/cinema/dans-the-dog-stars-ridley-scott-ny-met-pas-du-chien-20260825_T3DKSBJO25FMDBZHALFPVQYQMM/",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/25/french-driver-46-detained-in-italy-after-three-akeron-missiles-found-in-van",
       "rank": 3,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
+        "euronews.com",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4666,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.4286,
+          "source_reliability": 0.5
         },
-        "total": 0.4387,
+        "total": 0.5192,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "dolly parton",
+      "subject_label": "italia",
       "subject_names": [
-        "dolly parton",
-        "parton",
-        "ridley scott",
-        "stars"
+        "italia",
+        "italie",
+        "italy"
       ],
-      "subject_newsroom_count": 22,
-      "summary": "Ridley Scott regresa al cine con The Dog Stars, una película de ciencia ficción que retrata un mundo violento después de un cataclismo. El filme aborda temas sobre la incapacidad de los seres humanos para unirse frente a la adversidad, presentando una visión apocalíptica del futuro con un estilo cinematográfico que busca transportar al espectador a ese universo distópico.",
-      "takeaway": "Ridley Scott presenta una visión post-apocalíptica sobre la incapacidad humana para la unión, tema que ocupa el centro de su nuevo film.",
-      "why_it_matters": "El estreno de 'The Dog Stars' de Ridley Scott interesa a Francia como parte del panorama cinematográfico internacional, aunque los artículos no reportan consecuencias específicas para productores, distribuidores o audiencias franceses más allá del lanzamiento general de la película."
+      "subject_newsroom_count": 10,
+      "summary": "French driver, 46, detained in Italy after three Akeron missiles found in van",
+      "takeaway": "",
+      "why_it_matters": ""
     },
     {
-      "angle_zone": "france",
-      "cluster_id": "subject-sophie-adenot-e6c30608647a",
-      "coherence": 0.42928087900343814,
-      "consequence": 0,
+      "cluster_id": "subject-france-d0ca525cc4b2",
+      "coherence": null,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-26",
-      "headline": "La astronauta francesa Sophie Adenot realiza su segunda salida extravehicular al espacio",
-      "independent_source_count": 4,
+      "headline": "A Paris, un automobiliste poignarde un cycliste après un différend sur la route, son pronostic vital engagé",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/sophie-adenot-de-retour-dans-l-espace-comment-les-astronautes-preparent-ils-leurs-sorties-en-orbite-20260824"
+          "url": "https://www.liberation.fr/societe/police-justice/un-cycliste-poignarde-par-un-automobiliste-a-paris-apres-une-altercation-son-pronostic-vital-engage-20260826_LPFPYGPJEJCBFEEIXQKGHGZEZQ/"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260825-sophie-adenot-retourne-dans-l-espace-pour-une-deuxi%C3%A8me-sortie-extrav%C3%A9hiculaire"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260825-espace-nouvelle-sortie-extrav%C3%A9hiculaire-pour-sophie-adenot"
+          "url": "https://www.franceinfo.fr/faits-divers/accident/paris-un-cycliste-poignarde-au-cou-par-un-automobiliste-apres-un-differend-sur-la-route_8161955.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/sciences/20260818.OBS117475/sophie-adenot-premiere-francaise-a-effectuer-une-sortie-dans-l-espace-elle-connait-le-moindre-geste-a-faire-jusqu-au-nombre-de-tours-d-ecrous.html"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://toulon.maville.com/actu/actudet_-l-astronaute-francaise-sophie-adenot-a-mene-a-bien-sa-deuxieme-mission-dans-l-espace-apres-plus-de-six-heures-de-travail_fil-7451252_actu.Htm"
+          "url": "https://www.nouvelobs.com/faits-divers/20260826.OBS117676/a-paris-un-automobiliste-poignarde-un-cycliste-apres-un-differend-sur-la-route-son-pronostic-vital-engage.html"
         }
       ],
       "mentioned_countries": [
@@ -298,114 +285,170 @@
       ],
       "origin_country": "france",
       "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/sciences/20260818.OBS117475/sophie-adenot-premiere-francaise-a-effectuer-une-sortie-dans-l-espace-elle-connait-le-moindre-geste-a-faire-jusqu-au-nombre-de-tours-d-ecrous.html",
+      "outbound_url": "https://www.nouvelobs.com/faits-divers/20260826.OBS117676/a-paris-un-automobiliste-poignarde-un-cycliste-apres-un-differend-sur-la-route-son-pronostic-vital-engage.html",
       "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
+        "francetvinfo.fr",
+        "liberation.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4293,
+          "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.4371,
+        "total": 0.4763,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sophie adenot",
+      "subject_label": "france",
       "subject_names": [
-        "sophie adenot"
+        "france",
+        "francia",
+        "french",
+        "paris",
+        "thomas legrand"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Sophie Adenot, la primera francesa en realizar una caminata espacial, ha completado con éxito su segunda misión de salida extravehicular en órbita. Los artículos destacan la preparación exhaustiva que requieren estas operaciones, donde los astronautas estudian cada gesto y movimiento necesario para trabajar fuera de la nave espacial.",
-      "takeaway": "Francia cuenta con una astronauta de clase mundial capaz de realizar operaciones críticas en el espacio.",
-      "why_it_matters": "La presencia de Sophie Adenot en futuras misiones espaciales refuerza el lugar de Francia en los programas de exploración orbital europeos y estadounidenses, demostrando capacidades técnicas que influyen en la participación francesa en proyectos espaciales internacionales."
+      "subject_newsroom_count": 17,
+      "summary": "A Paris, un automobiliste poignarde un cycliste après un différend sur la route, son pronostic vital engagé",
+      "takeaway": "",
+      "why_it_matters": ""
     },
     {
-      "angle_zone": "france",
-      "cluster_id": "subject-paris-8955324921c4",
-      "coherence": null,
-      "consequence": 0,
+      "cluster_id": "subject-ceuta-4fef0592187e",
+      "coherence": 0.4378000675278896,
+      "consequence": 2,
       "countries": [
-        "po",
+        "mo",
         "spain",
-        "united-kingdom"
+        "united-states"
       ],
       "country_count": 3,
-      "editorial_day": "2026-08-25",
-      "headline": "Se construirá un parque temático de Dragon Ball cerca de París",
-      "independent_source_count": 3,
+      "editorial_day": "2026-08-27",
+      "filled_from": "europe",
+      "headline": "Sánchez comparecerá el 3 de septiembre en el Congreso, un mes después del inicio de la crisis de Ceuta, para evitar ir obligado por sus socios",
+      "independent_source_count": 11,
       "members": [
         {
           "language": "es",
           "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/transporte/2026/08/25/6a8d98aee5fdea71088b4585.html"
+          "url": "https://www.expansion.com/economia/politica/2026/08/26/6a8ea311e5fdea696d8b45a7.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-26/sanchez-pide-comparecer-en-el-congreso-crisis-ceuta_4412230/"
+        },
+        {
+          "language": "es",
+          "source": "diariolasamericas.com",
+          "source_country": "united-states",
+          "url": "https://www.diariolasamericas.com/mundo/crisis-ceuta-obliga-sanchez-adelantar-su-comparecencia-el-congreso-n5401224"
         },
         {
           "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c8r6xy3ryndo?at_medium=RSS&at_campaign=rss"
+          "source": "moroccoworldnews.com",
+          "source_country": "mo",
+          "url": "https://www.moroccoworldnews.com/2026/08/336111/sanchez-to-face-congress-over-spains-response-to-ceuta-migration-crisis/"
         },
         {
-          "language": "en",
-          "source": "theportugalnews.com",
-          "source_country": "po",
-          "url": "https://www.theportugalnews.com/news/2026-08-25/europe-to-have-a-theme-park-dedicated-to-dragon-ball/1075472"
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/26/spagna-sanchez-in-parlamento-il-9-settembre-per-la-crisi-di-ceuta-il-pp-chiede-risposte-pi"
+        },
+        {
+          "language": "es",
+          "source": "vozpopuli.com",
+          "source_country": "spain",
+          "url": "https://www.vozpopuli.com/espana/politica/sanchez-solicita-comparecer-en-el-congreso-para-dar-la-cara-tras-la-invasion-de-ceuta-un-mes-despues.html"
+        },
+        {
+          "language": "es",
+          "source": "publico.es",
+          "source_country": "spain",
+          "url": "https://www.publico.es/politica/pedro-sanchez-pide-comparecer-congreso-explicar-gestion-crisis-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "elcomercio.es",
+          "source_country": "spain",
+          "url": "https://www.elcomercio.es/politica/sanchez-pide-comparecer-congreso-mes-despues-inicio-20260826093409-ntrc.html"
+        },
+        {
+          "language": "cat",
+          "source": "ara.cat",
+          "source_country": "spain",
+          "url": "https://www.ara.cat/politica/pedro-sanchez-compareixera-congres-donar-explicacions-crisi-ceuta_1_5832359.html"
+        },
+        {
+          "language": "cat",
+          "source": "vilaweb.cat",
+          "source_country": "spain",
+          "url": "https://www.vilaweb.cat/noticies/sanchez-compareixer-congres-espanyol-informar-crisi-ceuta/"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "spain"
       ],
-      "origin_country": "po",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/c8r6xy3ryndo?at_medium=RSS&at_campaign=rss",
+      "origin_country": "mo",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html",
       "rank": 5,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "elconfidencial.com",
+        "elmundo.es",
+        "euronews.com",
         "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.4378,
           "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.7333,
+          "source_reliability": 0.7647
         },
-        "total": 0.4107,
+        "total": 0.5894,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "paris",
+      "subject_label": "ceuta",
       "subject_names": [
-        "dragon ball",
-        "macron",
-        "paris"
+        "aznar",
+        "ceuta",
+        "congreso",
+        "marruecos",
+        "sanchez"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "Europa tendrá un parque temático dedicado al manga y anime Dragon Ball, que se ubicará en las afueras de París.",
-      "takeaway": "Un parque temático basado en manga se construirá cerca de París, marcando la primera instalación europea dedicada a este género de entretenimiento japonés.",
-      "why_it_matters": "Francia recibirá inversión en infraestructura turística y empleo en la construcción y operación de un parque temático de escala europea dedicado a Dragon Ball, ubicado en las afueras de París."
+      "subject_newsroom_count": 15,
+      "summary": "Sánchez comparecerá el 3 de septiembre en el Congreso, un mes después del inicio de la crisis de Ceuta, para evitar ir obligado por sus socios",
+      "takeaway": "",
+      "why_it_matters": ""
     }
   ],
-  "discarded_ingested": 19,
+  "discarded_ingested": 28,
   "discarded_kept": 5,
-  "generated_at": "2026-08-26T05:59:42.415516+00:00",
+  "generated_at": "2026-08-27T00:21:50.001531+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

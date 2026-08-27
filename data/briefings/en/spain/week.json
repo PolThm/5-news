@@ -2,52 +2,369 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ceuta-f8c103bb58a8"
+        "subject-ceuta-4fef0592187e"
       ],
-      "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-f8c103bb58a8",
+      "cluster_id": "subject-ceuta-4fef0592187e",
+      "coherence": 0.4378000675278896,
+      "consequence": 2,
+      "countries": [
+        "mo",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-27",
+      "headline": "Sánchez comparecerá el 3 de septiembre en el Congreso, un mes después del inicio de la crisis de Ceuta, para evitar ir obligado por sus socios",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/08/26/6a8ea311e5fdea696d8b45a7.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-26/sanchez-pide-comparecer-en-el-congreso-crisis-ceuta_4412230/"
+        },
+        {
+          "language": "es",
+          "source": "diariolasamericas.com",
+          "source_country": "united-states",
+          "url": "https://www.diariolasamericas.com/mundo/crisis-ceuta-obliga-sanchez-adelantar-su-comparecencia-el-congreso-n5401224"
+        },
+        {
+          "language": "en",
+          "source": "moroccoworldnews.com",
+          "source_country": "mo",
+          "url": "https://www.moroccoworldnews.com/2026/08/336111/sanchez-to-face-congress-over-spains-response-to-ceuta-migration-crisis/"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/26/spagna-sanchez-in-parlamento-il-9-settembre-per-la-crisi-di-ceuta-il-pp-chiede-risposte-pi"
+        },
+        {
+          "language": "es",
+          "source": "vozpopuli.com",
+          "source_country": "spain",
+          "url": "https://www.vozpopuli.com/espana/politica/sanchez-solicita-comparecer-en-el-congreso-para-dar-la-cara-tras-la-invasion-de-ceuta-un-mes-despues.html"
+        },
+        {
+          "language": "es",
+          "source": "publico.es",
+          "source_country": "spain",
+          "url": "https://www.publico.es/politica/pedro-sanchez-pide-comparecer-congreso-explicar-gestion-crisis-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "elcomercio.es",
+          "source_country": "spain",
+          "url": "https://www.elcomercio.es/politica/sanchez-pide-comparecer-congreso-mes-despues-inicio-20260826093409-ntrc.html"
+        },
+        {
+          "language": "cat",
+          "source": "ara.cat",
+          "source_country": "spain",
+          "url": "https://www.ara.cat/politica/pedro-sanchez-compareixera-congres-donar-explicacions-crisi-ceuta_1_5832359.html"
+        },
+        {
+          "language": "cat",
+          "source": "vilaweb.cat",
+          "source_country": "spain",
+          "url": "https://www.vilaweb.cat/noticies/sanchez-compareixer-congres-espanyol-informar-crisi-ceuta/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "mo",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elmundo.es",
+        "euronews.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4378,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7647
+        },
+        "total": 0.6101,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "aznar",
+        "ceuta",
+        "congreso",
+        "marruecos",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Sánchez comparecerá el 3 de septiembre en el Congreso, un mes después del inicio de la crisis de Ceuta, para evitar ir obligado por sus socios",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "_linked_ids": [
+        "subject-navarra-801b07b7cf8d"
+      ],
+      "cluster_id": "subject-navarra-801b07b7cf8d",
+      "coherence": 0.4447143228275471,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-26",
+      "headline": "Al menos 47 heridos al explotar material pirotécnico en el Ayuntamiento de Noáin (Navarra) al inicio de sus fiestas",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-26/varios-heridos-al-estallar-material-pirotecnico-en-el-inicio-de-las-fiestas-de-noain-navarra.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/26/6a8ed4c2fc6c835d538b45ba.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/reportajes/20260826/heridos-explotar-material-pirotecnico-ayuntamiento-noain-navarra-inicio-fiestas/1003744363647_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-26/explosion-pirotecnico-noain-navarra-1tna-1tps_4412464/"
+        },
+        {
+          "language": "es",
+          "source": "libertaddigital.com",
+          "source_country": "spain",
+          "url": "https://www.libertaddigital.com/sucesos/2026-08-26/un-accidente-pirotecnico-en-el-chupinazo-de-noain-deja-medio-centenar-de-heridos-7451823/"
+        },
+        {
+          "language": "es",
+          "source": "elcorreogallego.es",
+          "source_country": "spain",
+          "url": "https://www.elcorreogallego.es/sucesos/2026/08/26/cuarenta-heridos-explotar-material-pirotecnico-133677277.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.tv",
+          "source_country": "spain",
+          "url": "https://www.europapress.tv/sucesos/1112523/1/explosion-cohetes-chupinazo-noain-deja-47-heridos-tres-hospitalizados"
+        },
+        {
+          "language": "es",
+          "source": "antena3.com",
+          "source_country": "spain",
+          "url": "https://www.antena3.com/noticias/sociedad/mas-cuarenta-heridos-explosion-material-pirotecnico-fiestas-noain-navarra_202608266a8edd192bcaf82098edec58.html"
+        },
+        {
+          "language": "es",
+          "source": "mundiario.com",
+          "source_country": "spain",
+          "url": "https://www.mundiario.com/articulo/sociedad/fallo-cohetes-provoca-decenas-heridos-chupinazo-noain/20260826163344437568.html"
+        },
+        {
+          "language": "es",
+          "source": "lne.es",
+          "source_country": "spain",
+          "url": "https://www.lne.es/sucesos/2026/08/26/cuarenta-heridos-explotar-material-pirotecnico-133677259.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/reportajes/20260826/heridos-explotar-material-pirotecnico-ayuntamiento-noain-navarra-inicio-fiestas/1003744363647_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4447,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.75
+        },
+        "total": 0.5664,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "navarra",
+      "subject_names": [
+        "navarra",
+        "noain"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Al menos 47 heridos al explotar material pirotécnico en el Ayuntamiento de Noáin (Navarra) al inicio de sus fiestas",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "_linked_ids": [
+        "subject-barcelona-790e74163459"
+      ],
+      "cluster_id": "subject-barcelona-790e74163459",
+      "coherence": 0.5345404842842166,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-26",
+      "headline": "El Barça sustituye el homenaje a los campeones del mundo por la celebración de un \"acto de exaltación de la estelada\"",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/catalunya/2026-08-26/el-barca-cancela-el-homenaje-a-los-campeones-del-mundial-tras-el-incidente-con-la-policia-en-elche.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/deportes/futbol/20260826/barca-sustituye-homenaje-campeones-mundo-celebracion-acto-exaltacion-estelada/1003744363772_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/deportes/futbol-00162/noticia-barca-no-homenajeara-campeones-mundo-camp-nou-hara-acto-exaltacion-estelada-20260826163336.html"
+        },
+        {
+          "language": "es",
+          "source": "antena3.com",
+          "source_country": "spain",
+          "url": "https://www.antena3.com/noticias/deportes/futbol/barcelona-sustituye-homenaje-sus-8-campeones-mundo-exaltacion-estelada_202608266a8ef8272bcaf82098ee26cf.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/deportes/futbol/20260826/barca-sustituye-homenaje-campeones-mundo-celebracion-acto-exaltacion-estelada/1003744363772_0.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5345,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5477,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "barcelona",
+      "subject_names": [
+        "barca",
+        "barcelona"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "El Barça sustituye el homenaje a los campeones del mundo por la celebración de un \"acto de exaltación de la estelada\"",
+      "takeaway": "",
+      "why_it_matters": ""
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-fdf6672ce75b"
+      ],
+      "cluster_id": "subject-ceuta-fdf6672ce75b",
       "coherence": null,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-25",
-      "headline": "Moroccan minister invokes sovereignty over Ceuta and Melilla before King Mohamed VI",
+      "editorial_day": "2026-08-26",
+      "headline": "Aznar visita este jueves Ceuta tras haber criticado la \"incapacidad\" del Gobierno y la \"política servil\" con Marruecos",
       "independent_source_count": 3,
       "members": [
         {
           "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-26/aznar-viaja-a-ceuta-este-jueves-en-plena-crisis.html"
+        },
+        {
+          "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/25/6a8d74f1e85ece475a8b4571.html"
+          "url": "https://www.elmundo.es/espana/2026/08/26/6a8f0fe0e9cf4af33b8b45a3.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-ministro-marroqui-habla-liberacion-ceuta-melilla-mohamed-vi-celebracion-religiosa-20260825120003.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ministro-marroqui-asuntos-religiosos-reivindica-soberania-ceuta-melilla-ante-rey-mohamed-vi-su-heredero_7029162_0.html"
+          "url": "https://www.elespanol.com/espana/politica/20260826/aznar-visita-jueves-ceuta-criticado-incapacidad-gobierno-politica-servil-marruecos/1003744363584_0.html"
         }
       ],
       "mentioned_countries": [
-        "mo",
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-ministro-marroqui-habla-liberacion-ceuta-melilla-mohamed-vi-celebracion-religiosa-20260825120003.html",
-      "rank": 1,
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/politica/20260826/aznar-visita-jueves-ceuta-criticado-incapacidad-gobierno-politica-servil-marruecos/1003744363584_0.html",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "20minutos.es",
+        "elespanol.com",
         "elmundo.es",
-        "europapress.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
@@ -66,382 +383,91 @@
       },
       "subject_label": "ceuta",
       "subject_names": [
+        "aznar",
         "ceuta",
-        "marruecos",
-        "melilla",
-        "mohamed",
-        "sanchez"
+        "marruecos"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Morocco's Minister of Religious Affairs raised the issue of Ceuta and Melilla during a religious celebration in the presence of King Mohamed VI and his heir, asserting Morocco's claim to these Spanish-controlled North African territories.",
-      "takeaway": "Morocco's government continues to assert claims to Spanish territory at the highest levels despite ongoing diplomatic relations between the countries.",
-      "why_it_matters": "A senior Moroccan minister with the king's direct audience has publicly renewed territorial claims over Ceuta and Melilla before Mohamed VI and the heir, signaling official-level persistence of a dispute that affects Spain's sovereignty over these enclaves and their strategic position on Spain's southern border."
+      "subject_newsroom_count": 15,
+      "summary": "Aznar visita este jueves Ceuta tras haber criticado la \"incapacidad\" del Gobierno y la \"política servil\" con Marruecos",
+      "takeaway": "",
+      "why_it_matters": ""
     },
     {
       "_linked_ids": [
-        "subject-ceuta-2f63bfe9fb0a"
+        "subject-tarragona-25c0cc6b7caf"
       ],
-      "angle_zone": "spain",
-      "cluster_id": "subject-ceuta-2f63bfe9fb0a",
-      "coherence": 0.4280584392650787,
+      "cluster_id": "subject-tarragona-25c0cc6b7caf",
+      "coherence": null,
       "consequence": 1,
       "countries": [
-        "spain"
+        "spain",
+        "united-states"
       ],
-      "country_count": 1,
+      "country_count": 2,
       "editorial_day": "2026-08-26",
-      "headline": "Spain's Defense and Interior ministers clash over whether intelligence service warned of Ceuta crisis",
-      "independent_source_count": 6,
+      "headline": "La Policía Nacional detiene en Tarragona a Taulant Toma, el ‘Maestro de las fugas’",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-26/robles-indigna-al-resto-del-gobierno-al-chocar-con-marlaska-y-plantear-que-el-cni-si-aviso-de-que-venia-un-gran-salto-en-ceuta.html"
+          "url": "https://elpais.com/espana/catalunya/2026-08-26/la-policia-nacional-detiene-en-tarragona-a-taulant-toma-el-maestro-de-las-fugas.html"
         },
         {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/08/25/6a8dd594e5fdeaeb478b456e.html"
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/26/arrestato-a-tarragona-il-maestro-delle-evasioni-scappato-da-4-carceri-in-italia-e-belgio"
         },
         {
-          "language": "es",
-          "source": "elmundo.es",
+          "language": "cat",
+          "source": "ara.cat",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/25/6a8de9ece9cf4a13208b45b3.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-25/robles-dice-que-el-cni-compartio-su-informacion-en-ceuta-y-que-el-control-de-fronteras-compete-a-interior_4411199/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-robles-subraya-cni-hizo-trabajo-ceuta-informo-delegacion-gobierno-20260825132106.html"
-        },
-        {
-          "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/robles-afirma-cni-hizo-labor-ceuta-compartio-fuerzas-seguridad-gobierno_1_2235455.html"
+          "url": "https://www.ara.cat/societat/justicia/detenen-tarragona-mestre-fugues-perillos-fugitiu-reclamat-justicia-italiana_25_5832605.html"
         }
       ],
       "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-08-25/robles-dice-que-el-cni-compartio-su-informacion-en-ceuta-y-que-el-control-de-fronteras-compete-a-interior_4411199/",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "elconfidencial.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "expansion.com",
-        "infolibre.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4281,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
-        },
-        "total": 0.5002,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "cni",
-        "interior",
-        "marlaska",
-        "marruecos",
-        "robles",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Spain's Defense Minister Robles has publicly contradicted Interior Minister Marlaska over whether the CNI intelligence agency provided advance warning of a major influx of migrants into the Spanish enclave of Ceuta. Robles asserts that the CNI did its job and shared information about the impending crisis with security forces and the Government, while Marlaska denies that such a warning was issued, creating a significant rift between the two government departments.",
-      "takeaway": "The Spanish government's internal disagreement about what the CNI knew beforehand signals that accountability for the Ceuta crisis remains unsettled between key ministers.",
-      "why_it_matters": "The public breach between Defence Minister Robles and Interior Minister Marlaska over whether the CNI warned of the Ceuta crisis exposes a fractured government response to border security and undermines public confidence in whether Spain's intelligence and security apparatus are functioning as a coordinated unit during emergencies."
-    },
-    {
-      "_linked_ids": [
-        "subject-ayuso-9920a57bffa1"
-      ],
-      "angle_zone": "spain",
-      "cluster_id": "subject-ayuso-9920a57bffa1",
-      "coherence": 0.47757111313520584,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-25",
-      "headline": "Madrid official pointed to in penthouse purchase request appearance before assembly",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/madrid/2026-08-25/el-consejero-senalado-por-ayuso-para-dar-explicaciones-sobre-el-atico-el-gobierno-de-madrid-ya-ha-dado-sobradas-explicaciones.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/madrid/consejero-ayuso-responsable-compra-atico-pide-comparecer-20260825013640-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/madrid/consejero-senalado-ayuso-compra-atico-chamberi-comparecera-peticion-propia-asamblea_1_13466305.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/madrid/noticia-garcia-martin-pide-comparecer-peticion-propia-pleno-asamblea-atico-chamberi-20260825162718.html"
-        }
-      ],
-      "mentioned_countries": [
+        "it",
         "spain"
       ],
       "origin_country": "spain",
       "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/madrid/2026-08-25/el-consejero-senalado-por-ayuso-para-dar-explicaciones-sobre-el-atico-el-gobierno-de-madrid-ya-ha-dado-sobradas-explicaciones.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "outbound_url": "https://elpais.com/espana/catalunya/2026-08-26/la-policia-nacional-detiene-en-tarragona-a-taulant-toma-el-maestro-de-las-fugas.html",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
         "elpais.com",
-        "europapress.es"
+        "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4776,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.4286,
+          "source_reliability": 0.5
         },
-        "total": 0.4698,
+        "total": 0.4567,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ayuso",
+      "subject_label": "tarragona",
       "subject_names": [
-        "argelia",
-        "asamblea",
-        "ayuso",
-        "barcelona",
-        "espana",
-        "feijoo",
-        "madrid"
+        "tarragona"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "A senior adviser in the Madrid regional government has requested to appear before the regional assembly to explain his role in a public company's purchase of a penthouse in the Chamberí neighborhood of Madrid. The official, identified as García Martín, has been indicated by Madrid's regional president Ayuso and national party leader Feijóo in connection with the property acquisition. His appearance before the assembly will address the public company Planifica Madrid's involvement in the transaction.",
-      "takeaway": "A senior Madrid official accused of impropriety in a public property deal is taking the unusual step of requesting a parliamentary hearing to defend himself.",
-      "why_it_matters": "García Martín's appearance before the Madrid Assembly will determine whether the adviser can clear his name in a high-profile property purchase scandal that has exposed divisions within the regional government between Ayuso and Feijóo, or whether testimony reveals further details that deepen the political crisis."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-6a78cb2b8b92",
-        "subject-ukraine-d87333fdaa78",
-        "subject-zelensky-a0351200d5b4"
-      ],
-      "angle_zone": "spain",
-      "cluster_id": "subject-ukraine-d87333fdaa78",
-      "coherence": 0.5230491950146292,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-24",
-      "filled_from": "europe",
-      "headline": "Zelensky warns that holding elections during wartime would fracture Ukraine",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260823.OBS117602/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-qui-fracturerait-le-pays.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-volodymyr-zelensky-met-en-garde-contre-des-elections-en-temps-de-guerre-qui-detruiraient-le-WF4WKPJZEFCBVOJOUMR3MYNZSM/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260824/11618571/zelenski-dice-elecciones-ucrania-serian-tsunami-dividiria-pais.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.523,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.5,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5218,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Ukrainian President Volodymyr Zelensky has cautioned against conducting elections while the country is at war, arguing that doing so would act as a destructive force that would divide the nation. The president characterized such an election as a \"tsunami\" that would undermine Ukrainian unity during an active conflict.",
-      "takeaway": "Ukraine's leader is signaling that holding elections during active conflict would destabilize the country rather than strengthen it, narrowing the path by which Ukrainian democracy could be renewed while the war continues.",
-      "why_it_matters": "Spain, as a European Union member invested in Ukraine's stability and potential post-war reconstruction, faces implications for how Ukrainian political legitimacy will be established when peace negotiations occur, since Zelensky's resistance to wartime elections may shape the international community's approach to Ukraine's democratic transition."
-    },
-    {
-      "_linked_ids": [
-        "subject-leipzig-00de0354f1d8"
-      ],
-      "angle_zone": "spain",
-      "cluster_id": "subject-leipzig-00de0354f1d8",
-      "coherence": 0.42833545113635685,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-25",
-      "filled_from": "europe",
-      "headline": "Germany discovers third drone with explosives near Leipzig airport",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/en-allemagne-la-presse-revele-qu-un-troisieme-drone-charge-d-explosifs-a-ete-retrouve-pres-de-l-aeroport-de-leipzig_8160866.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/dron-explosivo-confirma-aeropuerto-leipzig-planeo-gran-20260825102629-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260825/11619633/alemania-halla-tercer-dron-presuntos-explosivos-aeropuerto-leipzig.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/hallan-otro-dron-explosivos-ligados-presunto-intento-atentado-leipzig_7029086_0.html"
-        },
-        {
-          "language": "es",
-          "source": "infodefensa.com",
-          "source_country": "spain",
-          "url": "https://www.infodefensa.com/texto-diario/mostrar/5992993/alemania-descubre-tercer-dron-explosivo-militar-relacionado-intento-ataque-aeropuerto-leipzig"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260825/11619633/alemania-halla-tercer-dron-presuntos-explosivos-aeropuerto-leipzig.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "francetvinfo.fr",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4283,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.5174,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "leipzig",
-      "subject_names": [
-        "alemania",
-        "allemagne",
-        "leipzig"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "German authorities have found a third drone carrying explosives near Leipzig airport, indicating a planned large-scale attack on the facility. The discovery of multiple explosive-laden drones linked to what officials are treating as an attempted attack on the airport represents an escalation in the scope and coordination of the threat.",
-      "takeaway": "A planned attack using military-grade explosives and multiple drones was foiled in Germany, raising alarms across European aviation and security systems.",
-      "why_it_matters": "The discovery of a coordinated drone-and-explosives plot at a major European airport signals a security threat affecting all EU member states, including Spain, which must assess vulnerabilities at its own critical infrastructure and coordinate with German and other European authorities on counterterrorism response."
+      "subject_newsroom_count": 4,
+      "summary": "La Policía Nacional detiene en Tarragona a Taulant Toma, el ‘Maestro de las fugas’",
+      "takeaway": "",
+      "why_it_matters": ""
     }
   ],
-  "discarded_ingested": 18,
+  "discarded_ingested": 56,
   "discarded_kept": 5,
-  "generated_at": "2026-08-26T05:59:42.415516+00:00",
+  "generated_at": "2026-08-27T00:21:50.001531+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

@@ -2,135 +2,120 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ceuta-4fef0592187e",
-        "subject-ceuta-7f645ae7535a",
-        "subject-ceuta-d31ae79f8733"
+        "subject-nepal-2ba6a2cabb60"
       ],
-      "cluster_id": "subject-ceuta-d31ae79f8733",
-      "coherence": 0.40183932140620104,
-      "consequence": 2,
+      "cluster_id": "subject-nepal-2ba6a2cabb60",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
-        "mo",
         "spain",
         "united-states"
       ],
-      "country_count": 3,
+      "country_count": 2,
       "editorial_day": "2026-08-27",
-      "headline": "Spanish Prime Minister Sánchez to Appear Before Congress Over Ceuta Crisis",
+      "headline": "Glacial collapse and massive flood in Nepal leave thousands missing and four Spaniards unlocated",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/asia/20260827/inmensa-riada-arrasa-frontera-nepal-tibet-gobierno-katmandu-teme-fallecidos/1003744364207_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/08/27/6a8fca4121efa0ba2d8b45c9.html"
+        },
+        {
+          "language": "es",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://es.euronews.com/2026/08/27/1300-desaparecidos-por-el-colapso-de-un-glaciar-y-una-devastadora-riada-en-nepal-4-espanol"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/mundo/asia/20260827/inmensa-riada-arrasa-frontera-nepal-tibet-gobierno-katmandu-teme-fallecidos/1003744364207_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elmundo.es",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6548,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "nepal",
+      "subject_names": [
+        "himalaya",
+        "nepal",
+        "tibet"
+      ],
+      "subject_newsroom_count": 29,
+      "summary": "A glacier collapse triggered a catastrophic flood in Nepal and the Tibet border region that authorities say has caused thousands of people to be missing or dead; estimates cited by officials and outlets place the missing in the low-to-mid thousands (reports vary around 1,300–15,000), and foreign ministries confirm four Spanish nationals remain unlocated."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-231d95672500"
+      ],
+      "cluster_id": "subject-ceuta-231d95672500",
+      "coherence": 0.5128880352454896,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-27",
+      "headline": "Government and regional governments approve €25 million for migrant minors in Ceuta",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/08/26/6a8ea311e5fdea696d8b45a7.html"
+          "url": "https://www.expansion.com/economia/politica/2026/08/27/6a902e60e5fdea1e048b4590.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html"
-        },
-        {
-          "language": "es",
-          "source": "diariolasamericas.com",
-          "source_country": "united-states",
-          "url": "https://www.diariolasamericas.com/mundo/crisis-ceuta-obliga-sanchez-adelantar-su-comparecencia-el-congreso-n5401224"
-        },
-        {
-          "language": "en",
-          "source": "moroccoworldnews.com",
-          "source_country": "mo",
-          "url": "https://www.moroccoworldnews.com/2026/08/336111/sanchez-to-face-congress-over-spains-response-to-ceuta-migration-crisis/"
-        },
-        {
-          "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/my-europe/2026/08/26/spagna-sanchez-in-parlamento-il-9-settembre-per-la-crisi-di-ceuta-il-pp-chiede-risposte-pi"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "mo",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "euronews.com",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4018,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.5653,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "bolanos",
-        "ceuta",
-        "congreso",
-        "feijoo",
-        "marruecos",
-        "psoe",
-        "sanchez",
-        "vox"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Prime Minister Pedro Sánchez will appear before Spain's Congress to address the Ceuta migration crisis; the appearance is scheduled for early September (reports indicate dates around September 3–9) and was moved forward in response to the unfolding situation to avoid being compelled to attend later by coalition partners."
-    },
-    {
-      "_linked_ids": [
-        "subject-barca-d0b5e6aa0d01",
-        "subject-barcelona-790e74163459"
-      ],
-      "cluster_id": "subject-barca-d0b5e6aa0d01",
-      "coherence": 0.42506777928005834,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "FC Barcelona cancels planned homage to World Cup winners and will hold pro-independence flag event",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/catalunya/2026-08-26/el-barca-cancela-el-homenaje-a-los-campeones-del-mundial-tras-el-incidente-con-la-policia-en-elche.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20260827/barca-renuncia-homenajear-campeones-mundo-no-molestar-indepes-claman-policia/1003744363983_0.html"
+          "url": "https://www.elmundo.es/espana/2026/08/27/6a8fe943fc6c83aa4c8b4582.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/deportes/futbol-00162/noticia-barca-no-homenajeara-campeones-mundo-camp-nou-hara-acto-exaltacion-estelada-20260826163336.html"
+          "url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ccaa-aprueban-ayuda-25-millones-atencion-menores-migrantes-ceuta-20260827122652.html"
         },
         {
           "language": "es",
-          "source": "antena3.com",
+          "source": "menorca.info",
           "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/deportes/futbol/barcelona-sustituye-homenaje-sus-8-campeones-mundo-exaltacion-estelada_202608266a8ef8272bcaf82098ee26cf.html"
+          "url": "https://www.menorca.info/actualidad/nacional/2026/08/27/2696885/aprobado-reparto-millones-para-menores-migrantes-ceuta-apoyo-vox.html"
+        },
+        {
+          "language": "es",
+          "source": "elplural.com",
+          "source_country": "spain",
+          "url": "https://www.elplural.com/autonomias/castilla-la-mancha/gobierno-page-respalda-25-millones-ceuta-pide-proteger-menores-sin-sobrecargar-ccaa_398856102"
         }
       ],
       "mentioned_countries": [
@@ -138,280 +123,320 @@
       ],
       "origin_country": "spain",
       "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/deportes/futbol-00162/noticia-barca-no-homenajeara-campeones-mundo-camp-nou-hara-acto-exaltacion-estelada-20260826163336.html",
+      "outbound_url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ccaa-aprueban-ayuda-25-millones-atencion-menores-migrantes-ceuta-20260827122652.html",
       "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elespanol.com",
-        "elpais.com",
-        "europapress.es"
+        "elmundo.es",
+        "europapress.es",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4251,
+          "coherence": 0.5129,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5304,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "barca",
-      "subject_names": [
-        "barca",
-        "barcelona"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Barcelona will not hold the originally planned homage to its eight World Cup winners at Camp Nou; the club has replaced the tribute with an event described as an exaltation or celebration of the pro-independence estelada flag, a decision framed as avoiding conflict with independence supporters protesting against the police."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-6a78cb2b8b92",
-        "subject-ukraine-d87333fdaa78",
-        "subject-zelensky-a0351200d5b4",
-        "subject-zelensky-d87333fdaa78"
-      ],
-      "cluster_id": "subject-ukraine-d87333fdaa78",
-      "coherence": 0.5270806218541928,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-24",
-      "filled_from": "europe",
-      "headline": "Zelensky warns wartime elections would fracture Ukraine",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260823.OBS117602/en-ukraine-zelensky-juge-que-des-elections-en-temps-de-guerre-seraient-un-tsunami-qui-fracturerait-le-pays.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-volodymyr-zelensky-met-en-garde-contre-des-elections-en-temps-de-guerre-qui-detruiraient-le-WF4WKPJZEFCBVOJOUMR3MYNZSM/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260824/11618571/zelenski-dice-elecciones-ucrania-serian-tsunami-dividiria-pais.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/23/zelensky-diz-que-eleicoes-em-tempos-de-guerra-dividiriam-a-ucrania-e-seriam-um-tsunami-para-o-pais.ghtml",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5271,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.3536,
-          "geographic_relevance": 0.5,
           "impact": 1.0,
-          "novelty": 0.25,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.6043,
+        "total": 0.6413,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "ceuta",
       "subject_names": [
-        "kiev",
-        "kyiv",
-        "russie",
-        "ucrania",
-        "ukraine",
-        "zelenski",
-        "zelensky"
+        "aznar",
+        "ceuta",
+        "feijoo",
+        "marruecos",
+        "sanchez",
+        "vox"
       ],
-      "subject_newsroom_count": 16,
-      "summary": "Ukrainian President Volodymyr Zelensky warned that holding elections while the country is at war would act like a “tsunami” that would divide and destroy Ukraine, arguing such a vote would deeply fracture the nation."
+      "subject_newsroom_count": 14,
+      "summary": "Spain’s central government and regional governments agreed to allocate €25 million to support the care of migrant minors in Ceuta; the decision was approved by fourteen autonomous communities, was passed without Vox’s support, and includes calls to protect the children while avoiding overburdening regional administrations."
     },
     {
       "_linked_ids": [
-        "subject-fifa-04d5ae3da574"
+        "subject-villena-4aef3b7fa82f"
       ],
-      "cluster_id": "subject-fifa-04d5ae3da574",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-villena-4aef3b7fa82f",
+      "coherence": 0.5549699222081861,
+      "consequence": 2,
       "countries": [
-        "france",
+        "it",
         "spain"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-26",
-      "filled_from": "europe",
-      "headline": "UEFA drops threat to boycott FIFA after World Cup stake sale reversed",
-      "independent_source_count": 2,
+      "editorial_day": "2026-08-27",
+      "headline": "The Villena Treasure, a major Bronze Age hoard, is stolen in a fast raid",
+      "independent_source_count": 8,
       "members": [
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sports/football/luefa-prete-a-renoncer-au-boycott-de-la-fifa-apres-avoir-obtenu-lannulation-de-la-vente-de-la-coupe-du-monde-20260826_4KBPV2NCWVEMPKQL43LGGJGGZQ/"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/cultura/2026-08-27/roban-el-tesoro-de-villena-uno-de-los-hallazgos-mas-importantes-de-la-edad-de-bronce-en-europa.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/cultura/oro-villena-tecnologia-punta-edad-bronce-robada-20260827175405-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/sociedad/2026/08/27/6a900bdfe5fdea7c358b456f.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/alicante/20260827/robado-madrugada-tesoro-villena-conjuntos-edad-bronce-importantes-europa/1003744364334_0.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/2026/08/26/6a8ee71bfdddffe0778b458d.html"
+          "url": "https://www.elmundo.es/cultura/2026/08/27/6a8feab5fdddffca278b4589.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-roban-rapido-asalto-tesoro-villena-conjunto-orfebreria-singular-edad-bronce-20260827104629.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/08/27/news/spagna_villena_tesoro_furto_eta_bronzo-425550300/?rss"
+        },
+        {
+          "language": "es",
+          "source": "diariodesevilla.es",
+          "source_country": "spain",
+          "url": "https://www.diariodesevilla.es/sociedad/roban-tesoro-villena-valiosos-edad_0_2007803671.html"
         }
       ],
       "mentioned_countries": [
-        "mn"
+        "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/sports/football/luefa-prete-a-renoncer-au-boycott-de-la-fifa-apres-avoir-obtenu-lannulation-de-la-vente-de-la-coupe-du-monde-20260826_4KBPV2NCWVEMPKQL43LGGJGGZQ/",
-      "rank": 4,
-      "reference_newsroom_count": 2,
+      "origin_country": "it",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/alicante/20260827/robado-madrugada-tesoro-villena-conjuntos-edad-bronce-importantes-europa/1003744364334_0.html",
+      "rank": 3,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
+        "abc.es",
+        "elespanol.com",
         "elmundo.es",
-        "liberation.fr"
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.555,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.6667,
+          "source_reliability": 0.7419
         },
-        "total": 0.5636,
+        "total": 0.639,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "fifa",
+      "subject_label": "villena",
       "subject_names": [
-        "fifa",
-        "uefa"
+        "bronce",
+        "bruxelles",
+        "europa",
+        "europe",
+        "spanish",
+        "union",
+        "villena"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "UEFA has said it will withdraw its threat to boycott FIFA after the planned sale of World Cup commercial stakes was cancelled; both articles report that the reversal of the stake sale led UEFA to step back from the boycott threat."
+      "subject_newsroom_count": 11,
+      "summary": "Police are investigating the theft of the Villena Treasure, a highly valuable and singular set of Bronze Age goldsmithing and one of Europe's most important Bronze Age finds, after three masked attackers carried out a four‑minute raid that removed the collection."
     },
     {
       "_linked_ids": [
-        "subject-mbappe-d52fef6d7ea6"
+        "subject-ceuta-e41a6716e90a"
       ],
-      "cluster_id": "subject-mbappe-d52fef6d7ea6",
-      "coherence": 0.4223567797428923,
-      "consequence": 0,
+      "cluster_id": "subject-ceuta-e41a6716e90a",
+      "coherence": 0.4371995066239034,
+      "consequence": 2,
       "countries": [
         "ar",
         "spain"
       ],
       "country_count": 2,
       "editorial_day": "2026-08-27",
-      "headline": "Mourinho returns to the Santiago Bernabéu as Real Madrid beat Real Sociedad 4-1",
-      "independent_source_count": 5,
+      "headline": "Migrants attacked military vehicle in Ceuta, leaving four soldiers injured and several detained",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://elpais.com/deportes/futbol/2026-08-26/mbappe-y-bellingham-calman-al-bernabeu-con-una-goleada-contra-la-real-sociedad.html"
+          "url": "https://www.elmundo.es/espana/2026/08/27/6a8fed1c21efa0fe388b45b6.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20260826/mbappe-hat-trick-lidera-arsenal-ofensivo-real-madrid-divierte-bernabeu-sociedad/1003744364189_0.html"
+          "url": "https://www.elespanol.com/espana/politica/20260827/detenidos-migrantes-apedrear-militares-ceuta-heridos/1003744364358_0.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/08/26/6a8f33d0fdddff7e778b45bf.html"
+          "url": "https://www.elconfidencial.com/espana/2026-08-27/detenidos-12-migrantes-ceuta-atacar-patrulla-militar-soldado_4412878/"
         },
         {
           "language": "es",
-          "source": "lanacion.com.ar",
+          "source": "urgente24.com",
           "source_country": "ar",
-          "url": "https://www.lanacion.com.ar/deportes/futbol/mourinho-dirigio-a-real-madrid-en-el-bernabeu-tras-13-anos-goleo-4-1-a-real-sociedad-con-tres-de-nid26082026/"
-        },
-        {
-          "language": "es",
-          "source": "esdiario.com",
-          "source_country": "spain",
-          "url": "https://www.esdiario.com/deportes/260826/196240/mbappe-tri-tura-real-sociedad-puesta-escena-mourinho-santiago-bernabeu.html"
+          "url": "https://urgente24.com/mundo/fuerte-emboscada-al-ejercito-ceuta-4-heridos-y-12-detenidos-n631511"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "ar",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/deportes/futbol/20260826/mbappe-hat-trick-lidera-arsenal-ofensivo-real-madrid-divierte-bernabeu-sociedad/1003744364189_0.html",
-      "rank": 5,
+      "outbound_source": "elconfidencial.com",
+      "outbound_url": "https://www.elconfidencial.com/espana/2026-08-27/detenidos-12-migrantes-ceuta-atacar-patrulla-militar-soldado_4412878/",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "elconfidencial.com",
         "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
+        "elmundo.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4224,
+          "coherence": 0.4372,
           "corroboration": 0.5,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.3938,
+        "total": 0.5652,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "mbappe",
+      "subject_label": "ceuta",
       "subject_names": [
-        "madrid",
-        "mbappe",
-        "mourinho",
-        "real madrid",
-        "real sociedad"
+        "aznar",
+        "ceuta",
+        "feijoo",
+        "marruecos",
+        "sanchez",
+        "vox"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "José Mourinho managed Real Madrid at the Santiago Bernabéu for the first time in 13 years and his side defeated Real Sociedad 4-1, with Kylian Mbappé scoring a hat‑trick."
+      "subject_newsroom_count": 14,
+      "summary": "In Ceuta, a group of migrants threw stones at a Spanish Army vehicle, injuring four military personnel who required medical attention; authorities detained between 10 and 12 migrants in connection with the incident (most sources report 12 detainees, one reports 10)."
+    },
+    {
+      "_linked_ids": [
+        "subject-bolanos-cb53ca9bdf5c"
+      ],
+      "cluster_id": "subject-bolanos-cb53ca9bdf5c",
+      "coherence": 0.44588049457965495,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-27",
+      "headline": "Spain's Interior Minister says government lacked precise advance information on Ceuta migrant influx",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-27/bolanos-reconoce-que-no-hay-normalidad-en-ceuta-y-que-no-tenian-datos-de-la-magnitud-de-la-llegada.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/bolanos-achaca-llegada-masiva-inmigrantes-ceuta-mala-20260827110454-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/27/6a8ff068e4d4d8f71f8b459e.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-bolanos-remarca-gobierno-no-tenia-informacion-previa-precisa-entrada-migrantes-ceuta-20260827122745.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-bolanos-remarca-gobierno-no-tenia-informacion-previa-precisa-entrada-migrantes-ceuta-20260827122745.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4459,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.5585,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bolanos",
+      "subject_names": [
+        "aznar",
+        "bolanos",
+        "ceuta",
+        "cni",
+        "feijoo",
+        "marruecos",
+        "robles",
+        "sanchez",
+        "vox"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Interior Minister Fernando Grande-Marlaska (Bolaños) acknowledged that the government did not have prior or precise information about the scale of the mass arrival of migrants into Ceuta and admitted the situation in the city was not normal. Multiple statements from him make clear officials were unaware of the magnitude of the entry before it occurred."
     }
   ],
-  "discarded_ingested": 26,
+  "discarded_ingested": 49,
   "discarded_kept": 5,
-  "generated_at": "2026-08-27T08:26:16.627617+00:00",
+  "generated_at": "2026-08-27T16:38:28.698046+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

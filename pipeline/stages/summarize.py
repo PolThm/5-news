@@ -324,18 +324,10 @@ def collect_summarize(
             degraded_title = _degrade_title(cluster, representative)
             headline = degraded_title
             summary = degraded_title
-            # Left empty rather than filled with the title. A degraded item has
-            # no generated consequence, and repeating the headline under "why it
-            # matters" would state a judgment nothing produced -- the site omits
-            # the line instead (see BriefingPage.astro).
-            why_it_matters = ""
-            takeaway = ""
             degraded_cluster_ids.append(cluster_id)
         else:
             headline = text.headline
             summary = text.summary
-            why_it_matters = text.why_it_matters
-            takeaway = text.takeaway
 
         # outbound_url/outbound_source (Story 3.3, FR-14) are attached
         # regardless of whether summarization degraded -- a reader always
@@ -350,8 +342,6 @@ def collect_summarize(
                 **cluster,
                 "headline": headline,
                 "summary": summary,
-                "why_it_matters": why_it_matters,
-                "takeaway": takeaway,
                 "outbound_url": outbound_url,
                 "outbound_source": outbound_source,
             }

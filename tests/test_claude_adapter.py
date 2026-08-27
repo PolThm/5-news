@@ -389,13 +389,13 @@ def test_the_language_instruction_binds_every_field_the_schema_requires() -> Non
 
     Asserting on the phrasing rather than on a field list is the point -- a
     prompt that names fields can be narrowed by adding one, which is exactly
-    what happened. Derived from `_SUMMARY_SCHEMA` so a fifth field cannot be
-    added without this test having something to say about it.
+    what happened. Derived from `_SUMMARY_SCHEMA` so a newly added field cannot
+    escape this test.
     """
     from pipeline.adapters.claude import _SUMMARY_SCHEMA
 
     required = _SUMMARY_SCHEMA["required"]
-    assert len(required) >= 4, "guard assumes the schema outgrew headline+summary"
+    assert required, "the schema must require at least one field to bind"
 
     for cluster in (
         _cluster("a", [{"title": "Un evenement", "source": "lemonde.fr"}]),
@@ -528,12 +528,7 @@ def test_submit_constrains_the_response_to_the_headline_summary_schema() -> None
     params = batches.create_calls[0]["requests"][0]["params"]
     schema = params["output_config"]["format"]["schema"]
     assert params["output_config"]["format"]["type"] == "json_schema"
-    assert set(schema["required"]) == {
-        "headline",
-        "summary",
-        "why_it_matters",
-        "takeaway",
-    }
+    assert set(schema["required"]) == {"headline", "summary"}
     assert schema["additionalProperties"] is False
 
 

@@ -111,8 +111,6 @@ def assemble_briefings(
 _SUMMARIZE_OWNED_FIELDS = (
     "headline",
     "summary",
-    "why_it_matters",
-    "takeaway",
     "outbound_url",
     "outbound_source",
 )

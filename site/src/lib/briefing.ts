@@ -43,14 +43,11 @@ export interface Cluster {
   // `summary` already gets, which is why the schema bump is additive.
   headline?: string;
   summary?: string;
-  // The consequence and the point, added when the output contract grew beyond
-  // headline+summary. Optional because every earlier Briefing lacks them, and
-  // because a DEGRADED item carries them as empty strings on purpose -- there
-  // is no generated judgment to show, and repeating the headline under "why it
-  // matters" would state one nothing produced. The page omits the line rather
-  // than rendering an empty label.
-  why_it_matters?: string;
-  takeaway?: string;
+  // `why_it_matters` and `takeaway` were here until the pipeline stopped
+  // generating them. The page had already stopped rendering them on
+  // 2026-08-20, so they were text nobody read; Briefings published before the
+  // removal still carry both, and reading one of those files is the only way
+  // to encounter them now.
   outbound_url?: string | null;
   outbound_source?: string | null;
   // Editorial provenance, added when the agenda stage began supplying the
@@ -74,17 +71,6 @@ export interface Cluster {
   // The page does not render it yet -- it exists so an ordering can be audited
   // from the file alone.
   score?: ClusterScore;
-  // Which Zone's angle this item carries, when it carries one.
-  //
-  // `why_it_matters` and `takeaway` are written per territory: the same event
-  // reads differently from Paris and from Madrid, and a Country Briefing topped
-  // up from wider ground would otherwise repeat the World Briefing verbatim.
-  // The facts (`headline`, `summary`) are written once and shared, so the two
-  // Briefings can never state different facts about one event.
-  //
-  // Absent when the shared judgment was used -- the World Briefing always, and
-  // any Zone whose angle failed to generate.
-  angle_zone?: string;
   // Set when this item was not about the Zone itself but filled a remaining
   // place from wider ground: the Zone whose relevance admitted it.
   filled_from?: string;

@@ -115,17 +115,6 @@ def _language_instruction(language_name: str) -> str:
     )
 
 
-_CONSEQUENCE_INSTRUCTION = (
-    "'why_it_matters' is one sentence naming a concrete consequence the "
-    "Articles actually support -- who is affected, what changes, what is at "
-    "stake. Never reach for wider significance nobody reported, and never "
-    "speculate about what happens next. If the Articles support no consequence "
-    "beyond the event itself, say plainly what the event decides or ends.\n"
-    "'takeaway' is one short sentence a reader would remember: the point of "
-    "the item, stated flatly. Not a moral, not advice, not a rhetorical "
-    "question, and never a restatement of the headline in other words."
-)
-
 # Story 6.1: the batch now returns two fields per Cluster instead of one
 # free-text paragraph, so the response is constrained by a JSON schema
 # rather than parsed as raw text. `additionalProperties: false` plus both
@@ -140,10 +129,8 @@ _SUMMARY_SCHEMA: dict = {
     "properties": {
         "headline": {"type": "string"},
         "summary": {"type": "string"},
-        "why_it_matters": {"type": "string"},
-        "takeaway": {"type": "string"},
     },
-    "required": ["headline", "summary", "why_it_matters", "takeaway"],
+    "required": ["headline", "summary"],
     "additionalProperties": False,
 }
 
@@ -216,8 +203,6 @@ class ClusterText:
 
     headline: str
     summary: str
-    why_it_matters: str
-    takeaway: str
 
 
 @dataclass(frozen=True, slots=True)
@@ -304,7 +289,7 @@ def _prompt_for(cluster: dict, language: OutputLanguage) -> str:
         f"news event for a reader who has not seen any of these Articles.\n\n"
         f"Articles:\n{lines}\n\n"
         f"{corroboration_note}\n{_NO_FABRICATION_INSTRUCTION}\n"
-        f"{_HEADLINE_INSTRUCTION}\n{_CONSEQUENCE_INSTRUCTION}\n"
+        f"{_HEADLINE_INSTRUCTION}\n"
         # Last, not second.
         #
         # It was the second line, and the French Briefing published "La Comunidad

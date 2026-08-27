@@ -1,18 +1,93 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ceuta-4fef0592187e",
-      "coherence": 0.4378000675278896,
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-051c4c3dbfaf",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-26",
+      "headline": "PSOE busca reconciliar versiones de Robles y Marlaska sobre los informes del CNI en Ceuta",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-26/el-psoe-busca-una-salida-al-choque-entre-robles-y-marlaska-por-los-informes-del-cni-en-ceuta-las-dos-cosas-pueden-ser-ciertas-a-la-vez.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/versiones-robles-marlaska-alimentan-dudas-papel-servicios-secretos-ceuta_1_2235469.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/ultima-hora-actualidad-politica-crisis-ceuta-directo_6_13467122_1124515.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "infolibre.es",
+      "outbound_url": "https://www.infolibre.es/politica/versiones-robles-marlaska-alimentan-dudas-papel-servicios-secretos-ceuta_1_2235469.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.623,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "aznar",
+        "ceuta",
+        "cni",
+        "marlaska",
+        "marruecos",
+        "robles",
+        "sanchez",
+        "vox"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Tras discrepancias entre la ministra Margarita Robles y el ministro Fernando Grande‑Marlaska sobre la información que manejó el Centro Nacional de Inteligencia en los sucesos de Ceuta, dirigentes del PSOE, entre ellos Patxi López, han tratado de validar que ambas versiones pueden ser ciertas simultáneamente y han pedido una salida política al choque entre los dos ministros.",
+      "takeaway": "El PSOE intenta cerrar la crisis interna por las distintas versiones sobre los informes del CNI para preservar la unidad del Ejecutivo y la credibilidad en la gestión de Ceuta.",
+      "why_it_matters": "Las discrepancias públicas entre la ministra Margarita Robles y el ministro Fernando Grande‑Marlaska sobre los informes del CNI en Ceuta obligan al PSOE a gestionar la crisis interna y decidir si mantiene la versión conjunta que presentó Patxi López, afectando a la cohesión del Gobierno y a la confianza en el manejo de inteligencia en un asunto de seguridad fronteriza."
+    },
+    {
+      "angle_zone": "spain",
+      "cluster_id": "subject-ceuta-7f645ae7535a",
+      "coherence": 0.5756807590268711,
       "consequence": 2,
       "countries": [
-        "mo",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-08-27",
-      "headline": "Sánchez comparecerá el 3 de septiembre en el Congreso, un mes después del inicio de la crisis de Ceuta, para evitar ir obligado por sus socios",
-      "independent_source_count": 11,
+      "country_count": 1,
+      "editorial_day": "2026-08-26",
+      "headline": "Pedro Sánchez comparecerá ante el Congreso el 3 de septiembre por la crisis de Ceuta",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "es",
@@ -28,86 +103,62 @@
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-26/sanchez-pide-comparecer-en-el-congreso-crisis-ceuta_4412230/"
+          "url": "https://www.eldiario.es/politica/ultima-hora-actualidad-politica-crisis-ceuta-directo_6_13467122_1124510.html"
         },
         {
           "language": "es",
-          "source": "diariolasamericas.com",
-          "source_country": "united-states",
-          "url": "https://www.diariolasamericas.com/mundo/crisis-ceuta-obliga-sanchez-adelantar-su-comparecencia-el-congreso-n5401224"
-        },
-        {
-          "language": "en",
-          "source": "moroccoworldnews.com",
-          "source_country": "mo",
-          "url": "https://www.moroccoworldnews.com/2026/08/336111/sanchez-to-face-congress-over-spains-response-to-ceuta-migration-crisis/"
-        },
-        {
-          "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/my-europe/2026/08/26/spagna-sanchez-in-parlamento-il-9-settembre-per-la-crisi-di-ceuta-il-pp-chiede-risposte-pi"
+          "source": "laregion.es",
+          "source_country": "spain",
+          "url": "https://www.laregion.es/espana/sanchez-comparecera-congreso-3-septiembre_1_20260826-4392860.html"
         },
         {
           "language": "es",
-          "source": "vozpopuli.com",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.vozpopuli.com/espana/politica/sanchez-solicita-comparecer-en-el-congreso-para-dar-la-cara-tras-la-invasion-de-ceuta-un-mes-despues.html"
+          "url": "https://www.eldiario.es/politica/pedro-sanchez-dara-explicaciones-congreso-ceuta-3-septiembre_1_13467573.html"
         },
         {
           "language": "es",
-          "source": "publico.es",
+          "source": "heraldo.es",
           "source_country": "spain",
-          "url": "https://www.publico.es/politica/pedro-sanchez-pide-comparecer-congreso-explicar-gestion-crisis-ceuta.html"
+          "url": "https://www.heraldo.es/noticias/nacional/2026/08/26/sanchez-comparecera-finalmente-3-septiembre-congreso-para-informar-crisis-ceuta-2047307.html"
         },
         {
           "language": "es",
-          "source": "elcomercio.es",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elcomercio.es/politica/sanchez-pide-comparecer-congreso-mes-despues-inicio-20260826093409-ntrc.html"
-        },
-        {
-          "language": "cat",
-          "source": "ara.cat",
-          "source_country": "spain",
-          "url": "https://www.ara.cat/politica/pedro-sanchez-compareixera-congres-donar-explicacions-crisi-ceuta_1_5832359.html"
-        },
-        {
-          "language": "cat",
-          "source": "vilaweb.cat",
-          "source_country": "spain",
-          "url": "https://www.vilaweb.cat/noticies/sanchez-compareixer-congres-espanyol-informar-crisi-ceuta/"
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-comparecera-finalmente-septiembre-congreso-informar-crisis-ceuta-20260826113743.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "mo",
+      "origin_country": "spain",
       "outbound_source": "elmundo.es",
       "outbound_url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elconfidencial.com",
+        "eldiario.es",
         "elmundo.es",
-        "euronews.com",
+        "europapress.es",
         "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4378,
-          "corroboration": 0.6,
+          "coherence": 0.5757,
+          "corroboration": 0.3333,
           "editorial_weight": 0.3333,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7647
+          "prominence": 0.6,
+          "source_reliability": 0.7037
         },
-        "total": 0.6394,
+        "total": 0.5871,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
@@ -116,201 +167,124 @@
         "ceuta",
         "congreso",
         "marruecos",
-        "sanchez"
+        "sanchez",
+        "vox"
       ],
       "subject_newsroom_count": 15,
-      "summary": "Sánchez comparecerá el 3 de septiembre en el Congreso, un mes después del inicio de la crisis de Ceuta, para evitar ir obligado por sus socios",
-      "takeaway": "",
-      "why_it_matters": ""
+      "summary": "Los artículos coinciden en que el presidente del Gobierno, Pedro Sánchez, deberá comparecer en una sesión plenaria del Congreso el 3 de septiembre para dar explicaciones sobre la gestión de la crisis en Ceuta; la convocatoria llega aproximadamente un mes después del inicio de la crisis y fue votada por la Comisión Permanente del Congreso en el marco de la petición de comparecencia.",
+      "takeaway": "Sánchez tendrá que dar cuentas ante el Congreso el 3 de septiembre por la gestión de la crisis de Ceuta.",
+      "why_it_matters": "La comparecencia fijada para el 3 de septiembre obliga al Gobierno a dar explicaciones formales en el Congreso sobre la gestión de la crisis de Ceuta, afectando directamente al control parlamentario que pueden ejercer los partidos y a la percepción pública de la respuesta del Ejecutivo."
     },
     {
-      "cluster_id": "subject-navarra-801b07b7cf8d",
-      "coherence": 0.4447143228275471,
+      "angle_zone": "spain",
+      "cluster_id": "subject-detenido-9f78922d8826",
+      "coherence": 0.5974681790503202,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-26",
-      "headline": "Al menos 47 heridos al explotar material pirotécnico en el Ayuntamiento de Noáin (Navarra) al inicio de sus fiestas",
-      "independent_source_count": 10,
+      "headline": "Detenido un entrenador de voleibol en Las Palmas por presunta agresión sexual a una menor",
+      "independent_source_count": 9,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-26/varios-heridos-al-estallar-material-pirotecnico-en-el-inicio-de-las-fiestas-de-noain-navarra.html"
+          "url": "https://elpais.com/sociedad/2026-08-25/detenido-un-entrenador-por-violar-y-dejar-embarazada-a-una-menor-en-palma.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/26/6a8ed4c2fc6c835d538b45ba.html"
+          "url": "https://www.eldiario.es/illes-balears/sociedad/detenido-entrenador-voleibol-violar-embarazada-menor-palma_1_13465213.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/reportajes/20260826/heridos-explotar-material-pirotecnico-ayuntamiento-noain-navarra-inicio-fiestas/1003744363647_0.html"
+          "url": "https://www.20minutos.es/canarias/detenido-un-entrenador-voleibol-por-agresion-sexual-una-menor-las-palmas_7029499_0.html"
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
+          "source": "laopiniondezamora.es",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-26/explosion-pirotecnico-noain-navarra-1tna-1tps_4412464/"
+          "url": "https://www.laopiniondezamora.es/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666664.html"
         },
         {
           "language": "es",
-          "source": "libertaddigital.com",
+          "source": "levante-emv.com",
           "source_country": "spain",
-          "url": "https://www.libertaddigital.com/sucesos/2026-08-26/un-accidente-pirotecnico-en-el-chupinazo-de-noain-deja-medio-centenar-de-heridos-7451823/"
+          "url": "https://www.levante-emv.com/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666665.html"
         },
         {
           "language": "es",
-          "source": "elcorreogallego.es",
+          "source": "elnortedecastilla.es",
           "source_country": "spain",
-          "url": "https://www.elcorreogallego.es/sucesos/2026/08/26/cuarenta-heridos-explotar-material-pirotecnico-133677277.html"
+          "url": "https://www.elnortedecastilla.es/sociedad/detenido-jugador-entrenador-voleibol-palmas-presunta-agresion-20260826130136-ntrc.html"
         },
         {
           "language": "es",
-          "source": "europapress.tv",
+          "source": "laopiniondemurcia.es",
           "source_country": "spain",
-          "url": "https://www.europapress.tv/sucesos/1112523/1/explosion-cohetes-chupinazo-noain-deja-47-heridos-tres-hospitalizados"
+          "url": "https://www.laopiniondemurcia.es/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666673.html"
         },
         {
           "language": "es",
-          "source": "antena3.com",
+          "source": "eldiariomontanes.es",
           "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/sociedad/mas-cuarenta-heridos-explosion-material-pirotecnico-fiestas-noain-navarra_202608266a8edd192bcaf82098edec58.html"
+          "url": "https://www.eldiariomontanes.es/sociedad/detenido-jugador-entrenador-voleibol-palmas-presunta-agresion-20260826130136-ntrc.html"
         },
         {
           "language": "es",
-          "source": "mundiario.com",
+          "source": "elperiodicoextremadura.com",
           "source_country": "spain",
-          "url": "https://www.mundiario.com/articulo/sociedad/fallo-cohetes-provoca-decenas-heridos-chupinazo-noain/20260826163344437568.html"
-        },
-        {
-          "language": "es",
-          "source": "lne.es",
-          "source_country": "spain",
-          "url": "https://www.lne.es/sucesos/2026/08/26/cuarenta-heridos-explotar-material-pirotecnico-133677259.html"
+          "url": "https://www.elperiodicoextremadura.com/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666675.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/reportajes/20260826/heridos-explotar-material-pirotecnico-ayuntamiento-noain-navarra-inicio-fiestas/1003744363647_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/sociedad/2026-08-25/detenido-un-entrenador-por-violar-y-dejar-embarazada-a-una-menor-en-palma.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "elespanol.com",
-        "elmundo.es",
+        "20minutos.es",
+        "eldiario.es",
         "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4447,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.75
-        },
-        "total": 0.5771,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "navarra",
-      "subject_names": [
-        "navarra",
-        "noain"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Al menos 47 heridos al explotar material pirotécnico en el Ayuntamiento de Noáin (Navarra) al inicio de sus fiestas",
-      "takeaway": "",
-      "why_it_matters": ""
-    },
-    {
-      "cluster_id": "subject-barcelona-790e74163459",
-      "coherence": 0.5345404842842166,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-26",
-      "headline": "El Barça sustituye el homenaje a los campeones del mundo por la celebración de un \"acto de exaltación de la estelada\"",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/catalunya/2026-08-26/el-barca-cancela-el-homenaje-a-los-campeones-del-mundial-tras-el-incidente-con-la-policia-en-elche.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20260826/barca-sustituye-homenaje-campeones-mundo-celebracion-acto-exaltacion-estelada/1003744363772_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/deportes/futbol-00162/noticia-barca-no-homenajeara-campeones-mundo-camp-nou-hara-acto-exaltacion-estelada-20260826163336.html"
-        },
-        {
-          "language": "es",
-          "source": "antena3.com",
-          "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/deportes/futbol/barcelona-sustituye-homenaje-sus-8-campeones-mundo-exaltacion-estelada_202608266a8ef8272bcaf82098ee26cf.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/deportes/futbol/20260826/barca-sustituye-homenaje-campeones-mundo-celebracion-acto-exaltacion-estelada/1003744363772_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elespanol.com",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5345,
+          "coherence": 0.5975,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.6923,
+          "source_reliability": 0.7241
         },
-        "total": 0.5584,
+        "total": 0.579,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "barcelona",
+      "subject_label": "detenido",
       "subject_names": [
-        "barca",
-        "barcelona"
+        "abu dabi",
+        "detenido",
+        "palma",
+        "zaragoza"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "El Barça sustituye el homenaje a los campeones del mundo por la celebración de un \"acto de exaltación de la estelada\"",
-      "takeaway": "",
-      "why_it_matters": ""
+      "subject_newsroom_count": 8,
+      "summary": "Varios medios informan que la Policía ha detenido en Las Palmas de Gran Canaria a un entrenador de voleibol, también jugador en algunos relatos, por una presunta agresión sexual a una jugadora menor de edad; en al menos una crónica se menciona que la víctima habría quedado embarazada. Las noticias coinciden en la detención y en que la investigación se refiere a hechos sexuales contra una menor vinculada al equipo. No se aportan más detalles sobre la identidad del detenido ni sobre el estado procesal en las notas citadas.",
+      "takeaway": "La detención inicia el proceso judicial penal contra el entrenador por una presunta agresión sexual a una menor en Las Palmas.",
+      "why_it_matters": "La detención del entrenador afecta la instrucción judicial y la situación procesal de la menor y del detenido en España: se ha abierto una investigación penal que determina la privación de libertad y el inicio de actuaciones por agresión sexual y posible embarazo de la víctima menor."
     },
     {
+      "angle_zone": "spain",
       "cluster_id": "subject-ceuta-fdf6672ce75b",
       "coherence": null,
       "consequence": 2,
@@ -319,7 +293,7 @@
       ],
       "country_count": 1,
       "editorial_day": "2026-08-26",
-      "headline": "Aznar visita este jueves Ceuta tras haber criticado la \"incapacidad\" del Gobierno y la \"política servil\" con Marruecos",
+      "headline": "Aznar visita Ceuta este jueves en medio de la crisis por entrada masiva de inmigrantes",
       "independent_source_count": 3,
       "members": [
         {
@@ -373,86 +347,102 @@
       "subject_names": [
         "aznar",
         "ceuta",
-        "marruecos"
+        "marruecos",
+        "sanchez",
+        "vox"
       ],
       "subject_newsroom_count": 15,
-      "summary": "Aznar visita este jueves Ceuta tras haber criticado la \"incapacidad\" del Gobierno y la \"política servil\" con Marruecos",
-      "takeaway": "",
-      "why_it_matters": ""
+      "summary": "El expresidente José María Aznar tiene previsto viajar a Ceuta este jueves coincidiendo con la crisis provocada por la entrada masiva de inmigrantes; en días previos ha criticado la actuación del Gobierno y su relación con Marruecos. Los artículos coinciden en la fecha de la visita y en que llega mientras se vive la crisis migratoria en la ciudad.",
+      "takeaway": "Aznar entra en la crisis de Ceuta para convertirla en un foco político que intensifica la presión pública sobre el Gobierno en inmigración y relaciones con Marruecos.",
+      "why_it_matters": "La visita de Aznar a Ceuta implica una intervención política directa de un expresidente que reafirma críticas públicas contra el Gobierno y posiciona a su partido en el debate sobre inmigración y la relación con Marruecos, afectando la agenda mediática y la presión sobre decisiones de política migratoria y de fronteras."
     },
     {
-      "cluster_id": "subject-tarragona-25c0cc6b7caf",
-      "coherence": null,
+      "angle_zone": "spain",
+      "cluster_id": "subject-navarra-4cd305d3351a",
+      "coherence": 0.4071667050069109,
       "consequence": 1,
       "countries": [
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 2,
+      "country_count": 1,
       "editorial_day": "2026-08-26",
-      "headline": "La Policía Nacional detiene en Tarragona a Taulant Toma, el ‘Maestro de las fugas’",
-      "independent_source_count": 3,
+      "headline": "Explosión de material pirotécnico deja decenas de heridos en el chupinazo de Noáin",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/catalunya/2026-08-26/la-policia-nacional-detiene-en-tarragona-a-taulant-toma-el-maestro-de-las-fugas.html"
+          "url": "https://elpais.com/espana/2026-08-26/varios-heridos-al-estallar-material-pirotecnico-en-el-inicio-de-las-fiestas-de-noain-navarra.html"
         },
         {
-          "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/my-europe/2026/08/26/arrestato-a-tarragona-il-maestro-delle-evasioni-scappato-da-4-carceri-in-italia-e-belgio"
-        },
-        {
-          "language": "cat",
-          "source": "ara.cat",
+          "language": "es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.ara.cat/societat/justicia/detenen-tarragona-mestre-fugues-perillos-fugitiu-reclamat-justicia-italiana_25_5832605.html"
+          "url": "https://www.elmundo.es/espana/2026/08/26/6a8ed4c2fc6c835d538b45ba.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/reportajes/20260826/heridos-explotar-material-pirotecnico-ayuntamiento-noain-navarra-inicio-fiestas/1003744363647_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-26/explosion-pirotecnico-noain-navarra-1tna-1tps_4412464/"
+        },
+        {
+          "language": "es",
+          "source": "diariovasco.com",
+          "source_country": "spain",
+          "url": "https://www.diariovasco.com/sociedad/heridos-explosion-cohetes-txupinazo-noain-navarra-20260826124019-nt.html"
         }
       ],
       "mentioned_countries": [
-        "it",
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/catalunya/2026-08-26/la-policia-nacional-detiene-en-tarragona-a-taulant-toma-el-maestro-de-las-fugas.html",
+      "outbound_source": "diariovasco.com",
+      "outbound_url": "https://www.diariovasco.com/sociedad/heridos-explosion-cohetes-txupinazo-noain-navarra-20260826124019-nt.html",
       "rank": 5,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elpais.com",
-        "euronews.com"
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "coherence": 0.4072,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.474,
+        "total": 0.4889,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "tarragona",
+      "subject_label": "navarra",
       "subject_names": [
-        "tarragona"
+        "navarra",
+        "noain"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "La Policía Nacional detiene en Tarragona a Taulant Toma, el ‘Maestro de las fugas’",
-      "takeaway": "",
-      "why_it_matters": ""
+      "subject_newsroom_count": 5,
+      "summary": "Durante el inicio de las fiestas de Noáin (Navarra), varios cohetes o material pirotécnico estallaron entre la multitud en el chupinazo, provocando que entre 31 y 50 personas resultaran heridas según distintos recuentos, y obligando a la atención de numerosos afectados en el lugar.",
+      "takeaway": "El accidente obliga a revisar cómo se organiza y controla la pirotecnia en festejos locales tras causar decenas de heridos.",
+      "why_it_matters": "El suceso afecta directamente a la seguridad en fiestas populares en España porque decenas de heridos y la investigación abierta obligarán a las autoridades locales y forales a revisar protocolos de uso de pirotecnia y posibles sanciones en celebraciones públicas."
     }
   ],
-  "discarded_ingested": 54,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-08-27T00:21:50.001531+00:00",
+  "generated_at": "2026-08-27T03:44:59.985214+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

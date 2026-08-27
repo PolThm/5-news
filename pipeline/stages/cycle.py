@@ -81,6 +81,7 @@ from pipeline.stages.summarize import (
     WrittenSummarize,
     collect_summarize,
     gateway_consequence_fn_or_none,
+    provider_is_synchronous,
     submit_summarize,
 )
 
@@ -632,6 +633,25 @@ def run_cycle(
         + "\n",
         encoding="utf-8",
     )
+
+    # A synchronous provider has already generated everything by the time
+    # `submit` returned, so collect immediately, in this same run.
+    #
+    # This is not an optimization -- it is the only thing that works. The
+    # gateway adapter parks its results on the runner's local disk for the
+    # collect phase to read, and that disk does not survive the job: only
+    # `.gitignore`'s allowlist is committed, and the results file is not on
+    # it. A later catch-up would find `cycle.json` pointing at a
+    # `gateway-local:` batch whose results no longer exist anywhere, and
+    # would abandon the cycle -- which is exactly what the first production
+    # run did (2026-08-27T00-21-50Z: two hours of generation, phase stuck at
+    # summarize_submitted, nothing published).
+    #
+    # Claude is untouched by this: a real Batch API id refers to state held
+    # by Anthropic, which a later run can still poll, so it keeps AD-11's
+    # two-invocation shape.
+    if summarize_phase == "summarize_submitted" and provider_is_synchronous():
+        return _resume_cycle(cycle_path, collect_summarize_fn=collect_summarize_fn)
 
     return CycleResult(
         cycle_id=cycle_id,

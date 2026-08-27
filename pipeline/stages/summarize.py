@@ -108,6 +108,17 @@ def _resolve_submit_fn(submit_fn: SubmitFn, cycle_id: str, data_root: Path) -> S
     return partial(gateway_adapter.submit_batch, cycle_id=cycle_id, data_root=data_root)
 
 
+def provider_is_synchronous() -> bool:
+    """Whether the configured provider has already produced its text by the
+    time `submit_summarize` returns.
+
+    True for the gateway (no batch endpoint, so the adapter calls the model
+    inline), false for Claude (a real Batch API handle a later run polls).
+    `cycle.py` uses this to decide whether to collect in the same run.
+    """
+    return provider_name() == GATEWAY_PROVIDER
+
+
 def gateway_consequence_fn_or_none():
     """The gateway scorer when that provider is configured, else `None`.
 

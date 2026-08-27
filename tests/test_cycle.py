@@ -645,6 +645,40 @@ def test_a_fresh_cycle_submits_three_batches_and_stops_without_waiting(tmp_path:
     assert record["summarize_batches"]["fr"]["batch_id"] == "stub-batch-fr"
 
 
+def test_a_synchronous_provider_collects_in_the_same_run(tmp_path: Path, monkeypatch) -> None:
+    """The gateway provider must not leave the cycle at summarize_submitted.
+
+    Its adapter parks generated text on the runner's local disk, and that
+    disk does not survive the job -- `.gitignore` commits only an allowlist,
+    which the results file is not on. A later catch-up would find a
+    `gateway-local:` batch whose results exist nowhere and abandon the cycle.
+    That is not hypothetical: the first production run under this provider
+    (2026-08-27T00-21-50Z) spent two hours generating, stopped at
+    summarize_submitted, and published nothing.
+
+    The Claude path keeps the two-invocation shape -- a real Batch API id
+    refers to state Anthropic still holds -- which the test above asserts.
+    """
+    monkeypatch.setenv("SUMMARIZE_PROVIDER", "gateway")
+
+    collect_calls: list[str] = []
+
+    def recording_collect(*args, **kwargs):
+        collect_calls.append(kwargs.get("language", args[2] if len(args) > 2 else "?"))
+        return None  # "still pending" -- the cycle must still have tried
+
+    run_cycle(
+        collect=lambda: _collection(_record("A", "a.com")),
+        cycle_id="2026-08-27T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+        collect_summarize_fn=recording_collect,
+    )
+
+    assert collect_calls, "a synchronous provider must collect in the same run"
+
+
 def test_a_resumed_cycle_skips_collect_through_history_entirely(tmp_path: Path) -> None:
     """On the second invocation of the same cycle_id, collect through
     history must not re-run -- only the pending batches are checked."""

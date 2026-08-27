@@ -7,9 +7,8 @@
         "subject-zelensky-a0351200d5b4",
         "subject-zelensky-d87333fdaa78"
       ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-zelensky-d87333fdaa78",
-      "coherence": 0.5310612790654341,
+      "cluster_id": "subject-ukraine-d87333fdaa78",
+      "coherence": 0.5270806218541928,
       "consequence": 3,
       "countries": [
         "brazil",
@@ -18,7 +17,7 @@
       ],
       "country_count": 3,
       "editorial_day": "2026-08-24",
-      "headline": "Zelensky warns holding elections during the war would fracture Ukraine",
+      "headline": "Zelensky warns wartime elections would fracture Ukraine",
       "independent_source_count": 4,
       "members": [
         {
@@ -62,7 +61,7 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5311,
+          "coherence": 0.5271,
           "corroboration": 0.6,
           "editorial_weight": 0.3333,
           "freshness": 0.3536,
@@ -72,186 +71,92 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6648,
+        "total": 0.6643,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "zelensky",
+      "subject_label": "ukraine",
       "subject_names": [
-        "elon musk",
         "kiev",
         "kyiv",
-        "rusia",
-        "russia",
+        "russie",
         "ucrania",
         "ukraine",
         "zelenski",
         "zelensky"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "Ukrainian President Volodymyr Zelensky warned that conducting elections while the country remains at war would act like a \"tsunami\" that would divide or destroy the nation, expressing concern that such a vote would fracture Ukrainian society and governance. He urged against holding elections in wartime given the risks he described.",
-      "takeaway": "Zelensky has ruled out holding national elections during the war, signaling Ukraine will postpone elections and maintain its current leadership while conflict continues.",
-      "why_it_matters": "European governments and institutions engaged in Ukraine policy are affected because Zelensky’s public rejection of holding national elections during wartime clarifies Kyiv’s stance and reduces the likelihood that EU and NATO partners will need to reassess support or election-related diplomatic pressure; what is decided is that Ukraine intends to postpone domestic elections under current conditions, making stabilization and continuity of the current government the operative policy point."
+      "subject_newsroom_count": 16,
+      "summary": "Ukrainian President Volodymyr Zelensky warned that holding elections while the country is at war would act like a “tsunami” that would divide and destroy Ukraine, arguing such a vote would deeply fracture the nation."
     },
     {
       "_linked_ids": [
-        "subject-ceuta-051c4c3dbfaf"
+        "subject-fifa-04d5ae3da574"
       ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-ceuta-051c4c3dbfaf",
+      "cluster_id": "subject-fifa-04d5ae3da574",
       "coherence": null,
       "consequence": 3,
       "countries": [
+        "france",
         "spain"
       ],
-      "country_count": 1,
+      "country_count": 2,
       "editorial_day": "2026-08-26",
-      "headline": "Spanish PSOE seeks resolution after conflicting Robles and Marlaska accounts on Ceuta intelligence",
-      "independent_source_count": 3,
+      "headline": "UEFA drops threat to boycott FIFA after World Cup stake sale reversed",
+      "independent_source_count": 2,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-26/el-psoe-busca-una-salida-al-choque-entre-robles-y-marlaska-por-los-informes-del-cni-en-ceuta-las-dos-cosas-pueden-ser-ciertas-a-la-vez.html"
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/sports/football/luefa-prete-a-renoncer-au-boycott-de-la-fifa-apres-avoir-obtenu-lannulation-de-la-vente-de-la-coupe-du-monde-20260826_4KBPV2NCWVEMPKQL43LGGJGGZQ/"
         },
         {
           "language": "es",
-          "source": "infolibre.es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/versiones-robles-marlaska-alimentan-dudas-papel-servicios-secretos-ceuta_1_2235469.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/ultima-hora-actualidad-politica-crisis-ceuta-directo_6_13467122_1124515.html"
+          "url": "https://www.elmundo.es/deportes/futbol/2026/08/26/6a8ee71bfdddffe0778b458d.html"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "mn"
       ],
-      "origin_country": "spain",
-      "outbound_source": "infolibre.es",
-      "outbound_url": "https://www.infolibre.es/politica/versiones-robles-marlaska-alimentan-dudas-papel-servicios-secretos-ceuta_1_2235469.html",
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/sports/football/luefa-prete-a-renoncer-au-boycott-de-la-fifa-apres-avoir-obtenu-lannulation-de-la-vente-de-la-coupe-du-monde-20260826_4KBPV2NCWVEMPKQL43LGGJGGZQ/",
       "rank": 2,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "infolibre.es"
+        "elmundo.es",
+        "liberation.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6256,
+        "total": 0.6236,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "fifa",
       "subject_names": [
-        "aznar",
-        "ceuta",
-        "cni",
-        "marlaska",
-        "marruecos",
-        "robles",
-        "sanchez",
-        "vox"
+        "fifa",
+        "uefa"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Senior PSOE figures are trying to reconcile differing public statements by Defence Minister Margarita Robles and Interior Minister Fernando Grande-Marlaska about reports from Spain’s intelligence service (CNI) on events in Ceuta; party leaders, including Patxi López, have said the two versions could both be true and are urging a way to resolve the discrepancy while questions remain about the role and clarity of CNI information.",
-      "takeaway": "Conflicting ministerial versions over CNI reports have raised questions about Spain’s intelligence oversight and political cohesion, potentially affecting trust with EU partners.",
-      "why_it_matters": "The dispute over conflicting accounts from Spain’s defence and interior ministers affects domestic political stability and the credibility of Spain’s intelligence oversight, which in turn influences EU partners’ trust in Madrid’s internal management of security matters and cooperation on intelligence-sensitive issues."
-    },
-    {
-      "_linked_ids": [
-        "subject-mayotte-381f08ebb55d",
-        "subject-mayotte-80afc31b0301"
-      ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-mayotte-80afc31b0301",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-26",
-      "headline": "France will condition development aid to several African countries on cooperation against irregular migration to Mayotte",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/outre-mer/article/2026/08/26/mayotte-sebastien-lecornu-veut-conditionner-l-aide-au-developpement-pour-les-comores-a-une-meilleure-collaboration-dans-la-lutte-contre-l-immigration-clandestine_6757390_1840826.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/lecornu-veut-hater-la-reconstruction-de-mayotte-un-an-et-demi-apres-le-cyclone-chido-20260825"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260826-la-france-veut-conditionner-l-aide-au-d%C3%A9veloppement-pour-sept-pays-africains-%C3%A0-la-lutte-contre-l-immigration-%C3%A0-mayotte"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/outre-mer/article/2026/08/26/mayotte-sebastien-lecornu-veut-conditionner-l-aide-au-developpement-pour-les-comores-a-une-meilleure-collaboration-dans-la-lutte-contre-l-immigration-clandestine_6757390_1840826.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6156,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "mayotte",
-      "subject_names": [
-        "mayotte",
-        "sebastien lecornu"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "French Minister Sébastien Lecornu announced that France intends to make development aid to the Comoros and six other African countries contingent on better collaboration to curb clandestine migration to Mayotte; the decision links future aid disbursements to partner countries' efforts to combat irregular crossings to the French overseas department.",
-      "takeaway": "France is conditioning aid to several African partners on concrete cooperation to reduce irregular migration to Mayotte.",
-      "why_it_matters": "France will link development aid for Comoros and six other African countries to cooperation on curbing irregular migration to Mayotte, meaning aid budgets and diplomatic relations affecting those countries will now be conditioned on migration-control performance."
+      "subject_newsroom_count": 5,
+      "summary": "UEFA has said it will withdraw its threat to boycott FIFA after the planned sale of World Cup commercial stakes was cancelled; both articles report that the reversal of the stake sale led UEFA to step back from the boycott threat."
     },
     {
       "_linked_ids": [
         "subject-putin-84d721c57637",
         "subject-russia-84d721c57637"
       ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-putin-84d721c57637",
+      "cluster_id": "subject-russia-84d721c57637",
       "coherence": null,
       "consequence": 3,
       "countries": [
@@ -260,7 +165,7 @@
       ],
       "country_count": 2,
       "editorial_day": "2026-08-26",
-      "headline": "Putin signs decree allowing state takeover of businesses damaged by drone strikes",
+      "headline": "Putin signs decree allowing state seizure of businesses and infrastructure damaged by drone strikes",
       "independent_source_count": 2,
       "members": [
         {
@@ -282,7 +187,7 @@
       "origin_country": "it",
       "outbound_source": "pbs.org",
       "outbound_url": "https://www.pbs.org/newshour/world/putin-decree-lets-russia-take-control-of-infrastructure-damaged-in-ukrainian-drone-attacks",
-      "rank": 4,
+      "rank": 3,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "euronews.com",
@@ -303,131 +208,239 @@
         "total": 0.6136,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "putin",
+      "subject_label": "russia",
       "subject_names": [
         "putin",
-        "russie"
+        "rusia",
+        "russia"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "President Vladimir Putin signed a decree authorizing Russian authorities to temporarily seize and manage businesses and infrastructure that have been damaged in drone attacks, enabling state control of affected assets for recovery and continuity. The measure applies to facilities hit by such strikes and sets out administrative procedures for government intervention and management of those properties.",
-      "takeaway": "Russia can now nationalize damaged businesses and infrastructure, including assets tied to European investors, following drone attacks.",
-      "why_it_matters": "The decree lets the Russian state seize and operate businesses and infrastructure damaged in Ukrainian drone strikes, affecting foreign-owned assets in Russia and altering legal protections for companies with European investors or supply chains there."
+      "subject_newsroom_count": 14,
+      "summary": "Russian President Vladimir Putin has signed a decree permitting the state to seize businesses and infrastructure that suffer damage from Ukrainian drone attacks; the measure lets authorities take control of affected assets and outlines procedures for such transfers following drone strikes."
     },
     {
       "_linked_ids": [
-        "subject-detenido-9f78922d8826"
+        "subject-ceuta-4fef0592187e",
+        "subject-ceuta-7f645ae7535a",
+        "subject-ceuta-d31ae79f8733"
       ],
-      "angle_zone": "europe",
-      "cluster_id": "subject-detenido-9f78922d8826",
-      "coherence": 0.5974681790503202,
+      "cluster_id": "subject-ceuta-d31ae79f8733",
+      "coherence": 0.40183932140620104,
       "consequence": 2,
       "countries": [
-        "spain"
+        "mo",
+        "spain",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-26",
-      "headline": "Volleyball coach arrested in Las Palmas for alleged sexual assault of a minor",
-      "independent_source_count": 9,
+      "country_count": 3,
+      "editorial_day": "2026-08-27",
+      "headline": "Spanish Prime Minister Sánchez to Appear Before Congress Over Ceuta Crisis",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-08-25/detenido-un-entrenador-por-violar-y-dejar-embarazada-a-una-menor-en-palma.html"
+          "url": "https://www.expansion.com/economia/politica/2026/08/26/6a8ea311e5fdea696d8b45a7.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/illes-balears/sociedad/detenido-entrenador-voleibol-violar-embarazada-menor-palma_1_13465213.html"
+          "url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/canarias/detenido-un-entrenador-voleibol-por-agresion-sexual-una-menor-las-palmas_7029499_0.html"
+          "source": "diariolasamericas.com",
+          "source_country": "united-states",
+          "url": "https://www.diariolasamericas.com/mundo/crisis-ceuta-obliga-sanchez-adelantar-su-comparecencia-el-congreso-n5401224"
         },
         {
-          "language": "es",
-          "source": "laopiniondezamora.es",
-          "source_country": "spain",
-          "url": "https://www.laopiniondezamora.es/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666664.html"
+          "language": "en",
+          "source": "moroccoworldnews.com",
+          "source_country": "mo",
+          "url": "https://www.moroccoworldnews.com/2026/08/336111/sanchez-to-face-congress-over-spains-response-to-ceuta-migration-crisis/"
         },
         {
-          "language": "es",
-          "source": "levante-emv.com",
-          "source_country": "spain",
-          "url": "https://www.levante-emv.com/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666665.html"
-        },
-        {
-          "language": "es",
-          "source": "elnortedecastilla.es",
-          "source_country": "spain",
-          "url": "https://www.elnortedecastilla.es/sociedad/detenido-jugador-entrenador-voleibol-palmas-presunta-agresion-20260826130136-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "laopiniondemurcia.es",
-          "source_country": "spain",
-          "url": "https://www.laopiniondemurcia.es/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666673.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiariomontanes.es",
-          "source_country": "spain",
-          "url": "https://www.eldiariomontanes.es/sociedad/detenido-jugador-entrenador-voleibol-palmas-presunta-agresion-20260826130136-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "elperiodicoextremadura.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodicoextremadura.com/sucesos/2026/08/26/detenido-entrenador-voleibol-palmas-gran-canaria-presunta-agresion-sexual-menor-133666675.html"
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/26/spagna-sanchez-in-parlamento-il-9-settembre-per-la-crisi-di-ceuta-il-pp-chiede-risposte-pi"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/sociedad/2026-08-25/detenido-un-entrenador-por-violar-y-dejar-embarazada-a-una-menor-en-palma.html",
-      "rank": 5,
+      "origin_country": "mo",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/26/6a8e8c9ce9cf4a001a8b45ab.html",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elpais.com"
+        "elmundo.es",
+        "euronews.com",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5975,
-          "corroboration": 0.3333,
+          "coherence": 0.4018,
+          "corroboration": 0.6,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7241
+          "novelty": 0.3333,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.5683,
+        "total": 0.5653,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "detenido",
+      "subject_label": "ceuta",
       "subject_names": [
-        "abu dabi",
-        "detenido",
-        "palma",
-        "zaragoza"
+        "bolanos",
+        "ceuta",
+        "congreso",
+        "feijoo",
+        "marruecos",
+        "psoe",
+        "sanchez",
+        "vox"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Authorities arrested a volleyball coach in Las Palmas de Gran Canaria on suspicion of sexually assaulting a player who is a minor; some reports say the suspect is also a player and that the allegedly assaulted girl became pregnant. Police detention and investigation were reported by multiple outlets.",
-      "takeaway": "A volleyball coach in Spain has been arrested and the matter is now being handled by Spanish authorities as a criminal case.",
-      "why_it_matters": "The reports indicate a criminal investigation and arrest in Spain affecting the alleged victim, the accused coach/player, and local judicial authorities, with the case entering Spain’s criminal justice process rather than producing any wider Europe-level policy or cross-border consequence."
+      "subject_newsroom_count": 15,
+      "summary": "Prime Minister Pedro Sánchez will appear before Spain's Congress to address the Ceuta migration crisis; the appearance is scheduled for early September (reports indicate dates around September 3–9) and was moved forward in response to the unfolding situation to avoid being compelled to attend later by coalition partners."
+    },
+    {
+      "_linked_ids": [
+        "subject-harald-04aa0f1ecaa9"
+      ],
+      "cluster_id": "subject-harald-04aa0f1ecaa9",
+      "coherence": 0.557155343047112,
+      "consequence": 1,
+      "countries": [
+        "germany",
+        "it",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-27",
+      "headline": "King Harald V of Norway is reported to be in very serious condition",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/gente/2026-08-27/empeora-de-nuevo-el-estado-de-salud-del-rey-harald-de-noruega-se-encuentra-muy-grave.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/gente/rey-harald-noruega-estado-grave-tras-ingreso-20260827093817-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/corazon/casas-reales/20260827/salud-rey-harald-noruega-grave-toda-familia-cancela-actos-institucionales/1003744364294_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-salud-rey-harald-noruega-sufre-empeoramiento-ingreso-hospital-oslo-20260824090630.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/27/norways-king-harald-in-extremely-serious-condition-palace-confirms"
+        },
+        {
+          "language": "de",
+          "source": "muensterschezeitung.de",
+          "source_country": "germany",
+          "url": "https://www.muensterschezeitung.de/leben-und-erleben/unterhaltung/gesundheitszustand-von-koenig-harald-v-sehr-ernst-3628170"
+        },
+        {
+          "language": "de",
+          "source": "az-online.de",
+          "source_country": "germany",
+          "url": "https://www.az-online.de/welt/gesundheitszustand-von-koenig-harald-sehr-ernst-zr-94461908.html"
+        },
+        {
+          "language": "de",
+          "source": "volksstimme.de",
+          "source_country": "germany",
+          "url": "https://www.volksstimme.de/panorama/gesundheitszustand-von-konig-harald-v-sehr-ernst-4308556"
+        },
+        {
+          "language": "de",
+          "source": "sueddeutsche.de",
+          "source_country": "germany",
+          "url": "https://www.sueddeutsche.de/panorama/norwegisches-koenigshaus-gesundheitszustand-von-koenig-harald-v-sehr-ernst-dpa.urn-newsml-dpa-com-20090101-260827-930-589036"
+        },
+        {
+          "language": "de",
+          "source": "weser-kurier.de",
+          "source_country": "germany",
+          "url": "https://www.weser-kurier.de/deutschland-welt/gesundheitszustand-von-koenig-harald-v-sehr-ernst-doc87c6s3a3i1x2c0pbdz8"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/news/2026-08/27/gesundheitszustand-von-koenig-harald-v-sehr-ernst"
+        },
+        {
+          "language": "de",
+          "source": "fnp.de",
+          "source_country": "germany",
+          "url": "http://www.fnp.de/welt/gesundheitszustand-von-koenig-harald-sehr-ernst-zr-94461908.html"
+        }
+      ],
+      "mentioned_countries": [
+        "no"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/internacional/noticia-salud-rey-harald-noruega-sufre-empeoramiento-ingreso-hospital-oslo-20260824090630.html",
+      "rank": 5,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "abc.es",
+        "elespanol.com",
+        "elpais.com",
+        "euronews.com",
+        "europapress.es",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5572,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.75,
+          "source_reliability": 0.7895
+        },
+        "total": 0.5624,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "harald",
+      "subject_names": [
+        "harald"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Norwegian palace sources say King Harald V has been hospitalized and his health has worsened; officials describe his condition as very serious or extremely serious, and members of the royal family have canceled official engagements while he remains under medical care."
     }
   ],
-  "discarded_ingested": 197,
+  "discarded_ingested": 95,
   "discarded_kept": 5,
-  "generated_at": "2026-08-27T03:44:59.985214+00:00",
+  "generated_at": "2026-08-27T08:26:16.627617+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

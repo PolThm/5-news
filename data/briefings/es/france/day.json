@@ -1,154 +1,283 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-nvidia-1b0b7dd14d58",
-      "coherence": 0.4308930044904813,
-      "consequence": 2,
+      "cluster_id": "subject-france-e1dbc3265d8b",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
         "france",
-        "germany",
-        "india",
-        "it",
-        "pl"
+        "it"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-08-27",
-      "headline": "Nvidia acuerda comprar Hugging Face por 12,9 mil millones de dólares",
-      "independent_source_count": 9,
+      "country_count": 2,
+      "editorial_day": "2026-08-28",
+      "headline": "Los mercados empiezan a tratar a Francia como la nueva Italia en deuda",
+      "independent_source_count": 2,
       "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/hugging-face-la-pepite-franco-americaine-de-lia-courtisee-par-le-geant-nvidia-20260827_3K36JCQHLJBGJJGQVTMYSGGRQA/"
-        },
         {
           "language": "fr",
           "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.challenges.fr/entreprise/tech-numerique/129-milliards-de-dollars-pourquoi-nvidia-compte-depenser-une-fortune-pour-soffrir-hugging-face-la-pepite-creee-par-trois-francais_645344"
-        },
-        {
-          "language": "de",
-          "source": "boerse-online.de",
-          "source_country": "germany",
-          "url": "https://www.boerse-online.de/nachrichten/aktien/nvidia-zahlt-129-milliarden-dollar-fuer-150-millionen-umsatz-wer-zum-teufel-ist-hugging-face-20407628.html"
+          "url": "https://www.challenges.fr/politique/la-france-devient-peu-a-peu-la-nouvelle-italie-aux-yeux-des-marches-et-les-politiques-devraient-sen-preoccuper_645366"
         },
         {
           "language": "en",
-          "source": "deccanchronicle.com",
-          "source_country": "india",
-          "url": "https://www.deccanchronicle.com/technology/nvidia-to-buy-ai-platform-hugging-face-for-129-billion-report-1982671"
-        },
-        {
-          "language": "en",
-          "source": "aninews.in",
-          "source_country": "india",
-          "url": "https://aninews.in/news/business/jensen-huang-led-nvidia-to-acquire-ai-startup-hugging-face-for-usd-129-billion20260827121945/"
-        },
-        {
-          "language": "en",
-          "source": "freepressjournal.in",
-          "source_country": "india",
-          "url": "https://www.freepressjournal.in/tech/nvidia-agrees-to-buy-hugging-face-for-123-lakh-crore-in-a-bid-to-strengthen-its-foothold-in-the-ai-industry"
-        },
-        {
-          "language": "it",
-          "source": "teleborsa.it",
+          "source": "ansa.it",
           "source_country": "it",
-          "url": "https://www.teleborsa.it/News/2026/08/27/nvidia-punta-a-rilevare-hugging-face-per-13-miliardi-di-dollari-25.html"
-        },
-        {
-          "language": "it",
-          "source": "hwupgrade.it",
-          "source_country": "it",
-          "url": "https://www.hwupgrade.it/news/web/nvidia-punta-hugging-face-una-possibile-acquisizione-da-12-9-miliardi-di-dollari_158293.html"
-        },
-        {
-          "language": "pol",
-          "source": "bankier.pl",
-          "source_country": "pl",
-          "url": "https://www.bankier.pl/wiadomosc/Nvidia-kupuje-giganta-AI-Transakcja-za-12-9-mld-dolarow-9187815.html"
+          "url": "https://www.ansa.it/english/news/business/2026/08/27/france-replacing-italy-in-market-debt-concerns-ft_a637c036-a7e9-4c2c-999e-aba9663e44a0.html"
         }
       ],
       "mentioned_countries": [
-        "united-states",
-        "france"
+        "france",
+        "it"
       ],
       "origin_country": "france",
-      "outbound_source": "aninews.in",
-      "outbound_url": "https://aninews.in/news/business/jensen-huang-led-nvidia-to-acquire-ai-startup-hugging-face-for-usd-129-billion20260827121945/",
+      "outbound_source": "ansa.it",
+      "outbound_url": "https://www.ansa.it/english/news/business/2026/08/27/france-replacing-italy-in-market-debt-concerns-ft_a637c036-a7e9-4c2c-999e-aba9663e44a0.html",
       "rank": 1,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "challenges.fr",
-        "liberation.fr"
+        "ansa.it",
+        "challenges.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4309,
-          "corroboration": 0.7143,
+          "coherence": 0.5,
+          "corroboration": 0.5,
           "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6494,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "edouard philippe",
+        "france",
+        "francia",
+        "french",
+        "italia",
+        "italie",
+        "italy",
+        "leon xiv",
+        "lfi"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Los artículos coinciden en que los inversores y los mercados de deuda han comenzado a ver a Francia de forma similar a como venían viendo a Italia, mostrando preocupaciones sobre el riesgo soberano francés; señalan que esta evolución en la percepción debería preocupar a los responsables políticos."
+    },
+    {
+      "cluster_id": "subject-colombie-1529dcfdb2aa",
+      "coherence": 0.47387627750368855,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-28",
+      "headline": "Un legionario francés fue secuestrado en Colombia en una zona controlada por guerrilla",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-colombie-qui-sont-ces-mysterieux-guerilleros-soupconnes-d-avoir-enleve-un-soldat-de-la-legion-etrangere-francaise-20260828"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/colombie-un-soldat-de-la-legion-etrangere-francaise-enleve-20260828"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/armee-securite-defense/un-soldat-de-la-legion-etrangere-francaise-a-ete-enleve-debut-aout-dans-une-region-de-colombie-controlee-par-la-guerilla-annonce-l-armee-colombienne_8165993.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-jt/france-2/13-heures/un-legionnaire-francais-enleve-en-colombie-dans-une-region-controlee-par-les-trafiquants-de-drogue_8166545.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260828-colombie-un-caporal-de-la-l%C3%A9gion-%C3%A9trang%C3%A8re-retenu-en-otage-depuis-le-6-ao%C3%BBt"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260828.OBS117732/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie.html"
+        }
+      ],
+      "mentioned_countries": [
+        "co",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/societe/colombie-un-soldat-de-la-legion-etrangere-francaise-enleve-20260828",
+      "rank": 2,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4739,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7143
+          "prominence": 0.5556,
+          "source_reliability": 0.6923
         },
-        "total": 0.6143,
+        "total": 0.6205,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "nvidia",
+      "subject_label": "colombie",
       "subject_names": [
-        "nvidia"
+        "colombie",
+        "legion"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Nvidia ha pactado la adquisición de la plataforma de inteligencia artificial Hugging Face por 12,9 mil millones de dólares. Los artículos coinciden en que Hugging Face es una startup relevante en IA fundada por tres franceses y que la transacción busca reforzar la posición de Nvidia en el sector; la cifra de compra y el nombre de las empresas son los hechos reportados de forma consistente."
+      "subject_newsroom_count": 5,
+      "summary": "A comienzos de agosto un soldado de la Legión extranjera francesa fue retenido como rehén en una región de Colombia donde operan grupos de guerrilla y traficantes; los artículos coinciden en que el hecho ocurrió el 6 de agosto y que el militar permanece en manos de los secuestradores mientras las circunstancias exactas y la identidad precisa de los captores siguen siendo objeto de investigación."
     },
     {
-      "cluster_id": "subject-anne-hidalgo-93e2ebb46f07",
+      "cluster_id": "subject-france-bece03a1f184",
+      "coherence": 0.5151968275270524,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-28",
+      "headline": "Los incendios de este verano en Francia causaron daños por 500 millones de euros",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/economie/article/2026/08/28/le-cout-des-incendies-en-france-evalue-a-pres-de-500-millions-d-euros-selon-france-assureurs_6759045_3234.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/incendies-en-france-500-millions-d-euros-de-degats-selon-les-assureurs-20260828"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/incendies-et-feux-de-foret/le-cout-des-grands-incendies-de-cet-ete-en-gironde-dans-les-landes-et-dans-le-var-evalue-a-un-demi-milliard-d-euros-par-france-assureurs_8166653.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/incendies-en-france-au-moins-500-millions-d-euros-de-dommages-selon-les-assureurs-7957681"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/economie/incendies-en-france-500-millions-d-euros-de-degats-selon-les-assureurs-20260828",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "radiofrance.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5152,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6068,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "edouard philippe",
+        "france",
+        "francia",
+        "french",
+        "leon xiv",
+        "lfi"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Las aseguradoras calculan que los grandes incendios de este verano en Francia, incluidos episodios en Gironda, Las Landas y el Var, ocasionaron alrededor de 500 millones de euros en daños asegurados."
+    },
+    {
+      "cluster_id": "subject-quai-ef9a641435be",
       "coherence": null,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "Anne Hidalgo y Patrick Bloche reciben tres denuncias por violencia en el périscolar de París",
+      "editorial_day": "2026-08-28",
+      "headline": "Cuatro ciudadanos franceses desaparecen tras inundaciones en Nepal y Tíbet",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/08/27/violences-dans-le-periscolaire-a-paris-anne-hidalgo-et-patrick-bloche-directement-vises-par-des-plaintes_6758473_3224.html"
+          "url": "https://www.lemonde.fr/planete/live/2026/08/28/en-direct-inondations-au-nepal-et-au-tibet-le-bilan-s-alourdit-a-584-morts-et-pres-de-2500-disparus-l-ue-debloque-2-millions-d-euros_6758177_3244.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/violences-dans-le-periscolaire-parisien-anne-hidalgo-directement-visee-par-des-plaintes-20260827_RQL6G2J2LJGNTHCYF4Q2RIIDLQ/"
+          "url": "https://www.liberation.fr/international/asie-pacifique/en-direct-inondations-au-nepal-pres-de-470-morts-les-secours-recherchent-encore-plus-de-1-400-personnes-disparues-20260828_3YH7G5YVINEDNCRRIXJI2QORLM/"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/justice/20260827.OBS117709/anne-hidalgo-et-patrick-bloche-vises-par-trois-plaintes-dans-le-scandale-du-periscolaire-a-paris.html"
+          "url": "https://www.france24.com/fr/asie-pacifique/20260828-en-direct-nepal-tibet-chine-crue-meurtriere-nouvelles-coulees-boue-redoutees-aide-humanitaire-touristes"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/police-justice/violences-dans-le-periscolaire-parisien-anne-hidalgo-directement-visee-par-des-plaintes-20260827_RQL6G2J2LJGNTHCYF4Q2RIIDLQ/",
-      "rank": 2,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/planete/live/2026/08/28/en-direct-inondations-au-nepal-et-au-tibet-le-bilan-s-alourdit-a-584-morts-et-pres-de-2500-disparus-l-ue-debloque-2-millions-d-euros_6758177_3244.html",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "france24.com",
         "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com"
+        "liberation.fr"
       ],
       "score": {
         "components": {
@@ -165,259 +294,83 @@
         "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "anne hidalgo",
+      "subject_label": "quai",
       "subject_names": [
-        "anne hidalgo",
-        "france",
-        "francia",
-        "french",
-        "italie",
-        "paris"
+        "quai"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Tres denuncias han sido presentadas que señalan directamente a la alcaldesa de París, Anne Hidalgo, y al concejal Patrick Bloche en relación con hechos de violencia en actividades périscolares en la ciudad; las informaciones coinciden en que ambos están formalmente implicados en las querellas vinculadas al escándalo del servicio périscolar."
+      "subject_newsroom_count": 4,
+      "summary": "Las tres fuentes coinciden en que fuertes inundaciones en la región de Nepal y Tíbet han provocado que el Ministerio de Asuntos Exteriores de Francia confirme la desaparición de cuatro ciudadanos franceses; las informaciones se presentan en formato de crónica en directo sobre la evolución de la crecida."
     },
     {
-      "cluster_id": "subject-sebastien-delogu-9521b4d206ba",
-      "coherence": 0.5378660125055422,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "El diputado de La France Insoumise Sébastien Delogu fue puesto en detención policial en Marsella",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/08/27/le-depute-lfi-sebastien-delogu-place-en-garde-a-vue-a-marseille-apres-une-altercation-avec-des-policiers_6758475_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/garde-a-vue-de-sebastien-delogu-un-depute-peut-il-etre-prive-de-liberte-comme-n-importe-quel-justiciable-20260827"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/marseille/le-depute-lfi-sebastien-delogu-place-en-garde-a-vue-20260827"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/trou-du-cul-sebastien-delogu-porte-plainte-pour-violences-volontaires-apres-une-intervention-policiere-agitee-dans-son-immeuble-20260826_UY6XMAKGJRE57HKQYQI36BVXLI/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/la-france-insoumise/le-depute-insoumis-sebastien-delogu-place-en-garde-a-vue-dans-l-enquete-sur-son-altercation-avec-des-policiers-a-marseille_8165207.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/justice/20260827.OBS117715/le-depute-insoumis-sebastien-delogu-en-garde-a-vue-apres-une-altercation-avec-des-policiers-ce-que-l-on-sait.html"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-8737070"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/politique/la-france-insoumise/le-depute-insoumis-sebastien-delogu-place-en-garde-a-vue-dans-l-enquete-sur-son-altercation-avec-des-policiers-a-marseille_8165207.html#xtor=RSS-3-[lestitres]",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "radiofrance.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5379,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.7241
-        },
-        "total": 0.5683,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sebastien delogu",
-      "subject_names": [
-        "delogu",
-        "marseille",
-        "sebastien delogu"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Las fuentes coinciden en que Sébastien Delogu, diputado de La France Insoumise, fue detenido y colocado en garde à vue en Marsella tras una altercación con policías en su domicilio; la noticia se centra en la intervención policial, la detención temporal del parlamentario y las preguntas legales sobre si un diputado puede ser privado de libertad como cualquier ciudadano."
-    },
-    {
-      "cluster_id": "subject-montparnasse-a13586e884d1",
+      "cluster_id": "subject-france-8d84a91e0321",
       "coherence": null,
-      "consequence": 1,
+      "consequence": 2,
       "countries": [
-        "france"
+        "spain",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "El tráfico en la estación Montparnasse se reanuda tras una avería eléctrica",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/le-trafic-interrompu-a-la-gare-montparnasse-apres-une-panne-dinstallation-electrique-20260827_BICZ2GZTSFGINMZMTHTQPDHU7A/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/transports/trafic/le-trafic-est-interrompu-a-la-gare-paris-montparnasse-au-moins-jusqu-en-debut-d-apres-midi-jeudi-en-raison-d-une-panne-de-signalisation-annonce-la-sncf_8164982.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/economie/transports/train/gare-bondee-et-voyageurs-desempares-apres-la-panne-a-montparnasse-le-trafic-reprend-mais-lentement-0e733748-a21e-11f1-bba4-fb5ac80a227f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/economie/transports/trafic/le-trafic-est-interrompu-a-la-gare-paris-montparnasse-au-moins-jusqu-en-debut-d-apres-midi-jeudi-en-raison-d-une-panne-de-signalisation-annonce-la-sncf_8164982.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "liberation.fr",
-        "ouest-france.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5114,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "montparnasse",
-      "subject_names": [
-        "montparnasse"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Tras una interrupción causada por una «panne d’installation électrique», el tráfico en la estación parisina Montparnasse se reanuda de forma progresiva pero sigue muy perturbado; la estación estuvo llena de viajeros desorientados mientras la SNCF señala que la circulación se restablece lentamente."
-    },
-    {
-      "cluster_id": "subject-france-8289b8db8e19",
-      "coherence": 0.4582999017176921,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "Un conductor arrolla a varias personas en el noroeste de Francia con al menos un muerto",
-      "independent_source_count": 4,
+      "country_count": 2,
+      "editorial_day": "2026-08-28",
+      "headline": "La economía precaria de Francia marcó el primer debate presidencial",
+      "independent_source_count": 2,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-27/un-conductor-atropella-a-un-grupo-de-personas-y-mata-a-dos-personas-en-el-norte-de-francia.html"
+          "url": "https://www.abc.es/internacional/precaria-situacion-economica-francia-centra-primer-debate-20260828120216-nt.html"
         },
         {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20260827/atropello-noroeste-francia-deja-muerto-heridos-descarta-terrorismo-movil/1003744364224_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-atropello-noroeste-francia-deja-menos-un-muerto-una-docena-heridos_7029791_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/internacional/europa/atropello-masivo-francia-deja-muerto-diez-heridos-20260827013409-ntrc.html"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://www.euronews.com/business/2026/08/28/economy-dominates-first-debate-of-french-presidential-candidates"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "spain",
-      "outbound_source": "elcorreo.com",
-      "outbound_url": "https://www.elcorreo.com/internacional/europa/atropello-masivo-francia-deja-muerto-diez-heridos-20260827013409-ntrc.html",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/business/2026/08/28/economy-dominates-first-debate-of-french-presidential-candidates",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "20minutos.es",
-        "elespanol.com",
-        "elpais.com"
+        "abc.es",
+        "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4583,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.5111,
+        "total": 0.5761,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
+        "edouard philippe",
         "france",
         "francia",
         "french",
-        "italie",
-        "paris"
+        "leon xiv",
+        "lfi",
+        "medef"
       ],
       "subject_newsroom_count": 22,
-      "summary": "Un conductor atropelló a varias personas en el noroeste/norte de Francia, causando al menos una víctima mortal y entre diez y doce heridos según las distintas fuentes; las informaciones coinciden en que el suceso fue un atropello múltiple y que las autoridades descartaron el terrorismo como móvil."
+      "summary": "En el primer debate entre los candidatos a la presidencia francesa, la situación económica precaria de Francia fue el tema central, con los participantes enfocándose en cuestiones económicas y su impacto en los votantes."
     }
   ],
-  "discarded_ingested": 33,
+  "discarded_ingested": 29,
   "discarded_kept": 5,
-  "generated_at": "2026-08-27T16:38:28.698046+00:00",
+  "generated_at": "2026-08-28T17:36:34.629110+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

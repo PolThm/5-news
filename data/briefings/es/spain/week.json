@@ -2,37 +2,150 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-nepal-2ba6a2cabb60"
+        "subject-ceuta-41bd93960f26"
       ],
-      "cluster_id": "subject-nepal-2ba6a2cabb60",
-      "coherence": null,
+      "cluster_id": "subject-ceuta-41bd93960f26",
+      "coherence": 0.4006557200302201,
       "consequence": 3,
       "countries": [
+        "france",
+        "mx",
         "spain",
-        "united-states"
+        "sz",
+        "united-kingdom"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-27",
-      "headline": "Desastre en Nepal por colapso de glaciar causa miles de víctimas y deja cuatro españoles sin localizar",
-      "independent_source_count": 3,
+      "country_count": 5,
+      "editorial_day": "2026-08-28",
+      "headline": "Manifestaciones antiinmigrantes en Ceuta derivan en violencia contra migrantes y vecinos",
+      "independent_source_count": 6,
       "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260828-ceuta-enclave-espagne-manifestations-anti-migrants-tournent-violence-crise-migratoire"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/estallido-violencia-racista-ceuta-grupos-organizados-atacan-migrantes-vecinos-musulmanes_1_13470934.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/caza-marroqui-calles-ceuta-trampolin_1_2235528.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cy9zj11gwzxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "es",
+          "source": "lasillarota.com",
+          "source_country": "mx",
+          "url": "https://lasillarota.com/mundo/2026/8/28/tension-y-violencia-en-ceuta-a-un-mes-de-llegada-masiva-de-migrantes-526170.html"
+        },
+        {
+          "language": "fr",
+          "source": "24heures.ch",
+          "source_country": "sz",
+          "url": "https://www.24heures.ch/ceuta-les-manifestations-anti-migrants-degenerent-en-violences-234282667107"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "infolibre.es",
+      "outbound_url": "https://www.infolibre.es/politica/caza-marroqui-calles-ceuta-trampolin_1_2235528.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "eldiario.es",
+        "france24.com",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4007,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6994,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "asamblea",
+        "ceuta",
+        "frontex",
+        "marlaska",
+        "vox"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "En Ceuta, varias marchas y concentraciones contra la inmigración se transformaron en episodios de violencia: grupos de manifestantes atacaron a migrantes y a vecinos musulmanes, produciéndose agresiones, intimidación y tensión social en la ciudad en el contexto de la llegada masiva de personas."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-94c53a7a2ba1"
+      ],
+      "cluster_id": "subject-ceuta-94c53a7a2ba1",
+      "coherence": 0.4788317113589804,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-28",
+      "headline": "España solicita a la UE apoyo de Frontex para el triaje de migrantes en Ceuta",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-08-28/ultima-hora-de-la-entrada-de-inmigrantes-a-ceuta-en-directo.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/ultima-hora-crisis-migratoria-ceuta-directo-comparecencia-congreso-20260827132126-di.html"
+        },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/asia/20260827/inmensa-riada-arrasa-frontera-nepal-tibet-gobierno-katmandu-teme-fallecidos/1003744364207_0.html"
+          "url": "https://www.elespanol.com/espana/20260828/marlaska-pide-ue-apoyo-frontex-mes-despues-invasion-identificar-migrantes-siguen-ceuta/1003744366395_0.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/08/27/6a8fca4121efa0ba2d8b45c9.html"
+          "url": "https://www.elmundo.es/espana/2026/08/28/6a91c14ee85ecefe378b456f.html"
         },
         {
           "language": "es",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://es.euronews.com/2026/08/27/1300-desaparecidos-por-el-colapso-de-un-glaciar-y-una-devastadora-riada-en-nepal-4-espanol"
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-08-28/interior-pide-a-la-ue-apoyo-de-frontex-migrantes-ceuta_4414035/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-espana-solicita-comision-europea-apoyo-frontex-europol-triaje-inmigrantes-irregulares-ceuta-20260828191953.html"
         }
       ],
       "mentioned_countries": [
@@ -40,27 +153,242 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/asia/20260827/inmensa-riada-arrasa-frontera-nepal-tibet-gobierno-katmandu-teme-fallecidos/1003744364207_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_url": "https://www.elespanol.com/espana/20260828/marlaska-pide-ue-apoyo-frontex-mes-despues-invasion-identificar-migrantes-siguen-ceuta/1003744366395_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
         "elespanol.com",
         "elmundo.es",
-        "euronews.com"
+        "elpais.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4788,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.6548,
+        "total": 0.5929,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "asamblea",
+        "ceuta",
+        "espana",
+        "frontex",
+        "marlaska",
+        "spain",
+        "vox"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "El Gobierno español ha pedido a la Comisión Europea y a la agencia Frontex —con mención también de Europol en algunas notas— apoyo para realizar el triaje y la identificación de los migrantes que permanecen en Ceuta tras la entrada masiva ocurrida casi un mes antes; la solicitud se dirige a coordinar asistencia internacional en la gestión de estas personas."
+    },
+    {
+      "_linked_ids": [
+        "subject-holaluz-a7f1f146bf08"
+      ],
+      "cluster_id": "subject-holaluz-a7f1f146bf08",
+      "coherence": 0.4316016220284372,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-28",
+      "headline": "El Gobierno archiva los procedimientos de inhabilitación contra Holaluz",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/holaluz-esquiva-inhabilitacion-parte-gobierno-perder-clientes-20260828180734-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/holaluz-anuncia-archivo-procedimiento-inhabilitacion-reitera-corriente-pago_1_13473317.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/catalunya/2026/08/28/6a91b8d2e5fdea25778b4588.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/28/6a91bc7be4d4d8e02a8b457c.html"
+        },
+        {
+          "language": "es",
+          "source": "elperiodico.com",
+          "source_country": "spain",
+          "url": "https://www.elperiodico.com/es/economia/20260828/gobierno-archiva-expediente-holaluz-133742583"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/noticia-gobierno-archiva-procedimientos-inhabilitacion-traspaso-clientes-contra-holaluz-20260828181216.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/economia/holaluz-anuncia-archivo-procedimiento-inhabilitacion-reitera-corriente-pago_1_13473317.html",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elmundo.es",
+        "europapress.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4316,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.5761,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "holaluz",
+      "subject_names": [
+        "holaluz"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "El Gobierno ha decidido archivar los expedientes de inhabilitación y el posible traspaso de clientes abiertos contra la empresa eléctrica Holaluz; la compañía ha anunciado el archivo del procedimiento y asegura estar al corriente de sus pagos."
+    },
+    {
+      "_linked_ids": [
+        "subject-nepal-00ad2c5d6a61"
+      ],
+      "cluster_id": "subject-nepal-00ad2c5d6a61",
+      "coherence": 0.5678200554516146,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-28",
+      "headline": "Localizan con vida a uno de los tres españoles desaparecidos tras las riadas en Nepal",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-28/rescatado-uno-de-los-tres-espanoles-desaparecidos-tras-las-riadas-en-nepal.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/localizado-vida-tres-espanoles-desaparecidos-inundaciones-nepal-20260828181250-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260828/11621864/localizado-tres-espanoles-desaparecidos-riadas-nepal.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/nepal-localiza-tres-espanoles-desaparecidos-fuerte-riada_1_13473333.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/internacional/localizado-tres-espanoles-desaparecidos-riadas-nepal_1_2235617.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/asia/20260828/nepal-confirma-localizado-espanoles-desaparecidos-riadas/1003744366239_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/08/28/6a912720fdddff77408b4572.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-nepal-anuncia-rescate-tres-espanoles-desaparecidos-fuerte-riada-20260828182209.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/nepal-localiza-uno-tres-espanoles-desaparecidos-riada_7030464_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elnortedecastilla.es",
+          "source_country": "spain",
+          "url": "https://www.elnortedecastilla.es/internacional/asia/localizan-vida-tres-espanoles-desaparecidos-riada-nepal-20260828173956-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "infolibre.es",
+      "outbound_url": "https://www.infolibre.es/internacional/localizado-tres-espanoles-desaparecidos-riadas-nepal_1_2235617.html",
+      "rank": 4,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "infolibre.es",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5678,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7838
+        },
+        "total": 0.5491,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "nepal",
@@ -69,146 +397,30 @@
         "nepal",
         "tibet"
       ],
-      "subject_newsroom_count": 29,
-      "summary": "Un colapso de un glaciar en Nepal provocó una enorme riada que ha dejado miles de víctimas: las autoridades de Katmandú temen hasta unos 15.000 fallecidos y más de 1.300–1.500 personas siguen desaparecidas en Nepal y el Tíbet; el Ministerio de Exteriores confirma que cuatro ciudadanos españoles están aún no localizados."
+      "subject_newsroom_count": 30,
+      "summary": "Las autoridades nepalíes han localizado con vida a uno de los tres ciudadanos españoles que figuraban como desaparecidos tras las fuertes riadas en Nepal; las noticias coinciden en que el rescate ha sido confirmado y en que las inundaciones han causado cientos de fallecidos."
     },
     {
       "_linked_ids": [
-        "subject-ceuta-231d95672500"
+        "subject-tesoro-46fd1b741422"
       ],
-      "cluster_id": "subject-ceuta-231d95672500",
-      "coherence": 0.5128880352454896,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "Gobierno y comunidades aprueban 25 millones para menores migrantes en Ceuta",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/08/27/6a902e60e5fdea1e048b4590.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/27/6a8fe943fc6c83aa4c8b4582.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ccaa-aprueban-ayuda-25-millones-atencion-menores-migrantes-ceuta-20260827122652.html"
-        },
-        {
-          "language": "es",
-          "source": "menorca.info",
-          "source_country": "spain",
-          "url": "https://www.menorca.info/actualidad/nacional/2026/08/27/2696885/aprobado-reparto-millones-para-menores-migrantes-ceuta-apoyo-vox.html"
-        },
-        {
-          "language": "es",
-          "source": "elplural.com",
-          "source_country": "spain",
-          "url": "https://www.elplural.com/autonomias/castilla-la-mancha/gobierno-page-respalda-25-millones-ceuta-pide-proteger-menores-sin-sobrecargar-ccaa_398856102"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ccaa-aprueban-ayuda-25-millones-atencion-menores-migrantes-ceuta-20260827122652.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "europapress.es",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5129,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.6413,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "aznar",
-        "ceuta",
-        "feijoo",
-        "marruecos",
-        "sanchez",
-        "vox"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "El Gobierno y las comunidades autónomas han aprobado un reparto de 25 millones de euros destinado a la atención de menores migrantes en Ceuta; la medida contó con el apoyo de catorce comunidades y no reunió el respaldo del partido Vox, mientras autoridades regionales pidieron proteger a los menores sin sobrecargar a las comunidades autónomas."
-    },
-    {
-      "_linked_ids": [
-        "subject-villena-4aef3b7fa82f"
-      ],
-      "cluster_id": "subject-villena-4aef3b7fa82f",
-      "coherence": 0.5549699222081861,
+      "cluster_id": "subject-tesoro-46fd1b741422",
+      "coherence": null,
       "consequence": 2,
       "countries": [
-        "it",
-        "spain"
+        "germany",
+        "it"
       ],
       "country_count": 2,
-      "editorial_day": "2026-08-27",
-      "headline": "Robaron el Tesoro de Villena, un conjunto singular de la Edad del Bronce",
-      "independent_source_count": 8,
+      "editorial_day": "2026-08-28",
+      "headline": "Roban casi todo el oro del Tesoro de Villena en un asalto relámpago",
+      "independent_source_count": 3,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-08-27/roban-el-tesoro-de-villena-uno-de-los-hallazgos-mas-importantes-de-la-edad-de-bronce-en-europa.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/cultura/oro-villena-tecnologia-punta-edad-bronce-robada-20260827175405-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/sociedad/2026/08/27/6a900bdfe5fdea7c358b456f.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/alicante/20260827/robado-madrugada-tesoro-villena-conjuntos-edad-bronce-importantes-europa/1003744364334_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/cultura/2026/08/27/6a8feab5fdddffca278b4589.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/comunitat-valenciana/noticia-roban-rapido-asalto-tesoro-villena-conjunto-orfebreria-singular-edad-bronce-20260827104629.html"
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/spain-thieves-steal-bronze-age-gold-in-lightning-raid-on-villena-museum/a-78538027?maca=en-rss-en-world-4025-rdf"
         },
         {
           "language": "it",
@@ -217,226 +429,51 @@
           "url": "https://www.repubblica.it/esteri/2026/08/27/news/spagna_villena_tesoro_furto_eta_bronzo-425550300/?rss"
         },
         {
-          "language": "es",
-          "source": "diariodesevilla.es",
-          "source_country": "spain",
-          "url": "https://www.diariodesevilla.es/sociedad/roban-tesoro-villena-valiosos-edad_0_2007803671.html"
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-28/spagna-assalto-al-tesoro-di-villena-delleta-del-bronzo-trafugato-quasi-tutto-loro/19614775/"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "it",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/alicante/20260827/robado-madrugada-tesoro-villena-conjuntos-edad-bronce-importantes-europa/1003744364334_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
+      "origin_country": "germany",
+      "outbound_source": "repubblica.it",
+      "outbound_url": "https://www.repubblica.it/esteri/2026/08/27/news/spagna_villena_tesoro_furto_eta_bronzo-425550300/?rss",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "abc.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "expansion.com",
+        "dw.com",
         "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.555,
+          "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.4667,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7419
+          "prominence": 0.4286,
+          "source_reliability": 0.4667
         },
-        "total": 0.639,
+        "total": 0.5475,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "villena",
+      "subject_label": "tesoro",
       "subject_names": [
-        "bronce",
-        "bruxelles",
-        "europa",
-        "europe",
-        "spanish",
-        "union",
+        "tesoro",
         "villena"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Varios asaltantes encapuchados sustrajeron en pocos minutos el Tesoro de Villena, una colección de orfebrería de la Edad del Bronce considerada entre las más importantes y valiosas de Europa; las autoridades han abierto una investigación sobre el robo y la sustracción de piezas de oro y metalistería de alta tecnología para su época."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-e41a6716e90a"
-      ],
-      "cluster_id": "subject-ceuta-e41a6716e90a",
-      "coherence": 0.4371995066239034,
-      "consequence": 2,
-      "countries": [
-        "ar",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-27",
-      "headline": "Detienen a migrantes tras ataque con piedras a una patrulla militar en Ceuta",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/27/6a8fed1c21efa0fe388b45b6.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260827/detenidos-migrantes-apedrear-militares-ceuta-heridos/1003744364358_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-27/detenidos-12-migrantes-ceuta-atacar-patrulla-militar-soldado_4412878/"
-        },
-        {
-          "language": "es",
-          "source": "urgente24.com",
-          "source_country": "ar",
-          "url": "https://urgente24.com/mundo/fuerte-emboscada-al-ejercito-ceuta-4-heridos-y-12-detenidos-n631511"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-08-27/detenidos-12-migrantes-ceuta-atacar-patrulla-militar-soldado_4412878/",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elconfidencial.com",
-        "elespanol.com",
-        "elmundo.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4372,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5652,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "aznar",
-        "ceuta",
-        "feijoo",
-        "marruecos",
-        "sanchez",
-        "vox"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "En Ceuta, un grupo de migrantes atacó con piedras a un vehículo y a una patrulla del Ejército, resultando varios militares con contusiones que recibieron atención médica; las fuerzas de seguridad arrestaron entre 10 y 12 personas relacionadas con el incidente según las distintas fuentes."
-    },
-    {
-      "_linked_ids": [
-        "subject-bolanos-cb53ca9bdf5c"
-      ],
-      "cluster_id": "subject-bolanos-cb53ca9bdf5c",
-      "coherence": 0.44588049457965495,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-27",
-      "headline": "Bolaños afirma que el Gobierno no tuvo información precisa sobre la llegada masiva a Ceuta",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-27/bolanos-reconoce-que-no-hay-normalidad-en-ceuta-y-que-no-tenian-datos-de-la-magnitud-de-la-llegada.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/bolanos-achaca-llegada-masiva-inmigrantes-ceuta-mala-20260827110454-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/27/6a8ff068e4d4d8f71f8b459e.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-bolanos-remarca-gobierno-no-tenia-informacion-previa-precisa-entrada-migrantes-ceuta-20260827122745.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-bolanos-remarca-gobierno-no-tenia-informacion-previa-precisa-entrada-migrantes-ceuta-20260827122745.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4459,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5585,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bolanos",
-      "subject_names": [
-        "aznar",
-        "bolanos",
-        "ceuta",
-        "cni",
-        "feijoo",
-        "marruecos",
-        "robles",
-        "sanchez",
-        "vox"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "El ministro Bolaños reconoció que no había normalidad en Ceuta y declaró que el Gobierno no dispuso de información \"previa ni precisa\" sobre la magnitud de la entrada masiva de migrantes, rechazando así que existiera aviso anticipado sobre el alcance del suceso."
+      "subject_newsroom_count": 6,
+      "summary": "En un robo ocurrido en el Museo de Villena, en España, ladrones sustrajeron en minutos gran parte del Tesoro de Villena, un conjunto de piezas de oro de la Edad del Bronce considerado entre los más importantes de ese periodo; el atraco fue rápido y se llevaron la mayor parte del metal precioso expuesto."
     }
   ],
-  "discarded_ingested": 49,
+  "discarded_ingested": 37,
   "discarded_kept": 5,
-  "generated_at": "2026-08-27T16:38:28.698046+00:00",
+  "generated_at": "2026-08-28T17:36:34.629110+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

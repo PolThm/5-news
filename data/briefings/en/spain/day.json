@@ -1,128 +1,21 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ceuta-41bd93960f26",
-      "coherence": 0.4006557200302201,
-      "consequence": 3,
+      "cluster_id": "subject-ceuta-7df657ca9455",
+      "coherence": 0.5073398888023342,
+      "consequence": 2,
       "countries": [
-        "france",
-        "mx",
+        "germany",
+        "it",
+        "nl",
         "spain",
-        "sz",
-        "united-kingdom"
+        "united-states"
       ],
       "country_count": 5,
       "editorial_day": "2026-08-28",
-      "headline": "Anti-migrant demonstrations in Ceuta turn violent",
-      "independent_source_count": 6,
+      "headline": "Spain asks EU for Frontex and Europol help to process migrants in Ceuta",
+      "independent_source_count": 14,
       "members": [
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260828-ceuta-enclave-espagne-manifestations-anti-migrants-tournent-violence-crise-migratoire"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/estallido-violencia-racista-ceuta-grupos-organizados-atacan-migrantes-vecinos-musulmanes_1_13470934.html"
-        },
-        {
-          "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/caza-marroqui-calles-ceuta-trampolin_1_2235528.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cy9zj11gwzxo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "es",
-          "source": "lasillarota.com",
-          "source_country": "mx",
-          "url": "https://lasillarota.com/mundo/2026/8/28/tension-y-violencia-en-ceuta-a-un-mes-de-llegada-masiva-de-migrantes-526170.html"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/ceuta-les-manifestations-anti-migrants-degenerent-en-violences-234282667107"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "infolibre.es",
-      "outbound_url": "https://www.infolibre.es/politica/caza-marroqui-calles-ceuta-trampolin_1_2235528.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "eldiario.es",
-        "france24.com",
-        "infolibre.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4007,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.7108,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "asamblea",
-        "ceuta",
-        "frontex",
-        "marlaska",
-        "vox"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Organized anti-migrant demonstrations in the Spanish city of Ceuta escalated into violence, with protesters attacking migrants and some Muslim residents; clashes occurred amid ongoing tensions following a recent mass arrival of migrants."
-    },
-    {
-      "cluster_id": "subject-ceuta-94c53a7a2ba1",
-      "coherence": 0.4788317113589804,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-28",
-      "headline": "Spain asks EU for Frontex support to screen migrants in Ceuta",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-28/ultima-hora-de-la-entrada-de-inmigrantes-a-ceuta-en-directo.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/ultima-hora-crisis-migratoria-ceuta-directo-comparecencia-congreso-20260827132126-di.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/20260828/marlaska-pide-ue-apoyo-frontex-mes-despues-invasion-identificar-migrantes-siguen-ceuta/1003744366395_0.html"
-        },
         {
           "language": "es",
           "source": "elmundo.es",
@@ -131,157 +24,211 @@
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-28/interior-pide-a-la-ue-apoyo-de-frontex-migrantes-ceuta_4414035/"
-        },
-        {
-          "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
           "url": "https://www.europapress.es/nacional/noticia-espana-solicita-comision-europea-apoyo-frontex-europol-triaje-inmigrantes-irregulares-ceuta-20260828191953.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/espana/20260828/marlaska-pide-ue-apoyo-frontex-mes-despues-invasion-identificar-migrantes-siguen-ceuta/1003744366395_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "abc.es",
-        "elconfidencial.com",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4788,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
         },
-        "total": 0.6329,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "asamblea",
-        "ceuta",
-        "espana",
-        "frontex",
-        "marlaska",
-        "spain",
-        "vox"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Spanish authorities have formally requested assistance from the European Union’s border agency Frontex, and also sought support from EU bodies including Europol and the European Commission, to carry out triage and identification of irregular migrants who remain in Ceuta following a large-scale entry nearly a month earlier."
-    },
-    {
-      "cluster_id": "subject-holaluz-a7f1f146bf08",
-      "coherence": 0.4316016220284372,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-28",
-      "headline": "Spanish government drops disqualification proceedings against Holaluz",
-      "independent_source_count": 6,
-      "members": [
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-08/ceuta-migrationskrise-spanien-eu-frontex-asyl"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/28/ceuta-warns-it-is-on-the-brink-of-collapse-as-spain-seeks-frontex-and-europol-help"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2628716"
+        },
+        {
+          "language": "es",
+          "source": "larazon.es",
+          "source_country": "spain",
+          "url": "https://www.larazon.es/espana/marlaska-pide-apoyo-frontex-mes-despues-invasion-identificar-migrantes-que-siguen-ceuta_202608286a91c5abd16f763504a43e7c.html"
+        },
+        {
+          "language": "es",
+          "source": "antena3.com",
+          "source_country": "spain",
+          "url": "https://www.antena3.com/noticias/espana/espana-solicita-refuerzos-gestionar-crisis-migratoria-ceuta_202608286a91c8d0d16f763504a44487.html"
+        },
+        {
+          "language": "es",
+          "source": "diariosur.es",
+          "source_country": "spain",
+          "url": "https://www.diariosur.es/nacional/espana-solicita-comision-europea-apoyo-frontex-europol-20260828193520-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "publico.es",
+          "source_country": "spain",
+          "url": "https://www.publico.es/politica/gobierno-solicita-apoyo-frontex-frente-crisis-migratoria-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/politica/20260828/11621912/espana-pide-ue-apoyo-frontex-triaje-migrantes-permanecen-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "efe.com",
+          "source_country": "united-states",
+          "url": "https://efe.com/espana/2026-08-28/espana-ayuda-europa-migrantes-ceuta/"
+        },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/economia/holaluz-esquiva-inhabilitacion-parte-gobierno-perder-clientes-20260828180734-nt.html"
+          "url": "https://www.abc.es/espana/espana-pide-mes-despues-ue-apoyo-frontex-20260828193734-nt.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/holaluz-anuncia-archivo-procedimiento-inhabilitacion-reitera-corriente-pago_1_13473317.html"
+          "url": "https://www.20minutos.es/nacional/espana-pide-apoyo-union-europea-triaje-migrantes-ceuta_7030491_0.html"
         },
         {
-          "language": "es",
-          "source": "expansion.com",
+          "language": "glg",
+          "source": "diariosigloxxi.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/catalunya/2026/08/28/6a91b8d2e5fdea25778b4588.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/economia/empresas/2026/08/28/6a91bc7be4d4d8e02a8b457c.html"
-        },
-        {
-          "language": "es",
-          "source": "elperiodico.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodico.com/es/economia/20260828/gobierno-archiva-expediente-holaluz-133742583"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/economia/noticia-gobierno-archiva-procedimientos-inhabilitacion-traspaso-clientes-contra-holaluz-20260828181216.html"
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260828191953/espana-solicita-comision-europea-apoyo-frontex-europol-triaje-inmigrantes-irregulares-ceuta"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/economia/holaluz-anuncia-archivo-procedimiento-inhabilitacion-reitera-corriente-pago_1_13473317.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
+      "origin_country": "germany",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-espana-solicita-comision-europea-apoyo-frontex-europol-triaje-inmigrantes-irregulares-ceuta-20260828191953.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
+        "20minutos.es",
         "abc.es",
-        "eldiario.es",
         "elmundo.es",
+        "euronews.com",
         "europapress.es",
-        "expansion.com"
+        "lavanguardia.com",
+        "nos.nl",
+        "zeit.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.4316,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
+          "coherence": 0.5073,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
+          "prominence": 0.7778,
+          "source_reliability": 0.8182
         },
-        "total": 0.6161,
+        "total": 0.6681,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "holaluz",
+      "subject_label": "ceuta",
       "subject_names": [
-        "holaluz"
+        "ceuta",
+        "espana",
+        "frontex",
+        "gobierno",
+        "marruecos",
+        "peninsula"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "The Spanish government has closed the administrative procedures that could have disqualified Holaluz and prevented the transfer of its customers. Holaluz confirmed the file was archived and said it is up to date with payments; the government’s decision halts the planned sanctions and the potential traspaso of the company’s client base."
+      "subject_newsroom_count": 20,
+      "summary": "About a month after a mass arrival in Ceuta, the Spanish government has formally requested assistance from the European Commission, asking for Frontex and Europol support to carry out triage, identification and management of irregular migrants who remain in the city; local authorities have warned of severe strain on Ceuta's capacity."
     },
     {
-      "cluster_id": "subject-nepal-00ad2c5d6a61",
-      "coherence": 0.5678200554516146,
+      "cluster_id": "subject-ceuta-2daefea6dde1",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "united-kingdom"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-28",
+      "headline": "Clashes in Ceuta as anti-migrant protesters attack camp and confront police",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cy9zj11gwzxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/protesters-set-fire-to-migrant-camp-in-ceuta/a-78538847?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/protesters-set-fire-to-migrant-camp-in-ceuta/a-78538847?maca=en-rss-en-world-4025-rdf",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "dw.com",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6496,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "espana",
+        "frontex",
+        "gobierno",
+        "marruecos",
+        "peninsula"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Violence erupted in the Spanish enclave of Ceuta where anti-migrant protesters set fire to a migrant camp and clashed with police; authorities used crowd-control measures as residents and officers faced confrontations amid an ongoing migrant crisis."
+    },
+    {
+      "cluster_id": "subject-nepal-97b1772f5e1e",
+      "coherence": 0.47513057507070156,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-28",
-      "headline": "One of three Spaniards missing after Nepal floods found alive",
+      "editorial_day": "2026-08-29",
+      "headline": "One of three Spaniards missing after Nepal floods has been found alive",
       "independent_source_count": 10,
       "members": [
         {
@@ -289,12 +236,6 @@
           "source": "elpais.com",
           "source_country": "spain",
           "url": "https://elpais.com/internacional/2026-08-28/rescatado-uno-de-los-tres-espanoles-desaparecidos-tras-las-riadas-en-nepal.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/localizado-vida-tres-espanoles-desaparecidos-inundaciones-nepal-20260828181250-nt.html"
         },
         {
           "language": "es",
@@ -310,27 +251,15 @@
         },
         {
           "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/internacional/localizado-tres-espanoles-desaparecidos-riadas-nepal_1_2235617.html"
-        },
-        {
-          "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/asia/20260828/nepal-confirma-localizado-espanoles-desaparecidos-riadas/1003744366239_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/08/28/6a912720fdddff77408b4572.html"
+          "url": "https://www.elespanol.com/mundo/asia/20260829/nepal-confirma-localizacion-segundo-espanol-desaparecido-riada/1003744366642_0.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-nepal-anuncia-rescate-tres-espanoles-desaparecidos-fuerte-riada-20260828182209.html"
+          "url": "https://www.europapress.es/internacional/noticia-nepal-contacta-segundo-espanol-desaparecido-catastrofica-riada-rasuwa-20260829112438.html"
         },
         {
           "language": "es",
@@ -340,43 +269,58 @@
         },
         {
           "language": "es",
-          "source": "elnortedecastilla.es",
+          "source": "cope.es",
           "source_country": "spain",
-          "url": "https://www.elnortedecastilla.es/internacional/asia/localizan-vida-tres-espanoles-desaparecidos-riada-nepal-20260828173956-ntrc.html"
+          "url": "https://www.cope.es/actualidad/internacional/noticias/nepal-anuncia-rescate-tres-ciudadanos-espanoles-desaparecidos-devastadoras-inundaciones-20260828_3426853.html"
+        },
+        {
+          "language": "es",
+          "source": "latribunadetoledo.es",
+          "source_country": "spain",
+          "url": "https://www.latribunadetoledo.es/noticia/z3a7e9eac-a0bc-4574-98e34cc1c26d77e4/202608/localizado-uno-de-los-tres-espanoles-desaparecidos-en-nepal"
+        },
+        {
+          "language": "es",
+          "source": "diariosigloxxi.com",
+          "source_country": "spain",
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260828182209/nepal-anuncia-rescate-tres-espanoles-desaparecidos-fuerte-riada"
+        },
+        {
+          "language": "es",
+          "source": "diariopalentino.es",
+          "source_country": "spain",
+          "url": "https://www.diariopalentino.es/noticia/z3a7e9eac-a0bc-4574-98e34cc1c26d77e4/202608/localizado-uno-de-los-tres-espanoles-desaparecidos-en-nepal"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "infolibre.es",
-      "outbound_url": "https://www.infolibre.es/internacional/localizado-tres-espanoles-desaparecidos-riadas-nepal_1_2235617.html",
-      "rank": 4,
-      "reference_newsroom_count": 9,
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/nepal-localiza-tres-espanoles-desaparecidos-fuerte-riada_1_13473333.html",
+      "rank": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
         "eldiario.es",
         "elespanol.com",
-        "elmundo.es",
         "elpais.com",
         "europapress.es",
-        "infolibre.es",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5678,
+          "coherence": 0.4751,
           "corroboration": 0.3333,
-          "editorial_weight": 0.5294,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
           "prominence": 0.7143,
-          "source_reliability": 0.7838
+          "source_reliability": 0.7647
         },
-        "total": 0.6025,
+        "total": 0.5662,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "nepal",
@@ -385,80 +329,264 @@
         "nepal",
         "tibet"
       ],
-      "subject_newsroom_count": 30,
-      "summary": "Nepalese authorities have located one of three Spanish citizens who were reported missing following severe floods in Nepal. The discovery occurred amid rescue operations as the country grapples with a high death toll from the floods, with hundreds confirmed dead."
+      "subject_newsroom_count": 27,
+      "summary": "Authorities in Nepal have located and rescued one of three Spanish citizens who went missing during severe floods and landslides in the Rasuwa area; later updates indicate a second missing Spanish person has been contacted by officials."
     },
     {
-      "cluster_id": "subject-tesoro-46fd1b741422",
-      "coherence": null,
-      "consequence": 2,
+      "cluster_id": "subject-mallorca-fb89e6ac6cba",
+      "coherence": 0.6336388441315963,
+      "consequence": 1,
       "countries": [
-        "germany",
-        "it"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-28",
-      "headline": "Thieves steal almost all Bronze Age gold from Villena museum in quick raid",
-      "independent_source_count": 3,
+      "country_count": 1,
+      "editorial_day": "2026-08-29",
+      "headline": "Two Mallorca youth players detained for secretly recording sexual encounter with a minor",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/spain-thieves-steal-bronze-age-gold-in-lightning-raid-on-villena-museum/a-78538027?maca=en-rss-en-world-4025-rdf"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/sociedad/2026-08-29/detenidos-dos-canteranos-del-mallorca-por-grabar-relaciones-sexuales-con-una-menor-en-una-vivienda-de-palma.html"
         },
         {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/08/27/news/spagna_villena_tesoro_furto_eta_bronzo-425550300/?rss"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/baleares/dos-canteranos-rcd-mallorca-detenidos-grabar-escondidas-20260829104007-nt.html"
         },
         {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-08-28/spagna-assalto-al-tesoro-di-villena-delleta-del-bronzo-trafugato-quasi-tutto-loro/19614775/"
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/illes-balears/detenidos-canteranos-rcd-mallorca-grabar-escondidas-encuentro-sexual-menor_1_13474062.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/deportes/futbol/20260829/detenidos-canteranos-mallorca-grabar-relaciones-sexuales-chica/1003744366648_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/08/29/6a92a4dce4d4d887608b458c.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "germany",
-      "outbound_source": "repubblica.it",
-      "outbound_url": "https://www.repubblica.it/esteri/2026/08/27/news/spagna_villena_tesoro_furto_eta_bronzo-425550300/?rss",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/illes-balears/detenidos-canteranos-rcd-mallorca-grabar-escondidas-encuentro-sexual-menor_1_13474062.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "dw.com",
-        "repubblica.it"
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "coherence": 0.6336,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.4667
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.5809,
+        "total": 0.5643,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "tesoro",
+      "subject_label": "mallorca",
       "subject_names": [
-        "tesoro",
-        "villena"
+        "mallorca"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Sometime during a lightning raid lasting only minutes, thieves broke into the museum in Villena, Spain, and stole nearly all of the Villena Treasure, one of the most important Bronze Age gold hoards; the theft removed almost the entire collection of gold artifacts housed there."
+      "subject_newsroom_count": 5,
+      "summary": "Two youth players from RCD Mallorca were arrested after they secretly recorded a sexual encounter with a minor in a flat in Palma; authorities say the recording was made without the girl’s consent and led to their detention."
+    },
+    {
+      "cluster_id": "subject-haakon-viii-ca4ce81b8a94",
+      "coherence": 0.440101564218052,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "co",
+        "france",
+        "germany",
+        "it",
+        "lo",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 9,
+      "editorial_day": "2026-08-29",
+      "filled_from": "europe",
+      "headline": "Haakon VIII becomes King of Norway following death of King Harald V",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/29/haakon-viii-devient-le-nouveau-roi-de-norvege-apres-la-mort-de-son-pere-harald-v_6759580_3210.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-28/haakon-viii-de-noruega-asciende-al-trono-en-un-momento-de-gran-turbulencia-familiar.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/haakon-asume-tron-noruega-llora-muerte-rey-20260828011350-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260828/11621594/haakon-viii-llega-trono-peor-momento-monarquia-noruega.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/harald-v-haakon-viii-sera-sucesion-noruega-muerte-rey_1_13472078.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cm2rzxrdr71o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cp841114eg6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/norwegen-harald-haakon-koenig-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/28/norways-new-monarch-king-haakon-viii-his-life-role-and-challenges-ahead"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/28/norway-mourns-king-harald-v-as-crown-prince-haakon-becomes-king"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/08/28/nx-s1-5947778/norways-king-harald-v-dies-king-haakon-viii"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/norways-crown-prince-becomes-king-haakon-viii-after-his-fathers-death"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/28/principe-herdeiro-da-noruega-se-torna-rei-haakon-8o-apos-morte-do-pai.ghtml"
+        },
+        {
+          "language": "slk",
+          "source": "pluska.sk",
+          "source_country": "lo",
+          "url": "https://www1.pluska.sk/spravy/kto-je-haakon-viii-novy-norsky-kral-ma-manzelku-spajanu-s-epsteinom-aj-problemoveho-syna"
+        },
+        {
+          "language": "es",
+          "source": "portafolio.co",
+          "source_country": "co",
+          "url": "https://www.portafolio.co/internacional/tras-la-muerte-del-rey-harald-v-su-hijo-haakon-viii-se-prepara-para-jurar-como-el-nuevo-monarca-de-noruega-501363"
+        },
+        {
+          "language": "pt",
+          "source": "istoe.com.br",
+          "source_country": "brazil",
+          "url": "https://istoe.com.br/morte-rei-harald-v-noruega-haakon-viii-assume"
+        }
+      ],
+      "mentioned_countries": [
+        "no"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "npr.org",
+      "outbound_url": "https://www.npr.org/2026/08/28/nx-s1-5947778/norways-king-harald-v-dies-king-haakon-viii",
+      "rank": 5,
+      "reference_newsroom_count": 11,
+      "reference_newsrooms": [
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "globo.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "npr.org",
+        "pbs.org",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4401,
+          "corroboration": 0.8182,
+          "editorial_weight": 0.5789,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.8491
+        },
+        "total": 0.7494,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "haakon viii",
+      "subject_names": [
+        "haakon",
+        "haakon viii",
+        "harald",
+        "king haakon",
+        "muere",
+        "norvege",
+        "norway's",
+        "norway's king",
+        "oslo",
+        "uganda",
+        "viii"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "King Harald V of Norway has died, and his son Haakon has succeeded him as King Haakon VIII; Norway is mourning the late monarch while the new king prepares to begin his reign amid a difficult period for the royal family."
     }
   ],
-  "discarded_ingested": 37,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-08-28T17:36:34.629110+00:00",
+  "generated_at": "2026-08-29T10:20:48.318763+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

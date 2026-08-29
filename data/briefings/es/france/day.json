@@ -1,6 +1,80 @@
 {
   "clusters": [
     {
+      "cluster_id": "subject-colombie-f8b0a0c70df7",
+      "coherence": 0.6171197228407216,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-29",
+      "headline": "Un soldado de la Legión Extranjera francesa fue secuestrado en Colombia",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-colombie-l-enlevement-d-un-soldat-de-la-legion-etrangere-francaise-defie-la-nouvelle-ligne-dure-du-pouvoir-20260829"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-colombie-qui-sont-ces-mysterieux-guerilleros-soupconnes-d-avoir-enleve-un-soldat-de-la-legion-etrangere-francaise-20260828"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/ameriques/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie_8167193.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260828.OBS117732/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "co"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260828.OBS117732/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6171,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
+        },
+        "total": 0.6757,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "colombie",
+      "subject_names": [
+        "colombie",
+        "legion"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Varios medios coinciden en que un militar de la Legión Extranjera francesa fue secuestrado en Colombia; las informaciones indican que el hecho habría sido atribuido a un grupo guerrillero desconocido o emergente en la región, que mantiene prácticas de ataques y secuestros, y que el suceso plantea un desafío a la nueva política de mano dura del gobierno colombiano mientras las autoridades investigan y siguen el caso."
+    },
+    {
       "cluster_id": "subject-france-e1dbc3265d8b",
       "coherence": null,
       "consequence": 3,
@@ -10,7 +84,7 @@
       ],
       "country_count": 2,
       "editorial_day": "2026-08-28",
-      "headline": "Los mercados empiezan a tratar a Francia como la nueva Italia en deuda",
+      "headline": "Francia empieza a reemplazar a Italia como foco de preocupación de los mercados",
       "independent_source_count": 2,
       "members": [
         {
@@ -33,7 +107,7 @@
       "origin_country": "france",
       "outbound_source": "ansa.it",
       "outbound_url": "https://www.ansa.it/english/news/business/2026/08/27/france-replacing-italy-in-market-debt-concerns-ft_a637c036-a7e9-4c2c-999e-aba9663e44a0.html",
-      "rank": 1,
+      "rank": 2,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "ansa.it",
@@ -44,215 +118,118 @@
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6494,
+        "total": 0.6143,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
-        "edouard philippe",
+        "fitch",
         "france",
         "francia",
-        "french",
-        "italia",
         "italie",
-        "italy",
-        "leon xiv",
-        "lfi"
+        "lfi",
+        "paris"
       ],
-      "subject_newsroom_count": 22,
-      "summary": "Los artículos coinciden en que los inversores y los mercados de deuda han comenzado a ver a Francia de forma similar a como venían viendo a Italia, mostrando preocupaciones sobre el riesgo soberano francés; señalan que esta evolución en la percepción debería preocupar a los responsables políticos."
+      "subject_newsroom_count": 17,
+      "summary": "Los artículos coinciden en que los mercados financieros han empezado a ver a Francia de forma similar a como antes veían a Italia, con creciente preocupación por la deuda y el riesgo soberano, y advierten que esta evolución debería ser motivo de atención para los responsables políticos franceses."
     },
     {
-      "cluster_id": "subject-colombie-1529dcfdb2aa",
-      "coherence": 0.47387627750368855,
+      "cluster_id": "subject-france-cfcc58a653e1",
+      "coherence": 0.4649229855935678,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-28",
-      "headline": "Un legionario francés fue secuestrado en Colombia en una zona controlada por guerrilla",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/en-colombie-qui-sont-ces-mysterieux-guerilleros-soupconnes-d-avoir-enleve-un-soldat-de-la-legion-etrangere-francaise-20260828"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/colombie-un-soldat-de-la-legion-etrangere-francaise-enleve-20260828"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/armee-securite-defense/un-soldat-de-la-legion-etrangere-francaise-a-ete-enleve-debut-aout-dans-une-region-de-colombie-controlee-par-la-guerilla-annonce-l-armee-colombienne_8165993.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/replay-jt/france-2/13-heures/un-legionnaire-francais-enleve-en-colombie-dans-une-region-controlee-par-les-trafiquants-de-drogue_8166545.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260828-colombie-un-caporal-de-la-l%C3%A9gion-%C3%A9trang%C3%A8re-retenu-en-otage-depuis-le-6-ao%C3%BBt"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260828.OBS117732/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie.html"
-        }
-      ],
-      "mentioned_countries": [
-        "co",
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/colombie-un-soldat-de-la-legion-etrangere-francaise-enleve-20260828",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4739,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6923
-        },
-        "total": 0.6205,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "colombie",
-      "subject_names": [
-        "colombie",
-        "legion"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "A comienzos de agosto un soldado de la Legión extranjera francesa fue retenido como rehén en una región de Colombia donde operan grupos de guerrilla y traficantes; los artículos coinciden en que el hecho ocurrió el 6 de agosto y que el militar permanece en manos de los secuestradores mientras las circunstancias exactas y la identidad precisa de los captores siguen siendo objeto de investigación."
-    },
-    {
-      "cluster_id": "subject-france-bece03a1f184",
-      "coherence": 0.5151968275270524,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-28",
-      "headline": "Los incendios de este verano en Francia causaron daños por 500 millones de euros",
+      "editorial_day": "2026-08-29",
+      "headline": "Fitch mantiene la calificación A+ de Francia con perspectiva estable",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/08/28/le-cout-des-incendies-en-france-evalue-a-pres-de-500-millions-d-euros-selon-france-assureurs_6759045_3234.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/economie/incendies-en-france-500-millions-d-euros-de-degats-selon-les-assureurs-20260828"
+          "url": "https://www.liberation.fr/economie/notation-de-la-france-lagence-fitch-juge-leconomie-tricolore-resiliente-et-ne-change-rien-20260829_LNFKQZR3PVDNZNNJPIH3E4JTEY/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/incendies-et-feux-de-foret/le-cout-des-grands-incendies-de-cet-ete-en-gironde-dans-les-landes-et-dans-le-var-evalue-a-un-demi-milliard-d-euros-par-france-assureurs_8166653.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/economie/croissance/l-agence-de-notation-fitch-maintient-la-note-a-de-la-france-et-sa-perspective-stable-grace-a-une-economie-importante-et-diversifiee_8167253.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "radiofrance.fr",
+          "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/incendies-en-france-au-moins-500-millions-d-euros-de-dommages-selon-les-assureurs-7957681"
+          "url": "https://www.challenges.fr/economie/une-economie-vaste-diversifiee-et-a-haut-revenu-pourquoi-fitch-a-maintenu-la-note-de-la-france-a-a_645391"
+        },
+        {
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/economie/dette-publique-fitch-maintient-la-note-de-la-france-a-a-28-08-2026-IHJWGQLL6VGRFFXV6KCPTKIUDI.php"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/economie/incendies-en-france-500-millions-d-euros-de-degats-selon-les-assureurs-20260828",
+      "outbound_source": "leparisien.fr",
+      "outbound_url": "https://www.leparisien.fr/economie/dette-publique-fitch-maintient-la-note-de-la-france-a-a-28-08-2026-IHJWGQLL6VGRFFXV6KCPTKIUDI.php",
       "rank": 3,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "challenges.fr",
         "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "radiofrance.fr"
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5152,
+          "coherence": 0.4649,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.5789
         },
-        "total": 0.6068,
+        "total": 0.5852,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
-        "edouard philippe",
+        "fitch",
         "france",
         "francia",
-        "french",
-        "leon xiv",
-        "lfi"
+        "italie",
+        "lfi",
+        "paris"
       ],
-      "subject_newsroom_count": 22,
-      "summary": "Las aseguradoras calculan que los grandes incendios de este verano en Francia, incluidos episodios en Gironda, Las Landas y el Var, ocasionaron alrededor de 500 millones de euros en daños asegurados."
+      "subject_newsroom_count": 17,
+      "summary": "La agencia Fitch confirmó la nota A+ de Francia y mantuvo la perspectiva estable, citando que Francia tiene una economía amplia, diversificada y de altos ingresos; las evaluaciones coinciden en que la situación económica es resiliente y por ello no se modificó la calificación."
     },
     {
-      "cluster_id": "subject-quai-ef9a641435be",
-      "coherence": null,
-      "consequence": 2,
+      "cluster_id": "subject-nepal-9b0dbdcd91e6",
+      "coherence": 0.47244554444480036,
+      "consequence": 1,
       "countries": [
-        "france"
+        "france",
+        "germany"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-28",
-      "headline": "Cuatro ciudadanos franceses desaparecen tras inundaciones en Nepal y Tíbet",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-08-29",
+      "headline": "Cuatro ciudadanos franceses reportados como desaparecidos tras inundaciones en Nepal y Tíbet",
+      "independent_source_count": 6,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/live/2026/08/28/en-direct-inondations-au-nepal-et-au-tibet-le-bilan-s-alourdit-a-584-morts-et-pres-de-2500-disparus-l-ue-debloque-2-millions-d-euros_6758177_3244.html"
-        },
         {
           "language": "fr",
           "source": "liberation.fr",
@@ -261,23 +238,127 @@
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/asie-pacifique/20260828-en-direct-nepal-tibet-chine-crue-meurtriere-nouvelles-coulees-boue-redoutees-aide-humanitaire-touristes"
+          "url": "https://www.franceinfo.fr/replay-jt/france-2/20-heures/crues-meurtrieres-au-nepal-et-au-tibet-qui-sont-les-francais-disparus_8167130.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/inondations-et-crues/crues-meurtrieres-au-nepal-et-au-tibet/deux-de-mes-collaborateurs-ont-disparu-un-guide-francais-habitue-de-la-region-temoigne-apres-les-crues-meurtrieres-au-nepal_8166752.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/asie-pacifique/20260828-crue-d%C3%A9vastatrice-au-n%C3%A9pal-et-au-tibet-quatre-fran%C3%A7ais-port%C3%A9s-disparus"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260828.OBS117749/crues-meurtrieres-au-nepal-ce-que-l-on-sait-des-quatre-francais-portes-disparus.html"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/monde/nepal/crue-devastatrice-au-nepal-qui-sont-les-quatre-francais-toujours-portes-disparus-88819e42-a36f-11f1-8465-547a0964275c?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "guadeloupe.franceantilles.fr",
+          "source_country": "germany",
+          "url": "https://www.guadeloupe.franceantilles.fr/actualite/international/les-disparus-dans-les-crues-devastatrices-au-nepal-et-en-chine-1091231.php"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/planete/live/2026/08/28/en-direct-inondations-au-nepal-et-au-tibet-le-bilan-s-alourdit-a-584-morts-et-pres-de-2500-disparus-l-ue-debloque-2-millions-d-euros_6758177_3244.html",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/inondations-et-crues/crues-meurtrieres-au-nepal-et-au-tibet/deux-de-mes-collaborateurs-ont-disparu-un-guide-francais-habitue-de-la-region-temoigne-apres-les-crues-meurtrieres-au-nepal_8166752.html#xtor=RSS-3-%5Bgeneral%5D",
       "rank": 4,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4724,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7143
+        },
+        "total": 0.566,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "nepal",
+      "subject_names": [
+        "china",
+        "chine",
+        "himalaya",
+        "nepal",
+        "nepal-tibet",
+        "quai",
+        "tibet"
+      ],
+      "subject_newsroom_count": 27,
+      "summary": "Las fuentes coinciden en que devastadoras crecidas e inundaciones en Nepal y en regiones del Tíbet han dejado varios muertos y dañadas infraestructuras, y que cuatro ciudadanos franceses han sido declarados desaparecidos; medios recogen que las autoridades y conocidos de las víctimas confirman la búsqueda y citan testimonios de personas próximas, sin aportar por ahora más detalles identificativos o el resultado de las labores de localización."
+    },
+    {
+      "cluster_id": "subject-france-19eb0eae3268",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-29",
+      "headline": "La SDJ de France Inter critica la incorporación de Charles Sapin",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/actualite-medias/article/2026/08/29/la-societe-des-journalistes-de-france-inter-denonce-l-arrivee-a-l-antenne-d-un-dirigeant-de-valeurs-actuelles_6759920_3236.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/medias/une-ligne-rouge-la-sdj-de-france-inter-denonce-larrivee-a-lantenne-dun-dirigeant-de-valeurs-actuelles-20260829_ECQZCUNZARCEPNKP3326E6CA6U/"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/teleobs/20260828.OBS117747/charles-sapin-la-nouvelle-recrue-editoriale-de-france-inter-venue-de-valeurs-actuelles-qui-fait-hurler-la-redaction.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/teleobs/20260828.OBS117747/charles-sapin-la-nouvelle-recrue-editoriale-de-france-inter-venue-de-valeurs-actuelles-qui-fait-hurler-la-redaction.html",
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "france24.com",
         "lemonde.fr",
-        "liberation.fr"
+        "liberation.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
@@ -286,91 +367,32 @@
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5848,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "quai",
-      "subject_names": [
-        "quai"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Las tres fuentes coinciden en que fuertes inundaciones en la región de Nepal y Tíbet han provocado que el Ministerio de Asuntos Exteriores de Francia confirme la desaparición de cuatro ciudadanos franceses; las informaciones se presentan en formato de crónica en directo sobre la evolución de la crecida."
-    },
-    {
-      "cluster_id": "subject-france-8d84a91e0321",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "spain",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-28",
-      "headline": "La economía precaria de Francia marcó el primer debate presidencial",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/precaria-situacion-economica-francia-centra-primer-debate-20260828120216-nt.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://www.euronews.com/business/2026/08/28/economy-dominates-first-debate-of-french-presidential-candidates"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/business/2026/08/28/economy-dominates-first-debate-of-french-presidential-candidates",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "abc.es",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.5761,
+        "total": 0.5114,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
-        "edouard philippe",
+        "fitch",
         "france",
+        "france inter",
         "francia",
-        "french",
-        "leon xiv",
+        "italie",
         "lfi",
-        "medef"
+        "paris",
+        "valeurs"
       ],
-      "subject_newsroom_count": 22,
-      "summary": "En el primer debate entre los candidatos a la presidencia francesa, la situación económica precaria de Francia fue el tema central, con los participantes enfocándose en cuestiones económicas y su impacto en los votantes."
+      "subject_newsroom_count": 17,
+      "summary": "La sociedad de periodistas de France Inter ha denunciado la llegada a la antena de Charles Sapin, responsable editorial procedente de la revista conservadora Valeurs actuelles, y considera que su incorporación ha provocado un fuerte malestar interno en la redacción."
     }
   ],
-  "discarded_ingested": 29,
+  "discarded_ingested": 33,
   "discarded_kept": 5,
-  "generated_at": "2026-08-28T17:36:34.629110+00:00",
+  "generated_at": "2026-08-29T10:20:48.318763+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

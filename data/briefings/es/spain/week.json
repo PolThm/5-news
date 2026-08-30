@@ -15,7 +15,7 @@
       ],
       "country_count": 3,
       "editorial_day": "2026-08-28",
-      "headline": "Disturbios y enfrentamientos en Ceuta tras protestas contra migrantes",
+      "headline": "Disturbios en Ceuta tras enfrentamientos entre manifestantes y migrantes",
       "independent_source_count": 3,
       "members": [
         {
@@ -55,407 +55,346 @@
           "coherence": 0.5,
           "corroboration": 0.6,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 0.5,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.6529,
+        "total": 0.6488,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
         "ceuta",
-        "espana",
         "frontex",
-        "gobierno"
+        "marlaska",
+        "marruecos"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "Manifestantes en Ceuta se enfrentaron a la policía y prendieron fuego a un campamento de migrantes, provocando disturbios en la ciudad autónoma. Las escenas incluyeron confrontaciones entre antidisturbios y grupos que protestaban contra la presencia de migrantes, y autoridades intervinieron para controlar la situación."
+      "subject_newsroom_count": 15,
+      "summary": "En Ceuta se registraron choques entre manifestantes y fuerzas de seguridad en el contexto de la crisis migratoria; protestas incluyeron incendios en un campamento de migrantes y enfrentamientos con la policía mientras las autoridades intervenían para restablecer el orden."
     },
     {
       "_linked_ids": [
-        "subject-ceuta-01a35b696262",
-        "subject-ceuta-7df657ca9455"
+        "subject-nepal-15a37d598913"
       ],
-      "cluster_id": "subject-ceuta-01a35b696262",
-      "coherence": 0.5499807651358803,
+      "cluster_id": "subject-nepal-15a37d598913",
+      "coherence": 0.47313570814095973,
       "consequence": 2,
       "countries": [
-        "germany",
-        "it",
-        "nl",
-        "spain"
+        "spain",
+        "united-states"
       ],
-      "country_count": 4,
+      "country_count": 2,
       "editorial_day": "2026-08-29",
-      "headline": "España pide ayuda de Frontex y Europol para gestionar migración en Ceuta",
-      "independent_source_count": 10,
+      "headline": "Riada en Nepal causa cerca de 700 muertos y deja dos españoles desaparecidos",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/28/6a91c14ee85ecefe378b456f.html"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/politik/ausland/2026-08/ceuta-migrationskrise-spanien-eu-frontex-asyl"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/28/ceuta-warns-it-is-on-the-brink-of-collapse-as-spain-seeks-frontex-and-europol-help"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2628716"
-        },
-        {
-          "language": "nl",
-          "source": "drimble.nl",
-          "source_country": "nl",
-          "url": "https://drimble.nl/buitenlands-nieuws/107834047/spanje-vraagt-eu-grensbewaking-om-bijstand-voor-controleren-migranten-in-ceuta.html"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/news/2026-08/28/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta"
-        },
-        {
-          "language": "de",
-          "source": "finanzen.net",
-          "source_country": "germany",
-          "url": "https://www.finanzen.net/nachricht/aktien/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-15907355"
-        },
-        {
-          "language": "de",
-          "source": "finanznachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69440996-spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-016.htm"
-        },
-        {
-          "language": "de",
-          "source": "noz.de",
-          "source_country": "germany",
-          "url": "https://www.noz.de/deutschland-welt/politik/artikel/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-51263978"
-        },
-        {
-          "language": "de",
-          "source": "schwaebische.de",
-          "source_country": "germany",
-          "url": "https://www.schwaebische.de/politik/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-4816601"
-        },
-        {
-          "language": "de",
-          "source": "come-on.de",
-          "source_country": "germany",
-          "url": "http://www.come-on.de/politik/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-zr-94465288.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/08/28/6a91c14ee85ecefe378b456f.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "euronews.com",
-        "nos.nl",
-        "zeit.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.55,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.5,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6223,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "frontex",
-        "gobierno"
-      ],
-      "subject_newsroom_count": 19,
-      "summary": "El Gobierno español ha solicitado el apoyo de la agencia europea de fronteras Frontex y de Europol para ayudar en el triaje y gestión de los migrantes que permanecen en Ceuta, después de una llegada masiva que dejó a la ciudad al borde del colapso; las solicitudes buscan reforzar controles, procesamiento de solicitudes y coordinación ante la crisis humanitaria y de seguridad."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-1c097fe643f7"
-      ],
-      "cluster_id": "subject-ceuta-1c097fe643f7",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "El PP se personará en la causa por la crisis de Ceuta y pide la comparecencia de la directora del CNI",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/08/29/6a929a81e5fdea96148b457a.html"
+          "url": "https://www.lavanguardia.com/internacional/20260829/11622228/nepal-eleva-dos-espanoles-localizados-riada-633-muertos.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/29/6a92c2ede85ece47038b459c.html"
+          "url": "https://www.eldiario.es/internacional/nepal-eleva-610-muertos-violenta-riada-continuan-operaciones-zona-cero_1_13473947.html"
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-29/feijoo-y-rajoy-abren-el-curso-del-pp-en-galicia_4414189/"
+          "url": "https://www.20minutos.es/internacional/exteriores-confirma-que-dos-espanoles-siguen-desaparecidos-tras-riada-nepal-que-deja-cerca-700-muertos_7030651_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/nepal-eleva-dos-los-espanoles-localizados-tras-violenta-riada-que-ya-deja-633-muertos_7030557_0.html"
+        },
+        {
+          "language": "es",
+          "source": "efe.com",
+          "source_country": "united-states",
+          "url": "https://efe.com/espana/2026-08-29/espanoles-desaparecidos-nepal/"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-08-29/feijoo-y-rajoy-abren-el-curso-del-pp-en-galicia_4414189/",
-      "rank": 3,
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/nepal-eleva-610-muertos-violenta-riada-continuan-operaciones-zona-cero_1_13473947.html",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "elmundo.es",
-        "expansion.com"
+        "20minutos.es",
+        "eldiario.es",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
+          "coherence": 0.4731,
+          "corroboration": 0.5,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.6364
         },
-        "total": 0.5448,
+        "total": 0.5665,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "nepal",
       "subject_names": [
-        "ceuta",
-        "cni",
-        "espana",
-        "feijoo",
-        "frontex",
-        "gobierno"
+        "nepal",
+        "nepal-tibet"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "El Partido Popular ha anunciado que se personará en la causa abierta en la Audiencia Nacional por la crisis de Ceuta y ha pedido la comparecencia de la directora del Centro Nacional de Inteligencia; el líder del partido ha reclamado explicaciones públicas y ha afirmado que hay versiones contradictorias sobre los hechos."
+      "subject_newsroom_count": 25,
+      "summary": "Una violenta riada en Nepal ha provocado alrededor de 669–700 víctimas mortales según los artículos, y las autoridades españolas confirman que dos ciudadanos españoles continúan desaparecidos tras el desastre; en algunos textos se informa además que dos españoles han sido localizados mientras persisten búsquedas."
     },
     {
       "_linked_ids": [
-        "subject-mallorca-fb89e6ac6cba"
+        "subject-ceuta-582449ee5c32"
       ],
-      "cluster_id": "subject-mallorca-fb89e6ac6cba",
-      "coherence": 0.6326151134698965,
-      "consequence": 1,
+      "cluster_id": "subject-ceuta-582449ee5c32",
+      "coherence": 0.4646165687234949,
+      "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "Detienen a dos canteranos del Mallorca por grabar relaciones sexuales con una menor",
+      "editorial_day": "2026-08-30",
+      "headline": "El Gobierno aprobará un paquete de 165 millones de euros para Ceuta",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-08-29/detenidos-dos-canteranos-del-mallorca-por-grabar-relaciones-sexuales-con-una-menor-en-una-vivienda-de-palma.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/baleares/dos-canteranos-rcd-mallorca-detenidos-grabar-escondidas-20260829104007-nt.html"
+          "url": "https://elpais.com/espana/2026-08-30/sanchez-destina-otros-165-millones-a-recuperar-ceuta-y-aplacar-una-crisis-que-altera-el-nuevo-curso.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/illes-balears/detenidos-canteranos-rcd-mallorca-grabar-escondidas-encuentro-sexual-menor_1_13474062.html"
+          "url": "https://www.eldiario.es/politica/gobierno-aprobara-proximo-martes-plan-emergencia-ceuta-165-millones_1_13475109.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20260829/detenidos-canteranos-mallorca-grabar-relaciones-sexuales-chica/1003744366648_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/08/29/6a92a4dce4d4d887608b458c.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/illes-balears/detenidos-canteranos-rcd-mallorca-grabar-escondidas-encuentro-sexual-menor_1_13474062.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6326,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5108,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "mallorca",
-      "subject_names": [
-        "mallorca"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Dos jugadores de la cantera del RCD Mallorca fueron detenidos en Palma por haber grabado en secreto un encuentro sexual con una chica menor de edad en una vivienda; los arrestos se produjeron tras conocerse la existencia de las grabaciones y las investigaciones iniciales fueron recogidas por varios medios que coinciden en los hechos básicos."
-    },
-    {
-      "_linked_ids": [
-        "subject-nepal-00ad2c5d6a61",
-        "subject-nepal-2bf692003be4",
-        "subject-nepal-97b1772f5e1e"
-      ],
-      "cluster_id": "subject-nepal-2bf692003be4",
-      "coherence": 0.4941916936843703,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "Nepal localiza con vida al menos a uno de los tres españoles desaparecidos",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-28/rescatado-uno-de-los-tres-espanoles-desaparecidos-tras-las-riadas-en-nepal.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260828/11621864/localizado-tres-espanoles-desaparecidos-riadas-nepal.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nepal-localiza-tres-espanoles-desaparecidos-fuerte-riada_1_13473333.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/asia/20260829/nepal-confirma-localizacion-segundo-espanol-desaparecido-riada/1003744366642_0.html"
+          "url": "https://www.elconfidencial.com/espana/2026-08-30/el-gobierno-inyecta-165-millones-de-euros-a-ceuta-para-evitar-el-colapso-financiero-tras-la-crisis-migratoria_4414391/"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-nepal-contacta-segundo-espanol-desaparecido-catastrofica-riada-rasuwa-20260829112438.html"
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-aprobara-proximo-martes-paquete-165-millones-ayudar-ceuta-20260830110634.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "diariodeburgos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/nepal-localiza-uno-tres-espanoles-desaparecidos-riada_7030464_0.html"
+          "url": "https://www.diariodeburgos.es/noticia/zee8432b3-3959-4c88-8f19ee47076dd313/202608/el-gobierno-aprobara-165-millones-para-ayudar-a-ceuta"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/nepal-localiza-tres-espanoles-desaparecidos-fuerte-riada_1_13473333.html",
-      "rank": 5,
-      "reference_newsroom_count": 6,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-08-30/sanchez-destina-otros-165-millones-a-recuperar-ceuta-y-aplacar-una-crisis-que-altera-el-nuevo-curso.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
+        "elconfidencial.com",
         "eldiario.es",
-        "elespanol.com",
         "elpais.com",
-        "europapress.es",
-        "lavanguardia.com"
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4942,
+          "coherence": 0.4646,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.5642,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "frontex",
+        "marlaska",
+        "marruecos"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "El Ejecutivo destinará un plan de emergencia por 165 millones de euros a Ceuta para recuperar la ciudad y atajar las consecuencias de la reciente crisis migratoria, con la aprobación prevista el próximo martes y el objetivo de evitar el colapso financiero y facilitar la recuperación del curso escolar y los servicios afectados."
+    },
+    {
+      "_linked_ids": [
+        "subject-viena-18f111b14103",
+        "subject-villena-4aef3b7fa82f"
+      ],
+      "cluster_id": "subject-viena-18f111b14103",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "germany",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-27",
+      "headline": "Sustraen el Tesoro de Villena, un valioso conjunto de oro de la Edad del Bronce",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/sociedad/2026/08/27/6a900bdfe5fdea7c358b456f.html"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/spain-thieves-steal-bronze-age-gold-in-lightning-raid-on-villena-museum/a-78538027?maca=en-rss-en-world-4025-rdf"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/sociedad/2026/08/27/6a900bdfe5fdea7c358b456f.html",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "dw.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.5,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.5198,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "viena",
+      "subject_names": [
+        "viena",
+        "villena"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Del museo de Villena, en España, fueron robadas piezas del Tesoro de Villena, un conjunto de oro datado en la Edad del Bronce y considerado de gran valor en Europa; el robo se produjo en una acción rápida y sorpresiva llevada a cabo por ladrones."
+    },
+    {
+      "_linked_ids": [
+        "subject-pogacar-0978f692a8fe"
+      ],
+      "cluster_id": "subject-pogacar-0978f692a8fe",
+      "coherence": 0.4089698373291554,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-30",
+      "headline": "Tadej Pogacar abandona la Vuelta tras una fuerte caída",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/sports/cyclisme/tadej-pogacar-contraint-a-labandon-sur-la-vuelta-apres-une-lourde-chute-20260829_4QNFH43D5FCPFOM2KZLK3RVCLA/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20260830-vuelta-l-immense-frayeur-de-pogacar-une-lourde-chute-et-un-abandon"
+        },
+        {
+          "language": "es",
+          "source": "teleamazonas.com",
+          "source_country": "united-states",
+          "url": "https://www.teleamazonas.com/deportes/otros-deportes/ciclismo/tadej-pogacar-caida-abandona-vuelta-espana-126617/"
+        },
+        {
+          "language": "es",
+          "source": "diaridetarragona.com",
+          "source_country": "spain",
+          "url": "https://www.diaridetarragona.com/deportes/polideportivo/269491/tadej-pogacar-abandona-vuelta-dura-caida-valencia.html"
+        },
+        {
+          "language": "es",
+          "source": "lavozdigital.es",
+          "source_country": "spain",
+          "url": "https://www.lavozdigital.es/deportes/pogacar-retira-vuelta-durisima-caida-correra-cadiz-20260829173919-ntv.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "diaridetarragona.com",
+      "outbound_url": "https://www.diaridetarragona.com/deportes/polideportivo/269491/tadej-pogacar-abandona-vuelta-dura-caida-valencia.html",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "france24.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.409,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6
         },
-        "total": 0.4948,
+        "total": 0.4744,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "nepal",
+      "subject_label": "pogacar",
       "subject_names": [
-        "himalaya",
-        "nepal",
-        "nepal-tibet",
-        "tibet"
+        "pogacar",
+        "tadej pogacar"
       ],
-      "subject_newsroom_count": 29,
-      "summary": "Las autoridades nepalíes han localizado con vida a uno de los tres ciudadanos españoles que estaban desaparecidos tras las fuertes riadas en la región de Rasuwa; posteriormente las mismas fuentes confirmaron contacto con un segundo español desaparecido."
+      "subject_newsroom_count": 8,
+      "summary": "Tadej Pogacar se vio obligado a abandonar la Vuelta a España después de sufrir una fuerte caída durante la carrera; los artículos coinciden en que el accidente fue violento y que, como consecuencia, no pudo continuar en la competición."
     }
   ],
-  "discarded_ingested": 34,
+  "discarded_ingested": 35,
   "discarded_kept": 5,
-  "generated_at": "2026-08-29T11:44:38.373053+00:00",
+  "generated_at": "2026-08-30T10:35:48.222148+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

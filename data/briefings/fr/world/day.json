@@ -1,61 +1,257 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-1d92e29e4ec7",
-      "coherence": 0.5062303745649288,
+      "cluster_id": "subject-ratko-mladic-6d513b538698",
+      "coherence": 0.4537007695931199,
       "consequence": 3,
       "countries": [
         "brazil",
-        "china",
-        "fi",
         "france",
-        "germany",
-        "india",
+        "id",
         "it",
-        "mx",
-        "ni",
-        "nl",
         "spain",
-        "sy",
-        "td",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 15,
-      "editorial_day": "2026-08-29",
-      "headline": "Trump annonce un accord pour contrôler 65 milliards de barils de pétrole vénézuélien",
-      "independent_source_count": 46,
+      "country_count": 7,
+      "editorial_day": "2026-08-30",
+      "headline": "Ratko Mladić, général serbe bosniaque condamné pour génocide, est mort",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260827.OBS117713/le-boucher-de-bosnie-ratko-mladic-condamne-pour-genocide-apres-la-guerre-est-mort.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260827/11621127/muere-ratko-mladic.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/muere-ratko-mladic-carnicero-bosnia-condenado-genocidio-srebrenica_1_13470688.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c5ywxpryj95o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/27/convicted-bosnian-serb-war-criminal-ratko-mladic-dies-in-hague-prison"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/08/29/nx-s1-5947879/srebrenica-survivor-ahmed-hrustanovic-reflects-on-ratko-mladics-death"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "en.tempo.co",
+          "source_country": "id",
+          "url": "https://en.tempo.co/read/2118544/ratko-mladic-the-man-behind-srebrenica-massacre-dies-at-84"
+        }
+      ],
+      "mentioned_countries": [
+        "bk"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml",
+      "rank": 1,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "eldiario.es",
+        "euronews.com",
+        "globo.com",
+        "lavanguardia.com",
+        "nouvelobs.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4537,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7419
+        },
+        "total": 0.7613,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ratko mladic",
+      "subject_names": [
+        "bosnia'",
+        "mladic",
+        "muere",
+        "ratko mladic"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Ratko Mladić, le général serbe bosniaque condamné pour son rôle dans le génocide de Srebrenica et d’autres crimes de guerre pendant la guerre en Bosnie, est décédé à 84 ans en détention à La Haye. Les articles indiquent qu’il avait été reconnu coupable et condamnés par un tribunal international, et sa mort suscite des réactions, notamment de survivants de Srebrenica."
+    },
+    {
+      "cluster_id": "subject-kiev-cf69df293078",
+      "coherence": 0.44443910723375757,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "mx",
+        "spain"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-30",
+      "headline": "Une frappe russe sur un dépôt près de Kiev tue 37 personnes",
+      "independent_source_count": 10,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/29/donald-trump-annonce-la-mainmise-americaine-sur-le-petrole-venezuelien_6759434_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/08/29/pres-de-kiev-une-attaque-russe-tue-37-personnes-et-pose-la-question-de-la-presence-d-installations-sensibles-en-zone-urbaine_6760334_3210.html"
         },
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/29/donald-trump-annonce-un-accord-petrolier-avec-le-venezuela-pour-donner-aux-etats-unis-le-controle-de-65-milliards-de-barils-des-reserves-du-pays_6759300_3210.html"
+          "url": "https://www.nouvelobs.com/monde/20260829.OBS117770/au-moins-37-morts-apres-une-frappe-russe-sur-un-depot-de-munitions-pres-de-kiev-ce-que-l-on-sait.html"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260829-etats-unis-trump-annonce-un-accord-p%C3%A9trolier-avec-le-venezuela"
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-37-morts-apres-une-frappe-russe-contre-un-depot-darmes-kiev-denonce-une-negligence-QQLZ25NSCZDNVBWPFS5BYI5R3A/"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20260829-les-etats-unis-et-le-venezuela-annoncent-un-accord-p%C3%A9trolier-historique"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-29/al-menos-27-muertos-en-un-bombardeo-ruso-contra-kiev-en-uno-de-los-peores-ataques-de-la-guerra.html"
         },
         {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260829-donald-trump-annonce-accord-p%C3%A9trolier-historique-avec-venezuela"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/muertos-heridos-nuevo-ataque-ruso-centro-logistico-20260829125529-nt.html"
         },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/27-muertos-42-heridos-ataque-rusia-almacen-cerca-kiev_1_13474141.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/una-ola-ataques-rusos-contra-centros-logisticos-kiev-deja-menos-27-muertos-40-heridos_7030568_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/29/ataque-aereo-russo-mata-ao-menos-27-na-regiao-de-kiev-diz-autoridade-ucraniana.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "horacero.com.mx",
+          "source_country": "mx",
+          "url": "https://horacero.com.mx/internacional/ofensiva-rusa-kiev"
+        },
+        {
+          "language": "es",
+          "source": "razon.com.mx",
+          "source_country": "mx",
+          "url": "https://www.razon.com.mx/mundo/2026/08/29/ataque-ruso-contra-deposito-de-municiones-en-kiev-ucrania-deja-37-muertos-y-40-heridos/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/29/ataque-aereo-russo-mata-ao-menos-27-na-regiao-de-kiev-diz-autoridade-ucraniana.ghtml",
+      "rank": 2,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "globo.com",
+        "lemonde.fr",
+        "lexpress.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4444,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7778
+        },
+        "total": 0.7603,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "kiev",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "russia",
+        "russian",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Une attaque russe a frappé un dépôt de munitions ou un entrepôt militaire près de Kiev, faisant au moins 37 morts et une quarantaine de blessés selon les bilans rapportés; l'attaque est décrite comme l'une des plus meurtrières récentes et a suscité des questions sur la présence d'installations sensibles en zone urbaine et des critiques de Kiev sur la gestion/négligence autour du site."
+    },
+    {
+      "cluster_id": "subject-trump-386d4c57f6d8",
+      "coherence": 0.46739754517651344,
+      "consequence": 2,
+      "countries": [
+        "ar",
+        "brazil",
+        "ca",
+        "cu",
+        "france",
+        "germany",
+        "it",
+        "spain",
+        "sy",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 11,
+      "editorial_day": "2026-08-30",
+      "headline": "Trump annonce un accord pour prendre le contrôle de 65 milliards de barils de pétrole vénézulet",
+      "independent_source_count": 18,
+      "members": [
         {
           "language": "fr",
           "source": "lexpress.fr",
@@ -84,13 +280,13 @@
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-anuncia-acuerdo-historico-venezuela-controlar-reservas-petroleras-duplicar-eeuu_1_13473939.html"
+          "url": "https://www.eldiario.es/internacional/venezuela-anuncia-acuerdo-petrolero-trump-tendra-vigencia-25-anos-mantendra-soberania-recursos_1_13474907.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/20260829/trump-anuncia-historico-acuerdo-petrolero-venezuela-eeuu-duplicara-reservas-crudo/1003744366560_0.html"
+          "url": "https://www.eldiario.es/internacional/trump-anuncia-acuerdo-historico-venezuela-controlar-reservas-petroleras-duplicar-eeuu_1_13473939.html"
         },
         {
           "language": "es",
@@ -123,12 +319,6 @@
           "url": "http://www.euronews.com/2026/08/29/us-strikes-deal-to-control-more-than-65-billion-barrels-of-venezuelas-oil-reserves"
         },
         {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2628729"
-        },
-        {
           "language": "en",
           "source": "npr.org",
           "source_country": "united-states",
@@ -148,188 +338,227 @@
         },
         {
           "language": "en",
-          "source": "naharnet.com",
+          "source": "capeandislands.org",
+          "source_country": "united-states",
+          "url": "https://www.capeandislands.org/2026-08-29/trump-says-u-s-has-struck-a-deal-for-control-of-venezuelan-oil-reserves"
+        },
+        {
+          "language": "en",
+          "source": "havanatimes.org",
+          "source_country": "cu",
+          "url": "https://havanatimes.org/news/trump-and-delcy-announce-major-usa-venezuela-oil-deal/"
+        },
+        {
+          "language": "en",
+          "source": "globalnews.ca",
+          "source_country": "ca",
+          "url": "https://globalnews.ca/news/12040400/trump-us-venezuela-oil-reserves/"
+        },
+        {
+          "language": "es",
+          "source": "laarena.com.ar",
+          "source_country": "ar",
+          "url": "http://www.laarena.com.ar/el-mundo/trump-anuncio-el-mayor-acuerdo-petrolero-de-la-historia-mundial-con-venezuela-202682911260"
+        },
+        {
+          "language": "es",
+          "source": "hispantv.com",
           "source_country": "sy",
-          "url": "https://www.naharnet.com:443/stories/en/322138-trump-announces-deal-for-huge-us-stake-in-venezuelan-oil-reserves"
-        },
-        {
-          "language": "en",
-          "source": "coast1009.com",
-          "source_country": "united-states",
-          "url": "https://coast1009.com/uncategorized/trump-says-us-has-entered-deal-with-venezuela-to-take-control-of-65-billion-barrels-of-oil-reserves/"
-        },
-        {
-          "language": "en",
-          "source": "moneycontrol.com",
-          "source_country": "india",
-          "url": "https://www.moneycontrol.com/world/trump-hails-biggest-oil-deal-with-venezuela-us-to-gain-control-over-65-billion-barrels-article-14018111.html"
-        },
-        {
-          "language": "en",
-          "source": "nigerianeye.com",
-          "source_country": "ni",
-          "url": "https://www.nigerianeye.com/2026/08/trump-announces-biggest-oil-deal-in.html"
-        },
-        {
-          "language": "en",
-          "source": "wnyc.org",
-          "source_country": "united-states",
-          "url": "https://wnyc.org/npr/nx-s1-5948229"
-        },
-        {
-          "language": "en",
-          "source": "kpbs.org",
-          "source_country": "united-states",
-          "url": "https://www.kpbs.org/news/politics/2026/08/28/trump-says-u-s-has-entered-deal-with-venezuela-to-take-control-of-65-billion-barrels-of-oil-reserves"
-        },
-        {
-          "language": "en",
-          "source": "kval.com",
-          "source_country": "united-states",
-          "url": "https://kval.com/news/nation-world/trump-says-us-enters-deal-with-venezuela-to-control-of-65-billion-barrels-of-oil-reserves-the-biggest-oil-deal-in-world-history-rubio-hegseth-gas-prices-gasoline-pumps-iran-war"
-        },
-        {
-          "language": "en",
-          "source": "ktul.com",
-          "source_country": "united-states",
-          "url": "https://ktul.com/news/nation-world/trump-says-us-enters-deal-with-venezuela-to-control-of-65-billion-barrels-of-oil-reserves-the-biggest-oil-deal-in-world-history-rubio-hegseth-gas-prices-gasoline-pumps-iran-war"
-        },
-        {
-          "language": "en",
-          "source": "kmbc.com",
-          "source_country": "united-states",
-          "url": "https://www.kmbc.com/article/trump-venezuela-take-control-oil-reserves/73557625"
-        },
-        {
-          "language": "en",
-          "source": "wndu.com",
-          "source_country": "united-states",
-          "url": "https://www.wndu.com/2026/08/28/trump-says-us-has-entered-deal-with-venezuela-take-control-65-billion-barrels-oil-reserves/"
-        },
-        {
-          "language": "en",
-          "source": "guardian.co.tt",
-          "source_country": "td",
-          "url": "https://www.guardian.co.tt/news/trump-says-us-has-entered-deal-with-venezuela-to-take-control-of-65-billion-barrels-of-oil-reserves-6.2.2655488.d8e6e81c35"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://1440wgig.iheart.com/content/2026-08-28-trump-announces-major-usvenezuela-oil-deal/"
-        },
-        {
-          "language": "en",
-          "source": "fox17online.com",
-          "source_country": "united-states",
-          "url": "https://www.fox17online.com/science-and-tech/energy/trump-announces-deal-to-secure-billions-of-barrels-of-venezuelan-oil-for-the-us"
-        },
-        {
-          "language": "en",
-          "source": "wxyz.com",
-          "source_country": "united-states",
-          "url": "https://www.wxyz.com/science-and-tech/energy/trump-announces-deal-to-secure-billions-of-barrels-of-venezuelan-oil-for-the-us"
-        },
-        {
-          "language": "en",
-          "source": "moneycontrol.com",
-          "source_country": "india",
-          "url": "https://www.moneycontrol.com/world/trump-claims-us-has-secured-biggest-oil-deal-with-venezuela-says-gas-prices-will-fall-article-14017879.html"
-        },
-        {
-          "language": "en",
-          "source": "wncw.org",
-          "source_country": "united-states",
-          "url": "https://www.wncw.org/2026-08-28/trump-says-u-s-has-entered-deal-with-venezuela-to-take-control-of-65-billion-barrels-of-oil-reserves"
-        },
-        {
-          "language": "en",
-          "source": "ktvh.com",
-          "source_country": "united-states",
-          "url": "https://www.ktvh.com/science-and-tech/energy/trump-announces-deal-to-secure-billions-of-barrels-of-venezuelan-oil-for-the-us"
-        },
-        {
-          "language": "en",
-          "source": "koat.com",
-          "source_country": "united-states",
-          "url": "https://www.koat.com/article/trump-venezuela-take-control-oil-reserves/73557625"
-        },
-        {
-          "language": "en",
-          "source": "kxl.com",
-          "source_country": "united-states",
-          "url": "https://www.kxl.com/trump-says-us-has-entered-deal-with-venezuela-to-take-control-of-65-billion-barrels-of-oil-reserves/"
-        },
-        {
-          "language": "en",
-          "source": "wmtw.com",
-          "source_country": "united-states",
-          "url": "https://www.wmtw.com/article/trump-venezuela-take-control-oil-reserves/73557625"
-        },
-        {
-          "language": "en",
-          "source": "wapt.com",
-          "source_country": "united-states",
-          "url": "https://www.wapt.com/article/trump-venezuela-take-control-oil-reserves/73557625"
-        },
-        {
-          "language": "de",
-          "source": "muensterschezeitung.de",
-          "source_country": "germany",
-          "url": "https://www.muensterschezeitung.de/nachrichten/schlagzeilen/trump-usa-sichern-sich-riesige-oelvorkommen-in-venezuela-3630434"
-        },
-        {
-          "language": "de",
-          "source": "tageblatt.de",
-          "source_country": "germany",
-          "url": "https://www.tageblatt.de/Nachrichten/Trump-USA-sichern-sich-riesige-Oelvorkommen-in-Venezuela-766203.html"
-        },
-        {
-          "language": "nl",
-          "source": "dagelijksestandaard.nl",
-          "source_country": "nl",
-          "url": "https://www.dagelijksestandaard.nl/nieuws/trump-vs-en-venezuela-zijn-historische-oliedeal-overeengekomen"
-        },
-        {
-          "language": "nl",
-          "source": "drimble.nl",
-          "source_country": "nl",
-          "url": "https://drimble.nl/buitenlands-nieuws/107835791/trump-vs-krijgt-controle-over-venezolaanse-olie-ter-waarde-van-vele-miljarden.html"
-        },
-        {
-          "language": "es",
-          "source": "xinhuanet.com",
-          "source_country": "china",
-          "url": "http://spanish.xinhuanet.com/20260829/8484ae17ed984c469a1d69beec913ce3/c.html"
-        },
-        {
-          "language": "es",
-          "source": "rtve.es",
-          "source_country": "spain",
-          "url": "https://www.rtve.es/noticias/20260829/trump-anuncia-mayor-acuerdo-petrolero-historia-mundial-entre-estados-unidos-venezuela/17205573.shtml"
-        },
-        {
-          "language": "es",
-          "source": "quadratin.com.mx",
-          "source_country": "mx",
-          "url": "https://chihuahua.quadratin.com.mx/principal/trump-anuncia-acuerdo-para-controlar-reservas-del-petroleo-de-venezuela/"
-        },
-        {
-          "language": "fin",
-          "source": "yle.fi",
-          "source_country": "fi",
-          "url": "https://yle.fi/uutiset/lyhyesti/74-20243552"
+          "url": "https://www.hispantv.com/noticias/ee-uu-/659477/trump-anuncia-mayor-acuerdo-petrolero-venezuela"
         }
       ],
       "mentioned_countries": [
-        "ve",
-        "united-states"
+        "ve"
       ],
-      "origin_country": "brazil",
+      "origin_country": "ar",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/28/trump-anuncia-acordo-que-garante-aos-eua-controle-de-mais-de-65-bilhoes-de-barris-de-petroleo-da-venezuela.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 19,
+      "rank": 3,
+      "reference_newsroom_count": 13,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "globo.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "npr.org",
+        "pbs.org",
+        "tagesschau.de",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4674,
+          "corroboration": 0.8462,
+          "editorial_weight": 0.619,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.8182,
+          "source_reliability": 0.8667
+        },
+        "total": 0.7438,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "delcy rodriguez",
+        "donald trump",
+        "eeuu",
+        "etats-unis",
+        "trump",
+        "venezuela",
+        "yosemite"
+      ],
+      "subject_newsroom_count": 29,
+      "summary": "Les articles indiquent que Donald Trump a annoncé un accord avec le Venezuela qui, selon lui, permettra aux États‑Unis de prendre le contrôle d’environ 65 milliards de barils des réserves pétrolières vénézuéliennes, un pacte qualifié d’\"historique\" et susceptible de doubler les réserves pétrolières américaines selon ses déclarations ; certains textes ajoutent que la durée évoquée pour l’accord est de 25 ans et que les autorités vénézuéliennes affirment conserver la souveraineté sur leurs ressources."
+    },
+    {
+      "cluster_id": "subject-islandia-bbcfaf80a26e",
+      "coherence": 0.4694448752558117,
+      "consequence": 2,
+      "countries": [
+        "as",
+        "ei",
+        "france",
+        "pk",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-08-30",
+      "headline": "L’Islande vote contre la reprise des négociations d’adhésion à l’UE",
+      "independent_source_count": 18,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/referendum-sur-lue-en-islande-le-non-trois-points-devant-le-oui-alors-que-le-depouillement-touche-a-sa-fin-20260830_6FWWBJHRSNHCVOVB4ZSBUGNYVA/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260830-r%C3%A9f%C3%A9rendum-en-islande-le-non-l-emporte-sur-la-reprise-des-n%C3%A9gociations-d-adh%C3%A9sion-%C3%A0-l-ue"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260830-r%C3%A9f%C3%A9rendum-sur-l-ue-en-islande-le-non-en-passe-de-l-emporter"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-30/islandia-cierra-la-puerta-a-la-integracion-en-la-union-europea.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-29/islandia-vota-en-referendum-si-reabre-las-negociaciones-de-adhesion-a-la-union-europea.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/islandia-rechaza-reabrir-negociaciones-ue-ajustado-referendum-20260830094418-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/islandia-rechaza-volver-negociar-entrada-ue-margen-apenas-decimas-falta-terminar-recuento_1_13474899.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20260830/mantiene-ligera-ventaja-referendum-islandes-negociaciones-ingreso-union-europea/1003744366929_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-islandia-rechaza-referendum-conversaciones-adhesion-union-europea-20260830103623.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/islandia-rechaza-retomar-las-negociaciones-ingreso-ue-un-ajustado-referendum_7030696_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/aug/30/iceland-eu-accession-talks-referendum-result"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c70le8ed1plo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "yasstribune.com.au",
+          "source_country": "as",
+          "url": "https://www.yasstribune.com.au/story/9339942/iceland-votes-no-in-referendum-on-renewed-eu-talks/"
+        },
+        {
+          "language": "en",
+          "source": "irishtimes.com",
+          "source_country": "ei",
+          "url": "https://www.irishtimes.com/world/europe/2026/08/30/iceland-rejects-vote-for-european-union-accession-talks/"
+        },
+        {
+          "language": "en",
+          "source": "goulburnpost.com.au",
+          "source_country": "as",
+          "url": "https://www.goulburnpost.com.au/story/9339942/iceland-votes-no-in-referendum-on-renewed-eu-talks/"
+        },
+        {
+          "language": "en",
+          "source": "thefrontierpost.com",
+          "source_country": "pk",
+          "url": "https://thefrontierpost.com/iceland-rejects-eu-accession-talks-plan-in-referendum/"
+        },
+        {
+          "language": "en",
+          "source": "examiner.com.au",
+          "source_country": "as",
+          "url": "https://www.examiner.com.au/story/9339942/iceland-votes-no-in-referendum-on-renewed-eu-talks/"
+        },
+        {
+          "language": "en",
+          "source": "wgauradio.com",
+          "source_country": "united-states",
+          "url": "https://www.wgauradio.com/news/world/iceland-set-reject/NCYRH7HX2Y4UNONDECNF6Q3SGU/"
+        },
+        {
+          "language": "es",
+          "source": "elprogreso.es",
+          "source_country": "spain",
+          "url": "https://www.elprogreso.es/articulo/mundo/gana-terreno-referendo-islandia-ingreso-ue-roza-victoria/202608301148381994916.html"
+        }
+      ],
+      "mentioned_countries": [
+        "ic"
+      ],
+      "origin_country": "as",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/internacional/2026-08-29/islandia-vota-en-referendum-si-reabre-las-negociaciones-de-adhesion-a-la-union-europea.html",
+      "rank": 4,
+      "reference_newsroom_count": 11,
       "reference_newsrooms": [
         "20minutos.es",
         "abc.es",
@@ -337,580 +566,135 @@
         "eldiario.es",
         "elespanol.com",
         "elpais.com",
-        "euronews.com",
+        "europapress.es",
         "france24.com",
-        "globo.com",
-        "lavanguardia.com",
-        "lemonde.fr",
-        "lexpress.fr",
-        "nos.nl",
-        "npr.org",
-        "pbs.org",
+        "liberation.fr",
         "rfi.fr",
-        "rtve.es",
-        "tagesschau.de",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5062,
-          "corroboration": 0.8824,
-          "editorial_weight": 0.7037,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.92,
-          "source_reliability": 0.936
-        },
-        "total": 0.8523,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "canada",
-        "donald trump",
-        "eeuu",
-        "etats-unis",
-        "nasa",
-        "trump",
-        "venezuela",
-        "washington",
-        "yosemite"
-      ],
-      "subject_newsroom_count": 31,
-      "summary": "Les articles concordent sur l’annonce de Donald Trump selon laquelle les États‑Unis ont conclu un «accord historique» avec le Venezuela qui donne aux États‑Unis le contrôle d’environ 65 milliards de barils des réserves pétrolières vénézuéliennes; l’opération est présentée comme un très grand pacte qui augmenterait fortement les réserves américaines et serait assortie d’un montant financier évoqué par Trump dans certains récits."
-    },
-    {
-      "cluster_id": "subject-harald-ffd2a5ecae60",
-      "coherence": 0.45111408162739497,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "brazil",
-        "ci",
-        "france",
-        "germany",
-        "it",
-        "mx",
-        "sf",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 11,
-      "editorial_day": "2026-08-29",
-      "headline": "Le roi Harald V de Norvège est décédé à l'âge de 89 ans",
-      "independent_source_count": 16,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/la-norvege-perd-son-roi-harald-v-sest-eteint-a-lage-de-89-ans-6YY7BYMHIBCXHHOHCUETF3GWOQ/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-28/muere-harald-v-rey-de-noruega-a-los-89-anos.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/haakon-asume-tron-noruega-llora-muerte-rey-20260828011350-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260828/11617796/muere-harald-noruega-rey-tranquilo-hijos-89-anos.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/muere-rey-harald-v-noruega-89-anos_1_13471798.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/28/norway-king-harald-dies-leaving-stormy-succession-mette-marit-crown-princesss-epstein-links"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cm2rzxrdr71o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/clykn5p5172o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/norwegen-koenig-harald-nachruf-100.html"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/norway-s-king-harald-dies-at-89/a-78524572?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/28/europes-royal-houses-and-world-leaders-mourn-the-death-of-norways-king-harald-v"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/28/norways-king-harald-v-dies-at-the-age-of-89-palace-confirms"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/video/2026/08/28/norway-mourns-king-harald-v-as-crown-prince-haakon-becomes-king"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/video/2026/08/28/hundreds-gather-in-oslo-to-support-norways-king-harald-v"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/28/rei-harald-v-da-noruega-morre-aos-89-anos-apos-mais-de-tres-decadas-no-trono.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "wral.com",
-          "source_country": "united-states",
-          "url": "https://www.wral.com/news/ap/bc924-tens-of-thousands-mourn-king-harald-v-in-oslo-as-norway-enters-a-new-royal-era/"
-        },
-        {
-          "language": "en",
-          "source": "ewn.co.za",
-          "source_country": "sf",
-          "url": "https://www.ewn.co.za/2026/08/29/europes-monarchs-world-leaders-mourn-norways-king-harald"
-        },
-        {
-          "language": "en",
-          "source": "perthnow.com.au",
-          "source_country": "as",
-          "url": "https://www.perthnow.com.au/entertainment/royals/norways-king-harald-dies-as-son-haakon-viii-takes-throne-amid-royal-family-scandals-c-22794279"
-        },
-        {
-          "language": "es",
-          "source": "lanacion.cl",
-          "source_country": "ci",
-          "url": "https://www.lanacion.cl/a-los-89-anos-murio-el-rey-harald-v-de-noruega-asumio-su-hijo-haakon-viii/"
-        },
-        {
-          "language": "es",
-          "source": "termometroenlinea.com.mx",
-          "source_country": "mx",
-          "url": "https://www.termometroenlinea.com.mx/vernoticiasN.php?artid=133133&cat=1"
-        }
-      ],
-      "mentioned_countries": [
-        "no"
-      ],
-      "origin_country": "as",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/video/2026/08/28/hundreds-gather-in-oslo-to-support-norways-king-harald-v",
-      "rank": 2,
-      "reference_newsroom_count": 11,
-      "reference_newsrooms": [
-        "abc.es",
-        "bbc.co.uk",
-        "dw.com",
-        "eldiario.es",
-        "elpais.com",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "tagesschau.de",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4511,
-          "corroboration": 0.8462,
+          "coherence": 0.4694,
+          "corroboration": 0.7778,
           "editorial_weight": 0.5789,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.8,
-          "source_reliability": 0.873
+          "prominence": 0.8182,
+          "source_reliability": 0.8621
         },
-        "total": 0.732,
+        "total": 0.7274,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "harald",
+      "subject_label": "islandia",
       "subject_names": [
-        "haakon",
-        "haakon viii",
-        "harald",
-        "king haakon",
-        "muere",
-        "norvege",
-        "norway's",
-        "norway's king",
-        "oslo",
-        "viii"
+        "donald trump",
+        "etats-unis",
+        "iceland",
+        "islande",
+        "islandia",
+        "trump",
+        "union europea",
+        "yosemite"
       ],
       "subject_newsroom_count": 17,
-      "summary": "Le roi Harald V de Norvège est mort à 89 ans après plus de trois décennies sur le trône; son fils, le prince héritier Haakon, a immédiatement accédé au trône sous le nom de Haakon VIII. La mort du souverain a suscité des hommages de dirigeants étrangers et l'émotion publique en Norvège, avec des rassemblements et des manifestations de soutien à Oslo."
+      "summary": "Les électeurs islandais ont rejeté en référendum la proposition de reprendre les négociations pour adhérer à l’Union européenne, selon des résultats largement rapportés par les médias ; le scrutin s’est montré serré mais aboutit à un « non » à la relance des pourparlers d’adhésion."
     },
     {
-      "cluster_id": "subject-ukraine-1bc966927683",
-      "coherence": 0.5307816236059224,
+      "cluster_id": "subject-niger-c49bf28d0287",
+      "coherence": 0.5035124339157933,
       "consequence": 3,
       "countries": [
-        "france"
+        "france",
+        "germany",
+        "it",
+        "sz"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "Une frappe russe sur un entrepôt près de Kiev fait au moins 37 morts",
-      "independent_source_count": 7,
+      "country_count": 4,
+      "editorial_day": "2026-08-30",
+      "headline": "La junte du Niger affirme avoir repoussé une mutinerie avec l'aide de la Russie",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/08/29/en-direct-guerre-en-ukraine-une-attaque-russe-sur-un-entrepot-a-boutcha-pres-de-kiev-a-tue-au-moins-27-personnes-selon-le-gouvernement-ukrainien_6753793_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/ukraine-une-frappe-de-drone-russe-provoque-un-important-incendie-dans-un-entrepot-contenant-des-explosifs-200-personnes-evacuees-20260829"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/guerre-en-ukraine-au-moins-27-morts-apres-une-frappe-russe-sur-un-entrepot-pres-de-kyiv-les-autorites-denoncent-une-negligence-criminelle-20260829_DOO3VBXCVNCUHGGJXRW6M5SASU/"
+          "url": "https://www.lemonde.fr/afrique/article/2026/08/30/au-niger-une-importante-base-militaire-reprise-avec-l-aide-de-la-russie-apres-une-mutinerie_6759501_3213.html"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/en-ukraine-une-frappe-russe-fait-au-moins-27-morts-dans-un-entrepot-pres-de-kiev_8168213.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/afrique/niger/au-niger-la-junte-militaire-au-pouvoir-dejoue-une-mutinerie-avec-l-aide-de-la-russie_8169404.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260829-frappe-russe-sur-un-entrep%C3%B4t-pr%C3%A8s-de-kiev-au-moins-27-morts"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260830-niger-la-junte-d%C3%A9joue-une-mutinerie-avec-l-aide-de-la-russie"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/afrika/militaerjunta-niger-russland-100.html"
         },
         {
           "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260829-ukraine-une-frappe-russe-sur-un-entrep%C3%B4t-fait-au-moins-27-morts-pr%C3%A8s-de-kiev"
+          "source": "24heures.ch",
+          "source_country": "sz",
+          "url": "https://www.24heures.ch/niger-la-junte-dejoue-une-mutinerie-avec-laide-de-la-russie-553668388906"
         },
         {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260829-ukraine-frappe-russe-sur-un-entrep%C3%B4t-pr%C3%A8s-de-kiev-fait-27-morts"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-au-moins-27-morts-dans-une-frappe-russe-sur-un-entrepot-pres-de-kiev-36b7c7ee-a388-11f1-94d9-ff4da0548a19?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "language": "de",
+          "source": "suedtirolnews.it",
+          "source_country": "it",
+          "url": "https://www.suedtirolnews.it/politik/junta-im-niger-schlaegt-aufstand-mit-hilfe-russlands-nieder"
         }
       ],
       "mentioned_countries": [
-        "up",
         "rs"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/live/2026/08/29/en-direct-guerre-en-ukraine-une-attaque-russe-sur-un-entrepot-a-boutcha-pres-de-kiev-a-tue-au-moins-27-personnes-selon-le-gouvernement-ukrainien_6753793_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
+      "outbound_source": "suedtirolnews.it",
+      "outbound_url": "https://www.suedtirolnews.it/politik/junta-im-niger-schlaegt-aufstand-mit-hilfe-russlands-nieder",
+      "rank": 5,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "france24.com",
         "francetvinfo.fr",
-        "lefigaro.fr",
         "lemonde.fr",
-        "liberation.fr",
-        "ouest-france.fr",
-        "rfi.fr"
+        "tagesschau.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.5308,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4667,
+          "coherence": 0.5035,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.75
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.7256,
+        "total": 0.7184,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "niger",
       "subject_names": [
-        "kiev",
-        "kyiv",
-        "russian",
-        "ukraine"
+        "niamey",
+        "niger",
+        "russie"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "Une attaque russe visant un entrepôt contenant des munitions ou explosifs près de Boutcha, à l'ouest de Kiev, a tué au moins 37 personnes selon les autorités ukrainiennes; plusieurs médias évoquent une frappe de drone et des accusations de « négligence criminelle » des responsables locaux."
-    },
-    {
-      "cluster_id": "subject-lenin-moreno-6b3a10ed5452",
-      "coherence": 0.5234861509276476,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "nl",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-08-29",
-      "headline": "L’ex‑président équatorien Lenín Moreno condamné à cinq ans de prison",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/29/lenin-moreno-ancien-president-equatorien-condamne-a-cinq-ans-de-prison-pour-corruption_6759435_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260829-%C3%A9quateur-l-ancien-pr%C3%A9sident-lenin-moreno-condamn%C3%A9-%C3%A0-cinq-ans-de-prison-pour-corruption"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/america/2026-08-28/el-expresidente-de-ecuador-lenin-moreno-condenado-por-recibir-sobornos.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/expresidente-ecuatoriano-lenin-moreno-esposa-declarados-culpables-20260829002649-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/expresidente-ecuatoriano-lenin-moreno-condenado-cinco-anos-carcel-sobornos_1_13474132.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/expresidente-ecuatoriano-lenin-moreno-es-condenado-cinco-anos-carcel-por-sobornos_7030549_0.html"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2628725"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/29/equador-justica-condena-ex-presidente-lenin-moreno-a-5-anos-de-prisao-por-corrupcao.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "latimes.com",
-          "source_country": "united-states",
-          "url": "https://www.latimes.com/espanol/internacional/articulo/2026-08-28/corte-de-ecuador-declara-culpable-en-caso-de-corrupcion-al-expresidente-lenin-moreno"
-        }
-      ],
-      "mentioned_countries": [
-        "ec"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/america/2026-08-28/el-expresidente-de-ecuador-lenin-moreno-condenado-por-recibir-sobornos.html",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com",
-        "globo.com",
-        "lemonde.fr",
-        "nos.nl",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5235,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6999,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "lenin moreno",
-      "subject_names": [
-        "lenin moreno",
-        "moreno"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Les articles indiquent que Lenín Moreno, ancien président de l’Équateur, a été reconnu coupable dans une affaire de corruption ou de cohecho et condamné à cinq ans d’emprisonnement par la justice équatorienne; les comptes concordent sur la culpabilité et la peine prononcée, sans fournir d’autres détails communs sur les faits ou les circonstances."
-    },
-    {
-      "cluster_id": "subject-ratko-mladic-567302c54af4",
-      "coherence": 0.4568275497491645,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "germany",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-08-29",
-      "headline": "Ratko Mladić, condamné pour génocide, est mort à 84 ans",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260827.OBS117713/le-boucher-de-bosnie-ratko-mladic-condamne-pour-genocide-apres-la-guerre-est-mort.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260827/11621127/muere-ratko-mladic.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/muere-ratko-mladic-carnicero-bosnia-condenado-genocidio-srebrenica_1_13470688.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c5ywxpryj95o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/the-man-behind-srebrenica-ratko-mladic-dies-at-84/a-78536491?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/27/convicted-bosnian-serb-war-criminal-ratko-mladic-dies-in-hague-prison"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/29/nx-s1-5947879/srebrenica-survivor-ahmed-hrustanovic-reflects-on-ratko-mladics-death"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "bk"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml",
-      "rank": 5,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "eldiario.es",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "nouvelobs.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4568,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.75
-        },
-        "total": 0.6968,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ratko mladic",
-      "subject_names": [
-        "bosnia'",
-        "harald",
-        "mladic",
-        "muere",
-        "norvege",
-        "oslo",
-        "ratko mladic",
-        "serbia",
-        "srebrenica"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Ratko Mladić, ancien général des forces serbes de Bosnie condamné pour son rôle dans le génocide de Srebrenica et d’autres crimes de guerre, est décédé à l’âge de 84 ans alors qu’il purgeait sa peine dans une prison de La Haye; les articles signalent sa notoriété sous le surnom de « boucher/açougueiro/carnicero de Bosnie » et soulignent les réactions des survivants et observateurs au sujet de son décès."
+      "subject_newsroom_count": 12,
+      "summary": "Les autorités militaires au pouvoir au Niger ont déclaré avoir déjoué une mutinerie de soldats et repris le contrôle d’une importante base militaire avec le soutien de forces russes ou de conseillers russes; les médias concordent sur l’annonce par la junte de cet échec de l’insurrection, sans fournir de détails contradictoires sur le déroulement ou les pertes."
     }
   ],
-  "discarded_ingested": 290,
+  "discarded_ingested": 228,
   "discarded_kept": 5,
-  "generated_at": "2026-08-29T11:44:38.373053+00:00",
+  "generated_at": "2026-08-30T10:35:48.222148+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

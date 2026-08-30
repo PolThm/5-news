@@ -1,309 +1,129 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ceuta-01a35b696262",
-      "coherence": 0.5499807651358803,
-      "consequence": 2,
-      "countries": [
-        "germany",
-        "it",
-        "nl",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-29",
-      "headline": "L’Espagne demande l’aide de Frontex pour traiter les migrants à Ceuta",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/28/6a91c14ee85ecefe378b456f.html"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/politik/ausland/2026-08/ceuta-migrationskrise-spanien-eu-frontex-asyl"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/28/ceuta-warns-it-is-on-the-brink-of-collapse-as-spain-seeks-frontex-and-europol-help"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2628716"
-        },
-        {
-          "language": "nl",
-          "source": "drimble.nl",
-          "source_country": "nl",
-          "url": "https://drimble.nl/buitenlands-nieuws/107834047/spanje-vraagt-eu-grensbewaking-om-bijstand-voor-controleren-migranten-in-ceuta.html"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/news/2026-08/28/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta"
-        },
-        {
-          "language": "de",
-          "source": "finanzen.net",
-          "source_country": "germany",
-          "url": "https://www.finanzen.net/nachricht/aktien/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-15907355"
-        },
-        {
-          "language": "de",
-          "source": "finanznachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69440996-spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-016.htm"
-        },
-        {
-          "language": "de",
-          "source": "noz.de",
-          "source_country": "germany",
-          "url": "https://www.noz.de/deutschland-welt/politik/artikel/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-51263978"
-        },
-        {
-          "language": "de",
-          "source": "schwaebische.de",
-          "source_country": "germany",
-          "url": "https://www.schwaebische.de/politik/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-4816601"
-        },
-        {
-          "language": "de",
-          "source": "come-on.de",
-          "source_country": "germany",
-          "url": "http://www.come-on.de/politik/spanien-bittet-frontex-um-hilfe-bei-migrationskrise-in-ceuta-zr-94465288.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/08/28/6a91c14ee85ecefe378b456f.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "euronews.com",
-        "nos.nl",
-        "zeit.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.55,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
-        },
-        "total": 0.659,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "frontex",
-        "gobierno"
-      ],
-      "subject_newsroom_count": 19,
-      "summary": "Un mois après un important afflux, le gouvernement espagnol a sollicité le soutien de l’agence Frontex (et d’autres organes européens) pour aider au tri, au contrôle et au traitement des migrants restés à Ceuta, la ville se déclarant sous forte pression et proche du point de rupture."
-    },
-    {
-      "cluster_id": "subject-ceuta-2daefea6dde1",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "germany",
-        "it",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-28",
-      "headline": "Des affrontements éclatent à Ceuta lors de protestations contre des migrants",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cy9zj11gwzxo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/protesters-set-fire-to-migrant-camp-in-ceuta/a-78538847?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "dw.com",
-      "outbound_url": "https://www.dw.com/en/protesters-set-fire-to-migrant-camp-in-ceuta/a-78538847?maca=en-rss-en-world-4025-rdf",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6496,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "frontex",
-        "gobierno"
-      ],
-      "subject_newsroom_count": 19,
-      "summary": "Des violences ont eu lieu à Ceuta lorsque des manifestants hostiles aux migrants se sont affrontés avec la police; des protestataires ont également incendié un camp de migrants, et les autorités sont intervenues pour disperser les rassemblements."
-    },
-    {
-      "cluster_id": "subject-ceuta-1c097fe643f7",
-      "coherence": null,
+      "cluster_id": "subject-ceuta-582449ee5c32",
+      "coherence": 0.4646165687234949,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "Le PP se constitue partie civile dans l’affaire de la crise de Ceuta et réclame l’audition de la directrice du CNI",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/08/29/6a929a81e5fdea96148b457a.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/29/6a92c2ede85ece47038b459c.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-29/feijoo-y-rajoy-abren-el-curso-del-pp-en-galicia_4414189/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-08-29/feijoo-y-rajoy-abren-el-curso-del-pp-en-galicia_4414189/",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elconfidencial.com",
-        "elmundo.es",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5848,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "cni",
-        "espana",
-        "feijoo",
-        "frontex",
-        "gobierno"
-      ],
-      "subject_newsroom_count": 19,
-      "summary": "Le Parti populaire a annoncé qu’il se personnerait dans la cause ouverte à l’Audiencia Nacional sur la crise de Ceuta et demande la comparution de la directrice du Centre national du renseignement ; le chef du PP affirme qu’il y a des mensonges et exige des explications officielles."
-    },
-    {
-      "cluster_id": "subject-mallorca-fb89e6ac6cba",
-      "coherence": 0.6326151134698965,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "Deux jeunes joueurs de la cantera du Mallorca arrêtés pour avoir filmé des relations sexuelles",
+      "editorial_day": "2026-08-30",
+      "headline": "Le gouvernement approuve 165 millions d’euros pour aider Ceuta",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-08-29/detenidos-dos-canteranos-del-mallorca-por-grabar-relaciones-sexuales-con-una-menor-en-una-vivienda-de-palma.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/baleares/dos-canteranos-rcd-mallorca-detenidos-grabar-escondidas-20260829104007-nt.html"
+          "url": "https://elpais.com/espana/2026-08-30/sanchez-destina-otros-165-millones-a-recuperar-ceuta-y-aplacar-una-crisis-que-altera-el-nuevo-curso.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/illes-balears/detenidos-canteranos-rcd-mallorca-grabar-escondidas-encuentro-sexual-menor_1_13474062.html"
+          "url": "https://www.eldiario.es/politica/gobierno-aprobara-proximo-martes-plan-emergencia-ceuta-165-millones_1_13475109.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20260829/detenidos-canteranos-mallorca-grabar-relaciones-sexuales-chica/1003744366648_0.html"
+          "url": "https://www.elconfidencial.com/espana/2026-08-30/el-gobierno-inyecta-165-millones-de-euros-a-ceuta-para-evitar-el-colapso-financiero-tras-la-crisis-migratoria_4414391/"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/08/29/6a92a4dce4d4d887608b458c.html"
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-aprobara-proximo-martes-paquete-165-millones-ayudar-ceuta-20260830110634.html"
+        },
+        {
+          "language": "es",
+          "source": "diariodeburgos.es",
+          "source_country": "spain",
+          "url": "https://www.diariodeburgos.es/noticia/zee8432b3-3959-4c88-8f19ee47076dd313/202608/el-gobierno-aprobara-165-millones-para-ayudar-a-ceuta"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-08-30/sanchez-destina-otros-165-millones-a-recuperar-ceuta-y-aplacar-una-crisis-que-altera-el-nuevo-curso.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "eldiario.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4646,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6042,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "frontex",
+        "marlaska",
+        "marruecos"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Le gouvernement va approuver un plan d’urgence de 165 millions d’euros destiné à soutenir Ceuta et à répondre à la crise migratoire et à ses conséquences financières et sociales afin d’éviter le risque de « colapso » et d’atténuer les perturbations en début de cours scolaire."
+    },
+    {
+      "cluster_id": "subject-nepal-15a37d598913",
+      "coherence": 0.47313570814095973,
+      "consequence": 2,
+      "countries": [
+        "spain",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-29",
+      "headline": "Deux Espagnols portés disparus après une violente crue au Népal",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260829/11622228/nepal-eleva-dos-espanoles-localizados-riada-633-muertos.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/nepal-eleva-610-muertos-violenta-riada-continuan-operaciones-zona-cero_1_13473947.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/exteriores-confirma-que-dos-espanoles-siguen-desaparecidos-tras-riada-nepal-que-deja-cerca-700-muertos_7030651_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/nepal-eleva-dos-los-espanoles-localizados-tras-violenta-riada-que-ya-deja-633-muertos_7030557_0.html"
+        },
+        {
+          "language": "es",
+          "source": "efe.com",
+          "source_country": "united-states",
+          "url": "https://efe.com/espana/2026-08-29/espanoles-desaparecidos-nepal/"
         }
       ],
       "mentioned_countries": [
@@ -311,132 +131,318 @@
       ],
       "origin_country": "spain",
       "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/illes-balears/detenidos-canteranos-rcd-mallorca-grabar-escondidas-encuentro-sexual-menor_1_13474062.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
+      "outbound_url": "https://www.eldiario.es/internacional/nepal-eleva-610-muertos-violenta-riada-continuan-operaciones-zona-cero_1_13473947.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "abc.es",
+        "20minutos.es",
         "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.6326,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "coherence": 0.4731,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6364
+        },
+        "total": 0.5706,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "nepal",
+      "subject_names": [
+        "nepal",
+        "nepal-tibet"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "Une violente crue au Népal a causé près de 670 décès selon les bilans cités, et les autorités espagnoles confirment que deux ressortissants espagnols restent portés disparus tandis que d’autres ressortissants ont été localisés."
+    },
+    {
+      "cluster_id": "subject-pogacar-0978f692a8fe",
+      "coherence": 0.4089698373291554,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-30",
+      "headline": "Tadej Pogačar abandonne la Vuelta après une lourde chute",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/sports/cyclisme/tadej-pogacar-contraint-a-labandon-sur-la-vuelta-apres-une-lourde-chute-20260829_4QNFH43D5FCPFOM2KZLK3RVCLA/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20260830-vuelta-l-immense-frayeur-de-pogacar-une-lourde-chute-et-un-abandon"
+        },
+        {
+          "language": "es",
+          "source": "teleamazonas.com",
+          "source_country": "united-states",
+          "url": "https://www.teleamazonas.com/deportes/otros-deportes/ciclismo/tadej-pogacar-caida-abandona-vuelta-espana-126617/"
+        },
+        {
+          "language": "es",
+          "source": "diaridetarragona.com",
+          "source_country": "spain",
+          "url": "https://www.diaridetarragona.com/deportes/polideportivo/269491/tadej-pogacar-abandona-vuelta-dura-caida-valencia.html"
+        },
+        {
+          "language": "es",
+          "source": "lavozdigital.es",
+          "source_country": "spain",
+          "url": "https://www.lavozdigital.es/deportes/pogacar-retira-vuelta-durisima-caida-correra-cadiz-20260829173919-ntv.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "diaridetarragona.com",
+      "outbound_url": "https://www.diaridetarragona.com/deportes/polideportivo/269491/tadej-pogacar-abandona-vuelta-dura-caida-valencia.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "france24.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.409,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "source_reliability": 0.6
         },
-        "total": 0.5642,
+        "total": 0.5171,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "mallorca",
+      "subject_label": "pogacar",
       "subject_names": [
-        "mallorca"
+        "pogacar",
+        "tadej pogacar"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Deux membres des équipes de formation du RCD Mallorca ont été arrêtés à Palma pour avoir filmé à l’insu une relation sexuelle avec une mineure dans un logement; les détentions sont liées à l’enregistrement sans consentement de l’acte, selon les informations des articles."
+      "subject_newsroom_count": 8,
+      "summary": "Tadej Pogačar a été contraint d’abandonner la Vuelta a España après une violente chute survenue lors d’une étape à Valence; les articles indiquent qu’il a subi une lourde chute qui l’empêche de poursuivre la course et qu’il ne participera pas à l’étape suivante à Cadix."
     },
     {
-      "cluster_id": "subject-nepal-2bf692003be4",
-      "coherence": 0.4941916936843703,
+      "cluster_id": "subject-monteros-b66d59a205f2",
+      "coherence": 0.4859194108196998,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-08-29",
-      "headline": "Le Népal localise et retrouve au moins un des trois Espagnols portés disparus",
-      "independent_source_count": 6,
+      "headline": "Carlos Espinosa de los Monteros est décédé à 82 ans",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-28/rescatado-uno-de-los-tres-espanoles-desaparecidos-tras-las-riadas-en-nepal.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260828/11621864/localizado-tres-espanoles-desaparecidos-riadas-nepal.html"
+          "url": "https://elpais.com/economia/2026-08-29/muere-a-los-82-anos-carlos-espinosa-de-los-monteros-el-primer-alto-comisionado-para-la-marca-espana.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nepal-localiza-tres-espanoles-desaparecidos-fuerte-riada_1_13473333.html"
+          "url": "https://www.eldiario.es/economia/muere-carlos-espinosa-monteros-expresidente-iberia-primer-alto-comisionado-marca-espana_1_13474685.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/asia/20260829/nepal-confirma-localizacion-segundo-espanol-desaparecido-riada/1003744366642_0.html"
+          "url": "https://www.expansion.com/sociedad/2026/08/29/6a931be9468aebc63a8b459b.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-nepal-contacta-segundo-espanol-desaparecido-catastrofica-riada-rasuwa-20260829112438.html"
+          "url": "https://www.elmundo.es/economia/empresas/2026/08/29/6a93193121efa0e0188b456f.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "larazon.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/nepal-localiza-uno-tres-espanoles-desaparecidos-riada_7030464_0.html"
+          "url": "https://www.larazon.es/economia/muere-82-anos-empresario-carlos-espinosa-monteros_202608296a931e17ae2f3735da1c8222.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/nepal-localiza-tres-espanoles-desaparecidos-fuerte-riada_1_13473333.html",
-      "rank": 5,
-      "reference_newsroom_count": 6,
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/sociedad/2026/08/29/6a931be9468aebc63a8b459b.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
         "eldiario.es",
-        "elespanol.com",
+        "elmundo.es",
         "elpais.com",
-        "europapress.es",
-        "lavanguardia.com"
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4942,
+          "coherence": 0.4859,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.5614,
+        "total": 0.4983,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "nepal",
+      "subject_label": "monteros",
       "subject_names": [
-        "himalaya",
-        "nepal",
-        "nepal-tibet",
-        "tibet"
+        "alto comisionado",
+        "barcelona",
+        "espana",
+        "espinosa",
+        "madrid",
+        "monteros",
+        "muere",
+        "muere carlos",
+        "spain"
       ],
-      "subject_newsroom_count": 29,
-      "summary": "Les autorités népalaises ont retrouvé vivant au moins un des trois ressortissants espagnols qui étaient portés disparus après de fortes crues dans la région de Rasuwa; un deuxième Espagnol a ensuite été contacté ou localisé selon les sources, et les recherches se poursuivent pour le troisième disparu."
+      "subject_newsroom_count": 5,
+      "summary": "Carlos Espinosa de los Monteros, homme d’affaires espagnol qui a présidé Iberia et a été le premier Haut Commissaire pour la Marca España, est mort à l’âge de 82 ans; les articles indiquent qu’il était une figure importante du monde économique espagnol et mentionnent qu’il est le père d’un ancien responsable politique lié à Vox."
+    },
+    {
+      "cluster_id": "subject-ratko-mladic-6d513b538698",
+      "coherence": 0.4537007695931199,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "id",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-08-30",
+      "filled_from": "europe",
+      "headline": "Ratko Mladić, général serbe bosniaque condamné pour génocide, est mort",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260827.OBS117713/le-boucher-de-bosnie-ratko-mladic-condamne-pour-genocide-apres-la-guerre-est-mort.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260827/11621127/muere-ratko-mladic.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/muere-ratko-mladic-carnicero-bosnia-condenado-genocidio-srebrenica_1_13470688.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c5ywxpryj95o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/27/convicted-bosnian-serb-war-criminal-ratko-mladic-dies-in-hague-prison"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/08/29/nx-s1-5947879/srebrenica-survivor-ahmed-hrustanovic-reflects-on-ratko-mladics-death"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "en.tempo.co",
+          "source_country": "id",
+          "url": "https://en.tempo.co/read/2118544/ratko-mladic-the-man-behind-srebrenica-massacre-dies-at-84"
+        }
+      ],
+      "mentioned_countries": [
+        "bk"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml",
+      "rank": 5,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "eldiario.es",
+        "euronews.com",
+        "globo.com",
+        "lavanguardia.com",
+        "nouvelobs.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4537,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7419
+        },
+        "total": 0.7113,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ratko mladic",
+      "subject_names": [
+        "bosnia'",
+        "mladic",
+        "muere",
+        "ratko mladic"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Ratko Mladić, le général serbe bosniaque condamné pour son rôle dans le génocide de Srebrenica et d’autres crimes de guerre pendant la guerre en Bosnie, est décédé à 84 ans en détention à La Haye. Les articles indiquent qu’il avait été reconnu coupable et condamnés par un tribunal international, et sa mort suscite des réactions, notamment de survivants de Srebrenica."
     }
   ],
-  "discarded_ingested": 34,
+  "discarded_ingested": 30,
   "discarded_kept": 5,
-  "generated_at": "2026-08-29T11:44:38.373053+00:00",
+  "generated_at": "2026-08-30T10:35:48.222148+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

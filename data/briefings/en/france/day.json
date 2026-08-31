@@ -1,29 +1,129 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-olivier-faure-e386f193341c",
-      "coherence": 0.5299583732403458,
+      "cluster_id": "subject-legion-4ec2d3bbf764",
+      "coherence": 0.47502279156756433,
       "consequence": 2,
       "countries": [
-        "france",
-        "unknown"
+        "france"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-30",
-      "headline": "Olivier Faure announces he will run in the left's primary for the 2027 presidential election",
-      "independent_source_count": 9,
+      "country_count": 1,
+      "editorial_day": "2026-08-31",
+      "headline": "A French Foreign Legion soldier was captured in Colombia by an ex-FARC dissident group",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/live/2026/08/30/en-direct-presidentielle-2027-olivier-faure-a-annonce-aux-deputes-de-son-groupe-etre-candidat-a-la-primaire-de-la-gauche_6759921_823448.html"
+          "url": "https://www.lefigaro.fr/international/en-colombie-l-enlevement-d-un-soldat-de-la-legion-etrangere-francaise-defie-la-nouvelle-ligne-dure-du-pouvoir-20260829"
         },
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-edouard-philippe-s-exprime-ce-dimanche-chez-gerald-darmanin-a-tourcoing-pour-une-demonstration-de-rassemblement-20260830"
+          "url": "https://www.lefigaro.fr/international/en-colombie-qui-sont-ces-mysterieux-guerilleros-soupconnes-d-avoir-enleve-un-soldat-de-la-legion-etrangere-francaise-20260828"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/prisonnier-de-guerre-la-capture-dun-soldat-de-la-legion-etrangere-francaise-en-colombie-revendiquee-par-la-dissidence-des-ex-farc-20260831_QEK4LQGG5NH7PAFOLDE6KAKQHQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/la-principale-dissidence-des-ex-farc-revendique-la-capture-d-un-colombien-de-la-legion-etrangere-francaise_8170166.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260831-colombie-la-gu%C3%A9rilla-de-l-emc-revendique-la-capture-d-un-colombien-de-la-l%C3%A9gion-%C3%A9trang%C3%A8re-fran%C3%A7aise"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260831-colombie-groupe-arm%C3%A9-emc-revendique-l-enl%C3%A8vement-d-un-colombien-de-la-l%C3%A9gion-%C3%A9trang%C3%A8re-fran%C3%A7aise"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260828.OBS117732/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie.html"
+        },
+        {
+          "language": "fr",
+          "source": "maville.com",
+          "source_country": "france",
+          "url": "https://paris.maville.com/actu/actudet_-la-principale-dissidence-des-farc-revendique-l-enlevement-d-un-colombien-de-la-legion-etrangere-francaise_fil-7456784_actu.Htm"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "co"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260828.OBS117732/un-soldat-de-la-legion-etrangere-francaise-enleve-en-colombie.html",
+      "rank": 1,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.475,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7419
+        },
+        "total": 0.636,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "legion",
+      "subject_names": [
+        "colombie",
+        "legion"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Multiple French media outlets report that a soldier serving in the French Foreign Legion, who is Colombian, was abducted in Colombia and that the main dissident group of former FARC fighters — identified as the EMC or principal dissidence of the ex-FARC — has claimed responsibility for the capture, describing the soldier as a prisoner of war."
+    },
+    {
+      "cluster_id": "subject-olivier-faure-7b8b0c31b243",
+      "coherence": 0.44386548537823123,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-08-31",
+      "headline": "Olivier Faure announces candidacy for the left-wing primary for France 2027 presidency",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-olivier-faure-officialise-sa-candidature-a-la-primaire-et-lance-son-match-face-a-glucksmann-20260830"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/politique/presidentielle-olivier-faure-nouveau-candidat-a-la-primaire-20260830_G4RZYREKVBGMNELYXA4FVMVBQI/"
         },
         {
           "language": "fr",
@@ -33,569 +133,406 @@
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/direct-presidentielle-2027-olivier-faure-sur-le-point-d-annoncer-sa-candidature-a-blois-edouard-philippe-attendu-chez-gerald-darmanin-a-tourcoing_8169221.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.la-croix.com/olivier-faure-candidat-a-la-primaire-de-la-gauche-20260830"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260830-pr%C3%A9sidentielle-2027-olivier-faure-annonce-sa-candidature-%C3%A0-la-primaire-de-la-gauche"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260831-pr%C3%A9sidentielle-2027-olivier-faure-candidat-%C3%A0-la-primaire-de-la-gauche"
         },
         {
           "language": "fr",
-          "source": "ici.fr",
-          "source_country": "unknown",
-          "url": "https://www.ici.fr/infos/politique/presidentielle-2027-olivier-faure-candidat-a-la-primaire-de-la-gauche-3901679"
-        },
-        {
-          "language": "fr",
-          "source": "bfmtv.com",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.bfmtv.com/politique/elections/presidentielle/presidentielle-le-patron-du-ps-olivier-faure-va-annoncer-sa-candidature-a-la-primaire-de-la-gauche-en-vue-de-2027_AN-202608300136.html"
-        },
-        {
-          "language": "fr",
-          "source": "lindependant.fr",
-          "source_country": "france",
-          "url": "https://www.lindependant.fr/2026/08/30/presidentielle-2027-le-patron-du-parti-socialiste-olivier-faure-annonce-etre-candidat-a-la-primaire-de-la-gauche-13528593.php"
-        },
-        {
-          "language": "fr",
-          "source": "humanite.fr",
-          "source_country": "france",
-          "url": "https://www.humanite.fr/politique/olivier-faure/presidentielle-2027-un-olivier-faure-offensif-pour-son-discours-de-rentree-avant-son-entree-en-campagne"
+          "url": "https://www.rfi.fr/fr/france/20260831-france-faure-officialise-sa-candidature-%C3%A0-la-primaire-du-ps-au-journal-t%C3%A9l%C3%A9vis%C3%A9-de-tf1"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "humanite.fr",
-      "outbound_url": "https://www.humanite.fr/politique/olivier-faure/presidentielle-2027-un-olivier-faure-offensif-pour-son-discours-de-rentree-avant-son-entree-en-campagne",
-      "rank": 1,
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/politique/presidentielle-2027-olivier-faure-candidat-a-la-primaire-de-la-gauche-20260830_SIH5N4WSGRCTLFJHDU3HXOJQUU/",
+      "rank": 2,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "france24.com",
-        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4439,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6923
+        },
+        "total": 0.6169,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "olivier faure",
+      "subject_names": [
+        "attal",
+        "faure",
+        "glucksmann",
+        "olivier faure",
+        "raphael glucksmann"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Olivier Faure has officially declared he is running in the left‑wing primary ahead of France’s 2027 presidential election, launching his campaign appearance on major media and positioning himself as a candidate within the Socialist Party and the broader left coalition; other left figures such as Raphaël Glucksmann are awaiting further clarification of their own stances."
+    },
+    {
+      "cluster_id": "subject-chatgpt-f4f96c4c0c38",
+      "coherence": 0.4920845737178585,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "india",
+        "lo",
+        "no",
+        "pk",
+        "ro",
+        "sz",
+        "united-states"
+      ],
+      "country_count": 9,
+      "editorial_day": "2026-08-31",
+      "filled_from": "europe",
+      "headline": "EU subjects ChatGPT, Reddit and Roblox to tougher digital rules",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/pixels/article/2026/08/31/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-regles-renforcees-au-sein-de-l-union-europeenne_6762380_4408996.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/chatgpt-va-etre-soumis-a-des-regles-renforcees-dans-l-ue-de-meme-que-reddit-et-roblox-20260831"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/economie-numerique/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-controles-renforces-dans-lue-20260831_S2AIB5KHNJEZZAQG6LZRFJTKNM/"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chatgpt-reddit-roblox-to-adhere-to-eus-very-large-platform-rules/articleshow/133650637.cms"
+        },
+        {
+          "language": "en",
+          "source": "thenews.com.pk",
+          "source_country": "pk",
+          "url": "https://www.thenews.com.pk/latest/1414338-eu-designates-chatgpt-reddit-and-roblox-for-tougher-new-rules"
+        },
+        {
+          "language": "de",
+          "source": "gmx.ch",
+          "source_country": "sz",
+          "url": "https://www.gmx.ch/magazine/digital/eu-chatgpt-reddit-roblox-kuerzere-leine-42670978"
+        },
+        {
+          "language": "de",
+          "source": "t-online.de",
+          "source_country": "germany",
+          "url": "https://www.t-online.de/digital/aktuelles/id_101413152/dsa-chatgpt-reddit-und-roblox-stehen-vor-strengeren-eu-regeln.html"
+        },
+        {
+          "language": "de",
+          "source": "finanznachrichten.de",
+          "source_country": "germany",
+          "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69451135-chatgpt-reddit-und-roblox-muessen-hoehere-eu-standards-erfuellen-015.htm"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/next/2026/08/31/ue-sottopone-chatgpt-reddit-e-roblox-alle-regole-digitali-piu-severe"
+        },
+        {
+          "language": "nor",
+          "source": "nrk.no",
+          "source_country": "no",
+          "url": "https://www.nrk.no/nyheter/strengere-eu-regler-for-chatgpt_-reddit-og-roblox-1.18008768"
+        },
+        {
+          "language": "ron",
+          "source": "mediafax.ro",
+          "source_country": "ro",
+          "url": "https://www.mediafax.ro/social/ue-inaspreste-regulile-pentru-chatgpt-reddit-si-roblox-chatgpt-tratat-pentru-prima-data-ca-motor-de-cautare-foarte-mare-23799072"
+        },
+        {
+          "language": "slk",
+          "source": "hnonline.sk",
+          "source_country": "lo",
+          "url": "https://hnonline.sk/finweb/zahranicna-ekonomika/96299676-europska-komisia-zaradila-chatgpt-reddit-a-roblox-pod-prisnejsiu-kontrolu"
+        }
+      ],
+      "mentioned_countries": [
+        "be"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/economie/economie-numerique/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-controles-renforces-dans-lue-20260831_S2AIB5KHNJEZZAQG6LZRFJTKNM/",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
         "lefigaro.fr",
         "lemonde.fr",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.53,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
+          "coherence": 0.4921,
+          "corroboration": 0.8182,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7419
+          "prominence": 0.75,
+          "source_reliability": 0.7778
         },
-        "total": 0.6504,
+        "total": 0.6923,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "olivier faure",
+      "subject_label": "chatgpt",
       "subject_names": [
-        "edouard philippe",
-        "faure",
-        "francois hollande",
-        "glucksmann",
-        "olivier faure",
-        "raphael glucksmann"
+        "chatgpt",
+        "reddit",
+        "roblox"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Olivier Faure, leader of the Socialist Party, has told colleagues he has decided to be a candidate in the left-wing primary ahead of France’s 2027 presidential election; several outlets report he announced or will announce his candidacy to contest the primary as he begins his campaign phase."
+      "subject_newsroom_count": 6,
+      "summary": "The European Commission has designated ChatGPT, Reddit and Roblox for enhanced oversight under the EU’s digital regulations, meaning these services will face stricter compliance and monitoring requirements as part of the bloc’s effort to apply stronger rules to large online platforms and AI systems."
     },
     {
-      "cluster_id": "subject-marseille-85bbaf6565bb",
-      "coherence": null,
-      "consequence": 1,
+      "cluster_id": "subject-chipre-4984a5d94844",
+      "coherence": 0.5158015192317298,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-08-31",
+      "filled_from": "europe",
+      "headline": "Ferry sinks off northern Cyprus leaving at least eight dead",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-08-30/un-barco-con-unas-270-personas-a-bordo-vuelca-frente-al-norte-de-chipre.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/naufraga-barco-270-personas-bordo-frente-costas-20260830134109-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260830/11623130/ferry-mas-260-pasajeros-bordo-naufraga-frente-costa-norte-chipre.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/naugrafa-barco-270-personas-bordo-frente-costa-norte-chipre_1_13475259.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/un-ferry-con-270-personas-bordo-naufraga-norte-chipre_7030740_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/30/naufragio-de-balsa-no-norte-do-chipre-deixa-8-mortos-e-17-desaparecidos.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "sdpnoticias.com",
+          "source_country": "mx",
+          "url": "https://www.sdpnoticias.com/internacional/ferry-se-hunde-al-norte-de-chipre-con-267-personas-a-bordo-y-deja-8-muertos/"
+        },
+        {
+          "language": "es",
+          "source": "latribunadetoledo.es",
+          "source_country": "spain",
+          "url": "https://www.latribunadetoledo.es/noticia/zbb81f512-2079-48af-9de53c3f8eec5e7f/202608/se-hunde-un-ferry-con-267-personas-a-bordo-en-chipre"
+        }
+      ],
+      "mentioned_countries": [
+        "cy"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/naufraga-barco-270-personas-bordo-frente-costas-20260830134109-nt.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "globo.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5158,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
+        },
+        "total": 0.6914,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "chipre",
+      "subject_names": [
+        "chipre",
+        "chypre",
+        "cyprus",
+        "etat",
+        "turquie"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "A passenger ferry sank off the northern coast of Cyprus with around 267–270 people on board; the incident has killed at least eight people and left multiple others missing, while rescue operations have been carried out."
+    },
+    {
+      "cluster_id": "subject-visa-73b72e4c28ec",
+      "coherence": 0.5118805245655762,
+      "consequence": 0,
       "countries": [
         "france",
-        "unknown"
+        "spain",
+        "sz"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-08-30",
-      "headline": "Shooting at Marseille hookah bar kills one and injures four",
-      "independent_source_count": 3,
+      "country_count": 3,
+      "editorial_day": "2026-08-31",
+      "headline": "Jean‑François Leroy, founder and long‑time director of Visa pour l’Image, has died",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/marseille/marseille-un-mort-et-quatre-blesses-dont-un-grave-lors-d-une-fusillade-dans-un-bar-a-chicha-20260830"
+          "url": "https://www.lemonde.fr/disparitions/article/2026/08/31/jean-francois-leroy-directeur-du-festival-visa-pour-l-image-et-avocat-acharne-du-photojournalisme-est-mort_6762210_3382.html"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/societe/faits-divers/un-mort-et-quatre-blesses-dans-une-fusillade-a-marseille-sur-fond-de-trafic-de-drogue-2c9a3920-a457-11f1-94d9-ff4da0548a19?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.liberation.fr/culture/photographie/mort-de-jean-francois-leroy-fondateur-du-festival-de-photojournalisme-visa-pour-limage-20260831_XT73CLDMPNBZFEXE5332O5DGZQ/"
         },
         {
           "language": "fr",
-          "source": "ici.fr",
-          "source_country": "unknown",
-          "url": "https://www.ici.fr/provence-alpes-cote-d-azur/bouches-du-rhone-13/marseille/un-mort-et-quatre-blesses-dans-une-fusillade-a-marseille-un-mineur-parmi-les-victimes-4563091"
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/arts-expos/photographie/jean-francois-leroy-fondateur-et-directeur-historique-du-festival-de-photojournalisme-visa-pour-l-image-est-mort-a-l-age-de-69-ans_8170448.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/culture/20260831-visa-pour-l-image-mort-de-jean-fran%C3%A7ois-leroy-fondateur-du-festival-de-photojournalisme"
+        },
+        {
+          "language": "fr",
+          "source": "lindependant.fr",
+          "source_country": "france",
+          "url": "https://www.lindependant.fr/2026/08/31/diaporama-deces-de-jean-francois-leroy-les-images-marquantes-du-fondateur-du-festival-de-photojournalisme-visa-pour-limage-a-perpignan-13527855.php"
+        },
+        {
+          "language": "fr",
+          "source": "lindependant.fr",
+          "source_country": "france",
+          "url": "https://www.lindependant.fr/2026/08/31/carnet-noir-directeur-de-visa-pour-limage-de-perpignan-jean-francois-leroy-est-decede-a-lage-de-69-ans-13527831.php"
+        },
+        {
+          "language": "fr",
+          "source": "rtn.ch",
+          "source_country": "sz",
+          "url": "https://www.rtn.ch/rtn/Actualite/Culture/Mort-du-fondateur-du-festival-de-photojournalisme-Visa-pour-l-image.html"
+        },
+        {
+          "language": "cat",
+          "source": "emporda.info",
+          "source_country": "spain",
+          "url": "https://www.emporda.info/catalunya-nord/2026/08/31/mor-jean-francois-leroy-director-visa-image-perpinya-133803404.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "ouest-france.fr",
-      "outbound_url": "https://www.ouest-france.fr/societe/faits-divers/un-mort-et-quatre-blesses-dans-une-fusillade-a-marseille-sur-fond-de-trafic-de-drogue-2c9a3920-a457-11f1-94d9-ff4da0548a19?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-      "rank": 2,
-      "reference_newsroom_count": 2,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/disparitions/article/2026/08/31/jean-francois-leroy-directeur-du-festival-visa-pour-l-image-et-avocat-acharne-du-photojournalisme-est-mort_6762210_3382.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "lefigaro.fr",
-        "ouest-france.fr"
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "coherence": 0.5119,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.6364,
+          "source_reliability": 0.7143
         },
-        "total": 0.5092,
+        "total": 0.4962,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "marseille",
+      "subject_label": "visa",
       "subject_names": [
-        "marseille"
+        "jean-francois leroy",
+        "visa"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "A shooting inside a hookah bar in Marseille left one person dead and four wounded, including at least one seriously injured and two minors among the victims; authorities say the incident occurred against a backdrop of drug trafficking."
-    },
-    {
-      "cluster_id": "subject-ratko-mladic-6d513b538698",
-      "coherence": 0.4537007695931199,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "id",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-08-30",
-      "filled_from": "europe",
-      "headline": "Ratko Mladić, convicted Bosnian Serb war criminal, dies at 84",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260827.OBS117713/le-boucher-de-bosnie-ratko-mladic-condamne-pour-genocide-apres-la-guerre-est-mort.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260827/11621127/muere-ratko-mladic.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/muere-ratko-mladic-carnicero-bosnia-condenado-genocidio-srebrenica_1_13470688.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c5ywxpryj95o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/27/convicted-bosnian-serb-war-criminal-ratko-mladic-dies-in-hague-prison"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/29/nx-s1-5947879/srebrenica-survivor-ahmed-hrustanovic-reflects-on-ratko-mladics-death"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "en.tempo.co",
-          "source_country": "id",
-          "url": "https://en.tempo.co/read/2118544/ratko-mladic-the-man-behind-srebrenica-massacre-dies-at-84"
-        }
-      ],
-      "mentioned_countries": [
-        "bk"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml",
-      "rank": 3,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "eldiario.es",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "nouvelobs.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4537,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7419
-        },
-        "total": 0.7113,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ratko mladic",
-      "subject_names": [
-        "bosnia'",
-        "mladic",
-        "muere",
-        "ratko mladic"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Ratko Mladić, the Bosnian Serb general convicted of war crimes and genocide for his role in the Bosnian war and the Srebrenica massacre, has died at age 84 while serving his sentence in The Hague; his death has prompted reactions from survivors and coverage across international media."
-    },
-    {
-      "cluster_id": "subject-kiev-cf69df293078",
-      "coherence": 0.44443910723375757,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "mx",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-30",
-      "filled_from": "europe",
-      "headline": "Russian strike on munitions depot near Kyiv kills 37 people",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/29/pres-de-kiev-une-attaque-russe-tue-37-personnes-et-pose-la-question-de-la-presence-d-installations-sensibles-en-zone-urbaine_6760334_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260829.OBS117770/au-moins-37-morts-apres-une-frappe-russe-sur-un-depot-de-munitions-pres-de-kiev-ce-que-l-on-sait.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-37-morts-apres-une-frappe-russe-contre-un-depot-darmes-kiev-denonce-une-negligence-QQLZ25NSCZDNVBWPFS5BYI5R3A/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-29/al-menos-27-muertos-en-un-bombardeo-ruso-contra-kiev-en-uno-de-los-peores-ataques-de-la-guerra.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/muertos-heridos-nuevo-ataque-ruso-centro-logistico-20260829125529-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/27-muertos-42-heridos-ataque-rusia-almacen-cerca-kiev_1_13474141.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/una-ola-ataques-rusos-contra-centros-logisticos-kiev-deja-menos-27-muertos-40-heridos_7030568_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/29/ataque-aereo-russo-mata-ao-menos-27-na-regiao-de-kiev-diz-autoridade-ucraniana.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "horacero.com.mx",
-          "source_country": "mx",
-          "url": "https://horacero.com.mx/internacional/ofensiva-rusa-kiev"
-        },
-        {
-          "language": "es",
-          "source": "razon.com.mx",
-          "source_country": "mx",
-          "url": "https://www.razon.com.mx/mundo/2026/08/29/ataque-ruso-contra-deposito-de-municiones-en-kiev-ucrania-deja-37-muertos-y-40-heridos/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/29/ataque-aereo-russo-mata-ao-menos-27-na-regiao-de-kiev-diz-autoridade-ucraniana.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com",
-        "globo.com",
-        "lemonde.fr",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4444,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7778
-        },
-        "total": 0.7103,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kiev",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russian",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "A Russian attack struck a munitions or military storage site near Kyiv, killing 37 people and wounding around 40–42 others; the strike is described as one of the deadliest of the war and has raised concerns about military facilities located near populated areas and allegations of negligence."
-    },
-    {
-      "cluster_id": "subject-islandia-bbcfaf80a26e",
-      "coherence": 0.4694448752558117,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "ei",
-        "france",
-        "pk",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-08-30",
-      "filled_from": "europe",
-      "headline": "Iceland rejects restarting EU accession negotiations in referendum",
-      "independent_source_count": 18,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/referendum-sur-lue-en-islande-le-non-trois-points-devant-le-oui-alors-que-le-depouillement-touche-a-sa-fin-20260830_6FWWBJHRSNHCVOVB4ZSBUGNYVA/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260830-r%C3%A9f%C3%A9rendum-en-islande-le-non-l-emporte-sur-la-reprise-des-n%C3%A9gociations-d-adh%C3%A9sion-%C3%A0-l-ue"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260830-r%C3%A9f%C3%A9rendum-sur-l-ue-en-islande-le-non-en-passe-de-l-emporter"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-30/islandia-cierra-la-puerta-a-la-integracion-en-la-union-europea.html"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-29/islandia-vota-en-referendum-si-reabre-las-negociaciones-de-adhesion-a-la-union-europea.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/islandia-rechaza-reabrir-negociaciones-ue-ajustado-referendum-20260830094418-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/islandia-rechaza-volver-negociar-entrada-ue-margen-apenas-decimas-falta-terminar-recuento_1_13474899.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20260830/mantiene-ligera-ventaja-referendum-islandes-negociaciones-ingreso-union-europea/1003744366929_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-islandia-rechaza-referendum-conversaciones-adhesion-union-europea-20260830103623.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/islandia-rechaza-retomar-las-negociaciones-ingreso-ue-un-ajustado-referendum_7030696_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/30/iceland-eu-accession-talks-referendum-result"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c70le8ed1plo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "yasstribune.com.au",
-          "source_country": "as",
-          "url": "https://www.yasstribune.com.au/story/9339942/iceland-votes-no-in-referendum-on-renewed-eu-talks/"
-        },
-        {
-          "language": "en",
-          "source": "irishtimes.com",
-          "source_country": "ei",
-          "url": "https://www.irishtimes.com/world/europe/2026/08/30/iceland-rejects-vote-for-european-union-accession-talks/"
-        },
-        {
-          "language": "en",
-          "source": "goulburnpost.com.au",
-          "source_country": "as",
-          "url": "https://www.goulburnpost.com.au/story/9339942/iceland-votes-no-in-referendum-on-renewed-eu-talks/"
-        },
-        {
-          "language": "en",
-          "source": "thefrontierpost.com",
-          "source_country": "pk",
-          "url": "https://thefrontierpost.com/iceland-rejects-eu-accession-talks-plan-in-referendum/"
-        },
-        {
-          "language": "en",
-          "source": "examiner.com.au",
-          "source_country": "as",
-          "url": "https://www.examiner.com.au/story/9339942/iceland-votes-no-in-referendum-on-renewed-eu-talks/"
-        },
-        {
-          "language": "en",
-          "source": "wgauradio.com",
-          "source_country": "united-states",
-          "url": "https://www.wgauradio.com/news/world/iceland-set-reject/NCYRH7HX2Y4UNONDECNF6Q3SGU/"
-        },
-        {
-          "language": "es",
-          "source": "elprogreso.es",
-          "source_country": "spain",
-          "url": "https://www.elprogreso.es/articulo/mundo/gana-terreno-referendo-islandia-ingreso-ue-roza-victoria/202608301148381994916.html"
-        }
-      ],
-      "mentioned_countries": [
-        "ic"
-      ],
-      "origin_country": "as",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-08-29/islandia-vota-en-referendum-si-reabre-las-negociaciones-de-adhesion-a-la-union-europea.html",
-      "rank": 5,
-      "reference_newsroom_count": 11,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com",
-        "europapress.es",
-        "france24.com",
-        "liberation.fr",
-        "rfi.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4694,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.5789,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.8182,
-          "source_reliability": 0.8621
-        },
-        "total": 0.6774,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "islandia",
-      "subject_names": [
-        "donald trump",
-        "etats-unis",
-        "iceland",
-        "islande",
-        "islandia",
-        "trump",
-        "union europea",
-        "yosemite"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "Icelandic voters rejected a proposal to resume negotiations for joining the European Union in a national referendum, with results reported as a narrow or close defeat for the proposal by multiple outlets."
+      "subject_newsroom_count": 4,
+      "summary": "Jean‑François Leroy, who founded and served for decades as director of the Visa pour l’Image photojournalism festival in Perpignan, has died at the age of 69. He was widely recognized as a staunch defender and tireless promoter of photojournalism, and his death was reported across multiple outlets."
     }
   ],
-  "discarded_ingested": 18,
+  "discarded_ingested": 22,
   "discarded_kept": 5,
-  "generated_at": "2026-08-30T10:35:48.222148+00:00",
+  "generated_at": "2026-08-31T11:44:42.337367+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

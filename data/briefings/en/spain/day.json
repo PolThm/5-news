@@ -1,46 +1,384 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ceuta-582449ee5c32",
-      "coherence": 0.4646165687234949,
+      "cluster_id": "subject-italia-8a515227ed3a",
+      "coherence": 0.4727148868547184,
+      "consequence": 2,
+      "countries": [
+        "ci",
+        "it",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-08-31",
+      "headline": "Italy extends Schengen suspension with Spain for 15 days and Spain reciprocates controls",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/meloni-prorroga-dias-controles-viajeros-procedentes-espana-20260831120110-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/08/31/6a955d4c468aeb79138b4585.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/31/6a954dd8fdddffb46a8b4588.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20260831/meloni-alarga-suspension-espacio-schengen-italia-espana-dias-situacion-ceuta-no-mejora/1003744367602_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-espana-prorroga-15-dias-controles-pasajeros-italia-respuesta-decision-gobierno-meloni-20260831125959.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-los-controles-los-viajeros-procedentes-espana_7030965_0.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/31/italy-keeps-schengen-suspension-with-spain-in-place-for-further-15-days-over-ceuta-tension"
+        },
+        {
+          "language": "es",
+          "source": "eldiariomontanes.es",
+          "source_country": "spain",
+          "url": "https://www.eldiariomontanes.es/nacional/italia-prolonga-dos-semanas-controles-conexiones-espana-20260831124712-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "latercera.com",
+          "source_country": "ci",
+          "url": "https://www.latercera.com/mundo/noticia/italia-mantiene-15-dias-mas-la-suspension-de-schengen-con-espana-por-la-crisis-de-ceuta/"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-31/litalia-conferma-il-blocco-di-schengen-con-la-spagna-per-altri-15-giorni/19625431/"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/31/litalia-conferma-il-blocco-di-schengen-con-madrid-per-altri-15-giorni-a-causa-delle-tensio"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/news-notizia/post/972617/2026-08-31-schengen-italia-proroga-15-giorni-controlli-per-arrivi-spagna-13-02/"
+        },
+        {
+          "language": "it",
+          "source": "ilmessaggero.it",
+          "source_country": "it",
+          "url": "https://www.ilmessaggero.it:443/politica/migranti_shengen_scontro_italia_spagna_controlli_cosa_succede-9735083.html"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-08-31/schengen-litalia-proroga-i-controlli-alla-frontiera-con-la-spagna-per-altri-15-giorni/19625468/"
+        },
+        {
+          "language": "it",
+          "source": "ilmessaggero.it",
+          "source_country": "it",
+          "url": "https://www.ilmessaggero.it:443/politica/italia_schengen_migranti_ceuta_cosa_succede-9733972.html"
+        },
+        {
+          "language": "cat",
+          "source": "elpuntavui.cat",
+          "source_country": "spain",
+          "url": "http://www.elpuntavui.cat/politica/article/17-politica/2670938-italia-prorroga-15-dies-mes-els-controls-als-viatgers-de-l-estat-espanyol-per-la-crisi-migratoria-de-ceuta.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "it"
+      ],
+      "origin_country": "ci",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/mundo/europa/20260831/meloni-alarga-suspension-espacio-schengen-italia-espana-dias-situacion-ceuta-no-mejora/1003744367602_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "euronews.com",
+        "europapress.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4727,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.8333
+        },
+        "total": 0.6947,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "italia",
+      "subject_names": [
+        "ceuta",
+        "espana",
+        "gobierno",
+        "italia",
+        "italy",
+        "marlaska",
+        "melilla",
+        "meloni",
+        "sanchez",
+        "schengen"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Italy has extended by 15 days its suspension of Schengen rules for arrivals from Spain amid tensions linked to Ceuta, and Spain has responded by renewing border controls on passengers coming from Italy for the same 15-day period."
+    },
+    {
+      "cluster_id": "subject-ceuta-9ea8665c4a59",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-30",
+      "headline": "Spanish government approves €165 million emergency package for Ceuta",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/08/30/6a9405dae5fdea0a3b8b4575.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/08/30/6a9405e4fc6c83ef3d8b4590.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/08/30/spain-announces-165m-emergency-package-for-ceuta-as-migrant-returns-continue"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "it",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/08/30/6a9405e4fc6c83ef3d8b4590.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elmundo.es",
+        "euronews.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6396,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "espana",
+        "gobierno",
+        "marlaska",
+        "melilla",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "The Spanish government approved a €165 million emergency aid package for the autonomous city of Ceuta to address the ongoing migrant situation and related needs; the measure is being enacted as migrant returns continue."
+    },
+    {
+      "cluster_id": "subject-ceuta-19afeb890573",
+      "coherence": 0.42463987617006704,
+      "consequence": 2,
+      "countries": [
+        "fi",
+        "france",
+        "germany",
+        "ro",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-08-31",
+      "headline": "Spanish prime minister says Russia and Israel spread disinformation around Ceuta migrant crisis",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260831-ceuta-espagne-pedro-sanchez-d%C3%A9clare-russie-isra%C3%ABl-ont-aliment%C3%A9-d%C3%A9sinformation-immigration"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-08/desinformation-ceuta-migration-russland-israel-pedro-sanchez-gxe"
+        },
+        {
+          "language": "fin",
+          "source": "is.fi",
+          "source_country": "fi",
+          "url": "https://www.is.fi/ulkomaat/art-2000012241750.html"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/my-europe/2026/08/31/pedro-sanchez-la-disinformazione-online-spinta-dalle-destre-globali-ha-favorito-la-crisi-m"
+        },
+        {
+          "language": "ron",
+          "source": "realitatea.net",
+          "source_country": "ro",
+          "url": "https://www.realitatea.net/stiri/extern/pedro-sanchez-acuza-rusia-si-israelul-ca-au-amplificat-dezinformarea-din-criza-migrantilor-din-ceuta-ovdfnz"
+        },
+        {
+          "language": "ron",
+          "source": "mediafax.ro",
+          "source_country": "ro",
+          "url": "https://www.mediafax.ro/externe/pedro-sanchez-acuza-rusia-si-israelul-de-dezinformare-in-criza-migrantilor-din-ceuta-23799073"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "is"
+      ],
+      "origin_country": "fi",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/europe/20260831-ceuta-espagne-pedro-sanchez-d%C3%A9clare-russie-isra%C3%ABl-ont-aliment%C3%A9-d%C3%A9sinformation-immigration",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "euronews.com",
+        "france24.com",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4246,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6522
+        },
+        "total": 0.6251,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "gaza",
+        "israel",
+        "marlaska",
+        "maroc",
+        "marruecos",
+        "melilla",
+        "pedro sanchez",
+        "rabat",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Spanish Prime Minister Pedro Sánchez accused Russia and Israel of amplifying online disinformation that contributed to the migrant crisis in Ceuta, saying global right-wing forces also helped spread misleading narratives about the situation."
+    },
+    {
+      "cluster_id": "subject-pisa-a227a8ca0840",
+      "coherence": 0.43763583671711703,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-08-30",
-      "headline": "Spanish government approves €165 million emergency package for Ceuta",
+      "editorial_day": "2026-08-31",
+      "headline": "Catalonia's education department fires its secretary general and opens three disciplinary cases",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-08-30/sanchez-destina-otros-165-millones-a-recuperar-ceuta-y-aplacar-una-crisis-que-altera-el-nuevo-curso.html"
+          "url": "https://elpais.com/espana/catalunya/2026-08-31/educacion-fulmina-a-la-secretaria-general-y-abre-expediente-disciplinario-a-tres-funcionarios-tras-el-error-de-pisa-en-cataluna.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/sociedad/generalitat-fulmina-secretaria-general-educacion-abre-tres-20260831115942-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/gobierno-aprobara-proximo-martes-plan-emergencia-ceuta-165-millones_1_13475109.html"
+          "url": "https://www.eldiario.es/catalunya/generalitat-destituye-secretaria-general-educacion-anuncia-tres-expedientes-disciplinarios-errores-pruebas-pisa_1_13476407.html"
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-08-30/el-gobierno-inyecta-165-millones-de-euros-a-ceuta-para-evitar-el-colapso-financiero-tras-la-crisis-migratoria_4414391/"
+          "url": "https://www.elmundo.es/cataluna/2026/08/31/6a953f82e4d4d8d80e8b458f.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-gobierno-aprobara-proximo-martes-paquete-165-millones-ayudar-ceuta-20260830110634.html"
-        },
-        {
-          "language": "es",
-          "source": "diariodeburgos.es",
-          "source_country": "spain",
-          "url": "https://www.diariodeburgos.es/noticia/zee8432b3-3959-4c88-8f19ee47076dd313/202608/el-gobierno-aprobara-165-millones-para-ayudar-a-ceuta"
+          "url": "https://www.europapress.es/catalunya/noticia-educacio-abre-expediente-disciplinario-personas-polemica-pruebas-pisa-20260831114336.html"
         }
       ],
       "mentioned_countries": [
@@ -48,401 +386,114 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/2026-08-30/sanchez-destina-otros-165-millones-a-recuperar-ceuta-y-aplacar-una-crisis-que-altera-el-nuevo-curso.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
+      "outbound_url": "https://elpais.com/espana/catalunya/2026-08-31/educacion-fulmina-a-la-secretaria-general-y-abre-expediente-disciplinario-a-tres-funcionarios-tras-el-error-de-pisa-en-cataluna.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "elconfidencial.com",
+        "abc.es",
         "eldiario.es",
+        "elmundo.es",
         "elpais.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4646,
+          "coherence": 0.4376,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "source_reliability": 0.6522
         },
-        "total": 0.6042,
+        "total": 0.6141,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "pisa",
       "subject_names": [
-        "ceuta",
-        "frontex",
-        "marlaska",
-        "marruecos"
+        "cataluna",
+        "pisa"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "The Spanish government will approve a €165 million emergency plan to support Ceuta after a recent crisis that threatened the city’s finances and stability; the funds are intended to help recover the city and prevent financial collapse as authorities respond to the situation."
+      "subject_newsroom_count": 6,
+      "summary": "The Catalan government has dismissed its secretary general of Education and initiated disciplinary proceedings against three education officials after an error affected Catalonia’s participation in the PISA assessment, with regional authorities announcing the removals and investigations."
     },
     {
-      "cluster_id": "subject-nepal-15a37d598913",
-      "coherence": 0.47313570814095973,
+      "cluster_id": "subject-ceuta-39fd32118bce",
+      "coherence": null,
       "consequence": 2,
       "countries": [
+        "it",
         "spain",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-08-29",
-      "headline": "Two Spanish nationals remain missing after deadly Nepal landslide",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260829/11622228/nepal-eleva-dos-espanoles-localizados-riada-633-muertos.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nepal-eleva-610-muertos-violenta-riada-continuan-operaciones-zona-cero_1_13473947.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/exteriores-confirma-que-dos-espanoles-siguen-desaparecidos-tras-riada-nepal-que-deja-cerca-700-muertos_7030651_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/nepal-eleva-dos-los-espanoles-localizados-tras-violenta-riada-que-ya-deja-633-muertos_7030557_0.html"
-        },
-        {
-          "language": "es",
-          "source": "efe.com",
-          "source_country": "united-states",
-          "url": "https://efe.com/espana/2026-08-29/espanoles-desaparecidos-nepal/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/nepal-eleva-610-muertos-violenta-riada-continuan-operaciones-zona-cero_1_13473947.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4731,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
-        },
-        "total": 0.5706,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nepal",
-      "subject_names": [
-        "nepal",
-        "nepal-tibet"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "A violent landslide in Nepal has caused around 669–700 deaths, and Spanish authorities confirm that two Spanish citizens are still missing; updates indicate some Spanish nationals have been located while others remain unaccounted for amid the ongoing toll."
-    },
-    {
-      "cluster_id": "subject-pogacar-0978f692a8fe",
-      "coherence": 0.4089698373291554,
-      "consequence": 1,
-      "countries": [
-        "france",
-        "spain",
-        "united-states"
+        "united-kingdom"
       ],
       "country_count": 3,
       "editorial_day": "2026-08-30",
-      "headline": "Tadej Pogacar abandons Vuelta after a heavy crash",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sports/cyclisme/tadej-pogacar-contraint-a-labandon-sur-la-vuelta-apres-une-lourde-chute-20260829_4QNFH43D5FCPFOM2KZLK3RVCLA/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9missions/sports/20260830-vuelta-l-immense-frayeur-de-pogacar-une-lourde-chute-et-un-abandon"
-        },
-        {
-          "language": "es",
-          "source": "teleamazonas.com",
-          "source_country": "united-states",
-          "url": "https://www.teleamazonas.com/deportes/otros-deportes/ciclismo/tadej-pogacar-caida-abandona-vuelta-espana-126617/"
-        },
-        {
-          "language": "es",
-          "source": "diaridetarragona.com",
-          "source_country": "spain",
-          "url": "https://www.diaridetarragona.com/deportes/polideportivo/269491/tadej-pogacar-abandona-vuelta-dura-caida-valencia.html"
-        },
-        {
-          "language": "es",
-          "source": "lavozdigital.es",
-          "source_country": "spain",
-          "url": "https://www.lavozdigital.es/deportes/pogacar-retira-vuelta-durisima-caida-correra-cadiz-20260829173919-ntv.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "diaridetarragona.com",
-      "outbound_url": "https://www.diaridetarragona.com/deportes/polideportivo/269491/tadej-pogacar-abandona-vuelta-dura-caida-valencia.html",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "france24.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.409,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.5171,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "pogacar",
-      "subject_names": [
-        "pogacar",
-        "tadej pogacar"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Tadej Pogacar was forced to abandon the Vuelta a España following a heavy crash during the race; the fall was described as violent and serious and led to his withdrawal, with reports noting the incident occurred in Valencia-related stages and that he will not continue to Cádiz."
-    },
-    {
-      "cluster_id": "subject-monteros-b66d59a205f2",
-      "coherence": 0.4859194108196998,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-29",
-      "headline": "Carlos Espinosa de los Monteros dies at 82",
-      "independent_source_count": 5,
+      "headline": "Clashes erupt in Ceuta as anti-migrant protests confront police",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "infolibre.es",
           "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-08-29/muere-a-los-82-anos-carlos-espinosa-de-los-monteros-el-primer-alto-comisionado-para-la-marca-espana.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/muere-carlos-espinosa-monteros-expresidente-iberia-primer-alto-comisionado-marca-espana_1_13474685.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/sociedad/2026/08/29/6a931be9468aebc63a8b459b.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/economia/empresas/2026/08/29/6a93193121efa0e0188b456f.html"
-        },
-        {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/economia/muere-82-anos-empresario-carlos-espinosa-monteros_202608296a931e17ae2f3735da1c8222.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/sociedad/2026/08/29/6a931be9468aebc63a8b459b.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4859,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.4983,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "monteros",
-      "subject_names": [
-        "alto comisionado",
-        "barcelona",
-        "espana",
-        "espinosa",
-        "madrid",
-        "monteros",
-        "muere",
-        "muere carlos",
-        "spain"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Carlos Espinosa de los Monteros, a prominent Spanish businessman who served as president of airline Iberia and as Spain’s first High Commissioner for the Brand Spain, has died at the age of 82; several outlets note his role as a key figure in Spanish business and mention he was the father of a former Vox politician."
-    },
-    {
-      "cluster_id": "subject-ratko-mladic-6d513b538698",
-      "coherence": 0.4537007695931199,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "id",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-08-30",
-      "filled_from": "europe",
-      "headline": "Ratko Mladić, convicted Bosnian Serb war criminal, dies at 84",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260827.OBS117713/le-boucher-de-bosnie-ratko-mladic-condamne-pour-genocide-apres-la-guerre-est-mort.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260827/11621127/muere-ratko-mladic.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/muere-ratko-mladic-carnicero-bosnia-condenado-genocidio-srebrenica_1_13470688.html"
+          "url": "https://www.infolibre.es/opinion/columnas/oficio-de-impostores/llueve-violencia-ceuta_129_2235610.html"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c5ywxpryj95o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cy9zj11gwzxo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/27/convicted-bosnian-serb-war-criminal-ratko-mladic-dies-in-hague-prison"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/08/29/nx-s1-5947879/srebrenica-survivor-ahmed-hrustanovic-reflects-on-ratko-mladics-death"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "en.tempo.co",
-          "source_country": "id",
-          "url": "https://en.tempo.co/read/2118544/ratko-mladic-the-man-behind-srebrenica-massacre-dies-at-84"
+          "url": "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police"
         }
       ],
       "mentioned_countries": [
-        "bk"
+        "spain"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/27/morre-o-general-servio-bosnio-ratko-mladic-condenado-por-genocidio.ghtml",
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/video/2026/08/28/spain-clashes-erupt-in-ceuta-as-anti-migrant-protesters-confront-police",
       "rank": 5,
-      "reference_newsroom_count": 7,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "eldiario.es",
         "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "nouvelobs.com",
-        "npr.org"
+        "infolibre.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4537,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7419
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.7113,
+        "total": 0.5763,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ratko mladic",
+      "subject_label": "ceuta",
       "subject_names": [
-        "bosnia'",
-        "mladic",
-        "muere",
-        "ratko mladic"
+        "ceuta",
+        "marlaska",
+        "melilla",
+        "sanchez"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Ratko Mladić, the Bosnian Serb general convicted of war crimes and genocide for his role in the Bosnian war and the Srebrenica massacre, has died at age 84 while serving his sentence in The Hague; his death has prompted reactions from survivors and coverage across international media."
+      "subject_newsroom_count": 20,
+      "summary": "In Ceuta, confrontations broke out between anti-migrant demonstrators and police during protests linked to a migrant crisis; stones and other projectiles were thrown, police used force including shields and dispersal tactics, and several people were injured and detained while tensions remained high in the city."
     }
   ],
-  "discarded_ingested": 30,
+  "discarded_ingested": 58,
   "discarded_kept": 5,
-  "generated_at": "2026-08-30T10:35:48.222148+00:00",
+  "generated_at": "2026-08-31T11:44:42.337367+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

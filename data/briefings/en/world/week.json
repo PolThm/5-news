@@ -2,590 +2,1005 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-trump-386d4c57f6d8",
-        "subject-trump-c015a8e4e79f"
+        "subject-trump-47aab28e481f"
       ],
-      "cluster_id": "subject-trump-c015a8e4e79f",
-      "coherence": 0.47515369146952835,
+      "cluster_id": "subject-trump-47aab28e481f",
+      "coherence": 0.5349922970221876,
       "consequence": 3,
       "countries": [
         "brazil",
-        "cb",
         "france",
-        "it",
-        "np",
+        "germany",
+        "id",
+        "rp",
+        "spain",
+        "sz",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 7,
-      "editorial_day": "2026-08-31",
-      "headline": "Trump announces US deal to control 65 billion barrels of Venezuelan oil",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260829.OBS117756/65-milliards-de-barils-mainmise-americaine-que-contient-l-accord-petrolier-historique-signe-entre-les-etats-unis-et-le-venezuela.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/amerique/le-plan-de-donald-trump-pour-semparer-de-65-milliards-de-barils-de-petrole-venezueliens-KN7VZ447RVDZVMHGYA6KNWYXUA/"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/us-news/2026/aug/28/trump-venezuela-oil-agreement"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cx2zlwe7qj1o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/2026/08/29/us-strikes-deal-to-control-more-than-65-billion-barrels-of-venezuelas-oil-reserves"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/politics/trump-says-u-s-has-entered-deal-with-venezuela-to-control-65-billion-barrels-of-its-oil-reserves"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/28/trump-anuncia-acordo-que-garante-aos-eua-controle-de-mais-de-65-bilhoes-de-barris-de-petroleo-da-venezuela.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "nepalnational.com",
-          "source_country": "np",
-          "url": "http://www.nepalnational.com/news/279273580/trump-says-us-gains-majority-control-of-65-billion-oil-barrels"
-        },
-        {
-          "language": "en",
-          "source": "cambodiantimes.com",
-          "source_country": "cb",
-          "url": "http://www.cambodiantimes.com/news/279273580/trump-says-us-gains-majority-control-of-65-billion-oil-barrels"
-        },
-        {
-          "language": "en",
-          "source": "utahindependent.com",
-          "source_country": "united-states",
-          "url": "http://www.utahindependent.com/news/279273580/trump-says-us-gains-majority-control-of-65-billion-oil-barrels"
-        }
-      ],
-      "mentioned_countries": [
-        "ve",
-        "united-states"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/28/trump-anuncia-acordo-que-garante-aos-eua-controle-de-mais-de-65-bilhoes-de-barris-de-petroleo-da-venezuela.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "globo.com",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "pbs.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4752,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.7143,
-          "source_reliability": 0.7714
-        },
-        "total": 0.7479,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "canada",
-        "donald trump",
-        "eeuu",
-        "estados unidos",
-        "etats-unis",
-        "iran",
-        "kharg",
-        "moyen-orient",
-        "new york",
-        "ormuz",
-        "trump",
-        "venezuela",
-        "washington"
-      ],
-      "subject_newsroom_count": 30,
-      "summary": "Multiple news outlets report that former President Donald Trump announced a new agreement under which the United States would gain control or majority control of about 65 billion barrels of Venezuela’s oil reserves; the announcement described the pact as “historic” and centered on U.S. access to those reserves."
-    },
-    {
-      "_linked_ids": [
-        "subject-chatgpt-f4f96c4c0c38"
-      ],
-      "cluster_id": "subject-chatgpt-f4f96c4c0c38",
-      "coherence": 0.4920845737178585,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "germany",
-        "india",
-        "lo",
-        "no",
-        "pk",
-        "ro",
-        "sz",
-        "united-states"
-      ],
       "country_count": 9,
-      "editorial_day": "2026-08-31",
-      "headline": "EU subjects ChatGPT, Reddit and Roblox to tougher digital rules",
-      "independent_source_count": 12,
+      "editorial_day": "2026-09-01",
+      "headline": "Supreme Court allows Trump to continue building a White House ballroom",
+      "independent_source_count": 13,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/pixels/article/2026/08/31/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-regles-renforcees-au-sein-de-l-union-europeenne_6762380_4408996.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/chatgpt-va-etre-soumis-a-des-regles-renforcees-dans-l-ue-de-meme-que-reddit-et-roblox-20260831"
-        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/economie-numerique/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-controles-renforces-dans-lue-20260831_S2AIB5KHNJEZZAQG6LZRFJTKNM/"
+          "url": "https://www.liberation.fr/international/amerique/la-cour-supreme-autorise-la-construction-de-la-salle-de-bal-de-trump-a-la-maison-blanche-20260901_NJMTECKJFFGZHP4YP7WFQNFRFI/"
         },
         {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chatgpt-reddit-roblox-to-adhere-to-eus-very-large-platform-rules/articleshow/133650637.cms"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260901-etats-unis-cour-supreme-autoriseconstruction-salle-de-bal-donald-trump-maison-blanche"
         },
-        {
-          "language": "en",
-          "source": "thenews.com.pk",
-          "source_country": "pk",
-          "url": "https://www.thenews.com.pk/latest/1414338-eu-designates-chatgpt-reddit-and-roblox-for-tougher-new-rules"
-        },
-        {
-          "language": "de",
-          "source": "gmx.ch",
-          "source_country": "sz",
-          "url": "https://www.gmx.ch/magazine/digital/eu-chatgpt-reddit-roblox-kuerzere-leine-42670978"
-        },
-        {
-          "language": "de",
-          "source": "t-online.de",
-          "source_country": "germany",
-          "url": "https://www.t-online.de/digital/aktuelles/id_101413152/dsa-chatgpt-reddit-und-roblox-stehen-vor-strengeren-eu-regeln.html"
-        },
-        {
-          "language": "de",
-          "source": "finanznachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69451135-chatgpt-reddit-und-roblox-muessen-hoehere-eu-standards-erfuellen-015.htm"
-        },
-        {
-          "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/next/2026/08/31/ue-sottopone-chatgpt-reddit-e-roblox-alle-regole-digitali-piu-severe"
-        },
-        {
-          "language": "nor",
-          "source": "nrk.no",
-          "source_country": "no",
-          "url": "https://www.nrk.no/nyheter/strengere-eu-regler-for-chatgpt_-reddit-og-roblox-1.18008768"
-        },
-        {
-          "language": "ron",
-          "source": "mediafax.ro",
-          "source_country": "ro",
-          "url": "https://www.mediafax.ro/social/ue-inaspreste-regulile-pentru-chatgpt-reddit-si-roblox-chatgpt-tratat-pentru-prima-data-ca-motor-de-cautare-foarte-mare-23799072"
-        },
-        {
-          "language": "slk",
-          "source": "hnonline.sk",
-          "source_country": "lo",
-          "url": "https://hnonline.sk/finweb/zahranicna-ekonomika/96299676-europska-komisia-zaradila-chatgpt-reddit-a-roblox-pod-prisnejsiu-kontrolu"
-        }
-      ],
-      "mentioned_countries": [
-        "be"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/economie-numerique/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-controles-renforces-dans-lue-20260831_S2AIB5KHNJEZZAQG6LZRFJTKNM/",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "euronews.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4921,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.75,
-          "source_reliability": 0.7778
-        },
-        "total": 0.735,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "chatgpt",
-      "subject_names": [
-        "chatgpt",
-        "reddit",
-        "roblox"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "The European Commission has designated ChatGPT, Reddit and Roblox for enhanced oversight under the EU’s digital regulations, meaning these services will face stricter compliance and monitoring requirements as part of the bloc’s effort to apply stronger rules to large online platforms and AI systems."
-    },
-    {
-      "_linked_ids": [
-        "subject-chipre-4984a5d94844"
-      ],
-      "cluster_id": "subject-chipre-4984a5d94844",
-      "coherence": 0.5158015192317298,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "mx",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-08-31",
-      "headline": "Ferry sinks off northern Cyprus leaving at least eight dead",
-      "independent_source_count": 8,
-      "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-30/un-barco-con-unas-270-personas-a-bordo-vuelca-frente-al-norte-de-chipre.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/naufraga-barco-270-personas-bordo-frente-costas-20260830134109-nt.html"
+          "url": "https://elpais.com/us/2026-08-31/el-tribunal-supremo-autoriza-definitivamente-la-construccion-del-salon-de-baile-de-trump-en-la-casa-blanca.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260830/11623130/ferry-mas-260-pasajeros-bordo-naufraga-frente-costa-norte-chipre.html"
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624141/supremo-da-luz-verde-trump-construya-salon-baile-casa-blanca.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/naugrafa-barco-270-personas-bordo-frente-costa-norte-chipre_1_13475259.html"
+          "url": "https://www.elespanol.com/mundo/america/eeuu/20260901/supremo-unidos-da-luz-verde-trump-construya-salon-baile-casa-blanca/1003744368519_0.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-ferry-con-270-personas-bordo-naufraga-norte-chipre_7030740_0.html"
+          "url": "https://www.20minutos.es/internacional/supremo-da-luz-verde-trump-para-que-construya-un-salon-baile-casa-blanca_7031250_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c9w457e7ydlo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/weisses-haus-ballsaal-100.html"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/show/news-wrap-supreme-court-allows-trump-ballroom-construction-to-continue-amid-challenges"
         },
         {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/30/naufragio-de-balsa-no-norte-do-chipre-deixa-8-mortos-e-17-desaparecidos.ghtml"
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/31/suprema-corte-permite-que-trump-prossiga-com-construcao-do-salao-de-baile-na-casa-branca-continue.ghtml"
         },
         {
-          "language": "es",
-          "source": "sdpnoticias.com",
-          "source_country": "mx",
-          "url": "https://www.sdpnoticias.com/internacional/ferry-se-hunde-al-norte-de-chipre-con-267-personas-a-bordo-y-deja-8-muertos/"
+          "language": "en",
+          "source": "en.tempo.co",
+          "source_country": "id",
+          "url": "https://en.tempo.co/read/2118677/us-supreme-court-allows-trump-ballroom-project-to-proceed"
         },
         {
-          "language": "es",
-          "source": "latribunadetoledo.es",
-          "source_country": "spain",
-          "url": "https://www.latribunadetoledo.es/noticia/zbb81f512-2079-48af-9de53c3f8eec5e7f/202608/se-hunde-un-ferry-con-267-personas-a-bordo-en-chipre"
+          "language": "en",
+          "source": "manilatimes.net",
+          "source_country": "rp",
+          "url": "https://www.manilatimes.net/2026/09/01/world/asia-oceania/us-supreme-court-allows-trump-ballroom-project-to-proceed/2415556"
+        },
+        {
+          "language": "fr",
+          "source": "24heures.ch",
+          "source_country": "sz",
+          "url": "https://www.24heures.ch/trump-la-cour-supreme-autorise-sa-salle-de-bal-843921294875"
         }
       ],
       "mentioned_countries": [
-        "cy"
+        "united-states"
       ],
       "origin_country": "brazil",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/naufraga-barco-270-personas-bordo-frente-costas-20260830134109-nt.html",
-      "rank": 3,
-      "reference_newsroom_count": 6,
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/31/suprema-corte-permite-que-trump-prossiga-com-construcao-do-salao-de-baile-na-casa-branca-continue.ghtml",
+      "rank": 1,
+      "reference_newsroom_count": 10,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
-        "eldiario.es",
+        "bbc.co.uk",
+        "elespanol.com",
         "elpais.com",
+        "france24.com",
         "globo.com",
-        "lavanguardia.com"
+        "lavanguardia.com",
+        "liberation.fr",
+        "pbs.org",
+        "tagesschau.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.5158,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
+          "coherence": 0.535,
+          "corroboration": 0.8182,
+          "editorial_weight": 0.5556,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7333
+          "prominence": 0.7647,
+          "source_reliability": 0.8182
         },
-        "total": 0.7254,
+        "total": 0.7959,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "chipre",
+      "subject_label": "trump",
       "subject_names": [
-        "chipre",
-        "chypre",
-        "cyprus",
-        "etat",
-        "turquie"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "A passenger ferry sank off the northern coast of Cyprus with around 267–270 people on board; the incident has killed at least eight people and left multiple others missing, while rescue operations have been carried out."
-    },
-    {
-      "_linked_ids": [
-        "subject-islandia-59fba362496f"
-      ],
-      "cluster_id": "subject-islandia-59fba362496f",
-      "coherence": 0.493154649549956,
-      "consequence": 3,
-      "countries": [
-        "ec",
-        "id",
-        "spain",
-        "sz"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-30",
-      "headline": "Iceland votes against resuming European Union accession talks",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-30/islandia-cierra-la-puerta-a-la-integracion-en-la-union-europea.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/islandia-rechaza-reabrir-negociaciones-ue-ajustado-referendum-20260830094418-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/islandia-rechaza-volver-negociar-entrada-ue-margen-apenas-decimas-falta-terminar-recuento_1_13474899.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/islandia-rechaza-retomar-las-negociaciones-ingreso-ue-un-ajustado-referendum_7030696_0.html"
-        },
-        {
-          "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/islande-non-a-une-reprise-des-negociations-d-adhesion-a-l-ue"
-        },
-        {
-          "language": "es",
-          "source": "expreso.ec",
-          "source_country": "ec",
-          "url": "https://www.expreso.ec/internacional/islandia-rechaza-urnas-adhesion-union-europea-294013.html"
-        },
-        {
-          "language": "ind",
-          "source": "cnnindonesia.com",
-          "source_country": "id",
-          "url": "https://www.cnnindonesia.com/internasional/20260830200450-134-1398043/islandia-tolak-buka-kembali-negosiasi-gabung-uni-eropa"
-        }
-      ],
-      "mentioned_countries": [
-        "ic"
-      ],
-      "origin_country": "ec",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/islandia-rechaza-volver-negociar-entrada-ue-margen-apenas-decimas-falta-terminar-recuento_1_13474899.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4932,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
-        },
-        "total": 0.7004,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "islandia",
-      "subject_names": [
-        "canada",
+        "casa blanca",
+        "cour",
         "donald trump",
-        "estados unidos",
-        "europa",
-        "europe",
-        "islande",
-        "islandia",
-        "kharg",
-        "new york",
-        "trump",
-        "venezuela",
-        "washington"
+        "maison blanche",
+        "supreme court",
+        "trump"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Icelanders rejected reopening negotiations to join the European Union in a closely contested referendum; the vote means the government will not resume formal EU accession talks."
+      "subject_newsroom_count": 31,
+      "summary": "The U.S. Supreme Court has cleared the way for former President Donald Trump to proceed with construction of a ballroom at the White House, permitting the project to continue amid ongoing legal challenges."
     },
     {
       "_linked_ids": [
-        "subject-nepal-07f3e92cc760",
-        "subject-nepal-4c6ea3404001",
-        "subject-nepal-576068963df9",
-        "subject-nepal-76a470b617be",
-        "subject-nepal-c71a855cac15"
+        "subject-ukraine-98c4925d9691"
       ],
-      "cluster_id": "subject-nepal-07f3e92cc760",
-      "coherence": 0.4306819483924569,
+      "cluster_id": "subject-ukraine-98c4925d9691",
+      "coherence": 0.4768456342442433,
       "consequence": 3,
       "countries": [
         "france",
-        "mo",
-        "sy"
+        "germany",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-08-31",
-      "headline": "Floods at Nepal–Tibet border cause hundreds of deaths and thousands missing",
-      "independent_source_count": 6,
+      "country_count": 6,
+      "editorial_day": "2026-09-01",
+      "headline": "Massive Russian attack on Kyiv and surrounding region kills at least 12",
+      "independent_source_count": 11,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/31/inondations-au-nepal-et-au-tibet-919-morts-et-4-793-disparus-selon-les-derniers-bilans-officiels_6761898_3211.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/asie-pacifique/en-direct-inondations-au-nepal-et-au-tibet-633-morts-et-pres-de-3-000-disparus-20260829_I4IYKFXZPZE67N4YKPDEWLCLOU/"
-        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/inondations-et-crues/crues-meurtrieres-au-nepal-et-au-tibet/les-crues-meurtrieres-au-nepal-et-au-tibet-ont-fait-au-moins-903-morts-et-4-247-disparus-selon-un-nouveau-bilan_8170592.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-une-attaque-russe-massive-fait-neuf-morts-a-kiev-et-dans-sa-region_8171675.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-guerre-en-ukraine-au-moins-9-morts-dans-une-attaque-russe-massive-sur-kiev-et-dans-sa-r%C3%A9gion"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260826.OBS117694/crue-a-la-frontiere-entre-le-nepal-et-le-tibet-au-moins-98-morts-et-des-centaines-de-disparus.html"
+          "url": "https://www.nouvelobs.com/monde/20260901.OBS117829/guerre-en-ukraine-une-attaque-russe-massive-fait-9-morts-a-kiev-et-dans-sa-region.html"
         },
         {
           "language": "fr",
-          "source": "lnt.ma",
-          "source_country": "mo",
-          "url": "https://lnt.ma/nepal-le-bilan-de-la-crue-atteint-919-morts-et-pres-de-4-800-disparus/"
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-ce-que-lon-sait-de-lattaque-russe-massive-qui-a-fait-12-morts-a-kiev-et-dans-sa-region-8ea5a50a-a5e2-11f1-95a1-d7cb1b3759ac?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
         },
         {
-          "language": "fr",
-          "source": "sana.sy",
-          "source_country": "sy",
-          "url": "https://sana.sy/fr/international/2327021/"
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/11-muertos-nuevo-ataque-ruso-kiev-alrededores_1_13478418.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ascienden-11-los-muertos-tras-un-nuevo-ataque-ruso-contra-kiev-sus-alrededores_7031275_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/live/2026/sep/01/ukraine-russia-strikes-attacks-odesa-zelenskyy-putin-eu-defence-europe-latest-news-updates"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/russische-angriffe-ukraine-108.html"
+        },
+        {
+          "language": "en",
+          "source": "washingtonexaminer.com",
+          "source_country": "united-states",
+          "url": "https://www.washingtonexaminer.com/news/4707448/12-killed-in-ukraine-as-russia-launches-massive-aerial-assault/"
+        },
+        {
+          "language": "it",
+          "source": "dire.it",
+          "source_country": "it",
+          "url": "https://www.dire.it/01-09-2026/1264048-la-russia-attacca-un-deposito-ferroviario-in-ucraina-sette-morti/"
+        },
+        {
+          "language": "es",
+          "source": "farodevigo.es",
+          "source_country": "spain",
+          "url": "https://www.farodevigo.es/mundo/2026/09/01/mueren-11-personas-nuevo-ataque-133825806.html"
         }
       ],
       "mentioned_countries": [
-        "np"
+        "up",
+        "rs"
       ],
       "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260826.OBS117694/crue-a-la-frontiere-entre-le-nepal-et-le-tibet-au-moins-98-morts-et-des-centaines-de-disparus.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev",
+      "rank": 2,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "france24.com",
         "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com"
+        "nouvelobs.com",
+        "ouest-france.fr",
+        "tagesschau.de",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4307,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4768,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.2,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.8049
         },
-        "total": 0.671,
+        "total": 0.7645,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "russia",
+        "russian",
+        "ucrania",
+        "ukraine",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 24,
+      "summary": "A large-scale Russian strike on Kyiv and its surrounding region overnight caused multiple deaths and injuries; reporting from several outlets places the confirmed death toll at between nine and twelve civilians, with authorities and news organizations describing the assault as a 'massive' attack that struck the city and nearby areas."
+    },
+    {
+      "_linked_ids": [
+        "subject-nepal-7f8e10b846e8"
+      ],
+      "cluster_id": "subject-nepal-7f8e10b846e8",
+      "coherence": 0.4722434734934403,
+      "consequence": 3,
+      "countries": [
+        "au",
+        "be",
+        "brazil",
+        "france",
+        "germany",
+        "it",
+        "md",
+        "vm"
+      ],
+      "country_count": 8,
+      "editorial_day": "2026-09-01",
+      "headline": "Flash floods in the Himalaya kill over 1,000 people in Nepal and China",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/asie-pacifique/crue-dans-lhimalaya-le-bilan-depasse-les-1-000-morts-au-nepal-et-en-chine-20260901_BQ27HCK5QFBOHG5P257FM6AK4U/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/crue-dans-l-himalaya-le-bilan-depasse-1000-morts-au-nepal-et-en-chine-20260901"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/inondations-et-crues/crues-meurtrieres-au-nepal-et-au-tibet/le-bilan-des-crues-dans-l-himalaya-depasse-la-barre-des-1-000-morts-au-nepal-et-au-tibet-selon-les-derniers-bilans-des-autorites_8171924.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-crue-au-n%C3%A9pal-le-bilan-ne-cesse-d-augmenter-et-d%C3%A9passe-la-barre-des-1-000-morts"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/asie-pacifique/20260901-crue-d%C3%A9vastatrice-himalaya-nepal-chine-tibet-bilan-d%C3%A9passe-1000-morts"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/asien/himalaya-nepal-sturzflut-tote-100.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/avalanche-himalaia-nepal-tibete-mortes-passam-de-1000.ghtml"
+        },
+        {
+          "language": "ron",
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/59462400"
+        },
+        {
+          "language": "it",
+          "source": "tg.la7.it",
+          "source_country": "it",
+          "url": "https://tg.la7.it/esteri/alluvione-nepal-morti-dispersi-ghiacciaio-himalaya-01-09-2026-261902"
+        },
+        {
+          "language": "it",
+          "source": "toscanamedianews.it",
+          "source_country": "it",
+          "url": "https://www.toscanamedianews.it/italpress/in-nepal-si-aggrava-il-bilancio-delle-vittime-oltre-1000-i-morti"
+        },
+        {
+          "language": "vie",
+          "source": "vov.vn",
+          "source_country": "vm",
+          "url": "http://vov.vn/the-gioi/so-nguoi-thiet-mang-do-lu-quet-o-nepal-da-gan-1000-post1329155.vov"
+        },
+        {
+          "language": "de",
+          "source": "diepresse.com",
+          "source_country": "au",
+          "url": "https://www.diepresse.com/41221276/zahl-der-toten-nach-sturzflut-im-himalaya-steigt-in-nepal-auf-ueber"
+        },
+        {
+          "language": "de",
+          "source": "lr-online.de",
+          "source_country": "germany",
+          "url": "https://www.lr-online.de/nachrichten/panorama/flut-in-nepal-und-tibet-mehr-als-1000-tote-nach-katastrophe-im-himalaya-tausende-noch-vermisst-79429149.html"
+        },
+        {
+          "language": "de",
+          "source": "moz.de",
+          "source_country": "germany",
+          "url": "https://www.moz.de/nachrichten/panorama/flut-in-nepal-und-tibet-mehr-als-1000-tote-nach-katastrophe-im-himalaya-tausende-noch-vermisst-79429149.html"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.be",
+          "source_country": "be",
+          "url": "https://www.rtl.be/actu/monde/international/crues-meurtrieres-au-nepal-et-au-tibet-pres-de-1000-morts-et-4471-disparus/2026-08-31/article/798868"
+        }
+      ],
+      "mentioned_countries": [
+        "china"
+      ],
+      "origin_country": "au",
+      "outbound_source": "rtl.be",
+      "outbound_url": "https://www.rtl.be/actu/monde/international/crues-meurtrieres-au-nepal-et-au-tibet-pres-de-1000-morts-et-4471-disparus/2026-08-31/article/798868",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "la-croix.com",
+        "liberation.fr",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4722,
+          "corroboration": 0.8,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.8222
+        },
+        "total": 0.756,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "nepal",
       "subject_names": [
+        "chine",
         "himalaya",
         "nepal",
-        "nepal-tibet",
         "tibet"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Severe floods along the Nepal–Tibet border have resulted in hundreds of confirmed deaths and several thousand people reported missing; multiple recent official tallies put the death toll between about 160 and over 900 and the number of missing persons in the thousands (reports range up to roughly 4,793 missing)."
+      "subject_newsroom_count": 22,
+      "summary": "Heavy floods and related mountain disasters in the Himalaya have killed more than 1,000 people across Nepal and Tibet/China, with authorities reporting a rising death toll and thousands more missing or displaced."
+    },
+    {
+      "_linked_ids": [
+        "subject-john-ternus-7f2ac1fcc0dd"
+      ],
+      "cluster_id": "subject-john-ternus-7f2ac1fcc0dd",
+      "coherence": 0.46004998729188884,
+      "consequence": 3,
+      "countries": [
+        "be",
+        "france",
+        "germany",
+        "id",
+        "india",
+        "it",
+        "lu",
+        "spain",
+        "unknown",
+        "vm"
+      ],
+      "country_count": 10,
+      "editorial_day": "2026-09-01",
+      "headline": "John Ternus succeeds Tim Cook as Apple CEO",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/economie-numerique/nouvelle-ere-chez-apple-avec-lintronisation-de-son-nouveau-boss-john-ternus-apres-quinze-ans-de-regne-de-tim-cook-20260831_CB7MIOLCVZEZJHXEGCWQZ725DY/"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20260901-john-ternus-nouveau-patron-d-apple-un-ing%C3%A9nieur-maison-aux-commandes"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/economie/20260901.OBS117833/john-ternus-prend-les-renes-d-apple-10-choses-a-savoir-sur-l-ingenieur-qui-succede-a-tim-cook.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/apple-ceo-ternus-100.html"
+        },
+        {
+          "language": "en",
+          "source": "businesstoday.in",
+          "source_country": "india",
+          "url": "https://www.businesstoday.in/technology/news/story/john-ternus-could-oversee-10-new-apple-products-how-his-era-may-differ-from-tim-cooks-552313-2026-09-01"
+        },
+        {
+          "language": "fr",
+          "source": "rtbf.be",
+          "source_country": "be",
+          "url": "https://www.rtbf.be/article/apple-pret-a-rentrer-dans-une-nouvelle-ere-apres-15-ans-de-regne-tim-cook-passe-le-flambeau-a-l-ingenieur-john-ternus-11777736"
+        },
+        {
+          "language": "fr",
+          "source": "lessentiel.lu",
+          "source_country": "lu",
+          "url": "https://www.lessentiel.lu/fr/story/a-la-place-de-tim-cook-john-ternus-est-le-nouveau-boss-d-apple-103625603"
+        },
+        {
+          "language": "ind",
+          "source": "jawapos.com",
+          "source_country": "id",
+          "url": "https://www.jawapos.com/internasional/2609010323/john-ternus-resmi-gantikan-tim-cook-apple-masuki-era-baru-di-tengah-persaingan-ai"
+        },
+        {
+          "language": "vie",
+          "source": "voh.com.vn",
+          "source_country": "vm",
+          "url": "https://voh.com.vn/the-gioi/john-ternus-dam-nhiem-ceo-cua-apple-thay-the-tim-cook-666432.html"
+        },
+        {
+          "language": "en",
+          "source": "thehindubusinessline.com",
+          "source_country": "india",
+          "url": "https://www.thehindubusinessline.com/info-tech/apples-new-ceo-john-ternus-could-help-deepen-indias-relationship-with-the-tech-giant/article71411934.ece"
+        },
+        {
+          "language": "cat",
+          "source": "elperiodico.cat",
+          "source_country": "spain",
+          "url": "https://www.elperiodico.cat/economia/20260901/tim-cook-abandona-com-ceo-133821128"
+        },
+        {
+          "language": "es",
+          "source": "revistaeyn.com",
+          "source_country": "unknown",
+          "url": "https://www.revistaeyn.com/empresasymanagement/john-ternus-reemplaza-a-tim-cook-al-frente-de-apple-para-liderar-la-era-de-la-ia-JN31878203"
+        },
+        {
+          "language": "it",
+          "source": "milanofinanza.it",
+          "source_country": "it",
+          "url": "https://www.milanofinanza.it/news/apple-la-guida-passa-da-tim-cook-a-john-ternus-per-il-nuovo-ceo-la-sfida-dell-ai-202608311701393825"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "be",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/economie/economie-numerique/nouvelle-ere-chez-apple-avec-lintronisation-de-son-nouveau-boss-john-ternus-apres-quinze-ans-de-regne-de-tim-cook-20260831_CB7MIOLCVZEZJHXEGCWQZ725DY/",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "liberation.fr",
+        "nouvelobs.com",
+        "rfi.fr",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.46,
+          "corroboration": 0.8333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.7895
+        },
+        "total": 0.7343,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "john ternus",
+      "subject_names": [
+        "apple",
+        "john ternus",
+        "tim cook"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Apple has appointed long-time Apple engineer John Ternus as its new CEO, succeeding Tim Cook after Cook’s 15-year tenure; coverage notes Ternus is an internal engineering executive and observers highlight the leadership change coming as Apple faces priorities including AI and hardware strategy."
+    },
+    {
+      "_linked_ids": [
+        "subject-tupac-shakur-83fd0046b52e"
+      ],
+      "cluster_id": "subject-tupac-shakur-83fd0046b52e",
+      "coherence": 0.5152244935684243,
+      "consequence": 2,
+      "countries": [
+        "as",
+        "ei",
+        "france",
+        "germany",
+        "gv",
+        "id",
+        "it",
+        "pk",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 11,
+      "editorial_day": "2026-09-01",
+      "headline": "Duane 'Keffe D' Davis convicted of first‑degree murder in Tupac killing",
+      "independent_source_count": 51,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/meurtre-de-tupac-shakur-duane-davis-reconnu-coupable-trente-ans-apres-la-mort-du-rappeur_6763053_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/un-ancien-membre-de-gang-reconnu-coupable-du-meurtre-de-tupac-shakur-20260901_4CJAHRYUONGZNNMUWQZD7BRUOM/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/etats-unis-un-ancien-membre-de-gang-reconnu-coupable-du-meurtre-du-rappeur-tupac-shakur-20260901"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/musique/rap/un-ancien-membre-d-un-gang-de-los-angeles-reconnu-coupable-du-meurtre-de-la-legende-du-rap-tupac-shakur-trente-ans-apres-sa-mort_8171537.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260901-etats-unis-meurtre-du-rappeur-tupac-shakur-duane-davis-ex-membre-de-gang-reconnu-coupable"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260901-%C3%A9tats-unis-un-ancien-membre-de-gang-reconnu-coupable-du-meurtre-du-rappeur-tupac-shakur"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260901.OBS117828/un-ex-membre-de-gang-reconnu-coupable-du-meurtre-du-rappeur-tupac-shakur-en-1996.html"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/monde/etats-unis/mort-de-tupac-shakur-qui-est-duane-davis-reconnu-coupable-du-meurtre-du-rappeur-en-1996-0769bddc-a5d4-11f1-8a27-1e0c4eb5e395?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/cultura/musica/hay-culpable-asesinato-tupac-shakur-duane-keffe-d-davis-orquestar-tiroteo_1_13478342.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/america/20260901/jurado-declara-culpable-exlider-pandilla-planeo-asesinato-tupac-shakur-anos-despues-crimen/1003744368544_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/ckg7yrwp70qo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/09/01/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-in-1996-killing-of-hip-hop-icon-t"
+        },
+        {
+          "language": "en",
+          "source": "cnn.com",
+          "source_country": "united-states",
+          "url": "https://edition.cnn.com/2026/09/01/us/tupac-shakur-trial-verdict-duane-davis"
+        },
+        {
+          "language": "en",
+          "source": "wclk.com",
+          "source_country": "united-states",
+          "url": "https://www.wclk.com/2026-09-01/jury-convicts-a-man-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+        },
+        {
+          "language": "en",
+          "source": "thefrontierpost.com",
+          "source_country": "pk",
+          "url": "https://thefrontierpost.com/former-gang-member-found-guilty-of-murdering-tupac-shakur/"
+        },
+        {
+          "language": "fr",
+          "source": "africaguinee.com",
+          "source_country": "gv",
+          "url": "https://www.africaguinee.com/meurtre-de-tupac-shakur-lex-gangster-duane-davis-reconnu-coupable/"
+        },
+        {
+          "language": "fr",
+          "source": "atlasinfo.fr",
+          "source_country": "france",
+          "url": "https://atlasinfo.fr/tupac-shakur-duane-keffe-d-davis-reconnu-coupable-de-son-meurtre-30-ans-apres-les-faits.html"
+        },
+        {
+          "language": "es",
+          "source": "antena3.com",
+          "source_country": "spain",
+          "url": "https://www.antena3.com/noticias/mundo/jurado-declara-culpable-duane-keffe-davis-asesinato-rapero-tupac-shakur_202609016a9699a82d7d3022177a3ced.html"
+        },
+        {
+          "language": "de",
+          "source": "viply.de",
+          "source_country": "germany",
+          "url": "https://www.viply.de/news/duane-keffe-d-davis-wegen-mordes-an-tupac-shakur-schuldig-gesprochen/"
+        },
+        {
+          "language": "en",
+          "source": "bromsgroveadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bromsgroveadvertiser.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "runcornandwidnesworld.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.runcornandwidnesworld.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/live-updates-duane-keffe-d-davis-convicted-in-1996-killing-of-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "wsbtv.com",
+          "source_country": "united-states",
+          "url": "https://www.wsbtv.com/news/local/jury-reaches-verdict-less-than-3-hours-trial-over-1996-killing-tupac-shakur/N7XJD6XDLVAXTLCIPXLABTC75M/"
+        },
+        {
+          "language": "en",
+          "source": "northwichguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.northwichguardian.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "oxfordmail.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.oxfordmail.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "darlingtonandstocktontimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.darlingtonandstocktontimes.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "ktvq.com",
+          "source_country": "united-states",
+          "url": "https://www.ktvq.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+        },
+        {
+          "language": "en",
+          "source": "brentwoodlive.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.brentwoodlive.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/live-updates-jury-reaches-verdict-in-less-than-3-hours-at-trial-over-1996-killing-of-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "wmtw.com",
+          "source_country": "united-states",
+          "url": "https://www.wmtw.com/article/jury-verdict-tupac-shakur-murder-trial/73574371"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/live/cr3w09l8z0yyt"
+        },
+        {
+          "language": "en",
+          "source": "en.tempo.co",
+          "source_country": "id",
+          "url": "https://en.tempo.co/read/2118678/tupac-shakur-murder-trial-duane-keffe-d-davis-guilty"
+        },
+        {
+          "language": "en",
+          "source": "fox13now.com",
+          "source_country": "united-states",
+          "url": "https://www.fox13now.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+        },
+        {
+          "language": "en",
+          "source": "idahostatejournal.com",
+          "source_country": "united-states",
+          "url": "https://www.idahostatejournal.com/news/entertainment/the-jury-has-reached-a-verdict-in-less-than-3-hours-at-the-trial-over/article_e84de982-7872-5a48-946b-71506ba70de7.html"
+        },
+        {
+          "language": "en",
+          "source": "rte.ie",
+          "source_country": "ei",
+          "url": "https://www.rte.ie/entertainment/2026/0901/1589891-tupac-trial/"
+        },
+        {
+          "language": "en",
+          "source": "hampshirechronicle.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.hampshirechronicle.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "rhyljournal.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.rhyljournal.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "hertsad.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.hertsad.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "surreycomet.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.surreycomet.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "fox17online.com",
+          "source_country": "united-states",
+          "url": "https://www.fox17online.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+        },
+        {
+          "language": "en",
+          "source": "kmbc.com",
+          "source_country": "united-states",
+          "url": "https://www.kmbc.com/article/jury-verdict-tupac-shakur-murder-trial/73574371"
+        },
+        {
+          "language": "en",
+          "source": "illawarramercury.com.au",
+          "source_country": "as",
+          "url": "https://www.illawarramercury.com.au/story/9341136/us-man-found-guilty-of-murdering-rap-icon-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/live-updates-duane-keffe-d-davis-convicted-in-1996-killing-of-tupac-shakur-2/"
+        },
+        {
+          "language": "en",
+          "source": "wirralglobe.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wirralglobe.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "fox34.com",
+          "source_country": "united-states",
+          "url": "https://www.fox34.com/2026/09/01/jury-reaches-verdict-less-than-3-hours-trial-over-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "somersetcountygazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.somersetcountygazette.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "standard.net.au",
+          "source_country": "as",
+          "url": "https://www.standard.net.au/story/9341136/us-man-found-guilty-of-murdering-rap-icon-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "wapt.com",
+          "source_country": "united-states",
+          "url": "https://www.wapt.com/article/jury-verdict-tupac-shakur-murder-trial/73574371"
+        },
+        {
+          "language": "en",
+          "source": "10news.com",
+          "source_country": "united-states",
+          "url": "https://www.10news.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+        },
+        {
+          "language": "en",
+          "source": "theepochtimes.com",
+          "source_country": "united-states",
+          "url": "https://www.theepochtimes.com/us/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-in-tupac-shakur-killing-6081819"
+        },
+        {
+          "language": "en",
+          "source": "gazetteherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.gazetteherald.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "wxxinews.org",
+          "source_country": "united-states",
+          "url": "https://www.wxxinews.org/npr-news/2026-08-31/jurors-deliberate-in-the-trial-of-rap-icon-tupac-shakurs-killing"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/jury-convicts-a-man-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "hiphopwired.com",
+          "source_country": "united-states",
+          "url": "https://hiphopwired.com/3064365/duane-keith-davis-aka-keffe-d-found-guilty-of-murdering-tupac-shakur/"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/jury-reaches-a-verdict-in-less-than-3-hours-at-the-trial-over-the-1996-killing-of-tupac-shakur/"
+        },
+        {
+          "language": "es",
+          "source": "telemundodallas.com",
+          "source_country": "united-states",
+          "url": "https://www.telemundodallas.com/entretenimiento/entretenimiento-destacados/jurado-veredicto-juicio-asesinato-tupac-shakur/2600841/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "as",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/videos/ckg7yrwp70qo?at_medium=RSS&at_campaign=rss",
+      "rank": 5,
+      "reference_newsroom_count": 12,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5152,
+          "corroboration": 0.8462,
+          "editorial_weight": 0.6,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.9273,
+          "source_reliability": 0.9398
+        },
+        "total": 0.7324,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "tupac shakur",
+      "subject_names": [
+        "davis",
+        "duane",
+        "duane davis",
+        "eeuu",
+        "estados unidos",
+        "etats-unis",
+        "keffe",
+        "tupac shakur"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "A jury found Duane 'Keffe D' Davis guilty of first‑degree murder for the 1996 shooting death of rapper Tupac Shakur. The verdict came about 30 years after the killing, concluding a long‑running criminal case against the former gang member."
     }
   ],
-  "discarded_ingested": 307,
+  "discarded_ingested": 444,
   "discarded_kept": 5,
-  "generated_at": "2026-08-31T11:44:42.337367+00:00",
+  "generated_at": "2026-09-01T10:19:46.978488+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

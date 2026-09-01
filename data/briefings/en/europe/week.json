@@ -2,26 +2,165 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-chatgpt-f4f96c4c0c38"
+        "subject-ukraine-98c4925d9691"
       ],
-      "cluster_id": "subject-chatgpt-f4f96c4c0c38",
-      "coherence": 0.4920845737178585,
+      "cluster_id": "subject-ukraine-98c4925d9691",
+      "coherence": 0.4768456342442433,
       "consequence": 3,
       "countries": [
         "france",
         "germany",
-        "india",
-        "lo",
-        "no",
-        "pk",
-        "ro",
-        "sz",
+        "it",
+        "spain",
+        "united-kingdom",
         "united-states"
       ],
-      "country_count": 9,
-      "editorial_day": "2026-08-31",
-      "headline": "EU subjects ChatGPT, Reddit and Roblox to tougher digital rules",
-      "independent_source_count": 12,
+      "country_count": 6,
+      "editorial_day": "2026-09-01",
+      "headline": "Massive Russian attack on Kyiv and surrounding region kills at least 12",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-une-attaque-russe-massive-fait-neuf-morts-a-kiev-et-dans-sa-region_8171675.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-guerre-en-ukraine-au-moins-9-morts-dans-une-attaque-russe-massive-sur-kiev-et-dans-sa-r%C3%A9gion"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260901.OBS117829/guerre-en-ukraine-une-attaque-russe-massive-fait-9-morts-a-kiev-et-dans-sa-region.html"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-ce-que-lon-sait-de-lattaque-russe-massive-qui-a-fait-12-morts-a-kiev-et-dans-sa-region-8ea5a50a-a5e2-11f1-95a1-d7cb1b3759ac?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/11-muertos-nuevo-ataque-ruso-kiev-alrededores_1_13478418.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ascienden-11-los-muertos-tras-un-nuevo-ataque-ruso-contra-kiev-sus-alrededores_7031275_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/live/2026/sep/01/ukraine-russia-strikes-attacks-odesa-zelenskyy-putin-eu-defence-europe-latest-news-updates"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/russische-angriffe-ukraine-108.html"
+        },
+        {
+          "language": "en",
+          "source": "washingtonexaminer.com",
+          "source_country": "united-states",
+          "url": "https://www.washingtonexaminer.com/news/4707448/12-killed-in-ukraine-as-russia-launches-massive-aerial-assault/"
+        },
+        {
+          "language": "it",
+          "source": "dire.it",
+          "source_country": "it",
+          "url": "https://www.dire.it/01-09-2026/1264048-la-russia-attacca-un-deposito-ferroviario-in-ucraina-sette-morti/"
+        },
+        {
+          "language": "es",
+          "source": "farodevigo.es",
+          "source_country": "spain",
+          "url": "https://www.farodevigo.es/mundo/2026/09/01/mueren-11-personas-nuevo-ataque-133825806.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev",
+      "rank": 1,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "france24.com",
+        "francetvinfo.fr",
+        "nouvelobs.com",
+        "ouest-france.fr",
+        "tagesschau.de",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4768,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.8049
+        },
+        "total": 0.7645,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "russia",
+        "russian",
+        "ucrania",
+        "ukraine",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 24,
+      "summary": "A large-scale Russian strike on Kyiv and its surrounding region overnight caused multiple deaths and injuries; reporting from several outlets places the confirmed death toll at between nine and twelve civilians, with authorities and news organizations describing the assault as a 'massive' attack that struck the city and nearby areas."
+    },
+    {
+      "_linked_ids": [
+        "subject-chatgpt-f4f96c4c0c38",
+        "subject-roblox-518fe28d100b"
+      ],
+      "cluster_id": "subject-roblox-518fe28d100b",
+      "coherence": 0.42776438928333105,
+      "consequence": 3,
+      "countries": [
+        "co",
+        "fi",
+        "france",
+        "germany",
+        "it",
+        "mx",
+        "spain"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-09-01",
+      "headline": "EU designates ChatGPT, Reddit and Roblox for stricter digital rules",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "fr",
@@ -30,453 +169,181 @@
           "url": "https://www.lemonde.fr/pixels/article/2026/08/31/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-regles-renforcees-au-sein-de-l-union-europeenne_6762380_4408996.html"
         },
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/secteur/high-tech/chatgpt-va-etre-soumis-a-des-regles-renforcees-dans-l-ue-de-meme-que-reddit-et-roblox-20260831"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/tecnologia/2026-08-31/bruselas-incluye-a-chatgpt-reddit-y-roblox-entre-las-plataformas-mas-fiscalizadas-por-la-ue.html"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/economie-numerique/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-controles-renforces-dans-lue-20260831_S2AIB5KHNJEZZAQG6LZRFJTKNM/"
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/bruselas-designa-chatgpt-reddit-roblox-como-plataformas-sujetas-fuertes-requisitos-las-pone-bajo-maxima-vigilancia_7031167_0.html"
+        },
+        {
+          "language": "de",
+          "source": "deutschlandfunk.de",
+          "source_country": "germany",
+          "url": "https://www.deutschlandfunk.de/neue-regeln-fuer-chat-gpt-roblox-und-reddit-in-der-eu-104.html"
         },
         {
           "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/chatgpt-reddit-roblox-to-adhere-to-eus-very-large-platform-rules/articleshow/133650637.cms"
+          "source": "helsinkitimes.fi",
+          "source_country": "fi",
+          "url": "https://www.helsinkitimes.fi/world-int/29217-eu-puts-chatgpt-reddit-and-roblox-under-stricter-digital-rules.html"
         },
         {
-          "language": "en",
-          "source": "thenews.com.pk",
-          "source_country": "pk",
-          "url": "https://www.thenews.com.pk/latest/1414338-eu-designates-chatgpt-reddit-and-roblox-for-tougher-new-rules"
+          "language": "es",
+          "source": "eltiempo.com",
+          "source_country": "co",
+          "url": "https://www.eltiempo.com/mundo/europa/la-union-europea-incluye-a-chatgpt-roblox-y-reddit-en-la-lista-de-plataformas-sometidas-a-mayores-restricciones-digitales-como-afecta-la-medida-3582384"
         },
         {
-          "language": "de",
-          "source": "gmx.ch",
-          "source_country": "sz",
-          "url": "https://www.gmx.ch/magazine/digital/eu-chatgpt-reddit-roblox-kuerzere-leine-42670978"
-        },
-        {
-          "language": "de",
-          "source": "t-online.de",
-          "source_country": "germany",
-          "url": "https://www.t-online.de/digital/aktuelles/id_101413152/dsa-chatgpt-reddit-und-roblox-stehen-vor-strengeren-eu-regeln.html"
-        },
-        {
-          "language": "de",
-          "source": "finanznachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-08/69451135-chatgpt-reddit-und-roblox-muessen-hoehere-eu-standards-erfuellen-015.htm"
+          "language": "es",
+          "source": "eluniversal.com.mx",
+          "source_country": "mx",
+          "url": "https://www.eluniversal.com.mx/mundo/union-europea-somete-a-escrutinio-legal-a-chatgpt-y-roblox-por-impacto-en-ciudadanos-exigen-evaluar-riesgos-sistemicos/"
         },
         {
           "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/next/2026/08/31/ue-sottopone-chatgpt-reddit-e-roblox-alle-regole-digitali-piu-severe"
-        },
-        {
-          "language": "nor",
-          "source": "nrk.no",
-          "source_country": "no",
-          "url": "https://www.nrk.no/nyheter/strengere-eu-regler-for-chatgpt_-reddit-og-roblox-1.18008768"
-        },
-        {
-          "language": "ron",
-          "source": "mediafax.ro",
-          "source_country": "ro",
-          "url": "https://www.mediafax.ro/social/ue-inaspreste-regulile-pentru-chatgpt-reddit-si-roblox-chatgpt-tratat-pentru-prima-data-ca-motor-de-cautare-foarte-mare-23799072"
-        },
-        {
-          "language": "slk",
-          "source": "hnonline.sk",
-          "source_country": "lo",
-          "url": "https://hnonline.sk/finweb/zahranicna-ekonomika/96299676-europska-komisia-zaradila-chatgpt-reddit-a-roblox-pod-prisnejsiu-kontrolu"
+          "source": "milanofinanza.it",
+          "source_country": "it",
+          "url": "https://www.milanofinanza.it/news/chatgpt-reddit-e-roblox-dovranno-conformarsi-al-digital-services-act-dell-ue-ecco-cosa-cambia-202608311627122519"
         }
       ],
       "mentioned_countries": [
         "be"
       ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/economie-numerique/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-controles-renforces-dans-lue-20260831_S2AIB5KHNJEZZAQG6LZRFJTKNM/",
-      "rank": 1,
-      "reference_newsroom_count": 4,
+      "origin_country": "co",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/pixels/article/2026/08/31/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-regles-renforcees-au-sein-de-l-union-europeenne_6762380_4408996.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "euronews.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "20minutos.es",
+        "elpais.com",
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4921,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4278,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.75,
-          "source_reliability": 0.7778
+          "novelty": 0.5,
+          "prominence": 0.6667,
+          "source_reliability": 0.7037
         },
-        "total": 0.735,
+        "total": 0.6909,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "chatgpt",
+      "subject_label": "roblox",
       "subject_names": [
+        "bruselas",
         "chatgpt",
+        "meta",
         "reddit",
         "roblox"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "The European Commission has designated ChatGPT, Reddit and Roblox for enhanced oversight under the EU’s digital regulations, meaning these services will face stricter compliance and monitoring requirements as part of the bloc’s effort to apply stronger rules to large online platforms and AI systems."
+      "subject_newsroom_count": 4,
+      "summary": "The European Union has placed ChatGPT, Reddit and Roblox on a list of online platforms that will be subject to enhanced legal requirements and closer supervision under its digital rules (Digital Services Act). Member authorities will enforce stronger safeguards and oversight of these services because of their size, reach or potential impact on users, requiring the platforms to comply with new obligations aimed at protecting citizens."
     },
     {
       "_linked_ids": [
-        "subject-chipre-4984a5d94844"
+        "subject-israel-45dafbd98b94"
       ],
-      "cluster_id": "subject-chipre-4984a5d94844",
-      "coherence": 0.5158015192317298,
+      "cluster_id": "subject-israel-45dafbd98b94",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "brazil",
-        "mx",
+        "france",
+        "it",
         "spain"
       ],
       "country_count": 3,
       "editorial_day": "2026-08-31",
-      "headline": "Ferry sinks off northern Cyprus leaving at least eight dead",
-      "independent_source_count": 8,
+      "headline": "Israel signs €3 billion arms export deal with Greece",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-30/un-barco-con-unas-270-personas-a-bordo-vuelca-frente-al-norte-de-chipre.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/naufraga-barco-270-personas-bordo-frente-costas-20260830134109-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260830/11623130/ferry-mas-260-pasajeros-bordo-naufraga-frente-costa-norte-chipre.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/naugrafa-barco-270-personas-bordo-frente-costa-norte-chipre_1_13475259.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-ferry-con-270-personas-bordo-naufraga-norte-chipre_7030740_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/30/naufragio-de-balsa-no-norte-do-chipre-deixa-8-mortos-e-17-desaparecidos.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "sdpnoticias.com",
-          "source_country": "mx",
-          "url": "https://www.sdpnoticias.com/internacional/ferry-se-hunde-al-norte-de-chipre-con-267-personas-a-bordo-y-deja-8-muertos/"
-        },
-        {
-          "language": "es",
-          "source": "latribunadetoledo.es",
-          "source_country": "spain",
-          "url": "https://www.latribunadetoledo.es/noticia/zbb81f512-2079-48af-9de53c3f8eec5e7f/202608/se-hunde-un-ferry-con-267-personas-a-bordo-en-chipre"
-        }
-      ],
-      "mentioned_countries": [
-        "cy"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/naufraga-barco-270-personas-bordo-frente-costas-20260830134109-nt.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com",
-        "globo.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5158,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7333
-        },
-        "total": 0.7254,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "chipre",
-      "subject_names": [
-        "chipre",
-        "chypre",
-        "cyprus",
-        "etat",
-        "turquie"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "A passenger ferry sank off the northern coast of Cyprus with around 267–270 people on board; the incident has killed at least eight people and left multiple others missing, while rescue operations have been carried out."
-    },
-    {
-      "_linked_ids": [
-        "subject-islandia-59fba362496f"
-      ],
-      "cluster_id": "subject-islandia-59fba362496f",
-      "coherence": 0.493154649549956,
-      "consequence": 3,
-      "countries": [
-        "ec",
-        "id",
-        "spain",
-        "sz"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-30",
-      "headline": "Iceland votes against resuming European Union accession talks",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-08-30/islandia-cierra-la-puerta-a-la-integracion-en-la-union-europea.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/islandia-rechaza-reabrir-negociaciones-ue-ajustado-referendum-20260830094418-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/islandia-rechaza-volver-negociar-entrada-ue-margen-apenas-decimas-falta-terminar-recuento_1_13474899.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/islandia-rechaza-retomar-las-negociaciones-ingreso-ue-un-ajustado-referendum_7030696_0.html"
-        },
         {
           "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/islande-non-a-une-reprise-des-negociations-d-adhesion-a-l-ue"
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/08/31/israel-signe-avec-la-grece-un-contrat-d-exportation-d-armes-de-3-milliards-d-euros_6762586_3210.html"
         },
         {
           "language": "es",
-          "source": "expreso.ec",
-          "source_country": "ec",
-          "url": "https://www.expreso.ec/internacional/islandia-rechaza-urnas-adhesion-union-europea-294013.html"
-        },
-        {
-          "language": "ind",
-          "source": "cnnindonesia.com",
-          "source_country": "id",
-          "url": "https://www.cnnindonesia.com/internasional/20260830200450-134-1398043/islandia-tolak-buka-kembali-negosiasi-gabung-uni-eropa"
-        }
-      ],
-      "mentioned_countries": [
-        "ic"
-      ],
-      "origin_country": "ec",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/islandia-rechaza-volver-negociar-entrada-ue-margen-apenas-decimas-falta-terminar-recuento_1_13474899.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4932,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
-        },
-        "total": 0.7004,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "islandia",
-      "subject_names": [
-        "canada",
-        "donald trump",
-        "estados unidos",
-        "europa",
-        "europe",
-        "islande",
-        "islandia",
-        "kharg",
-        "new york",
-        "trump",
-        "venezuela",
-        "washington"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Icelanders rejected reopening negotiations to join the European Union in a closely contested referendum; the vote means the government will not resume formal EU accession talks."
-    },
-    {
-      "_linked_ids": [
-        "subject-kyiv-c85b9eb2e97f",
-        "subject-ukraine-1bc966927683"
-      ],
-      "cluster_id": "subject-kyiv-c85b9eb2e97f",
-      "coherence": 0.41059626908386493,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-08-29",
-      "headline": "Russian strike on Kyiv-area ammunition depot kills at least 37 and forces evacuations",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260829/11622237/27-muertos-42-heridos-ataque-ruso-almacen-municion-cerca-kyiv.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cy8z979y9e4o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c86xwqez4npo?at_medium=RSS&at_campaign=rss"
+          "url": "https://elpais.com/internacional/2026-08-31/israel-y-grecia-estrechan-su-alianza-con-su-mayor-acuerdo-armamentistico-por-valor-de-3000-millones.html"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/29/hundreds-evacuated-after-russian-strike-sparks-major-fire-and-explosions-at-a-warehouse-in"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russian-strike-near-kyiv-kills-37-in-one-of-the-years-deadliest-attacks"
+          "url": "http://www.euronews.com/my-europe/2026/08/31/israel-signs-3-billion-arms-export-deal-with-greece-defence-ministry-says"
         }
       ],
       "mentioned_countries": [
-        "up"
+        "is",
+        "gr"
       ],
-      "origin_country": "it",
+      "origin_country": "france",
       "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/29/hundreds-evacuated-after-russian-strike-sparks-major-fire-and-explosions-at-a-warehouse-in",
-      "rank": 4,
-      "reference_newsroom_count": 4,
+      "outbound_url": "http://www.euronews.com/my-europe/2026/08/31/israel-signs-3-billion-arms-export-deal-with-greece-defence-ministry-says",
+      "rank": 3,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "elpais.com",
         "euronews.com",
-        "lavanguardia.com",
-        "pbs.org"
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4106,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 0.5,
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.6702,
+        "total": 0.6629,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "kyiv",
+      "subject_label": "israel",
       "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russian",
-        "russie",
-        "ukraine",
-        "zelensky"
+        "israel"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "A Russian strike hit a weapons or ammunition warehouse near Kyiv, causing major fires and explosions, killing at least 37 people and injuring dozens; hundreds of residents were evacuated from surrounding areas as emergency services responded to the blaze."
+      "subject_newsroom_count": 12,
+      "summary": "Israel and Greece have agreed a €3 billion arms export contract, the countries’ defence authorities announced; the deal represents the largest defence agreement between them and formalizes expanded military cooperation."
     },
     {
       "_linked_ids": [
-        "subject-italia-8a515227ed3a"
+        "subject-italia-8a515227ed3a",
+        "subject-meloni-8b4b7d871ff7"
       ],
-      "cluster_id": "subject-italia-8a515227ed3a",
-      "coherence": 0.4727148868547184,
-      "consequence": 2,
+      "cluster_id": "subject-meloni-8b4b7d871ff7",
+      "coherence": 0.47171884994073787,
+      "consequence": 3,
       "countries": [
-        "ci",
         "it",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-08-31",
-      "headline": "Italy extends Schengen suspension with Spain for 15 days and Spain reciprocates controls",
-      "independent_source_count": 13,
+      "country_count": 2,
+      "editorial_day": "2026-09-01",
+      "headline": "Italy extends Schengen suspension with Spain for 15 days and Spain mirrors measure",
+      "independent_source_count": 4,
       "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/meloni-prorroga-dias-controles-viajeros-procedentes-espana-20260831120110-nt.html"
-        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
           "url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/08/31/6a955d4c468aeb79138b4585.html"
         },
         {
           "language": "es",
@@ -486,137 +353,137 @@
         },
         {
           "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20260831/meloni-alarga-suspension-espacio-schengen-italia-espana-dias-situacion-ceuta-no-mejora/1003744367602_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-espana-prorroga-15-dias-controles-pasajeros-italia-respuesta-decision-gobierno-meloni-20260831125959.html"
-        },
-        {
-          "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
           "url": "https://www.20minutos.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-los-controles-los-viajeros-procedentes-espana_7030965_0.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/31/italy-keeps-schengen-suspension-with-spain-in-place-for-further-15-days-over-ceuta-tension"
-        },
-        {
-          "language": "es",
-          "source": "eldiariomontanes.es",
-          "source_country": "spain",
-          "url": "https://www.eldiariomontanes.es/nacional/italia-prolonga-dos-semanas-controles-conexiones-espana-20260831124712-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "latercera.com",
-          "source_country": "ci",
-          "url": "https://www.latercera.com/mundo/noticia/italia-mantiene-15-dias-mas-la-suspension-de-schengen-con-espana-por-la-crisis-de-ceuta/"
-        },
-        {
           "language": "it",
-          "source": "zazoom.it",
+          "source": "travelnostop.com",
           "source_country": "it",
-          "url": "https://www.zazoom.it/2026-08-31/litalia-conferma-il-blocco-di-schengen-con-la-spagna-per-altri-15-giorni/19625431/"
-        },
-        {
-          "language": "it",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://it.euronews.com/my-europe/2026/08/31/litalia-conferma-il-blocco-di-schengen-con-madrid-per-altri-15-giorni-a-causa-delle-tensio"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/news-notizia/post/972617/2026-08-31-schengen-italia-proroga-15-giorni-controlli-per-arrivi-spagna-13-02/"
-        },
-        {
-          "language": "it",
-          "source": "ilmessaggero.it",
-          "source_country": "it",
-          "url": "https://www.ilmessaggero.it:443/politica/migranti_shengen_scontro_italia_spagna_controlli_cosa_succede-9735083.html"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-08-31/schengen-litalia-proroga-i-controlli-alla-frontiera-con-la-spagna-per-altri-15-giorni/19625468/"
-        },
-        {
-          "language": "it",
-          "source": "ilmessaggero.it",
-          "source_country": "it",
-          "url": "https://www.ilmessaggero.it:443/politica/italia_schengen_migranti_ceuta_cosa_succede-9733972.html"
-        },
-        {
-          "language": "cat",
-          "source": "elpuntavui.cat",
-          "source_country": "spain",
-          "url": "http://www.elpuntavui.cat/politica/article/17-politica/2670938-italia-prorroga-15-dies-mes-els-controls-als-viatgers-de-l-estat-espanyol-per-la-crisi-migratoria-de-ceuta.html"
+          "url": "https://travelnostop.com/news/cronaca/accordo-schengen-con-la-spagna-resta-sospeso-per-altri-15-giorni_685663"
         }
       ],
       "mentioned_countries": [
         "spain",
         "it"
       ],
-      "origin_country": "ci",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/europa/20260831/meloni-alarga-suspension-espacio-schengen-italia-espana-dias-situacion-ceuta-no-mejora/1003744367602_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 8,
+      "origin_country": "it",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
         "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "euronews.com",
-        "europapress.es",
-        "expansion.com"
+        "elmundo.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4727,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.5,
+          "coherence": 0.4717,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.8333
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.668,
+        "total": 0.646,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "italia",
+      "subject_label": "meloni",
       "subject_names": [
         "ceuta",
         "espana",
-        "gobierno",
         "italia",
         "italy",
-        "marlaska",
         "melilla",
         "meloni",
-        "sanchez",
-        "schengen"
+        "schengen",
+        "vivas"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Italy has extended by 15 days its suspension of Schengen rules for arrivals from Spain amid tensions linked to Ceuta, and Spain has responded by renewing border controls on passengers coming from Italy for the same 15-day period."
+      "subject_newsroom_count": 6,
+      "summary": "Italian Prime Minister Giorgia Meloni extended the suspension of the Schengen agreement with Spain for 15 days, maintaining border controls on travel from Spain; the Spanish government responded by imposing the same 15-day controls on passengers arriving from Italy."
+    },
+    {
+      "_linked_ids": [
+        "subject-trump-d7ec1f7b2094"
+      ],
+      "cluster_id": "subject-trump-d7ec1f7b2094",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-08-29",
+      "headline": "Iceland holds referendum on joining the European Union amid concerns over Trump and the Ukraine war",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260829.OBS117753/l-islande-en-route-vers-l-ue-un-referendum-avec-trump-en-epouvantail-et-une-population-fracturee.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/referendum-sur-lue-en-islande-les-menaces-de-donald-trump-sont-la-raison-immediate-du-scrutin-a-FQHFJRYQ6BET3IW6G74VYWAUWI/"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/08/29/agora-ou-nunca-islandia-faz-referendo-sobre-entrada-na-uniao-europeia-de-olho-em-trump-e-guerra-na-ucrania.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "ic"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/referendum-sur-lue-en-islande-les-menaces-de-donald-trump-sont-la-raison-immediate-du-scrutin-a-FQHFJRYQ6BET3IW6G74VYWAUWI/",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "globo.com",
+        "lexpress.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6419,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "islande",
+        "islandia",
+        "trump"
+      ],
+      "subject_newsroom_count": 31,
+      "summary": "Iceland is holding a referendum on whether to join the European Union; the vote was prompted in part by concerns about actions or rhetoric from former US President Donald Trump and by the ongoing war in Ukraine, and the campaign has revealed divisions within the Icelandic population."
     }
   ],
-  "discarded_ingested": 154,
+  "discarded_ingested": 165,
   "discarded_kept": 5,
-  "generated_at": "2026-08-31T11:44:42.337367+00:00",
+  "generated_at": "2026-09-01T10:19:46.978488+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

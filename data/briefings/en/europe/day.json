@@ -1,51 +1,514 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ukraine-98c4925d9691",
-      "coherence": 0.4768456342442433,
+      "cluster_id": "subject-leipzig-77b0d024eee4",
+      "coherence": 0.507757654329706,
       "consequence": 3,
       "countries": [
+        "as",
+        "brazil",
+        "ca",
+        "china",
         "france",
         "germany",
         "it",
+        "md",
+        "nl",
+        "pe",
         "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-09-01",
-      "headline": "Massive Russian attack on Kyiv and surrounding region kills at least 12",
-      "independent_source_count": 11,
+      "country_count": 13,
+      "editorial_day": "2026-09-02",
+      "headline": "Germany says Russia was behind attempted explosive drone attack at Leipzig airport",
+      "independent_source_count": 31,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/l-allemagne-accuse-la-russie-d-avoir-pilote-une-tentative-d-attentat-a-leipzig_6763526_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/attaque-au-drone-a-l-aeroport-de-leipzig-l-allemagne-accuse-la-russie-d-une-attaque-hybride_6763518_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/lallemagne-va-accuser-la-russie-detre-derriere-lattaque-au-drone-explosif-de-laeroport-de-leipzig-20260901_M5TQYFYGLFHAHILKR6HVG2HERE/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/l-allemagne-accuse-la-russie-detre-derriere-le-drone-explosif-de-laeroport-de-leipzig-20260901"
+        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-une-attaque-russe-massive-fait-neuf-morts-a-kiev-et-dans-sa-region_8171675.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/berlin-annonce-des-mesures-de-retorsion-contre-la-russie-accusee-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig_8172794.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-guerre-en-ukraine-au-moins-9-morts-dans-une-attaque-russe-massive-sur-kiev-et-dans-sa-r%C3%A9gion"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev"
+          "url": "https://www.rfi.fr/fr/europe/20260901-selon-l-allemagne-la-russie-est-responsable-de-l-attaque-au-drone-explosif-%C3%A0-l-a%C3%A9roport-de-leipzig"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260901.OBS117829/guerre-en-ukraine-une-attaque-russe-massive-fait-9-morts-a-kiev-et-dans-sa-region.html"
+          "url": "https://www.nouvelobs.com/monde/20260901.OBS117860/agents-jetables-et-tentative-d-attentat-l-allemagne-accuse-la-russie-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig.html"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-ce-que-lon-sait-de-lattaque-russe-massive-qui-a-fait-12-morts-a-kiev-et-dans-sa-region-8ea5a50a-a5e2-11f1-95a1-d7cb1b3759ac?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.lexpress.fr/monde/lallemagne-accuse-la-russie-detre-responsable-de-lattaque-au-drone-de-laeroport-de-leipzig-YDZOQKHA6VAGRKTCCSEWE3POGA/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-01/alemania-acusa-a-rusia-del-ataque-fallido-con-drones-bomba-en-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alemania-lleva-otan-acusacion-rusia-ataque-hibrido-20260901193345-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alemania-acusa-rusia-ataque-drones-aeropuerto-leizpig-20260901181841-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624890/alemania-senala-rusia-responsable-ataque-drones-aeropuerto-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/alemania-acusa-rusia-ataque-hibrido-drones-aeropuerto-leipzig-principios-agosto_1_13480261.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-alemania-senala-rusia-responsable-ataque-fallido-contra-aeropuerto-leizpig-20260901181815.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/los-servicios-seguridad-alemanes-vinculan-con-rusia-dron-con-explosivos-hallado-leipzig_7031466_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/01/russia-behind-drone-incident-at-leipzig-airport-berlin-says"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2629293"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/02/g-s1-141502/germany-russia-attempted-drone-attack"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/germany-blames-russia-for-attempted-drone-attack-at-leipzig-airport"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/putin-acusa-alemanha-de-plantar-evidencias-para-responsabilizar-russia-por-drone-com-explosivos-em-aeroporto-de-leipzig.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "wcsufm.org",
+          "source_country": "united-states",
+          "url": "https://www.wcsufm.org/latest-from-npr/2026-09-02/germany-blames-russia-for-last-months-attempted-drone-attack-at-leipzig-airport"
+        },
+        {
+          "language": "es",
+          "source": "canaln.pe",
+          "source_country": "pe",
+          "url": "https://canaln.pe/internacionales/alemania-acusa-rusia-ataque-dron-aeropuerto-clave-n494691"
+        },
+        {
+          "language": "en",
+          "source": "thelocal.de",
+          "source_country": "germany",
+          "url": "https://www.thelocal.de/20260901/germany-expected-to-blame-russia-for-airport-drone-incident"
+        },
+        {
+          "language": "en",
+          "source": "niagarafallsreview.ca",
+          "source_country": "ca",
+          "url": "https://www.niagarafallsreview.ca/news/world/europe/germany-blames-russia-for-last-month-s-attempted-drone-attack-at-leipzig-airport/article_0d78d57b-8ab4-5bff-aa65-b156eab14638.html"
+        },
+        {
+          "language": "en",
+          "source": "easternriverinachronicle.com.au",
+          "source_country": "as",
+          "url": "https://www.easternriverinachronicle.com.au/story/9341971/germany-accuses-russia-of-leipzig-airport-drone-attack/"
+        },
+        {
+          "language": "en",
+          "source": "scmp.com",
+          "source_country": "china",
+          "url": "https://www.scmp.com/news/world/europe/article/3366030/germany-blames-russia-attempted-drone-attack-leipzig-airport"
+        },
+        {
+          "language": "pt",
+          "source": "correiodopovo.com.br",
+          "source_country": "brazil",
+          "url": "https://www.correiodopovo.com.br/not%c3%adcias/mundo/alemanha-culpa-russia-por-drone-explosivo-no-aeroporto-de-leipzig-1.1744071"
+        },
+        {
+          "language": "pt",
+          "source": "em.com.br",
+          "source_country": "brazil",
+          "url": "http://www.em.com.br/internacional/2026/09/7491606-alemanha-culpa-russia-por-drone-explosivo-no-aeroporto-de-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "europasur.es",
+          "source_country": "spain",
+          "url": "https://www.europasur.es/mundo/alemania-responsabiliza-rusia-ataque-fallido_0_2007851374.html"
+        },
+        {
+          "language": "ron",
+          "source": "zdg.md",
+          "source_country": "md",
+          "url": "https://www.zdg.md/stiri/germania-sustine-ca-rusia-este-in-spatele-atacului-cu-drona-de-la-aeroportul-din-leipzig/"
+        },
+        {
+          "language": "fr",
+          "source": "larepubliquedespyrenees.fr",
+          "source_country": "france",
+          "url": "https://www.larepubliquedespyrenees.fr:443/societe/afp/berlin-sevit-contre-la-russie-accusee-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig-30447650.php"
+        }
+      ],
+      "mentioned_countries": [
+        "germany",
+        "rs"
+      ],
+      "origin_country": "as",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/los-servicios-seguridad-alemanes-vinculan-con-rusia-dron-con-explosivos-hallado-leipzig_7031466_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 20,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "dw.com",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "europapress.es",
+        "francetvinfo.fr",
+        "globo.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nos.nl",
+        "nouvelobs.com",
+        "npr.org",
+        "pbs.org",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5078,
+          "corroboration": 0.8667,
+          "editorial_weight": 0.7143,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8857,
+          "source_reliability": 0.9167
+        },
+        "total": 0.8514,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "leipzig",
+      "subject_names": [
+        "alemania",
+        "berlin",
+        "etat",
+        "germany",
+        "leipzig",
+        "otan",
+        "putin",
+        "rusia",
+        "russia",
+        "russie"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Germany has accused Russia of being responsible for a failed attack using an explosive-laden drone at Leipzig airport earlier this month, describing the incident as an attempted terrorist or “hybrid” operation and saying it will take retaliatory measures and raise the matter with NATO. Reported accounts indicate German authorities blamed Russian agents for directing or supplying the operation and characterized some operatives as disposable, but the articles do not provide independent verification of Russia’s involvement."
+    },
+    {
+      "cluster_id": "subject-haakon-viii-90b97ffbc56a",
+      "coherence": 0.434278062047197,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "no",
+        "rs",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-09-01",
+      "headline": "Haakon VIII sworn in as King of Norway before the Storting",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-01/haakon-viii-jura-como-rey-de-noruega-ante-el-parlamento.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624868/jura-rey-noruega-haakon-viii-imagenes.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624563/nuevo-rey-noruega-haakon-prestara-juramento-parlamento-noruego.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cp841114eg6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/norway-s-new-king-haakon-viii-takes-oath-in-parliament/a-78606923?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/01/so-help-me-god-norways-king-haakon-viii-swears-oath-of-allegiance-to-constitution"
+        },
+        {
+          "language": "en",
+          "source": "newsinenglish.no",
+          "source_country": "no",
+          "url": "https://www.newsinenglish.no/2026/09/01/king-haakon-viii-sworn-in-as-support-for-norways-monarchy-rises-again/"
+        },
+        {
+          "language": "ru",
+          "source": "muz-tv.ru",
+          "source_country": "rs",
+          "url": "https://muz-tv.ru/news/korol-norvegii-hokon-viii-prines-torzhestvennuyu-prisyagu-pered-stortingom/"
+        }
+      ],
+      "mentioned_countries": [
+        "no"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cp841114eg6o?at_medium=RSS&at_campaign=rss",
+      "rank": 2,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "dw.com",
+        "elpais.com",
+        "euronews.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4343,
+          "corroboration": 0.75,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7333
+        },
+        "total": 0.7,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "haakon viii",
+      "subject_names": [
+        "haakon",
+        "haakon viii",
+        "harald",
+        "mette-marit",
+        "parlamento",
+        "viii"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Haakon VIII formally took the oath as King of Norway before the country’s Parliament (the Storting) in a ceremonial session, pledging allegiance to the constitution. The inauguration was covered with photographs and public attention, and reports note that the event followed Norway’s established constitutional and ceremonial procedures for a new monarch."
+    },
+    {
+      "cluster_id": "subject-trump-56789dff6944",
+      "coherence": 0.4414253598807055,
+      "consequence": 3,
+      "countries": [
+        "ar",
+        "brazil",
+        "gt",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-01",
+      "headline": "Trump says US position on the Falkland Islands is under review",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624919/trump-enfada-londres-idea-cambiar-posicion-ee-uu-sobre-soberania-malvinas.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/theguardian/trump-insinua-revision-apoyo-eeuu-reino-unido-soberania-islas-malvinas_1_13478788.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/us-news/2026/aug/31/trump-uk-sovereignty-falkland-islands"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/trump-diz-estar-reavaliando-posicao-eua-malvinas.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "prensalibre.com",
+          "source_country": "gt",
+          "url": "https://www.prensalibre.com/internacional/bbc-news-mundo-internacional/trump-dice-que-la-posicion-de-ee-uu-sobre-las-malvinas-falklands-esta-bajo-revision/"
+        },
+        {
+          "language": "es",
+          "source": "unosantafe.com.ar",
+          "source_country": "ar",
+          "url": "https://www.unosantafe.com.ar/informacion-general/trump-dijo-que-podria-revisar-la-posicion-estados-unidos-las-islas-malvinas-n10278552.html"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/us-news/2026/aug/31/trump-uk-sovereignty-falkland-islands",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "globo.com",
+        "lavanguardia.com",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4414,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6806,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "canada",
+        "casa blanca",
+        "donald trump",
+        "londres",
+        "malvinas",
+        "milei",
+        "milo yiannopoulos",
+        "reino unido",
+        "trump"
+      ],
+      "subject_newsroom_count": 27,
+      "summary": "Multiple news outlets report that former US President Donald Trump said he is reviewing or could review the United States’ longstanding support for the United Kingdom’s position on sovereignty over the Falkland Islands (Malvinas), a statement that prompted concern in London."
+    },
+    {
+      "cluster_id": "subject-kiev-38b8f2f8e225",
+      "coherence": 0.4110540853191509,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-01",
+      "headline": "Russian drone attacks on Kyiv region kill at least 12 people",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/muertos-kiev-region-sexto-dia-consecutivo-bombardeos-20260901140530-nt.html"
         },
         {
           "language": "es",
@@ -57,463 +520,147 @@
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ascienden-11-los-muertos-tras-un-nuevo-ataque-ruso-contra-kiev-sus-alrededores_7031275_0.html"
+          "url": "https://www.20minutos.es/internacional/una-oleada-ataques-rusos-kiev-odesa-deja-12-muertos-otan-moviliza-sus-cazas-por-incursion-drones-sus-fronteras_7031602_0.html"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/01/ukraine-russia-strikes-attacks-odesa-zelenskyy-putin-eu-defence-europe-latest-news-updates"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/russische-angriffe-ukraine-108.html"
-        },
-        {
-          "language": "en",
-          "source": "washingtonexaminer.com",
-          "source_country": "united-states",
-          "url": "https://www.washingtonexaminer.com/news/4707448/12-killed-in-ukraine-as-russia-launches-massive-aerial-assault/"
-        },
-        {
-          "language": "it",
-          "source": "dire.it",
-          "source_country": "it",
-          "url": "https://www.dire.it/01-09-2026/1264048-la-russia-attacca-un-deposito-ferroviario-in-ucraina-sette-morti/"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/09/01/ataque-russo-drones-de-propulsao-a-jato-deixa-12-mortos-na-regiao-de-kiev.ghtml"
         },
         {
           "language": "es",
-          "source": "farodevigo.es",
-          "source_country": "spain",
-          "url": "https://www.farodevigo.es/mundo/2026/09/01/mueren-11-personas-nuevo-ataque-133825806.html"
+          "source": "netnoticias.mx",
+          "source_country": "mx",
+          "url": "https://netnoticias.mx/internacional/rusia-golpea-kiev-por-sexto-dia-consecutivo-y-deja-al-menos-12-muertos"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev",
-      "rank": 1,
-      "reference_newsroom_count": 8,
+      "origin_country": "brazil",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/11-muertos-nuevo-ataque-ruso-kiev-alrededores_1_13478418.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
+        "abc.es",
         "eldiario.es",
-        "france24.com",
-        "francetvinfo.fr",
-        "nouvelobs.com",
-        "ouest-france.fr",
-        "tagesschau.de",
-        "theguardian.com"
+        "globo.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4768,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
+          "coherence": 0.4111,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.8049
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.7745,
+        "total": 0.6627,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "kiev",
       "subject_names": [
         "kiev",
         "kyiv",
+        "otan",
+        "putin",
+        "rusia",
         "russia",
         "russian",
-        "ucrania",
-        "ukraine",
-        "zelensky"
+        "ucrania"
       ],
-      "subject_newsroom_count": 24,
-      "summary": "A large-scale Russian strike on Kyiv and its surrounding region overnight caused multiple deaths and injuries; reporting from several outlets places the confirmed death toll at between nine and twelve civilians, with authorities and news organizations describing the assault as a 'massive' attack that struck the city and nearby areas."
+      "subject_newsroom_count": 11,
+      "summary": "A new wave of Russian drone strikes hit Kyiv and surrounding areas, killing at least 12 people. Reports say the attacks included use of jet-powered drones and affected Kyiv and other cities such as Odesa, prompting NATO to mobilize fighters in response to drone incursions near its borders."
     },
     {
-      "cluster_id": "subject-roblox-518fe28d100b",
-      "coherence": 0.42776438928333105,
+      "cluster_id": "subject-zelensky-22f0cd8083ea",
+      "coherence": 0.43376141723488293,
       "consequence": 3,
       "countries": [
-        "co",
-        "fi",
         "france",
-        "germany",
-        "it",
-        "mx",
-        "spain"
+        "mo",
+        "united-kingdom"
       ],
-      "country_count": 7,
-      "editorial_day": "2026-09-01",
-      "headline": "EU designates ChatGPT, Reddit and Roblox for stricter digital rules",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/pixels/article/2026/08/31/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-regles-renforcees-au-sein-de-l-union-europeenne_6762380_4408996.html"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/tecnologia/2026-08-31/bruselas-incluye-a-chatgpt-reddit-y-roblox-entre-las-plataformas-mas-fiscalizadas-por-la-ue.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-designa-chatgpt-reddit-roblox-como-plataformas-sujetas-fuertes-requisitos-las-pone-bajo-maxima-vigilancia_7031167_0.html"
-        },
-        {
-          "language": "de",
-          "source": "deutschlandfunk.de",
-          "source_country": "germany",
-          "url": "https://www.deutschlandfunk.de/neue-regeln-fuer-chat-gpt-roblox-und-reddit-in-der-eu-104.html"
-        },
-        {
-          "language": "en",
-          "source": "helsinkitimes.fi",
-          "source_country": "fi",
-          "url": "https://www.helsinkitimes.fi/world-int/29217-eu-puts-chatgpt-reddit-and-roblox-under-stricter-digital-rules.html"
-        },
-        {
-          "language": "es",
-          "source": "eltiempo.com",
-          "source_country": "co",
-          "url": "https://www.eltiempo.com/mundo/europa/la-union-europea-incluye-a-chatgpt-roblox-y-reddit-en-la-lista-de-plataformas-sometidas-a-mayores-restricciones-digitales-como-afecta-la-medida-3582384"
-        },
-        {
-          "language": "es",
-          "source": "eluniversal.com.mx",
-          "source_country": "mx",
-          "url": "https://www.eluniversal.com.mx/mundo/union-europea-somete-a-escrutinio-legal-a-chatgpt-y-roblox-por-impacto-en-ciudadanos-exigen-evaluar-riesgos-sistemicos/"
-        },
-        {
-          "language": "it",
-          "source": "milanofinanza.it",
-          "source_country": "it",
-          "url": "https://www.milanofinanza.it/news/chatgpt-reddit-e-roblox-dovranno-conformarsi-al-digital-services-act-dell-ue-ecco-cosa-cambia-202608311627122519"
-        }
-      ],
-      "mentioned_countries": [
-        "be"
-      ],
-      "origin_country": "co",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/pixels/article/2026/08/31/chatgpt-roblox-et-reddit-vont-etre-soumis-a-des-regles-renforcees-au-sein-de-l-union-europeenne_6762380_4408996.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elpais.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4278,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7037
-        },
-        "total": 0.7097,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "roblox",
-      "subject_names": [
-        "bruselas",
-        "chatgpt",
-        "meta",
-        "reddit",
-        "roblox"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "The European Union has placed ChatGPT, Reddit and Roblox on a list of online platforms that will be subject to enhanced legal requirements and closer supervision under its digital rules (Digital Services Act). Member authorities will enforce stronger safeguards and oversight of these services because of their size, reach or potential impact on users, requiring the platforms to comply with new obligations aimed at protecting citizens."
-    },
-    {
-      "cluster_id": "subject-meloni-8b4b7d871ff7",
-      "coherence": 0.47171884994073787,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-01",
-      "headline": "Italy extends Schengen suspension with Spain for 15 days and Spain mirrors measure",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/31/6a954dd8fdddffb46a8b4588.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-los-controles-los-viajeros-procedentes-espana_7030965_0.html"
-        },
-        {
-          "language": "it",
-          "source": "travelnostop.com",
-          "source_country": "it",
-          "url": "https://travelnostop.com/news/cronaca/accordo-schengen-con-la-spagna-resta-sospeso-per-altri-15-giorni_685663"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "it"
-      ],
-      "origin_country": "it",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elmundo.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4717,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.676,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "meloni",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "italia",
-        "italy",
-        "melilla",
-        "meloni",
-        "schengen",
-        "vivas"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Italian Prime Minister Giorgia Meloni extended the suspension of the Schengen agreement with Spain for 15 days, maintaining border controls on travel from Spain; the Spanish government responded by imposing the same 15-day controls on passengers arriving from Italy."
-    },
-    {
-      "cluster_id": "subject-france-7d2a9dd59756",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "Private operator Velvet receives French high-speed rail operating licence",
+      "country_count": 3,
+      "editorial_day": "2026-09-02",
+      "headline": "Zelensky warns airlines to avoid Russian airspace as Ukraine increases drone strikes",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/09/01/tgv-l-entreprise-ferroviaire-velvet-obtient-sa-licence-d-exploitation-en-france-et-pourra-concurrencer-la-sncf-a-partir-de-2028_6763388_3234.html"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260902-zelensky-menace-de-perturber-l-espace-a%C3%A9rien-russe-avec-des-drones"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/transport-ferroviaire-apres-trenitalia-et-renfe-avant-le-train-le-francais-velvet-obtient-sa-licence-pour-concurrencer-la-sncf-20260901_VYHOQOOKABE3TEGHWLAC3QXAOA/"
+          "url": "https://www.france24.com/fr/europe/20260901-drones-ukrainiens-zelensky-met-en-garde-l-aviation-civile-poutine-%C3%A9voque-une-menace-terroriste"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/transports/l-entreprise-ferroviaire-privee-velvet-obtient-sa-licence-d-exploitation-de-trains-a-grande-vitesse-en-france_8171681.html#xtor=RSS-3-[lestitres]"
+          "source": "fr.le360.ma",
+          "source_country": "mo",
+          "url": "https://fr.le360.ma/monde/zelensky-previent-que-les-drones-ukrainiens-vont-rendre-dangereux-le-ciel-russe-du-terrorisme-selon_35OEJ2V35RHN5FWQEWCE3H6NUI/"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "rs",
+        "up"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/economie/transports/l-entreprise-ferroviaire-privee-velvet-obtient-sa-licence-d-exploitation-de-trains-a-grande-vitesse-en-france_8171681.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
-      "reference_newsroom_count": 3,
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/europe/20260901-drones-ukrainiens-zelensky-met-en-garde-l-aviation-civile-poutine-%C3%A9voque-une-menace-terroriste",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "bbc.co.uk",
+        "france24.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4338,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "source_reliability": 0.5789
         },
-        "total": 0.6581,
+        "total": 0.6619,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "zelensky",
       "subject_names": [
-        "france",
-        "francia",
-        "macron",
-        "paris",
-        "velvet"
+        "kyiv",
+        "russian",
+        "russland",
+        "zelenski",
+        "zelensky"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "French private rail company Velvet has been granted an operating licence to run high-speed trains in France, allowing it to enter competition with SNCF alongside other new entrants; the licence permits Velvet to begin services from 2028."
-    },
-    {
-      "cluster_id": "subject-ceuta-eb88da151541",
-      "coherence": 0.6320546123059385,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "Russia asks Spain to provide evidence of its alleged role in Ceuta migrant crisis",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/rusia-pide-pruebas-espana-participacion-crisis-migratoria-20260901111655-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/01/6a9699c9e9cf4ab3448b458d.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260901/rusia-pide-espana-pruebas-implicacion-campana-desinformacion-crisis-ceuta/1003744368670_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-01/rusia-desinformacion-ceuta-migracion-1tps_4415735/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-rusia-descarta-indicios-presunta-implicacion-crisis-ceuta-acusaciones-hay-probarlas-20260901120542.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/rusia-exige-sanchez-pruebas-concretas-su-supuesta-implicacion-crisis-ceuta_7031370_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elcorreogallego.es",
-          "source_country": "spain",
-          "url": "https://www.elcorreogallego.es/sociedad/2026/09/01/rusia-pide-espana-pruebas-supuesta-133830343.html"
-        },
-        {
-          "language": "es",
-          "source": "diariodenavarra.es",
-          "source_country": "spain",
-          "url": "https://www.diariodenavarra.es/noticias/actualidad/nacional/2026/09/01/rusia-pide-espana-pruebas-sobre-supuesta-implicacion-crisis-migratoria-ceuta-833551-28.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/internacional/2026/09/01/2699729/rusia-pide-espana-pruebas-sobre-supuesta-implicacion-crisis-migratoria-ceuta.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "rs"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-09-01/rusia-desinformacion-ceuta-migracion-1tps_4415735/",
-      "rank": 5,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elconfidencial.com",
-        "elespanol.com",
-        "elmundo.es",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6321,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
-        },
-        "total": 0.657,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "israel",
-        "marruecos",
-        "melilla",
-        "otan",
-        "pedro sanchez",
-        "psoe",
-        "rusia",
-        "sanchez",
-        "vivas"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Russian authorities have publicly requested that Spain present concrete evidence—such as facts, materials with dates, figures and names—supporting any claim that Russia was involved in the recent Ceuta migration crisis or in related disinformation campaigns, saying accusations must be proven before further discussion."
+      "subject_newsroom_count": 11,
+      "summary": "Ukraine’s president Volodymyr Zelensky has warned that expanded Ukrainian drone operations will make Russian airspace dangerous and urged airlines to avoid flying there; Russian President Vladimir Putin and Russian officials characterized the drone activity as a terrorist threat."
     }
   ],
-  "discarded_ingested": 144,
+  "discarded_ingested": 164,
   "discarded_kept": 5,
-  "generated_at": "2026-09-01T10:19:46.978488+00:00",
+  "generated_at": "2026-09-02T09:48:34.376062+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

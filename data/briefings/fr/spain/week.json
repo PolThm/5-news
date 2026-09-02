@@ -2,11 +2,10 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-italia-8a515227ed3a",
-        "subject-meloni-8b4b7d871ff7"
+        "subject-ceuta-90b962e71bb1"
       ],
-      "cluster_id": "subject-meloni-8b4b7d871ff7",
-      "coherence": 0.47171884994073787,
+      "cluster_id": "subject-ceuta-90b962e71bb1",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "it",
@@ -14,32 +13,244 @@
       ],
       "country_count": 2,
       "editorial_day": "2026-09-01",
-      "headline": "Meloni prolonge 15 jours la suspension de Schengen avec l'Espagne et Madrid riposte",
-      "independent_source_count": 4,
+      "headline": "Le gouvernement espagnol approuve un plan de 309 millions d’euros pour Ceuta",
+      "independent_source_count": 3,
       "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/01/6a96bed5468aeb1b4a8b458a.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/01/spanish-government-approves-309-million-aid-package-for-ceuta-amid-migrant-crisis"
+        },
+        {
+          "language": "it",
+          "source": "borsaitaliana.it",
+          "source_country": "it",
+          "url": "https://www.borsaitaliana.it/borsa/notizie/radiocor/economia/dettaglio/spagna-governo-approva-pacchetto-aiuti-da-309-mln-per-ceuta-nRC_01092026_1738_541913970.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "it",
+      "outbound_source": "borsaitaliana.it",
+      "outbound_url": "https://www.borsaitaliana.it/borsa/notizie/radiocor/economia/dettaglio/spagna-governo-approva-pacchetto-aiuti-da-309-mln-per-ceuta-nRC_01092026_1738_541913970.html",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.63,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "sanchez",
+        "vox"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Le gouvernement espagnol a approuvé un plan d’aide de 309 millions d’euros pour Ceuta comprenant des mesures comme des ERTE, des réductions fiscales et des aides directes destinées aux petites entreprises et aux travailleurs indépendants en réponse à la crise migratoire."
+    },
+    {
+      "_linked_ids": [
+        "subject-marruecos-a8f0556dbe95"
+      ],
+      "cluster_id": "subject-marruecos-a8f0556dbe95",
+      "coherence": 0.501270946055627,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-02",
+      "headline": "Marlaska demande des explications au directeur de la Police sur un rapport impliquant le Maroc",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-02/marlaska-pide-al-director-de-la-policia-que-aclare-si-existe-un-informe-que-senala-a-marruecos-en-el-asalto-masivo-a-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/marlaska-pide-explicaciones-director-policia-informe-atribuiria-20260902073419-nt.html"
+        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html"
+          "url": "https://www.eldiario.es/politica/marlaska-pregunta-director-policia-supuesto-informe-atribuia-fuerzas-marroquies-entrada-migrantes-ceuta_1_13481015.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/09/02/6a97d0dde5fdeaa5758b459c.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/08/31/6a954dd8fdddffb46a8b4588.html"
+          "url": "https://www.elmundo.es/espana/2026/09/02/6a97caa4e9cf4a201e8b456e.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "infolibre.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-los-controles-los-viajeros-procedentes-espana_7030965_0.html"
+          "url": "https://www.infolibre.es/politica/marlaska-exige-director-policia-aclare-si-marruecos-estuvo-detras-cruce-masivo-ceuta_1_2235761.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-02/crisis-migratoria-ceuta-policia-1tps_4416273/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-marlaska-pide-explicaciones-director-policia-informe-atribuiria-fuerzas-marroquies-hechos-ceuta-20260902071827.html"
+        },
+        {
+          "language": "es",
+          "source": "estrelladigital.es",
+          "source_country": "spain",
+          "url": "https://www.estrelladigital.es/articulo/seguridad-defensa/marlaska-pide-explicaciones-director-policia-informe-que-senala-marruecos-entrada-masiva-ceuta/20260902093431450635.html"
+        },
+        {
+          "language": "es",
+          "source": "esdiario.com",
+          "source_country": "spain",
+          "url": "https://www.esdiario.com/nacional/260902/196715/marlaska-policia-informes-ceuta-marruecos.html"
+        },
+        {
+          "language": "es",
+          "source": "laregion.es",
+          "source_country": "spain",
+          "url": "https://www.laregion.es/espana/marlaska-reclama-explicaciones-policia-informe_1_20260902-4399814.html"
+        }
+      ],
+      "mentioned_countries": [
+        "mo",
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-09-02/marlaska-pide-al-director-de-la-policia-que-aclare-si-existe-un-informe-que-senala-a-marruecos-en-el-asalto-masivo-a-ceuta.html",
+      "rank": 2,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5013,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6216,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "marruecos",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "marlaska",
+        "marruecos",
+        "sanchez",
+        "vox"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Le ministre espagnol de l’Intérieur, Fernando Grande‑Marlaska, a exigé des éclaircissements du directeur général de la Police après la parution d’un rapport, dont il dit avoir appris l’existence par la presse, qui attribue au Maroc un rôle dans l’entrée massive de migrants à Ceuta ; plusieurs articles concordent sur le fait que Marlaska affirme ne pas en avoir été informé auparavant et a demandé des explications à ses subordonnés."
+    },
+    {
+      "_linked_ids": [
+        "subject-cirsa-6c913f992813"
+      ],
+      "cluster_id": "subject-cirsa-6c913f992813",
+      "coherence": 0.4646237854796349,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-02",
+      "headline": "Lottomatica absorbe Cirsa pour créer un géant mondial du jeu",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://cincodias.elpais.com/companias/2026-09-02/la-italiana-lottomatica-absorbe-a-la-espanola-cirsa-para-crear-la-segunda-mayor-empresa-mundial-del-juego.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/cataluna/italiana-lottomatic-absorbe-cirsa-crear-gigante-mundial-20260902104148-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/2026/09/02/6a97c1c8468aeb967c8b4582.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/empresas/2026/09/02/6a97c5d9e4d4d8f44b8b4577.html"
         },
         {
           "language": "it",
-          "source": "travelnostop.com",
+          "source": "soldionline.it",
           "source_country": "it",
-          "url": "https://travelnostop.com/news/cronaca/accordo-schengen-con-la-spagna-resta-sospeso-per-altri-15-giorni_685663"
+          "url": "https://www.soldionline.it/notizie/azioni-italia/lottomatica-accordo-fusione-cirsa"
+        },
+        {
+          "language": "es",
+          "source": "estrategiasdeinversion.com",
+          "source_country": "spain",
+          "url": "https://www.estrategiasdeinversion.com/actualidad/noticias/bolsa-espana/cirsa-sera-absorbida-por-lottomatica-en-una-fusion-n-946107"
         }
       ],
       "mentioned_countries": [
@@ -47,382 +258,164 @@
         "it"
       ],
       "origin_country": "it",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/italia-prorroga-15-dias-suspension-schengen-mantiene-controles-viajes-procedentes-espana_1_13476402.html",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/economia/empresas/2026/09/02/6a97c5d9e4d4d8f44b8b4577.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elmundo.es"
+        "abc.es",
+        "elmundo.es",
+        "elpais.com",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4717,
+          "coherence": 0.4646,
           "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
         },
-        "total": 0.646,
+        "total": 0.5904,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "meloni",
+      "subject_label": "cirsa",
       "subject_names": [
-        "ceuta",
-        "espana",
-        "italia",
-        "italy",
-        "melilla",
-        "meloni",
-        "schengen",
-        "vivas"
+        "cirsa",
+        "lottomatica"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Le gouvernement italien de Giorgia Meloni a prolongé de quinze jours la suspension des accords Schengen concernant les voyages en provenance d'Espagne, et l'Espagne a répliqué en imposant pour la même durée des contrôles aux passagers arrivant d'Italie ; les deux pays maintiennent ainsi des contrôles temporaires aux frontières pour une période supplémentaire de quinze jours."
+      "subject_newsroom_count": 4,
+      "summary": "L’entreprise italienne Lottomatica va absorber la société espagnole Cirsa dans le cadre d’une opération de fusion qui donnera naissance au deuxième (ou à un des principaux) groupe mondiaux du jeu et des paris; l’accord inclut un paiement d’environ 13 200 millions et prévoit qu’un dividende extraordinaire sera versé à Cirsa avant l’absorption, entraînant une forte hausse du cours de son action."
     },
     {
       "_linked_ids": [
-        "subject-ceuta-eb88da151541"
+        "subject-ceuta-086be6f09b94"
       ],
-      "cluster_id": "subject-ceuta-eb88da151541",
-      "coherence": 0.6320546123059385,
+      "cluster_id": "subject-ceuta-086be6f09b94",
+      "coherence": 0.41113924642201183,
       "consequence": 2,
       "countries": [
+        "mo",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "La Russie demande à l'Espagne des preuves de son implication dans la crise migratoire de Ceuta",
-      "independent_source_count": 9,
+      "country_count": 2,
+      "editorial_day": "2026-09-02",
+      "headline": "La Commission européenne dit ne pas avoir de preuves que la crise de Ceuta ait été provoquée par une campagne étrangère",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/rusia-pide-pruebas-espana-participacion-crisis-migratoria-20260901111655-nt.html"
+          "url": "https://elpais.com/espana/2026-09-01/bruselas-ve-intentos-de-rusia-de-sacar-partido-de-la-crisis-de-ceuta-pero-afirma-que-no-hay-pruebas-de-que-la-provocara.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ue-asegura-no-hay-pruebas-concluyentes-crisis-ceuta-provocara-campana-desinformacion-rusia_1_13480516.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/01/6a9699c9e9cf4ab3448b458d.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260901/rusia-pide-espana-pruebas-implicacion-campana-desinformacion-crisis-ceuta/1003744368670_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-01/rusia-desinformacion-ceuta-migracion-1tps_4415735/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-rusia-descarta-indicios-presunta-implicacion-crisis-ceuta-acusaciones-hay-probarlas-20260901120542.html"
+          "url": "https://www.elmundo.es/espana/2026/09/01/6a970ab8e9cf4ae9398b458f.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/rusia-exige-sanchez-pruebas-concretas-su-supuesta-implicacion-crisis-ceuta_7031370_0.html"
+          "url": "https://www.20minutos.es/internacional/ue-no-identifica-que-rusia-israel-hayan-provocado-crisis-ceuta-pero-si-intentos-posteriores-sacar-partido-ella_7031688_0.html"
         },
         {
-          "language": "es",
-          "source": "elcorreogallego.es",
-          "source_country": "spain",
-          "url": "https://www.elcorreogallego.es/sociedad/2026/09/01/rusia-pide-espana-pruebas-supuesta-133830343.html"
-        },
-        {
-          "language": "es",
-          "source": "diariodenavarra.es",
-          "source_country": "spain",
-          "url": "https://www.diariodenavarra.es/noticias/actualidad/nacional/2026/09/01/rusia-pide-espana-pruebas-sobre-supuesta-implicacion-crisis-migratoria-ceuta-833551-28.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/internacional/2026/09/01/2699729/rusia-pide-espana-pruebas-sobre-supuesta-implicacion-crisis-migratoria-ceuta.html"
+          "language": "fr",
+          "source": "yabiladi.com",
+          "source_country": "mo",
+          "url": "https://www.yabiladi.com/articles/details/201874/aucune-preuve-concluante-desinformation-etrangere.html"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "rs"
+        "rs",
+        "spain"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-09-01/rusia-desinformacion-ceuta-migracion-1tps_4415735/",
-      "rank": 2,
-      "reference_newsroom_count": 6,
+      "origin_country": "mo",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/ue-no-identifica-que-rusia-israel-hayan-provocado-crisis-ceuta-pero-si-intentos-posteriores-sacar-partido-ella_7031688_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
-        "elconfidencial.com",
-        "elespanol.com",
+        "eldiario.es",
         "elmundo.es",
-        "europapress.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.6321,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
-        },
-        "total": 0.617,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "israel",
-        "marruecos",
-        "melilla",
-        "otan",
-        "pedro sanchez",
-        "psoe",
-        "rusia",
-        "sanchez",
-        "vivas"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Les articles indiquent que Moscou exige de Madrid des preuves concrètes, chiffrées et datées de son éventuelle implication dans la crise migratoire de Ceuta évoquée par le président Sánchez; sans présentation de faits, de matériaux ou de noms, les autorités russes estiment qu’il n’y a rien à discuter et rejettent les accusations non étayées."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-e7d252cc6146"
-      ],
-      "cluster_id": "subject-ceuta-e7d252cc6146",
-      "coherence": 0.5149364216888721,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "brazil",
-        "is",
-        "it",
-        "ni",
-        "united-kingdom",
-        "unknown"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-08-31",
-      "headline": "Le premier ministre espagnol exclut la responsabilité du Maroc dans la crise migratoire de Ceuta",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/aug/31/morocco-ceuta-border-breach-spanish-pm-migration-pedro-sanchez"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/08/31/spains-pm-says-ceuta-migrant-surge-inquiry-ongoing-far-right-behind-fake-information"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/31/premie-da-espanha-culpa-russia-e-israel-por-crise-migratoria-em-ceuta.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "maitlandmercury.com.au",
-          "source_country": "as",
-          "url": "https://www.maitlandmercury.com.au/story/9341108/spain-pm-blames-russia-israel-for-ceuta-migrant-crisis/"
-        },
-        {
-          "language": "en",
-          "source": "themedialine.org",
-          "source_country": "is",
-          "url": "https://themedialine.org/headlines/spanish-pm-blames-ceuta-crisis-on-israeli-russian-misinformation/"
-        },
-        {
-          "language": "en",
-          "source": "newcastleherald.com.au",
-          "source_country": "unknown",
-          "url": "https://www.newcastleherald.com.au/story/9341108/spain-pm-blames-russia-israel-for-ceuta-migrant-crisis/"
-        },
-        {
-          "language": "en",
-          "source": "africanews.com",
-          "source_country": "ni",
-          "url": "https://www.africanews.com/2026/08/31/spain-pm-pedro-sanchez-rules-out-moroccan-role-in-ceuta-migrant-surge/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "as",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/08/31/spains-pm-says-ceuta-migrant-surge-inquiry-ongoing-far-right-behind-fake-information",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "globo.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5149,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
-        },
-        "total": 0.6167,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "melilla",
-        "vivas"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Le premier ministre espagnol affirme que le Maroc n’est pas responsable de l’arrivée massive de migrants à Ceuta, indique qu’une enquête est en cours et attribue la diffusion d’informations fausses autour de la crise à de la désinformation liée à la Russie et à Israël; il a aussi accusé l’extrême droite de propager de « fausses » informations."
-    },
-    {
-      "_linked_ids": [
-        "subject-cgpj-76088c5fa047"
-      ],
-      "cluster_id": "subject-cgpj-76088c5fa047",
-      "coherence": 0.4695159179522588,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "Le CGPJ dépêche une magistrate pour renforcer les tribunaux de Ceuta",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/cgpj-envia-magistrada-cartagena-reforzar-juzgados-ceuta-20260901110320-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/01/6a969aa4e4d4d852658b45a1.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/tribunales/20260901/cgpj-designa-juez-reforzar-juzgado-ceuta-sobrecargado-casos-agresion-sexual-invasion/1003744368661_0.html"
-        },
-        {
-          "language": "es",
-          "source": "larioja.com",
-          "source_country": "spain",
-          "url": "https://www.larioja.com/nacional/cgpj-nombra-magistrada-destinada-cartagena-refuerzo-violencia-20260901104254-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "laverdad.es",
-          "source_country": "spain",
-          "url": "https://www.laverdad.es/nacional/cgpj-nombra-magistrada-destinada-cartagena-refuerzo-violencia-20260901104254-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/espana/tribunales/20260901/cgpj-designa-juez-reforzar-juzgado-ceuta-sobrecargado-casos-agresion-sexual-invasion/1003744368661_0.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "abc.es",
-        "elespanol.com",
-        "elmundo.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4695,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4111,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.619
+          "source_reliability": 0.6364
         },
-        "total": 0.5494,
+        "total": 0.5812,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "cgpj",
+      "subject_label": "ceuta",
       "subject_names": [
+        "bruselas",
         "ceuta",
-        "cgpj",
-        "espana",
-        "melilla",
-        "vivas"
+        "israel",
+        "netanyahu",
+        "otan",
+        "putin",
+        "rusia",
+        "russia",
+        "sanchez",
+        "vox"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Le Conseil général du pouvoir judiciaire (CGPJ) a désigné une magistrate, actuellement en poste à Carthagène, pour renforcer les tribunaux de Ceuta chargés des affaires de violence contre les femmes, en réponse à la surcharge de dossiers d’agressions sexuelles survenue après l’invasion."
+      "subject_newsroom_count": 18,
+      "summary": "La Commission européenne indique qu’elle n’a pas de preuves concluantes montrant que la crise migratoire de Ceuta a été provoquée par une campagne de désinformation d’acteurs étrangers (notamment la Russie et Israël), tout en estimant avoir observé des tentatives ultérieures de certains acteurs pour tirer parti de la crise."
     },
     {
       "_linked_ids": [
-        "subject-madrid-d7ba15a7e84b"
+        "subject-fiscalia-69fa1e9ea419"
       ],
-      "cluster_id": "subject-madrid-d7ba15a7e84b",
+      "cluster_id": "subject-fiscalia-69fa1e9ea419",
       "coherence": null,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "Más Madrid et le PSOE se constituent partie civile dans l’affaire de l’achat de l’attique par le gouvernement d’Ayuso",
+      "editorial_day": "2026-09-02",
+      "headline": "Le gouvernement demande une enquête pénale sur les tirs visant l’orque Toñi",
       "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/madrid/2026-08-31/mas-madrid-lleva-al-tribunal-de-cuentas-la-compra-del-atico-del-gobierno-de-ayuso.html"
+          "url": "https://elpais.com/clima-y-medio-ambiente/2026-09-02/el-gobierno-ve-delito-en-los-disparos-a-la-orca-toni-y-traslada-la-investigacion-a-la-fiscalia-y-la-guardia-civil.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/madrid/madrid-persona-causa-atico-comprado-gobierno-ayuso_1_13478696.html"
+          "url": "https://www.eldiario.es/sociedad/gobierno-pide-fiscalia-investigue-tiroteo-orca-barco-espanol_1_13481340.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.europapress.es/madrid/noticia-mas-madrid-persona-acusacion-popular-caso-investiga-compra-atico-20260901110726.html"
+          "url": "https://www.elconfidencial.com/espana/2026-09-02/orca-disparo-fauna-protegida-miteco-1tps_4416407/"
         }
       ],
       "mentioned_countries": [
@@ -430,13 +423,13 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/madrid/2026-08-31/mas-madrid-lleva-al-tribunal-de-cuentas-la-compra-del-atico-del-gobierno-de-ayuso.html",
+      "outbound_url": "https://elpais.com/clima-y-medio-ambiente/2026-09-02/el-gobierno-ve-delito-en-los-disparos-a-la-orca-toni-y-traslada-la-investigacion-a-la-fiscalia-y-la-guardia-civil.html",
       "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "elconfidencial.com",
         "eldiario.es",
-        "elpais.com",
-        "europapress.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
@@ -453,25 +446,18 @@
         "total": 0.5448,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "madrid",
+      "subject_label": "fiscalia",
       "subject_names": [
-        "ayuso",
-        "barcelona",
-        "congreso",
-        "gobierno",
-        "madrid",
-        "marruecos",
-        "pedro sanchez",
-        "psoe",
-        "sanchez"
+        "fiscalia",
+        "guardia civil"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Les partis Más Madrid et le PSOE se sont officiellement constitués parties civiles dans l’enquête sur l’achat par le gouvernement d’Isabel Díaz Ayuso d’un attique, et Más Madrid a en outre saisi le Tribunal de Cuentas dans le cadre de cette affaire; les démarches visent à participer à la procédure judiciaire qui examine les circonstances de cet achat."
+      "subject_newsroom_count": 5,
+      "summary": "Le gouvernement espagnol considère qu’il y a potentiellement un délit dans les tirs dirigés contre l’orque surnommée Toñi depuis un bateau espagnol et a transmis le dossier à la Fiscalía et à la Guardia Civil pour qu’elles ouvrent des investigations formelles."
     }
   ],
-  "discarded_ingested": 58,
+  "discarded_ingested": 57,
   "discarded_kept": 5,
-  "generated_at": "2026-09-01T10:19:46.978488+00:00",
+  "generated_at": "2026-09-02T09:48:34.376062+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

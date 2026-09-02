@@ -2,328 +2,470 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-france-7d2a9dd59756"
+        "subject-togo-c814d8e9bd38"
       ],
-      "cluster_id": "subject-france-7d2a9dd59756",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-togo-c814d8e9bd38",
+      "coherence": 0.5432646768628187,
+      "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "Private operator Velvet receives French high-speed rail operating licence",
-      "independent_source_count": 3,
+      "editorial_day": "2026-09-02",
+      "headline": "Two French journalists and a local collaborator released provisionally in Togo",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/09/01/tgv-l-entreprise-ferroviaire-velvet-obtient-sa-licence-d-exploitation-en-france-et-pourra-concurrencer-la-sncf-a-partir-de-2028_6763388_3234.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/02/les-deux-journalistes-francais-detenus-au-togo-depuis-la-fin-juillet-gael-mocaer-et-sebastian-perez-pezzani-ont-ete-liberes_6764212_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/transport-ferroviaire-apres-trenitalia-et-renfe-avant-le-train-le-francais-velvet-obtient-sa-licence-pour-concurrencer-la-sncf-20260901_VYHOQOOKABE3TEGHWLAC3QXAOA/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/transports/l-entreprise-ferroviaire-privee-velvet-obtient-sa-licence-d-exploitation-de-trains-a-grande-vitesse-en-france_8171681.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/economie/transports/l-entreprise-ferroviaire-privee-velvet-obtient-sa-licence-d-exploitation-de-trains-a-grande-vitesse-en-france_8171681.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6314,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "macron",
-        "paris",
-        "velvet"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "French private rail company Velvet has been granted an operating licence to run high-speed trains in France, allowing it to enter competition with SNCF alongside other new entrants; the licence permits Velvet to begin services from 2028."
-    },
-    {
-      "_linked_ids": [
-        "subject-macron-41ec43fd00c9",
-        "subject-suede-2050dd8c997b"
-      ],
-      "cluster_id": "subject-suede-2050dd8c997b",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-08-31",
-      "headline": "Sweden signs €4.3 billion contract to buy four French frigates",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/08/31/la-suede-signe-un-contrat-de-4-3-milliards-d-euros-pour-l-acquisition-de-quatre-fregates-francaises_6762592_3210.html"
+          "url": "https://www.liberation.fr/international/afrique/les-deux-journalistes-francais-detenus-au-togo-depuis-fin-juillet-ont-ete-liberes-provisoirement-20260902_Q4CYYPPX25AT5DSIVOMIZB7PYI/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/defense-la-suede-achete-4-fregates-francaises-un-contrat-a-43-milliards-d-euros-20260831"
+          "url": "https://www.la-croix.com/international/togo-le-journaliste-francais-et-son-collaborateur-detenus-ont-ete-liberes-provisoirement-20260902"
         },
         {
           "language": "fr",
-          "source": "challenges.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.challenges.fr/entreprise/defense/un-contrat-a-43-milliards-deuros-macron-attendu-en-suede-pour-officialiser-la-vente-de-quatre-fregates-du-francais-naval-group_645419"
+          "url": "https://www.franceinfo.fr/monde/afrique/togo/un-realisateur-francais-et-son-collaborateur-local-places-en-liberte-provisoire-apres-avoir-ete-detenus-au-togo_8173457.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/afrique/20260902-togo-liberation-deux-journalistes-fran%C3%A7ais-et-leur-collaborateur-local-remis-en-libert%C3%A9-provisoire"
+        },
+        {
+          "language": "fr",
+          "source": "midilibre.fr",
+          "source_country": "france",
+          "url": "https://www.midilibre.fr/2026/09/02/ils-tournaient-pour-les-routes-de-limpossible-lors-de-leur-arrestation-les-deux-journalistes-francais-detenus-au-togo-ont-ete-liberes-13532231.php"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "sw"
+        "france"
       ],
       "origin_country": "france",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/entreprise/defense/un-contrat-a-43-milliards-deuros-macron-attendu-en-suede-pour-officialiser-la-vente-de-quatre-fregates-du-francais-naval-group_645419",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/02/les-deux-journalistes-francais-detenus-au-togo-depuis-la-fin-juillet-gael-mocaer-et-sebastian-perez-pezzani-ont-ete-liberes_6764212_3210.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "challenges.fr",
+        "france24.com",
+        "francetvinfo.fr",
         "la-croix.com",
-        "lemonde.fr"
+        "lemonde.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5433,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
         },
-        "total": 0.6156,
+        "total": 0.5895,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "suede",
+      "subject_label": "togo",
       "subject_names": [
-        "france",
-        "francia",
-        "macron",
-        "paris",
-        "suede",
-        "velvet"
+        "togo"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Sweden has agreed to purchase four frigates from France in a deal worth €4.3 billion; the sale involves the French shipbuilder Naval Group and is expected to be formalized with President Emmanuel Macron traveling to Sweden to mark the agreement."
+      "subject_newsroom_count": 5,
+      "summary": "Two French journalists who had been detained in Togo since late July, along with their local collaborator, were provisionally released after being held in connection with their work; the journalists had been filming for a programme at the time of their arrest."
     },
     {
       "_linked_ids": [
-        "subject-john-galliano-bcc0901a7f2c"
+        "subject-leipzig-77b0d024eee4"
       ],
-      "cluster_id": "subject-john-galliano-bcc0901a7f2c",
-      "coherence": 0.503081468625262,
-      "consequence": 1,
+      "cluster_id": "subject-leipzig-77b0d024eee4",
+      "coherence": 0.507757654329706,
+      "consequence": 3,
       "countries": [
+        "as",
+        "brazil",
+        "ca",
+        "china",
         "france",
+        "germany",
         "it",
-        "mx",
+        "md",
+        "nl",
+        "pe",
+        "spain",
         "united-kingdom",
-        "united-states",
-        "unknown"
+        "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-09-01",
-      "headline": "Metropolitan Museum cancels John Galliano exhibition for 2027",
-      "independent_source_count": 26,
+      "country_count": 13,
+      "editorial_day": "2026-09-02",
+      "filled_from": "europe",
+      "headline": "Germany says Russia was behind attempted explosive drone attack at Leipzig airport",
+      "independent_source_count": 31,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/l-allemagne-accuse-la-russie-d-avoir-pilote-une-tentative-d-attentat-a-leipzig_6763526_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/attaque-au-drone-a-l-aeroport-de-leipzig-l-allemagne-accuse-la-russie-d-une-attaque-hybride_6763518_3210.html"
+        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/lifestyle/mode/au-met-de-new-york-la-retrospective-sur-john-galliano-finalement-annulee-20260831_JS2AWUFN65BD5G3FDBFGZQO4JI/"
+          "url": "https://www.liberation.fr/international/europe/lallemagne-va-accuser-la-russie-detre-derriere-lattaque-au-drone-explosif-de-laeroport-de-leipzig-20260901_M5TQYFYGLFHAHILKR6HVG2HERE/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/l-allemagne-accuse-la-russie-detre-derriere-le-drone-explosif-de-laeroport-de-leipzig-20260901"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/berlin-annonce-des-mesures-de-retorsion-contre-la-russie-accusee-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig_8172794.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260901-selon-l-allemagne-la-russie-est-responsable-de-l-attaque-au-drone-explosif-%C3%A0-l-a%C3%A9roport-de-leipzig"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260831.OBS117819/john-galliano-annule-finalement-sa-retrospective-au-met-rattrape-par-ses-propos-antisemites.html"
+          "url": "https://www.nouvelobs.com/monde/20260901.OBS117860/agents-jetables-et-tentative-d-attentat-l-allemagne-accuse-la-russie-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/lallemagne-accuse-la-russie-detre-responsable-de-lattaque-au-drone-de-laeroport-de-leipzig-YDZOQKHA6VAGRKTCCSEWE3POGA/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-01/alemania-acusa-a-rusia-del-ataque-fallido-con-drones-bomba-en-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alemania-lleva-otan-acusacion-rusia-ataque-hibrido-20260901193345-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alemania-acusa-rusia-ataque-drones-aeropuerto-leizpig-20260901181841-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624890/alemania-senala-rusia-responsable-ataque-drones-aeropuerto-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/alemania-acusa-rusia-ataque-hibrido-drones-aeropuerto-leipzig-principios-agosto_1_13480261.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-alemania-senala-rusia-responsable-ataque-fallido-contra-aeropuerto-leizpig-20260901181815.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/los-servicios-seguridad-alemanes-vinculan-con-rusia-dron-con-explosivos-hallado-leipzig_7031466_0.html"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c4gkp6pgy03o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/01/russia-behind-drone-incident-at-leipzig-airport-berlin-says"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2629293"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/02/g-s1-141502/germany-russia-attempted-drone-attack"
         },
         {
           "language": "en",
           "source": "pbs.org",
           "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/arts/metropolitan-museum-of-art-cancels-planned-2027-met-gala-exhibit-on-fashion-designer-john-galliano"
+          "url": "https://www.pbs.org/newshour/world/germany-blames-russia-for-attempted-drone-attack-at-leipzig-airport"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/putin-acusa-alemanha-de-plantar-evidencias-para-responsabilizar-russia-por-drone-com-explosivos-em-aeroporto-de-leipzig.ghtml"
         },
         {
           "language": "en",
-          "source": "wclk.com",
+          "source": "wcsufm.org",
           "source_country": "united-states",
-          "url": "https://www.wclk.com/2026-09-01/amid-backlash-museum-cancels-planned-met-gala-exhibit-on-fashion-designer-john-galliano"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-09-01/a-rischio-il-met-gala-2027-john-galliano-cancella-la-mostra-dopo-le-polemiche/19628803/"
+          "url": "https://www.wcsufm.org/latest-from-npr/2026-09-02/germany-blames-russia-for-last-months-attempted-drone-attack-at-leipzig-airport"
         },
         {
           "language": "es",
-          "source": "sdpnoticias.com",
-          "source_country": "mx",
-          "url": "https://www.sdpnoticias.com/internacional/con-mucha-tristeza-john-galliano-reacciona-a-la-cancelacion-de-su-exposicion/"
+          "source": "canaln.pe",
+          "source_country": "pe",
+          "url": "https://canaln.pe/internacionales/alemania-acusa-rusia-ataque-dron-aeropuerto-clave-n494691"
         },
         {
           "language": "en",
-          "source": "rollingstone.com",
-          "source_country": "united-states",
-          "url": "https://www.rollingstone.com/culture/culture-news/john-galliano-exhibit-2027-met-gala-canceled-1235618232/"
+          "source": "thelocal.de",
+          "source_country": "germany",
+          "url": "https://www.thelocal.de/20260901/germany-expected-to-blame-russia-for-airport-drone-incident"
         },
         {
           "language": "en",
-          "source": "film-news.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.film-news.co.uk:443/news/UK/128864/John-Galliano-withdraws-from-2027-Met-Gala-amid-backlash"
+          "source": "niagarafallsreview.ca",
+          "source_country": "ca",
+          "url": "https://www.niagarafallsreview.ca/news/world/europe/germany-blames-russia-for-last-month-s-attempted-drone-attack-at-leipzig-airport/article_0d78d57b-8ab4-5bff-aa65-b156eab14638.html"
         },
         {
           "language": "en",
-          "source": "nydailynews.com",
-          "source_country": "united-states",
-          "url": "https://www.nydailynews.com/2026/08/31/john-galliano-withdraws-met-gala-exhibit-antisemitism/"
+          "source": "easternriverinachronicle.com.au",
+          "source_country": "as",
+          "url": "https://www.easternriverinachronicle.com.au/story/9341971/germany-accuses-russia-of-leipzig-airport-drone-attack/"
         },
         {
           "language": "en",
-          "source": "955wtvy.com",
-          "source_country": "united-states",
-          "url": "https://955wtvy.com/entertainment-news/2026-08-31-metropolitan-museum-of-art-cancels-john-galliano-exhibit-after-controversy/"
+          "source": "scmp.com",
+          "source_country": "china",
+          "url": "https://www.scmp.com/news/world/europe/article/3366030/germany-blames-russia-attempted-drone-attack-leipzig-airport"
         },
         {
-          "language": "en",
-          "source": "royston-crow.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.royston-crow.co.uk/news/national/26509614.john-galliano-pulls-2027-met-gala-exhibition/"
+          "language": "pt",
+          "source": "correiodopovo.com.br",
+          "source_country": "brazil",
+          "url": "https://www.correiodopovo.com.br/not%c3%adcias/mundo/alemanha-culpa-russia-por-drone-explosivo-no-aeroporto-de-leipzig-1.1744071"
         },
         {
-          "language": "en",
-          "source": "kxel.com",
-          "source_country": "united-states",
-          "url": "https://kxel.com/2026/08/31/metropolitan-museum-of-art-cancels-john-galliano-exhibit-after-controversy/"
+          "language": "pt",
+          "source": "em.com.br",
+          "source_country": "brazil",
+          "url": "http://www.em.com.br/internacional/2026/09/7491606-alemanha-culpa-russia-por-drone-explosivo-no-aeroporto-de-leipzig.html"
         },
         {
-          "language": "en",
-          "source": "romfordrecorder.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.romfordrecorder.co.uk/news/national/26509614.john-galliano-pulls-2027-met-gala-exhibition/"
+          "language": "es",
+          "source": "europasur.es",
+          "source_country": "spain",
+          "url": "https://www.europasur.es/mundo/alemania-responsabiliza-rusia-ataque-fallido_0_2007851374.html"
         },
         {
-          "language": "en",
-          "source": "penarthtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.penarthtimes.co.uk/news/national/26509614.john-galliano-pulls-2027-met-gala-exhibition/"
-        },
-        {
-          "language": "en",
-          "source": "easy931miami.com",
-          "source_country": "unknown",
-          "url": "https://www.easy931miami.com/entertainment/metropolitan-museum-art-cancels-john-galliano-exhibit-after-controversy/TAQ35SVZYI2UHOWWC4AUPKCWIA/"
-        },
-        {
-          "language": "en",
-          "source": "variety.com",
-          "source_country": "united-states",
-          "url": "https://variety.com/2026/film/news/john-galliano-met-gala-canceled-2027-racism-backlash-1236847252/"
-        },
-        {
-          "language": "en",
-          "source": "the-independent.com",
-          "source_country": "unknown",
-          "url": "https://www.the-independent.com/life-style/met-gala-john-galliano-canceled-antisemitism-b3042163.html"
-        },
-        {
-          "language": "en",
-          "source": "altaz933.com",
-          "source_country": "united-states",
-          "url": "https://altaz933.com/metropolitan-museum-of-art-cancels-john-galliano-exhibit-after-controversy/"
-        },
-        {
-          "language": "en",
-          "source": "99jamzmiami.com",
-          "source_country": "unknown",
-          "url": "https://www.99jamzmiami.com/entertainment/metropolitan-museum-art-cancels-john-galliano-exhibit-after-controversy/TAQ35SVZYI2UHOWWC4AUPKCWIA/"
-        },
-        {
-          "language": "en",
-          "source": "wimbledonguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.wimbledonguardian.co.uk/news/national/26509614.john-galliano-pulls-2027-met-gala-exhibition/"
-        },
-        {
-          "language": "en",
-          "source": "nbcphiladelphia.com",
-          "source_country": "united-states",
-          "url": "https://www.nbcphiladelphia.com/entertainment/entertainment-news/metropolitan-museum-cancels-john-galliano-met-gala-exhibit-backlash/4456115/"
-        },
-        {
-          "language": "en",
-          "source": "malverngazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.malverngazette.co.uk/news/national/26509614.john-galliano-pulls-2027-met-gala-exhibition/"
-        },
-        {
-          "language": "it",
-          "source": "milanofinanza.it",
-          "source_country": "it",
-          "url": "https://www.milanofinanza.it/fashion/john-galliano-annullata-la-grande-mostra-del-met-202608311517156926"
+          "language": "ron",
+          "source": "zdg.md",
+          "source_country": "md",
+          "url": "https://www.zdg.md/stiri/germania-sustine-ca-rusia-este-in-spatele-atacului-cu-drona-de-la-aeroportul-din-leipzig/"
         },
         {
           "language": "fr",
-          "source": "vogue.fr",
+          "source": "larepubliquedespyrenees.fr",
           "source_country": "france",
-          "url": "https://www.vogue.fr/article/exposition-du-met-john-galliano-annulee"
+          "url": "https://www.larepubliquedespyrenees.fr:443/societe/afp/berlin-sevit-contre-la-russie-accusee-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig-30447650.php"
+        }
+      ],
+      "mentioned_countries": [
+        "germany",
+        "rs"
+      ],
+      "origin_country": "as",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/los-servicios-seguridad-alemanes-vinculan-con-rusia-dron-con-explosivos-hallado-leipzig_7031466_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 20,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "dw.com",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "europapress.es",
+        "francetvinfo.fr",
+        "globo.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nos.nl",
+        "nouvelobs.com",
+        "npr.org",
+        "pbs.org",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5078,
+          "corroboration": 0.8667,
+          "editorial_weight": 0.7143,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8857,
+          "source_reliability": 0.9167
+        },
+        "total": 0.7861,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "leipzig",
+      "subject_names": [
+        "alemania",
+        "berlin",
+        "etat",
+        "germany",
+        "leipzig",
+        "otan",
+        "putin",
+        "rusia",
+        "russia",
+        "russie"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Germany has accused Russia of being responsible for a failed attack using an explosive-laden drone at Leipzig airport earlier this month, describing the incident as an attempted terrorist or “hybrid” operation and saying it will take retaliatory measures and raise the matter with NATO. Reported accounts indicate German authorities blamed Russian agents for directing or supplying the operation and characterized some operatives as disposable, but the articles do not provide independent verification of Russia’s involvement."
+    },
+    {
+      "_linked_ids": [
+        "subject-jean-paul-rappeneau-7798acaae2d8"
+      ],
+      "cluster_id": "subject-jean-paul-rappeneau-7798acaae2d8",
+      "coherence": 0.6021163852223725,
+      "consequence": 0,
+      "countries": [
+        "france",
+        "germany",
+        "lu"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-02",
+      "headline": "Filmmaker Jean‑Paul Rappeneau dies at 94",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/disparitions/article/2026/09/02/jean-paul-rappeneau-realisateur-de-cyrano-de-bergerac-est-mort_6764318_3382.html"
         },
         {
           "language": "fr",
-          "source": "huffingtonpost.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.huffingtonpost.fr/culture/article/john-galliano-rattrape-par-cette-polemique-qui-oblige-le-met-gala-a-changer-de-theme-en-2027_315350.html"
+          "url": "https://www.lefigaro.fr/cinema/jean-paul-rappeneau-realisateur-de-cyrano-de-bergerac-et-du-hussard-sur-le-toit-est-mort-a-l-age-de-94-ans-20260902"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/culture/cinema/mort-de-jean-paul-rappeneau-un-cineaste-qui-a-de-lallure-20260902_RI6BISXMFZD7DB7DBRXL3TRMJU/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/culture/mort-de-jean-paul-rappeneau-le-celebre-realisateur-de-cyrano-de-bergerac-20260902"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/cinema/jean-paul-rappeneau-realisateur-de-cyrano-de-bergerac-et-du-hussard-sur-le-toit-est-mort-a-94-ans-annonce-l-un-de-ses-fils_8173445.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/culture/20260902-jean-paul-rappeneau-r%C3%A9alisateur-de-cyrano-de-bergerac-est-mort-%C3%A0-94-ans"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/cinema/20260902.OBS117868/mort-de-jean-paul-rappeneau-cineaste-de-genie-et-inventeur-de-la-comedie-sophistiquee-a-la-francaise.html"
+        },
+        {
+          "language": "fr",
+          "source": "voici.fr",
+          "source_country": "france",
+          "url": "https://www.voici.fr/cinema-series/mort-de-jean-paul-rappeneau-le-realisateur-de-cyrano-de-bergerac-vient-de-s-eteindre-a-l-age-de-94-ans-828441"
+        },
+        {
+          "language": "fr",
+          "source": "nicematin.com",
+          "source_country": "france",
+          "url": "https://www.nicematin.com/culture/jean-paul-rappeneau-realisateur-de-cyrano-de-bergerac-est-mort-a-94-ans-10716435"
+        },
+        {
+          "language": "fr",
+          "source": "guadeloupe.franceantilles.fr",
+          "source_country": "germany",
+          "url": "https://www.guadeloupe.franceantilles.fr/actualite/france/jean-paul-rappeneau-realisateur-de-cyrano-de-bergerac-est-mort-a-94-ans-1091640.php"
+        },
+        {
+          "language": "fr",
+          "source": "lessentiel.lu",
+          "source_country": "lu",
+          "url": "https://www.lessentiel.lu/fr/story/france-le-realisateur-jean-paul-rappeneau-est-mort-a-94-ans-103626229"
+        },
+        {
+          "language": "fr",
+          "source": "midilibre.fr",
+          "source_country": "france",
+          "url": "https://www.midilibre.fr/2026/09/02/mort-de-jean-paul-rappeneau-le-realisateur-multi-cesarise-de-cyrano-de-bergerac-sest-eteint-a-94-ans-13532291.php"
         }
       ],
       "mentioned_countries": [
@@ -331,77 +473,189 @@
       ],
       "origin_country": "france",
       "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/lifestyle/mode/au-met-de-new-york-la-retrospective-sur-john-galliano-finalement-annulee-20260831_JS2AWUFN65BD5G3FDBFGZQO4JI/",
+      "outbound_url": "https://www.liberation.fr/culture/cinema/mort-de-jean-paul-rappeneau-un-cineaste-qui-a-de-lallure-20260902_RI6BISXMFZD7DB7DBRXL3TRMJU/",
       "rank": 3,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
         "liberation.fr",
-        "nouvelobs.com",
-        "pbs.org"
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5031,
-          "corroboration": 0.75,
-          "editorial_weight": 0.3333,
+          "coherence": 0.6021,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4667,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.8667,
-          "source_reliability": 0.873
+          "prominence": 0.75,
+          "source_reliability": 0.7949
         },
-        "total": 0.5617,
+        "total": 0.4905,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "john galliano",
+      "subject_label": "jean-paul rappeneau",
       "subject_names": [
-        "john galliano",
-        "new york",
-        "nueva york",
-        "times square"
+        "bergerac",
+        "cyrano",
+        "jean-paul rappeneau"
       ],
       "subject_newsroom_count": 7,
-      "summary": "The Metropolitan Museum of Art has cancelled the planned 2027 exhibition and Met Gala spotlight on fashion designer John Galliano after widespread backlash over his past antisemitic and racist remarks; Galliano also withdrew from the show amid the controversy."
+      "summary": "Jean‑Paul Rappeneau, the French film director best known for films such as Cyrano de Bergerac and The Horseman on the Roof, has died at the age of 94, according to announcements from his family and multiple press outlets. He was widely recognized for his contributions to French cinema, earning several César Awards and praise for his distinctive, elegant filmmaking style."
     },
     {
       "_linked_ids": [
-        "subject-edouard-balladur-7ee56df04d24"
+        "subject-patrick-bruel-39c7ffdfc3d9"
       ],
-      "cluster_id": "subject-edouard-balladur-7ee56df04d24",
-      "coherence": 0.5439898718650118,
+      "cluster_id": "subject-patrick-bruel-39c7ffdfc3d9",
+      "coherence": 0.5228475711082986,
       "consequence": 0,
       "countries": [
-        "am",
+        "be",
         "france",
-        "it",
-        "nl",
-        "spain"
+        "sz",
+        "unknown"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-09-01",
-      "headline": "Former French Prime Minister Édouard Balladur dies at 97",
+      "country_count": 4,
+      "editorial_day": "2026-09-02",
+      "headline": "Patrick Bruel cancels autumn tour after being placed under formal investigation for sexual violence",
       "independent_source_count": 11,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/disparitions/article/2026/08/31/edouard-balladur-ancien-premier-ministre-est-mort-a-l-age-de-97-ans_6762811_3382.html"
+          "url": "https://www.lefigaro.fr/musique/patrick-bruel-les-billets-de-la-tournee-annulee-seront-rembourses-selon-son-avocate-20260902"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-france-l-ancien-premier-ministre-%C3%A9douard-balladur-est-mort-%C3%A0-l-%C3%A2ge-de-97-ans"
+          "url": "https://www.liberation.fr/culture/musique/apres-lannulation-de-la-tournee-de-patrick-bruel-le-soulagement-des-plaignantes-et-la-satisfaction-des-maires-20260902_OX5YK77KR5COZFPONLK4AGMDGE/"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/culture/patrick-bruel-mis-en-examen-dans-des-affaires-de-violences-sexuelles-annonce-lannulation-de-sa-tournee-20260901_W7PD4WCWMVHQHKQCKXPTFU3IIM/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/culture/patrick-bruel-decide-d-annuler-sa-tournee-suite-a-sa-mise-en-examen-pour-violences-sexuelles-20260901"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/france/010926/mis-en-examen-pour-violences-sexuelles-patrick-bruel-annule-sa-tournee-d-automne"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260831-france-l-ancien-premier-ministre-%C3%A9douard-balladur-est-mort"
+          "url": "https://www.rfi.fr/fr/france/20260901-france-patrick-bruel-mis-en-examen-pour-violences-sexuelles-annule-sa-tourn%C3%A9e-pr%C3%A9vue-%C3%A0-l-automne-2026"
         },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/culture/20260901.OBS117853/mis-en-examen-dans-des-affaires-de-violences-sexuelles-patrick-bruel-annule-finalement-sa-tournee.html"
+        },
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr/justice/affaire-patrick-bruel/affaire-patrick-bruel-le-chanteur-annule-sa-tournee-apres-sa-mise-en-examen-pour-violences-sexuelles-30447396.php"
+        },
+        {
+          "language": "fr",
+          "source": "ici.fr",
+          "source_country": "unknown",
+          "url": "https://www.ici.fr/infos/faits-divers-justice/patrick-bruel-mis-en-examen-pour-viol-et-agression-sexuelle-annule-sa-tournee-4754027"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.be",
+          "source_country": "be",
+          "url": "https://www.rtl.be/actu/monde/france/affaire-bruel-le-chanteur-annonce-lannulation-de-sa-tournee-elle-est-devenue/2026-09-01/article/798972"
+        },
+        {
+          "language": "fr",
+          "source": "ladepeche.fr",
+          "source_country": "france",
+          "url": "https://www.ladepeche.fr/2026/09/01/patrick-bruel-annule-sa-tournee-ce-netait-ni-un-defi-ni-une-provocation-le-chanteur-annonce-lui-meme-quil-renonce-a-ses-concerts-13531399.php"
+        },
+        {
+          "language": "fr",
+          "source": "tdg.ch",
+          "source_country": "sz",
+          "url": "https://www.tdg.ch/patrick-bruel-le-chanteur-annule-sa-tournee-face-aux-plaintes-839428032428"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "be",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/culture/20260901.OBS117853/mis-en-examen-dans-des-affaires-de-violences-sexuelles-patrick-bruel-annule-finalement-sa-tournee.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lefigaro.fr",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5228,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7949
+        },
+        "total": 0.4807,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "patrick bruel",
+      "subject_names": [
+        "patrick bruel"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "French singer Patrick Bruel has cancelled his scheduled autumn 2026 tour after being placed under formal investigation (mis en examen) in multiple sexual violence cases; his lawyer said tickets will be refunded, and the decision drew relief from complainants and approval from some local officials."
+    },
+    {
+      "_linked_ids": [
+        "subject-edouard-balladur-7ee56df04d24",
+        "subject-france-236a9080d474"
+      ],
+      "cluster_id": "subject-france-236a9080d474",
+      "coherence": null,
+      "consequence": 0,
+      "countries": [
+        "france",
+        "it",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-01",
+      "headline": "Former French Prime Minister Édouard Balladur dies aged 97",
+      "independent_source_count": 3,
+      "members": [
         {
           "language": "fr",
           "source": "challenges.fr",
@@ -410,165 +664,62 @@
         },
         {
           "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/muere-primer-ministro-frances-edouard-balladur-anos-20260831215200-nt.html"
-        },
-        {
-          "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260831/11624108/muere-97-anos-exprimer-ministro-frances-edouard-balladur.html"
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624878/fallece-edouard-balladur-referente-derecha-francesa.html"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
           "url": "http://www.euronews.com/my-europe/2026/08/31/tributes-pour-in-for-former-french-pm-edouard-balladur-following-his-death-aged-97"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2629189"
-        },
-        {
-          "language": "fr",
-          "source": "armenews.com",
-          "source_country": "am",
-          "url": "https://www.armenews.com/lancien-premier-ministre-edouard-balladur-est-mort-a-lage-de-97-ans/"
-        },
-        {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://paris.maville.com/actu/actudet_-edouard-balladur-ancien-premier-ministre-et-figure-de-la-droite-liberale-est-mort-a-97-ans_54135-7458097_actu.Htm"
-        },
-        {
-          "language": "es",
-          "source": "farodevigo.es",
-          "source_country": "spain",
-          "url": "https://www.farodevigo.es/mundo/2026/09/01/muere-ex-primer-ministro-frances-133825983.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "am",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/disparitions/article/2026/08/31/edouard-balladur-ancien-premier-ministre-est-mort-a-l-age-de-97-ans_6762811_3382.html",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "abc.es",
-        "challenges.fr",
-        "euronews.com",
-        "france24.com",
-        "lavanguardia.com",
-        "lemonde.fr",
-        "nos.nl",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.544,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7895
-        },
-        "total": 0.5068,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "edouard balladur",
-      "subject_names": [
-        "edouard balladur",
-        "france",
-        "francia",
-        "macron",
-        "paris",
-        "velvet"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Édouard Balladur, who served as France’s prime minister and was a prominent figure of the country’s liberal right, has died at the age of 97. Multiple outlets report his death and note that tributes have been paid to the former leader."
-    },
-    {
-      "_linked_ids": [
-        "subject-lena-situations-325861987f27"
-      ],
-      "cluster_id": "subject-lena-situations-325861987f27",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-01",
-      "headline": "Lena Situations ends her annual 'Vlogs d'août' series",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/pixels/article/2026/09/01/lena-situations-fete-la-fin-de-ses-vlogs-d-aout-en-retracant-son-parcours-de-la-bonne-copine-a-la-star-des-tapis-rouges_6763391_4408996.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/replay-radio/l-il-de-constance/lena-situations-arrete-les-vlogs-d-aout-cet-adieu-sonne-la-fin-d-une-saga-mythique_8144918.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/culture/20260831-youtube-clap-de-fin-pour-les-vlogs-d-ao%C3%BBt-lena-situation-format-culte-des-r%C3%A9seaux-sociaux"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/culture/20260831-youtube-clap-de-fin-pour-les-vlogs-d-ao%C3%BBt-lena-situation-format-culte-des-r%C3%A9seaux-sociaux",
+      "outbound_source": "challenges.fr",
+      "outbound_url": "https://www.challenges.fr/politique/lancien-premier-ministre-edouard-balladur-est-mort-a-lage-de-97-ans_645446",
       "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "rfi.fr"
+        "challenges.fr",
+        "euronews.com",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.3333,
+          "corroboration": 0.6,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.0,
-          "novelty": 1.0,
+          "novelty": 0.5,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.3714,
+        "total": 0.3929,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "lena situations",
+      "subject_label": "france",
       "subject_names": [
-        "lena situations"
+        "bollore",
+        "bretagne",
+        "edouard balladur",
+        "france",
+        "france inter",
+        "jean-luc melenchon",
+        "paris"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "French influencer and YouTuber Lena Situations has concluded her long-running summer tradition, announcing the end of her annual 'Vlogs d'août' series; the final installment looks back on her personal and professional journey from everyday creator to red-carpet figure."
+      "subject_newsroom_count": 17,
+      "summary": "Édouard Balladur, who served as Prime Minister of France, has died at the age of 97. Media accounts note his prominence in French politics and report that tributes have been paid following his death."
     }
   ],
-  "discarded_ingested": 49,
+  "discarded_ingested": 37,
   "discarded_kept": 5,
-  "generated_at": "2026-09-01T10:19:46.978488+00:00",
+  "generated_at": "2026-09-02T09:48:34.376062+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

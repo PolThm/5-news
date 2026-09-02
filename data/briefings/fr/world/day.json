@@ -1,991 +1,776 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-47aab28e481f",
-      "coherence": 0.5349922970221876,
+      "cluster_id": "subject-leipzig-77b0d024eee4",
+      "coherence": 0.507757654329706,
       "consequence": 3,
       "countries": [
+        "as",
         "brazil",
-        "france",
-        "germany",
-        "id",
-        "rp",
-        "spain",
-        "sz",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 9,
-      "editorial_day": "2026-09-01",
-      "headline": "La Cour suprême des États-Unis autorise la poursuite du chantier d’un salon de bal à la Maison Blanche",
-      "independent_source_count": 13,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/la-cour-supreme-autorise-la-construction-de-la-salle-de-bal-de-trump-a-la-maison-blanche-20260901_NJMTECKJFFGZHP4YP7WFQNFRFI/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20260901-etats-unis-cour-supreme-autoriseconstruction-salle-de-bal-donald-trump-maison-blanche"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/us/2026-08-31/el-tribunal-supremo-autoriza-definitivamente-la-construccion-del-salon-de-baile-de-trump-en-la-casa-blanca.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260901/11624141/supremo-da-luz-verde-trump-construya-salon-baile-casa-blanca.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/eeuu/20260901/supremo-unidos-da-luz-verde-trump-construya-salon-baile-casa-blanca/1003744368519_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/supremo-da-luz-verde-trump-para-que-construya-un-salon-baile-casa-blanca_7031250_0.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c9w457e7ydlo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/amerika/weisses-haus-ballsaal-100.html"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/news-wrap-supreme-court-allows-trump-ballroom-construction-to-continue-amid-challenges"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/08/31/suprema-corte-permite-que-trump-prossiga-com-construcao-do-salao-de-baile-na-casa-branca-continue.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "en.tempo.co",
-          "source_country": "id",
-          "url": "https://en.tempo.co/read/2118677/us-supreme-court-allows-trump-ballroom-project-to-proceed"
-        },
-        {
-          "language": "en",
-          "source": "manilatimes.net",
-          "source_country": "rp",
-          "url": "https://www.manilatimes.net/2026/09/01/world/asia-oceania/us-supreme-court-allows-trump-ballroom-project-to-proceed/2415556"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/trump-la-cour-supreme-autorise-sa-salle-de-bal-843921294875"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/08/31/suprema-corte-permite-que-trump-prossiga-com-construcao-do-salao-de-baile-na-casa-branca-continue.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 10,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "elespanol.com",
-        "elpais.com",
-        "france24.com",
-        "globo.com",
-        "lavanguardia.com",
-        "liberation.fr",
-        "pbs.org",
-        "tagesschau.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.535,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.5556,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.8182
-        },
-        "total": 0.8032,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "casa blanca",
-        "cour",
-        "donald trump",
-        "maison blanche",
-        "supreme court",
-        "trump"
-      ],
-      "subject_newsroom_count": 31,
-      "summary": "La Cour suprême américaine a rendu une décision permettant au projet de construction d’un salon de bal à la Maison Blanche lié à Donald Trump de se poursuivre pour l’instant ; les recours judiciaires n’empêchent pas momentanément la poursuite des travaux selon les informations publiées."
-    },
-    {
-      "cluster_id": "subject-ukraine-98c4925d9691",
-      "coherence": 0.4768456342442433,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "germany",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-09-01",
-      "headline": "Une attaque aérienne russe massive fait au moins 12 morts à Kiev et en région",
-      "independent_source_count": 11,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-une-attaque-russe-massive-fait-neuf-morts-a-kiev-et-dans-sa-region_8171675.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-guerre-en-ukraine-au-moins-9-morts-dans-une-attaque-russe-massive-sur-kiev-et-dans-sa-r%C3%A9gion"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260901.OBS117829/guerre-en-ukraine-une-attaque-russe-massive-fait-9-morts-a-kiev-et-dans-sa-region.html"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-ce-que-lon-sait-de-lattaque-russe-massive-qui-a-fait-12-morts-a-kiev-et-dans-sa-region-8ea5a50a-a5e2-11f1-95a1-d7cb1b3759ac?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/11-muertos-nuevo-ataque-ruso-kiev-alrededores_1_13478418.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ascienden-11-los-muertos-tras-un-nuevo-ataque-ruso-contra-kiev-sus-alrededores_7031275_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/01/ukraine-russia-strikes-attacks-odesa-zelenskyy-putin-eu-defence-europe-latest-news-updates"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/russische-angriffe-ukraine-108.html"
-        },
-        {
-          "language": "en",
-          "source": "washingtonexaminer.com",
-          "source_country": "united-states",
-          "url": "https://www.washingtonexaminer.com/news/4707448/12-killed-in-ukraine-as-russia-launches-massive-aerial-assault/"
-        },
-        {
-          "language": "it",
-          "source": "dire.it",
-          "source_country": "it",
-          "url": "https://www.dire.it/01-09-2026/1264048-la-russia-attacca-un-deposito-ferroviario-in-ucraina-sette-morti/"
-        },
-        {
-          "language": "es",
-          "source": "farodevigo.es",
-          "source_country": "spain",
-          "url": "https://www.farodevigo.es/mundo/2026/09/01/mueren-11-personas-nuevo-ataque-133825806.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20260901-en-direct-ukraine-russie-attaque-russe-massive-morts-kiev",
-      "rank": 2,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "france24.com",
-        "francetvinfo.fr",
-        "nouvelobs.com",
-        "ouest-france.fr",
-        "tagesschau.de",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4768,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.8049
-        },
-        "total": 0.7745,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russian",
-        "ucrania",
-        "ukraine",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Des attaques aériennes russes qualifiées de « massive » ont visé Kiev et sa périphérie durant la nuit, faisant au moins 9 à 12 morts selon les bilans publiés et causant des dégâts matériels; les informations concordent sur une frappe étendue touchant la capitale et ses environs."
-    },
-    {
-      "cluster_id": "subject-nepal-7f8e10b846e8",
-      "coherence": 0.4722434734934403,
-      "consequence": 3,
-      "countries": [
-        "au",
-        "be",
-        "brazil",
+        "ca",
+        "china",
         "france",
         "germany",
         "it",
         "md",
-        "vm"
-      ],
-      "country_count": 8,
-      "editorial_day": "2026-09-01",
-      "headline": "Crue dans l’Himalaya : plus de 1 000 morts au Népal et au Tibet",
-      "independent_source_count": 14,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/asie-pacifique/crue-dans-lhimalaya-le-bilan-depasse-les-1-000-morts-au-nepal-et-en-chine-20260901_BQ27HCK5QFBOHG5P257FM6AK4U/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/crue-dans-l-himalaya-le-bilan-depasse-1000-morts-au-nepal-et-en-chine-20260901"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/inondations-et-crues/crues-meurtrieres-au-nepal-et-au-tibet/le-bilan-des-crues-dans-l-himalaya-depasse-la-barre-des-1-000-morts-au-nepal-et-au-tibet-selon-les-derniers-bilans-des-autorites_8171924.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260901-crue-au-n%C3%A9pal-le-bilan-ne-cesse-d-augmenter-et-d%C3%A9passe-la-barre-des-1-000-morts"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/asie-pacifique/20260901-crue-d%C3%A9vastatrice-himalaya-nepal-chine-tibet-bilan-d%C3%A9passe-1000-morts"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/asien/himalaya-nepal-sturzflut-tote-100.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/avalanche-himalaia-nepal-tibete-mortes-passam-de-1000.ghtml"
-        },
-        {
-          "language": "ron",
-          "source": "news.yam.md",
-          "source_country": "md",
-          "url": "https://news.yam.md/ro/story/59462400"
-        },
-        {
-          "language": "it",
-          "source": "tg.la7.it",
-          "source_country": "it",
-          "url": "https://tg.la7.it/esteri/alluvione-nepal-morti-dispersi-ghiacciaio-himalaya-01-09-2026-261902"
-        },
-        {
-          "language": "it",
-          "source": "toscanamedianews.it",
-          "source_country": "it",
-          "url": "https://www.toscanamedianews.it/italpress/in-nepal-si-aggrava-il-bilancio-delle-vittime-oltre-1000-i-morti"
-        },
-        {
-          "language": "vie",
-          "source": "vov.vn",
-          "source_country": "vm",
-          "url": "http://vov.vn/the-gioi/so-nguoi-thiet-mang-do-lu-quet-o-nepal-da-gan-1000-post1329155.vov"
-        },
-        {
-          "language": "de",
-          "source": "diepresse.com",
-          "source_country": "au",
-          "url": "https://www.diepresse.com/41221276/zahl-der-toten-nach-sturzflut-im-himalaya-steigt-in-nepal-auf-ueber"
-        },
-        {
-          "language": "de",
-          "source": "lr-online.de",
-          "source_country": "germany",
-          "url": "https://www.lr-online.de/nachrichten/panorama/flut-in-nepal-und-tibet-mehr-als-1000-tote-nach-katastrophe-im-himalaya-tausende-noch-vermisst-79429149.html"
-        },
-        {
-          "language": "de",
-          "source": "moz.de",
-          "source_country": "germany",
-          "url": "https://www.moz.de/nachrichten/panorama/flut-in-nepal-und-tibet-mehr-als-1000-tote-nach-katastrophe-im-himalaya-tausende-noch-vermisst-79429149.html"
-        },
-        {
-          "language": "fr",
-          "source": "rtl.be",
-          "source_country": "be",
-          "url": "https://www.rtl.be/actu/monde/international/crues-meurtrieres-au-nepal-et-au-tibet-pres-de-1000-morts-et-4471-disparus/2026-08-31/article/798868"
-        }
-      ],
-      "mentioned_countries": [
-        "china"
-      ],
-      "origin_country": "au",
-      "outbound_source": "rtl.be",
-      "outbound_url": "https://www.rtl.be/actu/monde/international/crues-meurtrieres-au-nepal-et-au-tibet-pres-de-1000-morts-et-4471-disparus/2026-08-31/article/798868",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "globo.com",
-        "la-croix.com",
-        "liberation.fr",
-        "tagesschau.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4722,
-          "corroboration": 0.8,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.8222
-        },
-        "total": 0.764,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nepal",
-      "subject_names": [
-        "chine",
-        "himalaya",
-        "nepal",
-        "tibet"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Des crues et inondations dans la région de l’Himalaya ont fait plus de 1 000 morts au Népal et dans des zones du Tibet/Chine ; les bilans publiés indiquent également des milliers de personnes portées disparues et un nombre important de dégâts et de déplacés."
-    },
-    {
-      "cluster_id": "subject-tupac-shakur-83fd0046b52e",
-      "coherence": 0.5152244935684243,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "ei",
-        "france",
-        "germany",
-        "gv",
-        "id",
-        "it",
-        "pk",
+        "nl",
+        "pe",
         "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 11,
-      "editorial_day": "2026-09-01",
-      "headline": "Duane 'Keffe D' Davis reconnu coupable du meurtre de Tupac Shakur",
-      "independent_source_count": 51,
+      "country_count": 13,
+      "editorial_day": "2026-09-02",
+      "headline": "L'Allemagne accuse la Russie d'avoir orchestré une attaque au drone à l'aéroport de Leipzig",
+      "independent_source_count": 31,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/01/meurtre-de-tupac-shakur-duane-davis-reconnu-coupable-trente-ans-apres-la-mort-du-rappeur_6763053_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/l-allemagne-accuse-la-russie-d-avoir-pilote-une-tentative-d-attentat-a-leipzig_6763526_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/01/attaque-au-drone-a-l-aeroport-de-leipzig-l-allemagne-accuse-la-russie-d-une-attaque-hybride_6763518_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/un-ancien-membre-de-gang-reconnu-coupable-du-meurtre-de-tupac-shakur-20260901_4CJAHRYUONGZNNMUWQZD7BRUOM/"
+          "url": "https://www.liberation.fr/international/europe/lallemagne-va-accuser-la-russie-detre-derriere-lattaque-au-drone-explosif-de-laeroport-de-leipzig-20260901_M5TQYFYGLFHAHILKR6HVG2HERE/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/etats-unis-un-ancien-membre-de-gang-reconnu-coupable-du-meurtre-du-rappeur-tupac-shakur-20260901"
+          "url": "https://www.la-croix.com/international/l-allemagne-accuse-la-russie-detre-derriere-le-drone-explosif-de-laeroport-de-leipzig-20260901"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/musique/rap/un-ancien-membre-d-un-gang-de-los-angeles-reconnu-coupable-du-meurtre-de-la-legende-du-rap-tupac-shakur-trente-ans-apres-sa-mort_8171537.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20260901-etats-unis-meurtre-du-rappeur-tupac-shakur-duane-davis-ex-membre-de-gang-reconnu-coupable"
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/berlin-annonce-des-mesures-de-retorsion-contre-la-russie-accusee-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig_8172794.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260901-%C3%A9tats-unis-un-ancien-membre-de-gang-reconnu-coupable-du-meurtre-du-rappeur-tupac-shakur"
+          "url": "https://www.rfi.fr/fr/europe/20260901-selon-l-allemagne-la-russie-est-responsable-de-l-attaque-au-drone-explosif-%C3%A0-l-a%C3%A9roport-de-leipzig"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260901.OBS117828/un-ex-membre-de-gang-reconnu-coupable-du-meurtre-du-rappeur-tupac-shakur-en-1996.html"
+          "url": "https://www.nouvelobs.com/monde/20260901.OBS117860/agents-jetables-et-tentative-d-attentat-l-allemagne-accuse-la-russie-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig.html"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/monde/etats-unis/mort-de-tupac-shakur-qui-est-duane-davis-reconnu-coupable-du-meurtre-du-rappeur-en-1996-0769bddc-a5d4-11f1-8a27-1e0c4eb5e395?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.lexpress.fr/monde/lallemagne-accuse-la-russie-detre-responsable-de-lattaque-au-drone-de-laeroport-de-leipzig-YDZOQKHA6VAGRKTCCSEWE3POGA/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-01/alemania-acusa-a-rusia-del-ataque-fallido-con-drones-bomba-en-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alemania-lleva-otan-acusacion-rusia-ataque-hibrido-20260901193345-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alemania-acusa-rusia-ataque-drones-aeropuerto-leizpig-20260901181841-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624890/alemania-senala-rusia-responsable-ataque-drones-aeropuerto-leipzig.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/musica/hay-culpable-asesinato-tupac-shakur-duane-keffe-d-davis-orquestar-tiroteo_1_13478342.html"
+          "url": "https://www.eldiario.es/internacional/alemania-acusa-rusia-ataque-hibrido-drones-aeropuerto-leipzig-principios-agosto_1_13480261.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/20260901/jurado-declara-culpable-exlider-pandilla-planeo-asesinato-tupac-shakur-anos-despues-crimen/1003744368544_0.html"
+          "url": "https://www.europapress.es/internacional/noticia-alemania-senala-rusia-responsable-ataque-fallido-contra-aeropuerto-leizpig-20260901181815.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/los-servicios-seguridad-alemanes-vinculan-con-rusia-dron-con-explosivos-hallado-leipzig_7031466_0.html"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/ckg7yrwp70qo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/germany-says-russia-behind-attempted-drone-attack-at-leipzig-airport/a-78584589?maca=en-rss-en-world-4025-rdf"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "http://www.euronews.com/2026/09/01/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-in-1996-killing-of-hip-hop-icon-t"
+          "url": "http://www.euronews.com/my-europe/2026/09/01/russia-behind-drone-incident-at-leipzig-airport-berlin-says"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2629293"
         },
         {
           "language": "en",
-          "source": "cnn.com",
+          "source": "npr.org",
           "source_country": "united-states",
-          "url": "https://edition.cnn.com/2026/09/01/us/tupac-shakur-trial-verdict-duane-davis"
+          "url": "https://www.npr.org/2026/09/02/g-s1-141502/germany-russia-attempted-drone-attack"
         },
         {
           "language": "en",
-          "source": "wclk.com",
+          "source": "pbs.org",
           "source_country": "united-states",
-          "url": "https://www.wclk.com/2026-09-01/jury-convicts-a-man-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+          "url": "https://www.pbs.org/newshour/world/germany-blames-russia-for-attempted-drone-attack-at-leipzig-airport"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/putin-acusa-alemanha-de-plantar-evidencias-para-responsabilizar-russia-por-drone-com-explosivos-em-aeroporto-de-leipzig.ghtml"
         },
         {
           "language": "en",
-          "source": "thefrontierpost.com",
-          "source_country": "pk",
-          "url": "https://thefrontierpost.com/former-gang-member-found-guilty-of-murdering-tupac-shakur/"
-        },
-        {
-          "language": "fr",
-          "source": "africaguinee.com",
-          "source_country": "gv",
-          "url": "https://www.africaguinee.com/meurtre-de-tupac-shakur-lex-gangster-duane-davis-reconnu-coupable/"
-        },
-        {
-          "language": "fr",
-          "source": "atlasinfo.fr",
-          "source_country": "france",
-          "url": "https://atlasinfo.fr/tupac-shakur-duane-keffe-d-davis-reconnu-coupable-de-son-meurtre-30-ans-apres-les-faits.html"
+          "source": "wcsufm.org",
+          "source_country": "united-states",
+          "url": "https://www.wcsufm.org/latest-from-npr/2026-09-02/germany-blames-russia-for-last-months-attempted-drone-attack-at-leipzig-airport"
         },
         {
           "language": "es",
-          "source": "antena3.com",
-          "source_country": "spain",
-          "url": "https://www.antena3.com/noticias/mundo/jurado-declara-culpable-duane-keffe-davis-asesinato-rapero-tupac-shakur_202609016a9699a82d7d3022177a3ced.html"
+          "source": "canaln.pe",
+          "source_country": "pe",
+          "url": "https://canaln.pe/internacionales/alemania-acusa-rusia-ataque-dron-aeropuerto-clave-n494691"
         },
         {
-          "language": "de",
-          "source": "viply.de",
+          "language": "en",
+          "source": "thelocal.de",
           "source_country": "germany",
-          "url": "https://www.viply.de/news/duane-keffe-d-davis-wegen-mordes-an-tupac-shakur-schuldig-gesprochen/"
+          "url": "https://www.thelocal.de/20260901/germany-expected-to-blame-russia-for-airport-drone-incident"
         },
         {
           "language": "en",
-          "source": "bromsgroveadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bromsgroveadvertiser.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+          "source": "niagarafallsreview.ca",
+          "source_country": "ca",
+          "url": "https://www.niagarafallsreview.ca/news/world/europe/germany-blames-russia-for-last-month-s-attempted-drone-attack-at-leipzig-airport/article_0d78d57b-8ab4-5bff-aa65-b156eab14638.html"
         },
         {
           "language": "en",
-          "source": "runcornandwidnesworld.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.runcornandwidnesworld.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+          "source": "easternriverinachronicle.com.au",
+          "source_country": "as",
+          "url": "https://www.easternriverinachronicle.com.au/story/9341971/germany-accuses-russia-of-leipzig-airport-drone-attack/"
         },
         {
           "language": "en",
-          "source": "lethbridgeherald.com",
+          "source": "scmp.com",
+          "source_country": "china",
+          "url": "https://www.scmp.com/news/world/europe/article/3366030/germany-blames-russia-attempted-drone-attack-leipzig-airport"
+        },
+        {
+          "language": "pt",
+          "source": "correiodopovo.com.br",
+          "source_country": "brazil",
+          "url": "https://www.correiodopovo.com.br/not%c3%adcias/mundo/alemanha-culpa-russia-por-drone-explosivo-no-aeroporto-de-leipzig-1.1744071"
+        },
+        {
+          "language": "pt",
+          "source": "em.com.br",
+          "source_country": "brazil",
+          "url": "http://www.em.com.br/internacional/2026/09/7491606-alemanha-culpa-russia-por-drone-explosivo-no-aeroporto-de-leipzig.html"
+        },
+        {
+          "language": "es",
+          "source": "europasur.es",
+          "source_country": "spain",
+          "url": "https://www.europasur.es/mundo/alemania-responsabiliza-rusia-ataque-fallido_0_2007851374.html"
+        },
+        {
+          "language": "ron",
+          "source": "zdg.md",
+          "source_country": "md",
+          "url": "https://www.zdg.md/stiri/germania-sustine-ca-rusia-este-in-spatele-atacului-cu-drona-de-la-aeroportul-din-leipzig/"
+        },
+        {
+          "language": "fr",
+          "source": "larepubliquedespyrenees.fr",
+          "source_country": "france",
+          "url": "https://www.larepubliquedespyrenees.fr:443/societe/afp/berlin-sevit-contre-la-russie-accusee-d-etre-derriere-le-drone-explosif-de-l-aeroport-de-leipzig-30447650.php"
+        }
+      ],
+      "mentioned_countries": [
+        "germany",
+        "rs"
+      ],
+      "origin_country": "as",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/los-servicios-seguridad-alemanes-vinculan-con-rusia-dron-con-explosivos-hallado-leipzig_7031466_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 20,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "dw.com",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "europapress.es",
+        "francetvinfo.fr",
+        "globo.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nos.nl",
+        "nouvelobs.com",
+        "npr.org",
+        "pbs.org",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5078,
+          "corroboration": 0.8667,
+          "editorial_weight": 0.7143,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8857,
+          "source_reliability": 0.9167
+        },
+        "total": 0.8514,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "leipzig",
+      "subject_names": [
+        "alemania",
+        "berlin",
+        "etat",
+        "germany",
+        "leipzig",
+        "otan",
+        "putin",
+        "rusia",
+        "russia",
+        "russie"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Les autorités allemandes déclarent que la Russie est responsable d'une tentative d'attaque au drone chargé d'explosifs visant l'aéroport de Leipzig début août; Berlin qualifie l'incident d'«attaque hybride», annonce des mesures de rétorsion et a porté l'affaire auprès d'autres pays et organisations internationales."
+    },
+    {
+      "cluster_id": "subject-etats-unis-7d3fb780c473",
+      "coherence": 0.47362225501582533,
+      "consequence": 3,
+      "countries": [
+        "ca",
+        "france",
+        "lu",
+        "mo"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-02",
+      "headline": "Les États-Unis ont frappé l’Iran et l’Iran a riposté contre des bases américaines",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/video/2026/09/02/guerre-en-iran-le-pays-de-nouveau-frappe-par-les-etats-unis_6764283_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/moyen-orient/larmee-americaine-annonce-avoir-mene-de-nouvelles-frappes-en-iran-20260901_IQW3DO2JX5AB3IWLUYLL72U33M/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/direct-guerre-iran-israel-usa-jour-182-moyen-orient-bilan-resume-aujourdhui-20260902"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/direct-guerre-au-moyen-orient-l-iran-attaque-des-bases-des-etats-unis-apres-de-nouvelles-frappes-americaines_8173145.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/direct-guerre-au-moyen-orient-l-iran-attaque-des-bases-des-etats-unis-apres-de-nouvelles-frappes-americaines_8173145.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20260901-en-direct-nouvelles-frappes-americaines-contre-iran-represailles-jordanie-etats-unis-israel-missiles-moyen-orient-detroit-ormuz-pays-golfe"
+        },
+        {
+          "language": "fr",
+          "source": "fr.le360.ma",
+          "source_country": "mo",
+          "url": "https://fr.le360.ma/monde/liran-attaque-des-bases-des-etats-unis-apres-de-nouvelles-frappes-americaines_PX3TFGNNPFCRHML7YQFCZBG57Y/"
+        },
+        {
+          "language": "fr",
+          "source": "lequotidien.lu",
+          "source_country": "lu",
+          "url": "https://lequotidien.lu/monde/liran-attaque-des-bases-des-etats-unis-apres-de-nouvelles-frappes-americaines/"
+        },
+        {
+          "language": "fr",
+          "source": "lapresse.ca",
+          "source_country": "ca",
+          "url": "https://www.lapresse.ca/international/moyen-orient/2026-09-01/conflit-au-moyen-orient/l-iran-riposte-a-de-nouvelles-frappes-americaines.php"
+        }
+      ],
+      "mentioned_countries": [
+        "ir",
+        "united-states"
+      ],
+      "origin_country": "ca",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/moyen-orient/20260901-en-direct-nouvelles-frappes-americaines-contre-iran-represailles-jordanie-etats-unis-israel-missiles-moyen-orient-detroit-ormuz-pays-golfe",
+      "rank": 2,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4736,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.75
+        },
+        "total": 0.7333,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "etats-unis",
+      "subject_names": [
+        "canada",
+        "casa blanca",
+        "donald trump",
+        "eeuu",
+        "estados unidos",
+        "etats-unis",
+        "golfe",
+        "hormuz",
+        "iran",
+        "milo yiannopoulos",
+        "moyen-orient",
+        "ormuz",
+        "teheran",
+        "trump",
+        "washington"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Après de nouvelles frappes américaines en Iran, les forces iraniennes ont mené des attaques contre des bases militaires américaines situées dans plusieurs pays du Golfe, selon les informations concordantes des articles."
+    },
+    {
+      "cluster_id": "subject-nepal-3cf965e462bc",
+      "coherence": 0.5908716462021745,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "india",
+        "it",
+        "np",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-09-02",
+      "headline": "Les inondations au Népal font plus de 1 000 morts et les recherches se poursuivent",
+      "independent_source_count": 18,
+      "members": [
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/nepal-flood-death-toll-tops-1-000-as-rescue-continues/a-78589460?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/09/02/mass-burials-of-unidentified-victims-continue-in-nepal-as-death-toll-exceeds-1000-one-week"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/09/01/death-toll-passes-1000-from-catastrophic-flooding-in-nepal-and-china-officials-say"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/08/31/nepal-flood-death-toll-passes-900-as-search-for-survivors-continues"
+        },
+        {
+          "language": "en",
+          "source": "krmg.com",
           "source_country": "united-states",
-          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/live-updates-duane-keffe-d-davis-convicted-in-1996-killing-of-tupac-shakur/"
+          "url": "https://krmg.com/2026/09/02/some-missing-tourists-make-contact-as-nepal-flood-death-toll-tops-1100/"
         },
         {
           "language": "en",
-          "source": "wsbtv.com",
-          "source_country": "united-states",
-          "url": "https://www.wsbtv.com/news/local/jury-reaches-verdict-less-than-3-hours-trial-over-1996-killing-tupac-shakur/N7XJD6XDLVAXTLCIPXLABTC75M/"
+          "source": "siasat.com",
+          "source_country": "india",
+          "url": "https://www.siasat.com/nepal-floods-death-toll-rises-to-1127-rivers-swell-amid-rain-3534657/"
         },
         {
           "language": "en",
-          "source": "northwichguardian.co.uk",
+          "source": "dumbartonreporter.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.northwichguardian.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+          "url": "https://www.dumbartonreporter.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
         },
         {
           "language": "en",
-          "source": "oxfordmail.co.uk",
+          "source": "maldonandburnhamstandard.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.oxfordmail.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+          "url": "https://www.maldonandburnhamstandard.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
         },
         {
           "language": "en",
-          "source": "darlingtonandstocktontimes.co.uk",
+          "source": "leighjournal.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.darlingtonandstocktontimes.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+          "url": "https://www.leighjournal.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
         },
         {
           "language": "en",
-          "source": "ktvq.com",
-          "source_country": "united-states",
-          "url": "https://www.ktvq.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
-        },
-        {
-          "language": "en",
-          "source": "brentwoodlive.co.uk",
+          "source": "wisbechstandard.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.brentwoodlive.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
+          "url": "https://www.wisbechstandard.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
         },
         {
           "language": "en",
-          "source": "lethbridgeherald.com",
-          "source_country": "united-states",
-          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/live-updates-jury-reaches-verdict-in-less-than-3-hours-at-trial-over-1996-killing-of-tupac-shakur/"
+          "source": "milfordmercury.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.milfordmercury.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
         },
         {
           "language": "en",
-          "source": "wmtw.com",
+          "source": "news4jax.com",
           "source_country": "united-states",
-          "url": "https://www.wmtw.com/article/jury-verdict-tupac-shakur-murder-trial/73574371"
+          "url": "https://www.news4jax.com/news/world/2026/09/02/some-missing-tourists-make-contact-as-nepal-flood-death-toll-tops-1100/"
+        },
+        {
+          "language": "en",
+          "source": "richmondandtwickenhamtimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.richmondandtwickenhamtimes.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
+        },
+        {
+          "language": "en",
+          "source": "redditchadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.redditchadvertiser.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
+        },
+        {
+          "language": "en",
+          "source": "kilburntimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.kilburntimes.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
+        },
+        {
+          "language": "en",
+          "source": "wandsworthguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wandsworthguardian.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
+        },
+        {
+          "language": "en",
+          "source": "harrowtimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.harrowtimes.co.uk/news/national/26513828.missing-tourists-make-contact-nepal-flood-death-toll-tops-1-100/"
+        },
+        {
+          "language": "en",
+          "source": "fox4beaumont.com",
+          "source_country": "united-states",
+          "url": "https://fox4beaumont.com/news/nation-world/death-toll-tops-1000-in-nepal-china-border-floods-as-80-americans-remain-missing-rescue-teams-search-safety-bodies-graves-dna-samples-hydropower-tunnels-trapped-glacial-collapse-himalayas-earthquake"
+        },
+        {
+          "language": "en",
+          "source": "nydailynews.com",
+          "source_country": "united-states",
+          "url": "https://www.nydailynews.com/2026/09/01/mass-burials-nepal-flash-floods/"
+        },
+        {
+          "language": "en",
+          "source": "nepalnational.com",
+          "source_country": "np",
+          "url": "http://www.nepalnational.com/news/279279607/nepal-death-toll-crosses-1000-rescue-operations-continue-as-3916-people-remain-missing"
+        }
+      ],
+      "mentioned_countries": [
+        "np"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/video/2026/08/31/nepal-flood-death-toll-passes-900-as-search-for-survivors-continues",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "dw.com",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5909,
+          "corroboration": 0.75,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8182,
+          "source_reliability": 0.8462
+        },
+        "total": 0.7208,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "nepal",
+      "subject_names": [
+        "himalaya",
+        "nepal",
+        "tibet"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Des pluies et des crues soudaines au Népal ont entraîné un bilan de plus de 1 000 morts — dépassant 1 100 selon plusieurs comptes — des milliers de personnes sont portées disparues et des opérations de recherche, de secours et d’inhumations de victimes non identifiées se poursuivent, tandis que certains touristes portés disparus ont établi un contact."
+    },
+    {
+      "cluster_id": "subject-haakon-viii-90b97ffbc56a",
+      "coherence": 0.434278062047197,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "no",
+        "rs",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-09-01",
+      "headline": "Le roi Haakon VIII prête serment devant le Parlement norvégien",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-01/haakon-viii-jura-como-rey-de-noruega-ante-el-parlamento.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624868/jura-rey-noruega-haakon-viii-imagenes.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260901/11624563/nuevo-rey-noruega-haakon-prestara-juramento-parlamento-noruego.html"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/live/cr3w09l8z0yyt"
+          "url": "https://www.bbc.co.uk/news/articles/cp841114eg6o?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
-          "source": "en.tempo.co",
-          "source_country": "id",
-          "url": "https://en.tempo.co/read/2118678/tupac-shakur-murder-trial-duane-keffe-d-davis-guilty"
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/norway-s-new-king-haakon-viii-takes-oath-in-parliament/a-78606923?maca=en-rss-en-world-4025-rdf"
         },
         {
           "language": "en",
-          "source": "fox13now.com",
-          "source_country": "united-states",
-          "url": "https://www.fox13now.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/01/so-help-me-god-norways-king-haakon-viii-swears-oath-of-allegiance-to-constitution"
         },
         {
           "language": "en",
-          "source": "idahostatejournal.com",
-          "source_country": "united-states",
-          "url": "https://www.idahostatejournal.com/news/entertainment/the-jury-has-reached-a-verdict-in-less-than-3-hours-at-the-trial-over/article_e84de982-7872-5a48-946b-71506ba70de7.html"
+          "source": "newsinenglish.no",
+          "source_country": "no",
+          "url": "https://www.newsinenglish.no/2026/09/01/king-haakon-viii-sworn-in-as-support-for-norways-monarchy-rises-again/"
         },
         {
-          "language": "en",
-          "source": "rte.ie",
-          "source_country": "ei",
-          "url": "https://www.rte.ie/entertainment/2026/0901/1589891-tupac-trial/"
-        },
-        {
-          "language": "en",
-          "source": "hampshirechronicle.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.hampshirechronicle.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "rhyljournal.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.rhyljournal.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "hertsad.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.hertsad.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "surreycomet.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.surreycomet.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "fox17online.com",
-          "source_country": "united-states",
-          "url": "https://www.fox17online.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
-        },
-        {
-          "language": "en",
-          "source": "kmbc.com",
-          "source_country": "united-states",
-          "url": "https://www.kmbc.com/article/jury-verdict-tupac-shakur-murder-trial/73574371"
-        },
-        {
-          "language": "en",
-          "source": "illawarramercury.com.au",
-          "source_country": "as",
-          "url": "https://www.illawarramercury.com.au/story/9341136/us-man-found-guilty-of-murdering-rap-icon-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "lethbridgeherald.com",
-          "source_country": "united-states",
-          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/live-updates-duane-keffe-d-davis-convicted-in-1996-killing-of-tupac-shakur-2/"
-        },
-        {
-          "language": "en",
-          "source": "wirralglobe.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.wirralglobe.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "fox34.com",
-          "source_country": "united-states",
-          "url": "https://www.fox34.com/2026/09/01/jury-reaches-verdict-less-than-3-hours-trial-over-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "somersetcountygazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.somersetcountygazette.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "standard.net.au",
-          "source_country": "as",
-          "url": "https://www.standard.net.au/story/9341136/us-man-found-guilty-of-murdering-rap-icon-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "wapt.com",
-          "source_country": "united-states",
-          "url": "https://www.wapt.com/article/jury-verdict-tupac-shakur-murder-trial/73574371"
-        },
-        {
-          "language": "en",
-          "source": "10news.com",
-          "source_country": "united-states",
-          "url": "https://www.10news.com/us-news/crime/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur"
-        },
-        {
-          "language": "en",
-          "source": "theepochtimes.com",
-          "source_country": "united-states",
-          "url": "https://www.theepochtimes.com/us/jury-convicts-duane-keffe-d-davis-of-first-degree-murder-in-tupac-shakur-killing-6081819"
-        },
-        {
-          "language": "en",
-          "source": "gazetteherald.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.gazetteherald.co.uk/news/national/26509914.duane-keffe-d-davis-convicted-1996-killing-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "wxxinews.org",
-          "source_country": "united-states",
-          "url": "https://www.wxxinews.org/npr-news/2026-08-31/jurors-deliberate-in-the-trial-of-rap-icon-tupac-shakurs-killing"
-        },
-        {
-          "language": "en",
-          "source": "lethbridgeherald.com",
-          "source_country": "united-states",
-          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/jury-convicts-a-man-of-first-degree-murder-for-the-1996-killing-of-rap-icon-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "hiphopwired.com",
-          "source_country": "united-states",
-          "url": "https://hiphopwired.com/3064365/duane-keith-davis-aka-keffe-d-found-guilty-of-murdering-tupac-shakur/"
-        },
-        {
-          "language": "en",
-          "source": "lethbridgeherald.com",
-          "source_country": "united-states",
-          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/08/31/jury-reaches-a-verdict-in-less-than-3-hours-at-the-trial-over-the-1996-killing-of-tupac-shakur/"
-        },
-        {
-          "language": "es",
-          "source": "telemundodallas.com",
-          "source_country": "united-states",
-          "url": "https://www.telemundodallas.com/entretenimiento/entretenimiento-destacados/jurado-veredicto-juicio-asesinato-tupac-shakur/2600841/"
+          "language": "ru",
+          "source": "muz-tv.ru",
+          "source_country": "rs",
+          "url": "https://muz-tv.ru/news/korol-norvegii-hokon-viii-prines-torzhestvennuyu-prisyagu-pered-stortingom/"
         }
       ],
       "mentioned_countries": [
-        "united-states"
+        "no"
       ],
-      "origin_country": "as",
+      "origin_country": "germany",
       "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/ckg7yrwp70qo?at_medium=RSS&at_campaign=rss",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cp841114eg6o?at_medium=RSS&at_campaign=rss",
       "rank": 4,
-      "reference_newsroom_count": 12,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "eldiario.es",
-        "elespanol.com",
+        "dw.com",
+        "elpais.com",
         "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "ouest-france.fr",
-        "rfi.fr"
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5152,
-          "corroboration": 0.8462,
-          "editorial_weight": 0.6,
-          "freshness": 1.0,
+          "coherence": 0.4343,
+          "corroboration": 0.75,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.9273,
-          "source_reliability": 0.9398
+          "prominence": 0.6364,
+          "source_reliability": 0.7333
         },
-        "total": 0.7519,
+        "total": 0.7,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "tupac shakur",
+      "subject_label": "haakon viii",
       "subject_names": [
-        "davis",
-        "duane",
-        "duane davis",
-        "eeuu",
-        "estados unidos",
-        "etats-unis",
-        "keffe",
-        "tupac shakur"
+        "haakon",
+        "haakon viii",
+        "harald",
+        "mette-marit",
+        "parlamento",
+        "viii"
       ],
-      "subject_newsroom_count": 14,
-      "summary": "Un jury a déclaré Duane 'Keffe D' Davis coupable du meurtre du rappeur Tupac Shakur, tué en 1996 ; la condamnation intervient environ trente ans après la mort de la star et a été rendue après un procès dans lequel les jurés ont rapidement atteint leur verdict."
+      "subject_newsroom_count": 10,
+      "summary": "Haakon VIII a prêté serment comme nouveau roi de Norvège devant le Storting, jurant fidélité à la Constitution lors d’une cérémonie officielle qui a attiré une couverture médiatique nationale et internationale."
     },
     {
-      "cluster_id": "subject-john-ternus-7f2ac1fcc0dd",
-      "coherence": 0.46004998729188884,
+      "cluster_id": "subject-gaza-b2ff60efd9ef",
+      "coherence": 0.48165937759417643,
       "consequence": 3,
       "countries": [
-        "be",
+        "brazil",
         "france",
-        "germany",
-        "id",
-        "india",
-        "it",
-        "lu",
-        "spain",
-        "unknown",
-        "vm"
+        "is"
       ],
-      "country_count": 10,
-      "editorial_day": "2026-09-01",
-      "headline": "John Ternus devient le nouveau PDG d’Apple, succédant à Tim Cook",
-      "independent_source_count": 13,
+      "country_count": 3,
+      "editorial_day": "2026-09-02",
+      "headline": "Israël annonce l'arrestation du chef de la sécurité intérieure du Hamas à Gaza",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/economie-numerique/nouvelle-ere-chez-apple-avec-lintronisation-de-son-nouveau-boss-john-ternus-apres-quinze-ans-de-regne-de-tim-cook-20260831_CB7MIOLCVZEZJHXEGCWQZ725DY/"
+          "url": "https://www.lefigaro.fr/international/israel-indique-avoir-arrete-le-chef-de-la-securite-interieure-du-hamas-a-gaza-20260902"
         },
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20260901-john-ternus-nouveau-patron-d-apple-un-ing%C3%A9nieur-maison-aux-commandes"
+          "url": "https://www.france24.com/fr/moyen-orient/20260901-israel-affirme-avoir-arrete-mouein-al-arabid-chef-securite-interieure-hamas-gaza-benjamin-netanyahu-frappes"
         },
         {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/economie/20260901.OBS117833/john-ternus-prend-les-renes-d-apple-10-choses-a-savoir-sur-l-ingenieur-qui-succede-a-tim-cook.html"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/apple-ceo-ternus-100.html"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/netanyahu-afirma-que-israel-deteve-chefe-de-seguranca-do-hamas-em-gaza.ghtml"
         },
         {
           "language": "en",
-          "source": "businesstoday.in",
-          "source_country": "india",
-          "url": "https://www.businesstoday.in/technology/news/story/john-ternus-could-oversee-10-new-apple-products-how-his-era-may-differ-from-tim-cooks-552313-2026-09-01"
-        },
-        {
-          "language": "fr",
-          "source": "rtbf.be",
-          "source_country": "be",
-          "url": "https://www.rtbf.be/article/apple-pret-a-rentrer-dans-une-nouvelle-ere-apres-15-ans-de-regne-tim-cook-passe-le-flambeau-a-l-ingenieur-john-ternus-11777736"
-        },
-        {
-          "language": "fr",
-          "source": "lessentiel.lu",
-          "source_country": "lu",
-          "url": "https://www.lessentiel.lu/fr/story/a-la-place-de-tim-cook-john-ternus-est-le-nouveau-boss-d-apple-103625603"
-        },
-        {
-          "language": "ind",
-          "source": "jawapos.com",
-          "source_country": "id",
-          "url": "https://www.jawapos.com/internasional/2609010323/john-ternus-resmi-gantikan-tim-cook-apple-masuki-era-baru-di-tengah-persaingan-ai"
-        },
-        {
-          "language": "vie",
-          "source": "voh.com.vn",
-          "source_country": "vm",
-          "url": "https://voh.com.vn/the-gioi/john-ternus-dam-nhiem-ceo-cua-apple-thay-the-tim-cook-666432.html"
-        },
-        {
-          "language": "en",
-          "source": "thehindubusinessline.com",
-          "source_country": "india",
-          "url": "https://www.thehindubusinessline.com/info-tech/apples-new-ceo-john-ternus-could-help-deepen-indias-relationship-with-the-tech-giant/article71411934.ece"
-        },
-        {
-          "language": "cat",
-          "source": "elperiodico.cat",
-          "source_country": "spain",
-          "url": "https://www.elperiodico.cat/economia/20260901/tim-cook-abandona-com-ceo-133821128"
-        },
-        {
-          "language": "es",
-          "source": "revistaeyn.com",
-          "source_country": "unknown",
-          "url": "https://www.revistaeyn.com/empresasymanagement/john-ternus-reemplaza-a-tim-cook-al-frente-de-apple-para-liderar-la-era-de-la-ia-JN31878203"
-        },
-        {
-          "language": "it",
-          "source": "milanofinanza.it",
-          "source_country": "it",
-          "url": "https://www.milanofinanza.it/news/apple-la-guida-passa-da-tim-cook-a-john-ternus-per-il-nuovo-ceo-la-sfida-dell-ai-202608311701393825"
+          "source": "israelnationalnews.com",
+          "source_country": "is",
+          "url": "https://www.israelnationalnews.com/flashes/692774"
         }
       ],
       "mentioned_countries": [
-        "united-states"
+        "is",
+        "gz"
       ],
-      "origin_country": "be",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/economie-numerique/nouvelle-ere-chez-apple-avec-lintronisation-de-son-nouveau-boss-john-ternus-apres-quinze-ans-de-regne-de-tim-cook-20260831_CB7MIOLCVZEZJHXEGCWQZ725DY/",
+      "origin_country": "brazil",
+      "outbound_source": "israelnationalnews.com",
+      "outbound_url": "https://www.israelnationalnews.com/flashes/692774",
       "rank": 5,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "liberation.fr",
-        "nouvelobs.com",
-        "rfi.fr",
-        "tagesschau.de"
+        "france24.com",
+        "globo.com",
+        "lefigaro.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.46,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4817,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.7895
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.741,
+        "total": 0.6872,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "john ternus",
+      "subject_label": "gaza",
       "subject_names": [
-        "apple",
-        "john ternus",
-        "tim cook"
+        "gaza",
+        "hamas",
+        "israel",
+        "netanyahu"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Les articles indiquent qu’Apple a nommé John Ternus comme nouveau directeur général, prenant la succession de Tim Cook après quinze ans à la tête de l’entreprise. Ternus est présenté comme un ingénieur interne d’Apple et sa nomination intervient alors que la société aborde des enjeux liés au matériel, à la fabrication (notamment en Inde) et à l’essor de l’intelligence artificielle."
+      "subject_newsroom_count": 11,
+      "summary": "Les articles indiquent qu'Israël a annoncé avoir arrêté le chef de la sécurité intérieure du Hamas dans la bande de Gaza. Les comptes concordent sur la détention de cette figure par les forces israéliennes lors d'opérations menées à Gaza; certains articles signalent par ailleurs des victimes civiles liées aux opérations dans le territoire."
     }
   ],
-  "discarded_ingested": 414,
+  "discarded_ingested": 355,
   "discarded_kept": 5,
-  "generated_at": "2026-09-01T10:19:46.978488+00:00",
+  "generated_at": "2026-09-02T09:48:34.376062+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

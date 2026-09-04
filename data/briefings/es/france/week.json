@@ -2,124 +2,317 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-shein-2bd8c8c22046"
+        "subject-nvidia-79c869e13cb7"
       ],
-      "cluster_id": "subject-shein-2bd8c8c22046",
-      "coherence": null,
+      "cluster_id": "subject-nvidia-79c869e13cb7",
+      "coherence": 0.5183688631389297,
       "consequence": 3,
       "countries": [
-        "be",
+        "as",
+        "china",
+        "france",
         "spain",
-        "united-kingdom"
+        "united-kingdom",
+        "united-states",
+        "unknown"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-03",
-      "headline": "Francia impone tasas a Shein y Temu para reducir daños ambientales",
-      "independent_source_count": 3,
+      "country_count": 7,
+      "editorial_day": "2026-09-04",
+      "headline": "Nvidia compra Hugging Face por 13.000 millones de dólares",
+      "independent_source_count": 21,
       "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/hugging-face-la-start-up-francaise-de-l-ia-rachetee-13-milliards-de-dollars-par-nvidia_8147414.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/entreprise/tech-numerique/nvidia-soffre-hugging-face-pour-13-milliards-pourquoi-cette-folie-dinvestissements-du-banquier-de-la-silicon-valley-dans-lia_645509"
+        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://cincodias.elpais.com/companias/2026-09-03/china-exige-a-francia-que-retire-las-tasas-a-la-moda-ultrarrapida-de-shein-o-temu.html"
+          "url": "https://elpais.com/economia/2026-09-03/nvidia-se-hace-con-hugging-face-por-11200-millones-en-una-de-las-mayores-compras-de-su-historia.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia-digital/companias/2026/09/03/6a996622468aeb82478b4586.html"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cm2792pendro?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cr4vnr5g1k7o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "nl",
-          "source": "newsmonkey.be",
-          "source_country": "be",
-          "url": "https://newsmonkey.be/frankrijk-heft-belasting-op-onder-andere-shein-en-temu-om-milieuschade-tegen-te-gaan/"
+          "language": "es",
+          "source": "larazon.es",
+          "source_country": "spain",
+          "url": "https://www.larazon.es/tecnologia-consumo/inteligencia-artificial/oficial-nvidia-compra-hugging-face-12900-millones-dolares-se-aduena-codigo-abierto_202609046a9a85794941316b1e77447e.html"
+        },
+        {
+          "language": "en",
+          "source": "digitimes.com",
+          "source_country": "china",
+          "url": "https://www.digitimes.com/news/a20260904VL200/nvidia-silicon.html"
+        },
+        {
+          "language": "en",
+          "source": "dailypress.com",
+          "source_country": "united-states",
+          "url": "https://www.dailypress.com/2026/09/03/nvidia-hugging-face/"
+        },
+        {
+          "language": "en",
+          "source": "itnews.com.au",
+          "source_country": "as",
+          "url": "https://www.itnews.com.au/news/nvidia-buys-hugging-face-in-us13-billion-deal-628680"
+        },
+        {
+          "language": "en",
+          "source": "govinfosecurity.com",
+          "source_country": "united-states",
+          "url": "https://www.govinfosecurity.com/nvidias-129b-hugging-face-deal-tests-ai-platform-neutrality-a-32741"
+        },
+        {
+          "language": "en",
+          "source": "whec.com",
+          "source_country": "united-states",
+          "url": "https://www.whec.com/ap-top-news/nvidia-to-spend-13-billion-on-hugging-face-which-will-remain-an-open-source-platform/"
+        },
+        {
+          "language": "en",
+          "source": "tribdem.com",
+          "source_country": "united-states",
+          "url": "https://www.tribdem.com/news/business/nvidia-to-spend-13-billion-on-hugging-face-leaving-it-as-an-open-source-platform/article_66962819-cdf4-508f-8681-e8a494981c9d.html"
+        },
+        {
+          "language": "en",
+          "source": "abc7ny.com",
+          "source_country": "united-states",
+          "url": "https://abc7ny.com/story/nvidia-is-buying-ai-startup-hugging-face-was-hacked-openai-models-13-billion/19784608/"
+        },
+        {
+          "language": "en",
+          "source": "channel3000.com",
+          "source_country": "united-states",
+          "url": "https://www.channel3000.com/news/money/nvidia-inks-13-billion-deal-to-buy-the-ai-startup-that-was-hacked-by-openai/article_d7ba8e6b-8cd0-5863-9a28-ebdbac4bbb99.html"
+        },
+        {
+          "language": "en",
+          "source": "ksl.com",
+          "source_country": "united-states",
+          "url": "https://www.ksl.com:443/article/51619669/nvidia-to-buy-hugging-face-for-13b-in-big-bet-on-open-ai-models"
+        },
+        {
+          "language": "en",
+          "source": "erienewsnow.com",
+          "source_country": "united-states",
+          "url": "https://www.erienewsnow.com/news/state/nvidia-to-spend-13-billion-on-hugging-face-which-will-remain-an-open-source-platform/article_264972a0-9481-5a70-a20a-5f60fa0d309d.html"
+        },
+        {
+          "language": "en",
+          "source": "the-independent.com",
+          "source_country": "unknown",
+          "url": "https://www.the-independent.com/tech/hugging-face-nvidia-sale-openai-hack-b3044146.html"
+        },
+        {
+          "language": "en",
+          "source": "nypost.com",
+          "source_country": "united-states",
+          "url": "https://nypost.com/2026/09/03/business/nvidia-buying-ai-startup-hugging-face-for-whopping-13b/"
+        },
+        {
+          "language": "en",
+          "source": "adweek.com",
+          "source_country": "united-states",
+          "url": "https://www.adweek.com/dealroom/nvidia-confirms-purchase-of-hugging-face-for-nearly-13-billion/"
+        },
+        {
+          "language": "es",
+          "source": "laprovincia.es",
+          "source_country": "spain",
+          "url": "https://www.laprovincia.es/vida-y-estilo/tecnologia/2026/09/03/nvidia-cierra-compra-startup-hugging-face-ia-inversion-millones-openai-133922272.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/nvidia-compra-hugging-face-valor-11130-millones-20260903185918-nt.html"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "france",
+        "china"
       ],
-      "origin_country": "be",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cm2792pendro?at_medium=RSS&at_campaign=rss",
+      "origin_country": "as",
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/economia-digital/companias/2026/09/03/6a996622468aeb82478b4586.html",
       "rank": 1,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
+        "abc.es",
         "bbc.co.uk",
-        "elpais.com"
+        "challenges.fr",
+        "elpais.com",
+        "expansion.com",
+        "francetvinfo.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
+          "coherence": 0.5184,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.84,
+          "source_reliability": 0.8571
         },
-        "total": 0.6499,
+        "total": 0.762,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "shein",
+      "subject_label": "nvidia",
       "subject_names": [
-        "bruno retailleau",
-        "c'est",
-        "cour",
-        "france",
-        "francia",
-        "francois hollande",
-        "jean-paul rappeneau",
-        "shein",
-        "togo",
-        "vincent bollore"
+        "hugging face",
+        "nvidia",
+        "openai"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Francia ha aprobado un impuesto que grava a plataformas de ‘moda ultrarrápida’ como Shein y Temu con el objetivo de desalentar prácticas que generan daño ambiental; China ha pedido a Francia que retire esas tasas. Los artículos coinciden en que las medidas apuntan específicamente a plataformas de moda rápida y que la iniciativa busca responder a preocupaciones medioambientales."
+      "subject_newsroom_count": 9,
+      "summary": "Nvidia ha acordado adquirir la plataforma de inteligencia artificial Hugging Face en un acuerdo valorado en alrededor de 12.9–13.0 mil millones de dólares (aproximadamente 11.1 mil millones de euros según algunas fuentes). Las notas coinciden en que la operación es una de las mayores compras de la compañía y que Hugging Face seguirá vinculada al ecosistema de modelos de IA y al software de código abierto según lo señalado en los informes."
     },
     {
       "_linked_ids": [
-        "subject-france-57b8bc803607"
+        "subject-emmanuel-gregoire-ed9a55581224"
       ],
-      "cluster_id": "subject-france-57b8bc803607",
-      "coherence": null,
+      "cluster_id": "subject-emmanuel-gregoire-ed9a55581224",
+      "coherence": 0.6511185479587859,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-03",
-      "headline": "Trabajadores de Radio France amenazan con huelga por columnista de Valeurs Actuelles",
+      "editorial_day": "2026-09-04",
+      "headline": "Dieciséis familias presentan una denuncia contra el alcalde y la ciudad de París por violencia en actividades périscolares",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/politique/article/2026/09/04/violences-dans-le-periscolaire-parisien-emmanuel-gregoire-sera-auditionne-le-8-septembre-par-la-mission-d-information-de-la-ville_6765665_823448.html"
+        },
+        {
+          "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/medias/a-radio-france-et-france-inter-motion-et-menace-de-greve-apres-larrivee-dun-editorialiste-de-valeurs-actuelles-20260902_SB2GL7EDZ5HLXNOZ7VWR6YKG6E/"
+          "url": "https://www.liberation.fr/societe/police-justice/violences-dans-le-periscolaire-a-paris-le-maire-emmanuel-gregoire-et-anne-hidalgo-vises-par-une-plainte-de-familles-20260904_6QJP4PKJZVFZ5PFK7PNJE4GZTY/"
         },
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260903-menace-de-gr%C3%A8ve-%C3%A0-radio-france-apr%C3%A8s-l-arriv%C3%A9e-d-un-%C3%A9ditorialiste-de-valeurs-actuelles"
+          "url": "https://www.franceinfo.fr/societe/education/violences-dans-le-periscolaire/violences-dans-le-periscolaire-a-paris-le-maire-emmanuel-gregoire-et-sa-predecesseure-anne-hidalgo-vises-par-une-plainte-de-17-familles_8176556.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/medias/20260902.OBS117874/menace-de-greve-a-radio-france-pour-reclamer-le-depart-d-un-editorialiste-de-valeurs-actuelles.html"
+          "url": "https://www.franceinfo.fr/societe/education/violences-dans-le-periscolaire/violences-dans-le-periscolaire-a-paris-emmanuel-gregoire-prend-acte-du-depot-de-plainte-qui-le-vise_8176781.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/medias/20260902.OBS117874/menace-de-greve-a-radio-france-pour-reclamer-le-depart-d-un-editorialiste-de-valeurs-actuelles.html",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/politique/article/2026/09/04/violences-dans-le-periscolaire-parisien-emmanuel-gregoire-sera-auditionne-le-8-septembre-par-la-mission-d-information-de-la-ville_6765665_823448.html",
       "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6511,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
+        },
+        "total": 0.5664,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "emmanuel gregoire",
+      "subject_names": [
+        "anne hidalgo",
+        "emmanuel gregoire"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Dieciséis familias han presentado una denuncia que apunta al alcalde Emmanuel Grégoire, a la exalcaldesa Anne Hidalgo y a la Ville de Paris por presuntas agresiones ocurridas en actividades périscolares; Grégoire ha dicho que \"toma nota\" del depósito de la denuncia. Los artículos coinciden en que la acción judicial reúne a varias familias y nombra a ambos responsables municipales y a la ciudad como parte demandada."
+    },
+    {
+      "_linked_ids": [
+        "subject-dragon-ball-76fc7098322d"
+      ],
+      "cluster_id": "subject-dragon-ball-76fc7098322d",
+      "coherence": 0.49378930937757004,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-04",
+      "headline": "Los titulares de los derechos de Dragon Ball no autorizaron un parque en Île‑de‑France",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/les-detenteurs-des-droits-de-dragon-ball-nont-pas-donne-leur-accord-pour-la-construction-dun-parc-dattraction-en-ile-de-france-20260904_WFACK6NUHVEGBDNELRTMBRT6NU/"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260903-parc-dragon-ball-en-france-aucune-autorisation-n-a-%C3%A9t%C3%A9-accord%C3%A9e-par-les-ayants-droits"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20260903.OBS117895/parc-dragon-ball-dans-le-val-d-oise-le-studio-japonais-toei-animation-detenteur-de-la-licence-n-a-pas-donne-son-accord.html"
+        },
+        {
+          "language": "fr",
+          "source": "lanouvellerepublique.fr",
+          "source_country": "france",
+          "url": "https://www.lanouvellerepublique.fr/a-la-une/aucun-accord-de-licence-dragon-ball-en-cours-pour-les-parcs-d-attractions-franciliens-1788510998"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "japan"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/societe/20260903.OBS117895/parc-dragon-ball-dans-le-val-d-oise-le-studio-japonais-toei-animation-detenteur-de-la-licence-n-a-pas-donne-son-accord.html",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "liberation.fr",
@@ -128,287 +321,266 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.4938,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.5448,
+        "total": 0.462,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "dragon ball",
       "subject_names": [
-        "bruno retailleau",
-        "c'est",
-        "cour",
-        "france",
-        "france inter",
-        "francia",
-        "francois hollande",
-        "jean-paul rappeneau",
-        "radio france",
-        "togo",
-        "vincent bollore"
+        "dragon ball"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "Empleados y sindicatos de Radio France y France Inter han lanzado una moción y amenazan con convocar una huelga tras la llegada como editorialista de un periodista procedente de la revista conservadora Valeurs Actuelles; reclaman su salida y protestan por su incorporación a la emisora pública."
+      "subject_newsroom_count": 4,
+      "summary": "Varios medios coinciden en que los titulares de la licencia de Dragon Ball, incluido el estudio japonés Toei Animation, no han dado su autorización para la construcción o el uso de la marca en un parque de atracciones en la región de Île‑de‑France/Val‑d’Oise; no existe un acuerdo de licencia en vigor para esos proyectos."
     },
     {
       "_linked_ids": [
-        "subject-haute-saone-c18c55ac6b47"
+        "subject-volkswagen-97fc654618fe"
       ],
-      "cluster_id": "subject-haute-saone-c18c55ac6b47",
-      "coherence": 0.5212686272330193,
-      "consequence": 1,
+      "cluster_id": "subject-volkswagen-97fc654618fe",
+      "coherence": 0.43426985211704694,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "spain",
+        "united-kingdom",
+        "unknown"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-04",
+      "filled_from": "europe",
+      "headline": "Volkswagen aprueba recortar 50.000 empleos y pone en riesgo cuatro fábricas alemanas",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/volkswagen-acuerda-plan-ajuste-recorte-50-000-empleos-deja-aire-futuro-cuatro-fabricas-alemanas_1_13486326.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/motor/2026/09/03/6a99cfffe5fdeabb608b457c.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/motor/20260903/volkswagen-recortara-empleos-reducira-produccion-deja-aire-futuro-plantas/1003744372232_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/empresas/2026/09/03/6a99cd69e85ecedb668b45a3.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/business/2026/sep/03/volkswagen-confirms-100000-job-cuts-by-2030"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cx2z0kvy4n4o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "capitalfm.africa",
+          "source_country": "unknown",
+          "url": "https://capitalfm.africa/volkswagen-approves-plan-to-cut-50000-more-jobs-worldwide/"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-09-04/volkswagen-50mila-posti-in-meno-e-quattro-fabbriche-a-rischio-passa-la-maxi-ristrutturazione/19640953/"
+        },
+        {
+          "language": "es",
+          "source": "motorpasion.com",
+          "source_country": "spain",
+          "url": "https://www.motorpasion.com/industria/confirmado-volkswagen-va-a-despedir-a-50-000-empleados-seat-esta-a-salvo-al-momento"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "it",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/motor/20260903/volkswagen-recortara-empleos-reducira-produccion-deja-aire-futuro-plantas/1003744372232_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "expansion.com",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4343,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7419
+        },
+        "total": 0.6662,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "volkswagen",
+      "subject_names": [
+        "seat",
+        "volkswagen"
+      ],
+      "subject_newsroom_count": 12,
+      "summary": "Volkswagen ha aprobado un plan de ajuste que prevé recortar 50.000 puestos de trabajo adicionales hasta 2030, reducir la producción y deja en el aire el futuro de cuatro fábricas en Alemania; las fuentes coinciden en que la medida forma parte de una reestructuración global de la empresa."
+    },
+    {
+      "_linked_ids": [
+        "subject-tony-gatlif-99a80a1f1284"
+      ],
+      "cluster_id": "subject-tony-gatlif-99a80a1f1284",
+      "coherence": 0.5584589803547884,
+      "consequence": 0,
       "countries": [
         "france",
         "sz"
       ],
       "country_count": 2,
-      "editorial_day": "2026-09-03",
-      "headline": "Cuatro miembros de una misma familia, incluidos dos niños, fueron hallados muertos en Haute‑Saône",
-      "independent_source_count": 7,
+      "editorial_day": "2026-09-04",
+      "headline": "Fallece el cineasta Tony Gatlif a los 77 años",
+      "independent_source_count": 11,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/disparitions/article/2026/09/04/tony-gatlif-realisateur-de-gadjo-dilo-est-mort-a-l-age-de-77-ans_6765745_3382.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/cinema/tony-gatlif-realisateur-de-gadjo-dilo-est-mort-a-l-age-de-77-ans-20260904"
+        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/quatre-corps-dune-meme-famille-dont-deux-enfants-decouverts-en-haute-saone-20260903_JKTSXGIDZBFNZAZK6EKCSCCPUA/"
+          "url": "https://www.liberation.fr/culture/cinema/mort-de-tony-gatlif-cineaste-de-la-fievre-gitane-20260904_557MB6KBXVCGPKL4K7UVYSLGQU/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/haute-saone-quatre-membres-d-une-meme-famille-retrouves-morts-dont-deux-enfants-20260903"
+          "url": "https://www.la-croix.com/culture/mort-de-tony-gatlif-chantre-de-la-culture-gitane-et-realisateur-de-gadjo-dilo-20260904"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/un-homme-une-femme-et-deux-enfants-ont-ete-retrouves-morts-en-haute-saone_8174885.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/culture/cinema/le-cineaste-tony-gatlif-qui-a-notamment-realise-gadjo-dilo-et-exils-est-mort-a-l-age-de-77-ans_8176658.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/societe/faits-divers/jai-entendu-des-coups-de-feu-ce-que-lon-sait-de-la-mort-de-quatre-personnes-dont-deux-enfants-en-haute-saone-d3be9154-a76f-11f1-95a1-d7cb1b3759ac?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.france24.com/fr/culture/20260904-cinema-tony-gatlif-realisateur-de-gadjo-dilo-est-mort-a-77-ans"
         },
         {
           "language": "fr",
-          "source": "femmeactuelle.fr",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.femmeactuelle.fr/actu/news-actu/jai-entendu-des-coups-de-feu-quatre-corps-dune-meme-famille-decouverts-en-haute-saone-2211165"
+          "url": "https://www.rfi.fr/fr/culture/20260904-d%C3%A9c%C3%A8s-du-cin%C3%A9aste-tony-gatlif-r%C3%A9alisateur-de-gadjo-dilo-%C3%A0-77-ans"
+        },
+        {
+          "language": "fr",
+          "source": "vosgesmatin.fr",
+          "source_country": "france",
+          "url": "https://www.vosgesmatin.fr/culture-loisirs/2026/09/04/i-gadgo-dilo-i-i-exils-i-le-cineaste-et-comedien-francais-tony-gatlif-est-mort"
+        },
+        {
+          "language": "fr",
+          "source": "leprogres.fr",
+          "source_country": "france",
+          "url": "https://www.leprogres.fr/culture-loisirs/2026/09/04/i-gadgo-dilo-i-i-exils-i-le-cineaste-et-comedien-francais-tony-gatlif-est-mort"
+        },
+        {
+          "language": "fr",
+          "source": "estrepublicain.fr",
+          "source_country": "france",
+          "url": "https://www.estrepublicain.fr/culture-loisirs/2026/09/04/i-gadgo-dilo-i-i-exils-i-le-cineaste-et-comedien-francais-tony-gatlif-est-mort"
         },
         {
           "language": "fr",
           "source": "latele.ch",
           "source_country": "sz",
-          "url": "https://latele.ch/articles/quatre-personnes-dont-deux-enfants-retrouves-morts-en-haute-saone"
-        },
-        {
-          "language": "fr",
-          "source": "lindependant.fr",
-          "source_country": "france",
-          "url": "https://www.lindependant.fr/2026/09/03/les-cadavres-ont-ete-retrouves-sur-un-terrain-abritant-des-caravanes-quatre-corps-dune-meme-famille-dont-ceux-de-deux-enfants-de-6-et-9-ans-decouverts-13533830.php"
+          "url": "https://latele.ch/articles/deces-du-cineaste-tony-gatlif-realisateur-de-gadjo-dilo"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/haute-saone-quatre-membres-d-une-meme-famille-retrouves-morts-dont-deux-enfants-20260903",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/culture/cinema/mort-de-tony-gatlif-cineaste-de-la-fievre-gitane-20260904_557MB6KBXVCGPKL4K7UVYSLGQU/",
+      "rank": 5,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
         "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
         "liberation.fr",
-        "ouest-france.fr"
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5213,
+          "coherence": 0.5585,
           "corroboration": 0.5,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.4667,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
-        },
-        "total": 0.5129,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "haute-saone",
-      "subject_names": [
-        "bruno retailleau",
-        "c'est",
-        "cour",
-        "france",
-        "francia",
-        "francois hollande",
-        "haute-saone",
-        "jean-paul rappeneau",
-        "togo",
-        "vincent bollore"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "En Haute‑Saône se encontraron los cadáveres de cuatro personas de una misma familia —un hombre, una mujer y dos niños de 6 y 9 años— en un terreno con caravanas; testigos mencionaron haber oído disparos y las autoridades investigan las circunstancias del suceso."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-48c2b3e75ed1",
-        "subject-togo-c814d8e9bd38"
-      ],
-      "cluster_id": "subject-france-48c2b3e75ed1",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-03",
-      "headline": "Dos cineastas franceses liberados en Togo regresan a Francia hoy",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/afrique/gael-mocaer-et-sebastian-perez-pezzani-realisateurs-des-routes-de-limpossible-emprisonnes-au-togo-de-retour-en-france-aujourdhui-20260903_XYXTX7GBNFH6XINVRNX5VVCHAA/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/togo-les-deux-realisateurs-francais-liberes-rentrent-en-france-ce-jeudi-20260903"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260903.OBS117893/arretes-au-togo-en-juillet-les-deux-realisateurs-francais-gael-mocaer-et-sebastian-perez-pezzani-vont-rentrer-en-france.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/international/togo-les-deux-realisateurs-francais-liberes-rentrent-en-france-ce-jeudi-20260903",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.4481,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "bruno retailleau",
-        "c'est",
-        "cour",
-        "france",
-        "francia",
-        "francois hollande",
-        "jean-paul rappeneau",
-        "togo",
-        "vincent bollore"
-      ],
-      "subject_newsroom_count": 20,
-      "summary": "Gaël Mocaër y Sébastian Perez Pezzani, realizadores detenidos en Togo desde julio, han sido liberados y regresan a Francia hoy."
-    },
-    {
-      "_linked_ids": [
-        "subject-edouard-balladur-1ca80c17ecdf",
-        "subject-edouard-balladur-7ee56df04d24",
-        "subject-france-236a9080d474"
-      ],
-      "cluster_id": "subject-edouard-balladur-1ca80c17ecdf",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-01",
-      "headline": "Fallece el ex primer ministro francés Édouard Balladur a los 97 años",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/politique/lancien-premier-ministre-edouard-balladur-est-mort-a-lage-de-97-ans_645446"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260901/11624878/fallece-edouard-balladur-referente-derecha-francesa.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/politique/lancien-premier-ministre-edouard-balladur-est-mort-a-lage-de-97-ans_645446",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 0.0,
-          "novelty": 0.3333,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7838
         },
-        "total": 0.3461,
+        "total": 0.4702,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "edouard balladur",
+      "subject_label": "tony gatlif",
       "subject_names": [
-        "edouard balladur"
+        "gadjo dilo",
+        "tony gatlif"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Édouard Balladur, que fue primer ministro de Francia, ha fallecido a los 97 años. Las noticias coinciden en su muerte y en su condición de figura destacada de la derecha francesa."
+      "subject_newsroom_count": 7,
+      "summary": "Tony Gatlif, director y actor francés conocido por películas como Gadjo Dilo y Exils, ha muerto a los 77 años. Era reconocido por su dedicación a la cultura gitana y su obra recibió amplia cobertura en la prensa cultural."
     }
   ],
-  "discarded_ingested": 26,
+  "discarded_ingested": 44,
   "discarded_kept": 5,
-  "generated_at": "2026-09-03T10:00:16.421334+00:00",
+  "generated_at": "2026-09-04T09:50:32.590845+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

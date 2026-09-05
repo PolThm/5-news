@@ -2,240 +2,500 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-nvidia-79c869e13cb7"
+        "subject-trump-9a4e435cf515"
       ],
-      "cluster_id": "subject-nvidia-79c869e13cb7",
-      "coherence": 0.5183688631389297,
+      "cluster_id": "subject-trump-9a4e435cf515",
+      "coherence": 0.4989235281647004,
       "consequence": 3,
       "countries": [
-        "as",
-        "china",
         "france",
         "spain",
-        "united-kingdom",
-        "united-states",
         "unknown"
       ],
-      "country_count": 7,
-      "editorial_day": "2026-09-04",
-      "headline": "Nvidia achète Hugging Face pour environ 13 milliards de dollars",
-      "independent_source_count": 21,
+      "country_count": 3,
+      "editorial_day": "2026-09-05",
+      "headline": "Donald Trump envoie des émissaires à Moscou et à Kyiv pour relancer les pourparlers",
+      "independent_source_count": 7,
       "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/guerre-en-ukraine-trump-envoie-ses-emissaires-a-moscou-et-a-kyiv-20260905_SSK3ISIWH5BFZKL262VHQKAC7U/"
+        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/replay-radio/le-decryptage-eco/hugging-face-la-start-up-francaise-de-l-ia-rachetee-13-milliards-de-dollars-par-nvidia_8147414.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-guerre-en-ukraine-les-emissaires-de-donald-trump-attendus-a-moscou-et-a-kiev-pour-faire-avancer-les-choses-selon-le-president-americain_8178449.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "challenges.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.challenges.fr/entreprise/tech-numerique/nvidia-soffre-hugging-face-pour-13-milliards-pourquoi-cette-folie-dinvestissements-du-banquier-de-la-silicon-valley-dans-lia_645509"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/donald-trump-affirme-que-ses-emissaires-se-rendent-a-moscou-et-a-kiev-avec-un-plan-visant-a-mettre-fin-a-la-guerre_8177936.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-09-03/nvidia-se-hace-con-hugging-face-por-11200-millones-en-una-de-las-mayores-compras-de-su-historia.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-guerre-en-ukraine-les-emissaires-de-donald-trump-attendus-a-moscou-et-a-kiev-pour-faire-avancer-les-choses-selon-le-president-americain_8178449.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia-digital/companias/2026/09/03/6a996622468aeb82478b4586.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260905-trump-envoie-ses-%C3%A9missaires-en-ukraine-un-plan-pour-mettre-fin-%C3%A0-la-guerre"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cr4vnr5g1k7o?at_medium=RSS&at_campaign=rss"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260905-trump-envoie-ses-%C3%A9missaires-%C3%A0-moscou-et-kiev-avec-une-id%C3%A9e-pour-la-paix"
         },
         {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/tecnologia-consumo/inteligencia-artificial/oficial-nvidia-compra-hugging-face-12900-millones-dolares-se-aduena-codigo-abierto_202609046a9a85794941316b1e77447e.html"
-        },
-        {
-          "language": "en",
-          "source": "digitimes.com",
-          "source_country": "china",
-          "url": "https://www.digitimes.com/news/a20260904VL200/nvidia-silicon.html"
-        },
-        {
-          "language": "en",
-          "source": "dailypress.com",
-          "source_country": "united-states",
-          "url": "https://www.dailypress.com/2026/09/03/nvidia-hugging-face/"
-        },
-        {
-          "language": "en",
-          "source": "itnews.com.au",
-          "source_country": "as",
-          "url": "https://www.itnews.com.au/news/nvidia-buys-hugging-face-in-us13-billion-deal-628680"
-        },
-        {
-          "language": "en",
-          "source": "govinfosecurity.com",
-          "source_country": "united-states",
-          "url": "https://www.govinfosecurity.com/nvidias-129b-hugging-face-deal-tests-ai-platform-neutrality-a-32741"
-        },
-        {
-          "language": "en",
-          "source": "whec.com",
-          "source_country": "united-states",
-          "url": "https://www.whec.com/ap-top-news/nvidia-to-spend-13-billion-on-hugging-face-which-will-remain-an-open-source-platform/"
-        },
-        {
-          "language": "en",
-          "source": "tribdem.com",
-          "source_country": "united-states",
-          "url": "https://www.tribdem.com/news/business/nvidia-to-spend-13-billion-on-hugging-face-leaving-it-as-an-open-source-platform/article_66962819-cdf4-508f-8681-e8a494981c9d.html"
-        },
-        {
-          "language": "en",
-          "source": "abc7ny.com",
-          "source_country": "united-states",
-          "url": "https://abc7ny.com/story/nvidia-is-buying-ai-startup-hugging-face-was-hacked-openai-models-13-billion/19784608/"
-        },
-        {
-          "language": "en",
-          "source": "channel3000.com",
-          "source_country": "united-states",
-          "url": "https://www.channel3000.com/news/money/nvidia-inks-13-billion-deal-to-buy-the-ai-startup-that-was-hacked-by-openai/article_d7ba8e6b-8cd0-5863-9a28-ebdbac4bbb99.html"
-        },
-        {
-          "language": "en",
-          "source": "ksl.com",
-          "source_country": "united-states",
-          "url": "https://www.ksl.com:443/article/51619669/nvidia-to-buy-hugging-face-for-13b-in-big-bet-on-open-ai-models"
-        },
-        {
-          "language": "en",
-          "source": "erienewsnow.com",
-          "source_country": "united-states",
-          "url": "https://www.erienewsnow.com/news/state/nvidia-to-spend-13-billion-on-hugging-face-which-will-remain-an-open-source-platform/article_264972a0-9481-5a70-a20a-5f60fa0d309d.html"
-        },
-        {
-          "language": "en",
-          "source": "the-independent.com",
-          "source_country": "unknown",
-          "url": "https://www.the-independent.com/tech/hugging-face-nvidia-sale-openai-hack-b3044146.html"
-        },
-        {
-          "language": "en",
-          "source": "nypost.com",
-          "source_country": "united-states",
-          "url": "https://nypost.com/2026/09/03/business/nvidia-buying-ai-startup-hugging-face-for-whopping-13b/"
-        },
-        {
-          "language": "en",
-          "source": "adweek.com",
-          "source_country": "united-states",
-          "url": "https://www.adweek.com/dealroom/nvidia-confirms-purchase-of-hugging-face-for-nearly-13-billion/"
-        },
-        {
-          "language": "es",
-          "source": "laprovincia.es",
-          "source_country": "spain",
-          "url": "https://www.laprovincia.es/vida-y-estilo/tecnologia/2026/09/03/nvidia-cierra-compra-startup-hugging-face-ia-inversion-millones-openai-133922272.html"
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/economia/nvidia-compra-hugging-face-valor-11130-millones-20260903185918-nt.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "china"
-      ],
-      "origin_country": "as",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/economia-digital/companias/2026/09/03/6a996622468aeb82478b4586.html",
-      "rank": 1,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "abc.es",
-        "bbc.co.uk",
-        "challenges.fr",
-        "elpais.com",
-        "expansion.com",
-        "francetvinfo.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5184,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.84,
-          "source_reliability": 0.8571
-        },
-        "total": 0.762,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nvidia",
-      "subject_names": [
-        "hugging face",
-        "nvidia",
-        "openai"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Nvidia a conclu l’acquisition de la start-up d’intelligence artificielle Hugging Face pour un montant annoncé autour de 12,9–13 milliards de dollars (environ 11–11,2 milliards d’euros selon certains articles). Les titres indiquent que Hugging Face conservera son rôle dans l’écosystème de l’IA et que l’opération s’inscrit dans la stratégie d’investissement de Nvidia dans les modèles et plateformes d’IA, suscitant des réactions sur l’ouverture et la neutralité de la plateforme."
-    },
-    {
-      "_linked_ids": [
-        "subject-volkswagen-97fc654618fe"
-      ],
-      "cluster_id": "subject-volkswagen-97fc654618fe",
-      "coherence": 0.43426985211704694,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain",
-        "united-kingdom",
-        "unknown"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-04",
-      "headline": "Volkswagen approuve une coupe de 50 000 emplois et menace quatre usines allemandes",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/volkswagen-acuerda-plan-ajuste-recorte-50-000-empleos-deja-aire-futuro-cuatro-fabricas-alemanas_1_13486326.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/motor/2026/09/03/6a99cfffe5fdeabb608b457c.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/motor/20260903/volkswagen-recortara-empleos-reducira-produccion-deja-aire-futuro-plantas/1003744372232_0.html"
+          "url": "https://www.abc.es/internacional/trump-envia-negociadores-rusia-ucrania-reactivar-dialogo-20260905091046-nt.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/economia/empresas/2026/09/03/6a99cd69e85ecedb668b45a3.html"
+          "url": "https://www.elmundo.es/internacional/2026/09/05/6a9bae7dfdddffe7088b4572.html"
+        },
+        {
+          "language": "es",
+          "source": "bitlysdowssl-aws.com",
+          "source_country": "unknown",
+          "url": "https://bitlysdowssl-aws.com/2026/09/donald-trump-confirma-el-envio-de-emisarios-a-moscu-y-kiev-para-reactivar-las-negociaciones-de-paz/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "bitlysdowssl-aws.com",
+      "outbound_url": "https://bitlysdowssl-aws.com/2026/09/donald-trump-confirma-el-envio-de-emisarios-a-moscu-y-kiev-para-reactivar-las-negociaciones-de-paz/",
+      "rank": 1,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "abc.es",
+        "elmundo.es",
+        "france24.com",
+        "francetvinfo.fr",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4989,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7838
+        },
+        "total": 0.725,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "iran",
+        "kiev",
+        "kyiv",
+        "moscou",
+        "rusia",
+        "russian",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "washington"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Les articles rapportent que l'ancien président américain Donald Trump a dépêché deux émissaires en route vers Moscou et Kyiv avec pour objectif annoncé de relancer les négociations et «faire avancer les choses», affirmant qu’ils portent un plan ou une idée visant à mettre fin à la guerre en Ukraine."
+    },
+    {
+      "_linked_ids": [
+        "subject-milei-8adac3670f98"
+      ],
+      "cluster_id": "subject-milei-8adac3670f98",
+      "coherence": 0.4413876410438228,
+      "consequence": 3,
+      "countries": [
+        "ar",
+        "brazil",
+        "ci",
+        "it",
+        "spain"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-04",
+      "headline": "Le Royaume-Uni réaffirme son engagement envers les îles Malouines",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/argentina/2026-09-04/el-reino-unido-le-responde-a-milei-y-reafirma-su-compromiso-absoluto-e-inamovible-con-las-malvinas.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/reino-unido-responde-milei-tras-reclamar-las-malvinas-son-islas-britanicas-sus-habitantes-asi-eligieron_7032804_0.html"
         },
         {
           "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/business/2026/sep/03/volkswagen-confirms-100000-job-cuts-by-2030"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/2026/09/04/milei-touts-winds-of-change-as-he-reasserts-argentinas-claim-to-the-falklands"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/04/apos-nova-ameaca-milei-reino-unido-reitera-soberania-malvinas.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "elliberal.com.ar",
+          "source_country": "ar",
+          "url": "https://www.elliberal.com.ar/nota/90603/2026/09/fuerte-advertencia-del-reino-unido-tras-las-medidas-de-milei-por-las-malvinas--nuestras-fuerzas-armadas-estan-en-alerta"
+        },
+        {
+          "language": "es",
+          "source": "diariolaopinion.com.ar",
+          "source_country": "ar",
+          "url": "https://diariolaopinion.com.ar/nacionales/la-respuesta-de-reino-unido-a-los-anuncios-de-milei-en-cadena-nacional-sobre-malvinas.htm"
+        },
+        {
+          "language": "es",
+          "source": "elmostrador.cl",
+          "source_country": "ci",
+          "url": "https://www.elmostrador.cl/noticias/mundo/2026/09/04/reino-unido-responde-a-milei-por-las-malvinas-nuestro-compromiso-es-absoluto-e-inamovible/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/2026/09/04/milei-touts-winds-of-change-as-he-reasserts-argentinas-claim-to-the-falklands",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "elpais.com",
+        "euronews.com",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4414,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.6923
+        },
+        "total": 0.7008,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "milei",
+      "subject_names": [
+        "falkland islands",
+        "falklands",
+        "londres",
+        "malvinas",
+        "milei",
+        "reino unido"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "Après des déclarations de Javier Milei réitérant la revendication argentine sur les Malouines, le gouvernement britannique a répondu en déclarant que les îles sont britanniques, que leur engagement envers elles est « absolu et inamovible » et qu’il soutient les habitants de l’archipel ; Downing Street a en outre indiqué que les forces armées restent en alerte pour protéger le Royaume‑Uni et ses intérêts."
+    },
+    {
+      "_linked_ids": [
+        "subject-ukraine-d754b74eb918"
+      ],
+      "cluster_id": "subject-ukraine-d754b74eb918",
+      "coherence": 0.482647934987264,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "france",
+        "it",
+        "ro",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-09-05",
+      "headline": "Un drone russe frappe le siège du service de sécurité ukrainien à Kiev",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/video/2026/09/04/kiev-les-images-du-siege-du-service-de-securite-ukrainien-apres-la-frappe-de-drone-russe_6765822_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/ukraine-le-siege-des-services-secrets-touche-par-une-frappe-russe-20260904_3LYHBXOCIJAC7HAKLJCQJWYLMQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/un-drone-russe-frappe-le-siege-du-service-de-securite-ukrainien-a-kiev_8178524.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/la-russie-touche-les-services-de-securite-ukrainiens-et-frappe-kiev-au-c-ur_8178368.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-un-drone-russe-frappe-pour-la-premiere-fois-le-siege-des-services-de-securite-a-kiev-DM4ZYR5J2BE6TLRKSJF4B7J7YE/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-04/rusia-ataca-con-un-dron-la-sede-de-los-servicios-secretos-ucranios-en-kiev.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/dron-ruso-golpea-sede-agencia-inteligencia-ucraniana-20260904160923-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/rusia-alcanza-dron-sede-servicio-secreto-ucrania-kiev_1_13488313.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/un-dron-ruso-impacta-contra-sede-servicio-secreto-ucraniano-kiev-zelenski-ordena-una-respuesta_7033051_0.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/04/russian-drone-strikes-ukraine-security-service-headquarters-in-central-kyiv"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russian-drone-strikes-ukraine-security-service-headquarters-as-u-s-talks-on-the-war-are-expected"
+        },
+        {
+          "language": "pt",
+          "source": "em.com.br",
+          "source_country": "brazil",
+          "url": "http://www.em.com.br/internacional/2026/09/7494032-russia-ataca-sede-dos-servicos-de-seguranca-ucranianos-em-kiev.html"
+        },
+        {
+          "language": "ron",
+          "source": "sfin.ro",
+          "source_country": "ro",
+          "url": "https://www.sfin.ro/atac-cu-drone-in-kiev-sediul-sbu/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/09/04/russian-drone-strikes-ukraine-security-service-headquarters-in-central-kyiv",
+      "rank": 3,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4826,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.75,
+          "source_reliability": 0.8222
+        },
+        "total": 0.6932,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "moscou",
+        "rusia",
+        "russia",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Un drone russe a touché le bâtiment du Service de sécurité de l’Ukraine (SBU) situé en centre‑ville de Kiev ; les médias indiquent que l’impact a endommagé les locaux et que la frappe survient dans le cadre des attaques russes sur la capitale. Des responsables ukrainiens, dont le président, ont réagi en appelant à une réponse, et des sources notent la proximité de l’impact avec des diplomates présents dans la zone."
+    },
+    {
+      "_linked_ids": [
+        "subject-canarias-ab25bb5f75d0"
+      ],
+      "cluster_id": "subject-canarias-ab25bb5f75d0",
+      "coherence": 0.5485830459547352,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-04",
+      "headline": "Le ministère des Finances approuve la réforme du financement des communautés autonomes",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/hacienda-saca-adelante-reforma-financiacion-autonomica-catalunya-canarias-ausencia-madrid_1_13487253.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/04/6a9a87bb468aeb437d8b4578.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-hacienda-saca-adelante-nuevo-modelo-financiacion-autonomica-apoyo-cataluna-canarias-20260904160725.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.tv",
+          "source_country": "spain",
+          "url": "https://www.europapress.tv/economia/1114471/1/hacienda-saca-adelante-modelo-financiacion-autonomica-apoyo-cataluna-canarias"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/canarias/canarias-inclina-balanza-permite-aprobacion-nuevo-modelo-20260904175325-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lacerca.com",
+          "source_country": "spain",
+          "url": "https://www.lacerca.com/noticias/castilla_la_mancha/hacienda-nuevo-modelo-financiacion-autonomica-apoyo-cataluna-canarias-827455-1.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/economia/hacienda-saca-adelante-reforma-financiacion-autonomica-catalunya-canarias-ausencia-madrid_1_13487253.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "europapress.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5486,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.658,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "canarias",
+      "subject_names": [
+        "canarias",
+        "cataluna",
+        "hacienda"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Le ministère des Finances a fait adopter un nouveau modèle de financement des communautés autonomes avec le soutien de la Catalogne et des Îles Canaries, tandis que la Communauté de Madrid était absente des soutiens. Les articles concordent sur l’approbation du texte grâce à l’appui de Catalogne et Canaries."
+    },
+    {
+      "_linked_ids": [
+        "subject-volkswagen-58e40b915eae",
+        "subject-volkswagen-97fc654618fe"
+      ],
+      "cluster_id": "subject-volkswagen-58e40b915eae",
+      "coherence": 0.4208155442184299,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "ni",
+        "ro",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-04",
+      "headline": "Volkswagen supprime 50 000 emplois supplémentaires d’ici 2030",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/economie/article/2026/09/04/volkswagen-signe-un-accord-pour-la-suppression-de-50-000-emplois-supplementaires-mais-laisse-de-nombreuses-questions-en-suspens_6765776_3234.html"
         },
         {
           "language": "en",
@@ -245,52 +505,42 @@
         },
         {
           "language": "en",
-          "source": "capitalfm.africa",
-          "source_country": "unknown",
-          "url": "https://capitalfm.africa/volkswagen-approves-plan-to-cut-50000-more-jobs-worldwide/"
+          "source": "leadership.ng",
+          "source_country": "ni",
+          "url": "https://leadership.ng/volkswagen-to-cut-50000-more-jobs-by-2030/"
         },
         {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-09-04/volkswagen-50mila-posti-in-meno-e-quattro-fabbriche-a-rischio-passa-la-maxi-ristrutturazione/19640953/"
-        },
-        {
-          "language": "es",
-          "source": "motorpasion.com",
-          "source_country": "spain",
-          "url": "https://www.motorpasion.com/industria/confirmado-volkswagen-va-a-despedir-a-50-000-empleados-seat-esta-a-salvo-al-momento"
+          "language": "ron",
+          "source": "ziare.com",
+          "source_country": "ro",
+          "url": "https://ziare.com/volkswagen/restructurari-locuri-munca-auto-2033667"
         }
       ],
       "mentioned_countries": [
         "germany"
       ],
-      "origin_country": "it",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/motor/20260903/volkswagen-recortara-empleos-reducira-produccion-deja-aire-futuro-plantas/1003744372232_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
+      "origin_country": "france",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cx2z0kvy4n4o?at_medium=RSS&at_campaign=rss",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "expansion.com",
-        "theguardian.com"
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4343,
+          "coherence": 0.4208,
           "corroboration": 0.6667,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7419
+          "novelty": 0.5,
+          "prominence": 0.5,
+          "source_reliability": 0.5556
         },
-        "total": 0.7262,
+        "total": 0.6388,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "volkswagen",
@@ -298,399 +548,13 @@
         "seat",
         "volkswagen"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Volkswagen a validé un plan de restructuration prévoyant la suppression de 50 000 postes d'ici 2030, une réduction de la production mondiale et la mise en suspens du sort de quatre usines en Allemagne; plusieurs articles indiquent aussi des impacts sur l’organisation et des incertitudes pour certaines filiales, sans chiffrer autrement les conséquences."
-    },
-    {
-      "_linked_ids": [
-        "subject-leipzig-472eba921b5e",
-        "subject-leipzig-61d04a8b69f7",
-        "subject-leipzig-77b0d024eee4"
-      ],
-      "cluster_id": "subject-leipzig-472eba921b5e",
-      "coherence": 0.46743674521950274,
-      "consequence": 3,
-      "countries": [
-        "aj",
-        "brazil",
-        "france",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-03",
-      "headline": "L'Allemagne accuse la Russie d'être responsable d'une attaque au drone à l'aéroport de Leipzig",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260902.OBS117870/un-mois-apres-la-decouverte-d-un-drone-explosif-a-l-aeroport-de-leipzig-l-allemagne-accuse-officiellement-la-russie.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/lallemagne-accuse-la-russie-detre-responsable-de-lattaque-au-drone-de-laeroport-de-leipzig-YDZOQKHA6VAGRKTCCSEWE3POGA/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260901/11624890/alemania-senala-rusia-responsable-ataque-drones-aeropuerto-leipzig.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/alemania-acusa-rusia-ataque-hibrido-drones-aeropuerto-leipzig-principios-agosto_1_13480261.html"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/germany-blames-russia-for-attempted-drone-attack-at-leipzig-airport"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/01/putin-acusa-alemanha-de-plantar-evidencias-para-responsabilizar-russia-por-drone-com-explosivos-em-aeroporto-de-leipzig.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "news.az",
-          "source_country": "aj",
-          "url": "https://news.az/news/russia-denies-involvement-in-leipzig-drone-incident"
-        }
-      ],
-      "mentioned_countries": [
-        "germany",
-        "rs"
-      ],
-      "origin_country": "aj",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/alemania-acusa-rusia-ataque-hibrido-drones-aeropuerto-leipzig-principios-agosto_1_13480261.html",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "globo.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4674,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.6364,
-          "source_reliability": 0.7143
-        },
-        "total": 0.7146,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "leipzig",
-      "subject_names": [
-        "alemania",
-        "germany",
-        "leipzig",
-        "otan",
-        "putin",
-        "rusia",
-        "russia",
-        "russian",
-        "russie"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Un mois après la découverte d'un drone explosif à l'aéroport de Leipzig début août, les autorités allemandes ont officiellement mis en cause la Russie, qualifiant l'incident d'attaque ou d'opération hybride; la Russie nie toute implication et le président Poutine a accusé l'Allemagne de falsifier des éléments pour l'impliquer."
-    },
-    {
-      "_linked_ids": [
-        "subject-meloni-efd78bc610e0"
-      ],
-      "cluster_id": "subject-meloni-efd78bc610e0",
-      "coherence": 0.4311204185329054,
-      "consequence": 2,
-      "countries": [
-        "au",
-        "france",
-        "germany",
-        "it",
-        "ro",
-        "spain",
-        "sz",
-        "united-kingdom",
-        "up"
-      ],
-      "country_count": 9,
-      "editorial_day": "2026-09-04",
-      "headline": "Giorgia Meloni établit le record de longévité du gouvernement italien",
-      "independent_source_count": 20,
-      "members": [
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260904-en-italie-giorgia-meloni-bat-un-record-de-long%C3%A9vit%C3%A9-et-lance-sa-campagne-pour-2027"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/monde/record-historique-apres-quatre-ans-au-pouvoir-giorgia-meloni-simpose-comme-la-veritable-heritiere-de-silvio-berlusconi_645511"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-04/el-gobierno-de-meloni-ya-es-el-mas-longevo-de-italia-pero-poco-mas-puede-celebrar.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260903/11626292/meloni-bate-record-longevidad-empieza-batalla-seguir-gobernando.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/record-meloni-inestable-italia-liderar-gobierno-duradero-fascismo_1_13483085.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/09/03/6a999640e4d4d8f20f8b459a.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/meloni-celebra-record-su-gobierno-ya-es-mas-longevo-italia-atribuye-estabilidad-las-alianzas-centroderecha_7032750_0.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/09/03/milestone-giorgia-melonis-right-wing-government-becomes-italys-longest-lasting-since-wwii"
-        },
-        {
-          "language": "en",
-          "source": "kyivpost.com",
-          "source_country": "up",
-          "url": "https://www.kyivpost.com/post/83733"
-        },
-        {
-          "language": "fr",
-          "source": "vosgesmatin.fr",
-          "source_country": "france",
-          "url": "https://www.vosgesmatin.fr/politique/2026/09/04/avec-1-413-jours-au-pouvoir-meloni-bat-le-record-de-longevite-sur-un-mandat-de-berlusconi"
-        },
-        {
-          "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/giorgia-meloni-bat-un-record-de-longevite-et-lance-sa-campagne-2027"
-        },
-        {
-          "language": "fr",
-          "source": "estrepublicain.fr",
-          "source_country": "france",
-          "url": "https://www.estrepublicain.fr/politique/2026/09/04/avec-1-413-jours-au-pouvoir-meloni-bat-le-record-de-longevite-sur-un-mandat-de-berlusconi"
-        },
-        {
-          "language": "de",
-          "source": "gmx.at",
-          "source_country": "au",
-          "url": "https://www.gmx.at/magazine/politik/historischer-rekord-giorgia-meloni-42686750"
-        },
-        {
-          "language": "de",
-          "source": "traunsteiner-tagblatt.de",
-          "source_country": "germany",
-          "url": "https://www.traunsteiner-tagblatt.de/nachrichten_artikel,-immer-noch-da-meloni-knackt-italiens-regierungsrekord-_arid,1014879.html"
-        },
-        {
-          "language": "ron",
-          "source": "romaniatv.net",
-          "source_country": "ro",
-          "url": "https://www.romaniatv.net/giorgia-meloni-record-istoric-in-italia-conduce-cel-mai-longeviv-guvern-din-perioada-postbelica_9787057.html"
-        },
-        {
-          "language": "it",
-          "source": "tg.la7.it",
-          "source_country": "it",
-          "url": "https://tg.la7.it/politica/governo-meloni-record-longevita-berlusconi-bari-donzelli-salvini-tajani-04-09-2026-262059"
-        },
-        {
-          "language": "it",
-          "source": "strettoweb.com",
-          "source_country": "it",
-          "url": "https://www.strettoweb.com/2026/09/giorgia-meloni-nella-storia-oggi-il-suo-governo-diventa-il-piu-longevo-della-repubblica-italiana-perche-non-e-un-risultato-affatto-casuale/2136251/"
-        },
-        {
-          "language": "it",
-          "source": "online-news.it",
-          "source_country": "it",
-          "url": "https://online-news.it/governo-meloni-superato-il-berlusconi-ii-e-lesecutivo-piu-longevo-della-repubblica/"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/meloni-la-cheffe-du-gouvernement-italien-bat-un-record-845967032485"
-        },
-        {
-          "language": "en",
-          "source": "independent.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.independent.co.uk/news/world/europe/giorgia-meloni-record-italian-government-b3043999.html"
-        }
-      ],
-      "mentioned_countries": [
-        "it"
-      ],
-      "origin_country": "au",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/record-meloni-inestable-italia-liderar-gobierno-duradero-fascismo_1_13483085.html",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "challenges.fr",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "euronews.com",
-        "france24.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4311,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.8333,
-          "source_reliability": 0.8571
-        },
-        "total": 0.6875,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "meloni",
-      "subject_names": [
-        "giorgia meloni",
-        "italia",
-        "italie",
-        "meloni"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Après quatre ans à la tête du pays, le gouvernement de Giorgia Meloni est devenu le plus longevif de l'Italie républicaine/post‑Seconde Guerre mondiale, dépassant le précédent record tenu par un mandat de Silvio Berlusconi ; Meloni a annoncé le lancement de sa campagne pour 2027 et la longévité du mandat est soulignée comme un jalon politique significatif par plusieurs médias."
-    },
-    {
-      "_linked_ids": [
-        "subject-galizia-1daf1dd2c6b5",
-        "subject-galizia-c25f27408122"
-      ],
-      "cluster_id": "subject-galizia-c25f27408122",
-      "coherence": 0.41103696333558637,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "it",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-03",
-      "headline": "Un magnat acquitté de l’accusation d’avoir commandité le meurtre de Daphne Caruana Galizia",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/03/a-malte-l-acquittement-de-l-oligarque-yorgen-fenech-laisse-impunis-les-commanditaires-du-meurtre-de-la-journaliste-daphne-caruana-galizia_6765145_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/malte-un-magnat-acquitte-de-l-assassinat-de-la-journaliste-daphne-caruana-galizia-20260903"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260903/11626080/absuelto-malta-magnate-acusado-ordenar-asesinato-periodista-caruana-galizia.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/jurado-absuelve-empresario-acusado-ordenar-asesinato-periodista-daphne-caruana-galizia-malta_1_13483350.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/03/news/malta_processo_caruana_galizia_assolto_presunto_mandante-425561660/?rss"
-        }
-      ],
-      "mentioned_countries": [
-        "mt"
-      ],
-      "origin_country": "france",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/jurado-absuelve-empresario-acusado-ordenar-asesinato-periodista-daphne-caruana-galizia-malta_1_13483350.html",
-      "rank": 5,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "la-croix.com",
-        "lavanguardia.com",
-        "lemonde.fr",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.411,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.679,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "galizia",
-      "subject_names": [
-        "daphne caruana",
-        "galizia",
-        "malta"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Un jury à Malte a acquitté l’homme d’affaires accusé d’avoir ordonné l’assassinat de la journaliste Daphne Caruana Galizia ; les articles indiquent que le procès portait sur son rôle présumé comme commanditaire mais concluent à son innocence pénale dans cette affaire."
+      "subject_newsroom_count": 9,
+      "summary": "Volkswagen a approuvé un plan visant à supprimer 50 000 postes supplémentaires d’ici 2030 et à réduire sa gamme de modèles, une décision annoncée par la direction du groupe ; les articles indiquent que cet accord ou cette approbation vise des réductions d’effectifs significatives mais laissent plusieurs questions en suspens."
     }
   ],
-  "discarded_ingested": 179,
+  "discarded_ingested": 123,
   "discarded_kept": 5,
-  "generated_at": "2026-09-04T09:50:32.590845+00:00",
+  "generated_at": "2026-09-05T09:13:03.817920+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

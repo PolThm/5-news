@@ -2,446 +2,490 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-canarias-ab25bb5f75d0"
+        "subject-putin-9ab7dabb28b6"
       ],
-      "cluster_id": "subject-canarias-ab25bb5f75d0",
-      "coherence": 0.5485830459547352,
+      "cluster_id": "subject-putin-9ab7dabb28b6",
+      "coherence": 0.49694635181800917,
       "consequence": 3,
       "countries": [
-        "spain"
+        "ho",
+        "it",
+        "mx",
+        "spain",
+        "tw"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-04",
-      "headline": "Hacienda aprueba el nuevo modelo de financiación autonómica con el apoyo de Cataluña y Canarias",
-      "independent_source_count": 6,
+      "country_count": 5,
+      "editorial_day": "2026-09-06",
+      "headline": "Putin y Zelenski ordenan una pausa de tres días en los ataques por visitas de enviados",
+      "independent_source_count": 9,
       "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-05/los-negociadores-de-trump-llegan-a-moscu-para-intentar-reimpulsar-las-negociaciones-de-paz.html"
+        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/hacienda-saca-adelante-reforma-financiacion-autonomica-catalunya-canarias-ausencia-madrid_1_13487253.html"
+          "url": "https://www.eldiario.es/internacional/putin-ordena-suspender-tres-dias-ataques-kiev-llegada-moscu-emisarios-trump_1_13489774.html"
         },
         {
           "language": "es",
           "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/04/6a9a87bb468aeb437d8b4578.html"
+          "url": "https://www.expansion.com/economia/2026/09/05/6a9c1704468aeba9688b4582.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-hacienda-saca-adelante-nuevo-modelo-financiacion-autonomica-apoyo-cataluna-canarias-20260904160725.html"
+          "url": "https://www.20minutos.es/internacional/putin-ordena-suspender-dias-ataques-kiev-llegada-emisarios-eeuu_7033229_0.html"
         },
         {
           "language": "es",
-          "source": "europapress.tv",
+          "source": "ultimahora.es",
           "source_country": "spain",
-          "url": "https://www.europapress.tv/economia/1114471/1/hacienda-saca-adelante-modelo-financiacion-autonomica-apoyo-cataluna-canarias"
+          "url": "https://www.ultimahora.es/noticias/internacional/2026/09/06/2703037/putin-ordena-suspender-tres-dias-ataques-contra-kiev-durante-visita-delegacion-eeuu-1.html"
+        },
+        {
+          "language": "it",
+          "source": "ilpost.it",
+          "source_country": "it",
+          "url": "https://www.ilpost.it/2026/09/05/russia-ucraina-sospensione-attacchi-visita-witkoff-kushner/?homepagePosition=4.1&referrerPost=3672147"
+        },
+        {
+          "language": "en",
+          "source": "taipeitimes.com",
+          "source_country": "tw",
+          "url": "https://www.taipeitimes.com/News/front/archives/2026/09/06/2003863760"
         },
         {
           "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/canarias/canarias-inclina-balanza-permite-aprobacion-nuevo-modelo-20260904175325-nt.html"
+          "source": "vanguardia.com.mx",
+          "source_country": "mx",
+          "url": "https://vanguardia.com.mx/noticias/internacional/ordena-putin-una-pausa-de-72-horas-en-los-ataques-por-visita-de-enviados-de-eu-a-rusia-y-ucrania-HK23297505"
         },
         {
           "language": "es",
-          "source": "lacerca.com",
-          "source_country": "spain",
-          "url": "https://www.lacerca.com/noticias/castilla_la_mancha/hacienda-nuevo-modelo-financiacion-autonomica-apoyo-cataluna-canarias-827455-1.html"
+          "source": "laprensa.hn",
+          "source_country": "ho",
+          "url": "http://www.laprensa.hn/mundo/putin-ordena-suspender-ataques-kiev-llegada-emisarios-eeuu-FI31936201"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "rs",
+        "up"
       ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/economia/hacienda-saca-adelante-reforma-financiacion-autonomica-catalunya-canarias-ausencia-madrid_1_13487253.html",
+      "origin_country": "ho",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/internacional/2026-09-05/los-negociadores-de-trump-llegan-a-moscu-para-intentar-reimpulsar-las-negociaciones-de-paz.html",
       "rank": 1,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "abc.es",
+        "20minutos.es",
         "eldiario.es",
-        "europapress.es",
+        "elpais.com",
         "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5486,
-          "corroboration": 0.3333,
+          "coherence": 0.4969,
+          "corroboration": 0.7143,
           "editorial_weight": 0.3333,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
+          "prominence": 0.6923,
+          "source_reliability": 0.7333
         },
-        "total": 0.658,
+        "total": 0.7171,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "canarias",
+      "subject_label": "putin",
       "subject_names": [
-        "canarias",
-        "cataluna",
-        "hacienda"
+        "kremlin",
+        "putin"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "El Ministerio de Hacienda ha aprobado la reforma del modelo de financiación autonómica, que salió adelante con los votos favorables de Cataluña y Canarias; Madrid no apoyó la iniciativa y Canarias fue clave para inclinar la balanza a favor del nuevo modelo."
+      "subject_newsroom_count": 21,
+      "summary": "Varios medios informan que, con motivo de la llegada a Moscú y a Kiev de emisarios enviados por Estados Unidos, tanto Vladimir Putin como Volodímir Zelenski han ordenado suspender los ataques sobre Kiev durante un período de tres días."
     },
     {
       "_linked_ids": [
-        "subject-zapatero-2c864c6859c7"
+        "subject-afd-d7d23a47eec6"
       ],
-      "cluster_id": "subject-zapatero-2c864c6859c7",
-      "coherence": 0.4497251160960457,
-      "consequence": 2,
+      "cluster_id": "subject-afd-d7d23a47eec6",
+      "coherence": 0.47977604828543885,
+      "consequence": 3,
       "countries": [
-        "pm",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-04",
-      "headline": "El juez rechaza la petición de Zapatero de anular el 'caso Plus Ultra'",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-04/el-juez-rechaza-la-peticion-de-zapatero-de-declarar-la-nulidad-general-del-caso-plus-ultra.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/juez-rechaza-nulidad-causa-plus-ultra-planteada-zapatero_1_13487954.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/04/6a9ac729e85ece45788b459b.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-juez-desestima-peticion-zapatero-anular-caso-plus-ultra-no-ver-vulnerados-derechos-20260904155105.html"
-        },
-        {
-          "language": "es",
-          "source": "laestrella.com.pa",
-          "source_country": "pm",
-          "url": "https://www.laestrella.com.pa/mundo/juez-desestima-peticion-de-expresidente-rodriguez-zapatero-para-anular-el-caso-plus-ultra-NB25421084"
-        },
-        {
-          "language": "es",
-          "source": "leonoticias.com",
-          "source_country": "spain",
-          "url": "https://www.leonoticias.com/nacional/juez-calama-rechaza-intento-zapatero-tumbar-plus-20260904154931-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "pm",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/politica/juez-rechaza-nulidad-causa-plus-ultra-planteada-zapatero_1_13487954.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4497,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.5828,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "zapatero",
-      "subject_names": [
-        "zapatero"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Varios medios coinciden en que el juez (identificado como Calama en algunos textos) ha desestimado la solicitud del expresidente José Luis Rodríguez Zapatero para declarar la nulidad o anular la investigación conocida como 'caso Plus Ultra', al considerar que no se han vulnerado sus derechos y que la causa sigue siendo legalmente válida."
-    },
-    {
-      "_linked_ids": [
-        "subject-begona-gomez-2a4fa4556474"
-      ],
-      "cluster_id": "subject-begona-gomez-2a4fa4556474",
-      "coherence": 0.4851609459883893,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-04",
-      "headline": "Begoña Gómez pide su absolución por la cátedra de la UCM",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-04/begona-gomez-pide-su-absolucion-y-defiende-que-no-influyo-en-los-cargos-de-la-univerdad-ni-en-ninguna-autoridad-para-crear-la-catedra.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/09/04/6a9abb42468aeb2a7a8b4576.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/04/6a9aaea7fdddff81078b4570.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-begona-gomez-reclama-ser-absuelta-porque-no-actuo-animo-enriquecerse-apropio-software-ucm-20260904142220.html"
-        },
-        {
-          "language": "es",
-          "source": "leonoticias.com",
-          "source_country": "spain",
-          "url": "https://www.leonoticias.com/nacional/begona-gomez-pide-absolucion-argumenta-cometio-delito-20260904141501-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/04/6a9aaea7fdddff81078b4570.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4852,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.5608,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "begona gomez",
-      "subject_names": [
-        "begona gomez"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "En el juicio por la creación de una cátedra en la Universidad Complutense, Begoña Gómez ha solicitado que se la absuelva, defendiendo que no intervino para influir en cargos universitarios ni en autoridades, que no se aprovechó de su vínculo matrimonial y que no actuó con ánimo de enriquecerse ni se apropió del 'software' de la UCM."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-31650a14e5ae",
-        "subject-ceuta-81ff1d515058",
-        "subject-ceuta-e7d252cc6146"
-      ],
-      "cluster_id": "subject-ceuta-31650a14e5ae",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "sf",
+        "as",
+        "it",
         "united-kingdom"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-04",
-      "headline": "El primer ministro español afirma que no hay pruebas de implicación marroquí en la crisis de Ceuta",
-      "independent_source_count": 3,
+      "country_count": 3,
+      "editorial_day": "2026-09-06",
+      "headline": "El partido de extrema derecha AfD se perfila para ganar en Sajonia-Anhalt",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "en",
           "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/03/spain-pm-evidence-morocco-ceuta-border-breach"
+          "url": "https://www.theguardian.com/world/2026/sep/06/far-right-afd-saxony-anhalt-state-election-germany"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c07lz7rn2mjo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
-          "source": "africa.com",
-          "source_country": "sf",
-          "url": "https://www.africa.com/top-10-news/spains-prime-minister-defends-morocco-over-ceuta"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/06/polls-open-in-saxony-anhalt-as-afd-predicted-to-win-state-election"
+        },
+        {
+          "language": "en",
+          "source": "aol.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.aol.co.uk/articles/germany-far-afd-eyes-historic-081246000.html"
+        },
+        {
+          "language": "en",
+          "source": "perthnow.com.au",
+          "source_country": "as",
+          "url": "https://www.perthnow.com.au/news/politics/germanys-far-right-afd-seeks-landmark-state-victory-c-22830596"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "as",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4798,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.6746,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "afd",
+      "subject_names": [
+        "afd",
+        "alemania",
+        "berlin",
+        "leipzig",
+        "sajonia-anhalt",
+        "ulrich siegmund"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Las encuestas y las coberturas coinciden en que el partido de extrema derecha Alternativa para Alemania (AfD) se perfila como el ganador en las elecciones estatales de Sajonia-Anhalt, donde aspira a lograr un avance histórico y obtener por primera vez un papel de poder relevante en esa región del este de Alemania; los sondeos situaban a la formación por delante cuando se abrieron los colegios electorales."
+    },
+    {
+      "_linked_ids": [
+        "subject-ukraine-2e16fde0d4e1",
+        "subject-ukraine-d754b74eb918"
+      ],
+      "cluster_id": "subject-ukraine-2e16fde0d4e1",
+      "coherence": 0.4310133026808479,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "it",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-05",
+      "headline": "Un dron ruso golpea la sede del Servicio de Seguridad de Ucrania en Kiev",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-un-drone-russe-frappe-pour-la-premiere-fois-le-siege-des-services-de-securite-a-kiev-DM4ZYR5J2BE6TLRKSJF4B7J7YE/"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/rusia-alcanza-dron-sede-servicio-secreto-ucrania-kiev_1_13488313.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/04/russian-drone-strikes-ukraine-security-service-headquarters-in-central-kyiv"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russian-drone-strikes-ukraine-security-service-headquarters-as-u-s-talks-on-the-war-are-expected"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/my-europe/2026/09/04/russian-drone-strikes-ukraine-security-service-headquarters-in-central-kyiv",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "euronews.com",
+        "lexpress.fr",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.431,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6742,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "moscou",
+        "russia",
+        "russian",
+        "russie",
+        "ukraine",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Un dron ruso alcanzó por primera vez el edificio que alberga la sede del Servicio de Seguridad de Ucrania (SBU) en el centro de Kiev. El ataque ocurrió cerca del lugar donde se encontraba la embajadora de España en un momento dado, y tuvo lugar mientras Estados Unidos mantenía conversaciones relacionadas con la guerra."
+    },
+    {
+      "_linked_ids": [
+        "subject-trump-9a4e435cf515",
+        "subject-ukraine-01beb8ce4bd7"
+      ],
+      "cluster_id": "subject-ukraine-01beb8ce4bd7",
+      "coherence": 0.3994619854538993,
+      "consequence": 3,
+      "countries": [
+        "be",
+        "france"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-06",
+      "headline": "Enviados de Trump se reunieron con Putin en Moscú y viajaron a Kiev",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-direct-guerre-en-ukraine-apres-une-rencontre-avec-poutine-a-moscou-les-emissaires-de-trump-attendus-a-kiev-pour-la-premiere-fois-20260906"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/guerre-en-ukraine-trump-envoie-ses-emissaires-a-moscou-et-a-kyiv-20260905_SSK3ISIWH5BFZKL262VHQKAC7U/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260906-en-direct-apr%C3%A8s-moscou-les-%C3%A9missaires-de-trump-attendus-en-ukraine"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260906-%C3%A0-moscou-%C3%A9missaires-de-trump-ont-discut%C3%A9-de-plans-substantiels-pour-l-ukraine-avec-poutine"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html"
+        },
+        {
+          "language": "fr",
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/dernieres-depeches/2026/09/06/invasion-de-lukraine-poutine-rencontre-a-moscou-les-emissaires-de-trump-pour-parler-de-lukraine-T36WZG6AGZHONEV2GMCDSKQZZE/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "be",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "lefigaro.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3995,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.6722,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "donald trump",
+        "kiev",
+        "kremlin",
+        "kushner",
+        "kyiv",
+        "moscou",
+        "poutine",
+        "putin",
+        "rusia",
+        "russia",
+        "russie",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "venezuela",
+        "vladimir poutine",
+        "witkoff",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Dos enviados del expresidente Donald Trump se entrevistaron con Vladimir Putin en Moscú para hablar de la guerra en Ucrania, describiendo conversaciones sobre \"planes sustantivos\", y posteriormente se dirigieron a Kiev, donde arribaron por primera vez tras la reunión en Rusia."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-b89586b806b7"
+      ],
+      "cluster_id": "subject-ceuta-b89586b806b7",
+      "coherence": 0.5354933234818078,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-05",
+      "headline": "El Gobierno español asume el control del puerto de Ceuta para alojar migrantes",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/05/6a9c0874468aeb723d8b4576.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/05/6a9c0462fc6c8310268b45bd.html"
+        },
+        {
+          "language": "es",
+          "source": "diariolibre.com",
+          "source_country": "united-states",
+          "url": "https://www.diariolibre.com/mundo/espana/2026/09/05/el-gobierno-espanol-toma-el-control-del-puerto-de-ceuta/3650047"
+        },
+        {
+          "language": "de",
+          "source": "taz.de",
+          "source_country": "germany",
+          "url": "https://taz.de/Exklave-Ceuta/!6210508/"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "sf",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/c07lz7rn2mjo?at_medium=RSS&at_campaign=rss",
-      "rank": 4,
+      "origin_country": "germany",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/05/6a9c0462fc6c8310268b45bd.html",
+      "rank": 5,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "theguardian.com"
+        "elmundo.es",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
+          "coherence": 0.5355,
+          "corroboration": 0.6,
           "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5556
         },
-        "total": 0.53,
+        "total": 0.6532,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
         "ceuta",
-        "guardia civil",
+        "marlaska",
         "marruecos",
-        "sanchez"
+        "melilla"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "Los artículos coinciden en que el presidente del Gobierno español declaró que no existen pruebas de que Marruecos estuviera detrás de la entrada masiva de migrantes en Ceuta y afirmó que no recibió avisos previos sobre el incidente; además, defendió la posición de Marruecos ante las acusaciones y sostuvo que no hay evidencias que vinculen al país con la brecha fronteriza."
-    },
-    {
-      "_linked_ids": [
-        "subject-julio-iglesias-513a1590ae72"
-      ],
-      "cluster_id": "subject-julio-iglesias-513a1590ae72",
-      "coherence": 0.4526609961407986,
-      "consequence": 1,
-      "countries": [
-        "ar",
-        "ca",
-        "france",
-        "germany",
-        "spain"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-05",
-      "headline": "Dos exempleadas presentan una nueva denuncia por agresión sexual contra Julio Iglesias",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/julio-iglesias-de-nouveau-vise-par-une-plainte-pour-agression-sexuelle-de-deux-ex-employees-20260904_D3SEZWK5RBFZDAR6LB7XTCRUPI/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-09-04/las-dos-extrabajadoras-de-julio-iglesias-que-lo-denunciaron-por-agresion-sexual-anuncian-una-querella-contra-el-cantante.html"
-        },
-        {
-          "language": "es",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/es/dos-exempleadas-vuelven-a-demandar-a-julio-iglesias/a-79040654"
-        },
-        {
-          "language": "es",
-          "source": "tiempodesanjuan.com",
-          "source_country": "ar",
-          "url": "http://www.tiempodesanjuan.com/el-mundo/dos-exempleadas-de-julio-iglesias-presentan-una-nueva-denuncia-por-agresion-sexual_1788559586"
-        },
-        {
-          "language": "fr",
-          "source": "tvanouvelles.ca",
-          "source_country": "ca",
-          "url": "https://www.tvanouvelles.ca/2026/09/04/deux-ex-employees-du-chanteur-julio-iglesias-deposent-une-nouvelle-plainte-pour-agression-sexuelle"
-        },
-        {
-          "language": "es",
-          "source": "diariodemallorca.es",
-          "source_country": "spain",
-          "url": "https://www.diariodemallorca.es/nacional/2026/09/04/exempleadas-julio-iglesias-le-demandan-133961521.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiariomontanes.es",
-          "source_country": "spain",
-          "url": "https://www.eldiariomontanes.es/cantabria-dmoda/exempleadas-julio-iglesias-vuelven-carga-tras-querellarse-20260904160933-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/sociedad/2026-09-04/las-dos-extrabajadoras-de-julio-iglesias-que-lo-denunciaron-por-agresion-sexual-anuncian-una-querella-contra-el-cantante.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "dw.com",
-        "elpais.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4527,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.68
-        },
-        "total": 0.5195,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "julio iglesias",
-      "subject_names": [
-        "julio iglesias"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Dos extrabajadoras han presentado una nueva querella/denuncia contra el cantante Julio Iglesias por agresión sexual; las noticias coinciden en que se trata de una reclamación reciente interpuesta por mujeres que trabajaron para él y llevada ante la justicia en España."
+      "subject_newsroom_count": 17,
+      "summary": "El Ejecutivo español ha tomado el control del puerto de Ceuta con el objetivo de destinarlo a alojar a migrantes; la medida se ha implementado pese a la oposición del consejo de administración y de empresarios locales, según coinciden las informaciones."
     }
   ],
-  "discarded_ingested": 37,
+  "discarded_ingested": 91,
   "discarded_kept": 5,
-  "generated_at": "2026-09-05T09:13:03.817920+00:00",
+  "generated_at": "2026-09-06T09:35:11.849281+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,
-  "served_zone": "spain",
-  "served_zone_continent": "europe",
-  "served_zone_kind": "country",
+  "served_zone": "europe",
+  "served_zone_continent": null,
+  "served_zone_kind": "continent",
   "zone": "spain",
   "zone_continent": "europe",
   "zone_kind": "country"

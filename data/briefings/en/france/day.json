@@ -1,113 +1,354 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-aubervilliers-ca8b09d3537b",
-      "coherence": 0.5293206010113478,
-      "consequence": 1,
+      "cluster_id": "subject-aramburu-03ff58a636d7",
+      "coherence": 0.39217648597217936,
+      "consequence": 2,
       "countries": [
+        "ar",
         "france"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-06",
-      "headline": "Gas leak triggers house explosion in Aubervilliers, killing a two-year-old and injuring seven",
+      "country_count": 2,
+      "editorial_day": "2026-09-07",
+      "headline": "Trial opens in Paris for two alleged far‑right killers of former rugby player Aramburu",
       "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/06/l-explosion-d-un-pavillon-a-aubervilliers-cause-la-mort-d-un-enfant-et-fait-sept-blesses-apres-une-fuite-de-gaz-annonce-la-mairie_6766921_3224.html"
+          "url": "https://www.franceinfo.fr/faits-divers/assassinat-du-rugbyman-federico-martin-aramburu/sympathisants-du-gud-passe-militaire-culte-viriliste-qui-sont-les-accuses-juges-pour-l-assassinat-de-l-ex-rugbyman-federico-martin-aramburu-a-paris_8163830.html#xtor=RSS-3-[lestitres]"
         },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260906-le-proc%C3%A8s-des-meurtriers-pr%C3%A9sum%C3%A9s-de-l-ex-rugbyman-argentin-aramburu-s-ouvre-%C3%A0-paris"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260907-proc%C3%A8s-mort-ex-rugbyman-argentin-aramburu-deux-militants-ultradroite-jug%C3%A9s-france"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/justice/20260907.OBS117996/six-balles-tirees-en-quatre-secondes-le-proces-de-deux-ex-militants-du-gud-pour-l-assassinat-du-rugbyman-federico-aramburu-s-ouvre-a-paris.html"
+        },
+        {
+          "language": "es",
+          "source": "contextotucuman.com",
+          "source_country": "ar",
+          "url": "https://www.contextotucuman.com/nota/415158/asesinato-del-rugbier-argentino-federico-aramburu-empieza-el-juicio-a-dos-miembros-de-un-grupo-de-ultraderecha-en-francia.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "ar"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "contextotucuman.com",
+      "outbound_url": "https://www.contextotucuman.com/nota/415158/asesinato-del-rugbier-argentino-federico-aramburu-empieza-el-juicio-a-dos-miembros-de-un-grupo-de-ultraderecha-en-francia.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3922,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6122,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "aramburu",
+      "subject_names": [
+        "aramburu",
+        "federico martin",
+        "france",
+        "francois hollande",
+        "paris"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "In Paris a trial has begun for two men accused of assassinating former Argentine rugby player Federico Martín Aramburú; the defendants are described as former or sympathetic members of the far‑right GUD movement and are charged over a shooting in which Aramburú was killed. Court proceedings detail that the men are being tried for the same fatal attack and the case has drawn attention because of the defendants’ alleged ultranationalist ties and the violent circumstances of the killing."
+    },
+    {
+      "cluster_id": "subject-france-6f1814dd8aaa",
+      "coherence": 0.469059616300333,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-07",
+      "headline": "Far-right AfD wins state election in Saxony-Anhalt, drawing concern in France",
+      "independent_source_count": 4,
+      "members": [
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/un-enfant-decede-et-sept-personnes-blessees-apres-une-fuite-de-gaz-a-aubervilliers-20260906"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/un-enfant-meurt-dans-lexplosion-dun-pavillon-a-aubervilliers-20260906_AFL2GHC55FFNLAZGYLVNSYUH4E/"
+          "url": "https://www.lefigaro.fr/international/victoire-de-l-afd-en-saxe-anhalt-en-france-la-gauche-et-le-centre-expriment-leurs-inquietudes-le-rn-garde-le-silence-20260907"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/un-enfant-tue-et-sept-personnes-blessees-apres-une-explosion-causee-par-une-fuite-de-gaz-dans-un-pavillon-a-aubervilliers_8179433.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/politique/francois-hollande/francois-hollande-se-dit-inquiet-de-la-victoire-d-une-des-extremes-droites-les-plus-radicales-d-europe-en-saxe-anhalt-en-allemagne_8180537.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
-          "source": "parismatch.com",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.parismatch.com/actu/faits-divers/drame-a-aubervilliers-un-enfant-de-2-ans-est-mort-dans-lexplosion-dun-pavillon-275266"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260907-l-afd-en-t%C3%AAte-en-saxe-anhalt-tour-d-horizon-des-r%C3%A9actions-en-france"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260907.OBS117998/victoire-de-l-extreme-droite-en-saxe-anhalt-en-france-la-gauche-et-le-centre-expriment-leurs-inquietudes-silence-du-rn.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/06/l-explosion-d-un-pavillon-a-aubervilliers-cause-la-mort-d-un-enfant-et-fait-sept-blesses-apres-une-fuite-de-gaz-annonce-la-mairie_6766921_3224.html",
-      "rank": 1,
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/vid%C3%A9o/20260907-l-afd-en-t%C3%AAte-en-saxe-anhalt-tour-d-horizon-des-r%C3%A9actions-en-france",
+      "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
         "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5293,
+          "coherence": 0.4691,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.5387,
+        "total": 0.6013,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "aubervilliers",
+      "subject_label": "france",
       "subject_names": [
-        "aubervilliers"
+        "allemagne",
+        "france",
+        "francois hollande",
+        "paris",
+        "saxe-anhalt"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "A gas leak caused an explosion in a single-family house in Aubervilliers that killed a two-year-old child and injured seven people; authorities have opened a judicial inquiry into the incident."
+      "subject_newsroom_count": 14,
+      "summary": "The Alternative for Germany (AfD) won the state election in Saxony-Anhalt, prompting expressions of concern from French figures across the left and center about a rise of the far right; former president François Hollande voiced particular alarm, while France’s Rassemblement National remained publicly silent."
     },
     {
-      "cluster_id": "subject-lille-ea00be5d8ac7",
+      "cluster_id": "subject-tarn-fe398f3a6ad3",
+      "coherence": 0.5384564320872249,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-07",
+      "headline": "France records 40.3°C in September heatwave at Lavaur",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/09/07/meteo-france-a-enregistre-40-3-c-a-lavaur-dans-le-tarn-dimanche-nouveau-record-national-de-chaleur-pour-septembre_6767922_3244.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/planete/vague-de-chaleur-403-c-dans-le-tarn-dimanche-nouveau-record-national-pour-septembre-20260907"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/avec-40-3-c-releves-dans-le-tarn-dimanche-le-record-national-de-chaleur-a-ete-battu-en-france-hexagonale-pour-un-mois-de-septembre_8180699.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "ladepeche.fr",
+          "source_country": "france",
+          "url": "https://www.ladepeche.fr/2026/09/06/canicule-jusqua-403c-a-lavaur-dans-le-tarn-le-pic-de-chaleur-a-ete-atteint-ce-dimanche-les-temperatures-vont-commencer-a-baisser-lundi-13538464.php"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "ladepeche.fr",
+      "outbound_url": "https://www.ladepeche.fr/2026/09/06/canicule-jusqua-403c-a-lavaur-dans-le-tarn-le-pic-de-chaleur-a-ete-atteint-ce-dimanche-les-temperatures-vont-commencer-a-baisser-lundi-13538464.php",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5385,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.594,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "tarn",
+      "subject_names": [
+        "tarn"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Meteorological services registered 40.3°C in Lavaur, Tarn, on Sunday, setting a new national high temperature record for the month of September in metropolitan France; the heat peaked on Sunday and forecasts indicated temperatures would begin to fall on Monday."
+    },
+    {
+      "cluster_id": "subject-zevent-ffe7b7966d74",
+      "coherence": 0.464813297162305,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-07",
+      "headline": "ZEvent raises nearly €33 million in record-breaking final edition",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/economie-numerique/le-zevent-pulverise-son-record-pour-son-ultime-edition-avec-pres-de-33-millions-de-dons-20260907_BGJFH5ZUERE2XLZG57PXEBB2UU/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/zevent-record-battu-avec-deja-plus-de-20-millions-d-euros-de-dons-recoltes-20260906"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/internet/reseaux-sociaux/l-evenement-caritatif-zevent-depasse-les-16-5-millions-d-euros-de-dons-un-record-a-quelques-heures-de-la-fin-de-son-ultime-edition_8179991.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260906-les-streamers-de-zevent-collectent-pr%C3%A8s-de-33-millions-d-euros-pour-son-ultime-%C3%A9dition"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/gaming/zevent-2026-la-kermesse-dinternet-fait-ses-adieux-avec-une-edition-record-et-32-8-millions-collectes-on-vous-raconte-feaa9b76-aa47-11f1-a618-771a80631f2f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "20minutes.fr",
+          "source_country": "france",
+          "url": "https://www.20minutes.fr/gaming/4243067-20260907-zevent-recolte-pres-33-millions-euros-dernier-marathon-caritatif"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/france/20260906-les-streamers-de-zevent-collectent-pr%C3%A8s-de-33-millions-d-euros-pour-son-ultime-%C3%A9dition",
+      "rank": 4,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "liberation.fr",
+        "ouest-france.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4648,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.5468,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "zevent",
+      "subject_names": [
+        "zevent"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "The French streaming charity marathon ZEvent concluded its final edition having raised about €32.8–€33 million, a new record total for the event. The multi-stream fundraiser, run by a collective of streamers, closed with its highest-ever amount collected for charitable causes."
+    },
+    {
+      "cluster_id": "subject-fabien-roussel-ad029d632e6a",
       "coherence": null,
       "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-06",
-      "headline": "Presidential hopefuls campaign at Lille flea market ahead of 2027 vote",
+      "editorial_day": "2026-09-07",
+      "headline": "Fabien Roussel launches his candidacy for France's 2027 presidential election",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-jean-luc-melenchon-a-la-braderie-de-lille-a-fond-sur-le-pouvoir-dachat-20260905_GBAQNSSV55E2TESVNL3AOUNWLA/"
+          "url": "https://www.liberation.fr/politique/presidentielle-2027-fabien-roussel-repart-en-campagne-20260906_LNP67N3RFJGH5AWISUMBPUHHO4/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260906-pr%C3%A9sidentielle-2027-fabien-roussel-officialise-sa-candidature-avec-le-pcf"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260905-pr%C3%A9sidentielle-en-france-des-candidats-en-campagne-%C3%A0-la-braderie-de-lille"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20260905.OBS117951/une-braderie-de-lille-tres-politique-a-quelques-mois-de-l-election-presidentielle.html"
+          "url": "https://www.rfi.fr/fr/france/20260907-france-fabien-roussel-officialise-sa-candidature-%C3%A0-l-%C3%A9lection-pr%C3%A9sidentielle-de-2027"
         }
       ],
       "mentioned_countries": [
@@ -115,12 +356,12 @@
       ],
       "origin_country": "france",
       "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/politique/elections/presidentielle-2027-jean-luc-melenchon-a-la-braderie-de-lille-a-fond-sur-le-pouvoir-dachat-20260905_GBAQNSSV55E2TESVNL3AOUNWLA/",
-      "rank": 2,
+      "outbound_url": "https://www.liberation.fr/politique/presidentielle-2027-fabien-roussel-repart-en-campagne-20260906_LNP67N3RFJGH5AWISUMBPUHHO4/",
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "france24.com",
         "liberation.fr",
-        "nouvelobs.com",
         "rfi.fr"
       ],
       "score": {
@@ -138,321 +379,17 @@
         "total": 0.5114,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "lille",
+      "subject_label": "fabien roussel",
       "subject_names": [
-        "jean-luc melenchon",
-        "lille"
+        "fabien roussel"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Several presidential candidates, including Jean‑Luc Mélenchon, attended the annual Braderie de Lille to campaign and focus on voters’ concerns such as purchasing power; the event drew multiple parties and served as a high‑profile campaign stop in the run‑up to the 2027 presidential election."
-    },
-    {
-      "cluster_id": "subject-putin-9ab7dabb28b6",
-      "coherence": 0.49694635181800917,
-      "consequence": 3,
-      "countries": [
-        "ho",
-        "it",
-        "mx",
-        "spain",
-        "tw"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-06",
-      "filled_from": "europe",
-      "headline": "Putin orders three-day pause in attacks on Kyiv during US envoys’ visits",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-05/los-negociadores-de-trump-llegan-a-moscu-para-intentar-reimpulsar-las-negociaciones-de-paz.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/putin-ordena-suspender-tres-dias-ataques-kiev-llegada-moscu-emisarios-trump_1_13489774.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/05/6a9c1704468aeba9688b4582.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/putin-ordena-suspender-dias-ataques-kiev-llegada-emisarios-eeuu_7033229_0.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/internacional/2026/09/06/2703037/putin-ordena-suspender-tres-dias-ataques-contra-kiev-durante-visita-delegacion-eeuu-1.html"
-        },
-        {
-          "language": "it",
-          "source": "ilpost.it",
-          "source_country": "it",
-          "url": "https://www.ilpost.it/2026/09/05/russia-ucraina-sospensione-attacchi-visita-witkoff-kushner/?homepagePosition=4.1&referrerPost=3672147"
-        },
-        {
-          "language": "en",
-          "source": "taipeitimes.com",
-          "source_country": "tw",
-          "url": "https://www.taipeitimes.com/News/front/archives/2026/09/06/2003863760"
-        },
-        {
-          "language": "es",
-          "source": "vanguardia.com.mx",
-          "source_country": "mx",
-          "url": "https://vanguardia.com.mx/noticias/internacional/ordena-putin-una-pausa-de-72-horas-en-los-ataques-por-visita-de-enviados-de-eu-a-rusia-y-ucrania-HK23297505"
-        },
-        {
-          "language": "es",
-          "source": "laprensa.hn",
-          "source_country": "ho",
-          "url": "http://www.laprensa.hn/mundo/putin-ordena-suspender-ataques-kiev-llegada-emisarios-eeuu-FI31936201"
-        }
-      ],
-      "mentioned_countries": [
-        "rs",
-        "up"
-      ],
-      "origin_country": "ho",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-09-05/los-negociadores-de-trump-llegan-a-moscu-para-intentar-reimpulsar-las-negociaciones-de-paz.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elpais.com",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4969,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7333
-        },
-        "total": 0.6785,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "putin",
-      "subject_names": [
-        "kremlin",
-        "putin"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Russian President Vladimir Putin ordered a suspension of attacks on Kyiv for three days coinciding with visits by US envoys to Moscow and Ukraine; reports say the pause was linked to the arrival of the American delegation and applies to airstrikes or attacks on the capital during that period."
-    },
-    {
-      "cluster_id": "subject-ukraine-01beb8ce4bd7",
-      "coherence": 0.3994619854538993,
-      "consequence": 3,
-      "countries": [
-        "be",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-06",
-      "filled_from": "europe",
-      "headline": "Two Trump envoys met Putin in Moscow then traveled to Ukraine",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/en-direct-guerre-en-ukraine-apres-une-rencontre-avec-poutine-a-moscou-les-emissaires-de-trump-attendus-a-kiev-pour-la-premiere-fois-20260906"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/guerre-en-ukraine-trump-envoie-ses-emissaires-a-moscou-et-a-kyiv-20260905_SSK3ISIWH5BFZKL262VHQKAC7U/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260906-en-direct-apr%C3%A8s-moscou-les-%C3%A9missaires-de-trump-attendus-en-ukraine"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260906-%C3%A0-moscou-%C3%A9missaires-de-trump-ont-discut%C3%A9-de-plans-substantiels-pour-l-ukraine-avec-poutine"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html"
-        },
-        {
-          "language": "fr",
-          "source": "lalibre.be",
-          "source_country": "be",
-          "url": "https://www.lalibre.be/dernieres-depeches/2026/09/06/invasion-de-lukraine-poutine-rencontre-a-moscou-les-emissaires-de-trump-pour-parler-de-lukraine-T36WZG6AGZHONEV2GMCDSKQZZE/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "be",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "lefigaro.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3995,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.6522,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "donald trump",
-        "kiev",
-        "kremlin",
-        "kushner",
-        "kyiv",
-        "moscou",
-        "poutine",
-        "putin",
-        "rusia",
-        "russia",
-        "russie",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "venezuela",
-        "vladimir poutine",
-        "witkoff",
-        "zelenski",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Two envoys sent by former U.S. President Donald Trump met Russian President Vladimir Putin in Moscow to discuss substantive plans related to the war in Ukraine, and afterward proceeded to travel to Kyiv for a first visit to Ukraine."
-    },
-    {
-      "cluster_id": "subject-afd-d7d23a47eec6",
-      "coherence": 0.47977604828543885,
-      "consequence": 3,
-      "countries": [
-        "as",
-        "it",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-06",
-      "filled_from": "europe",
-      "headline": "Far-right AfD predicted to win Saxony-Anhalt state election",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/06/far-right-afd-saxony-anhalt-state-election-germany"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/09/06/polls-open-in-saxony-anhalt-as-afd-predicted-to-win-state-election"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/germany-far-afd-eyes-historic-081246000.html"
-        },
-        {
-          "language": "en",
-          "source": "perthnow.com.au",
-          "source_country": "as",
-          "url": "https://www.perthnow.com.au/news/politics/germanys-far-right-afd-seeks-landmark-state-victory-c-22830596"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "as",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4798,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.6406,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "afd",
-      "subject_names": [
-        "afd",
-        "alemania",
-        "berlin",
-        "leipzig",
-        "sajonia-anhalt",
-        "ulrich siegmund"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Polls and commentators across multiple outlets forecast that the far-right Alternative for Germany (AfD) is set to make a strong showing and is predicted to win the state election in Saxony-Anhalt, where the party is seeking its first significant foothold in regional government."
+      "subject_newsroom_count": 3,
+      "summary": "Fabien Roussel has formally announced his candidacy for the 2027 French presidential election as the French Communist Party (PCF) candidate and has begun campaigning. The articles state that Roussel officially presented his bid with the backing of the PCF and is actively restarting his campaign efforts toward the 2027 vote."
     }
   ],
-  "discarded_ingested": 8,
+  "discarded_ingested": 28,
   "discarded_kept": 5,
-  "generated_at": "2026-09-06T09:35:11.849281+00:00",
+  "generated_at": "2026-09-07T10:36:14.263864+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

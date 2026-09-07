@@ -1,239 +1,181 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-putin-9ab7dabb28b6",
-      "coherence": 0.49694635181800917,
+      "cluster_id": "subject-ceuta-84fb938781a3",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "ho",
-        "it",
-        "mx",
-        "spain",
-        "tw"
+        "spain"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-09-06",
-      "headline": "Putin y Zelenski ordenan una pausa de tres días en los ataques por visitas de enviados",
-      "independent_source_count": 9,
+      "country_count": 1,
+      "editorial_day": "2026-09-07",
+      "headline": "El Gobierno desclasificará y hará públicos los informes sobre la crisis de Ceuta",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-05/los-negociadores-de-trump-llegan-a-moscu-para-intentar-reimpulsar-las-negociaciones-de-paz.html"
-        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/putin-ordena-suspender-tres-dias-ataques-kiev-llegada-moscu-emisarios-trump_1_13489774.html"
+          "url": "https://www.eldiario.es/politica/gobierno-desclasificara-martes-informes-secretos-ceuta-apoya-sanchez-exculpar-marruecos_1_13491858.html"
         },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/07/6a9e8d00e4d4d85d0a8b4586.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-gobierno-desclasificara-martes-informes-crisis-ceuta-estaran-disposicion-publica-miercoles-20260907114559.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-gobierno-desclasificara-martes-informes-crisis-ceuta-estaran-disposicion-publica-miercoles-20260907114559.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elmundo.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6581,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "marruecos"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "El Gobierno ha anunciado que desclasificará este martes los informes secretos relacionados con la crisis de Ceuta y que esos documentos estarán a disposición pública el miércoles; la medida busca aclarar la gestión del Ejecutivo durante los hechos."
+    },
+    {
+      "cluster_id": "subject-ceuta-ff09734eedf6",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-07",
+      "headline": "Feijóo acusa al Gobierno de planear cesiones a Marruecos tras la llegada masiva a Ceuta",
+      "independent_source_count": 3,
+      "members": [
         {
           "language": "es",
           "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/05/6a9c1704468aeba9688b4582.html"
+          "url": "https://www.expansion.com/economia/2026/09/07/6a9e77ace5fdea1f628b459c.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/putin-ordena-suspender-dias-ataques-kiev-llegada-emisarios-eeuu_7033229_0.html"
+          "url": "https://www.elmundo.es/espana/2026/09/07/6a9e73ad21efa0913c8b4581.html"
         },
         {
           "language": "es",
-          "source": "ultimahora.es",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/internacional/2026/09/06/2703037/putin-ordena-suspender-tres-dias-ataques-contra-kiev-durante-visita-delegacion-eeuu-1.html"
-        },
-        {
-          "language": "it",
-          "source": "ilpost.it",
-          "source_country": "it",
-          "url": "https://www.ilpost.it/2026/09/05/russia-ucraina-sospensione-attacchi-visita-witkoff-kushner/?homepagePosition=4.1&referrerPost=3672147"
-        },
-        {
-          "language": "en",
-          "source": "taipeitimes.com",
-          "source_country": "tw",
-          "url": "https://www.taipeitimes.com/News/front/archives/2026/09/06/2003863760"
-        },
-        {
-          "language": "es",
-          "source": "vanguardia.com.mx",
-          "source_country": "mx",
-          "url": "https://vanguardia.com.mx/noticias/internacional/ordena-putin-una-pausa-de-72-horas-en-los-ataques-por-visita-de-enviados-de-eu-a-rusia-y-ucrania-HK23297505"
-        },
-        {
-          "language": "es",
-          "source": "laprensa.hn",
-          "source_country": "ho",
-          "url": "http://www.laprensa.hn/mundo/putin-ordena-suspender-ataques-kiev-llegada-emisarios-eeuu-FI31936201"
+          "url": "https://www.elconfidencial.com/espana/2026-09-07/feijoo-sugiere-que-el-gobierno-planeo_4418937/"
         }
       ],
       "mentioned_countries": [
-        "rs",
-        "up"
+        "mo",
+        "spain"
       ],
-      "origin_country": "ho",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-09-05/los-negociadores-de-trump-llegan-a-moscu-para-intentar-reimpulsar-las-negociaciones-de-paz.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/07/6a9e73ad21efa0913c8b4581.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elpais.com",
+        "elconfidencial.com",
+        "elmundo.es",
         "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4969,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7333
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.7285,
+        "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "putin",
+      "subject_label": "ceuta",
       "subject_names": [
-        "kremlin",
-        "putin"
+        "ayuso",
+        "ceuta",
+        "feijoo",
+        "marruecos",
+        "pedro sanchez",
+        "psoe",
+        "sanchez"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "Varios medios informan que, con motivo de la llegada a Moscú y a Kiev de emisarios enviados por Estados Unidos, tanto Vladimir Putin como Volodímir Zelenski han ordenado suspender los ataques sobre Kiev durante un período de tres días."
+      "subject_newsroom_count": 16,
+      "summary": "Alberto Núñez Feijóo y Juan Vivas han afirmado que Marruecos auspició la entrada masiva de migrantes en Ceuta y han denunciado que el Ejecutivo de Pedro Sánchez habría diseñado un \"plan\" tras esa crisis que incluía alguna forma de cesión a Marruecos; los artículos recogen que Feijóo vinculó la supuesta intervención marroquí con el objetivo final de obtener concesiones del Gobierno español."
     },
     {
-      "cluster_id": "subject-ukraine-01beb8ce4bd7",
-      "coherence": 0.3994619854538993,
-      "consequence": 3,
-      "countries": [
-        "be",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-06",
-      "headline": "Enviados de Trump se reunieron con Putin en Moscú y viajaron a Kiev",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/en-direct-guerre-en-ukraine-apres-une-rencontre-avec-poutine-a-moscou-les-emissaires-de-trump-attendus-a-kiev-pour-la-premiere-fois-20260906"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/guerre-en-ukraine-trump-envoie-ses-emissaires-a-moscou-et-a-kyiv-20260905_SSK3ISIWH5BFZKL262VHQKAC7U/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260906-en-direct-apr%C3%A8s-moscou-les-%C3%A9missaires-de-trump-attendus-en-ukraine"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260906-%C3%A0-moscou-%C3%A9missaires-de-trump-ont-discut%C3%A9-de-plans-substantiels-pour-l-ukraine-avec-poutine"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html"
-        },
-        {
-          "language": "fr",
-          "source": "lalibre.be",
-          "source_country": "be",
-          "url": "https://www.lalibre.be/dernieres-depeches/2026/09/06/invasion-de-lukraine-poutine-rencontre-a-moscou-les-emissaires-de-trump-pour-parler-de-lukraine-T36WZG6AGZHONEV2GMCDSKQZZE/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "be",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260905.OBS117948/deux-emissaires-de-donald-trump-en-route-pour-moscou-et-kiev.html",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "lefigaro.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3995,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.7022,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "donald trump",
-        "kiev",
-        "kremlin",
-        "kushner",
-        "kyiv",
-        "moscou",
-        "poutine",
-        "putin",
-        "rusia",
-        "russia",
-        "russie",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "venezuela",
-        "vladimir poutine",
-        "witkoff",
-        "zelenski",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Dos enviados del expresidente Donald Trump se entrevistaron con Vladimir Putin en Moscú para hablar de la guerra en Ucrania, describiendo conversaciones sobre \"planes sustantivos\", y posteriormente se dirigieron a Kiev, donde arribaron por primera vez tras la reunión en Rusia."
-    },
-    {
-      "cluster_id": "subject-afd-d7d23a47eec6",
-      "coherence": 0.47977604828543885,
+      "cluster_id": "subject-german-7122f4707afe",
+      "coherence": 0.498275646458212,
       "consequence": 3,
       "countries": [
         "as",
+        "china",
+        "is",
         "it",
-        "united-kingdom"
+        "lu",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-06",
-      "headline": "El partido de extrema derecha AfD se perfila para ganar en Sajonia-Anhalt",
-      "independent_source_count": 5,
+      "country_count": 7,
+      "editorial_day": "2026-09-07",
+      "filled_from": "europe",
+      "headline": "El partido de extrema derecha AfD gana las elecciones en Sajonia-Anhalt",
+      "independent_source_count": 20,
       "members": [
         {
           "language": "en",
           "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/06/far-right-afd-saxony-anhalt-state-election-germany"
+          "url": "https://www.theguardian.com/world/2026/sep/06/saxony-anhalt-germany-afd-exit-poll-ulrich-siegmund"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/c5yegd6ldy6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
@@ -245,19 +187,109 @@
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/09/06/polls-open-in-saxony-anhalt-as-afd-predicted-to-win-state-election"
+          "url": "http://www.euronews.com/my-europe/2026/09/06/german-far-right-afd-wins-by-a-landslide-in-saxony-anhalt-exit-polls"
         },
         {
           "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/germany-far-afd-eyes-historic-081246000.html"
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/06/nx-s1-5955677/german-afd-far-right"
         },
         {
           "language": "en",
-          "source": "perthnow.com.au",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/german-far-right-party-set-for-strong-win-in-regional-election-but-uncertain-of-governing"
+        },
+        {
+          "language": "en",
+          "source": "chronicle.lu",
+          "source_country": "lu",
+          "url": "https://www.chronicle.lu/category/international-news/63208-far-right-afd-wins-historic-victory-in-german-state-election"
+        },
+        {
+          "language": "en",
+          "source": "wuky.org",
+          "source_country": "united-states",
+          "url": "https://www.wuky.org/npr-news/2026-09-06/germanys-far-right-achieves-an-electoral-breakthrough-in-key-state-election"
+        },
+        {
+          "language": "en",
+          "source": "wfdd.org",
+          "source_country": "united-states",
+          "url": "https://www.wfdd.org/national/2026-09-06/germanys-far-right-achieves-an-electoral-breakthrough-in-key-state-election"
+        },
+        {
+          "language": "en",
+          "source": "israelnationalnews.com",
+          "source_country": "is",
+          "url": "https://www.israelnationalnews.com/news/432810"
+        },
+        {
+          "language": "en",
+          "source": "klcc.org",
+          "source_country": "united-states",
+          "url": "https://www.klcc.org/npr-news/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "kvpr.org",
+          "source_country": "united-states",
+          "url": "https://www.kvpr.org/npr-news/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "illawarramercury.com.au",
           "source_country": "as",
-          "url": "https://www.perthnow.com.au/news/politics/germanys-far-right-afd-seeks-landmark-state-victory-c-22830596"
+          "url": "https://www.illawarramercury.com.au/story/9344855/anti-immigration-party-dominates-german-state-election/"
+        },
+        {
+          "language": "en",
+          "source": "bordermail.com.au",
+          "source_country": "as",
+          "url": "https://www.bordermail.com.au/story/9344855/anti-immigration-party-dominates-german-state-election/"
+        },
+        {
+          "language": "en",
+          "source": "kcbx.org",
+          "source_country": "united-states",
+          "url": "https://www.kcbx.org/npr-top-news/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "krwg.org",
+          "source_country": "united-states",
+          "url": "https://www.krwg.org/national-news/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "waer.org",
+          "source_country": "united-states",
+          "url": "https://www.waer.org/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "upr.org",
+          "source_country": "united-states",
+          "url": "https://www.upr.org/npr-news/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "scmp.com",
+          "source_country": "china",
+          "url": "https://www.scmp.com/news/world/europe/article/3366562/germanys-far-right-afd-landslide-winner-eastern-state-vote-exit-polls-indicate"
+        },
+        {
+          "language": "en",
+          "source": "wrvo.org",
+          "source_country": "united-states",
+          "url": "https://www.wrvo.org/2026-09-06/german-exit-polls-suggest-far-right-party-has-big-lead-in-regional-election"
+        },
+        {
+          "language": "en",
+          "source": "netscape.com",
+          "source_country": "united-states",
+          "url": "https://isp.netscape.com:443/pf/story/0001/20260906/c538060710a2495c72425b6468df0d40"
         }
       ],
       "mentioned_countries": [
@@ -267,208 +299,253 @@
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss",
       "rank": 3,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "bbc.co.uk",
         "euronews.com",
+        "npr.org",
+        "pbs.org",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4798,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4983,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
+          "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "prominence": 0.8333,
+          "source_reliability": 0.8644
         },
-        "total": 0.6906,
+        "total": 0.7081,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "afd",
+      "subject_label": "german",
       "subject_names": [
         "afd",
-        "alemania",
-        "berlin",
-        "leipzig",
-        "sajonia-anhalt",
-        "ulrich siegmund"
+        "cdu",
+        "deutschland",
+        "europa",
+        "europe",
+        "friedrich merz",
+        "german",
+        "germany's",
+        "merz"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Las encuestas y las coberturas coinciden en que el partido de extrema derecha Alternativa para Alemania (AfD) se perfila como el ganador en las elecciones estatales de Sajonia-Anhalt, donde aspira a lograr un avance histórico y obtener por primera vez un papel de poder relevante en esa región del este de Alemania; los sondeos situaban a la formación por delante cuando se abrieron los colegios electorales."
+      "subject_newsroom_count": 6,
+      "summary": "Los sondeos y resultados proyectados muestran que el partido de extrema derecha Alternativa para Alemania (AfD) obtuvo una victoria amplia en las elecciones estatales de Sajonia-Anhalt, logrando el mayor porcentaje de votos pero quedándose por debajo de una mayoría absoluta y dejando incierto si podrá gobernar por sí solo."
     },
     {
-      "cluster_id": "subject-ukraine-2e16fde0d4e1",
-      "coherence": 0.4310133026808479,
-      "consequence": 3,
+      "cluster_id": "subject-ulrich-siegmund-f6b1dee1a1e7",
+      "coherence": 0.43521696521160214,
+      "consequence": 2,
       "countries": [
         "france",
         "it",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-05",
-      "headline": "Un dron ruso golpea la sede del Servicio de Seguridad de Ucrania en Kiev",
-      "independent_source_count": 4,
+      "country_count": 3,
+      "editorial_day": "2026-09-07",
+      "filled_from": "europe",
+      "headline": "Ulrich Siegmund lidera la victoria histórica de la AfD en Sajonia-Anhalt",
+      "independent_source_count": 9,
       "members": [
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-un-drone-russe-frappe-pour-la-premiere-fois-le-siege-des-services-de-securite-a-kiev-DM4ZYR5J2BE6TLRKSJF4B7J7YE/"
+          "url": "https://www.lemonde.fr/international/article/2026/09/06/qui-est-ulrich-siegmund-la-figure-montante-de-l-extreme-droite-allemande-qui-galvanise-les-foules-et-fait-trembler-berlin_6756796_3211.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/ulrich-siegmund-l-etoile-montante-inattendue-et-lisse-de-lextreme-droite-allemande-20260828"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/060926/ulrich-siegmund-l-homme-qui-construit-la-victoire-de-l-afd-en-saxe-anhalt"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260907-allemagne-ulrich-siegmund-l-homme-derri%C3%A8re-la-victoire-afd-extr%C3%AAme-droite-en-saxe-anhalt"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260906.OBS117968/10-choses-a-savoir-sur-ulrich-siegmund-le-populiste-d-extreme-droite-qui-veut-faire-sauter-les-verrous-de-la-democratie-allemande.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/rusia-alcanza-dron-sede-servicio-secreto-ucrania-kiev_1_13488313.html"
+          "url": "https://www.eldiario.es/internacional/ulrich-siegmund-cara-amable-ultraderecha-alemana-dura-vende-etnonacionalismo-sonrisa-comercial_129_13491585.html"
         },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/09/04/russian-drone-strikes-ukraine-security-service-headquarters-in-central-kyiv"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russian-drone-strikes-ukraine-security-service-headquarters-as-u-s-talks-on-the-war-are-expected"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "http://www.euronews.com/my-europe/2026/09/04/russian-drone-strikes-ukraine-security-service-headquarters-in-central-kyiv",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "euronews.com",
-        "lexpress.fr",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.431,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6682,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "moscou",
-        "russia",
-        "russian",
-        "russie",
-        "ukraine",
-        "zelensky"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Un dron ruso alcanzó por primera vez el edificio que alberga la sede del Servicio de Seguridad de Ucrania (SBU) en el centro de Kiev. El ataque ocurrió cerca del lugar donde se encontraba la embajadora de España en un momento dado, y tuvo lugar mientras Estados Unidos mantenía conversaciones relacionadas con la guerra."
-    },
-    {
-      "cluster_id": "subject-ceuta-b89586b806b7",
-      "coherence": 0.5354933234818078,
-      "consequence": 3,
-      "countries": [
-        "germany",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-05",
-      "headline": "El Gobierno español asume el control del puerto de Ceuta para alojar migrantes",
-      "independent_source_count": 4,
-      "members": [
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/05/6a9c0874468aeb723d8b4576.html"
+          "url": "https://www.elespanol.com/mundo/europa/20260907/siegmund-rostro-amable-afd-lleva-extrema-derecha-alemania-victoria-historica-sajonia/1003744374580_0.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/05/6a9c0462fc6c8310268b45bd.html"
+          "url": "https://www.elmundo.es/internacional/2026/09/06/6a9d3ea521efa0d91f8b459e.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/07/ulrich-siegmund-from-cdu-member-to-afd-lead-candidate"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/video/2026/09/06/afds-ulrich-siegmund-casts-vote-in-key-german-state-election"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "http://www.euronews.com/video/2026/09/06/afds-ulrich-siegmund-casts-vote-in-key-german-state-election",
+      "rank": 4,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "euronews.com",
+        "la-croix.com",
+        "lemonde.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4352,
+          "corroboration": 0.6,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6362,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ulrich siegmund",
+      "subject_names": [
+        "afd",
+        "alemania",
+        "allemagne",
+        "cdu",
+        "deutschland",
+        "sajonia-anhalt",
+        "saxe-anhalt",
+        "siegmund",
+        "ulrich siegmund"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Ulrich Siegmund, exmiembro de la CDU y ahora candidato principal de la AfD, emergió como la figura central detrás del avance de la extrema derecha en Sajonia-Anhalt; los artículos coinciden en que su imagen cuidadosamente construida y su capacidad para movilizar votantes contribuyeron a la victoria regional, y lo presentan como un líder populista que ha acelerado el ascenso electoral del partido."
+    },
+    {
+      "cluster_id": "subject-carlos-iii-bb5210de845f",
+      "coherence": 0.473937855371932,
+      "consequence": 0,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-07",
+      "headline": "La Princesa Leonor comienza sus estudios en la Universidad Carlos III de Madrid",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/casa-real/princesa-leonor-llega-primer-dia-universidad-carlos-20260907092131-nt.html"
         },
         {
           "language": "es",
-          "source": "diariolibre.com",
-          "source_country": "united-states",
-          "url": "https://www.diariolibre.com/mundo/espana/2026/09/05/el-gobierno-espanol-toma-el-control-del-puerto-de-ceuta/3650047"
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/sociedad/2026/09/07/6a9e70af468aebf80f8b4592.html"
         },
         {
-          "language": "de",
-          "source": "taz.de",
-          "source_country": "germany",
-          "url": "https://taz.de/Exklave-Ceuta/!6210508/"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/04/6a9af4a0e4d4d872368b458c.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-princesa-leonor-inicia-muchas-ganas-rodeada-expectacion-estudios-carlos-iii-20260907093838.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "germany",
+      "origin_country": "spain",
       "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/05/6a9c0462fc6c8310268b45bd.html",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/04/6a9af4a0e4d4d872368b458c.html",
       "rank": 5,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "abc.es",
         "elmundo.es",
+        "europapress.es",
         "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5355,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "coherence": 0.4739,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.5556
+          "source_reliability": 0.6
         },
-        "total": 0.6399,
+        "total": 0.4552,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "carlos iii",
       "subject_names": [
-        "ceuta",
-        "marlaska",
-        "marruecos",
-        "melilla"
+        "carlos iii",
+        "princesa leonor"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "El Ejecutivo español ha tomado el control del puerto de Ceuta con el objetivo de destinarlo a alojar a migrantes; la medida se ha implementado pese a la oposición del consejo de administración y de empresarios locales, según coinciden las informaciones."
+      "subject_newsroom_count": 6,
+      "summary": "La Princesa Leonor asistió a su primer día de clases en la Universidad Carlos III de Madrid, donde inició sus estudios rodeada de expectación y con ánimo de comenzar la vida universitaria; la universidad buscó garantizar la normalidad en el inicio de curso."
     }
   ],
-  "discarded_ingested": 72,
+  "discarded_ingested": 14,
   "discarded_kept": 5,
-  "generated_at": "2026-09-06T09:35:11.849281+00:00",
+  "generated_at": "2026-09-07T10:36:14.263864+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,
-  "served_zone": "europe",
-  "served_zone_continent": null,
-  "served_zone_kind": "continent",
+  "served_zone": "spain",
+  "served_zone_continent": "europe",
+  "served_zone_kind": "country",
   "zone": "spain",
   "zone_continent": "europe",
   "zone_kind": "country"

@@ -2,388 +2,521 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-cisjordanie-1590e66e8288"
+        "subject-ceuta-fcfaa3f92630"
       ],
-      "cluster_id": "subject-cisjordanie-1590e66e8288",
-      "coherence": 0.488207915833199,
+      "cluster_id": "subject-ceuta-fcfaa3f92630",
+      "coherence": 0.4447986475722894,
       "consequence": 3,
       "countries": [
-        "be",
         "france",
-        "sz",
+        "it",
+        "ro",
+        "spain",
         "united-states"
       ],
-      "country_count": 4,
+      "country_count": 5,
       "editorial_day": "2026-09-09",
-      "headline": "Twelve countries impose measures targeting trade with Israeli settlements in the West Bank",
+      "headline": "EU grants Spain €115 million to help manage Ceuta migration crisis",
       "independent_source_count": 10,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/08/onze-pays-europeens-et-le-canada-imposent-a-israel-des-sanctions-contre-les-produits-issus-des-colonies-en-cisjordanie_6768553_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/09/apres-l-afflux-de-migrants-a-ceuta-l-ue-accorde-115-millions-d-euros-a-l-espagne-pour-renforcer-sa-frontiere_6768922_3210.html"
         },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/comision-europea-aprueba-ayuda-emergencia-115-millones-ceuta_1_13498133.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/09/6aa16741e5fdea761d8b456f.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/09/6aa16502e9cf4ab16a8b45ca.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/09/ceuta-crisis-eu-grants-spain-114-million-in-gesture-of-solidarity"
+        },
+        {
+          "language": "en",
+          "source": "yahoo.com",
+          "source_country": "united-states",
+          "url": "https://www.yahoo.com/news/world/articles/eu-provides-115m-help-spain-164827150.html"
+        },
+        {
+          "language": "es",
+          "source": "granadahoy.com",
+          "source_country": "spain",
+          "url": "https://www.granadahoy.com/espana/bruselas-desbloquea-115-millones-fondos_0_2007913963.html"
+        },
+        {
+          "language": "ron",
+          "source": "agerpres.ro",
+          "source_country": "ro",
+          "url": "https://agerpres.ro/politic-extern/2026/09/09/ue-acorda-spaniei-un-ajutor-de-115-milioane-de-euro-pentru-gestionarea-crizei-migrantilor-in-ceuta--1592112"
+        },
+        {
+          "language": "ron",
+          "source": "hotnews.ro",
+          "source_country": "ro",
+          "url": "https://hotnews.ro/ue-a-acordat-spaniei-115-000-000-de-euro-pentru-a-gestiona-criza-migrantilor-din-ceuta-2345507"
+        },
+        {
+          "language": "ron",
+          "source": "stirileprotv.ro",
+          "source_country": "ro",
+          "url": "https://stirileprotv.ro/ue-a-acordat-spaniei-115-milioane-de-euro-pentru-criza-migrantilor-din-ceuta-peste-70-000-au-intrat-in-enclava.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/09/6aa16502e9cf4ab16a8b45ca.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elmundo.es",
+        "euronews.com",
+        "expansion.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4448,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7576
+        },
+        "total": 0.7191,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "bruselas",
+        "ceuta",
+        "cni",
+        "guardia civil",
+        "marlaska",
+        "marruecos",
+        "vivas"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "The European Union has approved about €114.7–€115 million in emergency funding to Spain to help manage the surge of migrants into the Spanish enclave of Ceuta; the aid is presented as a solidarity gesture and will support border management efforts, including reinforcement of Frontex."
+    },
+    {
+      "_linked_ids": [
+        "subject-zelensky-1be48320a4e0"
+      ],
+      "cluster_id": "subject-zelensky-1be48320a4e0",
+      "coherence": 0.4821213667027294,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "france",
+        "it",
+        "spain"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-10",
+      "headline": "A drone nearly struck President Zelensky’s plane en route to Oslo",
+      "independent_source_count": 11,
+      "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/colonies-en-cisjordanie-israel-sanctionne-par-12-pays-une-claque-avant-tout-symbolique-20260908_ISBXFISKNZDO5I7SVMPNN62SJI/"
+          "url": "https://www.liberation.fr/international/europe/lavion-du-president-ukrainien-volodymyr-zelensky-a-failli-etre-frappe-par-un-drone-en-moldavie-20260909_J2DRTI6ASVET3AKGDFUK53Y3BE/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/cisjordanie-la-france-interdit-de-l-importation-des-produits-des-colonies-israeliennes-20260908"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/080926/cisjordanie-12-pays-dont-la-france-et-le-royaume-uni-veulent-sanctionner-le-commerce-avec-les-colon"
+          "url": "https://www.la-croix.com/international/l-avion-de-zelensky-a-failli-etre-touche-par-un-drone-tandis-quil-etait-en-route-vers-oslo-20260909"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/palestine/12-pays-dont-la-france-veulent-mettre-fin-au-commerce-avec-les-colonies-israeliennes-en-cisjordanie_8184317.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.franceinfo.fr/replay-radio/d-un-monde-a-l-autre/un-drone-pres-de-l-avion-de-volodymyr-zelensky-ravive-les-inquietudes-sur-sa-securite_8165057.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260908.OBS118036/un-nettoyage-ethnique-est-en-cours-en-cisjordanie-12-pays-dont-la-france-vont-sanctionner-le-commerce-avec-les-colonies-israeliennes.html"
+          "url": "https://www.nouvelobs.com/monde/20260910.OBS118099/l-avion-de-zelensky-a-failli-etre-touche-par-un-drone-tandis-qu-il-etait-en-route-vers-la-norvege-selon-oslo-ce-que-l-on-sait.html"
         },
         {
           "language": "fr",
-          "source": "radiofrance.fr",
+          "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/geopolitique/geopolitique-du-mercredi-09-septembre-2026-1711872"
+          "url": "https://www.challenges.fr/monde/lavion-de-zelensky-echappe-de-peu-a-une-collision-avec-un-drone-alors-quil-etait-en-route-vers-oslo_645668"
         },
         {
-          "language": "fr",
-          "source": "rfj.ch",
-          "source_country": "sz",
-          "url": "https://www.rfj.ch/rfj/Actualite/economie/Cisjordanie-12-pays-pour-sanctionner-le-commerce-avec-les-colonies.html"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-10/noruega-afirma-que-un-dron-casi-impacta-en-el-avion-que-trasladaba-a-zelenski-a-oslo.html"
         },
-        {
-          "language": "fr",
-          "source": "courrierinternational.com",
-          "source_country": "united-states",
-          "url": "https://www.courrierinternational.com/article/cisjordanie-nettoyage-ethnique-le-royaume-uni-la-france-et-dix-pays-vont-sanctionner-la-colonisation-israelienne_268887"
-        },
-        {
-          "language": "fr",
-          "source": "dhnet.be",
-          "source_country": "be",
-          "url": "https://www.dhnet.be/actu/monde/2026/09/08/cisjordanie-douze-pays-dont-la-france-et-le-royaume-uni-veulent-sanctionner-le-commerce-avec-les-colonies-au-regard-du-droit-international-MXRAM54NPNDV7C5WGCNN6LHHAY/"
-        }
-      ],
-      "mentioned_countries": [
-        "is",
-        "france"
-      ],
-      "origin_country": "be",
-      "outbound_source": "mediapart.fr",
-      "outbound_url": "https://www.mediapart.fr/journal/international/080926/cisjordanie-12-pays-dont-la-france-et-le-royaume-uni-veulent-sanctionner-le-commerce-avec-les-colon",
-      "rank": 1,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "mediapart.fr",
-        "nouvelobs.com",
-        "radiofrance.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4882,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7714
-        },
-        "total": 0.7439,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "cisjordanie",
-      "subject_names": [
-        "british",
-        "canada",
-        "canadian",
-        "cisjordania",
-        "cisjordanie",
-        "einfuhrverbot",
-        "france",
-        "francia",
-        "gaza",
-        "israel",
-        "ottawa",
-        "paris",
-        "reino unido",
-        "royaume-uni",
-        "west bank"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Twelve countries, including France and the United Kingdom, have announced sanctions or measures aimed at limiting or ending trade with Israeli settlements in the West Bank. The coordinated action criticizes Israel’s settlement policy as undermining a two-state solution and targets commerce linked to the settlements; several outlets describe the move as largely symbolic."
-    },
-    {
-      "_linked_ids": [
-        "subject-israel-a44b2f18252d"
-      ],
-      "cluster_id": "subject-israel-a44b2f18252d",
-      "coherence": 0.452464208224884,
-      "consequence": 3,
-      "countries": [
-        "ar",
-        "india",
-        "spain",
-        "sy",
-        "sz",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 8,
-      "editorial_day": "2026-09-09",
-      "headline": "Israel closes British consulate in Jerusalem and bans 12 British nationals",
-      "independent_source_count": 14,
-      "members": [
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/israel-ordena-cierre-consulado-britanico-jerusalen-eleva-20260908194809-nt.html"
+          "url": "https://www.abc.es/internacional/avion-zelenski-punto-alcanzado-dron-dirigia-funeral-20260909203451-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260909/11631306/avion-zelenski-estuvo-punto-alcanzado-dron-dirigia-oslo.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/israel-cierra-consulado-britanico-jerusalen-represalia-por-las-sanciones-londres-los-asentamientos-cisjordania_7034309_0.html"
+          "url": "https://www.20minutos.es/internacional/un-dron-estuvo-punto-impactar-contra-avion-zelenski-cuando-viajaba-noruega_7034874_0.html"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/08/israel-close-british-consulate-jerusalem-sanctions"
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/10/news/zelensky_aereo_drone_russia_norvegia-425575694/?rss"
         },
         {
-          "language": "en",
-          "source": "middleeaststar.com",
-          "source_country": "sy",
-          "url": "http://www.middleeaststar.com/news/279294449/israel-announces-measures-against-britain-over-west-bank-settlement-sanctions"
-        },
-        {
-          "language": "es",
-          "source": "diariopopular.com.ar",
-          "source_country": "ar",
-          "url": "https://www.diariopopular.com.ar/internacionales/israel-cerro-el-consulado-del-reino-unido-y-prohibio-la-entrada-12-britanicos-n918790"
-        },
-        {
-          "language": "en",
-          "source": "moneycontrol.com",
-          "source_country": "india",
-          "url": "https://www.moneycontrol.com/world/israel-bans-12-british-nationals-shuts-consulate-after-uk-sanctions-over-west-bank-article-14025545.html"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/israel-close-british-consulate-jerusalem-165526000.html"
-        },
-        {
-          "language": "en",
-          "source": "aninews.in",
-          "source_country": "india",
-          "url": "https://aninews.in/news/world/middle-east/israel-to-close-uk-consulate-in-east-jerusalem-expel-british-reps-over-settlement-sanctions20260908220404/"
-        },
-        {
-          "language": "en",
-          "source": "albawaba.net",
-          "source_country": "unknown",
-          "url": "https://www.albawaba.net/news/israel-shuts-british-consulate-jerusalem-1636674"
-        },
-        {
-          "language": "es",
-          "source": "diariolibre.com",
-          "source_country": "united-states",
-          "url": "https://www.diariolibre.com/mundo/europa/2026/09/08/israel-confirma-cierre-de-consulado-de-reino-unido-en-jerusalen/3652610"
-        },
-        {
-          "language": "es",
-          "source": "lasexta.com",
-          "source_country": "spain",
-          "url": "https://www.lasexta.com/noticias/internacional/israel-responde-veto-reino-unido-cierre-consulado-jerusalen-sanciones-12-politicos-britanicos_202609086aa036133bfe5d1eff482261.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260908172921/israel-anuncia-sanciones-contra-doce-politicos-britanicos-cierre-consulado-jerusalen"
-        },
-        {
-          "language": "fr",
-          "source": "rfj.ch",
-          "source_country": "sz",
-          "url": "https://www.rfj.ch/rfj/Actualite/Monde/Israel-annonce-la-fermeture-du-consulat-britannique-a-Jerusalem.html"
-        },
-        {
-          "language": "fr",
-          "source": "rtn.ch",
-          "source_country": "sz",
-          "url": "https://www.rtn.ch/rtn/Actualite/Monde/Israel-annonce-la-fermeture-du-consulat-britannique-a-Jerusalem.html"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/09/aviao-de-zelensky-quase-e-atingido-por-drone-a-caminho-de-oslo-diz-premie-da-noruega.ghtml"
         }
       ],
       "mentioned_countries": [
-        "is",
-        "united-kingdom"
+        "no"
       ],
-      "origin_country": "ar",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/israel-cierra-consulado-britanico-jerusalen-represalia-por-las-sanciones-londres-los-asentamientos-cisjordania_7034309_0.html",
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/09/aviao-de-zelensky-quase-e-atingido-por-drone-a-caminho-de-oslo-diz-premie-da-noruega.ghtml",
       "rank": 2,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 11,
       "reference_newsrooms": [
         "20minutos.es",
         "abc.es",
-        "theguardian.com"
+        "challenges.fr",
+        "elpais.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "la-croix.com",
+        "lavanguardia.com",
+        "liberation.fr",
+        "nouvelobs.com",
+        "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.4525,
-          "corroboration": 0.8,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4821,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.5789,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.8049
+        },
+        "total": 0.6857,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "zelensky",
+      "subject_names": [
+        "harald",
+        "noruega",
+        "oslo",
+        "volodymyr zelensky",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Multiple outlets report that while Ukrainian President Volodymyr Zelensky was flying to Norway, his aircraft narrowly avoided being hit by a drone; the incident was publicly described by Norwegian authorities and revived concerns about the president’s security during the trip."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-9f8d85a7c4f2"
+      ],
+      "cluster_id": "subject-ceuta-9f8d85a7c4f2",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-10",
+      "headline": "Spanish intelligence warned of planned Ceuta mass crossing before surge",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/ced7vj2gv82o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "http://www.euronews.com/my-europe/2026/09/10/spanish-intelligence-and-police-warned-of-ceuta-mass-crossing-a-day-in-advance"
+        },
+        {
+          "language": "en",
+          "source": "the-messenger.com",
+          "source_country": "united-states",
+          "url": "https://www.the-messenger.com/news/world/article_b45d7966-f28f-50ff-a714-de0bdfb8114e.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "it",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/ced7vj2gv82o?at_medium=RSS&at_campaign=rss",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.7949
+          "prominence": 0.4286,
+          "source_reliability": 0.5
         },
-        "total": 0.7148,
+        "total": 0.6499,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "israel",
+      "subject_label": "ceuta",
       "subject_names": [
-        "british",
-        "cisjordania",
-        "gaza",
-        "israel",
-        "londres",
-        "west bank"
+        "ceuta",
+        "cni",
+        "guardia civil",
+        "marlaska",
+        "marruecos",
+        "vivas"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "Israel announced it will close the British consulate in Jerusalem and has imposed measures against British individuals, including bans on 12 British nationals, in response to UK sanctions related to Israeli settlements in the West Bank."
+      "subject_newsroom_count": 20,
+      "summary": "Declassified and reported information shows Spanish intelligence and police received warnings a day in advance that plans were in place for a mass crossing into Ceuta, indicating authorities had prior notice before the subsequent surge at the border."
     },
     {
       "_linked_ids": [
-        "subject-saxe-anhalt-4fc44e1751f3",
-        "subject-saxe-anhalt-c357650410ca"
+        "subject-merz-8697ebabaa13"
       ],
-      "cluster_id": "subject-saxe-anhalt-c357650410ca",
-      "coherence": 0.44800674312740596,
-      "consequence": 3,
+      "cluster_id": "subject-merz-8697ebabaa13",
+      "coherence": 0.45060098568013984,
+      "consequence": 2,
       "countries": [
-        "as",
         "france",
-        "united-states"
+        "germany",
+        "nl",
+        "spain",
+        "sz"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-08",
-      "headline": "Far-right AfD wins major victory in Saxony-Anhalt regional election",
-      "independent_source_count": 6,
+      "country_count": 5,
+      "editorial_day": "2026-09-10",
+      "headline": "German Chancellor Merz accuses AfD of advocating ethnic cleansing",
+      "independent_source_count": 9,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/l-allemagne-sous-le-choc-apres-la-victoire-de-l-afd-en-saxe-anhalt-le-chancelier-merz-desempare-20260907"
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/le-chancelier-allemand-friedrich-merz-accuse-l-afd-de-vouloir-un-nettoyage-ethnique_8185835.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-09/merz-acusa-a-la-extrema-derecha-de-querer-llevar-a-cabo-una-limpieza-etnica-en-alemania.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/canciller-aleman-merz-defiende-remigracion-sinonimo-limpieza-20260909135441-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260909/11631053/canciller-aleman-merz-acusa-afd-practicar-politica-limpieza-etnica.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/merz-arremete-afd-idea-remigracion-debacle-electoral-cdu-sinonimo-limpieza-etnica_1_13498172.html"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2630307"
+        },
+        {
+          "language": "es",
+          "source": "publico.es",
+          "source_country": "spain",
+          "url": "https://www.publico.es/internacional/europa/merz-acusa-partido-ultra-afd-promover-limpieza-etnica-politicas-remigracion.html"
         },
         {
           "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/donald-trump-et-vladimir-poutine-sablent-le-champagne-la-victoire-de-l-afd-en-saxe-anhalt-va-peser-sur-l-avenir-de-l-europe-20260907"
+          "source": "24heures.ch",
+          "source_country": "sz",
+          "url": "https://www.24heures.ch/afd-merz-accuse-lextreme-droite-de-promouvoir-un-nettoyage-ethnique-923768243316"
         },
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/victoire-historique-en-saxe-anhalt-que-pese-l-afd-dans-les-autres-laender-allemands-20260907"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/080926/saxe-anhalt-ce-que-le-triomphe-de-l-afd-dit-des-democraties-liberales"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260907.OBS118008/coalition-cordon-sanitaire-influence-russe-apres-la-victoire-de-l-afd-en-saxe-anhalt-les-questions-qui-se-posent.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/lallemagne-sous-le-choc-apres-le-triomphe-de-lafd-en-saxe-anhalt-nous-sommes-loin-de-1933-mais-cest-UDWUJG6XR5CSBOYWQKF5ZPTFQY/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/apres-la-victoire-de-lafd-en-saxe-anhalt-lallemagne-en-terre-inconnue-BLVNAMR7QFATHOED2J7LXCK73Y/"
-        },
-        {
-          "language": "fr",
-          "source": "courrierinternational.com",
-          "source_country": "united-states",
-          "url": "https://www.courrierinternational.com/article/analyse-victoire-de-l-afd-en-saxe-anhalt-la-droite-allemande-sera-t-elle-bientot-reduite-a-neant_268774"
-        },
-        {
-          "language": "fr",
-          "source": "theconversation.com",
-          "source_country": "as",
-          "url": "https://theconversation.com/allemagne-les-multiples-effets-du-triomphe-de-lafd-en-saxe-anhalt-291470"
+          "language": "de",
+          "source": "rheinpfalz.de",
+          "source_country": "germany",
+          "url": "https://www.rheinpfalz.de/politik_artikel,-merz-afd-plant-ethnische-s%C3%A4uberungen-_arid,5927800.html"
         }
       ],
       "mentioned_countries": [
         "germany"
       ],
-      "origin_country": "as",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/apres-la-victoire-de-lafd-en-saxe-anhalt-lallemagne-en-terre-inconnue-BLVNAMR7QFATHOED2J7LXCK73Y/",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "origin_country": "france",
+      "outbound_source": "nos.nl",
+      "outbound_url": "https://nos.nl/l/2630307",
+      "rank": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "lefigaro.fr",
-        "lexpress.fr",
-        "mediapart.fr",
-        "nouvelobs.com"
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "lavanguardia.com",
+        "nos.nl"
       ],
       "score": {
         "components": {
-          "coherence": 0.448,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
+          "coherence": 0.4506,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.6,
-          "source_reliability": 0.7576
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.75
         },
-        "total": 0.6778,
+        "total": 0.6485,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "saxe-anhalt",
+      "subject_label": "merz",
+      "subject_names": [
+        "afd",
+        "alemania",
+        "cdu",
+        "friedrich merz",
+        "germany",
+        "germany's",
+        "merz",
+        "sajonia-anhalt"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "In parliamentary remarks following recent elections, Chancellor Friedrich Merz accused the far‑right AfD of promoting policies he characterized as 'ethnic cleansing'—specifically criticizing the party's calls for 'remigration' as synonymous with ethnic cleansing. Multiple outlets report Merz directly challenged the AfD over these proposals during political debate."
+    },
+    {
+      "_linked_ids": [
+        "subject-afd-a6c2b917bae2",
+        "subject-afd-d7d23a47eec6",
+        "subject-german-7122f4707afe"
+      ],
+      "cluster_id": "subject-afd-a6c2b917bae2",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-07",
+      "headline": "Far-right AfD wins projected victory in German state election",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/c5yegd6ldy6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/show/far-right-afd-win-signals-shift-in-germany-raises-alarm-in-europe"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/06/extrema-direita-afd-conquista-vitoria-historica-em-eleicao-regional-alema.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/videos/c5yegd6ldy6o?at_medium=RSS&at_campaign=rss",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "globo.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.3333,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6425,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "afd",
       "subject_names": [
         "afd",
         "alemania",
@@ -393,242 +526,17 @@
         "europa",
         "europe",
         "germany",
-        "merz",
-        "migration",
+        "germany's",
         "sajonia-anhalt",
         "saxe-anhalt"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Across the articles, outlets agree that the Alternative for Germany (AfD) achieved a significant electoral victory in the Saxony-Anhalt regional vote, prompting shock and concern in Germany and debate about its implications for national politics, coalitions and party dynamics; commentators highlight questions over how other parties will respond (including cordons sanitaires), the broader impact on Germany’s democracy and European politics, and possible external influences cited in discussions of the result."
-    },
-    {
-      "_linked_ids": [
-        "subject-reino-unido-e10a72adfcab"
-      ],
-      "cluster_id": "subject-reino-unido-e10a72adfcab",
-      "coherence": 0.5025191314688803,
-      "consequence": 2,
-      "countries": [
-        "ar",
-        "brazil",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-09",
-      "headline": "Technical fault in UK air traffic control causes hundreds of flight cancellations",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-08/una-averia-en-el-sistema-de-control-aereo-provoca-la-cancelacion-de-400-vuelos-en-el-reino-unido.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/400-vuelos-cancelados-reino-unido-fallo-tecnico-20260908185616-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260908/11630340/centenares-vuelos-cancelados-reino-unido-problema-tecnico-control-aereo.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/transporte/2026/09/08/6aa03e6de5fdea52718b456d.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/mas-400-vuelos-cancelados-reino-unido-por-una-averia-sistema-control-aereo_7034332_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/08/problema-em-sistema-de-trafego-aereo-interrompe-voos-no-reino-unido.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "aimdigital.com.ar",
-          "source_country": "ar",
-          "url": "https://www.aimdigital.com.ar/internacionales/caos-areo-en-reino-unido-fallo-tcnico-de-nats-provoca-cancelacin-de-ms-de-600-vuelos.htm"
-        },
-        {
-          "language": "glg",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260908182314/400-vuelos-cancelados-reino-unido-fallo-tecnico-control-trafico-aereo"
-        },
-        {
-          "language": "es",
-          "source": "elperiodico.com",
-          "source_country": "spain",
-          "url": "https://www.elperiodico.com/es/internacional/20260908/400-vuelos-cancelados-reino-unido-134080327"
-        },
-        {
-          "language": "es",
-          "source": "diariodemallorca.es",
-          "source_country": "spain",
-          "url": "https://www.diariodemallorca.es/internacional/2026/09/08/400-vuelos-cancelados-reino-unido-134080330.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260908/11630340/centenares-vuelos-cancelados-reino-unido-problema-tecnico-control-aereo.html",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elpais.com",
-        "expansion.com",
-        "globo.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5025,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6402,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "reino unido",
-      "subject_names": [
-        "cisjordanie",
-        "reino unido",
-        "royaume-uni"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "A technical failure in the United Kingdom’s air traffic control system led to the cancellation of hundreds of flights across the country; reports place the number of cancelled services at several hundred to over one thousand, and the fault was subsequently repaired."
-    },
-    {
-      "_linked_ids": [
-        "subject-iceland-6cfbd11f4743"
-      ],
-      "cluster_id": "subject-iceland-6cfbd11f4743",
-      "coherence": 0.5319200385473182,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-09",
-      "headline": "Iceland summons U.S. ambassador after Trump posts map showing Iceland under U.S. flag",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/islandia-convoca-embajador-eeuu-mapa-trump-muestra-20260908163851-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260908/11630083/islandia-convoca-embajador-ee-uu-protestar-controvertido-mapa-americano-trump.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c93ek32pqd2o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/09/nx-s1-5961412/iceland-summons-u-s-ambassador-after-trump-posts-countries-draped-with-american-flag"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/08/islandia-convoca-embaixador-dos-eua-apos-trump-publicar-mapa-que-mostra-ilha-sob-bandeira-americana.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "krcgtv.com",
-          "source_country": "united-states",
-          "url": "https://krcgtv.com/news/nation-world/iceland-summons-us-ambassador-after-trump-post-of-american-flag-covering-island-foreign-ministry-billy-long-greenalnd"
-        },
-        {
-          "language": "en",
-          "source": "wlos.com",
-          "source_country": "united-states",
-          "url": "https://wlos.com/news/nation-world/iceland-summons-us-ambassador-after-trump-post-of-american-flag-covering-island-foreign-ministry-billy-long-greenalnd"
-        }
-      ],
-      "mentioned_countries": [
-        "ic",
-        "united-states"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260908/11630083/islandia-convoca-embajador-ee-uu-protestar-controvertido-mapa-americano-trump.html",
-      "rank": 5,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "abc.es",
-        "bbc.co.uk",
-        "globo.com",
-        "lavanguardia.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5319,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7037
-        },
-        "total": 0.6371,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "iceland",
-      "subject_names": [
-        "donald trump",
-        "iceland",
-        "islandia",
-        "mexico",
-        "natalie harp",
-        "smithsonian institution",
-        "trump",
-        "trump's"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Iceland summoned the United States ambassador to protest after former President Donald Trump posted a map depicting several countries, including Iceland, covered by the American flag. Icelandic officials expressed disapproval of the image and treated the post as the reason for calling in the ambassador, a step reported by multiple news outlets."
+      "subject_newsroom_count": 16,
+      "summary": "Germany's far-right Alternative for Germany (AfD) achieved a projected win in a regional state election, marking a significant electoral success for the party and prompting concern from other European observers about its political rise."
     }
   ],
-  "discarded_ingested": 149,
+  "discarded_ingested": 127,
   "discarded_kept": 5,
-  "generated_at": "2026-09-09T09:58:46.960183+00:00",
+  "generated_at": "2026-09-10T09:57:11.777183+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

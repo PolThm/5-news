@@ -1,0 +1,28 @@
+{
+  "articles_collected": 8495,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 7390,
+  "clusters_selected": 14,
+  "completed": true,
+  "cycle_id": "2026-09-10T09-57-11Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "europapress.es: request failed: The read operation timed out"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20260910093000.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20260910093000.translation.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 7517,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-09-10T09:57:11.777183+00:00",
+  "summarize_batches": {}
+}

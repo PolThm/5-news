@@ -2,112 +2,386 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ceuta-fcfaa3f92630"
+        "subject-ukraine-98f205addd8e"
       ],
-      "cluster_id": "subject-ceuta-fcfaa3f92630",
-      "coherence": 0.4447986475722894,
+      "cluster_id": "subject-ukraine-98f205addd8e",
+      "coherence": 0.4106375587035809,
+      "consequence": 3,
+      "countries": [
+        "bg",
+        "brazil",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-10",
+      "headline": "Russian strike hits shopping centre in Ukraine, killing at least three people",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/tres-muertos-bombardeo-ruso-sobre-centro-comercial-20260910175329-nt.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cpvelrmp1vmo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/09/10/bombardeio-shopping-ucrania-deixa-mortos-feridos.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "bssnews.net",
+          "source_country": "bg",
+          "url": "https://www.bssnews.net/international/423326"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "bg",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/tres-muertos-bombardeo-ruso-sobre-centro-comercial-20260910175329-nt.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "bbc.co.uk",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4106,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6662,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "putin",
+        "russia",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 24,
+      "summary": "A Russian strike struck a shopping centre in Ukraine, killing at least three people and injuring dozens; reports indicate multiple fatalities and many wounded from the attack on the mall."
+    },
+    {
+      "_linked_ids": [
+        "subject-canada-30ea19b11fc6"
+      ],
+      "cluster_id": "subject-canada-30ea19b11fc6",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-10",
+      "headline": "Canada pledges air defence support for Ukraine during Zelenskyy visit",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/zelenski-anuncia-toronto-ucrania-recibira-apoyo-defensa-20260910201014-nt.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/10/zelenskyy-canada-visit"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/zelenskyy-visits-canada-to-seek-more-military-support-for-ukraine-against-russia"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "ca"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/zelenski-anuncia-toronto-ucrania-recibira-apoyo-defensa-20260910201014-nt.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6629,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "canada",
+      "subject_names": [
+        "canada",
+        "kiev",
+        "kyiv",
+        "putin",
+        "russia",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Ukrainian President Volodymyr Zelenskyy visited Canada, where Canadian leaders pledged to provide air defence support to Ukraine as part of efforts to strengthen military assistance against Russia."
+    },
+    {
+      "_linked_ids": [
+        "subject-merz-7affb1f43d3d",
+        "subject-merz-8697ebabaa13"
+      ],
+      "cluster_id": "subject-merz-7affb1f43d3d",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "france",
-        "it",
-        "ro",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-09-09",
-      "headline": "EU grants Spain €115 million to help manage Ceuta migration crisis",
-      "independent_source_count": 10,
+      "country_count": 2,
+      "editorial_day": "2026-09-11",
+      "headline": "German Chancellor Friedrich Merz sues AfD after calling 'remigration' ethnic cleansing",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/09/apres-l-afflux-de-migrants-a-ceuta-l-ue-accorde-115-millions-d-euros-a-l-espagne-pour-renforcer-sa-frontiere_6768922_3210.html"
+          "url": "https://www.lefigaro.fr/international/allemagne-l-afd-attaque-le-chancelier-friedrich-merz-en-justice-pour-avoir-qualifie-le-concept-de-remigration-de-nettoyage-ethnique-20260911"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260909/11631053/canciller-aleman-merz-acusa-afd-practicar-politica-limpieza-etnica.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/comision-europea-aprueba-ayuda-emergencia-115-millones-ceuta_1_13498133.html"
+          "url": "https://www.eldiario.es/internacional/merz-arremete-afd-idea-remigracion-debacle-electoral-cdu-sinonimo-limpieza-etnica_1_13498172.html"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260909/11631053/canciller-aleman-merz-acusa-afd-practicar-politica-limpieza-etnica.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "lavanguardia.com",
+        "lefigaro.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6448,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "merz",
+      "subject_names": [
+        "afd",
+        "alemania",
+        "cdu",
+        "friedrich merz",
+        "merz",
+        "sajonia-anhalt",
+        "ulrich siegmund"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "German Chancellor Friedrich Merz described the AfD’s concept of “remigration” as equivalent to ethnic cleansing, and the AfD has responded by taking legal action against him; the confrontation followed criticism of the party’s policy proposals and came after recent electoral setbacks for the CDU."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-81c100a2432d"
+      ],
+      "cluster_id": "subject-ceuta-81c100a2432d",
+      "coherence": 0.6076335222153472,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-11",
+      "headline": "Chief of staff to Ceuta government delegate resigns over CNI warnings",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-11/dimite-el-jefe-de-gabinete-del-delegado-del-gobierno-en-ceuta-por-el-salto-fronterizo.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/dimite-jefe-gabinete-delegado-gobierno-ceuta-recibio-20260911094046-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/dimite-jefe-gabinete-delegado-gobierno-ceuta-recibio-wasap-cni_1_13502325.html"
         },
         {
           "language": "es",
           "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/09/6aa16741e5fdea761d8b456f.html"
+          "url": "https://www.expansion.com/economia/politica/2026/09/11/6aa3b657e5fdeaa6028b456e.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/09/6aa16502e9cf4ab16a8b45ca.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/09/09/ceuta-crisis-eu-grants-spain-114-million-in-gesture-of-solidarity"
-        },
-        {
-          "language": "en",
-          "source": "yahoo.com",
-          "source_country": "united-states",
-          "url": "https://www.yahoo.com/news/world/articles/eu-provides-115m-help-spain-164827150.html"
+          "url": "https://www.elmundo.es/espana/2026/09/11/6aa3af19e4d4d8326b8b4574.html"
         },
         {
           "language": "es",
-          "source": "granadahoy.com",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.granadahoy.com/espana/bruselas-desbloquea-115-millones-fondos_0_2007913963.html"
+          "url": "https://www.elespanol.com/espana/politica/20260911/dimite-jefe-gabinete-delegado-gobierno-ceuta-recibio-mensajes-cni-alertando-asalto/1003744380013_0.html"
         },
         {
-          "language": "ron",
-          "source": "agerpres.ro",
-          "source_country": "ro",
-          "url": "https://agerpres.ro/politic-extern/2026/09/09/ue-acorda-spaniei-un-ajutor-de-115-milioane-de-euro-pentru-gestionarea-crizei-migrantilor-in-ceuta--1592112"
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-11/quien-honzalo-sanz-jefe-gabinete-delegado-gobierno-ceuta-dimite-1qrt_4421892/"
         },
         {
-          "language": "ron",
-          "source": "hotnews.ro",
-          "source_country": "ro",
-          "url": "https://hotnews.ro/ue-a-acordat-spaniei-115-000-000-de-euro-pentru-a-gestiona-criza-migrantilor-din-ceuta-2345507"
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-11/dimite-jefe-gabinete-delegado-gobierno-ceuta_4421839/"
         },
         {
-          "language": "ron",
-          "source": "stirileprotv.ro",
-          "source_country": "ro",
-          "url": "https://stirileprotv.ro/ue-a-acordat-spaniei-115-milioane-de-euro-pentru-criza-migrantilor-din-ceuta-peste-70-000-au-intrat-in-enclava.html"
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-dimite-jefe-gabinete-delegacion-gobierno-ceuta-polemica-contactos-cni-20260911094355.html"
+        },
+        {
+          "language": "es",
+          "source": "andaluciainformacion.es",
+          "source_country": "spain",
+          "url": "https://www.andaluciainformacion.es/articulo/espana/renuncia-jefe-gabinete-delegacion-gobierno-ceuta-polemica-cni/202609111017143474120.html"
+        },
+        {
+          "language": "es",
+          "source": "lacronicabadajoz.com",
+          "source_country": "spain",
+          "url": "https://www.lacronicabadajoz.com/nacional/2026/09/11/dimite-jefe-gabinete-delegacion-gobierno-134175826.html"
+        },
+        {
+          "language": "es",
+          "source": "diariodeburgos.es",
+          "source_country": "spain",
+          "url": "https://www.diariodeburgos.es/noticia/z568a530d-582d-4e2d-895600a8727492b1/202609/dimite-el-jefe-de-gabinete-del-delegado-del-gobierno-en-ceuta"
+        },
+        {
+          "language": "es",
+          "source": "elcorreogallego.es",
+          "source_country": "spain",
+          "url": "https://www.elcorreogallego.es/espana/2026/09/11/dimite-jefe-gabinete-delegacion-gobierno-134175849.html"
+        },
+        {
+          "language": "es",
+          "source": "diariosur.es",
+          "source_country": "spain",
+          "url": "https://www.diariosur.es/nacional/dimite-jefe-gabinete-delegacion-gobierno-ceuta-tras-20260911100630-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "elcomercio.es",
+          "source_country": "spain",
+          "url": "https://www.elcomercio.es/politica/dimite-jefe-gabinete-delegacion-gobierno-ceuta-tras-20260911100630-ntrc.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/09/6aa16502e9cf4ab16a8b45ca.html",
-      "rank": 1,
-      "reference_newsroom_count": 5,
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-dimite-jefe-gabinete-delegacion-gobierno-ceuta-polemica-contactos-cni-20260911094355.html",
+      "rank": 4,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
         "eldiario.es",
+        "elespanol.com",
         "elmundo.es",
-        "euronews.com",
-        "expansion.com",
-        "lemonde.fr"
+        "elpais.com",
+        "europapress.es",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4448,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "coherence": 0.6076,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7576
+          "prominence": 0.7778,
+          "source_reliability": 0.8298
         },
-        "total": 0.7191,
+        "total": 0.6377,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
@@ -115,20 +389,22 @@
         "bruselas",
         "ceuta",
         "cni",
-        "guardia civil",
-        "marlaska",
+        "delegacion",
+        "maroc",
         "marruecos",
-        "vivas"
+        "moncloa",
+        "tarajal"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "The European Union has approved about €114.7–€115 million in emergency funding to Spain to help manage the surge of migrants into the Spanish enclave of Ceuta; the aid is presented as a solidarity gesture and will support border management efforts, including reinforcement of Frontex."
+      "subject_newsroom_count": 18,
+      "summary": "The chief of staff to the Spanish government delegate in Ceuta has resigned, saying he informed his superior about alerts from the National Intelligence Center (CNI); his departure follows controversy over contacts and communications related to those CNI reports."
     },
     {
       "_linked_ids": [
-        "subject-zelensky-1be48320a4e0"
+        "subject-zelensky-1be48320a4e0",
+        "subject-zelensky-c16751ee2480"
       ],
-      "cluster_id": "subject-zelensky-1be48320a4e0",
-      "coherence": 0.4821213667027294,
+      "cluster_id": "subject-zelensky-c16751ee2480",
+      "coherence": 0.4870152021305588,
       "consequence": 2,
       "countries": [
         "brazil",
@@ -138,26 +414,14 @@
       ],
       "country_count": 4,
       "editorial_day": "2026-09-10",
-      "headline": "A drone nearly struck President Zelensky’s plane en route to Oslo",
-      "independent_source_count": 11,
+      "headline": "Zelensky’s plane was nearly struck by a drone en route to Oslo",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/lavion-du-president-ukrainien-volodymyr-zelensky-a-failli-etre-frappe-par-un-drone-en-moldavie-20260909_J2DRTI6ASVET3AKGDFUK53Y3BE/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/l-avion-de-zelensky-a-failli-etre-touche-par-un-drone-tandis-quil-etait-en-route-vers-oslo-20260909"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/replay-radio/d-un-monde-a-l-autre/un-drone-pres-de-l-avion-de-volodymyr-zelensky-ravive-les-inquietudes-sur-sa-securite_8165057.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.liberation.fr/checknews/un-drone-russe-a-t-il-vraiment-failli-percuter-lavion-de-zelensky-en-moldavie-20260910_OFRLIIHYG5DSNBXFKTRBNTI6BQ/"
         },
         {
           "language": "fr",
@@ -173,27 +437,15 @@
         },
         {
           "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-10/noruega-afirma-que-un-dron-casi-impacta-en-el-avion-que-trasladaba-a-zelenski-a-oslo.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/avion-zelenski-punto-alcanzado-dron-dirigia-funeral-20260909203451-nt.html"
-        },
-        {
-          "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
           "url": "https://www.lavanguardia.com/internacional/20260909/11631306/avion-zelenski-estuvo-punto-alcanzado-dron-dirigia-oslo.html"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-dron-estuvo-punto-impactar-contra-avion-zelenski-cuando-viajaba-noruega_7034874_0.html"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/09/zelenskyys-plane-almost-hit-by-drone-en-route-to-oslo-norway-pm-says"
         },
         {
           "language": "it",
@@ -214,16 +466,12 @@
       "origin_country": "brazil",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/09/aviao-de-zelensky-quase-e-atingido-por-drone-a-caminho-de-oslo-diz-premie-da-noruega.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 11,
+      "rank": 5,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
         "challenges.fr",
-        "elpais.com",
-        "francetvinfo.fr",
+        "euronews.com",
         "globo.com",
-        "la-croix.com",
         "lavanguardia.com",
         "liberation.fr",
         "nouvelobs.com",
@@ -231,312 +479,41 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4821,
+          "coherence": 0.487,
           "corroboration": 0.6667,
-          "editorial_weight": 0.5789,
-          "freshness": 1.0,
+          "editorial_weight": 0.4667,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.8049
+          "novelty": 0.5,
+          "prominence": 0.6364,
+          "source_reliability": 0.7241
         },
-        "total": 0.6857,
+        "total": 0.6365,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "zelensky",
       "subject_names": [
-        "harald",
-        "noruega",
+        "kiev",
+        "kyiv",
         "oslo",
-        "volodymyr zelensky",
+        "putin",
+        "russia",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine",
         "zelenski",
-        "zelensky"
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Multiple outlets report that while Ukrainian President Volodymyr Zelensky was flying to Norway, his aircraft narrowly avoided being hit by a drone; the incident was publicly described by Norwegian authorities and revived concerns about the president’s security during the trip."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-9f8d85a7c4f2"
-      ],
-      "cluster_id": "subject-ceuta-9f8d85a7c4f2",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-10",
-      "headline": "Spanish intelligence warned of planned Ceuta mass crossing before surge",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ced7vj2gv82o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "http://www.euronews.com/my-europe/2026/09/10/spanish-intelligence-and-police-warned-of-ceuta-mass-crossing-a-day-in-advance"
-        },
-        {
-          "language": "en",
-          "source": "the-messenger.com",
-          "source_country": "united-states",
-          "url": "https://www.the-messenger.com/news/world/article_b45d7966-f28f-50ff-a714-de0bdfb8114e.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/ced7vj2gv82o?at_medium=RSS&at_campaign=rss",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.6499,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "cni",
-        "guardia civil",
-        "marlaska",
-        "marruecos",
-        "vivas"
-      ],
-      "subject_newsroom_count": 20,
-      "summary": "Declassified and reported information shows Spanish intelligence and police received warnings a day in advance that plans were in place for a mass crossing into Ceuta, indicating authorities had prior notice before the subsequent surge at the border."
-    },
-    {
-      "_linked_ids": [
-        "subject-merz-8697ebabaa13"
-      ],
-      "cluster_id": "subject-merz-8697ebabaa13",
-      "coherence": 0.45060098568013984,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "germany",
-        "nl",
-        "spain",
-        "sz"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-10",
-      "headline": "German Chancellor Merz accuses AfD of advocating ethnic cleansing",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/le-chancelier-allemand-friedrich-merz-accuse-l-afd-de-vouloir-un-nettoyage-ethnique_8185835.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-09/merz-acusa-a-la-extrema-derecha-de-querer-llevar-a-cabo-una-limpieza-etnica-en-alemania.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/canciller-aleman-merz-defiende-remigracion-sinonimo-limpieza-20260909135441-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260909/11631053/canciller-aleman-merz-acusa-afd-practicar-politica-limpieza-etnica.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/merz-arremete-afd-idea-remigracion-debacle-electoral-cdu-sinonimo-limpieza-etnica_1_13498172.html"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2630307"
-        },
-        {
-          "language": "es",
-          "source": "publico.es",
-          "source_country": "spain",
-          "url": "https://www.publico.es/internacional/europa/merz-acusa-partido-ultra-afd-promover-limpieza-etnica-politicas-remigracion.html"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/afd-merz-accuse-lextreme-droite-de-promouvoir-un-nettoyage-ethnique-923768243316"
-        },
-        {
-          "language": "de",
-          "source": "rheinpfalz.de",
-          "source_country": "germany",
-          "url": "https://www.rheinpfalz.de/politik_artikel,-merz-afd-plant-ethnische-s%C3%A4uberungen-_arid,5927800.html"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nos.nl",
-      "outbound_url": "https://nos.nl/l/2630307",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "lavanguardia.com",
-        "nos.nl"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4506,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
-        },
-        "total": 0.6485,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "merz",
-      "subject_names": [
-        "afd",
-        "alemania",
-        "cdu",
-        "friedrich merz",
-        "germany",
-        "germany's",
-        "merz",
-        "sajonia-anhalt"
-      ],
-      "subject_newsroom_count": 19,
-      "summary": "In parliamentary remarks following recent elections, Chancellor Friedrich Merz accused the far‑right AfD of promoting policies he characterized as 'ethnic cleansing'—specifically criticizing the party's calls for 'remigration' as synonymous with ethnic cleansing. Multiple outlets report Merz directly challenged the AfD over these proposals during political debate."
-    },
-    {
-      "_linked_ids": [
-        "subject-afd-a6c2b917bae2",
-        "subject-afd-d7d23a47eec6",
-        "subject-german-7122f4707afe"
-      ],
-      "cluster_id": "subject-afd-a6c2b917bae2",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-07",
-      "headline": "Far-right AfD wins projected victory in German state election",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/c5yegd6ldy6o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/far-right-afd-win-signals-shift-in-germany-raises-alarm-in-europe"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/06/extrema-direita-afd-conquista-vitoria-historica-em-eleicao-regional-alema.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/c5yegd6ldy6o?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "globo.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.3536,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6425,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "afd",
-      "subject_names": [
-        "afd",
-        "alemania",
-        "allemagne",
-        "bsw",
-        "cdu",
-        "europa",
-        "europe",
-        "germany",
-        "germany's",
-        "sajonia-anhalt",
-        "saxe-anhalt"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "Germany's far-right Alternative for Germany (AfD) achieved a projected win in a regional state election, marking a significant electoral success for the party and prompting concern from other European observers about its political rise."
+      "subject_newsroom_count": 12,
+      "summary": "Norwegian authorities say a drone came close to striking President Volodymyr Zelensky’s plane as it was traveling to Oslo; multiple international outlets report the incident and attribute the near-collision to a drone, with Norway’s prime minister among officials commenting on the event."
     }
   ],
-  "discarded_ingested": 127,
+  "discarded_ingested": 155,
   "discarded_kept": 5,
-  "generated_at": "2026-09-10T09:57:11.777183+00:00",
+  "generated_at": "2026-09-11T09:55:02.398599+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

@@ -2,28 +2,255 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ukraine-98f205addd8e"
+        "subject-g20-1d5c2473685a"
       ],
-      "cluster_id": "subject-ukraine-98f205addd8e",
-      "coherence": 0.4106375587035809,
+      "cluster_id": "subject-g20-1d5c2473685a",
+      "coherence": 0.5536888005283918,
       "consequence": 3,
       "countries": [
-        "bg",
-        "brazil",
-        "spain",
-        "united-kingdom"
+        "france",
+        "germany"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-10",
-      "headline": "Russian strike hits shopping centre in Ukraine, killing at least three people",
+      "country_count": 2,
+      "editorial_day": "2026-09-12",
+      "headline": "Zelensky says he is willing to meet Putin at the G20 in Miami in December",
       "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/tres-muertos-bombardeo-ruso-sobre-centro-comercial-20260910175329-nt.html"
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/live/2026/09/12/en-direct-guerre-en-ukraine-la-russie-a-attaque-l-ukraine-avec-une-centaine-de-drones-et-plus-de-14-missiles-dans-la-nuit-de-vendredi-a-samedi_6766818_3210.html"
         },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-en-decembre-20260912_LLGP2ZLOXFC2RFTQE47SYJFJ44/"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-dd26fd08-ae86-11f1-8483-804bbf8224d2?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states",
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "dw.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "ouest-france.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5537,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6814,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "g20",
+      "subject_names": [
+        "g20",
+        "miami",
+        "moldova",
+        "moscou",
+        "oslo",
+        "poutine",
+        "russia",
+        "ucrania",
+        "ukraine",
+        "vladimir poutine",
+        "volodymyr zelensky",
+        "zelensky",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Ukrainian President Volodymyr Zelensky has said he is prepared to meet Russian President Vladimir Putin at the upcoming G20 summit in Miami in December, offering to hold talks there; this position was stated publicly and reported across multiple outlets."
+    },
+    {
+      "_linked_ids": [
+        "subject-reino-unido-60d7bc54de27"
+      ],
+      "cluster_id": "subject-reino-unido-60d7bc54de27",
+      "coherence": 0.5050986675921745,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-11",
+      "headline": "UK MPs reject bill to legalise assisted dying in England and Wales",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/11/au-royaume-uni-les-deputes-rejettent-la-legalisation-de-l-aide-a-mourir-en-angleterre-et-au-pays-de-galles_6770600_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/royaume-uni-les-deputes-rejettent-le-projet-de-loi-sur-l-aide-a-mourir-20260911"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/11/parlamento-do-reino-unido-rejeita-legalizacao-da-morte-assistida.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "diariosigloxxi.com",
+          "source_country": "spain",
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260911173605/reino-unido-rechaza-proyecto-ley-sobre-muerte-asistida-personas-enfermedades-terminales"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/11/au-royaume-uni-les-deputes-rejettent-la-legalisation-de-l-aide-a-mourir-en-angleterre-et-au-pays-de-galles_6770600_3210.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "globo.com",
+        "la-croix.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5051,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6682,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "reino unido",
+      "subject_names": [
+        "burnham",
+        "cisjordania",
+        "reino unido",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Members of the UK Parliament voted against a bill to legalise assisted dying for people with terminal illnesses in England and Wales. The proposed legislation was rejected by MPs, preventing a change in the law."
+    },
+    {
+      "_linked_ids": [
+        "subject-rusia-6adaf504621d"
+      ],
+      "cluster_id": "subject-rusia-6adaf504621d",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-11",
+      "headline": "Kremlin warns Lithuania against hosting nuclear weapons",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260911-le-kremlin-met-en-garde-la-lituanie-contre-un-%C3%A9ventuel-d%C3%A9ploiement-d-armes-nucl%C3%A9aires-sur-son-sol"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260911/11632702/el-kremlin-advierte-a-lituania-contra-el-despliegue-de-armas-nucleares.html"
+        }
+      ],
+      "mentioned_countries": [
+        "lh",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260911/11632702/el-kremlin-advierte-a-lituania-contra-el-despliegue-de-armas-nucleares.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "lavanguardia.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6236,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "rusia",
+      "subject_names": [
+        "kremlin",
+        "rusia"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "The Kremlin has warned Lithuania against the possible deployment of nuclear weapons on Lithuanian soil, expressing opposition to any such move and signaling potential consequences if the country were to host nuclear arms."
+    },
+    {
+      "_linked_ids": [
+        "subject-ukraine-e0590daf1867"
+      ],
+      "cluster_id": "subject-ukraine-e0590daf1867",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-10",
+      "headline": "Russian strike on Ukrainian shopping centre kills five and injures dozens",
+      "independent_source_count": 2,
+      "members": [
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -35,81 +262,62 @@
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/09/10/bombardeio-shopping-ucrania-deixa-mortos-feridos.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "bssnews.net",
-          "source_country": "bg",
-          "url": "https://www.bssnews.net/international/423326"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "up"
       ],
-      "origin_country": "bg",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/tres-muertos-bombardeo-ruso-sobre-centro-comercial-20260910175329-nt.html",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/09/10/bombardeio-shopping-ucrania-deixa-mortos-feridos.ghtml",
+      "rank": 4,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "abc.es",
         "bbc.co.uk",
         "globo.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4106,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6662,
+        "total": 0.6194,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ukraine",
       "subject_names": [
-        "kiev",
-        "kyiv",
-        "putin",
         "russia",
-        "russian",
-        "russie",
         "ucrania",
         "ukraine",
         "zelenskyy"
       ],
-      "subject_newsroom_count": 24,
-      "summary": "A Russian strike struck a shopping centre in Ukraine, killing at least three people and injuring dozens; reports indicate multiple fatalities and many wounded from the attack on the mall."
+      "subject_newsroom_count": 20,
+      "summary": "A Russian attack on a shopping centre in Ukraine killed five people and injured dozens, with reports indicating 67 people were hurt. The strike struck the commercial facility, causing both fatalities and multiple injuries."
     },
     {
       "_linked_ids": [
-        "subject-canada-30ea19b11fc6"
+        "subject-canada-30ea19b11fc6",
+        "subject-trump-254e516d4059"
       ],
-      "cluster_id": "subject-canada-30ea19b11fc6",
+      "cluster_id": "subject-trump-254e516d4059",
       "coherence": null,
       "consequence": 3,
       "countries": [
-        "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 3,
+      "country_count": 2,
       "editorial_day": "2026-09-10",
-      "headline": "Canada pledges air defence support for Ukraine during Zelenskyy visit",
-      "independent_source_count": 3,
+      "headline": "Zelenskyy visits Canada as Ottawa pledges air defence support for Ukraine",
+      "independent_source_count": 2,
       "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/zelenski-anuncia-toronto-ucrania-recibira-apoyo-defensa-20260910201014-nt.html"
-        },
         {
           "language": "en",
           "source": "theguardian.com",
@@ -127,393 +335,50 @@
         "up",
         "ca"
       ],
-      "origin_country": "spain",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/zelenski-anuncia-toronto-ucrania-recibira-apoyo-defensa-20260910201014-nt.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "origin_country": "united-kingdom",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/world/2026/sep/10/zelenskyy-canada-visit",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "abc.es",
         "pbs.org",
         "theguardian.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "novelty": 0.5,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6629,
+        "total": 0.6094,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "canada",
+      "subject_label": "trump",
       "subject_names": [
         "canada",
-        "kiev",
-        "kyiv",
-        "putin",
+        "dallas",
+        "donald trump",
+        "groenland",
+        "pentagono",
         "russia",
-        "russian",
-        "russie",
+        "trump",
         "ucrania",
         "ukraine",
         "zelenskyy"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "Ukrainian President Volodymyr Zelenskyy visited Canada, where Canadian leaders pledged to provide air defence support to Ukraine as part of efforts to strengthen military assistance against Russia."
-    },
-    {
-      "_linked_ids": [
-        "subject-merz-7affb1f43d3d",
-        "subject-merz-8697ebabaa13"
-      ],
-      "cluster_id": "subject-merz-7affb1f43d3d",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-11",
-      "headline": "German Chancellor Friedrich Merz sues AfD after calling 'remigration' ethnic cleansing",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/allemagne-l-afd-attaque-le-chancelier-friedrich-merz-en-justice-pour-avoir-qualifie-le-concept-de-remigration-de-nettoyage-ethnique-20260911"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260909/11631053/canciller-aleman-merz-acusa-afd-practicar-politica-limpieza-etnica.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/merz-arremete-afd-idea-remigracion-debacle-electoral-cdu-sinonimo-limpieza-etnica_1_13498172.html"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260909/11631053/canciller-aleman-merz-acusa-afd-practicar-politica-limpieza-etnica.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "lavanguardia.com",
-        "lefigaro.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6448,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "merz",
-      "subject_names": [
-        "afd",
-        "alemania",
-        "cdu",
-        "friedrich merz",
-        "merz",
-        "sajonia-anhalt",
-        "ulrich siegmund"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "German Chancellor Friedrich Merz described the AfD’s concept of “remigration” as equivalent to ethnic cleansing, and the AfD has responded by taking legal action against him; the confrontation followed criticism of the party’s policy proposals and came after recent electoral setbacks for the CDU."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-81c100a2432d"
-      ],
-      "cluster_id": "subject-ceuta-81c100a2432d",
-      "coherence": 0.6076335222153472,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-11",
-      "headline": "Chief of staff to Ceuta government delegate resigns over CNI warnings",
-      "independent_source_count": 14,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-11/dimite-el-jefe-de-gabinete-del-delegado-del-gobierno-en-ceuta-por-el-salto-fronterizo.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/dimite-jefe-gabinete-delegado-gobierno-ceuta-recibio-20260911094046-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/dimite-jefe-gabinete-delegado-gobierno-ceuta-recibio-wasap-cni_1_13502325.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/09/11/6aa3b657e5fdeaa6028b456e.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/11/6aa3af19e4d4d8326b8b4574.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260911/dimite-jefe-gabinete-delegado-gobierno-ceuta-recibio-mensajes-cni-alertando-asalto/1003744380013_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-11/quien-honzalo-sanz-jefe-gabinete-delegado-gobierno-ceuta-dimite-1qrt_4421892/"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-11/dimite-jefe-gabinete-delegado-gobierno-ceuta_4421839/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-dimite-jefe-gabinete-delegacion-gobierno-ceuta-polemica-contactos-cni-20260911094355.html"
-        },
-        {
-          "language": "es",
-          "source": "andaluciainformacion.es",
-          "source_country": "spain",
-          "url": "https://www.andaluciainformacion.es/articulo/espana/renuncia-jefe-gabinete-delegacion-gobierno-ceuta-polemica-cni/202609111017143474120.html"
-        },
-        {
-          "language": "es",
-          "source": "lacronicabadajoz.com",
-          "source_country": "spain",
-          "url": "https://www.lacronicabadajoz.com/nacional/2026/09/11/dimite-jefe-gabinete-delegacion-gobierno-134175826.html"
-        },
-        {
-          "language": "es",
-          "source": "diariodeburgos.es",
-          "source_country": "spain",
-          "url": "https://www.diariodeburgos.es/noticia/z568a530d-582d-4e2d-895600a8727492b1/202609/dimite-el-jefe-de-gabinete-del-delegado-del-gobierno-en-ceuta"
-        },
-        {
-          "language": "es",
-          "source": "elcorreogallego.es",
-          "source_country": "spain",
-          "url": "https://www.elcorreogallego.es/espana/2026/09/11/dimite-jefe-gabinete-delegacion-gobierno-134175849.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosur.es",
-          "source_country": "spain",
-          "url": "https://www.diariosur.es/nacional/dimite-jefe-gabinete-delegacion-gobierno-ceuta-tras-20260911100630-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "elcomercio.es",
-          "source_country": "spain",
-          "url": "https://www.elcomercio.es/politica/dimite-jefe-gabinete-delegacion-gobierno-ceuta-tras-20260911100630-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-dimite-jefe-gabinete-delegacion-gobierno-ceuta-polemica-contactos-cni-20260911094355.html",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "abc.es",
-        "elconfidencial.com",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6076,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.8298
-        },
-        "total": 0.6377,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "bruselas",
-        "ceuta",
-        "cni",
-        "delegacion",
-        "maroc",
-        "marruecos",
-        "moncloa",
-        "tarajal"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "The chief of staff to the Spanish government delegate in Ceuta has resigned, saying he informed his superior about alerts from the National Intelligence Center (CNI); his departure follows controversy over contacts and communications related to those CNI reports."
-    },
-    {
-      "_linked_ids": [
-        "subject-zelensky-1be48320a4e0",
-        "subject-zelensky-c16751ee2480"
-      ],
-      "cluster_id": "subject-zelensky-c16751ee2480",
-      "coherence": 0.4870152021305588,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "it",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-10",
-      "headline": "Zelensky’s plane was nearly struck by a drone en route to Oslo",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/checknews/un-drone-russe-a-t-il-vraiment-failli-percuter-lavion-de-zelensky-en-moldavie-20260910_OFRLIIHYG5DSNBXFKTRBNTI6BQ/"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260910.OBS118099/l-avion-de-zelensky-a-failli-etre-touche-par-un-drone-tandis-qu-il-etait-en-route-vers-la-norvege-selon-oslo-ce-que-l-on-sait.html"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/monde/lavion-de-zelensky-echappe-de-peu-a-une-collision-avec-un-drone-alors-quil-etait-en-route-vers-oslo_645668"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260909/11631306/avion-zelenski-estuvo-punto-alcanzado-dron-dirigia-oslo.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/09/zelenskyys-plane-almost-hit-by-drone-en-route-to-oslo-norway-pm-says"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/10/news/zelensky_aereo_drone_russia_norvegia-425575694/?rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/09/aviao-de-zelensky-quase-e-atingido-por-drone-a-caminho-de-oslo-diz-premie-da-noruega.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "no"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/09/aviao-de-zelensky-quase-e-atingido-por-drone-a-caminho-de-oslo-diz-premie-da-noruega.ghtml",
-      "rank": 5,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "liberation.fr",
-        "nouvelobs.com",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.487,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.5,
-          "prominence": 0.6364,
-          "source_reliability": 0.7241
-        },
-        "total": 0.6365,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "zelensky",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "oslo",
-        "putin",
-        "russia",
-        "russian",
-        "russie",
-        "ucrania",
-        "ukraine",
-        "zelenski",
-        "zelensky",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Norwegian authorities say a drone came close to striking President Volodymyr Zelensky’s plane as it was traveling to Oslo; multiple international outlets report the incident and attribute the near-collision to a drone, with Norway’s prime minister among officials commenting on the event."
+      "subject_newsroom_count": 27,
+      "summary": "Ukrainian President Volodymyr Zelenskyy visited Canada to seek additional military backing, and Canadian officials announced they will provide air defence support to Ukraine; the trip focused on strengthening military cooperation between the two countries."
     }
   ],
-  "discarded_ingested": 155,
+  "discarded_ingested": 136,
   "discarded_kept": 5,
-  "generated_at": "2026-09-11T09:55:02.398599+00:00",
+  "generated_at": "2026-09-12T09:30:20.733648+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

@@ -1,64 +1,348 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-hong-kong-958d68bf06cf",
-      "coherence": 0.4945924090407007,
+      "cluster_id": "subject-bab-90b5c13bf515",
+      "coherence": 0.47974735219403775,
       "consequence": 3,
       "countries": [
+        "be",
+        "brazil",
         "france",
+        "germany",
+        "it",
+        "sy"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-09-12",
+      "headline": "Houthis seize control of Bab al‑Mandab Strait",
+      "independent_source_count": 15,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/au-yemen-les-rebelles-pro-iran-prennent-le-controle-du-detroit-strategique-de-bab-al-mandab-20260911"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/au-yemen-les-houthistes-resserrent-leur-etau-sur-le-detroit-de-bab-al-mandab-20260911"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-jt/franceinfo/21h-minuit/23-heures/les-houthis-s-emparent-du-detroit-de-bab-el-mandeb_8189402.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260912-les-houthis-du-y%C3%A9men-s-emparent-du-strat%C3%A9gique-d%C3%A9troit-de-bab-el-mandeb"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260912.OBS118160/les-houthis-du-yemen-s-emparent-du-detroit-de-bab-el-mandeb-passage-strategique-entre-l-europe-et-l-asie.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/afrique/yemen-les-houthistes-avancent-vers-le-strategique-detroit-de-bab-el-mandeb-ZXDQ3XFQKVFAZMWRVZNWDO2UFE/"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/huthi-eroberung-inseln-100.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/asien/jemen-huthi-rebellen-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/12/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/10/houthis-seize-red-sea-port-city-in-push-to-seize-bab-el-mandeb"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml"
+        },
+        {
+          "language": "fr",
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/dernieres-depeches/2026/09/11/les-houthis-du-yemen-semparent-du-strategique-detroit-de-bab-el-mandeb-IRVYBB6WMFASDNZB6MROKVHFBI/"
+        },
+        {
+          "language": "en",
+          "source": "aawsat.com",
+          "source_country": "sy",
+          "url": "https://english.aawsat.com/arab-world/5317238-houthis-seize-bab-al-mandeb-and-yemeni-islands-southern-red-sea"
+        },
+        {
+          "language": "de",
+          "source": "deutschlandfunk.de",
+          "source_country": "germany",
+          "url": "https://www.deutschlandfunk.de/huthi-miliz-nimmt-inseln-in-strategisch-wichtiger-meerenge-bab-al-mandab-ein-100.html"
+        },
+        {
+          "language": "de",
+          "source": "westfalen-blatt.de",
+          "source_country": "germany",
+          "url": "https://www.westfalen-blatt.de/ueberregional/nachrichten/themen-des-tages/huthi-rebellen-greifen-nach-wichtiger-meerenge-bab-al-mandab-3646261"
+        },
+        {
+          "language": "pt",
+          "source": "jornaldebrasilia.com.br",
+          "source_country": "brazil",
+          "url": "https://jornaldebrasilia.com.br/noticias/mundo/rebeldes-houthis-do-iemen-tomam-estrategico-estreito-de-bab-el-mandeb/"
+        },
+        {
+          "language": "fr",
+          "source": "martinique.franceantilles.fr",
+          "source_country": "france",
+          "url": "https://www.martinique.franceantilles.fr/actualite/international/les-houthis-du-yemen-semparent-du-strategique-detroit-de-bab-el-mandeb-1092718.php"
+        }
+      ],
+      "mentioned_countries": [
+        "sa",
+        "ir",
+        "ym"
+      ],
+      "origin_country": "be",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml",
+      "rank": 1,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lexpress.fr",
+        "nouvelobs.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4797,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7895,
+          "source_reliability": 0.8491
+        },
+        "total": 0.7858,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bab",
+      "subject_names": [
+        "bab",
+        "houthis",
+        "mandeb",
+        "red sea",
+        "teheran",
+        "yemen"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Houthi forces in Yemen have taken control of the Bab al‑Mandab strait and nearby islands and coastal areas, consolidating a strategic grip on the southern entrance to the Red Sea. Reports indicate the rebels advanced along Yemen’s Red Sea coastline to capture port areas and islands that give them control over this key maritime passage between Europe and Asia."
+    },
+    {
+      "cluster_id": "subject-brics-aa7c80d95be6",
+      "coherence": 0.8134180643803893,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "germany",
+        "it",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-12",
+      "headline": "BRICS leaders gather in India for a two-day summit amid global tensions",
+      "independent_source_count": 17,
+      "members": [
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/india-s-brics-strategy-tested-with-xi-putin-set-to-visit/a-79231879?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/11/russian-leader-vladimir-putin-arrives-in-india-ahead-of-brics-summit"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/12/g-s1-143054/brics-leaders-meet-in-india"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/12/lideres-do-brics-se-reunem-na-india-em-meio-a-guerras-e-tensoes-com-os-eua.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "kclu.org",
+          "source_country": "united-states",
+          "url": "https://www.kclu.org/world/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
+        },
+        {
+          "language": "en",
+          "source": "sloughobserver.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.sloughobserver.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        },
+        {
+          "language": "en",
+          "source": "times-series.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.times-series.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        },
+        {
+          "language": "en",
+          "source": "fox21online.com",
+          "source_country": "united-states",
+          "url": "https://www.fox21online.com/news/us-world/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc/article_27d4a3c8-d154-59a8-b367-978c01fa7245.html"
+        },
+        {
+          "language": "en",
+          "source": "eastlothiancourier.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.eastlothiancourier.com/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        },
+        {
+          "language": "en",
+          "source": "dailyadvance.com",
+          "source_country": "united-states",
+          "url": "http://www.dailyadvance.com/news/world/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc/article_6cdc9be2-15c3-5a92-8124-85454961f42d.html"
+        },
+        {
+          "language": "en",
+          "source": "maldonandburnhamstandard.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.maldonandburnhamstandard.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        },
+        {
+          "language": "en",
+          "source": "ktep.org",
+          "source_country": "united-states",
+          "url": "https://www.ktep.org/world-news/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
+        },
+        {
+          "language": "en",
+          "source": "capeandislands.org",
+          "source_country": "united-states",
+          "url": "https://www.capeandislands.org/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
+        },
+        {
+          "language": "en",
+          "source": "dailyecho.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.dailyecho.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        },
+        {
+          "language": "en",
+          "source": "bromsgroveadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bromsgroveadvertiser.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        },
+        {
+          "language": "en",
+          "source": "wypr.org",
+          "source_country": "united-states",
+          "url": "https://www.wypr.org/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
+        },
+        {
+          "language": "en",
+          "source": "andoveradvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.andoveradvertiser.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
+        }
+      ],
+      "mentioned_countries": [
+        "india"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/11/russian-leader-vladimir-putin-arrives-in-india-ahead-of-brics-summit",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "dw.com",
+        "euronews.com",
+        "globo.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.8134,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8095,
+          "source_reliability": 0.8261
+        },
+        "total": 0.7746,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "brics",
+      "subject_names": [
+        "brics",
+        "india",
+        "jinping",
+        "modi",
+        "putin"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Leaders of BRICS countries have arrived in India for a two-day summit hosted by New Delhi, where visits from China’s Xi and Russia’s Putin are expected; the meeting takes place against a backdrop of ongoing wars and rising tensions with the United States, testing the bloc’s diplomatic cohesion and India’s strategy in managing competing international pressures."
+    },
+    {
+      "cluster_id": "subject-hong-kong-d21f7353769f",
+      "coherence": 0.5340261164612865,
+      "consequence": 3,
+      "countries": [
         "germany",
         "it",
         "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 6,
+      "country_count": 5,
       "editorial_day": "2026-09-11",
-      "headline": "Hong Kong court sentences three Tiananmen vigil organisers to prison",
-      "independent_source_count": 12,
+      "headline": "Hong Kong court sentences three Tiananmen vigil organizers to up to seven years in prison",
+      "independent_source_count": 7,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/11/un-tribunal-de-hongkong-condamne-a-de-lourdes-peines-les-organisateurs-des-veillees-du-souvenir-du-massacre-de-tiananmen_6770545_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/11/hongkong-trois-militants-qui-organisaient-des-veillees-commemorant-la-repression-de-tiananmen-condamnes-a-entre-cinq-et-plus-de-sept-ans-de-prison_6770280_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/asie-pacifique/hongkong-de-5-a-7-ans-de-prison-pour-des-militants-de-la-memoire-de-tiananmen-20260911_XW44OEYFWZHD7JESFBPHC24IQQ/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/hong-kong-des-militants-de-la-memoire-de-tiananmen-condamnes-a-entre-5-et-7-ans-de-prison-20260911"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/asie-pacifique/20260911-hong-kong-sept-ans-prison-trois-militants-memoire-tiananmen-lee-cheuk-yan-chow-hang-tung-albert-ho"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/asie-pacifique/20260911-hong-kong-trois-militants-de-la-m%C3%A9moire-de-tiananmen-condamn%C3%A9s-%C3%A0-des-peines-de-cinq-%C3%A0-sept-ans-de-prison"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/hong-kong-impone-siete-anos-carcel-organizadores-20260911074915-nt.html"
-        },
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -69,7 +353,7 @@
           "language": "en",
           "source": "dw.com",
           "source_country": "germany",
-          "url": "https://www.dw.com/en/hong-kong-tiananmen-activists-sentenced-up-to-7-years/a-79224243?maca=en-rss-en-world-4025-rdf"
+          "url": "https://www.dw.com/en/hong-kong-tiananmen-activists-jailed-for-up-to-7-years/a-79224243?maca=en-rss-en-world-4025-rdf"
         },
         {
           "language": "en",
@@ -91,45 +375,46 @@
         },
         {
           "language": "en",
-          "source": "wvtf.org",
+          "source": "pbs.org",
           "source_country": "united-states",
-          "url": "https://www.wvtf.org/2026-09-11/hong-kong-court-sentences-3-tiananmen-vigil-organizers-to-prison"
+          "url": "https://www.pbs.org/newshour/world/hong-kong-court-sentences-3-tiananmen-vigil-organizers-to-prison-in-national-security-case"
+        },
+        {
+          "language": "es",
+          "source": "diariosigloxxi.com",
+          "source_country": "spain",
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260911171201/condenados-carcel-tres-activistas-organizar-actos-hong-kong-recuerdo-masacre-tiananmen"
         }
       ],
       "mentioned_countries": [
         "china"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/asie-pacifique/20260911-hong-kong-sept-ans-prison-trois-militants-memoire-tiananmen-lee-cheuk-yan-chow-hang-tung-albert-ho",
-      "rank": 1,
-      "reference_newsroom_count": 11,
+      "origin_country": "germany",
+      "outbound_source": "npr.org",
+      "outbound_url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers",
+      "rank": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "abc.es",
         "bbc.co.uk",
         "dw.com",
         "euronews.com",
-        "france24.com",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
         "npr.org",
-        "repubblica.it",
-        "rfi.fr"
+        "pbs.org",
+        "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.4946,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5789,
-          "freshness": 1.0,
+          "coherence": 0.534,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.75,
-          "source_reliability": 0.8261
+          "prominence": 0.6364,
+          "source_reliability": 0.7143
         },
-        "total": 0.7971,
+        "total": 0.718,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "hong kong",
@@ -137,565 +422,65 @@
         "hong kong",
         "tiananmen"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "A Hong Kong court has convicted and sentenced three activists who organised annual vigils commemorating the 1989 Tiananmen crackdown to prison terms ranging from five to seven years. The rulings came after trials over their roles in holding the memorial gatherings."
+      "subject_newsroom_count": 8,
+      "summary": "A Hong Kong court has sentenced three activists who organized vigils commemorating the 1989 Tiananmen Square crackdown to prison terms ranging from five to seven years after finding them guilty in a national security-related case; the convictions stem from their roles in holding and promoting the annual memorial gatherings."
     },
     {
-      "cluster_id": "subject-bab-fe0f38087c0f",
-      "coherence": 0.4510540988573938,
+      "cluster_id": "subject-g20-1d5c2473685a",
+      "coherence": 0.5536888005283918,
       "consequence": 3,
       "countries": [
-        "india",
-        "it",
-        "sy",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-09-11",
-      "headline": "Houthis seize Mokha port and nearby islands, tightening grip on Bab el-Mandeb",
-      "independent_source_count": 11,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/10/houthis-seize-key-port-mocha-yemen-red-sea-coast-iran-saudi-arabia-us"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c4g7vr0lngwo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/11/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/10/houthis-seize-red-sea-port-city-in-push-to-seize-bab-el-mandeb"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/11/g-s1-142822/houthis-red-sea-port"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/iran-backed-houthis-capture-red-sea-port-putting-more-pressure-on-oil-markets"
-        },
-        {
-          "language": "en",
-          "source": "wvtf.org",
-          "source_country": "united-states",
-          "url": "https://www.wvtf.org/2026-09-11/iran-backed-houthi-rebels-seize-strategic-red-sea-port-in-yemen"
-        },
-        {
-          "language": "en",
-          "source": "investinglive.com",
-          "source_country": "unknown",
-          "url": "https://investinglive.com/news/yemen-s-iran-backed-houthis-have-completed-the-takeover-of-bab-el-mandeb-strait/"
-        },
-        {
-          "language": "en",
-          "source": "siasat.com",
-          "source_country": "india",
-          "url": "https://www.siasat.com/houthis-seize-perim-island-tighten-grip-on-bab-el-mandab-area-3540353/"
-        },
-        {
-          "language": "en",
-          "source": "foreignpolicy.com",
-          "source_country": "united-states",
-          "url": "https://foreignpolicy.com/2026/09/10/houthis-yemen-mokha-port-red-sea-bab-el-mandeb-iran-saudi-arabia-strait-hormuz/"
-        },
-        {
-          "language": "en",
-          "source": "wxow.com",
-          "source_country": "united-states",
-          "url": "https://www.wxow.com/news/international/iran-backed-rebels-capture-red-sea-port-tightening-grip-on-a-key-global-chokepoint/article_7c3e8100-b19b-59cc-a86e-9794c3f92fc2.html"
-        },
-        {
-          "language": "en",
-          "source": "arabherald.com",
-          "source_country": "sy",
-          "url": "http://www.arabherald.com/news/279298992/houthis-seize-strategic-red-sea-port-near-key-shipping-route-media"
-        }
-      ],
-      "mentioned_countries": [
-        "ym"
-      ],
-      "origin_country": "india",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/2026/sep/10/houthis-seize-key-port-mocha-yemen-red-sea-coast-iran-saudi-arabia-us",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "npr.org",
-        "pbs.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4511,
-          "corroboration": 0.75,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7895
-        },
-        "total": 0.7429,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bab",
-      "subject_names": [
-        "bab",
-        "houthis",
-        "jemen",
-        "mandeb",
-        "moca",
-        "moyen-orient",
-        "red sea",
-        "yemen"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Iran-backed Houthi forces have captured the strategic Red Sea port of Mokha (Mocha) and nearby islands including Perim, consolidating control over the approaches to the Bab el-Mandeb Strait and extending their hold along Yemen’s Red Sea coast; the takeover raises concerns about security for a key global shipping route and potential impacts on oil markets."
-    },
-    {
-      "cluster_id": "subject-anthropic-c2a399f4098b",
-      "coherence": 0.4599459683350736,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "ei",
-        "po",
-        "spain",
-        "united-kingdom",
-        "united-states",
-        "vm"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-09-11",
-      "headline": "Anthropic says it blocked attempts to use its AI to develop biological weapons",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/tecnologia/2026-09-10/anthropic-alerta-de-que-ha-frenado-posibles-intentos-de-crear-armas-biologicas-con-su-ia.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/financial-times/2026/09/11/6aa3cb9a468aeba96b8b456e.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cx2zrrpkx20o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/10/anthropic-diz-ter-identificado-paises-que-usaram-sua-ia-para-fazer-propaganda-e-desenvolver-possiveis-armas-biologicas-diz-nyt.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "irishtimes.com",
-          "source_country": "ei",
-          "url": "https://www.irishtimes.com/world/us/2026/09/11/anthropic-says-it-blocked-possible-efforts-to-build-biological-weapons-and-deadly-pathogens/"
-        },
-        {
-          "language": "en",
-          "source": "mirror.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.mirror.co.uk/news/us-news/anthropic-blocks-malicious-use-ai-37650451"
-        },
-        {
-          "language": "pt",
-          "source": "pplware.sapo.pt",
-          "source_country": "po",
-          "url": "https://pplware.sapo.pt/inteligencia-artificial/anthropic-deteta-e-bloqueia-cientistas-que-usavam-a-ia-claude-para-criar-armas-biologicas/"
-        },
-        {
-          "language": "vie",
-          "source": "baomoi.com",
-          "source_country": "vm",
-          "url": "https://baomoi.com/anthropic-cong-bo-bao-cao-phat-hien-nha-khoa-hoc-dung-ai-claude-nghien-cuu-vu-khi-sinh-hoc-c56027448.epi"
-        },
-        {
-          "language": "es",
-          "source": "andaluciainformacion.es",
-          "source_country": "spain",
-          "url": "https://www.andaluciainformacion.es/articulo/sociedad/anthropic-detecta-bloquea-cinco-intentos-desarrollar-armas-biologicas-claude/202609111024293474135.html"
-        },
-        {
-          "language": "en",
-          "source": "sun-sentinel.com",
-          "source_country": "united-states",
-          "url": "https://www.sun-sentinel.com/2026/09/10/anthropic-threat-report/"
-        }
-      ],
-      "mentioned_countries": [
-        "rs",
-        "united-states"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/10/anthropic-diz-ter-identificado-paises-que-usaram-sua-ia-para-fazer-propaganda-e-desenvolver-possiveis-armas-biologicas-diz-nyt.ghtml",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "elpais.com",
-        "expansion.com",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4599,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.75
-        },
-        "total": 0.7319,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "anthropic",
-      "subject_names": [
-        "anthropic",
-        "chine",
-        "iran",
-        "openai",
-        "teheran"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "Anthropic reported that its AI system Claude identified and blocked multiple attempts by users, including some scientists, to misuse the model in ways that could have supported development of biological weapons or deadly pathogens; the company said it detected the misuse, prevented the requested outputs, and flagged the incidents for further review."
-    },
-    {
-      "cluster_id": "subject-trump-ea57a62200f1",
-      "coherence": 0.4785834581010693,
-      "consequence": 2,
-      "countries": [
-        "ci",
         "france",
-        "germany",
-        "gt",
-        "mx",
-        "ro",
-        "spain",
-        "united-states",
-        "unknown",
-        "uy"
-      ],
-      "country_count": 10,
-      "editorial_day": "2026-09-11",
-      "headline": "Donald Trump promises $5,000 to each U.S. adult if GOP wins Congress",
-      "independent_source_count": 28,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/etats-unis-trump-pourrait-il-vraiment-offrir-5000-dollars-aux-citoyens-americains-en-cas-de-victoire-aux-midterms-20260910"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/promesse-de-5000-dollars-pour-chaque-americain-attaques-contre-les-democrates-fous-donald-trump-se-place-au-centre-de-la-campagne-des-midterms-20260910"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/usa/midterms-2018/donald-trump-promet-5000-a-chaque-americain_8187965.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20260910-l%C3%A9galit%C3%A9-co%C3%BBt-ce-qu-il-faut-savoir-du-ch%C3%A8que-promis-par-trump-aux-am%C3%A9ricains"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260910.OBS118101/a-dallas-trump-promet-un-dividende-de-5-000-dollars-par-citoyen-si-son-parti-garde-le-controle-du-congres.html"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/monde/il-promet-5-000-dollars-a-chaque-americain-adulte-en-cas-de-victoire-a-dallas-trump-joue-le-tout-pour-le-tout-avant-des-midterms-perilleux-pour-les-republicains_645670"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/us/2026-09-10/trump-promete-en-el-trump-a-palooza-un-bono-de-5000-dolares-si-los-republicanos-ganan-las-midterms.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260910/11631541/trump-promete-dividendo-5-000-dolares-estadounidense-republicanos-ganan-midterm.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-ceba-culto-lider-convencion-republicana-agita-fantasmas-legislativas-derrotar-comunismo_1_13499098.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/trump-promete-5-000-dolares-cada-adulto-si-los-republicanos-mantienen-congreso_7034922_0.html"
-        },
-        {
-          "language": "en",
-          "source": "mycolumbuspower.com",
-          "source_country": "united-states",
-          "url": "https://mycolumbuspower.com/4900661/donald-trump-5k-payout-bribe-reactions/"
-        },
-        {
-          "language": "en",
-          "source": "965kvki.com",
-          "source_country": "united-states",
-          "url": "https://965kvki.com/ixp/180/p/trump-5000-check-midterms/"
-        },
-        {
-          "language": "en",
-          "source": "yahoo.com",
-          "source_country": "united-states",
-          "url": "https://www.yahoo.com/news/politics/articles/trump-floats-5-000-checks-194226066.html"
-        },
-        {
-          "language": "en",
-          "source": "fox5ny.com",
-          "source_country": "united-states",
-          "url": "https://www.fox5ny.com/news/trump-promises-every-american-adult-5000-gop-wins-midterms"
-        },
-        {
-          "language": "en",
-          "source": "thenewamerican.com",
-          "source_country": "united-states",
-          "url": "https://thenewamerican.com/us/politics/trump-vows-inflationary-5k-check-to-every-american-if-gop-wins-midterms/"
-        },
-        {
-          "language": "en",
-          "source": "newsone.com",
-          "source_country": "united-states",
-          "url": "https://newsone.com/6871405/trump-offers-bribe-republicans-win-midterms/"
-        },
-        {
-          "language": "en",
-          "source": "fox10tv.com",
-          "source_country": "united-states",
-          "url": "https://www.fox10tv.com/2026/09/10/trump-makes-dubious-pledge-give-every-us-adult-5000-if-gop-keeps-control-congress/"
-        },
-        {
-          "language": "en",
-          "source": "ksby.com",
-          "source_country": "united-states",
-          "url": "https://www.ksby.com/politics/america-votes/trump-says-hell-send-americans-5-000-each-if-republicans-win-in-november"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://ktok.iheart.com/content/2026-09-10-trump-promises-5000-dividend-checks-if-gop-keeps-control/"
-        },
-        {
-          "language": "en",
-          "source": "fox6now.com",
-          "source_country": "united-states",
-          "url": "https://www.fox6now.com/news/trump-promises-every-american-adult-5000-gop-wins-midterms"
-        },
-        {
-          "language": "es",
-          "source": "df.cl",
-          "source_country": "ci",
-          "url": "https://www.df.cl/internacional/ft/trump-promete-un-dividendo-de-us-5-mil-a-los-votantes-de-eeuu-si-los"
-        },
-        {
-          "language": "es",
-          "source": "forbes.com.mx",
-          "source_country": "mx",
-          "url": "https://forbes.com.mx/trump-promete-pago-de-5000-dolares-si-republicanos-ganan-elecciones/"
-        },
-        {
-          "language": "es",
-          "source": "prensalibre.com",
-          "source_country": "gt",
-          "url": "https://www.prensalibre.com/internacional/trump-promete-us5-mil-a-cada-adulto-si-ganan-los-republicanos-que-se-sabe-de-su-propuesta/"
-        },
-        {
-          "language": "es",
-          "source": "canal26.com",
-          "source_country": "unknown",
-          "url": "https://www.canal26.com/internacionales/2026/09/10/donald-trump-prometio-5-mil-dolares-a-cada-estadounidense-si-su-partido-gana-las-legislativas/"
-        },
-        {
-          "language": "es",
-          "source": "diario.mx",
-          "source_country": "mx",
-          "url": "https://diario.mx/estados-unidos/2026/sep/10/promete-trump-5-md-a-cada-adulto-de-ee-uu-si-ganan-republicanos-1137577.html"
-        },
-        {
-          "language": "es",
-          "source": "almomento.net",
-          "source_country": "united-states",
-          "url": "https://almomento.net/trump-promete-5-000-dolares-si-republicanos-ganan-congreso/"
-        },
-        {
-          "language": "es",
-          "source": "elobservador.com.uy",
-          "source_country": "uy",
-          "url": "https://www.elobservador.com.uy/estados-unidos/politica/trump-se-carga-la-campana-al-hombro-pide-salir-votar-y-promete-5000-dolares-si-los-republicanos-mantienen-el-congreso-n6056772"
-        },
-        {
-          "language": "de",
-          "source": "kreiszeitung.de",
-          "source_country": "germany",
-          "url": "https://www.kreiszeitung.de/politik/midterms-stehen-an-trump-verspricht-us-buergern-5000-dollar-zr-94486149.html"
-        },
-        {
-          "language": "ron",
-          "source": "stirileprotv.ro",
-          "source_country": "ro",
-          "url": "https://stirileprotv.ro/stiri/international/trump-promite-pe-fata-mita-electorala-5-000-de-dolari-pentru-fiecare-american-daca-pierdem-alegerile-ajungem-in-iad.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "ci",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/trump-ceba-culto-lider-convencion-republicana-agita-fantasmas-legislativas-derrotar-comunismo_1_13499098.html",
-      "rank": 4,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "challenges.fr",
-        "eldiario.es",
-        "elpais.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "lavanguardia.com",
-        "lefigaro.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4786,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.875,
-          "source_reliability": 0.8933
-        },
-        "total": 0.7254,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "dallas",
-        "donald trump",
-        "republicans",
-        "trump"
-      ],
-      "subject_newsroom_count": 26,
-      "summary": "Across multiple outlets, Donald Trump vowed at campaign events that he would provide a $5,000 payment to every American adult if Republicans retain control of Congress in the upcoming midterm elections; the pledge has been described and questioned in reports regarding its feasibility, legality and potential impact on voters and the campaign."
-    },
-    {
-      "cluster_id": "subject-hezbollah-5ac50434c1c9",
-      "coherence": 0.4468399088166771,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france"
+        "germany"
       ],
       "country_count": 2,
-      "editorial_day": "2026-09-11",
-      "headline": "Israel detonates Hezbollah underground infrastructure, causing 4.1 magnitude tremor",
+      "editorial_day": "2026-09-12",
+      "headline": "Zelensky says he is willing to meet Putin at the G20 in Miami in December",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/live/2026/09/12/en-direct-guerre-en-ukraine-la-russie-a-attaque-l-ukraine-avec-une-centaine-de-drones-et-plus-de-14-missiles-dans-la-nuit-de-vendredi-a-samedi_6766818_3210.html"
+        },
+        {
+          "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/israel-frappe-des-infrastructures-du-hezbollah-et-provoque-une-secousse-de-magnitude-41-dans-le-sud-liban-20260910_N4KWOUBOMJDWFOIHDG6X3DKHMQ/"
+          "url": "https://www.liberation.fr/international/europe/volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-en-decembre-20260912_LLGP2ZLOXFC2RFTQE47SYJFJ44/"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "ouest-france.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/moyen-orient/20260910-liban-isra%C3%ABl-dynamite-des-tunnels-du-hezbollah-et-provoque-un-mini-s%C3%A9isme"
+          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-dd26fd08-ae86-11f1-8483-804bbf8224d2?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/moyen-orient/20260910-en-direct-moyen-orient-iran-petrole-au-dessus-100-dollars-frappes-detroit-ormuz-donald-trump"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/moyen-orient/20260911-liban-isra%C3%ABl-d%C3%A9truit-des-infrastructures-souterraines-du-hezbollah-provoquant-une-secousse-de-magnitude-4-1"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/10/explosoes-de-israel-para-destruir-estrutura-do-hezbollah-provocam-terremoto-de-magnitude-41-no-libano.ghtml"
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf"
         }
       ],
       "mentioned_countries": [
-        "is",
-        "le"
+        "united-states",
+        "up"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/10/explosoes-de-israel-para-destruir-estrutura-do-hezbollah-provocam-terremoto-de-magnitude-41-no-libano.ghtml",
-      "rank": 5,
+      "origin_country": "france",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf",
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "france24.com",
-        "globo.com",
+        "dw.com",
+        "lemonde.fr",
         "liberation.fr",
-        "rfi.fr"
+        "ouest-france.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4468,
+          "coherence": 0.5537,
           "corroboration": 0.5,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -703,26 +488,128 @@
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6522
+          "source_reliability": 0.6
         },
-        "total": 0.6912,
+        "total": 0.7014,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "hezbollah",
+      "subject_label": "g20",
       "subject_names": [
-        "gaza",
-        "hezbollah",
-        "israel",
-        "liban",
-        "libano"
+        "g20",
+        "miami",
+        "moldova",
+        "moscou",
+        "oslo",
+        "poutine",
+        "russia",
+        "ucrania",
+        "ukraine",
+        "vladimir poutine",
+        "volodymyr zelensky",
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Israeli forces struck and destroyed underground Hezbollah facilities in southern Lebanon, detonations that generated a seismic event measured at magnitude 4.1; multiple news outlets report the explosions targeted tunnels or subterranean infrastructure and produced a noticeable tremor in the region."
+      "subject_newsroom_count": 4,
+      "summary": "Ukrainian President Volodymyr Zelensky has said he is prepared to meet Russian President Vladimir Putin at the upcoming G20 summit in Miami in December, offering to hold talks there; this position was stated publicly and reported across multiple outlets."
+    },
+    {
+      "cluster_id": "subject-ormuz-fcb8420410b9",
+      "coherence": 0.5164355750303937,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-11",
+      "headline": "Saudi Arabia closes its only oil pipeline that bypasses the Strait of Hormuz",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-11/el-polvorin-del-mar-rojo-se-suma-al-cierre-de-ormuz-y-agrava-la-crisis-petrolera.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/arabi-saudi-cierra-unico-oleoducto-atraviesa-ormuz-20260911224926-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260911/11632935/arabia-saudi-cierra-unico-oleoducto-alternativo-ormuz-ofensiva-mar-rojo.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/arabia-saudi-cierra-unico-oleoducto-alternativo-ormuz-sufrir-ataques_1_13504505.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/11/6aa45b15e5fdea2f2e8b458d.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/09/11/6aa4656dfdddffcd6c8b45a2.html"
+        }
+      ],
+      "mentioned_countries": [
+        "sa",
+        "ir"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/economia/2026/09/11/6aa45b15e5fdea2f2e8b458d.html",
+      "rank": 5,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
+        "expansion.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5164,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.6756,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ormuz",
+      "subject_names": [
+        "arabia saudi",
+        "est-ouest",
+        "irak",
+        "iraq",
+        "jordania",
+        "ormuz",
+        "saudi arabia"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Saudi Arabia has shut its East–West oil pipeline, the kingdom’s sole route that avoids the Strait of Hormuz, after the route sustained multiple attacks linked to a surge in assaults in the Red Sea and nearby waters."
     }
   ],
-  "discarded_ingested": 290,
+  "discarded_ingested": 252,
   "discarded_kept": 5,
-  "generated_at": "2026-09-11T09:55:02.398599+00:00",
+  "generated_at": "2026-09-12T09:30:20.733648+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

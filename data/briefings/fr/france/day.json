@@ -1,16 +1,255 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-francia-82207ce6fb0b",
-      "coherence": 0.5177379020507118,
-      "consequence": 1,
+      "cluster_id": "subject-capgemini-35cd560adae0",
+      "coherence": 0.4744553923805732,
+      "consequence": 2,
       "countries": [
-        "spain"
+        "france",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-12",
+      "headline": "Capgemini vend sa filiale américaine liée à un contrat avec l’ICE",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/09/12/capgemini-vend-sa-filiale-qui-avait-fait-polemique-pour-son-contrat-avec-l-ice_6771813_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/entreprise/sous-pression-apres-un-contrat-avec-la-police-de-limmigration-americaine-capgemini-vend-sa-filiale-controversee_645731"
+        },
+        {
+          "language": "en",
+          "source": "digitaljournal.com",
+          "source_country": "united-states",
+          "url": "https://www.digitaljournal.com/article/french-it-giant-capgemini-sells-subsidiary-after-row-over-ice-links/"
+        },
+        {
+          "language": "pt",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://pt.euronews.com/business/2026/09/12/capgemini-vende-filial-americana-criticada-por-contrato-com-a-ice"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "challenges.fr",
+      "outbound_url": "https://www.challenges.fr/entreprise/sous-pression-apres-un-contrat-avec-la-police-de-limmigration-americaine-capgemini-vend-sa-filiale-controversee_645731",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "euronews.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4745,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5679,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "capgemini",
+      "subject_names": [
+        "capgemini",
+        "ice"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Sous la pression suscitée par un contrat passé avec l’ICE (l’agence américaine de lutte contre l’immigration), le groupe informatique français Capgemini a cédé sa filiale américaine controversée ; les articles indiquent que la vente intervient après des polémiques publiques sur les liens de la filiale avec l’agence d’immigration américaine."
+    },
+    {
+      "cluster_id": "subject-normandie-26e2a2f29528",
+      "coherence": 0.41186116280236973,
+      "consequence": 2,
+      "countries": [
+        "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-09-12",
-      "headline": "Un train régional déraille dans le nord de la France et blesse au moins 44 personnes",
+      "headline": "Un TER déraille en Normandie, 44 personnes blessées et piste de malveillance privilégiée",
       "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/09/12/deraillement-d-un-ter-en-normandie-l-hypothese-d-un-acte-de-malveillance-privilegiee_6771437_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/transports/cetait-vraiment-assez-choquant-jen-tremble-encore-ce-que-lon-sait-ce-samedi-sur-le-deraillement-du-ter-en-normandie-20260912_CK2OUTDMEBHTRJRVD5C2SEAJIU/"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/transports/deraillement-du-ter-en-normandie-la-piste-de-lacte-malveillant-se-precise-20260912_7L32GMU75RCI7EOIAWHNU3QATY/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/ter-qui-deraille-en-seine-maritime-44-blesses-et-des-questions-autour-d-un-acte-malveillant-20260912"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/faits-divers/20260912.OBS118162/un-ter-deraille-en-normandie-44-blesses-acte-malveillant-privilegie-enquete-ouverte-ce-que-l-on-sait.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/faits-divers/20260912.OBS118162/un-ter-deraille-en-normandie-44-blesses-acte-malveillant-privilegie-enquete-ouverte-ce-que-l-on-sait.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4119,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
+        },
+        "total": 0.5619,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "normandie",
+      "subject_names": [
+        "normandie",
+        "seine-maritime"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Un TER a déraillé en Normandie faisant 44 blessés dont une victime dans un état grave désormais hors de danger; les autorités ont ouvert une enquête et les premières investigations privilégient la piste d’un acte de malveillance pendant que le trafic ferroviaire est perturbé."
+    },
+    {
+      "cluster_id": "subject-france-a41b9e1825d4",
+      "coherence": 0.38602756480267075,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-13",
+      "headline": "Radio France entame une grève de deux jours contre l'arrivée d'un éditorialiste",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/medias/une-greve-de-deux-jours-debute-a-radio-france-pour-denoncer-la-chronique-du-directeur-adjoint-de-valeurs-actuelles-20260913"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/culture-et-idees/120926/radio-france-en-greve-pour-marquer-son-refus-categorique-face-aux-discours-de-haine"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/economie/greve/programmes-perturbes-en-raison-d-un-mouvement-de-greve-a-radio-france_8188931.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260912-deux-jours-de-gr%C3%A8ve-%C3%A0-radio-france-pour-contrer-l-arriv%C3%A9e-d-un-responsable-de-valeurs-actuelles"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260912-france-gr%C3%A8ve-%C3%A0-radio-france-contre-l-arriv%C3%A9e-d-un-%C3%A9ditorialiste-issu-d-un-m%C3%A9dia-d-extr%C3%AAme-droite"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "mediapart.fr",
+      "outbound_url": "https://www.mediapart.fr/journal/culture-et-idees/120926/radio-france-en-greve-pour-marquer-son-refus-categorique-face-aux-discours-de-haine",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "mediapart.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.386,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
+        },
+        "total": 0.5346,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "leon",
+        "radio france"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "Les journalistes et personnels de Radio France ont lancé une grève de deux jours qui perturbe les programmes pour protester contre la nomination ou l’arrivée d’un chroniqueur/éditorialiste lié au magazine Valeurs actuelles, dénonçant des discours qu’ils qualifient de haineux et exprimant un refus catégorique de cette arrivée."
+    },
+    {
+      "cluster_id": "subject-france-51e1bb08358b",
+      "coherence": 0.47768285154708445,
+      "consequence": 1,
+      "countries": [
+        "it",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-12",
+      "headline": "Un train régional déraille dans le nord de la France et blesse des dizaines de personnes",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
@@ -26,420 +265,258 @@
         },
         {
           "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/09/12/6aa508b8fc6c83a01b8b4595.html"
-        },
-        {
-          "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
           "url": "https://www.20minutos.es/internacional/heridos-descarrilar-tren-regional-norte-francia_7035885_0.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/12/passenger-train-derails-in-northern-france-injuring-at-least-44-people-including-one-serio"
+        },
+        {
+          "language": "es",
+          "source": "notisistema.com",
+          "source_country": "mx",
+          "url": "https://www.notisistema.com/noticias/al-menos-45-deja-accidente-de-tren-en-francia/"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "spain",
+      "origin_country": "it",
       "outbound_source": "abc.es",
       "outbound_url": "https://www.abc.es/internacional/veintena-heridos-tras-descarrilar-tren-francia-20260911215257-nt.html",
-      "rank": 1,
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
         "abc.es",
-        "elmundo.es",
+        "euronews.com",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5177,
-          "corroboration": 0.3333,
+          "coherence": 0.4777,
+          "corroboration": 0.6,
           "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5338,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "francia",
-      "subject_names": [
-        "celine dion",
-        "france",
-        "francia",
-        "paris"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Un train régional a déraillé dans le nord de la France, faisant au moins 44 blessés selon les bilans publiés. Les autorités ont ouvert une enquête et la police examine l’incident comme un acte délibéré."
-    },
-    {
-      "cluster_id": "subject-adele-haenel-b3644786971f",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-11",
-      "headline": "France Télévisions retire le replay d'une intervention d'Adèle Haenel sur Israël",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/medias/apres-la-polemique-suscitee-par-la-suppression-du-replay-d-une-intervention-de-l-actrice-d-adele-sur-israel-france-televisions-se-defend-de-toute-censure_8188391.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260911-pol%C3%A9mique-apr%C3%A8s-la-suppression-par-france-t%C3%A9l%C3%A9visions-du-replay-de-propos-d-ad%C3%A8le-haenel-sur-isra%C3%ABl"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/medias/20260911.OBS118150/les-propos-d-adele-haenel-sur-la-palestine-dans-la-grande-librairie-ont-ils-ete-censures-par-france-televisions.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "is"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/economie/medias/apres-la-polemique-suscitee-par-la-suppression-du-replay-d-une-intervention-de-l-actrice-d-adele-sur-israel-france-televisions-se-defend-de-toute-censure_8188391.html#xtor=RSS-3-%5Bgeneral%5D",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.4763,
+        "total": 0.524,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "adele haenel",
+      "subject_label": "france",
       "subject_names": [
-        "adele haenel",
-        "celine dion",
         "france",
-        "france televisions",
-        "israel",
-        "netanyahou",
-        "netanyahu",
-        "paris"
+        "francia",
+        "leon",
+        "radio france"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Après la diffusion d'une intervention d'Adèle Haenel évoquant Israël et la Palestine dans l'émission La Grande Librairie, France Télévisions a supprimé le replay de cette séquence, suscitant une polémique et des interrogations sur une possible censure; le groupe audiovisuel a toutefois déclaré ne pas pratiquer de censure en réponse aux critiques."
+      "subject_newsroom_count": 25,
+      "summary": "Un train régional a déraillé dans le nord de la France, faisant entre une vingtaine et au moins 45 personnes blessées selon les bilans publiés ; plusieurs sources indiquent au moins 44 blessés et au moins une personne grièvement touchée. Les articles rapportent un nombre variable de blessés mais s'accordent sur un incident avec de nombreux blessés, sans donner d'autres détails concordants sur les causes ou le lieu exact."
     },
     {
-      "cluster_id": "subject-g20-1d5c2473685a",
-      "coherence": 0.5536888005283918,
-      "consequence": 3,
+      "cluster_id": "subject-celine-dion-09bfd7f2e3a2",
+      "coherence": 0.4364853861775796,
+      "consequence": 0,
       "countries": [
+        "as",
+        "ca",
         "france",
-        "germany"
+        "germany",
+        "india",
+        "mx",
+        "spain",
+        "sz",
+        "united-states",
+        "unknown",
+        "vm"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-12",
-      "filled_from": "europe",
-      "headline": "Volodymyr Zelensky se dit prêt à rencontrer Vladimir Poutine au G20 de Miami",
-      "independent_source_count": 4,
+      "country_count": 11,
+      "editorial_day": "2026-09-13",
+      "headline": "Céline Dion revient sur scène à Paris après six ans d’absence",
+      "independent_source_count": 22,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/09/12/en-direct-guerre-en-ukraine-la-russie-a-attaque-l-ukraine-avec-une-centaine-de-drones-et-plus-de-14-missiles-dans-la-nuit-de-vendredi-a-samedi_6766818_3210.html"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/cultura/musica/fervor-celine-dion-invade-paris-ante-retorno-20260912174726-nt.html"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-en-decembre-20260912_LLGP2ZLOXFC2RFTQE47SYJFJ44/"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/el-cultural/20260913/celine-dion-vuelve-escenarios-anos-prometido-no-llorar-cumplo-promesas/1003744381834_0.html"
         },
         {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-dd26fd08-ae86-11f1-8483-804bbf8224d2?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/cultura/2026/09/12/6aa5ada5e85ece2d2a8b4581.html"
         },
         {
           "language": "en",
-          "source": "dw.com",
+          "source": "hppr.org",
+          "source_country": "united-states",
+          "url": "https://www.hppr.org/npr-news/2026-09-12/celine-dion-returns-to-the-stage-after-battling-rare-illness"
+        },
+        {
+          "language": "en",
+          "source": "krcu.org",
+          "source_country": "united-states",
+          "url": "https://www.krcu.org/2026-09-12/celine-dion-returns-to-the-stage-after-battling-rare-illness"
+        },
+        {
+          "language": "en",
+          "source": "prokerala.com",
+          "source_country": "india",
+          "url": "https://www.prokerala.com/news/articles/a1811745.html"
+        },
+        {
+          "language": "en",
+          "source": "houstonpublicmedia.org",
+          "source_country": "united-states",
+          "url": "https://www.houstonpublicmedia.org/npr/2026/09/12/nx-s1-5967534/celine-dion-returns-to-the-stage-after-battling-rare-illness/"
+        },
+        {
+          "language": "de",
+          "source": "t-online.de",
           "source_country": "germany",
-          "url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf"
+          "url": "https://www.t-online.de/unterhaltung/musik/id_101433222/celine-dion-feiert-buehnen-comeback-erstes-konzert-seit-sechs-jahren.html"
+        },
+        {
+          "language": "de",
+          "source": "gala.de",
+          "source_country": "germany",
+          "url": "https://www.gala.de/lifestyle/film-tv-musik/c%C3%A9line-dion--traenen-beim-konzert-comeback-in-paris-24675158.html"
+        },
+        {
+          "language": "fr",
+          "source": "letemps.ch",
+          "source_country": "sz",
+          "url": "https://www.letemps.ch/culture/musiques/j-ai-promis-de-ne-pas-pleurer-le-retour-touchant-et-triomphant-de-celine-dion"
+        },
+        {
+          "language": "en",
+          "source": "cnn.com",
+          "source_country": "united-states",
+          "url": "https://edition.cnn.com/2026/09/12/entertainment/celine-dion-returns-stage-latam-intl"
+        },
+        {
+          "language": "en",
+          "source": "ottawasun.com",
+          "source_country": "ca",
+          "url": "https://ottawasun.com/entertainment-life/celine-dions-comeback-is-official-i-promised-not-to-cry-she-tells-paris-crowd-in-live-return/wcm/e80c18a3-3018-480a-96e9-4aa02c1eb2b2"
+        },
+        {
+          "language": "en",
+          "source": "batemansbaypost.com.au",
+          "source_country": "as",
+          "url": "https://www.batemansbaypost.com.au/story/9349046/celine-dion-cries-during-emotional-paris-concert-return/"
+        },
+        {
+          "language": "en",
+          "source": "ketr.org",
+          "source_country": "united-states",
+          "url": "https://www.ketr.org/2026-09-12/celine-dion-returns-to-the-stage-after-battling-rare-illness"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/news/2026-09/13/traenen-party-und-leidenschaft-c-line-dion-feiert-comeback"
+        },
+        {
+          "language": "de",
+          "source": "schwaebische.de",
+          "source_country": "germany",
+          "url": "https://www.schwaebische.de/panorama/traenen-party-und-leidenschaft-celine-dion-feiert-comeback-4861065"
+        },
+        {
+          "language": "de",
+          "source": "westfalen-blatt.de",
+          "source_country": "germany",
+          "url": "https://www.westfalen-blatt.de/ueberregional/kultur/topnews/traenen-party-und-leidenschaft-celine-dion-feiert-comeback-3648155"
+        },
+        {
+          "language": "de",
+          "source": "nw.de",
+          "source_country": "germany",
+          "url": "https://www.nw.de/nachrichten/panorama/24417333_Traenen-Party-und-Leidenschaft-Celine-Dion-feiert-Comeback.html"
+        },
+        {
+          "language": "vie",
+          "source": "baomoi.com",
+          "source_country": "vm",
+          "url": "https://baomoi.com/ca-si-celine-dion-khoc-nhu-mua-khi-tro-lai-san-khau-sau-6-nam-mac-benh-la-c56037651.epi"
+        },
+        {
+          "language": "fr",
+          "source": "lanouvellerepublique.fr",
+          "source_country": "france",
+          "url": "https://www.lanouvellerepublique.fr/a-la-une/c-est-des-larmes-de-joie-un-retour-emouvant-sur-scene-pour-celine-dion-apres-six-ans-d-absence-1789252568"
+        },
+        {
+          "language": "es",
+          "source": "bitlysdowssl-aws.com",
+          "source_country": "unknown",
+          "url": "https://bitlysdowssl-aws.com/2026/09/celine-dion-conmueve-a-paris-con-su-regreso-a-los-escenarios-tras-seis-anos/"
+        },
+        {
+          "language": "es",
+          "source": "excelsior.com.mx",
+          "source_country": "mx",
+          "url": "https://www.excelsior.com.mx/espectaculos/celine-dion-regresa-triunfal-escenarios-paris-tras-seis-anos-ausencia"
         }
       ],
       "mentioned_countries": [
-        "united-states",
-        "up"
+        "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "dw.com",
-      "outbound_url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf",
-      "rank": 3,
+      "origin_country": "as",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/cultura/2026/09/12/6aa5ada5e85ece2d2a8b4581.html",
+      "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "dw.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "ouest-france.fr"
+        "abc.es",
+        "elespanol.com",
+        "elmundo.es",
+        "zeit.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.5537,
-          "corroboration": 0.5,
+          "coherence": 0.4365,
+          "corroboration": 0.8462,
           "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6514,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "g20",
-      "subject_names": [
-        "g20",
-        "miami",
-        "moldova",
-        "moscou",
-        "oslo",
-        "poutine",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "vladimir poutine",
-        "volodymyr zelensky",
-        "zelensky",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Le président ukrainien Volodymyr Zelensky a déclaré qu’il était disposé à rencontrer le président russe Vladimir Poutine lors du sommet du G20 prévu à Miami en décembre, une proposition évoquée publiquement et relayée par plusieurs médias."
-    },
-    {
-      "cluster_id": "subject-reino-unido-60d7bc54de27",
-      "coherence": 0.5050986675921745,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-11",
-      "filled_from": "europe",
-      "headline": "Les députés du Royaume‑Uni rejettent un projet de légalisation de l’aide à mourir",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/11/au-royaume-uni-les-deputes-rejettent-la-legalisation-de-l-aide-a-mourir-en-angleterre-et-au-pays-de-galles_6770600_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/royaume-uni-les-deputes-rejettent-le-projet-de-loi-sur-l-aide-a-mourir-20260911"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/11/parlamento-do-reino-unido-rejeita-legalizacao-da-morte-assistida.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260911173605/reino-unido-rechaza-proyecto-ley-sobre-muerte-asistida-personas-enfermedades-terminales"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/11/au-royaume-uni-les-deputes-rejettent-la-legalisation-de-l-aide-a-mourir-en-angleterre-et-au-pays-de-galles_6770600_3210.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "globo.com",
-        "la-croix.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5051,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6049,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "reino unido",
-      "subject_names": [
-        "burnham",
-        "cisjordania",
-        "reino unido",
-        "royaume-uni"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Les parlements ont refusé un projet de loi visant à légaliser l’aide à mourir pour les personnes atteintes de maladies terminales en Angleterre et au Pays de Galles ; plusieurs articles concordent sur le rejet de cette proposition au Royaume‑Uni."
-    },
-    {
-      "cluster_id": "subject-paris-3b538b4c4555",
-      "coherence": 0.4243656314320885,
-      "consequence": 0,
-      "countries": [
-        "dr",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-12",
-      "headline": "Céline Dion revient sur scène à Paris pour une résidence de concerts",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/culture/article/2026/09/12/celine-dion-lance-samedi-soir-une-serie-de-16-concerts-pour-son-grand-retour-sur-scene-a-paris_6771055_3246.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/culture/celine-dion-a-paris-comment-la-chanteuse-est-devenue-un-phenomene-de-societe-20260911"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/musique/celine-dion-en-residence-a-paris-une-tendance-loin-d-etre-nouvelle-qui-revient-sur-le-devant-de-la-scene_8173838.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260912-le-grand-soir-pour-c%C3%A9line-dion-apr%C3%A8s-6-ans-d-absence-%C3%A0-paris"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260912-c%C3%A9line-dion-la-star-fait-son-retour-sur-la-sc%C3%A8ne-parisienne"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260912-le-grand-soir-pour-c%C3%A9line-dion-de-retour-sur-sc%C3%A8ne-%C3%A0-paris"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/culture/20260912-le-grand-soir-pour-c%C3%A9line-dion-de-retour-sur-sc%C3%A8ne-%C3%A0-paris"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/dossier/celine-dion/"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/musique/20260912.OBS118158/celine-dion-a-paris.html"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/musique/20260910.OBS118097/on-attend-le-retour-de-celine-dion-depuis-des-annees-mais-les-derniers-jours-sont-les-plus-durs.html"
-        },
-        {
-          "language": "es",
-          "source": "acento.com.do",
-          "source_country": "dr",
-          "url": "https://acento.com.do/rfi/paris-se-prepara-para-el-regreso-a-los-escenarios-de-la-diva-canadiense-celine-dion-9751634.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "dr",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/dossier/celine-dion/",
-      "rank": 5,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4244,
-          "corroboration": 0.5,
-          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.8
+          "prominence": 0.8462,
+          "source_reliability": 0.8571
         },
-        "total": 0.5029,
+        "total": 0.5252,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "paris",
+      "subject_label": "celine dion",
       "subject_names": [
         "celine dion",
-        "france",
         "paris"
       ],
       "subject_newsroom_count": 17,
-      "summary": "La chanteuse québécoise Céline Dion fait son retour à Paris après plusieurs années d’absence, lançant une série de concerts en résidence dans la capitale; les articles soulignent l’importance médiatique et sociale de son comeback, l’attention du public et des médias pendant ces représentations, et replacent cette démarche dans la continuité de résidences d’artistes plutôt qu’une nouveauté absolue."
+      "summary": "Après six ans d’interruption liée à une maladie rare, Céline Dion a fait un retour émotionnel et triomphal sur scène à Paris; la chanteuse a exprimé sa joie en pleurant et en disant qu’elle avait promis de ne pas pleurer, et le concert a été accueilli avec enthousiasme par le public."
     }
   ],
-  "discarded_ingested": 20,
+  "discarded_ingested": 43,
   "discarded_kept": 5,
-  "generated_at": "2026-09-12T09:30:20.733648+00:00",
+  "generated_at": "2026-09-13T10:29:04.156092+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

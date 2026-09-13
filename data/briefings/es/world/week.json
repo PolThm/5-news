@@ -2,23 +2,123 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-bab-90b5c13bf515"
+        "subject-saudi-arabia-673f8ab0fc7d"
       ],
-      "cluster_id": "subject-bab-90b5c13bf515",
-      "coherence": 0.47974735219403775,
+      "cluster_id": "subject-saudi-arabia-673f8ab0fc7d",
+      "coherence": 0.46632923544334137,
       "consequence": 3,
       "countries": [
-        "be",
+        "brazil",
+        "it",
+        "so",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-13",
+      "headline": "Arabia Saudí cierra un oleoducto clave tras ataques con drones desde Irak",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/12/saudi-arabia-shuts-down-oil-pipeline-blaming-drones-from-iraq"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/12/drones-from-iraq-attack-and-set-pipeline-on-fire-in-saudi-arabia"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/12/nx-s1-5964940/saudi-arabia-forced-to-shut-down-crucial-red-sea-pipeline-after-attacks"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/attack-on-key-saudi-pipeline-is-blamed-on-iran-backed-militias-in-iraq"
+        },
+        {
+          "language": "en",
+          "source": "riotimesonline.com",
+          "source_country": "brazil",
+          "url": "https://www.riotimesonline.com/saudis-shut-key-oil-pipeline-houthis-red-sea-2026/"
+        },
+        {
+          "language": "en",
+          "source": "jowhar.com",
+          "source_country": "so",
+          "url": "https://jowhar.com/saudi-arabia-halts-oil-pipeline-as-houthis-tighten-control-in-the-red-sea/"
+        }
+      ],
+      "mentioned_countries": [
+        "sa"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/12/drones-from-iraq-attack-and-set-pipeline-on-fire-in-saudi-arabia",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "npr.org",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4663,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.7225,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "saudi arabia",
+      "subject_names": [
+        "arabia saudi",
+        "iraq",
+        "ormuz",
+        "saudi arabia"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Varios informes coinciden en que Arabia Saudí detuvo el funcionamiento de un oleoducto importante después de que drones lanzados desde territorio iraquí atacaran e incendiaron tramos de la infraestructura; las autoridades saudíes atribuyeron los ataques a milicias apoyadas por Irán en Irak y cerraron el conducto por razones de seguridad mientras evalúan daños y riesgos adicionales."
+    },
+    {
+      "_linked_ids": [
+        "subject-bab-90b5c13bf515",
+        "subject-yemen-faf437b648ba"
+      ],
+      "cluster_id": "subject-yemen-faf437b648ba",
+      "coherence": 0.4505480322446279,
+      "consequence": 3,
+      "countries": [
         "brazil",
         "france",
-        "germany",
-        "it",
-        "sy"
+        "it"
       ],
-      "country_count": 6,
+      "country_count": 3,
       "editorial_day": "2026-09-12",
-      "headline": "Los hutíes toman el control del estrecho estratégico de Bab al‑Mandeb",
-      "independent_source_count": 15,
+      "headline": "Los hutíes toman el control del estratégico estrecho de Bab el-Mandeb",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
@@ -28,21 +128,15 @@
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/au-yemen-les-houthistes-resserrent-leur-etau-sur-le-detroit-de-bab-al-mandab-20260911"
+          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/un-instrument-strategique-de-pression-supplementaire-pourquoi-les-rebelles-houthis-servent-les-interets-de-l-iran-en-s-emparant-du-detroit-de-bab-el-mandeb_8189762.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/replay-jt/franceinfo/21h-minuit/23-heures/les-houthis-s-emparent-du-detroit-de-bab-el-mandeb_8189402.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260912-les-houthis-du-y%C3%A9men-s-emparent-du-strat%C3%A9gique-d%C3%A9troit-de-bab-el-mandeb"
+          "url": "https://www.franceinfo.fr/monde/proche-orient/guerre/les-rebelles-houthis-du-yemen-s-emparent-du-detroit-strategique-de-bab-el-mandeb_8189828.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
@@ -55,18 +149,6 @@
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/afrique/yemen-les-houthistes-avancent-vers-le-strategique-detroit-de-bab-el-mandeb-ZXDQ3XFQKVFAZMWRVZNWDO2UFE/"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/huthi-eroberung-inseln-100.html"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/asien/jemen-huthi-rebellen-100.html"
         },
         {
           "language": "en",
@@ -85,546 +167,498 @@
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml"
-        },
-        {
-          "language": "fr",
-          "source": "lalibre.be",
-          "source_country": "be",
-          "url": "https://www.lalibre.be/dernieres-depeches/2026/09/11/les-houthis-du-yemen-semparent-du-strategique-detroit-de-bab-el-mandeb-IRVYBB6WMFASDNZB6MROKVHFBI/"
-        },
-        {
-          "language": "en",
-          "source": "aawsat.com",
-          "source_country": "sy",
-          "url": "https://english.aawsat.com/arab-world/5317238-houthis-seize-bab-al-mandeb-and-yemeni-islands-southern-red-sea"
-        },
-        {
-          "language": "de",
-          "source": "deutschlandfunk.de",
-          "source_country": "germany",
-          "url": "https://www.deutschlandfunk.de/huthi-miliz-nimmt-inseln-in-strategisch-wichtiger-meerenge-bab-al-mandab-ein-100.html"
-        },
-        {
-          "language": "de",
-          "source": "westfalen-blatt.de",
-          "source_country": "germany",
-          "url": "https://www.westfalen-blatt.de/ueberregional/nachrichten/themen-des-tages/huthi-rebellen-greifen-nach-wichtiger-meerenge-bab-al-mandab-3646261"
-        },
-        {
-          "language": "pt",
-          "source": "jornaldebrasilia.com.br",
-          "source_country": "brazil",
-          "url": "https://jornaldebrasilia.com.br/noticias/mundo/rebeldes-houthis-do-iemen-tomam-estrategico-estreito-de-bab-el-mandeb/"
-        },
-        {
-          "language": "fr",
-          "source": "martinique.franceantilles.fr",
-          "source_country": "france",
-          "url": "https://www.martinique.franceantilles.fr/actualite/international/les-houthis-du-yemen-semparent-du-strategique-detroit-de-bab-el-mandeb-1092718.php"
         }
       ],
       "mentioned_countries": [
-        "sa",
-        "ir",
-        "ym"
-      ],
-      "origin_country": "be",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "globo.com",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "tagesschau.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4797,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7895,
-          "source_reliability": 0.8491
-        },
-        "total": 0.7758,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bab",
-      "subject_names": [
-        "bab",
-        "houthis",
-        "mandeb",
-        "red sea",
-        "teheran",
-        "yemen"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "Los rebeldes hutíes del Yemen han ocupado islas y avanzan sobre la costa del Mar Rojo, logrando controlar el estrecho de Bab al‑Mandeb, una vía marítima estratégica que conecta el Mar Rojo con el golfo de Adén; las informaciones coinciden en que su ofensiva les permitió apoderarse de posiciones clave en la zona costera meridional del país."
-    },
-    {
-      "_linked_ids": [
-        "subject-brics-aa7c80d95be6"
-      ],
-      "cluster_id": "subject-brics-aa7c80d95be6",
-      "coherence": 0.8134180643803893,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "germany",
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-12",
-      "headline": "Líderes del BRICS se reúnen en India para cumbre de dos días",
-      "independent_source_count": 17,
-      "members": [
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/india-s-brics-strategy-tested-with-xi-putin-set-to-visit/a-79231879?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/11/russian-leader-vladimir-putin-arrives-in-india-ahead-of-brics-summit"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/12/g-s1-143054/brics-leaders-meet-in-india"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/12/lideres-do-brics-se-reunem-na-india-em-meio-a-guerras-e-tensoes-com-os-eua.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "kclu.org",
-          "source_country": "united-states",
-          "url": "https://www.kclu.org/world/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
-        },
-        {
-          "language": "en",
-          "source": "sloughobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.sloughobserver.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        },
-        {
-          "language": "en",
-          "source": "times-series.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.times-series.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        },
-        {
-          "language": "en",
-          "source": "fox21online.com",
-          "source_country": "united-states",
-          "url": "https://www.fox21online.com/news/us-world/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc/article_27d4a3c8-d154-59a8-b367-978c01fa7245.html"
-        },
-        {
-          "language": "en",
-          "source": "eastlothiancourier.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.eastlothiancourier.com/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        },
-        {
-          "language": "en",
-          "source": "dailyadvance.com",
-          "source_country": "united-states",
-          "url": "http://www.dailyadvance.com/news/world/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc/article_6cdc9be2-15c3-5a92-8124-85454961f42d.html"
-        },
-        {
-          "language": "en",
-          "source": "maldonandburnhamstandard.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.maldonandburnhamstandard.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        },
-        {
-          "language": "en",
-          "source": "ktep.org",
-          "source_country": "united-states",
-          "url": "https://www.ktep.org/world-news/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
-        },
-        {
-          "language": "en",
-          "source": "capeandislands.org",
-          "source_country": "united-states",
-          "url": "https://www.capeandislands.org/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
-        },
-        {
-          "language": "en",
-          "source": "dailyecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.dailyecho.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        },
-        {
-          "language": "en",
-          "source": "bromsgroveadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bromsgroveadvertiser.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        },
-        {
-          "language": "en",
-          "source": "wypr.org",
-          "source_country": "united-states",
-          "url": "https://www.wypr.org/2026-09-12/brics-leaders-meet-in-india-as-wars-and-us-tensions-test-the-bloc"
-        },
-        {
-          "language": "en",
-          "source": "andoveradvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.andoveradvertiser.co.uk/news/national/26544472.brics-leaders-meet-india-wars-us-tensions-test-bloc/"
-        }
-      ],
-      "mentioned_countries": [
-        "india"
+        "ir"
       ],
       "origin_country": "brazil",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/11/russian-leader-vladimir-putin-arrives-in-india-ahead-of-brics-summit",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml",
       "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "dw.com",
-        "euronews.com",
-        "globo.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.8134,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.8095,
-          "source_reliability": 0.8261
-        },
-        "total": 0.7632,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "brics",
-      "subject_names": [
-        "brics",
-        "india",
-        "jinping",
-        "modi",
-        "putin"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Los líderes del grupo BRICS llegaron a India para una cumbre de dos días durante la cual se abordarán conflictos globales y crecientes tensiones con Estados Unidos; la visita de figuras como Xi Jinping y Vladimir Putin pone a prueba la estrategia india y la cohesión del bloque en medio de crisis internacionales."
-    },
-    {
-      "_linked_ids": [
-        "subject-hong-kong-d21f7353769f"
-      ],
-      "cluster_id": "subject-hong-kong-d21f7353769f",
-      "coherence": 0.5340261164612865,
-      "consequence": 3,
-      "countries": [
-        "germany",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-11",
-      "headline": "Tribunal de Hong Kong condena a tres organizadores de vigilias por Tiananmen",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cvgyvk2djk4o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/hong-kong-tiananmen-activists-jailed-for-up-to-7-years/a-79224243?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/11/hong-kong-gives-tiananmen-vigil-activists-between-5-and-7-year"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/11/news/hong_kong_attivisti_tiananmen_condanna_veglie-425578549/?rss"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/hong-kong-court-sentences-3-tiananmen-vigil-organizers-to-prison-in-national-security-case"
-        },
-        {
-          "language": "es",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260911171201/condenados-carcel-tres-activistas-organizar-actos-hong-kong-recuerdo-masacre-tiananmen"
-        }
-      ],
-      "mentioned_countries": [
-        "china"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "npr.org",
-      "outbound_url": "https://www.npr.org/2026/09/11/g-s1-142832/hong-kong-court-sentences-vigil-organizers",
-      "rank": 3,
       "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
         "euronews.com",
-        "npr.org",
-        "pbs.org",
-        "repubblica.it"
+        "francetvinfo.fr",
+        "globo.com",
+        "lefigaro.fr",
+        "lexpress.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.534,
-          "corroboration": 0.7143,
+          "coherence": 0.4505,
+          "corroboration": 0.6,
           "editorial_weight": 0.4286,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7143
+          "novelty": 0.5,
+          "prominence": 0.6,
+          "source_reliability": 0.75
         },
-        "total": 0.7359,
+        "total": 0.7006,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "hong kong",
+      "subject_label": "yemen",
       "subject_names": [
-        "hong kong",
-        "tiananmen"
+        "arabie",
+        "bab",
+        "houthi",
+        "red sea",
+        "yemen"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Un tribunal de Hong Kong sentenció a tres activistas que organizaron vigilias en recuerdo de la masacre de Tiananmen a penas de prisión de entre cinco y siete años tras ser condenados en un caso vinculado a la seguridad nacional; las noticias coinciden en que los acusados eran organizadores de los actos y recibieron sentencias de hasta siete años."
+      "subject_newsroom_count": 21,
+      "summary": "Los rebeldes hutíes del Yemen han avanzado sobre la costa del Mar Rojo y se apoderaron de una isla y posiciones clave que les permiten controlar el estrecho de Bab el-Mandeb, un paso marítimo vital entre Europa y Asia; las operaciones forman parte de una ofensiva amplia que los medios describen como alineada con los intereses de Irán y que aumenta su capacidad de presión en la región."
     },
     {
       "_linked_ids": [
-        "subject-g20-1d5c2473685a"
+        "subject-yemen-3e86c8cbf942"
       ],
-      "cluster_id": "subject-g20-1d5c2473685a",
-      "coherence": 0.5536888005283918,
+      "cluster_id": "subject-yemen-3e86c8cbf942",
+      "coherence": 0.518038379549127,
       "consequence": 3,
       "countries": [
         "france",
-        "germany"
+        "it",
+        "pk"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-12",
-      "headline": "Zelenski se ofrece a reunirse con Putin en la cumbre del G20 en Miami",
-      "independent_source_count": 4,
+      "country_count": 3,
+      "editorial_day": "2026-09-13",
+      "headline": "Los hutíes anuncian ataque contra una base militar saudí",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/09/12/en-direct-guerre-en-ukraine-la-russie-a-attaque-l-ukraine-avec-une-centaine-de-drones-et-plus-de-14-missiles-dans-la-nuit-de-vendredi-a-samedi_6766818_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/13/les-houthistes-revendiquent-une-attaque-sur-une-base-saoudienne-en-replique-a-des-bombardements-menes-par-riyad-au-yemen_6772078_3210.html"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-en-decembre-20260912_LLGP2ZLOXFC2RFTQE47SYJFJ44/"
+          "url": "https://www.lefigaro.fr/international/en-direct-guerre-au-moyen-orient-l-iran-a-utilise-des-images-satellites-chinoises-lors-de-sa-frappe-meurtriere-contre-des-soldats-americains-20260912"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/ukraine/guerre-en-ukraine-volodymyr-zelensky-se-dit-pret-a-rencontrer-vladimir-poutine-au-g20-a-miami-dd26fd08-ae86-11f1-8483-804bbf8224d2?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260913-y%C3%A9men-les-houthis-disent-avoir-attaqu%C3%A9-une-base-militaire-en-arabie-saoudite"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20260913-moyen-orient-en-direct-houthis-disent-avoir-attaque-base-militaire-en-arabie-saoudite"
         },
         {
           "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf"
+          "source": "samaa.tv",
+          "source_country": "pk",
+          "url": "https://www.samaa.tv/2087356721-houthis-claim-attack-on-saudi-military-base-as-yemen-fighting-intensifies"
+        },
+        {
+          "language": "it",
+          "source": "ansa.it",
+          "source_country": "it",
+          "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/13/houthi-colpita-una-base-militare-saudita-con-missili-balistici-e-droni_71ed5ae4-5a31-4905-acc2-7d81e6d514a6.html"
+        },
+        {
+          "language": "fr",
+          "source": "linternaute.com",
+          "source_country": "france",
+          "url": "https://www.linternaute.com/actualite/depeches/11302627-yemen-les-houthis-disent-avoir-attaque-une-base-militaire-en-arabie-saoudite/"
         }
       ],
       "mentioned_countries": [
-        "united-states",
-        "up"
+        "sa"
       ],
       "origin_country": "france",
-      "outbound_source": "dw.com",
-      "outbound_url": "https://www.dw.com/en/dw-exclusive-zelenskyy-offers-to-meet-putin-at-g20-in-miami/a-79241703?maca=en-rss-en-world-4025-rdf",
-      "rank": 4,
+      "outbound_source": "ansa.it",
+      "outbound_url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/13/houthi-colpita-una-base-militare-saudita-con-missili-balistici-e-droni_71ed5ae4-5a31-4905-acc2-7d81e6d514a6.html",
+      "rank": 3,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "dw.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "ouest-france.fr"
+        "ansa.it",
+        "france24.com",
+        "lefigaro.fr",
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5537,
-          "corroboration": 0.5,
+          "coherence": 0.518,
+          "corroboration": 0.6,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.6,
+          "source_reliability": 0.7037
         },
-        "total": 0.6814,
+        "total": 0.6993,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "g20",
+      "subject_label": "yemen",
       "subject_names": [
-        "g20",
-        "miami",
-        "moldova",
-        "moscou",
-        "oslo",
-        "poutine",
-        "russia",
-        "ucrania",
-        "ukraine",
-        "vladimir poutine",
-        "volodymyr zelensky",
-        "zelensky",
-        "zelenskyy"
+        "arabie",
+        "bab",
+        "houthi",
+        "red sea",
+        "yemen"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "El presidente ucraniano Volodímir Zelenski declaró públicamente que está dispuesto a encontrarse con el presidente ruso Vladímir Putin durante la cumbre del G20 que se celebrará en Miami en diciembre; las declaraciones fueron difundidas por varios medios y se presentan como una oferta de encuentro en ese marco internacional."
+      "subject_newsroom_count": 21,
+      "summary": "Las fuentes coinciden en que los rebeldes hutíes de Yemen afirmaron haber atacado una base militar en Arabia Saudí, atribuyendo la acción como respuesta a bombardeos saudíes en Yemen; varias notas mencionan el uso declarado de misiles balísticos y drones en el ataque."
     },
     {
       "_linked_ids": [
-        "subject-ormuz-fcb8420410b9"
+        "subject-cia-6be1ecac9c9e"
       ],
-      "cluster_id": "subject-ormuz-fcb8420410b9",
-      "coherence": 0.5164355750303937,
+      "cluster_id": "subject-cia-6be1ecac9c9e",
+      "coherence": null,
       "consequence": 3,
       "countries": [
+        "it",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-11",
-      "headline": "Arabia Saudí cierra el oleoducto Este-Oeste, su alternativa al estrecho de Ormuz",
-      "independent_source_count": 6,
+      "country_count": 2,
+      "editorial_day": "2026-09-13",
+      "headline": "La CIA desclasifica avisos de que Al Qaeda planeaba ataques aéreos antes del 11-S",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-11/el-polvorin-del-mar-rojo-se-suma-al-cierre-de-ormuz-y-agrava-la-crisis-petrolera.html"
-        },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/arabi-saudi-cierra-unico-oleoducto-atraviesa-ormuz-20260911224926-nt.html"
+          "url": "https://www.abc.es/internacional/cia-desclasifica-documentos-11s-alertas-qaeda-planeaba-20260911222150-nt.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260911/11632935/arabia-saudi-cierra-unico-oleoducto-alternativo-ormuz-ofensiva-mar-rojo.html"
+          "url": "https://www.20minutos.es/internacional/cia-aviso-casa-blanca-qaeda-planeaba-ataques-aviones-antes-11s_7035884_0.html"
         },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/13/news/11_settembre_cia_attacchi_aerei_bin_laden-425582193/?rss"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "it",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/cia-desclasifica-documentos-11s-alertas-qaeda-planeaba-20260911222150-nt.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6548,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cia",
+      "subject_names": [
+        "bin laden",
+        "cia",
+        "qaeda"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Documentos desclasificados de la CIA muestran que la agencia informó años antes del 11 de septiembre que Al Qaeda estudiaba atentados con aviones y posibles ataques aéreos cargados de explosivos; esas advertencias llegaron a instancias gubernamentales en Washington en el periodo previo a los atentados."
+    },
+    {
+      "_linked_ids": [
+        "subject-anthropic-c1b58221cf78"
+      ],
+      "cluster_id": "subject-anthropic-c1b58221cf78",
+      "coherence": 0.4850844062125893,
+      "consequence": 2,
+      "countries": [
+        "aj",
+        "brazil",
+        "india",
+        "it",
+        "mx",
+        "pk",
+        "rs",
+        "spain",
+        "sy",
+        "tu",
+        "united-kingdom",
+        "united-states",
+        "unknown"
+      ],
+      "country_count": 13,
+      "editorial_day": "2026-09-13",
+      "headline": "El CEO de Anthropic pide frenar el ritmo de desarrollo de la IA",
+      "independent_source_count": 32,
+      "members": [
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/arabia-saudi-cierra-unico-oleoducto-alternativo-ormuz-sufrir-ataques_1_13504505.html"
+          "url": "https://www.eldiario.es/tecnologia/director-ejecutivo-anthropic-pide-frenar-desarrollo-ia-si-no-controla-superar-capacidad-comprender-controlar-sistemas_1_13505495.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/12/anthropic-ceo-dario-amodei-calls-on-ai-companies-to-slow-down-ai-development-amid-superint"
+        },
+        {
+          "language": "en",
+          "source": "cecildaily.com",
+          "source_country": "united-states",
+          "url": "http://www.cecildaily.com/ap/nation/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-give-safety-measures-time-to-catch/article_e3b9d3d2-bdf1-59e8-8112-c79a6616c5e9.html"
+        },
+        {
+          "language": "en",
+          "source": "somdnews.com",
+          "source_country": "united-states",
+          "url": "http://www.somdnews.com/ap/nation/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-give-safety-measures-time-to-catch/article_b385af47-76e5-50de-a1f6-c84cb8a8b204.html"
+        },
+        {
+          "language": "en",
+          "source": "theepochtimes.com",
+          "source_country": "united-states",
+          "url": "https://www.theepochtimes.com/tech/industry-rallies-behind-anthropic-ceos-call-for-ai-slowdown-6086704"
+        },
+        {
+          "language": "en",
+          "source": "samaa.tv",
+          "source_country": "pk",
+          "url": "https://www.samaa.tv/2087356714-anthropic-ceo-outlines-plan-to-slow-pace-of-ai-development"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/international/business/anthropic-ceo-seeks-ai-slowdown-tighter-safety-checks-and-global-cooperation/articleshow/134168909.cms"
+        },
+        {
+          "language": "en",
+          "source": "krwg.org",
+          "source_country": "united-states",
+          "url": "https://www.krwg.org/national-news/2026-09-12/anthropic-and-openai-ceos-call-for-ai-development-to-slow-down-openai-to-delay-ipo"
+        },
+        {
+          "language": "en",
+          "source": "nbcmiami.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcmiami.com/news/national-international/anthropic-ceo-calls-for-slowing-ai-race/3858376/"
+        },
+        {
+          "language": "en",
+          "source": "wsls.com",
+          "source_country": "united-states",
+          "url": "https://www.wsls.com/business/2026/09/12/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-slow-down-for-safety/"
+        },
+        {
+          "language": "en",
+          "source": "bangordailynews.com",
+          "source_country": "united-states",
+          "url": "https://www.bangordailynews.com/2026/09/12/nation/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-slow-down-for-safety/"
+        },
+        {
+          "language": "en",
+          "source": "dailygazette.com",
+          "source_country": "united-states",
+          "url": "https://www.dailygazette.com/ade/ap/business/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-slow-down-for-safety/article_c7b0dd5e-cf5d-579e-badf-5b48576d1d30.html"
+        },
+        {
+          "language": "en",
+          "source": "newcastleherald.com.au",
+          "source_country": "unknown",
+          "url": "https://www.newcastleherald.com.au/story/9349026/anthropic-ceo-urges-ai-firms-to-slow-development/"
+        },
+        {
+          "language": "en",
+          "source": "webpronews.com",
+          "source_country": "united-states",
+          "url": "https://www.webpronews.com/anthropic-ceo-dario-amodei-calls-for-ai-industry-to-pace-itself-as-models-accelerate/"
+        },
+        {
+          "language": "en",
+          "source": "katv.com",
+          "source_country": "united-states",
+          "url": "https://katv.com/news/nation-world/anthropic-ceo-urges-ai-firms-slow-model-advances-let-safety-catch-up-dario-amodei-elon-musk"
+        },
+        {
+          "language": "en",
+          "source": "digitaljournal.com",
+          "source_country": "united-states",
+          "url": "https://www.digitaljournal.com/article/anthropic-boss-calls-for-slowing-pace-of-ai-development/"
+        },
+        {
+          "language": "en",
+          "source": "gazettextra.com",
+          "source_country": "united-states",
+          "url": "http://www.gazettextra.com/news/nation_world/anthropic-ceo-dario-amodei-says-ai-industry-needs-to-slow-down-for-safety/article_947cb9f6-abf2-51c7-833b-5ed4523c949c.html"
+        },
+        {
+          "language": "en",
+          "source": "aawsat.com",
+          "source_country": "sy",
+          "url": "https://english.aawsat.com/technology/5317522-anthropic-boss-calls-slowing-pace-ai-development"
+        },
+        {
+          "language": "en",
+          "source": "wcyb.com",
+          "source_country": "united-states",
+          "url": "https://wcyb.com/news/nation-world/anthropic-ceo-urges-ai-firms-slow-model-advances-let-safety-catch-up-dario-amodei-elon-musk"
+        },
+        {
+          "language": "en",
+          "source": "wokv.com",
+          "source_country": "united-states",
+          "url": "https://www.wokv.com/news/business/anthropic-ceo-dario/JOYRNP5J4Y5VZKDCR6ECGFQW2I/"
         },
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "lasexta.com",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/11/6aa45b15e5fdea2f2e8b458d.html"
+          "url": "https://www.lasexta.com/noticias/ciencia-tecnologia/sigue-preocupando-ceo-anthropic-advierte-que-puede-perder-control_202609126aa5749ae428ed29213dcfbc.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "lavozdegalicia.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/09/11/6aa4656dfdddffcd6c8b45a2.html"
+          "url": "https://www.lavozdegalicia.es/noticia/sociedad/2026/09/12/ceo-anthropic-pide-bajar-ritmo-desarrollo-ia-advierte-puede-perder-control/00031789227232613647208.htm"
+        },
+        {
+          "language": "es",
+          "source": "notisistema.com",
+          "source_country": "mx",
+          "url": "https://www.notisistema.com/noticias/ceo-de-anthropic-pide-frenar-desarrollo-de-ia/"
+        },
+        {
+          "language": "it",
+          "source": "affaritaliani.it",
+          "source_country": "it",
+          "url": "https://www.affaritaliani.it/economia/intelligenza-artificiale-il-ceo-di-anthropic-lancia-lennesimo-allarme-dobbiamo-rallentare-il-ritmo-di-sviluppo-dei-modelli-ia.html"
+        },
+        {
+          "language": "it",
+          "source": "notiziegeopolitiche.net",
+          "source_country": "it",
+          "url": "https://www.notiziegeopolitiche.net/il-fondatore-di-anthropic-chiede-di-frenare-la-corsa-allintelligenza-artificiale-che-la-sua-azienda-guida/"
+        },
+        {
+          "language": "tur",
+          "source": "mersinhaber.com",
+          "source_country": "tu",
+          "url": "https://www.mersinhaber.com/haber-anthropic-ceosundan-yapay-zeka-sektorunun-bilincli-sekilde-yavaslatilmasi-cagrisi-calforna/773908"
+        },
+        {
+          "language": "tur",
+          "source": "haberler.com",
+          "source_country": "tu",
+          "url": "https://www.haberler.com/teknoloji/anthropic-ceo-sundan-yapay-zeka-sektorunun-20231881-haberi/"
+        },
+        {
+          "language": "tur",
+          "source": "haberler.com",
+          "source_country": "tu",
+          "url": "https://www.haberler.com/guncel/anthropic-ceo-su-amodei-den-yapay-zeka-20231876-haberi/"
+        },
+        {
+          "language": "tur",
+          "source": "aa.com.tr",
+          "source_country": "tu",
+          "url": "https://www.aa.com.tr/tr/bilim-teknoloji/anthropic-ceosu-amodeiden-yapay-zeka-sirketlerine-yavaslama-cagrisi/4055385"
+        },
+        {
+          "language": "ru",
+          "source": "ru.apa.az",
+          "source_country": "aj",
+          "url": "https://ru.apa.az/amerika/glava-anthropic-prizval-ii-kompanii-zamedlit-temp-razrabotki-texnologii-671654"
+        },
+        {
+          "language": "ru",
+          "source": "rt.com",
+          "source_country": "rs",
+          "url": "https://russian.rt.com/science/news/1681607-mask-anthropic-iskusstvennyi-intellekt"
+        },
+        {
+          "language": "pt",
+          "source": "uol.com.br",
+          "source_country": "brazil",
+          "url": "https://www.uol.com.br/tilt/noticias/redacao/2026/09/12/ceo-da-anthropic-defende-desacelerar-ia-poderosa-sem-parar-progresso.ghtm"
+        },
+        {
+          "language": "pt",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://pt.euronews.com/my-europe/2026/09/12/ceo-da-anthropic-dario-amodei-apela-a-abrandar-desenvolvimento-da-ia-por-riscos-de-superin"
         }
       ],
       "mentioned_countries": [
-        "sa",
-        "ir"
+        "china"
       ],
-      "origin_country": "spain",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/economia/2026/09/11/6aa45b15e5fdea2f2e8b458d.html",
+      "origin_country": "aj",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/tecnologia/director-ejecutivo-anthropic-pide-frenar-desarrollo-ia-si-no-controla-superar-capacidad-comprender-controlar-sistemas_1_13505495.html",
       "rank": 5,
-      "reference_newsroom_count": 6,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "abc.es",
+        "bbc.co.uk",
         "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "expansion.com",
-        "lavanguardia.com"
+        "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5164,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 0.7071,
+          "coherence": 0.4851,
+          "corroboration": 0.8667,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
+          "prominence": 0.8889,
+          "source_reliability": 0.9
         },
-        "total": 0.6783,
+        "total": 0.65,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ormuz",
+      "subject_label": "anthropic",
       "subject_names": [
-        "arabia saudi",
-        "est-ouest",
-        "irak",
-        "iraq",
-        "jordania",
-        "ormuz",
-        "saudi arabia"
+        "altman",
+        "amodei",
+        "anthropic",
+        "bourse",
+        "ceo",
+        "musk"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "Arabia Saudí ha cerrado el oleoducto Este-Oeste, su única ruta que evita el estrecho de Ormuz, tras sufrir una serie de ataques en el mar Rojo y en instalaciones relacionadas; la medida responde a daños y riesgos derivados de los incidentes, según coinciden las informaciones."
+      "subject_newsroom_count": 10,
+      "summary": "Dario Amodei, consejero delegado de Anthropic, ha pedido que las empresas de inteligencia artificial reduzcan el ritmo de desarrollo para dar tiempo a que las medidas de seguridad se pongan al día, advirtiendo del riesgo de perder el control sobre sistemas muy avanzados y reclamando controles más estrictos y cooperación global."
     }
   ],
-  "discarded_ingested": 270,
+  "discarded_ingested": 262,
   "discarded_kept": 5,
-  "generated_at": "2026-09-12T09:30:20.733648+00:00",
+  "generated_at": "2026-09-13T10:29:04.156092+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

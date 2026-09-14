@@ -1,522 +1,472 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-capgemini-35cd560adae0",
-      "coherence": 0.4744553923805732,
-      "consequence": 2,
+      "cluster_id": "subject-france-241cbc2a9f11",
+      "coherence": 0.6654866125001514,
+      "consequence": 3,
       "countries": [
-        "france",
-        "united-states"
+        "china",
+        "france"
       ],
       "country_count": 2,
-      "editorial_day": "2026-09-12",
-      "headline": "Capgemini vend sa filiale américaine liée à un contrat avec l’ICE",
-      "independent_source_count": 4,
+      "editorial_day": "2026-09-14",
+      "headline": "La Finlande rejoint l’initiative française de dissuasion nucléaire avancée",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/12/capgemini-vend-sa-filiale-qui-avait-fait-polemique-pour-son-contrat-avec-l-ice_6771813_3224.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/14/la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france-aux-pays-europeens_6773746_3210.html"
         },
         {
           "language": "fr",
-          "source": "challenges.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.challenges.fr/entreprise/sous-pression-apres-un-contrat-avec-la-police-de-limmigration-americaine-capgemini-vend-sa-filiale-controversee_645731"
-        },
-        {
-          "language": "en",
-          "source": "digitaljournal.com",
-          "source_country": "united-states",
-          "url": "https://www.digitaljournal.com/article/french-it-giant-capgemini-sells-subsidiary-after-row-over-ice-links/"
-        },
-        {
-          "language": "pt",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://pt.euronews.com/business/2026/09/12/capgemini-vende-filial-americana-criticada-por-contrato-com-a-ice"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/entreprise/sous-pression-apres-un-contrat-avec-la-police-de-limmigration-americaine-capgemini-vend-sa-filiale-controversee_645731",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "euronews.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4745,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5679,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "capgemini",
-      "subject_names": [
-        "capgemini",
-        "ice"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Sous la pression suscitée par un contrat passé avec l’ICE (l’agence américaine de lutte contre l’immigration), le groupe informatique français Capgemini a cédé sa filiale américaine controversée ; les articles indiquent que la vente intervient après des polémiques publiques sur les liens de la filiale avec l’agence d’immigration américaine."
-    },
-    {
-      "cluster_id": "subject-normandie-26e2a2f29528",
-      "coherence": 0.41186116280236973,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-12",
-      "headline": "Un TER déraille en Normandie, 44 personnes blessées et piste de malveillance privilégiée",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/12/deraillement-d-un-ter-en-normandie-l-hypothese-d-un-acte-de-malveillance-privilegiee_6771437_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/cetait-vraiment-assez-choquant-jen-tremble-encore-ce-que-lon-sait-ce-samedi-sur-le-deraillement-du-ter-en-normandie-20260912_CK2OUTDMEBHTRJRVD5C2SEAJIU/"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/deraillement-du-ter-en-normandie-la-piste-de-lacte-malveillant-se-precise-20260912_7L32GMU75RCI7EOIAWHNU3QATY/"
+          "url": "https://www.lefigaro.fr/international/la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-emmanuel-macron-en-mars-aux-pays-europeens-20260914"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/ter-qui-deraille-en-seine-maritime-44-blesses-et-des-questions-autour-d-un-acte-malveillant-20260912"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/faits-divers/20260912.OBS118162/un-ter-deraille-en-normandie-44-blesses-acte-malveillant-privilegie-enquete-ouverte-ce-que-l-on-sait.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/faits-divers/20260912.OBS118162/un-ter-deraille-en-normandie-44-blesses-acte-malveillant-privilegie-enquete-ouverte-ce-que-l-on-sait.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4119,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5619,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "normandie",
-      "subject_names": [
-        "normandie",
-        "seine-maritime"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Un TER a déraillé en Normandie faisant 44 blessés dont une victime dans un état grave désormais hors de danger; les autorités ont ouvert une enquête et les premières investigations privilégient la piste d’un acte de malveillance pendant que le trafic ferroviaire est perturbé."
-    },
-    {
-      "cluster_id": "subject-france-a41b9e1825d4",
-      "coherence": 0.38602756480267075,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-13",
-      "headline": "Radio France entame une grève de deux jours contre l'arrivée d'un éditorialiste",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/medias/une-greve-de-deux-jours-debute-a-radio-france-pour-denoncer-la-chronique-du-directeur-adjoint-de-valeurs-actuelles-20260913"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/culture-et-idees/120926/radio-france-en-greve-pour-marquer-son-refus-categorique-face-aux-discours-de-haine"
+          "url": "https://www.la-croix.com/international/defense-la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france-20260914"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/greve/programmes-perturbes-en-raison-d-un-mouvement-de-greve-a-radio-france_8188931.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/societe/armee-securite-defense/nucleaire-militaire/la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france_8191679.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260912-deux-jours-de-gr%C3%A8ve-%C3%A0-radio-france-pour-contrer-l-arriv%C3%A9e-d-un-responsable-de-valeurs-actuelles"
+          "source": "china.org.cn",
+          "source_country": "china",
+          "url": "http://french.china.org.cn/foreign/txt/2026-09/14/content_118695415.htm"
+        }
+      ],
+      "mentioned_countries": [
+        "fi",
+        "france"
+      ],
+      "origin_country": "china",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/international/defense-la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france-20260914",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6655,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
+        "total": 0.7183,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "derriere",
+        "emmanuel macron",
+        "etats-unis",
+        "finlande",
+        "france",
+        "francia",
+        "leon xiv",
+        "macron",
+        "radio france"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "La Finlande a décidé de participer à l’initiative française de « dissuasion nucléaire avancée » annoncée par la France pour les pays européens ; l’Elysée a confirmé l’adhésion finlandaise et les autorités françaises ont présenté cette proposition comme une coopération de défense entre alliés européens."
+    },
+    {
+      "cluster_id": "subject-france-ec801703d8cf",
+      "coherence": 0.5190793437435335,
+      "consequence": 3,
+      "countries": [
+        "be",
+        "france",
+        "it"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-14",
+      "headline": "La France soumet une nouvelle version de l’interdiction des réseaux sociaux pour les moins de 15 ans",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/economie-numerique/la-france-soumet-a-lue-une-nouvelle-version-de-son-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-20260914_3RHVXFY5IVFB3PCSMMJD42AMTY/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/reseaux-sociaux-la-france-presente-une-nouvelle-version-pour-l-interdiction-moins-de-15-ans-20260914"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/14/france-submits-new-proposal-to-ban-social-media-for-under-15s-after-failed-attempt"
+        },
+        {
+          "language": "fr",
+          "source": "lavenir.net",
+          "source_country": "be",
+          "url": "https://www.lavenir.net/actu/monde/2026/09/14/la-france-soumet-une-nouvelle-version-de-linterdiction-des-reseaux-sociaux-aux-moins-de-15-ans-nous-irons-au-bout-XOTH2FGBMFA5PJXVBXUD4YP7SA/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "be",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/economie/economie-numerique/la-france-soumet-a-lue-une-nouvelle-version-de-son-interdiction-des-reseaux-sociaux-aux-moins-de-15-ans-20260914_3RHVXFY5IVFB3PCSMMJD42AMTY/",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "euronews.com",
+        "la-croix.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5191,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6917,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "derriere",
+        "etats-unis",
+        "finlande",
+        "france",
+        "leon xiv",
+        "radio france"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Le gouvernement français a présenté à l’Union européenne une nouvelle proposition visant à interdire l’accès aux réseaux sociaux aux moins de 15 ans, après un précédent projet qui n’avait pas abouti ; les autorités affirment leur intention d’aller jusqu’au bout de cette démarche et soumettent cette version révisée pour examen au niveau européen."
+    },
+    {
+      "cluster_id": "subject-pen-26fb8761815f",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-14",
+      "headline": "Marine Le Pen place la priorité nationale et le logement au cœur de sa campagne présidentielle",
+      "independent_source_count": 2,
+      "members": [
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260912-france-gr%C3%A8ve-%C3%A0-radio-france-contre-l-arriv%C3%A9e-d-un-%C3%A9ditorialiste-issu-d-un-m%C3%A9dia-d-extr%C3%AAme-droite"
+          "url": "https://www.rfi.fr/fr/france/20260913-france-marine-le-pen-place-la-priorit%C3%A9-nationale-et-le-logement-au-c%C5%93ur-de-son-projet-pr%C3%A9sidentiel"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/14/le-pen-vows-to-put-french-citizens-first-tackle-housing-and-cost-of-living-crisis-at-first"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "mediapart.fr",
-      "outbound_url": "https://www.mediapart.fr/journal/culture-et-idees/120926/radio-france-en-greve-pour-marquer-son-refus-categorique-face-aux-discours-de-haine",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/france/20260913-france-marine-le-pen-place-la-priorit%C3%A9-nationale-et-le-logement-au-c%C5%93ur-de-son-projet-pr%C3%A9sidentiel",
       "rank": 3,
-      "reference_newsroom_count": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "mediapart.fr",
+        "euronews.com",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.386,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.5346,
+        "total": 0.6494,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "pen",
       "subject_names": [
-        "france",
-        "francia",
-        "leon",
-        "radio france"
+        "marine",
+        "pen"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Les journalistes et personnels de Radio France ont lancé une grève de deux jours qui perturbe les programmes pour protester contre la nomination ou l’arrivée d’un chroniqueur/éditorialiste lié au magazine Valeurs actuelles, dénonçant des discours qu’ils qualifient de haineux et exprimant un refus catégorique de cette arrivée."
+      "subject_newsroom_count": 12,
+      "summary": "Lors de son premier discours de campagne, Marine Le Pen a annoncé qu’elle ferait de la « priorité nationale » et de la question du logement des priorités de son projet présidentiel, en s’engageant également à s’attaquer à la crise du pouvoir d’achat."
     },
     {
-      "cluster_id": "subject-france-51e1bb08358b",
-      "coherence": 0.47768285154708445,
-      "consequence": 1,
+      "cluster_id": "subject-macron-199a674a2680",
+      "coherence": 0.5767737057027511,
+      "consequence": 2,
       "countries": [
-        "it",
-        "mx",
+        "france",
         "spain"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-12",
-      "headline": "Un train régional déraille dans le nord de la France et blesse des dizaines de personnes",
-      "independent_source_count": 5,
+      "country_count": 2,
+      "editorial_day": "2026-09-14",
+      "headline": "Emmanuel Macron effectuera une visite d’État en Espagne les 29 et 30 septembre",
+      "independent_source_count": 12,
       "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/emmanuel-macron-effectuera-une-visite-d-etat-en-espagne-les-29-et-30-septembre_8191649.html#xtor=RSS-3-[lestitres]"
+        },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/veintena-heridos-tras-descarrilar-tren-francia-20260911215257-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260912/11633194/44-heridos-descarrilamiento-tren-regional-norte-francia.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/heridos-descarrilar-tren-regional-norte-francia_7035885_0.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/12/passenger-train-derails-in-northern-france-injuring-at-least-44-people-including-one-serio"
-        },
-        {
-          "language": "es",
-          "source": "notisistema.com",
-          "source_country": "mx",
-          "url": "https://www.notisistema.com/noticias/al-menos-45-deja-accidente-de-tren-en-francia/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/veintena-heridos-tras-descarrilar-tren-francia-20260911215257-nt.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "euronews.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4777,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.524,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "leon",
-        "radio france"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "Un train régional a déraillé dans le nord de la France, faisant entre une vingtaine et au moins 45 personnes blessées selon les bilans publiés ; plusieurs sources indiquent au moins 44 blessés et au moins une personne grièvement touchée. Les articles rapportent un nombre variable de blessés mais s'accordent sur un incident avec de nombreux blessés, sans donner d'autres détails concordants sur les causes ou le lieu exact."
-    },
-    {
-      "cluster_id": "subject-celine-dion-09bfd7f2e3a2",
-      "coherence": 0.4364853861775796,
-      "consequence": 0,
-      "countries": [
-        "as",
-        "ca",
-        "france",
-        "germany",
-        "india",
-        "mx",
-        "spain",
-        "sz",
-        "united-states",
-        "unknown",
-        "vm"
-      ],
-      "country_count": 11,
-      "editorial_day": "2026-09-13",
-      "headline": "Céline Dion revient sur scène à Paris après six ans d’absence",
-      "independent_source_count": 22,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/cultura/musica/fervor-celine-dion-invade-paris-ante-retorno-20260912174726-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/el-cultural/20260913/celine-dion-vuelve-escenarios-anos-prometido-no-llorar-cumplo-promesas/1003744381834_0.html"
+          "url": "https://www.abc.es/espana/macron-vistara-espana-dias-septiembre-20260914102222-nt.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/cultura/2026/09/12/6aa5ada5e85ece2d2a8b4581.html"
+          "url": "https://www.elmundo.es/espana/2026/09/14/6aa7aca9e4d4d8d7638b457b.html"
         },
         {
-          "language": "en",
-          "source": "hppr.org",
-          "source_country": "united-states",
-          "url": "https://www.hppr.org/npr-news/2026-09-12/celine-dion-returns-to-the-stage-after-battling-rare-illness"
-        },
-        {
-          "language": "en",
-          "source": "krcu.org",
-          "source_country": "united-states",
-          "url": "https://www.krcu.org/2026-09-12/celine-dion-returns-to-the-stage-after-battling-rare-illness"
-        },
-        {
-          "language": "en",
-          "source": "prokerala.com",
-          "source_country": "india",
-          "url": "https://www.prokerala.com/news/articles/a1811745.html"
-        },
-        {
-          "language": "en",
-          "source": "houstonpublicmedia.org",
-          "source_country": "united-states",
-          "url": "https://www.houstonpublicmedia.org/npr/2026/09/12/nx-s1-5967534/celine-dion-returns-to-the-stage-after-battling-rare-illness/"
-        },
-        {
-          "language": "de",
-          "source": "t-online.de",
-          "source_country": "germany",
-          "url": "https://www.t-online.de/unterhaltung/musik/id_101433222/celine-dion-feiert-buehnen-comeback-erstes-konzert-seit-sechs-jahren.html"
-        },
-        {
-          "language": "de",
-          "source": "gala.de",
-          "source_country": "germany",
-          "url": "https://www.gala.de/lifestyle/film-tv-musik/c%C3%A9line-dion--traenen-beim-konzert-comeback-in-paris-24675158.html"
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/macron-realizara-una-visita-estado-espana-los-dias-29-30-septiembre_7036323_0.html"
         },
         {
           "language": "fr",
-          "source": "letemps.ch",
-          "source_country": "sz",
-          "url": "https://www.letemps.ch/culture/musiques/j-ai-promis-de-ne-pas-pleurer-le-retour-touchant-et-triomphant-de-celine-dion"
-        },
-        {
-          "language": "en",
-          "source": "cnn.com",
-          "source_country": "united-states",
-          "url": "https://edition.cnn.com/2026/09/12/entertainment/celine-dion-returns-stage-latam-intl"
-        },
-        {
-          "language": "en",
-          "source": "ottawasun.com",
-          "source_country": "ca",
-          "url": "https://ottawasun.com/entertainment-life/celine-dions-comeback-is-official-i-promised-not-to-cry-she-tells-paris-crowd-in-live-return/wcm/e80c18a3-3018-480a-96e9-4aa02c1eb2b2"
-        },
-        {
-          "language": "en",
-          "source": "batemansbaypost.com.au",
-          "source_country": "as",
-          "url": "https://www.batemansbaypost.com.au/story/9349046/celine-dion-cries-during-emotional-paris-concert-return/"
-        },
-        {
-          "language": "en",
-          "source": "ketr.org",
-          "source_country": "united-states",
-          "url": "https://www.ketr.org/2026-09-12/celine-dion-returns-to-the-stage-after-battling-rare-illness"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/news/2026-09/13/traenen-party-und-leidenschaft-c-line-dion-feiert-comeback"
-        },
-        {
-          "language": "de",
-          "source": "schwaebische.de",
-          "source_country": "germany",
-          "url": "https://www.schwaebische.de/panorama/traenen-party-und-leidenschaft-celine-dion-feiert-comeback-4861065"
-        },
-        {
-          "language": "de",
-          "source": "westfalen-blatt.de",
-          "source_country": "germany",
-          "url": "https://www.westfalen-blatt.de/ueberregional/kultur/topnews/traenen-party-und-leidenschaft-celine-dion-feiert-comeback-3648155"
-        },
-        {
-          "language": "de",
-          "source": "nw.de",
-          "source_country": "germany",
-          "url": "https://www.nw.de/nachrichten/panorama/24417333_Traenen-Party-und-Leidenschaft-Celine-Dion-feiert-Comeback.html"
-        },
-        {
-          "language": "vie",
-          "source": "baomoi.com",
-          "source_country": "vm",
-          "url": "https://baomoi.com/ca-si-celine-dion-khoc-nhu-mua-khi-tro-lai-san-khau-sau-6-nam-mac-benh-la-c56037651.epi"
-        },
-        {
-          "language": "fr",
-          "source": "lanouvellerepublique.fr",
+          "source": "republicain-lorrain.fr",
           "source_country": "france",
-          "url": "https://www.lanouvellerepublique.fr/a-la-une/c-est-des-larmes-de-joie-un-retour-emouvant-sur-scene-pour-celine-dion-apres-six-ans-d-absence-1789252568"
+          "url": "https://www.republicain-lorrain.fr/politique/2026/09/14/emmanuel-macron-va-effectuer-une-visite-d-etat-en-espagne-les-29-et-30-septembre"
+        },
+        {
+          "language": "fr",
+          "source": "20minutes.fr",
+          "source_country": "france",
+          "url": "https://www.20minutes.fr/monde/espagne/4245178-20260914-espagne-macron-effectuera-visite-etat-29-30-septembre-premiere-depuis-dix-sept-ans"
+        },
+        {
+          "language": "fr",
+          "source": "bfmtv.com",
+          "source_country": "france",
+          "url": "https://www.bfmtv.com/politique/elysee/emmanuel-macron-en-visite-d-etat-en-espagne-les-29-et-30-septembre-la-premiere-d-un-president-francais-depuis-2009_AN-202609140347.html"
+        },
+        {
+          "language": "cat",
+          "source": "ara.cat",
+          "source_country": "spain",
+          "url": "https://www.ara.cat/politica/macron-visitara-espanya-29-30-setembre_25_5849378.html"
         },
         {
           "language": "es",
-          "source": "bitlysdowssl-aws.com",
-          "source_country": "unknown",
-          "url": "https://bitlysdowssl-aws.com/2026/09/celine-dion-conmueve-a-paris-con-su-regreso-a-los-escenarios-tras-seis-anos/"
+          "source": "diariodeavila.es",
+          "source_country": "spain",
+          "url": "https://www.diariodeavila.es/noticia/zfae77616-9df4-4ad1-942d357076157720/202609/macron-realizara-una-visita-a-espana-el-29-y-30-de-septiembre"
         },
         {
           "language": "es",
-          "source": "excelsior.com.mx",
-          "source_country": "mx",
-          "url": "https://www.excelsior.com.mx/espectaculos/celine-dion-regresa-triunfal-escenarios-paris-tras-seis-anos-ausencia"
+          "source": "diariocordoba.com",
+          "source_country": "spain",
+          "url": "https://www.diariocordoba.com/internacional/2026/09/14/macron-realiza-visita-espana-29-septiembre-134260524.html"
+        },
+        {
+          "language": "es",
+          "source": "farodevigo.es",
+          "source_country": "spain",
+          "url": "https://www.farodevigo.es/mundo/2026/09/14/macron-realiza-visita-espana-29-septiembre-134260562.html"
+        },
+        {
+          "language": "es",
+          "source": "diariodemallorca.es",
+          "source_country": "spain",
+          "url": "https://www.diariodemallorca.es/internacional/2026/09/14/macron-realiza-visita-espana-29-septiembre-134260530.html"
         }
       ],
       "mentioned_countries": [
+        "spain",
         "france"
       ],
-      "origin_country": "as",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/cultura/2026/09/12/6aa5ada5e85ece2d2a8b4581.html",
-      "rank": 5,
+      "origin_country": "france",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/macron-realizara-una-visita-estado-espana-los-dias-29-30-septiembre_7036323_0.html",
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "20minutos.es",
         "abc.es",
-        "elespanol.com",
         "elmundo.es",
-        "zeit.de"
+        "francetvinfo.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4365,
-          "corroboration": 0.8462,
+          "coherence": 0.5768,
+          "corroboration": 0.5,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.8462,
-          "source_reliability": 0.8571
+          "prominence": 0.75,
+          "source_reliability": 0.7778
         },
-        "total": 0.5252,
+        "total": 0.6473,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "celine dion",
+      "subject_label": "macron",
       "subject_names": [
-        "celine dion",
-        "paris"
+        "barcelona",
+        "emmanuel macron",
+        "espana",
+        "francia",
+        "macron"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Après six ans d’interruption liée à une maladie rare, Céline Dion a fait un retour émotionnel et triomphal sur scène à Paris; la chanteuse a exprimé sa joie en pleurant et en disant qu’elle avait promis de ne pas pleurer, et le concert a été accueilli avec enthousiasme par le public."
+      "subject_newsroom_count": 13,
+      "summary": "Les articles indiquent qu’Emmanuel Macron se rendra en Espagne pour une visite d’État les 29 et 30 septembre; plusieurs sources précisent qu’il s’agit de la première visite d’État d’un président français en Espagne depuis 2009."
+    },
+    {
+      "cluster_id": "subject-kiev-78730db9842b",
+      "coherence": 0.5089646540196858,
+      "consequence": 3,
+      "countries": [
+        "be",
+        "france"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-14",
+      "filled_from": "europe",
+      "headline": "Un train reliant Kiev à Varsovie touché par un drone russe près de la Pologne",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/14/guerre-en-ukraine-emoi-international-apres-une-frappe-de-drone-russe-sur-un-train-reliant-kiev-a-varsovie_6773350_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/13/un-train-a-destination-de-varsovie-a-ete-frappe-par-un-drone-russe-en-ukraine-qui-denonce-une-attaque-systemique-visant-le-rail_6772805_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/un-train-parti-de-kyiv-et-a-destination-de-varsovie-frappe-par-un-drone-russe-en-ukraine-20260913_VJWICPNROZGS7IBDPEBFDMITN4/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-un-train-reliant-kiev-a-varsovie-attaque-pres-de-la-frontiere-polonaise_8191655.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260913.OBS118203/un-train-pour-varsovie-frappe-par-un-drone-russe-en-ukraine-une-attaque-systemique-contre-le-rail-en-cours.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-la-russie-frappe-pres-de-la-pologne-et-touche-un-train-reliant-kiev-a-varsovie-5Q7YXGMEB5CTLCV7LMMAW4OZ2Q/"
+        },
+        {
+          "language": "fr",
+          "source": "dhnet.be",
+          "source_country": "be",
+          "url": "https://www.dhnet.be/dernieres-depeches/2026/09/14/kiev-et-varsovie-denoncent-une-frappe-russe-sur-un-train-a-la-frontiere-polonaise-LSXU45ICKZGTNPKXH27QW6O5R4/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "pl",
+        "rs"
+      ],
+      "origin_country": "be",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260913.OBS118203/un-train-pour-varsovie-frappe-par-un-drone-russe-en-ukraine-une-attaque-systemique-contre-le-rail-en-cours.html",
+      "rank": 5,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.509,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7143
+        },
+        "total": 0.6671,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "kiev",
+      "subject_names": [
+        "kiev",
+        "pologne",
+        "polonia",
+        "rusia",
+        "russia",
+        "russia's",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "ukraine-poland",
+        "varsovie"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "Un train en partance pour Varsovie a été frappé par un drone russe en Ukraine près de la frontière polonaise; Kiev et Varsovie ont dénoncé l'attaque, qualifiée par l'Ukraine d'«attaque systémique» visant le réseau ferroviaire à travers le pays, selon les informations communes aux articles."
     }
   ],
-  "discarded_ingested": 43,
+  "discarded_ingested": 27,
   "discarded_kept": 5,
-  "generated_at": "2026-09-13T10:29:04.156092+00:00",
+  "generated_at": "2026-09-14T10:53:02.760185+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

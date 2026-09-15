@@ -2,38 +2,673 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-israel-725b3511abfd"
+        "subject-trump-8bc6b18d0ba7"
       ],
-      "cluster_id": "subject-israel-725b3511abfd",
-      "coherence": 0.5347802340798782,
+      "cluster_id": "subject-trump-8bc6b18d0ba7",
+      "coherence": 0.5343487736163146,
       "consequence": 3,
       "countries": [
+        "brazil",
+        "ca",
         "france",
+        "gt",
+        "india",
+        "it",
+        "pk",
+        "po",
         "spain",
-        "united-kingdom"
+        "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-14",
-      "headline": "Israeli minister seeks to revoke citizenship of filmmakers behind Gaza documentary NAZA",
-      "independent_source_count": 6,
+      "country_count": 10,
+      "editorial_day": "2026-09-15",
+      "headline": "Supreme Court blocks Trump administration plan to restrict mail‑in voting",
+      "independent_source_count": 32,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/15/donald-trump-voit-son-projet-de-restriction-du-vote-par-correspondance-rejete-par-la-cour-supreme-a-six-semaines-des-midterms_6774151_3211.html"
+        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/proche-orient/israel-palestine/un-ministre-israelien-veut-dechoir-de-leur-nationalite-les-realisateurs-du-documentaire-naza-sur-des-militaires-accusant-l-armee-de-tuer-de-nombreux-civils-a-gaza_8191484.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/usa/le-projet-de-donald-trump-d-encadrement-plus-strict-du-vote-par-correspondance-rejete-par-la-cour-supreme_8193182.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260915-la-cour-supr%C3%AAme-rejette-une-attaque-de-trump-contre-le-vote-par-correspondance"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260915-%C3%A9tats-unis-la-cour-supr%C3%AAme-rejette-un-recours-de-l-administration-trump-visant-%C3%A0-restreindre-le-vote-par-correspondance"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/us/2026-09-15/el-tribunal-suprema-rechaza-por-ahora-las-restricciones-de-trump-al-voto-por-correo-antes-de-las-elecciones-legislativas.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/supremo-eeuu-tumba-planes-trump-restringir-voto-20260915070039-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260915/11635026/supremo-bloquea-maniobras-trump-restringir-voto-correo-legislativas.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/nuevo-reves-supremo-trump-tribunal-rechaza-maniobras-restringir-voto-correo-legislativas_1_13509985.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/el-cultural/cine/20260914/ministro-cultura-israel-amenaza-retirar-ciudadania-directores-documental-naza/1003744382263_0.html"
+          "url": "https://www.elespanol.com/mundo/america/eeuu/20260915/tribunal-supremo-bloquea-plan-trump-restringir-voto-correo-midterms-noviembre/1003744383606_0.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ministro-israeli-cultura-pide-revocar-ciudadania-autores-filme-naza-horrores-guerra-gaza_7036223_0.html"
+          "url": "https://www.20minutos.es/internacional/supremo-eeuu-frena-por-ahora-intento-trump-restringir-voto-por-correo_7036739_0.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/15/news/usa_voto_per_posta_corte_suprema_boccia_ricorso_amministrazione_trump_per_introdurre_restrizioni-425585754/?rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/14/em-derrota-para-trump-suprema-corte-dos-eua-nao-permite-que-servico-postal-restrinja-votos-por-correio-nas-eleicoes-de-novembro.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "rtp.pt",
+          "source_country": "po",
+          "url": "https://www.rtp.pt/noticias/mundo/derrota-para-trump-supremo-tribunal-dos-eua-rejeita-restringir-voto-por-correio_n1765520"
+        },
+        {
+          "language": "en",
+          "source": "deccanchronicle.com",
+          "source_country": "india",
+          "url": "https://www.deccanchronicle.com/world/americas/supreme-court-rejects-trump-mail-ballot-restrictions-ahead-of-midterms-1987480"
+        },
+        {
+          "language": "en",
+          "source": "nbcdfw.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcdfw.com/news/national-international/supreme-court-trump-cannot-enforce-new-mail-in-ballot-regulation/4077017/"
+        },
+        {
+          "language": "en",
+          "source": "niagarafallsreview.ca",
+          "source_country": "ca",
+          "url": "https://www.niagarafallsreview.ca/news/world/united-states/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms/article_121a9fa3-6ad4-59c8-8b7e-b5ef223af9cf.html"
+        },
+        {
+          "language": "en",
+          "source": "koaa.com",
+          "source_country": "united-states",
+          "url": "https://www.koaa.com/politics/america-votes/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms"
+        },
+        {
+          "language": "en",
+          "source": "wxyz.com",
+          "source_country": "united-states",
+          "url": "https://www.wxyz.com/politics/america-votes/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms"
+        },
+        {
+          "language": "en",
+          "source": "pasadenastarnews.com",
+          "source_country": "united-states",
+          "url": "https://www.pasadenastarnews.com/2026/09/14/us-supreme-court-trump-elections-mail-ballots/"
+        },
+        {
+          "language": "en",
+          "source": "kxl.com",
+          "source_country": "united-states",
+          "url": "https://www.kxl.com/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms/"
+        },
+        {
+          "language": "en",
+          "source": "thenews.com.pk",
+          "source_country": "pk",
+          "url": "https://www.thenews.com.pk/latest/1416253-supreme-court-stops-trump-plan-that-could-have-withheld-millions-of-mail-ballots"
+        },
+        {
+          "language": "en",
+          "source": "khqa.com",
+          "source_country": "united-states",
+          "url": "https://www.khqa.com/news/nation-world/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms/article_9ea6f084-eceb-5ca2-a48f-3643ea811a9a.html"
+        },
+        {
+          "language": "en",
+          "source": "sbsun.com",
+          "source_country": "united-states",
+          "url": "https://www.sbsun.com/2026/09/14/us-supreme-court-trump-elections-mail-ballots/"
+        },
+        {
+          "language": "en",
+          "source": "lex18.com",
+          "source_country": "united-states",
+          "url": "https://www.lex18.com/politics/america-votes/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms"
+        },
+        {
+          "language": "en",
+          "source": "bostonherald.com",
+          "source_country": "united-states",
+          "url": "https://www.bostonherald.com/2026/09/14/us-supreme-court-trump-elections-mail-ballots/"
+        },
+        {
+          "language": "en",
+          "source": "ky3.com",
+          "source_country": "united-states",
+          "url": "https://www.ky3.com/2026/09/14/supreme-court-rejects-trump-mail-ballot-restrictions-now-ahead-midterms/"
+        },
+        {
+          "language": "en",
+          "source": "therecord.com",
+          "source_country": "ca",
+          "url": "https://www.therecord.com/news/world/united-states/supreme-court-rejects-trump-mail-ballot-restrictions-for-now-ahead-of-midterms/article_307ab347-1b2d-5a85-867e-fe28c8662195.html"
+        },
+        {
+          "language": "en",
+          "source": "kptv.com",
+          "source_country": "united-states",
+          "url": "https://www.kptv.com/2026/09/14/supreme-court-rejects-trump-mail-ballot-restrictions-now-ahead-midterms/"
+        },
+        {
+          "language": "es",
+          "source": "eldiariony.com",
+          "source_country": "united-states",
+          "url": "https://eldiariony.com/2026/09/14/suprema-corte-rechaza-por-ahora-restricciones-de-trump-al-voto-por-correo-antes-de-las-elecciones-legislativas/"
+        },
+        {
+          "language": "es",
+          "source": "abc7.com",
+          "source_country": "united-states",
+          "url": "https://abc7.com/post/corte-suprema-de-eeuu-rechaza-por-ahora-restricciones-de-trump-a-voto-por-correo-de-cara-a-eleccion/19832620/"
+        },
+        {
+          "language": "es",
+          "source": "laraza.com",
+          "source_country": "united-states",
+          "url": "https://laraza.com/2026/09/14/corte-suprema-rechaza-el-plan-de-trump-para-restringir-el-voto-por-correo-en-la-eleccion-de-noviembre/"
+        },
+        {
+          "language": "es",
+          "source": "prensalibre.com",
+          "source_country": "gt",
+          "url": "https://www.prensalibre.com/ahora/internacional/corte-suprema-de-estados-unidos-frena-intento-de-trump-de-restringir-el-voto-por-correo/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/14/em-derrota-para-trump-suprema-corte-dos-eua-nao-permite-que-servico-postal-restrinja-votos-por-correio-nas-eleicoes-de-novembro.ghtml",
+      "rank": 1,
+      "reference_newsroom_count": 12,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elpais.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "repubblica.it",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5343,
+          "corroboration": 0.8333,
+          "editorial_weight": 0.6,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8889,
+          "source_reliability": 0.9048
+        },
+        "total": 0.8167,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "eeuu",
+        "etats-unis",
+        "space force",
+        "supreme court",
+        "supremo",
+        "trump",
+        "trump's",
+        "washington"
+      ],
+      "subject_newsroom_count": 27,
+      "summary": "The U.S. Supreme Court rejected an effort by the Trump administration to impose tighter rules on mail‑in ballots ahead of the November midterm elections, blocking measures that would have limited or withheld mail ballots; the decision prevents those proposed restrictions from taking effect for now."
+    },
+    {
+      "_linked_ids": [
+        "subject-etats-unis-8dfd73515235"
+      ],
+      "cluster_id": "subject-etats-unis-8dfd73515235",
+      "coherence": 0.4495329060791947,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "it",
+        "spain"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-15",
+      "headline": "United States confirms it has deployed weapons in orbit",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/15/les-etats-unis-confirment-disposer-d-armes-deployees-en-orbite_6774085_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/les-etats-unis-admettent-pour-la-premiere-fois-disposer-darmes-dans-lespace-20260915_2VDMZQPBKJGYHAJ5ZRVS7HZE2U/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/etats-unis-l-us-space-force-affirme-disposer-darmes-dans-lespace-20260915"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/%C3%A9co-tech/20260914-espace-etats-unis-confirment-deploye-armes-orbit-us-space-force"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-09/usa-weltraumwaffen-orbit-space-force-russland-china-gxe"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/14/united-states-space-force-says-us-has-weapons-in-orbit"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/financial-times/2026/09/15/6aa90cab468aebb26d8b4571.html"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/14/united-states-space-force-says-us-has-weapons-in-orbit",
+      "rank": 2,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "euronews.com",
+        "expansion.com",
+        "france24.com",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4495,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7241
+        },
+        "total": 0.7346,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "etats-unis",
+      "subject_names": [
+        "eeuu",
+        "etats-unis",
+        "space force"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "U.S. officials, including the Space Force, acknowledged for the first time that the United States has weapons deployed in Earth orbit. The statements, reported across multiple outlets, indicate the presence of armed capabilities in space but do not provide detailed inventories or exact locations."
+    },
+    {
+      "_linked_ids": [
+        "subject-escocia-885dc3e3fe45",
+        "subject-irlanda-689a29e4ffea"
+      ],
+      "cluster_id": "subject-irlanda-689a29e4ffea",
+      "coherence": 0.46519991850057407,
+      "consequence": 3,
+      "countries": [
+        "ar",
+        "brazil",
+        "it",
+        "mx",
+        "spain"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-15",
+      "headline": "Scotland, Wales and Northern Ireland agree to pursue the right to independence from the UK",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-14/los-nacionalistas-de-escocia-gales-e-irlanda-del-norte-se-unen-para-impulsar-su-independencia-del-reino-unido.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/escocia-gales-irlanda-norte-unen-fuerzas-reclamar-20260914134801-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260915/11634771/escocia-gales-ulster-exigen-derecho-dejar-reino-unido.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/lideres-escocia-gales-e-irlanda-norte-acuerdan-luchar-independizarse-reino-unido_1_13507512.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/escocia-gales-irlanda-norte-se-unen-para-reclamar-su-independencia-reino-unido-nuestro-futuro-esta-ue_7036484_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/noticia/2026/09/14/lideres-de-escocia-irlanda-do-norte-e-pais-de-gales-se-unem-para-reivindicar-independencia-do-reino-unido-o-tempo-de-westminster-acabou.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/14/escocia-pais-de-gales-irlanda-do-norte-assinam-acordo-exigindo-referendos-independencia-inglaterra.ghtml"
+        },
+        {
+          "language": "it",
+          "source": "eunews.it",
+          "source_country": "it",
+          "url": "https://www.eunews.it/2026/09/15/scozia-galles-e-irlanda-del-nord-unite-per-lindipendenza-e-il-ritorno-nella-ue/"
+        },
+        {
+          "language": "es",
+          "source": "lajornadasanluis.com.mx",
+          "source_country": "mx",
+          "url": "https://lajornadasanluis.com.mx/escocia-gales-e-irlanda-del-norte-reclaman-su-derecho-a-la-autodeterminacion-y-un-futuro-en-la-ue/"
+        },
+        {
+          "language": "es",
+          "source": "elheraldodesaltillo.mx",
+          "source_country": "mx",
+          "url": "https://elheraldodesaltillo.mx/2026/09/14/escocia-gales-e-irlanda-del-norte-reclaman-al-reino-unido-su-independencia/"
+        },
+        {
+          "language": "es",
+          "source": "laprensa.com.ar",
+          "source_country": "ar",
+          "url": "https://www.laprensa.com.ar/Sacudon-en-Reino-Unido-Escocia-Irlanda-del-Norte-y-Gales-invocan-la-autodeterminacion-575810.note.aspx"
+        },
+        {
+          "language": "pt",
+          "source": "correiobraziliense.com.br",
+          "source_country": "brazil",
+          "url": "https://www.correiobraziliense.com.br/mundo/2026/09/7500037-lideres-de-escocia-irlanda-do-norte-e-pais-de-gales-se-unem-para-reivindicar-independencia-do-reino-unido-o-tempo-de-westminster-acabou.html"
+        },
+        {
+          "language": "pt",
+          "source": "uol.com.br",
+          "source_country": "brazil",
+          "url": "https://operamundi.uol.com.br/europa/escocia-gales-e-irlanda-do-norte-exigem-referendos-sobre-independencia-do-reino-unido/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "ei"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/14/escocia-pais-de-gales-irlanda-do-norte-assinam-acordo-exigindo-referendos-independencia-inglaterra.ghtml",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "globo.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4652,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.75,
+          "source_reliability": 0.8049
+        },
+        "total": 0.7314,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "irlanda",
+      "subject_names": [
+        "donald trump",
+        "escocia",
+        "gales",
+        "ireland",
+        "irlanda",
+        "londres",
+        "reino unido",
+        "trump",
+        "washington"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Leaders and nationalist parties from Scotland, Wales and Northern Ireland have publicly aligned to demand the right to self-determination and to pursue independence from the United Kingdom, calling for referendums and indicating a shared goal of closer ties with the European Union."
+    },
+    {
+      "_linked_ids": [
+        "subject-iran-132130032f14"
+      ],
+      "cluster_id": "subject-iran-132130032f14",
+      "coherence": 0.5331715018542222,
+      "consequence": 3,
+      "countries": [
+        "bn",
+        "france",
+        "it"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-15",
+      "headline": "Pentagon acknowledges U.S. ammunition shortfall linked to the war in Iran",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/15/etats-unis-le-pentagone-reconnait-une-penurie-de-munitions-consecutive-a-la-guerre-en-iran_6774321_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/guerre-en-iran-le-pentagone-reconnait-une-penurie-de-munitions-et-chiffre-les-affrontements-a-33-milliards-de-dollars-20260915_GI5BJD2VWRBPPCB23HY4THOQSY/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/etats-unis-le-pentagone-reconnait-une-penurie-de-munitions-avec-la-guerre-en-iran-20260915"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/le-pentagone-reconnait-une-penurie-de-munitions-liee-avec-la-guerre-en-iran_8193014.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260915-%C3%A9tats-unis-manque-munitions-guerre-iran-pentagone-defense"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20260915-en-direct-moyen-orient-iran-etats-unis-yemen-houthis-pentagone-penurie-munitions-trump"
+        },
+        {
+          "language": "fr",
+          "source": "lanouvelletribune.info",
+          "source_country": "bn",
+          "url": "https://lanouvelletribune.info/2026/09/guerre-en-iran-le-pentagone-contredit-trump-et-reconnait-une-penurie-de-munitions/"
+        },
+        {
+          "language": "fr",
+          "source": "huffingtonpost.fr",
+          "source_country": "france",
+          "url": "https://www.huffingtonpost.fr/international/article/l-armee-americaine-concede-enfin-que-la-guerre-en-iran-a-epuise-ses-stocks-de-munitions_324988.html"
+        },
+        {
+          "language": "it",
+          "source": "affaritaliani.it",
+          "source_country": "it",
+          "url": "https://www.affaritaliani.it/esteri/pentagono-iran-carenza-munizioni-trump.html"
+        }
+      ],
+      "mentioned_countries": [
+        "ir",
+        "united-states"
+      ],
+      "origin_country": "bn",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/15/etats-unis-le-pentagone-reconnait-une-penurie-de-munitions-consecutive-a-la-guerre-en-iran_6774321_3210.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5332,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.75
+        },
+        "total": 0.7178,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "iran",
+      "subject_names": [
+        "eeuu",
+        "etats-unis",
+        "iran",
+        "pentagone",
+        "space force",
+        "teheran"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "U.S. defense officials have for the first time acknowledged a shortage of munitions that they attribute to sustained military operations related to the war in Iran; they say the increased tempo of fighting has depleted stockpiles and placed strain on budgets, with reported costs of the confrontations cited at about $33 billion."
+    },
+    {
+      "_linked_ids": [
+        "subject-israel-725b3511abfd",
+        "subject-naza-cfb0f08cb0eb"
+      ],
+      "cluster_id": "subject-naza-cfb0f08cb0eb",
+      "coherence": 0.491960753121498,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "it",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-14",
+      "headline": "Israeli culture minister seeks to strip NAZA filmmakers of citizenship",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260914.OBS118220/des-ministres-israeliens-s-en-prennent-violemment-aux-realisateurs-de-naza-jusqu-a-reclamer-leur-decheance-de-nationalite.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/cultura/20260914/11634032/ministro-cultura-israeli-amenaza-revocar-ciudadania-realizadores-documental-naza.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ministro-israeli-cultura-pide-revocar-ciudadania-autores-documental-naza-premiado-venecia_1_13506930.html"
         },
         {
           "language": "en",
@@ -42,465 +677,72 @@
           "url": "https://www.theguardian.com/film/2026/sep/14/gaza-documentary-makers-naza-israel-citizenship-ntwnfb"
         },
         {
-          "language": "es",
-          "source": "elnortedecastilla.es",
-          "source_country": "spain",
-          "url": "https://www.elnortedecastilla.es/pantallas/cine/ministro-cultura-israel-pide-retirar-nacionalidad-directores-20260914111843-ntrc.html"
-        },
-        {
           "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/israeli-minister-threatens-strip-israeli-005405000.html"
-        }
-      ],
-      "mentioned_countries": [
-        "is",
-        "gz"
-      ],
-      "origin_country": "france",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/ministro-israeli-cultura-pide-revocar-ciudadania-autores-filme-naza-horrores-guerra-gaza_7036223_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elespanol.com",
-        "francetvinfo.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5348,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.6995,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "israel",
-      "subject_names": [
-        "cisjordania",
-        "cisjordanie",
-        "gaza",
-        "israel",
-        "naza",
-        "venise"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "An Israeli culture minister has called for revoking the Israeli nationality of the directors of the documentary \"NAZA,\" which features Israeli military personnel accusing the army of killing civilians in Gaza and alleges use of AI in bombardments; the minister threatened to strip the filmmakers of citizenship in response to the film."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-241cbc2a9f11"
-      ],
-      "cluster_id": "subject-france-241cbc2a9f11",
-      "coherence": 0.6654866125001514,
-      "consequence": 3,
-      "countries": [
-        "china",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-14",
-      "headline": "Finland to join France’s proposed “advanced” nuclear deterrence initiative",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/14/la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france-aux-pays-europeens_6773746_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-emmanuel-macron-en-mars-aux-pays-europeens-20260914"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/defense-la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france-20260914"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/armee-securite-defense/nucleaire-militaire/la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france_8191679.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "china.org.cn",
-          "source_country": "china",
-          "url": "http://french.china.org.cn/foreign/txt/2026-09/14/content_118695415.htm"
-        }
-      ],
-      "mentioned_countries": [
-        "fi",
-        "france"
-      ],
-      "origin_country": "china",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/international/defense-la-finlande-va-rejoindre-la-dissuasion-nucleaire-avancee-proposee-par-la-france-20260914",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6655,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6983,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "derriere",
-        "emmanuel macron",
-        "etats-unis",
-        "finlande",
-        "france",
-        "francia",
-        "leon xiv",
-        "macron",
-        "radio france"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "Finland has decided to join the French initiative for an \"advanced\" nuclear deterrence framework offered to European countries by President Emmanuel Macron. The move reflects Helsinki’s agreement to participate in the diplomatic and security arrangement described by France as an enhanced form of nuclear cooperation among European partners."
-    },
-    {
-      "_linked_ids": [
-        "subject-kiev-78730db9842b"
-      ],
-      "cluster_id": "subject-kiev-78730db9842b",
-      "coherence": 0.5089646540196858,
-      "consequence": 3,
-      "countries": [
-        "be",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-14",
-      "headline": "Russian drone strikes train bound for Warsaw near Poland–Ukraine border",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/14/guerre-en-ukraine-emoi-international-apres-une-frappe-de-drone-russe-sur-un-train-reliant-kiev-a-varsovie_6773350_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/13/un-train-a-destination-de-varsovie-a-ete-frappe-par-un-drone-russe-en-ukraine-qui-denonce-une-attaque-systemique-visant-le-rail_6772805_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/un-train-parti-de-kyiv-et-a-destination-de-varsovie-frappe-par-un-drone-russe-en-ukraine-20260913_VJWICPNROZGS7IBDPEBFDMITN4/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-un-train-reliant-kiev-a-varsovie-attaque-pres-de-la-frontiere-polonaise_8191655.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260913.OBS118203/un-train-pour-varsovie-frappe-par-un-drone-russe-en-ukraine-une-attaque-systemique-contre-le-rail-en-cours.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/ukraine-la-russie-frappe-pres-de-la-pologne-et-touche-un-train-reliant-kiev-a-varsovie-5Q7YXGMEB5CTLCV7LMMAW4OZ2Q/"
-        },
-        {
-          "language": "fr",
-          "source": "dhnet.be",
-          "source_country": "be",
-          "url": "https://www.dhnet.be/dernieres-depeches/2026/09/14/kiev-et-varsovie-denoncent-une-frappe-russe-sur-un-train-a-la-frontiere-polonaise-LSXU45ICKZGTNPKXH27QW6O5R4/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "pl",
-        "rs"
-      ],
-      "origin_country": "be",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260913.OBS118203/un-train-pour-varsovie-frappe-par-un-drone-russe-en-ukraine-une-attaque-systemique-contre-le-rail-en-cours.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.509,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.7143
-        },
-        "total": 0.6971,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kiev",
-      "subject_names": [
-        "kiev",
-        "pologne",
-        "polonia",
-        "rusia",
-        "russia",
-        "russia's",
-        "russian",
-        "russie",
-        "ucrania",
-        "ukraine",
-        "ukraine-poland",
-        "varsovie"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "A Russian drone struck a train traveling from Kyiv to Warsaw near the Polish border; Ukrainian and Polish authorities and media describe the incident as part of a broader, systematic campaign of attacks on rail infrastructure across Ukraine."
-    },
-    {
-      "_linked_ids": [
-        "subject-bab-90b5c13bf515",
-        "subject-yemen-50b0bc3f5584",
-        "subject-yemen-faf437b648ba"
-      ],
-      "cluster_id": "subject-yemen-50b0bc3f5584",
-      "coherence": 0.44231659416877545,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "it"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-13",
-      "headline": "Houthis seize control of key islands and advance around Bab al-Mandeb strait",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/au-yemen-les-rebelles-pro-iran-prennent-le-controle-du-detroit-strategique-de-bab-al-mandab-20260911"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260912.OBS118160/les-houthis-du-yemen-s-emparent-du-detroit-de-bab-el-mandeb-passage-strategique-entre-l-europe-et-l-asie.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/afrique/yemen-les-houthistes-avancent-vers-le-strategique-detroit-de-bab-el-mandeb-ZXDQ3XFQKVFAZMWRVZNWDO2UFE/"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
+          "source": "ansa.it",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/12/houthis-seize-yemeni-island-in-bab-el-mandeb-taking-control-of-the-strait"
+          "url": "https://www.ansa.it/english/news/lifestyle/arts/2026/09/14/naza-directors-risk-being-stripped-of-israeli-citizenship_b95c3360-a28b-4cd9-9b7f-190224d22347.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/10/houthis-seize-red-sea-port-city-in-push-to-seize-bab-el-mandeb"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml"
+          "language": "de",
+          "source": "tagesspiegel.de",
+          "source_country": "germany",
+          "url": "https://www.tagesspiegel.de/internationales/dpa-israelischer-minister-fordert-entzug-der-staatsburgerschaft-fur-regisseure-16052150.html"
         },
         {
           "language": "it",
           "source": "ilpost.it",
           "source_country": "it",
-          "url": "https://www.ilpost.it/2026/09/11/houthi-avanzare-stretto-bab-el-mandeb-perim/?homepagePosition=20.1&referrerPost=3677539"
+          "url": "https://www.ilpost.it/2026/09/14/ministro-cultura-israele-revoca-cittadinanza-registi-naza/?homepagePosition=0.1&referrerPost=3678521"
         }
       ],
       "mentioned_countries": [
-        "sa"
+        "is"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/10/houthis-tomam-cidade-portuaria-moca-iemen.ghtml",
-      "rank": 4,
+      "origin_country": "france",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/ministro-israeli-cultura-pide-revocar-ciudadania-autores-documental-naza-premiado-venecia_1_13506930.html",
+      "rank": 5,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "euronews.com",
-        "globo.com",
-        "lefigaro.fr",
-        "lexpress.fr",
-        "nouvelobs.com"
+        "ansa.it",
+        "eldiario.es",
+        "lavanguardia.com",
+        "nouvelobs.com",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4423,
-          "corroboration": 0.6,
+          "coherence": 0.492,
+          "corroboration": 0.7143,
           "editorial_weight": 0.3846,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.7143
+          "novelty": 0.5,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
         },
-        "total": 0.6839,
+        "total": 0.7098,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "yemen",
+      "subject_label": "naza",
       "subject_names": [
-        "arabia saudi",
-        "arabie",
-        "bab",
-        "moyen-orient",
-        "yemen"
+        "cisjordania",
+        "cisjordanie",
+        "cultura",
+        "gaza",
+        "israel",
+        "naza",
+        "netanyahu",
+        "venise"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Armed Houthi forces in Yemen have captured a strategic island and seized control of areas along the Red Sea coast, advancing toward and taking positions that give them control over the Bab al-Mandeb strait, a crucial maritime chokepoint linking Europe and Asia."
-    },
-    {
-      "_linked_ids": [
-        "subject-lgbt-71ba47f1f726"
-      ],
-      "cluster_id": "subject-lgbt-71ba47f1f726",
-      "coherence": 0.4792200683823964,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-14",
-      "headline": "Turkish police carry out large-scale raids targeting LGBT+ bars and groups",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/13/en-turquie-une-operation-policiere-sans-precedent-contre-la-communaute-lgbt_6772767_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/vaste-coup-de-filet-en-turquie-contre-des-bars-et-associations-lgbt-20260913_5HS5AC5R6NA2JGYHMAUSJMHPRI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/la-turquie-s-en-prend-aux-organisations-lgbt-20260913"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/turquie/au-moins-63-arrestations-dans-un-coup-de-filet-anti-lgbt-en-turquie_8191481.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260914-turquie-au-moins-63-arrestations-polici%C3%A8res-anti-lgbtq-dans-des-bars-et-des-associations"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/asie-pacifique/20260914-turquie-raids-police-communaut%C3%A9-lgbt-erdogan-homosexualit%C3%A9-famille"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260914.OBS118223/la-communaute-lgbt-visee-par-une-vaste-operation-policiere-en-turquie-ce-que-l-on-sait.html"
-        }
-      ],
-      "mentioned_countries": [
-        "tu"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/international/europe/vaste-coup-de-filet-en-turquie-contre-des-bars-et-associations-lgbt-20260913_5HS5AC5R6NA2JGYHMAUSJMHPRI/",
-      "rank": 5,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4792,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.7241
-        },
-        "total": 0.6812,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "lgbt",
-      "subject_names": [
-        "lgbt",
-        "turquie"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Turkish authorities conducted a wide police operation against the LGBT+ community, carrying out raids on bars and associations and arresting at least 63 people; the actions targeted multiple locations and involved coordinated police interventions."
+      "subject_newsroom_count": 13,
+      "summary": "Several outlets report that Israel’s culture minister has called for the revocation of Israeli citizenship for the directors of the documentary NAZA, which has drawn controversy after screenings and awards; ministers and other officials have publicly criticized the filmmakers over the film’s depiction of the Gaza war and urged punitive measures including loss of nationality."
     }
   ],
-  "discarded_ingested": 277,
+  "discarded_ingested": 374,
   "discarded_kept": 5,
-  "generated_at": "2026-09-14T10:53:02.760185+00:00",
+  "generated_at": "2026-09-15T10:16:59.737770+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

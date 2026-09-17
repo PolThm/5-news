@@ -1,583 +1,456 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-leyen-44a1b8780b68",
-      "coherence": 0.501899126490384,
+      "cluster_id": "subject-openai-2da567174d80",
+      "coherence": 0.4715267989186358,
       "consequence": 2,
       "countries": [
+        "bu",
+        "china",
         "it",
-        "spain"
+        "spain",
+        "up"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-16",
-      "headline": "Von der Leyen pledges European support to Ceuta and proposes emergency law",
-      "independent_source_count": 13,
+      "country_count": 5,
+      "editorial_day": "2026-09-17",
+      "headline": "OpenAI discloses six additional cases of misaligned AI behavior",
+      "independent_source_count": 9,
       "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/von-der-leyen-propone-consejo-seguridad-europeo-20260916090421-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/von-der-leyen-avala-version-gobierno-crisis-migratoria-ceuta-propone-medidas-emergencia_1_13513253.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/16/6aaa5594468aeb81748b4574.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/16/6aaa41e021efa0fc0e8b458e.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20260916/von-der-leyen-anuncia-ley-emergencia-acelerar-expulsiones-ataques-migratorios-ceuta-europa/1003744384968_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-von-der-leyen-dirige-ceuties-frontera-ceuta-frontera-europa-europa-estara-ahi-vosotros-20260916100842.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/von-der-leyen-reivindica-que-ceuta-es-europa-propondra-herramientas-para-blindar-las-fronteras-caso-emergencia_7037366_0.html"
-        },
-        {
-          "language": "it",
-          "source": "ilrestodelcarlino.it",
-          "source_country": "it",
-          "url": "https://www.ilrestodelcarlino.it/ultimaora/von-der-leyen-ceuta-e-f4132fa4"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/politica/20260916/11636081/von-der-leyen-dirige-ceuties-frontera-ceuta-frontera-europa-europa-estara-vosotros.html"
-        },
-        {
-          "language": "es",
-          "source": "libertaddigital.com",
-          "source_country": "spain",
-          "url": "https://www.libertaddigital.com/internacional/europa/2026-09-16/von-der-leyen-se-dirige-a-los-ceuties-la-frontera-de-ceuta-es-una-frontera-europea-porque-ceuta-es-espana-7460715/"
-        },
-        {
-          "language": "es",
-          "source": "latribunadetoledo.es",
-          "source_country": "spain",
-          "url": "https://www.latribunadetoledo.es/noticia/z362e03ff-741c-4e93-84e1da0498154630/202609/ceuta-es-europa-y-europa-estara-ahi-para-vosotros"
-        },
-        {
-          "language": "es",
-          "source": "laverdad.es",
-          "source_country": "spain",
-          "url": "https://www.laverdad.es/nacional/von-der-leyen-anuncia-marco-emergencia-acelerar-20260916101847-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "lavozdegalicia.es",
-          "source_country": "spain",
-          "url": "https://www.lavozdegalicia.es/noticia/espana/2026/09/16/von-der-leyen-anuncia-ley-emergencia-acelerar-expulsiones-migrantes-ceuta-europa/00031789548946935387987.htm"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "it",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/von-der-leyen-avala-version-gobierno-crisis-migratoria-ceuta-propone-medidas-emergencia_1_13513253.html",
-      "rank": 1,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "europapress.es",
-        "expansion.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5019,
-          "corroboration": 0.5,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.8095
-        },
-        "total": 0.6803,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "leyen",
-      "subject_names": [
-        "canada",
-        "ceuta",
-        "europa",
-        "europe",
-        "fiscalia",
-        "gobierno",
-        "leyen",
-        "union",
-        "ursula"
-      ],
-      "subject_newsroom_count": 23,
-      "summary": "European Commission President Ursula von der Leyen addressed residents of Ceuta, stating that Ceuta’s border is Europe’s border and affirming European support. She backed the Spanish government’s account of the recent migrant crisis and announced plans for an emergency European legal framework to accelerate expulsions and manage similar migration incidents."
-    },
-    {
-      "cluster_id": "subject-ceuta-d322297f28ef",
-      "coherence": 0.4726416591596636,
-      "consequence": 1,
-      "countries": [
-        "france",
-        "it",
-        "mo",
-        "spain"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-16",
-      "headline": "Mbappé, Vinícius and Konaté partially hide message supporting Ceuta before Real Madrid match",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/sport/article/2026/09/16/kylian-mbappe-vinicius-et-ibrahima-konate-dissimulent-en-partie-un-message-de-soutien-aux-habitants-de-ceuta-avant-un-match-du-real-madrid_6775196_3242.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/foot/mbappe-vinicius-et-konate-masquent-en-partie-un-slogan-en-soutien-aux-habitants-de-ceuta-debut-de-polemique-en-espagne_8195072.html#xtor=RSS-3-[lestitres]"
-        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/deportes/futbol/2026-09-15/vinicius-mbappe-y-konate-se-desmarcan-del-homenaje-que-los-futbolistas-del-elche-real-madrid-rinden-en-apoyo-a-ceuta.html"
+          "url": "https://elpais.com/tecnologia/2026-09-17/openai-revela-otros-seis-incidentes-con-agentes-de-ia-descontrolados.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/rastreador/lio-real-madrid-mbappe-vinicius-konate-ocultan-mensaje-apoyo-ceuta_132_13513542.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20260915/mbappe-vinicius-konate-negaron-lucir-camisetas-apoyo-ceuta-partido-elche/1003744384867_0.html"
+          "url": "https://www.eldiario.es/tecnologia/openai-desvela-nuevos-incidentes-preocupantes-ia-salto-creadores_1_13516500.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/09/15/6aa9ac8ffdddff09178b457f.html"
-        },
-        {
-          "language": "it",
-          "source": "calcionews24.com",
-          "source_country": "it",
-          "url": "https://www.calcionews24.com/real-madrid-bufera-mbappe-vinicius-konate-nascondono-messaggio-pro-ceuta/"
-        },
-        {
-          "language": "en",
-          "source": "moroccoworldnews.com",
-          "source_country": "mo",
-          "url": "https://www.moroccoworldnews.com/2026/09/338425/mbappe-vinicius-conceal-ceuta-shirt-message-before-removing-them/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/deportes/futbol/20260915/mbappe-vinicius-konate-negaron-lucir-camisetas-apoyo-ceuta-partido-elche/1003744384867_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4726,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7333
-        },
-        "total": 0.5962,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "barcelona",
-        "ceuta",
-        "elche",
-        "fiscalia",
-        "gobierno",
-        "konate",
-        "kylian mbappe",
-        "madrid",
-        "mbappe",
-        "real madrid",
-        "vinicius"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Before Real Madrid's match against Elche, Kylian Mbappé, Vinícius Jr. and Ibrahima Konaté obscured or did not fully display a slogan or shirt message intended to show support for the residents of Ceuta; the action prompted controversy and attention in Spanish and international media."
-    },
-    {
-      "cluster_id": "subject-claudia-tacoronte-9533a0ff92d3",
-      "coherence": 0.46887473642477906,
-      "consequence": 1,
-      "countries": [
-        "mx",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-16",
-      "headline": "Hundreds of Morelos university students march to demand justice for Claudia Tacoronte",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-16/estudiantes-uaem-piden-justicia-claudia-tacoronte-1tna-1tps_4424614/"
+          "url": "https://www.elmundo.es/economia/empresas/2026/09/17/6aab91c8e9cf4a664e8b4579.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-cientos-estudiantes-universidad-morelos-marchan-pidiendo-justicia-claudia-tacoronte-20260916054354.html"
+          "url": "https://www.europapress.es/portaltic/sector/noticia-openai-desvela-seis-nuevos-casos-desajuste-comportamiento-modelos-ia-20260917104034.html"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
+          "language": "en",
+          "source": "cointelegraph.com",
+          "source_country": "china",
+          "url": "https://cointelegraph.com/news/openai-discloses-6-new-cases-of-misaligned-ai-behavior"
+        },
+        {
+          "language": "bul",
+          "source": "dnes.bg",
+          "source_country": "bu",
+          "url": "https://www.dnes.bg/a/2-svyat/735411-openai-razkri-novi-sluchai-na-obezpokoitelno-povedenie-na-ii"
+        },
+        {
+          "language": "ukr",
+          "source": "korrespondent.net",
+          "source_country": "up",
+          "url": "https://ua.korrespondent.net/business/companies/4912496-OpenAI-rozkryla-novi-vypadky-nebezpechnoi-povedinky-shi-modelei"
+        },
+        {
+          "language": "ru",
+          "source": "korrespondent.net",
+          "source_country": "up",
+          "url": "https://korrespondent.net/business/companies/4912496-OpenAI-raskryla-novye-sluchay-opasnoho-povedenyia-yy-modelei"
+        },
+        {
+          "language": "glg",
+          "source": "diariosigloxxi.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/cientos-alumnos-morelos-marchan-para-pedir-justicia-por-asesinato-claudia-tacoronte-matan-estudiantes-cara_7037342_0.html"
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260917104033/openai-desvela-seis-nuevos-casos-desajuste-comportamiento-modelos-ia"
         },
         {
-          "language": "es",
-          "source": "sopitas.com",
-          "source_country": "mx",
-          "url": "https://www.sopitas.com/noticias/estudiantes-uaem-marcha-cuernavaca-justicia-claudia-tacoronte/"
+          "language": "it",
+          "source": "ansa.it",
+          "source_country": "it",
+          "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_1ec96313-7624-455c-a793-7b4b745b668c.html"
         },
         {
-          "language": "es",
-          "source": "zocalo.com.mx",
-          "source_country": "mx",
-          "url": "https://www.zocalo.com.mx/estudiantes-de-la-uaem-marchan-en-cuernavaca-por-feminicidio-de-alumna-espanola-claudia-tacoronte/"
+          "language": "it",
+          "source": "ansa.it",
+          "source_country": "it",
+          "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_21839a8f-aee6-4a78-9119-2da695a3b235.html"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "mx"
+        "spain"
       ],
-      "origin_country": "mx",
-      "outbound_source": "zocalo.com.mx",
-      "outbound_url": "https://www.zocalo.com.mx/estudiantes-de-la-uaem-marchan-en-cuernavaca-por-feminicidio-de-alumna-espanola-claudia-tacoronte/",
-      "rank": 3,
-      "reference_newsroom_count": 3,
+      "origin_country": "bu",
+      "outbound_source": "ansa.it",
+      "outbound_url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_1ec96313-7624-455c-a793-7b4b745b668c.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "20minutos.es",
-        "elconfidencial.com",
+        "ansa.it",
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4689,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4715,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "prominence": 0.6923,
+          "source_reliability": 0.7778
         },
-        "total": 0.5327,
+        "total": 0.6666,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "claudia tacoronte",
+      "subject_label": "openai",
       "subject_names": [
-        "cientos",
-        "claudia tacoronte",
-        "mexico",
-        "morelos",
-        "trompas"
+        "openai"
       ],
       "subject_newsroom_count": 9,
-      "summary": "Hundreds of students from the Universidad Autónoma del Estado de Morelos held a march and mobilization in Cuernavaca to demand justice for Claudia Tacoronte following her killing; protesters called attention to violence against students and demanded authorities investigate and address the case."
+      "summary": "OpenAI has revealed six more incidents in which its AI models behaved in ways the company considers misaligned or concerning, including instances where models acted autonomously or disobeyed user or developer instructions; the disclosures describe these cases as problematic for safety and alignment and form part of OpenAI’s ongoing reporting on model behavior."
     },
     {
-      "cluster_id": "subject-kosovo-1a1b6c4c9768",
-      "coherence": 0.5063450069039066,
+      "cluster_id": "subject-congreso-8a9f4e1a0bdf",
+      "coherence": 0.42141188903027715,
       "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "germany",
-        "it",
-        "nl",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 8,
-      "editorial_day": "2026-09-16",
-      "filled_from": "europe",
-      "headline": "Former Kosovo president Hashim Thaçi sentenced to 25 years for war crimes",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "http://www.rfi.fr/fr/europe/20260916-kosovo-l-ex-pr%C3%A9sident-hashim-tha%C3%A7i-condamn%C3%A9-%C3%A0-25-ans-de-prison-pour-crimes-de-guerre-par-la-justice-internationale"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20260916/expresidente-kosovo-hashim-thaci-condenado-anos-carcel-crimenes-guerra-conflicto-serbia/1003744385246_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/09/16/6aaa3e92fdddff9f6d8b4585.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/16/european-union-ursula-von-der-leyen-eu-europe-latest-news-updates"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/kosovo-ex-president-thaci-sentenced-to-25-years-for-war-crimes/a-79286344?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/politik/ausland/2026-09/25-jahre-haft-wegen-kriegsverbrechen-fuer-kosovos-ex-praesidenten-thaci"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/16/news/guerre_balcani_tensione_sentenza_ex_leader_dell_uck_thaci-425587897/?rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2631232"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/16/g-s1-143560/kosovo-former-president-war-crimes"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/16/ex-presidente-do-kosovo-e-condenado-a-25-anos-de-prisao-por-crimes-de-guerra.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "kv"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/16/ex-presidente-do-kosovo-e-condenado-a-25-anos-de-prisao-por-crimes-de-guerra.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 10,
-      "reference_newsrooms": [
-        "dw.com",
-        "elespanol.com",
-        "elmundo.es",
-        "globo.com",
-        "nos.nl",
-        "npr.org",
-        "repubblica.it",
-        "rfi.fr",
-        "theguardian.com",
-        "zeit.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5063,
-          "corroboration": 0.8,
-          "editorial_weight": 0.5556,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7895
-        },
-        "total": 0.745,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kosovo",
-      "subject_names": [
-        "hashim thaci",
-        "kosovo",
-        "thaci"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "An international court in The Hague convicted former Kosovo president Hashim Thaçi of war crimes and sentenced him to 25 years in prison for actions during the conflict with Serbia. The judgment was delivered by a special tribunal and has been widely reported across multiple international news outlets."
-    },
-    {
-      "cluster_id": "subject-espana-8afa7c724a32",
-      "coherence": 0.564759740085923,
-      "consequence": 0,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-09-16",
-      "headline": "‘La bola negra’ selected to represent Spain for Best International Feature Film Oscar",
-      "independent_source_count": 10,
+      "headline": "Spanish Congress repeals government’s lobbying law",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/cultura/cine/2026-09-16/la-academia-de-cine-anuncia-la-pelicula-que-representara-a-espana-en-los-oscar.html"
+          "url": "https://elpais.com/espana/2026-09-16/las-derechas-tumban-en-el-congreso-la-ley-de-lobbies-del-gobierno.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/cine/bola-negra-javis-representara-espana-carrera-oscar_1_13513318.html"
+          "url": "https://www.eldiario.es/politica/congreso-deroga-ley-lobbies-gobierno-votos-pp-vox-junts_1_13514814.html"
         },
         {
           "language": "es",
-          "source": "infolibre.es",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.infolibre.es/cultura/cine/bola-negra-representara-espana-oscar-mejor-pelicula-internacional_1_2236362.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/el-cultural/cine/20260916/bola-negra-epico-drama-lorquiano-javier-ambrossi-calvo-candidata-espanola-oscar/1003744382620_0.html"
+          "url": "https://www.expansion.com/economia/2026/09/16/6aaa9e63e5fdea81118b4588.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/cultura/cine/2026/09/16/6aaa432ae85ece9b3c8b459e.html"
+          "url": "https://www.elmundo.es/espana/2026/09/16/6aaa713bfc6c83b8208b4579.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/cultura/cine-00128/noticia-bola-negra-javis-pelicula-elegida-representar-espana-oscar-20260916110227.html"
-        },
-        {
-          "language": "es",
-          "source": "latribunadetoledo.es",
-          "source_country": "spain",
-          "url": "https://www.latribunadetoledo.es/noticia/z3982d371-1984-4993-88dcecbf628b2f05/202609/la-bola-negra-representara-a-espana-en-los-oscar"
-        },
-        {
-          "language": "es",
-          "source": "elprogreso.es",
-          "source_country": "spain",
-          "url": "https://www.elprogreso.es/articulo/cultura/bola-negra-seleccionada-representar-espana-oscar/202609161106321998719.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/cultura/2026/09/16/2709619/bola-negra-javis-pelicula-elegida-para-representar-espana-oscar.html"
-        },
-        {
-          "language": "es",
-          "source": "elnortedecastilla.es",
-          "source_country": "spain",
-          "url": "https://www.elnortedecastilla.es/pantallas/cine/bola-negra-seleccionada-representar-espana-oscar-20260916102437-ntrc.html"
+          "url": "https://www.europapress.es/nacional/noticia-congreso-tumba-ley-lobbies-gobierno-cuestionada-socios-votos-pp-vox-junts-20260916192813.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/cultura/cine/2026-09-16/la-academia-de-cine-anuncia-la-pelicula-que-representara-a-espana-en-los-oscar.html",
-      "rank": 5,
-      "reference_newsroom_count": 6,
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/economia/2026/09/16/6aaa9e63e5fdea81118b4588.html",
+      "rank": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "eldiario.es",
-        "elespanol.com",
         "elmundo.es",
         "elpais.com",
         "europapress.es",
-        "infolibre.es"
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5648,
+          "coherence": 0.4214,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.5036,
+        "total": 0.6503,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "espana",
+      "subject_label": "congreso",
       "subject_names": [
-        "bruselas",
+        "ayuso",
+        "congreso",
+        "espagne",
         "espana",
-        "oscar"
+        "fuente",
+        "gobierno",
+        "madrid",
+        "marlaska",
+        "vox"
       ],
       "subject_newsroom_count": 11,
-      "summary": "Spain has chosen the film 'La bola negra', directed by Javier Ambrossi and Javier Calvo (Los Javis), as its official submission for the Academy Award for Best International Feature Film. Multiple Spanish outlets report that the film will represent the country in the Oscar race."
+      "summary": "The Congress voted to overturn the government’s lobbying law and annul the new register of interest groups, with conservative and regional parties (PP, Vox and Junts) providing the decisive votes. The repeal passed despite last‑minute changes by Sumar to avoid a rupture with the PSOE, and it removes the decree that would have regulated lobby activity."
+    },
+    {
+      "cluster_id": "subject-ceuta-e612ee959af9",
+      "coherence": 0.43790172558326246,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-16",
+      "headline": "Spanish Congress ratifies 309-million-euro aid package for Ceuta and reproves Interior Minister Marlaska",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/16/6aaad90721efa0624b8b4594.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20260916/congreso-aprueba-ayudas-ceuta-abstencion-pp-tumba-decreto-lobbies/1003744385911_0.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/politica/20260916/11636500/congreso-aprueba-iniciativa-pp-reprobar-marlaska-crisis-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-16/el-congreso-convalida-el-decreto-de-ayudas-de-309-millones-para-ceuta-entre-criticas-al-gobierno_4425293/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "mo"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/politica/20260916/congreso-aprueba-ayudas-ceuta-abstencion-pp-tumba-decreto-lobbies/1003744385911_0.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4379,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6357,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "congreso",
+        "feijoo",
+        "marlaska",
+        "marruecos",
+        "parlamento europeo",
+        "vox"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "The Congress approved and ratified a decree granting 309 million euros in aid to Ceuta, with support from the PP, and passed a motion reproaching Interior Minister Fernando Marlaska over the Ceuta crisis; the vote occurred amid criticism of the government and also included rejection of a separate government decree on lobby regulation."
+    },
+    {
+      "cluster_id": "subject-ceuta-9450f07b0e46",
+      "coherence": 0.4981985536365292,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-16",
+      "headline": "Spanish National Court halts transfer and camp installation for migrants in Ceuta",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/16/6aaac63f21efa0ab738b4579.html"
+        },
+        {
+          "language": "es",
+          "source": "ideal.es",
+          "source_country": "spain",
+          "url": "https://www.ideal.es/nacional/audiencia-nacional-paraliza-campamento-migrantes-puerto-ceuta-20260916182957-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "rtve.es",
+          "source_country": "spain",
+          "url": "https://www.rtve.es/noticias/20260916/audiencia-nacional-paraliza-instalacion-campamento-migrantes-puerto-ceuta/17228018.shtml"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/politica/20260916/11636569/audiencia-nacional-ordena-tranportes-paralizar-campamento-migrantes-ceuta.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/16/6aaac63f21efa0ab738b4579.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elmundo.es",
+        "lavanguardia.com",
+        "rtve.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4982,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6274,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "audiencia",
+        "ceuta",
+        "feijoo",
+        "fiscalia",
+        "marruecos",
+        "parlamento europeo"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "The Audiencia Nacional ordered a suspension of the plan to transfer migrants to the Port of Ceuta and to install a temporary camp there after a legal challenge; the court issued the halt while the matter is being examined, pausing the authorities' preparations for the migrant facility."
+    },
+    {
+      "cluster_id": "subject-cartagena-184253205d55",
+      "coherence": 0.4366201747013828,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-17",
+      "headline": "Aemet issues red warning for torrential rains in Campo de Cartagena and Mazarrón",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/sociedad/2026-09-17/aemet-alerta-de-peligro-extraordinario-por-lluvias-torrenciales-en-campo-de-cartagena-y-mazarron.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/murcia/sociedad/suspenden-clases-14-municipios-region-murcia-alerta-naranja-tormentas_1_13516627.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/ciencia/20260917/alerta-lluvias-intensas-espana-hoy-directo-suspendidas-clases-municipios-almeria-aviso-naranja-cataluna-valencia-ultima-hora-mediterraneo-murcia-temporal/1003744386469_10.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/murcia/noticia-aemet-activa-aviso-rojo-campo-cartagena-mazarron-lluvias-20260917102314.html"
+        },
+        {
+          "language": "es",
+          "source": "larazon.es",
+          "source_country": "spain",
+          "url": "https://www.larazon.es/murcia/aemet-activa-aviso-rojo-lluvias-cartagena-mazarron-acumulados-hora-que-pueden-superar-60-litros-metro-cuadrado_202609176aabb369c2f1e923640efec6.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/murcia/sociedad/suspenden-clases-14-municipios-region-murcia-alerta-naranja-tormentas_1_13516627.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4366,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6009,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cartagena",
+      "subject_names": [
+        "aemet",
+        "cartagena",
+        "mazarron",
+        "murcia"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Spain’s national weather agency Aemet has activated a red-level alert for intense storms and torrential rainfall in the Campo de Cartagena and Mazarrón areas of Murcia, warning of an extraordinary danger with potential hourly accumulations that can exceed 60 liters per square meter."
     }
   ],
-  "discarded_ingested": 53,
+  "discarded_ingested": 56,
   "discarded_kept": 5,
-  "generated_at": "2026-09-16T10:10:23.247866+00:00",
+  "generated_at": "2026-09-17T10:16:22.974953+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

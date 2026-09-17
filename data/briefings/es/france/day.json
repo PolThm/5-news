@@ -1,34 +1,114 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-carney-3ed23a2cf4bf",
-      "coherence": null,
+      "cluster_id": "subject-macron-334a3cf55e45",
+      "coherence": 0.45827751819368445,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-16",
-      "headline": "Mark Carney anuncia en Estrasburgo un acercamiento formal entre Canadá y la UE",
+      "editorial_day": "2026-09-17",
+      "headline": "Emmanuel Macron convoca a los líderes de los partidos para tratar la situación internacional",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/politique/live/2026/09/17/en-direct-presidentielle-2027-suivez-les-derniers-developpements-de-la-campagne_6776151_823448.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/politique/macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-les-conflits-internationaux-et-leurs-consequences-nationales-20260917"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/politique/macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-les-conflits-internationaux-et-leurs-consequences-nationales-20260917_YDAKWJO3RJCCLPUCVK7HZUUTE4/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/moyen-orient/emmanuel-macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-la-degradation-rapide-de-la-situation-internationale-et-ses-consequences-en-france-sur-la-securite-et-l-energie_8196932.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rtl.fr",
+          "source_country": "france",
+          "url": "https://www.rtl.fr/actu/politique/situation-internationale-emmanuel-macron-convoque-les-chefs-des-partis-et-les-candidats-le-vendredi-18-septembre-a-10h30-a-l-elysee-7900673407"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/politique/live/2026/09/17/en-direct-presidentielle-2027-suivez-les-derniers-developpements-de-la-campagne_6776151_823448.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4583,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6768,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "macron"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "El presidente Emmanuel Macron ha citado a los jefes de los partidos políticos, así como a los candidatos, para una reunión el viernes 18 de septiembre a las 10:30 en el Elíseo con el fin de tratar la \"degradación rápida\" de la situación internacional y sus repercusiones en Francia, en particular sobre la seguridad y la energía."
+    },
+    {
+      "cluster_id": "subject-canada-b6d78c6935a9",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-17",
+      "headline": "Mark Carney aboga por una alianza reforzada entre Canadá y la UE",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "http://www.rfi.fr/fr/europe/20260916-face-aux-tensions-avec-washington-mark-carney-officialise-le-rapprochement-du-canada-avec-l-ue-%C3%A0-bruxelles"
+          "url": "https://www.liberation.fr/international/mark-carney-a-strasbourg-le-canada-et-leurope-en-quete-dune-alliance-unique-20260917_FIUUAZJU2RAZ5FNLERADK7KW5A/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "http://www.france24.com/fr/europe/20260917-en-direct-mark-carney-parlement-europ%C3%A9en-trump-menace-canada-ue"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/europe/le-canada-de-mark-carney-une-boussole-pour-leurope-face-aux-grandes-puissances-4BOK3NZPU5EQ3JVZ2ROS3336GM/"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/geopolitique/geopolitique-du-mercredi-16-septembre-2026-7585049"
         }
       ],
       "mentioned_countries": [
@@ -38,272 +118,12 @@
       "origin_country": "france",
       "outbound_source": "lexpress.fr",
       "outbound_url": "https://www.lexpress.fr/monde/europe/le-canada-de-mark-carney-une-boussole-pour-leurope-face-aux-grandes-puissances-4BOK3NZPU5EQ3JVZ2ROS3336GM/",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "lexpress.fr",
-        "radiofrance.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6581,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "carney",
-      "subject_names": [
-        "canada",
-        "carney",
-        "europe",
-        "mark carney",
-        "strasbourg"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "En Estrasburgo, el primer ministro canadiense Mark Carney presentó un movimiento de acercamiento entre Canadá y la Unión Europea como respuesta a las tensiones con Washington, ofreciendo a Europa una alianza política y estratégica más estrecha según los artículos citados."
-    },
-    {
-      "cluster_id": "subject-philippe-brun-3b730b63eb65",
-      "coherence": 0.47638585213481965,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-16",
-      "headline": "El diputado Philippe Brun suspendido del PS y excluido de la primaria de la izquierda",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/09/16/presidentielle-2027-philippe-brun-suspendu-a-titre-conservatoire-du-ps-ne-participera-pas-a-la-primaire-a-gauche_6775146_823448.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/en-direct-presidentielle-2027-six-candidats-en-lice-pour-la-primaire-de-la-gauche-20260916"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/suspendu-du-ps-philippe-brun-ecarte-de-la-primaire-a-gauche-en-raison-d-accusations-de-violence-20260916"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/elections/primaire-ps-le-depute-philippe-brun-suspendu-du-parti-en-raison-daccusations-de-violence-20260916_YKOEGTOUPZHMZGIKS5MUA3ROEQ/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/le-depute-socialiste-philippe-brun-exclu-de-la-primaire-de-la-gauche-apres-des-accusations-de-violence-l-interesse-evoque-sa-stupeur_8195156.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/cinq-candidats-participeront-a-la-primaire-de-la-gauche-pour-la-presidentielle-le-depute-philippe-brun-exclu-apres-des-accusations-de-violences_8194955.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20260916.OBS118289/primaire-de-la-gauche-le-depute-philippe-brun-exclu-en-raison-d-accusations-de-violence.html"
-        },
-        {
-          "language": "fr",
-          "source": "nicematin.com",
-          "source_country": "france",
-          "url": "https://www.nicematin.com/societe/politique/j-ignore-ce-qui-m-est-reproche-le-depute-philippe-brun-suspendu-du-ps-pour-des-accusations-de-violence-10724608"
-        },
-        {
-          "language": "fr",
-          "source": "humanite.fr",
-          "source_country": "france",
-          "url": "https://www.humanite.fr/politique/parti-socialiste/presidentielle-2027-suspendu-du-ps-a-titre-conservatoire-pour-des-faits-graves-philippe-brun-ne-participera-pas-a-la-primaire-socialiste"
-        },
-        {
-          "language": "fr",
-          "source": "lcp.fr",
-          "source_country": "france",
-          "url": "https://lcp.fr/actualites/suspendu-du-ps-pour-des-accusations-de-violence-le-depute-philippe-brun-ne-participera"
-        },
-        {
-          "language": "fr",
-          "source": "leprogres.fr",
-          "source_country": "france",
-          "url": "https://www.leprogres.fr/politique/2026/09/16/accusations-de-violence-le-depute-philippe-brun-suspendu-du-ps"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/politique/article/2026/09/16/presidentielle-2027-philippe-brun-suspendu-a-titre-conservatoire-du-ps-ne-participera-pas-a-la-primaire-a-gauche_6775146_823448.html",
       "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4764,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7838
-        },
-        "total": 0.6294,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "philippe brun",
-      "subject_names": [
-        "philippe brun"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Las fuentes coinciden en que el diputado Philippe Brun fue suspendido del Partido Socialista a título conservatorio y excluido de la primaria de la izquierda para la presidencial de 2027 debido a acusaciones de violencia; Brun ha declarado desconocer los cargos y expresar su \"estupor\" ante la medida."
-    },
-    {
-      "cluster_id": "subject-rachida-dati-947b1440f9aa",
-      "coherence": 0.42304588135192456,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-16",
-      "headline": "Rachida Dati y Carlos Ghosn comparecen ante un tribunal por el caso Renault",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/15/rachida-dati-devant-le-tribunal-correctionnel-de-paris-dans-l-affaire-ghosn-renault_6774445_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/rachida-dati-face-au-tribunal-pour-l-imbroglio-de-son-contrat-avec-renault-20260915"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/affaire-renault-nissan-pour-rachida-dati-et-l-ancien-pdg-carlos-ghosn-lheure-du-proces-20260915"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/rachida-dati/six-questions-sur-le-proces-pour-corruption-de-rachida-dati-et-carlos-ghosn-ex-pdg-de-renault_8193776.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/15/rachida-dati-devant-le-tribunal-correctionnel-de-paris-dans-l-affaire-ghosn-renault_6774445_3224.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.423,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5958,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "rachida dati",
-      "subject_names": [
-        "rachida dati",
-        "renault"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Los artículos coinciden en que la exministra francesa Rachida Dati y el exdirector general Carlos Ghosn están siendo juzgados ante un tribunal correccional en París por cuestiones vinculadas a su contrato con Renault y a presunta corrupción; el proceso marca el inicio del juicio sobre las discrepancias y sospechas en la contratación y remuneración relacionadas con la alianza Renault‑Nissan."
-    },
-    {
-      "cluster_id": "subject-senat-e83141f27333",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-16",
-      "headline": "Alcaldesa y funcionarios expresan pesar por abusos sexuales en actividades después de clase en París",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/familles/violences-sexuelles-dans-le-periscolaire-a-paris-emmanuel-gregoire-fait-part-de-ses-profonds-regrets-devant-le-senat-20260916_XCYT4WOLU5GFXJSYCN3FH44AZI/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/education/violences-dans-le-periscolaire/nos-institutions-ont-failli-estime-anne-hidalgo-a-propos-des-violences-sexuelles-dans-le-periscolaire-a-paris_8193326.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20260915.OBS118266/scandale-du-periscolaire-a-paris-anne-hidalgo-evoque-des-regrets-immenses-et-un-echec-collectif-devant-le-senat.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/societe/education/violences-dans-le-periscolaire/nos-institutions-ont-failli-estime-anne-hidalgo-a-propos-des-violences-sexuelles-dans-le-periscolaire-a-paris_8193326.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "liberation.fr",
-        "nouvelobs.com"
+        "france24.com",
+        "lexpress.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
@@ -320,56 +140,206 @@
         "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "senat",
+      "subject_label": "canada",
       "subject_names": [
-        "senat"
+        "canada",
+        "carney",
+        "kanada",
+        "mark carney",
+        "strasbourg",
+        "union europea"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Durante una comparecencia ante el Senado francés sobre los recientes casos de agresiones sexuales en actividades périscolares en París, la alcaldesa Anne Hidalgo y el adjunto Emmanuel Grégoire reconocieron fallos institucionales y expresaron un profundo pesar, calificando los hechos como un fracaso colectivo y manifestando remordimiento por lo ocurrido."
+      "subject_newsroom_count": 30,
+      "summary": "Mark Carney, exgobernador del Banco de Inglaterra y exgobernador del Banco de Canadá, habló en Estrasburgo defendiendo una cooperación más estrecha entre Canadá y la Unión Europea. En sus intervenciones subrayó que ambas partes son \"más fuertes juntas\" y presentó la experiencia canadiense como una guía para la UE ante desafíos geopolíticos y económicos, proponiendo una \"alianza única\" basada en valores y políticas comunes."
     },
     {
-      "cluster_id": "subject-france-fbc2b24fc7a0",
+      "cluster_id": "subject-rachida-dati-c6fb0e631500",
       "coherence": null,
       "consequence": 2,
+      "countries": [
+        "it",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-16",
+      "headline": "La exministra francesa Rachida Dati se sienta en el banquillo por un caso de corrupción",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/juzgan-exministra-francesa-rachida-dati-corrupcion-20260916194952-nt.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/16/rachida-dati-in-court-ex-minister-on-trial-over-renault-nissan-corruption-case"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/juzgan-exministra-francesa-rachida-dati-corrupcion-20260916194952-nt.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "abc.es",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.5409,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "rachida dati",
+      "subject_names": [
+        "rachida dati"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Rachida Dati, exministra francesa, ha sido juzgada en relación con presuntas irregularidades vinculadas a un caso de corrupción que involucra a Renault-Nissan; el proceso aborda acusaciones sobre su papel en la contratación de personal y el uso de influencias relacionadas con ese entramado."
+    },
+    {
+      "cluster_id": "subject-philippe-brun-dc6bb6424c35",
+      "coherence": 0.3945954311784642,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-15",
-      "headline": "Finlandia se adhiere a la disuasión nuclear avanzada de Francia",
-      "independent_source_count": 3,
+      "editorial_day": "2026-09-16",
+      "headline": "Philippe Brun excluido de la primaria y del PS por acusaciones de violencia",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/heloise-fayet-specialiste-des-questions-nucleaires-l-adhesion-de-la-finlande-demontre-la-credibilite-de-l-initiative-francaise-de-dissuasion-avancee-20260915"
+          "url": "https://www.liberation.fr/politique/accuse-de-violences-et-exclu-de-la-primaire-a-gauche-philippe-brun-evoque-un-conflit-instrumentalise-par-le-ps-20260916_TNYJKROFN5GVXKZVIYKF32IY4I/"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/politique/160926/philippe-brun-ecarte-de-la-primaire-socialiste-le-ps-dans-l-embarras"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260914.OBS118227/la-finlande-rejoint-la-dissuasion-nucleaire-francaise-avancee-voici-ce-que-ca-veut-dire.html"
+          "url": "https://www.nouvelobs.com/politique/20260916.OBS118314/on-m-execute-en-place-publique-philippe-brun-contre-attaque-apres-son-exclusion-de-la-primaire-de-la-gauche.html"
         },
         {
           "language": "fr",
-          "source": "challenges.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.challenges.fr/entreprise/defense/nous-diversifions-notre-defense-la-finlande-voisine-de-la-russie-renforce-son-parapluie-nucleaire-grace-a-la-france_645776"
+          "url": "https://www.nouvelobs.com/politique/20260916.OBS118289/primaire-de-la-gauche-le-depute-philippe-brun-exclu-en-raison-d-accusations-de-violence.html"
+        },
+        {
+          "language": "fr",
+          "source": "parismatch.com",
+          "source_country": "france",
+          "url": "https://www.parismatch.com/actu/politique/exclu-de-la-primaire-et-accuse-de-violences-philippe-brun-estime-que-le-ps-veut-le-tuer-politiquement-275900"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/justice/exclu-du-parti-socialiste-et-de-la-primaire-pour-la-presidentielle-philippe-brun-denonce-des-fausses-accusations-de-violences-et-annonce-deposer-plainte_8194358.html"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "fi"
+        "france"
       ],
       "origin_country": "france",
       "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260914.OBS118227/la-finlande-rejoint-la-dissuasion-nucleaire-francaise-avancee-voici-ce-que-ca-veut-dire.html",
+      "outbound_url": "https://www.nouvelobs.com/politique/20260916.OBS118289/primaire-de-la-gauche-le-depute-philippe-brun-exclu-en-raison-d-accusations-de-violence.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3946,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6667
+        },
+        "total": 0.4743,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "philippe brun",
+      "subject_names": [
+        "olivier faure",
+        "philippe brun"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Varios medios informan que el diputado Philippe Brun fue excluido de la primaria de la izquierda y del Partido Socialista a raíz de acusaciones de violencia contra una ex‑colaboradora; Brun niega los hechos, anuncia acciones legales y afirma ser víctima de manœbras políticas."
+    },
+    {
+      "cluster_id": "subject-sydney-sweeney-6cd94100c463",
+      "coherence": null,
+      "consequence": 0,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-17",
+      "headline": "Sydney Sweeney protagoniza un anuncio desnuda que indigna a varias deportistas",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/culture/sexisme-pourquoi-des-sportives-s-offusquent-dune-publicite-denudee-de-sydney-sweeney-20260916"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/sports/il-y-a-d-autres-moyens-de-parler-de-sport-feminin-que-de-montrer-un-corps-nu-des-sportives-francaises-denoncent-a-leur-tour-une-publicite-avec-sydney-sweeney_8196947.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20260914.OBS118242/sydney-sweeney-denudee-pour-la-publicite-un-site-de-paris-sportifs-de-nombreuses-athletes-scandalisees.html"
+        }
+      ],
+      "mentioned_countries": [
+        "as",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/societe/20260914.OBS118242/sydney-sweeney-denudee-pour-la-publicite-un-site-de-paris-sportifs-de-nombreuses-athletes-scandalisees.html",
       "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "challenges.fr",
-        "lefigaro.fr",
+        "francetvinfo.fr",
+        "la-croix.com",
         "nouvelobs.com"
       ],
       "score": {
@@ -377,34 +347,27 @@
           "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5496,
+        "total": 0.4381,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "sydney sweeney",
       "subject_names": [
-        "bruno retailleau",
-        "celine dion",
-        "finlande",
-        "france",
-        "francia",
-        "leon xiv",
-        "ligne",
-        "macron"
+        "sydney sweeney"
       ],
-      "subject_newsroom_count": 17,
-      "summary": "Los artículos coinciden en que Finlandia ha decidido sumarse a la iniciativa francesa de ‘‘disuasión nuclear avanzada’’, reforzando así su protección estratégica frente a amenazas regionales; la medida forma parte de una diversificación de la defensa finlandesa y se presenta como un refuerzo del paraguas nuclear ofrecido por Francia."
+      "subject_newsroom_count": 5,
+      "summary": "Varios medios coinciden en que la actriz Sydney Sweeney aparece sin ropa en un anuncio de un sitio de apuestas deportivas y que numerosas deportistas han expresado su indignación, considerando que el recurso de mostrar un cuerpo desnudo no es apropiado para hablar del deporte femenino."
     }
   ],
-  "discarded_ingested": 47,
+  "discarded_ingested": 28,
   "discarded_kept": 5,
-  "generated_at": "2026-09-16T10:10:23.247866+00:00",
+  "generated_at": "2026-09-17T10:16:22.974953+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

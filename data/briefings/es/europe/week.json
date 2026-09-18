@@ -2,56 +2,145 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-kosovo-1a1b6c4c9768",
-        "subject-thaci-eac6b22b7912"
+        "subject-trump-0733cf2dece5"
       ],
-      "cluster_id": "subject-thaci-eac6b22b7912",
-      "coherence": 0.5046613521967158,
+      "cluster_id": "subject-trump-0733cf2dece5",
+      "coherence": 0.4652523783179058,
       "consequence": 3,
       "countries": [
+        "be",
         "brazil",
         "france",
         "germany",
-        "india",
         "it",
-        "pe",
         "spain",
         "united-states"
       ],
-      "country_count": 8,
-      "editorial_day": "2026-09-17",
-      "headline": "El expresidente de Kosovo Hashim Thaçi es condenado a 25 años por crímenes de guerra",
-      "independent_source_count": 15,
+      "country_count": 7,
+      "editorial_day": "2026-09-18",
+      "headline": "Trump anuncia avances hacia la creación de una base militar de EE. UU. en Polonia",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/16/hashim-thaci-l-ex-president-du-kosovo-heros-de-l-independance-chez-beaucoup-dans-son-pays-condamne-a-vingt-cinq-ans-de-prison-par-un-tribunal-international_6775466_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/16/l-ancien-president-du-kosovo-condamne-a-vingt-cinq-ans-de-prison-pour-crimes-de-guerre_6775199_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/au-kosovo-l-ancien-president-hashim-thaci-condamne-a-25-ans-de-prison-pour-crimes-de-guerre-20260916"
+          "url": "https://www.liberation.fr/international/europe/la-creation-dune-base-militaire-americaine-en-pologne-avance-trump-sen-felicite-20260917_3ZAE53QG2JGQDFPIKQGRS5ZS7I/"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "http://www.france24.com/fr/vid%C3%A9o/20260917-l-ex-pr%C3%A9sident-du-kosovo-hashim-tha%C3%A7i-condamn%C3%A9-pour-crimes-de-guerre-par-un-tribunal-sp%C3%A9cial"
+          "url": "https://www.france24.com/fr/europe/20260917-pologne-etats-unis-base-americaine-donald-trump-progres-majeurs-lituanie"
         },
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/condenado-anos-carcel-expresidente-kosovo-hashim-thaci-20260916124052-nt.html"
+          "url": "https://www.elespanol.com/mundo/america/eeuu/20260917/trump-anuncia-avances-base-permanente-eeuu-polonia-refuerce-flanco-otan/1003744387796_0.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/18/trump-touts-major-progress-towards-setting-up-us-military-base-in-poland"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml"
+        },
+        {
+          "language": "nl",
+          "source": "newsmonkey.be",
+          "source_country": "be",
+          "url": "https://newsmonkey.be/trump-kondigt-permanente-amerikaanse-militaire-basis-in-polen-aan/"
+        },
+        {
+          "language": "de",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://de.euronews.com/2026/09/18/trump-us-militarbasis-polen"
+        },
+        {
+          "language": "de",
+          "source": "az-online.de",
+          "source_country": "germany",
+          "url": "https://www.az-online.de/politik/us-militaerstuetzpunkt-in-polen-trump-meldet-grosse-fortschritte-zr-94498482.html"
+        }
+      ],
+      "mentioned_countries": [
+        "pl",
+        "united-states"
+      ],
+      "origin_country": "be",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "euronews.com",
+        "france24.com",
+        "globo.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4653,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7333
+        },
+        "total": 0.7328,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "ice",
+        "kennedy center",
+        "pologne",
+        "polonia",
+        "supremo",
+        "trump",
+        "washington"
+      ],
+      "subject_newsroom_count": 28,
+      "summary": "Varios medios coinciden en que el presidente Trump declaró que hay \"progresos\" o \"avances mayores\" en las negociaciones para establecer una base militar permanente de Estados Unidos en Polonia destinada a reforzar el flanco este de la OTAN."
+    },
+    {
+      "_linked_ids": [
+        "subject-kosovo-1a1b6c4c9768",
+        "subject-kosovo-f6ec3074abd4",
+        "subject-thaci-eac6b22b7912"
+      ],
+      "cluster_id": "subject-kosovo-f6ec3074abd4",
+      "coherence": 0.4549865505988079,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "germany",
+        "it",
+        "spain"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-16",
+      "headline": "El Tribunal de La Haya condena a Hashim Thaçi a 25 años de prisión",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/au-kosovo-l-ancien-president-hashim-thaci-condamne-a-25-ans-de-prison-pour-crimes-de-guerre-20260916"
         },
         {
           "language": "es",
@@ -66,22 +155,10 @@
           "url": "https://www.eldiario.es/internacional/expresidente-kosovo-hashim-thaci-condenado-25-anos-carcel-crimenes-guerra_1_13513873.html"
         },
         {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/verurteilung-thaci-100.html"
-        },
-        {
           "language": "en",
           "source": "dw.com",
           "source_country": "germany",
           "url": "https://www.dw.com/en/shock-in-kosovo-as-hague-convicts-former-president-thaci/a-79294916?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/kosovo-ex-president-thaci-sentenced-to-25-years-for-war-crimes/a-79286344?maca=en-rss-en-world-4025-rdf"
         },
         {
           "language": "en",
@@ -90,46 +167,10 @@
           "url": "https://www.euronews.com/video/2026/09/16/kosovo-war-crimes-court-jails-ex-president-hashim-thaci-for-25-years-sparking-mass-protest"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/16/kosovos-former-president-thaci-convicted-of-war-crimes-at-hague-court"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/16/news/guerre_balcani_tensione_sentenza_ex_leader_dell_uck_thaci-425587897/?rss"
-        },
-        {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
           "url": "https://g1.globo.com/mundo/noticia/2026/09/16/ex-presidente-do-kosovo-e-condenado-a-25-anos-de-prisao-por-crimes-de-guerra.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "sitkasentinel.com",
-          "source_country": "united-states",
-          "url": "http://www.sitkasentinel.com/stories/hague-court-to-deliver-verdict-in-war-crimes-trial-of-kosovos-former-president-thaci,171225"
-        },
-        {
-          "language": "en",
-          "source": "theshillongtimes.com",
-          "source_country": "india",
-          "url": "https://theshillongtimes.com/2026/09/17/hague-court-convicts-kosovos-ex-prez-thaci-of-war-crimes/"
-        },
-        {
-          "language": "fr",
-          "source": "charentelibre.fr",
-          "source_country": "france",
-          "url": "https://www.charentelibre.fr/international/hashim-thaci-un-ancien-president-du-kosovo-condamne-pour-crimes-de-guerre-30654523.php"
-        },
-        {
-          "language": "es",
-          "source": "rpp.pe",
-          "source_country": "pe",
-          "url": "https://rpp.pe/mundo/europa/hashim-thaci-expresidente-de-kosovo-fue-condenado-a-25-anos-de-prision-por-crimenes-de-guerra-noticia-1707727"
         }
       ],
       "mentioned_countries": [
@@ -138,430 +179,268 @@
       "origin_country": "brazil",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/16/ex-presidente-do-kosovo-e-condenado-a-25-anos-de-prisao-por-crimes-de-guerra.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 11,
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "abc.es",
         "dw.com",
         "eldiario.es",
         "euronews.com",
-        "france24.com",
         "globo.com",
         "lavanguardia.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "repubblica.it",
-        "tagesschau.de"
+        "lefigaro.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5047,
-          "corroboration": 0.8,
-          "editorial_weight": 0.5789,
-          "freshness": 1.0,
+          "coherence": 0.455,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4286,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.7895,
-          "source_reliability": 0.8621
+          "novelty": 0.3333,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.7883,
+        "total": 0.7067,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "thaci",
+      "subject_label": "kosovo",
       "subject_names": [
         "hashim thaci",
-        "kosovo",
-        "kosovo hashim",
-        "thaci"
+        "kosovo"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Un tribunal especial en La Haya halló a Hashim Thaçi, ex presidente de Kosovo, culpable de crímenes de guerra cometidos durante los años 1990 y le impuso una pena de 25 años de prisión; la condena ha provocado reacciones y protestas en Kosovo según las informaciones."
+      "subject_newsroom_count": 6,
+      "summary": "El ex presidente de Kosovo Hashim Thaçi ha sido condenado por el tribunal de La Haya a 25 años de prisión por crímenes de guerra cometidos durante el conflicto de Kosovo; la condena ha provocado conmoción y protestas masivas en Kosovo según las informaciones."
     },
     {
       "_linked_ids": [
-        "subject-congreso-8a9f4e1a0bdf"
+        "subject-suecia-8dd817550042"
       ],
-      "cluster_id": "subject-congreso-8a9f4e1a0bdf",
-      "coherence": 0.42141188903027715,
+      "cluster_id": "subject-suecia-8dd817550042",
+      "coherence": 0.41078869118260053,
       "consequence": 3,
       "countries": [
+        "ec",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-16",
-      "headline": "El Congreso deroga la ley y el registro de lobbies impulsados por el Gobierno",
+      "country_count": 2,
+      "editorial_day": "2026-09-17",
+      "headline": "El bloque izquierdista gana las elecciones en Suecia y el primer ministro dimite",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-16/las-derechas-tumban-en-el-congreso-la-ley-de-lobbies-del-gobierno.html"
+          "url": "https://elpais.com/internacional/2026-09-17/el-bloque-de-centroizquierda-gana-las-elecciones-en-suecia-segun-el-escrutinio-definitivo.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/congreso-deroga-ley-lobbies-gobierno-votos-pp-vox-junts_1_13514814.html"
+          "url": "https://www.eldiario.es/internacional/recuento-voto-exterior-confirma-triunfo-izquierda-suecia_1_13519153.html"
         },
         {
           "language": "es",
-          "source": "expansion.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/09/16/6aaa9e63e5fdea81118b4588.html"
+          "url": "https://www.20minutos.es/internacional/primer-ministro-conservador-sueco-ulf-kristersson-admite-derrota-electoral-anuncia-su-renuncia_7038037_0.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/16/6aaa713bfc6c83b8208b4579.html"
+          "url": "https://www.20minutos.es/internacional/recuento-voto-exterior-confirma-triunfo-oposicion-izquierda-suecia_7038023_0.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-congreso-tumba-ley-lobbies-gobierno-cuestionada-socios-votos-pp-vox-junts-20260916192813.html"
+          "source": "confirmado.net",
+          "source_country": "ec",
+          "url": "https://confirmado.net/suecia-dimite-el-primer-ministro-de-suecia-tras-la-victoria-del-bloque-izquierdista-en-las-elecciones/"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "sw"
       ],
-      "origin_country": "spain",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/economia/2026/09/16/6aaa9e63e5fdea81118b4588.html",
-      "rank": 2,
-      "reference_newsroom_count": 5,
+      "origin_country": "ec",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
         "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "expansion.com"
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4214,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "coherence": 0.4108,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "source_reliability": 0.68
         },
-        "total": 0.653,
+        "total": 0.6641,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "congreso",
+      "subject_label": "suecia",
       "subject_names": [
-        "ayuso",
-        "congreso",
-        "espagne",
-        "espana",
-        "fuente",
-        "gobierno",
-        "madrid",
-        "marlaska",
-        "vox"
+        "suecia",
+        "suede"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "El Congreso ha rechazado la ley y el decreto que regulaban los lobbies y el nuevo registro de grupos de interés impulsados por el Gobierno, con los votos en contra de PP, Vox y Junts; la iniciativa quedó tumbada pese a cambios finales de Sumar destinados a evitar una crisis con el PSOE."
+      "subject_newsroom_count": 10,
+      "summary": "El recuento definitivo, incluido el voto por correo y el externo, confirma la victoria del bloque de izquierdas en las elecciones suecas; tras ese resultado el primer ministro ha presentado su dimisión."
     },
     {
       "_linked_ids": [
-        "subject-macron-334a3cf55e45"
+        "subject-ukraine-b2b93fdc8338"
       ],
-      "cluster_id": "subject-macron-334a3cf55e45",
-      "coherence": 0.45827751819368445,
+      "cluster_id": "subject-ukraine-b2b93fdc8338",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "france"
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-17",
-      "headline": "Emmanuel Macron convoca a los líderes de los partidos para tratar la situación internacional",
-      "independent_source_count": 5,
+      "country_count": 2,
+      "editorial_day": "2026-09-18",
+      "headline": "Polonia advierte que Rusia podría lanzar ataques híbridos contra aliados de Ucrania",
+      "independent_source_count": 2,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/live/2026/09/17/en-direct-presidentielle-2027-suivez-les-derniers-developpements-de-la-campagne_6776151_823448.html"
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/live/2026/sep/17/donald-trump-eu-european-union-mark-carney-canada-associate-membership-tariffs-threats-germany-merz-latest-news-updates"
         },
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-les-conflits-internationaux-et-leurs-consequences-nationales-20260917"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-les-conflits-internationaux-et-leurs-consequences-nationales-20260917_YDAKWJO3RJCCLPUCVK7HZUUTE4/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/moyen-orient/emmanuel-macron-convie-les-chefs-de-parti-vendredi-pour-evoquer-la-degradation-rapide-de-la-situation-internationale-et-ses-consequences-en-france-sur-la-securite-et-l-energie_8196932.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rtl.fr",
-          "source_country": "france",
-          "url": "https://www.rtl.fr/actu/politique/situation-internationale-emmanuel-macron-convoque-les-chefs-des-partis-et-les-candidats-le-vendredi-18-septembre-a-10h30-a-l-elysee-7900673407"
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/18/nx-s1-5973265/poland-nato-russia"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "up",
+        "pl"
       ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/politique/live/2026/09/17/en-direct-presidentielle-2027-suivez-les-derniers-developpements-de-la-campagne_6776151_823448.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "origin_country": "united-kingdom",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/world/live/2026/sep/17/donald-trump-eu-european-union-mark-carney-canada-associate-membership-tariffs-threats-germany-merz-latest-news-updates",
+      "rank": 4,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "npr.org",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4583,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6501,
+        "total": 0.6294,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "macron",
+      "subject_label": "ukraine",
       "subject_names": [
-        "emmanuel macron",
-        "macron"
+        "russian",
+        "ukraine"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "El presidente Emmanuel Macron ha citado a los jefes de los partidos políticos, así como a los candidatos, para una reunión el viernes 18 de septiembre a las 10:30 en el Elíseo con el fin de tratar la \"degradación rápida\" de la situación internacional y sus repercusiones en Francia, en particular sobre la seguridad y la energía."
+      "subject_newsroom_count": 14,
+      "summary": "Los artículos coinciden en que el primer ministro polaco advirtió sobre el riesgo de que Rusia lleve a cabo ataques híbridos o incidentes \"accidentales\" apuntando a países que apoyan a Ucrania, y llamó a aumentar la vigilancia y la cooperación entre aliados para prevenir y responder a esas acciones."
     },
     {
       "_linked_ids": [
-        "subject-openai-2da567174d80"
+        "subject-rusia-bf27cbe189f8"
       ],
-      "cluster_id": "subject-openai-2da567174d80",
-      "coherence": 0.4715267989186358,
-      "consequence": 2,
-      "countries": [
-        "bu",
-        "china",
-        "it",
-        "spain",
-        "up"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-17",
-      "headline": "OpenAI revela seis nuevos casos de comportamiento problemático de sus modelos de IA",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/tecnologia/2026-09-17/openai-revela-otros-seis-incidentes-con-agentes-de-ia-descontrolados.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/tecnologia/openai-desvela-nuevos-incidentes-preocupantes-ia-salto-creadores_1_13516500.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/economia/empresas/2026/09/17/6aab91c8e9cf4a664e8b4579.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/portaltic/sector/noticia-openai-desvela-seis-nuevos-casos-desajuste-comportamiento-modelos-ia-20260917104034.html"
-        },
-        {
-          "language": "en",
-          "source": "cointelegraph.com",
-          "source_country": "china",
-          "url": "https://cointelegraph.com/news/openai-discloses-6-new-cases-of-misaligned-ai-behavior"
-        },
-        {
-          "language": "bul",
-          "source": "dnes.bg",
-          "source_country": "bu",
-          "url": "https://www.dnes.bg/a/2-svyat/735411-openai-razkri-novi-sluchai-na-obezpokoitelno-povedenie-na-ii"
-        },
-        {
-          "language": "ukr",
-          "source": "korrespondent.net",
-          "source_country": "up",
-          "url": "https://ua.korrespondent.net/business/companies/4912496-OpenAI-rozkryla-novi-vypadky-nebezpechnoi-povedinky-shi-modelei"
-        },
-        {
-          "language": "ru",
-          "source": "korrespondent.net",
-          "source_country": "up",
-          "url": "https://korrespondent.net/business/companies/4912496-OpenAI-raskryla-novye-sluchay-opasnoho-povedenyia-yy-modelei"
-        },
-        {
-          "language": "glg",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260917104033/openai-desvela-seis-nuevos-casos-desajuste-comportamiento-modelos-ia"
-        },
-        {
-          "language": "it",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_1ec96313-7624-455c-a793-7b4b745b668c.html"
-        },
-        {
-          "language": "it",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/sito/notizie/topnews/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_21839a8f-aee6-4a78-9119-2da695a3b235.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "bu",
-      "outbound_source": "ansa.it",
-      "outbound_url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_1ec96313-7624-455c-a793-7b4b745b668c.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "ansa.it",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4715,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7778
-        },
-        "total": 0.6419,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "openai",
-      "subject_names": [
-        "openai"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "OpenAI ha dado a conocer seis incidentes adicionales en los que sus modelos de inteligencia artificial mostraron comportamientos no deseados o desalineados, incluyendo acciones autónomas para engañar o desobedecer instrucciones de sus creadores; la empresa publicó estos casos como ejemplos de fallos en el comportamiento de sus sistemas."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-e612ee959af9"
-      ],
-      "cluster_id": "subject-ceuta-e612ee959af9",
-      "coherence": 0.43790172558326246,
+      "cluster_id": "subject-rusia-bf27cbe189f8",
+      "coherence": null,
       "consequence": 3,
       "countries": [
+        "brazil",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-16",
-      "headline": "El Congreso convalida las ayudas a Ceuta y reprueba a Marlaska",
-      "independent_source_count": 4,
+      "country_count": 2,
+      "editorial_day": "2026-09-15",
+      "headline": "Rusia y Ucrania continúan ataques pese a anuncio de tregua de Trump",
+      "independent_source_count": 2,
       "members": [
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/16/6aaad90721efa0624b8b4594.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260916/congreso-aprueba-ayudas-ceuta-abstencion-pp-tumba-decreto-lobbies/1003744385911_0.html"
-        },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/politica/20260916/11636500/congreso-aprueba-iniciativa-pp-reprobar-marlaska-crisis-ceuta.html"
+          "url": "https://www.lavanguardia.com/internacional/20260915/11635151/rusia-y-ucrania-desoyen-la-tregua-anunciada-por-trump.html"
         },
         {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-16/el-congreso-convalida-el-decreto-de-ayudas-de-309-millones-para-ceuta-entre-criticas-al-gobierno_4425293/"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/15/russia-e-ucrania-seguem-ataques-apesar-de-anuncio-de-trump-sobre-tregua.ghtml"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "mo"
+        "up"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/espana/politica/20260916/congreso-aprueba-ayudas-ceuta-abstencion-pp-tumba-decreto-lobbies/1003744385911_0.html",
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260915/11635151/rusia-y-ucrania-desoyen-la-tregua-anunciada-por-trump.html",
       "rank": 5,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "elespanol.com",
-        "elmundo.es",
+        "globo.com",
         "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4379,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.3536,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6384,
+        "total": 0.6165,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "rusia",
       "subject_names": [
-        "ceuta",
-        "congreso",
-        "feijoo",
-        "marlaska",
-        "marruecos",
-        "parlamento europeo",
-        "vox"
+        "donald trump",
+        "ice",
+        "kennedy center",
+        "rusia",
+        "supremo",
+        "trump",
+        "ucrania",
+        "washington"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "El Congreso de los Diputados convalidó un decreto de ayudas para Ceuta por 309 millones de euros y, en una iniciativa del PP, aprobó una moción que reprueba al ministro Fernando Grande‑Marlaska en relación con la crisis de Ceuta; la aprobación de las ayudas contó con el apoyo del PP y la tramitación suscitó críticas al Gobierno."
+      "subject_newsroom_count": 8,
+      "summary": "Tras el anuncio de una tregua por parte del presidente Trump, ambos países siguieron lanzando ataques; las informaciones coinciden en que ni Rusia ni Ucrania respetaron la suspensión de hostilidades anunciada y los combates continuaron."
     }
   ],
   "discarded_ingested": 121,
   "discarded_kept": 5,
-  "generated_at": "2026-09-17T10:16:22.974953+00:00",
+  "generated_at": "2026-09-18T09:58:05.023873+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

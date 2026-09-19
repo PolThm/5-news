@@ -1,476 +1,1150 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-0733cf2dece5",
-      "coherence": 0.4652523783179058,
+      "cluster_id": "subject-trump-4d4e07e1d116",
+      "coherence": 0.4991873629462239,
       "consequence": 3,
       "countries": [
-        "be",
-        "brazil",
+        "au",
+        "china",
         "france",
-        "germany",
+        "india",
         "it",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-09-18",
-      "headline": "Trump anuncia avances hacia la creación de una base militar de EE. UU. en Polonia",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/la-creation-dune-base-militaire-americaine-en-pologne-avance-trump-sen-felicite-20260917_3ZAE53QG2JGQDFPIKQGRS5ZS7I/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260917-pologne-etats-unis-base-americaine-donald-trump-progres-majeurs-lituanie"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/eeuu/20260917/trump-anuncia-avances-base-permanente-eeuu-polonia-refuerce-flanco-otan/1003744387796_0.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/18/trump-touts-major-progress-towards-setting-up-us-military-base-in-poland"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml"
-        },
-        {
-          "language": "nl",
-          "source": "newsmonkey.be",
-          "source_country": "be",
-          "url": "https://newsmonkey.be/trump-kondigt-permanente-amerikaanse-militaire-basis-in-polen-aan/"
-        },
-        {
-          "language": "de",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://de.euronews.com/2026/09/18/trump-us-militarbasis-polen"
-        },
-        {
-          "language": "de",
-          "source": "az-online.de",
-          "source_country": "germany",
-          "url": "https://www.az-online.de/politik/us-militaerstuetzpunkt-in-polen-trump-meldet-grosse-fortschritte-zr-94498482.html"
-        }
-      ],
-      "mentioned_countries": [
-        "pl",
-        "united-states"
-      ],
-      "origin_country": "be",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "elespanol.com",
-        "euronews.com",
-        "france24.com",
-        "globo.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4653,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7333
-        },
-        "total": 0.7417,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "ice",
-        "kennedy center",
-        "pologne",
-        "polonia",
-        "supremo",
-        "trump",
-        "washington"
-      ],
-      "subject_newsroom_count": 28,
-      "summary": "Varios medios coinciden en que el presidente Trump declaró que hay \"progresos\" o \"avances mayores\" en las negociaciones para establecer una base militar permanente de Estados Unidos en Polonia destinada a reforzar el flanco este de la OTAN."
-    },
-    {
-      "cluster_id": "subject-iran-732d78224824",
-      "coherence": 0.505899044663933,
-      "consequence": 3,
-      "countries": [
-        "as",
-        "brazil",
+        "mx",
         "ni",
+        "pk",
+        "po",
+        "qa",
         "spain",
+        "sz",
         "united-kingdom",
-        "united-states"
+        "united-states",
+        "vm"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-09-18",
-      "headline": "Expertos de la ONU dicen que EE. UU. pudo cometer crímenes de guerra en Irán",
-      "independent_source_count": 12,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260917/11637114/onu-califica-crimen-guerra-ataque-ee-uu-sobre-escuela-ninas-iran.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cm9w4n5nverdo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/17/nx-s1-5972934/us-iran-war-un-report-alleged-war-crimes"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/comissao-onu-crimes-de-guerra-eua-guerra-ira.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://newsradio910wltp.iheart.com/content/2026-09-18-un-panel-says-us-may-have-committed-war-crimes-in-iran/"
-        },
-        {
-          "language": "en",
-          "source": "westernadvocate.com.au",
-          "source_country": "as",
-          "url": "https://www.westernadvocate.com.au/story/9352676/war-crimes-un-fact-finding-mission-condemns-us-iran/"
-        },
-        {
-          "language": "en",
-          "source": "wfdd.org",
-          "source_country": "united-states",
-          "url": "https://www.wfdd.org/national/2026-09-17/u-n-backed-experts-cite-possible-u-s-war-crimes-in-iran-including-a-school-attack"
-        },
-        {
-          "language": "en",
-          "source": "krvs.org",
-          "source_country": "united-states",
-          "url": "https://www.krvs.org/npr-news/2026-09-17/u-n-backed-experts-cite-possible-u-s-war-crimes-in-iran-including-a-school-attack"
-        },
-        {
-          "language": "en",
-          "source": "wnmufm.org",
-          "source_country": "united-states",
-          "url": "https://www.wnmufm.org/2026-09-17/u-n-backed-experts-cite-possible-u-s-war-crimes-in-iran-including-a-school-attack"
-        },
-        {
-          "language": "en",
-          "source": "saharareporters.com",
-          "source_country": "ni",
-          "url": "https://saharareporters.com/2026/09/17/un-panel-says-us-likely-committed-war-crimes-iran"
-        },
-        {
-          "language": "en",
-          "source": "wvtf.org",
-          "source_country": "united-states",
-          "url": "https://www.wvtf.org/2026-09-17/u-n-backed-experts-cite-possible-u-s-war-crimes-in-iran-including-a-school-attack"
-        },
-        {
-          "language": "pt",
-          "source": "ansabrasil.com.br",
-          "source_country": "brazil",
-          "url": "https://ansabrasil.com.br/brasil/noticias/ultimo_momento/2026/09/17/onu-aponta-possiveis-crimes-de-guerra-dos-eua-em-ataque-contra-escola_814710c0-12c6-4d20-9beb-c3dd5f89c62f.html"
-        }
-      ],
-      "mentioned_countries": [
-        "ir"
-      ],
-      "origin_country": "as",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/17/comissao-onu-crimes-de-guerra-eua-guerra-ira.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "globo.com",
-        "lavanguardia.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5059,
-          "corroboration": 0.75,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.75,
-          "source_reliability": 0.7714
-        },
-        "total": 0.7368,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "iran",
-      "subject_names": [
-        "iran",
-        "onu",
-        "ormuz",
-        "teheran",
-        "yemen"
-      ],
-      "subject_newsroom_count": 23,
-      "summary": "Un panel de expertos respaldado por la ONU concluyó que hay motivos para creer que Estados Unidos pudo haber cometido crímenes de guerra en ataques en Irán, incluyendo uno contra una escuela de niñas; las declaraciones señalan posibles violaciones del derecho internacional humanitario sin aportar en los artículos detalles sobre responsabilidades legales definitivas."
-    },
-    {
-      "cluster_id": "subject-f-35-266b0b49eb45",
-      "coherence": 0.49289989362501196,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "mo",
-        "rs"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-18",
-      "headline": "Estados Unidos aprueba la venta de 48 cazas F-35 a Arabia Saudita",
-      "independent_source_count": 4,
+      "country_count": 15,
+      "editorial_day": "2026-09-19",
+      "headline": "Trump anuncia un acuerdo que otorga control permanente de seguridad en Groenlandia",
+      "independent_source_count": 50,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/18/washington-pret-a-vendre-48-avions-furtifs-f-35-a-l-arabie-saoudite-en-plein-conflit-au-moyen-orient_6776659_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/19/donald-trump-annonce-un-accord-de-securite-avec-le-groenland-mettant-fin-au-contentieux-avec-le-danemark-l-ue-et-l-otan_6777111_3210.html"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/moyen-orient/20260918-administration-trump-donne-feu-vert-vente-48-avions-f-35-arabie-saoudite"
+          "url": "https://www.lemonde.fr/international/article/2026/09/18/donald-trump-affirme-avoir-obtenu-un-controle-permanent-de-washington-sur-la-securite-du-groenland_6776878_3210.html"
         },
-        {
-          "language": "fr",
-          "source": "fr.le360.ma",
-          "source_country": "mo",
-          "url": "https://fr.le360.ma/monde/arabie-saoudite-washington-ouvre-la-voie-a-une-vente-de-48-f-35_T4CZ3Y4OV5HGXELMHK6CJYSTKQ/"
-        },
-        {
-          "language": "ru",
-          "source": "kommersant.ru",
-          "source_country": "rs",
-          "url": "https://www.kommersant.ru/doc/8957696"
-        }
-      ],
-      "mentioned_countries": [
-        "sa"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/18/washington-pret-a-vendre-48-avions-furtifs-f-35-a-l-arabie-saoudite-en-plein-conflit-au-moyen-orient_6776659_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4929,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5556
-        },
-        "total": 0.6699,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "f-35",
-      "subject_names": [
-        "arabie",
-        "f-35"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "El gobierno de Estados Unidos dio luz verde a la venta de 48 aviones de combate furtivos F-35 a Arabia Saudita; las decisiones aparecen en múltiples informaciones internacionales y se producen en el contexto de la actual guerra en Oriente Medio."
-    },
-    {
-      "cluster_id": "subject-eric-zemmour-f74926fbaf81",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-18",
-      "headline": "Éric Zemmour confirma su candidatura a la presidencia y endurece su discurso",
-      "independent_source_count": 3,
-      "members": [
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/presidentielle-2027-eric-zemmour-confirme-qu-il-sera-candidat-durcit-encore-son-discours-sur-l-immigration-20260918"
+          "url": "https://www.lefigaro.fr/international/trump-annonce-un-accord-avec-le-danemark-sur-le-groenland-20260919"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/donald-trump-annonce-avoir-obtenu-un-controle-permanent-sur-la-securite-du-groenland-20260919_BO2YAYNPQRCHJN7HHVUEKBNNO4/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/politique/presidentielle-2027-eric-zemmour-confirme-qu-il-sera-candidat-20260918"
+          "url": "https://www.la-croix.com/trump-annonce-avoir-obtenu-un-controle-permanent-sur-la-securite-du-groenland-20260918"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/190926/trump-annonce-avoir-obtenu-un-controle-permanent-sur-la-securite-du-groenland"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/groenland/donald-trump-annonce-avoir-obtenu-un-controle-permanent-sur-la-securite-du-groenland_8199956.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260917-france-extreme-droite-eric-zemmour-confirme-candidature-pr%C3%A9sidentielle-immigration"
-        }
-      ],
-      "mentioned_countries": [],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/france/20260917-france-extreme-droite-eric-zemmour-confirme-candidature-pr%C3%A9sidentielle-immigration",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
-        "lefigaro.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "url": "https://www.france24.com/fr/europe/20260918-donald-trump-groenland-danemark-etats-unis-accord-controle-permanent-securite"
         },
-        "total": 0.6581,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "eric zemmour",
-      "subject_names": [
-        "eric zemmour"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Éric Zemmour ha anunciado que será candidato a la presidencia en 2027 y ha endurecido su postura sobre la inmigración; en su declaración confirma su participación en la campaña y detalla qué categorías de extranjeros considera expulsables."
-    },
-    {
-      "cluster_id": "subject-suecia-8dd817550042",
-      "coherence": 0.41078869118260053,
-      "consequence": 3,
-      "countries": [
-        "ec",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-17",
-      "headline": "El bloque izquierdista gana las elecciones en Suecia y el primer ministro dimite",
-      "independent_source_count": 5,
-      "members": [
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260918-groenland-donald-trump-annonce-un-accord-pour-renforcer-la-pr%C3%A9sence-militaire-am%C3%A9ricaine"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260919.OBS118393/groenland-controle-permanent-bases-militaires-duree-ce-que-l-on-sait-sur-l-accord-annonce-par-trump.html"
+        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-17/el-bloque-de-centroizquierda-gana-las-elecciones-en-suecia-segun-el-escrutinio-definitivo.html"
+          "url": "https://elpais.com/internacional/2026-09-18/trump-anuncia-un-acuerdo-militar-historico-con-dinamarca-sobre-groenlandia.html"
         },
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html"
+          "url": "https://www.lavanguardia.com/internacional/20260919/11638945/trump-anuncia-haber-obtenido-control-permanente-sobre-seguridad-groenlandia.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/recuento-voto-exterior-confirma-triunfo-izquierda-suecia_1_13519153.html"
+          "url": "https://www.eldiario.es/internacional/trump-dice-llegado-acuerdo-dinamarca-asumir-control-permanente-seguridad-groenlandia_1_13522340.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/09/18/6aadb113468aeb243a8b458f.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/internacional/trump-anuncia-acuerdo-dinamarca-controlar-seguridad-groenlandia_1_2236565.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/america/eeuu/20260919/trump-anuncia-acuerdo-dinamarca-eeuu-tome-control-permanente-seguridad-groenlandia/1003744389403_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/09/19/6aadb39f21efa00e708b4583.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/primer-ministro-conservador-sueco-ulf-kristersson-admite-derrota-electoral-anuncia-su-renuncia_7038037_0.html"
+          "url": "https://www.20minutos.es/internacional/donald-trump-anuncia-estados-unidos-hace-control-permanente-groenlandia-acordarlo-dinamarca_7038746_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/19/news/la_sfida_usa_all_europa_un_piano_per_ritirare_oltre_25mila_militari_dalle_basi_nel_vecchio_continente-425594273/?rss"
+        },
+        {
+          "language": "en",
+          "source": "tribune.com.pk",
+          "source_country": "pk",
+          "url": "https://tribune.com.pk/story/2630177/us-and-denmark-reach-deal-on-greenland-trump-says"
+        },
+        {
+          "language": "en",
+          "source": "chinamil.com.cn",
+          "source_country": "china",
+          "url": "http://eng.chinamil.com.cn/2025xb/W/N/16487595.html"
+        },
+        {
+          "language": "en",
+          "source": "dailypost.ng",
+          "source_country": "ni",
+          "url": "https://dailypost.ng/2026/09/19/trump-announces-permanent-us-security-deal-with-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "qatar-tribune.com",
+          "source_country": "qa",
+          "url": "https://www.qatar-tribune.com/article/254687/latest-news/trump-says-deal-with-denmark-gives-us-permanent-control-over-greenland"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "diariosigloxxi.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/recuento-voto-exterior-confirma-triunfo-oposicion-izquierda-suecia_7038023_0.html"
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260919072638/trump-anuncia-acuerdo-dinamarca-groenlandia-control-seguridad-isla"
+        },
+        {
+          "language": "it",
+          "source": "milanofinanza.it",
+          "source_country": "it",
+          "url": "https://www.milanofinanza.it/news/groenlandia-trump-esulta-accordo-storico-per-migliorare-la-sicurezza-sull-isola-e-nell-artico-202609190947512853"
+        },
+        {
+          "language": "fr",
+          "source": "linternaute.com",
+          "source_country": "france",
+          "url": "https://www.linternaute.com/actualite/monde/11304399-groenland-trump-annonce-un-accord-qui-donnerait-aux-etats-unis-un-controle-permanent-sur-la-securite-de-l-ile/"
+        },
+        {
+          "language": "fr",
+          "source": "lecourrier.vn",
+          "source_country": "vm",
+          "url": "https://lecourrier.vn/trump-annonce-avoir-obtenu-un-controle-permanent-sur-la-securite-du-groenland/1355704.html"
+        },
+        {
+          "language": "fr",
+          "source": "lematin.ch",
+          "source_country": "sz",
+          "url": "https://www.lematin.ch/story/etats-unis-trump-annonce-un-controle-permanent-sur-la-securite-du-groenland-103635689"
+        },
+        {
+          "language": "en",
+          "source": "cinaradio.com",
+          "source_country": "india",
+          "url": "https://www.cinaradio.com/2026/09/18/trump-claims-deal-struck-with-denmark-to-give-u-s-security-control-over-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "kfyrtv.com",
+          "source_country": "united-states",
+          "url": "https://www.kfyrtv.com/2026/09/18/trump-says-he-has-deal-with-denmark-bolster-us-military-presence-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "10news.com",
+          "source_country": "united-states",
+          "url": "https://www.10news.com/politics/the-president/trump-says-he-has-a-deal-with-denmark-to-bolster-us-military-presence-in-greenland"
+        },
+        {
+          "language": "en",
+          "source": "kcby.com",
+          "source_country": "united-states",
+          "url": "https://kcby.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says"
+        },
+        {
+          "language": "en",
+          "source": "iheart.com",
+          "source_country": "united-states",
+          "url": "https://wbhpam.iheart.com/content/2026-09-18-trump-announces-us-denmark-agreement-on-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "webindia123.com",
+          "source_country": "india",
+          "url": "https://news.webindia123.com/news/Articles/World/20260919/4500502.html"
+        },
+        {
+          "language": "en",
+          "source": "beijingbulletin.com",
+          "source_country": "china",
+          "url": "http://www.beijingbulletin.com/news/279316265/trump-announces-greenland-security-deal-with-denmark"
+        },
+        {
+          "language": "en",
+          "source": "iheart.com",
+          "source_country": "united-states",
+          "url": "https://wflaorlando.iheart.com/content/2026-09-18-trump-announces-us-denmark-agreement-on-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "chinanationalnews.com",
+          "source_country": "china",
+          "url": "http://www.chinanationalnews.com/news/279316333/trump-announces-greenland-deal"
+        },
+        {
+          "language": "en",
+          "source": "mynews4.com",
+          "source_country": "united-states",
+          "url": "https://mynews4.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says"
+        },
+        {
+          "language": "en",
+          "source": "heraldglobe.com",
+          "source_country": "united-states",
+          "url": "http://www.heraldglobe.com/news/279316333/trump-announces-greenland-deal"
+        },
+        {
+          "language": "en",
+          "source": "cbs12.com",
+          "source_country": "united-states",
+          "url": "https://cbs12.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says"
+        },
+        {
+          "language": "en",
+          "source": "chinanationalnews.com",
+          "source_country": "china",
+          "url": "http://www.chinanationalnews.com/news/279316265/trump-announces-greenland-security-deal-with-denmark"
+        },
+        {
+          "language": "en",
+          "source": "cinaradio.com",
+          "source_country": "india",
+          "url": "https://www.cinaradio.com/2026/09/18/trump-claims-he-has-deal-with-denmark-to-bolster-us-military-presence-in-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "abc11.com",
+          "source_country": "united-states",
+          "url": "https://abc11.com/story/trump-says-he-has-deal-denmark-bolster-us-military-presence-greenland/19847856/"
+        },
+        {
+          "language": "en",
+          "source": "abcnews4.com",
+          "source_country": "united-states",
+          "url": "https://abcnews4.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says"
+        },
+        {
+          "language": "en",
+          "source": "heraldglobe.com",
+          "source_country": "united-states",
+          "url": "http://www.heraldglobe.com/news/279316327/update-trump-claims-deal-with-denmark-greenland-giving-us-control-over-security-in-greenland"
+        },
+        {
+          "language": "en",
+          "source": "nbc16.com",
+          "source_country": "united-states",
+          "url": "https://nbc16.com/news/nation-world/us-denmark-and-greenland-reach-security-deal-giving-us-permanent-control-trump-says"
+        },
+        {
+          "language": "en",
+          "source": "hindustantimes.com",
+          "source_country": "india",
+          "url": "https://www.hindustantimes.com/world-news/trump-greenland-announces-deal-with-denmark-us-gets-permanent-control-over-security-101789766939686.html"
+        },
+        {
+          "language": "en",
+          "source": "iheart.com",
+          "source_country": "united-states",
+          "url": "https://newsradiori.iheart.com/content/2026-09-18-trump-announces-us-denmark-agreement-on-greenland/"
+        },
+        {
+          "language": "en",
+          "source": "greeleytribune.com",
+          "source_country": "united-states",
+          "url": "https://www.greeleytribune.com/2026/09/18/trump-greenland-deal/"
+        },
+        {
+          "language": "en",
+          "source": "thetimes-tribune.com",
+          "source_country": "united-states",
+          "url": "https://www.thetimes-tribune.com/2026/09/18/trump-greenland-deal/"
+        },
+        {
+          "language": "pt",
+          "source": "dnoticias.pt",
+          "source_country": "po",
+          "url": "https://www.dnoticias.pt/2026/9/18/505962-trump-anuncia-acordo-sobre-gronelandia-que-da-aos-eua-controlo-permanente-da-seguranca/"
+        },
+        {
+          "language": "fr",
+          "source": "boursorama.com",
+          "source_country": "france",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/trump-annonce-avoir-obtenu-un-controle-permanent-sur-la-securite-du-groenland-960b170a1882886b7d9e8769b6763d4a"
+        },
+        {
+          "language": "fr",
+          "source": "boursorama.com",
+          "source_country": "france",
+          "url": "https://www.boursorama.com/actualite-economique/actualites/trump-affirme-que-les-etats-unis-le-danemark-et-le-groenland-ont-conclu-un-accord-sur-l-ile-40eda37fd66d9f0afe20ce1e661a3cbc"
         },
         {
           "language": "es",
-          "source": "confirmado.net",
-          "source_country": "ec",
-          "url": "https://confirmado.net/suecia-dimite-el-primer-ministro-de-suecia-tras-la-victoria-del-bloque-izquierdista-en-las-elecciones/"
+          "source": "aristeguinoticias.com",
+          "source_country": "mx",
+          "url": "https://aristeguinoticias.com/1809/mundo/trump-anuncia-acuerdo-para-controlar-siempre-la-seguridad-de-groenlandia/"
+        },
+        {
+          "language": "es",
+          "source": "teleamazonas.com",
+          "source_country": "united-states",
+          "url": "https://www.teleamazonas.com/actualidad/noticias/internacional/trump-acuerdo-seguridad-groenlandia-dinamarca-128314/"
+        },
+        {
+          "language": "de",
+          "source": "orf.at",
+          "source_country": "au",
+          "url": "https://orf.at/stories/3442618/"
         }
       ],
       "mentioned_countries": [
-        "sw"
+        "gl"
       ],
-      "origin_country": "ec",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
+      "origin_country": "au",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/donald-trump-anuncia-estados-unidos-hace-control-permanente-groenlandia-acordarlo-dinamarca_7038746_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 19,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
+        "bbc.co.uk",
         "eldiario.es",
-        "elpais.com"
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "expansion.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "infolibre.es",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "repubblica.it",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4108,
-          "corroboration": 0.5,
+          "coherence": 0.4992,
+          "corroboration": 0.8824,
+          "editorial_weight": 0.7037,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.9259,
+          "source_reliability": 0.9424
+        },
+        "total": 0.8519,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "danemark",
+        "denmark",
+        "dinamarca",
+        "donald trump",
+        "eeuu",
+        "estados unidos",
+        "greenland",
+        "groenland",
+        "groenlandia",
+        "trump",
+        "usa"
+      ],
+      "subject_newsroom_count": 32,
+      "summary": "Donald Trump anunció que Estados Unidos alcanzó un acuerdo con Dinamarca (y con participación de Groenlandia en las declaraciones) por el que Washington obtendría un “control permanente” o un refuerzo permanente de la seguridad en Groenlandia, incluyendo un incremento o fortalecimiento de la presencia militar estadounidense en la isla; las noticias indican además que el pacto busca impedir que rivales establezcan bases y fue presentado por Trump como beneficioso para la seguridad en el Ártico y para laOTAN/Europa, con diferentes reacciones y algunas incertidumbres sobre detalles operativos y de duración."
+    },
+    {
+      "cluster_id": "subject-cnn-b17bd991d3c0",
+      "coherence": 0.505352345501352,
+      "consequence": 2,
+      "countries": [
+        "ar",
+        "bl",
+        "brazil",
+        "france",
+        "germany",
+        "it",
+        "my",
+        "ni",
+        "nl",
+        "po",
+        "spain",
+        "sz",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 14,
+      "editorial_day": "2026-09-19",
+      "headline": "Donald Trump veta el acceso a la Casa Blanca de CNN, MSNOW y Politico",
+      "independent_source_count": 37,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/19/donald-trump-bannit-trois-grands-medias-americains-de-la-maison-blanche_6776912_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/donald-trump-ne-veut-plus-a-la-maison-blanche-des-chaines-de-television-cnn-et-msnow-et-du-media-en-ligne-politico-20260918_U743ONYUORB7RJFCUWAQO3IBL4/"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/190926/trump-annonce-interdire-l-acces-de-la-maison-blanche-plusieurs-grands-medias-americains-dont-cnn"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/usa/presidentielle/donald-trump/donald-trump-annonce-interdire-l-acces-de-la-maison-blanche-a-trois-medias-dont-la-chaine-americaine-cnn_8199869.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260918-avec-effet-imm%C3%A9diat-trump-annonce-bannir-cnn-et-deux-autres-m%C3%A9dias-de-la-maison-blanche"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260918-%C3%A9tats-unis-donald-trump-veut-emp%C3%AAcher-cnn-et-d-autres-m%C3%A9dias-de-venir-%C3%A0-la-maison-blanche"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-2157676"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-18/trump-veta-el-acceso-a-la-casa-blanca-de-cnn-msnbc-y-politico.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/trump-anuncia-veta-casa-blanca-cnn-msnow-20260918213415-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260918/11638752/trump-veta-cnn-msnow-politico-entrada-casa-blanca-difundir-noticias-falsas.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/trump-veta-cnn-msnow-politico-casa-blanca_1_13522167.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/internacional/trump-veta-casa-blanca-medios-cnn-msnow-politico_1_2236563.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/donald-trump-veta-casa-blanca-cnn-msnow-politico-acusa-ofrecer-noticias-falsas_7038745_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/usa-trump-presse-weisses-haus-102.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/usa-trump-presse-weisses-haus-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/18/trump-threatens-to-ban-cnn"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/18/news/trump_bandisce_dalla_casa_bianca_cnn_msnow_e_politico_notizie_false-425594112/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2631574"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/18/trump-anuncia-que-vai-banir-cnn-ms-now-e-politico-da-casa-branca.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "tribuneonlineng.com",
+          "source_country": "ni",
+          "url": "https://tribuneonlineng.com/us-trump-bans-cnn-others-from-white-house-coverage-gives-reason/"
+        },
+        {
+          "language": "fr",
+          "source": "lematin.ch",
+          "source_country": "sz",
+          "url": "https://www.lematin.ch/story/etats-unis-donald-trump-interdit-la-maison-blanche-a-certains-medias-103635691"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/medias/trump-interdit-l-acces-de-la-maison-blanche-a-cnn-msnow-et-politico-20260918"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/09/18/trump-targets-more-news-outlets-saying-he-will-ban-cnn-ms-now-and-politico-from-the-white-house/"
+        },
+        {
+          "language": "en",
+          "source": "kmxt.org",
+          "source_country": "united-states",
+          "url": "https://www.kmxt.org/2026-09-18/trump-says-he-is-banning-cnn-ms-now-and-politico-from-the-white-house"
+        },
+        {
+          "language": "en",
+          "source": "krwg.org",
+          "source_country": "united-states",
+          "url": "https://www.krwg.org/national-news/2026-09-18/trump-says-he-is-banning-cnn-ms-now-and-politico-from-the-white-house"
+        },
+        {
+          "language": "en",
+          "source": "dailyadvance.com",
+          "source_country": "united-states",
+          "url": "http://www.dailyadvance.com/features/entertainment/trump-targets-more-news-outlets-saying-he-will-ban-cnn-ms-now-and-politico-from/article_6072de04-bb4b-5718-b442-e04c0ef4a439.html"
+        },
+        {
+          "language": "en",
+          "source": "lethbridgeherald.com",
+          "source_country": "united-states",
+          "url": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/09/18/trump-says-he-is-banning-cnn-msnow-and-politico-from-the-white-house/"
+        },
+        {
+          "language": "en",
+          "source": "thetimes-tribune.com",
+          "source_country": "united-states",
+          "url": "https://www.thetimes-tribune.com/2026/09/18/trump-media-bans/"
+        },
+        {
+          "language": "en",
+          "source": "kmuw.org",
+          "source_country": "united-states",
+          "url": "https://www.kmuw.org/2026-09-18/trump-says-he-is-banning-cnn-ms-now-and-politico-from-the-white-house"
+        },
+        {
+          "language": "en",
+          "source": "abc7ny.com",
+          "source_country": "united-states",
+          "url": "https://abc7ny.com/story/trump-says-he-is-banning-cnn-msnow-politico-white-house/19848126/"
+        },
+        {
+          "language": "en",
+          "source": "freemalaysiatoday.com",
+          "source_country": "my",
+          "url": "https://www.freemalaysiatoday.com/category/highlight/2026/09/19/trump-says-cnn-ms-now-politico-banned-from-white-house"
+        },
+        {
+          "language": "en",
+          "source": "abc11.com",
+          "source_country": "united-states",
+          "url": "https://abc11.com/story/trump-says-he-is-banning-cnn-msnow-politico-white-house/19848126/"
+        },
+        {
+          "language": "en",
+          "source": "dailyadvance.com",
+          "source_country": "united-states",
+          "url": "http://www.dailyadvance.com/news/national/the-latest-trump-says-he-is-banning-cnn-ms-now-and-politico-from-white-house/article_428a3e65-09ee-5bd7-8e79-77150ec094fb.html"
+        },
+        {
+          "language": "en",
+          "source": "salon.com",
+          "source_country": "united-states",
+          "url": "https://www.salon.com/2026/09/18/trump-bans-cnn-ms-now-and-politico-from-white-house-effective-immediately/"
+        },
+        {
+          "language": "pt",
+          "source": "noticiasdecoimbra.pt",
+          "source_country": "po",
+          "url": "https://www.noticiasdecoimbra.pt/trump-proibe-acesso-a-casa-branca-a-cnn-msnow-e-politico/"
+        },
+        {
+          "language": "msa",
+          "source": "astroawani.com",
+          "source_country": "my",
+          "url": "https://www.astroawani.com/berita-dunia/trump-sekat-cnn-msnbc-dan-politico-dari-white-house-beri-amaran-media-lain-bakal-menyusul"
+        },
+        {
+          "language": "es",
+          "source": "teletica.com",
+          "source_country": "united-states",
+          "url": "https://www.teletica.com/internacional/trump-prohibe-el-acceso-a-la-casa-blanca-a-cnn-msnow-y-politico_417582"
+        },
+        {
+          "language": "es",
+          "source": "infobae.com",
+          "source_country": "ar",
+          "url": "https://www.infobae.com/estados-unidos/2026/09/18/trump-anuncio-que-prohibira-el-acceso-de-cnn-ms-now-y-politico-a-la-casa-blanca/"
+        },
+        {
+          "language": "es",
+          "source": "eju.tv",
+          "source_country": "bl",
+          "url": "https://eju.tv/2026/09/trump-prohibe-acceso-a-casa-blanca-a-cnn-msnow-y-politico/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/18/trump-anuncia-que-vai-banir-cnn-ms-now-e-politico-da-casa-branca.ghtml",
+      "rank": 2,
+      "reference_newsroom_count": 20,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elpais.com",
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "infolibre.es",
+        "lavanguardia.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "mediapart.fr",
+        "nos.nl",
+        "radiofrance.fr",
+        "repubblica.it",
+        "rfi.fr",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5054,
+          "corroboration": 0.875,
+          "editorial_weight": 0.7143,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.9024,
+          "source_reliability": 0.9266
+        },
+        "total": 0.7796,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cnn",
+      "subject_names": [
+        "casa blanca",
+        "cnn",
+        "donald trump",
+        "maison blanche",
+        "maison-blanche",
+        "msnow",
+        "politico",
+        "trump"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "El presidente Donald Trump anunció que prohibirá el acceso de tres medios —CNN, MSNOW (MSNBC/ MSNOW según algunas fuentes) y Politico— a la Casa Blanca, diciendo que lo hace por su cobertura y calificándolos de difusores de “noticias falsas”; la medida fue anunciada como efectiva de inmediato y varios medios internacionales replicaron el anuncio."
+    },
+    {
+      "cluster_id": "subject-trump-a8325184eb27",
+      "coherence": 0.46648436407943183,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "india",
+        "it",
+        "my",
+        "sy",
+        "sz",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 9,
+      "editorial_day": "2026-09-19",
+      "headline": "Donald Trump firma una ley que impone nuevas sanciones a Rusia",
+      "independent_source_count": 18,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/19/guerre-en-ukraine-donald-trump-signe-la-loi-graham-permettant-de-nouvelles-sanctions-contre-la-russie_6777144_3210.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/19/trump-signs-into-law-sweeping-russia-sanctions-package-aiming-to-choke-off-revenues-fundin"
+        },
+        {
+          "language": "en",
+          "source": "iheart.com",
+          "source_country": "united-states",
+          "url": "https://kprcradio.iheart.com/content/2026-09-19-trump-signs-russia-sanctions-bill/"
+        },
+        {
+          "language": "it",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://it.euronews.com/2026/09/19/stati-uniti-trump-firma-nuove-sanzioni-contro-la-russia-per-la-guerra-in-ucraina"
+        },
+        {
+          "language": "fr",
+          "source": "sana.sy",
+          "source_country": "sy",
+          "url": "https://sana.sy/fr/international/2330369/"
+        },
+        {
+          "language": "fr",
+          "source": "lematin.ch",
+          "source_country": "sz",
+          "url": "https://www.lematin.ch/story/etats-unis-donald-trump-impose-de-rudes-sanctions-contre-la-russie-103635725"
+        },
+        {
+          "language": "en",
+          "source": "greeleytribune.com",
+          "source_country": "united-states",
+          "url": "https://www.greeleytribune.com/2026/09/18/trump-signs-russia-sanctions/"
+        },
+        {
+          "language": "en",
+          "source": "foxcarolina.com",
+          "source_country": "united-states",
+          "url": "https://www.foxcarolina.com/2026/09/18/pres-trump-signs-sweeping-russia-sanctions-bill-aiming-choke-off-funds-moscow-ukraine-war/"
+        },
+        {
+          "language": "en",
+          "source": "deccanchronicle.com",
+          "source_country": "india",
+          "url": "https://www.deccanchronicle.com/world/americas/trump-signs-russia-sanctions-bill-allowing-100-tariffs-on-india-1988663"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/economy/foreign-trade/trump-signs-russia-iran-sanctions-law-opens-door-to-100-tariffs-on-india/articleshow/134346075.cms"
+        },
+        {
+          "language": "en",
+          "source": "cinaradio.com",
+          "source_country": "india",
+          "url": "https://www.cinaradio.com/2026/09/18/trump-signs-russia-sanctions-bill-clears-way-for-100-india-tariffs/"
+        },
+        {
+          "language": "en",
+          "source": "freemalaysiatoday.com",
+          "source_country": "my",
+          "url": "https://www.freemalaysiatoday.com/category/world/2026/09/19/trump-signs-bill-authorising-broad-new-sanctions-to-squeeze-russia"
+        },
+        {
+          "language": "de",
+          "source": "volksstimme.de",
+          "source_country": "germany",
+          "url": "https://www.volksstimme.de/deutschland-und-welt/politik/trump-unterzeichnet-paket-mit-sanktionen-gegen-russland-4322578"
+        },
+        {
+          "language": "de",
+          "source": "news.de",
+          "source_country": "germany",
+          "url": "https://www.news.de/politik/860008196/trump-unterzeichnet-paket-mit-sanktionen-gegen-russland-donald-trump-news-der-dpa-aktuell-zu-konflikte-krieg-regierung-und-oel/1/"
+        },
+        {
+          "language": "de",
+          "source": "idowa.de",
+          "source_country": "germany",
+          "url": "https://www.idowa.de/politik/trump-unterzeichnet-paket-mit-sanktionen-gegen-russland-art-416007"
+        },
+        {
+          "language": "it",
+          "source": "bresciaoggi.it",
+          "source_country": "it",
+          "url": "https://www.bresciaoggi.it/news/mondo/trump-firma-la-legge-che-impone-nuove-sanzioni-contro-la-russia-1.13128726"
+        },
+        {
+          "language": "it",
+          "source": "prealpina.it",
+          "source_country": "it",
+          "url": "https://www.prealpina.it/news/italia-esteri/548498/trump-firma-la-legge-che-impone-nuove-sanzioni-contro-la-russia.html"
+        },
+        {
+          "language": "en",
+          "source": "theepochtimes.com",
+          "source_country": "united-states",
+          "url": "https://www.theepochtimes.com/us/trump-to-sign-russia-and-iran-sanctions-bill-6089946"
+        }
+      ],
+      "mentioned_countries": [
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "theepochtimes.com",
+      "outbound_url": "https://www.theepochtimes.com/us/trump-to-sign-russia-and-iran-sanctions-bill-6089946",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4665,
+          "corroboration": 0.8182,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8182,
+          "source_reliability": 0.8367
+        },
+        "total": 0.7296,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "russia",
+        "trump",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 32,
+      "summary": "El presidente Donald Trump firmó una ley que autoriza un paquete amplio de sanciones contra Rusia (y medidas también dirigidas a Irán), diseñado para restringir ingresos que financian la guerra en Ucrania; la normativa incluye potestades adicionales para imponer sanciones y en algunos artículos abre la vía a aranceles sobre terceros países."
+    },
+    {
+      "cluster_id": "subject-iran-31733b51f4a1",
+      "coherence": 0.5030168027578734,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "my",
+        "ni",
+        "ro",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-09-19",
+      "headline": "Irán ejecuta a un hombre condenado por espiar para Israel",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/conflit-israel-iran/le-gouvernement-iranien-execute-un-homme-accuse-d-avoir-transmis-a-israel-des-informations-sur-des-missiles_8200400.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/iran-ejecuta-un-hombre-condenado-por-supuesto-espionaje-colaboracion-con-israel_7038779_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/19/ira-executa-homem-espionagem.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "whbl.com",
+          "source_country": "united-states",
+          "url": "https://whbl.com/2026/09/19/iran-executes-man-convicted-of-spying-for-israels-mossad-judiciary-says/"
+        },
+        {
+          "language": "en",
+          "source": "freemalaysiatoday.com",
+          "source_country": "my",
+          "url": "https://www.freemalaysiatoday.com/category/world/2026/09/19/iran-executes-man-accused-of-providing-missile-info-to-israel"
+        },
+        {
+          "language": "en",
+          "source": "punchng.com",
+          "source_country": "ni",
+          "url": "https://punchng.com/iran-executes-man-accused-of-leaking-missile-information-to-israel/"
+        },
+        {
+          "language": "glg",
+          "source": "diariosigloxxi.com",
+          "source_country": "spain",
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260919092929/iran-anuncia-ejecucion-supuesto-espia-israel"
+        },
+        {
+          "language": "ron",
+          "source": "mediafax.ro",
+          "source_country": "ro",
+          "url": "https://www.mediafax.ro/stirile-zilei/iran-un-barbat-a-fost-executat-dupa-ce-a-fost-acuzat-ca-a-furnizat-mossadului-informatii-despre-siturile-de-rachete-23810133"
+        }
+      ],
+      "mentioned_countries": [
+        "ir",
+        "is"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/19/ira-executa-homem-espionagem.ghtml",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "francetvinfo.fr",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.503,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7037
+        },
+        "total": 0.7188,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "iran",
+      "subject_names": [
+        "iran",
+        "israel",
+        "teheran"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "El poder judicial iraní anunció la ejecución de un hombre acusado y condenado por colaborar con el servicio de inteligencia israelí y por proporcionar información sobre emplazamientos de misiles; las notas coinciden en que la pena capital fue aplicada tras las acusaciones de espionaje y colaboración con Israel."
+    },
+    {
+      "cluster_id": "subject-leyen-cd8a415d547b",
+      "coherence": 0.5845550406727947,
+      "consequence": 3,
+      "countries": [
+        "china",
+        "france",
+        "ni",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-18",
+      "headline": "Ursula von der Leyen propone que Canadá sea miembro asociado de la UE",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/le-canada-futur-membre-associe-comment-ursula-von-der-leyen-a-pris-de-court-lue-Q6OWCDUOJFBHJMQZJRTURXUWYE/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260916/11636009/von-der-leyen-alianza-seguridad-otan-ue-canada-reino-unido-ucrania-smr.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/carney-escenifica-frente-comun-ue-guerra-diplomatica-comercial-trump-canada_1_13512026.html"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/eu-chief-ursula-von-der-leyen-proposes-canada-becoming-the-blocs-1st-associate-member"
+        },
+        {
+          "language": "en",
+          "source": "nigeriasun.com",
+          "source_country": "ni",
+          "url": "http://www.nigeriasun.com/news/279311505/eu-s-von-der-leyen-proposes-associate-membership-for-canada"
+        },
+        {
+          "language": "en",
+          "source": "asiabulletin.com",
+          "source_country": "china",
+          "url": "http://www.asiabulletin.com/news/279311505/eu-s-von-der-leyen-proposes-associate-membership-for-canada"
+        },
+        {
+          "language": "en",
+          "source": "pittsburghstar.com",
+          "source_country": "united-states",
+          "url": "http://www.pittsburghstar.com/news/279311505/eu-s-von-der-leyen-proposes-associate-membership-for-canada"
+        },
+        {
+          "language": "en",
+          "source": "neworleanssun.com",
+          "source_country": "united-states",
+          "url": "http://www.neworleanssun.com/news/279311505/eu-s-von-der-leyen-proposes-associate-membership-for-canada"
+        }
+      ],
+      "mentioned_countries": [
+        "ca"
+      ],
+      "origin_country": "china",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/carney-escenifica-frente-comun-ue-guerra-diplomatica-comercial-trump-canada_1_13512026.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5846,
+          "corroboration": 0.7143,
           "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.68
+          "prominence": 0.6667,
+          "source_reliability": 0.7143
         },
-        "total": 0.6548,
+        "total": 0.7021,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "suecia",
+      "subject_label": "leyen",
       "subject_names": [
-        "suecia",
-        "suede"
+        "canada",
+        "carney",
+        "donald trump",
+        "leyen",
+        "mark carney",
+        "strasbourg",
+        "trump",
+        "ursula"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "El recuento definitivo, incluido el voto por correo y el externo, confirma la victoria del bloque de izquierdas en las elecciones suecas; tras ese resultado el primer ministro ha presentado su dimisión."
+      "subject_newsroom_count": 8,
+      "summary": "La presidenta de la Comisión Europea, Ursula von der Leyen, ha planteado la idea de que Canadá se convierta en el primer \"miembro asociado\" de la Unión Europea, una propuesta destinada a reforzar la cooperación entre el bloque y Canadá. Los artículos coinciden en que la iniciativa fue anunciada por von der Leyen y presenta a Canadá como candidato para un estatus nuevo de relación más estrecha con la UE."
     }
   ],
-  "discarded_ingested": 238,
+  "discarded_ingested": 296,
   "discarded_kept": 5,
-  "generated_at": "2026-09-18T09:58:05.023873+00:00",
+  "generated_at": "2026-09-19T09:40:04.661477+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

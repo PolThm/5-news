@@ -2,146 +2,382 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-trump-0733cf2dece5"
+        "subject-macron-44856f95ff9d"
       ],
-      "cluster_id": "subject-trump-0733cf2dece5",
-      "coherence": 0.4652523783179058,
-      "consequence": 3,
+      "cluster_id": "subject-macron-44856f95ff9d",
+      "coherence": 0.521774292304182,
+      "consequence": 2,
       "countries": [
-        "be",
-        "brazil",
+        "au",
         "france",
-        "germany",
-        "it",
-        "spain",
-        "united-states"
+        "nl",
+        "spain"
       ],
-      "country_count": 7,
-      "editorial_day": "2026-09-18",
-      "headline": "Trump anuncia avances hacia la creación de una base militar de EE. UU. en Polonia",
-      "independent_source_count": 7,
+      "country_count": 4,
+      "editorial_day": "2026-09-19",
+      "headline": "Macron ordena un plan para proteger infraestructuras críticas frente a ataques rusos",
+      "independent_source_count": 10,
       "members": [
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/la-creation-dune-base-militaire-americaine-en-pologne-avance-trump-sen-felicite-20260917_3ZAE53QG2JGQDFPIKQGRS5ZS7I/"
+          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/face-aux-attaques-hybrides-russes-emmanuel-macron-promet-un-plan-pour-les-infrastructures-critiques_8199287.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260917-pologne-etats-unis-base-americaine-donald-trump-progres-majeurs-lituanie"
+          "url": "https://www.lexpress.fr/monde/europe/menace-russe-emmanuel-macron-annonce-un-plan-pour-proteger-les-infrastructures-critiques-francaises-XWMLSE7R3FCTLDPG2OR6GTZBY4/"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/eeuu/20260917/trump-anuncia-avances-base-permanente-eeuu-polonia-refuerce-flanco-otan/1003744387796_0.html"
+          "url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260918/11638460/macron-pide-francia-plan-proteger-infraestructuras-criticas-amenaza-rusa.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/macron-ordena-plan-proteccion-infraestructuras-criticas-amenaza-hibrida-rusa-francia_1_13521457.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/macron-ordena-un-plan-francia-contra-ataques-infraestructuras-criticas-agresividad-rusa-esta-cambiando_7038734_0.html"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2631534"
+        },
+        {
+          "language": "es",
+          "source": "mundiario.com",
+          "source_country": "spain",
+          "url": "https://www.mundiario.com/articulo/internacional/macron-ordena-blindar-infraestructuras-criticas-francia-amenaza-hibrida-rusa/20260919082744442012.html"
         },
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/18/trump-touts-major-progress-towards-setting-up-us-military-base-in-poland"
+          "source": "thelocal.fr",
+          "source_country": "france",
+          "url": "https://www.thelocal.fr/20260918/macron-orders-protection-of-frances-infrastructure-against-russian-hybrid-attacks"
+        },
+        {
+          "language": "de",
+          "source": "orf.at",
+          "source_country": "au",
+          "url": "https://orf.at/stories/3442576/"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "rs"
+      ],
+      "origin_country": "au",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html",
+      "rank": 1,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "nos.nl"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5218,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7714
+        },
+        "total": 0.6613,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "francia",
+        "macron"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "El presidente francés Emmanuel Macron ha ordenado la elaboración de un plan para reforzar la protección de las infraestructuras críticas del país ante lo que las autoridades describen como una amenaza híbrida o ataques procedentes de Rusia; la iniciativa busca blindar servicios esenciales frente a agresiones crecientes señaladas por el Ejecutivo."
+    },
+    {
+      "_linked_ids": [
+        "subject-suecia-5272fccfaf59",
+        "subject-suecia-ea8c9e3393d9"
+      ],
+      "cluster_id": "subject-suecia-5272fccfaf59",
+      "coherence": 0.4039458330279887,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-18",
+      "headline": "La izquierda gana las elecciones en Suecia en un resultado muy ajustado",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/legislatives-en-suede-victorieuse-la-gauche-face-au-casse-tete-de-la-formation-d-un-gouvernement-20260918"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260913.OBS118213/legislatives-en-suede-la-gauche-en-tete-l-extreme-droite-recule.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-la-gauche-et-le-bloc-de-droite-au-coude-a-coude-56T6D3GNSNDALLRJVFTHXFQ4QU/"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/"
         },
         {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml"
-        },
-        {
-          "language": "nl",
-          "source": "newsmonkey.be",
-          "source_country": "be",
-          "url": "https://newsmonkey.be/trump-kondigt-permanente-amerikaanse-militaire-basis-in-polen-aan/"
-        },
-        {
-          "language": "de",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://de.euronews.com/2026/09/18/trump-us-militarbasis-polen"
-        },
-        {
-          "language": "de",
-          "source": "az-online.de",
-          "source_country": "germany",
-          "url": "https://www.az-online.de/politik/us-militaerstuetzpunkt-in-polen-trump-meldet-grosse-fortschritte-zr-94498482.html"
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/esquerda-vence-eleicoes-de-suecia.ghtml"
         }
       ],
       "mentioned_countries": [
-        "pl",
-        "united-states"
+        "sw"
       ],
-      "origin_country": "be",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 5,
+      "origin_country": "brazil",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/",
+      "rank": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elespanol.com",
-        "euronews.com",
-        "france24.com",
         "globo.com",
-        "liberation.fr"
+        "la-croix.com",
+        "lexpress.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4653,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
+          "coherence": 0.4039,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7333
+          "novelty": 0.5,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.7328,
+        "total": 0.6502,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "trump",
+      "subject_label": "suecia",
       "subject_names": [
-        "donald trump",
-        "ice",
-        "kennedy center",
-        "pologne",
-        "polonia",
-        "supremo",
-        "trump",
-        "washington"
+        "suecia",
+        "suede"
       ],
-      "subject_newsroom_count": 28,
-      "summary": "Varios medios coinciden en que el presidente Trump declaró que hay \"progresos\" o \"avances mayores\" en las negociaciones para establecer una base militar permanente de Estados Unidos en Polonia destinada a reforzar el flanco este de la OTAN."
+      "subject_newsroom_count": 6,
+      "summary": "La izquierda obtuvo la victoria en las elecciones legislativas suecas en un escrutinio muy reñido; los artículos coinciden en que el resultado deja un parlamento parejo entre bloques y complica la formación de un gobierno, mientras que la extrema derecha retrocede respecto a su avance anterior aunque su entrada en el gabinete sigue siendo una posibilidad discutida."
+    },
+    {
+      "_linked_ids": [
+        "subject-ukraine-3da50bc00dbd"
+      ],
+      "cluster_id": "subject-ukraine-3da50bc00dbd",
+      "coherence": 0.6007197182155009,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "india",
+        "it",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-19",
+      "headline": "Rusia celebra elecciones legislativas y vota también en territorios ocupados",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/18/legislatives-en-russie-les-electeurs-appeles-aux-urnes-plus-de-quatre-ans-apres-le-debut-de-la-guerre-en-ukraine_6776825_3210.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/18/russians-vote-in-elections-with-no-party-opposing-putin-or-war-in-ukraine"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/19/g-s1-144169/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russia-begins-3-days-of-voting-in-a-parliamentary-election-set-to-cement-the-kremlins-power"
+        },
+        {
+          "language": "en",
+          "source": "ketr.org",
+          "source_country": "united-states",
+          "url": "https://www.ketr.org/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "tspr.org",
+          "source_country": "united-states",
+          "url": "https://www.tspr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wkms.org",
+          "source_country": "united-states",
+          "url": "https://www.wkms.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "kunc.org",
+          "source_country": "united-states",
+          "url": "https://www.kunc.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wkyufm.org",
+          "source_country": "united-states",
+          "url": "https://www.wkyufm.org/news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wemu.org",
+          "source_country": "united-states",
+          "url": "https://www.wemu.org/npr-national-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "upr.org",
+          "source_country": "united-states",
+          "url": "https://www.upr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wrkf.org",
+          "source_country": "united-states",
+          "url": "https://www.wrkf.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "foreignpolicy.com",
+          "source_country": "united-states",
+          "url": "https://foreignpolicy.com/2026/09/18/russia-elections-state-duma-results-putin-democracy-ukraine/"
+        },
+        {
+          "language": "ben",
+          "source": "sangbadpratidin.in",
+          "source_country": "india",
+          "url": "https://www.sangbadpratidin.in/world/parliamentary-election-in-russia-during-ukraine-war/pid/1345730/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "lemonde.fr",
+        "npr.org",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6007,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.814
+        },
+        "total": 0.6428,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "graham",
+        "kremlin",
+        "putin",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Rusia celebró unas elecciones parciales a la Duma que por primera vez se realizan desde el inicio de la guerra en Ucrania; la votación se extendió varios días, reforzó el control del Kremlin y se llevó a cabo también en regiones que Moscú ha anexado o controla durante el conflicto, sin que surgiera una fuerza política que se presente claramente en oposición a Putin o a la guerra."
     },
     {
       "_linked_ids": [
         "subject-kosovo-1a1b6c4c9768",
+        "subject-kosovo-4e5f16968b33",
         "subject-kosovo-f6ec3074abd4",
         "subject-thaci-eac6b22b7912"
       ],
-      "cluster_id": "subject-kosovo-f6ec3074abd4",
-      "coherence": 0.4549865505988079,
+      "cluster_id": "subject-kosovo-4e5f16968b33",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "brazil",
-        "france",
-        "germany",
-        "it",
         "spain"
       ],
-      "country_count": 5,
+      "country_count": 2,
       "editorial_day": "2026-09-16",
       "headline": "El Tribunal de La Haya condena a Hashim Thaçi a 25 años de prisión",
-      "independent_source_count": 6,
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/au-kosovo-l-ancien-president-hashim-thaci-condamne-a-25-ans-de-prison-pour-crimes-de-guerre-20260916"
-        },
         {
           "language": "es",
           "source": "lavanguardia.com",
@@ -153,18 +389,6 @@
           "source": "eldiario.es",
           "source_country": "spain",
           "url": "https://www.eldiario.es/internacional/expresidente-kosovo-hashim-thaci-condenado-25-anos-carcel-crimenes-guerra_1_13513873.html"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/shock-in-kosovo-as-hague-convicts-former-president-thaci/a-79294916?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/09/16/kosovo-war-crimes-court-jails-ex-president-hashim-thaci-for-25-years-sparking-mass-protest"
         },
         {
           "language": "pt",
@@ -179,232 +403,10 @@
       "origin_country": "brazil",
       "outbound_source": "globo.com",
       "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/16/ex-presidente-do-kosovo-e-condenado-a-25-anos-de-prisao-por-crimes-de-guerra.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "dw.com",
-        "eldiario.es",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "lefigaro.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.455,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
-        },
-        "total": 0.7067,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kosovo",
-      "subject_names": [
-        "hashim thaci",
-        "kosovo"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "El ex presidente de Kosovo Hashim Thaçi ha sido condenado por el tribunal de La Haya a 25 años de prisión por crímenes de guerra cometidos durante el conflicto de Kosovo; la condena ha provocado conmoción y protestas masivas en Kosovo según las informaciones."
-    },
-    {
-      "_linked_ids": [
-        "subject-suecia-8dd817550042"
-      ],
-      "cluster_id": "subject-suecia-8dd817550042",
-      "coherence": 0.41078869118260053,
-      "consequence": 3,
-      "countries": [
-        "ec",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-17",
-      "headline": "El bloque izquierdista gana las elecciones en Suecia y el primer ministro dimite",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-17/el-bloque-de-centroizquierda-gana-las-elecciones-en-suecia-segun-el-escrutinio-definitivo.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/recuento-voto-exterior-confirma-triunfo-izquierda-suecia_1_13519153.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/primer-ministro-conservador-sueco-ulf-kristersson-admite-derrota-electoral-anuncia-su-renuncia_7038037_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/recuento-voto-exterior-confirma-triunfo-oposicion-izquierda-suecia_7038023_0.html"
-        },
-        {
-          "language": "es",
-          "source": "confirmado.net",
-          "source_country": "ec",
-          "url": "https://confirmado.net/suecia-dimite-el-primer-ministro-de-suecia-tras-la-victoria-del-bloque-izquierdista-en-las-elecciones/"
-        }
-      ],
-      "mentioned_countries": [
-        "sw"
-      ],
-      "origin_country": "ec",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4108,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.68
-        },
-        "total": 0.6641,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "suecia",
-      "subject_names": [
-        "suecia",
-        "suede"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "El recuento definitivo, incluido el voto por correo y el externo, confirma la victoria del bloque de izquierdas en las elecciones suecas; tras ese resultado el primer ministro ha presentado su dimisión."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-b2b93fdc8338"
-      ],
-      "cluster_id": "subject-ukraine-b2b93fdc8338",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-18",
-      "headline": "Polonia advierte que Rusia podría lanzar ataques híbridos contra aliados de Ucrania",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/17/donald-trump-eu-european-union-mark-carney-canada-associate-membership-tariffs-threats-germany-merz-latest-news-updates"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/18/nx-s1-5973265/poland-nato-russia"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "pl"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/live/2026/sep/17/donald-trump-eu-european-union-mark-carney-canada-associate-membership-tariffs-threats-germany-merz-latest-news-updates",
       "rank": 4,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "npr.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6294,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "russian",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "Los artículos coinciden en que el primer ministro polaco advirtió sobre el riesgo de que Rusia lleve a cabo ataques híbridos o incidentes \"accidentales\" apuntando a países que apoyan a Ucrania, y llamó a aumentar la vigilancia y la cooperación entre aliados para prevenir y responder a esas acciones."
-    },
-    {
-      "_linked_ids": [
-        "subject-rusia-bf27cbe189f8"
-      ],
-      "cluster_id": "subject-rusia-bf27cbe189f8",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-15",
-      "headline": "Rusia y Ucrania continúan ataques pese a anuncio de tregua de Trump",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260915/11635151/rusia-y-ucrania-desoyen-la-tregua-anunciada-por-trump.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/15/russia-e-ucrania-seguem-ataques-apesar-de-anuncio-de-trump-sobre-tregua.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260915/11635151/rusia-y-ucrania-desoyen-la-tregua-anunciada-por-trump.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
+        "eldiario.es",
         "globo.com",
         "lavanguardia.com"
       ],
@@ -412,35 +414,94 @@
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "editorial_weight": 0.2727,
           "freshness": 0.3536,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.25,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6269,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "kosovo",
+      "subject_names": [
+        "kosovo"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "El Tribunal Especial para Kosovo en La Haya declaró a Hashim Thaçi, expresidente de Kosovo, culpable de crímenes de guerra y lo condenó a 25 años de cárcel; las noticias coinciden en que la sentencia fue impuesta por su papel en delitos cometidos durante y después del conflicto en Kosovo."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-5d6c4f418d42"
+      ],
+      "cluster_id": "subject-ceuta-5d6c4f418d42",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-18",
+      "headline": "La policía dispara al aire mientras trasladan a miles de migrantes en Ceuta",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/18/officers-fire-warning-shots-as-thousands-of-migrants-moved-to-new-facility-in-ceuta"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/my-europe/2026/09/18/officers-fire-warning-shots-as-thousands-of-migrants-moved-to-new-facility-in-ceuta",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6165,
+        "total": 0.6236,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "rusia",
+      "subject_label": "ceuta",
       "subject_names": [
-        "donald trump",
-        "ice",
-        "kennedy center",
-        "rusia",
-        "supremo",
-        "trump",
-        "ucrania",
-        "washington"
+        "ceuta",
+        "marruecos",
+        "sanchez",
+        "vivas"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Tras el anuncio de una tregua por parte del presidente Trump, ambos países siguieron lanzando ataques; las informaciones coinciden en que ni Rusia ni Ucrania respetaron la suspensión de hostilidades anunciada y los combates continuaron."
+      "subject_newsroom_count": 19,
+      "summary": "En Ceuta, la policía usó disparos al aire y marcó presencia armada mientras comenzaba el traslado de miles de migrantes desde las playas a una nueva instalación; las autoridades estaban moviendo a grandes grupos hacia ese centro y hubo tensión durante la operación."
     }
   ],
-  "discarded_ingested": 121,
+  "discarded_ingested": 85,
   "discarded_kept": 5,
-  "generated_at": "2026-09-18T09:58:05.023873+00:00",
+  "generated_at": "2026-09-19T09:40:04.661477+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

@@ -1,194 +1,344 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-0733cf2dece5",
-      "coherence": 0.4652523783179058,
-      "consequence": 3,
+      "cluster_id": "subject-macron-44856f95ff9d",
+      "coherence": 0.521774292304182,
+      "consequence": 2,
       "countries": [
-        "be",
-        "brazil",
+        "au",
         "france",
-        "germany",
-        "it",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-09-18",
-      "headline": "Trump says major progress made on establishing a US military base in Poland",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/la-creation-dune-base-militaire-americaine-en-pologne-avance-trump-sen-felicite-20260917_3ZAE53QG2JGQDFPIKQGRS5ZS7I/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260917-pologne-etats-unis-base-americaine-donald-trump-progres-majeurs-lituanie"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/eeuu/20260917/trump-anuncia-avances-base-permanente-eeuu-polonia-refuerce-flanco-otan/1003744387796_0.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/18/trump-touts-major-progress-towards-setting-up-us-military-base-in-poland"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml"
-        },
-        {
-          "language": "nl",
-          "source": "newsmonkey.be",
-          "source_country": "be",
-          "url": "https://newsmonkey.be/trump-kondigt-permanente-amerikaanse-militaire-basis-in-polen-aan/"
-        },
-        {
-          "language": "de",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://de.euronews.com/2026/09/18/trump-us-militarbasis-polen"
-        },
-        {
-          "language": "de",
-          "source": "az-online.de",
-          "source_country": "germany",
-          "url": "https://www.az-online.de/politik/us-militaerstuetzpunkt-in-polen-trump-meldet-grosse-fortschritte-zr-94498482.html"
-        }
-      ],
-      "mentioned_countries": [
-        "pl",
-        "united-states"
-      ],
-      "origin_country": "be",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "elespanol.com",
-        "euronews.com",
-        "france24.com",
-        "globo.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4653,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7333
-        },
-        "total": 0.7417,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "ice",
-        "kennedy center",
-        "pologne",
-        "polonia",
-        "supremo",
-        "trump",
-        "washington"
-      ],
-      "subject_newsroom_count": 28,
-      "summary": "President Donald Trump announced that negotiations are advancing and described \"major progress\" toward establishing a permanent US military base in Poland to strengthen NATO's eastern flank."
-    },
-    {
-      "cluster_id": "subject-suecia-8dd817550042",
-      "coherence": 0.41078869118260053,
-      "consequence": 3,
-      "countries": [
-        "ec",
+        "nl",
         "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-17",
-      "headline": "Left-leaning bloc wins Sweden election and prime minister resigns",
-      "independent_source_count": 5,
+      "country_count": 4,
+      "editorial_day": "2026-09-19",
+      "headline": "Macron orders plan to protect France’s critical infrastructure from Russian attacks",
+      "independent_source_count": 10,
       "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/face-aux-attaques-hybrides-russes-emmanuel-macron-promet-un-plan-pour-les-infrastructures-critiques_8199287.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/menace-russe-emmanuel-macron-annonce-un-plan-pour-proteger-les-infrastructures-critiques-francaises-XWMLSE7R3FCTLDPG2OR6GTZBY4/"
+        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-17/el-bloque-de-centroizquierda-gana-las-elecciones-en-suecia-segun-el-escrutinio-definitivo.html"
+          "url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html"
         },
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html"
+          "url": "https://www.lavanguardia.com/internacional/20260918/11638460/macron-pide-francia-plan-proteger-infraestructuras-criticas-amenaza-rusa.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/recuento-voto-exterior-confirma-triunfo-izquierda-suecia_1_13519153.html"
+          "url": "https://www.eldiario.es/internacional/macron-ordena-plan-proteccion-infraestructuras-criticas-amenaza-hibrida-rusa-francia_1_13521457.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/primer-ministro-conservador-sueco-ulf-kristersson-admite-derrota-electoral-anuncia-su-renuncia_7038037_0.html"
+          "url": "https://www.20minutos.es/internacional/macron-ordena-un-plan-francia-contra-ataques-infraestructuras-criticas-agresividad-rusa-esta-cambiando_7038734_0.html"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2631534"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "mundiario.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/recuento-voto-exterior-confirma-triunfo-oposicion-izquierda-suecia_7038023_0.html"
+          "url": "https://www.mundiario.com/articulo/internacional/macron-ordena-blindar-infraestructuras-criticas-francia-amenaza-hibrida-rusa/20260919082744442012.html"
         },
         {
-          "language": "es",
-          "source": "confirmado.net",
-          "source_country": "ec",
-          "url": "https://confirmado.net/suecia-dimite-el-primer-ministro-de-suecia-tras-la-victoria-del-bloque-izquierdista-en-las-elecciones/"
+          "language": "en",
+          "source": "thelocal.fr",
+          "source_country": "france",
+          "url": "https://www.thelocal.fr/20260918/macron-orders-protection-of-frances-infrastructure-against-russian-hybrid-attacks"
+        },
+        {
+          "language": "de",
+          "source": "orf.at",
+          "source_country": "au",
+          "url": "https://orf.at/stories/3442576/"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "rs"
+      ],
+      "origin_country": "au",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html",
+      "rank": 1,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "nos.nl"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5218,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7714
+        },
+        "total": 0.6879,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "francia",
+        "macron"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "French President Emmanuel Macron has ordered a national plan to strengthen protection of France’s critical infrastructure against Russian “hybrid” or other aggressive attacks, citing a changing threat and the need to better safeguard key facilities and services."
+    },
+    {
+      "cluster_id": "subject-ukraine-3da50bc00dbd",
+      "coherence": 0.6007197182155009,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "india",
+        "it",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-19",
+      "headline": "Russia holds nationwide parliamentary elections amid ongoing war in Ukraine",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/18/legislatives-en-russie-les-electeurs-appeles-aux-urnes-plus-de-quatre-ans-apres-le-debut-de-la-guerre-en-ukraine_6776825_3210.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/18/russians-vote-in-elections-with-no-party-opposing-putin-or-war-in-ukraine"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/19/g-s1-144169/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russia-begins-3-days-of-voting-in-a-parliamentary-election-set-to-cement-the-kremlins-power"
+        },
+        {
+          "language": "en",
+          "source": "ketr.org",
+          "source_country": "united-states",
+          "url": "https://www.ketr.org/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "tspr.org",
+          "source_country": "united-states",
+          "url": "https://www.tspr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wkms.org",
+          "source_country": "united-states",
+          "url": "https://www.wkms.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "kunc.org",
+          "source_country": "united-states",
+          "url": "https://www.kunc.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wkyufm.org",
+          "source_country": "united-states",
+          "url": "https://www.wkyufm.org/news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wemu.org",
+          "source_country": "united-states",
+          "url": "https://www.wemu.org/npr-national-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "upr.org",
+          "source_country": "united-states",
+          "url": "https://www.upr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "wrkf.org",
+          "source_country": "united-states",
+          "url": "https://www.wrkf.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+        },
+        {
+          "language": "en",
+          "source": "foreignpolicy.com",
+          "source_country": "united-states",
+          "url": "https://foreignpolicy.com/2026/09/18/russia-elections-state-duma-results-putin-democracy-ukraine/"
+        },
+        {
+          "language": "ben",
+          "source": "sangbadpratidin.in",
+          "source_country": "india",
+          "url": "https://www.sangbadpratidin.in/world/parliamentary-election-in-russia-during-ukraine-war/pid/1345730/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "lemonde.fr",
+        "npr.org",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6007,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.814
+        },
+        "total": 0.6695,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "graham",
+        "kremlin",
+        "putin",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Russia is conducting nationwide State Duma elections — the first since the start of the war in Ukraine — with voting held across the country, including in territories seized during the conflict; the vote is widely seen as set to reinforce Kremlin control and features no major parties opposing President Vladimir Putin or the war."
+    },
+    {
+      "cluster_id": "subject-suecia-5272fccfaf59",
+      "coherence": 0.4039458330279887,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-18",
+      "headline": "Left bloc wins Sweden election but must build a coalition to govern",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/legislatives-en-suede-victorieuse-la-gauche-face-au-casse-tete-de-la-formation-d-un-gouvernement-20260918"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260913.OBS118213/legislatives-en-suede-la-gauche-en-tete-l-extreme-droite-recule.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-la-gauche-et-le-bloc-de-droite-au-coude-a-coude-56T6D3GNSNDALLRJVFTHXFQ4QU/"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/esquerda-vence-eleicoes-de-suecia.ghtml"
         }
       ],
       "mentioned_countries": [
         "sw"
       ],
-      "origin_country": "ec",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/andersson-acelera-contactos-espinosa-formacion-gobierno-suecia-20260917131152-nt.html",
-      "rank": 2,
+      "origin_country": "brazil",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/",
+      "rank": 3,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
+        "globo.com",
+        "la-croix.com",
+        "lexpress.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4108,
+          "coherence": 0.4039,
           "corroboration": 0.5,
           "editorial_weight": 0.3333,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.68
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.6548,
+        "total": 0.6509,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "suecia",
@@ -196,302 +346,139 @@
         "suecia",
         "suede"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "After final counts including postal and overseas ballots, the left-leaning bloc has secured victory in Sweden’s general election; the incumbent prime minister has resigned following the confirmed result."
+      "subject_newsroom_count": 6,
+      "summary": "Sweden’s left bloc emerged ahead in the legislative election, while the far right lost ground; results were close between left and right blocs, leaving the victorious left facing a complex task of forming a government and potential uncertainty over the far right’s role."
     },
     {
-      "cluster_id": "subject-ukraine-b2b93fdc8338",
+      "cluster_id": "subject-ceuta-5d6c4f418d42",
       "coherence": null,
       "consequence": 3,
       "countries": [
-        "united-kingdom",
-        "united-states"
+        "it",
+        "united-kingdom"
       ],
       "country_count": 2,
       "editorial_day": "2026-09-18",
-      "headline": "Poland warns Russia may carry out hybrid or accidental strikes on allies",
+      "headline": "Police fire shots as thousands of migrants moved from Ceuta beaches to new facility",
       "independent_source_count": 2,
       "members": [
         {
           "language": "en",
-          "source": "theguardian.com",
+          "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/17/donald-trump-eu-european-union-mark-carney-canada-associate-membership-tariffs-threats-germany-merz-latest-news-updates"
+          "url": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/18/nx-s1-5973265/poland-nato-russia"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/18/officers-fire-warning-shots-as-thousands-of-migrants-moved-to-new-facility-in-ceuta"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "pl"
+        "spain"
       ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "theguardian.com",
-      "outbound_url": "https://www.theguardian.com/world/live/2026/sep/17/donald-trump-eu-european-union-mark-carney-canada-associate-membership-tariffs-threats-germany-merz-latest-news-updates",
-      "rank": 3,
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/my-europe/2026/09/18/officers-fire-warning-shots-as-thousands-of-migrants-moved-to-new-facility-in-ceuta",
+      "rank": 4,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "npr.org",
-        "theguardian.com"
+        "bbc.co.uk",
+        "euronews.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6494,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "russian",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "Poland’s prime minister and other officials warned that Russia is planning or could cause ‘hybrid’ and potentially ‘accidental’ strikes against countries that support Ukraine. They said such actions could target allies through covert or indirect means and cautioned NATO members to be vigilant, while urging preparedness and closer international coordination to deter and respond to these threats."
-    },
-    {
-      "cluster_id": "subject-sebastien-lecornu-6c4b522ecbff",
-      "coherence": 0.4672823863257718,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-18",
-      "headline": "France announces 2027 budget plan targeting €54 billion in savings",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/budget-2027-lecornu-cherche-ses-milliards-20260917_FTEIY3FT5ZB23E2G2L7BDAVHRI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/budget-2027-sebastien-lecornu-mise-sur-54-milliards-d-euros-deconomies-20260917"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/politique/170926/sebastien-lecornu-presente-un-budget-offensif-avec-54-milliards-d-economies"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260917-france-s%C3%A9bastien-lecornu-pr%C3%A9sente-un-budget-offensif-pour-2027-avec-54-milliards-d-%C3%A9conomies"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/economie/budget-2027-retraites-fonctionnaires-les-pistes-de-sebastien-lecornu-pour-economiser-54-milliards-FPBDQOOAFVHQ5PUDV2WSOM7FNU/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/politique/budget-2027-sebastien-lecornu-propose-un-effort-denviron-54-milliards-deuros-D5M6FPJYHJG2XGDATIJ26MUOCA/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/politique/budget-2027-les-trois-pistes-du-gouvernement-lecornu-pour-mettre-les-retraites-a-contribution-IBFR3HSDGBDHPOGO5RGPJR4RZM/"
-        },
-        {
-          "language": "fr",
-          "source": "abcbourse.com",
-          "source_country": "france",
-          "url": "https://www.abcbourse.com/marches/newsContent/702722"
-        },
-        {
-          "language": "fr",
-          "source": "abcbourse.com",
-          "source_country": "france",
-          "url": "https://www.abcbourse.com/forums/dmsg2?id=1112488"
-        },
-        {
-          "language": "fr",
-          "source": "huffingtonpost.fr",
-          "source_country": "france",
-          "url": "https://www.huffingtonpost.fr/politique/article/budget-quels-efforts-a-qui-et-combien-lecornu-devoile-sa-copie-pour-2027_326330.html"
-        },
-        {
-          "language": "fr",
-          "source": "ladepeche.fr",
-          "source_country": "france",
-          "url": "https://www.ladepeche.fr/2026/09/17/gel-des-depenses-de-letat-economies-effort-demande-aux-retraites-et-aux-collectivites-493-lecornu-detaille-un-effort-de-54-milliards-deuros-pour-le-13556162.php"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/politique/budget-2027-les-trois-pistes-du-gouvernement-lecornu-pour-mettre-les-retraites-a-contribution-IBFR3HSDGBDHPOGO5RGPJR4RZM/",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "lexpress.fr",
-        "liberation.fr",
-        "mediapart.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4673,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7838
-        },
-        "total": 0.6276,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sebastien lecornu",
-      "subject_names": [
-        "france",
-        "francia",
-        "lecornu",
-        "leon xiv",
-        "notre-dame",
-        "pisa",
-        "sebastien lecornu",
-        "senat",
-        "zidane"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "France’s government, presented by Sébastien Lecornu, unveiled a 2027 budget plan that aims to achieve about €54 billion in savings without raising taxes. The plan includes spending freezes and measures that would ask contributions from retirees, public-sector workers and local governments, and relies on a mix of expenditure cuts and reforms to meet the savings target."
-    },
-    {
-      "cluster_id": "subject-ceuta-0432f12a10b2",
-      "coherence": 0.45818688048158274,
-      "consequence": 2,
-      "countries": [
-        "spain",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-18",
-      "headline": "European Parliament labels Ceuta events an \"invasion\" and calls for accountability",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/politica/2026/09/17/6aabd5aae5fdeac1528b45a1.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/17/6aabc78a21efa05b188b4586.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/18/6aac08cbfc6c8359438b45b1.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/16/6aaabe69fc6c835d248b4589.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/parlamento-europeo-respalda-las-devoluciones-rapidas-blindaje-frontera-tras-crisis-ceuta-con-voto-contra-los-socialistas_7037789_0.html"
-        },
-        {
-          "language": "es",
-          "source": "estrelladigital.es",
-          "source_country": "spain",
-          "url": "https://www.estrelladigital.es/articulo/espana/europa-da-espalda-sanchez-ceuta-eurocamara-habla-invasion-exige-responsabilidades-marruecos/20260918094647451198.html"
-        },
-        {
-          "language": "es",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://es.euronews.com/my-europe/2026/09/17/eurocamara-responsabiliza-marruecos-asalto-masivo-ceuta-rechazo-socialistas"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "mo"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/16/6aaabe69fc6c835d248b4589.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elmundo.es",
-        "euronews.com",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4582,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.7143
-        },
-        "total": 0.624,
+        "total": 0.6143,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
-        "audiencia",
-        "aznar",
         "ceuta",
-        "eurocamara",
-        "feijoo",
         "marruecos",
-        "oscar puente",
-        "parlamento europeo",
-        "psoe",
-        "rabat",
-        "sanchez"
+        "sanchez",
+        "vivas"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "The European Parliament adopted a resolution describing the recent assault on Ceuta as an \"invasion,\" blamed Morocco and demanded that responsibilities be assigned; the measure faced opposition and was rejected by Socialist MEPs, who vetoed or opposed parts of the text."
+      "subject_newsroom_count": 19,
+      "summary": "Spanish police used gunfire into the air while overseeing the relocation of thousands of migrants from Ceuta’s beaches to a newly opened reception centre, with officers reporting large crowds being moved to the facility during the operation."
+    },
+    {
+      "cluster_id": "subject-pologne-26d2957b8db1",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-18",
+      "headline": "Trump says US is close to agreeing a permanent military base in Poland",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-anuncia-que-eeuu-esta-cerca-acordar-creacion-una-base-militar-permanente-polonia_7038517_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/17/trump-anuncia-que-eua-terao-base-na-polonia.ghtml",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6143,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "pologne",
+      "subject_names": [
+        "donald trump",
+        "pologne",
+        "polonia",
+        "trump"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Former President Donald Trump stated that the United States is close to reaching an agreement to establish a permanent U.S. military base in Poland, and he linked the talks to recent Russian threats; both articles convey that negotiations are advancing toward such a base."
     }
   ],
-  "discarded_ingested": 109,
+  "discarded_ingested": 76,
   "discarded_kept": 5,
-  "generated_at": "2026-09-18T09:58:05.023873+00:00",
+  "generated_at": "2026-09-19T09:40:04.661477+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

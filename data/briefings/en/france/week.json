@@ -2,39 +2,121 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-macron-44856f95ff9d"
+        "subject-france-861ff3094bed"
       ],
-      "cluster_id": "subject-macron-44856f95ff9d",
-      "coherence": 0.521774292304182,
-      "consequence": 2,
+      "cluster_id": "subject-france-861ff3094bed",
+      "coherence": 0.5229337991385878,
+      "consequence": 3,
       "countries": [
-        "au",
         "france",
-        "nl",
-        "spain"
+        "sg"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-19",
-      "headline": "Macron orders plan to protect France’s critical infrastructure from Russian attacks",
-      "independent_source_count": 10,
+      "country_count": 2,
+      "editorial_day": "2026-09-20",
+      "headline": "French public debt set to hit a record 121.7% of GDP in 2027",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/face-aux-attaques-hybrides-russes-emmanuel-macron-promet-un-plan-pour-les-infrastructures-critiques_8199287.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.liberation.fr/economie/budget-la-dette-publique-de-la-france-devrait-atteindre-un-record-de-1217-du-pib-en-2027-selon-bercy-20260919_ZFXTUAL65FFCFJ7HCBOTM2TLFA/"
         },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260919-dette-publique-2026-france-budget-pib-endettement-record"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/economie/20260919.OBS118400/la-dette-publique-de-la-france-devrait-atteindre-un-record-de-121-7-du-pib-en-2027.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/economie/1193-du-pib-en-2026-et-jusqua-1217-du-pib-en-2027-la-dette-publique-devrait-atteindre-des-niveaux-records_645889"
+        },
+        {
+          "language": "fr",
+          "source": "econostrum.info",
+          "source_country": "france",
+          "url": "https://econostrum.info/pourquoi-la-dette-francaise-continue-de-grimper/"
+        },
+        {
+          "language": "fr",
+          "source": "dakaractu.com",
+          "source_country": "sg",
+          "url": "https://www.dakaractu.com/Endettement-francais-1193-du-PIB-en-2026-1217-attendus-en-2027-selon-Bercy-Une-trajectoire-qui-echappe-au_a276165.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/economie/budget-la-dette-publique-de-la-france-devrait-atteindre-un-record-de-1217-du-pib-en-2027-selon-bercy-20260919_ZFXTUAL65FFCFJ7HCBOTM2TLFA/",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "france24.com",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5229,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6841,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "celine dion",
+        "france",
+        "journees",
+        "leon xiv",
+        "mbappe",
+        "pib",
+        "pisa"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "French government forecasts project public debt rising to about 119.3% of GDP in 2026 and reaching a record 121.7% of GDP in 2027, marking the highest levels on record and reflecting a continued upward trajectory in France’s debt burden."
+    },
+    {
+      "_linked_ids": [
+        "subject-macron-44856f95ff9d",
+        "subject-macron-bb804dee2974"
+      ],
+      "cluster_id": "subject-macron-bb804dee2974",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-18",
+      "headline": "Macron orders plan to protect France’s critical infrastructure from Russian threat",
+      "independent_source_count": 3,
+      "members": [
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/europe/menace-russe-emmanuel-macron-annonce-un-plan-pour-proteger-les-infrastructures-critiques-francaises-XWMLSE7R3FCTLDPG2OR6GTZBY4/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html"
         },
         {
           "language": "es",
@@ -47,476 +129,300 @@
           "source": "eldiario.es",
           "source_country": "spain",
           "url": "https://www.eldiario.es/internacional/macron-ordena-plan-proteccion-infraestructuras-criticas-amenaza-hibrida-rusa-francia_1_13521457.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/macron-ordena-un-plan-francia-contra-ataques-infraestructuras-criticas-agresividad-rusa-esta-cambiando_7038734_0.html"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2631534"
-        },
-        {
-          "language": "es",
-          "source": "mundiario.com",
-          "source_country": "spain",
-          "url": "https://www.mundiario.com/articulo/internacional/macron-ordena-blindar-infraestructuras-criticas-francia-amenaza-hibrida-rusa/20260919082744442012.html"
-        },
-        {
-          "language": "en",
-          "source": "thelocal.fr",
-          "source_country": "france",
-          "url": "https://www.thelocal.fr/20260918/macron-orders-protection-of-frances-infrastructure-against-russian-hybrid-attacks"
-        },
-        {
-          "language": "de",
-          "source": "orf.at",
-          "source_country": "au",
-          "url": "https://orf.at/stories/3442576/"
         }
       ],
       "mentioned_countries": [
         "france",
         "rs"
       ],
-      "origin_country": "au",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html",
-      "rank": 1,
-      "reference_newsroom_count": 7,
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/menace-russe-emmanuel-macron-annonce-un-plan-pour-proteger-les-infrastructures-critiques-francaises-XWMLSE7R3FCTLDPG2OR6GTZBY4/",
+      "rank": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "20minutos.es",
         "eldiario.es",
-        "elpais.com",
-        "francetvinfo.fr",
         "lavanguardia.com",
-        "lexpress.fr",
-        "nos.nl"
+        "lexpress.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5218,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7714
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.6613,
+        "total": 0.6348,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "macron",
       "subject_names": [
         "emmanuel macron",
         "francia",
-        "macron"
+        "macron",
+        "saint-pierre-et-miquelon"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "French President Emmanuel Macron has ordered a national plan to strengthen protection of France’s critical infrastructure against Russian “hybrid” or other aggressive attacks, citing a changing threat and the need to better safeguard key facilities and services."
+      "subject_newsroom_count": 14,
+      "summary": "French President Emmanuel Macron has ordered a plan to protect France’s critical infrastructure against what he described as a Russian hybrid threat, directing measures to strengthen security and resilience of key sites and systems."
     },
     {
       "_linked_ids": [
-        "subject-rachida-dati-947b1440f9aa",
-        "subject-renault-974b42ad2d30"
+        "subject-russia-144dacc0c230"
       ],
-      "cluster_id": "subject-renault-974b42ad2d30",
+      "cluster_id": "subject-russia-144dacc0c230",
       "coherence": null,
-      "consequence": 2,
+      "consequence": 3,
       "countries": [
-        "france",
-        "it"
+        "united-kingdom",
+        "united-states"
       ],
       "country_count": 2,
-      "editorial_day": "2026-09-17",
-      "headline": "Former French minister Rachida Dati goes on trial over Renault-Nissan corruption links",
+      "editorial_day": "2026-09-19",
+      "headline": "Macron and European allies warn that Russian hybrid attacks are intensifying",
       "independent_source_count": 2,
       "members": [
         {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/justice/20260917.OBS118317/le-premier-proces-d-une-longue-serie-rachida-dati-et-les-multiples-ramifications-de-l-affaire-renault.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/16/rachida-dati-in-court-ex-minister-on-trial-over-renault-nissan-corruption-case"
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/19/nx-s1-5974215/france-poland-and-european-allies-warn-of-escalating-russian-hybrid-attacks"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/my-europe/2026/09/16/rachida-dati-in-court-ex-minister-on-trial-over-renault-nissan-corruption-case",
-      "rank": 2,
+      "origin_country": "united-kingdom",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss",
+      "rank": 3,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "euronews.com",
-        "nouvelobs.com"
+        "bbc.co.uk",
+        "npr.org"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.5,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.5228,
+        "total": 0.6236,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "renault",
+      "subject_label": "russia",
       "subject_names": [
-        "geely",
-        "rachida dati",
-        "renault"
+        "nato",
+        "russia",
+        "russian",
+        "ukraine"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Rachida Dati, a former French minister, has begun a criminal trial linked to the wider Renault‑Nissan corruption investigation; she faces questioning over her role in arrangements connected to the case and the proceedings are presented as one of several potential trials arising from the affair."
+      "subject_newsroom_count": 15,
+      "summary": "French President Emmanuel Macron, together with Poland and other European allies, say Russia is carrying out increasing 'hybrid' attacks against Europe, combining cyber, disinformation and other non‑kinetic measures; the leaders called attention to the escalation and urged coordinated European responses to the growing threat."
     },
     {
       "_linked_ids": [
-        "subject-zinedine-zidane-05e5c583e8d5"
+        "subject-macron-a28580f23861"
       ],
-      "cluster_id": "subject-zinedine-zidane-05e5c583e8d5",
-      "coherence": 0.39333711630047863,
-      "consequence": 1,
+      "cluster_id": "subject-macron-a28580f23861",
+      "coherence": 0.5272511262254155,
+      "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-18",
-      "headline": "Zinedine Zidane names first France squad, appoints Kylian Mbappé captain",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sports/football/on-va-faire-differemment-zidane-devoile-sa-premiere-liste-pour-lequipe-de-france-20260918_XOTMTI3FWBFKBAPKCPU74CEXG4/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/sport/equipe-de-france-zinedine-zidane-presente-sa-premiere-liste-avec-kylian-mbappe-en-capitaine-20260918"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260918-replay-zidane-d%C3%A9voile-sa-premi%C3%A8re-liste-en-tant-que-s%C3%A9lectionneur-de-l-%C3%A9quipe-de-france"
-        },
-        {
-          "language": "fr",
-          "source": "centrepresseaveyron.fr",
-          "source_country": "france",
-          "url": "https://www.centrepresseaveyron.fr/2026/09/18/kylian-mbappe-esteban-lepaul-guillaume-restes-decouvrez-la-premiere-liste-des-bleus-appeles-par-zinedine-zidane-13557811.php"
-        },
-        {
-          "language": "fr",
-          "source": "toulouse7.com",
-          "source_country": "france",
-          "url": "https://toulouse7.com/2026/09/18/zidane-selectionne-guillaume-restes-en-equipe-de-france/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/sport/equipe-de-france-zinedine-zidane-presente-sa-premiere-liste-avec-kylian-mbappe-en-capitaine-20260918",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3933,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.4477,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "zinedine zidane",
-      "subject_names": [
-        "celine dion",
-        "france",
-        "journees",
-        "leon xiv",
-        "zidane",
-        "zinedine zidane"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Zinedine Zidane has announced his first France national team squad, featuring new call-ups including goalkeeper Guillaume Restes and confirming Kylian Mbappé as team captain; the list notably omits Aurélien Tchouaméni and Marcus Thuram."
-    },
-    {
-      "_linked_ids": [
-        "subject-suecia-5272fccfaf59",
-        "subject-suecia-ea8c9e3393d9"
-      ],
-      "cluster_id": "subject-suecia-5272fccfaf59",
-      "coherence": 0.4039458330279887,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-18",
-      "filled_from": "europe",
-      "headline": "Left bloc wins Sweden election but must build a coalition to govern",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/legislatives-en-suede-victorieuse-la-gauche-face-au-casse-tete-de-la-formation-d-un-gouvernement-20260918"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260913.OBS118213/legislatives-en-suede-la-gauche-en-tete-l-extreme-droite-recule.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-la-gauche-et-le-bloc-de-droite-au-coude-a-coude-56T6D3GNSNDALLRJVFTHXFQ4QU/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/esquerda-vence-eleicoes-de-suecia.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "sw"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "globo.com",
-        "la-croix.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4039,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5902,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "suecia",
-      "subject_names": [
-        "suecia",
-        "suede"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Sweden’s left bloc emerged ahead in the legislative election, while the far right lost ground; results were close between left and right blocs, leaving the victorious left facing a complex task of forming a government and potential uncertainty over the far right’s role."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-3da50bc00dbd"
-      ],
-      "cluster_id": "subject-ukraine-3da50bc00dbd",
-      "coherence": 0.6007197182155009,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "india",
-        "it",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-19",
-      "filled_from": "europe",
-      "headline": "Russia holds nationwide parliamentary elections amid ongoing war in Ukraine",
-      "independent_source_count": 14,
+      "editorial_day": "2026-09-20",
+      "headline": "Macron visits Saint-Pierre-et-Miquelon and reaffirms French sovereignty",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/18/legislatives-en-russie-les-electeurs-appeles-aux-urnes-plus-de-quatre-ans-apres-le-debut-de-la-guerre-en-ukraine_6776825_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/09/20/emmanuel-macron-reaffirme-la-souverainete-de-saint-pierre-et-miquelon-face-aux-convoitises-de-trump_6778047_3210.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/18/russians-vote-in-elections-with-no-party-opposing-putin-or-war-in-ukraine"
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/20/saint-pierre-et-miquelon-est-bien-francais-martele-sur-place-emmanuel-macron-en-reponse-aux-visees-expansionnistes-de-donald-trump_6777911_3210.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote"
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/saint-pierre-et-miquelon-est-bien-francais-repond-emmanuel-macron-a-donald-trump-a-son-arrivee-dans-larchipel-20260920_VJ6ZLRVHYVCGLOXNQFUSD5WSFY/"
         },
         {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/19/g-s1-144169/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine"
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/saint-pierre-et-miquelon-est-francais-repond-macron-a-trump-a-son-arrivee-dans-l-archipel-20260919"
         },
         {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russia-begins-3-days-of-voting-in-a-parliamentary-election-set-to-cement-the-kremlins-power"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/saint-pierre-et-miquelon-est-francais-repond-emmanuel-macron-a-donald-trump-a-son-arrivee-dans-l-archipel_8201387.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "en",
-          "source": "ketr.org",
-          "source_country": "united-states",
-          "url": "https://www.ketr.org/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20260920-saint-pierre-et-miquelon-est-fier-d-%C3%AAtre-fran%C3%A7ais-macron-r%C3%A9pond-%C3%A0-trump-depuis-l-archipel"
         },
         {
-          "language": "en",
-          "source": "tspr.org",
-          "source_country": "united-states",
-          "url": "https://www.tspr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260919-macron-%C3%A0-saint-pierre-et-miquelon-une-mani%C3%A8re-de-rappeler-la-souverainet%C3%A9-fran%C3%A7aise"
         },
         {
-          "language": "en",
-          "source": "wkms.org",
-          "source_country": "united-states",
-          "url": "https://www.wkms.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "kunc.org",
-          "source_country": "united-states",
-          "url": "https://www.kunc.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wkyufm.org",
-          "source_country": "united-states",
-          "url": "https://www.wkyufm.org/news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wemu.org",
-          "source_country": "united-states",
-          "url": "https://www.wemu.org/npr-national-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "upr.org",
-          "source_country": "united-states",
-          "url": "https://www.upr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wrkf.org",
-          "source_country": "united-states",
-          "url": "https://www.wrkf.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "foreignpolicy.com",
-          "source_country": "united-states",
-          "url": "https://foreignpolicy.com/2026/09/18/russia-elections-state-duma-results-putin-democracy-ukraine/"
-        },
-        {
-          "language": "ben",
-          "source": "sangbadpratidin.in",
-          "source_country": "india",
-          "url": "https://www.sangbadpratidin.in/world/parliamentary-election-in-russia-during-ukraine-war/pid/1345730/"
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260920-pas-de-discussion-saint-pierre-et-miquelon-est-fran%C3%A7ais-lance-macron-%C3%A0-trump"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "france"
       ],
       "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote",
-      "rank": 5,
-      "reference_newsroom_count": 4,
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/vid%C3%A9o/20260919-macron-%C3%A0-saint-pierre-et-miquelon-une-mani%C3%A8re-de-rappeler-la-souverainet%C3%A9-fran%C3%A7aise",
+      "rank": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
         "lemonde.fr",
-        "npr.org",
-        "pbs.org"
+        "liberation.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6007,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5273,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
+          "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.814
+          "prominence": 0.6,
+          "source_reliability": 0.75
         },
-        "total": 0.5828,
+        "total": 0.6016,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "macron",
       "subject_names": [
-        "graham",
-        "kremlin",
-        "putin",
-        "rusia",
-        "russia",
-        "russie",
-        "ucrania",
-        "ukraine"
+        "donald trump",
+        "emmanuel macron",
+        "francia",
+        "kennedy center",
+        "macron",
+        "saint-pierre-et-miquelon",
+        "trump"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Russia is conducting nationwide State Duma elections — the first since the start of the war in Ukraine — with voting held across the country, including in territories seized during the conflict; the vote is widely seen as set to reinforce Kremlin control and features no major parties opposing President Vladimir Putin or the war."
+      "subject_newsroom_count": 14,
+      "summary": "During a visit to the Saint-Pierre-et-Miquelon archipelago, President Emmanuel Macron publicly insisted the territory is French and affirmed France’s sovereignty there, responding directly to expansionist claims attributed to former U.S. President Donald Trump and saying there is no discussion over the islands’ status."
+    },
+    {
+      "_linked_ids": [
+        "subject-saint-pierre-des-corps-ed5e9bf1abc8"
+      ],
+      "cluster_id": "subject-saint-pierre-des-corps-ed5e9bf1abc8",
+      "coherence": 0.42675651433949535,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-20",
+      "headline": "Clashes in Saint-Pierre-des-Corps after police car collides with motorcycle",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/actualite-france/nuit-d-emeutes-a-saint-pierre-des-corps-apres-un-refus-d-obtemperer-deux-vehicules-de-police-incendies-neuf-policiers-et-gendarmes-blesses-20260920"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/a-saint-pierre-des-corps-un-policier-place-en-garde-a-vue-et-un-jeune-hospitalise-apres-une-nuit-de-violences-20260920_SQ3JJLJXGBCQBAL6IZGLTG3YIQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/des-violences-a-saint-pierre-des-corps-apres-une-collision-entre-une-voiture-de-police-et-une-moto_8201426.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "bfmtv.com",
+          "source_country": "france",
+          "url": "https://www.bfmtv.com/police-justice/des-violences-eclatent-a-saint-pierre-des-corps-apres-une-collision-entre-une-voiture-de-police-et-une-moto-la-mairie-appelle-au-calme_AV-202609200050.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/faits-divers/des-violences-a-saint-pierre-des-corps-apres-une-collision-entre-une-voiture-de-police-et-une-moto_8201426.html#xtor=RSS-3-[lestitres]",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4268,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5406,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "saint-pierre-des-corps",
+      "subject_names": [
+        "saint-pierre-des-corps"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "A collision between a police vehicle and a motorcycle in Saint-Pierre-des-Corps triggered a night of violence during which at least two police vehicles were set on fire, multiple officers were injured, several people were arrested, and a police officer was placed in custody while a young person was hospitalized."
     }
   ],
-  "discarded_ingested": 23,
+  "discarded_ingested": 36,
   "discarded_kept": 5,
-  "generated_at": "2026-09-19T09:40:04.661477+00:00",
+  "generated_at": "2026-09-20T09:57:43.669614+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

@@ -6,14 +6,14 @@
       ],
       "cluster_id": "subject-ceuta-5d6c4f418d42",
       "coherence": null,
-      "consequence": 3,
+      "consequence": 2,
       "countries": [
         "it",
         "united-kingdom"
       ],
       "country_count": 2,
       "editorial_day": "2026-09-18",
-      "headline": "La police tire en l’air lors du transfert de milliers de migrants à Ceuta",
+      "headline": "La police tire en l’air et déplace des milliers de migrants vers une nouvelle installation à Ceuta",
       "independent_source_count": 2,
       "members": [
         {
@@ -46,25 +46,217 @@
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6236,
+        "total": 0.5328,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ceuta",
       "subject_names": [
+        "bruselas",
         "ceuta",
         "marruecos",
-        "sanchez",
-        "vivas"
+        "sanchez"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "Des agents ont tiré des coups en l’air pendant l’opération de déplacement de milliers de migrants depuis les plages de Ceuta vers une nouvelle installation, les autorités procédant au transfert pour regrouper les personnes arrivées sur la côte et sécuriser la zone."
+      "subject_newsroom_count": 16,
+      "summary": "À Ceuta, les forces de l’ordre ont tiré des coups en l’air alors qu’elles procédaient au déplacement de milliers de migrants depuis les plages vers une nouvelle installation; les tirs ont été effectués par la police pour accompagner l’opération de transfert et des migrants ont été regroupés pour être conduits vers ce centre."
+    },
+    {
+      "_linked_ids": [
+        "subject-pamplona-9b4d78f7a08b"
+      ],
+      "cluster_id": "subject-pamplona-9b4d78f7a08b",
+      "coherence": 0.47281022668786843,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-20",
+      "headline": "Incendie dans une clinique psychiatrique de Pampelune : une morte et 18 blessés",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-20/muere-una-persona-y-18-resultan-heridas-en-el-incendio-en-una-residencia-en-pamplona.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/navarra/mujer-muerta-personas-trasladadas-hospital-incendio-residencia-20260920084010-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/navarra/muerto-18-heridos-incendio-residencia-pamplona_1_13523774.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/19/6aaf02afe85ece3c018b4575.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/sociedad/sucesos/20260920/muerto-heridos-incendio-residencia-pamplona/1003744390036_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-20/incendio-residencia-padre-menni-pamplona-1tna-1tps_4427609/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/navarra/noticia-muere-persona-18-resultan-heridas-humo-incendio-centro-psiquiatrico-pamplona-20260920020813.html"
+        },
+        {
+          "language": "es",
+          "source": "elcomercio.es",
+          "source_country": "spain",
+          "url": "https://www.elcomercio.es/sociedad/residente-fallecida-personas-trasladadas-hospital-incendio-residencia-20260920092707-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "lasexta.com",
+          "source_country": "spain",
+          "url": "https://www.lasexta.com/noticias/sociedad/muere-persona-otras-18-resultan-heridas-producirse-incendio-residencia-pamplona_202609206aaf89e022237c6bdc5a7d9c.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/local/navarra/20260920/11639513/paciente-muere-incendio-residencia-psiquiatrica-pamplona.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/navarra/noticia-muere-persona-18-resultan-heridas-humo-incendio-centro-psiquiatrico-pamplona-20260920020813.html",
+      "rank": 2,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4728,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7778
+        },
+        "total": 0.5304,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "pamplona",
+      "subject_names": [
+        "pamplona"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Un incendie s’est déclaré dans une résidence/clinique psychiatrique à Pampelune, faisant une personne décédée et 18 autres évacuées et hospitalisées; une patiente a été arrêtée comme principale suspecte et au moins un homme a été signalé en état grave en unité de soins intensifs."
+    },
+    {
+      "_linked_ids": [
+        "subject-asturias-024e0150f22c"
+      ],
+      "cluster_id": "subject-asturias-024e0150f22c",
+      "coherence": 0.5711201895523144,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-20",
+      "headline": "Cinq hommes arrêtés pour agression d’une femme trans en Asturies",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/sociedad/2026-09-20/detenidos-cinco-hombres-por-una-agresion-transfoba-a-una-mujer-en-asturias.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/asturias/detenidos-cinco-hombres-grupo-ultra-asturias-agredir-amenazar-muerte-mujer-trans_1_13523839.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/20/6aafa4b421efa015208b4576.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-20/guardia-civil-agresion-transfoba-asturias-1hms-1tna_4427622/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elconfidencial.com",
+      "outbound_url": "https://www.elconfidencial.com/espana/2026-09-20/guardia-civil-agresion-transfoba-asturias-1hms-1tna_4427622/",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5711,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.4869,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "asturias",
+      "subject_names": [
+        "asturias"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Les articles indiquent que la Guardia Civil a interpellé cinq hommes en Asturies après une agression visant une femme trans. Les suspects, liés selon les sources à un groupe d’extrême droite ou à des ultras, sont accusés d’avoir agressé et menacé de mort la victime. Les médias concordent sur le nombre d’arrestations, le caractère transphobe de l’agression et l’intervention des forces de l’ordre."
     },
     {
       "_linked_ids": [
@@ -80,7 +272,7 @@
       ],
       "country_count": 2,
       "editorial_day": "2026-09-17",
-      "headline": "Pluie torrentielle et crues éclair en Catalogne et Valence tuent un conducteur",
+      "headline": "De fortes pluies et crues soudaines provoquent une mort en Espagne",
       "independent_source_count": 2,
       "members": [
         {
@@ -102,7 +294,7 @@
       "origin_country": "it",
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/c9lyk27g8ln7o?at_medium=RSS&at_campaign=rss",
-      "rank": 2,
+      "rank": 4,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
@@ -113,390 +305,99 @@
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.5,
+          "freshness": 0.3536,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 0.5,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.4361,
+        "total": 0.4332,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "valencia",
       "subject_names": [
+        "alzira",
         "barcelona",
+        "spain",
         "valencia"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "De fortes pluies et des crues éclair ont frappé les régions de Catalogne et de Valence en Espagne, provoquant des inondations importantes; un conducteur est décédé après avoir été pris dans ces intempéries, et des routes et zones urbaines ont été submergées par les eaux selon les comptes rendus."
+      "subject_newsroom_count": 13,
+      "summary": "De fortes pluies et des crues éclair ont frappé les régions de Catalogne et de Valence en Espagne, provoquant des inondations routières; un conducteur est décédé après que son véhicule a été emporté par les eaux, et des interventions de secours ont été menées dans les zones touchées."
     },
     {
       "_linked_ids": [
-        "subject-macron-44856f95ff9d"
+        "subject-mourinho-6383155ac062"
       ],
-      "cluster_id": "subject-macron-44856f95ff9d",
-      "coherence": 0.521774292304182,
-      "consequence": 2,
+      "cluster_id": "subject-mourinho-6383155ac062",
+      "coherence": null,
+      "consequence": 0,
       "countries": [
-        "au",
-        "france",
-        "nl",
         "spain"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-19",
-      "filled_from": "europe",
-      "headline": "Macron ordonne un plan pour protéger les infrastructures critiques face aux attaques russes",
-      "independent_source_count": 10,
+      "country_count": 1,
+      "editorial_day": "2026-09-20",
+      "headline": "Simeone et Mourinho se retrouvent en adversaires pour un nouveau duel tactique",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/emmanuel-macron/face-aux-attaques-hybrides-russes-emmanuel-macron-promet-un-plan-pour-les-infrastructures-critiques_8199287.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/menace-russe-emmanuel-macron-annonce-un-plan-pour-proteger-les-infrastructures-critiques-francaises-XWMLSE7R3FCTLDPG2OR6GTZBY4/"
-        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html"
+          "url": "https://elpais.com/deportes/futbol/2026-09-20/diego-simeone-y-jose-mourinho-del-balon-largo-al-portero-jugador.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260918/11638460/macron-pide-francia-plan-proteger-infraestructuras-criticas-amenaza-rusa.html"
+          "url": "https://www.abc.es/deportes/futbol/simeone-mourinho-rivales-companeros-guerra-20260919011935-nt.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "rtve.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/macron-ordena-plan-proteccion-infraestructuras-criticas-amenaza-hibrida-rusa-francia_1_13521457.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/macron-ordena-un-plan-francia-contra-ataques-infraestructuras-criticas-agresividad-rusa-esta-cambiando_7038734_0.html"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2631534"
-        },
-        {
-          "language": "es",
-          "source": "mundiario.com",
-          "source_country": "spain",
-          "url": "https://www.mundiario.com/articulo/internacional/macron-ordena-blindar-infraestructuras-criticas-francia-amenaza-hibrida-rusa/20260919082744442012.html"
-        },
-        {
-          "language": "en",
-          "source": "thelocal.fr",
-          "source_country": "france",
-          "url": "https://www.thelocal.fr/20260918/macron-orders-protection-of-frances-infrastructure-against-russian-hybrid-attacks"
-        },
-        {
-          "language": "de",
-          "source": "orf.at",
-          "source_country": "au",
-          "url": "https://orf.at/stories/3442576/"
+          "url": "https://www.rtve.es/deportes/20260919/derbi-madrileno-reune-a-mourinho-simeone-doce-anos-despues-su-ultimo-duelo-stamford-bridge/17232238.shtml"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "rs"
+        "spain"
       ],
-      "origin_country": "au",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-09-18/macron-ordena-reforzar-la-proteccion-de-infraestructuras-criticas-frente-a-los-ataques-rusos.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nos.nl"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5218,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7714
-        },
-        "total": 0.6013,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "macron",
-      "subject_names": [
-        "emmanuel macron",
-        "francia",
-        "macron"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Le président Emmanuel Macron a demandé la mise en place d’un plan national visant à renforcer la protection des infrastructures critiques françaises en réponse à ce qu’il qualifie de menaces ou d’attaques « hybrides » russes ; les articles indiquent qu’il s’agit d’une réaction à l’évolution de l’agressivité russe et visent à mieux sécuriser sites et services essentiels contre ce type d’actions."
-    },
-    {
-      "_linked_ids": [
-        "subject-suecia-5272fccfaf59",
-        "subject-suecia-ea8c9e3393d9"
-      ],
-      "cluster_id": "subject-suecia-5272fccfaf59",
-      "coherence": 0.4039458330279887,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-18",
-      "filled_from": "europe",
-      "headline": "La gauche remporte les législatives en Suède mais la formation d’un gouvernement reste incertaine",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/legislatives-en-suede-victorieuse-la-gauche-face-au-casse-tete-de-la-formation-d-un-gouvernement-20260918"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260913.OBS118213/legislatives-en-suede-la-gauche-en-tete-l-extreme-droite-recule.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-la-gauche-et-le-bloc-de-droite-au-coude-a-coude-56T6D3GNSNDALLRJVFTHXFQ4QU/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/esquerda-vence-eleicoes-de-suecia.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "sw"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-suede-un-scrutin-serre-qui-pourrait-faire-entrer-lextreme-droite-au-gouvernement-YPEWYNODRRA3RBNRKYIOTKPU2Q/",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "globo.com",
-        "la-croix.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4039,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5902,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "suecia",
-      "subject_names": [
-        "suecia",
-        "suede"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Les articles indiquent que la gauche est arrivée en tête des législatives suédoises, avec un recul de l’extrême droite par rapport aux scrutins précédents. Le résultat est serré entre le bloc de gauche et le bloc de droite, laissant une situation politique instable où la constitution d’un gouvernement majoritaire pose un casse-tête, et où la possibilité d’une implication de l’extrême droite dans l’exécutif suscite des inquiétudes."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-3da50bc00dbd"
-      ],
-      "cluster_id": "subject-ukraine-3da50bc00dbd",
-      "coherence": 0.6007197182155009,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "india",
-        "it",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-19",
-      "filled_from": "europe",
-      "headline": "La Russie organise des élections législatives nationales, y compris dans les territoires occupés",
-      "independent_source_count": 14,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/18/legislatives-en-russie-les-electeurs-appeles-aux-urnes-plus-de-quatre-ans-apres-le-debut-de-la-guerre-en-ukraine_6776825_3210.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/18/russians-vote-in-elections-with-no-party-opposing-putin-or-war-in-ukraine"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/19/g-s1-144169/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russia-begins-3-days-of-voting-in-a-parliamentary-election-set-to-cement-the-kremlins-power"
-        },
-        {
-          "language": "en",
-          "source": "ketr.org",
-          "source_country": "united-states",
-          "url": "https://www.ketr.org/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "tspr.org",
-          "source_country": "united-states",
-          "url": "https://www.tspr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wkms.org",
-          "source_country": "united-states",
-          "url": "https://www.wkms.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "kunc.org",
-          "source_country": "united-states",
-          "url": "https://www.kunc.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wkyufm.org",
-          "source_country": "united-states",
-          "url": "https://www.wkyufm.org/news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wemu.org",
-          "source_country": "united-states",
-          "url": "https://www.wemu.org/npr-national-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "upr.org",
-          "source_country": "united-states",
-          "url": "https://www.upr.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "wrkf.org",
-          "source_country": "united-states",
-          "url": "https://www.wrkf.org/npr-news/2026-09-19/russia-holds-parliamentary-vote-in-areas-it-seized-from-ukraine-in-the-war"
-        },
-        {
-          "language": "en",
-          "source": "foreignpolicy.com",
-          "source_country": "united-states",
-          "url": "https://foreignpolicy.com/2026/09/18/russia-elections-state-duma-results-putin-democracy-ukraine/"
-        },
-        {
-          "language": "ben",
-          "source": "sangbadpratidin.in",
-          "source_country": "india",
-          "url": "https://www.sangbadpratidin.in/world/parliamentary-election-in-russia-during-ukraine-war/pid/1345730/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/09/18/russia-holds-nationwide-duma-elections-as-war-in-ukraine-reshapes-vote",
+      "origin_country": "spain",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/deportes/futbol/simeone-mourinho-rivales-companeros-guerra-20260919011935-nt.html",
       "rank": 5,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "euronews.com",
-        "lemonde.fr",
-        "npr.org",
-        "pbs.org"
+        "abc.es",
+        "elpais.com",
+        "rtve.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.6007,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.814
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5828,
+        "total": 0.3714,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "mourinho",
       "subject_names": [
-        "graham",
-        "kremlin",
-        "putin",
-        "rusia",
-        "russia",
-        "russie",
-        "ucrania",
-        "ukraine"
+        "mourinho"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "La Russie tient des élections pour la Douma d’État — les premières depuis le début de la guerre en Ukraine — avec un vote étalé sur plusieurs jours; le scrutin inclut des bureaux de vote dans les zones que Moscou a saisies en Ukraine et se déroule sans véritable parti d’opposition contestant la politique du Kremlin ou la guerre."
+      "subject_newsroom_count": 4,
+      "summary": "Les articles indiquent que Diego Simeone et José Mourinho, deux entraîneurs renommés, s’affrontent à nouveau sur le même terrain après douze ans, présentant une confrontation marquée par leurs styles défensifs et leur rivalité historique ; les textes soulignent aussi leur intérêt commun pour l’évolution tactique du jeu, notamment l’utilisation du jeu long et le rôle du gardien‑joueur."
     }
   ],
-  "discarded_ingested": 24,
+  "discarded_ingested": 42,
   "discarded_kept": 5,
-  "generated_at": "2026-09-19T09:40:04.661477+00:00",
+  "generated_at": "2026-09-20T09:57:43.669614+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

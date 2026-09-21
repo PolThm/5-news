@@ -1,446 +1,549 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-861ff3094bed",
-      "coherence": 0.5229337991385878,
+      "cluster_id": "subject-berlin-49698a315ce6",
+      "coherence": 0.43904454827131156,
       "consequence": 3,
       "countries": [
-        "france",
-        "sg"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-20",
-      "headline": "La dette publique française devrait atteindre un record de 121,7 % du PIB en 2027",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/budget-la-dette-publique-de-la-france-devrait-atteindre-un-record-de-1217-du-pib-en-2027-selon-bercy-20260919_ZFXTUAL65FFCFJ7HCBOTM2TLFA/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260919-dette-publique-2026-france-budget-pib-endettement-record"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/economie/20260919.OBS118400/la-dette-publique-de-la-france-devrait-atteindre-un-record-de-121-7-du-pib-en-2027.html"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/economie/1193-du-pib-en-2026-et-jusqua-1217-du-pib-en-2027-la-dette-publique-devrait-atteindre-des-niveaux-records_645889"
-        },
-        {
-          "language": "fr",
-          "source": "econostrum.info",
-          "source_country": "france",
-          "url": "https://econostrum.info/pourquoi-la-dette-francaise-continue-de-grimper/"
-        },
-        {
-          "language": "fr",
-          "source": "dakaractu.com",
-          "source_country": "sg",
-          "url": "https://www.dakaractu.com/Endettement-francais-1193-du-PIB-en-2026-1217-attendus-en-2027-selon-Bercy-Une-trajectoire-qui-echappe-au_a276165.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/budget-la-dette-publique-de-la-france-devrait-atteindre-un-record-de-1217-du-pib-en-2027-selon-bercy-20260919_ZFXTUAL65FFCFJ7HCBOTM2TLFA/",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "france24.com",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5229,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.7041,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "celine dion",
-        "france",
-        "journees",
-        "leon xiv",
-        "mbappe",
-        "pib",
-        "pisa"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Les articles s’accordent pour dire que, selon les projections de Bercy, la dette publique de la France atteindra un niveau record de 121,7 % du PIB en 2027, après 119,3 % en 2026, indiquant une poursuite de la hausse de l’endettement public dans les années à venir."
-    },
-    {
-      "cluster_id": "subject-trump-b72b78d67da0",
-      "coherence": 0.4638304296460397,
-      "consequence": 3,
-      "countries": [
-        "be",
+        "bk",
         "france",
         "it",
-        "united-kingdom"
+        "spain",
+        "united-states"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-20",
-      "headline": "Donald Trump promulgue une loi imposant de nouvelles sanctions contre la Russie",
-      "independent_source_count": 4,
+      "country_count": 5,
+      "editorial_day": "2026-09-21",
+      "headline": "La gauche radicale gagne à Berlin pendant que l’AfD l’emporte au nord‑est",
+      "independent_source_count": 10,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/19/guerre-en-ukraine-donald-trump-signe-la-loi-graham-permettant-de-nouvelles-sanctions-contre-la-russie_6777144_3210.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/19/trump-signs-into-law-sweeping-russia-sanctions-package-aiming-to-choke-off-revenues-fundin"
+          "url": "https://www.lemonde.fr/international/article/2026/09/20/elections-regionales-en-allemagne-le-parti-d-extreme-droite-afd-en-forte-progression-dans-le-land-de-mecklembourg-pomeranie-occidentale_6778399_3210.html"
         },
         {
           "language": "fr",
-          "source": "lalibre.be",
-          "source_country": "be",
-          "url": "https://www.lalibre.be/dernieres-depeches/2026/09/19/trump-promulgue-une-loi-imposant-de-nouvelles-sanctions-contre-la-russie-WLPQEQUTDNGUDFST4TTDA5TIQI/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "be",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4638,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6917,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "kennedy center",
-        "nato",
-        "russia",
-        "russian",
-        "trump",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 30,
-      "summary": "Le président américain Donald Trump a signé une loi instaurant un vaste dispositif de sanctions contre la Russie visant à restreindre ses revenus liés à la guerre en Ukraine ; la mesure a été présentée comme un paquet législatif large autorisant de nouvelles restrictions économiques et financières contre Moscou."
-    },
-    {
-      "cluster_id": "subject-merz-0440352a4b6f",
-      "coherence": 0.4632225801822609,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-20",
-      "headline": "Friedrich Merz confronté à deux élections régionales décisives pour sa survie politique",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/20/elections-regionales-en-allemagne-la-cdu-de-friedrich-merz-menacee-d-un-revers-historique_6778330_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/19/en-allemagne-le-chancelier-friedrich-merz-plus-conteste-que-jamais-avant-les-elections-regionales-du-20-septembre_6777434_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/allemagne-friedrich-merz-sous-pression-maximale-avant-les-elections-regionales-20260918"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/allemagne-deux-elections-regionales-a-haut-risque-pour-le-chancelier-merz-ce-dimanche-lextreme-droite-en-embuscade-20260920_U3ZK6OTLOZEKBAWF6VTJDCK6P4/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/le-chancelier-allemand-friedrich-merz-fait-face-une-nouvelle-fois-a-des-scrutins-a-haut-risque-lors-d-elections-locales_8201639.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.mediapart.fr/journal/international/200926/elections-allemandes-l-extreme-droite-en-tete-dans-le-mecklembourg-la-gauche-gagnante-berlin"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260920-%C3%A9lections-r%C3%A9gionales-en-allemagne-deux-scrutins-%C3%A0-haut-risque-pour-merz"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260921-la-gauche-radicale-devance-le-parti-du-chancelier-allemand-lors-d-%C3%A9lections-%C3%A0-berlin"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260920-en-allemagne-deux-%C3%A9lections-r%C3%A9gionales-d%C3%A9cisives-pour-l-avenir-de-friedrich-merz"
+          "url": "https://www.rfi.fr/fr/monde/20260920-%C3%A9lections-en-allemagne-la-gauche-radicale-de-die-linke-l-emporte-%C3%A0-berlin-nouvelle-pouss%C3%A9e-de-l-afd"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260920.OBS118411/elections-regionales-en-allemagne-les-scrutins-de-la-derniere-chance-pour-friedrich-merz.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/elections-regionales-en-allemagne-friedrich-merz-peut-il-survivre-a-une-nouvelle-debacle-ZB426MS6WFEV7JVHUNOOJOCDTQ/"
+          "url": "https://www.nouvelobs.com/monde/20260920.OBS118433/l-extreme-droite-en-tete-dans-le-nord-est-de-l-allemagne-victoire-de-la-gauche-radicale-a-berlin.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nuevas-elecciones-regionales-alemania-amenazan-pulverizar-capital-politico-le-queda-friedrich-merz_1_13522017.html"
+          "url": "https://www.elespanol.com/mundo/europa/20260920/alemania-aguanta-nuevo-respiracion-elecciones-regionales-clave-afd-alza-cdu-merz-crisis/1003744390189_0.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/my-europe/2026/09/21/germany-the-left-triumphs-in-berlin-as-afd-surges-in-mecklenburg-western-pomerania"
+        },
+        {
+          "language": "en",
+          "source": "bignewsnetwork.com",
+          "source_country": "united-states",
+          "url": "http://www.bignewsnetwork.com/news/279319435/1st-ld-left-party-wins-berlin-election-far-right-afd-takes-mecklenburg-vorpommern-exit-polls-show"
+        },
+        {
+          "language": "es",
+          "source": "europapress.tv",
+          "source_country": "spain",
+          "url": "https://www.europapress.tv/internacional/1118697/1/afd-primera-fuerza-mecklemburgo-pomerania-occidental-izquierda-gana-berlin"
+        },
+        {
+          "language": "bos",
+          "source": "klix.ba",
+          "source_country": "bk",
+          "url": "https://www.klix.ba/vijesti/svijet/izbori-u-njemackoj-ljevica-osvaja-berlin-a-u-pokrajini-meklenburg-prvi-afd-pad-cdu-a/260920095"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "bk",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/mundo/europa/20260920/alemania-aguanta-nuevo-respiracion-elecciones-regionales-clave-afd-alza-cdu-merz-crisis/1003744390189_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "euronews.com",
+        "france24.com",
+        "lemonde.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.439,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7647
+        },
+        "total": 0.7558,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "berlin",
+      "subject_names": [
+        "afd",
+        "alemania",
+        "allemagne",
+        "berlin",
+        "cdu",
+        "die linke",
+        "elif eralp",
+        "friedrich merz",
+        "german",
+        "linke",
+        "manuela schwesig",
+        "merz",
+        "spd"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "Aux élections régionales en Allemagne, le parti de gauche radicale Die Linke arrive en tête à Berlin, tandis que le parti d’extrême droite Alternative für Deutschland (AfD) réalise une victoire dans le land du Mecklembourg‑Palatinat/Mecklembourg‑Poméranie‑Occidentale; plusieurs articles mentionnent aussi la faiblesse ou la sortie de la CDU dans certains scrutins régionaux."
+    },
+    {
+      "cluster_id": "subject-merz-f8a371c9f2d5",
+      "coherence": 0.49472855365371804,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "nl",
+        "po",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-21",
+      "headline": "Le chancelier Friedrich Merz reste en fonction après un revers électoral pour la CDU",
+      "independent_source_count": 18,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/le-chancelier-allemand-friedrich-merz-promet-de-poursuivre-les-reformes-en-depit-d-un-desastre-electoral-pour-son-parti-apres-la-forte-progression-de-l-afd_8202077.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260920-%C3%A9lections-en-allemagne-malgr%C3%A9-la-d%C3%A9faite-cuisante-de-son-parti-le-chancelier-merz-promet-de-ne-rien-changer"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/20/friedrich-merz-chancellor-germany-state-elections-cdu-afd-linke-berlin"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/20/g-s1-144211/germanys-merz-vows-to-press-ahead-with-reforms-after-historic-state-election-defeat"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/merz-vows-to-press-ahead-with-reforms-after-partys-historic-defeat-in-2-german-state-elections"
+        },
+        {
+          "language": "en",
+          "source": "lbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.lbc.co.uk/article/german-chancellor-vows-to-stay-in-office-despite-calling-state-election-results-5HjdhhQ_2/"
+        },
+        {
+          "language": "en",
+          "source": "koco.com",
+          "source_country": "united-states",
+          "url": "https://www.koco.com/article/merz-german-state-elections-far-right/73814028"
+        },
+        {
+          "language": "en",
+          "source": "bbc.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.com/news/articles/cvwyz29n0nn2o"
+        },
+        {
+          "language": "en",
+          "source": "tspr.org",
+          "source_country": "united-states",
+          "url": "https://www.tspr.org/npr-news/2026-09-20/germanys-merz-vows-to-press-ahead-with-reforms-after-historic-state-election-defeat"
+        },
+        {
+          "language": "en",
+          "source": "publicradiotulsa.org",
+          "source_country": "united-states",
+          "url": "https://www.publicradiotulsa.org/npr-national-news/2026-09-20/germanys-merz-vows-to-press-ahead-with-reforms-after-historic-state-election-defeat"
+        },
+        {
+          "language": "en",
+          "source": "freerepublic.com",
+          "source_country": "united-states",
+          "url": "https://freerepublic.com/focus/f-news/4396255/posts"
+        },
+        {
+          "language": "en",
+          "source": "ketr.org",
+          "source_country": "united-states",
+          "url": "https://www.ketr.org/2026-09-20/germanys-merz-vows-to-press-ahead-with-reforms-after-historic-state-election-defeat"
+        },
+        {
+          "language": "nl",
+          "source": "nieuws.nl",
+          "source_country": "nl",
+          "url": "https://nieuws.nl/buitenland/merz-wil-bondskanselier-blijven-na-historisch-verlies-cdu"
+        },
+        {
+          "language": "pt",
+          "source": "executivedigest.sapo.pt",
+          "source_country": "po",
+          "url": "https://executivedigest.sapo.pt/chanceler-merz-quer-continuar-apesar-de-derrota-da-cdu-nas-eleicoes-estaduais-alemas/"
+        },
+        {
+          "language": "pt",
+          "source": "sapo.pt",
+          "source_country": "po",
+          "url": "https://sapo.pt/artigo/alemanha-merz-assume-desastre-eleitoral-mas-mantem-se-como-chanceler-6ab01d667a663ca5d35db213"
+        },
+        {
+          "language": "pt",
+          "source": "jornaleconomico.sapo.pt",
+          "source_country": "po",
+          "url": "https://jornaleconomico.sapo.pt/noticias/chanceler-merz-quer-continuar-apesar-de-derrota-da-cdu-nas-eleicoes-estaduais-alemas/"
+        },
+        {
+          "language": "pt",
+          "source": "dn.pt",
+          "source_country": "po",
+          "url": "https://www.dn.pt/internacional/alemanha-merz-assume-desastre-eleitoral-mas-mantm-se-como-chanceler"
         }
       ],
       "mentioned_countries": [
         "germany"
       ],
       "origin_country": "france",
-      "outbound_source": "lefigaro.fr",
-      "outbound_url": "https://www.lefigaro.fr/international/allemagne-friedrich-merz-sous-pression-maximale-avant-les-elections-regionales-20260918",
-      "rank": 3,
-      "reference_newsroom_count": 9,
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/world/merz-vows-to-press-ahead-with-reforms-after-partys-historic-defeat-in-2-german-state-elections",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "eldiario.es",
-        "france24.com",
+        "bbc.co.uk",
         "francetvinfo.fr",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "rfi.fr"
+        "npr.org",
+        "pbs.org",
+        "rfi.fr",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4632,
-          "corroboration": 0.5,
-          "editorial_weight": 0.5294,
+          "coherence": 0.4947,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7895
+          "prominence": 0.8182,
+          "source_reliability": 0.84
         },
-        "total": 0.6796,
+        "total": 0.6869,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "merz",
       "subject_names": [
+        "afd",
         "alemania",
         "allemagne",
         "cdu",
+        "die linke",
         "friedrich merz",
-        "merz"
+        "german",
+        "manuela schwesig",
+        "merz",
+        "spd"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Les articles s’accordent pour dire que le chancelier allemand Friedrich Merz arrive affaibli aux scrutins régionaux de dimanche, qui sont présentés comme des épreuves cruciales pour son avenir politique ; la CDU risque un revers historique et l’extrême droite est considérée comme une menace dans ces élections localement déterminantes."
+      "subject_newsroom_count": 30,
+      "summary": "Après des défaites marquées de la CDU dans des élections régionales décrites comme un \"désastre\" pour son parti, le chancelier Friedrich Merz a reconnu l'ampleur du revers mais a déclaré qu'il resterait en poste et poursuivrait ses réformes."
     },
     {
-      "cluster_id": "subject-russia-60781a8c4a0f",
+      "cluster_id": "subject-google-dc181940ea82",
       "coherence": null,
       "consequence": 3,
       "countries": [
-        "brazil",
-        "it",
-        "united-states"
+        "france",
+        "spain"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-20",
-      "headline": "La Pologne affirme que la Russie planifie des frappes par drones ou roquettes en Europe",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-09-21",
+      "headline": "L’Irlande inflige à Google une amende de 403 millions d’euros pour géolocalisation",
+      "independent_source_count": 2,
       "members": [
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/17/tusk-intelligence-sees-russian-plan-for-drone-strikes-on-poland-allies"
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/geolocalisation-google-ecope-d-une-amende-de-403-millions-deuros-par-lue-20260921"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/17/polonia-diz-que-russia-esta-planejando-ataques-com-drones-e-misseis-contra-paises-europeus.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "fortune.com",
-          "source_country": "united-states",
-          "url": "https://fortune.com/2026/09/19/polish-prime-minister-russia-hybrid-war-drone-rocket-strikes-european-countries-ukraine/"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://cincodias.elpais.com/companias/2026-09-21/irlanda-multa-a-google-con-403-millones-por-infringir-la-normativa-de-proteccion-de-datos.html"
         }
       ],
       "mentioned_countries": [
-        "pl"
+        "ei"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/my-europe/2026/09/17/tusk-intelligence-sees-russian-plan-for-drone-strikes-on-poland-allies",
-      "rank": 4,
+      "origin_country": "france",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://cincodias.elpais.com/companias/2026-09-21/irlanda-multa-a-google-con-403-millones-por-infringir-la-normativa-de-proteccion-de-datos.html",
+      "rank": 3,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "euronews.com",
-        "globo.com"
+        "elpais.com",
+        "la-croix.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.6,
+          "corroboration": 0.5,
           "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6659,
+        "total": 0.6494,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "russia",
+      "subject_label": "google",
       "subject_names": [
-        "nato",
-        "russia",
-        "russian",
-        "ukraine"
+        "anthropic",
+        "gemini",
+        "google"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Les articles indiquent que des responsables polonais, dont le Premier ministre et des services de renseignement, ont déclaré avoir identifié des plans russes visant à lancer des frappes par drones ou roquettes contre la Pologne et d’autres pays européens qui soutiennent l’Ukraine. Ils affirment que l’intention ciblait des alliés européens et que l’information provient d’évaluations des services de sécurité polonais et de déclarations officielles."
+      "subject_newsroom_count": 8,
+      "summary": "Les articles indiquent que les autorités irlandaises ont sanctionné Google d’une amende de 403 millions d’euros pour des manquements liés à la géolocalisation et à la protection des données personnelles ; les décisions relèvent de l’application des règles européennes de protection des données."
     },
     {
-      "cluster_id": "subject-rusia-a371a5491028",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-groenlandia-2b9aad0a2750",
+      "coherence": 0.45484814945771546,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-20",
+      "headline": "Trump annonce un accord avec le Danemark pour la sécurité permanente du Groenland",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/trump-annonce-un-accord-avec-le-danemark-sur-le-groenland-20260919"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260919.OBS118393/groenland-controle-permanent-bases-militaires-duree-ce-que-l-on-sait-sur-l-accord-annonce-par-trump.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/monde/la-chine-et-la-russie-ne-pourront-pas-y-installer-des-bases-militaires-donald-trump-annonce-un-accord-de-securite-avec-le-groenland_645887"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260920/11639303/ee-uu-controlara-groenlandia.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260919/11638945/trump-anuncia-haber-obtenido-control-permanente-sobre-seguridad-groenlandia.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/trump-dice-llegado-acuerdo-dinamarca-asumir-control-permanente-seguridad-groenlandia_1_13522340.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/18/trump-diz-que-fechou-acordo-com-a-dinamarca-para-controlar-a-seguranca-da-groenlandia.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "gl",
+        "da"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/18/trump-diz-que-fechou-acordo-com-a-dinamarca-para-controlar-a-seguranca-da-groenlandia.ghtml",
+      "rank": 4,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "eldiario.es",
+        "globo.com",
+        "lavanguardia.com",
+        "lefigaro.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4548,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7241
+        },
+        "total": 0.6232,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "groenlandia",
+      "subject_names": [
+        "dinamarca",
+        "donald trump",
+        "groenland",
+        "groenlandia",
+        "otan",
+        "trump",
+        "washington"
+      ],
+      "subject_newsroom_count": 12,
+      "summary": "Les États-Unis et le Danemark ont annoncé un accord portant sur la sécurité du Groenland, que Donald Trump a présenté comme un « contrôle permanent » américain de la sécurité de l’île; le pacte vise à empêcher notamment l’installation de bases étrangères, et le Danemark a précisé que la sécurité serait partagée entre les deux pays."
+    },
+    {
+      "cluster_id": "subject-ceuta-00dce5d32e65",
+      "coherence": 0.4699437064215548,
+      "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-20",
-      "headline": "L’Ukraine lance une importante attaque de drones contre Moscou",
-      "independent_source_count": 3,
+      "editorial_day": "2026-09-21",
+      "headline": "Des habitants de Ceuta brisent la voiture d’une députée après une méprise",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20260920/ucrania-lanza-mayor-ataque-jamas-perpetrado-rusia-envia-drones-muertos-heridos/1003744390049_0.html"
+          "url": "https://elpais.com/espana/2026-09-20/manifestantes-destrozan-en-ceuta-el-coche-de-una-diputada-que-viajaba-con-un-activista.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/grupo-vecinos-destroza-coche-diputada-ceuta-confundirlo-20260921070607-nt.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/09/20/6aaf7073fdddff546f8b4581.html"
+          "url": "https://www.elmundo.es/espana/2026/09/21/6ab05361fdddff4f138b4598.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ucrania-mayor-ataque-drones-moscu-muertos-heridos-refineria-petroleo_7038943_0.html"
+          "url": "https://www.elespanol.com/espana/politica/20260921/ceuties-apedrean-coche-diputada-ceuta-confundirla-miembros-ong-abertzale-negu-gorriak/1003744390563_0.html"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/ucrania-mayor-ataque-drones-moscu-muertos-heridos-refineria-petroleo_7038943_0.html",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-09-20/manifestantes-destrozan-en-ceuta-el-coche-de-una-diputada-que-viajaba-con-un-activista.html",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
+        "abc.es",
         "elespanol.com",
-        "elmundo.es"
+        "elmundo.es",
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.4699,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.6581,
+        "total": 0.6014,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "rusia",
+      "subject_label": "ceuta",
       "subject_names": [
-        "kiev",
-        "moscu",
-        "nato",
-        "rusia",
-        "russia",
-        "russian",
-        "ucrania",
-        "ukraine"
+        "albares",
+        "ceuta",
+        "feijoo",
+        "marruecos"
       ],
       "subject_newsroom_count": 15,
-      "summary": "Les articles indiquent que l’Ukraine a mené une vaste attaque par drones contre Moscou, impliquant plus de 1 600 appareils selon au moins une source, et causant plusieurs victimes et blessés; des morts sont mentionnés (au moins deux à quatre selon les articles) et des dommages matériels incluent une raffinerie touchée."
+      "summary": "Des voisins à Ceuta ont attaqué et endommagé la voiture d’une députée du groupe Ceuta Ya!, apparemment en la prenant à tort pour celle de membres d’une ONG basque ou d’un groupe activiste. L’incident a eu lieu alors que la députée voyageait avec un activiste, et les assaillants auraient confondu son véhicule avec celui d’une organisation liée au mouvement abertzale."
     }
   ],
-  "discarded_ingested": 103,
+  "discarded_ingested": 61,
   "discarded_kept": 5,
-  "generated_at": "2026-09-20T09:57:43.669614+00:00",
+  "generated_at": "2026-09-21T10:57:34.456062+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

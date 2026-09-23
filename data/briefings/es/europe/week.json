@@ -2,355 +2,57 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-meloni-fcdab3cc8758"
-      ],
-      "cluster_id": "subject-meloni-fcdab3cc8758",
-      "coherence": 0.46160735011672516,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "india",
-        "it",
-        "mx",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-22",
-      "headline": "Meloni anuncia prohibición de burka y niqab en escuelas e límite de estudiantes extranjeros por aula",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/20/meloni-announces-ban-on-burqa-and-niqab-in-italian-schools-and-cap-on-foreign-students"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/20/italia-prepara-proibicao-de-veus-islamicos-em-escolas-e-limite-para-estrangeiros-por-turma.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "breitbart.com",
-          "source_country": "united-states",
-          "url": "https://www.breitbart.com/politics/2026/09/20/meloni-to-ban-burqas-in-schools-and-limit-number-of-foreigners-in-classrooms/"
-        },
-        {
-          "language": "es",
-          "source": "sdpnoticias.com",
-          "source_country": "mx",
-          "url": "https://www.sdpnoticias.com/internacional/meloni-propone-prohibir-el-burka-y-el-niqab-en-las-escuelas-de-italia/"
-        },
-        {
-          "language": "en",
-          "source": "wcti12.com",
-          "source_country": "united-states",
-          "url": "https://wcti12.com/news/nation-world/meloni-says-italy-to-ban-face-coverings-limit-foreign-students-per-class-in-schools-cabinet-burqas-language"
-        },
-        {
-          "language": "en",
-          "source": "scroll.in",
-          "source_country": "india",
-          "url": "https://scroll.in/latest/1095883/italy-plans-to-ban-burqas-in-schools-limit-foreign-students-per-class"
-        }
-      ],
-      "mentioned_countries": [
-        "it"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/20/italia-prepara-proibicao-de-veus-islamicos-em-escolas-e-limite-para-estrangeiros-por-turma.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4616,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6732,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "meloni",
-      "subject_names": [
-        "italia",
-        "meloni"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "La primera ministra Giorgia Meloni declaró que el gobierno italiano prohibirá el uso de burka y niqab en las escuelas y establecerá un tope al número de alumnos extranjeros por clase; la medida fue presentada como parte de una política educativa y de inmigración y fue anunciada públicamente por Meloni."
-    },
-    {
-      "_linked_ids": [
-        "subject-openai-132275661886"
-      ],
-      "cluster_id": "subject-openai-132275661886",
-      "coherence": 0.5334728184480699,
-      "consequence": 3,
-      "countries": [
-        "as",
-        "ca",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-22",
-      "headline": "Columbia Británica demanda a OpenAI y a Sam Altman por tiroteo escolar",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/technology/2026/sep/22/british-columbia-sues-openai-sam-altman-tumbler-ridge-school-shooting"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c3wyz2rkgrx0o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "onenewspage.com",
-          "source_country": "united-states",
-          "url": "https://www.onenewspage.com/story/british-columbia-sues-openai-and-sam-altman-over-tumbler-ridge-mass-school-sho-58cd22c9/"
-        },
-        {
-          "language": "en",
-          "source": "edenmagnet.com.au",
-          "source_country": "as",
-          "url": "https://www.edenmagnet.com.au/story/9354919/british-columbia-sues-openai-over-school-shooting/"
-        },
-        {
-          "language": "fr",
-          "source": "lerefletdulac.com",
-          "source_country": "ca",
-          "url": "https://www.lerefletdulac.com/nouvelles-nationales/la-colombie-britannique-intente-une-poursuite-contre-openai-pour-tumbler-ridge/"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "united-states"
-      ],
-      "origin_country": "as",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/c3wyz2rkgrx0o?at_medium=RSS&at_campaign=rss",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5335,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.672,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "openai",
-      "subject_names": [
-        "anthropic",
-        "openai"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "La provincia de Columbia Británica presentó una demanda legal contra OpenAI y su director ejecutivo Sam Altman en relación con el tiroteo masivo ocurrido en la escuela de Tumbler Ridge, alegando responsabilidad de la empresa en el suceso; varias fuentes confirman que la acción judicial fue iniciada por la provincia y nombra a OpenAI y a Altman como demandados."
-    },
-    {
-      "_linked_ids": [
-        "subject-moscow-5cc848f8d0af"
-      ],
-      "cluster_id": "subject-moscow-5cc848f8d0af",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-20",
-      "headline": "Ucrania lanza ataque masivo con drones contra Moscú según autoridades",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/20/moscow-hit-by-largest-scale-attack-on-capital-so-far-mayor-says"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/ukraine-fires-over-1000-drones-at-russia-including-largest-ever-attack-on-moscow"
-        }
-      ],
-      "mentioned_countries": [
-        "rs",
-        "up"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/my-europe/2026/09/20/moscow-hit-by-largest-scale-attack-on-capital-so-far-mayor-says",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6588,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "moscow",
-      "subject_names": [
-        "moscou",
-        "moscow",
-        "rusia",
-        "russia",
-        "russian",
-        "ucrania",
-        "ukraine",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Las autoridades de Moscú y fuentes coinciden en que Ucrania llevó a cabo un ataque aéreo masivo contra la capital rusa utilizando cientos de drones; los informes indican que se dispararon más de mil drones en varias ofensivas, y el alcalde de Moscú describió el asalto a la ciudad como el de mayor envergadura hasta la fecha."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-c594472ce937"
-      ],
-      "cluster_id": "subject-ukraine-c594472ce937",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-20",
-      "headline": "Olas de soldados norcoreanos están siendo enviadas para luchar en Ucrania",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cgl7zrnxxy6o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/09/20/por-que-uma-nova-onda-de-soldados-norte-coreanos-pode-lutar-na-guerra-da-russia-contra-a-ucrania.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cgl7zrnxxy6o?at_medium=RSS&at_campaign=rss",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6194,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "russia",
-        "ukraine",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Fuentes coinciden en que Corea del Norte ha desplegado o facilitado el envío de más soldados para combatir en la guerra de Rusia contra Ucrania. Los informes señalan que estos movimientos forman parte de un refuerzo reciente de personal militar norcoreano implicado en el conflicto, sin ofrecer cifras exactas ni detalles operativos precisos."
-    },
-    {
-      "_linked_ids": [
         "subject-groenlandia-2b9aad0a2750",
         "subject-groenlandia-87c851941816",
+        "subject-groenlandia-c0bf914467ff",
         "subject-trump-4d4e07e1d116",
         "subject-trump-9f57fd3134f3"
       ],
-      "cluster_id": "subject-groenlandia-87c851941816",
-      "coherence": 0.4600344112173893,
-      "consequence": 2,
+      "cluster_id": "subject-groenlandia-c0bf914467ff",
+      "coherence": 0.40915178941202246,
+      "consequence": 3,
       "countries": [
-        "ar",
+        "brazil",
         "france",
-        "spain"
+        "it",
+        "spain",
+        "united-kingdom",
+        "unknown"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-22",
-      "headline": "Trump anuncia acuerdo con Dinamarca sobre seguridad en Groenlandia",
-      "independent_source_count": 7,
+      "country_count": 6,
+      "editorial_day": "2026-09-23",
+      "headline": "Trump firma un acuerdo trilateral para la seguridad de Groenlandia",
+      "independent_source_count": 10,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/trump-annonce-un-accord-avec-le-danemark-sur-le-groenland-20260919"
+          "url": "https://www.lemonde.fr/international/article/2026/09/23/soulagement-au-groenland-et-au-danemark-apres-l-accord-de-securite-signe-avec-washington_6780533_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/22/donald-trump-signe-un-accord-de-securite-avec-le-groenland-et-le-danemark_6780267_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/groenland-ce-que-prevoit-l-accord-signe-avec-les-etats-unis-et-le-danemark-20260922"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
           "url": "https://www.nouvelobs.com/monde/20260919.OBS118393/groenland-controle-permanent-bases-militaires-duree-ce-que-l-on-sait-sur-l-accord-annonce-par-trump.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/amerique/presence-militaire-decuplee-controle-permanent-a-lonu-donald-trump-detaille-son-accord-avec-le-ACIEYIGVJJDDFBGJS4MBG2JRPQ/"
         },
         {
           "language": "es",
@@ -365,79 +67,453 @@
           "url": "https://www.lavanguardia.com/internacional/20260919/11638945/trump-anuncia-haber-obtenido-control-permanente-sobre-seguridad-groenlandia.html"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/acuerdo-anunciado-trump-groenlandia-deja-incognitas-certezas-soberania-control-isla_1_13523505.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/22/eua-dinamarca-e-groenlandia-assinam-acordo-de-seguranca.ghtml"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-dice-llegado-acuerdo-dinamarca-asumir-control-permanente-seguridad-groenlandia_1_13522340.html"
+          "source": "bitlysdowssl-aws.com",
+          "source_country": "unknown",
+          "url": "https://bitlysdowssl-aws.com/2026/09/donald-trump-firma-un-acuerdo-de-seguridad-tripartito-con-dinamarca-y-groenlandia-para-el-despliegue-de-bases-militares-en-el-artico/"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/dinamarca-groenlandia-maquillan-un-acuerdo-que-ya-existe-para-que-trump-venda-como-un-exito-nuevo-pacto-sobre-isla_7039382_0.html"
-        },
-        {
-          "language": "es",
-          "source": "urgente24.com",
-          "source_country": "ar",
-          "url": "https://urgente24.com/mundo/donald-trump-forzo-un-acuerdo-dinamarca-y-groenlandia-ceden-la-seguridad-del-artico-la-otan-n633164"
+          "language": "it",
+          "source": "notiziegeopolitiche.net",
+          "source_country": "it",
+          "url": "https://www.notiziegeopolitiche.net/groenlandia-accordo-con-danimarca-e-usa-trump-avremo-il-controllo-permanente-sulla-sicurezza/"
         }
       ],
       "mentioned_countries": [
         "gl",
         "da"
       ],
-      "origin_country": "ar",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/trump-dice-llegado-acuerdo-dinamarca-asumir-control-permanente-seguridad-groenlandia_1_13522340.html",
-      "rank": 5,
-      "reference_newsroom_count": 6,
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260919/11638945/trump-anuncia-haber-obtenido-control-permanente-sobre-seguridad-groenlandia.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
+        "bbc.co.uk",
         "elpais.com",
+        "globo.com",
+        "la-croix.com",
         "lavanguardia.com",
-        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.46,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
+          "coherence": 0.4092,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.25,
-          "prominence": 0.6364,
-          "source_reliability": 0.7419
+          "impact": 1.0,
+          "novelty": 0.2,
+          "prominence": 0.7143,
+          "source_reliability": 0.7949
         },
-        "total": 0.6166,
+        "total": 0.7393,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "groenlandia",
       "subject_names": [
-        "belarus",
+        "danemark",
         "dinamarca",
         "donald trump",
-        "etats-unis",
+        "eeuu",
+        "estados unidos",
+        "europa",
+        "europe",
+        "greenland",
         "groenland",
         "groenlandia",
+        "iran",
+        "nato",
         "trump"
       ],
+      "subject_newsroom_count": 14,
+      "summary": "Estados Unidos, Dinamarca y Groenlandia firmaron un acuerdo de seguridad tripartito que prevé un mayor despliegue militar en el Ártico y otorga a EE. UU. un rol de control permanente sobre la seguridad en Groenlandia, mientras Dinamarca describe la fórmula como seguridad compartida; el pacto menciona el establecimiento o reforzamiento de bases y fue presentado públicamente por el presidente Trump y las partes involucradas."
+    },
+    {
+      "_linked_ids": [
+        "subject-espana-749e6f634545"
+      ],
+      "cluster_id": "subject-espana-749e6f634545",
+      "coherence": 0.44345287359871555,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-23",
+      "headline": "La OCDE eleva la previsión de crecimiento de España al 2,6% pero advierte de mayor inflación",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-09-23/la-ocde-mejora-la-prevision-de-pib-de-espana-pero-alerta-de-una-inflacion-elevada-y-persistente.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/ocde-preve-espana-crecera-2-6-costa-inflacion-enquistada-precio-petroleo-alimentos_1_13527945.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/23/6ab2c6cf468aebe0408b45af.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20260923/ocde-eleva-crecimiento-espana-inflacion-subira-ano/1003744393464_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/09/23/6ab38c88fc6c831e108b4599.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-ocde-eleva-prevision-crecimiento-espana-26-ano-sube-inflacion-37-20260923111853.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/economia/2026-09-23/la-ocde-mejora-la-prevision-de-pib-de-espana-pero-alerta-de-una-inflacion-elevada-y-persistente.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4435,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.6754,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espana",
+      "subject_names": [
+        "espana",
+        "gobierno",
+        "ocde",
+        "pib",
+        "spain"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "La OCDE ha revisado al alza su previsión de crecimiento del PIB de España hasta el 2,6% para este año pero simultáneamente advierte de una inflación elevada y persistente, con subidas de precios impulsadas en parte por el coste del petróleo y los alimentos y una tasa de inflación anual que se situaría por encima de la de otros países europeos."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-e099ad4e1566"
+      ],
+      "cluster_id": "subject-france-e099ad4e1566",
+      "coherence": 0.5113241430509198,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-23",
+      "headline": "La UE retira sanciones a dos oligarcas rusos tras presiones de varios países",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/l-union-europeenne-leve-ses-sanctions-a-l-encontre-de-deux-oligarques-russes_8206004.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-22/la-ue-saca-de-la-lista-de-sanciones-a-dos-grandes-oligarcas-por-las-presiones-de-francia-y-luxemburgo.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ue-cede-presion-francia-luxemburgo-eslovaquia-saca-oligarcas-rusos-lista-sancionados_1_13529569.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/ue-cede-presion-francia-luxemburgo-eslovaquia-saca-oligarcas-rusos-lista-sancionados_1_13529569.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5113,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6561,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "belgique",
+        "france",
+        "francia",
+        "fridman",
+        "leon xiv",
+        "luxemburgo",
+        "moscou",
+        "otan",
+        "paris",
+        "rusia",
+        "russie",
+        "ucrania",
+        "usmanov",
+        "vladimir poutine"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "La Unión Europea ha eliminado a dos oligarcas rusos de su lista de sanciones; la decisión se tomó después de solicitudes y presiones de Estados miembros, entre ellos Francia, Luxemburgo y Eslovaquia, que pidieron o apoyaron la retirada de los nombres afectados."
+    },
+    {
+      "_linked_ids": [
+        "subject-martin-ryan-d90226f2d256"
+      ],
+      "cluster_id": "subject-martin-ryan-d90226f2d256",
+      "coherence": 0.539836537212678,
+      "consequence": 2,
+      "countries": [
+        "be",
+        "france",
+        "it"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-23",
+      "headline": "Azerbaiyán concede el indulto presidencial al francés Martin Ryan",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/23/l-azerbaidjan-gracie-le-francais-emprisonne-martin-ryan-selon-un-decret-presidentiel_6780798_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/martin-ryan-le-francais-emprisonne-en-azerbaidjan-a-ete-gracie-par-le-president-20260923"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/azerbaidjan-grace-presidentielle-pour-le-francais-emprisonne-martin-ryan-20260923_LDZZPMMBQZH5TIKMMZ4D6TZQ6U/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/azerbaidjan-grace-presidentielle-pour-martin-ryan-un-francais-emprisonne-depuis-trois-ans-20260923"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/l-azerbaidjan-accorde-une-grace-presidentielle-au-francais-martin-ryan-emprisonne-pour-espionnage_8206082.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260923-azerba%C3%AFdjan-gracie-fran%C3%A7ais-martin-ryan-apr%C3%A8s-lev%C3%A9e-sanctions-contre-oligarque"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/23/azerbaijan-pardons-french-citizen-martin-ryan-following-usmanovs-delisting"
+        },
+        {
+          "language": "fr",
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/international/europe/2026/09/23/un-francais-emprisonne-en-azerbaidjan-depuis-2023-obtient-la-grace-presidentielle-XL52N5T2UZC3PKVCHLTU4BMNFQ/"
+        },
+        {
+          "language": "fr",
+          "source": "lalsace.fr",
+          "source_country": "france",
+          "url": "https://www.lalsace.fr/defense-guerre-conflit/2026/09/23/le-francais-martin-ryan-condamne-a-dix-ans-de-prison-pour-espionnage-a-ete-gracie"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "be",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/23/l-azerbaidjan-gracie-le-francais-emprisonne-martin-ryan-selon-un-decret-presidentiel_6780798_3210.html",
+      "rank": 4,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5398,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7576
+        },
+        "total": 0.6528,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "martin ryan",
+      "subject_names": [
+        "azerbaidjan",
+        "martin ryan"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Las noticias coinciden en que Martin Ryan, ciudadano francés condenado por espionaje y encarcelado en Azerbaiyán desde 2023, ha recibido un indulto presidencial. Varios medios señalan que la medida se produjo tras un decreto presidencial y mencionan además que el indulto llega en el contexto de la reciente suspensión de sanciones a un oligarca ruso."
+    },
+    {
+      "_linked_ids": [
+        "subject-russia-9bd352d1aa9a"
+      ],
+      "cluster_id": "subject-russia-9bd352d1aa9a",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "pk",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-23",
+      "headline": "Rusia y Ucrania se intercambian ataques mientras Zelenskiy se reúne con Trump",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/22/russia-and-ukraine-trade-deadly-strikes-as-zelenskyy-prepares-to-meet-trump-at-un"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russia-and-ukraine-trade-strikes-ahead-of-zelenskyys-meeting-with-trump"
+        },
+        {
+          "language": "en",
+          "source": "tribune.com.pk",
+          "source_country": "pk",
+          "url": "https://tribune.com.pk/story/2630970/russia-kills-eight-in-strikes-on-ukraine-as-trump-meets-zelenskiy"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/22/russia-and-ukraine-trade-deadly-strikes-as-zelenskyy-prepares-to-meet-trump-at-un",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.6499,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russia",
+      "subject_names": [
+        "donald trump",
+        "iran",
+        "kiev",
+        "kremlin",
+        "russia",
+        "trump",
+        "ukraine",
+        "zelensky"
+      ],
       "subject_newsroom_count": 12,
-      "summary": "Los artículos coinciden en que el presidente Donald Trump anunció un acuerdo con Dinamarca que aborda la seguridad de Groenlandia, describiéndolo como un pacto para asumir o garantizar un control permanente de la seguridad en la isla; las piezas señalan además que Dinamarca y Groenlandia matizaron o precisaron que la seguridad será compartida con aliados (mencionándose la OTAN) y que quedan aspectos sobre soberanía, duración y alcance del acuerdo que no están del todo aclarados."
+      "summary": "Mientras el presidente ucraniano Volodímir Zelenskiy se prepara para reunirse con el expresidente Donald Trump en la Asamblea General de la ONU, fuerzas rusas y ucranianas realizaron ataques que causaron víctimas; los artículos coinciden en que se produjeron bombardeos simultáneos y que civiles murieron durante los enfrentamientos."
     }
   ],
-  "discarded_ingested": 152,
+  "discarded_ingested": 139,
   "discarded_kept": 5,
-  "generated_at": "2026-09-22T10:11:41.914407+00:00",
+  "generated_at": "2026-09-23T10:12:10.562071+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

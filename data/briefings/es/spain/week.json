@@ -2,61 +2,250 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-audiencia-32064f08788a"
+        "subject-espana-749e6f634545"
       ],
-      "cluster_id": "subject-audiencia-32064f08788a",
-      "coherence": 0.5605237378268912,
-      "consequence": 2,
+      "cluster_id": "subject-espana-749e6f634545",
+      "coherence": 0.44345287359871555,
+      "consequence": 3,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-22",
-      "headline": "La Audiencia de Tarragona deja al Tribunal Supremo decidir sobre la competencia del 'caso Montoro'",
-      "independent_source_count": 4,
+      "editorial_day": "2026-09-23",
+      "headline": "La OCDE eleva la previsión de crecimiento de España al 2,6% pero advierte de mayor inflación",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-22/la-audiencia-de-tarragona-deja-en-manos-del-supremo-decidir-si-el-caso-montoro-se-queda-en-cataluna-o-se-traslada-a-madrid.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/cataluna/audiencia-tarragona-deja-manos-supremo-decidir-montoro-20260922113728-nt.html"
+          "url": "https://elpais.com/economia/2026-09-23/la-ocde-mejora-la-prevision-de-pib-de-espana-pero-alerta-de-una-inflacion-elevada-y-persistente.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/audiencia-tarragona-avisa-decision-si-caso-montoro-debe-investigar-madrid-depende-supremo_1_13527969.html"
+          "url": "https://www.eldiario.es/economia/ocde-preve-espana-crecera-2-6-costa-inflacion-enquistada-precio-petroleo-alimentos_1_13527945.html"
         },
         {
           "language": "es",
-          "source": "infolibre.es",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/audiencia-tarragona-rechaza-resolver-competencia-caso-montoro-apunta-tribunal-supremo_1_2236664.html"
+          "url": "https://www.expansion.com/economia/2026/09/23/6ab2c6cf468aebe0408b45af.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20260923/ocde-eleva-crecimiento-espana-inflacion-subira-ano/1003744393464_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/09/23/6ab38c88fc6c831e108b4599.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-ocde-eleva-prevision-crecimiento-espana-26-ano-sube-inflacion-37-20260923111853.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "infolibre.es",
-      "outbound_url": "https://www.infolibre.es/politica/audiencia-tarragona-rechaza-resolver-competencia-caso-montoro-apunta-tribunal-supremo_1_2236664.html",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/economia/2026-09-23/la-ocde-mejora-la-prevision-de-pib-de-espana-pero-alerta-de-una-inflacion-elevada-y-persistente.html",
       "rank": 1,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "abc.es",
         "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
         "elpais.com",
-        "infolibre.es"
+        "europapress.es",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5605,
+          "coherence": 0.4435,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.6754,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espana",
+      "subject_names": [
+        "espana",
+        "gobierno",
+        "ocde",
+        "pib",
+        "spain"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "La OCDE ha revisado al alza su previsión de crecimiento del PIB de España hasta el 2,6% para este año pero simultáneamente advierte de una inflación elevada y persistente, con subidas de precios impulsadas en parte por el coste del petróleo y los alimentos y una tasa de inflación anual que se situaría por encima de la de otros países europeos."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-bf61aa985013"
+      ],
+      "cluster_id": "subject-ceuta-bf61aa985013",
+      "coherence": 0.5293982489277834,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-22",
+      "headline": "Sánchez exige a Marruecos respuestas y acciones por el fallo en el control fronterizo de Ceuta",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-22/sanchez-pide-explicaciones-a-marruecos-porque-su-control-de-fronteras-fallo.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260922/11641642/sanchez-pide-respuestas-acciones-marruecos-fallo-mecanismo-control-fronterizo.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/sanchez-cnn-ceuta-evidente-control-fronterizo-marruecos-fallo_1_13530245.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/09/22/6ab2eb24468aeb1d638b459e.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/22/6ab2d13dfc6c83b24a8b45ba.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-ve-evidente-control-fronterizo-marruecos-fallo-crisis-ceuta-asegura-pidio-respuestas-20260922204500.html"
+        }
+      ],
+      "mentioned_countries": [
+        "mo",
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-09-22/sanchez-pide-explicaciones-a-marruecos-porque-su-control-de-fronteras-fallo.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5294,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.5931,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "canarias",
+        "ceuta",
+        "marruecos",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "El presidente del Gobierno, Pedro Sánchez, ha afirmado que pidió a Marruecos respuestas y acciones tras la entrada masiva de migrantes en Ceuta, señalando que \"es evidente\" que el mecanismo de control fronterizo marroquí falló durante la crisis."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-8ea938f804a3"
+      ],
+      "cluster_id": "subject-ceuta-8ea938f804a3",
+      "coherence": 0.4454069838718526,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-23",
+      "headline": "Marruecos celebra elecciones marcadas por apatía juvenil y tensión en Ceuta",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/marruecos-vota-desafeccion-juvenil-sombra-ceuta-20260922012218-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260923/11641511/marruecos-celebra-elecciones-marcadas-desafeccion-juvenil.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/marruecos-vota-elecciones-marcadas-desafeccion-ceuta-jefe-futbol-acabar-primer-ministro_1_13529667.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/marruecos-vota-entre-apatia-los-jovenes-tension-fronteriza-ceuta-protesta-generacion-z-podria-reactivarse_7039727_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "mo",
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/marruecos-vota-elecciones-marcadas-desafeccion-ceuta-jefe-futbol-acabar-primer-ministro_1_13529667.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4454,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -66,256 +255,176 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.5723,
+        "total": 0.5584,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "audiencia",
+      "subject_label": "ceuta",
       "subject_names": [
-        "audiencia",
-        "barcelona",
-        "bruselas",
-        "espana",
-        "eurovision",
-        "madrid",
-        "spain",
-        "supremo",
-        "tarragona"
+        "canarias",
+        "ceuta",
+        "maroc",
+        "marokko",
+        "marruecos",
+        "sanchez"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "La Audiencia de Tarragona ha rechazado resolver sobre la competencia para investigar el llamado 'caso Montoro' y ha remitido la decisión final al Tribunal Supremo, señalando que corresponde a ese alto tribunal determinar si la causa debe permanecer en Cataluña o trasladarse a Madrid."
+      "subject_newsroom_count": 15,
+      "summary": "Los comicios en Marruecos transcurren con una alta desafección entre los jóvenes, que analistas vinculan a insatisfacción social y riesgo de movilización de la generación Z, mientras en la agenda pública también destaca la tensión por la situación fronteriza en Ceuta; además, la campaña y el resultado se siguen en clave política por figuras como dirigentes del mundo del fútbol con proyección nacional."
     },
     {
       "_linked_ids": [
-        "subject-albares-7f724a552c5e"
+        "subject-congreso-b1064be3652b"
       ],
-      "cluster_id": "subject-albares-7f724a552c5e",
-      "coherence": null,
-      "consequence": 2,
+      "cluster_id": "subject-congreso-b1064be3652b",
+      "coherence": 0.4679861052623878,
+      "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-22",
-      "headline": "Albares se reunirá en Nueva York con su homólogo marroquí para tratar Ceuta",
-      "independent_source_count": 3,
+      "editorial_day": "2026-09-23",
+      "headline": "La presidenta del Congreso expulsa a una diputada del PP por mostrar un bote de spray de pimienta",
+      "independent_source_count": 8,
       "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-23/armengol-pide-a-la-diputada-popular-ana-vazquez-que-abandone-la-camara-por-sacar-un-bote-de-gas-pimienta.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/bronca-congreso-armengol-abandonar-hemiciclo-diputada-pp-20260923102226-nt.html"
+        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/albares-reunira-nueva-york-homologo-marroqui-llamamiento-entrar-ceuta-tomaran-medidas-necesarias_1_13527529.html"
+          "url": "https://www.eldiario.es/politica/diputada-pp-introduce-spray-pimienta-congreso-fuerza-bronca-armengol_1_13530865.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/22/6ab1d23cfdddff82388b45ab.html"
+          "url": "https://www.elmundo.es/espana/2026/09/23/6ab3881de85ece8d268b45a2.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/presidenta-congreso-expulsa-diputada-pp-mostar-bote-gas-pimienta-pleno_1_2236720.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20260923/armengol-expulsa-ana-vazquez-mostrar-spray-gas-pimienta-llevan-escolares-ceuta/1003744393552_0.html"
         },
         {
           "language": "es",
           "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-22/albares-marruecos-retorno-migrantes-ceuta-1tps_4428662/"
+          "url": "https://www.elconfidencial.com/espana/2026-09-23/armengol-expulsa-del-congreso-a-la-diputada-del-pp-ana-vazquez-por-ensenar-un-spray-pimienta_4429589/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-armengol-echa-hemiciclo-diputada-pp-mostrar-bote-gas-pimienta-considerarlo-arma-20260923100935.html"
         }
       ],
       "mentioned_countries": [
-        "mo",
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/22/6ab1d23cfdddff82388b45ab.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-armengol-echa-hemiciclo-diputada-pp-mostrar-bote-gas-pimienta-considerarlo-arma-20260923100935.html",
+      "rank": 4,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
+        "abc.es",
         "elconfidencial.com",
         "eldiario.es",
-        "elmundo.es"
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "infolibre.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.468,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6667,
+          "source_reliability": 0.75
         },
-        "total": 0.5448,
+        "total": 0.527,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "albares",
+      "subject_label": "congreso",
       "subject_names": [
-        "albares",
-        "burnham",
-        "ceuta",
-        "marruecos",
-        "new york",
-        "nueva york",
-        "vox"
+        "armengol",
+        "congreso"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "El ministro de Exteriores, José Manuel Albares, mantendrá una reunión en Nueva York con su homólogo marroquí para abordar la situación en Ceuta y coordinar el retorno de cerca de 10.000 inmigrantes que aún permanecen en la ciudad; ambas partes han acordado abordar el asunto y tomar las medidas necesarias."
+      "subject_newsroom_count": 10,
+      "summary": "Durante un pleno en el Congreso, la presidenta del hemiciclo, Meritxell Batet/Armengol (articles vary on name), ordenó la expulsión momentánea de una diputada del PP tras mostrar un bote de gas/espray de pimienta; la presencia del spray motivó que la Policía acordonara o precintara zonas y provocó discusión y la intervención de la presidencia al considerar el objeto como un arma."
     },
     {
       "_linked_ids": [
-        "subject-sanchez-9059b2388b69"
+        "subject-baqueira-3a8f4743b554"
       ],
-      "cluster_id": "subject-sanchez-9059b2388b69",
-      "coherence": 0.5129885961492191,
+      "cluster_id": "subject-baqueira-3a8f4743b554",
+      "coherence": 0.6065979179783852,
       "consequence": 1,
       "countries": [
-        "spain",
-        "ve"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-22",
-      "headline": "Pedro Sánchez no asistirá a la recepción de Donald Trump por la Asamblea de la ONU",
+      "country_count": 1,
+      "editorial_day": "2026-09-23",
+      "headline": "Detenida en Madrid la pareja del arquitecto Josep Juanpere por su muerte en Baqueira",
       "independent_source_count": 6,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-22/sanchez-no-asistira-a-la-recepcion-que-ofrece-trump-por-la-asamblea-de-la-onu.html"
+          "url": "https://elpais.com/espana/catalunya/2026-09-23/detenida-la-mujer-del-arquitecto-josep-juanpere-acusada-de-su-muerte-en-su-casa-de-baqueira.html"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/sanchez-feo-trump-acudira-recepcion-onu-20260922070432-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260922/ultima-hora-politica-directo-sanchez-no-acudira-martes-recepcion-ofrece-trump-asamblea-onu-motivos-agenda/1003744391876_10.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-22/sanchez-no-asistira-recepcion-trump-1tps_4428659/"
-        },
-        {
-          "language": "es",
-          "source": "entornointeligente.com",
-          "source_country": "ve",
-          "url": "https://www.entornointeligente.com/sanchez-hace-un-feo-a-trump-y-no-acudira-a-su-recepcion-en-la-onu/"
-        },
-        {
-          "language": "es",
-          "source": "diariovasco.com",
-          "source_country": "spain",
-          "url": "https://www.diariovasco.com/internacional/eeuu/sanchez-feo-trump-acudira-recepcion-onu-20260922110051-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-09-22/sanchez-no-asistira-recepcion-trump-1tps_4428659/",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "elconfidencial.com",
-        "elespanol.com",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.513,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.5096,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sanchez",
-      "subject_names": [
-        "asamblea",
-        "asamblea general",
-        "belarus",
-        "brasil",
-        "donald trump",
-        "etats-unis",
-        "feijoo",
-        "onu",
-        "psoe",
-        "sanchez",
-        "trump"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Los artículos coinciden en que el presidente del Gobierno español, Pedro Sánchez, no acudirá a la recepción que ofrece el presidente de Estados Unidos, Donald Trump, con motivo de la Asamblea General de la ONU; la ausencia se atribuye oficialmente a motivos de agenda."
-    },
-    {
-      "_linked_ids": [
-        "subject-mamdani-c2d28b1b17ab"
-      ],
-      "cluster_id": "subject-mamdani-c2d28b1b17ab",
-      "coherence": 0.4904322464720503,
-      "consequence": 0,
-      "countries": [
-        "spain",
-        "ve"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-22",
-      "headline": "Donald Trump elogia a Olúfẹ́mi Mamdani tras reunirse con él en Nueva York",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/us/2026-09-21/trump-a-mamdani-espero-que-sea-un-gran-alcalde-de-nueva-york-tiene-potencia-para-ello.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/trump-elogia-mamdani-tras-encuentro-nueva-york-20260922024255-nt.html"
+          "url": "https://www.abc.es/gente/mossos-detienen-madrid-pareja-arquitecto-josep-juanpere-20260923102442-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-visita-mamdani-nueva-york-espero-llegue-gran-alcalde-gran-potencial_1_13527538.html"
+          "url": "https://www.eldiario.es/catalunya/detienen-madrid-pareja-arquitecto-josep-juanpere-muerto-baqueira-diciembre-pasado-ano_1_13531134.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/cataluna/2026/09/23/6ab3901a21efa036048b456e.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-trump-agradece-mamdani-invitacion-gracie-mansion-nueva-york-espera-sea-gran-alcalde-20260922020650.html"
+          "url": "https://www.europapress.es/catalunya/noticia-detenida-pareja-arquitecto-josep-juanpere-muerte-baqueira-lleida-diciembre-20260923111752.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/trump-halaga-mamdani-potencial-gran-alcalde-nueva-york_7039585_0.html"
-        },
-        {
-          "language": "es",
-          "source": "entornointeligente.com",
-          "source_country": "ve",
-          "url": "https://www.entornointeligente.com/trump-elogia-a-mamdani-tras-su-encuentro-en-nueva-york-seras-uno-de-los-grandes/"
-        },
-        {
-          "language": "es",
-          "source": "eluniversal.com",
-          "source_country": "ve",
-          "url": "https://www.eluniversal.com/internacional/241781/donald-trump-elogia-al-alcalde-izquierdista-mamdani-tras-encuentro-en-nueva-york"
+          "url": "https://www.elconfidencial.com/espana/2026-09-23/detenida-pareja-arquitecto-muerte-baqueira-1tna-1tps_4429639/"
         }
       ],
       "mentioned_countries": [
@@ -323,126 +432,47 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/us/2026-09-21/trump-a-mamdani-espero-que-sea-un-gran-alcalde-de-nueva-york-tiene-potencia-para-ello.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
+      "outbound_url": "https://elpais.com/espana/catalunya/2026-09-23/detenida-la-mujer-del-arquitecto-josep-juanpere-acusada-de-su-muerte-en-su-casa-de-baqueira.html",
+      "rank": 5,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "20minutos.es",
         "abc.es",
+        "elconfidencial.com",
         "eldiario.es",
+        "elmundo.es",
         "elpais.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4904,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7037
-        },
-        "total": 0.4354,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "mamdani",
-      "subject_names": [
-        "belarus",
-        "burnham",
-        "donald trump",
-        "etats-unis",
-        "mamdani",
-        "new york",
-        "nueva york",
-        "trump"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Tras un encuentro en Nueva York, Donald Trump agradeció la invitación de Olúfẹ́mi Mamdani y elogió su potencial como alcalde, afirmando que espera que llegue a ser un gran alcalde y que será \"uno de los grandes\"."
-    },
-    {
-      "_linked_ids": [
-        "subject-new-york-acdbb39d01d7"
-      ],
-      "cluster_id": "subject-new-york-acdbb39d01d7",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-22",
-      "headline": "Nueva York renombra la calle 14 como “Little Spain” en homenaje a la comunidad española",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/cultura/little-spain-nacional-way-comunidad-espanola-fin-20260922102441-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260922/11640947/nueva-york-renombra-calle-14-little-spain-homenaje-comunidad-hispana.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/nueva-york-renombra-calle-14-como-little-spain-homenaje-comunidad-espanola_7039547_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/nueva-york-renombra-calle-14-como-little-spain-homenaje-comunidad-espanola_7039547_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
+          "coherence": 0.6066,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.3714,
+        "total": 0.5216,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "new york",
+      "subject_label": "baqueira",
       "subject_names": [
-        "barcelona",
-        "bruselas",
-        "burnham",
-        "espana",
-        "eurovision",
-        "madrid",
-        "new york",
-        "nueva york",
-        "spain"
+        "baqueira",
+        "detenida",
+        "josep juanpere",
+        "liga",
+        "madrid"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "Las autoridades de Nueva York han cambiado el nombre de la calle 14 por “Little Spain” (también llamada “La Nacional Way”) como reconocimiento a la presencia y contribución de la comunidad española en la ciudad; la iniciativa busca honrar la historia y la cultura hispana vinculada a ese entorno urbano."
+      "subject_newsroom_count": 6,
+      "summary": "La pareja del arquitecto Josep Juanpere fue detenida en Madrid en relación con la muerte del hombre, ocurrida en diciembre en Baqueira (Lleida). Los detenidos hechos están siendo investigados por las autoridades y la detención fue difundida por varios medios."
     }
   ],
-  "discarded_ingested": 34,
+  "discarded_ingested": 42,
   "discarded_kept": 5,
-  "generated_at": "2026-09-22T10:11:41.914407+00:00",
+  "generated_at": "2026-09-23T10:12:10.562071+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

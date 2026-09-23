@@ -1,200 +1,51 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-openai-132275661886",
-      "coherence": 0.5334728184480699,
-      "consequence": 3,
-      "countries": [
-        "as",
-        "ca",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-22",
-      "headline": "Columbia Británica demanda a OpenAI y a Sam Altman por tiroteo escolar",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/technology/2026/sep/22/british-columbia-sues-openai-sam-altman-tumbler-ridge-school-shooting"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c3wyz2rkgrx0o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "onenewspage.com",
-          "source_country": "united-states",
-          "url": "https://www.onenewspage.com/story/british-columbia-sues-openai-and-sam-altman-over-tumbler-ridge-mass-school-sho-58cd22c9/"
-        },
-        {
-          "language": "en",
-          "source": "edenmagnet.com.au",
-          "source_country": "as",
-          "url": "https://www.edenmagnet.com.au/story/9354919/british-columbia-sues-openai-over-school-shooting/"
-        },
-        {
-          "language": "fr",
-          "source": "lerefletdulac.com",
-          "source_country": "ca",
-          "url": "https://www.lerefletdulac.com/nouvelles-nationales/la-colombie-britannique-intente-une-poursuite-contre-openai-pour-tumbler-ridge/"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "united-states"
-      ],
-      "origin_country": "as",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/c3wyz2rkgrx0o?at_medium=RSS&at_campaign=rss",
-      "rank": 1,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5335,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.6854,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "openai",
-      "subject_names": [
-        "anthropic",
-        "openai"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "La provincia de Columbia Británica presentó una demanda legal contra OpenAI y su director ejecutivo Sam Altman en relación con el tiroteo masivo ocurrido en la escuela de Tumbler Ridge, alegando responsabilidad de la empresa en el suceso; varias fuentes confirman que la acción judicial fue iniciada por la provincia y nombra a OpenAI y a Altman como demandados."
-    },
-    {
-      "cluster_id": "subject-meloni-fcdab3cc8758",
-      "coherence": 0.46160735011672516,
+      "cluster_id": "subject-groenlandia-c0bf914467ff",
+      "coherence": 0.40915178941202246,
       "consequence": 3,
       "countries": [
         "brazil",
-        "india",
-        "it",
-        "mx",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-22",
-      "headline": "Meloni anuncia prohibición de burka y niqab en escuelas e límite de estudiantes extranjeros por aula",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/my-europe/2026/09/20/meloni-announces-ban-on-burqa-and-niqab-in-italian-schools-and-cap-on-foreign-students"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/20/italia-prepara-proibicao-de-veus-islamicos-em-escolas-e-limite-para-estrangeiros-por-turma.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "breitbart.com",
-          "source_country": "united-states",
-          "url": "https://www.breitbart.com/politics/2026/09/20/meloni-to-ban-burqas-in-schools-and-limit-number-of-foreigners-in-classrooms/"
-        },
-        {
-          "language": "es",
-          "source": "sdpnoticias.com",
-          "source_country": "mx",
-          "url": "https://www.sdpnoticias.com/internacional/meloni-propone-prohibir-el-burka-y-el-niqab-en-las-escuelas-de-italia/"
-        },
-        {
-          "language": "en",
-          "source": "wcti12.com",
-          "source_country": "united-states",
-          "url": "https://wcti12.com/news/nation-world/meloni-says-italy-to-ban-face-coverings-limit-foreign-students-per-class-in-schools-cabinet-burqas-language"
-        },
-        {
-          "language": "en",
-          "source": "scroll.in",
-          "source_country": "india",
-          "url": "https://scroll.in/latest/1095883/italy-plans-to-ban-burqas-in-schools-limit-foreign-students-per-class"
-        }
-      ],
-      "mentioned_countries": [
-        "it"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/20/italia-prepara-proibicao-de-veus-islamicos-em-escolas-e-limite-para-estrangeiros-por-turma.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4616,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6846,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "meloni",
-      "subject_names": [
-        "italia",
-        "meloni"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "La primera ministra Giorgia Meloni declaró que el gobierno italiano prohibirá el uso de burka y niqab en las escuelas y establecerá un tope al número de alumnos extranjeros por clase; la medida fue presentada como parte de una política educativa y de inmigración y fue anunciada públicamente por Meloni."
-    },
-    {
-      "cluster_id": "subject-groenlandia-87c851941816",
-      "coherence": 0.4600344112173893,
-      "consequence": 2,
-      "countries": [
-        "ar",
         "france",
-        "spain"
+        "it",
+        "spain",
+        "united-kingdom",
+        "unknown"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-09-22",
-      "headline": "Trump anuncia acuerdo con Dinamarca sobre seguridad en Groenlandia",
-      "independent_source_count": 7,
+      "country_count": 6,
+      "editorial_day": "2026-09-23",
+      "headline": "Trump firma un acuerdo trilateral para la seguridad de Groenlandia",
+      "independent_source_count": 10,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/trump-annonce-un-accord-avec-le-danemark-sur-le-groenland-20260919"
+          "url": "https://www.lemonde.fr/international/article/2026/09/23/soulagement-au-groenland-et-au-danemark-apres-l-accord-de-securite-signe-avec-washington_6780533_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/22/donald-trump-signe-un-accord-de-securite-avec-le-groenland-et-le-danemark_6780267_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/groenland-ce-que-prevoit-l-accord-signe-avec-les-etats-unis-et-le-danemark-20260922"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
           "url": "https://www.nouvelobs.com/monde/20260919.OBS118393/groenland-controle-permanent-bases-militaires-duree-ce-que-l-on-sait-sur-l-accord-annonce-par-trump.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/amerique/presence-militaire-decuplee-controle-permanent-a-lonu-donald-trump-detaille-son-accord-avec-le-ACIEYIGVJJDDFBGJS4MBG2JRPQ/"
         },
         {
           "language": "es",
@@ -209,266 +60,444 @@
           "url": "https://www.lavanguardia.com/internacional/20260919/11638945/trump-anuncia-haber-obtenido-control-permanente-sobre-seguridad-groenlandia.html"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/acuerdo-anunciado-trump-groenlandia-deja-incognitas-certezas-soberania-control-isla_1_13523505.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/22/eua-dinamarca-e-groenlandia-assinam-acordo-de-seguranca.ghtml"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-dice-llegado-acuerdo-dinamarca-asumir-control-permanente-seguridad-groenlandia_1_13522340.html"
+          "source": "bitlysdowssl-aws.com",
+          "source_country": "unknown",
+          "url": "https://bitlysdowssl-aws.com/2026/09/donald-trump-firma-un-acuerdo-de-seguridad-tripartito-con-dinamarca-y-groenlandia-para-el-despliegue-de-bases-militares-en-el-artico/"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/dinamarca-groenlandia-maquillan-un-acuerdo-que-ya-existe-para-que-trump-venda-como-un-exito-nuevo-pacto-sobre-isla_7039382_0.html"
-        },
-        {
-          "language": "es",
-          "source": "urgente24.com",
-          "source_country": "ar",
-          "url": "https://urgente24.com/mundo/donald-trump-forzo-un-acuerdo-dinamarca-y-groenlandia-ceden-la-seguridad-del-artico-la-otan-n633164"
+          "language": "it",
+          "source": "notiziegeopolitiche.net",
+          "source_country": "it",
+          "url": "https://www.notiziegeopolitiche.net/groenlandia-accordo-con-danimarca-e-usa-trump-avremo-il-controllo-permanente-sulla-sicurezza/"
         }
       ],
       "mentioned_countries": [
         "gl",
         "da"
       ],
-      "origin_country": "ar",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/trump-dice-llegado-acuerdo-dinamarca-asumir-control-permanente-seguridad-groenlandia_1_13522340.html",
-      "rank": 3,
-      "reference_newsroom_count": 6,
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260919/11638945/trump-anuncia-haber-obtenido-control-permanente-sobre-seguridad-groenlandia.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
+        "bbc.co.uk",
         "elpais.com",
+        "globo.com",
+        "la-croix.com",
         "lavanguardia.com",
-        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.46,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
+          "coherence": 0.4092,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7419
+          "prominence": 0.7143,
+          "source_reliability": 0.7949
         },
-        "total": 0.6609,
+        "total": 0.7653,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "groenlandia",
       "subject_names": [
-        "belarus",
+        "danemark",
         "dinamarca",
         "donald trump",
-        "etats-unis",
+        "eeuu",
+        "estados unidos",
+        "europa",
+        "europe",
+        "greenland",
         "groenland",
         "groenlandia",
+        "iran",
+        "nato",
         "trump"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Los artículos coinciden en que el presidente Donald Trump anunció un acuerdo con Dinamarca que aborda la seguridad de Groenlandia, describiéndolo como un pacto para asumir o garantizar un control permanente de la seguridad en la isla; las piezas señalan además que Dinamarca y Groenlandia matizaron o precisaron que la seguridad será compartida con aliados (mencionándose la OTAN) y que quedan aspectos sobre soberanía, duración y alcance del acuerdo que no están del todo aclarados."
+      "subject_newsroom_count": 14,
+      "summary": "Estados Unidos, Dinamarca y Groenlandia firmaron un acuerdo de seguridad tripartito que prevé un mayor despliegue militar en el Ártico y otorga a EE. UU. un rol de control permanente sobre la seguridad en Groenlandia, mientras Dinamarca describe la fórmula como seguridad compartida; el pacto menciona el establecimiento o reforzamiento de bases y fue presentado públicamente por el presidente Trump y las partes involucradas."
     },
     {
-      "cluster_id": "subject-merz-d30bbdfaba58",
-      "coherence": 0.484013337060078,
-      "consequence": 2,
+      "cluster_id": "subject-espana-749e6f634545",
+      "coherence": 0.44345287359871555,
+      "consequence": 3,
       "countries": [
-        "france",
         "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-22",
-      "headline": "Friedrich Merz queda políticamente debilitado tras el descalabro electoral de la CDU",
-      "independent_source_count": 5,
+      "country_count": 1,
+      "editorial_day": "2026-09-23",
+      "headline": "La OCDE eleva la previsión de crecimiento de España al 2,6% pero advierte de mayor inflación",
+      "independent_source_count": 6,
       "members": [
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/apres-le-desastre-electoral-de-friedrich-merz-le-systeme-politique-allemand-menace-par-les-extremes-20260922"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/allemagne-apres-le-naufrage-electoral-de-son-parti-le-chancelier-friedrich-merz-peut-il-encore-tenir-20260921"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260921-%C3%A9lections-en-allemagne-comment-la-d%C3%A9b%C3%A2cle-de-la-cdu-aux-r%C3%A9gionales-fragilise-friedrich-merz-%C3%A0-l-international"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260920.OBS118411/elections-regionales-en-allemagne-les-scrutins-de-la-derniere-chance-pour-friedrich-merz.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/friedrich-merz-fragilise-pourquoi-les-elections-regionales-pourraient-changer-la-donne-en-allemagne-TOMLMKFGRZC5XBWSE4APL4F3AQ/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/elections-regionales-en-allemagne-friedrich-merz-peut-il-survivre-a-une-nouvelle-debacle-ZB426MS6WFEV7JVHUNOOJOCDTQ/"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-09-23/la-ocde-mejora-la-prevision-de-pib-de-espana-pero-alerta-de-una-inflacion-elevada-y-persistente.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nuevas-elecciones-regionales-alemania-amenazan-pulverizar-capital-politico-le-queda-friedrich-merz_1_13522017.html"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/elections-regionales-en-allemagne-friedrich-merz-peut-il-survivre-a-une-nouvelle-debacle-ZB426MS6WFEV7JVHUNOOJOCDTQ/",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "lefigaro.fr",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.484,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.7241
-        },
-        "total": 0.6399,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "merz",
-      "subject_names": [
-        "afd",
-        "alemania",
-        "allemagne",
-        "cdu",
-        "friedrich merz",
-        "manuela schwesig",
-        "merz"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Las piezas coinciden en que la reciente derrota regional de la CDU ha erosionado significativamente el capital político de Friedrich Merz, exponiéndolo a críticas internas y al ascenso de fuerzas políticas extremas, y que los próximos comicios regionales serán decisivos para su continuidad al frente del partido y su influencia internacional."
-    },
-    {
-      "cluster_id": "subject-google-2eb71938611a",
-      "coherence": 0.558624209066703,
-      "consequence": 2,
-      "countries": [
-        "aj",
-        "india",
-        "spain",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-09-22",
-      "headline": "La UE impone una multa de €403 millones a Google por uso de datos de ubicación",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck1e52v16ngxo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.eldiario.es/economia/ocde-preve-espana-crecera-2-6-costa-inflacion-enquistada-precio-petroleo-alimentos_1_13527945.html"
         },
         {
           "language": "es",
-          "source": "20minutos.es",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/tecnologia/actualidad/google-multada-403-millones-uso-datos-ubicacion-tres-ajustes-investigados_7039700_0.html"
+          "url": "https://www.expansion.com/economia/2026/09/23/6ab2c6cf468aebe0408b45af.html"
         },
         {
-          "language": "en",
-          "source": "2news.com",
-          "source_country": "unknown",
-          "url": "https://www.2news.com/news/national/google-fined-463-million-for-breaching-eu-rule-on-location-data/article_d34d470b-cb32-5664-879c-4c025fcbc2c7.html"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20260923/ocde-eleva-crecimiento-espana-inflacion-subira-ano/1003744393464_0.html"
         },
         {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/news/international/business/google-fined-463-million-for-breaching-eu-rule-on-location-data/articleshow/134399853.cms"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/09/23/6ab38c88fc6c831e108b4599.html"
         },
         {
-          "language": "en",
-          "source": "dailylocal.com",
-          "source_country": "united-states",
-          "url": "https://www.dailylocal.com/2026/09/21/eu-ireland-google/"
-        },
-        {
-          "language": "en",
-          "source": "news.az",
-          "source_country": "aj",
-          "url": "https://news.az/news/google-hit-with-403-million-eu-fine-over-location-data-practices"
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-ocde-eleva-prevision-crecimiento-espana-26-ano-sube-inflacion-37-20260923111853.html"
         }
       ],
       "mentioned_countries": [
-        "ei"
+        "spain"
       ],
-      "origin_country": "aj",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/ck1e52v16ngxo?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/economia/2026-09-23/la-ocde-mejora-la-prevision-de-pib-de-espana-pero-alerta-de-una-inflacion-elevada-y-persistente.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk"
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5586,
-          "corroboration": 0.75,
-          "editorial_weight": 0.2,
+          "coherence": 0.4435,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.702,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espana",
+      "subject_names": [
+        "espana",
+        "gobierno",
+        "ocde",
+        "pib",
+        "spain"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "La OCDE ha revisado al alza su previsión de crecimiento del PIB de España hasta el 2,6% para este año pero simultáneamente advierte de una inflación elevada y persistente, con subidas de precios impulsadas en parte por el coste del petróleo y los alimentos y una tasa de inflación anual que se situaría por encima de la de otros países europeos."
+    },
+    {
+      "cluster_id": "subject-martin-ryan-d90226f2d256",
+      "coherence": 0.539836537212678,
+      "consequence": 2,
+      "countries": [
+        "be",
+        "france",
+        "it"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-23",
+      "headline": "Azerbaiyán concede el indulto presidencial al francés Martin Ryan",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/23/l-azerbaidjan-gracie-le-francais-emprisonne-martin-ryan-selon-un-decret-presidentiel_6780798_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/martin-ryan-le-francais-emprisonne-en-azerbaidjan-a-ete-gracie-par-le-president-20260923"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/azerbaidjan-grace-presidentielle-pour-le-francais-emprisonne-martin-ryan-20260923_LDZZPMMBQZH5TIKMMZ4D6TZQ6U/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/azerbaidjan-grace-presidentielle-pour-martin-ryan-un-francais-emprisonne-depuis-trois-ans-20260923"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/l-azerbaidjan-accorde-une-grace-presidentielle-au-francais-martin-ryan-emprisonne-pour-espionnage_8206082.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20260923-azerba%C3%AFdjan-gracie-fran%C3%A7ais-martin-ryan-apr%C3%A8s-lev%C3%A9e-sanctions-contre-oligarque"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/23/azerbaijan-pardons-french-citizen-martin-ryan-following-usmanovs-delisting"
+        },
+        {
+          "language": "fr",
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/international/europe/2026/09/23/un-francais-emprisonne-en-azerbaidjan-depuis-2023-obtient-la-grace-presidentielle-XL52N5T2UZC3PKVCHLTU4BMNFQ/"
+        },
+        {
+          "language": "fr",
+          "source": "lalsace.fr",
+          "source_country": "france",
+          "url": "https://www.lalsace.fr/defense-guerre-conflit/2026/09/23/le-francais-martin-ryan-condamne-a-dix-ans-de-prison-pour-espionnage-a-ete-gracie"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "be",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/23/l-azerbaidjan-gracie-le-francais-emprisonne-martin-ryan-selon-un-decret-presidentiel_6780798_3210.html",
+      "rank": 3,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5398,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4667,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
+          "prominence": 0.6923,
+          "source_reliability": 0.7576
         },
-        "total": 0.6265,
+        "total": 0.6821,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "google",
+      "subject_label": "martin ryan",
       "subject_names": [
-        "google"
+        "azerbaidjan",
+        "martin ryan"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Las noticias coinciden en que los reguladores europeos multaron a Google con €403 millones (aprox. $463 millones) por incumplimientos del GDPR relacionados con el uso de datos de ubicación; la sanción se centra en prácticas sobre cómo Google recopilaba y procesaba esa información, y los artículos mencionan tres ajustes investigados sin aportar aquí sus detalles."
+      "subject_newsroom_count": 7,
+      "summary": "Las noticias coinciden en que Martin Ryan, ciudadano francés condenado por espionaje y encarcelado en Azerbaiyán desde 2023, ha recibido un indulto presidencial. Varios medios señalan que la medida se produjo tras un decreto presidencial y mencionan además que el indulto llega en el contexto de la reciente suspensión de sanciones a un oligarca ruso."
+    },
+    {
+      "cluster_id": "subject-france-e099ad4e1566",
+      "coherence": 0.5113241430509198,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-23",
+      "headline": "La UE retira sanciones a dos oligarcas rusos tras presiones de varios países",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/l-union-europeenne-leve-ses-sanctions-a-l-encontre-de-deux-oligarques-russes_8206004.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-22/la-ue-saca-de-la-lista-de-sanciones-a-dos-grandes-oligarcas-por-las-presiones-de-francia-y-luxemburgo.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ue-cede-presion-francia-luxemburgo-eslovaquia-saca-oligarcas-rusos-lista-sancionados_1_13529569.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/ue-cede-presion-francia-luxemburgo-eslovaquia-saca-oligarcas-rusos-lista-sancionados_1_13529569.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5113,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6761,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "belgique",
+        "france",
+        "francia",
+        "fridman",
+        "leon xiv",
+        "luxemburgo",
+        "moscou",
+        "otan",
+        "paris",
+        "rusia",
+        "russie",
+        "ucrania",
+        "usmanov",
+        "vladimir poutine"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "La Unión Europea ha eliminado a dos oligarcas rusos de su lista de sanciones; la decisión se tomó después de solicitudes y presiones de Estados miembros, entre ellos Francia, Luxemburgo y Eslovaquia, que pidieron o apoyaron la retirada de los nombres afectados."
+    },
+    {
+      "cluster_id": "subject-france-fdbf089b7177",
+      "coherence": 0.4194617176969341,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-23",
+      "headline": "El papa León XIV realiza una visita histórica a Francia",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/podcasts/article/2026/09/23/le-pape-leon-xiv-en-france-les-enjeux-d-une-visite-historique_6780532_5463015.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/religion/visite-du-pape-en-france-qui-sont-les-reseaux-francais-de-leon-xiv-20260922"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/france/leon-xiv-en-france-entre-lelysee-et-le-vatican-les-batailles-souterraines-dune-visite-historique-JICIULIYBJGN3KK4BBMEVAFN34/"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/economie/qui-va-payer-la-visite-du-pape-leon-xiv-en-france_645898"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "challenges.fr",
+      "outbound_url": "https://www.challenges.fr/economie/qui-va-payer-la-visite-du-pape-leon-xiv-en-france_645898",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4195,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6687,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "belgique",
+        "france",
+        "francia",
+        "leon xiv",
+        "paris"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "El papa León XIV visita Francia en un viaje presentado como histórico, que moviliza tanto al Vaticano como al Estado francés; la organización implica redes e interlocutores franceses ligados al pontífice, discusiones sobre logística y seguridad entre el Palacio del Elíseo y el Vaticano, y negociaciones claras sobre quién asumirá los costos de la visita."
     }
   ],
-  "discarded_ingested": 143,
+  "discarded_ingested": 129,
   "discarded_kept": 5,
-  "generated_at": "2026-09-22T10:11:41.914407+00:00",
+  "generated_at": "2026-09-23T10:12:10.562071+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

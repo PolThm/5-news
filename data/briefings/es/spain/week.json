@@ -2,425 +2,499 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-renault-d95921b682c4"
+        "subject-italy-e8ac84a6ac01",
+        "subject-meloni-fcdab3cc8758"
       ],
-      "cluster_id": "subject-renault-d95921b682c4",
-      "coherence": 0.46993197537311915,
-      "consequence": 2,
+      "cluster_id": "subject-italy-e8ac84a6ac01",
+      "coherence": 0.4646625574197457,
+      "consequence": 3,
       "countries": [
-        "france",
-        "spain"
+        "germany",
+        "india",
+        "it",
+        "united-kingdom"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-25",
-      "headline": "Renault invertirá 600 millones de euros en España hasta 2030",
-      "independent_source_count": 5,
+      "country_count": 4,
+      "editorial_day": "2026-09-26",
+      "headline": "Italia prohibe el burka y el niqab en las escuelas y limita alumnos extranjeros",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/motor/sector_y_mercado/renault-invertira-600-millones-espana-2030-incluyendo-ayudas-publicas_1_13534314.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/motor/2026/09/24/6ab4ed8f468aeb5e598b458c.html"
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/italy-to-ban-burqa-in-schools-limit-foreign-pupils/a-79423432?maca=en-rss-en-world-4025-rdf"
         },
         {
-          "language": "fr",
-          "source": "tradingsat.com",
-          "source_country": "france",
-          "url": "https://www.tradingsat.com/renault-FR0000131906/actualites/renault-renault-officialise-un-plan-d-investissement-en-espagne-1170779.html"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/25/italy-moves-to-ban-face-coverings-and-limit-foreign-pupils-in-schools-with-new-law"
         },
         {
-          "language": "fr",
-          "source": "lalsace.fr",
-          "source_country": "france",
-          "url": "https://www.lalsace.fr/economie/2026/09/24/renault-va-investir-600-millions-d-euros-d-ici-2030-pour-produire-cinq-nouveaux-modeles"
-        },
-        {
-          "language": "fr",
-          "source": "leprogres.fr",
-          "source_country": "france",
-          "url": "https://www.leprogres.fr/economie/2026/09/24/renault-va-investir-600-millions-d-euros-d-ici-2030-pour-produire-cinq-nouveaux-modeles"
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://timesofindia.indiatimes.com/world/europe/italy-govt-decrees-limits-on-non-italian-speakers-and-veils-in-school-classrooms/articleshow/134495465.cms"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "france"
+        "it"
       ],
-      "origin_country": "france",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/empresas/motor/2026/09/24/6ab4ed8f468aeb5e598b458c.html",
+      "origin_country": "germany",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
       "rank": 1,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
-        "expansion.com"
+        "bbc.co.uk",
+        "dw.com",
+        "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4699,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "coherence": 0.4647,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6685,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "italy",
+      "subject_names": [
+        "italy"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "El gobierno italiano aprobó una medida que prohíbe el uso de velos integrales (burka y niqab) en las aulas y establece límites al número de alumnos extranjeros o con bajo dominio del italiano en las clases. Las notas coinciden en que la decisión forma parte de una nueva normativa destinada a regular la presencia de no italianos y las coberturas faciales en centros educativos."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-0bbcc0a5b9a1"
+      ],
+      "cluster_id": "subject-france-0bbcc0a5b9a1",
+      "coherence": 0.6679013330906407,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-26",
+      "headline": "El Papa advierte que una 'paradisíaca de máquinas' podría socavar a la humanidad",
+      "independent_source_count": 17,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/25/pope-leo-ai-threat-to-humanity-three-day-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/live/2026/sep/25/pope-leo-france-paris-notre-dame-metz-ai-europe-latest-news-updates"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/26/g-s1-145150/pope-warns-a-paradise-of-machines-could-undermine-humanity"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/25/nx-s1-5981140/pope-leo-france"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/pope-opens-france-trip-with-warning-that-a-paradise-of-machines-could-undermine-humanity"
+        },
+        {
+          "language": "en",
+          "source": "journalgazette.net",
+          "source_country": "united-states",
+          "url": "https://www.journalgazette.net/news/world/pope-warns-a-paradise-of-machines-could-undermine-humanity-as-he-opens-france-trip/article_cc608f84-8da3-5f03-ac28-65220efa474a.html"
+        },
+        {
+          "language": "en",
+          "source": "kvnf.org",
+          "source_country": "united-states",
+          "url": "https://www.kvnf.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wjct.org",
+          "source_country": "united-states",
+          "url": "https://news.wjct.org/tech/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "kvpr.org",
+          "source_country": "united-states",
+          "url": "https://www.kvpr.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "whqr.org",
+          "source_country": "united-states",
+          "url": "https://www.whqr.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wsiu.org",
+          "source_country": "united-states",
+          "url": "https://www.wsiu.org/science-technology/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "nbcbayarea.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcbayarea.com/news/national-international/pope-leo-ai-warning-france-trip/4148553/"
+        },
+        {
+          "language": "en",
+          "source": "kccu.org",
+          "source_country": "united-states",
+          "url": "https://www.kccu.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "nbclosangeles.com",
+          "source_country": "united-states",
+          "url": "https://www.nbclosangeles.com/news/national-international/pope-leo-ai-warning-france-trip/3947264/"
+        },
+        {
+          "language": "en",
+          "source": "iowapublicradio.org",
+          "source_country": "united-states",
+          "url": "https://www.iowapublicradio.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wutc.org",
+          "source_country": "united-states",
+          "url": "https://www.wutc.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wfae.org",
+          "source_country": "united-states",
+          "url": "https://www.wfae.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wknofm.org",
+          "source_country": "united-states",
+          "url": "https://www.wknofm.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "npr.org",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6679,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
+          "prominence": 0.8095,
+          "source_reliability": 0.8462
         },
-        "total": 0.5544,
+        "total": 0.6441,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "renault",
+      "subject_label": "france",
       "subject_names": [
-        "renault"
+        "france",
+        "francia",
+        "leon xiv",
+        "lourdes",
+        "lyon",
+        "maison bakhita",
+        "pope leo",
+        "xiv"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Renault ha anunciado un plan de inversión de 600 millones de euros en España hasta 2030 para electrificar y modernizar sus plantas españolas y producir cinco nuevos modelos; la cifra incluye ayudas públicas."
+      "subject_newsroom_count": 24,
+      "summary": "En la apertura de su visita de tres días a Francia, el Papa Leo XIV advirtió sobre los riesgos de la inteligencia artificial, diciendo que un «paraíso de máquinas» podría amenazar o socavar a la humanidad y subrayó que la tecnología debe permanecer al servicio de las personas."
     },
     {
       "_linked_ids": [
-        "subject-sanchez-8d28c7215212"
+        "subject-france-982ee7abcb94"
       ],
-      "cluster_id": "subject-sanchez-8d28c7215212",
+      "cluster_id": "subject-france-982ee7abcb94",
       "coherence": null,
-      "consequence": 2,
+      "consequence": 3,
       "countries": [
-        "spain"
+        "france",
+        "it"
       ],
-      "country_count": 1,
+      "country_count": 2,
       "editorial_day": "2026-09-25",
-      "headline": "El papa califica de \"crisis humanitaria\" la situación de migrantes en Ceuta",
-      "independent_source_count": 3,
+      "headline": "Francia y Alemania discrepan sobre las reglas «Made in/with Europe», España propone un compromiso",
+      "independent_source_count": 2,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-25/el-papa-sobre-ceuta-lo-he-seguido-desde-el-primer-dia-realmente-es-una-crisis-humanitaria.html"
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/economie/made-in-europe-la-france-et-lallemagne-sopposent-lespagne-cherche-un-compromis-FZJI3HYICVER7IYQMMGH5PINYQ/"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/sociedad/papa-leon-xiv-califica-crisis-humanitaria-situacion-migrantes-ceuta_1_13537306.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-25/papa-leon-xiv-crisis-ceuta-1tps_4431651/"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "germany",
+        "france"
       ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/sociedad/papa-leon-xiv-califica-crisis-humanitaria-situacion-migrantes-ceuta_1_13537306.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france",
+      "rank": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "eldiario.es",
-        "elpais.com"
+        "euronews.com",
+        "lexpress.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.5448,
+        "total": 0.6236,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sanchez",
+      "subject_label": "france",
       "subject_names": [
-        "ceuta",
-        "gobierno",
-        "leon xiv",
-        "lourdes",
-        "pedro sanchez",
-        "sanchez",
-        "toledo",
-        "xiv"
+        "france",
+        "francia",
+        "lyon",
+        "pope leo"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "El papa León XIV afirmó que la llegada masiva de migrantes a Ceuta debe ser considerada una \"crisis humanitaria\" y pidió buscar maneras de responder a este tipo de situaciones, subrayando la necesidad de afrontar sus causas y atender a las personas afectadas."
+      "subject_newsroom_count": 24,
+      "summary": "Francia y Alemania están enfrentadas en la negociación de nuevas normas sobre el etiquetado y origen de productos europeos: Alemania quiere reglas más amplias bajo la fórmula «Made with Europe», mientras que Francia defiende una definición más estricta de «Made in Europe». España intenta mediar proponiendo un compromiso entre ambas posturas. Ambos artículos coinciden en que hay desacuerdo entre París y Berlín y que Madrid busca una solución intermedia."
     },
     {
       "_linked_ids": [
-        "subject-harvard-ca081ec67f91"
+        "subject-starlink-e5629a2c675e"
       ],
-      "cluster_id": "subject-harvard-ca081ec67f91",
-      "coherence": 0.46072887732657386,
-      "consequence": 1,
+      "cluster_id": "subject-starlink-e5629a2c675e",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
-        "spain"
+        "it",
+        "united-kingdom"
       ],
-      "country_count": 1,
+      "country_count": 2,
+      "editorial_day": "2026-09-24",
+      "headline": "Polonia dice que incendio en estación Starlink fue un sabotaje",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.5,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6194,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "starlink",
+      "subject_names": [
+        "starlink"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Las autoridades polacas dijeron que un incendio en una estación terrestre de Starlink en el centro de Polonia fue resultado de un sabotaje; el ministro de asuntos digitales calificó el incidente como intencionado. Las informaciones también sitúan el suceso en el contexto de advertencias sobre el aumento de la amenaza rusa en la región."
+    },
+    {
+      "_linked_ids": [
+        "subject-trump-12d3c2b5e7e8",
+        "subject-trump-9b3d11a4e553"
+      ],
+      "cluster_id": "subject-trump-9b3d11a4e553",
+      "coherence": 0.5585886874178165,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "pk",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 4,
       "editorial_day": "2026-09-25",
-      "headline": "Estudiantes de Harvard interrogan a Pedro Sánchez sobre corrupción y Pegasus",
+      "headline": "Zelenski afirma que Trump autorizó la producción de misiles Patriot en Ucrania",
       "independent_source_count": 6,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-25/las-preguntas-de-los-alumnos-sobre-corrupcion-pegasus-ceuta-y-venezuela-cambian-el-guion-de-sanchez-en-harvard.html"
-        },
-        {
-          "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/begona-pegasus-zapatero-escandalos-persiguen-sanchez-harvard-20260925031353-nt.html"
+          "url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html"
         },
         {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/25/6ab61ed5fdddffb60d8b4571.html"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/25/zelensky-trump-aprovacao-final-licenciar-patriot.ghtml"
         },
         {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260925/estudiantes-harvard-preguntan-sanchez-corrupcion-espana-caso-begona-pegasus/1003744396651_0.html"
+          "language": "en",
+          "source": "wtkr.com",
+          "source_country": "united-states",
+          "url": "https://www.wtkr.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/sorpresa-harvard-estudiantes-preguntan-sanchez-por-corrupcion-los-casos-su-esposa-su-hermano_7041161_0.html"
+          "language": "en",
+          "source": "ksby.com",
+          "source_country": "united-states",
+          "url": "https://www.ksby.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
         },
         {
-          "language": "es",
-          "source": "marca.com",
-          "source_country": "spain",
-          "url": "https://www.marca.com/tiramillas/politica/2026/09/25/estudiantes-harvard-ponen-aprieto-pedro-sanchez-casos-mi-esposa-mi-hermano-son-corrupcion-son-politica-sucia.html"
+          "language": "en",
+          "source": "thenews.com.pk",
+          "source_country": "pk",
+          "url": "https://www.thenews.com.pk/latest/1417633-trump-agrees-to-let-ukraine-manufacture-patriot-missiles-zelensky-says"
+        },
+        {
+          "language": "en",
+          "source": "kxlf.com",
+          "source_country": "united-states",
+          "url": "https://www.kxlf.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "ve"
+        "up",
+        "rs"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/2026-09-25/las-preguntas-de-los-alumnos-sobre-corrupcion-pegasus-ceuta-y-venezuela-cambian-el-guion-de-sanchez-en-harvard.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4607,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.4929,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "harvard",
-      "subject_names": [
-        "bruselas",
-        "ceuta",
-        "espana",
-        "gobierno",
-        "harvard",
-        "madrid",
-        "marruecos",
-        "pedro sanchez",
-        "pegasus",
-        "sanchez",
-        "toledo"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Durante una sesión en Harvard, estudiantes preguntaron al presidente Pedro Sánchez sobre casos de corrupción en España y le interpelaron específicamente por asuntos vinculados a su esposa, a su hermano y al software espía Pegasus; las preguntas obligaron a Sánchez a responder y defendió que algunas acusaciones son 'política sucia'."
-    },
-    {
-      "_linked_ids": [
-        "subject-sevilla-854894026020"
-      ],
-      "cluster_id": "subject-sevilla-854894026020",
-      "coherence": 0.47614474888988245,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-25",
-      "headline": "Detenido un joven por matar a puñaladas a una mujer en un hotel de Bormujos",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-09-25/detenido-tras-matar-a-punaladas-a-una-mujer-en-un-hotel-de-bormujos-sevilla.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/sevilla/detenido-joven-20-anos-apunalar-mortalmente-mujer-hotel-bormujos-sevilla_1_13537101.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/andalucia/2026/09/25/6ab61aa521efa0d8128b45ab.html"
-        },
-        {
-          "language": "es",
-          "source": "andaluciainformacion.es",
-          "source_country": "spain",
-          "url": "https://www.andaluciainformacion.es/articulo/sevilla/detenido-joven-20-anos-apunalar-mortalmente-mujer-hotel-bormujos/202609251052333488042.html"
-        },
-        {
-          "language": "es",
-          "source": "diariodepontevedra.es",
-          "source_country": "spain",
-          "url": "https://www.diariodepontevedra.es/articulo/espana/joven-20-anos-mata-punaladas-mujer-hotel-sevilla/202609251032251469445.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/sociedad/2026-09-25/detenido-tras-matar-a-punaladas-a-una-mujer-en-un-hotel-de-bormujos-sevilla.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4761,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.4635,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sevilla",
-      "subject_names": [
-        "bormujos",
-        "sevilla"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Varios medios informan que un joven de 20 años fue detenido tras matar a puñaladas a una mujer que ejercía la prostitución en un alojamiento turístico/hotel de Bormujos, en la provincia de Sevilla; según las informaciones, el agresor se entregó tras el homicidio."
-    },
-    {
-      "_linked_ids": [
-        "subject-maricarmen-178f1cd693a6"
-      ],
-      "cluster_id": "subject-maricarmen-178f1cd693a6",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-25",
-      "headline": "Maricarmen anuncia desde el hospital que debe dejar su casa pero seguirá luchando",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/madrid/sociedad/20260925/maricarmen-rompe-silencio-hospital-dejar-casa-no-significa-vaya-seguir-luchando/1003744396861_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/madrid/2026/09/25/6ab563bdfc6c83cc628b45b9.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/madrid/las-primeras-palabras-maricarmen-tras-su-desahucio-quiero-dar-las-gracias-todas-las-personas-que-han-estado-conmigo_7041280_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/madrid/sociedad/20260925/maricarmen-rompe-silencio-hospital-dejar-casa-no-significa-vaya-seguir-luchando/1003744396861_0.html",
+      "origin_country": "brazil",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "20minutos.es",
-        "elespanol.com",
-        "elmundo.es"
+        "abc.es",
+        "globo.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "coherence": 0.5586,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "impact": 0.6667,
+          "novelty": 0.5,
+          "prominence": 0.6,
+          "source_reliability": 0.6364
         },
-        "total": 0.3714,
+        "total": 0.5757,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "maricarmen",
+      "subject_label": "trump",
       "subject_names": [
-        "ayuso",
-        "maricarmen",
-        "maricarmen'"
+        "canada",
+        "donald trump",
+        "jinping",
+        "kiev",
+        "kremlin",
+        "patriot",
+        "russian",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "zelenski"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Maricarmen habló desde el hospital y dijo que tiene que abandonar su casa; en sus primeras palabras expresó que aunque no pueda quedarse en el hogar no renuncia a seguir luchando y describió la espera y la incertidumbre sobre su destino mientras permanece ingresada."
+      "subject_newsroom_count": 30,
+      "summary": "El presidente ucraniano Volodímir Zelenski dijo que el expresidente estadounidense Donald Trump dio su aprobación final para que Ucrania fabrique misiles Patriot; varios artículos concordaron en que Zelenski informó además que Estados Unidos sugirió una nueva reunión trilateral relacionada con el asunto."
     }
   ],
-  "discarded_ingested": 33,
+  "discarded_ingested": 122,
   "discarded_kept": 5,
-  "generated_at": "2026-09-25T10:24:06.564348+00:00",
+  "generated_at": "2026-09-26T10:04:01.509327+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,
-  "served_zone": "spain",
-  "served_zone_continent": "europe",
-  "served_zone_kind": "country",
+  "served_zone": "europe",
+  "served_zone_continent": null,
+  "served_zone_kind": "continent",
   "zone": "spain",
   "zone_continent": "europe",
   "zone_kind": "country"

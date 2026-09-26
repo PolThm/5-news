@@ -1,0 +1,24 @@
+{
+  "articles_collected": 7646,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 6621,
+  "clusters_selected": 15,
+  "completed": true,
+  "cycle_id": "2026-09-26T10-04-01Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20260926094500.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20260926094500.translation.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 6733,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-09-26T10:04:01.509327+00:00",
+  "summarize_batches": {}
+}

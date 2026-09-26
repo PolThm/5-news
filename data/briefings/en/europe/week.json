@@ -2,58 +2,412 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-trump-12d3c2b5e7e8"
+        "subject-italy-e8ac84a6ac01",
+        "subject-meloni-fcdab3cc8758"
       ],
-      "cluster_id": "subject-trump-12d3c2b5e7e8",
-      "coherence": 0.464220552996932,
+      "cluster_id": "subject-italy-e8ac84a6ac01",
+      "coherence": 0.4646625574197457,
       "consequence": 3,
       "countries": [
-        "brazil",
-        "france",
+        "germany",
+        "india",
         "it",
-        "lo",
-        "md",
-        "no",
-        "po",
-        "ro",
-        "spain",
-        "sy",
-        "up"
+        "united-kingdom"
       ],
-      "country_count": 11,
-      "editorial_day": "2026-09-25",
-      "headline": "Zelensky says Trump approved Ukraine producing Patriot missiles",
-      "independent_source_count": 15,
+      "country_count": 4,
+      "editorial_day": "2026-09-26",
+      "headline": "Italy approves measures to ban face veils in schools and limit foreign pupils",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/09/25/en-direct-guerre-en-ukraine-donald-trump-a-accepte-d-accorder-a-l-ukraine-les-licences-pour-produire-des-missiles-patriot-annonce-volodymyr-zelensky_6777944_3210.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/25/volodymyr-zelensky-dit-avoir-obtenu-l-aval-de-donald-trump-pour-la-production-de-missiles-patriot-en-ukraine_6782422_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260925-volodymyr-zelensky-affirme-que-donald-trump-a-valid%C3%A9-la-production-en-ukraine-de-missiles-patriot"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html"
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/italy-to-ban-burqa-in-schools-limit-foreign-pupils/a-79423432?maca=en-rss-en-world-4025-rdf"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/25/trump-makes-final-decision-to-grant-ukraine-patriot-license-zelenskyy-says"
+          "url": "https://www.euronews.com/2026/09/25/italy-moves-to-ban-face-coverings-and-limit-foreign-pupils-in-schools-with-new-law"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://timesofindia.indiatimes.com/world/europe/italy-govt-decrees-limits-on-non-italian-speakers-and-veils-in-school-classrooms/articleshow/134495465.cms"
+        }
+      ],
+      "mentioned_countries": [
+        "it"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "dw.com",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4647,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6685,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "italy",
+      "subject_names": [
+        "italy"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "The Italian government has approved measures to prohibit face coverings such as the burqa and niqab in school classrooms and to impose limits on the number or proportion of non-Italian-speaking or foreign pupils in classes, as part of a new decree affecting school enrolment and classroom rules."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-0bbcc0a5b9a1"
+      ],
+      "cluster_id": "subject-france-0bbcc0a5b9a1",
+      "coherence": 0.6679013330906407,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-26",
+      "headline": "Pope warns that a 'paradise of machines' could undermine humanity",
+      "independent_source_count": 17,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/25/pope-leo-ai-threat-to-humanity-three-day-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/live/2026/sep/25/pope-leo-france-paris-notre-dame-metz-ai-europe-latest-news-updates"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/26/g-s1-145150/pope-warns-a-paradise-of-machines-could-undermine-humanity"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/25/nx-s1-5981140/pope-leo-france"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/pope-opens-france-trip-with-warning-that-a-paradise-of-machines-could-undermine-humanity"
+        },
+        {
+          "language": "en",
+          "source": "journalgazette.net",
+          "source_country": "united-states",
+          "url": "https://www.journalgazette.net/news/world/pope-warns-a-paradise-of-machines-could-undermine-humanity-as-he-opens-france-trip/article_cc608f84-8da3-5f03-ac28-65220efa474a.html"
+        },
+        {
+          "language": "en",
+          "source": "kvnf.org",
+          "source_country": "united-states",
+          "url": "https://www.kvnf.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wjct.org",
+          "source_country": "united-states",
+          "url": "https://news.wjct.org/tech/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "kvpr.org",
+          "source_country": "united-states",
+          "url": "https://www.kvpr.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "whqr.org",
+          "source_country": "united-states",
+          "url": "https://www.whqr.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wsiu.org",
+          "source_country": "united-states",
+          "url": "https://www.wsiu.org/science-technology/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "nbcbayarea.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcbayarea.com/news/national-international/pope-leo-ai-warning-france-trip/4148553/"
+        },
+        {
+          "language": "en",
+          "source": "kccu.org",
+          "source_country": "united-states",
+          "url": "https://www.kccu.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "nbclosangeles.com",
+          "source_country": "united-states",
+          "url": "https://www.nbclosangeles.com/news/national-international/pope-leo-ai-warning-france-trip/3947264/"
+        },
+        {
+          "language": "en",
+          "source": "iowapublicradio.org",
+          "source_country": "united-states",
+          "url": "https://www.iowapublicradio.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wutc.org",
+          "source_country": "united-states",
+          "url": "https://www.wutc.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wfae.org",
+          "source_country": "united-states",
+          "url": "https://www.wfae.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        },
+        {
+          "language": "en",
+          "source": "wknofm.org",
+          "source_country": "united-states",
+          "url": "https://www.wknofm.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "npr.org",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6679,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.8095,
+          "source_reliability": 0.8462
+        },
+        "total": 0.6441,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "leon xiv",
+        "lourdes",
+        "lyon",
+        "maison bakhita",
+        "pope leo",
+        "xiv"
+      ],
+      "subject_newsroom_count": 24,
+      "summary": "On the opening day of his three-day visit to France, Pope Leo delivered a public warning about artificial intelligence, saying that unchecked technology risks creating a 'paradise of machines' that could undermine human dignity and urging that AI remain at the service of people."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-982ee7abcb94"
+      ],
+      "cluster_id": "subject-france-982ee7abcb94",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-25",
+      "headline": "France and Germany clash over new EU 'Made in Europe' labelling rules",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/economie/made-in-europe-la-france-et-lallemagne-sopposent-lespagne-cherche-un-compromis-FZJI3HYICVER7IYQMMGH5PINYQ/"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france"
+        }
+      ],
+      "mentioned_countries": [
+        "germany",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6236,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "lyon",
+        "pope leo"
+      ],
+      "subject_newsroom_count": 24,
+      "summary": "France and Germany disagree on proposed EU rules for a 'Made in Europe' or 'Made with Europe' label: Germany wants broader criteria that would allow products with more non-EU inputs to qualify, while France opposes loosening the rules; Spain is seeking a compromise between the positions."
+    },
+    {
+      "_linked_ids": [
+        "subject-starlink-e5629a2c675e"
+      ],
+      "cluster_id": "subject-starlink-e5629a2c675e",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-24",
+      "headline": "Poland says fire at central Starlink ground station was sabotage",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.5,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6194,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "starlink",
+      "subject_names": [
+        "starlink"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Polish authorities have concluded that a fire at a Starlink ground station in central Poland was an act of sabotage. Officials including the digital affairs minister described the incident as deliberate, and the event has prompted concern about a rising Russian threat in the region, according to government statements."
+    },
+    {
+      "_linked_ids": [
+        "subject-trump-12d3c2b5e7e8",
+        "subject-trump-9b3d11a4e553"
+      ],
+      "cluster_id": "subject-trump-9b3d11a4e553",
+      "coherence": 0.5585886874178165,
+      "consequence": 2,
+      "countries": [
+        "brazil",
+        "pk",
+        "spain",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-09-25",
+      "headline": "Zelensky says Trump approved Ukraine producing Patriot missiles",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html"
         },
         {
           "language": "pt",
@@ -63,516 +417,78 @@
         },
         {
           "language": "en",
-          "source": "interfax.com.ua",
-          "source_country": "up",
-          "url": "https://en.interfax.com.ua/news/general/1209831.html"
+          "source": "wtkr.com",
+          "source_country": "united-states",
+          "url": "https://www.wtkr.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
         },
         {
           "language": "en",
-          "source": "aawsat.com",
-          "source_country": "sy",
-          "url": "https://english.aawsat.com/world/5322442-zelensky-says-trump-made-final-decision-give-ukraine-patriot-license"
+          "source": "ksby.com",
+          "source_country": "united-states",
+          "url": "https://www.ksby.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
         },
         {
-          "language": "slk",
-          "source": "hnonline.sk",
-          "source_country": "lo",
-          "url": "https://hnonline.sk/svet/96304233-trump-povedal-ze-povoli-ukrajine-vyrabat-strely-do-systemov-patriot-uviedol-zelenskyj"
+          "language": "en",
+          "source": "thenews.com.pk",
+          "source_country": "pk",
+          "url": "https://www.thenews.com.pk/latest/1417633-trump-agrees-to-let-ukraine-manufacture-patriot-missiles-zelensky-says"
         },
         {
-          "language": "ron",
-          "source": "agerpres.ro",
-          "source_country": "ro",
-          "url": "https://agerpres.ro/politic-extern/2026/09/25/ucraina-zelenski-anunta-ca-trump-a-acceptat-sa-acorde-kievului-licente-pentru-a-produce-rachete-patr--1596927"
-        },
-        {
-          "language": "ron",
-          "source": "news.yam.md",
-          "source_country": "md",
-          "url": "https://news.yam.md/ro/story/67046068"
-        },
-        {
-          "language": "pt",
-          "source": "rtp.pt",
-          "source_country": "po",
-          "url": "https://www.rtp.pt/noticias/mundo/zelensky-diz-que-trump-autorizou-a-ucrania-a-produzir-misseis-patriot_n1767651"
-        },
-        {
-          "language": "nor",
-          "source": "dagsavisen.no",
-          "source_country": "no",
-          "url": "https://www.dagsavisen.no/nyheter/zelenskyj-trump-gir-ukraina-lisens-til-a-produsere-patriot-missiler/10550845"
-        },
-        {
-          "language": "it",
-          "source": "ilrestodelcarlino.it",
-          "source_country": "it",
-          "url": "https://www.ilrestodelcarlino.it/ultimaora/zelensky-ok-di-trump-alle-4d4994f3"
-        },
-        {
-          "language": "it",
-          "source": "ilgiornale.it",
-          "source_country": "it",
-          "url": "https://www.ilgiornale.it/diretta/cronaca-internazionale/zelensky-ok-di-trump-alle-licenze-per-i-missili-patriot/"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-09-25/zelensky-ok-di-trump-alle-licenze-per-i-patriot/19722270/"
+          "language": "en",
+          "source": "kxlf.com",
+          "source_country": "united-states",
+          "url": "https://www.kxlf.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
         }
       ],
       "mentioned_countries": [
-        "up"
+        "up",
+        "rs"
       ],
       "origin_country": "brazil",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/live/2026/09/25/en-direct-guerre-en-ukraine-donald-trump-a-accepte-d-accorder-a-l-ukraine-les-licences-pour-produire-des-missiles-patriot-annonce-volodymyr-zelensky_6777944_3210.html",
-      "rank": 1,
-      "reference_newsroom_count": 5,
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "abc.es",
-        "euronews.com",
-        "france24.com",
-        "globo.com",
-        "lemonde.fr"
+        "globo.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4642,
-          "corroboration": 0.8462,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
+          "coherence": 0.5586,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7895,
-          "source_reliability": 0.8222
+          "impact": 0.6667,
+          "novelty": 0.5,
+          "prominence": 0.6,
+          "source_reliability": 0.6364
         },
-        "total": 0.7513,
+        "total": 0.5757,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
       "subject_names": [
+        "canada",
         "donald trump",
         "jinping",
         "kiev",
-        "musk",
+        "kremlin",
         "patriot",
-        "russia",
+        "russian",
         "trump",
-        "trump's",
         "ucrania",
         "ukraine",
         "zelenski"
       ],
-      "subject_newsroom_count": 29,
-      "summary": "Ukrainian President Volodymyr Zelensky announced that former U.S. President Donald Trump gave final approval or accepted granting licenses allowing Ukraine to produce missiles for Patriot air‑defense systems; several outlets report Zelensky presented this decision as Trump’s authorization and said the move included discussion of further trilateral talks."
-    },
-    {
-      "_linked_ids": [
-        "subject-meloni-b78cbbe5e0c7"
-      ],
-      "cluster_id": "subject-meloni-b78cbbe5e0c7",
-      "coherence": 0.649757938202078,
-      "consequence": 3,
-      "countries": [
-        "mt",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-25",
-      "headline": "Meloni limits non-Italian speakers to 30% per classroom and bans full-face veils in schools",
-      "independent_source_count": 13,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260924/11643184/meloni-limita-30-alumnos-aula-sepan-italiano-veta-burka-niqab.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260921/11640298/meloni-propone-limitar-30-alumnos-extranjeros-clase-prohibir-velo-integral-escuela.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/meloni-veta-burka-los-colegios-limita-30-numero-estudiantes-por-aula-que-no-sepan-italiano_7041110_0.html"
-        },
-        {
-          "language": "en",
-          "source": "independent.com.mt",
-          "source_country": "mt",
-          "url": "https://www.independent.com.mt/articles/2026-09-21/world-news/Meloni-plans-to-ban-burqas-and-niqabs-in-Italian-schools-and-cap-foreign-students-in-classrooms-6736293067"
-        },
-        {
-          "language": "en",
-          "source": "heraldseries.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.heraldseries.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "lancashiretelegraph.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.lancashiretelegraph.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "newsandstar.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.newsandstar.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "bridportnews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bridportnews.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "nwemail.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.nwemail.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "thecomet.net",
-          "source_country": "united-kingdom",
-          "url": "https://www.thecomet.net/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "hertsad.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.hertsad.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "brentwoodlive.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.brentwoodlive.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "en",
-          "source": "ludlowadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ludlowadvertiser.co.uk/news/national/26580370.meloni-approves-limits-non-italian-speakers-veils-school-classrooms/"
-        },
-        {
-          "language": "es",
-          "source": "libertaddigital.com",
-          "source_country": "spain",
-          "url": "https://www.libertaddigital.com/internacional/europa/2026-09-24/meloni-limita-al-30-por-ciento-los-alumnos-por-aula-que-no-hablen-italiano-y-veta-el-velo-islamico-7465476/"
-        }
-      ],
-      "mentioned_countries": [
-        "it"
-      ],
-      "origin_country": "mt",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260921/11640298/meloni-propone-limitar-30-alumnos-extranjeros-clase-prohibir-velo-integral-escuela.html",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6498,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.7949
-        },
-        "total": 0.6927,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "meloni",
-      "subject_names": [
-        "italia",
-        "italy",
-        "meloni"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Italian Prime Minister Giorgia Meloni has approved measures to cap the share of students who do not speak Italian at 30% in each classroom and to prohibit full-face Islamic veils such as the burka and niqab in schools; multiple outlets report these policies affecting classroom composition and dress in educational settings."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-8f70bf6b60dc"
-      ],
-      "cluster_id": "subject-france-8f70bf6b60dc",
-      "coherence": 0.5880117904892257,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-24",
-      "headline": "France records 98,000 hectares burned since start of 2026, highest since 1976",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/environnement/feux-de-foret-98-000-hectares-brules-depuis-le-debut-de-lannee-en-france-un-record-depuis-1976-20260924_FVOVD5FOCFCAJMKA4NOCMCSO3U/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/planete/incendies-en-france-un-record-de-98-000-hectares-brules-depuis-le-debut-de-l-annee-20260924"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/incendies-et-feux-de-foret/environ-98-000-hectares-ont-brule-depuis-le-debut-de-l-annee-en-france-selon-l-office-national-des-forets-un-record-depuis-1976_8208305.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "lalsace.fr",
-          "source_country": "france",
-          "url": "https://www.lalsace.fr/faits-divers-justice/2026/09/24/98-000-hectares-brules-depuis-debut-2026-en-france-un-record-depuis-1976"
-        },
-        {
-          "language": "fr",
-          "source": "leprogres.fr",
-          "source_country": "france",
-          "url": "https://www.leprogres.fr/faits-divers-justice/2026/09/24/98-000-hectares-brules-depuis-debut-2026-en-france-un-record-depuis-1976"
-        },
-        {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/faits-divers/incendies/incendies-en-france-98-000-hectares-brules-depuis-le-debut-de-l-annee-un-record-depuis-1976-30768975.php"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/incendies-et-feux-de-foret/environ-98-000-hectares-ont-brule-depuis-le-debut-de-l-annee-en-france-selon-l-office-national-des-forets-un-record-depuis-1976_8208305.html#xtor=RSS-3-[lestitres]",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.588,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6522
-        },
-        "total": 0.6474,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "paris",
-        "pope leo",
-        "zidane"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "French authorities say about 98,000 hectares have burned across the country since the start of 2026, the largest area lost to wildfires reported in a single year there since 1976, according to the national forestry office and multiple news outlets."
-    },
-    {
-      "_linked_ids": [
-        "subject-finlandia-723a1d155dc4"
-      ],
-      "cluster_id": "subject-finlandia-723a1d155dc4",
-      "coherence": 0.6695252834438192,
-      "consequence": 2,
-      "countries": [
-        "spain",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-25",
-      "headline": "Finnish and Swedish fighters intercept Russian military aircraft over the Baltic",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-25/cazas-de-finlandia-y-suecia-interceptan-a-un-escuadron-de-aviones-rusos-en-el-baltico.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/cazas-finlandia-suecia-interceptan-aviones-combate-rusos-20260925115758-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260925/11643649/cazas-finlandia-suecia-interceptan-aviones-guerra-rusos-sobre-baltico.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/cazas-finlandia-suecia-interceptan-aviones-guerra-rusos-sobre-baltico_7041284_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://pt.euronews.com/2026/09/25/finlandia-e-suecia-mobilizam-cacas-em-regime-de-alerta-de-reacao-rapida-para-interceptar-a"
-        },
-        {
-          "language": "es",
-          "source": "diariolibre.com",
-          "source_country": "united-states",
-          "url": "https://www.diariolibre.com/mundo/europa/2026/09/25/cazas-finlandia-y-suecia-interceptan-aviones-rusos/3669814"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/mundo/2026-09-25/finlandia-suecia-interceptan-aviones-rusos-1tps_4431637/"
-        }
-      ],
-      "mentioned_countries": [
-        "fi",
-        "sw"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20260925/11643649/cazas-finlandia-suecia-interceptan-aviones-guerra-rusos-sobre-baltico.html",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elconfidencial.com",
-        "elpais.com",
-        "euronews.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6695,
-          "corroboration": 0.5,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7143
-        },
-        "total": 0.6413,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "finlandia",
-      "subject_names": [
-        "baltico",
-        "finlande",
-        "finlandia",
-        "suecia",
-        "suede"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Fighter jets from Finland and Sweden were scrambled to intercept a formation of Russian military aircraft operating over the Baltic Sea. Both countries put jets on quick-reaction alert and conducted interception maneuvers to monitor and escort the Russian planes while ensuring their national airspace security."
-    },
-    {
-      "_linked_ids": [
-        "subject-volkswagen-5501506156fa"
-      ],
-      "cluster_id": "subject-volkswagen-5501506156fa",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-25",
-      "headline": "Volkswagen recalls more than 2 million vehicles worldwide over steering corrosion risk",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/09/25/volkswagen-rappelle-plus-de-2-millions-de-vehicules-dans-le-monde-pour-un-risque-de-defaillance-de-la-direction_6782421_3234.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/societes/2-1-millions-de-vehicules-volkswagen-rappelees-dans-le-monde-pour-un-risque-de-corrosion-de-la-direction-20260925"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/lallemand-volkswagen-rappelle-plus-de-2-millions-de-vehicules-a-travers-le-monde-pour-des-risques-de-corrosion-de-la-direction-20260925_HABC45NPYFGTTJPFJZSJKROGNY/"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/lallemand-volkswagen-rappelle-plus-de-2-millions-de-vehicules-a-travers-le-monde-pour-des-risques-de-corrosion-de-la-direction-20260925_HABC45NPYFGTTJPFJZSJKROGNY/",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6314,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "volkswagen",
-      "subject_names": [
-        "volkswagen"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Volkswagen has issued a global recall affecting over 2 million vehicles, including models such as the Golf, Tiguan and Touran, because of a risk of steering corrosion that could lead to steering failure; the company is contacting owners to inspect and, if necessary, repair or replace affected steering components."
+      "subject_newsroom_count": 30,
+      "summary": "Ukrainian President Volodymyr Zelensky said that former U.S. President Donald Trump gave final approval for Ukraine to manufacture Patriot surface-to-air missiles; Zelensky also indicated the United States suggested holding a new trilateral meeting."
     }
   ],
-  "discarded_ingested": 144,
+  "discarded_ingested": 122,
   "discarded_kept": 5,
-  "generated_at": "2026-09-25T10:24:06.564348+00:00",
+  "generated_at": "2026-09-26T10:04:01.509327+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

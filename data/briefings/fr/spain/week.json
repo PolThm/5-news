@@ -2,499 +2,420 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-italy-e8ac84a6ac01",
-        "subject-meloni-fcdab3cc8758"
+        "subject-thousands-d1e5025431ef"
       ],
-      "cluster_id": "subject-italy-e8ac84a6ac01",
-      "coherence": 0.4646625574197457,
-      "consequence": 3,
+      "cluster_id": "subject-thousands-d1e5025431ef",
+      "coherence": null,
+      "consequence": 2,
       "countries": [
+        "as",
         "germany",
-        "india",
-        "it",
-        "united-kingdom"
+        "it"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-26",
-      "headline": "L'Italie interdit le voile intégral dans les écoles et restreint les élèves étrangers",
-      "independent_source_count": 4,
+      "country_count": 3,
+      "editorial_day": "2026-09-27",
+      "headline": "Des milliers de personnes manifestent à Madrid contre la crise du logement",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis"
         },
         {
           "language": "en",
           "source": "dw.com",
           "source_country": "germany",
-          "url": "https://www.dw.com/en/italy-to-ban-burqa-in-schools-limit-foreign-pupils/a-79423432?maca=en-rss-en-world-4025-rdf"
+          "url": "https://www.dw.com/en/spain-thousands-protest-in-madrid-against-housing-crisis/a-79446662"
         },
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/25/italy-moves-to-ban-face-coverings-and-limit-foreign-pupils-in-schools-with-new-law"
-        },
-        {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://timesofindia.indiatimes.com/world/europe/italy-govt-decrees-limits-on-non-italian-speakers-and-veils-in-school-classrooms/articleshow/134495465.cms"
+          "source": "thecourier.com.au",
+          "source_country": "as",
+          "url": "https://www.thecourier.com.au/story/9358007/tens-of-thousands-protest-spains-housing-crisis/"
         }
       ],
       "mentioned_countries": [
-        "it"
+        "spain"
       ],
-      "origin_country": "germany",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
+      "origin_country": "as",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "bbc.co.uk",
         "dw.com",
         "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4647,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6685,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "italy",
-      "subject_names": [
-        "italy"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Le gouvernement italien a adopté des mesures pour interdire le port du burqa et du niqab dans les écoles et pour limiter le nombre d'élèves non-italophones ou étrangers accueillis dans les classes, en introduisant des plafonds et des règles visant à favoriser l'usage de l'italien en milieu scolaire."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-0bbcc0a5b9a1"
-      ],
-      "cluster_id": "subject-france-0bbcc0a5b9a1",
-      "coherence": 0.6679013330906407,
-      "consequence": 2,
-      "countries": [
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-26",
-      "headline": "Le pape Léon met en garde contre l’IA lors de l’ouverture de sa visite en France",
-      "independent_source_count": 17,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/25/pope-leo-ai-threat-to-humanity-three-day-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/25/pope-leo-france-paris-notre-dame-metz-ai-europe-latest-news-updates"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/26/g-s1-145150/pope-warns-a-paradise-of-machines-could-undermine-humanity"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/25/nx-s1-5981140/pope-leo-france"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/pope-opens-france-trip-with-warning-that-a-paradise-of-machines-could-undermine-humanity"
-        },
-        {
-          "language": "en",
-          "source": "journalgazette.net",
-          "source_country": "united-states",
-          "url": "https://www.journalgazette.net/news/world/pope-warns-a-paradise-of-machines-could-undermine-humanity-as-he-opens-france-trip/article_cc608f84-8da3-5f03-ac28-65220efa474a.html"
-        },
-        {
-          "language": "en",
-          "source": "kvnf.org",
-          "source_country": "united-states",
-          "url": "https://www.kvnf.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wjct.org",
-          "source_country": "united-states",
-          "url": "https://news.wjct.org/tech/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "kvpr.org",
-          "source_country": "united-states",
-          "url": "https://www.kvpr.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "whqr.org",
-          "source_country": "united-states",
-          "url": "https://www.whqr.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wsiu.org",
-          "source_country": "united-states",
-          "url": "https://www.wsiu.org/science-technology/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "nbcbayarea.com",
-          "source_country": "united-states",
-          "url": "https://www.nbcbayarea.com/news/national-international/pope-leo-ai-warning-france-trip/4148553/"
-        },
-        {
-          "language": "en",
-          "source": "kccu.org",
-          "source_country": "united-states",
-          "url": "https://www.kccu.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "nbclosangeles.com",
-          "source_country": "united-states",
-          "url": "https://www.nbclosangeles.com/news/national-international/pope-leo-ai-warning-france-trip/3947264/"
-        },
-        {
-          "language": "en",
-          "source": "iowapublicradio.org",
-          "source_country": "united-states",
-          "url": "https://www.iowapublicradio.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wutc.org",
-          "source_country": "united-states",
-          "url": "https://www.wutc.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wfae.org",
-          "source_country": "united-states",
-          "url": "https://www.wfae.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wknofm.org",
-          "source_country": "united-states",
-          "url": "https://www.wknofm.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "euronews.com",
-        "npr.org",
-        "pbs.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6679,
+          "coherence": 0.5,
           "corroboration": 0.6,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.8095,
-          "source_reliability": 0.8462
+          "prominence": 0.4286,
+          "source_reliability": 0.5
         },
-        "total": 0.6441,
+        "total": 0.5632,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "thousands",
       "subject_names": [
-        "france",
-        "francia",
-        "leon xiv",
-        "lourdes",
-        "lyon",
-        "maison bakhita",
-        "pope leo",
-        "xiv"
+        "ceuta",
+        "espagne",
+        "madrid",
+        "thousands"
       ],
-      "subject_newsroom_count": 24,
-      "summary": "Lors de l’ouverture d’une visite de trois jours en France, le pape Léon a averti que le développement de l’intelligence artificielle risque de créer un « paradis de machines » susceptible de saper l’humanité et a appelé la technologie à rester au service des êtres humains."
+      "subject_newsroom_count": 3,
+      "summary": "Plusieurs articles indiquent que des milliers, voire des dizaines de milliers, de manifestants ont défilé à Madrid pour protester contre la crise du logement; les rassemblements évoquent également des tensions liées à la gestion des migrants à Ceuta et expriment un mécontentement général face aux politiques publiques en matière de logement."
     },
     {
       "_linked_ids": [
-        "subject-france-982ee7abcb94"
+        "subject-rumania-404784cd23c5"
       ],
-      "cluster_id": "subject-france-982ee7abcb94",
+      "cluster_id": "subject-rumania-404784cd23c5",
       "coherence": null,
-      "consequence": 3,
+      "consequence": 2,
       "countries": [
-        "france",
-        "it"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-25",
-      "headline": "La France et l'Allemagne s’opposent sur les règles « made in/with Europe », l’Espagne propose un compromis",
-      "independent_source_count": 2,
+      "country_count": 1,
+      "editorial_day": "2026-09-26",
+      "headline": "Deux chasseurs espagnols interceptés en Roumanie après détection d’un drone",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/activados-cazas-espanoles-rumania-detectarse-dron-cerca-frontera-ucrania_1_13540187.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/26/6ab79d58fdddffbd1e8b4570.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/cazas-espanoles-intervienen-detectar-dron-ruso-cerca-frontera-rumania_7041652_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "ro"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/cazas-espanoles-intervienen-detectar-dron-ruso-cerca-frontera-rumania_7041652_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "elmundo.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5389,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "rumania",
+      "subject_names": [
+        "nato",
+        "otan",
+        "rumania",
+        "rusia",
+        "russian",
+        "ucrania"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Des avions de chasse espagnols ont été déployés en Roumanie après la détection d’un drone près de la frontière avec l’Ukraine; les appareils sont intervenus pour identifier et surveiller l’objet signalé et opéraient dans le cadre des missions de l’OTAN présentes dans la région."
+    },
+    {
+      "_linked_ids": [
+        "subject-madrid-ad936446f094"
+      ],
+      "cluster_id": "subject-madrid-ad936446f094",
+      "coherence": 0.44551351215183255,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-27",
+      "headline": "Des milliers de personnes manifestent à Madrid pour soutenir une octogénaire expulsée",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/economie/made-in-europe-la-france-et-lallemagne-sopposent-lespagne-cherche-un-compromis-FZJI3HYICVER7IYQMMGH5PINYQ/"
+          "url": "https://www.lemonde.fr/international/article/2026/09/27/crise-du-logement-en-espagne-des-centaines-de-personnes-campent-a-madrid-pour-soutenir-une-octogenaire-expulsee-de-chez-elle_6783545_3211.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/vous-pourriez-etre-la-prochaine-maricarmen-des-milliers-de-manifestants-dans-les-rues-de-madrid-pour-soutenir-une-octogenaire-expulsee-de-son-appartement_8211455.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20260926-espagne-des-milliers-de-manifestants-%C3%A0-madrid-pour-soutenir-une-octog%C3%A9naire-expuls%C3%A9e-de-chez-elle"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260926-espagne-une-octog%C3%A9naire-expuls%C3%A9e-de-son-logement-devient-le-symbole-d-un-secteur-en-crise"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260924.OBS118562/expulsee-de-chez-elle-a-87-ans-maricarmen-est-devenue-le-visage-de-la-crise-du-logement-en-espagne.html"
         }
       ],
       "mentioned_countries": [
-        "germany",
-        "france"
+        "spain"
       ],
       "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260924.OBS118562/expulsee-de-chez-elle-a-87-ans-maricarmen-est-devenue-le-visage-de-la-crise-du-logement-en-espagne.html",
       "rank": 3,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "euronews.com",
-        "lexpress.fr"
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "nouvelobs.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "coherence": 0.4455,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.6236,
+        "total": 0.4884,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "madrid",
       "subject_names": [
-        "france",
-        "francia",
-        "lyon",
-        "pope leo"
+        "ceuta",
+        "espagne",
+        "madrid",
+        "maricarmen",
+        "maricarmen'"
       ],
-      "subject_newsroom_count": 24,
-      "summary": "Les deux articles indiquent que la France et l’Allemagne sont en désaccord sur une proposition d’étiquetage lié à l’origine des produits « made in/with Europe » : l’Allemagne veut des règles plus larges tandis que la France y est opposée, et l’Espagne cherche à trouver un compromis entre les positions des deux pays."
+      "subject_newsroom_count": 21,
+      "summary": "À Madrid, des milliers de manifestants ont défilé et des centaines ont campé toute la nuit pour soutenir Maricarmen, une femme de 87 ans récemment expulsée de son appartement, devenue le symbole de la crise du logement en Espagne."
     },
     {
       "_linked_ids": [
-        "subject-starlink-e5629a2c675e"
+        "subject-sevilla-a648067ff9dc"
       ],
-      "cluster_id": "subject-starlink-e5629a2c675e",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-sevilla-a648067ff9dc",
+      "coherence": 0.5092313164110591,
+      "consequence": 1,
       "countries": [
-        "it",
-        "united-kingdom"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-24",
-      "headline": "Pologne : un incendie dans une station Starlink est qualifié de sabotage",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says"
-        }
-      ],
-      "mentioned_countries": [
-        "pl"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.5,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6194,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "starlink",
-      "subject_names": [
-        "starlink"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Un incendie survenu dans une station Starlink du centre de la Pologne a été déclaré acte de sabotage par le ministre chargé du numérique; l’incident est évoqué dans le contexte d’un avertissement danois faisant état d’une menace russe croissante."
-    },
-    {
-      "_linked_ids": [
-        "subject-trump-12d3c2b5e7e8",
-        "subject-trump-9b3d11a4e553"
-      ],
-      "cluster_id": "subject-trump-9b3d11a4e553",
-      "coherence": 0.5585886874178165,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "pk",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-09-25",
-      "headline": "Zelensky affirme que Trump a autorisé la production ukrainienne de missiles Patriot",
+      "country_count": 1,
+      "editorial_day": "2026-09-27",
+      "headline": "Un homme tue sa compagne et s’atrinchère dans une maison à La Campana",
       "independent_source_count": 6,
       "members": [
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html"
+          "url": "https://elpais.com/sociedad/2026-09-27/un-hombre-mata-a-su-pareja-y-se-atrinchera-en-una-casa-de-la-campana-sevilla.html"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/25/zelensky-trump-aprovacao-final-licenciar-patriot.ghtml"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/andalucia/2026/09/27/6ab8dca5fdddffe60a8b4570.html"
         },
         {
-          "language": "en",
-          "source": "wtkr.com",
-          "source_country": "united-states",
-          "url": "https://www.wtkr.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-atrincherado-hombre-vivienda-matar-mujer-campana-sevilla-20260927113540.html"
         },
         {
-          "language": "en",
-          "source": "ksby.com",
-          "source_country": "united-states",
-          "url": "https://www.ksby.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
+          "language": "es",
+          "source": "lavozdegalicia.es",
+          "source_country": "spain",
+          "url": "https://www.lavozdegalicia.es/noticia/espana/2026/09/27/hombre-mata-pareja-campana-sevilla-atrinchera-casa/00031790500461359988633.htm"
         },
         {
-          "language": "en",
-          "source": "thenews.com.pk",
-          "source_country": "pk",
-          "url": "https://www.thenews.com.pk/latest/1417633-trump-agrees-to-let-ukraine-manufacture-patriot-missiles-zelensky-says"
+          "language": "es",
+          "source": "elcorreo.com",
+          "source_country": "spain",
+          "url": "https://www.elcorreo.com/sociedad/hombre-mata-pareja-punaladas-sevilla-atrinchera-casa-20260927115002-ntrc.html"
         },
         {
-          "language": "en",
-          "source": "kxlf.com",
-          "source_country": "united-states",
-          "url": "https://www.kxlf.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
+          "language": "es",
+          "source": "hoy.es",
+          "source_country": "spain",
+          "url": "https://www.hoy.es/sociedad/hombre-mata-pareja-punaladas-sevilla-atrinchera-casa-20260927115002-ntrc.html"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "spain",
+        "sw"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/sociedad/2026-09-27/un-hombre-mata-a-su-pareja-y-se-atrinchera-en-una-casa-de-la-campana-sevilla.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "abc.es",
-        "globo.com"
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5586,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "coherence": 0.5092,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 0.5,
+          "impact": 0.3333,
+          "novelty": 1.0,
           "prominence": 0.6,
-          "source_reliability": 0.6364
+          "source_reliability": 0.6522
         },
-        "total": 0.5757,
+        "total": 0.4705,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "trump",
+      "subject_label": "sevilla",
       "subject_names": [
-        "canada",
-        "donald trump",
-        "jinping",
-        "kiev",
-        "kremlin",
-        "patriot",
-        "russian",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "zelenski"
+        "sevilla"
       ],
-      "subject_newsroom_count": 30,
-      "summary": "Le président ukrainien Volodymyr Zelensky a déclaré que l’ancien président américain Donald Trump a donné son approbation finale pour que l’Ukraine produise des missiles Patriot; plusieurs articles rapportent cette affirmation et indiquent aussi que les États-Unis auraient proposé d’organiser une nouvelle réunion trilatérale."
+      "subject_newsroom_count": 4,
+      "summary": "Selon les articles, un homme a tué sa partenaire à La Campana (Séville), apparemment à l’aide d’un couteau, puis s’est retranché pendant plusieurs heures dans une maison avant de se rendre et d’être arrêté par la police."
+    },
+    {
+      "_linked_ids": [
+        "subject-madrid-c960abd09e9d"
+      ],
+      "cluster_id": "subject-madrid-c960abd09e9d",
+      "coherence": 0.510699774913538,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-27",
+      "headline": "La police évacue un campement de migrants près de la station de dessalement de Ceuta",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/desalambre/policia-desaloja-asentamiento-personas-migrantes-playa-proxima-desaladora-ceuta_1_13541369.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/27/6ab8c245e4d4d821038b457e.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-27/ceuta-desalojo-migrantes-planta-desaladora-1tna-1tps_4432988/"
+        },
+        {
+          "language": "es",
+          "source": "diariodeleon.es",
+          "source_country": "spain",
+          "url": "https://www.diariodeleon.es/sociedad/260927/2098539/policia-desaloja-asentamiento-playa-proxima-desaladora-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "libertaddigital.com",
+          "source_country": "spain",
+          "url": "https://www.libertaddigital.com/espana/2026-09-27/la-policia-desaloja-a-cientos-de-inmigrantes-desde-la-playa-de-benitez-al-guano-para-proteger-la-desaladora-7466521/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elconfidencial.com",
+      "outbound_url": "https://www.elconfidencial.com/espana/2026-09-27/ceuta-desalojo-migrantes-planta-desaladora-1tna-1tps_4432988/",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "eldiario.es",
+        "elmundo.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5107,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.4677,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "madrid",
+      "subject_names": [
+        "ceuta",
+        "espagne",
+        "madrid"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "Les forces de l'ordre ont démantelé et évacué un campement de migrants situé sur la plage de Benítez, à proximité de la station de dessalement de Ceuta, transférant des personnes vers des zones d'accueil plus éloignées pour prévenir les risques d'accidents et protéger les installations de la desaladora."
     }
   ],
-  "discarded_ingested": 122,
+  "discarded_ingested": 29,
   "discarded_kept": 5,
-  "generated_at": "2026-09-26T10:04:01.509327+00:00",
+  "generated_at": "2026-09-27T10:39:57.333263+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,
-  "served_zone": "europe",
-  "served_zone_continent": null,
-  "served_zone_kind": "continent",
+  "served_zone": "spain",
+  "served_zone_continent": "europe",
+  "served_zone_kind": "country",
   "zone": "spain",
   "zone_continent": "europe",
   "zone_kind": "country"

@@ -2,22 +2,124 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-athens-0979780505fc"
+      ],
+      "cluster_id": "subject-athens-0979780505fc",
+      "coherence": 0.49548399530392284,
+      "consequence": 2,
+      "countries": [
+        "as",
+        "it",
+        "japan",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-09-27",
+      "headline": "Explosión por presunto escape de gas provoca el colapso de un edificio en Atenas y deja seis muertos",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/26/greek-authorities-seek-answers-after-six-killed-in-athens-apartment-block-explosion"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/26/six-dead-after-explosion-causes-building-to-collapse-in-central-athens"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/25/building-in-central-athens-collapses-after-explosion-two-women-rescued"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/bodies-of-6-people-including-4-americans-recovered-from-collapsed-building-in-athens"
+        },
+        {
+          "language": "en",
+          "source": "kcra.com",
+          "source_country": "united-states",
+          "url": "https://www.kcra.com/article/4-americans-recovered-collapse-greece/73906287"
+        },
+        {
+          "language": "en",
+          "source": "abc.net.au",
+          "source_country": "as",
+          "url": "https://www.abc.net.au/news/2026-09-27/six-bodies-recovered-from-athens-explosion-building/107200742"
+        },
+        {
+          "language": "en",
+          "source": "japantoday.com",
+          "source_country": "japan",
+          "url": "https://japantoday.com/category/world/six-dead-after-explosion-destroys-building-in-athens1"
+        },
+        {
+          "language": "en",
+          "source": "singletonargus.com.au",
+          "source_country": "as",
+          "url": "https://www.singletonargus.com.au/story/9357945/six-bodies-recovered-from-collapsed-athens-building/"
+        }
+      ],
+      "mentioned_countries": [
+        "gr"
+      ],
+      "origin_country": "as",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/25/building-in-central-athens-collapses-after-explosion-two-women-rescued",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "euronews.com",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4955,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7143
+        },
+        "total": 0.6131,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "athens",
+      "subject_names": [
+        "athens"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Seis personas murieron y sus cuerpos fueron recuperados tras una explosión que dañó y provocó el colapso de un bloque de apartamentos en el centro de Atenas; las autoridades investigan la causa y las informaciones apuntan a un posible escape de gas, mientras que inicialmente hubo reportes de personas desaparecidas."
+    },
+    {
+      "_linked_ids": [
+        "subject-italia-270c932c0767",
         "subject-italy-e8ac84a6ac01",
         "subject-meloni-fcdab3cc8758"
       ],
-      "cluster_id": "subject-italy-e8ac84a6ac01",
-      "coherence": 0.4646625574197457,
+      "cluster_id": "subject-italia-270c932c0767",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "germany",
-        "india",
         "it",
         "united-kingdom"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-26",
-      "headline": "Italia prohibe el burka y el niqab en las escuelas y limita alumnos extranjeros",
-      "independent_source_count": 4,
+      "country_count": 2,
+      "editorial_day": "2026-09-25",
+      "headline": "Italia aprueba prohibir burka y niqab en escuelas y limitar alumnos extranjeros",
+      "independent_source_count": 2,
       "members": [
         {
           "language": "en",
@@ -27,336 +129,18 @@
         },
         {
           "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/italy-to-ban-burqa-in-schools-limit-foreign-pupils/a-79423432?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
           "source": "euronews.com",
           "source_country": "it",
           "url": "https://www.euronews.com/2026/09/25/italy-moves-to-ban-face-coverings-and-limit-foreign-pupils-in-schools-with-new-law"
-        },
-        {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://timesofindia.indiatimes.com/world/europe/italy-govt-decrees-limits-on-non-italian-speakers-and-veils-in-school-classrooms/articleshow/134495465.cms"
         }
       ],
       "mentioned_countries": [
         "it"
       ],
-      "origin_country": "germany",
+      "origin_country": "it",
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4647,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6685,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "italy",
-      "subject_names": [
-        "italy"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "El gobierno italiano aprobó una medida que prohíbe el uso de velos integrales (burka y niqab) en las aulas y establece límites al número de alumnos extranjeros o con bajo dominio del italiano en las clases. Las notas coinciden en que la decisión forma parte de una nueva normativa destinada a regular la presencia de no italianos y las coberturas faciales en centros educativos."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-0bbcc0a5b9a1"
-      ],
-      "cluster_id": "subject-france-0bbcc0a5b9a1",
-      "coherence": 0.6679013330906407,
-      "consequence": 2,
-      "countries": [
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-26",
-      "headline": "El Papa advierte que una 'paradisíaca de máquinas' podría socavar a la humanidad",
-      "independent_source_count": 17,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/25/pope-leo-ai-threat-to-humanity-three-day-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/sep/25/pope-leo-france-paris-notre-dame-metz-ai-europe-latest-news-updates"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/26/g-s1-145150/pope-warns-a-paradise-of-machines-could-undermine-humanity"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/25/nx-s1-5981140/pope-leo-france"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/pope-opens-france-trip-with-warning-that-a-paradise-of-machines-could-undermine-humanity"
-        },
-        {
-          "language": "en",
-          "source": "journalgazette.net",
-          "source_country": "united-states",
-          "url": "https://www.journalgazette.net/news/world/pope-warns-a-paradise-of-machines-could-undermine-humanity-as-he-opens-france-trip/article_cc608f84-8da3-5f03-ac28-65220efa474a.html"
-        },
-        {
-          "language": "en",
-          "source": "kvnf.org",
-          "source_country": "united-states",
-          "url": "https://www.kvnf.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wjct.org",
-          "source_country": "united-states",
-          "url": "https://news.wjct.org/tech/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "kvpr.org",
-          "source_country": "united-states",
-          "url": "https://www.kvpr.org/npr-news/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "whqr.org",
-          "source_country": "united-states",
-          "url": "https://www.whqr.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wsiu.org",
-          "source_country": "united-states",
-          "url": "https://www.wsiu.org/science-technology/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "nbcbayarea.com",
-          "source_country": "united-states",
-          "url": "https://www.nbcbayarea.com/news/national-international/pope-leo-ai-warning-france-trip/4148553/"
-        },
-        {
-          "language": "en",
-          "source": "kccu.org",
-          "source_country": "united-states",
-          "url": "https://www.kccu.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "nbclosangeles.com",
-          "source_country": "united-states",
-          "url": "https://www.nbclosangeles.com/news/national-international/pope-leo-ai-warning-france-trip/3947264/"
-        },
-        {
-          "language": "en",
-          "source": "iowapublicradio.org",
-          "source_country": "united-states",
-          "url": "https://www.iowapublicradio.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wutc.org",
-          "source_country": "united-states",
-          "url": "https://www.wutc.org/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wfae.org",
-          "source_country": "united-states",
-          "url": "https://www.wfae.org/world/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        },
-        {
-          "language": "en",
-          "source": "wknofm.org",
-          "source_country": "united-states",
-          "url": "https://www.wknofm.org/news-from-npr/2026-09-25/pope-leo-warns-a-paradise-of-machines-could-undermine-humanity-on-his-france-visit"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines",
       "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "euronews.com",
-        "npr.org",
-        "pbs.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6679,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.8095,
-          "source_reliability": 0.8462
-        },
-        "total": 0.6441,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "leon xiv",
-        "lourdes",
-        "lyon",
-        "maison bakhita",
-        "pope leo",
-        "xiv"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "En la apertura de su visita de tres días a Francia, el Papa Leo XIV advirtió sobre los riesgos de la inteligencia artificial, diciendo que un «paraíso de máquinas» podría amenazar o socavar a la humanidad y subrayó que la tecnología debe permanecer al servicio de las personas."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-982ee7abcb94"
-      ],
-      "cluster_id": "subject-france-982ee7abcb94",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-25",
-      "headline": "Francia y Alemania discrepan sobre las reglas «Made in/with Europe», España propone un compromiso",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/economie/made-in-europe-la-france-et-lallemagne-sopposent-lespagne-cherche-un-compromis-FZJI3HYICVER7IYQMMGH5PINYQ/"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france"
-        }
-      ],
-      "mentioned_countries": [
-        "germany",
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/24/germany-seeks-wider-made-with-europe-rules-setting-up-clash-with-france",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "lexpress.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6236,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "lyon",
-        "pope leo"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Francia y Alemania están enfrentadas en la negociación de nuevas normas sobre el etiquetado y origen de productos europeos: Alemania quiere reglas más amplias bajo la fórmula «Made with Europe», mientras que Francia defiende una definición más estricta de «Made in Europe». España intenta mediar proponiendo un compromiso entre ambas posturas. Ambos artículos coinciden en que hay desacuerdo entre París y Berlín y que Madrid busca una solución intermedia."
-    },
-    {
-      "_linked_ids": [
-        "subject-starlink-e5629a2c675e"
-      ],
-      "cluster_id": "subject-starlink-e5629a2c675e",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-24",
-      "headline": "Polonia dice que incendio en estación Starlink fue un sabotaje",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says"
-        }
-      ],
-      "mentioned_countries": [
-        "pl"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/24/fire-at-starlink-station-in-central-poland-was-sabotage-digital-affairs-minister-says",
-      "rank": 4,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
@@ -370,125 +154,247 @@
           "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
+          "novelty": 0.3333,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6194,
+        "total": 0.6061,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "starlink",
+      "subject_label": "italia",
       "subject_names": [
-        "starlink"
+        "italia",
+        "italy"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Las autoridades polacas dijeron que un incendio en una estación terrestre de Starlink en el centro de Polonia fue resultado de un sabotaje; el ministro de asuntos digitales calificó el incidente como intencionado. Las informaciones también sitúan el suceso en el contexto de advertencias sobre el aumento de la amenaza rusa en la región."
+      "subject_newsroom_count": 6,
+      "summary": "El gobierno italiano acordó prohibir el uso de burka y niqab en centros escolares y adoptar una nueva norma que restringe la presencia de alumnos extranjeros en las aulas, como parte de una ley educativa que modifica reglas sobre la identificación y la composición del alumnado."
     },
     {
       "_linked_ids": [
-        "subject-trump-12d3c2b5e7e8",
-        "subject-trump-9b3d11a4e553"
+        "subject-polonia-82167b4603b9",
+        "subject-russia-45cc07509b36"
       ],
-      "cluster_id": "subject-trump-9b3d11a4e553",
-      "coherence": 0.5585886874178165,
-      "consequence": 2,
+      "cluster_id": "subject-polonia-82167b4603b9",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
         "brazil",
-        "pk",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-25",
-      "headline": "Zelenski afirma que Trump autorizó la producción de misiles Patriot en Ucrania",
-      "independent_source_count": 6,
+      "country_count": 2,
+      "editorial_day": "2026-09-23",
+      "headline": "Polonia dice que un helicóptero militar ruso violó su espacio aéreo",
+      "independent_source_count": 2,
       "members": [
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html"
+          "url": "https://www.lavanguardia.com/internacional/20260923/11642251/polonia-denuncia-helicoptero-militar-ruso-entro-espacio-aereo.html"
         },
         {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/25/zelensky-trump-aprovacao-final-licenciar-patriot.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "wtkr.com",
-          "source_country": "united-states",
-          "url": "https://www.wtkr.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
-        },
-        {
-          "language": "en",
-          "source": "ksby.com",
-          "source_country": "united-states",
-          "url": "https://www.ksby.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
-        },
-        {
-          "language": "en",
-          "source": "thenews.com.pk",
-          "source_country": "pk",
-          "url": "https://www.thenews.com.pk/latest/1417633-trump-agrees-to-let-ukraine-manufacture-patriot-missiles-zelensky-says"
-        },
-        {
-          "language": "en",
-          "source": "kxlf.com",
-          "source_country": "united-states",
-          "url": "https://www.kxlf.com/world/zelensky-says-trump-approved-patriot-missile-production-in-ukraine"
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/23/polonia-acusa-russia-violar-espaco-aereo-helicoptero-militar.ghtml"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "pl"
       ],
       "origin_country": "brazil",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/zelensky-asegura-trump-aceptado-dar-ucrania-licencias-20260925105211-nt.html",
-      "rank": 5,
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260923/11642251/polonia-denuncia-helicoptero-militar-ruso-entro-espacio-aereo.html",
+      "rank": 3,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "abc.es",
-        "globo.com"
+        "globo.com",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5586,
-          "corroboration": 0.6667,
+          "coherence": 0.5,
+          "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "freshness": 0.25,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 0.5,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.5757,
+        "total": 0.6044,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "trump",
+      "subject_label": "polonia",
       "subject_names": [
-        "canada",
-        "donald trump",
-        "jinping",
-        "kiev",
-        "kremlin",
-        "patriot",
-        "russian",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "zelenski"
+        "polonia"
       ],
-      "subject_newsroom_count": 30,
-      "summary": "El presidente ucraniano Volodímir Zelenski dijo que el expresidente estadounidense Donald Trump dio su aprobación final para que Ucrania fabrique misiles Patriot; varios artículos concordaron en que Zelenski informó además que Estados Unidos sugirió una nueva reunión trilateral relacionada con el asunto."
+      "subject_newsroom_count": 3,
+      "summary": "Polonia denunció que un helicóptero militar ruso entró en su espacio aéreo; las fuerzas polacas movilizaron aeronaves en respuesta mientras las autoridades acusaron a Rusia de la violación."
+    },
+    {
+      "_linked_ids": [
+        "subject-royaume-uni-30e6c42b03bb"
+      ],
+      "cluster_id": "subject-royaume-uni-30e6c42b03bb",
+      "coherence": 0.44655957777768185,
+      "consequence": 2,
+      "countries": [
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-27",
+      "headline": "Varias personas detenidas por sospechas de delitos con explosivos cerca de la base aérea de Fairford",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-27/la-policia-britanica-detiene-a-varios-sospechosos-por-manejar-explosivos-cerca-de-la-base-militar-aerea-de-fairford.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/reino-unido-activa-alerta-incidente-grave-base-aerea-fairford-utilizada-eeuu_1_13541309.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/09/27/6ab8ceeffc6c83dc348b4570.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/uk-news/2026/sep/27/major-incident-declared-near-raf-fairford-as-men-arrested-on-suspicion-of-explosives-offences"
+        },
+        {
+          "language": "en",
+          "source": "stroudnewsandjournal.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.stroudnewsandjournal.co.uk/news/26584952.men-arrested-suspected-explosives-offences-near-raf-fairford/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/reino-unido-activa-alerta-incidente-grave-base-aerea-fairford-utilizada-eeuu_1_13541309.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4466,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.5854,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "royaume-uni",
+      "subject_names": [
+        "fairford",
+        "reino unido",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Las autoridades británicas han detenido a varios hombres en las inmediaciones de la base aérea de Fairford en relación con un incidente serio vinculado a explosivos; la detención se produjo mientras la base, utilizada por las fuerzas armadas (incluido el ejército estadounidense según los artículos), permanecía en el área afectada y la policía declaró el suceso como un incidente importante mientras investiga las sospechas sobre delitos con explosivos."
+    },
+    {
+      "_linked_ids": [
+        "subject-thousands-d1e5025431ef"
+      ],
+      "cluster_id": "subject-thousands-d1e5025431ef",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "as",
+        "germany",
+        "it"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-27",
+      "headline": "Miles de personas protestan en Madrid por la crisis de vivienda y migratoria",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/spain-thousands-protest-in-madrid-against-housing-crisis/a-79446662"
+        },
+        {
+          "language": "en",
+          "source": "thecourier.com.au",
+          "source_country": "as",
+          "url": "https://www.thecourier.com.au/story/9358007/tens-of-thousands-protest-spains-housing-crisis/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "as",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "dw.com",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.5632,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "thousands",
+      "subject_names": [
+        "ceuta",
+        "espagne",
+        "madrid",
+        "thousands"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Miles de manifestantes se concentraron en Madrid para protestar por la crisis de la vivienda; algunas movilizaciones también estuvieron vinculadas a la situación migratoria tras el paso de migrantes por Ceuta. Las protestas exigieron soluciones a la escasez de vivienda asequible y respondieron a la atención pública generada por la llegada de migrantes a la ciudad autónoma de Ceuta."
     }
   ],
-  "discarded_ingested": 122,
+  "discarded_ingested": 111,
   "discarded_kept": 5,
-  "generated_at": "2026-09-26T10:04:01.509327+00:00",
+  "generated_at": "2026-09-27T10:39:57.333263+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

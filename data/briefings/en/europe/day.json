@@ -1,407 +1,581 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-athens-0979780505fc",
-      "coherence": 0.49548399530392284,
-      "consequence": 2,
+      "cluster_id": "subject-aleksandar-vucic-63e4127236d5",
+      "coherence": 0.4482349351969098,
+      "consequence": 3,
       "countries": [
-        "as",
+        "au",
+        "da",
+        "ez",
+        "france",
+        "germany",
         "it",
-        "japan",
+        "lo",
+        "nl",
+        "ri",
+        "si",
+        "spain",
+        "sz",
+        "tu",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-09-27",
-      "headline": "Six people die after suspected gas explosion collapses Athens apartment building",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/26/greek-authorities-seek-answers-after-six-killed-in-athens-apartment-block-explosion"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/26/six-dead-after-explosion-causes-building-to-collapse-in-central-athens"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/25/building-in-central-athens-collapses-after-explosion-two-women-rescued"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/bodies-of-6-people-including-4-americans-recovered-from-collapsed-building-in-athens"
-        },
-        {
-          "language": "en",
-          "source": "kcra.com",
-          "source_country": "united-states",
-          "url": "https://www.kcra.com/article/4-americans-recovered-collapse-greece/73906287"
-        },
-        {
-          "language": "en",
-          "source": "abc.net.au",
-          "source_country": "as",
-          "url": "https://www.abc.net.au/news/2026-09-27/six-bodies-recovered-from-athens-explosion-building/107200742"
-        },
-        {
-          "language": "en",
-          "source": "japantoday.com",
-          "source_country": "japan",
-          "url": "https://japantoday.com/category/world/six-dead-after-explosion-destroys-building-in-athens1"
-        },
-        {
-          "language": "en",
-          "source": "singletonargus.com.au",
-          "source_country": "as",
-          "url": "https://www.singletonargus.com.au/story/9357945/six-bodies-recovered-from-collapsed-athens-building/"
-        }
-      ],
-      "mentioned_countries": [
-        "gr"
-      ],
-      "origin_country": "as",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/25/building-in-central-athens-collapses-after-explosion-two-women-rescued",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "pbs.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4955,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7143
-        },
-        "total": 0.6378,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "athens",
-      "subject_names": [
-        "athens"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "A suspected gas explosion caused an apartment building to collapse in central Athens, killing six people whose bodies were recovered from the rubble; among the dead were four American citizens. Authorities are investigating the blast, and several people were reported missing in the immediate aftermath."
-    },
-    {
-      "cluster_id": "subject-royaume-uni-30e6c42b03bb",
-      "coherence": 0.44655957777768185,
-      "consequence": 2,
-      "countries": [
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-27",
-      "headline": "Several men arrested near RAF Fairford on suspicion of explosives offences",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-27/la-policia-britanica-detiene-a-varios-sospechosos-por-manejar-explosivos-cerca-de-la-base-militar-aerea-de-fairford.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/reino-unido-activa-alerta-incidente-grave-base-aerea-fairford-utilizada-eeuu_1_13541309.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/09/27/6ab8ceeffc6c83dc348b4570.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/uk-news/2026/sep/27/major-incident-declared-near-raf-fairford-as-men-arrested-on-suspicion-of-explosives-offences"
-        },
-        {
-          "language": "en",
-          "source": "stroudnewsandjournal.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.stroudnewsandjournal.co.uk/news/26584952.men-arrested-suspected-explosives-offences-near-raf-fairford/"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/reino-unido-activa-alerta-incidente-grave-base-aerea-fairford-utilizada-eeuu_1_13541309.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4466,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6187,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "royaume-uni",
-      "subject_names": [
-        "fairford",
-        "reino unido",
-        "royaume-uni"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Police in the UK arrested several men near RAF Fairford and declared a major/serious incident after an incident involving suspected explosives; the arrests were connected to offences relating to explosives close to the military air base used by UK and US forces. Authorities held the suspects on suspicion of explosives offences while responding to the scene."
-    },
-    {
-      "cluster_id": "subject-thousands-d1e5025431ef",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "germany",
-        "it"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-27",
-      "headline": "Tens of thousands protest in Madrid over housing and migrant issues",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/spain-thousands-protest-in-madrid-against-housing-crisis/a-79446662"
-        },
-        {
-          "language": "en",
-          "source": "thecourier.com.au",
-          "source_country": "as",
-          "url": "https://www.thecourier.com.au/story/9358007/tens-of-thousands-protest-spains-housing-crisis/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "as",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "dw.com",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.5925,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "thousands",
-      "subject_names": [
-        "ceuta",
-        "espagne",
-        "madrid",
-        "thousands"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Thousands of people gathered in Madrid to protest against Spain’s housing crisis and related social issues, with demonstrators calling for government action on affordable housing, rent controls and protections for migrants; the rallies drew large crowds and expressed public frustration over housing shortages and the handling of migrants in Ceuta."
-    },
-    {
-      "cluster_id": "subject-charles-sapin-6c1d5a895709",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "Hadrien Brachet replaces Charles Sapin on France Inter",
-      "independent_source_count": 3,
+      "country_count": 15,
+      "editorial_day": "2026-09-28",
+      "headline": "Serbian President Aleksandar Vučić resigns to run for prime minister",
+      "independent_source_count": 30,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/medias/hadrien-brachet-journaliste-au-point-remplace-charles-sapin-ecarte-sous-la-pression-des-syndicats-sur-france-inter-20260927"
+          "url": "https://www.lemonde.fr/international/video/2026/09/28/la-demission-en-images-du-president-serbe-aleksandar-vucic-qui-brigue-le-poste-de-premier-ministre_6785018_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/27/en-serbie-le-president-aleksandar-vucic-demissionne-et-vise-le-poste-de-premier-ministre_6784554_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/medias/le-journaliste-hadrien-brachet-remplace-charles-sapin-sur-france-inter-20260927_MMN4OZYMBRGWNGBIQEW2J5X7FI/"
+          "url": "https://www.liberation.fr/international/europe/serbie-le-president-aleksandar-vucic-annonce-sa-demission-pour-mieux-rebondir-comme-premier-ministre-20260928_25KNLBBJVVGJXACQFR6ZZGQNEA/"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20260927.OBS118648/sur-france-inter-le-journaliste-du-point-hadrien-brachet-remplace-charles-sapin.html"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260928-serbie-le-pr%C3%A9sident-aleksandar-vucic-annonce-sa-d%C3%A9misison"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260927-serbie-le-pr%C3%A9sident-aleksandar-vucic-annonce-sa-d%C3%A9mission-des-%C3%A9lections-anticip%C3%A9es-%C3%A0-venir"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/populista-vucic-dimite-presidente-serbia-presentarse-primer-ministro_7041935_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/27/serbia-president-aleksandar-vucic-resigns-run-prime-minister"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/vucic-serbien-ruecktritt-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/28/serbias-president-aleksandar-vucic-resigns-to-run-for-prime-minister-in-snap-elections"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/27/news/aleksandar_vucic_dimissioni_presidente_serbia_candidatura_premier_elezioni_ottobre-425611278/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2632830"
+        },
+        {
+          "language": "slv",
+          "source": "primorski.eu",
+          "source_country": "si",
+          "url": "http://www.primorski.eu/se/srbski-predsednik-aleksandar-vucic-odstopil-DI2280041"
+        },
+        {
+          "language": "tur",
+          "source": "habermeydan.com",
+          "source_country": "tu",
+          "url": "https://www.habermeydan.com/dunya/sirbistan-cumhurbaskani-aleksandar-vucic-gorevinden-istifa-etti-h222702/"
+        },
+        {
+          "language": "srp",
+          "source": "b92.net",
+          "source_country": "ri",
+          "url": "https://www.b92.net/english/politics/271296/aleksandar-vucic-has-resigned/vest"
+        },
+        {
+          "language": "srp",
+          "source": "b92.net",
+          "source_country": "ri",
+          "url": "https://www.b92.net/svi-komentari/271296"
+        },
+        {
+          "language": "bos",
+          "source": "naslovi.net",
+          "source_country": "ri",
+          "url": "https://naslovi.net/tema/2578947"
+        },
+        {
+          "language": "en",
+          "source": "dailygazette.com",
+          "source_country": "united-states",
+          "url": "https://www.dailygazette.com/leader_herald/ap/world/serbias-populist-president-vucic-resigns-to-run-for-prime-minister-at-early-vote/article_cb2137c3-4fa1-58f9-b44e-dd2ac524a163.html"
+        },
+        {
+          "language": "en",
+          "source": "the-messenger.com",
+          "source_country": "united-states",
+          "url": "https://www.the-messenger.com/news/world/article_eb3b8a1a-8e2b-5953-9fc1-94bfdc08a48b.html"
+        },
+        {
+          "language": "fr",
+          "source": "rtn.ch",
+          "source_country": "sz",
+          "url": "https://www.rtn.ch/rtn/Actualite/Monde/Le-president-serbe-Aleksandar-Vucic-annonce-sa-demission.html"
+        },
+        {
+          "language": "dan",
+          "source": "ekstrabladet.dk",
+          "source_country": "da",
+          "url": "https://ekstrabladet.dk/nyheder/serbiens-praesident-aleksandar-vucic-traeder-tilbage/11302916"
+        },
+        {
+          "language": "de",
+          "source": "watson.ch",
+          "source_country": "sz",
+          "url": "https://www.watson.ch/international/gesellschaft-politik/681434761-serbiens-praesident-vucic-tritt-zurueck-das-ist-der-grund"
+        },
+        {
+          "language": "de",
+          "source": "news.de",
+          "source_country": "germany",
+          "url": "https://www.news.de/politik/860033951/serbiens-praesident-vucic-zurueckgetreten-politik-am-balkan-news-der-dpa-aktuell-zu-staatsoberhaupt-wahl-und-parlament/1/"
+        },
+        {
+          "language": "de",
+          "source": "sueddeutsche.de",
+          "source_country": "germany",
+          "url": "https://www.sueddeutsche.de/politik/politik-am-balkan-serbiens-praesident-vucic-zurueckgetreten-dpa.urn-newsml-dpa-com-20090101-260927-930-753788"
+        },
+        {
+          "language": "de",
+          "source": "pz-news.de",
+          "source_country": "germany",
+          "url": "https://www.pz-news.de/politik_artikel,-Serbiens-Praesident-Vucic-zurueckgetreten-_arid,2370512.html"
+        },
+        {
+          "language": "de",
+          "source": "derstandard.at",
+          "source_country": "au",
+          "url": "https://www.derstandard.at/consent/tcf/story/3000000341564/serbiens-praesident-vucic-tritt-zurueck-weg-fuer-vorgezogene-wahlen-geebnet"
+        },
+        {
+          "language": "it",
+          "source": "bresciaoggi.it",
+          "source_country": "it",
+          "url": "https://www.bresciaoggi.it/news/mondo/il-presidente-serbo-vucic-si-dimette-per-candidarsi-alle-elezioni-anticipate-1.13136807"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-09-27/serbia-il-presidente-vucic-si-dimette-per-candidarsi-alla-carica-di-primo-ministro/19730690/"
+        },
+        {
+          "language": "slk",
+          "source": "ta3.com",
+          "source_country": "lo",
+          "url": "https://www.ta3.com/clanok/1073733/srbsky-prezident-aleksandar-vucic-podal-demisiu-konci-v-urade-a-na-jesen-zabojuje-o-kreslo-predsedu-vlady"
+        },
+        {
+          "language": "ces",
+          "source": "denik.cz",
+          "source_country": "ez",
+          "url": "https://www.denik.cz/evropa/srbsky-prezident-vucic-rezignoval-bude-kandidovat-v-parlamentnich-volbach/"
+        },
+        {
+          "language": "tur",
+          "source": "ensonhaber.com",
+          "source_country": "tu",
+          "url": "https://www.ensonhaber.com/sirbistan-cumhurbaskani-aleksandar-vucic-gorevinden-istifa-etti-h1569150"
+        },
+        {
+          "language": "srp",
+          "source": "tanjug.rs",
+          "source_country": "ri",
+          "url": "https://www.tanjug.rs/srbija/politika/284472/predsednik-srbije-aleksandar-vucic-podneo-ostavku-na-tu-funkciju-do-kraja-decembra-imacemo-predsednicke-izbore/vest"
+        },
+        {
+          "language": "srp",
+          "source": "informer.rs",
+          "source_country": "ri",
+          "url": "https://informer.rs/politika/vesti/1154965/aleksandar-vucic-politika-srbija"
+        },
+        {
+          "language": "srp",
+          "source": "naslovi.net",
+          "source_country": "ri",
+          "url": "https://naslovi.net/2026-09-27/plusonline/aleksandar-vucic-podneo-ostavku-na-mesto-predsednika-srbije/42415106"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "ri"
       ],
-      "origin_country": "france",
-      "outbound_source": "lefigaro.fr",
-      "outbound_url": "https://www.lefigaro.fr/medias/hadrien-brachet-journaliste-au-point-remplace-charles-sapin-ecarte-sous-la-pression-des-syndicats-sur-france-inter-20260927",
-      "rank": 4,
-      "reference_newsroom_count": 3,
+      "origin_country": "au",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/europe/20260927-serbie-le-pr%C3%A9sident-aleksandar-vucic-annonce-sa-d%C3%A9mission-des-%C3%A9lections-anticip%C3%A9es-%C3%A0-venir",
+      "rank": 1,
+      "reference_newsroom_count": 10,
       "reference_newsrooms": [
-        "lefigaro.fr",
+        "20minutos.es",
+        "euronews.com",
+        "france24.com",
+        "lemonde.fr",
         "liberation.fr",
-        "nouvelobs.com"
+        "nos.nl",
+        "repubblica.it",
+        "rfi.fr",
+        "tagesschau.de",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.4482,
+          "corroboration": 0.8824,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8824,
+          "source_reliability": 0.9048
+        },
+        "total": 0.8071,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "aleksandar vucic",
+      "subject_names": [
+        "aleksandar vucic",
+        "serbie",
+        "vucic"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Aleksandar Vučić has announced his resignation as president of Serbia and will step down from the presidency in order to become a candidate for prime minister in upcoming early or snap elections."
+    },
+    {
+      "cluster_id": "subject-suecia-6fa4a44e302f",
+      "coherence": 0.556782259059426,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Social Democrat Magdalena Andersson withdraws attempt to form Sweden’s government",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-28/la-lider-socialdemocrata-de-suecia-renuncia-a-formar-gobierno.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/socialdemocrata-magdalena-andersson-renuncia-formar-gobierno-suecia-20260928113905-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260928/11645489/socialdemocrata-andersson-anuncia-formar-gobierno-suecia.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20260928/socialdemocrata-andersson-renuncia-formar-gobierno-suecia-pinza-socialistas-conservadores/1003744399908_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "sw"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260928/11645489/socialdemocrata-andersson-anuncia-formar-gobierno-suecia.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "elespanol.com",
+        "elpais.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5568,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6851,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "suecia",
+      "subject_names": [
+        "suecia",
+        "suede"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Magdalena Andersson, leader of Sweden’s Social Democratic Party, announced she cannot form a government and has renounced the effort after failing to secure sufficient support in parliament; reports say her bid collapsed amid a political blockade between other parties that left her without the necessary backing."
+    },
+    {
+      "cluster_id": "subject-suiza-ba473b1593a7",
+      "coherence": 0.493612663208697,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Swiss voters reject proposal to tighten the country’s neutrality policy",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/suiza-rechaza-referendum-aplicacion-estricta-neutralidad-20260927204736-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/suiza-vota-referendum-reforzar-neutralidad-20260926030118-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/suiza-rechaza-referendum-propuesta-apoyada-ultras-imponer-neutralidad-estricta_1_13543268.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/suiza-rechaza-referendum-endurecer-su-politica-neutralidad_7041892_0.html"
+        },
+        {
+          "language": "es",
+          "source": "laverdad.es",
+          "source_country": "spain",
+          "url": "https://www.laverdad.es/internacional/europa/suiza-rechaza-neutralidad-estricta-mantener-vinculo-otan-20260927191511-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "sz"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/suiza-vota-referendum-reforzar-neutralidad-20260926030118-nt.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4936,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.6364
         },
-        "total": 0.5848,
+        "total": 0.6648,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "charles sapin",
+      "subject_label": "suiza",
       "subject_names": [
-        "charles sapin",
-        "dieu",
-        "france",
-        "francia",
-        "hadrien brachet",
-        "quels"
+        "suiza"
       ],
       "subject_newsroom_count": 3,
-      "summary": "Journalist Hadrien Brachet, who works for Le Point, has been appointed to replace Charles Sapin on France Inter after Sapin was removed amid pressure from unions; multiple outlets report Brachet as the new presenter on the station."
+      "summary": "In a nationwide referendum, Swiss voters turned down a proposal — backed by right-wing groups — to impose a stricter form of neutrality; campaigners for the change said it aimed to preserve ties with NATO and the EU, but the proposal was rejected and will not alter Switzerland’s current neutrality policy."
     },
     {
-      "cluster_id": "subject-europe-939aa44de805",
-      "coherence": 0.5124250851130083,
-      "consequence": 2,
+      "cluster_id": "subject-senat-66739dee8576",
+      "coherence": 0.4351740067155686,
+      "consequence": 3,
       "countries": [
-        "germany",
-        "united-states"
+        "france"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-27",
-      "headline": "Russia is expected to step up hybrid and aggressive tactics in Europe",
-      "independent_source_count": 3,
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Rassemblement National forms its first-ever parliamentary group in the French Senate",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/russia-expected-to-intensify-hybrid-war-on-europe/a-79444596?maca=en-rss-en-world-4025-rdf"
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/politique/elections/senatoriales-pour-la-premiere-fois-le-rn-aura-un-groupe-parlementaire-dans-la-chambre-haute-20260927_IQHZYDMMTVAZFJ7ODX477QKLYE/"
         },
         {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/video/compass-points/2026/09/russia-tests-nato-with-increasingly-aggressive-tactics-in-europe"
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/politique/280926/pour-la-premiere-fois-le-rn-cree-un-groupe-au-senat"
         },
         {
-          "language": "en",
-          "source": "drudge.com",
-          "source_country": "united-states",
-          "url": "https://drudge.com/news/294677/russia-expected-intensify-hybrid-war"
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/politique/270926/le-rn-en-mesure-de-constituer-un-groupe-au-senat-pour-la-premiere-fois"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/politique/senatoriales-le-rn-decroche-son-premier-groupe-au-senat_646033"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/elections/senatoriales/resultats-des-elections-senatoriales-2026-le-rn-reussit-a-constituer-un-groupe-au-senat-pour-la-premiere-fois-de-son-histoire_8212448.html"
         }
       ],
       "mentioned_countries": [
-        "ro"
+        "lu"
       ],
-      "origin_country": "germany",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/video/compass-points/2026/09/russia-tests-nato-with-increasingly-aggressive-tactics-in-europe",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "france",
+      "outbound_source": "challenges.fr",
+      "outbound_url": "https://www.challenges.fr/politique/senatoriales-le-rn-decroche-son-premier-groupe-au-senat_646033",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "dw.com",
-        "pbs.org"
+        "challenges.fr",
+        "liberation.fr",
+        "mediapart.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5124,
+          "coherence": 0.4352,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6578,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "senat",
+      "subject_names": [
+        "rassemblement",
+        "senat",
+        "senate"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "In the 2026 senatorial elections, the Rassemblement National succeeded in securing enough seats to create a parliamentary group in the French Senate for the first time in the party's history, a development reported consistently across the cited articles."
+    },
+    {
+      "cluster_id": "subject-israel-f0abc4e44b6d",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "sy"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-28",
+      "headline": "Israel revokes accreditation of Dutch diplomats in West Bank",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/27/israel-revoque-l-accreditation-des-diplomates-neerlandais-en-cisjordanie-en-reponse-a-l-interdiction-emise-par-les-pays-bas-d-importer-les-produits-des-colonies_6784560_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/israel/les-pays-bas-regrettent-profondement-la-decision-inutile-d-israel-concernant-ses-diplomates-en-poste-en-cisjordanie_8212961.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "es",
+          "source": "sana.sy",
+          "source_country": "sy",
+          "url": "https://sana.sy/es/world/2335506/"
+        }
+      ],
+      "mentioned_countries": [
+        "nl",
+        "is"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/09/27/israel-revoque-l-accreditation-des-diplomates-neerlandais-en-cisjordanie-en-reponse-a-l-interdiction-emise-par-les-pays-bas-d-importer-les-produits-des-colonies_6784560_3210.html",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5
         },
-        "total": 0.584,
+        "total": 0.6559,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "europe",
+      "subject_label": "israel",
       "subject_names": [
-        "europa",
-        "europe",
-        "nato",
-        "otan",
-        "rusia",
-        "russia",
-        "russian",
-        "serguei lavrov",
-        "ucrania",
-        "ukraine"
+        "cisjordanie",
+        "gaza",
+        "israel",
+        "palestina",
+        "sira rego"
       ],
-      "subject_newsroom_count": 16,
-      "summary": "Officials and analysts cited across the articles say Russia has been using a mix of coercive measures short of full-scale war—including political interference, cyber operations, disinformation and military provocations—and is likely to increase these hybrid and aggressive tactics across Europe to test NATO and influence European states."
+      "subject_newsroom_count": 24,
+      "summary": "Israel has revoked the accreditation of Dutch diplomats serving in the West Bank in response to the Netherlands’ decision to ban imports from settlements; the Netherlands expressed deep regret and called Israel’s move unnecessary."
     }
   ],
-  "discarded_ingested": 95,
+  "discarded_ingested": 191,
   "discarded_kept": 5,
-  "generated_at": "2026-09-27T10:39:57.333263+00:00",
+  "generated_at": "2026-09-28T11:52:48.712973+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

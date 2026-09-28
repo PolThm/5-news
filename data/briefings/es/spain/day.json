@@ -1,400 +1,423 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-thousands-d1e5025431ef",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "germany",
-        "it"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-27",
-      "headline": "Miles de personas protestan en Madrid por la crisis de vivienda y migratoria",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/spain-thousands-protest-in-madrid-against-housing-crisis/a-79446662"
-        },
-        {
-          "language": "en",
-          "source": "thecourier.com.au",
-          "source_country": "as",
-          "url": "https://www.thecourier.com.au/story/9358007/tens-of-thousands-protest-spains-housing-crisis/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "as",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/26/thousands-of-protesters-take-to-the-streets-in-madrid-over-ceuta-migrant-crisis",
-      "rank": 1,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "dw.com",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.5925,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "thousands",
-      "subject_names": [
-        "ceuta",
-        "espagne",
-        "madrid",
-        "thousands"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Miles de manifestantes se concentraron en Madrid para protestar por la crisis de la vivienda; algunas movilizaciones también estuvieron vinculadas a la situación migratoria tras el paso de migrantes por Ceuta. Las protestas exigieron soluciones a la escasez de vivienda asequible y respondieron a la atención pública generada por la llegada de migrantes a la ciudad autónoma de Ceuta."
-    },
-    {
-      "cluster_id": "subject-rumania-404784cd23c5",
-      "coherence": null,
+      "cluster_id": "subject-israel-ef25049dca59",
+      "coherence": 0.5485005458496506,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-26",
-      "headline": "España activa dos cazas en Rumanía tras detección de un dron cerca de Ucrania",
-      "independent_source_count": 3,
+      "editorial_day": "2026-09-28",
+      "headline": "Israel convoca a la encargada de negocios de España por declaraciones de Sira Rego",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/activados-cazas-espanoles-rumania-detectarse-dron-cerca-frontera-ucrania_1_13540187.html"
+          "url": "https://elpais.com/espana/2026-09-28/israel-convoca-a-la-encargada-de-negocios-de-espana-tras-unas-declaraciones-de-sira-rego.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/26/6ab79d58fdddffbd1e8b4570.html"
+          "url": "https://www.abc.es/espana/israel-convoca-encargada-negocios-tras-declaraciones-sira-20260928115808-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/oriente-proximo/20260928/israel-amonesta-encargada-negocios-espanola-lema-favor-palestina-pronuncio-ministra-rego/1003744399524_0.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/cazas-espanoles-intervienen-detectar-dron-ruso-cerca-frontera-rumania_7041652_0.html"
+          "url": "https://www.20minutos.es/internacional/israel-convoca-encargada-negocios-espana-tras-las-palabras-sira-rego-gobierno-ha-perdido-su-brujula-moral_7042110_0.html"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "ro"
+        "is",
+        "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/cazas-espanoles-intervienen-detectar-dron-ruso-cerca-frontera-rumania_7041652_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-09-28/israel-convoca-a-la-encargada-de-negocios-de-espana-tras-unas-declaraciones-de-sira-rego.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
-        "eldiario.es",
-        "elmundo.es"
+        "abc.es",
+        "elespanol.com",
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5485,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.5496,
+        "total": 0.6108,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "rumania",
+      "subject_label": "israel",
       "subject_names": [
-        "nato",
-        "otan",
-        "rumania",
-        "rusia",
-        "russian",
-        "ucrania"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Fuerzas españolas desplegaron dos cazas en Rumanía después de que se detectara un dron en las proximidades de la frontera con Ucrania; las aeronaves respondieron para identificar y vigilar el objeto aéreo según coinciden las informaciones."
-    },
-    {
-      "cluster_id": "subject-madrid-ad936446f094",
-      "coherence": 0.44551351215183255,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "Miles de personas protestan en Madrid por el desahucio de una mujer de 87 años",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/27/crise-du-logement-en-espagne-des-centaines-de-personnes-campent-a-madrid-pour-soutenir-une-octogenaire-expulsee-de-chez-elle_6783545_3211.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/espagne/vous-pourriez-etre-la-prochaine-maricarmen-des-milliers-de-manifestants-dans-les-rues-de-madrid-pour-soutenir-une-octogenaire-expulsee-de-son-appartement_8211455.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20260926-espagne-des-milliers-de-manifestants-%C3%A0-madrid-pour-soutenir-une-octog%C3%A9naire-expuls%C3%A9e-de-chez-elle"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260926-espagne-une-octog%C3%A9naire-expuls%C3%A9e-de-son-logement-devient-le-symbole-d-un-secteur-en-crise"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20260924.OBS118562/expulsee-de-chez-elle-a-87-ans-maricarmen-est-devenue-le-visage-de-la-crise-du-logement-en-espagne.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20260924.OBS118562/expulsee-de-chez-elle-a-87-ans-maricarmen-est-devenue-le-visage-de-la-crise-du-logement-en-espagne.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4455,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5417,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "madrid",
-      "subject_names": [
-        "ceuta",
+        "cisjordanie",
         "espagne",
+        "espana",
+        "gaza",
+        "israel",
         "madrid",
-        "maricarmen",
-        "maricarmen'"
+        "palestina",
+        "sira rego"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "En Madrid, miles de manifestantes y decenas de personas acamparon para apoyar a Maricarmen, una mujer de 87 años que fue desalojada de su vivienda; su caso se ha convertido en símbolo de la crisis de la vivienda en España y ha movilizado actos de solidaridad y protestas en las calles."
+      "subject_newsroom_count": 24,
+      "summary": "Israel llamó a la encargada de negocios de España tras unas declaraciones de la ministra Sira Rego en las que, según las autoridades israelíes, pronunció un lema a favor de Palestina; el Ministerio de Asuntos Exteriores israelí amonestó a la diplomática por esas palabras y expresó su rechazo a las manifestaciones de la ministra."
     },
     {
-      "cluster_id": "subject-sevilla-a648067ff9dc",
-      "coherence": 0.5092313164110591,
-      "consequence": 1,
+      "cluster_id": "subject-peinado-548235d132b5",
+      "coherence": 0.454588896545132,
+      "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "Un hombre mata a su pareja en La Campana (Sevilla) y se atrinchera en una vivienda",
+      "editorial_day": "2026-09-28",
+      "headline": "La Fiscalía critica al juez Peinado por actuar \"por encima\" de las partes en el caso Begoña Gómez",
       "independent_source_count": 6,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-09-27/un-hombre-mata-a-su-pareja-y-se-atrinchera-en-una-casa-de-la-campana-sevilla.html"
+          "url": "https://elpais.com/espana/2026-09-28/el-fiscal-contra-el-juez-peinado-no-es-aceptable-pasar-por-encima-de-los-profesionales.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/andalucia/2026/09/27/6ab8dca5fdddffe60a8b4570.html"
+          "url": "https://www.eldiario.es/politica/fiscalia-acusa-peinado-haber-pasado-partes-caso-begona-gomez_1_13543010.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/tribunales/20260928/fiscal-despide-juez-peinado-arremetiendo-precipitacion-mandar-begona-asistente-juicio/1003744399692_0.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/andalucia/sevilla-00357/noticia-atrincherado-hombre-vivienda-matar-mujer-campana-sevilla-20260927113540.html"
+          "url": "https://www.europapress.es/nacional/noticia-fiscalia-reprocha-peinado-decisiones-tomadas-celeridad-pasaron-encima-partes-caso-begona-20260928131705.html"
         },
         {
           "language": "es",
-          "source": "lavozdegalicia.es",
+          "source": "eldiariomontanes.es",
           "source_country": "spain",
-          "url": "https://www.lavozdegalicia.es/noticia/espana/2026/09/27/hombre-mata-pareja-campana-sevilla-atrinchera-casa/00031790500461359988633.htm"
+          "url": "https://www.eldiariomontanes.es/nacional/fiscalia-arremete-peinado-despedida-acusa-haber-pasado-20260928120126-ntrc.html"
         },
         {
           "language": "es",
-          "source": "elcorreo.com",
+          "source": "larioja.com",
           "source_country": "spain",
-          "url": "https://www.elcorreo.com/sociedad/hombre-mata-pareja-punaladas-sevilla-atrinchera-casa-20260927115002-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "hoy.es",
-          "source_country": "spain",
-          "url": "https://www.hoy.es/sociedad/hombre-mata-pareja-punaladas-sevilla-atrinchera-casa-20260927115002-ntrc.html"
+          "url": "https://www.larioja.com/nacional/fiscalia-arremete-peinado-despedida-acusa-haber-pasado-20260928120126-ntrc.html"
         }
       ],
       "mentioned_countries": [
-        "spain",
-        "sw"
+        "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/sociedad/2026-09-27/un-hombre-mata-a-su-pareja-y-se-atrinchera-en-una-casa-de-la-campana-sevilla.html",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/politica/fiscalia-acusa-peinado-haber-pasado-partes-caso-begona-gomez_1_13543010.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4546,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6059,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "peinado",
+      "subject_names": [
+        "fiscalia",
+        "peinado"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "En su despedida en el proceso, la Fiscalía reprochó al juez Peinado haber tomado decisiones con celeridad y haber \"pasado por encima\" de las partes al enviar a Begoña Gómez y su asistente a juicio, cuestionando su forma de actuar durante la instrucción."
+    },
+    {
+      "cluster_id": "subject-maricarmen-ca6544d98e0d",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Sánchez pide priorizar el uso residencial sobre el turístico de las viviendas",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/cataluna/sanchez-pone-foco-viviendas-temporada-privilegiar-uso-20260928130453-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/catalunya/sanchez-pide-privilegiar-residencial-vivienda-frente-turistico-acto-espana-2050_1_13543592.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/catalunya/noticia-sanchez-pide-privilegiar-uso-residencial-turistico-ccaa-aplicar-ley-vivienda-20260928130756.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/catalunya/noticia-sanchez-pide-privilegiar-uso-residencial-turistico-ccaa-aplicar-ley-vivienda-20260928130756.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "maricarmen",
+      "subject_names": [
+        "maricarmen",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "El presidente del Gobierno, Pedro Sánchez, en un acto en Barcelona y dirigiéndose a las comunidades autónomas, ha reclamado aplicar la Ley de Vivienda para \"privilegiar\" el uso residencial frente al uso turístico de las viviendas, poniendo el foco en las viviendas de temporada y defendiendo que el alojamiento para residentes prevalezca sobre el turístico."
+    },
+    {
+      "cluster_id": "subject-sol-b13fb9f2b404",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Almeida estudia medidas legales contra la Delegación por la acampada en la Puerta del Sol",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/madrid/2026-09-28/almeida-se-abre-a-que-el-ayuntamiento-actue-frente-a-la-acampada-de-sol-si-se-prolonga-en-el-tiempo-y-ayuso-acusa-al-gobierno-de-inaccion.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/madrid/somos/almeida-busca-frustrar-acampada-sol-si-delegacion-evita-no-queremos-quedarnos-brazos-cruzados_1_13542762.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/madrid/almeida-estudia-opciones-legales-proceder-delegado-sigue-20260928125923-nt.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/madrid/somos/almeida-busca-frustrar-acampada-sol-si-delegacion-evita-no-queremos-quedarnos-brazos-cruzados_1_13542762.html",
       "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "sol",
+      "subject_names": [
+        "almeida",
+        "sol"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "El alcalde de Madrid, José Luis Martínez-Almeida, ha señalado que estudiará y podría promover opciones legales contra el delegado del Gobierno en Madrid si éste no actúa para impedir o desalojar la acampada en la Puerta del Sol; el alcalde advierte que no se quedará de brazos cruzados y busca fórmulas para frustrar la ocupación si la Delegación evita intervenir."
+    },
+    {
+      "cluster_id": "subject-benidorm-a3ddd2a08eb4",
+      "coherence": 0.5139598057166126,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Detienen a un hombre en Benidorm por asesinar a su pareja y a dos por encubrimiento",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/sociedad/2026-09-28/la-policia-investiga-como-posible-crimen-machista-el-asesinato-de-una-mujer-en-benidorm.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/comunidad-valenciana/alicante/detienen-tres-hombres-tras-asesinato-mujer-benidorm-20260928103921-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/comunitat-valenciana/detenido-hombre-asesinato-qrma-blanca-pareja-benidorm_1_13542819.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/alicante/benidorm/20260928/detienen-hombre-matar-pareja-anos-cuchillo-ocultar-cadaver-zona-campo-benidorm/1003744399496_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/comunidad-valenciana/alicante/2026/09/28/6aba235fe4d4d82b368b457c.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-09-28/mujer-asesinada-benidorm-crimen-machista-1tna-1tps_4433403/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-policia-detiene-benidorm-hombre-asesinato-pareja-otros-dos-encubrimiento-20260928104830.html"
+        },
+        {
+          "language": "es",
+          "source": "huelvainformacion.es",
+          "source_country": "spain",
+          "url": "https://www.huelvainformacion.es/sociedad/mujer-asesinada-benidorm-presunto-crimen_0_2008094208.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiariomontanes.es",
+          "source_country": "spain",
+          "url": "https://www.eldiariomontanes.es/sociedad/tres-detenidos-benidorm-asesinato-machista-mujer-20260928112108-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "diariosur.es",
+          "source_country": "spain",
+          "url": "https://www.diariosur.es/sociedad/tres-detenidos-benidorm-asesinato-machista-mujer-20260928112108-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/comunitat-valenciana/detenido-hombre-asesinato-qrma-blanca-pareja-benidorm_1_13542819.html",
+      "rank": 5,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
         "elmundo.es",
         "elpais.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5092,
+          "coherence": 0.514,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.4667,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6522
+          "prominence": 0.7143,
+          "source_reliability": 0.7714
         },
-        "total": 0.5238,
+        "total": 0.5803,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sevilla",
+      "subject_label": "benidorm",
       "subject_names": [
-        "sevilla"
+        "benidorm",
+        "detienen"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Varios medios informan que en La Campana (Sevilla) un hombre mató a su pareja, presuntamente a puñaladas, y posteriormente se atrincheró en una vivienda durante varias horas; finalmente se entregó y fue detenido por las fuerzas de seguridad."
-    },
-    {
-      "cluster_id": "subject-madrid-c960abd09e9d",
-      "coherence": 0.510699774913538,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "La Policía desaloja un asentamiento junto a la desaladora de Ceuta",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/policia-desaloja-asentamiento-personas-migrantes-playa-proxima-desaladora-ceuta_1_13541369.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/27/6ab8c245e4d4d821038b457e.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-27/ceuta-desalojo-migrantes-planta-desaladora-1tna-1tps_4432988/"
-        },
-        {
-          "language": "es",
-          "source": "diariodeleon.es",
-          "source_country": "spain",
-          "url": "https://www.diariodeleon.es/sociedad/260927/2098539/policia-desaloja-asentamiento-playa-proxima-desaladora-ceuta.html"
-        },
-        {
-          "language": "es",
-          "source": "libertaddigital.com",
-          "source_country": "spain",
-          "url": "https://www.libertaddigital.com/espana/2026-09-27/la-policia-desaloja-a-cientos-de-inmigrantes-desde-la-playa-de-benitez-al-guano-para-proteger-la-desaladora-7466521/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-09-27/ceuta-desalojo-migrantes-planta-desaladora-1tna-1tps_4432988/",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elconfidencial.com",
-        "eldiario.es",
-        "elmundo.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5107,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.521,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "madrid",
-      "subject_names": [
-        "ceuta",
-        "espagne",
-        "madrid"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Las fuerzas policiales han intervenido para desalojar un asentamiento de migrantes ubicado en la playa Benítez, próxima a la planta desalinizadora de Ceuta, y han trasladado a cientos de personas a otra ubicación (el Guano) por motivos de seguridad y riesgo de accidentes asociados a la cercanía de la desaladora."
+      "subject_newsroom_count": 7,
+      "summary": "La policía en Benidorm arrestó a un hombre acusado de matar a su pareja con un arma blanca y a otras dos personas por presuntamente ayudar a ocultar el cuerpo; los detenidos están siendo investigados por el asesinato, que se investiga como un posible caso de violencia machista."
     }
   ],
-  "discarded_ingested": 27,
+  "discarded_ingested": 57,
   "discarded_kept": 5,
-  "generated_at": "2026-09-27T10:39:57.333263+00:00",
+  "generated_at": "2026-09-28T11:52:48.712973+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

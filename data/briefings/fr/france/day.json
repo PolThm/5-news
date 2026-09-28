@@ -1,141 +1,643 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-charles-sapin-6c1d5a895709",
-      "coherence": null,
+      "cluster_id": "subject-pen-a51b05b79fe8",
+      "coherence": 0.43174697471108514,
       "consequence": 2,
       "countries": [
-        "france"
+        "brazil",
+        "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "Hadrien Brachet remplace Charles Sapin à l'antenne de France Inter",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-09-28",
+      "headline": "Le parti de Marine Le Pen obtient pour la première fois un groupe au Sénat français",
+      "independent_source_count": 6,
       "members": [
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/medias/hadrien-brachet-journaliste-au-point-remplace-charles-sapin-ecarte-sous-la-pression-des-syndicats-sur-france-inter-20260927"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-28/la-ultraderecha-francesa-de-le-pen-consolida-en-el-senado-su-avance-electoral.html"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/medias/le-journaliste-hadrien-brachet-remplace-charles-sapin-sur-france-inter-20260927_MMN4OZYMBRGWNGBIQEW2J5X7FI/"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/partido-pen-consigue-formar-grupo-senado-primera-20260927212933-nt.html"
         },
         {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20260927.OBS118648/sur-france-inter-le-journaliste-du-point-hadrien-brachet-remplace-charles-sapin.html"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260928/11645165/extrema-derecha-avanza-eleccion-parcial-senado-frances.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/nuevo-avance-le-pen-francia-extrema-derecha-tendra-primera-vez-grupo-parlamentario-senado_1_13543464.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/27/extrema-direita-ganha-espaco-no-senado-da-franca.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "larioja.com",
+          "source_country": "spain",
+          "url": "https://www.larioja.com/internacional/europa/partido-pen-consigue-grupo-senado-frances-primera-20260927213002-ntrc.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "lefigaro.fr",
-      "outbound_url": "https://www.lefigaro.fr/medias/hadrien-brachet-journaliste-au-point-remplace-charles-sapin-ecarte-sous-la-pression-des-syndicats-sur-france-inter-20260927",
+      "origin_country": "brazil",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/partido-pen-consigue-formar-grupo-senado-primera-20260927212933-nt.html",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "lefigaro.fr",
-        "liberation.fr",
-        "nouvelobs.com"
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "globo.com",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4317,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.68
         },
-        "total": 0.5848,
+        "total": 0.6328,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "charles sapin",
+      "subject_label": "pen",
       "subject_names": [
-        "charles sapin",
-        "dieu",
-        "france",
-        "francia",
-        "hadrien brachet",
-        "quels"
+        "lfi",
+        "marine",
+        "pen",
+        "rassemblement",
+        "senado",
+        "senat",
+        "senate"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Les articles indiquent que Hadrien Brachet, journaliste au Point, a pris la place de Charles Sapin sur France Inter. Ils précisent que le remplacement intervient après le départ de Charles Sapin, évoqué comme lié à des pressions syndicales, et signalent que Brachet est désormais en charge de l'émission concernée."
+      "subject_newsroom_count": 14,
+      "summary": "Lors d’une récente élection partielle au Sénat, la formation de l’extrême droite liée à Marine Le Pen a consolidé son avance en obtenant un nombre record de sièges pour son histoire et a réussi à constituer pour la première fois un groupe parlementaire au Sénat français, selon les articles cités."
     },
     {
-      "cluster_id": "subject-leon-xiv-b516edb2818f",
-      "coherence": 0.49793445832449834,
+      "cluster_id": "subject-leon-xiv-951f90a597bf",
+      "coherence": null,
       "consequence": 1,
       "countries": [
+        "brazil",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-27",
+      "headline": "Le pape Léon XIV met en garde contre le risque d’une intelligence artificielle menaçante",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/25/watch-pope-leo-xiv-warns-ai-could-threaten-humanity-in-paradise-of-machines"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/tecnologia/noticia/2026/09/25/papa-leao-xiii-alerta-na-franca-para-risco-de-a-ia-criar-um-paraiso-de-maquinas.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "estadao.com.br",
+          "source_country": "brazil",
+          "url": "https://www.estadao.com.br/tecmundo/inteligencia-artificial/paraiso-das-maquinas-papa-leao-xiv-faz-novos-alertas-sobre-riscos-da-ia/"
+        }
+      ],
+      "mentioned_countries": [
         "france"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "Le pape Léon XIV appelle l’Église de France à poursuivre son action contre les violences sexuelles",
-      "independent_source_count": 7,
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/tecnologia/noticia/2026/09/25/papa-leao-xiii-alerta-na-franca-para-risco-de-a-ia-criar-um-paraiso-de-maquinas.ghtml",
+      "rank": 2,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.474,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "leon xiv",
+      "subject_names": [
+        "leon",
+        "leon xiv",
+        "metz",
+        "xiv"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "Le pape Léon XIV a déclaré en France que le développement de l’intelligence artificielle pourrait conduire à un « paradis de machines » et poser un risque pour l’humanité, exprimant son inquiétude face à un possible « apocalypse » lié à l’IA et appelant à la prudence face à ces technologies."
+    },
+    {
+      "cluster_id": "subject-aleksandar-vucic-63e4127236d5",
+      "coherence": 0.4482349351969098,
+      "consequence": 3,
+      "countries": [
+        "au",
+        "da",
+        "ez",
+        "france",
+        "germany",
+        "it",
+        "lo",
+        "nl",
+        "ri",
+        "si",
+        "spain",
+        "sz",
+        "tu",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 15,
+      "editorial_day": "2026-09-28",
+      "filled_from": "europe",
+      "headline": "Le président serbe Aleksandar Vučić démissionne pour se présenter Premier ministre",
+      "independent_source_count": 30,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/27/a-lourdes-le-pape-leon-xiv-se-recueille-devant-un-symbole-des-victimes-de-violences-sexuelles-dans-l-eglise_6784031_3210.html"
+          "url": "https://www.lemonde.fr/international/video/2026/09/28/la-demission-en-images-du-president-serbe-aleksandar-vucic-qui-brigue-le-poste-de-premier-ministre_6785018_3210.html"
         },
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/27/visite-du-pape-en-france-les-violences-sexuelles-au-sein-de-l-eglise-une-plaie-encore-ouverte-pour-leon-xiv_6783753_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/live/2026/09/26/visite-du-pape-en-france-apres-deux-jours-intenses-a-paris-leon-xiv-est-a-lourdes-pour-une-fin-de-week-end-qui-sera-marquee-par-la-question-des-violences-sexuelles-dans-l-eglise-catholique_6782008_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/direct-pape-leon-xiv-visite-france-lourdes-pontife-messe-catholique-religion-concorde-metz-messe-20260927"
+          "url": "https://www.lemonde.fr/international/article/2026/09/27/en-serbie-le-president-aleksandar-vucic-demissionne-et-vise-le-poste-de-premier-ministre_6784554_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/religions/visite-du-pape-en-france-bain-de-foule-pelerins-malades-et-victimes-de-violences-sexuelles-au-programme-de-leon-xiv-20260927_JWITXWYHQ5BBRNCCJXWXT3XAXI/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/vatican/pape-leon-xiv/leon-xiv-en-france-retrouvez-l-essentiel/le-pape-leon-xiv-encourage-l-eglise-de-france-a-poursuivre-son-action-face-au-douloureux-fleau-des-violences-sexuelles_8212043.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/vatican/pape-leon-xiv/direct-visite-du-pape-en-france-suivez-la-rencontre-tres-attendue-entre-le-pape-leon-xiv-et-des-victimes-de-violences-sexuelles-a-lourdes_8202998.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/vatican/pape-leon-xiv/direct-visite-du-pape-en-france-suivez-la-rencontre-tres-attendue-entre-le-pape-leon-xiv-et-des-victimes-de-violences-sexuelles-a-lourdes_8202998.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.liberation.fr/international/europe/serbie-le-president-aleksandar-vucic-annonce-sa-demission-pour-mieux-rebondir-comme-premier-ministre-20260928_25KNLBBJVVGJXACQFR6ZZGQNEA/"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20260927-%C3%A0-lourdes-le-pape-l%C3%A9on-xiv-face-%C3%A0-la-question-des-violences-sexuelles-dans-l-%C3%A9glise-catholique"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260928-serbie-le-pr%C3%A9sident-aleksandar-vucic-annonce-sa-d%C3%A9misison"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260927-serbie-le-pr%C3%A9sident-aleksandar-vucic-annonce-sa-d%C3%A9mission-des-%C3%A9lections-anticip%C3%A9es-%C3%A0-venir"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/populista-vucic-dimite-presidente-serbia-presentarse-primer-ministro_7041935_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/27/serbia-president-aleksandar-vucic-resigns-run-prime-minister"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/vucic-serbien-ruecktritt-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/28/serbias-president-aleksandar-vucic-resigns-to-run-for-prime-minister-in-snap-elections"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/27/news/aleksandar_vucic_dimissioni_presidente_serbia_candidatura_premier_elezioni_ottobre-425611278/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2632830"
+        },
+        {
+          "language": "slv",
+          "source": "primorski.eu",
+          "source_country": "si",
+          "url": "http://www.primorski.eu/se/srbski-predsednik-aleksandar-vucic-odstopil-DI2280041"
+        },
+        {
+          "language": "tur",
+          "source": "habermeydan.com",
+          "source_country": "tu",
+          "url": "https://www.habermeydan.com/dunya/sirbistan-cumhurbaskani-aleksandar-vucic-gorevinden-istifa-etti-h222702/"
+        },
+        {
+          "language": "srp",
+          "source": "b92.net",
+          "source_country": "ri",
+          "url": "https://www.b92.net/english/politics/271296/aleksandar-vucic-has-resigned/vest"
+        },
+        {
+          "language": "srp",
+          "source": "b92.net",
+          "source_country": "ri",
+          "url": "https://www.b92.net/svi-komentari/271296"
+        },
+        {
+          "language": "bos",
+          "source": "naslovi.net",
+          "source_country": "ri",
+          "url": "https://naslovi.net/tema/2578947"
+        },
+        {
+          "language": "en",
+          "source": "dailygazette.com",
+          "source_country": "united-states",
+          "url": "https://www.dailygazette.com/leader_herald/ap/world/serbias-populist-president-vucic-resigns-to-run-for-prime-minister-at-early-vote/article_cb2137c3-4fa1-58f9-b44e-dd2ac524a163.html"
+        },
+        {
+          "language": "en",
+          "source": "the-messenger.com",
+          "source_country": "united-states",
+          "url": "https://www.the-messenger.com/news/world/article_eb3b8a1a-8e2b-5953-9fc1-94bfdc08a48b.html"
+        },
+        {
+          "language": "fr",
+          "source": "rtn.ch",
+          "source_country": "sz",
+          "url": "https://www.rtn.ch/rtn/Actualite/Monde/Le-president-serbe-Aleksandar-Vucic-annonce-sa-demission.html"
+        },
+        {
+          "language": "dan",
+          "source": "ekstrabladet.dk",
+          "source_country": "da",
+          "url": "https://ekstrabladet.dk/nyheder/serbiens-praesident-aleksandar-vucic-traeder-tilbage/11302916"
+        },
+        {
+          "language": "de",
+          "source": "watson.ch",
+          "source_country": "sz",
+          "url": "https://www.watson.ch/international/gesellschaft-politik/681434761-serbiens-praesident-vucic-tritt-zurueck-das-ist-der-grund"
+        },
+        {
+          "language": "de",
+          "source": "news.de",
+          "source_country": "germany",
+          "url": "https://www.news.de/politik/860033951/serbiens-praesident-vucic-zurueckgetreten-politik-am-balkan-news-der-dpa-aktuell-zu-staatsoberhaupt-wahl-und-parlament/1/"
+        },
+        {
+          "language": "de",
+          "source": "sueddeutsche.de",
+          "source_country": "germany",
+          "url": "https://www.sueddeutsche.de/politik/politik-am-balkan-serbiens-praesident-vucic-zurueckgetreten-dpa.urn-newsml-dpa-com-20090101-260927-930-753788"
+        },
+        {
+          "language": "de",
+          "source": "pz-news.de",
+          "source_country": "germany",
+          "url": "https://www.pz-news.de/politik_artikel,-Serbiens-Praesident-Vucic-zurueckgetreten-_arid,2370512.html"
+        },
+        {
+          "language": "de",
+          "source": "derstandard.at",
+          "source_country": "au",
+          "url": "https://www.derstandard.at/consent/tcf/story/3000000341564/serbiens-praesident-vucic-tritt-zurueck-weg-fuer-vorgezogene-wahlen-geebnet"
+        },
+        {
+          "language": "it",
+          "source": "bresciaoggi.it",
+          "source_country": "it",
+          "url": "https://www.bresciaoggi.it/news/mondo/il-presidente-serbo-vucic-si-dimette-per-candidarsi-alle-elezioni-anticipate-1.13136807"
+        },
+        {
+          "language": "it",
+          "source": "zazoom.it",
+          "source_country": "it",
+          "url": "https://www.zazoom.it/2026-09-27/serbia-il-presidente-vucic-si-dimette-per-candidarsi-alla-carica-di-primo-ministro/19730690/"
+        },
+        {
+          "language": "slk",
+          "source": "ta3.com",
+          "source_country": "lo",
+          "url": "https://www.ta3.com/clanok/1073733/srbsky-prezident-aleksandar-vucic-podal-demisiu-konci-v-urade-a-na-jesen-zabojuje-o-kreslo-predsedu-vlady"
+        },
+        {
+          "language": "ces",
+          "source": "denik.cz",
+          "source_country": "ez",
+          "url": "https://www.denik.cz/evropa/srbsky-prezident-vucic-rezignoval-bude-kandidovat-v-parlamentnich-volbach/"
+        },
+        {
+          "language": "tur",
+          "source": "ensonhaber.com",
+          "source_country": "tu",
+          "url": "https://www.ensonhaber.com/sirbistan-cumhurbaskani-aleksandar-vucic-gorevinden-istifa-etti-h1569150"
+        },
+        {
+          "language": "srp",
+          "source": "tanjug.rs",
+          "source_country": "ri",
+          "url": "https://www.tanjug.rs/srbija/politika/284472/predsednik-srbije-aleksandar-vucic-podneo-ostavku-na-tu-funkciju-do-kraja-decembra-imacemo-predsednicke-izbore/vest"
+        },
+        {
+          "language": "srp",
+          "source": "informer.rs",
+          "source_country": "ri",
+          "url": "https://informer.rs/politika/vesti/1154965/aleksandar-vucic-politika-srbija"
+        },
+        {
+          "language": "srp",
+          "source": "naslovi.net",
+          "source_country": "ri",
+          "url": "https://naslovi.net/2026-09-27/plusonline/aleksandar-vucic-podneo-ostavku-na-mesto-predsednika-srbije/42415106"
+        }
+      ],
+      "mentioned_countries": [
+        "ri"
+      ],
+      "origin_country": "au",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/europe/20260927-serbie-le-pr%C3%A9sident-aleksandar-vucic-annonce-sa-d%C3%A9mission-des-%C3%A9lections-anticip%C3%A9es-%C3%A0-venir",
+      "rank": 3,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "euronews.com",
+        "france24.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "nos.nl",
+        "repubblica.it",
+        "rfi.fr",
+        "tagesschau.de",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4482,
+          "corroboration": 0.8824,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8824,
+          "source_reliability": 0.9048
+        },
+        "total": 0.7571,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "aleksandar vucic",
+      "subject_names": [
+        "aleksandar vucic",
+        "serbie",
+        "vucic"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Aleksandar Vučić a démissionné de son poste de président de la Serbie pour se lancer comme candidat au poste de Premier ministre lors d’élections anticipées, ouvrant la voie à des scrutins précipités à organiser prochainement."
+    },
+    {
+      "cluster_id": "subject-leon-xiv-ce05b9e35a0f",
+      "coherence": 0.4519092058751034,
+      "consequence": 0,
+      "countries": [
+        "be",
+        "france",
+        "mo"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-09-28",
+      "headline": "Le pape Léon XIV a achevé sa visite à Metz en appelant à l’Europe et à la paix",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/09/28/la-visite-du-pape-a-metz-sous-le-sceau-de-l-europe-et-de-la-paix-leon-xiv-sait-il-qu-il-va-dire-la-messe-sur-un-autel-fait-avec-le-bronze-d-anciens-canons-allemands_6780277_3225.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/09/28/visite-du-pape-a-metz-l-espoir-que-leon-xiv-venu-celebrer-la-paix-et-l-europe-aide-a-redorer-l-image-de-la-ville_6784765_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/actualite-france/leon-xiv-a-metz-quels-chefs-d-etat-et-de-gouvernement-assisteront-a-son-discours-sur-l-europe-20260928"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/actualite-france/leon-xiv-a-metz-une-derniere-journee-sous-le-signe-de-l-identite-europeenne-et-de-la-paix-20260928"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/religions/visite-de-leon-xiv-en-france-a-metz-un-interet-croyant-pour-leurope-20260928_KCHEU5KJ35BNTLYJTVNLRS7HKQ/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/religion/pape-a-metz-qui-est-saint-chrodegang-dont-leon-xiv-parle-dans-son-discours-sur-l-europe-20260928"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/religion/qui-etait-alcide-de-gasperi-pere-de-l-europe-sur-la-voie-de-la-beatification-20250228"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/vatican/pape-leon-xiv/pape-leon-xiv-a-metz-le-pape-appelle-a-preserver-la-paix-en-europe_8213348.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260928-replay-%C3%A0-metz-le-pape-l%C3%A9on-xiv-%C3%A0-dialoguer-plut%C3%B4t-que-de-s-affronter"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260928-l%C3%A9on-xiv-%C3%A0-metz-le-pape-souhaite-mettre-l-accent-sur-l-europe"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20260928-l%C3%A9on-xiv-%C3%A0-metz-derni%C3%A8re-%C3%A9tape-de-sa-viste-en-france"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260928-union-europ%C3%A9enne-concordat-pourquoi-l%C3%A9on-xiv-se-rend-il-%C3%A0-metz"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/societe/religions/pape-leon-xiv/visite-du-pape-en-france-a-metz-leon-xiv-denonce-des-relations-barbares-entre-etats-et-vante-leurope-de-la-paix-8acb0c54-bb2c-11f1-8a73-5c5c9f666d13?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "fr.le360.ma",
+          "source_country": "mo",
+          "url": "https://fr.le360.ma/monde/leon-xiv-en-route-pour-metz-derniere-etape-de-sa-visite-en-france_MAFQKOWK2JALHCQVJGKVM27GPI/"
+        },
+        {
+          "language": "fr",
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/international/europe/2026/09/28/leon-xiv-est-arrive-a-metz-QKPKJZDPNJE5JBBIMUDS6SM4TY/"
+        },
+        {
+          "language": "fr",
+          "source": "valeursactuelles.com",
+          "source_country": "france",
+          "url": "https://www.valeursactuelles.com/regions/grand-est/moselle/metz/societe/a-metz-leon-xiv-face-a-lhistoire-dune-terre-de-guerres-et-de-paix"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "be",
+      "outbound_source": "valeursactuelles.com",
+      "outbound_url": "https://www.valeursactuelles.com/regions/grand-est/moselle/metz/societe/a-metz-leon-xiv-face-a-lhistoire-dune-terre-de-guerres-et-de-paix",
+      "rank": 4,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4519,
+          "corroboration": 0.6,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.8491
+        },
+        "total": 0.5387,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "leon xiv",
+      "subject_names": [
+        "emmanuel macron",
+        "europa",
+        "europe",
+        "france",
+        "francia",
+        "leon",
+        "leon xiv",
+        "lourdes",
+        "lyon",
+        "macron",
+        "metz",
+        "paris",
+        "pope leo",
+        "vatican",
+        "xiv"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "Lors de sa dernière étape à Metz, le pape Léon XIV a prononcé un discours centré sur l’importance de l’Europe et la préservation de la paix, évoquant des figures historiques liées à la construction européenne et célébrant le dialogue plutôt que l’affrontement ; sa messe et ses interventions ont souligné le caractère symbolique de la ville, marquée par une histoire de conflits, et plusieurs dirigeants et autorités étaient présents pour écouter ses appels à la réconciliation et à l’unité."
+    },
+    {
+      "cluster_id": "subject-lourdes-f88184be4d26",
+      "coherence": 0.4569064877906268,
+      "consequence": 0,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-28",
+      "headline": "Le pape Léon XIV à Lourdes appelle l’Église à affronter les violences sexuelles et condamne l’euthanasie",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/09/27/visite-du-pape-a-lourdes-sur-les-violences-sexuelles-leon-xiv-appelle-l-eglise-a-continuer-la-recherche-de-la-verite-la-justice-le-pardon-la-reparation_6784556_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/09/27/visite-du-pape-a-lourdes-leon-xiv-reaffirme-son-opposition-a-l-aide-a-mourir-et-denonce-le-fleau-des-violences-sexuelles-au-sein-de-l-eglise_6784031_3211.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/religions/a-lourdes-le-pape-condamne-leuthanasie-et-invite-leglise-a-poursuivre-la-lutte-contre-les-violences-sexuelles-20260927_3F4VBTTJ2RCX7CJXI3ZR7YV6VQ/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/religion/leon-xiv-a-lourdes-des-victimes-assurent-que-le-pape-a-reconnu-le-caractere-systemique-des-abus-sexuels-dans-l-eglise-20260928"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/vatican/pape-leon-xiv/leon-xiv-a-lourdes-les-victimes-de-violences-sexuelles-saluent-son-ecoute-et-reclament-des-actions_8213063.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
@@ -145,350 +647,57 @@
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "boursorama.com",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/societe/religions/pape-leon-xiv/visite-du-pape-leon-xiv-demande-a-leglise-de-france-de-poursuivre-son-action-face-au-fleau-des-abus-sexuels-8ed41dbe-ba59-11f1-bf2b-20ac402d7e60?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.boursorama.com/actualite-economique/actualites/le-pape-leon-qui-doit-rencontrer-des-victimes-de-violences-sexuelles-a-lourdes-exhorte-l-eglise-a-reconnaitre-ses-manquements-fbb3b3b4e4dc67ed81091242bac1ece9"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/live/2026/09/26/visite-du-pape-en-france-apres-deux-jours-intenses-a-paris-leon-xiv-est-a-lourdes-pour-une-fin-de-week-end-qui-sera-marquee-par-la-question-des-violences-sexuelles-dans-l-eglise-catholique_6782008_3224.html",
-      "rank": 2,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "ouest-france.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4979,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.8049
-        },
-        "total": 0.5778,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "leon xiv",
-      "subject_names": [
-        "concorde",
-        "dieu",
-        "france",
-        "francia",
-        "jean-paul",
-        "leon xiv",
-        "lourdes",
-        "paris",
-        "pope leo",
-        "quels",
-        "xiv"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "En visite à Lourdes après deux jours à Paris, le pape Léon XIV a qualifié les violences sexuelles au sein de l’Église de « douloureux fléau » et « plaie encore ouverte », appelant l’Église de France à continuer ses efforts, tenant une messe, rencontrant des victimes et plaidant pour la paix et le dialogue."
-    },
-    {
-      "cluster_id": "subject-paris-6ee144440652",
-      "coherence": 0.47366385204807027,
-      "consequence": 1,
-      "countries": [
-        "au",
-        "brazil",
-        "germany",
-        "it",
-        "spain"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-26",
-      "headline": "Le pape Léon XIV célèbre une messe à Paris rassemblant 800 000 personnes",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-26/el-papa-llama-a-ver-a-quienes-son-invisibilizados-en-un-centro-de-ayuda-a-migrantes-de-paris.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260926/11644520/papa-reune-600-000-personas-misa-paris.html"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/papst-paris-messe-100.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/26/news/papa_parigi_messa_place_concorde_lourdes-425608795/?rss"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/26/news/papa_parigi_messa_place_concorde_lourdes-425608794/?rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/26/em-visita-a-franca-papa-leao-xiv-celebra-missa-para-800-mil-pessoas-em-paris.ghtml"
-        },
-        {
-          "language": "de",
-          "source": "suedtirolnews.it",
-          "source_country": "it",
-          "url": "https://www.suedtirolnews.it/politik/rund-800-000-glaeubige-bei-papstmesse-in-paris"
-        },
-        {
-          "language": "de",
-          "source": "apa.at",
-          "source_country": "au",
-          "url": "https://apa.at/news/hunderttausende-bei-papstmesse-in-paris/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "au",
-      "outbound_source": "repubblica.it",
-      "outbound_url": "https://www.repubblica.it/esteri/2026/09/26/news/papa_parigi_messa_place_concorde_lourdes-425608794/?rss",
-      "rank": 3,
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/france/20260927-en-direct-le-pape-l%C3%A9on-xiv-c%C3%A9l%C3%A8bre-une-messe-%C3%A0-lourdes-avant-une-rencontre-avec-des-victimes-de-violences-sexuelles-dans-l-eglise",
+      "rank": 5,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "elpais.com",
-        "globo.com",
-        "lavanguardia.com",
-        "repubblica.it",
-        "tagesschau.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4737,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7333
-        },
-        "total": 0.5545,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "paris",
-      "subject_names": [
-        "concorde",
-        "jean-paul",
-        "leon xiv",
-        "paris",
-        "pope leo",
-        "xiv"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Le pape Léon XIV a célébré une messe à Paris, sur la place de la Concorde, à laquelle ont assisté environ 800 000 fidèles selon les articles fournis ; la cérémonie a été suivie par une très grande foule et le pontife a invité les présents à ne pas garder la foi pour eux-mêmes."
-    },
-    {
-      "cluster_id": "subject-athens-0979780505fc",
-      "coherence": 0.49548399530392284,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "it",
-        "japan",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-27",
-      "filled_from": "europe",
-      "headline": "Une explosion présumée détruit un immeuble au centre d'Athènes, six morts",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/26/greek-authorities-seek-answers-after-six-killed-in-athens-apartment-block-explosion"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/26/six-dead-after-explosion-causes-building-to-collapse-in-central-athens"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/25/building-in-central-athens-collapses-after-explosion-two-women-rescued"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/bodies-of-6-people-including-4-americans-recovered-from-collapsed-building-in-athens"
-        },
-        {
-          "language": "en",
-          "source": "kcra.com",
-          "source_country": "united-states",
-          "url": "https://www.kcra.com/article/4-americans-recovered-collapse-greece/73906287"
-        },
-        {
-          "language": "en",
-          "source": "abc.net.au",
-          "source_country": "as",
-          "url": "https://www.abc.net.au/news/2026-09-27/six-bodies-recovered-from-athens-explosion-building/107200742"
-        },
-        {
-          "language": "en",
-          "source": "japantoday.com",
-          "source_country": "japan",
-          "url": "https://japantoday.com/category/world/six-dead-after-explosion-destroys-building-in-athens1"
-        },
-        {
-          "language": "en",
-          "source": "singletonargus.com.au",
-          "source_country": "as",
-          "url": "https://www.singletonargus.com.au/story/9357945/six-bodies-recovered-from-collapsed-athens-building/"
-        }
-      ],
-      "mentioned_countries": [
-        "gr"
-      ],
-      "origin_country": "as",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/25/building-in-central-athens-collapses-after-explosion-two-women-rescued",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "pbs.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4955,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7143
-        },
-        "total": 0.5878,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "athens",
-      "subject_names": [
-        "athens"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Une explosion suspectée d'être causée par une fuite de gaz a provoqué l'effondrement d'un immeuble au centre d'Athènes; les secours ont récupéré les corps de six personnes, et plusieurs autres étaient signalées portées disparues dans les heures suivant l'incident."
-    },
-    {
-      "cluster_id": "subject-pologne-3d1dea9a101b",
-      "coherence": 0.47506032038062507,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-27",
-      "headline": "La Pologne bat la France en finale et prive les Bleus du titre européen",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sports/euro-de-volley-intraitable-la-pologne-stoppe-net-le-reve-tricolore-en-finale-20260927_HFTVAXAA3RAYFEQWMTQSAQCXQI/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sports/volley/championnat-d-europe/logiquement-dominee-par-la-pologne-tenante-du-titre-l-equipe-de-france-s-incline-en-finale-de-l-euro-de-volley_8211530.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/sports/20260926-volley-ball-la-france-s-incline-contre-la-pologne-en-finale-de-l-euro"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/sports/20260926-volley-pas-de-titre-pour-la-france-battue-en-finale-par-la-pologne-3-1"
-        }
-      ],
-      "mentioned_countries": [
-        "pl",
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/sports/volley/championnat-d-europe/logiquement-dominee-par-la-pologne-tenante-du-titre-l-equipe-de-france-s-incline-en-finale-de-l-euro-de-volley_8211530.html#xtor=RSS-3-[lestitres]",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
         "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
         "liberation.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4751,
+          "coherence": 0.4569,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.6,
+          "source_reliability": 0.7143
         },
-        "total": 0.4553,
+        "total": 0.4742,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "pologne",
+      "subject_label": "lourdes",
       "subject_names": [
-        "dieu",
-        "france",
-        "francia",
-        "pologne",
-        "quels"
+        "leon",
+        "leon xiv",
+        "lourdes",
+        "metz",
+        "pope leo",
+        "xiv"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "En finale de l'Euro de volley, la Pologne, tenante du titre, a battu l'équipe de France, qui s'incline et ne remporte pas le titre ; le match s'est terminé sur un score en sets en faveur de la Pologne (victoire 3-1 selon plusieurs comptes rendus)."
+      "subject_newsroom_count": 12,
+      "summary": "Lors de sa visite à Lourdes, le pape Léon XIV a reconnu le caractère « systémique » des violences sexuelles au sein de l’Église, a entendu et salué des victimes, et les a appelés à poursuivre « la recherche de la vérité, la justice, le pardon, la réparation ». Il a par ailleurs réaffirmé son opposition à l’aide à mourir."
     }
   ],
-  "discarded_ingested": 37,
+  "discarded_ingested": 35,
   "discarded_kept": 5,
-  "generated_at": "2026-09-27T10:39:57.333263+00:00",
+  "generated_at": "2026-09-28T11:52:48.712973+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

@@ -2,391 +2,212 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-israel-ef25049dca59"
+        "subject-madrid-6cd654f89ed6"
       ],
-      "cluster_id": "subject-israel-ef25049dca59",
-      "coherence": 0.5485005458496506,
+      "cluster_id": "subject-madrid-6cd654f89ed6",
+      "coherence": 0.43201890624107486,
       "consequence": 2,
       "countries": [
+        "it",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-29",
+      "headline": "Protestas en Madrid por desahucio y crisis de vivienda derivan en acampadas y ocupaciones",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/28/protesters-camp-in-madrid-as-housing-crisis-sparks-anger"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/09/29/madrid-housing-activists-occupy-agency-amid-eviction-protests"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/09/27/watch-mass-madrid-protests-over-maricarmen-eviction-and-housing-crisis"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/28/nx-s1-5983303/encampment-protest-madrid-housing-crisis"
+        }
+      ],
+      "mentioned_countries": [
         "spain"
       ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/video/2026/09/27/watch-mass-madrid-protests-over-maricarmen-eviction-and-housing-crisis",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.432,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.6
+        },
+        "total": 0.5432,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "madrid",
+      "subject_names": [
+        "espana",
+        "madrid"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "En Madrid, manifestantes han protestado por la crisis de vivienda tras el desahucio de una mujer de 87 años; las acciones incluyeron concentraciones masivas, acampadas frente a sedes oficiales y la ocupación de una agencia inmobiliaria como protesta contra los desalojos y la falta de soluciones habitacionales."
+    },
+    {
+      "_linked_ids": [
+        "subject-espagne-eb1f9735a672"
+      ],
+      "cluster_id": "subject-espagne-eb1f9735a672",
+      "coherence": 0.5223512912033453,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
       "country_count": 1,
-      "editorial_day": "2026-09-28",
-      "headline": "Israel convoca a la encargada de negocios de España por declaraciones de Sira Rego",
+      "editorial_day": "2026-09-29",
+      "headline": "Maricarmen Abascal, de 87 años, recupera su vivienda tras ser expulsada",
       "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-28/israel-convoca-a-la-encargada-de-negocios-de-espana-tras-unas-declaraciones-de-sira-rego.html"
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/logement/crise-du-logement-en-espagne-maricarmen-abascal-expulsee-a-87-ans-finalement-autorisee-a-rentrer-chez-elle-20260929_EDMF4SYMHZCYRIWEEWMN2JAFFU/"
         },
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/israel-convoca-encargada-negocios-tras-declaraciones-sira-20260928115808-nt.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/en-espagne-comment-maricarmen-abascal-87-ans-est-devenue-le-symbole-de-la-crise-du-logement_8213075.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/oriente-proximo/20260928/israel-amonesta-encargada-negocios-espanola-lema-favor-palestina-pronuncio-ministra-rego/1003744399524_0.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/en-espagne-comment-maricarmen-abascal-87-ans-est-devenue-le-symbole-de-la-crise-du-logement_8213075.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/israel-convoca-encargada-negocios-espana-tras-las-palabras-sira-rego-gobierno-ha-perdido-su-brujula-moral_7042110_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "is",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/2026-09-28/israel-convoca-a-la-encargada-de-negocios-de-espana-tras-unas-declaraciones-de-sira-rego.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5485,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5708,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "israel",
-      "subject_names": [
-        "cisjordanie",
-        "espagne",
-        "espana",
-        "gaza",
-        "israel",
-        "madrid",
-        "palestina",
-        "sira rego"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Israel llamó a la encargada de negocios de España tras unas declaraciones de la ministra Sira Rego en las que, según las autoridades israelíes, pronunció un lema a favor de Palestina; el Ministerio de Asuntos Exteriores israelí amonestó a la diplomática por esas palabras y expresó su rechazo a las manifestaciones de la ministra."
-    },
-    {
-      "_linked_ids": [
-        "subject-peinado-548235d132b5"
-      ],
-      "cluster_id": "subject-peinado-548235d132b5",
-      "coherence": 0.454588896545132,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-28",
-      "headline": "La Fiscalía critica al juez Peinado por actuar \"por encima\" de las partes en el caso Begoña Gómez",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-28/el-fiscal-contra-el-juez-peinado-no-es-aceptable-pasar-por-encima-de-los-profesionales.html"
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20260928-espagne-maricarmen-abascal-retrouve-son-logement-alors-que-la-mobilisation-pour-un-d%C3%A9cret-loi-continue"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/fiscalia-acusa-peinado-haber-pasado-partes-caso-begona-gomez_1_13543010.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/tribunales/20260928/fiscal-despide-juez-peinado-arremetiendo-precipitacion-mandar-begona-asistente-juicio/1003744399692_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-fiscalia-reprocha-peinado-decisiones-tomadas-celeridad-pasaron-encima-partes-caso-begona-20260928131705.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiariomontanes.es",
-          "source_country": "spain",
-          "url": "https://www.eldiariomontanes.es/nacional/fiscalia-arremete-peinado-despedida-acusa-haber-pasado-20260928120126-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "larioja.com",
-          "source_country": "spain",
-          "url": "https://www.larioja.com/nacional/fiscalia-arremete-peinado-despedida-acusa-haber-pasado-20260928120126-ntrc.html"
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20260924.OBS118562/expulsee-de-chez-elle-a-87-ans-maricarmen-est-devenue-le-visage-de-la-crise-du-logement-en-espagne.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/politica/fiscalia-acusa-peinado-haber-pasado-partes-caso-begona-gomez_1_13543010.html",
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20260924.OBS118562/expulsee-de-chez-elle-a-87-ans-maricarmen-est-devenue-le-visage-de-la-crise-du-logement-en-espagne.html",
       "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com",
-        "europapress.es"
+        "francetvinfo.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4546,
+          "coherence": 0.5224,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.5659,
+        "total": 0.4836,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "peinado",
-      "subject_names": [
-        "fiscalia",
-        "peinado"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "En su despedida en el proceso, la Fiscalía reprochó al juez Peinado haber tomado decisiones con celeridad y haber \"pasado por encima\" de las partes al enviar a Begoña Gómez y su asistente a juicio, cuestionando su forma de actuar durante la instrucción."
-    },
-    {
-      "_linked_ids": [
-        "subject-maricarmen-ca6544d98e0d"
-      ],
-      "cluster_id": "subject-maricarmen-ca6544d98e0d",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-28",
-      "headline": "Sánchez pide priorizar el uso residencial sobre el turístico de las viviendas",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/cataluna/sanchez-pone-foco-viviendas-temporada-privilegiar-uso-20260928130453-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/sanchez-pide-privilegiar-residencial-vivienda-frente-turistico-acto-espana-2050_1_13543592.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/catalunya/noticia-sanchez-pide-privilegiar-uso-residencial-turistico-ccaa-aplicar-ley-vivienda-20260928130756.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/catalunya/noticia-sanchez-pide-privilegiar-uso-residencial-turistico-ccaa-aplicar-ley-vivienda-20260928130756.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5448,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "maricarmen",
-      "subject_names": [
-        "maricarmen",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "El presidente del Gobierno, Pedro Sánchez, en un acto en Barcelona y dirigiéndose a las comunidades autónomas, ha reclamado aplicar la Ley de Vivienda para \"privilegiar\" el uso residencial frente al uso turístico de las viviendas, poniendo el foco en las viviendas de temporada y defendiendo que el alojamiento para residentes prevalezca sobre el turístico."
-    },
-    {
-      "_linked_ids": [
-        "subject-sol-b13fb9f2b404"
-      ],
-      "cluster_id": "subject-sol-b13fb9f2b404",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-28",
-      "headline": "Almeida estudia medidas legales contra la Delegación por la acampada en la Puerta del Sol",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/madrid/2026-09-28/almeida-se-abre-a-que-el-ayuntamiento-actue-frente-a-la-acampada-de-sol-si-se-prolonga-en-el-tiempo-y-ayuso-acusa-al-gobierno-de-inaccion.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/madrid/somos/almeida-busca-frustrar-acampada-sol-si-delegacion-evita-no-queremos-quedarnos-brazos-cruzados_1_13542762.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/madrid/almeida-estudia-opciones-legales-proceder-delegado-sigue-20260928125923-nt.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/madrid/somos/almeida-busca-frustrar-acampada-sol-si-delegacion-evita-no-queremos-quedarnos-brazos-cruzados_1_13542762.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5448,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sol",
+      "subject_label": "espagne",
       "subject_names": [
         "almeida",
-        "sol"
+        "espagne",
+        "espana",
+        "madrid",
+        "maricarmen",
+        "maricarmen abascal",
+        "urbagestion"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "El alcalde de Madrid, José Luis Martínez-Almeida, ha señalado que estudiará y podría promover opciones legales contra el delegado del Gobierno en Madrid si éste no actúa para impedir o desalojar la acampada en la Puerta del Sol; el alcalde advierte que no se quedará de brazos cruzados y busca fórmulas para frustrar la ocupación si la Delegación evita intervenir."
+      "subject_newsroom_count": 6,
+      "summary": "Maricarmen Abascal, una mujer de 87 años que fue desalojada de su vivienda en España, se convirtió en símbolo de la crisis del acceso a la vivienda; tras movilizaciones y atención pública, las autoridades finalmente autorizaron su regreso al domicilio mientras sigue el debate y la protesta por medidas legales sobre el acceso a la vivienda."
     },
     {
       "_linked_ids": [
-        "subject-benidorm-a3ddd2a08eb4"
+        "subject-ayuso-4fcbebd81d73"
       ],
-      "cluster_id": "subject-benidorm-a3ddd2a08eb4",
-      "coherence": 0.5139598057166126,
+      "cluster_id": "subject-ayuso-4fcbebd81d73",
+      "coherence": 0.46312681381564147,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-28",
-      "headline": "Detienen a un hombre en Benidorm por asesinar a su pareja y a dos por encubrimiento",
-      "independent_source_count": 10,
+      "editorial_day": "2026-09-29",
+      "headline": "Ayuso exige al Gobierno que desalojen la Puerta del Sol en 48 horas",
+      "independent_source_count": 5,
       "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-09-28/la-policia-investiga-como-posible-crimen-machista-el-asesinato-de-una-mujer-en-benidorm.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/comunidad-valenciana/alicante/detienen-tres-hombres-tras-asesinato-mujer-benidorm-20260928103921-nt.html"
-        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/comunitat-valenciana/detenido-hombre-asesinato-qrma-blanca-pareja-benidorm_1_13542819.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/alicante/benidorm/20260928/detienen-hombre-matar-pareja-anos-cuchillo-ocultar-cadaver-zona-campo-benidorm/1003744399496_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/comunidad-valenciana/alicante/2026/09/28/6aba235fe4d4d82b368b457c.html"
+          "url": "https://www.eldiario.es/madrid/gobierno-ayuso-exige-delegado-gobierno-desaloje-sol-48-horas-proteja-sede-hemos-visto-orines-fachada_1_13546413.html"
         },
         {
           "language": "es",
           "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-09-28/mujer-asesinada-benidorm-crimen-machista-1tna-1tps_4433403/"
+          "url": "https://www.elconfidencial.com/espana/madrid/2026-09-29/ultimatum-de-ayuso-al-gobierno-o-desaloja-sol-en-48-horas-o-acudira-a-los-tribunales_4434388/"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "publico.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/comunitat-valenciana/noticia-policia-detiene-benidorm-hombre-asesinato-pareja-otros-dos-encubrimiento-20260928104830.html"
+          "url": "https://www.publico.es/economia/vivienda/ejecutivo-ayuso-da-48-horas-gobierno-desmantelar-acampada-sol.html"
         },
         {
           "language": "es",
-          "source": "huelvainformacion.es",
+          "source": "larazon.es",
           "source_country": "spain",
-          "url": "https://www.huelvainformacion.es/sociedad/mujer-asesinada-benidorm-presunto-crimen_0_2008094208.html"
+          "url": "https://www.larazon.es/madrid/ayuso-48-horas-gobierno-que-desaloje-puerta-sol-amenaza-emprendender-acciones-penales_202609296abb93c0a520494aafd92823.html"
         },
         {
           "language": "es",
-          "source": "eldiariomontanes.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.eldiariomontanes.es/sociedad/tres-detenidos-benidorm-asesinato-machista-mujer-20260928112108-ntrc.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosur.es",
-          "source_country": "spain",
-          "url": "https://www.diariosur.es/sociedad/tres-detenidos-benidorm-asesinato-machista-mujer-20260928112108-ntrc.html"
+          "url": "https://www.abc.es/espana/madrid/comunidad-madrid-envia-requerimiento-delegacion-gobierno-plazo-20260929122616-nt.html"
         }
       ],
       "mentioned_countries": [
@@ -394,45 +215,215 @@
       ],
       "origin_country": "spain",
       "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/comunitat-valenciana/detenido-hombre-asesinato-qrma-blanca-pareja-benidorm_1_13542819.html",
-      "rank": 5,
-      "reference_newsroom_count": 7,
+      "outbound_url": "https://www.eldiario.es/madrid/gobierno-ayuso-exige-delegado-gobierno-desaloje-sol-48-horas-proteja-sede-hemos-visto-orines-fachada_1_13546413.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "abc.es",
         "elconfidencial.com",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
+        "eldiario.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.514,
+          "coherence": 0.4631,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4667,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7714
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.527,
+        "total": 0.462,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "benidorm",
+      "subject_label": "ayuso",
       "subject_names": [
-        "benidorm",
-        "detienen"
+        "ayuso"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "La policía en Benidorm arrestó a un hombre acusado de matar a su pareja con un arma blanca y a otras dos personas por presuntamente ayudar a ocultar el cuerpo; los detenidos están siendo investigados por el asesinato, que se investiga como un posible caso de violencia machista."
+      "subject_newsroom_count": 6,
+      "summary": "La presidenta regional Isabel Díaz Ayuso ha dado un ultimátum de 48 horas al delegado del Gobierno para que desaloje la acampada en la Puerta del Sol y ha amenazado con emprender acciones legales y penales si no se actúa; además pide protección para la sede del Gobierno regional alegando daños como orines en la fachada."
+    },
+    {
+      "_linked_ids": [
+        "subject-ceuta-86b861389d33",
+        "subject-madrid-c960abd09e9d"
+      ],
+      "cluster_id": "subject-ceuta-86b861389d33",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-29",
+      "headline": "La Policía traslada a centenares de migrantes desde la playa Benítez al CETI",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-29/la-policia-trata-de-desalojar-el-ultimo-tramo-de-la-playa-benitez-de-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/09/29/6abb5d58e5fdea313b8b4594.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/29/6abb5a6fe4d4d849178b4584.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/29/6abb5a6fe4d4d849178b4584.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elmundo.es",
+        "elpais.com",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 0.5,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.4481,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "benitez",
+        "bruselas",
+        "ceuta",
+        "marruecos"
+      ],
+      "subject_newsroom_count": 12,
+      "summary": "Agentes de Policía desalojaron el último tramo de la playa Benítez en Ceuta y trasladaron a centenares de migrantes al Centro de Atención Temporal de Extranjeros (CETI) de El Tarajal; las operaciones implicaron el desalojo de la franja costera y el traslado organizado de las personas hacia el recinto."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-30df0f97751e"
+      ],
+      "cluster_id": "subject-france-30df0f97751e",
+      "coherence": 0.5705435819626969,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-29",
+      "filled_from": "europe",
+      "headline": "La deuda pública de Francia alcanza el 119% del PIB en el segundo trimestre",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/politique/article/2026/09/29/la-dette-publique-s-envole-a-119-du-pib-du-jamais-vu-depuis-1946_6785566_823448.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/conjoncture/3595-5-milliards-d-euros-la-dette-de-la-france-a-continue-de-se-creuser-au-deuxieme-trimestre-a-119-du-pib-20260929"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/france-la-dette-publique-a-atteint-119-du-pib-au-deuxieme-trimestre-selon-linsee-20260929_XCULYSFNR5EZNF6ODTPJCPFQMQ/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/la-dette-publique-francaise-atteint-119-du-pib-au-deuxieme-trimestre-20260929"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/la-dette-publique-de-la-france-a-atteint-3-595-5-milliards-d-euros-au-deuxieme-trimestre-soit-119-du-pib-un-record_8214491.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20260929-en-france-la-dette-publique-s-envole-%C3%A0-119-du-pib-quelques-mois-de-l-%C3%A9lection-pr%C3%A9sidentielle"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/economie/la-dette-publique-francaise-senvole-a-119-du-pib-un-nouveau-record-NUULPZOEOVEDJDR5VXK7QXBGDM/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/politique/article/2026/09/29/la-dette-publique-s-envole-a-119-du-pib-du-jamais-vu-depuis-1946_6785566_823448.html",
+      "rank": 5,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5705,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7241
+        },
+        "total": 0.6424,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "paris",
+        "pib"
+      ],
+      "subject_newsroom_count": 24,
+      "summary": "Según datos oficiales, la deuda pública francesa se situó en 3.595,5 millardos de euros al segundo trimestre, lo que equivale al 119% del PIB; se trata de un nivel récord no visto desde la posguerra y se produjo en el periodo previo a la elección presidencial."
     }
   ],
-  "discarded_ingested": 59,
+  "discarded_ingested": 30,
   "discarded_kept": 5,
-  "generated_at": "2026-09-28T11:52:48.712973+00:00",
+  "generated_at": "2026-09-29T11:28:57.396602+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

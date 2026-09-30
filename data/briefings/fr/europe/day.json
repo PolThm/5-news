@@ -1,58 +1,40 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-30df0f97751e",
-      "coherence": 0.5705435819626969,
+      "cluster_id": "subject-marseille-aa90296a67d4",
+      "coherence": 0.7369043715192612,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-29",
-      "headline": "La dette publique française atteint 119 % du PIB au deuxième trimestre",
-      "independent_source_count": 7,
+      "editorial_day": "2026-09-30",
+      "headline": "La justice reconnaît les rafles de Marseille en 1943 comme crime contre l’humanité",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/09/29/la-dette-publique-s-envole-a-119-du-pib-du-jamais-vu-depuis-1946_6785566_823448.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/conjoncture/3595-5-milliards-d-euros-la-dette-de-la-france-a-continue-de-se-creuser-au-deuxieme-trimestre-a-119-du-pib-20260929"
+          "url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/france-la-dette-publique-a-atteint-119-du-pib-au-deuxieme-trimestre-selon-linsee-20260929_XCULYSFNR5EZNF6ODTPJCPFQMQ/"
+          "url": "https://www.liberation.fr/societe/police-justice/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-lhumanite-20260930_D2WJDIMIU5AWXJVVNSSZB2PA2Y/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/economie/la-dette-publique-francaise-atteint-119-du-pib-au-deuxieme-trimestre-20260929"
+          "url": "https://www.la-croix.com/societe/rafle-du-vieux-port-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite-20260930"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/crise/crise-de-la-dette/la-dette-publique-de-la-france-a-atteint-3-595-5-milliards-d-euros-au-deuxieme-trimestre-soit-119-du-pib-un-record_8214491.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20260929-en-france-la-dette-publique-s-envole-%C3%A0-119-du-pib-quelques-mois-de-l-%C3%A9lection-pr%C3%A9sidentielle"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/economie/la-dette-publique-francaise-senvole-a-119-du-pib-un-nouveau-record-NUULPZOEOVEDJDR5VXK7QXBGDM/"
+          "url": "https://www.franceinfo.fr/societe/seconde-guerre-mondiale/la-justice-reconnait-comme-crime-contre-l-humanite-les-rafles-menees-en-1943-a-marseille_8216224.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "mentioned_countries": [
@@ -60,79 +42,294 @@
       ],
       "origin_country": "france",
       "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/politique/article/2026/09/29/la-dette-publique-s-envole-a-119-du-pib-du-jamais-vu-depuis-1946_6785566_823448.html",
+      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html",
       "rank": 1,
-      "reference_newsroom_count": 7,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "francetvinfo.fr",
         "la-croix.com",
-        "lefigaro.fr",
         "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "rfi.fr"
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5705,
+          "coherence": 0.7369,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4667,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7241
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.7291,
+        "total": 0.7068,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "marseille",
       "subject_names": [
-        "france",
-        "francia",
-        "french",
-        "paris",
-        "pib"
+        "marseille"
       ],
-      "subject_newsroom_count": 24,
-      "summary": "Selon l’Insee, la dette publique de la France a atteint 3 595,5 milliards d’euros au deuxième trimestre, soit 119 % du produit intérieur brut, un niveau record depuis 1946; cet accroissement a été signalé par plusieurs médias et observatoires économiques."
+      "subject_newsroom_count": 5,
+      "summary": "Les tribunaux ont qualifié juridiquement les rafles menées à Marseille en 1943, notamment celles du Vieux‑Port, comme un crime contre l’humanité, reconnaissance portée à la suite de procédures visant à établir la responsabilité et la nature des actes perpétrés pendant l’occupation."
     },
     {
-      "cluster_id": "subject-edouard-philippe-da99894a112b",
-      "coherence": 0.569293348102001,
+      "cluster_id": "subject-macron-62a7176e3740",
+      "coherence": 0.4630453008182165,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-30",
+      "headline": "Le Sénat rejette le traité d’amitié avec la France lors de la visite de Macron",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20260930/pp-bloquea-senado-tratado-amistad-francia-contrario-interes-espana-materia-energetica/1003744402493_0.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/acampada-sol-ultima-hora-directo-tercera-noche-raso-presionar-decreto_6_13545576_1125360.html"
+        },
+        {
+          "language": "es",
+          "source": "larazon.es",
+          "source_country": "spain",
+          "url": "https://www.larazon.es/espana/mayoria-senado-rechaza-tratado-amistad-francia_202609296abc01a1d5f3ae10c73808ea.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/nacional/pp-tumba-senado-tratado-amistad-con-francia-plena-visita-macron-espana_7042959_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.463,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6774,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "espagne",
+        "espana",
+        "felipe",
+        "francia",
+        "macron",
+        "madrid",
+        "senado",
+        "senat"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "La majorité du Parti populaire au Sénat a voté contre le traité d’amitié avec la France, refus confirmé malgré l’appui du Tribunal constitutionnel; le rejet a eu lieu pendant la visite du président français Emmanuel Macron en Espagne et a été motivé par des considérations liées à l’intérêt espagnol en matière énergétique."
+    },
+    {
+      "cluster_id": "subject-rusia-8b039fa99a6a",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-09-30",
+      "headline": "La Corée du Sud proteste après le transfert secret de deux prisonniers nord-coréens par l’Ukraine",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-29/corea-del-sur-y-ucrania-chocan-por-la-revelacion-del-traslado-secreto-de-dos-prisioneros-norcoreanos.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/theguardian/enfadado-corea-sur-ucrania-prisioneros-guerra-norcoreanos_1_13545762.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/09/30/como-dois-soldados-e-uma-informacao-secreta-causaram-crise-diplomatica-entre-ucrania-e-coreia-do-sul.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "ks",
+        "up"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/theguardian/enfadado-corea-sur-ucrania-prisioneros-guerra-norcoreanos_1_13545762.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "globo.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6748,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "rusia",
+      "subject_names": [
+        "kremlin",
+        "putin",
+        "rusia",
+        "ucrania"
+      ],
+      "subject_newsroom_count": 12,
+      "summary": "La Corée du Sud a exprimé son mécontentement envers l’Ukraine après la révélation que Kiev avait transféré secrètement deux prisonniers nord-coréens. Les médias indiquent que la divulgation de ce mouvement a provoqué une crise diplomatique entre les deux pays, suscitant des protestations officielles de Séoul et des explications demandées à l’Ukraine sur les circonstances du transfert."
+    },
+    {
+      "cluster_id": "subject-ceuta-145d77e51815",
+      "coherence": 0.43107788138116676,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-09-30",
+      "headline": "Le ministère de la Défense saisit la justice après des allégations de mauvais traitements à Ceuta",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/desalambre/defensa-envia-justicia-denuncias-torturas-tratos-degradantes-militares-migrantes-ceuta_1_13549491.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-casos-tortura-tratos-degradantes-militares-migrantes-ceuta_1_13547507.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/09/30/6abca3ece4d4d822038b45af.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/amnistia-internacional-denuncia-torturas-agresiones-militares-migrantes-ceuta_1_2237101.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/seguridad-y-defensa/noticia-defensa-remite-justicia-denuncia-torturas-militares-migrantes-ceuta-encarga-investigacion-interna-20260930101326.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-casos-tortura-tratos-degradantes-militares-migrantes-ceuta_1_13547507.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elmundo.es",
+        "europapress.es",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4311,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
+        },
+        "total": 0.6727,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "justicia",
+        "vivas"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Des organisations, dont Amnesty International, ont documenté des allégations de torture et de traitements dégradants commis par des militaires à l’encontre de migrants à Ceuta; le ministère de la Défense a transmis ces éléments au parquet et a annoncé l’ouverture d’une enquête interne afin de clarifier les faits et protéger le nom des Forces armées."
+    },
+    {
+      "cluster_id": "subject-edouard-philippe-b425f4e146e7",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-29",
-      "headline": "Édouard Philippe propose de porter l’âge légal de départ à la retraite à 65 ans",
-      "independent_source_count": 7,
+      "editorial_day": "2026-09-30",
+      "headline": "Édouard Philippe présente un projet de réforme des retraites prévoyant un départ à 65 ans",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/retraites-edouard-philippe-propose-de-porter-progressivement-la-duree-de-cotisation-a-45-ans-et-l-age-de-depart-a-65-ans-20260929"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/economie/faut-il-porter-l-age-de-depart-a-la-retraite-a-65-ans-comme-le-propose-edouard-philippe-20260929"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/elections/retraite-a-65-ans-et-45-ans-de-cotisation-pourquoi-edouard-philippe-a-arrache-ce-sparadrap-des-67-ans-20260929_D7ONCEOGQNHTBDZFGM7GVER27Q/"
-        },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/politique/depart-a-65-ans-duree-de-cotisation-comment-edouard-philippe-veut-reformer-les-retraites-20260929"
+          "url": "https://www.la-croix.com/politique/presidentielle-2027-edouard-philippe-assume-le-risque-de-porter-l-age-de-la-retraite-a-65-ans-20260929"
         },
         {
           "language": "fr",
@@ -142,305 +339,50 @@
         },
         {
           "language": "fr",
-          "source": "republicain-lorrain.fr",
+          "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.republicain-lorrain.fr/politique/2026/09/29/reforme-des-retraites-edouard-philippe-veut-relever-l-age-legal-de-depart-a-65-ans"
-        },
-        {
-          "language": "fr",
-          "source": "ledauphine.com",
-          "source_country": "france",
-          "url": "https://www.ledauphine.com/politique/2026/09/29/reforme-des-retraites-edouard-philippe-veut-relever-l-age-legal-de-depart-a-65-ans"
-        },
-        {
-          "language": "fr",
-          "source": "vosgesmatin.fr",
-          "source_country": "france",
-          "url": "https://www.vosgesmatin.fr/politique/2026/09/29/reforme-des-retraites-edouard-philippe-veut-relever-l-age-legal-de-depart-a-65-ans"
+          "url": "https://www.challenges.fr/politique/je-ne-cherche-pas-a-gagner-des-points-je-veux-proteger-les-francais-edouard-philippe-devoile-son-plan-pour-les-retraites-entre-depart-a-65-ans-et-capitalisation_646081"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/politique/elections/retraite-a-65-ans-et-45-ans-de-cotisation-pourquoi-edouard-philippe-a-arrache-ce-sparadrap-des-67-ans-20260929_D7ONCEOGQNHTBDZFGM7GVER27Q/",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/elections/presidentielle/age-de-depart-a-65-ans-45-annuites-de-cotisation-edouard-philippe-candidat-horizons-a-la-presidentielle-devoile-son-projet-de-reforme-des-retraites_8214737.html#xtor=RSS-3-[lestitres]",
+      "rank": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "challenges.fr",
         "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "liberation.fr"
+        "la-croix.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5693,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7241
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.6969,
+        "total": 0.6581,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "edouard philippe",
       "subject_names": [
         "edouard philippe"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Les articles indiquent qu’Édouard Philippe, candidat d’Horizons, propose une réforme des retraites visant à relever l’âge légal de départ à la retraite à 65 ans et à porter progressivement la durée de cotisation à 45 ans; son projet est présenté comme un élément central de son programme et a été détaillé dans plusieurs médias."
-    },
-    {
-      "cluster_id": "subject-russian-af18a031d9b1",
-      "coherence": 0.457004043546707,
-      "consequence": 3,
-      "countries": [
-        "ca",
-        "france",
-        "ro",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-09-29",
-      "headline": "L’Estonie accuse la Russie d’un incendie contre une entreprise de défense",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/estonie/lestonie-accuse-avec-certitude-la-russie-detre-a-lorigine-dun-incendie-sur-une-entreprise-darmement-lettone-e2f7a53c-bbe9-11f1-8ea4-97dc4d7cca62?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/estonia-atribuye-rusia-ataque-empresa-defensa_1_13545943.html"
-        },
-        {
-          "language": "en",
-          "source": "wral.com",
-          "source_country": "united-states",
-          "url": "https://www.wral.com/news/ap/ddac8-estonia-blames-russia-for-arson-attack-on-defense-company-that-provides-vehicles-to-ukraine/"
-        },
-        {
-          "language": "en",
-          "source": "clickorlando.com",
-          "source_country": "united-states",
-          "url": "https://www.clickorlando.com/news/world/2026/09/29/estonia-blames-russia-for-arson-attack-on-defense-company-that-provides-vehicles-to-ukraine/"
-        },
-        {
-          "language": "en",
-          "source": "winnipegfreepress.com",
-          "source_country": "ca",
-          "url": "https://www.winnipegfreepress.com/world/2026/09/29/estonia-blames-russia-for-arson-attack-on-defense-company-that-provides-vehicles-to-ukraine"
-        },
-        {
-          "language": "ron",
-          "source": "antena3.ro",
-          "source_country": "ro",
-          "url": "https://www.antena3.ro/externe/estonia-acuza-serviciile-ruse-de-sabotaj-o-companie-de-aparare-care-furnizeaza-roboti-ucrainei-a-fost-tinta-unui-atac-incendiar-805055.html"
-        }
-      ],
-      "mentioned_countries": [
-        "en",
-        "rs"
-      ],
-      "origin_country": "ca",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/estonia-atribuye-rusia-ataque-empresa-defensa_1_13545943.html",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "ouest-france.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.457,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6841,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "russian",
-      "subject_names": [
-        "estonia",
-        "kyiv",
-        "russian",
-        "russie"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Les articles indiquent que les autorités estoniennes attribuent avec certitude à la Russie ou à ses services un incendie criminel visant une entreprise de défense qui fournit des véhicules/robots à l’Ukraine; les médias mentionnent que l’attaque a pris la forme d’un incendie volontaire contre cette société liée à l’aide militaire ukrainienne."
-    },
-    {
-      "cluster_id": "subject-reino-unido-0abdb8c05ddb",
-      "coherence": 0.4581364907994867,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-29",
-      "headline": "Cinq hommes arrêtés pour projet d’attaque contre une base militaire en Angleterre libérés sous caution",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/28/projet-d-attaque-contre-une-base-militaire-en-angleterre-l-iran-nie-toute-implication_6785060_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20260929-projet-d-attaque-pr%C3%A9sum%C3%A9-contre-une-base-militaire-en-angleterre-les-cinq-suspects-lib%C3%A9r%C3%A9s-sous-caution"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/liberados-bajo-fianza-cinco-detenidos-intento-atentado-20260929103502-nt.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/28/presos-suspeita-ataque-terrorista-reino-unido-5-britanicos.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/28/presos-suspeita-ataque-terrorista-reino-unido-5-britanicos.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "globo.com",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4581,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6266,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "reino unido",
-      "subject_names": [
-        "angleterre",
-        "hormuz",
-        "iran",
-        "reino unido",
-        "royaume-uni"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Cinq personnes arrêtées en lien avec un projet présumé d’attaque visant une base militaire ou une base aérienne aux États‑Unis située au Royaume‑Uni ont été remises en liberté sous caution, selon les informations des articles. Les comptes rendus indiquent que les suspects ont été détenus puis libérés sous conditions, sans fournir de détails supplémentaires sur les charges formelles, les mesures de caution ou l’enquête en cours."
-    },
-    {
-      "cluster_id": "subject-kiev-1a648b35d85f",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-28",
-      "headline": "Une attaque russe endommage l’Académie des sciences à Kiev",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/rusia-ataca-academia-ciencias-ucrania-centro-kiev_1_13544363.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/29/news/kiev_accademia_delle_scienze_bombardamento_russo-425613809/?rss"
-        },
-        {
-          "language": "es",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20260928202148/zelenski-denuncia-ataque-ruso-sobre-sede-academia-nacional-ciencias-kiev"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "it",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/rusia-ataca-academia-ciencias-ucrania-centro-kiev_1_13544363.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.6207,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kiev",
-      "subject_names": [
-        "kiev",
-        "moscou",
-        "otan",
-        "rusia",
-        "russia",
-        "ucrania"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Des bombardements attribués aux forces russes ont touché la siège de l’Académie nationale des sciences au centre de Kiev, provoquant des incendies et des dégâts ; le président Volodymyr Zelensky a dénoncé l’attaque."
+      "subject_newsroom_count": 4,
+      "summary": "Édouard Philippe, candidat d’Horizons à la présidentielle, a dévoilé un projet de réforme des retraites qui prévoit notamment de porter l’âge de départ à 65 ans et d’exiger 45 annuités de cotisation, avec des propositions incluant le développement de mécanismes de capitalisation; il assume les risques politiques de cette orientation et affirme vouloir protéger les Français."
     }
   ],
-  "discarded_ingested": 130,
+  "discarded_ingested": 106,
   "discarded_kept": 5,
-  "generated_at": "2026-09-29T11:28:57.396602+00:00",
+  "generated_at": "2026-09-30T11:17:01.197656+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

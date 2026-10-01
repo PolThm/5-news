@@ -2,410 +2,550 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-marseille-aa90296a67d4"
+        "subject-swiss-31c43ad1b04d"
       ],
-      "cluster_id": "subject-marseille-aa90296a67d4",
-      "coherence": 0.7369043715192612,
+      "cluster_id": "subject-swiss-31c43ad1b04d",
+      "coherence": 0.558235115692665,
       "consequence": 3,
       "countries": [
-        "france"
+        "germany",
+        "it",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "La justice reconnaît les rafles de Marseille en 1943 comme crime contre l’humanité",
-      "independent_source_count": 4,
+      "country_count": 4,
+      "editorial_day": "2026-10-01",
+      "headline": "Les glaciers suisses ont perdu une part importante de leur glace en 2026",
+      "independent_source_count": 10,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html"
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/environment/2026/oct/01/switzerland-glacier-loss-fossil-fuel-pollution-europe"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-lhumanite-20260930_D2WJDIMIU5AWXJVVNSSZB2PA2Y/"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6n9w0ypjwl9o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/rafle-du-vieux-port-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite-20260930"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/10/01/swiss-glaciers-lose-55-of-ice-in-second-largest-melt-on-record"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/seconde-guerre-mondiale/la-justice-reconnait-comme-crime-contre-l-humanite-les-rafles-menees-en-1943-a-marseille_8216224.html#xtor=RSS-3-[lestitres]"
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change"
+        },
+        {
+          "language": "en",
+          "source": "wnyc.org",
+          "source_country": "united-states",
+          "url": "https://wnyc.org/npr/nx-s1-5981403"
+        },
+        {
+          "language": "en",
+          "source": "wcbe.org",
+          "source_country": "united-states",
+          "url": "https://www.wcbe.org/npr-news/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
+        },
+        {
+          "language": "en",
+          "source": "kmxt.org",
+          "source_country": "united-states",
+          "url": "https://www.kmxt.org/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
+        },
+        {
+          "language": "en",
+          "source": "wohfradio.com",
+          "source_country": "united-states",
+          "url": "https://wohfradio.com/national-news/experts-say-swiss-glaciers-lost-5-5-of-their-ice-this-year-second-biggest-annual-loss-due-to-heat-waves-and-less-snow/"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/swiss-glaciers-lose-of-more-than-5-in-ice-volume-in-2026/a-79495965"
+        },
+        {
+          "language": "en",
+          "source": "kunr.org",
+          "source_country": "united-states",
+          "url": "https://www.kunr.org/world-headlines/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "sz"
       ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html",
+      "origin_country": "germany",
+      "outbound_source": "npr.org",
+      "outbound_url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change",
       "rank": 1,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
+        "bbc.co.uk",
+        "dw.com",
+        "euronews.com",
+        "npr.org",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.7369,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5582,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.7143,
+          "source_reliability": 0.7576
         },
-        "total": 0.6801,
+        "total": 0.7319,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "marseille",
+      "subject_label": "swiss",
       "subject_names": [
-        "marseille"
+        "swiss"
       ],
       "subject_newsroom_count": 5,
-      "summary": "Les tribunaux ont qualifié juridiquement les rafles menées à Marseille en 1943, notamment celles du Vieux‑Port, comme un crime contre l’humanité, reconnaissance portée à la suite de procédures visant à établir la responsabilité et la nature des actes perpétrés pendant l’occupation."
+      "summary": "Les articles indiquent qu’en 2026 les glaciers suisses ont subi une nouvelle forte fonte, perdant environ 5,5 % de leur volume de glace sur l’année — une des plus fortes diminutions annuelles enregistrées — et qu’au cours des dernières années la perte cumulée a été très importante (environ 20 % sur cinq ans selon certains bilans). La fonte accrue est attribuée dans ces comptes rendus à des vagues de chaleur et à un enneigement moindre, et les pertes menacent l’approvisionnement en eau et illustrent une tendance de déclin glaciaire continu en Suisse."
     },
     {
       "_linked_ids": [
-        "subject-rusia-8b039fa99a6a"
+        "subject-italia-31ad348fefef"
       ],
-      "cluster_id": "subject-rusia-8b039fa99a6a",
-      "coherence": null,
+      "cluster_id": "subject-italia-31ad348fefef",
+      "coherence": 0.4361740356756282,
       "consequence": 3,
       "countries": [
-        "brazil",
+        "ro",
         "spain"
       ],
       "country_count": 2,
       "editorial_day": "2026-09-30",
-      "headline": "La Corée du Sud proteste après le transfert secret de deux prisonniers nord-coréens par l’Ukraine",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-29/corea-del-sur-y-ucrania-chocan-por-la-revelacion-del-traslado-secreto-de-dos-prisioneros-norcoreanos.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/theguardian/enfadado-corea-sur-ucrania-prisioneros-guerra-norcoreanos_1_13545762.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/30/como-dois-soldados-e-uma-informacao-secreta-causaram-crise-diplomatica-entre-ucrania-e-coreia-do-sul.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "ks",
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/theguardian/enfadado-corea-sur-ucrania-prisioneros-guerra-norcoreanos_1_13545762.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "globo.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6548,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "rusia",
-      "subject_names": [
-        "kremlin",
-        "putin",
-        "rusia",
-        "ucrania"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "La Corée du Sud a exprimé son mécontentement envers l’Ukraine après la révélation que Kiev avait transféré secrètement deux prisonniers nord-coréens. Les médias indiquent que la divulgation de ce mouvement a provoqué une crise diplomatique entre les deux pays, suscitant des protestations officielles de Séoul et des explications demandées à l’Ukraine sur les circonstances du transfert."
-    },
-    {
-      "_linked_ids": [
-        "subject-macron-62a7176e3740"
-      ],
-      "cluster_id": "subject-macron-62a7176e3740",
-      "coherence": 0.4630453008182165,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "Le Sénat rejette le traité d’amitié avec la France lors de la visite de Macron",
+      "headline": "L'Italie prolonge de 15 jours les contrôles aux frontières pour les voyageurs en provenance d'Espagne",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260930/pp-bloquea-senado-tratado-amistad-francia-contrario-interes-espana-materia-energetica/1003744402493_0.html"
+          "url": "https://www.abc.es/internacional/italia-prorroga-dias-suspension-espacio-schengen-espana-20260930202122-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/acampada-sol-ultima-hora-directo-tercera-noche-raso-presionar-decreto_6_13545576_1125360.html"
-        },
-        {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/espana/mayoria-senado-rechaza-tratado-amistad-francia_202609296abc01a1d5f3ae10c73808ea.html"
+          "url": "https://www.eldiario.es/internacional/italia-extiende-semanas-controles-viajeros-llegados-espana_1_13551880.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/nacional/pp-tumba-senado-tratado-amistad-con-francia-plena-visita-macron-espana_7042959_0.html"
+          "url": "https://www.20minutos.es/internacional/italia-prorroga-otros-15-dias-los-controles-los-viajeros-procedentes-espana_7043412_0.html"
+        },
+        {
+          "language": "ron",
+          "source": "antena3.ro",
+          "source_country": "ro",
+          "url": "https://www.antena3.ro/externe/italia-prelungeste-cu-15-zile-controalele-la-frontiera-cu-spania-roma-invoca-probleme-de-securitate-din-cauza-exclavei-spaniole-ceuta-805302.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-30/italia-vuelve-a-prolongar-otros-15-dias-los-controles-fronterizos-a-viajeros-de-espana.html"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "spain"
+        "spain",
+        "it"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html",
-      "rank": 3,
+      "origin_country": "ro",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/italia-prorroga-dias-suspension-espacio-schengen-espana-20260930202122-nt.html",
+      "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
+        "abc.es",
         "eldiario.es",
-        "elespanol.com",
-        "elmundo.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.463,
-          "corroboration": 0.3333,
+          "coherence": 0.4362,
+          "corroboration": 0.5,
           "editorial_weight": 0.3333,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5556,
           "source_reliability": 0.6364
         },
-        "total": 0.6507,
+        "total": 0.665,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "macron",
+      "subject_label": "italia",
       "subject_names": [
-        "emmanuel macron",
-        "espagne",
+        "bruselas",
+        "cataluna",
         "espana",
-        "felipe",
-        "francia",
-        "macron",
+        "italia",
         "madrid",
-        "senado",
-        "senat"
+        "roma",
+        "spain"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "La majorité du Parti populaire au Sénat a voté contre le traité d’amitié avec la France, refus confirmé malgré l’appui du Tribunal constitutionnel; le rejet a eu lieu pendant la visite du président français Emmanuel Macron en Espagne et a été motivé par des considérations liées à l’intérêt espagnol en matière énergétique."
+      "subject_newsroom_count": 7,
+      "summary": "Le gouvernement italien a décidé de prolonger de 15 jours les contrôles frontaliers et la suspension des règles de libre circulation Schengen pour les voyageurs arrivant d'Espagne, en invoquant des motifs de sécurité liés à la situation autour de l'enclave espagnole de Ceuta."
     },
     {
       "_linked_ids": [
-        "subject-ceuta-145d77e51815"
+        "subject-burnham-65790b54f5a0"
       ],
-      "cluster_id": "subject-ceuta-145d77e51815",
-      "coherence": 0.43107788138116676,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "Le ministère de la Défense saisit la justice après des allégations de mauvais traitements à Ceuta",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/defensa-envia-justicia-denuncias-torturas-tratos-degradantes-militares-migrantes-ceuta_1_13549491.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-casos-tortura-tratos-degradantes-militares-migrantes-ceuta_1_13547507.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/30/6abca3ece4d4d822038b45af.html"
-        },
-        {
-          "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/amnistia-internacional-denuncia-torturas-agresiones-militares-migrantes-ceuta_1_2237101.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/seguridad-y-defensa/noticia-defensa-remite-justicia-denuncia-torturas-militares-migrantes-ceuta-encarga-investigacion-interna-20260930101326.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-casos-tortura-tratos-degradantes-militares-migrantes-ceuta_1_13547507.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "europapress.es",
-        "infolibre.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4311,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.646,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "justicia",
-        "vivas"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Des organisations, dont Amnesty International, ont documenté des allégations de torture et de traitements dégradants commis par des militaires à l’encontre de migrants à Ceuta; le ministère de la Défense a transmis ces éléments au parquet et a annoncé l’ouverture d’une enquête interne afin de clarifier les faits et protéger le nom des Forces armées."
-    },
-    {
-      "_linked_ids": [
-        "subject-russian-af18a031d9b1",
-        "subject-ukraine-b4033d2d904d"
-      ],
-      "cluster_id": "subject-ukraine-b4033d2d904d",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-burnham-65790b54f5a0",
+      "coherence": 0.42537217851550035,
+      "consequence": 2,
       "countries": [
         "france",
-        "united-kingdom"
+        "it",
+        "md",
+        "spain",
+        "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-09-29",
-      "headline": "L'Estonie accuse la Russie d'avoir commandité l'incendie d'un fabricant de drones",
-      "independent_source_count": 3,
+      "country_count": 5,
+      "editorial_day": "2026-10-01",
+      "headline": "Andy Burnham ouvre la possibilité d’un retour du Royaume‑Uni dans l’UE",
+      "independent_source_count": 9,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/29/l-estonie-accuse-la-russie-d-avoir-commandite-un-acte-de-sabotage-sur-l-une-de-ses-entreprises-de-drones_6785650_3210.html"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-10-ans-du-brexit-un-retour-du-royaume-uni-dans-l-ue-envisag%C3%A9-par-burnham"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/lestonie-accuse-la-russie-davoir-commandite-lincendie-dun-fabricant-de-drones-2ECINPAXP5HNPGNFRBTDVFZ5II/"
+          "url": "https://www.lexpress.fr/monde/europe/dix-ans-apres-le-brexit-andy-burnham-necarte-pas-un-retour-du-royaume-uni-dans-lue-QLHPNGMHWZAVVLMW6KO7VOGSLY/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-09-30/andy-burnham-no-descarta-estudiar-un-futuro-reingreso-del-reino-unido-en-la-ue.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260930/11647394/burnham-asegura-reincorporacion-reino-unido-ue-esta-sobre-mesa.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260924/11642921/tony-blair-plantea-burnham-plan-volver-ue-decada.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/burnham-no-descarta-vuelta-reino-unido-ue-tenemos-que-ver-todas-las-opciones_7043055_0.html"
         },
         {
           "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6m27l4er4jxo?at_medium=RSS&at_campaign=rss"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/30/uks-burnham-floats-going-all-the-way-and-rejoining-the-eu"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/09/30/news/brexit_burnham_ue_ritorno_del_regno_unito_in_europa_e_sul_tavolo-425617212/?rss"
+        },
+        {
+          "language": "es",
+          "source": "telesurtv.net",
+          "source_country": "united-states",
+          "url": "https://www.telesurtv.net/burnham-opciones-retorno-reino-unido-ue/"
+        },
+        {
+          "language": "ron",
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/69274263"
+        },
+        {
+          "language": "ron",
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/69274313"
         }
       ],
       "mentioned_countries": [
-        "en",
-        "rs"
+        "united-kingdom"
       ],
       "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/lestonie-accuse-la-russie-davoir-commandite-lincendie-dun-fabricant-de-drones-2ECINPAXP5HNPGNFRBTDVFZ5II/",
-      "rank": 5,
-      "reference_newsroom_count": 3,
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260924/11642921/tony-blair-plantea-burnham-plan-volver-ue-decada.html",
+      "rank": 3,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "lemonde.fr",
-        "lexpress.fr"
+        "20minutos.es",
+        "elpais.com",
+        "euronews.com",
+        "france24.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
+          "coherence": 0.4254,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6566,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "burnham",
+      "subject_names": [
+        "andy burnham",
+        "burnham",
+        "reino unido",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Dix ans après le Brexit, le Premier ministre britannique Andy Burnham a déclaré qu’il ne rejetait pas l’idée d’un éventuel réengagement du Royaume‑Uni avec l’Union européenne et qu’il fallait « examiner toutes les options », évoquant même la possibilité d’envisager un retour complet à l’UE à l’avenir."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-e14ad034bbd1"
+      ],
+      "cluster_id": "subject-france-e14ad034bbd1",
+      "coherence": 0.46941325072914064,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "it"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-01",
+      "headline": "Le Royaume‑Uni met fin à l’accord « un pour un » sur les retours de migrants",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/pourquoi-la-france-sort-de-l-accord-migratoire-un-pour-un-signe-avec-le-royaume-uni-20261001"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/londres-annonce-la-fin-de-l-accord-d-echange-de-migrants-entre-la-france-et-le-royaume-uni-20260930"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/30/uk-ends-one-in-one-out-migrant-returns-deal-with-france"
+        },
+        {
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/international/vers-la-fin-de-laccord-dechange-de-migrants-un-pour-un-entre-france-et-royaume-uni-30-09-2026-LDIDPXG5Y5HV3MKQUXLACPQMAM.php"
+        },
+        {
+          "language": "fr",
+          "source": "guadeloupe.franceantilles.fr",
+          "source_country": "germany",
+          "url": "https://www.guadeloupe.franceantilles.fr/actualite/international/londres-annonce-la-fin-de-laccord-dechange-de-migrants-entre-la-france-et-le-royaume-uni-1094665.php"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/30/uk-ends-one-in-one-out-migrant-returns-deal-with-france",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "la-croix.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4694,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.619
+        },
+        "total": 0.6543,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "gaulle",
+        "marseille",
+        "reino unido",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Le Royaume‑Uni a annoncé la fin de l’accord bilatéral dit « un pour un » avec la France, qui prévoyait des retours de migrants entre les deux pays. Les articles indiquent que Londres a officiellement décidé de mettre un terme à ce mécanisme d’échanges de migrants, interrompant ainsi la mise en œuvre de ce dispositif convenu auparavant entre les deux gouvernements."
+    },
+    {
+      "_linked_ids": [
+        "subject-burnham-51d04b1badb3"
+      ],
+      "cluster_id": "subject-burnham-51d04b1badb3",
+      "coherence": 0.5715407051414896,
+      "consequence": 2,
+      "countries": [
+        "germany",
+        "is",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states",
+        "unknown"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-09-30",
+      "headline": "Le ministre Burnham indique des signes forts d'implication iranienne",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/burnham-indicios-claros-sobre-implicacion-iran-incidente-20260930195630-nt.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/burnham-iran-stuetzpunkt-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/30/burnham-says-strong-indications-iran-played-part-in-raf-fairford-security-scare"
+        },
+        {
+          "language": "en",
+          "source": "bbc.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.com/news/articles/cjwyz59k5y75o"
+        },
+        {
+          "language": "en",
+          "source": "fox11online.com",
+          "source_country": "united-states",
+          "url": "https://fox11online.com/news/nation-world/uks-united-kingdom-prime-minister-andy-burnham-cites-strong-indications-iran-linked-to-suspected-terrorist-plot-near-us-used-airbase-raf-fairford-england-us-israeli-war-metropolitan-police"
+        },
+        {
+          "language": "en",
+          "source": "jpost.com",
+          "source_country": "is",
+          "url": "http://www.jpost.com/international/article-910226"
+        },
+        {
+          "language": "en",
+          "source": "kval.com",
+          "source_country": "united-states",
+          "url": "https://kval.com/news/nation-world/uks-united-kingdom-prime-minister-andy-burnham-cites-strong-indications-iran-linked-to-suspected-terrorist-plot-near-us-used-airbase-raf-fairford-england-us-israeli-war-metropolitan-police"
+        },
+        {
+          "language": "en",
+          "source": "midmichigannow.com",
+          "source_country": "unknown",
+          "url": "https://midmichigannow.com/news/nation-world/uks-united-kingdom-prime-minister-andy-burnham-cites-strong-indications-iran-linked-to-suspected-terrorist-plot-near-us-used-airbase-raf-fairford-england-us-israeli-war-metropolitan-police"
+        },
+        {
+          "language": "en",
+          "source": "wwmt.com",
+          "source_country": "united-states",
+          "url": "https://wwmt.com/news/nation-world/uks-united-kingdom-prime-minister-andy-burnham-cites-strong-indications-iran-linked-to-suspected-terrorist-plot-near-us-used-airbase-raf-fairford-england-us-israeli-war-metropolitan-police"
+        },
+        {
+          "language": "en",
+          "source": "abc6onyourside.com",
+          "source_country": "united-states",
+          "url": "https://abc6onyourside.com/news/nation-world/uks-united-kingdom-prime-minister-andy-burnham-cites-strong-indications-iran-linked-to-suspected-terrorist-plot-near-us-used-airbase-raf-fairford-england-us-israeli-war-metropolitan-police"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "ir"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/burnham-indicios-claros-sobre-implicacion-iran-incidente-20260930195630-nt.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "euronews.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5715,
+          "corroboration": 0.7778,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7419
         },
-        "total": 0.6389,
+        "total": 0.6289,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "burnham",
       "subject_names": [
-        "estonia",
-        "kiev",
-        "nato",
-        "russia",
-        "russie",
-        "ukraine"
+        "andy burnham",
+        "burnham",
+        "fairford",
+        "iran"
       ],
-      "subject_newsroom_count": 19,
-      "summary": "Les autorités estoniennes affirment qu'un acte de sabotage visant une entreprise de fabrication de drones, qui fournit des équipements à l'Ukraine, a été commandité par la Russie ; le sinistre a été qualifié d'incendie criminel et fait l'objet d'une enquête par Tallinn."
+      "subject_newsroom_count": 15,
+      "summary": "Le ministre britannique de la Sécurité, James Burnham, a déclaré qu'il existait de « fortes indications » laissant penser qu'Iran a joué un rôle dans un incident de sécurité près de la base aérienne RAF Fairford, utilisée par des bombardiers américains. Les déclarations reflètent l'évaluation du gouvernement britannique reliant l'incident à l'Iran, sans détailler publiquement les preuves ni fournir de chiffres précis."
     }
   ],
-  "discarded_ingested": 117,
+  "discarded_ingested": 106,
   "discarded_kept": 5,
-  "generated_at": "2026-09-30T11:17:01.197656+00:00",
+  "generated_at": "2026-10-01T11:44:35.746037+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

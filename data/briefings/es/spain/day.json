@@ -1,116 +1,109 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-macron-62a7176e3740",
-      "coherence": 0.4630453008182165,
+      "cluster_id": "subject-italia-31ad348fefef",
+      "coherence": 0.4361740356756282,
       "consequence": 3,
       "countries": [
+        "ro",
         "spain"
       ],
-      "country_count": 1,
+      "country_count": 2,
       "editorial_day": "2026-09-30",
-      "headline": "El Senado rechaza el Tratado de Amistad con Francia durante la visita de Macron a España",
+      "headline": "Italia prorroga 15 días más los controles fronterizos a viajeros desde España",
       "independent_source_count": 5,
       "members": [
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260930/pp-bloquea-senado-tratado-amistad-francia-contrario-interes-espana-materia-energetica/1003744402493_0.html"
+          "url": "https://www.abc.es/internacional/italia-prorroga-dias-suspension-espacio-schengen-espana-20260930202122-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/acampada-sol-ultima-hora-directo-tercera-noche-raso-presionar-decreto_6_13545576_1125360.html"
-        },
-        {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/espana/mayoria-senado-rechaza-tratado-amistad-francia_202609296abc01a1d5f3ae10c73808ea.html"
+          "url": "https://www.eldiario.es/internacional/italia-extiende-semanas-controles-viajeros-llegados-espana_1_13551880.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/nacional/pp-tumba-senado-tratado-amistad-con-francia-plena-visita-macron-espana_7042959_0.html"
+          "url": "https://www.20minutos.es/internacional/italia-prorroga-otros-15-dias-los-controles-los-viajeros-procedentes-espana_7043412_0.html"
+        },
+        {
+          "language": "ron",
+          "source": "antena3.ro",
+          "source_country": "ro",
+          "url": "https://www.antena3.ro/externe/italia-prelungeste-cu-15-zile-controalele-la-frontiera-cu-spania-roma-invoca-probleme-de-securitate-din-cauza-exclavei-spaniole-ceuta-805302.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-09-30/italia-vuelve-a-prolongar-otros-15-dias-los-controles-fronterizos-a-viajeros-de-espana.html"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "spain"
+        "spain",
+        "it"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html",
+      "origin_country": "ro",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/italia-prorroga-dias-suspension-espacio-schengen-espana-20260930202122-nt.html",
       "rank": 1,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "20minutos.es",
+        "abc.es",
         "eldiario.es",
-        "elespanol.com",
-        "elmundo.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.463,
-          "corroboration": 0.3333,
+          "coherence": 0.4362,
+          "corroboration": 0.5,
           "editorial_weight": 0.3333,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5556,
           "source_reliability": 0.6364
         },
-        "total": 0.6774,
+        "total": 0.6557,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "macron",
+      "subject_label": "italia",
       "subject_names": [
-        "emmanuel macron",
-        "espagne",
+        "bruselas",
+        "cataluna",
         "espana",
-        "felipe",
-        "francia",
-        "macron",
+        "italia",
         "madrid",
-        "senado",
-        "senat"
+        "roma",
+        "spain"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "La mayoría del Partido Popular en el Senado tumbó el Tratado de Amistad con Francia mientras el presidente francés, Emmanuel Macron, se encontraba de visita en España. El rechazo fue motivado por objeciones del PP sobre el contenido del acuerdo, incluida su incidencia en asuntos energéticos, y se produjo pese a que el tratado había recibido el aval del Tribunal Constitucional según las informaciones."
+      "subject_newsroom_count": 7,
+      "summary": "El gobierno italiano ha ampliado por otros 15 días los controles en frontera aplicados a viajeros procedentes de España; la medida mantiene la suspensión temporal del espacio Schengen con España y Roma la justifica por motivos de seguridad vinculados a la crisis en la ciudad española de Ceuta."
     },
     {
-      "cluster_id": "subject-ceuta-145d77e51815",
-      "coherence": 0.43107788138116676,
+      "cluster_id": "subject-ceuta-2418c7c0ad89",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-09-30",
-      "headline": "Defensa remite a la Justicia las denuncias de malos tratos de militares a migrantes en Ceuta",
-      "independent_source_count": 4,
+      "headline": "Defensa remite a la Fiscalía denuncias de abusos de militares a migrantes en Ceuta",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
           "url": "https://www.eldiario.es/desalambre/defensa-envia-justicia-denuncias-torturas-tratos-degradantes-militares-migrantes-ceuta_1_13549491.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-casos-tortura-tratos-degradantes-militares-migrantes-ceuta_1_13547507.html"
         },
         {
           "language": "es",
@@ -123,155 +116,80 @@
           "source": "infolibre.es",
           "source_country": "spain",
           "url": "https://www.infolibre.es/politica/amnistia-internacional-denuncia-torturas-agresiones-militares-migrantes-ceuta_1_2237101.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/seguridad-y-defensa/noticia-defensa-remite-justicia-denuncia-torturas-militares-migrantes-ceuta-encarga-investigacion-interna-20260930101326.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-casos-tortura-tratos-degradantes-militares-migrantes-ceuta_1_13547507.html",
+      "outbound_source": "infolibre.es",
+      "outbound_url": "https://www.infolibre.es/politica/amnistia-internacional-denuncia-torturas-agresiones-militares-migrantes-ceuta_1_2237101.html",
       "rank": 2,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "eldiario.es",
         "elmundo.es",
-        "europapress.es",
         "infolibre.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4311,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.6727,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "justicia",
-        "vivas"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "El Ministerio de Defensa ha enviado a la Fiscalía las denuncias e informes de Amnistía Internacional que documentan casos de torturas y tratos degradantes y ha encargado además una investigación interna para esclarecer las vejaciones y agresiones atribuidas a militares contra migrantes en Ceuta, con el argumento de preservar el buen nombre de las Fuerzas Armadas."
-    },
-    {
-      "cluster_id": "subject-pamplona-5fabc7ff41f4",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "Pamplona acogerá la gala de los Premios Goya 2027 el 6 de febrero",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/cultura/premios-goya/2026-09-30/pamplona-acogera-la-41-edicion-de-los-premios-goya.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/play/cine/noticias/pamplona-acogera-gala-premios-goya-2027-proximo-20260930110611-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/cine/gala-premios-goya-2027-celebrara-pamplona_1_13549393.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/cultura/cine/gala-premios-goya-2027-celebrara-pamplona_1_13549393.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5114,
+        "total": 0.623,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "pamplona",
+      "subject_label": "ceuta",
       "subject_names": [
-        "goya",
-        "pamplona"
+        "ceuta",
+        "melilla"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Las tres piezas coinciden en que la 41.ª edición de los Premios Goya se celebrará en Pamplona y que la gala tendrá lugar el 6 de febrero de 2027."
+      "subject_newsroom_count": 15,
+      "summary": "El Ministerio de Defensa ha trasladado a la Fiscalía las denuncias e informes, entre ellos el de Amnistía Internacional, que señalan torturas, agresiones y tratos degradantes cometidos por militares contra migrantes en Ceuta; las instituciones coinciden en que las sospechas se elevan a la Justicia para investigación y protección del buen nombre de las Fuerzas Armadas."
     },
     {
-      "cluster_id": "subject-espana-5ca3902d1b4b",
+      "cluster_id": "subject-espana-0308be491f9c",
       "coherence": null,
-      "consequence": 1,
+      "consequence": 3,
       "countries": [
-        "it",
+        "united-kingdom",
         "united-states"
       ],
       "country_count": 2,
-      "editorial_day": "2026-09-29",
-      "headline": "Anciana de 87 años desalojada podrá volver a su casa, según sindicato de inquilinos",
+      "editorial_day": "2026-09-30",
+      "headline": "España prohíbe los desahucios tras las protestas por una mujer de 87 años",
       "independent_source_count": 2,
       "members": [
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/29/evicted-87-year-old-madrid-pensioner-can-return-home-says-tenants-union"
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "npr.org",
           "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/28/nx-s1-5983303/encampment-protest-madrid-housing-crisis"
+          "url": "https://www.npr.org/2026/09/30/nx-s1-5985703/woman-eviction-protests-spain"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "it",
-      "outbound_source": "npr.org",
-      "outbound_url": "https://www.npr.org/2026/09/28/nx-s1-5983303/encampment-protest-madrid-housing-crisis",
-      "rank": 4,
+      "origin_country": "united-kingdom",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss",
+      "rank": 3,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "euronews.com",
+        "bbc.co.uk",
         "npr.org"
       ],
       "score": {
@@ -281,101 +199,198 @@
           "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.4676,
+        "total": 0.6143,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "espana",
       "subject_names": [
-        "espagne",
+        "bruselas",
+        "cataluna",
         "espana",
-        "madrid"
+        "madrid",
+        "spain"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "Una mujer de 87 años fue desalojada de su vivienda en Madrid, lo que provocó protestas; el sindicato de inquilinos afirma que podrá regresar a su hogar. Los artículos coinciden en que el desalojo generó movilizaciones públicas y que la organización de inquilinos anunció la posibilidad de retorno."
+      "subject_newsroom_count": 16,
+      "summary": "Las autoridades españolas anunciaron una prohibición de los desahucios después de que el desalojo de una mujer de 87 años provocara protestas; la anciana ha regresado a su domicilio."
     },
     {
-      "cluster_id": "subject-marseille-aa90296a67d4",
-      "coherence": 0.7369043715192612,
-      "consequence": 3,
+      "cluster_id": "subject-ceuta-f8a47b63bf4b",
+      "coherence": 0.5610986804060304,
+      "consequence": 1,
       "countries": [
-        "france"
+        "mo",
+        "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "filled_from": "europe",
-      "headline": "La justicia reconoce como crimen contra la humanidad las redadas de 1943 en Marsella",
-      "independent_source_count": 4,
+      "country_count": 2,
+      "editorial_day": "2026-10-01",
+      "headline": "Los Reyes visitarán Ceuta y Melilla los días 13 y 14 de octubre",
+      "independent_source_count": 8,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/casa-real/reyes-visitaran-ceuta-melilla-dias-octubre-20261001093834-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/reyes-visitaran-ceuta-melilla-13-14-octubre_1_13552402.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/01/6abe0c70e9cf4aeb608b45a2.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20261001/reyes-visitaran-ceuta-melilla-dias-octubre/1003744404266_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-reyes-visitaran-ceuta-melilla-13-14-octubre-20261001093507.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-no-acompanara-reyes-visita-ceuta-melilla-20261001115409.html"
+        },
+        {
+          "language": "es",
+          "source": "lanzadigital.com",
+          "source_country": "spain",
+          "url": "https://www.lanzadigital.com/nacional/los-reyes-visitaran/"
+        },
+        {
+          "language": "es",
+          "source": "diariodesevilla.es",
+          "source_country": "spain",
+          "url": "https://www.diariodesevilla.es/espana/reyes-visitaran-ceuta-melilla-13_0_2008119767.html"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-lhumanite-20260930_D2WJDIMIU5AWXJVVNSSZB2PA2Y/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/rafle-du-vieux-port-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite-20260930"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/seconde-guerre-mondiale/la-justice-reconnait-comme-crime-contre-l-humanite-les-rafles-menees-en-1943-a-marseille_8216224.html#xtor=RSS-3-[lestitres]"
+          "source": "yabiladi.com",
+          "source_country": "mo",
+          "url": "https://www.yabiladi.com/articles/details/204024/reine-d-espagne-rendront-ceuta-melilla.html"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
+      "origin_country": "mo",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-reyes-visitaran-ceuta-melilla-13-14-octubre-20261001093507.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.7369,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5611,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.6667,
+          "source_reliability": 0.75
         },
-        "total": 0.6568,
+        "total": 0.5805,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "marseille",
+      "subject_label": "ceuta",
       "subject_names": [
-        "marseille"
+        "ceuta",
+        "melilla",
+        "pedro sanchez",
+        "sanchez"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Tribunales franceses determinaron que las redadas y deportaciones realizadas en Marsella en 1943 durante la ocupación nazi constituyen un crimen contra la humanidad; la decisión reconoce la gravedad de las detenciones masivas en el puerto y su carácter sistemático en el contexto de la persecución y deportación de civiles."
+      "subject_newsroom_count": 15,
+      "summary": "Los Reyes de España realizarán una visita a Ceuta y Melilla el 13 y 14 de octubre; será la primera visita real a ambas ciudades desde 2007, y el presidente Pedro Sánchez no acompañará a la Casa Real en el viaje, según ha anunciado Moncloa."
+    },
+    {
+      "cluster_id": "subject-ceuta-4559ae2fe9bb",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-01",
+      "headline": "Pedro Sánchez sigue afrontando la crisis migratoria de Ceuta dos meses después",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/deux-mois-apres-l-envahissement-de-l-enclave-espagnole-de-ceuta-pedro-sanchez-toujours-empetre-dans-la-crise-migratoire-20260930"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/ceuta-meses-despues-crisis-migratoria-enquista-bloqueo-politico-acogida-limite_1_2237113.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "infolibre.es",
+      "outbound_url": "https://www.infolibre.es/politica/ceuta-meses-despues-crisis-migratoria-enquista-bloqueo-politico-acogida-limite_1_2237113.html",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "infolibre.es",
+        "lefigaro.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.5761,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "melilla"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "A dos meses del asalto masivo de la valla de Ceuta, el Gobierno de Pedro Sánchez continúa enfrentando una crisis migratoria marcada por el bloqueo político y dificultades para gestionar la acogida: las autoridades siguen bajo presión por la llegada masiva de personas y la situación humanitaria y administrativa permanece tensa."
     }
   ],
-  "discarded_ingested": 31,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-09-30T11:17:01.197656+00:00",
+  "generated_at": "2026-10-01T11:44:35.746037+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

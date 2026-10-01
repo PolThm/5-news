@@ -2,80 +2,491 @@
   "clusters": [
     {
       "_linked_ids": [
+        "subject-christa-pike-84f28e69f1fa",
+        "subject-tennessee-171715ec19fd"
+      ],
+      "cluster_id": "subject-christa-pike-84f28e69f1fa",
+      "coherence": 0.46785187960916963,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "lu",
+        "nl",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-01",
+      "headline": "L’exécution de Christa Pike dans le Tennessee a échoué et les mises à mort sont suspendues",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/01/etats-unis-apres-l-execution-ratee-de-christa-pike-le-tennessee-suspend-les-mises-a-mort-par-injection-letale_6786483_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/01/execution-ratee-de-christa-pike-aux-etats-unis-la-condamnee-a-survecu-a-l-injection-letale-apres-un-ultime-sursis-annule_6786327_3211.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/etats-unis-une-femme-va-etre-executee-dans-le-tennessee-pour-la-premiere-fois-depuis-200-ans-20260930_7NBPGNXAMBCU7D2OMGQNKKQSPE/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/etats-unis-l-execution-de-christa-pike-premiere-americaine-devant-etre-mise-a-mort-depuis-2023-a-echoue-20261001"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/justice-proces/l-execution-de-christa-pike-autorisee-in-extremis-par-la-cour-supreme-des-etats-unis-a-echoue-selon-ses-avocats_8217682.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-christa-pike-condamn%C3%A9e-%C3%A0-mort-survit-%C3%A0-une-tentative-d-ex%C3%A9cution"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-peine-de-mort-aux-etats-unis-le-cas-de-christa-pike-indigne"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261001-%C3%A9tats-unis-finalement-autoris%C3%A9e-par-la-cour-supr%C3%AAme-l-ex%C3%A9cution-de-la-condamn%C3%A9e-%C3%A0-mort-christa-pike-a-%C3%A9chou%C3%A9"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/societe/peine-de-mort/condamnation-a-mort-de-christa-pike-aux-etats-unis-de-toutes-les-executions-ratees-celle-ci-est-la-pire-e422f184-bd6d-11f1-81a4-4fea3020cab7?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2633212"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2633155"
+        },
+        {
+          "language": "fr",
+          "source": "courrierinternational.com",
+          "source_country": "united-states",
+          "url": "https://www.courrierinternational.com/article/etats-unis-l-execution-ratee-de-christa-pike-dans-le-tennessee-une-agonie-inutile_275422"
+        },
+        {
+          "language": "fr",
+          "source": "sixactualites.fr",
+          "source_country": "france",
+          "url": "https://sixactualites.fr/actualites/un-sursis-judiciaire-suspend-lexecution-de-christa-pike-qui-aurait-ete-la-premiere-femme-executee-aux-etats-unis-depuis-2023/133156/"
+        },
+        {
+          "language": "fr",
+          "source": "lessentiel.lu",
+          "source_country": "lu",
+          "url": "https://www.lessentiel.lu/fr/story/etats-unis-l-execution-d-une-femme-suspendue-dans-les-dernieres-minutes-103642075"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nos.nl",
+      "outbound_url": "https://nos.nl/l/2633155",
+      "rank": 1,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "nos.nl",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4679,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 0.5,
+          "prominence": 0.7333,
+          "source_reliability": 0.8298
+        },
+        "total": 0.743,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "christa pike",
+      "subject_names": [
+        "christa pike",
+        "etats-unis",
+        "tennessee"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "Christa Pike, condamnée à mort dans le Tennessee, a survécu à une injection létale considérée comme « ratée » par plusieurs sources ; après cette tentative d’exécution, les autorités judiciaires ont suspendu ou réexaminent les procédures d’exécution dans l’État, la Cour suprême ayant par ailleurs été saisie lors du processus."
+    },
+    {
+      "_linked_ids": [
+        "subject-israel-a21f9ce9ba17"
+      ],
+      "cluster_id": "subject-israel-a21f9ce9ba17",
+      "coherence": 0.5178570485368332,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "ke",
+        "nz",
+        "rs",
+        "sf",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-10-01",
+      "headline": "Un pilote poignarde son copilote et tente apparemment de faire s’écraser un vol vers Israël",
+      "independent_source_count": 22,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/sep/30/israel-bound-passenger-plane-emergency-landing-saudi-arabia-pilots-feud"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/30/flydubai-plane-traveling-to-israel-diverted-to-saudi-arabia-after-alleged-dispute-between-"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/30/nx-s1-5985806/flydubai-flight-dubai-tel-aviv-israel"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/netanyahu-says-a-pilot-on-a-flydubai-flight-stabbed-another-and-apparently-tried-to-crash-the-plane"
+        },
+        {
+          "language": "en",
+          "source": "journalgazette.net",
+          "source_country": "united-states",
+          "url": "https://www.journalgazette.net/news/world/pilot-stabs-fellow-pilot-on-flight-to-israel-before-passengers-intervene-to-stop-attack/article_4808ce6d-aedc-55ca-9bb0-fc7a2b83059b.html"
+        },
+        {
+          "language": "en",
+          "source": "businessday.co.za",
+          "source_country": "sf",
+          "url": "https://www.businessday.co.za/world/2026-09-30-airline-cockpit-stabbing-may-be-attempted-terror-attack-says-israel/"
+        },
+        {
+          "language": "en",
+          "source": "klcc.org",
+          "source_country": "united-states",
+          "url": "https://www.klcc.org/npr-news/2026-09-30/a-pilot-stabs-the-other-pilot-and-tries-to-crash-their-flight-to-tel-aviv-israel-says"
+        },
+        {
+          "language": "en",
+          "source": "wnmufm.org",
+          "source_country": "united-states",
+          "url": "https://www.wnmufm.org/2026-09-30/a-pilot-stabs-the-other-pilot-and-tries-to-crash-their-flight-to-tel-aviv-israel-says"
+        },
+        {
+          "language": "en",
+          "source": "thisiswiltshire.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thisiswiltshire.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        },
+        {
+          "language": "en",
+          "source": "warringtonguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.warringtonguardian.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        },
+        {
+          "language": "en",
+          "source": "newstalkzb.co.nz",
+          "source_country": "nz",
+          "url": "https://www.newstalkzb.co.nz/news/world/israel-says-jihadist-pilot-tried-to-crash-flight-from-dubai-passengers-fought-back-to-prevent-disaster/"
+        },
+        {
+          "language": "en",
+          "source": "standardspeaker.com",
+          "source_country": "united-states",
+          "url": "https://www.standardspeaker.com/2026/09/30/netanyahu-flydubai-flight-stabbing/"
+        },
+        {
+          "language": "en",
+          "source": "sloughobserver.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.sloughobserver.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        },
+        {
+          "language": "en",
+          "source": "oklahomastar.com",
+          "source_country": "united-states",
+          "url": "http://www.oklahomastar.com/news/279343574/israel-bound-flight-diverted-after-death-dive-and-pilot-stabbing"
+        },
+        {
+          "language": "en",
+          "source": "wknofm.org",
+          "source_country": "united-states",
+          "url": "https://www.wknofm.org/news-from-npr/2026-09-30/a-pilot-stabs-the-other-pilot-and-tries-to-crash-their-flight-to-tel-aviv-israel-says"
+        },
+        {
+          "language": "en",
+          "source": "nwemail.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.nwemail.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        },
+        {
+          "language": "en",
+          "source": "clactonandfrintongazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.clactonandfrintongazette.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        },
+        {
+          "language": "en",
+          "source": "channel3000.com",
+          "source_country": "united-states",
+          "url": "https://www.channel3000.com/news/a-pilot-on-a-flight-carrying-israelis-stabbed-another-and-apparently-tried-to-crash-netanyahu/article_ec6acc81-7223-57f9-87ef-6017c2c5cc42.html"
+        },
+        {
+          "language": "en",
+          "source": "kenyastar.com",
+          "source_country": "ke",
+          "url": "http://www.kenyastar.com/news/279343574/israel-bound-flight-diverted-after-death-dive-and-pilot-stabbing"
+        },
+        {
+          "language": "en",
+          "source": "cravenherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.cravenherald.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        },
+        {
+          "language": "en",
+          "source": "europesun.com",
+          "source_country": "rs",
+          "url": "http://www.europesun.com/news/279343574/israel-bound-flight-diverted-after-death-dive-and-pilot-stabbing"
+        },
+        {
+          "language": "en",
+          "source": "edp24.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.edp24.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+        }
+      ],
+      "mentioned_countries": [
+        "is",
+        "sa"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/30/flydubai-plane-traveling-to-israel-diverted-to-saudi-arabia-after-alleged-dispute-between-",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "npr.org",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5179,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8462,
+          "source_reliability": 0.8571
+        },
+        "total": 0.7393,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "israel",
+      "subject_names": [
+        "dubai",
+        "dubai-tel aviv",
+        "gaza",
+        "israel",
+        "israel-bound",
+        "netanyahu",
+        "smit machchhar",
+        "tel aviv",
+        "tel-aviv"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Sur un vol FlyDubai à destination d’Israël, un membre d’équipage a poignardé le copilote en plein vol, puis aurait tenté de provoquer un crash avant qu’un atterrissage d’urgence ou la réaction des passagers n’empêche la catastrophe; les autorités israéliennes enquêtent et qualifient l’incident de possible attaque terroriste."
+    },
+    {
+      "_linked_ids": [
+        "subject-swiss-31c43ad1b04d"
+      ],
+      "cluster_id": "subject-swiss-31c43ad1b04d",
+      "coherence": 0.558235115692665,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-01",
+      "headline": "Les glaciers suisses ont perdu une part importante de leur glace en 2026",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/environment/2026/oct/01/switzerland-glacier-loss-fossil-fuel-pollution-europe"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6n9w0ypjwl9o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/10/01/swiss-glaciers-lose-55-of-ice-in-second-largest-melt-on-record"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change"
+        },
+        {
+          "language": "en",
+          "source": "wnyc.org",
+          "source_country": "united-states",
+          "url": "https://wnyc.org/npr/nx-s1-5981403"
+        },
+        {
+          "language": "en",
+          "source": "wcbe.org",
+          "source_country": "united-states",
+          "url": "https://www.wcbe.org/npr-news/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
+        },
+        {
+          "language": "en",
+          "source": "kmxt.org",
+          "source_country": "united-states",
+          "url": "https://www.kmxt.org/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
+        },
+        {
+          "language": "en",
+          "source": "wohfradio.com",
+          "source_country": "united-states",
+          "url": "https://wohfradio.com/national-news/experts-say-swiss-glaciers-lost-5-5-of-their-ice-this-year-second-biggest-annual-loss-due-to-heat-waves-and-less-snow/"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/swiss-glaciers-lose-of-more-than-5-in-ice-volume-in-2026/a-79495965"
+        },
+        {
+          "language": "en",
+          "source": "kunr.org",
+          "source_country": "united-states",
+          "url": "https://www.kunr.org/world-headlines/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
+        }
+      ],
+      "mentioned_countries": [
+        "sz"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "npr.org",
+      "outbound_url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "dw.com",
+        "euronews.com",
+        "npr.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5582,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7576
+        },
+        "total": 0.7319,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "swiss",
+      "subject_names": [
+        "swiss"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Les articles indiquent qu’en 2026 les glaciers suisses ont subi une nouvelle forte fonte, perdant environ 5,5 % de leur volume de glace sur l’année — une des plus fortes diminutions annuelles enregistrées — et qu’au cours des dernières années la perte cumulée a été très importante (environ 20 % sur cinq ans selon certains bilans). La fonte accrue est attribuée dans ces comptes rendus à des vagues de chaleur et à un enneigement moindre, et les pertes menacent l’approvisionnement en eau et illustrent une tendance de déclin glaciaire continu en Suisse."
+    },
+    {
+      "_linked_ids": [
+        "subject-fatima-mansouri-8ebb951f1242",
         "subject-mansouri-a1d8ab59fb9b"
       ],
-      "cluster_id": "subject-mansouri-a1d8ab59fb9b",
-      "coherence": 0.4881159053877524,
+      "cluster_id": "subject-fatima-mansouri-8ebb951f1242",
+      "coherence": 0.5055414053556748,
       "consequence": 3,
       "countries": [
         "ar",
         "france",
         "germany",
         "it",
-        "nl",
         "spain",
-        "tu",
-        "united-states",
-        "unknown"
+        "united-states"
       ],
-      "country_count": 9,
+      "country_count": 6,
       "editorial_day": "2026-09-30",
-      "headline": "Le roi Mohammed VI nomme Fatima Ezzahra El Mansouri première ministre du Maroc",
-      "independent_source_count": 21,
+      "headline": "Le roi Mohammed VI nomme Fatima Ezzahra El Mansouri première cheffe du gouvernement",
+      "independent_source_count": 8,
       "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/maroc-avocate-de-formation-fatima-ezzahra-el-mansouri-devient-la-premiere-femme-nommee-a-la-tete-du-gouvernement-20260929_CY55ZCLUQZAHNLRFWI6YZOHEXA/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/maroc-fatima-ezzahra-el-mansouri-une-premiere-ministre-sous-pression-sociale-20260930"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/maroc-fatima-ezzahra-el-mansouri-est-la-premiere-femme-nommee-cheffe-du-gouvernement-20260929"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/afrique/maroc/au-maroc-fatima-ezzahra-el-mansouri-devient-la-premiere-femme-nommee-cheffe-du-gouvernement_8215427.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20260930-maroc-quels-d%C3%A9fis-attendent-la-nouvelle-premi%C3%A8re-ministre-fatima-ezzahra-el-mansouri"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/afrique/20260930-maroc-fatima-ezzahra-el-mansouri-mairie-marrakech-d%C3%A9put%C3%A9e-cheffe-gouvernement-avocate-formation"
-        },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/proche-moyen-orient/maroc-fatima-ezzahra-el-mansouri-devient-la-premiere-femme-premiere-ministre-TNWIXGKXNBAVBLFVYJ7FFBRQ2E/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-09-29/marruecos-nombra-a-fatima-mansouri-como-primera-ministra-del-pais-la-primera-mujer-al-frente-del-gobierno-en-rabat.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/mohamed-nombra-fatima-zahra-mansouri-primera-ministra-20260929181050-nt.html"
         },
         {
           "language": "es",
@@ -93,13 +504,7 @@
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/mohamed-vi-encarga-por-primera-vez-una-mujer-formar-gobierno-marruecos_7042912_0.html"
-        },
-        {
-          "language": "de",
-          "source": "zeit.de",
-          "source_country": "germany",
-          "url": "https://www.zeit.de/politik/ausland/2026-09/fatima-ezzahra-el-mansouri-marokko-regierungschefin-koenig-mohammed-vi"
+          "url": "https://www.20minutos.es/internacional/fatima-mansouri-mujer-que-rompe-moldes-marruecos-ya-ha-sido-alcaldesa-ministra-lider-partido-ahora-formara-gobierno_7043122_0.html"
         },
         {
           "language": "en",
@@ -108,224 +513,176 @@
           "url": "https://www.euronews.com/2026/09/30/moroccos-king-mohammed-vi-appoints-fatima-mansouri-as-the-countrys-first-female-prime-mini"
         },
         {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/09/29/news/marocco_prima_donna_premier_fatima_ezzahra_el_mansour-425615264/?rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2633048"
-        },
-        {
           "language": "en",
           "source": "pbs.org",
           "source_country": "united-states",
           "url": "https://www.pbs.org/newshour/world/moroccos-king-appoints-fatima-zahra-mansouri-as-countrys-1st-woman-prime-minister"
         },
         {
-          "language": "es",
-          "source": "mdzol.com",
-          "source_country": "ar",
-          "url": "https://www.mdzol.com/mundo/fatima-zahra-el-mansouri-la-primera-mujer-elegida-primera-ministra-marruecos-n1617171"
-        },
-        {
-          "language": "en",
-          "source": "dailysabah.com",
-          "source_country": "tu",
-          "url": "https://www.dailysabah.com/world/africa/morocco-appoints-fatima-zahra-mansouri-as-first-woman-pm"
-        },
-        {
-          "language": "en",
-          "source": "thenationalnews.com",
-          "source_country": "unknown",
-          "url": "https://www.thenationalnews.com/news/mena/2026/09/29/moroccos-fatima-ezzahra-el-mansouri-set-to-be-first-female-pm/"
-        },
-        {
-          "language": "it",
-          "source": "corriere.it",
-          "source_country": "it",
-          "url": "https://www.corriere.it/esteri/26_settembre_29/marocco-fatima-ezzahra-el-mansouri-prima-premier-donna-del-paese-9a40d504-11fb-4aed-af76-da9024739xlk.shtml"
-        },
-        {
-          "language": "it",
-          "source": "ilmessaggero.it",
-          "source_country": "it",
-          "url": "https://www.ilmessaggero.it/persone/fatima_mansouri_chi_e_premier_marocco_donna-9793369.html"
+          "language": "fr",
+          "source": "guadeloupe.franceantilles.fr",
+          "source_country": "germany",
+          "url": "https://www.guadeloupe.franceantilles.fr/actualite/international/au-maroc-fatima-ezzahra-el-mansouri-devient-la-premiere-cheffe-du-gouvernement-1094650.php"
         },
         {
           "language": "es",
-          "source": "cadena3.com",
+          "source": "elcordillerano.com.ar",
           "source_country": "ar",
-          "url": "https://www.cadena3.com/noticia/mundo/fatima-el-mansouri-primera-mujer-designada-como-primera-ministra-de-marruecos_598939"
+          "url": "https://www.elcordillerano.com.ar/noticias/2026/09/30/264927-fatima-zahra-el-mansouri-es-la-primera-mujer-en-liderar-el-gobierno-de-marruecos"
         }
       ],
       "mentioned_countries": [
         "mo"
       ],
       "origin_country": "ar",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/mohamed-nombra-fatima-zahra-mansouri-primera-ministra-20260929181050-nt.html",
-      "rank": 1,
-      "reference_newsroom_count": 16,
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260929/11646980/marruecos-tendra-primera-vez-primera-ministra-fatima-mansouri.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es",
-        "corriere.it",
         "eldiario.es",
-        "elpais.com",
         "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
         "lavanguardia.com",
         "lexpress.fr",
-        "liberation.fr",
-        "nos.nl",
-        "pbs.org",
-        "repubblica.it",
-        "zeit.de"
+        "pbs.org"
       ],
       "score": {
         "components": {
-          "coherence": 0.4881,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.6667,
-          "freshness": 1.0,
+          "coherence": 0.5055,
+          "corroboration": 0.75,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.84,
-          "source_reliability": 0.8889
+          "novelty": 0.5,
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
         },
-        "total": 0.8228,
+        "total": 0.7293,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "mansouri",
+      "subject_label": "fatima mansouri",
       "subject_names": [
-        "fatima ezzahra",
         "fatima mansouri",
         "mansouri",
         "maroc",
-        "marruecos",
-        "mohamed"
+        "marruecos"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Le roi Mohammed VI a chargé Fatima Ezzahra El Mansouri, avocate et ancienne maire de Marrakech, de former le gouvernement, faisant d’elle la première femme nommée cheffe du gouvernement au Maroc. Les articles soulignent son parcours politique local et indiquent qu’elle hérite d’un mandat marqué par des attentes sociales et des défis politiques."
+      "subject_newsroom_count": 7,
+      "summary": "Les articles indiquent que le roi Mohammed VI du Maroc a chargé Fatima Ezzahra (Fatima Zahra) El Mansouri — ancienne maire, ministre et dirigeante de parti — de former le gouvernement, faisant d’elle la première femme à occuper le poste de Première ministre/cheffe du gouvernement du pays."
     },
     {
       "_linked_ids": [
-        "subject-trump-c1910c9422c3"
+        "subject-hegseth-a830f84e276e"
       ],
-      "cluster_id": "subject-trump-c1910c9422c3",
-      "coherence": 0.46660996646244945,
+      "cluster_id": "subject-hegseth-a830f84e276e",
+      "coherence": 0.4479534635553697,
       "consequence": 3,
       "countries": [
-        "brazil",
-        "cu",
-        "spain",
+        "ca",
+        "france",
+        "germany",
+        "india",
         "united-states"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-09-30",
-      "headline": "La Cour suprême autorise la reprise des expulsions vers des pays tiers",
+      "country_count": 5,
+      "editorial_day": "2026-10-01",
+      "headline": "Le secrétaire à la Défense Pete Hegseth annonce une coupe de 20 % des généraux et amiraux",
       "independent_source_count": 11,
       "members": [
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/tribunal-supremo-eeuu-avala-deportacion-inmigrantes-terceros-20260929220256-nt.html"
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/01/aux-etats-unis-pete-hegseth-le-secretaire-a-la-defense-revendique-une-reduction-de-20-du-nombre-de-hauts-grades-et-poursuit-la-reconfiguration-de-l-armee_6786428_3210.html"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260930/11647327/supremo-ee-uu-permite-trump-reactivar-deportaciones-terceros-paises.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-etats-unis-hegseth-dit-avoir-r%C3%A9duit-de-20-le-nombre-de-g%C3%A9n%C3%A9raux-dans-l-arm%C3%A9e"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/supremo-eeuu-autoriza-trump-reactivar-las-deportaciones-migrantes-terceros-paises_7042980_0.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/am%C3%A9riques/20261001-aux-%C3%A9tats-unis-pete-hegseth-affirme-avoir-r%C3%A9duit-de-20-le-nombre-de-g%C3%A9n%C3%A9raux-et-amiraux"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/hegseth-entlaesst-offiziere-musk-untersucht-kriegsfuehrung-100.html"
         },
         {
           "language": "en",
           "source": "pbs.org",
           "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/news-wrap-supreme-court-allows-trumps-deportations-to-third-countries-for-now"
+          "url": "https://www.pbs.org/newshour/world/watch-live-hegseth-delivers-state-of-the-force-address-expected-to-make-cuts-to-top-ranks"
         },
         {
           "language": "en",
-          "source": "pbs.org",
+          "source": "wtop.com",
           "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/politics/supreme-court-lets-trump-continue-deporting-people-to-3rd-countries-while-justices-consider-policy"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/29/suprema-corte-permite-que-trump-retome-deportacoes-para-terceiros-paises.ghtml"
+          "url": "https://wtop.com/us-politics/2026/09/hegseth-confirms-that-the-us-military-will-cut-20-of-its-generals-and-admirals/"
         },
         {
           "language": "en",
-          "source": "kezi.com",
+          "source": "thehindu.com",
+          "source_country": "india",
+          "url": "https://www.thehindu.com/news/international/hegseth-announces-new-drone-command-cuts-to-20-of-generals-in-state-of-the-force-speech/article71531255.ece"
+        },
+        {
+          "language": "en",
+          "source": "salinapost.com",
           "source_country": "united-states",
-          "url": "https://www.kezi.com/news/national/supreme-court-allows-trump-to-restart-controversial-deportations-to-countries-that-migrants-have-no-connection/article_01c66a70-0d2a-5ddb-a538-93951f54ef84.html"
+          "url": "https://salinapost.com/posts/1348f5d7-28ed-445d-a9ea-1b5ce336dff4"
+        },
+        {
+          "language": "fr",
+          "source": "ledevoir.com",
+          "source_country": "ca",
+          "url": "https://www.ledevoir.com/monde/etats-unis/1013477/pete-hegseth-affirme-avoir-considerablement-reduit-nombre-generaux"
         },
         {
           "language": "en",
-          "source": "foxwilmington.com",
+          "source": "klcc.org",
           "source_country": "united-states",
-          "url": "https://foxwilmington.com/supreme-court-takes-up-fight-over-trumps-third-country-illegal-alien-deportation-policy/"
+          "url": "https://www.klcc.org/npr-politics/2026-09-30/defense-secretary-pete-hegseth-cuts-generals-and-admirals-by-20"
         },
         {
           "language": "en",
-          "source": "cubaheadlines.com",
-          "source_country": "cu",
-          "url": "https://www.cubaheadlines.com/articles/341502"
-        },
-        {
-          "language": "en",
-          "source": "abc7chicago.com",
+          "source": "wknofm.org",
           "source_country": "united-states",
-          "url": "https://abc7chicago.com/story/supreme-court-rules-trump-administration-can-continue-rapidly-deporting-migrants-3rd-countries/19889392/"
+          "url": "https://www.wknofm.org/politics-npr-news/2026-09-30/defense-secretary-pete-hegseth-cuts-generals-and-admirals-by-20"
         },
         {
           "language": "en",
-          "source": "iheart.com",
+          "source": "time.com",
           "source_country": "united-states",
-          "url": "https://talkradio1080.iheart.com/content/2026-09-29-scotus-allows-trump-admin-deportation-policy/"
-        },
-        {
-          "language": "en",
-          "source": "fox35orlando.com",
-          "source_country": "united-states",
-          "url": "https://www.fox35orlando.com/news/supreme-court-allows-trump-administration-resume-third-country-deportations"
+          "url": "https://time.com/article/2026/09/30/hegseth-pentagon-us-military-generals-admirals-cuts/"
         }
       ],
       "mentioned_countries": [
         "united-states"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/29/suprema-corte-permite-que-trump-retome-deportacoes-para-terceiros-paises.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 5,
+      "origin_country": "ca",
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/world/watch-live-hegseth-delivers-state-of-the-force-address-expected-to-make-cuts-to-top-ranks",
+      "rank": 5,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "globo.com",
-        "lavanguardia.com",
-        "pbs.org"
+        "france24.com",
+        "lemonde.fr",
+        "pbs.org",
+        "tagesschau.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.4666,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
+          "coherence": 0.448,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
@@ -333,309 +690,23 @@
           "prominence": 0.7333,
           "source_reliability": 0.7838
         },
-        "total": 0.7228,
+        "total": 0.7149,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "etats-unis",
-        "supremo",
-        "trump",
-        "trump's",
-        "washington"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "La Cour suprême des États-Unis a permis provisoirement à l’administration Trump de reprendre une politique qui autorise l’expulsion de migrants vers des pays tiers sans lien direct avec eux, en suspendant pour l’instant les blocages judiciaires pendant que les juges examinent la question."
-    },
-    {
-      "_linked_ids": [
-        "subject-trump-985c5f791c9e"
-      ],
-      "cluster_id": "subject-trump-985c5f791c9e",
-      "coherence": 0.38361794274091365,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-09-30",
-      "headline": "Trump annonce un engagement d’autorégulation des entreprises d’IA",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/09/30/refusant-de-brider-l-intelligence-artificielle-donald-trump-met-en-scene-l-autoregulation-de-ses-acteurs_6785824_3234.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/economie-numerique/presque-comme-une-constitution-sous-la-tutelle-de-trump-les-patrons-de-lia-promettent-de-sautoreguler-20260930_Q4J4GU6725FLHBNEWBLAZLR4WA/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/us/2026-09-29/trump-apuesta-por-que-las-empresas-de-ia-se-autorregulen-para-evitar-el-descontrol-de-la-tecnologia.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260929/11647053/trump-reune-mayores-ejecutivos-sector-ia-rechaza-ralentizar-desarrollo-frenarla.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/2026/09/30/6abc87d4468aeb27108b459a.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/29/em-encontro-com-ceos-de-ia-trump-diz-que-lideres-querem-fazer-o-que-e-certo.ghtml"
-        }
-      ],
-      "mentioned_countries": [],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/29/em-encontro-com-ceos-de-ia-trump-diz-que-lideres-querem-fazer-o-que-e-certo.ghtml",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "elpais.com",
-        "expansion.com",
-        "globo.com",
-        "lavanguardia.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3836,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
-        },
-        "total": 0.7055,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "trump",
-        "trump's",
-        "washington"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "Lors d’une rencontre avec des dirigeants de grandes entreprises d’intelligence artificielle, Donald Trump a soutenu que ces sociétés accepteraient de s’autoréguler : les patrons de l’IA se sont engagés à mettre en place des contrôles volontaires et des revues internes pour limiter les risques technologiques, selon plusieurs comptes rendus des échanges et de l’accord signé lors de la réunion."
-    },
-    {
-      "_linked_ids": [
-        "subject-marseille-aa90296a67d4"
-      ],
-      "cluster_id": "subject-marseille-aa90296a67d4",
-      "coherence": 0.7369043715192612,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "La justice reconnaît les rafles de Marseille en 1943 comme crime contre l’humanité",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-lhumanite-20260930_D2WJDIMIU5AWXJVVNSSZB2PA2Y/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/rafle-du-vieux-port-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite-20260930"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/seconde-guerre-mondiale/la-justice-reconnait-comme-crime-contre-l-humanite-les-rafles-menees-en-1943-a-marseille_8216224.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7369,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6801,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "marseille",
-      "subject_names": [
-        "marseille"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Les tribunaux ont qualifié juridiquement les rafles menées à Marseille en 1943, notamment celles du Vieux‑Port, comme un crime contre l’humanité, reconnaissance portée à la suite de procédures visant à établir la responsabilité et la nature des actes perpétrés pendant l’occupation."
-    },
-    {
-      "_linked_ids": [
-        "subject-tennessee-171715ec19fd"
-      ],
-      "cluster_id": "subject-tennessee-171715ec19fd",
-      "coherence": 0.534114113251503,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "ci",
-        "france",
-        "spain",
-        "united-kingdom",
-        "uy"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-09-30",
-      "headline": "Christa Pike doit être exécutée, première femme exécutée au Tennessee en 200 ans",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/09/30/l-americaine-christa-pike-devrait-etre-la-premiere-femme-executee-dans-l-etat-du-tennessee-depuis-200-ans_6785927_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/elle-n-avait-que-18-ans-christa-pike-doit-devenir-ce-mercredi-la-premiere-femme-executee-depuis-deux-siecles-dans-le-tennessee-20260930"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/etats-unis-une-femme-va-etre-executee-dans-le-tennessee-pour-la-premiere-fois-depuis-200-ans-20260930_7NBPGNXAMBCU7D2OMGQNKKQSPE/"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20260929-%C3%A9tats-unis-le-tennessee-s-appr%C3%AAte-%C3%A0-ex%C3%A9cuter-une-femme-pour-la-premi%C3%A8re-fois-en-200-ans"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/us/2026-09-30/el-caso-de-christa-pike-la-primera-mujer-que-sera-ejecutada-en-tennessee-en-mas-de-dos-siglos.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/29/ela-tambem-e-uma-vitima-quem-e-christa-pike-que-pode-ser-a-primeira-mulher-executada-no-tennessee-em-200-anos.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "24horas.cl",
-          "source_country": "ci",
-          "url": "https://www.24horas.cl/internacional/noticias/christa-pike-se-convertiria-en-la-primera-mujer-ejecutada-de-tennessee"
-        },
-        {
-          "language": "es",
-          "source": "bbc.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.com/mundo/articles/cqx2zwxld8lyo"
-        },
-        {
-          "language": "es",
-          "source": "elobservador.com.uy",
-          "source_country": "uy",
-          "url": "https://www.elobservador.com.uy/estados-unidos/bbc-news-mundo/quien-es-y-que-crimen-cometio-christa-pike-la-primera-mujer-que-sera-ejecutada-tennessee-200-anos-n6058718"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/29/ela-tambem-e-uma-vitima-quem-e-christa-pike-que-pode-ser-a-primeira-mulher-executada-no-tennessee-em-200-anos.ghtml",
-      "rank": 5,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "elpais.com",
-        "globo.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5341,
-          "corroboration": 0.75,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
-        },
-        "total": 0.6636,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "tennessee",
+      "subject_label": "hegseth",
       "subject_names": [
         "christa pike",
         "etats-unis",
+        "hegseth",
         "tennessee"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Tous les articles indiquent que Christa Pike, condamnée pour un meurtre commis alors qu’elle était adolescente, est sur le point d’être exécutée par l’État du Tennessee, ce qui ferait d’elle la première femme mise à mort dans cet État depuis environ deux siècles ; les textes précisent son jeune âge au moment du crime et soulignent le caractère exceptionnel de l’exécution féminine dans l’histoire pénale du Tennessee."
+      "subject_newsroom_count": 5,
+      "summary": "Les articles concordent pour dire que le secrétaire à la Défense américain Pete Hegseth a annoncé avoir réduit ou annoncé la réduction d’environ 20 % du nombre de généraux et d’amiraux dans les forces armées, dans le cadre d’une réorganisation plus large incluant la création d’un commandement pour drones et d’autres changements structurels."
     }
   ],
   "discarded_ingested": 258,
   "discarded_kept": 5,
-  "generated_at": "2026-09-30T11:17:01.197656+00:00",
+  "generated_at": "2026-10-01T11:44:35.746037+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

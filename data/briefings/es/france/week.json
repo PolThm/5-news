@@ -2,340 +2,253 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-marseille-aa90296a67d4"
+        "subject-france-e14ad034bbd1"
       ],
-      "cluster_id": "subject-marseille-aa90296a67d4",
-      "coherence": 0.7369043715192612,
+      "cluster_id": "subject-france-e14ad034bbd1",
+      "coherence": 0.46941325072914064,
       "consequence": 3,
       "countries": [
-        "france"
+        "france",
+        "germany",
+        "it"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "La justicia reconoce como crimen contra la humanidad las redadas de 1943 en Marsella",
+      "country_count": 3,
+      "editorial_day": "2026-10-01",
+      "headline": "Reino Unido pone fin al acuerdo de devolución 'uno por uno' con Francia",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-lhumanite-20260930_D2WJDIMIU5AWXJVVNSSZB2PA2Y/"
+          "url": "https://www.la-croix.com/politique/pourquoi-la-france-sort-de-l-accord-migratoire-un-pour-un-signe-avec-le-royaume-uni-20261001"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/rafle-du-vieux-port-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite-20260930"
+          "url": "https://www.la-croix.com/londres-annonce-la-fin-de-l-accord-d-echange-de-migrants-entre-la-france-et-le-royaume-uni-20260930"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/30/uk-ends-one-in-one-out-migrant-returns-deal-with-france"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "leparisien.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/seconde-guerre-mondiale/la-justice-reconnait-comme-crime-contre-l-humanite-les-rafles-menees-en-1943-a-marseille_8216224.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.leparisien.fr/international/vers-la-fin-de-laccord-dechange-de-migrants-un-pour-un-entre-france-et-royaume-uni-30-09-2026-LDIDPXG5Y5HV3MKQUXLACPQMAM.php"
+        },
+        {
+          "language": "fr",
+          "source": "guadeloupe.franceantilles.fr",
+          "source_country": "germany",
+          "url": "https://www.guadeloupe.franceantilles.fr/actualite/international/londres-annonce-la-fin-de-laccord-dechange-de-migrants-entre-la-france-et-le-royaume-uni-1094665.php"
         }
       ],
       "mentioned_countries": [
+        "united-kingdom",
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/09/30/rafles-a-marseille-en-1943-la-justice-reconnait-un-crime-contre-l-humanite_6786043_3224.html",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/09/30/uk-ends-one-in-one-out-migrant-returns-deal-with-france",
       "rank": 1,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
+        "euronews.com",
+        "la-croix.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.7369,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4694,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.619
         },
-        "total": 0.6801,
+        "total": 0.6543,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "marseille",
+      "subject_label": "france",
       "subject_names": [
-        "marseille"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Tribunales franceses determinaron que las redadas y deportaciones realizadas en Marsella en 1943 durante la ocupación nazi constituyen un crimen contra la humanidad; la decisión reconoce la gravedad de las detenciones masivas en el puerto y su carácter sistemático en el contexto de la persecución y deportación de civiles."
-    },
-    {
-      "_linked_ids": [
-        "subject-macron-62a7176e3740"
-      ],
-      "cluster_id": "subject-macron-62a7176e3740",
-      "coherence": 0.4630453008182165,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "El Senado rechaza el Tratado de Amistad con Francia durante la visita de Macron a España",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20260930/pp-bloquea-senado-tratado-amistad-francia-contrario-interes-espana-materia-energetica/1003744402493_0.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/acampada-sol-ultima-hora-directo-tercera-noche-raso-presionar-decreto_6_13545576_1125360.html"
-        },
-        {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/espana/mayoria-senado-rechaza-tratado-amistad-francia_202609296abc01a1d5f3ae10c73808ea.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/nacional/pp-tumba-senado-tratado-amistad-con-francia-plena-visita-macron-espana_7042959_0.html"
-        }
-      ],
-      "mentioned_countries": [
         "france",
-        "spain"
+        "gaulle",
+        "marseille",
+        "reino unido",
+        "royaume-uni"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/09/29/6abbfc80e4d4d84c5f8b458a.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.463,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6507,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "macron",
-      "subject_names": [
-        "emmanuel macron",
-        "espagne",
-        "espana",
-        "felipe",
-        "francia",
-        "macron",
-        "madrid",
-        "senado",
-        "senat"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "La mayoría del Partido Popular en el Senado tumbó el Tratado de Amistad con Francia mientras el presidente francés, Emmanuel Macron, se encontraba de visita en España. El rechazo fue motivado por objeciones del PP sobre el contenido del acuerdo, incluida su incidencia en asuntos energéticos, y se produjo pese a que el tratado había recibido el aval del Tribunal Constitucional según las informaciones."
+      "subject_newsroom_count": 15,
+      "summary": "Reino Unido ha anunciado la finalización del acuerdo bilateral conocido como 'uno por uno' que permitía el intercambio y la devolución de migrantes con Francia; los artículos coinciden en que Londres comunicó que ya no aplicará ese mecanismo entre los dos países."
     },
     {
       "_linked_ids": [
-        "subject-edouard-philippe-b425f4e146e7"
+        "subject-bardella-d7141f2660f2"
       ],
-      "cluster_id": "subject-edouard-philippe-b425f4e146e7",
+      "cluster_id": "subject-bardella-d7141f2660f2",
       "coherence": null,
-      "consequence": 3,
+      "consequence": 2,
       "countries": [
-        "france"
+        "germany",
+        "it",
+        "spain"
       ],
-      "country_count": 1,
+      "country_count": 3,
       "editorial_day": "2026-09-30",
-      "headline": "Édouard Philippe propone elevar la edad de jubilación a 65 años",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/presidentielle-2027-edouard-philippe-assume-le-risque-de-porter-l-age-de-la-retraite-a-65-ans-20260929"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/age-de-depart-a-65-ans-45-annuites-de-cotisation-edouard-philippe-candidat-horizons-a-la-presidentielle-devoile-son-projet-de-reforme-des-retraites_8214737.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/politique/je-ne-cherche-pas-a-gagner-des-points-je-veux-proteger-les-francais-edouard-philippe-devoile-son-plan-pour-les-retraites-entre-depart-a-65-ans-et-capitalisation_646081"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/elections/presidentielle/age-de-depart-a-65-ans-45-annuites-de-cotisation-edouard-philippe-candidat-horizons-a-la-presidentielle-devoile-son-projet-de-reforme-des-retraites_8214737.html#xtor=RSS-3-[lestitres]",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "francetvinfo.fr",
-        "la-croix.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6314,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "edouard philippe",
-      "subject_names": [
-        "edouard philippe"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Édouard Philippe, candidato presidencial de Horizons, presentó un plan de reforma de las pensiones que incluye elevar la edad de jubilación a 65 años, exigir 45 años de cotización para la pensión completa y complementar el sistema con medidas de capitalización; dijo asumir el riesgo político de la propuesta y afirmó que su objetivo es proteger a los franceses."
-    },
-    {
-      "_linked_ids": [
-        "subject-pen-a51b05b79fe8",
-        "subject-senado-f9b64dd225a4",
-        "subject-senat-e3e9c4b75f2b"
-      ],
-      "cluster_id": "subject-senado-f9b64dd225a4",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-28",
-      "headline": "La extrema derecha logra por primera vez representación como grupo en el Senado francés",
+      "headline": "Acusan a Jordan Bardella de antisemitismo y él niega las acusaciones",
       "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20260928/11645165/extrema-derecha-avanza-eleccion-parcial-senado-frances.html"
+          "url": "https://www.lavanguardia.com/internacional/20260929/11646849/acusacion-antisemitismo-bardella-sacude-extrema-derecha-francia-bardella.html"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nuevo-avance-le-pen-francia-extrema-derecha-tendra-primera-vez-grupo-parlamentario-senado_1_13543464.html"
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/bardella-vorwuerfe-antisemitismus-100.html"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/09/27/extrema-direita-ganha-espaco-no-senado-da-franca.ghtml"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/09/30/bardella-hits-back-at-macron-over-antisemitism-allegations"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/09/27/extrema-direita-ganha-espaco-no-senado-da-franca.ghtml",
-      "rank": 4,
+      "origin_country": "germany",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20260929/11646849/acusacion-antisemitismo-bardella-sacude-extrema-derecha-francia-bardella.html",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
-        "globo.com",
-        "lavanguardia.com"
+        "euronews.com",
+        "lavanguardia.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5763,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bardella",
+      "subject_names": [
+        "affaire bardella",
+        "bardella",
+        "jordan bardella",
+        "pen"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "Fuentes coincidentes informan que Jordan Bardella, dirigente del Rassemblement National en Francia, ha sido acusado de antisemitismo tras declaraciones y mensajes vinculados a su círculo; la acusación ha generado tensión en la derecha francesa y Bardella ha respondido rechazando las imputaciones y atacando al presidente Macron por politizar el asunto."
+    },
+    {
+      "_linked_ids": [
+        "subject-nantes-2d1cd791439e"
+      ],
+      "cluster_id": "subject-nantes-2d1cd791439e",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "unknown"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-01",
+      "headline": "Un liceo en Nantes sufre un incendio mientras universidades se suman al bloqueo",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/des-campus-universitaires-rejoignent-les-lycees-dans-la-contestation-sociale-20261001"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20261001.OBS118787/blocages-des-lycees-des-campus-universitaires-rejoignent-la-mobilisation-le-hall-d-un-lycee-detruit-par-un-incendie-a-nantes.html"
+        },
+        {
+          "language": "fr",
+          "source": "tf1info.fr",
+          "source_country": "unknown",
+          "url": "https://www.tf1info.fr/justice-faits-divers/blocages-des-lycees-les-images-du-hall-d-un-etablissement-detruit-par-un-incendie-a-nantes-2467400.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/des-campus-universitaires-rejoignent-les-lycees-dans-la-contestation-sociale-20261001",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.3333,
+          "impact": 0.6667,
+          "novelty": 1.0,
           "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "source_reliability": 0.5
         },
-        "total": 0.6314,
+        "total": 0.5492,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "senado",
+      "subject_label": "nantes",
       "subject_names": [
-        "affaire bardella",
-        "bardella",
-        "jordan bardella",
-        "mediapart",
-        "pen",
-        "senado",
-        "senat"
+        "blocages",
+        "ile-de-france",
+        "nantes"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "En una elección parcial al Senado de Francia, la coalición de Marine Le Pen y sus aliados obtuvo un avance significativo que les permitirá formar por primera vez un grupo parlamentario en la Cámara alta, alcanzando un número récord de escaños para esa fuerza política según las noticias citadas."
+      "subject_newsroom_count": 9,
+      "summary": "Varios liceos en Francia están siendo bloqueados por movilizaciones estudiantiles; en Nantes el hall de un establecimiento quedó destruido por un incendio, y varias universidades han anunciado su adhesión a las acciones de bloqueo. Los artículos coinciden en que el incendio destruyó el hall del liceo y en que campus universitarios se unieron al movimiento de bloqueo."
     },
     {
       "_linked_ids": [
+        "subject-france-2436299f78f6",
         "subject-france-591cf40a71b6"
       ],
-      "cluster_id": "subject-france-591cf40a71b6",
-      "coherence": 0.462879126307165,
+      "cluster_id": "subject-france-2436299f78f6",
+      "coherence": null,
       "consequence": 2,
       "countries": [
-        "it",
+        "germany",
         "united-kingdom"
       ],
       "country_count": 2,
-      "editorial_day": "2026-09-29",
-      "headline": "Estudiantes franceses bloquean centros y chocan con la policía, con más de 400 detenidos",
+      "editorial_day": "2026-09-30",
+      "headline": "Protestas estudiantiles en Francia provocan incendios y detenciones",
       "independent_source_count": 2,
       "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c862epne7glyo?at_medium=RSS&at_campaign=rss"
-        },
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -344,59 +257,152 @@
         },
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/29/french-students-clash-with-police-as-blockades-over-conditions-in-schools-intensify"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/09/29/french-students-blockade-schools-nationwide-to-demand-more-resources"
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/france-hundreds-arrested-as-student-protests-escalate/a-79495633?maca=en-rss-en-world-4025-rdf"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/29/french-students-clash-with-police-as-blockades-over-conditions-in-schools-intensify",
-      "rank": 5,
+      "origin_country": "germany",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
+      "rank": 4,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "euronews.com"
+        "dw.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4629,
+          "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
+          "novelty": 0.5,
           "prominence": 0.3333,
-          "source_reliability": 0.6
+          "source_reliability": 0.4286
         },
-        "total": 0.541,
+        "total": 0.5269,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
         "france",
+        "francia",
         "french",
-        "leon xiv",
-        "metz",
-        "paris"
+        "gaulle",
+        "marseille"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Estudiantes han organizado bloqueos y protestas en centros educativos por todo Francia para reclamar más recursos y mejores condiciones; en varias manifestaciones se produjeron enfrentamientos con la policía, se registraron incendios y obstrucciones de vías, y las autoridades detuvieron a más de 400 personas."
+      "subject_newsroom_count": 15,
+      "summary": "Estudiantes en Francia han organizado protestas que incluyen incendios y bloqueos; las manifestaciones se han intensificado y las fuerzas del orden han arrestado a cientos de personas en varias ciudades según los reportes."
+    },
+    {
+      "_linked_ids": [
+        "subject-thelyson-orelien-cf091b38200d"
+      ],
+      "cluster_id": "subject-thelyson-orelien-cf091b38200d",
+      "coherence": 0.4442881052194818,
+      "consequence": 1,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-01",
+      "headline": "Thélyson Orélien retirado de la selección del Goncourt tras acusaciones",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/culture/livres/affaire-thelyson-orelien-de-phenomene-a-traque-la-semaine-qui-a-bouleverse-le-monde-de-ledition-20261001_MREBXXEP5BE3RCXA2YTGUR2MOA/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/livres/affaire-thelyson-orelien/thelyson-orelien-les-ventes-de-son-livre-continuent-d-augmenter-en-france-malgre-les-accusations-de-recours-a-l-ia_8218147.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/livres/affaire-thelyson-orelien/pourquoi-certains-auteurs-continuent-ils-de-defendre-thelyson-orelien-malgre-les-soupcons-d-utilisation-de-l-ia-et-les-accusations-de-plagiat_8214584.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/livres/affaire-thelyson-orelien/l-ecrivain-thelyson-orelien-accuse-d-avoir-eu-recours-a-l-ia-pour-ecrire-son-roman-interrompt-sa-tournee-et-retourne-au-canada_8213783.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/bibliobs/20260925.OBS118599/thelyson-orelien-des-accusations-a-l-eviction-du-goncourt-le-recit-d-une-folle-semaine-qui-a-ebranle-la-rentree-litteraire.html"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20260925.OBS118588/thelyson-orelien-soupconne-de-plagiat-et-de-recours-a-l-ia-l-academie-goncourt-retire-son-roman-de-sa-selection.html"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/bibliobs/20260925.OBS118578/litterature-et-ia-ce-que-dit-l-affaire-thelyson-orelien.html"
+        },
+        {
+          "language": "fr",
+          "source": "laprovence.com",
+          "source_country": "france",
+          "url": "https://www.laprovence.com/article/culture-loisirs/95454719366443/thelyson-orelien-les-ventes-de-son-roman-caracolent-en-tete-apres-la-polemique-sur-le-recours-a-l-ia"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/societe/20260925.OBS118588/thelyson-orelien-soupconne-de-plagiat-et-de-recours-a-l-ia-l-academie-goncourt-retire-son-roman-de-sa-selection.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4443,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.7419
+        },
+        "total": 0.4642,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "thelyson orelien",
+      "subject_names": [
+        "thelyson orelien"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Varios medios coinciden en que el novelista Thélyson Orélien fue acusado de haber recurrido a la inteligencia artificial y de plagio, lo que provocó su retirada de la selección del premio Goncourt, la suspensión de su gira y su regreso a Canadá; pese a la polémica, las ventas de su libro aumentaron y varios autores siguen defendiendo al escritor mientras el debate sobre la IA en la literatura se intensifica."
     }
   ],
-  "discarded_ingested": 50,
+  "discarded_ingested": 30,
   "discarded_kept": 5,
-  "generated_at": "2026-09-30T11:17:01.197656+00:00",
+  "generated_at": "2026-10-01T11:44:35.746037+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

@@ -1,0 +1,24 @@
+{
+  "articles_collected": 11373,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 10004,
+  "clusters_selected": 18,
+  "completed": true,
+  "cycle_id": "2026-10-01T11-44-35Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261001113000.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-ceuta-4559ae2fe9bb: response was not valid JSON (likely truncated or refused): Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "groups_after_dedupe": 10168,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-10-01T11:44:35.746037+00:00",
+  "summarize_batches": {}
+}

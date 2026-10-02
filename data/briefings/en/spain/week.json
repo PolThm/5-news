@@ -2,231 +2,168 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-italia-31ad348fefef"
+        "subject-espana-d3a604947812"
       ],
-      "cluster_id": "subject-italia-31ad348fefef",
-      "coherence": 0.4361740356756282,
-      "consequence": 3,
-      "countries": [
-        "ro",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-30",
-      "headline": "Italy extends border controls on travelers from Spain for 15 days",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/italia-prorroga-dias-suspension-espacio-schengen-espana-20260930202122-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/italia-extiende-semanas-controles-viajeros-llegados-espana_1_13551880.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/italia-prorroga-otros-15-dias-los-controles-los-viajeros-procedentes-espana_7043412_0.html"
-        },
-        {
-          "language": "ron",
-          "source": "antena3.ro",
-          "source_country": "ro",
-          "url": "https://www.antena3.ro/externe/italia-prelungeste-cu-15-zile-controalele-la-frontiera-cu-spania-roma-invoca-probleme-de-securitate-din-cauza-exclavei-spaniole-ceuta-805302.html"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-09-30/italia-vuelve-a-prolongar-otros-15-dias-los-controles-fronterizos-a-viajeros-de-espana.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "it"
-      ],
-      "origin_country": "ro",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/italia-prorroga-dias-suspension-espacio-schengen-espana-20260930202122-nt.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4362,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.665,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "italia",
-      "subject_names": [
-        "bruselas",
-        "cataluna",
-        "espana",
-        "italia",
-        "madrid",
-        "roma",
-        "spain"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Italy has again extended border checks on travelers arriving from Spain for an additional 15 days, citing security concerns linked to the situation in the Spanish exclave of Ceuta; the measures maintain temporary controls on movement across the Schengen area between the two countries."
-    },
-    {
-      "_linked_ids": [
-        "subject-espana-0308be491f9c"
-      ],
-      "cluster_id": "subject-espana-0308be491f9c",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-30",
-      "headline": "Spain bans evictions and an elderly tenant is returning to her flat",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/30/nx-s1-5985703/woman-eviction-protests-spain"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.6236,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "espana",
-      "subject_names": [
-        "bruselas",
-        "cataluna",
-        "espana",
-        "madrid",
-        "spain"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "Spain announced a temporary ban on evictions after protests over the removal of an 87-year-old woman from her flat; following the controversy and public demonstrations, the woman is set to return home."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-145d77e51815",
-        "subject-ceuta-2418c7c0ad89"
-      ],
-      "cluster_id": "subject-ceuta-2418c7c0ad89",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-espana-d3a604947812",
+      "coherence": 0.5664174465578811,
+      "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-09-30",
-      "headline": "Spanish Defence Ministry forwards Amnesty report on alleged military abuse of migrants in Ceuta",
-      "independent_source_count": 3,
+      "editorial_day": "2026-10-01",
+      "headline": "Airbus workforce in Spain approves preagreement to end labour dispute",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/defensa-envia-justicia-denuncias-torturas-tratos-degradantes-militares-migrantes-ceuta_1_13549491.html"
+          "url": "https://cincodias.elpais.com/companias/2026-10-01/la-plantilla-de-airbus-en-espana-valida-el-preacuerdo-laboral-de-industria-y-pone-fin-a-la-huelga.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/empresas/2026/10/01/6abe9ba5e5fdea02168b4576.html"
+        },
+        {
+          "language": "es",
+          "source": "laverdad.es",
+          "source_country": "spain",
+          "url": "https://www.laverdad.es/economia/plantilla-airbus-acepta-mayoria-preacuerdo-poner-fin-20261001200452-ntrc.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/09/30/6abca3ece4d4d822038b45af.html"
+          "url": "https://www.elmundo.es/economia/empresas/2026/10/01/6abe95bde4d4d80f7e8b4590.html"
         },
         {
           "language": "es",
-          "source": "infolibre.es",
+          "source": "cronicadecantabria.com",
           "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/amnistia-internacional-denuncia-torturas-agresiones-militares-migrantes-ceuta_1_2237101.html"
+          "url": "https://cronicadecantabria.com/cr/la-plantilla-de-airbus-acepta-por-mayora-la-ltima-propuesta-para-poner-fin-al-conflicto-en-espaa/"
+        },
+        {
+          "language": "es",
+          "source": "elcorreo.com",
+          "source_country": "spain",
+          "url": "https://www.elcorreo.com/economia/plantilla-airbus-acepta-mayoria-preacuerdo-poner-fin-20261001200452-ntrc.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "infolibre.es",
-      "outbound_url": "https://www.infolibre.es/politica/amnistia-internacional-denuncia-torturas-agresiones-militares-migrantes-ceuta_1_2237101.html",
-      "rank": 3,
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/empresas/2026/10/01/6abe9ba5e5fdea02168b4576.html",
+      "rank": 1,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
         "elmundo.es",
-        "infolibre.es"
+        "elpais.com",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5664,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6522
         },
-        "total": 0.6156,
+        "total": 0.5582,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "espana",
       "subject_names": [
-        "ceuta",
-        "melilla"
+        "airbus",
+        "bruselas",
+        "espana",
+        "madrid"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Amnesty International has accused members of the Spanish military of torturing and degrading migrants in Ceuta, and Spain’s Defence Ministry has sent the Amnesty report and related complaints to the public prosecutor to investigate and to protect the reputation of the Armed Forces."
+      "subject_newsroom_count": 11,
+      "summary": "Workers at Airbus in Spain voted by majority to accept a preagreement offered by management and industry, giving broad backing to the proposed labour deal and clearing the way to conclude the months-long conflict between staff and the company."
+    },
+    {
+      "_linked_ids": [
+        "subject-junts-02562d7816ef"
+      ],
+      "cluster_id": "subject-junts-02562d7816ef",
+      "coherence": 0.4177408172841518,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-02",
+      "headline": "Junts submits alternative housing decree and threatens to block government measures",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/catalunya/2026-10-02/junts-presenta-un-texto-alternativo-para-salvar-in-extremis-un-acuerdo-sobre-vivienda.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/02/6abf593cfc6c836f418b456e.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-10-02/junts-se-revuelve-contra-el_4436949/"
+        },
+        {
+          "language": "es",
+          "source": "mundiario.com",
+          "source_country": "spain",
+          "url": "https://www.mundiario.com/articulo/politica/ordago-junts-sanchez-tumbara-decretos-vivienda-exigir-nuevo-texto/20261002114003444562.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/10/02/6abf593cfc6c836f418b456e.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4177,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5395,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "junts",
+      "subject_names": [
+        "junts"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Junts has presented an alternative draft to the Spanish government’s housing decrees and says it will vote against the current decrees to force a renegotiation, denouncing the government’s approach as a form of \"blackmail\" and demanding withdrawal of the existing text."
     },
     {
       "_linked_ids": [
@@ -241,7 +178,7 @@
       ],
       "country_count": 2,
       "editorial_day": "2026-10-01",
-      "headline": "Ceuta, dos meses después: la crisis migratoria se enquista entre el bloqueo político y la acogida al límite",
+      "headline": "Two months after mass arrival in Ceuta Spain remains mired in a migration crisis",
       "independent_source_count": 2,
       "members": [
         {
@@ -263,75 +200,11 @@
       "origin_country": "france",
       "outbound_source": "infolibre.es",
       "outbound_url": "https://www.infolibre.es/politica/ceuta-meses-despues-crisis-migratoria-enquista-bloqueo-politico-acogida-limite_1_2237113.html",
-      "rank": 4,
+      "rank": 3,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "infolibre.es",
         "lefigaro.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.5428,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "melilla"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Ceuta, dos meses después: la crisis migratoria se enquista entre el bloqueo político y la acogida al límite"
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-0fc5e8bc87c0"
-      ],
-      "cluster_id": "subject-ceuta-0fc5e8bc87c0",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "it",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-09-30",
-      "headline": "Macron supports Spain over Ceuta migrant crisis and calls for EU action",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/macron-se-solidariza-con-sanchez-por-ceuta-pero-le-hace-mismo-aviso-que-todos-que-aplique-pacto-migratorio-europeo_7043264_0.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/30/macron-backs-spain-over-ceuta-migration-crisis-and-urges-firm-eu-action"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "it",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/macron-se-solidariza-con-sanchez-por-ceuta-pero-le-hace-mismo-aviso-que-todos-que-aplique-pacto-migratorio-europeo_7043264_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "euronews.com"
       ],
       "score": {
         "components": {
@@ -351,18 +224,212 @@
       "subject_label": "ceuta",
       "subject_names": [
         "ceuta",
-        "emmanuel macron",
-        "espagne",
-        "macron",
         "melilla"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "French President Emmanuel Macron expressed solidarity with Spanish Prime Minister Pedro Sánchez over the migration crisis in Ceuta and urged that Spain apply the European migration pact and that the EU take firm, collective action to address the situation."
+      "subject_newsroom_count": 13,
+      "summary": "Two months after a large group entered the Spanish enclave of Ceuta, Spain continues to face a prolonged migration crisis marked by political deadlock and strained capacity to receive and process arrivals; the situation remains a central challenge for Prime Minister Pedro Sánchez and local authorities."
+    },
+    {
+      "_linked_ids": [
+        "subject-terrassa-d2908744f2a7"
+      ],
+      "cluster_id": "subject-terrassa-d2908744f2a7",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-02",
+      "headline": "Two Civil Guard officers wounded in Terrassa shooting; three arrested",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/catalunya/2026-10-02/unos-teloneros-abren-fuego-y-hieren-a-dos-guardias-civiles-en-terrassa.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/cataluna/2026/10/02/6abed3a8e9cf4aeb608b45d0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/catalunya/noticia-fuera-peligro-dos-agentes-guardia-civil-heridos-tiroteo-terrassa-barcelona-20261002102836.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/cataluna/2026/10/02/6abed3a8e9cf4aeb608b45d0.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.4581,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "terrassa",
+      "subject_names": [
+        "terrassa"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Gunmen opened fire in Terrassa, Barcelona, injuring two Civil Guard officers; both were reported out of danger and three people have been detained in connection with the shooting."
+    },
+    {
+      "_linked_ids": [
+        "subject-reino-unido-faa9f4b55eec"
+      ],
+      "cluster_id": "subject-reino-unido-faa9f4b55eec",
+      "coherence": 0.43940976133776277,
+      "consequence": 3,
+      "countries": [
+        "ei",
+        "ez",
+        "is",
+        "it",
+        "spain"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-10-01",
+      "filled_from": "europe",
+      "headline": "UK arrests dual British-Iranian man over suspected RAF Fairford plot",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-01/la-policia-antiterrorista-del-reino-unido-detiene-a-un-britanico-irani-concectado-con-el-incidente-de-la-base-militar-de-fairford.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/policia-detiene-hombre-nacionalidad-britanica-irani-incidente-20261001190240-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261001/11648883/policia-antiterrorista-detiene-britanico-irani-relacion-presunto-atentado-fallido-fairford.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/reino-unido-arresta-joven-britanico-irani-investigacion-supuesto-complot-base-fairford_1_13555014.html"
+        },
+        {
+          "language": "en",
+          "source": "breakingnews.ie",
+          "source_country": "ei",
+          "url": "https://www.breakingnews.ie/world/uk-iranian-dual-national-arrested-in-london-over-raf-fairford-incident-1951738.html"
+        },
+        {
+          "language": "en",
+          "source": "thejc.com",
+          "source_country": "is",
+          "url": "https://www.thejc.com/news/uk/iranian-british-national-arrested-raf-fairford-ob3yk2kg"
+        },
+        {
+          "language": "it",
+          "source": "ilgiornale.it",
+          "source_country": "it",
+          "url": "https://www.ilgiornale.it/news/esteri/il-mistero-di-fairford-si-tinge-diran-arrestato-un-britannico-iraniano-per-il-presunto-attacco-alla-base-raf/"
+        },
+        {
+          "language": "it",
+          "source": "blitzquotidiano.it",
+          "source_country": "it",
+          "url": "https://www.blitzquotidiano.it/cronaca/base-raf-di-fairford-arrestato-un-27enne-britannico-iraniano-per-terrorismo-3804602/"
+        },
+        {
+          "language": "it",
+          "source": "tg24.sky.it",
+          "source_country": "it",
+          "url": "https://tg24.sky.it/mondo/2026/10/01/incidente-base-aerea-fairford-arrestato"
+        },
+        {
+          "language": "it",
+          "source": "ilpost.it",
+          "source_country": "it",
+          "url": "https://www.ilpost.it/2026/10/01/arresto-anglo-iraniano-piano-fairford/"
+        },
+        {
+          "language": "ces",
+          "source": "lidovky.cz",
+          "source_country": "ez",
+          "url": "https://www.lidovky.cz/svet/britanie-zakladna-fairford-iran-utok-terorismus.A261001_201418_ln_zahranici_lval"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "ir"
+      ],
+      "origin_country": "ei",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/policia-detiene-hombre-nacionalidad-britanica-irani-incidente-20261001190240-nt.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4394,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7647
+        },
+        "total": 0.6471,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "reino unido",
+      "subject_names": [
+        "donald trump",
+        "fairford",
+        "iran",
+        "reino unido",
+        "trump"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "British counterterrorism police arrested a dual British-Iranian man in London in connection with a suspected plot or incident involving RAF Fairford, a U.S.-linked military base in the UK; the arrest is part of an ongoing investigation into the alleged attempt and authorities have treated the matter as a terrorism-related inquiry."
     }
   ],
-  "discarded_ingested": 40,
+  "discarded_ingested": 22,
   "discarded_kept": 5,
-  "generated_at": "2026-10-01T11:44:35.746037+00:00",
+  "generated_at": "2026-10-02T11:14:20.988073+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

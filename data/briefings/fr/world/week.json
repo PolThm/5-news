@@ -2,373 +2,419 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-christa-pike-84f28e69f1fa",
-        "subject-tennessee-171715ec19fd"
+        "subject-reino-unido-faa9f4b55eec"
       ],
-      "cluster_id": "subject-christa-pike-84f28e69f1fa",
-      "coherence": 0.46785187960916963,
+      "cluster_id": "subject-reino-unido-faa9f4b55eec",
+      "coherence": 0.43940976133776277,
       "consequence": 3,
       "countries": [
-        "france",
-        "lu",
-        "nl",
-        "united-states"
+        "ei",
+        "ez",
+        "is",
+        "it",
+        "spain"
       ],
-      "country_count": 4,
+      "country_count": 5,
       "editorial_day": "2026-10-01",
-      "headline": "L’exécution de Christa Pike dans le Tennessee a échoué et les mises à mort sont suspendues",
+      "headline": "Le Royaume‑Uni arrête un citoyen binationnal anglo‑iranien lié à un incident à la base de RAF Fairford",
       "independent_source_count": 11,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-01/la-policia-antiterrorista-del-reino-unido-detiene-a-un-britanico-irani-concectado-con-el-incidente-de-la-base-militar-de-fairford.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/policia-detiene-hombre-nacionalidad-britanica-irani-incidente-20261001190240-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261001/11648883/policia-antiterrorista-detiene-britanico-irani-relacion-presunto-atentado-fallido-fairford.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/reino-unido-arresta-joven-britanico-irani-investigacion-supuesto-complot-base-fairford_1_13555014.html"
+        },
+        {
+          "language": "en",
+          "source": "breakingnews.ie",
+          "source_country": "ei",
+          "url": "https://www.breakingnews.ie/world/uk-iranian-dual-national-arrested-in-london-over-raf-fairford-incident-1951738.html"
+        },
+        {
+          "language": "en",
+          "source": "thejc.com",
+          "source_country": "is",
+          "url": "https://www.thejc.com/news/uk/iranian-british-national-arrested-raf-fairford-ob3yk2kg"
+        },
+        {
+          "language": "it",
+          "source": "ilgiornale.it",
+          "source_country": "it",
+          "url": "https://www.ilgiornale.it/news/esteri/il-mistero-di-fairford-si-tinge-diran-arrestato-un-britannico-iraniano-per-il-presunto-attacco-alla-base-raf/"
+        },
+        {
+          "language": "it",
+          "source": "blitzquotidiano.it",
+          "source_country": "it",
+          "url": "https://www.blitzquotidiano.it/cronaca/base-raf-di-fairford-arrestato-un-27enne-britannico-iraniano-per-terrorismo-3804602/"
+        },
+        {
+          "language": "it",
+          "source": "tg24.sky.it",
+          "source_country": "it",
+          "url": "https://tg24.sky.it/mondo/2026/10/01/incidente-base-aerea-fairford-arrestato"
+        },
+        {
+          "language": "it",
+          "source": "ilpost.it",
+          "source_country": "it",
+          "url": "https://www.ilpost.it/2026/10/01/arresto-anglo-iraniano-piano-fairford/"
+        },
+        {
+          "language": "ces",
+          "source": "lidovky.cz",
+          "source_country": "ez",
+          "url": "https://www.lidovky.cz/svet/britanie-zakladna-fairford-iran-utok-terorismus.A261001_201418_ln_zahranici_lval"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom",
+        "ir"
+      ],
+      "origin_country": "ei",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/policia-detiene-hombre-nacionalidad-britanica-irani-incidente-20261001190240-nt.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elpais.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4394,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7647
+        },
+        "total": 0.7071,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "reino unido",
+      "subject_names": [
+        "donald trump",
+        "fairford",
+        "iran",
+        "reino unido",
+        "trump"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "La police antiterroriste britannique a arrêté à Londres un homme anglo‑iranien de 27 ans en lien avec un incident ou un présumé complot visant la base aérienne RAF Fairford; les autorités enquêtent sur un possible attentat et ont procédé à cette arrestation dans le cadre de l'enquête."
+    },
+    {
+      "_linked_ids": [
+        "subject-jordan-bardella-fd145b1b5382"
+      ],
+      "cluster_id": "subject-jordan-bardella-fd145b1b5382",
+      "coherence": 0.48836232244605526,
+      "consequence": 2,
+      "countries": [
+        "be",
+        "france",
+        "germany",
+        "it",
+        "lu",
+        "spain"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-10-02",
+      "headline": "Mediapart publie et affirme avoir authentifié des messages antisémites attribués à Jordan Bardella",
+      "independent_source_count": 14,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/01/etats-unis-apres-l-execution-ratee-de-christa-pike-le-tennessee-suspend-les-mises-a-mort-par-injection-letale_6786483_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/01/execution-ratee-de-christa-pike-aux-etats-unis-la-condamnee-a-survecu-a-l-injection-letale-apres-un-ultime-sursis-annule_6786327_3211.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/etats-unis-une-femme-va-etre-executee-dans-le-tennessee-pour-la-premiere-fois-depuis-200-ans-20260930_7NBPGNXAMBCU7D2OMGQNKKQSPE/"
+          "url": "https://www.lemonde.fr/politique/article/2026/10/02/la-droite-reste-prudente-pour-denoncer-les-propos-antisemites-de-jordan-bardella-malgre-des-preuves-accablantes_6787074_823448.html"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/etats-unis-l-execution-de-christa-pike-premiere-americaine-devant-etre-mise-a-mort-depuis-2023-a-echoue-20261001"
+          "url": "https://www.la-croix.com/politique/ecrits-antisemites-mediapart-revele-avoir-pu-authentifier-les-propos-attribues-a-jordan-bardella-20261001"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/justice-proces/l-execution-de-christa-pike-autorisee-in-extremis-par-la-cour-supreme-des-etats-unis-a-echoue-selon-ses-avocats_8217682.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/politique/jordan-bardella/extraction-des-donnees-constat-d-huissier-e-mails-comment-mediapart-justifie-l-authentification-des-messages-antisemites-attribues-a-jordan-bardella_8219347.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/jordan-bardella/direct-propos-antisemites-attribues-a-jordan-bardella-le-president-du-rn-ment-ehontement-accuse-gerald-darmanin_8219365.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-christa-pike-condamn%C3%A9e-%C3%A0-mort-survit-%C3%A0-une-tentative-d-ex%C3%A9cution"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-peine-de-mort-aux-etats-unis-le-cas-de-christa-pike-indigne"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261002-propos-antis%C3%A9mites-de-jordan-bardella-mediapart-publie-ses-preuves-apr%C3%A8s-les-d%C3%A9mentis-du-rn"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261001-%C3%A9tats-unis-finalement-autoris%C3%A9e-par-la-cour-supr%C3%AAme-l-ex%C3%A9cution-de-la-condamn%C3%A9e-%C3%A0-mort-christa-pike-a-%C3%A9chou%C3%A9"
+          "url": "https://www.rfi.fr/fr/france/20261001-france-mediapart-r%C3%A9v%C3%A8le-avoir-pu-authentifier-les-messages-antis%C3%A9mites-attribu%C3%A9s-%C3%A0-bardella"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/societe/peine-de-mort/condamnation-a-mort-de-christa-pike-aux-etats-unis-de-toutes-les-executions-ratees-celle-ci-est-la-pire-e422f184-bd6d-11f1-81a4-4fea3020cab7?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2633212"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2633155"
+          "url": "https://www.nouvelobs.com/politique/20261001.OBS118802/affaire-bardella-mediapart-devoile-sa-boite-noire-et-des-captures-d-ecran-de-messages-antisemites.html"
         },
         {
           "language": "fr",
-          "source": "courrierinternational.com",
-          "source_country": "united-states",
-          "url": "https://www.courrierinternational.com/article/etats-unis-l-execution-ratee-de-christa-pike-dans-le-tennessee-une-agonie-inutile_275422"
-        },
-        {
-          "language": "fr",
-          "source": "sixactualites.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://sixactualites.fr/actualites/un-sursis-judiciaire-suspend-lexecution-de-christa-pike-qui-aurait-ete-la-premiere-femme-executee-aux-etats-unis-depuis-2023/133156/"
+          "url": "https://www.nouvelobs.com/politique/20260928.OBS118683/d-anciens-ecrits-antisemites-de-jordan-bardella-reveles-par-mediapart.html"
         },
         {
           "language": "fr",
-          "source": "lessentiel.lu",
-          "source_country": "lu",
-          "url": "https://www.lessentiel.lu/fr/story/etats-unis-l-execution-d-une-femme-suspendue-dans-les-dernieres-minutes-103642075"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nos.nl",
-      "outbound_url": "https://nos.nl/l/2633155",
-      "rank": 1,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "nos.nl",
-        "ouest-france.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4679,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.7333,
-          "source_reliability": 0.8298
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/politique/accusations-dantisemitisme-mediapart-presente-des-preuves-bardella-continue-de-dementir_646122"
         },
-        "total": 0.743,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "christa pike",
-      "subject_names": [
-        "christa pike",
-        "etats-unis",
-        "tennessee"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "Christa Pike, condamnée à mort dans le Tennessee, a survécu à une injection létale considérée comme « ratée » par plusieurs sources ; après cette tentative d’exécution, les autorités judiciaires ont suspendu ou réexaminent les procédures d’exécution dans l’État, la Cour suprême ayant par ailleurs été saisie lors du processus."
-    },
-    {
-      "_linked_ids": [
-        "subject-israel-a21f9ce9ba17"
-      ],
-      "cluster_id": "subject-israel-a21f9ce9ba17",
-      "coherence": 0.5178570485368332,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "ke",
-        "nz",
-        "rs",
-        "sf",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-10-01",
-      "headline": "Un pilote poignarde son copilote et tente apparemment de faire s’écraser un vol vers Israël",
-      "independent_source_count": 22,
-      "members": [
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/sep/30/israel-bound-passenger-plane-emergency-landing-saudi-arabia-pilots-feud"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-01/el-periodico-mediapart-publica-las-pruebas-de-los-mensajes-antisemitas-atribuidos-a-jordan-bardella.html"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/09/30/flydubai-plane-traveling-to-israel-diverted-to-saudi-arabia-after-alleged-dispute-between-"
+          "url": "https://www.euronews.com/2026/10/01/france-mediapart-publishes-new-antisemitic-screenshots-attributed-to-jordan-bardella"
         },
         {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/30/nx-s1-5985806/flydubai-flight-dubai-tel-aviv-israel"
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/des-documents-authentiques-mediapart-revele-les-dessous-de-son-enquete-sur-jordan-bardella-7718987"
         },
         {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/netanyahu-says-a-pilot-on-a-flydubai-flight-stabbed-another-and-apparently-tried-to-crash-the-plane"
+          "language": "fr",
+          "source": "rtl.be",
+          "source_country": "be",
+          "url": "https://www.rtl.be/actu/monde/france/il-sagit-bien-du-veritable-jordan-bardella-mediapart-affirme-avoir-authentifie/2026-10-01/article/801955"
         },
         {
-          "language": "en",
-          "source": "journalgazette.net",
-          "source_country": "united-states",
-          "url": "https://www.journalgazette.net/news/world/pilot-stabs-fellow-pilot-on-flight-to-israel-before-passengers-intervene-to-stop-attack/article_4808ce6d-aedc-55ca-9bb0-fc7a2b83059b.html"
+          "language": "fr",
+          "source": "lessentiel.lu",
+          "source_country": "lu",
+          "url": "https://www.lessentiel.lu/fr/story/antisemitisme-en-france-mediapart-publie-les-preuves-du-mensonge-de-bardella-103642600"
         },
         {
-          "language": "en",
-          "source": "businessday.co.za",
-          "source_country": "sf",
-          "url": "https://www.businessday.co.za/world/2026-09-30-airline-cockpit-stabbing-may-be-attempted-terror-attack-says-israel/"
+          "language": "fr",
+          "source": "guadeloupe.franceantilles.fr",
+          "source_country": "germany",
+          "url": "https://www.guadeloupe.franceantilles.fr/actualite/france/mediapart-revele-avoir-pu-authentifier-les-messages-antisemites-attribues-a-bardella-1094797.php"
         },
         {
-          "language": "en",
-          "source": "klcc.org",
-          "source_country": "united-states",
-          "url": "https://www.klcc.org/npr-news/2026-09-30/a-pilot-stabs-the-other-pilot-and-tries-to-crash-their-flight-to-tel-aviv-israel-says"
-        },
-        {
-          "language": "en",
-          "source": "wnmufm.org",
-          "source_country": "united-states",
-          "url": "https://www.wnmufm.org/2026-09-30/a-pilot-stabs-the-other-pilot-and-tries-to-crash-their-flight-to-tel-aviv-israel-says"
-        },
-        {
-          "language": "en",
-          "source": "thisiswiltshire.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thisiswiltshire.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
-        },
-        {
-          "language": "en",
-          "source": "warringtonguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.warringtonguardian.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
-        },
-        {
-          "language": "en",
-          "source": "newstalkzb.co.nz",
-          "source_country": "nz",
-          "url": "https://www.newstalkzb.co.nz/news/world/israel-says-jihadist-pilot-tried-to-crash-flight-from-dubai-passengers-fought-back-to-prevent-disaster/"
-        },
-        {
-          "language": "en",
-          "source": "standardspeaker.com",
-          "source_country": "united-states",
-          "url": "https://www.standardspeaker.com/2026/09/30/netanyahu-flydubai-flight-stabbing/"
-        },
-        {
-          "language": "en",
-          "source": "sloughobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.sloughobserver.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
-        },
-        {
-          "language": "en",
-          "source": "oklahomastar.com",
-          "source_country": "united-states",
-          "url": "http://www.oklahomastar.com/news/279343574/israel-bound-flight-diverted-after-death-dive-and-pilot-stabbing"
-        },
-        {
-          "language": "en",
-          "source": "wknofm.org",
-          "source_country": "united-states",
-          "url": "https://www.wknofm.org/news-from-npr/2026-09-30/a-pilot-stabs-the-other-pilot-and-tries-to-crash-their-flight-to-tel-aviv-israel-says"
-        },
-        {
-          "language": "en",
-          "source": "nwemail.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.nwemail.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
-        },
-        {
-          "language": "en",
-          "source": "clactonandfrintongazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.clactonandfrintongazette.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
-        },
-        {
-          "language": "en",
-          "source": "channel3000.com",
-          "source_country": "united-states",
-          "url": "https://www.channel3000.com/news/a-pilot-on-a-flight-carrying-israelis-stabbed-another-and-apparently-tried-to-crash-netanyahu/article_ec6acc81-7223-57f9-87ef-6017c2c5cc42.html"
-        },
-        {
-          "language": "en",
-          "source": "kenyastar.com",
-          "source_country": "ke",
-          "url": "http://www.kenyastar.com/news/279343574/israel-bound-flight-diverted-after-death-dive-and-pilot-stabbing"
-        },
-        {
-          "language": "en",
-          "source": "cravenherald.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.cravenherald.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
-        },
-        {
-          "language": "en",
-          "source": "europesun.com",
-          "source_country": "rs",
-          "url": "http://www.europesun.com/news/279343574/israel-bound-flight-diverted-after-death-dive-and-pilot-stabbing"
-        },
-        {
-          "language": "en",
-          "source": "edp24.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.edp24.co.uk/news/national/26595374.pilot-flydubai-flight-israel-stabbed-another-tried-crash-plane/"
+          "language": "fr",
+          "source": "latribune.fr",
+          "source_country": "france",
+          "url": "https://www.latribune.fr/article/la-tribune-dimanche/politique/18149046301809/mediapart-publie-les-messages-antisemites-attribues-a-jordan-bardella"
         }
       ],
       "mentioned_countries": [
-        "is",
-        "sa"
+        "france"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/09/30/flydubai-plane-traveling-to-israel-diverted-to-saudi-arabia-after-alleged-dispute-between-",
+      "origin_country": "be",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/politique/20260928.OBS118683/d-anciens-ecrits-antisemites-de-jordan-bardella-reveles-par-mediapart.html",
       "rank": 2,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 10,
       "reference_newsrooms": [
+        "challenges.fr",
+        "elpais.com",
         "euronews.com",
-        "npr.org",
-        "pbs.org",
-        "theguardian.com"
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "nouvelobs.com",
+        "radiofrance.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5179,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4884,
+          "corroboration": 0.75,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.8462
+        },
+        "total": 0.6959,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "jordan bardella",
+      "subject_names": [
+        "affaire bardella",
+        "bardella",
+        "france",
+        "jordan bardella",
+        "leon xiv",
+        "lfi",
+        "marine",
+        "marseille",
+        "mediapart",
+        "nantes",
+        "pen"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "Plusieurs médias concordent pour dire que Mediapart a publié des captures d’écran et des éléments techniques (extractions de données, constat d’huissier, e‑mails) qu’il présente comme preuves et affirme avoir pu authentifier des messages à teneur antisémite attribués à Jordan Bardella; Bardella et son camp contestent ces publications et démentent, tandis que la droite reste prudente face aux éléments avancés."
+    },
+    {
+      "_linked_ids": [
+        "subject-otan-602ad52483bb"
+      ],
+      "cluster_id": "subject-otan-602ad52483bb",
+      "coherence": 0.45808461318249105,
+      "consequence": 3,
+      "countries": [
+        "gt",
+        "pe",
+        "po",
+        "spain"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-02",
+      "headline": "Poutine menace d'employer l'arsenal russe si Kaliningrad est attaqué",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261001/11648908/putin-insiste-en-que-rusia-usara-todo-su-arsenal-si-kaliningrado-es-atacada.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20260930/11647836/rusia-amenaza-otan-arsenal-nuclear-aisla-kaliningrado.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/otan-confirma-rusia-amenazo-utilizar-armas-nucleares-si-bloqueaba-kaliningrado_1_13551180.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20261001/putin-insiste-utilizar-armas-nucleares-aliados-otan-bloquean-kaliningrado-ocupar-donbas/1003744405563_0.html"
+        },
+        {
+          "language": "es",
+          "source": "prensalibre.com",
+          "source_country": "gt",
+          "url": "https://www.prensalibre.com/internacional/bbc-news-mundo-internacional/putin-advierte-que-rusia-esta-dispuesta-a-usar-todas-sus-armas-para-proteger-kaliningrado-incluidas-las-nucleares/"
+        },
+        {
+          "language": "es",
+          "source": "rpp.pe",
+          "source_country": "pe",
+          "url": "https://rpp.pe/mundo/actualidad/putin-amenaza-con-emplear-todo-su-arsenal-si-atacan-kaliningrado-claves-del-enclave-ruso-noticia-1710403"
+        },
+        {
+          "language": "pt",
+          "source": "sol.iol.pt",
+          "source_country": "po",
+          "url": "https://sol.iol.pt/internacional/noticias/putin-ameaca-usar-todo-o-arsenal-russo-se-kaliningrado-for-atacada/20261001/6abea2de0cf20dc52778e12f"
+        }
+      ],
+      "mentioned_countries": [
+        "rs"
+      ],
+      "origin_country": "gt",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/otan-confirma-rusia-amenazo-utilizar-armas-nucleares-si-bloqueaba-kaliningrado_1_13551180.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4581,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.8462,
-          "source_reliability": 0.8571
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.7393,
+        "total": 0.6864,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "israel",
+      "subject_label": "otan",
       "subject_names": [
-        "dubai",
-        "dubai-tel aviv",
-        "gaza",
-        "israel",
-        "israel-bound",
-        "netanyahu",
-        "smit machchhar",
-        "tel aviv",
-        "tel-aviv"
+        "kaliningrad",
+        "kaliningrado",
+        "nato",
+        "otan",
+        "putin",
+        "rusia"
       ],
-      "subject_newsroom_count": 26,
-      "summary": "Sur un vol FlyDubai à destination d’Israël, un membre d’équipage a poignardé le copilote en plein vol, puis aurait tenté de provoquer un crash avant qu’un atterrissage d’urgence ou la réaction des passagers n’empêche la catastrophe; les autorités israéliennes enquêtent et qualifient l’incident de possible attaque terroriste."
+      "subject_newsroom_count": 6,
+      "summary": "Les articles concordent pour dire que le président russe Vladimir Poutine a menacé que la Russie utiliserait « tout son arsenal », y compris des armes nucléaires, pour défendre l'enclave de Kaliningrad si celle-ci était attaquée ou isolée, et que l'OTAN a confirmé avoir reçu cette menace. Ils indiquent aussi que Poutine a lié cette posture à la protection de territoires russes impliqués dans le conflit en Ukraine."
     },
     {
       "_linked_ids": [
-        "subject-swiss-31c43ad1b04d"
+        "subject-swiss-1905d3b9b886"
       ],
-      "cluster_id": "subject-swiss-31c43ad1b04d",
-      "coherence": 0.558235115692665,
+      "cluster_id": "subject-swiss-1905d3b9b886",
+      "coherence": 0.47009992611803564,
       "consequence": 3,
       "countries": [
-        "germany",
         "it",
+        "tu",
         "united-kingdom",
         "united-states"
       ],
       "country_count": 4,
-      "editorial_day": "2026-10-01",
-      "headline": "Les glaciers suisses ont perdu une part importante de leur glace en 2026",
-      "independent_source_count": 10,
+      "editorial_day": "2026-10-02",
+      "headline": "Les glaciers suisses perdent massivement de la glace après un été exceptionnellement chaud",
+      "independent_source_count": 4,
       "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/environment/2026/oct/01/switzerland-glacier-loss-fossil-fuel-pollution-europe"
-        },
         {
           "language": "en",
           "source": "bbc.co.uk",
@@ -389,104 +435,76 @@
         },
         {
           "language": "en",
-          "source": "wnyc.org",
-          "source_country": "united-states",
-          "url": "https://wnyc.org/npr/nx-s1-5981403"
-        },
-        {
-          "language": "en",
-          "source": "wcbe.org",
-          "source_country": "united-states",
-          "url": "https://www.wcbe.org/npr-news/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
-        },
-        {
-          "language": "en",
-          "source": "kmxt.org",
-          "source_country": "united-states",
-          "url": "https://www.kmxt.org/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
-        },
-        {
-          "language": "en",
-          "source": "wohfradio.com",
-          "source_country": "united-states",
-          "url": "https://wohfradio.com/national-news/experts-say-swiss-glaciers-lost-5-5-of-their-ice-this-year-second-biggest-annual-loss-due-to-heat-waves-and-less-snow/"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/swiss-glaciers-lose-of-more-than-5-in-ice-volume-in-2026/a-79495965"
-        },
-        {
-          "language": "en",
-          "source": "kunr.org",
-          "source_country": "united-states",
-          "url": "https://www.kunr.org/world-headlines/2026-09-30/swiss-glaciers-suffer-another-year-of-record-ice-loss"
+          "source": "dailysabah.com",
+          "source_country": "tu",
+          "url": "https://www.dailysabah.com/life/environment/swiss-glaciers-face-catastrophic-melt-after-record-hot-summer"
         }
       ],
       "mentioned_countries": [
         "sz"
       ],
-      "origin_country": "germany",
+      "origin_country": "it",
       "outbound_source": "npr.org",
       "outbound_url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change",
-      "rank": 3,
-      "reference_newsroom_count": 5,
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "dw.com",
         "euronews.com",
-        "npr.org",
-        "theguardian.com"
+        "npr.org"
       ],
       "score": {
         "components": {
-          "coherence": 0.5582,
+          "coherence": 0.4701,
           "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7576
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.7319,
+        "total": 0.6791,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "swiss",
       "subject_names": [
         "swiss"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Les articles indiquent qu’en 2026 les glaciers suisses ont subi une nouvelle forte fonte, perdant environ 5,5 % de leur volume de glace sur l’année — une des plus fortes diminutions annuelles enregistrées — et qu’au cours des dernières années la perte cumulée a été très importante (environ 20 % sur cinq ans selon certains bilans). La fonte accrue est attribuée dans ces comptes rendus à des vagues de chaleur et à un enneigement moindre, et les pertes menacent l’approvisionnement en eau et illustrent une tendance de déclin glaciaire continu en Suisse."
+      "subject_newsroom_count": 4,
+      "summary": "Les quatre articles indiquent que les glaciers suisses ont subi une perte importante de glace cette année après un été très chaud; les études et observations parlent d’une fonte parmi les plus fortes enregistrées (la deuxième ou une année record selon les sources), avec une réduction notable du volume ou de la surface glaciaire qui menace les disponibilités en eau et est qualifiée de « catastrophique » ou « désastreuse » par les chercheurs et autorités citées."
     },
     {
       "_linked_ids": [
         "subject-fatima-mansouri-8ebb951f1242",
-        "subject-mansouri-a1d8ab59fb9b"
+        "subject-mansouri-a1d8ab59fb9b",
+        "subject-marruecos-08877c4180e0"
       ],
-      "cluster_id": "subject-fatima-mansouri-8ebb951f1242",
-      "coherence": 0.5055414053556748,
+      "cluster_id": "subject-marruecos-08877c4180e0",
+      "coherence": 0.44338851863771467,
       "consequence": 3,
       "countries": [
-        "ar",
         "france",
-        "germany",
         "it",
-        "spain",
-        "united-states"
+        "spain"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-09-30",
-      "headline": "Le roi Mohammed VI nomme Fatima Ezzahra El Mansouri première cheffe du gouvernement",
-      "independent_source_count": 8,
+      "country_count": 3,
+      "editorial_day": "2026-10-02",
+      "headline": "Fatima Ezzahra El Mansouri nommée première femme Première ministre du Maroc",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/proche-moyen-orient/maroc-fatima-ezzahra-el-mansouri-devient-la-premiere-femme-premiere-ministre-TNWIXGKXNBAVBLFVYJ7FFBRQ2E/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261002/11648860/ascenso-fatima-mansuri-hija-pacha-convertida-primera-ministra-marruecos.html"
         },
         {
           "language": "es",
@@ -501,212 +519,55 @@
           "url": "https://www.eldiario.es/internacional/mohamed-vi-encarga-formar-gobierno-fatima-mansouri-primera-mujer-asumir-cargo-marruecos_1_13548127.html"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/fatima-mansouri-mujer-que-rompe-moldes-marruecos-ya-ha-sido-alcaldesa-ministra-lider-partido-ahora-formara-gobierno_7043122_0.html"
-        },
-        {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
           "url": "https://www.euronews.com/2026/09/30/moroccos-king-mohammed-vi-appoints-fatima-mansouri-as-the-countrys-first-female-prime-mini"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/moroccos-king-appoints-fatima-zahra-mansouri-as-countrys-1st-woman-prime-minister"
-        },
-        {
-          "language": "fr",
-          "source": "guadeloupe.franceantilles.fr",
-          "source_country": "germany",
-          "url": "https://www.guadeloupe.franceantilles.fr/actualite/international/au-maroc-fatima-ezzahra-el-mansouri-devient-la-premiere-cheffe-du-gouvernement-1094650.php"
-        },
-        {
-          "language": "es",
-          "source": "elcordillerano.com.ar",
-          "source_country": "ar",
-          "url": "https://www.elcordillerano.com.ar/noticias/2026/09/30/264927-fatima-zahra-el-mansouri-es-la-primera-mujer-en-liderar-el-gobierno-de-marruecos"
         }
       ],
       "mentioned_countries": [
         "mo"
       ],
-      "origin_country": "ar",
+      "origin_country": "france",
       "outbound_source": "lavanguardia.com",
       "outbound_url": "https://www.lavanguardia.com/internacional/20260929/11646980/marruecos-tendra-primera-vez-primera-ministra-fatima-mansouri.html",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "euronews.com",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5055,
-          "corroboration": 0.75,
-          "editorial_weight": 0.4286,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.6667,
-          "source_reliability": 0.7333
-        },
-        "total": 0.7293,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "fatima mansouri",
-      "subject_names": [
-        "fatima mansouri",
-        "mansouri",
-        "maroc",
-        "marruecos"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Les articles indiquent que le roi Mohammed VI du Maroc a chargé Fatima Ezzahra (Fatima Zahra) El Mansouri — ancienne maire, ministre et dirigeante de parti — de former le gouvernement, faisant d’elle la première femme à occuper le poste de Première ministre/cheffe du gouvernement du pays."
-    },
-    {
-      "_linked_ids": [
-        "subject-hegseth-a830f84e276e"
-      ],
-      "cluster_id": "subject-hegseth-a830f84e276e",
-      "coherence": 0.4479534635553697,
-      "consequence": 3,
-      "countries": [
-        "ca",
-        "france",
-        "germany",
-        "india",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-01",
-      "headline": "Le secrétaire à la Défense Pete Hegseth annonce une coupe de 20 % des généraux et amiraux",
-      "independent_source_count": 11,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/01/aux-etats-unis-pete-hegseth-le-secretaire-a-la-defense-revendique-une-reduction-de-20-du-nombre-de-hauts-grades-et-poursuit-la-reconfiguration-de-l-armee_6786428_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261001-etats-unis-hegseth-dit-avoir-r%C3%A9duit-de-20-le-nombre-de-g%C3%A9n%C3%A9raux-dans-l-arm%C3%A9e"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20261001-aux-%C3%A9tats-unis-pete-hegseth-affirme-avoir-r%C3%A9duit-de-20-le-nombre-de-g%C3%A9n%C3%A9raux-et-amiraux"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/amerika/hegseth-entlaesst-offiziere-musk-untersucht-kriegsfuehrung-100.html"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/watch-live-hegseth-delivers-state-of-the-force-address-expected-to-make-cuts-to-top-ranks"
-        },
-        {
-          "language": "en",
-          "source": "wtop.com",
-          "source_country": "united-states",
-          "url": "https://wtop.com/us-politics/2026/09/hegseth-confirms-that-the-us-military-will-cut-20-of-its-generals-and-admirals/"
-        },
-        {
-          "language": "en",
-          "source": "thehindu.com",
-          "source_country": "india",
-          "url": "https://www.thehindu.com/news/international/hegseth-announces-new-drone-command-cuts-to-20-of-generals-in-state-of-the-force-speech/article71531255.ece"
-        },
-        {
-          "language": "en",
-          "source": "salinapost.com",
-          "source_country": "united-states",
-          "url": "https://salinapost.com/posts/1348f5d7-28ed-445d-a9ea-1b5ce336dff4"
-        },
-        {
-          "language": "fr",
-          "source": "ledevoir.com",
-          "source_country": "ca",
-          "url": "https://www.ledevoir.com/monde/etats-unis/1013477/pete-hegseth-affirme-avoir-considerablement-reduit-nombre-generaux"
-        },
-        {
-          "language": "en",
-          "source": "klcc.org",
-          "source_country": "united-states",
-          "url": "https://www.klcc.org/npr-politics/2026-09-30/defense-secretary-pete-hegseth-cuts-generals-and-admirals-by-20"
-        },
-        {
-          "language": "en",
-          "source": "wknofm.org",
-          "source_country": "united-states",
-          "url": "https://www.wknofm.org/politics-npr-news/2026-09-30/defense-secretary-pete-hegseth-cuts-generals-and-admirals-by-20"
-        },
-        {
-          "language": "en",
-          "source": "time.com",
-          "source_country": "united-states",
-          "url": "https://time.com/article/2026/09/30/hegseth-pentagon-us-military-generals-admirals-cuts/"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "ca",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/world/watch-live-hegseth-delivers-state-of-the-force-address-expected-to-make-cuts-to-top-ranks",
       "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr",
-        "pbs.org",
-        "tagesschau.de"
+        "eldiario.es",
+        "euronews.com",
+        "lavanguardia.com",
+        "lexpress.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.448,
-          "corroboration": 0.7143,
+          "coherence": 0.4434,
+          "corroboration": 0.6,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7838
+          "novelty": 0.3333,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.7149,
+        "total": 0.6715,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "hegseth",
+      "subject_label": "marruecos",
       "subject_names": [
-        "christa pike",
-        "etats-unis",
-        "hegseth",
-        "tennessee"
+        "fatima mansouri",
+        "maroc",
+        "marruecos",
+        "mohamed"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Les articles concordent pour dire que le secrétaire à la Défense américain Pete Hegseth a annoncé avoir réduit ou annoncé la réduction d’environ 20 % du nombre de généraux et d’amiraux dans les forces armées, dans le cadre d’une réorganisation plus large incluant la création d’un commandement pour drones et d’autres changements structurels."
+      "subject_newsroom_count": 9,
+      "summary": "Les articles indiquent que le roi Mohammed VI a chargé Fatima Ezzahra El Mansouri (aussi appelée Fatima Mansuri) de former le gouvernement, faisant d’elle la première femme à occuper le poste de Première ministre au Maroc. Ils précisent son nomination historique mais ne donnent pas de détails supplémentaires sur la composition du futur cabinet ni sur son programme."
     }
   ],
-  "discarded_ingested": 258,
+  "discarded_ingested": 174,
   "discarded_kept": 5,
-  "generated_at": "2026-10-01T11:44:35.746037+00:00",
+  "generated_at": "2026-10-02T11:14:20.988073+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

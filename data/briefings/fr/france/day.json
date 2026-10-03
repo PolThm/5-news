@@ -1,57 +1,369 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-jordan-bardella-fd145b1b5382",
-      "coherence": 0.48836232244605526,
-      "consequence": 2,
+      "cluster_id": "subject-france-edc9b38a37ed",
+      "coherence": 0.4765270872567776,
+      "consequence": 3,
       "countries": [
-        "be",
-        "france",
-        "germany",
         "it",
         "lu",
-        "spain"
+        "ng",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-10-02",
-      "headline": "Mediapart publie et affirme avoir authentifié des messages antisémites attribués à Jordan Bardella",
-      "independent_source_count": 14,
+      "country_count": 5,
+      "editorial_day": "2026-10-03",
+      "headline": "Des lycéens manifestent et affrontent la police lors de protestations nationales",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/cr5ynddn318eo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/02/hundreds-of-high-schools-in-france-close-as-new-protests-against-conditions-erupt"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/01/french-protests-over-school-conditions-spread-as-students-set-fires-and-put-up-blockades"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/10/02/french-students-clash-with-police-as-school-protests-spread-nationwide"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting"
+        },
+        {
+          "language": "en",
+          "source": "chronicle.lu",
+          "source_country": "lu",
+          "url": "https://www.chronicle.lu/category/international/63773-students-police-clash-as-france-struggles-to-quell-school-protests"
+        },
+        {
+          "language": "en",
+          "source": "dailytrust.com",
+          "source_country": "ng",
+          "url": "https://dailytrust.com/schools-shut-as-violent-protest-breaks-out-in-france/"
+        },
+        {
+          "language": "en",
+          "source": "kvia.com",
+          "source_country": "united-states",
+          "url": "https://kvia.com/news/us-world/cnn-world/2026/10/02/students-and-police-clash-as-frances-government-struggles-to-calm-student-tensions/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4765,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7895
+        },
+        "total": 0.7115,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "emmanuel macron",
+        "france",
+        "francia",
+        "french",
+        "italia",
+        "lecornu",
+        "paris"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "Des centaines de lycées à travers la France ont été touchés par des blocages, des incendies et des fermetures alors qu’élèves et forces de l’ordre se sont affrontés ; les manifestations dénoncent la dégradation et le sous-financement des conditions scolaires, et ont poussé le gouvernement à convoquer une réunion de crise."
+    },
+    {
+      "cluster_id": "subject-france-ad5991e3c067",
+      "coherence": 0.5999889393248863,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-03",
+      "headline": "La France enregistre un nouveau record de détenus avec 90 020 personnes en prison",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/02/la-droite-reste-prudente-pour-denoncer-les-propos-antisemites-de-jordan-bardella-malgre-des-preuves-accablantes_6787074_823448.html"
+          "url": "https://www.lemonde.fr/societe/article/2026/10/03/les-prisons-francaises-continuent-d-etre-surpeuplees-avec-un-nombre-inegale-de-plus-de-90-000-detenus_6787785_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/politique/ecrits-antisemites-mediapart-revele-avoir-pu-authentifier-les-propos-attribues-a-jordan-bardella-20261001"
+          "url": "https://www.la-croix.com/societe/prisons-90-020-detenus-en-france-un-nouveau-record-20261003"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/jordan-bardella/extraction-des-donnees-constat-d-huissier-e-mails-comment-mediapart-justifie-l-authentification-des-messages-antisemites-attribues-a-jordan-bardella_8219347.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/societe/prisons/la-surpopulation-carcerale-atteint-un-nouveau-record-en-france-avec-90-020-detenus-au-1er-septembre_8220991.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6903,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "emmanuel macron",
+        "france",
+        "francia",
+        "french",
+        "italia",
+        "lecornu",
+        "paris"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "Au 1er septembre, les prisons françaises comptent 90 020 détenus, un chiffre inédit signalant une surpopulation carcérale persistante selon les bilans publiés ; plusieurs sources confirment que ce total constitue un nouveau record national."
+    },
+    {
+      "cluster_id": "subject-europe-e3c6edde7577",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-02",
+      "headline": "L'été 2026 est le plus chaud jamais enregistré en Europe occidentale",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/02/l-ete-2026-devient-le-plus-chaud-jamais-enregistre-en-europe-occidentale-sans-provoquer-de-sursaut-politique_6786757_3210.html"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/jordan-bardella/direct-propos-antisemites-attribues-a-jordan-bardella-le-president-du-rn-ment-ehontement-accuse-gerald-darmanin_8219365.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/environnement/crise-climatique/l-ete-2026-est-le-plus-chaud-jamais-enregistre-en-europe-de-l-ouest-selon-l-institut-copernicus_8219773.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "es",
+          "source": "diariodesevilla.es",
+          "source_country": "spain",
+          "url": "https://www.diariodesevilla.es/sociedad/europa-occidental-registra-verano-calido_0_2008129337.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/02/l-ete-2026-devient-le-plus-chaud-jamais-enregistre-en-europe-occidentale-sans-provoquer-de-sursaut-politique_6786757_3210.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.6207,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "europe",
+      "subject_names": [
+        "copernicus",
+        "europa",
+        "europe"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Les articles indiquent que l'été 2026 a été enregistré comme le plus chaud de l'histoire en Europe occidentale selon l'institut Copernicus et des bilans climatiques, une tendance confirmée par plusieurs sources européennes ; l'extrême chaleur n'a pas provoqué de basculement politique notable dans la région selon au moins un des textes."
+    },
+    {
+      "cluster_id": "subject-blocage-b0f00f993f5e",
+      "coherence": 0.44855402017342916,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-03",
+      "headline": "Blocages de lycées : LFI apporte un soutien attentif mais critiqué",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/politique/article/2026/10/03/blocage-des-lycees-pour-la-france-insoumise-un-appui-au-mouvement-a-double-tranchant_6787492_823448.html"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261002-propos-antis%C3%A9mites-de-jordan-bardella-mediapart-publie-ses-preuves-apr%C3%A8s-les-d%C3%A9mentis-du-rn"
+          "url": "https://www.la-croix.com/politique/blocus-des-lycees-lfi-tente-d-ajuster-son-discours-face-aux-debordements-20261002"
         },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/politique/blocus-des-lycees-lfi-les-eleves-et-les-professeurs-la-bataille-du-recit-RCAYC3FTXRFWRILPUQOC6D3MGU/"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/societe/blocus-des-lycees-matignon-pointe-du-doigt-lfi-et-ses-proxys-de-lultra-gauche-N2UIKMF34JHU7F6VFQLTBP4U7A/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/societe/blocus-des-lycees-matignon-pointe-du-doigt-lfi-et-ses-proxys-de-lultra-gauche-N2UIKMF34JHU7F6VFQLTBP4U7A/",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lemonde.fr",
+        "lexpress.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4486,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
+        },
+        "total": 0.5821,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "blocage",
+      "subject_names": [
+        "blocage",
+        "blocages",
+        "lfi",
+        "teddy riner"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Les articles font état d’un mouvement de blocus dans des lycées soutenu publiquement par La France insoumise, qui tente d’ajuster son discours face aux débordements et aux critiques. Tous relèvent que ce soutien est perçu à la fois comme un appui utile aux élèves et comme une source de polémique, Matignon et certains médias désignant LFI et ses relais comme responsables ou coupables d’excès, tandis que la formation cherche à gérer l’image et la narration de l’action entre élèves et professeurs."
+    },
+    {
+      "cluster_id": "subject-jordan-bardella-b1b3e68d6910",
+      "coherence": 0.40285814364571815,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-02",
+      "headline": "Mediapart publie des captures accusant Jordan Bardella de propos antisémites",
+      "independent_source_count": 4,
+      "members": [
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261001-france-mediapart-r%C3%A9v%C3%A8le-avoir-pu-authentifier-les-messages-antis%C3%A9mites-attribu%C3%A9s-%C3%A0-bardella"
+          "url": "https://www.rfi.fr/fr/podcasts/chronique-des-m%C3%A9dias/20261002-faut-il-croire-mediapart-apr%C3%A8s-ses-r%C3%A9v%C3%A9lations-sur-les-propos-antis%C3%A9mites-attribu%C3%A9s-%C3%A0-jordan-bardella"
         },
         {
           "language": "fr",
@@ -72,463 +384,55 @@
           "url": "https://www.challenges.fr/politique/accusations-dantisemitisme-mediapart-presente-des-preuves-bardella-continue-de-dementir_646122"
         },
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-01/el-periodico-mediapart-publica-las-pruebas-de-los-mensajes-antisemitas-atribuidos-a-jordan-bardella.html"
-        },
-        {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
           "url": "https://www.euronews.com/2026/10/01/france-mediapart-publishes-new-antisemitic-screenshots-attributed-to-jordan-bardella"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/des-documents-authentiques-mediapart-revele-les-dessous-de-son-enquete-sur-jordan-bardella-7718987"
-        },
-        {
-          "language": "fr",
-          "source": "rtl.be",
-          "source_country": "be",
-          "url": "https://www.rtl.be/actu/monde/france/il-sagit-bien-du-veritable-jordan-bardella-mediapart-affirme-avoir-authentifie/2026-10-01/article/801955"
-        },
-        {
-          "language": "fr",
-          "source": "lessentiel.lu",
-          "source_country": "lu",
-          "url": "https://www.lessentiel.lu/fr/story/antisemitisme-en-france-mediapart-publie-les-preuves-du-mensonge-de-bardella-103642600"
-        },
-        {
-          "language": "fr",
-          "source": "guadeloupe.franceantilles.fr",
-          "source_country": "germany",
-          "url": "https://www.guadeloupe.franceantilles.fr/actualite/france/mediapart-revele-avoir-pu-authentifier-les-messages-antisemites-attribues-a-bardella-1094797.php"
-        },
-        {
-          "language": "fr",
-          "source": "latribune.fr",
-          "source_country": "france",
-          "url": "https://www.latribune.fr/article/la-tribune-dimanche/politique/18149046301809/mediapart-publie-les-messages-antisemites-attribues-a-jordan-bardella"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "be",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/politique/20260928.OBS118683/d-anciens-ecrits-antisemites-de-jordan-bardella-reveles-par-mediapart.html",
-      "rank": 1,
-      "reference_newsroom_count": 10,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "elpais.com",
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "nouvelobs.com",
-        "radiofrance.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4884,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5556,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.8462
-        },
-        "total": 0.7192,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "jordan bardella",
-      "subject_names": [
-        "affaire bardella",
-        "bardella",
-        "france",
-        "jordan bardella",
-        "leon xiv",
-        "lfi",
-        "marine",
-        "marseille",
-        "mediapart",
-        "nantes",
-        "pen"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "Plusieurs médias concordent pour dire que Mediapart a publié des captures d’écran et des éléments techniques (extractions de données, constat d’huissier, e‑mails) qu’il présente comme preuves et affirme avoir pu authentifier des messages à teneur antisémite attribués à Jordan Bardella; Bardella et son camp contestent ces publications et démentent, tandis que la droite reste prudente face aux éléments avancés."
-    },
-    {
-      "cluster_id": "subject-france-4667a7cd7a08",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-02",
-      "headline": "Septembre 2026 a été le deuxième mois de septembre le plus chaud en France",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/environnement/climat/septembre-2026-a-ete-le-deuxieme-mois-le-plus-chaud-et-le-troisieme-plus-sec-en-france-20261002_MS6A7Q5FVZDMBDUWOQLZQY4XLI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/planete/canicule-deuxieme-mois-de-septembre-le-plus-chaud-jamais-enregistre-en-france-20261002"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/meteo/la-france-a-connu-le-deuxieme-mois-de-septembre-le-plus-chaud-de-son-histoire-en-2026-annonce-meteo-france_8219509.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/environnement/climat/septembre-2026-a-ete-le-deuxieme-mois-le-plus-chaud-et-le-troisieme-plus-sec-en-france-20261002_MS6A7Q5FVZDMBDUWOQLZQY4XLI/",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6581,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "leon xiv",
-        "lfi",
-        "marseille",
-        "nantes"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Météo‑France a annoncé que septembre 2026 a été, en France, le deuxième mois de septembre le plus chaud jamais enregistré ; les articles indiquent aussi que ce mois a été très sec, se classant parmi les plus secs."
-    },
-    {
-      "cluster_id": "subject-france-f6e074668c29",
-      "coherence": 0.42047930510240894,
-      "consequence": 2,
-      "countries": [
-        "germany",
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-02",
-      "headline": "Des centaines d'élèves manifestent et ferment des lycées à travers la France",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/france-hundreds-arrested-as-student-protests-escalate/a-79495633?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/02/hundreds-of-high-schools-in-france-close-as-new-protests-against-conditions-erupt"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
-      "rank": 3,
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/politique/20260928.OBS118683/d-anciens-ecrits-antisemites-de-jordan-bardella-reveles-par-mediapart.html",
+      "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
+        "challenges.fr",
         "euronews.com",
-        "pbs.org"
+        "nouvelobs.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4205,
-          "corroboration": 0.6667,
+          "coherence": 0.4029,
+          "corroboration": 0.5,
           "editorial_weight": 0.3333,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5,
           "source_reliability": 0.6522
         },
-        "total": 0.6314,
+        "total": 0.5775,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "jordan bardella",
       "subject_names": [
-        "france",
-        "francia",
-        "french",
-        "leon xiv",
-        "lfi",
-        "marseille",
-        "nantes"
+        "affaire bardella",
+        "bardella",
+        "jordan bardella",
+        "mediapart"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Des manifestations d'élèves ont lieu dans de nombreux lycées en France, avec des établissements fermés, des blocages et des incendies signalés ; les protestations ont entraîné des arrestations en nombre et ont poussé le gouvernement à organiser une réunion de crise."
-    },
-    {
-      "cluster_id": "subject-swiss-1905d3b9b886",
-      "coherence": 0.47009992611803564,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "tu",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-02",
-      "filled_from": "europe",
-      "headline": "Les glaciers suisses perdent massivement de la glace après un été exceptionnellement chaud",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6n9w0ypjwl9o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/01/swiss-glaciers-lose-55-of-ice-in-second-largest-melt-on-record"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change"
-        },
-        {
-          "language": "en",
-          "source": "dailysabah.com",
-          "source_country": "tu",
-          "url": "https://www.dailysabah.com/life/environment/swiss-glaciers-face-catastrophic-melt-after-record-hot-summer"
-        }
-      ],
-      "mentioned_countries": [
-        "sz"
-      ],
-      "origin_country": "it",
-      "outbound_source": "npr.org",
-      "outbound_url": "https://www.npr.org/2026/09/30/nx-s1-5981403/swiss-glaciers-climate-change",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4701,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6425,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "swiss",
-      "subject_names": [
-        "swiss"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Les quatre articles indiquent que les glaciers suisses ont subi une perte importante de glace cette année après un été très chaud; les études et observations parlent d’une fonte parmi les plus fortes enregistrées (la deuxième ou une année record selon les sources), avec une réduction notable du volume ou de la surface glaciaire qui menace les disponibilités en eau et est qualifiée de « catastrophique » ou « désastreuse » par les chercheurs et autorités citées."
-    },
-    {
-      "cluster_id": "subject-reino-unido-faa9f4b55eec",
-      "coherence": 0.43940976133776277,
-      "consequence": 3,
-      "countries": [
-        "ei",
-        "ez",
-        "is",
-        "it",
-        "spain"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-01",
-      "filled_from": "europe",
-      "headline": "Le Royaume‑Uni arrête un citoyen binationnal anglo‑iranien lié à un incident à la base de RAF Fairford",
-      "independent_source_count": 11,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-01/la-policia-antiterrorista-del-reino-unido-detiene-a-un-britanico-irani-concectado-con-el-incidente-de-la-base-militar-de-fairford.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/policia-detiene-hombre-nacionalidad-britanica-irani-incidente-20261001190240-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261001/11648883/policia-antiterrorista-detiene-britanico-irani-relacion-presunto-atentado-fallido-fairford.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/reino-unido-arresta-joven-britanico-irani-investigacion-supuesto-complot-base-fairford_1_13555014.html"
-        },
-        {
-          "language": "en",
-          "source": "breakingnews.ie",
-          "source_country": "ei",
-          "url": "https://www.breakingnews.ie/world/uk-iranian-dual-national-arrested-in-london-over-raf-fairford-incident-1951738.html"
-        },
-        {
-          "language": "en",
-          "source": "thejc.com",
-          "source_country": "is",
-          "url": "https://www.thejc.com/news/uk/iranian-british-national-arrested-raf-fairford-ob3yk2kg"
-        },
-        {
-          "language": "it",
-          "source": "ilgiornale.it",
-          "source_country": "it",
-          "url": "https://www.ilgiornale.it/news/esteri/il-mistero-di-fairford-si-tinge-diran-arrestato-un-britannico-iraniano-per-il-presunto-attacco-alla-base-raf/"
-        },
-        {
-          "language": "it",
-          "source": "blitzquotidiano.it",
-          "source_country": "it",
-          "url": "https://www.blitzquotidiano.it/cronaca/base-raf-di-fairford-arrestato-un-27enne-britannico-iraniano-per-terrorismo-3804602/"
-        },
-        {
-          "language": "it",
-          "source": "tg24.sky.it",
-          "source_country": "it",
-          "url": "https://tg24.sky.it/mondo/2026/10/01/incidente-base-aerea-fairford-arrestato"
-        },
-        {
-          "language": "it",
-          "source": "ilpost.it",
-          "source_country": "it",
-          "url": "https://www.ilpost.it/2026/10/01/arresto-anglo-iraniano-piano-fairford/"
-        },
-        {
-          "language": "ces",
-          "source": "lidovky.cz",
-          "source_country": "ez",
-          "url": "https://www.lidovky.cz/svet/britanie-zakladna-fairford-iran-utok-terorismus.A261001_201418_ln_zahranici_lval"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "ir"
-      ],
-      "origin_country": "ei",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/policia-detiene-hombre-nacionalidad-britanica-irani-incidente-20261001190240-nt.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4394,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6392,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "reino unido",
-      "subject_names": [
-        "donald trump",
-        "fairford",
-        "iran",
-        "reino unido",
-        "trump"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "La police antiterroriste britannique a arrêté à Londres un homme anglo‑iranien de 27 ans en lien avec un incident ou un présumé complot visant la base aérienne RAF Fairford; les autorités enquêtent sur un possible attentat et ont procédé à cette arrestation dans le cadre de l'enquête."
+      "subject_newsroom_count": 11,
+      "summary": "Plusieurs médias indiquent que Mediapart a rendu publiques des captures d’écran et une « boîte noire » contenant des messages antisémites attribués à Jordan Bardella; les articles précisent que Mediapart présente ces éléments comme des preuves tandis que Bardella continue de nier les accusations."
     }
   ],
-  "discarded_ingested": 31,
+  "discarded_ingested": 35,
   "discarded_kept": 5,
-  "generated_at": "2026-10-02T11:14:20.988073+00:00",
+  "generated_at": "2026-10-03T10:31:22.194629+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

@@ -2,52 +2,28 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ukraine-602b91b094d6"
+        "subject-russia-1c9016226b03"
       ],
-      "cluster_id": "subject-ukraine-602b91b094d6",
-      "coherence": 0.4843208386640021,
+      "cluster_id": "subject-russia-1c9016226b03",
+      "coherence": 0.4598265311489034,
       "consequence": 3,
       "countries": [
-        "france",
         "it",
+        "rp",
         "spain",
-        "sz",
-        "united-kingdom"
+        "united-kingdom",
+        "united-states"
       ],
       "country_count": 5,
       "editorial_day": "2026-10-03",
-      "headline": "Russia struck a second major bridge in Kyiv, damaging a Dnipro crossing",
-      "independent_source_count": 8,
+      "headline": "Russia strikes a second major bridge in Kyiv amid wider attacks",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/10/03/en-direct-guerre-en-ukraine-la-russie-a-attaque-un-deuxieme-pont-majeur-a-kiev_6783795_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/en-ukraine-un-nouveau-grand-pont-de-kiev-touche-par-une-frappe-russe_8220826.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261003-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-une-frappe-russe"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261003-en-direct-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-des-frappes-russes"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261003-au-bord-du-pr%C3%A9cipice-%C3%A0-kiev-les-frappes-russes-sur-les-ponts-perturbent-fortement-la-circulation"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261003/11650129/nuevo-ataque-rusia-vias-acceso-kyiv.html"
         },
         {
           "language": "en",
@@ -62,303 +38,250 @@
           "url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings"
         },
         {
-          "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/ukraine-un-nouveau-pont-majeur-de-kiev-touche-par-une-frappe-russe"
+          "language": "en",
+          "source": "manilatimes.net",
+          "source_country": "rp",
+          "url": "https://www.manilatimes.net/2026/10/04/world/americas-emea/russia-strikes-another-major-bridge-in-kyiv/2438389"
         },
         {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html"
+          "language": "en",
+          "source": "wsbradio.com",
+          "source_country": "united-states",
+          "url": "https://www.wsbradio.com/news/world/russia-strikes-kyivs/LTKYBWNWEE6L3CETQJZHW6O4KM/"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "up"
       ],
-      "origin_country": "france",
-      "outbound_source": "elcorreo.com",
-      "outbound_url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html",
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings",
       "rank": 1,
-      "reference_newsroom_count": 6,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
         "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4598,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.6824,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russia",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "moscou",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "vladimir poutine",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Russian forces carried out strikes that hit a second major bridge over the Dnipro in Kyiv within two days, part of a series of attacks that also caused casualties and damage elsewhere in Ukraine. Reports agree the bridge was targeted in the latest strike and that the incidents occurred amid continued Russian attacks on Ukrainian infrastructure and population centers."
+    },
+    {
+      "_linked_ids": [
+        "subject-bresil-3cd16fb114a3"
+      ],
+      "cluster_id": "subject-bresil-3cd16fb114a3",
+      "coherence": 0.37706521511703683,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-04",
+      "headline": "Lula runs for a fourth term against Bolsonaro’s son in Brazil’s presidential race",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/lula-pour-un-quatrieme-mandat-flavio-bolsonaro-sur-les-traces-de-son-pere-au-bresil-une-presidentielle-au-parfum-de-match-retour-20261003"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261003-%C3%A9lections-au-br%C3%A9sil-le-duel-lula-bolsonaro-un-air-de-d%C3%A9j%C3%A0-vu"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261004.OBS118867/lula-face-au-fils-bolsonaro-l-ombre-de-trump-ce-qu-il-faut-savoir-sur-la-presidentielle-au-bresil.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/amerique/presidentielle-au-bresil-entre-flavio-bolsonaro-et-lula-le-choc-des-populistes-IYGQE6NVNREQTOYRKF7GC7HVKA/"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/monde/bresil/bresil-duel-lula-bolsonaro-affaires-et-ingerence-ce-quil-faut-savoir-sur-les-elections-de-ce-dimanche-b023eb1e-be5c-11f1-bc1c-de747933f8a6?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        }
+      ],
+      "mentioned_countries": [
+        "brazil"
+      ],
+      "origin_country": "france",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/am%C3%A9riques/20261003-%C3%A9lections-au-br%C3%A9sil-le-duel-lula-bolsonaro-un-air-de-d%C3%A9j%C3%A0-vu",
+      "rank": 2,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "lefigaro.fr",
+        "lexpress.fr",
+        "nouvelobs.com",
+        "ouest-france.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4843,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
+          "coherence": 0.3771,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7576
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.7389,
+        "total": 0.6535,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "bresil",
       "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russie",
-        "ukraine"
+        "bolsonaro",
+        "brasil",
+        "brazil's",
+        "bresil",
+        "donald trump",
+        "estados unidos",
+        "flavio bolsonaro",
+        "lula",
+        "trump"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Multiple outlets report that Russian forces struck a second major bridge over the Dnipro River in Kyiv within days, hitting a key crossing and disrupting traffic across the city; Ukrainian authorities and the mayor described the attack as affecting movement and causing significant disturbance to transport."
+      "subject_newsroom_count": 12,
+      "summary": "Brazil’s presidential contest is shaping up as a rematch between former president Luiz Inácio Lula da Silva, who is seeking a fourth term, and the Bolsonaro political legacy represented by Flávio Bolsonaro, son of Jair Bolsonaro; coverage emphasizes the familiar polarized dynamic, the populist profiles of the main contenders, and concerns about legal cases, political baggage and foreign influence surrounding the campaign."
     },
     {
       "_linked_ids": [
-        "subject-trump-2927490abb67"
+        "subject-tel-aviv-e4a5d26cb375"
       ],
-      "cluster_id": "subject-trump-2927490abb67",
-      "coherence": 0.45968367914160346,
+      "cluster_id": "subject-tel-aviv-e4a5d26cb375",
+      "coherence": 0.4583490613692873,
       "consequence": 3,
       "countries": [
-        "france",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "ar",
+        "spain"
       ],
-      "country_count": 4,
+      "country_count": 2,
       "editorial_day": "2026-10-03",
-      "headline": "G7 agrees to release up to 100 million barrels of oil and diesel",
-      "independent_source_count": 6,
+      "headline": "UAE authorities say Flydubai co‑pilot carried out a planned terrorist act on Tel Aviv flight",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/02/sous-pression-de-donald-trump-le-g7-annonce-un-deblocage-de-100-millions-de-barils-de-petrole_6787218_3234.html"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-03/emiratos-arabes-constata-que-el-piloto-del-vuelo-a-tel-aviv-pretendia-cometer-un-acto-terrorista.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/investigacion-vuelo-israel-confirma-trato-acto-terrorista-20261003111144-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/g7-acuerda-liberar-reservas-maximo-100-millones-barriles-crisis-energetica-mundial-guerra-iran_1_13557827.html"
+          "url": "https://www.eldiario.es/internacional/fiscalia-emiratos-arabes-confirma-atentado-terrorista-ocurrido-vuelo-flydubai-tel-aviv_1_13558724.html"
         },
         {
           "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/10/02/6abfc2ca468aebc31e8b457a.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "tribdem.com",
-          "source_country": "united-states",
-          "url": "https://www.tribdem.com/news/latest_news/g7-nations-agree-to-release-100-million-barrels-of-oil-including-diesel-a-boost-for/article_940b2dd6-74c7-5062-82b4-ba3a4ba34f61.html"
-        },
-        {
-          "language": "es",
-          "source": "leonoticias.com",
-          "source_country": "spain",
-          "url": "https://www.leonoticias.com/economia/acuerda-liberar-100-millones-barriles-diesel-ante-20261002171101-ntrc.html"
+          "source": "diariopanorama.com",
+          "source_country": "ar",
+          "url": "https://www.diariopanorama.com/noticia/568530/emiratos-rabes-confirmo-fue-ataque-terrorista-lo-ocurrido-vuelo-flydubai"
         }
       ],
       "mentioned_countries": [
-        "ir"
+        "is"
       ],
-      "origin_country": "france",
+      "origin_country": "ar",
       "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/economia/g7-acuerda-liberar-reservas-maximo-100-millones-barriles-crisis-energetica-mundial-guerra-iran_1_13557827.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "eldiario.es",
-        "expansion.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4597,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.6998,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "iran",
-        "texas",
-        "trump"
-      ],
-      "subject_newsroom_count": 23,
-      "summary": "Under pressure from former US President Donald Trump, G7 countries have agreed to release up to 100 million barrels of oil, including diesel, from strategic reserves to address the global energy crisis."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-2436299f78f6",
-        "subject-france-591cf40a71b6",
-        "subject-france-edc9b38a37ed"
-      ],
-      "cluster_id": "subject-france-edc9b38a37ed",
-      "coherence": 0.4765270872567776,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "lu",
-        "ng",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-03",
-      "headline": "Students across France clash with police and disrupt schools over conditions",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cr5ynddn318eo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/02/hundreds-of-high-schools-in-france-close-as-new-protests-against-conditions-erupt"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/01/french-protests-over-school-conditions-spread-as-students-set-fires-and-put-up-blockades"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/02/french-students-clash-with-police-as-school-protests-spread-nationwide"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting"
-        },
-        {
-          "language": "en",
-          "source": "chronicle.lu",
-          "source_country": "lu",
-          "url": "https://www.chronicle.lu/category/international/63773-students-police-clash-as-france-struggles-to-quell-school-protests"
-        },
-        {
-          "language": "en",
-          "source": "dailytrust.com",
-          "source_country": "ng",
-          "url": "https://dailytrust.com/schools-shut-as-violent-protest-breaks-out-in-france/"
-        },
-        {
-          "language": "en",
-          "source": "kvia.com",
-          "source_country": "united-states",
-          "url": "https://kvia.com/news/us-world/cnn-world/2026/10/02/students-and-police-clash-as-frances-government-struggles-to-calm-student-tensions/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
+      "outbound_url": "https://www.eldiario.es/internacional/fiscalia-emiratos-arabes-confirma-atentado-terrorista-ocurrido-vuelo-flydubai-tel-aviv_1_13558724.html",
       "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "pbs.org"
+        "abc.es",
+        "eldiario.es",
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4765,
-          "corroboration": 0.7143,
+          "coherence": 0.4583,
+          "corroboration": 0.5,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.7895
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.6868,
+        "total": 0.6485,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "tel aviv",
       "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "french",
-        "italia",
-        "lecornu",
-        "paris"
+        "australia",
+        "emiratos arabes",
+        "tel aviv",
+        "uae"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Students in multiple French cities have staged nationwide protests and school actions—including blockades, fires and occupations—that have forced hundreds of high schools to close. Demonstrations are aimed at poor school conditions and underfunding; clashes with riot police have occurred and prompted government attention, including a crisis meeting called by the prime minister."
+      "subject_newsroom_count": 4,
+      "summary": "United Arab Emirates authorities have determined that the co‑pilot of a Flydubai flight to Tel Aviv planned and attempted a terrorist attack aboard the aircraft; reports say he used the plane’s emergency axe during the incident and prosecutors have classified the episode as a terrorist act."
     },
     {
       "_linked_ids": [
         "subject-otan-602ad52483bb",
+        "subject-putin-37633c2c9714",
         "subject-putin-cd30077c21d6"
       ],
-      "cluster_id": "subject-putin-cd30077c21d6",
-      "coherence": 0.41929997217253634,
+      "cluster_id": "subject-putin-37633c2c9714",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "it",
-        "mx",
-        "ro",
         "spain",
         "united-kingdom"
       ],
-      "country_count": 5,
+      "country_count": 3,
       "editorial_day": "2026-10-02",
-      "headline": "Putin says Russia will use all weapons to defend Kaliningrad if attacked",
-      "independent_source_count": 5,
+      "headline": "Putin says Russia will use all weapons if Kaliningrad is attacked",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
@@ -377,18 +300,6 @@
           "source": "euronews.com",
           "source_country": "it",
           "url": "https://www.euronews.com/2026/10/02/putin-says-all-weapons-on-agenda-if-russias-kaliningrad-attacked"
-        },
-        {
-          "language": "ron",
-          "source": "bursa.ro",
-          "source_country": "ro",
-          "url": "https://www.bursa.ro/euronews-vladimir-putin-ameninta-cu-utilizarea-tuturor-armelor-in-cazul-unui-atac-asupra-regiunii-kaliningrad-26874061"
-        },
-        {
-          "language": "es",
-          "source": "laverdad.com.mx",
-          "source_country": "mx",
-          "url": "https://laverdad.com.mx/2026/10/putin-amenaza-con-usar-todo-su-arsenal-por-kaliningrado/"
         }
       ],
       "mentioned_countries": [
@@ -406,86 +317,91 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4193,
-          "corroboration": 0.7143,
+          "coherence": 0.5,
+          "corroboration": 0.6,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.5,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "novelty": 0.3333,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.6675,
+        "total": 0.6454,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "putin",
       "subject_names": [
         "kaliningrado",
         "otan",
-        "putin",
-        "rusia"
+        "putin"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "Russian President Vladimir Putin warned Western countries that Russia is prepared to use its full range of weapons to protect the Kaliningrad region if it comes under attack, saying all options are on the table to defend the territory."
+      "subject_newsroom_count": 8,
+      "summary": "Russian President Vladimir Putin warned Western countries that Russia is prepared to use its full arsenal, including unspecified weapons \"on the agenda,\" to defend Kaliningrad if it comes under attack, and emphasized that Moscow views threats to the exclave as requiring a strong response."
     },
     {
       "_linked_ids": [
-        "subject-france-ad5991e3c067"
+        "subject-lettonie-cb59da431f03"
       ],
-      "cluster_id": "subject-france-ad5991e3c067",
-      "coherence": 0.5999889393248863,
+      "cluster_id": "subject-lettonie-cb59da431f03",
+      "coherence": 0.42268642294425385,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "French prisons reach a new record with 90,020 inmates",
+      "editorial_day": "2026-10-04",
+      "headline": "Pro‑European party wins Latvian parliamentary vote despite populist gains",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/03/les-prisons-francaises-continuent-d-etre-surpeuplees-avec-un-nombre-inegale-de-plus-de-90-000-detenus_6787785_3224.html"
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/en-lettonie-le-parti-du-premier-ministre-andris-kulbergs-obtient-un-succes-historique-qui-eloigne-le-danger-populiste_6788216_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/prisons-90-020-detenus-en-france-un-nouveau-record-20261003"
+          "url": "https://www.liberation.fr/international/europe/legislatives-en-lettonie-les-populistes-et-souverainistes-font-une-percee-mais-le-camp-pro-europe-garde-le-cap-20261004_6FTV6CPN75EDNKNAQTCHBCSFTQ/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/prisons/la-surpopulation-carcerale-atteint-un-nouveau-record-en-france-avec-90-020-detenus-au-1er-septembre_8220991.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/le-parti-pro-europeen-et-pro-ukrainien-liste-unie-arrive-en-tete-des-legislatives-en-lettonie-selon-des-resultats-partiels_8221912.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261004-l%C3%A9gislatives-en-lettonie-la-majorit%C3%A9-pro-europ%C3%A9enne-et-pro-ukraine-en-t%C3%AAte-malgr%C3%A9-la-pouss%C3%A9e-des-populistes"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "lg"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html",
       "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "la-croix.com",
         "lemonde.fr",
-        "liberation.fr"
+        "liberation.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6,
+          "coherence": 0.4227,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -493,28 +409,24 @@
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.6522
         },
-        "total": 0.6637,
+        "total": 0.645,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "lettonie",
       "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "french",
-        "italia",
-        "lecornu",
-        "paris"
+        "letonia",
+        "lettonie",
+        "lista unida"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "France’s prison system is at a new high for overcrowding: on September 1 there were 90,020 people incarcerated, the largest recorded prison population in the country according to the published reports."
+      "subject_newsroom_count": 4,
+      "summary": "Latvia’s pro‑European, pro‑Ukraine ruling party finished first in the parliamentary elections according to partial results, maintaining a pro‑Europe majority even as populist and sovereignist parties made significant advances."
     }
   ],
-  "discarded_ingested": 170,
+  "discarded_ingested": 194,
   "discarded_kept": 5,
-  "generated_at": "2026-10-03T10:31:22.194629+00:00",
+  "generated_at": "2026-10-04T11:12:40.597399+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

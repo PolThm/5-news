@@ -2,52 +2,28 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ukraine-602b91b094d6"
+        "subject-russia-1c9016226b03"
       ],
-      "cluster_id": "subject-ukraine-602b91b094d6",
-      "coherence": 0.4843208386640021,
+      "cluster_id": "subject-russia-1c9016226b03",
+      "coherence": 0.4598265311489034,
       "consequence": 3,
       "countries": [
-        "france",
         "it",
+        "rp",
         "spain",
-        "sz",
-        "united-kingdom"
+        "united-kingdom",
+        "united-states"
       ],
       "country_count": 5,
       "editorial_day": "2026-10-03",
-      "headline": "Russia struck a second major bridge in Kyiv, damaging a Dnipro crossing",
-      "independent_source_count": 8,
+      "headline": "Russia strikes a second major bridge in Kyiv amid wider attacks",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/10/03/en-direct-guerre-en-ukraine-la-russie-a-attaque-un-deuxieme-pont-majeur-a-kiev_6783795_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/en-ukraine-un-nouveau-grand-pont-de-kiev-touche-par-une-frappe-russe_8220826.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261003-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-une-frappe-russe"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261003-en-direct-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-des-frappes-russes"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261003-au-bord-du-pr%C3%A9cipice-%C3%A0-kiev-les-frappes-russes-sur-les-ponts-perturbent-fortement-la-circulation"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261003/11650129/nuevo-ataque-rusia-vias-acceso-kyiv.html"
         },
         {
           "language": "en",
@@ -62,247 +38,125 @@
           "url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings"
         },
         {
-          "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/ukraine-un-nouveau-pont-majeur-de-kiev-touche-par-une-frappe-russe"
+          "language": "en",
+          "source": "manilatimes.net",
+          "source_country": "rp",
+          "url": "https://www.manilatimes.net/2026/10/04/world/americas-emea/russia-strikes-another-major-bridge-in-kyiv/2438389"
         },
         {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html"
+          "language": "en",
+          "source": "wsbradio.com",
+          "source_country": "united-states",
+          "url": "https://www.wsbradio.com/news/world/russia-strikes-kyivs/LTKYBWNWEE6L3CETQJZHW6O4KM/"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "elcorreo.com",
-      "outbound_url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html",
-      "rank": 1,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4843,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7576
-        },
-        "total": 0.7389,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russie",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Multiple outlets report that Russian forces struck a second major bridge over the Dnipro River in Kyiv within days, hitting a key crossing and disrupting traffic across the city; Ukrainian authorities and the mayor described the attack as affecting movement and causing significant disturbance to transport."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-2436299f78f6",
-        "subject-france-591cf40a71b6",
-        "subject-france-edc9b38a37ed"
-      ],
-      "cluster_id": "subject-france-edc9b38a37ed",
-      "coherence": 0.4765270872567776,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "lu",
-        "ng",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-03",
-      "headline": "Students across France clash with police and disrupt schools over conditions",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cr5ynddn318eo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/02/hundreds-of-high-schools-in-france-close-as-new-protests-against-conditions-erupt"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/01/french-protests-over-school-conditions-spread-as-students-set-fires-and-put-up-blockades"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/02/french-students-clash-with-police-as-school-protests-spread-nationwide"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting"
-        },
-        {
-          "language": "en",
-          "source": "chronicle.lu",
-          "source_country": "lu",
-          "url": "https://www.chronicle.lu/category/international/63773-students-police-clash-as-france-struggles-to-quell-school-protests"
-        },
-        {
-          "language": "en",
-          "source": "dailytrust.com",
-          "source_country": "ng",
-          "url": "https://dailytrust.com/schools-shut-as-violent-protest-breaks-out-in-france/"
-        },
-        {
-          "language": "en",
-          "source": "kvia.com",
-          "source_country": "united-states",
-          "url": "https://kvia.com/news/us-world/cnn-world/2026/10/02/students-and-police-clash-as-frances-government-struggles-to-calm-student-tensions/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
+        "up"
       ],
       "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
-      "rank": 2,
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings",
+      "rank": 1,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
         "euronews.com",
-        "pbs.org"
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4765,
+          "coherence": 0.4598,
           "corroboration": 0.7143,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.7895
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.6868,
+        "total": 0.6824,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "russia",
       "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "french",
-        "italia",
-        "lecornu",
-        "paris"
+        "kiev",
+        "kyiv",
+        "moscou",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "vladimir poutine",
+        "zelenski"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Students in multiple French cities have staged nationwide protests and school actions—including blockades, fires and occupations—that have forced hundreds of high schools to close. Demonstrations are aimed at poor school conditions and underfunding; clashes with riot police have occurred and prompted government attention, including a crisis meeting called by the prime minister."
+      "subject_newsroom_count": 8,
+      "summary": "Russian forces carried out strikes that hit a second major bridge over the Dnipro in Kyiv within two days, part of a series of attacks that also caused casualties and damage elsewhere in Ukraine. Reports agree the bridge was targeted in the latest strike and that the incidents occurred amid continued Russian attacks on Ukrainian infrastructure and population centers."
     },
     {
       "_linked_ids": [
-        "subject-france-ad5991e3c067"
+        "subject-lettonie-cb59da431f03"
       ],
-      "cluster_id": "subject-france-ad5991e3c067",
-      "coherence": 0.5999889393248863,
+      "cluster_id": "subject-lettonie-cb59da431f03",
+      "coherence": 0.42268642294425385,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "French prisons reach a new record with 90,020 inmates",
+      "editorial_day": "2026-10-04",
+      "headline": "Pro‑European party wins Latvian parliamentary vote despite populist gains",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/03/les-prisons-francaises-continuent-d-etre-surpeuplees-avec-un-nombre-inegale-de-plus-de-90-000-detenus_6787785_3224.html"
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/en-lettonie-le-parti-du-premier-ministre-andris-kulbergs-obtient-un-succes-historique-qui-eloigne-le-danger-populiste_6788216_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/prisons-90-020-detenus-en-france-un-nouveau-record-20261003"
+          "url": "https://www.liberation.fr/international/europe/legislatives-en-lettonie-les-populistes-et-souverainistes-font-une-percee-mais-le-camp-pro-europe-garde-le-cap-20261004_6FTV6CPN75EDNKNAQTCHBCSFTQ/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/prisons/la-surpopulation-carcerale-atteint-un-nouveau-record-en-france-avec-90-020-detenus-au-1er-septembre_8220991.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/le-parti-pro-europeen-et-pro-ukrainien-liste-unie-arrive-en-tete-des-legislatives-en-lettonie-selon-des-resultats-partiels_8221912.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261004-l%C3%A9gislatives-en-lettonie-la-majorit%C3%A9-pro-europ%C3%A9enne-et-pro-ukraine-en-t%C3%AAte-malgr%C3%A9-la-pouss%C3%A9e-des-populistes"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "lg"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/",
-      "rank": 3,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html",
+      "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "la-croix.com",
         "lemonde.fr",
-        "liberation.fr"
+        "liberation.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6,
+          "coherence": 0.4227,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -310,23 +164,162 @@
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.6522
         },
-        "total": 0.6637,
+        "total": 0.645,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "lettonie",
+      "subject_names": [
+        "letonia",
+        "lettonie",
+        "lista unida"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Latvia’s pro‑European, pro‑Ukraine ruling party finished first in the parliamentary elections according to partial results, maintaining a pro‑Europe majority even as populist and sovereignist parties made significant advances."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-091c503267b8"
+      ],
+      "cluster_id": "subject-france-091c503267b8",
+      "coherence": 0.4239874427146295,
+      "consequence": 3,
+      "countries": [
+        "spain",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-03",
+      "headline": "Student protests in France lead to widespread arrests and urban violence",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261002/11649224/protestas-estudiantiles-francia-derivan-violencia-urbana-dejan-2-000-detenidos.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/protestas-estudiantiles-francia-intensifican-dejan-cerca-2-000-detenidos_1_13555816.html"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/10/03/nx-s1-5989532/france-arrests-5-000-people-mostly-teens-as-school-protests-spread"
+        },
+        {
+          "language": "es",
+          "source": "vozpopuli.com",
+          "source_country": "spain",
+          "url": "https://www.vozpopuli.com/internacional/mas-de-5000-arrestos-y-millones-de-euros-en-danos-por-protestas-estudiantiles-en-francia.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261002/11649224/protestas-estudiantiles-francia-derivan-violencia-urbana-dejan-2-000-detenidos.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "lavanguardia.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.424,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6444,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
-        "emmanuel macron",
         "france",
         "francia",
         "french",
-        "italia",
-        "lecornu",
+        "nantes",
         "paris"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "France’s prison system is at a new high for overcrowding: on September 1 there were 90,020 people incarcerated, the largest recorded prison population in the country according to the published reports."
+      "subject_newsroom_count": 22,
+      "summary": "Student demonstrations across France escalated into clashes with police, resulting in thousands of arrests (reports cite around 2,000 to more than 5,000 detained), widespread disturbances described as 'urban violence,' and significant property damage costing millions of euros."
+    },
+    {
+      "_linked_ids": [
+        "subject-kiev-c13da12992af"
+      ],
+      "cluster_id": "subject-kiev-c13da12992af",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-03",
+      "headline": "Russia orders diplomats and foreign nationals to leave Kyiv",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/moscou-appelle-les-diplomates-et-etrangers-a-quitter-kiev-20261003"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/10/04/news/ucraina_guerra_russia_ponti_kiev_ue-425624288/?rss"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/international/moscou-appelle-les-diplomates-et-etrangers-a-quitter-kiev-20261003",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.6236,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "kiev",
+      "subject_names": [
+        "kiev"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Both articles report that Russia has demanded that diplomatic staff and other foreign nationals depart Kyiv, framing the move as a directive for diplomats and foreigners to immediately leave the Ukrainian capital."
     },
     {
       "_linked_ids": [
@@ -342,7 +335,7 @@
       ],
       "country_count": 2,
       "editorial_day": "2026-10-02",
-      "headline": "South Korea demands public apology from Ukraine over POW transfer or warns of action",
+      "headline": "South Korea warns of further measures unless Ukraine apologises over POW disclosure",
       "independent_source_count": 2,
       "members": [
         {
@@ -364,7 +357,7 @@
       "origin_country": "it",
       "outbound_source": "bbc.co.uk",
       "outbound_url": "https://www.bbc.co.uk/news/articles/cm1dld14weero?at_medium=RSS&at_campaign=rss",
-      "rank": 4,
+      "rank": 5,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
@@ -375,116 +368,27 @@
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 0.5,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.6136,
+        "total": 0.6094,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ukraine",
       "subject_names": [
-        "kiev",
-        "russia",
-        "russie",
         "ukraine"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "South Korea has told Ukraine it must publicly apologise for disclosing the transfer of a South Korean national held as a prisoner of war; Seoul said it would consider further measures if Ukraine refuses to issue the apology. Both articles state the dispute concerns the disclosure of the transfer and that South Korea has warned of additional steps should Ukraine not comply."
-    },
-    {
-      "_linked_ids": [
-        "subject-lituania-b2a364572e0b"
-      ],
-      "cluster_id": "subject-lituania-b2a364572e0b",
-      "coherence": 0.4762515024221603,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "Lithuania closes Vilnius airport temporarily after possible drone sighting",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-03/lituania-cierra-durante-una-hora-el-aeropuerto-de-vilnius-y-despliega-aviones-de-la-otan-por-la-presencia-de-un-dron.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/alerta-posible-dron-obliga-cerrar-aeropuerto-importante-20261003105957-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261003/11650147/posible-dron-bielorrusia-cierra-aeropuerto-vilna-lituania-activa-despliegue-aereo-otan.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/lituania-cierra-temporalmente-espacio-aereo-aeropuerto-vilna-presencia-posible-dron_1_13558921.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/20261003/aeropuerto-vilna-cierra-temporalmente-espacio-aereo-posible-presencia-dron-no-identificado/1003744407360_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "lh"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-10-03/lituania-cierra-durante-una-hora-el-aeropuerto-de-vilnius-y-despliega-aviones-de-la-otan-por-la-presencia-de-un-dron.html",
-      "rank": 5,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4763,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5787,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "lituania",
-      "subject_names": [
-        "kaliningrado",
-        "lituania",
-        "otan",
-        "vilna"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Lithuania temporarily closed airspace at Vilnius Airport for about an hour after authorities detected a possible unidentified drone reportedly coming from Belarus; the incident prompted NATO to deploy aircraft to the area while the situation was investigated and flights were disrupted during the alert."
+      "subject_newsroom_count": 12,
+      "summary": "South Korea has warned it will take further action if Ukraine does not publicly apologise after Seoul criticised Kyiv for disclosing information about the transfer of a South Korean prisoner of war; South Korean officials say they seek a formal apology over the disclosure and have signalled possible additional measures if one is not given."
     }
   ],
-  "discarded_ingested": 94,
+  "discarded_ingested": 86,
   "discarded_kept": 5,
-  "generated_at": "2026-10-03T10:31:22.194629+00:00",
+  "generated_at": "2026-10-04T11:12:40.597399+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

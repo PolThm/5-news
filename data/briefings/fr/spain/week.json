@@ -2,161 +2,283 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-espana-c0fa778b45c6"
+        "subject-ceuta-6b14d80aa754",
+        "subject-ceuta-86b861389d33"
       ],
-      "cluster_id": "subject-espana-c0fa778b45c6",
-      "coherence": 0.5502941609109289,
+      "cluster_id": "subject-ceuta-6b14d80aa754",
+      "coherence": 0.5270556215665787,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-04",
+      "headline": "La police commence le délogement du camp de migrants à la plage El Trampolín de Ceuta",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-04/la-policia-empieza-a-desalojar-el-asentamiento-de-la-playa-de-el-trampolin-de-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/desalambre/policia-nacional-inicia-desalojo-asentamiento-playa-trampolin-ceuta_1_13560310.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/reportajes/20261004/policia-comienza-desalojo-campamento-playa-trampolin-ceuta/1003744407777_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/04/6ac1f3dbe85ece39088b45a4.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-10-04/policia-nacional-desalojo-asentamiento-playa-trampolin-ceuta-1tna_4437848/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-policia-nacional-despliega-trampolin-ceuta-desalojar-parte-campamento-migrantes-20261004083251.html"
+        },
+        {
+          "language": "es",
+          "source": "diariodeleon.es",
+          "source_country": "spain",
+          "url": "https://www.diariodeleon.es/nacional/261004/2099223/350-policias-desplegados-trampolin-ceuta-primera-fase-desalojo.html"
+        },
+        {
+          "language": "es",
+          "source": "diariosur.es",
+          "source_country": "spain",
+          "url": "https://www.diariosur.es/nacional/policia-nacional-desaloja-asentamiento-playa-trampolin-ceuta-20261004113715-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "mo"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-10-04/la-policia-empieza-a-desalojar-el-asentamiento-de-la-playa-de-el-trampolin-de-ceuta.html",
+      "rank": 1,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5271,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 0.5,
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
+        },
+        "total": 0.5928,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "marruecos",
+        "trampolin"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "La Police nationale a lancé le délogement du dernier campement de migrants installé sur la plage d’El Trampolín à Ceuta, avec un déploiement d’environ 350 policiers pour la première phase de l’opération; lors de l’intervention des personnes présentes ont crié des slogans et interrogé ce qui leur arriverait, tandis que les autorités procédaient à l’évacuation."
+    },
+    {
+      "_linked_ids": [
+        "subject-espagne-b40be7654e42",
+        "subject-madrid-6cd654f89ed6"
+      ],
+      "cluster_id": "subject-espagne-b40be7654e42",
+      "coherence": 0.4778030405617649,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
       "editorial_day": "2026-10-03",
-      "headline": "Le Parlement espagnol rejette les textes sur le logement du gouvernement Sánchez",
-      "independent_source_count": 7,
+      "headline": "Des manifestations massives pour le droit au logement rassemblent des milliers en Espagne",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/03/en-espagne-pedro-sanchez-fragilise-par-le-rejet-de-ses-mesures-sur-le-logement_6787670_3210.html"
+          "url": "https://www.lemonde.fr/international/video/2026/10/03/a-madrid-les-images-impressionnantes-des-manifestations-contre-la-crise-du-logement_6787825_3210.html"
         },
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/en-espagne-pedro-sanchez-veut-rebondir-grace-a-la-crise-du-logement-20261002"
+          "url": "https://www.lemonde.fr/international/article/2026/10/03/a-madrid-et-dans-d-autres-villes-espagnoles-des-dizaines-de-milliers-de-manifestants-pour-le-droit-au-logement_6787798_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/droit-au-logement-en-espagne-des-manifestations-monstres-dans-tout-le-pays-ce-samedi-20261003_5QVJOUZ5INBHVIEXNIZNU272OA/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/espagne-apres-le-rejet-des-mesures-du-gouvernement-des-manifestations-monstres-pour-le-droit-au-logement-20261003"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/031026/en-espagne-de-grandes-manifestations-pour-le-logement-apres-le-rejet-par-les-deputes-d-une-serie-de"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/espagne/en-espagne-les-deputes-rejettent-les-textes-sur-le-logement_8220139.html#xtor=RSS-3-%5Bgeneral%5D"
+          "url": "https://www.franceinfo.fr/monde/espagne/reportage-des-membres-de-ma-famille-vont-etre-expulses-a-madrid-des-milliers-de-personnes-manifestent-leur-colere-face-a-la-crise-du-logement-qui-touche-l-ensemble-du-pays_8221552.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/a-madrid-une-manifestation-pour-le-droit-au-logement-rassemble-entre-70-000-et-500-000-personnes_8221219.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261002-crise-du-logement-en-espagne-le-parlement-rejette-deux-textes-revers-cuisant-pour-pedro-sanchez"
-        },
-        {
-          "language": "fr",
-          "source": "lejsl.com",
-          "source_country": "france",
-          "url": "https://www.lejsl.com/politique/2026/10/02/crise-du-logement-les-deputes-rejettent-les-texte-du-gouvernement-de-pedro-sanchez"
-        },
-        {
-          "language": "fr",
-          "source": "ledauphine.com",
-          "source_country": "france",
-          "url": "https://www.ledauphine.com/politique/2026/10/02/crise-du-logement-les-deputes-rejettent-les-texte-du-gouvernement-de-pedro-sanchez"
-        },
-        {
-          "language": "fr",
-          "source": "bienpublic.com",
-          "source_country": "france",
-          "url": "https://www.bienpublic.com/politique/2026/10/02/crise-du-logement-les-deputes-rejettent-les-texte-du-gouvernement-de-pedro-sanchez"
+          "url": "https://www.rfi.fr/fr/europe/20261003-espagne-apr%C3%A8s-le-rejet-des-mesures-du-gouvernement-des-manifestations-monstres-pour-le-droit-au-logement"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/espagne/en-espagne-les-deputes-rejettent-les-textes-sur-le-logement_8220139.html#xtor=RSS-3-%5Bgeneral%5D",
-      "rank": 1,
-      "reference_newsroom_count": 4,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/03/a-madrid-et-dans-d-autres-villes-espagnoles-des-dizaines-de-milliers-de-manifestants-pour-le-droit-au-logement_6787798_3210.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "lefigaro.fr",
+        "la-croix.com",
         "lemonde.fr",
+        "liberation.fr",
+        "mediapart.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5503,
+          "coherence": 0.4778,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
+          "novelty": 0.5,
+          "prominence": 0.6,
+          "source_reliability": 0.75
         },
-        "total": 0.5797,
+        "total": 0.5798,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "espana",
+      "subject_label": "espagne",
       "subject_names": [
-        "congreso",
         "espagne",
         "espana",
         "feijoo",
         "junts",
         "madrid",
         "pedro sanchez",
+        "podemos",
+        "psoe",
         "sanchez"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Les députés espagnols ont rejeté deux textes proposés par le gouvernement de Pedro Sánchez visant à répondre à la crise du logement. Ce refus constitue un revers politique pour le président, qui voulait utiliser ces mesures pour apaiser la contestation sociale liée à l’accès au logement."
+      "subject_newsroom_count": 13,
+      "summary": "Des dizaines de milliers à plusieurs centaines de milliers de personnes ont manifesté samedi à Madrid et dans de nombreuses villes d’Espagne pour le droit au logement, exprimant leur colère après le rejet par les députés d’une série de mesures d’urgence; les cortèges dénoncent la crise du logement et les expulsions qui touchent des familles."
     },
     {
       "_linked_ids": [
-        "subject-madrigueras-254466f7543e"
+        "subject-cataluna-affd28eea25a"
       ],
-      "cluster_id": "subject-madrigueras-254466f7543e",
-      "coherence": 0.502781633874167,
+      "cluster_id": "subject-cataluna-affd28eea25a",
+      "coherence": 0.4892553012236681,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "Une centenaire meurt et 90 personnes sont secourues après la riada à Madrigueras",
-      "independent_source_count": 7,
+      "editorial_day": "2026-10-04",
+      "headline": "Deux morts et une personne portée disparue après les fortes pluies en Catalogne",
+      "independent_source_count": 8,
       "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/catalunya/2026-10-04/la-alerta-por-el-temporal-sigue-y-los-rios-van-al-limite-no-bajar-la-guardia.html"
+        },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/castilla-la-mancha/mujer-centenaria-muere-tras-inundarse-casa-riada-20261003030810-nt.html"
+          "url": "https://www.abc.es/espana/cataluna/muerto-tordera-tras-caida-muro-temporal-azota-20261004094427-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/castilla-la-mancha/provincias/albacete/inundaciones-madrigueras-tromba-agua-parte-albacete_1_13558437.html"
+          "url": "https://www.eldiario.es/catalunya/bomberos-rescatan-diversos-conductores-atrapados-agua-granollers-canovelles-barcelona_1_13560308.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/catalunya/2026/10/04/temporal-cataluna-deja-dos-victimas-mortales.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/10/03/6ac03e88e4d4d8b3088b45ce.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/eldigitalcastillalamancha/region/albacete/20261003/mujer-muerta-personas-rescatadas-riada-localidad-albacetena-madrigueras/1003744407304_0.html"
+          "url": "https://www.elmundo.es/cataluna/2026/10/04/6ac2032dfdddff42278b458b.html"
         },
         {
           "language": "es",
           "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-10-03/riada-madrigueras-inundaciones-rescates-fallecida-1tna-1tps_4437466/"
+          "url": "https://www.elconfidencial.com/espana/cataluna/2026-10-04/muere-persona-tordera-lluvias-barcelona-temporal-1tna_4437862/"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "marca.com",
           "source_country": "spain",
-          "url": "https://www.europapress.es/castilla-lamancha/noticia-fallece-anciana-riada-madrigueras-albacete-mientras-encontraba-domicilio-20261003092649.html"
+          "url": "https://www.marca.com/tiramillas/sucesos/2026/10/04/tragedia-temporal-cataluna-hallan-dos-fallecidos-riadas-barcelona.html"
         },
         {
-          "language": "es",
-          "source": "lanzadigital.com",
+          "language": "cat",
+          "source": "elperiodico.cat",
           "source_country": "spain",
-          "url": "https://www.lanzadigital.com/castilla-la-mancha/fallece-una-mujer-de-100-anos-en-la-riada-de-madrigueras-mientras-se-encontraba-en-su-domicilio/"
+          "url": "https://www.elperiodico.cat/societat/20261004/victima-mortal-tordera-fort-temporal-catalunya-134977898"
         }
       ],
       "mentioned_countries": [
@@ -164,175 +286,69 @@
       ],
       "origin_country": "spain",
       "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/castilla-la-mancha/provincias/albacete/inundaciones-madrigueras-tromba-agua-parte-albacete_1_13558437.html",
-      "rank": 2,
+      "outbound_url": "https://www.eldiario.es/catalunya/bomberos-rescatan-diversos-conductores-atrapados-agua-granollers-canovelles-barcelona_1_13560308.html",
+      "rank": 3,
       "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "abc.es",
         "elconfidencial.com",
         "eldiario.es",
-        "elespanol.com",
         "elmundo.es",
-        "europapress.es"
+        "elpais.com",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5028,
+          "coherence": 0.4893,
           "corroboration": 0.3333,
           "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7143
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
         },
-        "total": 0.5113,
+        "total": 0.5116,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "madrigueras",
+      "subject_label": "cataluna",
       "subject_names": [
-        "albacete",
-        "madrigueras",
-        "muere"
+        "barcelona",
+        "barcelone",
+        "cataluna",
+        "espagne",
+        "madrid",
+        "tordera"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Une femme d’environ 100–102 ans est décédée dans son domicile lors d’une inondation (riada) à Madrigueras, dans la province d’Albacete; les services d’urgence ont secouru environ 90 personnes affectées par l’événement."
+      "subject_newsroom_count": 7,
+      "summary": "Un violent épisode pluvieux en Catalogne a causé au moins deux décès — localisés à Tordera et Montornès — et une personne est portée disparue à Pineda de Mar ; les intempéries ont aussi entraîné alertes locales pour risque de crue des rivières et des inondations."
     },
     {
       "_linked_ids": [
-        "subject-rioja-7b5862ae1a53"
+        "subject-russia-1c9016226b03"
       ],
-      "cluster_id": "subject-rioja-7b5862ae1a53",
-      "coherence": 0.5270512477854989,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "L'effondrement du toit d'un bar à San Vicente de la Sonsierra blesse douze personnes",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-10-03/el-derrumbe-del-techo-de-un-bar-en-un-pueblo-de-la-rioja-causa-11-heridos.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/ocho-personas-trasladadas-centro-sanitarios-derrumbe-bar-20261003093542-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/la-rioja/derrumbe-bar-san-vicente-sonsierra-25-personas-atrapadas-seis-trasladadas-hospital-logrono_1_13558730.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/10/03/6ac0aaacfdddffa2658b4599.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-10-03/derrumbe-bar-san-vicente-heridos-1tna-1tps_4437476/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/la-rioja/derrumbe-bar-san-vicente-sonsierra-25-personas-atrapadas-seis-trasladadas-hospital-logrono_1_13558730.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "abc.es",
-        "elconfidencial.com",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5271,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.4982,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "rioja",
-      "subject_names": [
-        "rioja",
-        "san vicente",
-        "sonsierra"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Le toit d’un bar à San Vicente de la Sonsierra (La Rioja) s’est effondré; selon les articles, entre onze et douze personnes ont été blessées et plus de vingt-cinq personnes se sont retrouvées piégées dans l’établissement avant d’être secourues."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-602b91b094d6"
-      ],
-      "cluster_id": "subject-ukraine-602b91b094d6",
-      "coherence": 0.4843208386640021,
+      "cluster_id": "subject-russia-1c9016226b03",
+      "coherence": 0.4598265311489034,
       "consequence": 3,
       "countries": [
-        "france",
         "it",
+        "rp",
         "spain",
-        "sz",
-        "united-kingdom"
+        "united-kingdom",
+        "united-states"
       ],
       "country_count": 5,
       "editorial_day": "2026-10-03",
       "filled_from": "europe",
-      "headline": "La Russie a frappé un deuxième grand pont de Kiev",
-      "independent_source_count": 8,
+      "headline": "La Russie frappe un deuxième grand pont de Kyiv en deux jours",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/10/03/en-direct-guerre-en-ukraine-la-russie-a-attaque-un-deuxieme-pont-majeur-a-kiev_6783795_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/en-ukraine-un-nouveau-grand-pont-de-kiev-touche-par-une-frappe-russe_8220826.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261003-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-une-frappe-russe"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261003-en-direct-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-des-frappes-russes"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261003-au-bord-du-pr%C3%A9cipice-%C3%A0-kiev-les-frappes-russes-sur-les-ponts-perturbent-fortement-la-circulation"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261003/11650129/nuevo-ataque-rusia-vias-acceso-kyiv.html"
         },
         {
           "language": "en",
@@ -347,195 +363,151 @@
           "url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings"
         },
         {
-          "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/ukraine-un-nouveau-pont-majeur-de-kiev-touche-par-une-frappe-russe"
+          "language": "en",
+          "source": "manilatimes.net",
+          "source_country": "rp",
+          "url": "https://www.manilatimes.net/2026/10/04/world/americas-emea/russia-strikes-another-major-bridge-in-kyiv/2438389"
         },
         {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html"
+          "language": "en",
+          "source": "wsbradio.com",
+          "source_country": "united-states",
+          "url": "https://www.wsbradio.com/news/world/russia-strikes-kyivs/LTKYBWNWEE6L3CETQJZHW6O4KM/"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "elcorreo.com",
-      "outbound_url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4843,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7576
-        },
-        "total": 0.6789,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russie",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Les articles indiquent qu'à Kiev un deuxième pont majeur traversant le Dnipro a été touché par des frappes russes dans un nouvel assaut, causant des perturbations importantes de la circulation et des difficultés pour les liaisons entre les rives, selon les autorités locales."
-    },
-    {
-      "_linked_ids": [
-        "subject-france-2436299f78f6",
-        "subject-france-591cf40a71b6",
-        "subject-france-edc9b38a37ed"
-      ],
-      "cluster_id": "subject-france-edc9b38a37ed",
-      "coherence": 0.4765270872567776,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "lu",
-        "ng",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-03",
-      "filled_from": "europe",
-      "headline": "Des lycéens manifestent et affrontent la police lors de protestations nationales",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cr5ynddn318eo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/02/hundreds-of-high-schools-in-france-close-as-new-protests-against-conditions-erupt"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/01/french-protests-over-school-conditions-spread-as-students-set-fires-and-put-up-blockades"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/02/french-students-clash-with-police-as-school-protests-spread-nationwide"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting"
-        },
-        {
-          "language": "en",
-          "source": "chronicle.lu",
-          "source_country": "lu",
-          "url": "https://www.chronicle.lu/category/international/63773-students-police-clash-as-france-struggles-to-quell-school-protests"
-        },
-        {
-          "language": "en",
-          "source": "dailytrust.com",
-          "source_country": "ng",
-          "url": "https://dailytrust.com/schools-shut-as-violent-protest-breaks-out-in-france/"
-        },
-        {
-          "language": "en",
-          "source": "kvia.com",
-          "source_country": "united-states",
-          "url": "https://kvia.com/news/us-world/cnn-world/2026/10/02/students-and-police-clash-as-frances-government-struggles-to-calm-student-tensions/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
+        "up"
       ],
       "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
         "euronews.com",
-        "pbs.org"
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4765,
+          "coherence": 0.4598,
           "corroboration": 0.7143,
           "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.6224,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russia",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "moscou",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "vladimir poutine",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Les articles indiquent que la Russie a mené une nouvelle attaque visant un pont majeur traversant le Dnipro à Kyiv, marquant le deuxième pont touché en l’espace de deux jours; les frappes ont endommagé une ou plusieurs voies d’accès au pont et des attaques plus larges en Ukraine ont fait des victimes, au moins six personnes selon les comptes rendus."
+    },
+    {
+      "_linked_ids": [
+        "subject-lettonie-cb59da431f03"
+      ],
+      "cluster_id": "subject-lettonie-cb59da431f03",
+      "coherence": 0.42268642294425385,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-04",
+      "filled_from": "europe",
+      "headline": "Le parti pro‑européen au pouvoir arrive en tête des législatives en Lettonie",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/en-lettonie-le-parti-du-premier-ministre-andris-kulbergs-obtient-un-succes-historique-qui-eloigne-le-danger-populiste_6788216_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/legislatives-en-lettonie-les-populistes-et-souverainistes-font-une-percee-mais-le-camp-pro-europe-garde-le-cap-20261004_6FTV6CPN75EDNKNAQTCHBCSFTQ/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/le-parti-pro-europeen-et-pro-ukrainien-liste-unie-arrive-en-tete-des-legislatives-en-lettonie-selon-des-resultats-partiels_8221912.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261004-l%C3%A9gislatives-en-lettonie-la-majorit%C3%A9-pro-europ%C3%A9enne-et-pro-ukraine-en-t%C3%AAte-malgr%C3%A9-la-pouss%C3%A9e-des-populistes"
+        }
+      ],
+      "mentioned_countries": [
+        "lg"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4227,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.7895
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.6268,
+        "total": 0.585,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "lettonie",
       "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "french",
-        "italia",
-        "lecornu",
-        "paris"
+        "letonia",
+        "lettonie",
+        "lista unida"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Des centaines de lycées à travers la France ont été touchés par des blocages, des incendies et des fermetures alors qu’élèves et forces de l’ordre se sont affrontés ; les manifestations dénoncent la dégradation et le sous-financement des conditions scolaires, et ont poussé le gouvernement à convoquer une réunion de crise."
+      "subject_newsroom_count": 4,
+      "summary": "Les résultats partiels des législatives en Lettonie montrent que la liste pro‑européenne et pro‑Ukraine au pouvoir arrive en tête, permettant au camp pro‑Europe de conserver l’avantage malgré une progression des formations populistes et souverainistes."
     }
   ],
-  "discarded_ingested": 30,
+  "discarded_ingested": 26,
   "discarded_kept": 5,
-  "generated_at": "2026-10-03T10:31:22.194629+00:00",
+  "generated_at": "2026-10-04T11:12:40.597399+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

@@ -1,50 +1,107 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ukraine-602b91b094d6",
-      "coherence": 0.4843208386640021,
+      "cluster_id": "subject-lettonie-cb59da431f03",
+      "coherence": 0.42268642294425385,
       "consequence": 3,
       "countries": [
-        "france",
-        "it",
-        "spain",
-        "sz",
-        "united-kingdom"
+        "france"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-10-03",
-      "headline": "Rusia atacó por segunda vez en pocos días un gran puente en Kiev",
-      "independent_source_count": 8,
+      "country_count": 1,
+      "editorial_day": "2026-10-04",
+      "headline": "Partido proeuropeo lidera las legislativas en Letonia pese al avance populista",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/10/03/en-direct-guerre-en-ukraine-la-russie-a-attaque-un-deuxieme-pont-majeur-a-kiev_6783795_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/en-lettonie-le-parti-du-premier-ministre-andris-kulbergs-obtient-un-succes-historique-qui-eloigne-le-danger-populiste_6788216_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/legislatives-en-lettonie-les-populistes-et-souverainistes-font-une-percee-mais-le-camp-pro-europe-garde-le-cap-20261004_6FTV6CPN75EDNKNAQTCHBCSFTQ/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/en-ukraine-un-nouveau-grand-pont-de-kiev-touche-par-une-frappe-russe_8220826.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261003-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-une-frappe-russe"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261003-en-direct-ukraine-un-nouveau-grand-pont-de-kiev-touch%C3%A9-par-des-frappes-russes"
+          "url": "https://www.franceinfo.fr/monde/europe/le-parti-pro-europeen-et-pro-ukrainien-liste-unie-arrive-en-tete-des-legislatives-en-lettonie-selon-des-resultats-partiels_8221912.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261003-au-bord-du-pr%C3%A9cipice-%C3%A0-kiev-les-frappes-russes-sur-les-ponts-perturbent-fortement-la-circulation"
+          "url": "https://www.rfi.fr/fr/europe/20261004-l%C3%A9gislatives-en-lettonie-la-majorit%C3%A9-pro-europ%C3%A9enne-et-pro-ukraine-en-t%C3%AAte-malgr%C3%A9-la-pouss%C3%A9e-des-populistes"
+        }
+      ],
+      "mentioned_countries": [
+        "lg"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4227,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
+        },
+        "total": 0.6717,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "lettonie",
+      "subject_names": [
+        "letonia",
+        "lettonie",
+        "lista unida"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Los sondeos y resultados parciales coinciden en que la Lista Unida, partido proeuropeo y favorable a Ucrania encabezado por el primer ministro Andris Kublērs, llegó en primer lugar en las elecciones legislativas de Letonia, mientras que movimientos populistas y soberanistas registraron una progresión significativa pero no desplazaron al bloque pro‑Europa."
+    },
+    {
+      "cluster_id": "subject-russia-1c9016226b03",
+      "coherence": 0.4598265311489034,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "rp",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-10-03",
+      "headline": "Rusia ataca por segunda vez en dos días un puente principal de Kyiv",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261003/11650129/nuevo-ataque-rusia-vias-acceso-kyiv.html"
         },
         {
           "language": "en",
@@ -59,414 +116,354 @@
           "url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings"
         },
         {
-          "language": "fr",
-          "source": "latele.ch",
-          "source_country": "sz",
-          "url": "https://latele.ch/articles/ukraine-un-nouveau-pont-majeur-de-kiev-touche-par-une-frappe-russe"
-        },
-        {
-          "language": "es",
-          "source": "elcorreo.com",
-          "source_country": "spain",
-          "url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "elcorreo.com",
-      "outbound_url": "https://www.elcorreo.com/internacional/europa/drones-rusos-bombardean-importante-puente-sobre-rio-20261002194949-ntrc.html",
-      "rank": 1,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4843,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7576
-        },
-        "total": 0.7503,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russie",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "En Kiev, las autoridades informaron que las fuerzas rusas atacaron y dañaron un segundo gran puente sobre el río Dniéper en el transcurso de pocos días; las ofensivas con bombas y drones han afectado la circulación y perturbado el tránsito en la ciudad según los comunicados locales."
-    },
-    {
-      "cluster_id": "subject-france-edc9b38a37ed",
-      "coherence": 0.4765270872567776,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "lu",
-        "ng",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-03",
-      "headline": "Estudiantes protestan en Francia y se producen enfrentamientos con la policía",
-      "independent_source_count": 6,
-      "members": [
-        {
           "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss"
+          "source": "manilatimes.net",
+          "source_country": "rp",
+          "url": "https://www.manilatimes.net/2026/10/04/world/americas-emea/russia-strikes-another-major-bridge-in-kyiv/2438389"
         },
         {
           "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cr5ynddn318eo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/02/hundreds-of-high-schools-in-france-close-as-new-protests-against-conditions-erupt"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/01/french-protests-over-school-conditions-spread-as-students-set-fires-and-put-up-blockades"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/02/french-students-clash-with-police-as-school-protests-spread-nationwide"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
+          "source": "wsbradio.com",
           "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/student-protests-grip-france-as-prime-minister-lecornu-calls-crisis-meeting"
-        },
-        {
-          "language": "en",
-          "source": "chronicle.lu",
-          "source_country": "lu",
-          "url": "https://www.chronicle.lu/category/international/63773-students-police-clash-as-france-struggles-to-quell-school-protests"
-        },
-        {
-          "language": "en",
-          "source": "dailytrust.com",
-          "source_country": "ng",
-          "url": "https://dailytrust.com/schools-shut-as-violent-protest-breaks-out-in-france/"
-        },
-        {
-          "language": "en",
-          "source": "kvia.com",
-          "source_country": "united-states",
-          "url": "https://kvia.com/news/us-world/cnn-world/2026/10/02/students-and-police-clash-as-frances-government-struggles-to-calm-student-tensions/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/videos/cmy0zey3ey2lo?at_medium=RSS&at_campaign=rss",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4765,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.7895
-        },
-        "total": 0.7115,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "french",
-        "italia",
-        "lecornu",
-        "paris"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "Estudiantes de secundaria y universitarios en Francia han realizado protestas masivas por las condiciones y el subfinanciamiento de la educación; las movilizaciones incluyeron cierres de centros, bloqueos, incendios y choques con la policía en múltiples localidades, lo que llevó a la suspensión de clases en cientos de centros y a reuniones del gobierno para abordar la crisis."
-    },
-    {
-      "cluster_id": "subject-france-ad5991e3c067",
-      "coherence": 0.5999889393248863,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "Las prisiones de Francia alcanzan un nuevo récord de 90.020 presos",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/03/les-prisons-francaises-continuent-d-etre-surpeuplees-avec-un-nombre-inegale-de-plus-de-90-000-detenus_6787785_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/prisons-90-020-detenus-en-france-un-nouveau-record-20261003"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/prisons/la-surpopulation-carcerale-atteint-un-nouveau-record-en-france-avec-90-020-detenus-au-1er-septembre_8220991.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/police-justice/surpopulation-carcerale-90-020-detenus-en-france-au-1er-septembre-un-nouveau-record-20261003_Z3OR4PFVRFG5BKLPRKJPP7BDBI/",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6903,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "french",
-        "italia",
-        "lecornu",
-        "paris"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "Las cuatro fuentes coinciden en que el 1 de septiembre Francia registró un nuevo máximo de población reclusa, con 90.020 detenidos, confirmando que las prisiones del país permanecen sobrepobladas."
-    },
-    {
-      "cluster_id": "subject-lituania-b2a364572e0b",
-      "coherence": 0.4762515024221603,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-03",
-      "headline": "Lituania cierra temporalmente el aeropuerto de Vilna por posible dron",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-03/lituania-cierra-durante-una-hora-el-aeropuerto-de-vilnius-y-despliega-aviones-de-la-otan-por-la-presencia-de-un-dron.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/alerta-posible-dron-obliga-cerrar-aeropuerto-importante-20261003105957-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261003/11650147/posible-dron-bielorrusia-cierra-aeropuerto-vilna-lituania-activa-despliegue-aereo-otan.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/lituania-cierra-temporalmente-espacio-aereo-aeropuerto-vilna-presencia-posible-dron_1_13558921.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/20261003/aeropuerto-vilna-cierra-temporalmente-espacio-aereo-posible-presencia-dron-no-identificado/1003744407360_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "lh"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-10-03/lituania-cierra-durante-una-hora-el-aeropuerto-de-vilnius-y-despliega-aviones-de-la-otan-por-la-presencia-de-un-dron.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4763,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.6187,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "lituania",
-      "subject_names": [
-        "kaliningrado",
-        "lituania",
-        "otan",
-        "vilna"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Los cinco artículos coinciden en que el aeropuerto de Vilna (Vilnius) cerró temporalmente su espacio aéreo durante alrededor de una hora ante la detección de un posible dron, y que la situación motivó el despliegue de aeronaves de la OTAN para monitorizar y controlar el incidente; algunas fuentes indican que el dron procedía de Bielorrusia, pero todas las notas apuntan a una alarma por un objeto no identificado que obligó a suspender operaciones durante ese periodo."
-    },
-    {
-      "cluster_id": "subject-ukraine-c2860e239af0",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-02",
-      "headline": "Corea del Sur exige disculpa pública de Ucrania y amenaza con medidas",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cm1dld14weero?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/02/south-korea-warns-of-further-measures-if-ukraine-refuses-public-apology-over-pow-transfer-"
+          "url": "https://www.wsbradio.com/news/world/russia-strikes-kyivs/LTKYBWNWEE6L3CETQJZHW6O4KM/"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
       "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cm1dld14weero?at_medium=RSS&at_campaign=rss",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings",
+      "rank": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "euronews.com"
+        "euronews.com",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "coherence": 0.4598,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.6143,
+        "total": 0.6645,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russia",
+      "subject_names": [
+        "kiev",
+        "kyiv",
+        "moscou",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "vladimir poutine",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Varias fuentes informan que Rusia lanzó ataques contra puentes que cruzan el río Dniéper en Kyiv; en el segundo día consecutivo, otro puente principal resultó alcanzado, con daños reportados en la infraestructura y víctimas mortales por los ataques en Ucrania."
+    },
+    {
+      "cluster_id": "subject-ukraine-46743d401969",
+      "coherence": 0.45477935949187287,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "germany"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-04",
+      "headline": "Friedrich Merz visita Kiev mientras un puente de la ciudad es atacado por un dron",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/ukraine-un-pont-de-kiev-attaque-par-un-drone-lors-de-la-visite-du-chancelier-allemand-friedrich-merz-20261004"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/ukraine-en-pleine-visite-non-annoncee-de-friedrich-merz-un-pont-de-kyiv-attaque-par-un-drone-20261004_2M53YWXKBZFAJKHU2WBOPQJD44/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1680-point-conflit-ukrainien-poutine-aujourdhui-20261004"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261004-ukraine-friedrich-merz-en-visite-surprise-%C3%A0-kiev-toujours-sous-le-feu-des-frappes-russes"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/merz-kiew-drohnen-100.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/eilmeldung-merz-kiew-100.html"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-10/friedrich-merz-ukraine-besuch-katherina-reiche-abfangdrohnen-gxe"
+        },
+        {
+          "language": "de",
+          "source": "ovb-online.de",
+          "source_country": "germany",
+          "url": "http://www.ovb-online.de/weltspiegel/politik/ukraine-aktuell-waehrend-merz-besuch-russland-greift-bruecke-in-kiew-mit-drohne-an-zr-94522823.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "tagesschau.de",
+      "outbound_url": "https://www.tagesschau.de/ausland/europa/eilmeldung-merz-kiew-100.html",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lefigaro.fr",
+        "liberation.fr",
+        "rfi.fr",
+        "tagesschau.de",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4548,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7647
+        },
+        "total": 0.6514,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ukraine",
       "subject_names": [
+        "friedrich merz",
         "kiev",
-        "russia",
-        "russie",
+        "merz",
         "ukraine"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Corea del Sur ha solicitado una disculpa pública de Ucrania por la divulgación de la transferencia de prisioneros de guerra y advirtió que tomará “medidas adicionales” o “más acciones” si Ucrania no se disculpa; ambos artículos coinciden en que la demanda surcoreana se centra en la revelación del traslado de prisioneros y en la advertencia de posibles consecuencias si no hay disculpa pública."
+      "subject_newsroom_count": 12,
+      "summary": "El canciller alemán Friedrich Merz realizó una visita sorpresa a Kiev y, durante su estancia, un puente en la ciudad fue atacado por un dron; los artículos coinciden en que el ataque ocurrió en medio de la visita y en el contexto de los continuos ataques relacionados con la guerra en Ucrania."
+    },
+    {
+      "cluster_id": "subject-ceuta-6b14d80aa754",
+      "coherence": 0.5270556215665787,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-04",
+      "headline": "La Policía Nacional inicia el desalojo del asentamiento en la playa de El Trampolín en Ceuta",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-04/la-policia-empieza-a-desalojar-el-asentamiento-de-la-playa-de-el-trampolin-de-ceuta.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/desalambre/policia-nacional-inicia-desalojo-asentamiento-playa-trampolin-ceuta_1_13560310.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/reportajes/20261004/policia-comienza-desalojo-campamento-playa-trampolin-ceuta/1003744407777_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/04/6ac1f3dbe85ece39088b45a4.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-10-04/policia-nacional-desalojo-asentamiento-playa-trampolin-ceuta-1tna_4437848/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-policia-nacional-despliega-trampolin-ceuta-desalojar-parte-campamento-migrantes-20261004083251.html"
+        },
+        {
+          "language": "es",
+          "source": "diariodeleon.es",
+          "source_country": "spain",
+          "url": "https://www.diariodeleon.es/nacional/261004/2099223/350-policias-desplegados-trampolin-ceuta-primera-fase-desalojo.html"
+        },
+        {
+          "language": "es",
+          "source": "diariosur.es",
+          "source_country": "spain",
+          "url": "https://www.diariosur.es/nacional/policia-nacional-desaloja-asentamiento-playa-trampolin-ceuta-20261004113715-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "mo"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-10-04/la-policia-empieza-a-desalojar-el-asentamiento-de-la-playa-de-el-trampolin-de-ceuta.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5271,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
+        },
+        "total": 0.6428,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "marruecos",
+        "trampolin"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Agentes de la Policía Nacional desplegaron más de 350 efectivos y comenzaron a desalojar el asentamiento de migrantes en la playa de El Trampolín, en Ceuta; durante la actuación se escucharon protestas y gritos de algunos residentes del campamento."
+    },
+    {
+      "cluster_id": "subject-france-091c503267b8",
+      "coherence": 0.4239874427146295,
+      "consequence": 3,
+      "countries": [
+        "spain",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-03",
+      "headline": "Protestas estudiantiles en Francia dejan miles de detenidos y daños materiales",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261002/11649224/protestas-estudiantiles-francia-derivan-violencia-urbana-dejan-2-000-detenidos.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/protestas-estudiantiles-francia-intensifican-dejan-cerca-2-000-detenidos_1_13555816.html"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/10/03/nx-s1-5989532/france-arrests-5-000-people-mostly-teens-as-school-protests-spread"
+        },
+        {
+          "language": "es",
+          "source": "vozpopuli.com",
+          "source_country": "spain",
+          "url": "https://www.vozpopuli.com/internacional/mas-de-5000-arrestos-y-millones-de-euros-en-danos-por-protestas-estudiantiles-en-francia.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261002/11649224/protestas-estudiantiles-francia-derivan-violencia-urbana-dejan-2-000-detenidos.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "lavanguardia.com",
+        "npr.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.424,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6351,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "nantes",
+        "paris"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Estudiantes y menores han protagonizado protestas a gran escala en Francia que se han intensificado en varias ciudades, y las fuerzas de seguridad han realizado entre cerca de 2.000 y más de 5.000 detenciones según los distintos recuentos; las manifestaciones han derivado en episodios de violencia urbana y han causado daños materiales por valor de millones de euros."
     }
   ],
-  "discarded_ingested": 90,
+  "discarded_ingested": 81,
   "discarded_kept": 5,
-  "generated_at": "2026-10-03T10:31:22.194629+00:00",
+  "generated_at": "2026-10-04T11:12:40.597399+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

@@ -1,324 +1,42 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-091c503267b8",
-      "coherence": 0.4239874427146295,
+      "cluster_id": "subject-france-478089cde8c2",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "spain",
+        "united-kingdom",
         "united-states"
       ],
       "country_count": 2,
-      "editorial_day": "2026-10-03",
-      "headline": "Student protests in France lead to widespread arrests and urban violence",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261002/11649224/protestas-estudiantiles-francia-derivan-violencia-urbana-dejan-2-000-detenidos.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/protestas-estudiantiles-francia-intensifican-dejan-cerca-2-000-detenidos_1_13555816.html"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/03/nx-s1-5989532/france-arrests-5-000-people-mostly-teens-as-school-protests-spread"
-        },
-        {
-          "language": "es",
-          "source": "vozpopuli.com",
-          "source_country": "spain",
-          "url": "https://www.vozpopuli.com/internacional/mas-de-5000-arrestos-y-millones-de-euros-en-danos-por-protestas-estudiantiles-en-francia.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261002/11649224/protestas-estudiantiles-francia-derivan-violencia-urbana-dejan-2-000-detenidos.html",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "lavanguardia.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.424,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6351,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "french",
-        "nantes",
-        "paris"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Student demonstrations across France escalated into clashes with police, resulting in thousands of arrests (reports cite around 2,000 to more than 5,000 detained), widespread disturbances described as 'urban violence,' and significant property damage costing millions of euros."
-    },
-    {
-      "cluster_id": "subject-bardella-78c1986d1037",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-03",
-      "headline": "Media publish screenshots attributed to Jordan Bardella showing antisemitic writings",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/jordan-bardella/marine-le-pen-maintient-totalement-sa-confiance-a-jordan-bardella-a-qui-mediapart-attribue-des-ecrits-antisemites_8221537.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20260928.OBS118683/d-anciens-ecrits-antisemites-de-jordan-bardella-reveles-par-mediapart.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/01/france-mediapart-publishes-new-antisemitic-screenshots-attributed-to-jordan-bardella"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/politique/20260928.OBS118683/d-anciens-ecrits-antisemites-de-jordan-bardella-reveles-par-mediapart.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "francetvinfo.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5663,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bardella",
-      "subject_names": [
-        "affaire bardella",
-        "bardella",
-        "jordan bardella",
-        "marine",
-        "mediapart",
-        "pen"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "French media outlets published screenshots that they attribute to Jordan Bardella which contain antisemitic writings; the publications present these documents as linked to Bardella, and Marine Le Pen publicly maintained her full confidence in him after the revelations."
-    },
-    {
-      "cluster_id": "subject-dafroza-gauthier-dc74a251e420",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-04",
-      "headline": "Dafroza Gauthier, who pursued Rwandan genocide suspects in France, has died",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/disparitions/article/2026/10/03/dafroza-gauthier-apres-trente-ans-de-traque-des-genocidaires-rwandais-refugies-en-france-est-morte_6787817_3382.html"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261004-dafroza-gauthier-chasseuse-g%C3%A9nocidaires-rwandais-morte-tutsi"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/afrique/20261004-g%C3%A9nocides-des-tutsis-au-rwanda-dafroza-gauthier-une-vie-consacr%C3%A9e-%C3%A0-la-traque-des-g%C3%A9nocidaires-rwandais"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/disparitions/article/2026/10/03/dafroza-gauthier-apres-trente-ans-de-traque-des-genocidaires-rwandais-refugies-en-france-est-morte_6787817_3382.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5114,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "dafroza gauthier",
-      "subject_names": [
-        "dafroza gauthier"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Dafroza Gauthier, known for spending about thirty years tracking Rwandan genocide suspects who found refuge in France, has died; she built a lifelong commitment to identifying and pursuing those involved in the 1994 genocide against the Tutsi and worked to bring them to justice."
-    },
-    {
-      "cluster_id": "subject-terre-d2fd26b98c67",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-04",
-      "headline": "NASA delays French astronaut Sophie Adenot’s return to Earth due to weather",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sciences/espace/le-retour-sur-terre-de-sophie-adenot-reporte-en-raison-de-la-meteo-20261004_XEKWD3E3J5GQNN3D3ZYZBWHVSI/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/sophie-adenot-dans-l-espace/le-retour-sur-terre-de-l-astronaute-francaise-sophie-adenot-est-reporte-en-raison-de-la-meteo_8221942.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/sciences/20261004-le-retour-sur-terre-de-sophie-adenot-report%C3%A9-par-la-nasa-en-raison-de-la-m%C3%A9t%C3%A9o"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/sophie-adenot-dans-l-espace/le-retour-sur-terre-de-l-astronaute-francaise-sophie-adenot-est-reporte-en-raison-de-la-meteo_8221942.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5114,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "terre",
-      "subject_names": [
-        "sophie adenot",
-        "terre"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "NASA postponed the planned return to Earth of French astronaut Sophie Adenot because unfavorable weather conditions prevented the scheduled landing. The agencies involved decided to delay the descent until conditions are suitable, and the change was communicated publicly by mission officials."
-    },
-    {
-      "cluster_id": "subject-france-56c5c4933f06",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-04",
-      "headline": "Tens of thousands march through Paris for LGBTQ+ Pride",
+      "editorial_day": "2026-10-05",
+      "headline": "Euro drops to 17-month low against US dollar amid French debt concerns",
       "independent_source_count": 2,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/video/2026/10/04/marche-des-fiertes-lgbtq-a-paris-retour-en-images-sur-le-cortege_6788221_823448.html"
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/business/2026/oct/05/euro-falls-dollar-amid-french-debt-cac-40-spain-eurozone"
         },
         {
           "language": "en",
           "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/03/tens-of-thousands-of-people-take-to-streets-of-paris-to-march-for-pride"
+          "source_country": "united-states",
+          "url": "https://www.euronews.com/2026/10/05/euro-hits-17-month-low-as-french-debt-fears-mount-and-spain-heads-for-snap-election"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/03/tens-of-thousands-of-people-take-to-streets-of-paris-to-march-for-pride",
-      "rank": 5,
+      "origin_country": "united-kingdom",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/business/2026/oct/05/euro-falls-dollar-amid-french-debt-cac-40-spain-eurozone",
+      "rank": 1,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "euronews.com",
-        "lemonde.fr"
+        "theguardian.com"
       ],
       "score": {
         "components": {
@@ -327,29 +45,458 @@
           "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.3333,
           "source_reliability": 0.4286
         },
-        "total": 0.4294,
+        "total": 0.6494,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
+        "belgique",
         "france",
         "francia",
         "french",
-        "nantes",
-        "paris"
+        "lfi",
+        "paris",
+        "royaume-uni"
       ],
       "subject_newsroom_count": 22,
-      "summary": "Tens of thousands of people took part in a Pride march through Paris, with a long procession of participants seen in images and footage along the route; the event brought together a large, visible crowd to celebrate and demonstrate for LGBTQ+ rights."
+      "summary": "The euro fell to a 17-month low against the US dollar as investors grew worried about mounting French government debt issues; the decline was reported alongside political uncertainty in the eurozone, including Spain moving toward a snap election."
+    },
+    {
+      "cluster_id": "subject-rohan-rane-9a4969bb4f92",
+      "coherence": 0.4364119367313313,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-05",
+      "headline": "Trial of Rohan Rane, accused of sexual torture of minors, opens in camera",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/05/le-proces-de-rohan-rane-un-etudiant-fasciste-et-masculiniste-juge-pour-des-tortures-sexuelles-sur-mineures-se-tiendra-a-huis-clos_6788522_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/extorsions-et-tortures-sexuelles-sur-discord-le-proces-de-rohan-rane-se-tient-a-huis-clos-au-grand-dam-des-parties-civiles-20261005_HVVS723PRFDH5NIAWNA3754Z4Y/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/justice/mutilations-croix-gammees-gravees-sur-la-peau-victimes-mineures-le-proces-de-rohan-rane-masculiniste-et-fasciste-revendique-de-discord-s-ouvre-a-paris_8222227.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/societe/justice/gourou-accuse-de-torture-en-ligne-sur-des-adolescentes-le-proces-du-masculiniste-rohan-rane-sest-ouvert-a-huis-clos-b5648ff0-c093-11f1-b7db-555e86a524f6?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/societe/justice/mutilations-croix-gammees-gravees-sur-la-peau-victimes-mineures-le-proces-de-rohan-rane-masculiniste-et-fasciste-revendique-de-discord-s-ouvre-a-paris_8222227.html#xtor=RSS-3-[lestitres]",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "ouest-france.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4364,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.5974,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "rohan rane",
+      "subject_names": [
+        "rohan rane"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Rohan Rane, described in the press as a fascist and masculinist figure active on Discord, is on trial in Paris accused of orchestrating sexual extortion and torture of underage victims, including mutilations and carved swastikas; proceedings are being held behind closed doors, a decision contested by some civil parties."
+    },
+    {
+      "cluster_id": "subject-monday-34e1bde69fdd",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-05",
+      "headline": "France closes hundreds of schools as student protests disrupt classes",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cwkg5n7lm3y5o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/04/student-protests-in-france-400500-schools-fully-or-partially-closed-monday"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/04/student-protests-in-france-400500-schools-fully-or-partially-closed-monday",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.5761,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "monday",
+      "subject_names": [
+        "monday"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Between 400 and 500 schools across France were fully or partially closed on Monday because of student protests, with up to 500 closures reported overall; authorities and schools implemented these closures in response to widespread demonstrations by students."
+    },
+    {
+      "cluster_id": "subject-france-2faaa7ee3361",
+      "coherence": 0.46417501119086946,
+      "consequence": 1,
+      "countries": [
+        "it",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-05",
+      "headline": "Student loses a hand after a police grenade detonates during French school protests",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/explota-mano-menor-coger-granada-policia-protestas-20261005134017-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261005/11651305/protestas-profesores-previa-huelga-francia-afectan-mas-400-centros.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/10/05/6ac391b6e9cf4a253c8b45bf.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/05/french-students-set-fire-to-paris-school-entrance-on-eve-of-nationwide-day-of-action"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/05/french-students-set-fire-to-paris-school-entrance-on-eve-of-nationwide-day-of-action",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "elmundo.es",
+        "euronews.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4642,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.544,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "belgique",
+        "france",
+        "francia",
+        "french",
+        "lens",
+        "lfi",
+        "paris",
+        "royaume-uni"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "During ongoing student protests in France, a minor picked up a police grenade which detonated, resulting in the loss of his hand; the incident occurred amid clashes between students and police at demonstrations over education."
+    },
+    {
+      "cluster_id": "subject-pedro-sanchez-2d08fe68fb33",
+      "coherence": 0.48843696492425515,
+      "consequence": 3,
+      "countries": [
+        "co",
+        "france",
+        "it",
+        "po",
+        "spain",
+        "uy",
+        "ve"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-10-05",
+      "filled_from": "europe",
+      "headline": "Spanish Prime Minister Pedro Sánchez calls snap general election for November 29",
+      "independent_source_count": 22,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/05/en-espagne-pedro-sanchez-fragilise-par-le-rejet-de-ses-mesures-sur-le-logement-convoque-des-elections-anticipees-le-29-novembre_6788491_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/en-espagne-pedro-sanchez-joue-son-va-tout-et-convoque-des-elections-anticipees-20261005"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/espagne-pedro-sanchez-convoque-des-elections-anticipees-le-29-novembre-20261005"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/051026/espagne-pedro-sanchez-convoque-des-elections-anticipees-le-29-novembre"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/fragilise-par-le-rejet-de-ses-mesures-sur-le-logement-le-premier-ministre-espagnol-pedro-sanchez-convoque-des-elections-anticipees-le-29-novembre_8222983.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261005-en-espagne-pedro-sanchez-convoque-des-%C3%A9lections-anticip%C3%A9es-le-29-novembre"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261005-crise-du-logement-en-espagne-pedro-s%C3%A1nchez-convoque-des-%C3%A9lections-anticip%C3%A9es-le-29-novembre"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-05/sanchez-adelanta-las-elecciones-al-29-de-noviembre-necesitamos-una-mayoria-progresista-mucho-mas-amplia.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/sanchez-convoca-elecciones-agitando-malestar-vivienda-20261005090835-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/sanchez-convoca-elecciones-anticipadas-29-noviembre_1_13555649.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/10/05/6ac344e5e5fdea9f3a8b4580.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/05/6ac3493de4d4d82d6e8b4580.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/sanchez-convoca-elecciones-anticipadas-29-noviembre-necesitamos-mayoria-amplia_1_2237376.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20261005/sanchez-convoca-elecciones-doblegar-elites-parlamento-pisan-intereses-gente/1003744408309_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-elecciones-anticipadas-29-noviembre-20261005090901.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/10/05/news/sanchez_dimissioni_elezioni_spagna_novembre_2026-425626262/?rss"
+        },
+        {
+          "language": "fr",
+          "source": "martinique.franceantilles.fr",
+          "source_country": "france",
+          "url": "https://www.martinique.franceantilles.fr/actualite/international/espagne-sanchez-convoque-des-elections-anticipees-apres-le-rejet-de-ses-mesures-pour-le-logement-1095165.php"
+        },
+        {
+          "language": "pt",
+          "source": "jm-madeira.pt",
+          "source_country": "po",
+          "url": "https://www.jm-madeira.pt/not%C3%ADcias/mundo/30006474/sanchez-convoca-eleicoes-antecipadas-em-espanha-para-29-de-novembro.html"
+        },
+        {
+          "language": "es",
+          "source": "ejecutivos.es",
+          "source_country": "spain",
+          "url": "https://ejecutivos.es/noticias/sanchez-convoca-elecciones-generales-para-el-29-de-noviembre/"
+        },
+        {
+          "language": "es",
+          "source": "correodelorinoco.gob.ve",
+          "source_country": "ve",
+          "url": "http://www.correodelorinoco.gob.ve/pedro-sanchez-anuncia-elecciones-anticipadas-espana-votara-el-29-de-noviembre/"
+        },
+        {
+          "language": "es",
+          "source": "subrayado.com.uy",
+          "source_country": "uy",
+          "url": "https://www.subrayado.com.uy/pedro-sanchez-adelanta-las-elecciones-espana-el-29-noviembre-n1019862"
+        },
+        {
+          "language": "es",
+          "source": "eldiadecordoba.es",
+          "source_country": "spain",
+          "url": "https://www.eldiadecordoba.es/espana/pedro-sanchez-convocatoria-elecciones-generales-2026_0_2008153433.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://diariodeavisos.elespanol.com/2026/10/pedro-sanchez-convoca-elecciones-generales/"
+        },
+        {
+          "language": "es",
+          "source": "elheraldo.co",
+          "source_country": "co",
+          "url": "https://www.elheraldo.co/mundo/2026/10/05/pedro-sanchez-adelanta-elecciones-generales-en-espana-para-el-29-de-noviembre-tras-fracaso-en-decretos-de-vivienda/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "co",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/politica/sanchez-convoca-elecciones-anticipadas-29-noviembre_1_13555649.html",
+      "rank": 5,
+      "reference_newsroom_count": 15,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "infolibre.es",
+        "la-croix.com",
+        "lemonde.fr",
+        "mediapart.fr",
+        "repubblica.it",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4884,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.6522,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8462,
+          "source_reliability": 0.8904
+        },
+        "total": 0.7728,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "pedro sanchez",
+      "subject_names": [
+        "espagne",
+        "pedro sanchez",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 27,
+      "summary": "Pedro Sánchez, Spain’s prime minister, dissolved parliament and announced a snap general election to be held on 29 November after his housing measures were rejected; he framed the vote as a bid to secure a broader progressive majority amid political tensions over housing and the rise of the far right."
     }
   ],
-  "discarded_ingested": 24,
+  "discarded_ingested": 12,
   "discarded_kept": 5,
-  "generated_at": "2026-10-04T11:12:40.597399+00:00",
+  "generated_at": "2026-10-05T12:29:39.573698+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

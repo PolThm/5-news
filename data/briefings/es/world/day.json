@@ -1,195 +1,634 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-bresil-3cd16fb114a3",
-      "coherence": 0.37706521511703683,
+      "cluster_id": "subject-pedro-sanchez-2d08fe68fb33",
+      "coherence": 0.48843696492425515,
       "consequence": 3,
       "countries": [
-        "france"
+        "co",
+        "france",
+        "it",
+        "po",
+        "spain",
+        "uy",
+        "ve"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-04",
-      "headline": "Lula se enfrenta a Flavio Bolsonaro en una presidencial que recuerda al duelo anterior",
-      "independent_source_count": 5,
+      "country_count": 7,
+      "editorial_day": "2026-10-05",
+      "headline": "Pedro Sánchez convoca elecciones generales anticipadas para el 29 de noviembre",
+      "independent_source_count": 22,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/lula-pour-un-quatrieme-mandat-flavio-bolsonaro-sur-les-traces-de-son-pere-au-bresil-une-presidentielle-au-parfum-de-match-retour-20261003"
+          "url": "https://www.lemonde.fr/international/article/2026/10/05/en-espagne-pedro-sanchez-fragilise-par-le-rejet-de-ses-mesures-sur-le-logement-convoque-des-elections-anticipees-le-29-novembre_6788491_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/en-espagne-pedro-sanchez-joue-son-va-tout-et-convoque-des-elections-anticipees-20261005"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/espagne-pedro-sanchez-convoque-des-elections-anticipees-le-29-novembre-20261005"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/051026/espagne-pedro-sanchez-convoque-des-elections-anticipees-le-29-novembre"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/fragilise-par-le-rejet-de-ses-mesures-sur-le-logement-le-premier-ministre-espagnol-pedro-sanchez-convoque-des-elections-anticipees-le-29-novembre_8222983.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261005-en-espagne-pedro-sanchez-convoque-des-%C3%A9lections-anticip%C3%A9es-le-29-novembre"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261003-%C3%A9lections-au-br%C3%A9sil-le-duel-lula-bolsonaro-un-air-de-d%C3%A9j%C3%A0-vu"
+          "url": "https://www.rfi.fr/fr/europe/20261005-crise-du-logement-en-espagne-pedro-s%C3%A1nchez-convoque-des-%C3%A9lections-anticip%C3%A9es-le-29-novembre"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-05/sanchez-adelanta-las-elecciones-al-29-de-noviembre-necesitamos-una-mayoria-progresista-mucho-mas-amplia.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/sanchez-convoca-elecciones-agitando-malestar-vivienda-20261005090835-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/sanchez-convoca-elecciones-anticipadas-29-noviembre_1_13555649.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/10/05/6ac344e5e5fdea9f3a8b4580.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/05/6ac3493de4d4d82d6e8b4580.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/sanchez-convoca-elecciones-anticipadas-29-noviembre-necesitamos-mayoria-amplia_1_2237376.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20261005/sanchez-convoca-elecciones-doblegar-elites-parlamento-pisan-intereses-gente/1003744408309_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-elecciones-anticipadas-29-noviembre-20261005090901.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/10/05/news/sanchez_dimissioni_elezioni_spagna_novembre_2026-425626262/?rss"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "martinique.franceantilles.fr",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261004.OBS118867/lula-face-au-fils-bolsonaro-l-ombre-de-trump-ce-qu-il-faut-savoir-sur-la-presidentielle-au-bresil.html"
+          "url": "https://www.martinique.franceantilles.fr/actualite/international/espagne-sanchez-convoque-des-elections-anticipees-apres-le-rejet-de-ses-mesures-pour-le-logement-1095165.php"
+        },
+        {
+          "language": "pt",
+          "source": "jm-madeira.pt",
+          "source_country": "po",
+          "url": "https://www.jm-madeira.pt/not%C3%ADcias/mundo/30006474/sanchez-convoca-eleicoes-antecipadas-em-espanha-para-29-de-novembro.html"
+        },
+        {
+          "language": "es",
+          "source": "ejecutivos.es",
+          "source_country": "spain",
+          "url": "https://ejecutivos.es/noticias/sanchez-convoca-elecciones-generales-para-el-29-de-noviembre/"
+        },
+        {
+          "language": "es",
+          "source": "correodelorinoco.gob.ve",
+          "source_country": "ve",
+          "url": "http://www.correodelorinoco.gob.ve/pedro-sanchez-anuncia-elecciones-anticipadas-espana-votara-el-29-de-noviembre/"
+        },
+        {
+          "language": "es",
+          "source": "subrayado.com.uy",
+          "source_country": "uy",
+          "url": "https://www.subrayado.com.uy/pedro-sanchez-adelanta-las-elecciones-espana-el-29-noviembre-n1019862"
+        },
+        {
+          "language": "es",
+          "source": "eldiadecordoba.es",
+          "source_country": "spain",
+          "url": "https://www.eldiadecordoba.es/espana/pedro-sanchez-convocatoria-elecciones-generales-2026_0_2008153433.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://diariodeavisos.elespanol.com/2026/10/pedro-sanchez-convoca-elecciones-generales/"
+        },
+        {
+          "language": "es",
+          "source": "elheraldo.co",
+          "source_country": "co",
+          "url": "https://www.elheraldo.co/mundo/2026/10/05/pedro-sanchez-adelanta-elecciones-generales-en-espana-para-el-29-de-noviembre-tras-fracaso-en-decretos-de-vivienda/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "co",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/politica/sanchez-convoca-elecciones-anticipadas-29-noviembre_1_13555649.html",
+      "rank": 1,
+      "reference_newsroom_count": 15,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "infolibre.es",
+        "la-croix.com",
+        "lemonde.fr",
+        "mediapart.fr",
+        "repubblica.it",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4884,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.6522,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8462,
+          "source_reliability": 0.8904
+        },
+        "total": 0.8228,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "pedro sanchez",
+      "subject_names": [
+        "espagne",
+        "pedro sanchez",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 27,
+      "summary": "El gobierno de Pedro Sánchez disolvió el Parlamento y anunció la convocatoria de elecciones generales anticipadas para el 29 de noviembre tras el rechazo de sus medidas sobre la vivienda; el primer ministro justificó la decisión buscando una mayoría progresista más amplia frente al avance de la ultraderecha."
+    },
+    {
+      "cluster_id": "subject-fbi-4836863d3a67",
+      "coherence": 0.6081125142558483,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "germany",
+        "india",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-10-05",
+      "headline": "FBI detiene a una mujer acusada de espiar para China a la familia del presidente de Taiwán",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/une-femme-soupconnee-despionner-la-famille-du-president-taiwanais-pour-le-compte-de-la-chine-arretee-par-le-fbi-20261005_OIABT4UFKJBMZFGYXQW3ZSNCIM/"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/fbi-detiene-mujer-china-acusa-espiar-pekin-20261005082603-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261005/11651105/estados-unidos-detiene-mujer-espiar-china-vigilar-hijo-presidente-taiwan.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/oct/05/california-woman-arrested-and-accused-of-spying-on-taiwan-presidents-son-for-china"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/05/fbi-arrests-woman-accused-of-spying-on-taiwanese-presidents-family-in-the-us-for-china"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/10/05/g-s1-146410/fbi-arrests-a-woman-accused-of-spying-on-taiwan-leaders-family-for-china"
+        },
+        {
+          "language": "en",
+          "source": "kunr.org",
+          "source_country": "united-states",
+          "url": "https://www.kunr.org/world-headlines/2026-10-05/fbi-arrests-a-woman-accused-of-spying-on-taiwan-leaders-family-for-china"
+        },
+        {
+          "language": "en",
+          "source": "wmtw.com",
+          "source_country": "united-states",
+          "url": "https://www.wmtw.com/article/fbi-woman-accused-spying-taiwan-leaders-china/74023768"
+        },
+        {
+          "language": "en",
+          "source": "wmur.com",
+          "source_country": "united-states",
+          "url": "https://www.wmur.com/article/fbi-woman-accused-spying-taiwan-leaders-china/74023768"
+        },
+        {
+          "language": "en",
+          "source": "wwno.org",
+          "source_country": "united-states",
+          "url": "https://www.wwno.org/npr-news/2026-10-05/fbi-arrests-a-woman-accused-of-spying-on-taiwan-leaders-family-for-china"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/us-fbi-arrests-woman-accused-of-spying-for-china/a-79541849"
+        },
+        {
+          "language": "en",
+          "source": "thehindu.com",
+          "source_country": "india",
+          "url": "https://www.thehindu.com/news/international/us-accuses-california-woman-of-spying-for-china-surveilling-taiwan-leaders-son/article71545758.ece"
+        }
+      ],
+      "mentioned_countries": [
+        "china",
+        "tw"
+      ],
+      "origin_country": "france",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/us-fbi-arrests-woman-accused-of-spying-for-china/a-79541849",
+      "rank": 2,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "abc.es",
+        "dw.com",
+        "euronews.com",
+        "lavanguardia.com",
+        "liberation.fr",
+        "npr.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6081,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.75,
+          "source_reliability": 0.7949
+        },
+        "total": 0.7117,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "fbi",
+      "subject_names": [
+        "chine",
+        "eeuu",
+        "estados unidos",
+        "etats-unis",
+        "fbi",
+        "taiwan"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "El FBI arrestó en Estados Unidos a una mujer acusada de actuar como espía a favor de China y de vigilar al hijo y a la familia del presidente de Taiwán; las autoridades sostienen que la detenida realizó labores de vigilancia en beneficio de Pekín mientras la investigación está en curso."
+    },
+    {
+      "cluster_id": "subject-trump-ca487ae775be",
+      "coherence": 0.6547606659089398,
+      "consequence": 3,
+      "countries": [
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-05",
+      "headline": "Trump nombra a Jay Clayton como zar nacional de inteligencia artificial",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261004/11650751/trump-nombra-jay-clayton-jefe-espias-cargo-zar-ia.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "krcu.org",
+          "source_country": "united-states",
+          "url": "https://www.krcu.org/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "wfae.org",
+          "source_country": "united-states",
+          "url": "https://www.wfae.org/united-states-world/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "wdiy.org",
+          "source_country": "united-states",
+          "url": "https://www.wdiy.org/npr-news/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "digg.com",
+          "source_country": "united-states",
+          "url": "https://digg.com/world-business/lh7mvph7"
+        },
+        {
+          "language": "en",
+          "source": "wnmufm.org",
+          "source_country": "united-states",
+          "url": "https://www.wnmufm.org/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "ksut.org",
+          "source_country": "united-states",
+          "url": "https://www.ksut.org/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "wvasfm.org",
+          "source_country": "united-states",
+          "url": "https://www.wvasfm.org/politics/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "wuky.org",
+          "source_country": "united-states",
+          "url": "https://www.wuky.org/npr-news/2026-10-04/trump-names-national-intelligence-chief-jay-clayton-as-new-ai-czar"
+        },
+        {
+          "language": "en",
+          "source": "pasadenastarnews.com",
+          "source_country": "united-states",
+          "url": "https://www.pasadenastarnews.com/2026/10/04/trump-names-national-intelligence-director-jay-clayton-to-lead-a-new-federal-ai-task-force/"
+        },
+        {
+          "language": "en",
+          "source": "thenextweb.com",
+          "source_country": "united-states",
+          "url": "https://thenextweb.com/news/trump-super-intelligence-force-leaders"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261004/11650751/trump-nombra-jay-clayton-jefe-espias-cargo-zar-ia.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6548,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.75,
+          "source_reliability": 0.7647
+        },
+        "total": 0.7073,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "trump",
+        "venezuela"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "El presidente Trump designó a Jay Clayton, director nacional de inteligencia, para liderar un nuevo grupo de trabajo federal sobre inteligencia artificial; varias fuentes coinciden en que asumirá la responsabilidad de coordinar la política y supervisión en materia de IA a nivel nacional."
+    },
+    {
+      "cluster_id": "subject-bresil-fe8633bd9bac",
+      "coherence": 0.49404611189216374,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-05",
+      "headline": "Flávio Bolsonaro gana la primera vuelta y se enfrentará a Lula en segunda vuelta",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/05/lula-a-paye-le-prix-du-mecontentement-des-electeurs-au-bresil-flavio-bolsonaro-devance-lula-au-premier-tour-de-l-election-presidentielle_6788483_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/bresil-le-fils-bolsonaro-devance-le-president-lula-de-deux-points-second-tour-le-25-octobre-20261005_EVXQY5SKZVHDROGUY3VIIQFD2I/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/presidentielle-au-bresil-flavio-bolsonaro-vire-en-tete-et-se-pose-comme-favori-au-second-tour-20261005"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/bresil/presidentielle-au-bresil-le-conservateur-flavio-bolsonaro-cree-la-surprise-et-devance-lula-au-premier-tour_8222773.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261005-pr%C3%A9sidentielle-au-br%C3%A9sil-flavio-bolsonaro-en-t%C3%AAte-du-premier-tour"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261005-pr%C3%A9sidentielle-au-br%C3%A9sil-flavio-bolsonaro-cr%C3%A9e-la-surprise-en-devan%C3%A7ant-lula"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261004-%C3%A9lections-pr%C3%A9sidentielles-au-br%C3%A9sil-flavio-bolsonaro-devant-lula-selon-des-r%C3%A9sultats-partiels"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/amerique/presidentielle-au-bresil-entre-flavio-bolsonaro-et-lula-le-choc-des-populistes-IYGQE6NVNREQTOYRKF7GC7HVKA/"
+          "url": "https://www.lexpress.fr/monde/amerique/presidentielle-au-bresil-flavio-bolsonaro-cree-la-surprise-et-devance-lula-au-premier-tour-M27NV3MKNJAHHBYCCWGDX3WMRM/"
         },
         {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/monde/bresil/bresil-duel-lula-bolsonaro-affaires-et-ingerence-ce-quil-faut-savoir-sur-les-elections-de-ce-dimanche-b023eb1e-be5c-11f1-bc1c-de747933f8a6?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/america/2026-10-05/bolsonaro-vence-a-lula-en-primera-vuelta-y-acaricia-el-retorno-de-la-ultraderecha-al-poder-en-brasil.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/comienza-recuento-electoral-brasil-20-escrutado-flavio-bolsonaro-aventaja-lula-millones-votos_1_13561452.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/america/20261005/flavio-bolsonaro-da-campanada-primera-vuelta-frente-lula-acerca-presidencia-brasil/1003744408283_0.html"
+        },
+        {
+          "language": "es",
+          "source": "sdpnoticias.com",
+          "source_country": "mx",
+          "url": "https://www.sdpnoticias.com/internacional/flavio-bolsonaro-encabeza-elecciones-en-brasil-supera-a-lula-da-silva/"
         }
       ],
       "mentioned_countries": [
         "brazil"
       ],
       "origin_country": "france",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/am%C3%A9riques/20261003-%C3%A9lections-au-br%C3%A9sil-le-duel-lula-bolsonaro-un-air-de-d%C3%A9j%C3%A0-vu",
-      "rank": 1,
-      "reference_newsroom_count": 5,
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/comienza-recuento-electoral-brasil-20-escrutado-flavio-bolsonaro-aventaja-lula-millones-votos_1_13561452.html",
+      "rank": 4,
+      "reference_newsroom_count": 10,
       "reference_newsrooms": [
-        "lefigaro.fr",
+        "eldiario.es",
+        "elespanol.com",
+        "elpais.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
         "lexpress.fr",
-        "nouvelobs.com",
-        "ouest-france.fr",
+        "liberation.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.3771,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "coherence": 0.494,
+          "corroboration": 0.6,
+          "editorial_weight": 0.5556,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.7333,
+          "source_reliability": 0.814
         },
-        "total": 0.6802,
+        "total": 0.702,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "bresil",
       "subject_names": [
         "bolsonaro",
         "brasil",
-        "brazil's",
+        "brazil",
         "bresil",
         "donald trump",
-        "estados unidos",
         "flavio bolsonaro",
         "lula",
-        "trump"
+        "senado",
+        "trump",
+        "venezuela"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Las fuentes concuerdan en que la elección presidencial en Brasil enfrenta al expresidente Luiz Inácio Lula da Silva y a Flavio Bolsonaro, hijo del expresidente Jair Bolsonaro, y que el choque evoca la repetición del enfrentamiento político anterior; los artículos señalan además la presencia de temas como causas judiciales, acusaciones de interferencia y el auge del populismo como factores centrales del escrutinio."
+      "subject_newsroom_count": 20,
+      "summary": "En la primera vuelta de la elección presidencial en Brasil, Flávio Bolsonaro obtuvo la mayoría de votos y quedó por delante del expresidente Luiz Inácio Lula da Silva; ambos candidatos avanzan al balotaje que se celebrará el 25 de octubre, según las informaciones concordantes de los artículos."
     },
     {
-      "cluster_id": "subject-lettonie-cb59da431f03",
-      "coherence": 0.42268642294425385,
+      "cluster_id": "subject-kiev-ccb78defbd8a",
+      "coherence": 0.43924230573063594,
       "consequence": 3,
       "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-04",
-      "headline": "Partido proeuropeo lidera las legislativas en Letonia pese al avance populista",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/04/en-lettonie-le-parti-du-premier-ministre-andris-kulbergs-obtient-un-succes-historique-qui-eloigne-le-danger-populiste_6788216_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/legislatives-en-lettonie-les-populistes-et-souverainistes-font-une-percee-mais-le-camp-pro-europe-garde-le-cap-20261004_6FTV6CPN75EDNKNAQTCHBCSFTQ/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/le-parti-pro-europeen-et-pro-ukrainien-liste-unie-arrive-en-tete-des-legislatives-en-lettonie-selon-des-resultats-partiels_8221912.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261004-l%C3%A9gislatives-en-lettonie-la-majorit%C3%A9-pro-europ%C3%A9enne-et-pro-ukraine-en-t%C3%AAte-malgr%C3%A9-la-pouss%C3%A9e-des-populistes"
-        }
-      ],
-      "mentioned_countries": [
-        "lg"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/04/legislatives-en-lettonie-le-parti-pro-europeen-au-pouvoir-en-tete-face-a-une-poussee-populiste_6787992_3210.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4227,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.6717,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "lettonie",
-      "subject_names": [
-        "letonia",
-        "lettonie",
-        "lista unida"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Los sondeos y resultados parciales coinciden en que la Lista Unida, partido proeuropeo y favorable a Ucrania encabezado por el primer ministro Andris Kublērs, llegó en primer lugar en las elecciones legislativas de Letonia, mientras que movimientos populistas y soberanistas registraron una progresión significativa pero no desplazaron al bloque pro‑Europa."
-    },
-    {
-      "cluster_id": "subject-russia-1c9016226b03",
-      "coherence": 0.4598265311489034,
-      "consequence": 3,
-      "countries": [
+        "gh",
         "it",
-        "rp",
-        "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-10-03",
-      "headline": "Rusia ataca por segunda vez en dos días un puente principal de Kyiv",
+      "country_count": 4,
+      "editorial_day": "2026-10-05",
+      "headline": "Puente en Kiev atacado por drones rusos mientras visita el canciller alemán",
       "independent_source_count": 5,
       "members": [
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261003/11650129/nuevo-ataque-rusia-vias-acceso-kyiv.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
@@ -205,394 +644,67 @@
         },
         {
           "language": "en",
-          "source": "manilatimes.net",
-          "source_country": "rp",
-          "url": "https://www.manilatimes.net/2026/10/04/world/americas-emea/russia-strikes-another-major-bridge-in-kyiv/2438389"
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/10/05/nx-s1-5989637/russias-attacks-on-ukraine-escalate-as-its-drones-target-bridges-in-kyiv"
         },
         {
           "language": "en",
-          "source": "wsbradio.com",
+          "source": "thechronicle.com.gh",
+          "source_country": "gh",
+          "url": "https://thechronicle.com.gh/kyiv-bridge-hit-in-further-russian-drone-attack-as-german-chancellor-makes-surprise-visit/"
+        },
+        {
+          "language": "en",
+          "source": "10news.com",
           "source_country": "united-states",
-          "url": "https://www.wsbradio.com/news/world/russia-strikes-kyivs/LTKYBWNWEE6L3CETQJZHW6O4KM/"
+          "url": "https://www.10news.com/world/europe/russian-drone-slams-into-kyiv-bridge-in-escalating-campaign-as-germanys-chancellor-arrives-to-sirens"
         }
       ],
       "mentioned_countries": [
         "up"
       ],
-      "origin_country": "it",
+      "origin_country": "gh",
       "outbound_source": "euronews.com",
       "outbound_url": "https://www.euronews.com/2026/10/03/second-kyiv-bridge-hit-in-two-days-as-russia-targets-dnipro-crossings",
-      "rank": 3,
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
         "euronews.com",
-        "lavanguardia.com"
+        "npr.org"
       ],
       "score": {
         "components": {
-          "coherence": 0.4598,
-          "corroboration": 0.7143,
+          "coherence": 0.4392,
+          "corroboration": 0.6667,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.619
+          "source_reliability": 0.6667
         },
-        "total": 0.6645,
+        "total": 0.6948,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "russia",
+      "subject_label": "kiev",
       "subject_names": [
         "kiev",
         "kyiv",
-        "moscou",
-        "rusia",
         "russia",
         "russie",
-        "ucrania",
-        "ukraine",
-        "vladimir poutine",
-        "zelenski"
+        "siberia",
+        "ukraine"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Varias fuentes informan que Rusia lanzó ataques contra puentes que cruzan el río Dniéper en Kyiv; en el segundo día consecutivo, otro puente principal resultó alcanzado, con daños reportados en la infraestructura y víctimas mortales por los ataques en Ucrania."
-    },
-    {
-      "cluster_id": "subject-christa-pike-f5b37dc17f28",
-      "coherence": 0.551117042302463,
-      "consequence": 1,
-      "countries": [
-        "france",
-        "mi",
-        "nl",
-        "spain",
-        "sz",
-        "united-kingdom",
-        "united-states",
-        "unknown",
-        "vm"
-      ],
-      "country_count": 9,
-      "editorial_day": "2026-10-04",
-      "headline": "El responsable penitenciario de Tennessee dimite tras ejecución fallida",
-      "independent_source_count": 33,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/03/christa-pike-le-chef-de-l-administration-penitentiaire-du-tennessee-demissionne-apres-l-execution-ratee-d-une-femme_6787820_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/usa/le-directeur-de-l-administration-penitentiaire-du-tennessee-demissionne-apres-l-echec-de-l-execution-de-la-condamnee-a-mort-christa-pike-annonce-le-gouverneur-d-etat_8221396.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/am%C3%A9riques/20261003-%C3%A9tats-unis-tennessee-ex%C3%A9cution-rat%C3%A9e-christa-pike-d%C3%A9mission-chef-administration-p%C3%A9nitentiaire"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261003-%C3%A9tats-unis-le-chef-de-l-administration-p%C3%A9nitentiaire-du-tennessee-d%C3%A9missionne-apr%C3%A8s-l-ex%C3%A9cution-rat%C3%A9e-de-christa-pike"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/dimite-director-prision-christa-pike-superviso-cuatro-20261003194102-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/dimite-jefe-prisiones-tennessee-tras-fallida-ejecucion-christa-pike-mejor_7044567_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/us-news/2026/oct/03/tennessee-christa-pike-frank-strada"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2633570"
-        },
-        {
-          "language": "en",
-          "source": "maravipost.com",
-          "source_country": "mi",
-          "url": "https://www.maravipost.com/tennessee-prison-chief-strada-resigns-after-christa-pikes-failed-execution/"
-        },
-        {
-          "language": "en",
-          "source": "tmz.com",
-          "source_country": "united-states",
-          "url": "https://www.tmz.com/2026/10/03/tennessee-prison-chief-resigns-after-botched-christa-pike-execution/"
-        },
-        {
-          "language": "en",
-          "source": "wsbradio.com",
-          "source_country": "united-states",
-          "url": "https://www.wsbradio.com/news/governor-says/3PL6ZTRK5U4XPIKQR5R5SDAPWU/"
-        },
-        {
-          "language": "en",
-          "source": "kfvs12.com",
-          "source_country": "united-states",
-          "url": "https://www.kfvs12.com/2026/10/03/tennessees-prisons-chief-is-resigning-after-failed-execution-christa-pike-governor-says/"
-        },
-        {
-          "language": "en",
-          "source": "walesonline.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.walesonline.co.uk/news/world-news/tennessee-corrections-chief-resigns-after-34713049"
-        },
-        {
-          "language": "en",
-          "source": "goskagit.com",
-          "source_country": "united-states",
-          "url": "http://www.goskagit.com/news/nation/tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike/article_38f92311-1e43-58ce-90e4-f86b8f572511.html"
-        },
-        {
-          "language": "en",
-          "source": "therocket951.com",
-          "source_country": "unknown",
-          "url": "https://www.therocket951.com/archives/4158"
-        },
-        {
-          "language": "en",
-          "source": "abc7ny.com",
-          "source_country": "united-states",
-          "url": "https://abc7ny.com/post/tennessees-prisons-chief-is-resigning-failed-execution-attempt-christa-pike/19904806/"
-        },
-        {
-          "language": "en",
-          "source": "fox34.com",
-          "source_country": "united-states",
-          "url": "https://www.fox34.com/2026/10/03/tennessees-prisons-chief-is-resigning-after-failed-execution-christa-pike-governor-says/"
-        },
-        {
-          "language": "en",
-          "source": "whbl.com",
-          "source_country": "united-states",
-          "url": "https://whbl.com/2026/10/03/tennessee-prison-chief-resigns-after-failed-execution/"
-        },
-        {
-          "language": "en",
-          "source": "standard-journal.com",
-          "source_country": "united-states",
-          "url": "https://www.standard-journal.com/ap/national/head-of-tennessees-prison-system-to-resign-after-failed-execution-of-christa-pike-governor-announces/article_0b82e324-d4ef-5c87-9363-3c6230afd136.html"
-        },
-        {
-          "language": "en",
-          "source": "ksbw.com",
-          "source_country": "united-states",
-          "url": "https://www.ksbw.com/article/tennessee-prisons-chief-resign-failed-execution-christa-pike/74005474"
-        },
-        {
-          "language": "en",
-          "source": "dailyadvance.com",
-          "source_country": "united-states",
-          "url": "http://www.dailyadvance.com/news/national/tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike/article_558e63fa-3db6-528f-8d56-1d6b21edbbbf.html"
-        },
-        {
-          "language": "en",
-          "source": "wvtm13.com",
-          "source_country": "united-states",
-          "url": "https://www.wvtm13.com/article/tennessee-prisons-chief-resign-failed-execution-christa-pike/74005474"
-        },
-        {
-          "language": "en",
-          "source": "wkms.org",
-          "source_country": "united-states",
-          "url": "https://www.wkms.org/criminal-justice/2026-10-03/tennessee-correction-commissioner-steps-down-after-failed-execution"
-        },
-        {
-          "language": "en",
-          "source": "clickondetroit.com",
-          "source_country": "united-states",
-          "url": "https://www.clickondetroit.com/news/national/2026/10/03/governor-says-tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike/"
-        },
-        {
-          "language": "en",
-          "source": "fox5ny.com",
-          "source_country": "united-states",
-          "url": "https://www.fox5ny.com/news/christa-pike-latest-tennessee-prisons-chief-resigns-after-failed-execution"
-        },
-        {
-          "language": "en",
-          "source": "idahopress.com",
-          "source_country": "united-states",
-          "url": "http://www.idahopress.com/ap_news/us/tennessees-prisons-chief-is-resigning-after-failed-execution-of-christa-pike/article_ffea3421-a0a9-50e3-b897-905bbefb7fc6.html"
-        },
-        {
-          "language": "de",
-          "source": "bernerzeitung.ch",
-          "source_country": "sz",
-          "url": "https://www.bernerzeitung.ch/tennessee-behoerdenleiter-tritt-nach-gescheiterter-hinrichtung-zurueck-835574898105"
-        },
-        {
-          "language": "de",
-          "source": "derbund.ch",
-          "source_country": "sz",
-          "url": "https://www.derbund.ch/tennessee-behoerdenleiter-tritt-nach-gescheiterter-hinrichtung-zurueck-835574898105"
-        },
-        {
-          "language": "fr",
-          "source": "republicain-lorrain.fr",
-          "source_country": "france",
-          "url": "https://www.republicain-lorrain.fr/faits-divers-justice/2026/10/03/double-execution-ratee-de-christa-pike-le-chef-des-prisons-du-tennessee-demissionne"
-        },
-        {
-          "language": "es",
-          "source": "telemundo.com",
-          "source_country": "united-states",
-          "url": "https://www.telemundo.com/noticias/noticias-telemundo/estados-unidos/dimite-jefe-prisiones-tennessee-fallida-ejecucion-christa-pike-rcna601276"
-        },
-        {
-          "language": "es",
-          "source": "actualidad-rt.com",
-          "source_country": "unknown",
-          "url": "https://actualidad-rt.com/actualidad/630696-renuncia-jefe-departamento-penitenciario-ejecicion-fallida-christa"
-        },
-        {
-          "language": "vie",
-          "source": "vnexpress.net",
-          "source_country": "vm",
-          "url": "https://vnexpress.net/lanh-dao-he-thong-nha-tu-tennessee-tu-chuc-sau-vu-tu-hinh-bat-thanh-5128110.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/usa/le-directeur-de-l-administration-penitentiaire-du-tennessee-demissionne-apres-l-echec-de-l-execution-de-la-condamnee-a-mort-christa-pike-annonce-le-gouverneur-d-etat_8221396.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "bbc.co.uk",
-        "france24.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "nos.nl",
-        "rfi.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5511,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.8919,
-          "source_reliability": 0.9036
-        },
-        "total": 0.6603,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "christa pike",
-      "subject_names": [
-        "christa pike",
-        "dimite",
-        "tennessee"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "El jefe del sistema penitenciario de Tennessee presentó su dimisión después de que la ejecución de la condenada a muerte Christa Pike resultara fallida; la renuncia fue anunciada por el gobernador y vinculada al intento de ejecución que no se completó."
-    },
-    {
-      "cluster_id": "subject-yemen-24f2af44a2ea",
-      "coherence": 0.5123268111856161,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-04",
-      "headline": "Los hutíes del Yemen atacan un sitio de Aramco en Riad y hay bombardeos en Saná",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/03/les-houthistes-du-yemen-revendiquent-une-frappe-sur-un-site-du-geant-petrolier-saoudien-aramco-a-ryad_6787808_3211.html"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/proche-orient/yemen/l-armee-du-yemen-bombarde-la-capitale-sanaa-tenue-par-les-houthis-qui-revendiquent-une-attaque-contre-un-site-de-saudi-aramco-a-riyad_8221960.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/moyen-orient/20261003-y%C3%A9men-fortes-explosions-%C3%A0-sanaa-les-houthis-font-%C3%A9tat-d-une-vingtaine-de-raids-saoudiens"
-        }
-      ],
-      "mentioned_countries": [
-        "sa"
-      ],
-      "origin_country": "france",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/moyen-orient/20261003-y%C3%A9men-fortes-explosions-%C3%A0-sanaa-les-houthis-font-%C3%A9tat-d-une-vingtaine-de-raids-saoudiens",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5123,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6596,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "yemen",
-      "subject_names": [
-        "riyad",
-        "yemen"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Fuerzas hutíes del Yemen reivindicaron un ataque contra un emplazamiento del grupo petrolero saudí Aramco en Riad; en respuesta, según los hutíes, fuerzas saudíes llevaron a cabo alrededor de veinte ataques aéreos en la capital yemení, Saná, controlada por los hutíes."
+      "subject_newsroom_count": 16,
+      "summary": "Varios artículos coinciden en que drones rusos atacaron y dañaron un puente en Kiev; fue el segundo ataque a un puente en dos días en la capital y las incursiones se sucedieron mientras el canciller alemán realizaba una visita sorpresa, con detonaciones o sirenas reportadas durante su llegada."
     }
   ],
-  "discarded_ingested": 169,
+  "discarded_ingested": 278,
   "discarded_kept": 5,
-  "generated_at": "2026-10-04T11:12:40.597399+00:00",
+  "generated_at": "2026-10-05T12:29:39.573698+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

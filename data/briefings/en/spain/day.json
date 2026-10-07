@@ -1,40 +1,245 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-alemania-75f9babc5e8e",
-      "coherence": 0.5075439380315065,
-      "consequence": 2,
+      "cluster_id": "subject-sanchez-5781c75ae3dc",
+      "coherence": 0.438305551539801,
+      "consequence": 3,
       "countries": [
-        "as",
-        "france",
-        "spain",
+        "it",
+        "mo",
         "united-kingdom",
-        "united-states",
-        "unknown"
+        "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-10-06",
-      "headline": "Germany arrests former foreign intelligence chief on suspicion of spying",
-      "independent_source_count": 16,
+      "country_count": 4,
+      "editorial_day": "2026-10-07",
+      "headline": "Spanish prime minister calls snap election after housing protests",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/allemagne-l-ex-chef-du-renseignement-arrete-berlin-ne-tolerera-pas-la-trahison-20261006"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmdx39k49xw0o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/07/sanchez-announces-21-urgent-housing-measures-after-nationwide-protests-ahead-of-snap-elect"
+        },
+        {
+          "language": "en",
+          "source": "oann.com",
+          "source_country": "united-states",
+          "url": "https://www.oann.com/newsroom/spain-ahead-of-snap-election-govt-passes-21-urgent-housing-decrees-amid-nationwide-protests/"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/allemagne-lancien-chef-du-renseignement-exterieur-arrete-pour-des-soupcons-despionnage-20261006_JFSEGLDTZRHLHPEYVYSBXF6QFY/"
+          "source": "leseco.ma",
+          "source_country": "mo",
+          "url": "https://leseco.ma/international/espagne-sanchez-convoque-des-elections-anticipees-apres-le-rejet-de-ses-mesures-pour-le-logement.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "it",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cmdx39k49xw0o?at_medium=RSS&at_campaign=rss",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4383,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5556
+        },
+        "total": 0.67,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "sanchez",
+      "subject_names": [
+        "ayuso",
+        "espagne",
+        "espana",
+        "junts",
+        "moncloa",
+        "pedro sanchez",
+        "sanchez",
+        "spain"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "Spanish Prime Minister Pedro Sánchez announced a snap election after widespread protests over housing; his government had introduced 21 urgent housing measures or decrees in response to the unrest, but the unrest and political opposition preceded the decision to call early polls."
+    },
+    {
+      "cluster_id": "subject-sanchez-0784d0358399",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-07",
+      "headline": "Spain’s rental stock has fallen by about 400,000 homes since 2018",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/inmobiliario/mercado/2026/10/07/6ac5f6ae468aebd45c8b45bd.html"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/en-allemagne-un-ancien-chef-du-renseignement-exterieur-arrete-pour-espionnage_8224831.html#xtor=RSS-3-[lestitres]"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/observatorios/vivienda/20261007/mercado-alquiler-pierde-viviendas-llegada-pedro-sanchez-moncloa/1003744411352_0.html"
         },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/vivienda/2026/10/06/6ac5064ffdddff93768b45ab.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/economia/vivienda/2026/10/06/6ac5064ffdddff93768b45ab.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elmundo.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6581,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "sanchez",
+      "subject_names": [
+        "ayuso",
+        "espagne",
+        "espana",
+        "junts",
+        "moncloa",
+        "pedro sanchez",
+        "sanchez",
+        "spain"
+      ],
+      "subject_newsroom_count": 19,
+      "summary": "Across the three articles, they report that Spain’s rental housing supply has shrunk by nearly 400,000 units since 2018, a decline occurring during Pedro Sánchez’s time in office; they note an especially sharp reduction in Barcelona, where roughly 83% of its rental offering has been lost."
+    },
+    {
+      "cluster_id": "subject-puigdemont-91e373ffaea2",
+      "coherence": 0.40411042451904655,
+      "consequence": 1,
+      "countries": [
+        "germany",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-06",
+      "headline": "Carles Puigdemont is now allowed to return to Spain",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/opinion/zona-critica/regreso-puigdemont-buena-noticia_129_13567571.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/opinion/puigdemont-volver_131_13567667.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/spanien-puigdemont-verfassungsgericht-100.html"
+        },
+        {
+          "language": "es",
+          "source": "publico.es",
+          "source_country": "spain",
+          "url": "https://www.publico.es/sociedad/puigdemont-puede-volver-catalunya-cuatro-noticias-importantes-hoy.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "tagesschau.de",
+      "outbound_url": "https://www.tagesschau.de/ausland/europa/spanien-puigdemont-verfassungsgericht-100.html",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4041,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5789
+        },
+        "total": 0.4665,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "puigdemont",
+      "subject_names": [
+        "puigdemont"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Courts have ruled that Catalan separatist leader Carles Puigdemont can return to Spain and to Catalonia after legal obstacles were removed, allowing him to travel back without the previous prohibitions that had kept him abroad."
+    },
+    {
+      "cluster_id": "subject-alemania-6335abda05ab",
+      "coherence": 0.6152418094636513,
+      "consequence": 3,
+      "countries": [
+        "mx",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-06",
+      "filled_from": "europe",
+      "headline": "Germany arrests former head of its intelligence service on suspicion of espionage and treason",
+      "independent_source_count": 5,
+      "members": [
         {
           "language": "es",
           "source": "elpais.com",
@@ -49,418 +254,262 @@
         },
         {
           "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261006/11652484/alemania-servicios-secretos-espionaje-detenido-hanning-complice.html"
+        },
+        {
+          "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
           "url": "https://www.eldiario.es/internacional/alemania-detiene-exjefe-servicios-secretos-sospecha-espionaje_1_13565429.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261006/detenido-exjefe-agencia-espionaje-alemania-alta-traicion-compartir-secretos-pais-extranjero/1003744409948_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/06/germany-august-hanning-bnd-arrest-former-domestic-intelligence-chief"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/06/g-s1-146630/germany-ex-spy-chief-state-secrets"
-        },
-        {
-          "language": "en",
-          "source": "localnews8.com",
-          "source_country": "united-states",
-          "url": "https://localnews8.com/news/national-world/cnn-world/2026/10/06/germany-arrests-a-former-foreign-intelligence-chief-on-spying-allegations/"
-        },
-        {
-          "language": "en",
-          "source": "bordermail.com.au",
-          "source_country": "as",
-          "url": "https://www.bordermail.com.au/story/9363917/germany-arrests-ex-intelligence-chief-for-spying/"
-        },
-        {
-          "language": "en",
-          "source": "perthnow.com.au",
-          "source_country": "as",
-          "url": "https://www.perthnow.com.au/news/crime/germany-arrests-ex-intelligence-chief-for-spying-c-22977370"
-        },
-        {
-          "language": "en",
-          "source": "nypost.com",
-          "source_country": "united-states",
-          "url": "https://nypost.com/2026/10/06/world-news/ex-spy-chief-august-hanning-is-arrested-in-germany-on-suspicion-of-trading-state-secrets-and-treason/"
-        },
-        {
-          "language": "en",
-          "source": "newcastleherald.com.au",
-          "source_country": "unknown",
-          "url": "https://www.newcastleherald.com.au/story/9363917/germany-arrests-ex-intelligence-chief-for-spying/"
-        },
-        {
-          "language": "en",
-          "source": "thegazette.com",
-          "source_country": "united-states",
-          "url": "http://www.thegazette.com/news/world/ex-spy-chief-is-arrested-in-germany-on-suspicion-of-trading-state-secrets-and-treason/article_24048ef2-6a0c-5176-8daa-1d16a6a2ab01.html"
-        },
-        {
-          "language": "es",
-          "source": "elsoldesantiago.com",
-          "source_country": "united-states",
-          "url": "https://elsoldesantiago.com/detienen-al-exjefe-de-inteligencia-de-alemania-acusado-de-espionaje-y-tentativa-de-traicion/"
+          "source": "vanguardia.com.mx",
+          "source_country": "mx",
+          "url": "https://vanguardia.com.mx/noticias/el-exjefe-de-los-servicios-de-inteligencia-de-alemania-fue-arrestado-bajo-sospecha-de-trafico-de-secretos-de-estado-y-traicion-JN23950801"
         }
       ],
       "mentioned_countries": [
         "germany"
       ],
-      "origin_country": "as",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/europa/20261006/detenido-exjefe-agencia-espionaje-alemania-alta-traicion-compartir-secretos-pais-extranjero/1003744409948_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 9,
+      "origin_country": "mx",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/alemania-detiene-presunto-espionaje-traicion-exjefe-servicios-20261006105353-nt.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "abc.es",
         "eldiario.es",
-        "elespanol.com",
         "elpais.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "liberation.fr",
-        "npr.org",
-        "theguardian.com"
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5075,
-          "corroboration": 0.75,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "coherence": 0.6152,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 0.7071,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.8,
-          "source_reliability": 0.8367
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
         },
-        "total": 0.7155,
+        "total": 0.6272,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "alemania",
       "subject_names": [
         "alemania",
         "allemagne",
-        "germany"
+        "august hanning"
       ],
-      "subject_newsroom_count": 14,
-      "summary": "German authorities have arrested a former head of the country’s foreign intelligence service on allegations of spying, trading state secrets and treason. Reports say he is suspected of sharing classified information with a foreign country; officials framed the arrest as a response to serious breaches of trust while investigations continue."
+      "subject_newsroom_count": 5,
+      "summary": "German authorities have arrested a former chief of the country’s intelligence service on suspicion of espionage, alleged trafficking of state secrets and high treason. The arrest followed an investigation into the ex-official’s activities; media reports indicate prosecutors and security services are involved, and the suspect is accused of passing sensitive information, though formal charges and case details remain under official review."
     },
     {
-      "cluster_id": "subject-francis-halzen-d99027d9c63c",
-      "coherence": 0.4811211353289798,
+      "cluster_id": "subject-nobel-8010ec9e5d55",
+      "coherence": 0.5737787993922507,
       "consequence": 1,
       "countries": [
-        "be",
-        "co",
+        "aj",
         "france",
         "germany",
-        "hu",
         "india",
-        "it",
-        "mx",
-        "pe",
-        "si",
         "spain",
-        "sw",
-        "tu",
-        "united-states",
-        "uy"
+        "united-states"
       ],
-      "country_count": 15,
-      "editorial_day": "2026-10-06",
-      "headline": "Francis Halzen wins 2026 Nobel Prize in Physics for neutrino work",
-      "independent_source_count": 42,
+      "country_count": 6,
+      "editorial_day": "2026-10-07",
+      "filled_from": "europe",
+      "headline": "Henri B. Kagan and Kenso Soai awarded the 2026 Nobel Prize in Chemistry",
+      "independent_source_count": 28,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/sciences/article/2026/10/06/le-prix-nobel-de-physique-2026-est-decerne-au-belge-francis-halzen-pour-ses-travaux-sur-les-neutrinos_6788974_1650684.html"
+          "url": "https://www.lemonde.fr/sciences/article/2026/10/07/le-prix-nobel-de-chimie-2026-est-decerne-au-francais-henri-kagan-et-au-japonais-kenso-soai_6789581_1650684.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/sciences/prix-nobel-de-physique-2026-le-belge-francis-halzen-prime-20261006_C47WTDEBIJCXLHKSBYXVR6YSJQ/"
+          "url": "https://www.liberation.fr/sciences/prix-nobel-de-chimie-2026-le-francais-henri-kagan-recompense-20261007_GSDZECOHFFA5JLLFK5QBT3KAEY/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/prix-nobel-de-physique-2026-le-belge-francis-halzen-recompense-20261006"
+          "url": "https://www.la-croix.com/international/nobel-de-chimie-2026-le-francais-henri-kagan-et-le-japonais-kenso-soal-recompenses-20261007"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/prix-nobel/le-prix-nobel-de-physique-2026-decerne-au-belge-francis-halzen-pour-ses-contributions-decisives-a-l-astrophysique_8224861.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/prix-nobel/le-prix-nobel-de-chimie-2026-decerne-au-francais-henri-kagan-et-au-japonais-kenso-soai-pour-leurs-travaux-sur-les-reactions-moleculaires-utilisees-notamment-en-pharmacologie_8226604.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261006-le-prix-nobel-de-physique-est-d%C3%A9cern%C3%A9-%C3%A0-francis-halzen"
+          "url": "https://www.france24.com/fr/sciences/20261007-le-prix-nobel-de-chimie-d%C3%A9cern%C3%A9-%C3%A0-henri-kagan-et-kenso-soai"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/science/20261006-le-prix-nobel-de-physique-d%C3%A9cern%C3%A9-au-belge-francis-halzen"
+          "url": "https://www.rfi.fr/fr/science/20261007-le-prix-nobel-de-chimie-d%C3%A9cern%C3%A9-au-fran%C3%A7ais-henri-kagan-et-au-japonais-kenso-soai"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/sciences-sante/sante/le-prix-nobel-de-physique-decerne-au-belge-francis-halzen-pour-ses-travaux-sur-les-neutrinos-HQ5LA5D5T5CLJCUZOLKMDH7KNA/"
+          "url": "https://www.lexpress.fr/sciences-sante/le-prix-nobel-de-chimie-attribue-au-francais-henri-kagan-et-au-japonais-kenso-soai-DFLVL5EWUFGIVBSQ3G6JQBH3ZY/"
         },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/ciencia/2026-10-06/premio-nobel-de-fisica.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/ciencia/premio-nobel-fisica-2026-francis-halzenel-descubrimiento-20261006114859-nt.html"
+          "url": "https://elpais.com/ciencia/2026-10-07/premio-nobel-de-quimica.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/sociedad/premio-nobel-fisica-2026-francis-halzen-descubrir-neutrinos-alta-energia-origen-cosmico_1_13564931.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/estilo-vida/salud/2026/10/06/francis-halzen-gana-nobel-fisica-avances-pioneros-astrofisica-neutrinos.html"
+          "url": "https://www.eldiario.es/sociedad/premio-nobel-quimica-2026-henri-kagan-kenso-soai-trabajos-simetria-moleculas_1_13567959.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/ciencia/20261006/francis-halzen-nobel-fisica-descubrimientos-origen-neutrinos-alta-energia/1003744409864_0.html"
+          "url": "https://www.elespanol.com/ciencia/20261007/henri-kagan-kenso-soai-nobel-quimica-trabajo-sintesis-organica-asimetrica/1003744411122_0.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/ciencia/2026/10/06/6ac4bb03e85ecec70e8b45b9.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/nobel-fisica-premia-francis-halzen-por-sus-contribuciones-decisivas-descubrimiento-neutrinos_7045402_0.html"
+          "url": "https://www.europapress.es/ciencia/noticia-henri-kagan-kenso-soai-premio-nobel-quimica-2026-descubrimientos-sintesis-organica-asimetrica-20261007115447.html"
         },
         {
           "language": "de",
           "source": "tagesschau.de",
           "source_country": "germany",
-          "url": "https://www.tagesschau.de/wissen/nobelpreis-physik-francis-halzen-100.html"
+          "url": "https://www.tagesschau.de/wissen/forschung/chemie-nobelpreis-fuer-kagan-und-soai-100.html"
         },
         {
           "language": "en",
           "source": "npr.org",
           "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/06/g-s1-146622/nobel-prize-physics"
+          "url": "https://www.npr.org/2026/10/07/g-s1-146849/nobel-prize-chemistry"
         },
         {
           "language": "en",
-          "source": "knpr.org",
+          "source": "wgauradio.com",
           "source_country": "united-states",
-          "url": "https://knpr.org/npr/2026-10-06/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-from-space"
+          "url": "https://www.wgauradio.com/news/world/nobel-prize/BDAUZKQBJE3NHLKGBOLMNEOTT4/"
         },
         {
           "language": "en",
-          "source": "whqr.org",
+          "source": "news.az",
+          "source_country": "aj",
+          "url": "https://news.az/news/henri-kagan-kenso-soai-win-2026-nobel-prize-in-chemistry"
+        },
+        {
+          "language": "en",
+          "source": "wmra.org",
           "source_country": "united-states",
-          "url": "https://www.whqr.org/2026-10-06/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-from-space"
+          "url": "https://www.wmra.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
         },
         {
           "language": "en",
-          "source": "thehindubusinessline.com",
+          "source": "capeandislands.org",
+          "source_country": "united-states",
+          "url": "https://www.capeandislands.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
+        },
+        {
+          "language": "en",
+          "source": "ksl.com",
+          "source_country": "united-states",
+          "url": "https://www.ksl.com:443/article/51633339/kagan-and-soai-win-2026-nobel-chemistry-prize"
+        },
+        {
+          "language": "en",
+          "source": "wncw.org",
+          "source_country": "united-states",
+          "url": "https://www.wncw.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
+        },
+        {
+          "language": "en",
+          "source": "wyomingpublicmedia.org",
+          "source_country": "united-states",
+          "url": "https://www.wyomingpublicmedia.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
+        },
+        {
+          "language": "en",
+          "source": "deccanchronicle.com",
           "source_country": "india",
-          "url": "https://www.thehindubusinessline.com/news/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-of-astrophysical-origin/article71551079.ece"
+          "url": "https://www.deccanchronicle.com/science/henri-b-kagan-kenso-soai-win-nobel-prize-in-chemistry-1993838"
         },
         {
           "language": "en",
-          "source": "kazu.org",
+          "source": "houstonpublicmedia.org",
           "source_country": "united-states",
-          "url": "https://www.kazu.org/npr-news/2026-10-06/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-from-space"
+          "url": "https://www.houstonpublicmedia.org/npr/2026/10/07/g-s1-146849/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry/"
         },
         {
           "language": "en",
-          "source": "kcbx.org",
+          "source": "kpbs.org",
           "source_country": "united-states",
-          "url": "https://www.kcbx.org/npr-top-news/2026-10-06/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-from-space"
+          "url": "https://www.kpbs.org/news/science-technology/2026/10/07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
         },
         {
           "language": "en",
-          "source": "yahoo.com",
-          "source_country": "united-states",
-          "url": "https://www.yahoo.com/news/articles/nobel-prize-physics-awarded-stockholm-064349652.html"
-        },
-        {
-          "language": "en",
-          "source": "dailysabah.com",
-          "source_country": "tu",
-          "url": "https://www.dailysabah.com/life/science/francis-halzen-wins-nobel-for-unveiling-universe-through-neutrinos"
-        },
-        {
-          "language": "en",
-          "source": "wemu.org",
-          "source_country": "united-states",
-          "url": "https://www.wemu.org/npr-national-news/2026-10-06/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-from-space"
-        },
-        {
-          "language": "en",
-          "source": "wrkf.org",
-          "source_country": "united-states",
-          "url": "https://www.wrkf.org/npr-news/2026-10-06/francis-halzen-wins-nobel-prize-in-physics-for-work-on-high-energy-neutrinos-from-space"
-        },
-        {
-          "language": "es",
-          "source": "rpp.pe",
-          "source_country": "pe",
-          "url": "https://rpp.pe/mundo/actualidad/nobel-de-fisica-a-francis-halzen-por-hallazgo-de-neutrinos-de-alta-energia-de-origen-astrofisico-noticia-1711010"
-        },
-        {
-          "language": "es",
-          "source": "diariopalentino.es",
-          "source_country": "spain",
-          "url": "https://www.diariopalentino.es/noticia/zf55952c2-cb41-4795-aef712a7b0e6711f/202610/el-belga-francis-halzen-gana-el-nobel-de-fisica-2026"
-        },
-        {
-          "language": "es",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/es/francis-halzen-gan%C3%B3-el-premio-nobel-de-f%C3%ADsica-por-el-observatorio-de-neutrinos-icecube/a-79559561"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com.uy",
-          "source_country": "uy",
-          "url": "https://www.elpais.com.uy/vida-actual/ciencia/el-hito-cientifico-en-el-hielo-del-polo-sur-que-le-valio-el-premio-nobel-de-fisica-2026-a-francis-halzen"
-        },
-        {
-          "language": "es",
-          "source": "lanzadigital.com",
-          "source_country": "spain",
-          "url": "https://www.lanzadigital.com/sociedad/fancis-halzen-premio-nobel-de-fisica-2026-por-sus-descubrimientos-sobre-los-neutrinos/"
-        },
-        {
-          "language": "es",
-          "source": "elsoldesantiago.com",
-          "source_country": "united-states",
-          "url": "https://elsoldesantiago.com/nobel-de-fisica-2026-reconoce-a-francis-halzen-por-sus-aportes-al-observatorio-icecube/"
-        },
-        {
-          "language": "es",
-          "source": "aristeguinoticias.com",
-          "source_country": "mx",
-          "url": "https://aristeguinoticias.com/0610/kiosko/francis-halzen-recibe-el-nobel-de-fisica-2026-por-descubrir-neutrinos-de-alta-energia-de-origen-astrofisico/"
-        },
-        {
-          "language": "es",
-          "source": "elheraldo.co",
-          "source_country": "co",
-          "url": "https://www.elheraldo.co/mundo/2026/10/06/el-belga-francis-halzen-gana-el-nobel-de-fisica-por-hallazgo-de-neutrinos-de-alta-energia-de-origen-astrofisico/"
-        },
-        {
-          "language": "es",
-          "source": "lafm.com.co",
-          "source_country": "co",
-          "url": "https://www.lafm.com.co/actualidad/francis-halzen-gana-nobel-de-fisica-413110"
-        },
-        {
-          "language": "de",
-          "source": "morgenpost.de",
-          "source_country": "germany",
-          "url": "https://www.morgenpost.de/panorama/article413344962/physik-nobelpreis-an-neutrinoforscher-francis-halzen.html"
-        },
-        {
-          "language": "de",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/de/physik-nobelpreis-geht-an-francis-halzen-aus-belgien/a-79558576"
-        },
-        {
-          "language": "slv",
-          "source": "rtvslo.si",
-          "source_country": "si",
-          "url": "https://www.rtvslo.si/znanost-in-tehnologija/prejemnik-nobelove-nagrade-za-fiziko-je-francis-halzen/795966"
-        },
-        {
-          "language": "hi",
-          "source": "khaskhabar.com",
+          "source": "aninews.in",
           "source_country": "india",
-          "url": "https://www.khaskhabar.com/local/delhi-ncr/delhi-news/news-francis-halzen-received-the-nobel-prize-in-physics-news-hindi-1-850846-KKN.html"
+          "url": "https://aninews.in/news/world/europe/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry-2026-for-spontaneous-homochirality-solution20261007162339/"
         },
         {
-          "language": "swe",
-          "source": "affarsvarlden.se",
-          "source_country": "sw",
-          "url": "https://www.affarsvarlden.se/artikel/francis-halzen-tilldelas-arets-nobelpris-i-fysik"
+          "language": "en",
+          "source": "freepressjournal.in",
+          "source_country": "india",
+          "url": "https://www.freepressjournal.in/world/nobel-prize-in-chemistry-2026-awarded-to-henri-kagan-kenso-soai-for-breakthrough-in-asymmetric-synthesis"
         },
         {
-          "language": "tur",
-          "source": "ensonhaber.com",
-          "source_country": "tu",
-          "url": "https://www.ensonhaber.com/2026-nobel-fizik-odulu-francis-halzene-verildi-h1571319"
+          "language": "en",
+          "source": "kenw.org",
+          "source_country": "united-states",
+          "url": "https://www.kenw.org/npr-news/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
         },
         {
-          "language": "it",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/canale_scienza/notizie/fisica_matematica/2026/10/06/nobel-per-la-fisica-a-francis-halzen-per-la-scoperta-dei-neutrini-cosmici_916de5dd-f7de-4099-90b2-3e195273bf07.html"
+          "language": "en",
+          "source": "newser.com",
+          "source_country": "united-states",
+          "url": "https://www.newser.com/story/397714/nobel-in-chemistry-goes-to-henri-kagan-and-kenso-soai.html"
         },
         {
-          "language": "fr",
-          "source": "lavenir.net",
-          "source_country": "be",
-          "url": "https://www.lavenir.net/actu/belgique/2026/10/06/le-prix-nobel-de-physique-decerne-au-belge-francis-halzen-AQVY7L7C5NDYZFOUBWBCNKENPA/"
-        },
-        {
-          "language": "hun",
-          "source": "index.hu",
-          "source_country": "hu",
-          "url": "https://index.hu/tudomany/2026/10/06/fizikai-nobel-dij-2026-francis-halzen/"
+          "language": "en",
+          "source": "wvtf.org",
+          "source_country": "united-states",
+          "url": "https://www.wvtf.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
         }
       ],
       "mentioned_countries": [
-        "sw",
-        "be"
+        "france",
+        "sw"
       ],
-      "origin_country": "be",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/sociedad/premio-nobel-fisica-2026-francis-halzen-descubrir-neutrinos-alta-energia-origen-cosmico_1_13564931.html",
-      "rank": 2,
-      "reference_newsroom_count": 18,
+      "origin_country": "aj",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/ciencia/20261007/henri-kagan-kenso-soai-nobel-quimica-trabajo-sintesis-organica-asimetrica/1003744411122_0.html",
+      "rank": 5,
+      "reference_newsroom_count": 13,
       "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "ansa.it",
-        "dw.com",
         "eldiario.es",
         "elespanol.com",
-        "elmundo.es",
         "elpais.com",
-        "expansion.com",
+        "europapress.es",
         "france24.com",
         "francetvinfo.fr",
         "la-croix.com",
@@ -473,270 +522,43 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.4811,
-          "corroboration": 0.8824,
-          "editorial_weight": 0.6923,
+          "coherence": 0.5738,
+          "corroboration": 0.75,
+          "editorial_weight": 0.619,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
+          "geographic_relevance": 0.5,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.913,
-          "source_reliability": 0.9292
+          "prominence": 0.875,
+          "source_reliability": 0.8961
         },
-        "total": 0.6993,
+        "total": 0.6268,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "francis halzen",
+      "subject_label": "nobel",
       "subject_names": [
-        "belge francis",
-        "fisica",
-        "francis halzen",
-        "halzen",
-        "nobel"
+        "francais henri",
+        "henri kagan",
+        "japonais kenso",
+        "kagan",
+        "kenso soai",
+        "nobel",
+        "premio nobel",
+        "soai"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "The 2026 Nobel Prize in Physics was awarded to Belgian scientist Francis Halzen for his pioneering contributions to the detection and study of high‑energy neutrinos of astrophysical origin, notably through the IceCube observatory at the South Pole, which helped trace these 'ghost' particles back to cosmic sources."
-    },
-    {
-      "cluster_id": "subject-parlement-85903cd8d1e3",
-      "coherence": 0.588903377742569,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-06",
-      "headline": "Germany’s AfD secures first state parliament presidency since 1945",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/en-allemagne-l-afd-accede-a-la-presidence-d-un-parlement-regional-une-premiere-pour-l-extreme-droite-depuis-1945_8225005.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/info-en-continu/20261005-l-extr%C3%AAme-droite-allemande-en-passe-de-pr%C3%A9sider-son-premier-parlement-r%C3%A9gional"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/06/germanys-far-right-afd-bids-to-take-helm-of-state-parliament-in-saxony-anhalt"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/06/germanys-far-right-afd-bids-to-take-helm-of-state-parliament-in-saxony-anhalt",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5889,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6855,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "parlement",
-      "subject_names": [
-        "afd",
-        "alemania",
-        "allemagne",
-        "germany",
-        "parlement"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "The far-right Alternative für Deutschland (AfD) has won the presidency of a state parliament in Germany, marking the first time since 1945 that an extreme-right party holds such a position at the regional parliamentary level."
-    },
-    {
-      "cluster_id": "subject-emmanuel-macron-7d6883e70e32",
-      "coherence": 0.5089672588799012,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-06",
-      "headline": "French president attends test launch of submarine-launched M51 missile",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/armee-securite-defense/la-france-realise-son-premier-tir-d-exercice-d-un-missile-nucleaire-sans-charge-depuis-un-sous-marin-emmanuel-macron-assiste-a-l-essai_8224942.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261006-la-france-a-test%C3%A9-un-nouveau-missile-nucl%C3%A9aire-sans-charge-depuis-un-sous-marin"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261006-france-emmanuel-macron-a-assist%C3%A9-%C3%A0-l-essai-d-un-nouveau-missile-nucl%C3%A9aire-m51-tir%C3%A9-depuis-un-sous-marin"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-10-06/macron-assiste-al-primo-lancio-del-missile-balistico-nucleare-m51-3-il-potenziale-della-nuova-arma-della-force-de-frappe-francese/19764927/"
-        },
-        {
-          "language": "fr",
-          "source": "nicematin.com",
-          "source_country": "france",
-          "url": "https://www.nicematin.com/societe/defense/emmanuel-macron-a-assiste-a-un-essai-d-un-missile-nucleaire-tire-sans-charge-depuis-un-sous-marin-10735882"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/france/20261006-la-france-a-test%C3%A9-un-nouveau-missile-nucl%C3%A9aire-sans-charge-depuis-un-sous-marin",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.509,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.6832,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "emmanuel macron",
-      "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "lfi",
-        "macron",
-        "melenchon",
-        "paris",
-        "pen"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "President Emmanuel Macron was present for a test launch of France’s M51 submarine-launched ballistic missile conducted without a nuclear warhead; multiple reports say the trial was an exercise of the new missile variant and took place from a French submarine."
-    },
-    {
-      "cluster_id": "subject-france-483f92ca95a9",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "co",
-        "france",
-        "it"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-05",
-      "headline": "Germany and France agree a new trade tool to rebalance commerce with China",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/05/l-allemagne-et-la-france-passent-a-l-offensive-pour-reequilibrer-les-echanges-commerciaux-avec-la-chine_6788570_3234.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/05/germany-and-france-agree-new-trade-tool-to-counter-china"
-        },
-        {
-          "language": "es",
-          "source": "larepublica.co",
-          "source_country": "co",
-          "url": "https://www.larepublica.co/globoeconomia/alemania-y-francia-impulsan-medidas-comerciales-para-impedir-el-acceso-de-china-4497008"
-        }
-      ],
-      "mentioned_countries": [
-        "germany",
-        "france"
-      ],
-      "origin_country": "co",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/05/germany-and-france-agree-new-trade-tool-to-counter-china",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.6307,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "lfi",
-        "melenchon",
-        "paris",
-        "pen"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Germany and France have agreed to create a new trade instrument aimed at rebalancing their trade with China and preventing unfair access by Chinese companies; the measure is presented as a joint offensive to better protect European industry and address distortions in bilateral trade."
+      "subject_newsroom_count": 16,
+      "summary": "The 2026 Nobel Prize in Chemistry was jointly awarded to French chemist Henri B. Kagan and Japanese chemist Kenso Soai for their work on asymmetric synthesis and reactions that explain and enable single-molecule (homochiral) production, advances with applications in fields such as pharmacology."
     }
   ],
-  "discarded_ingested": 143,
+  "discarded_ingested": 15,
   "discarded_kept": 5,
-  "generated_at": "2026-10-06T12:09:21.754733+00:00",
+  "generated_at": "2026-10-07T11:55:06.523139+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,
-  "served_zone": "europe",
-  "served_zone_continent": null,
-  "served_zone_kind": "continent",
+  "served_zone": "spain",
+  "served_zone_continent": "europe",
+  "served_zone_kind": "country",
   "zone": "spain",
   "zone_continent": "europe",
   "zone_kind": "country"

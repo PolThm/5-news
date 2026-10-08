@@ -1,57 +1,202 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-nobel-8010ec9e5d55",
-      "coherence": 0.5737787993922507,
-      "consequence": 1,
+      "cluster_id": "subject-france-bc10ba2d4b09",
+      "coherence": 0.5218682024155007,
+      "consequence": 2,
       "countries": [
-        "aj",
-        "france",
-        "germany",
-        "india",
-        "spain",
+        "ca",
+        "it",
+        "united-kingdom",
         "united-states"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-10-07",
-      "headline": "Henri Kagan y Kenso Soai reciben el Premio Nobel de Química 2026",
-      "independent_source_count": 28,
+      "country_count": 4,
+      "editorial_day": "2026-10-08",
+      "headline": "La policía usa gas lacrimógeno en enfrentamientos con manifestantes escolares en París",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/cwm26078pkepo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/10/07/tear-gas-and-fireworks-as-student-protests-turn-violent-in-paris"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/10/06/paris-police-clash-with-protesters-over-school-conditions"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/french-police-fire-tear-gas-as-more-than-250000-protest-nationwide-for-school-funding"
+        },
+        {
+          "language": "en",
+          "source": "wellandtribune.ca",
+          "source_country": "ca",
+          "url": "https://www.wellandtribune.ca/news/world/europe/police-fire-tear-gas-at-a-barricaded-high-school-in-paris-as-school-protests-show-no-sign-of-ending/article_64a10c4b-6499-538f-8c6d-4265e84516dc.html"
+        },
+        {
+          "language": "en",
+          "source": "clickorlando.com",
+          "source_country": "united-states",
+          "url": "https://www.clickorlando.com/news/world/2026/10/08/police-fire-tear-gas-at-a-barricaded-high-school-in-paris-as-school-protests-show-no-sign-of-ending/"
+        },
+        {
+          "language": "en",
+          "source": "news4jax.com",
+          "source_country": "united-states",
+          "url": "https://www.news4jax.com/news/world/2026/10/08/police-fire-tear-gas-at-a-barricaded-high-school-in-paris-as-school-protests-show-no-sign-of-ending/"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "be"
+      ],
+      "origin_country": "ca",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/video/2026/10/06/paris-police-clash-with-protesters-over-school-conditions",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5219,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.634,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "macron",
+        "nantes",
+        "paris"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "En varias ciudades de Francia, incluida París, la policía se enfrentó con estudiantes que protestaban por las condiciones y la financiación escolar, empleando gas lacrimógeno y deteniendo o dispersando a manifestantes; en París los choques incluyeron barricadas y lanzamiento de fuegos artificiales, y las protestas se extendieron a nivel nacional con manifestaciones masivas."
+    },
+    {
+      "cluster_id": "subject-lecornu-a76ed2cd3f87",
+      "coherence": 0.43906421880300406,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-08",
+      "headline": "Sébastien Lecornu anuncia medidas sobre liceos, carburantes y apoyo a las fuerzas del orden",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/sciences/article/2026/10/07/le-prix-nobel-de-chimie-2026-est-decerne-au-francais-henri-kagan-et-au-japonais-kenso-soai_6789581_1650684.html"
+          "url": "https://www.lefigaro.fr/politique/lycees-carburants-budget-emmanuel-macron-et-sebastien-lecornu-cherchent-les-voies-de-l-apaisement-20261007"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/sciences/prix-nobel-de-chimie-2026-le-francais-henri-kagan-recompense-20261007_GSDZECOHFFA5JLLFK5QBT3KAEY/"
+          "url": "https://www.lefigaro.fr/politique/colere-lyceenne-carburants-electricite-ce-qu-il-faut-retenir-de-l-intervention-de-sebastien-lecornu-20261007"
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/nobel-de-chimie-2026-le-francais-henri-kagan-et-le-japonais-kenso-soal-recompenses-20261007"
+          "url": "https://www.nouvelobs.com/politique/20261007.OBS119003/soutien-aux-forces-de-l-ordre-revendications-lyceennes-prix-de-l-essence-ce-qu-il-faut-retenir-des-annonces-de-lecornu.html"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/prix-nobel/le-prix-nobel-de-chimie-2026-decerne-au-francais-henri-kagan-et-au-japonais-kenso-soai-pour-leurs-travaux-sur-les-reactions-moleculaires-utilisees-notamment-en-pharmacologie_8226604.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.challenges.fr/politique/lycees-carburants-deficits-tout-ce-quil-faut-retenir-des-annonces-de-sebastien-lecornu_646238"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "larepubliquedespyrenees.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/sciences/20261007-le-prix-nobel-de-chimie-d%C3%A9cern%C3%A9-%C3%A0-henri-kagan-et-kenso-soai"
+          "url": "https://www.larepubliquedespyrenees.fr:443/societe/vie-quotidienne/colere-des-lyceens-prix-de-l-essence-et-crise-de-l-agriculture-que-retenir-des-annonces-de-sebastien-lecornu-de-ce-mercredi-soir-30967264.php"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "challenges.fr",
+      "outbound_url": "https://www.challenges.fr/politique/lycees-carburants-deficits-tout-ce-quil-faut-retenir-des-annonces-de-sebastien-lecornu_646238",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "lefigaro.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4391,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6364
         },
+        "total": 0.585,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "lecornu",
+      "subject_names": [
+        "lecornu",
+        "sebastien lecornu"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "El ministro Sébastien Lecornu hizo esta semana un conjunto de anuncios para intentar apaciguar tensiones: presentó medidas y compromisos dirigidos a responder las movilizaciones de estudiantes en liceos, medidas sobre el precio y el suministro de carburantes y garantías de apoyo a las fuerzas del orden, enmarcando además temas presupuestarios y preocupaciones del sector agrícola."
+    },
+    {
+      "cluster_id": "subject-kagan-4651c66c0d67",
+      "coherence": 0.47866336463205006,
+      "consequence": 1,
+      "countries": [
+        "ar",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-07",
+      "headline": "Henri Kagan y Kenso Soai reciben el Nobel de Química por la quiralidad",
+      "independent_source_count": 4,
+      "members": [
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/science/20261007-le-prix-nobel-de-chimie-d%C3%A9cern%C3%A9-au-fran%C3%A7ais-henri-kagan-et-au-japonais-kenso-soai"
+          "url": "https://www.nouvelobs.com/sciences/20261007.OBS118990/qu-est-ce-que-la-chiralite-qui-a-valu-le-prix-nobel-de-chimie-au-francais-henri-kagan-et-au-japonais-kenso-soai.html"
         },
         {
           "language": "fr",
@@ -67,276 +212,378 @@
         },
         {
           "language": "es",
+          "source": "laprensa.com.ar",
+          "source_country": "ar",
+          "url": "https://www.laprensa.com.ar/El-Nobel-de-Quimica-premia-a-los-investigadores-Kagan-y-Soai-por-descifrar-la-enigmatica-asimetria-de-las-moleculas-576605.note.aspx"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "japan"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/sciences-sante/le-prix-nobel-de-chimie-attribue-au-francais-henri-kagan-et-au-japonais-kenso-soai-DFLVL5EWUFGIVBSQ3G6JQBH3ZY/",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elpais.com",
+        "lexpress.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4787,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.505,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "kagan",
+      "subject_names": [
+        "anne carson",
+        "carson",
+        "francais henri",
+        "kagan",
+        "nobel",
+        "premio nobel"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Los galardonados son el químico francés Henri Kagan y el japonés Kenso Soai, premiados por investigaciones que explican la quiralidad —la asimetría molecular— y su papel en la naturaleza; los artículos coinciden en que su trabajo arrojó luz sobre por qué las moléculas pueden existir en formas no superponibles y en la importancia de esos descubrimientos para la química."
+    },
+    {
+      "cluster_id": "subject-nobel-2f7aa03cfada",
+      "coherence": 0.5283459746915145,
+      "consequence": 3,
+      "countries": [
+        "as",
+        "ca",
+        "france",
+        "germany",
+        "india",
+        "ks",
+        "nl",
+        "rp",
+        "spain",
+        "united-kingdom",
+        "united-states",
+        "unknown"
+      ],
+      "country_count": 12,
+      "editorial_day": "2026-10-08",
+      "filled_from": "europe",
+      "headline": "Anne Carson recibe el Premio Nobel de Literatura 2026",
+      "independent_source_count": 34,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/livres/article/2026/10/08/la-canadienne-anne-carson-recoit-le-prix-nobel-de-litterature-2026_6790199_3260.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/livres/le-prix-nobel-de-litterature-2026-decerne-a-la-canadienne-anne-carson-20261008"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/culture/livres/prix-nobel-de-litterature-2026-la-poetesse-canadienne-anne-carson-laureate-20261008_5VW4CELKAREANLXO6BIR6NQN2A/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/culture/prix-nobel-de-litterature-2026-la-canadienne-anne-carson-recompensee-20261008"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/prix-nobel/le-prix-nobel-de-litterature-2026-est-attribue-a-l-autrice-canadienne-anne-carson_8228320.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/culture/20261008-le-prix-nobel-de-litt%C3%A9rature-est-d%C3%A9cern%C3%A9-%C3%A0-la-po%C3%A9tesse-canadienne-anne-carson?utm_slink=f24.my%2FCCup"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/culture/20261008-le-prix-nobel-de-litt%C3%A9rature-est-d%C3%A9cern%C3%A9-%C3%A0-la-po%C3%A9tesse-canadienne-anne-carson"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/culture/20261008-le-prix-nobel-de-litt%C3%A9rature-d%C3%A9cern%C3%A9-%C3%A0-la-canadienne-anne-carson"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/culture/livre/le-prix-nobel-de-litterature-decerne-a-la-canadienne-anne-carson-X7VAN5N6WVEQPMLC6KAA2HYAN4/"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/ukraine-russe-1848191"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/monde/prix-nobel/le-prix-nobel-de-litterature-decerne-a-lecrivaine-canadienne-anne-carson-08f0fff6-c2eb-11f1-97ef-829bf84bf59f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/cultura/2026-10-08/premio-nobel-de-literatura.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/cultura/sigue-directo-anuncio-premio-nobel-literatura-2026-20261008113210-nt.html"
+        },
+        {
+          "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/sociedad/premio-nobel-quimica-2026-henri-kagan-kenso-soai-trabajos-simetria-moleculas_1_13567959.html"
+          "url": "https://www.eldiario.es/cultura/anne-carson-gana-premio-nobel-literatura-2026_1_13571892.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/sociedad/2026/10/08/anne-carson-gana-premio-nobel-literatura-2026.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/cultura/canadiense-anne-carson-premio-nobel-literatura-2026_1_2237668.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/ciencia/20261007/henri-kagan-kenso-soai-nobel-quimica-trabajo-sintesis-organica-asimetrica/1003744411122_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/ciencia/noticia-henri-kagan-kenso-soai-premio-nobel-quimica-2026-descubrimientos-sintesis-organica-asimetrica-20261007115447.html"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/wissen/forschung/chemie-nobelpreis-fuer-kagan-und-soai-100.html"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/07/g-s1-146849/nobel-prize-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "wgauradio.com",
-          "source_country": "united-states",
-          "url": "https://www.wgauradio.com/news/world/nobel-prize/BDAUZKQBJE3NHLKGBOLMNEOTT4/"
-        },
-        {
-          "language": "en",
-          "source": "news.az",
-          "source_country": "aj",
-          "url": "https://news.az/news/henri-kagan-kenso-soai-win-2026-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "wmra.org",
-          "source_country": "united-states",
-          "url": "https://www.wmra.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "capeandislands.org",
-          "source_country": "united-states",
-          "url": "https://www.capeandislands.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "ksl.com",
-          "source_country": "united-states",
-          "url": "https://www.ksl.com:443/article/51633339/kagan-and-soai-win-2026-nobel-chemistry-prize"
-        },
-        {
-          "language": "en",
-          "source": "wncw.org",
-          "source_country": "united-states",
-          "url": "https://www.wncw.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "wyomingpublicmedia.org",
-          "source_country": "united-states",
-          "url": "https://www.wyomingpublicmedia.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "deccanchronicle.com",
-          "source_country": "india",
-          "url": "https://www.deccanchronicle.com/science/henri-b-kagan-kenso-soai-win-nobel-prize-in-chemistry-1993838"
-        },
-        {
-          "language": "en",
-          "source": "houstonpublicmedia.org",
-          "source_country": "united-states",
-          "url": "https://www.houstonpublicmedia.org/npr/2026/10/07/g-s1-146849/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry/"
-        },
-        {
-          "language": "en",
-          "source": "kpbs.org",
-          "source_country": "united-states",
-          "url": "https://www.kpbs.org/news/science-technology/2026/10/07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "aninews.in",
-          "source_country": "india",
-          "url": "https://aninews.in/news/world/europe/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry-2026-for-spontaneous-homochirality-solution20261007162339/"
-        },
-        {
-          "language": "en",
-          "source": "freepressjournal.in",
-          "source_country": "india",
-          "url": "https://www.freepressjournal.in/world/nobel-prize-in-chemistry-2026-awarded-to-henri-kagan-kenso-soai-for-breakthrough-in-asymmetric-synthesis"
-        },
-        {
-          "language": "en",
-          "source": "kenw.org",
-          "source_country": "united-states",
-          "url": "https://www.kenw.org/npr-news/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        },
-        {
-          "language": "en",
-          "source": "newser.com",
-          "source_country": "united-states",
-          "url": "https://www.newser.com/story/397714/nobel-in-chemistry-goes-to-henri-kagan-and-kenso-soai.html"
-        },
-        {
-          "language": "en",
-          "source": "wvtf.org",
-          "source_country": "united-states",
-          "url": "https://www.wvtf.org/2026-10-07/henri-b-kagan-and-kenso-soai-win-nobel-prize-in-chemistry"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "sw"
-      ],
-      "origin_country": "aj",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/ciencia/20261007/henri-kagan-kenso-soai-nobel-quimica-trabajo-sintesis-organica-asimetrica/1003744411122_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 13,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com",
-        "europapress.es",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "npr.org",
-        "rfi.fr",
-        "tagesschau.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5738,
-          "corroboration": 0.75,
-          "editorial_weight": 0.619,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.875,
-          "source_reliability": 0.8961
-        },
-        "total": 0.6768,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nobel",
-      "subject_names": [
-        "francais henri",
-        "henri kagan",
-        "japonais kenso",
-        "kagan",
-        "kenso soai",
-        "nobel",
-        "premio nobel",
-        "soai"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "El Premio Nobel de Química 2026 fue otorgado conjuntamente al francés Henri B. Kagan y al japonés Kenso Soai por sus trabajos en reacciones químicas asimétricas que explican y permiten controlar la formación de moléculas con quiralidad, aplicaciones relevantes en campos como la farmacología."
-    },
-    {
-      "cluster_id": "subject-francia-e15a7d460ed1",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-07",
-      "headline": "Un menor pierde una mano por la explosión de una granada en protestas estudiantiles en Francia",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261005/11651305/protestas-profesores-previa-huelga-francia-afectan-mas-400-centros.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/adolescente-pierde-mano-explosion-granada-policial-protestas-estudiantiles-francia_1_13563658.html"
+          "url": "https://www.elespanol.com/el-cultural/letras/20261008/poeta-canadiense-anne-carson-gana-premio-nobel-literatura/1003744413197_0.html"
         },
         {
           "language": "en",
           "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/07/french-police-suspend-use-stun-grenades-high-school-protester-loses-hand"
+          "url": "https://www.theguardian.com/books/2026/oct/08/wins-the-nobel-prize-in-literature-2026"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/kultur/literatur-nobelpreis-116.html"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2634134"
+        },
+        {
+          "language": "en",
+          "source": "thehindu.com",
+          "source_country": "india",
+          "url": "https://www.thehindu.com/books/nobel-prize-in-literature-2026-winner/article71559179.ece"
+        },
+        {
+          "language": "en",
+          "source": "jagranjosh.com",
+          "source_country": "india",
+          "url": "https://www.jagranjosh.com/general-knowledge/who-won-the-nobel-prize-in-literature-2026-anne-carson-wins-prestigious-award-1820012875-1"
+        },
+        {
+          "language": "en",
+          "source": "clickorlando.com",
+          "source_country": "united-states",
+          "url": "https://www.clickorlando.com/entertainment/2026/10/08/nobel-prize-in-literature-to-be-awarded-in-stockholm/"
+        },
+        {
+          "language": "en",
+          "source": "orissapost.com",
+          "source_country": "india",
+          "url": "https://www.orissapost.com/canadian-poet-essayist-anne-carson-wins-nobel-prize-in-literature/"
+        },
+        {
+          "language": "en",
+          "source": "nbcwashington.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcwashington.com/news/national-international/canadian-poet-essayist-anne-carson-wins-nobel-prize-in-literature/4164911/"
+        },
+        {
+          "language": "en",
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/arts-and-life/entertainment/2026/10/08/cp-newsalert-canadian-poet-anne-carson-wins-nobel-prize-in-literature"
+        },
+        {
+          "language": "en",
+          "source": "aol.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.aol.co.uk/articles/nobel-prize-literature-awarded-poet-111858000.html"
+        },
+        {
+          "language": "en",
+          "source": "thecourier.com.au",
+          "source_country": "as",
+          "url": "https://www.thecourier.com.au/story/9365278/canadian-writer-anne-carson-wins-nobel-literature-prize/"
+        },
+        {
+          "language": "en",
+          "source": "newcastleherald.com.au",
+          "source_country": "unknown",
+          "url": "https://www.newcastleherald.com.au/story/9365278/canadian-writer-anne-carson-wins-nobel-literature-prize/"
+        },
+        {
+          "language": "en",
+          "source": "manilatimes.net",
+          "source_country": "rp",
+          "url": "https://www.manilatimes.net/2026/10/08/world/canadas-anne-carson-wins-nobel-literature-prize/2441642"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/international/world-news/who-is-anne-carson-the-canadian-author-who-won-the-2026-nobel-prize-in-literature/articleshow/134788727.cms"
+        },
+        {
+          "language": "en",
+          "source": "koreaherald.com",
+          "source_country": "ks",
+          "url": "https://www.koreaherald.com/article/10897567"
+        },
+        {
+          "language": "en",
+          "source": "nbcbayarea.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcbayarea.com/news/national-international/canadian-poet-essayist-anne-carson-wins-nobel-prize-in-literature/4155037/"
+        },
+        {
+          "language": "en",
+          "source": "westernadvocate.com.au",
+          "source_country": "as",
+          "url": "https://www.westernadvocate.com.au/story/9365278/canadian-writer-anne-carson-wins-nobel-literature-prize/"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/international/world-news/nobel-prize-in-literature-2026-awarded-to-canadian-author-anne-carson/articleshow/134787953.cms"
+        },
+        {
+          "language": "en",
+          "source": "thetimes-tribune.com",
+          "source_country": "united-states",
+          "url": "https://www.thetimes-tribune.com/2026/10/08/anne-carson-nobel-prize-literature/"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "sw",
+        "ca"
       ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261005/11651305/protestas-profesores-previa-huelga-francia-afectan-mas-400-centros.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "origin_country": "as",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/cultura/anne-carson-gana-premio-nobel-literatura-2026_1_13571892.html",
+      "rank": 4,
+      "reference_newsroom_count": 19,
       "reference_newsrooms": [
+        "abc.es",
         "eldiario.es",
-        "lavanguardia.com",
+        "elespanol.com",
+        "elpais.com",
+        "expansion.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "infolibre.es",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nos.nl",
+        "ouest-france.fr",
+        "radiofrance.fr",
+        "rfi.fr",
+        "tagesschau.de",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.5283,
+          "corroboration": 0.8571,
+          "editorial_weight": 0.7037,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
+          "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.8947,
+          "source_reliability": 0.92
         },
-        "total": 0.6748,
+        "total": 0.8008,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "francia",
+      "subject_label": "nobel",
       "subject_names": [
-        "francia",
-        "french",
-        "lecornu"
+        "anne carson",
+        "canadienne anne",
+        "carson",
+        "nobel",
+        "premio nobel"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Durante protestas estudiantiles en Francia, un menor sufrió la amputación de una mano y parte del antebrazo tras la explosión de una granada lanzada por la policía; a raíz del incidente, las autoridades policiales suspendieron el uso de esas granadas mientras se investiga lo ocurrido."
+      "subject_newsroom_count": 24,
+      "summary": "Los artículos coinciden en que la poetisa y ensayista canadiense Anne Carson ha sido galardonada con el Premio Nobel de Literatura 2026, reconocido por su obra considerada audaz e inventiva; la noticia se publica en múltiples medios internacionales en varios idiomas."
     },
     {
-      "cluster_id": "subject-bouches-du-rhone-89287745c772",
+      "cluster_id": "subject-sophie-adenot-34a2353d47e6",
       "coherence": null,
-      "consequence": 2,
+      "consequence": 0,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-07",
-      "headline": "Varios departamentos del sur de Francia puestos en vigilancia naranja por fuertes lluvias y tormentas",
+      "editorial_day": "2026-10-08",
+      "headline": "Sophie Adenot regresa pronto a la Tierra tras su misión espacial",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/environnement/climat/pluies-intenses-et-phenomenes-tourbillonnaires-le-gard-et-lherault-de-nouveau-en-vigilance-orange-inondation-ce-mardi-20261006_ST2H2SLKERBKPOVCQP7JTJAELQ/"
+          "url": "https://www.liberation.fr/sciences/histoire/retour-de-sophie-adenot-en-martinique-quand-les-reves-despace-sont-des-souhaits-de-liberte-20261008_PJCUULNJEBGDVMFVKBVIR4JAMI/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/pluie-et-orages-le-gard-les-bouches-du-rhone-le-var-et-l-herault-en-vigilance-orange-20261007"
+          "url": "https://www.la-croix.com/planete/retour-sur-terre-de-sophie-adenot-ce-que-l-espace-fait-a-lame-des-astronautes-20261007"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/meteo/les-bouches-du-rhone-le-gard-et-le-var-places-en-vigilance-orange-pluie-inondation-et-orages-l-herault-en-alerte-crues_8226235.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261008-espace-sophie-adenot-bient%C3%B4t-de-retour-sur-terre"
         }
       ],
       "mentioned_countries": [
@@ -344,11 +591,11 @@
       ],
       "origin_country": "france",
       "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/societe/pluie-et-orages-le-gard-les-bouches-du-rhone-le-var-et-l-herault-en-vigilance-orange-20261007",
-      "rank": 3,
+      "outbound_url": "https://www.la-croix.com/planete/retour-sur-terre-de-sophie-adenot-ce-que-l-espace-fait-a-lame-des-astronautes-20261007",
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "francetvinfo.fr",
+        "france24.com",
         "la-croix.com",
         "liberation.fr"
       ],
@@ -359,168 +606,26 @@
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5848,
+        "total": 0.4381,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "bouches-du-rhone",
+      "subject_label": "sophie adenot",
       "subject_names": [
-        "bouches-du-rhone",
-        "gard",
-        "var"
+        "sophie adenot",
+        "terre"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Las autoridades meteorológicas han colocado al Gard, Hérault, Bouches‑du‑Rhône y Var en vigilancia naranja por fuertes lluvias y tormentas; posteriormente se mantuvo la vigilancia naranja para el Var mientras se levantó la alerta para Bouches‑du‑Rhône, Gard y Hérault."
-    },
-    {
-      "cluster_id": "subject-reckoning-7e0b0171998e",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "united-states"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-07",
-      "headline": "Se estrena «The Social Reckoning», un thriller sobre el poder de Facebook",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/culture/the-social-reckoning-lumiere-crue-sur-l-influence-nefaste-de-facebook-20261006"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/cinema/20261006.OBS118959/the-social-reckoning-un-thriller-sur-le-pouvoir-de-mark-zuckerberg-seize-ans-apres-the-social-network.html"
-        },
-        {
-          "language": "fr",
-          "source": "courrierinternational.com",
-          "source_country": "united-states",
-          "url": "https://www.courrierinternational.com/article/en-salle-the-social-reckoning-ce-que-la-lanceuse-d-alerte-sur-facebook-pense-du-film-qu-elle-a-inspire_276177"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "courrierinternational.com",
-      "outbound_url": "https://www.courrierinternational.com/article/en-salle-the-social-reckoning-ce-que-la-lanceuse-d-alerte-sur-facebook-pense-du-film-qu-elle-a-inspire_276177",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "la-croix.com",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.5825,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "reckoning",
-      "subject_names": [
-        "reckoning"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Las tres piezas coinciden en que «The Social Reckoning» es una película que examina críticamente la influencia y el poder de Facebook y de su fundador, evocando temas de responsabilidad social y consecuencias dañinas. Señalan además que la película se presenta como un thriller que retoma y amplía la narrativa sobre la plataforma, y mencionan que la obra está inspirada en las revelaciones de una exempleada o denunciante de Facebook, quien ha comentado públicamente sobre el filme."
-    },
-    {
-      "cluster_id": "subject-francia-f544067386f9",
-      "coherence": 0.4201666999351389,
-      "consequence": 2,
-      "countries": [
-        "co",
-        "rq",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-06",
-      "headline": "Estudiantes franceses protestan en las calles por la precariedad educativa",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-06/la-colera-de-los-estudiantes-toma-las-calles-de-francia.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261006/11652614/ira-estudiantes-toma-calles-francia-protesta-precariedad-educativa.html"
-        },
-        {
-          "language": "es",
-          "source": "eluniversal.com.co",
-          "source_country": "co",
-          "url": "https://www.eluniversal.com.co/mundo/2026/10/06/protestas-estudiantiles-en-francia-acorralan-al-gobierno-de-emmanuel-macron/"
-        },
-        {
-          "language": "es",
-          "source": "metro.pr",
-          "source_country": "rq",
-          "url": "https://www.metro.pr/noticias/2026/10/06/que-hay-detras-de-las-protestas-estudiantiles-que-se-extienden-por-francia/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "co",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/internacional/2026-10-06/la-colera-de-los-estudiantes-toma-las-calles-de-francia.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4202,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5556
-        },
-        "total": 0.5527,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "francia",
-      "subject_names": [
-        "francia",
-        "french",
-        "lecornu"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Miles de estudiantes han salido a las calles en distintas ciudades de Francia para protestar contra la precariedad en la educación y exigir cambios, en movilizaciones que presionan al gobierno de Emmanuel Macron y se han extendido por varias universidades y centros urbanos."
+      "subject_newsroom_count": 4,
+      "summary": "Los artículos coinciden en que la astronauta Sophie Adenot está próxima a regresar a la Tierra tras una misión espacial; abordan cómo la experiencia del espacio influye en su vida y en sus aspiraciones, y mencionan su llegada prevista a Martinica como momento de reencuentro con su entorno y deseos de libertad."
     }
   ],
-  "discarded_ingested": 47,
+  "discarded_ingested": 33,
   "discarded_kept": 5,
-  "generated_at": "2026-10-07T11:55:06.523139+00:00",
+  "generated_at": "2026-10-08T12:10:12.399868+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

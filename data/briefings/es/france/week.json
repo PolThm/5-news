@@ -2,647 +2,473 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-france-bc10ba2d4b09",
-        "subject-france-edc9b38a37ed",
-        "subject-france-f6e074668c29"
+        "subject-anthony-vaccarello-9df8ddb897fa"
       ],
-      "cluster_id": "subject-france-bc10ba2d4b09",
-      "coherence": 0.5218682024155007,
+      "cluster_id": "subject-anthony-vaccarello-9df8ddb897fa",
+      "coherence": 0.5341128397302202,
       "consequence": 2,
       "countries": [
-        "ca",
+        "france",
+        "spain",
+        "sy",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-09",
+      "headline": "Anthony Vaccarello deja Saint Laurent tras diez años al frente",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/lifestyle/mode/anthony-vaccarello-quitte-saint-laurent-alors-quune-nouvelle-organisation-est-en-vue-chez-les-maisons-du-groupe-kering-20261009_XJPJXWXM7FEODCJGX5P4MWCM2E/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/culture/mode/anthony-vaccarello-quitte-saint-laurent-apres-une-decennie-de-creation-un-seisme-dans-le-monde-de-la-mode_8229691.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/smoda/moda/2026-10-09/anthony-vaccarello-abandona-saint-laurent-tras-una-decada.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/estilo/moda/anthony-vaccarello-despide-saint-laurent-tras-decada-20261009123017-nt.html"
+        },
+        {
+          "language": "en",
+          "source": "10magazine.com",
+          "source_country": "united-kingdom",
+          "url": "https://10magazine.com/anthony-vaccarello-ysl-exit/"
+        },
+        {
+          "language": "en",
+          "source": "aawsat.com",
+          "source_country": "sy",
+          "url": "https://english.aawsat.com/fashion/5327659-saint-laurent-says-designer-anthony-vaccarello-leave"
+        },
+        {
+          "language": "en",
+          "source": "gq-magazine.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.gq-magazine.co.uk/article/anthony-vaccarello-exits-saint-laurent-october-2026"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/smoda/moda/2026-10-09/anthony-vaccarello-abandona-saint-laurent-tras-una-decada.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5341,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.6923
+        },
+        "total": 0.6245,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "anthony vaccarello",
+      "subject_names": [
+        "anthony vaccarello",
+        "saint laurent"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Los artículos coinciden en que Anthony Vaccarello abandona su puesto como director creativo de Saint Laurent tras una década en la casa; la salida se anunció públicamente y se enmarca en cambios organizativos dentro del grupo Kering."
+    },
+    {
+      "_linked_ids": [
+        "subject-renoir-e8db9182364f"
+      ],
+      "cluster_id": "subject-renoir-e8db9182364f",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
         "it",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 4,
+      "country_count": 3,
       "editorial_day": "2026-10-08",
-      "headline": "La policía usa gas lacrimógeno en enfrentamientos con manifestantes escolares en París",
-      "independent_source_count": 6,
+      "headline": "Estudiantes franceses mantienen protestas masivas y chocan con la policía",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "en",
-          "source": "bbc.co.uk",
+          "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cwm26078pkepo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.theguardian.com/world/2026/oct/08/france-student-protests-schools-vow-to-continue"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/07/tear-gas-and-fireworks-as-student-protests-turn-violent-in-paris"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/06/paris-police-clash-with-protesters-over-school-conditions"
+          "url": "https://www.euronews.com/video/2026/10/08/french-students-clash-with-police-as-school-protests-continue"
         },
         {
           "language": "en",
           "source": "pbs.org",
           "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/french-police-fire-tear-gas-as-more-than-250000-protest-nationwide-for-school-funding"
-        },
-        {
-          "language": "en",
-          "source": "wellandtribune.ca",
-          "source_country": "ca",
-          "url": "https://www.wellandtribune.ca/news/world/europe/police-fire-tear-gas-at-a-barricaded-high-school-in-paris-as-school-protests-show-no-sign-of-ending/article_64a10c4b-6499-538f-8c6d-4265e84516dc.html"
-        },
-        {
-          "language": "en",
-          "source": "clickorlando.com",
-          "source_country": "united-states",
-          "url": "https://www.clickorlando.com/news/world/2026/10/08/police-fire-tear-gas-at-a-barricaded-high-school-in-paris-as-school-protests-show-no-sign-of-ending/"
-        },
-        {
-          "language": "en",
-          "source": "news4jax.com",
-          "source_country": "united-states",
-          "url": "https://www.news4jax.com/news/world/2026/10/08/police-fire-tear-gas-at-a-barricaded-high-school-in-paris-as-school-protests-show-no-sign-of-ending/"
+          "url": "https://www.pbs.org/newshour/show/why-french-students-are-leading-massive-protests-across-the-country"
         }
       ],
       "mentioned_countries": [
-        "france",
-        "be"
+        "france"
       ],
-      "origin_country": "ca",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/10/06/paris-police-clash-with-protesters-over-school-conditions",
-      "rank": 1,
+      "origin_country": "it",
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/show/why-french-students-are-leading-massive-protests-across-the-country",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
         "euronews.com",
-        "pbs.org"
+        "pbs.org",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5219,
-          "corroboration": 0.6667,
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5763,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "renoir",
+      "subject_names": [
+        "cagnes-sur-mer",
+        "france",
+        "francia",
+        "french",
+        "lecornu",
+        "melenchon",
+        "paris",
+        "renoir"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Durante más de una semana, estudiantes en Francia han protagonizado protestas nacionales que incluyen enfrentamientos con la policía; las movilizaciones exigen cambios en políticas educativas y han provocado respuestas de ministros que intentan calmar la situación."
+    },
+    {
+      "_linked_ids": [
+        "subject-renoir-5c78df81799c"
+      ],
+      "cluster_id": "subject-renoir-5c78df81799c",
+      "coherence": 0.47813032991801074,
+      "consequence": 1,
+      "countries": [
+        "as",
+        "france",
+        "nl",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-10-09",
+      "headline": "Recuperan dos cuadros de Renoir robados en el museo de Cagnes-sur-Mer",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/nice/les-deux-tableaux-d-auguste-renoir-voles-a-cagnes-sur-mer-finalement-retrouves-20261009"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/cambriolage-au-musee-renoir-de-cagnes-sur-mer-deux-tableaux-retrouves-20261009_YJMHSJXELNDHBBSYJWAGZJMQ4E/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://france3-regions.franceinfo.fr/provence-alpes-cote-d-azur/alpes-maritimes/cagnes-sur-mer/les-deux-tableaux-derobes-au-musee-renoir-de-cagnes-sur-mer-retrouves-un-mois-apres-le-cambriolage-3430668.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-policia-francesa-recupera-dos-cuadros-renoir-robados-septiembre-casa-museo-cagnes-sur-mer-sur-20261009134952.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/ck5yn8j8ge43o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2634279"
+        },
+        {
+          "language": "en",
+          "source": "wral.com",
+          "source_country": "united-states",
+          "url": "https://www.wral.com/news/ap/824dc-2-renoir-paintings-stolen-from-a-french-museum-have-been-found-6-arrested/"
+        },
+        {
+          "language": "en",
+          "source": "abc.net.au",
+          "source_country": "as",
+          "url": "https://www.abc.net.au/news/2026-10-09/stolen-renoirs-found-french-museum-six-arrested/107250236"
+        },
+        {
+          "language": "en",
+          "source": "clickondetroit.com",
+          "source_country": "united-states",
+          "url": "https://www.clickondetroit.com/entertainment/2026/10/09/2-renoir-paintings-stolen-from-a-french-museum-have-been-found-6-arrested/"
+        },
+        {
+          "language": "en",
+          "source": "santamariatimes.com",
+          "source_country": "united-states",
+          "url": "https://santamariatimes.com/ap/international/2-renoir-paintings-stolen-from-a-french-museum-have-been-found-6-arrested/article_5991dfd7-f289-5d94-a25e-56178ec3485d.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "as",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/ck5yn8j8ge43o?at_medium=RSS&at_campaign=rss",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "europapress.es",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "liberation.fr",
+        "nos.nl"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4781,
+          "corroboration": 0.75,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7647
+        },
+        "total": 0.5716,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "renoir",
+      "subject_names": [
+        "cagnes-sur-mer",
+        "french",
+        "renoir"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Dos pinturas de Auguste Renoir que fueron sustraídas del museo que lleva su nombre en Cagnes-sur-Mer en septiembre han sido recuperadas aproximadamente un mes después del robo; las fuerzas de seguridad detuvieron a varias personas en relación con el caso (al menos cinco o seis según las fuentes)."
+    },
+    {
+      "_linked_ids": [
+        "subject-edouard-geffray-284e9386ba27"
+      ],
+      "cluster_id": "subject-edouard-geffray-284e9386ba27",
+      "coherence": 0.4403457504604179,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-09",
+      "headline": "El ministro Geffray anuncia el envío de 3.000 profesores suplentes a los liceos",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/education/en-direct-mobilisation-lyceenne-les-manifestants-reprennent-la-rue-ce-jeudi-pour-un-acte-iv-de-la-contestation-20261008_CWY2UUNCHNEF5DZL27G4B7PDF4/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261009-3024-professeurs-ont-vocation-d-%C3%AAtre-affect%C3%A9s-annonce-edouard-geffray"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20261009.OBS119044/pourquoi-cela-n-a-pas-ete-fait-avant-d-ou-sortent-les-3-000-professeurs-promis-par-edouard-geffray.html"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20261008.OBS119038/colere-des-lyceens-edouard-geffray-promet-3-000-professeurs-remplacants-dans-les-heures-et-les-jours-qui-viennent.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/economie/face-a-la-colere-lyceenne-le-ministre-edouard-geffray-promet-le-deploiement-de-3-000-professeurs-remplacants-dici-a-mardi_646261"
+        },
+        {
+          "language": "fr",
+          "source": "vosgesmatin.fr",
+          "source_country": "france",
+          "url": "https://www.vosgesmatin.fr/politique/2026/10/08/blocus-des-lycees-quelles-annonces-d-edouard-geffray-pour-remplacer-les-professeurs-absents"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/societe/20261008.OBS119038/colere-des-lyceens-edouard-geffray-promet-3-000-professeurs-remplacants-dans-les-heures-et-les-jours-qui-viennent.html",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "france24.com",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4403,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.68
+        },
+        "total": 0.5635,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "edouard geffray",
+      "subject_names": [
+        "edouard geffray",
+        "education"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Frente a bloqueos y protestas en los liceos, el ministro Édouard Geffray anunció que 3.000 profesores suplentes serán desplegados en las próximas horas y días para relevar establecimientos afectados; la cifra concreta mencionada fue 3.024 en algunas declaraciones y el despliegue se prometió antes del martes."
+    },
+    {
+      "_linked_ids": [
+        "subject-france-b89ffd7d0b9a"
+      ],
+      "cluster_id": "subject-france-b89ffd7d0b9a",
+      "coherence": 0.40532705268175173,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-09",
+      "headline": "La movilización de los liceos en Francia continúa tras varias jornadas de protesta",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261009-mobilisations-des-lyc%C3%A9es-en-france-donner-la-parole-aux-jeunes"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261009-la-mobilisation-lyc%C3%A9enne-se-poursuit-en-france-appel-%C3%A0-un-acte-v"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261009-la-mobilisation-lyc%C3%A9enne-en-france-trouve-un-%C3%A9cho-en-belgique"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20261008.OBS119010/il-a-rien-dit-on-continue-apres-l-allocution-de-lecornu-la-mobilisation-lyceenne-se-poursuit-dans-un-acte-iv.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/societe/20261008.OBS119010/il-a-rien-dit-on-continue-apres-l-allocution-de-lecornu-la-mobilisation-lyceenne-se-poursuit-dans-un-acte-iv.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "france24.com",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4053,
+          "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
-          "novelty": 0.3333,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
         },
-        "total": 0.594,
+        "total": 0.537,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
         "france",
         "francia",
-        "french",
-        "macron",
-        "nantes",
+        "lecornu",
+        "melenchon",
         "paris"
       ],
-      "subject_newsroom_count": 26,
-      "summary": "En varias ciudades de Francia, incluida París, la policía se enfrentó con estudiantes que protestaban por las condiciones y la financiación escolar, empleando gas lacrimógeno y deteniendo o dispersando a manifestantes; en París los choques incluyeron barricadas y lanzamiento de fuegos artificiales, y las protestas se extendieron a nivel nacional con manifestaciones masivas."
-    },
-    {
-      "_linked_ids": [
-        "subject-lecornu-a76ed2cd3f87"
-      ],
-      "cluster_id": "subject-lecornu-a76ed2cd3f87",
-      "coherence": 0.43906421880300406,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-08",
-      "headline": "Sébastien Lecornu anuncia medidas sobre liceos, carburantes y apoyo a las fuerzas del orden",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/lycees-carburants-budget-emmanuel-macron-et-sebastien-lecornu-cherchent-les-voies-de-l-apaisement-20261007"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/colere-lyceenne-carburants-electricite-ce-qu-il-faut-retenir-de-l-intervention-de-sebastien-lecornu-20261007"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20261007.OBS119003/soutien-aux-forces-de-l-ordre-revendications-lyceennes-prix-de-l-essence-ce-qu-il-faut-retenir-des-annonces-de-lecornu.html"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/politique/lycees-carburants-deficits-tout-ce-quil-faut-retenir-des-annonces-de-sebastien-lecornu_646238"
-        },
-        {
-          "language": "fr",
-          "source": "larepubliquedespyrenees.fr",
-          "source_country": "france",
-          "url": "https://www.larepubliquedespyrenees.fr:443/societe/vie-quotidienne/colere-des-lyceens-prix-de-l-essence-et-crise-de-l-agriculture-que-retenir-des-annonces-de-sebastien-lecornu-de-ce-mercredi-soir-30967264.php"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/politique/lycees-carburants-deficits-tout-ce-quil-faut-retenir-des-annonces-de-sebastien-lecornu_646238",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "lefigaro.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4391,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
-        },
-        "total": 0.545,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "lecornu",
-      "subject_names": [
-        "lecornu",
-        "sebastien lecornu"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "El ministro Sébastien Lecornu hizo esta semana un conjunto de anuncios para intentar apaciguar tensiones: presentó medidas y compromisos dirigidos a responder las movilizaciones de estudiantes en liceos, medidas sobre el precio y el suministro de carburantes y garantías de apoyo a las fuerzas del orden, enmarcando además temas presupuestarios y preocupaciones del sector agrícola."
-    },
-    {
-      "_linked_ids": [
-        "subject-kagan-4651c66c0d67"
-      ],
-      "cluster_id": "subject-kagan-4651c66c0d67",
-      "coherence": 0.47866336463205006,
-      "consequence": 1,
-      "countries": [
-        "ar",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-07",
-      "headline": "Henri Kagan y Kenso Soai reciben el Nobel de Química por la quiralidad",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/sciences/20261007.OBS118990/qu-est-ce-que-la-chiralite-qui-a-valu-le-prix-nobel-de-chimie-au-francais-henri-kagan-et-au-japonais-kenso-soai.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/sciences-sante/le-prix-nobel-de-chimie-attribue-au-francais-henri-kagan-et-au-japonais-kenso-soai-DFLVL5EWUFGIVBSQ3G6JQBH3ZY/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/ciencia/2026-10-07/premio-nobel-de-quimica.html"
-        },
-        {
-          "language": "es",
-          "source": "laprensa.com.ar",
-          "source_country": "ar",
-          "url": "https://www.laprensa.com.ar/El-Nobel-de-Quimica-premia-a-los-investigadores-Kagan-y-Soai-por-descifrar-la-enigmatica-asimetria-de-las-moleculas-576605.note.aspx"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "japan"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/sciences-sante/le-prix-nobel-de-chimie-attribue-au-francais-henri-kagan-et-au-japonais-kenso-soai-DFLVL5EWUFGIVBSQ3G6JQBH3ZY/",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elpais.com",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4787,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.4917,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kagan",
-      "subject_names": [
-        "anne carson",
-        "carson",
-        "francais henri",
-        "kagan",
-        "nobel",
-        "premio nobel"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Los galardonados son el químico francés Henri Kagan y el japonés Kenso Soai, premiados por investigaciones que explican la quiralidad —la asimetría molecular— y su papel en la naturaleza; los artículos coinciden en que su trabajo arrojó luz sobre por qué las moléculas pueden existir en formas no superponibles y en la importancia de esos descubrimientos para la química."
-    },
-    {
-      "_linked_ids": [
-        "subject-nobel-2f7aa03cfada"
-      ],
-      "cluster_id": "subject-nobel-2f7aa03cfada",
-      "coherence": 0.5283459746915145,
-      "consequence": 3,
-      "countries": [
-        "as",
-        "ca",
-        "france",
-        "germany",
-        "india",
-        "ks",
-        "nl",
-        "rp",
-        "spain",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 12,
-      "editorial_day": "2026-10-08",
-      "filled_from": "europe",
-      "headline": "Anne Carson recibe el Premio Nobel de Literatura 2026",
-      "independent_source_count": 34,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/livres/article/2026/10/08/la-canadienne-anne-carson-recoit-le-prix-nobel-de-litterature-2026_6790199_3260.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/livres/le-prix-nobel-de-litterature-2026-decerne-a-la-canadienne-anne-carson-20261008"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/culture/livres/prix-nobel-de-litterature-2026-la-poetesse-canadienne-anne-carson-laureate-20261008_5VW4CELKAREANLXO6BIR6NQN2A/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/culture/prix-nobel-de-litterature-2026-la-canadienne-anne-carson-recompensee-20261008"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/prix-nobel/le-prix-nobel-de-litterature-2026-est-attribue-a-l-autrice-canadienne-anne-carson_8228320.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/culture/20261008-le-prix-nobel-de-litt%C3%A9rature-est-d%C3%A9cern%C3%A9-%C3%A0-la-po%C3%A9tesse-canadienne-anne-carson?utm_slink=f24.my%2FCCup"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/culture/20261008-le-prix-nobel-de-litt%C3%A9rature-est-d%C3%A9cern%C3%A9-%C3%A0-la-po%C3%A9tesse-canadienne-anne-carson"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/culture/20261008-le-prix-nobel-de-litt%C3%A9rature-d%C3%A9cern%C3%A9-%C3%A0-la-canadienne-anne-carson"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/culture/livre/le-prix-nobel-de-litterature-decerne-a-la-canadienne-anne-carson-X7VAN5N6WVEQPMLC6KAA2HYAN4/"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/ukraine-russe-1848191"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/monde/prix-nobel/le-prix-nobel-de-litterature-decerne-a-lecrivaine-canadienne-anne-carson-08f0fff6-c2eb-11f1-97ef-829bf84bf59f?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-10-08/premio-nobel-de-literatura.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/cultura/sigue-directo-anuncio-premio-nobel-literatura-2026-20261008113210-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/anne-carson-gana-premio-nobel-literatura-2026_1_13571892.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/sociedad/2026/10/08/anne-carson-gana-premio-nobel-literatura-2026.html"
-        },
-        {
-          "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/cultura/canadiense-anne-carson-premio-nobel-literatura-2026_1_2237668.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/el-cultural/letras/20261008/poeta-canadiense-anne-carson-gana-premio-nobel-literatura/1003744413197_0.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/books/2026/oct/08/wins-the-nobel-prize-in-literature-2026"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/kultur/literatur-nobelpreis-116.html"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2634134"
-        },
-        {
-          "language": "en",
-          "source": "thehindu.com",
-          "source_country": "india",
-          "url": "https://www.thehindu.com/books/nobel-prize-in-literature-2026-winner/article71559179.ece"
-        },
-        {
-          "language": "en",
-          "source": "jagranjosh.com",
-          "source_country": "india",
-          "url": "https://www.jagranjosh.com/general-knowledge/who-won-the-nobel-prize-in-literature-2026-anne-carson-wins-prestigious-award-1820012875-1"
-        },
-        {
-          "language": "en",
-          "source": "clickorlando.com",
-          "source_country": "united-states",
-          "url": "https://www.clickorlando.com/entertainment/2026/10/08/nobel-prize-in-literature-to-be-awarded-in-stockholm/"
-        },
-        {
-          "language": "en",
-          "source": "orissapost.com",
-          "source_country": "india",
-          "url": "https://www.orissapost.com/canadian-poet-essayist-anne-carson-wins-nobel-prize-in-literature/"
-        },
-        {
-          "language": "en",
-          "source": "nbcwashington.com",
-          "source_country": "united-states",
-          "url": "https://www.nbcwashington.com/news/national-international/canadian-poet-essayist-anne-carson-wins-nobel-prize-in-literature/4164911/"
-        },
-        {
-          "language": "en",
-          "source": "winnipegfreepress.com",
-          "source_country": "ca",
-          "url": "https://www.winnipegfreepress.com/arts-and-life/entertainment/2026/10/08/cp-newsalert-canadian-poet-anne-carson-wins-nobel-prize-in-literature"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/nobel-prize-literature-awarded-poet-111858000.html"
-        },
-        {
-          "language": "en",
-          "source": "thecourier.com.au",
-          "source_country": "as",
-          "url": "https://www.thecourier.com.au/story/9365278/canadian-writer-anne-carson-wins-nobel-literature-prize/"
-        },
-        {
-          "language": "en",
-          "source": "newcastleherald.com.au",
-          "source_country": "unknown",
-          "url": "https://www.newcastleherald.com.au/story/9365278/canadian-writer-anne-carson-wins-nobel-literature-prize/"
-        },
-        {
-          "language": "en",
-          "source": "manilatimes.net",
-          "source_country": "rp",
-          "url": "https://www.manilatimes.net/2026/10/08/world/canadas-anne-carson-wins-nobel-literature-prize/2441642"
-        },
-        {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/news/international/world-news/who-is-anne-carson-the-canadian-author-who-won-the-2026-nobel-prize-in-literature/articleshow/134788727.cms"
-        },
-        {
-          "language": "en",
-          "source": "koreaherald.com",
-          "source_country": "ks",
-          "url": "https://www.koreaherald.com/article/10897567"
-        },
-        {
-          "language": "en",
-          "source": "nbcbayarea.com",
-          "source_country": "united-states",
-          "url": "https://www.nbcbayarea.com/news/national-international/canadian-poet-essayist-anne-carson-wins-nobel-prize-in-literature/4155037/"
-        },
-        {
-          "language": "en",
-          "source": "westernadvocate.com.au",
-          "source_country": "as",
-          "url": "https://www.westernadvocate.com.au/story/9365278/canadian-writer-anne-carson-wins-nobel-literature-prize/"
-        },
-        {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/news/international/world-news/nobel-prize-in-literature-2026-awarded-to-canadian-author-anne-carson/articleshow/134787953.cms"
-        },
-        {
-          "language": "en",
-          "source": "thetimes-tribune.com",
-          "source_country": "united-states",
-          "url": "https://www.thetimes-tribune.com/2026/10/08/anne-carson-nobel-prize-literature/"
-        }
-      ],
-      "mentioned_countries": [
-        "sw",
-        "ca"
-      ],
-      "origin_country": "as",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/cultura/anne-carson-gana-premio-nobel-literatura-2026_1_13571892.html",
-      "rank": 4,
-      "reference_newsroom_count": 19,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com",
-        "expansion.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "infolibre.es",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "nos.nl",
-        "ouest-france.fr",
-        "radiofrance.fr",
-        "rfi.fr",
-        "tagesschau.de",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5283,
-          "corroboration": 0.8571,
-          "editorial_weight": 0.7037,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.8947,
-          "source_reliability": 0.92
-        },
-        "total": 0.7851,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nobel",
-      "subject_names": [
-        "anne carson",
-        "canadienne anne",
-        "carson",
-        "nobel",
-        "premio nobel"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Los artículos coinciden en que la poetisa y ensayista canadiense Anne Carson ha sido galardonada con el Premio Nobel de Literatura 2026, reconocido por su obra considerada audaz e inventiva; la noticia se publica en múltiples medios internacionales en varios idiomas."
-    },
-    {
-      "_linked_ids": [
-        "subject-sophie-adenot-34a2353d47e6"
-      ],
-      "cluster_id": "subject-sophie-adenot-34a2353d47e6",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-08",
-      "headline": "Sophie Adenot regresa pronto a la Tierra tras su misión espacial",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/sciences/histoire/retour-de-sophie-adenot-en-martinique-quand-les-reves-despace-sont-des-souhaits-de-liberte-20261008_PJCUULNJEBGDVMFVKBVIR4JAMI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/planete/retour-sur-terre-de-sophie-adenot-ce-que-l-espace-fait-a-lame-des-astronautes-20261007"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261008-espace-sophie-adenot-bient%C3%B4t-de-retour-sur-terre"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/planete/retour-sur-terre-de-sophie-adenot-ce-que-l-espace-fait-a-lame-des-astronautes-20261007",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.3714,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sophie adenot",
-      "subject_names": [
-        "sophie adenot",
-        "terre"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Los artículos coinciden en que la astronauta Sophie Adenot está próxima a regresar a la Tierra tras una misión espacial; abordan cómo la experiencia del espacio influye en su vida y en sus aspiraciones, y mencionan su llegada prevista a Martinica como momento de reencuentro con su entorno y deseos de libertad."
+      "subject_newsroom_count": 20,
+      "summary": "Estudiantes de liceos en Francia han mantenido movilizaciones en varias jornadas, incluyendo un cuarto acto y llamados a continuar con un quinto; las protestas siguieron incluso después de una alocución oficial y han encontrado eco en Bélgica, y las voces piden que se dé espacio a la expresión de los jóvenes."
     }
   ],
-  "discarded_ingested": 33,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-10-08T12:10:12.399868+00:00",
+  "generated_at": "2026-10-09T12:01:13.951098+00:00",
   "language": "es",
   "period": "week",
   "schema_version": 2,

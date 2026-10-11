@@ -1,267 +1,461 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-5fc46c07de7e",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-trump-4f8cb0d646e2",
+      "coherence": 0.5496712350128736,
+      "consequence": 2,
       "countries": [
+        "as",
+        "brazil",
+        "ca",
+        "india",
         "it",
+        "spain",
+        "united-kingdom",
         "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-10-09",
-      "headline": "Estudiantes franceses realizan protestas masivas por reformas y economía",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/09/france-faces-perfect-storm-of-student-unrest-and-economic-turmoil"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/08/fresh-day-of-student-protests-across-france-as-rally-planned-in-paris"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/why-french-students-are-leading-massive-protests-across-the-country"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/show/why-french-students-are-leading-massive-protests-across-the-country",
-      "rank": 1,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6193,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "french",
-        "lfi",
-        "paris"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Los artículos coinciden en que miles de estudiantes en Francia han organizado días consecutivos de protestas y concentraciones, incluida una manifestación prevista en París, impulsadas por la oposición a reformas educativas y por la difícil situación económica; las movilizaciones forman parte de un movimiento amplio que combina descontento estudiantil y malestar social general."
-    },
-    {
-      "cluster_id": "subject-renoir-a55a400720f0",
-      "coherence": 0.46525921285343963,
-      "consequence": 1,
-      "countries": [
-        "nl",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-09",
-      "headline": "Recuperan dos cuadros de Renoir robados de un museo en la Costa Azul",
-      "independent_source_count": 4,
+      "country_count": 8,
+      "editorial_day": "2026-10-11",
+      "headline": "Trump dice que Ucrania necesita un nuevo presidente tras acuerdo sobre diésel",
+      "independent_source_count": 19,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-10-09/recuperados-un-mes-despues-los-dos-cuadros-robados-del-museo-renoir-en-francia.html"
+          "url": "https://www.abc.es/internacional/trump-rompe-zelenski-dice-hora-ucrania-nuevo-20261010190655-nt.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/cultura/arte/20261009/11655395/recuperados-dos-cuadros-renoir-robados-museo-costa-azul.html"
+          "url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/20261011/trump-rompe-zelenski-pacto-energetico-putin-salvar-inflacion-ucrania-debe-elegir-nuevo-presidente/1003744416463_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-arremete-con-dureza-contra-zelenski-tras-acuerdo-con-putin-es-hora-que-ucrania-tenga-nuevo-presidente_7047511_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/oct/10/ukraine-russia-strikes-war-trump-diesel-deal-zelenskyy"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cwkg50v1vn07o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2634279"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "nl",
-      "outbound_source": "nos.nl",
-      "outbound_url": "https://nos.nl/l/2634279",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "elpais.com",
-        "lavanguardia.com",
-        "nos.nl"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4653,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.519,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "renoir",
-      "subject_names": [
-        "renoir"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Las cuatro fuentes coinciden en que dos cuadros de Pierre-Auguste Renoir, sustraídos hace aproximadamente un mes del Museo Renoir en la Costa Azul (Francia), han sido recuperados; las obras provienen de la colección del museo y la recuperación fue confirmada tras la investigación policial."
-    },
-    {
-      "cluster_id": "subject-ukraine-8bf76d6eb012",
-      "coherence": 0.6208804210697707,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "filled_from": "europe",
-      "headline": "Bombardeos rusos en Zaporiyia causan al menos 11 muertos, incluidos niños",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/l-ambassadeur-de-coree-du-sud-en-ukraine-rentre-au-pays-apres-un-differend-diplomatique-20261010"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/10/trump-says-ukraine-needs-new-president-after-zelenskyy-condemns-russia-fuel-deal"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/de-nouvelles-frappes-russes-en-ukraine-font-au-moins-sept-morts-dont-trois-enfants-20261010_XY5NY6DM75F75AG2NHQDVX7ZS4/"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/10/10/trump-rebate-zelensky-sobre-diesel-russo-e-sugere-que-ucrania-tenha-novo-lider.ghtml"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-au-moins-12-morts-dont-trois-enfants-dans-des-frappes-russes-lancees-sur-zaporijjia_8231440.html#xtor=RSS-3-[lestitres]"
+          "language": "en",
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/breakingnews/2026/10/10/russian-attacks-kill-7-in-ukraine-after-trump-strikes-diesel-deal-with-putin"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff"
+          "language": "en",
+          "source": "wwaytv3.com",
+          "source_country": "united-states",
+          "url": "https://www.wwaytv3.com/trump-says-ukraine-needs-a-new-president-blames-zelenskyys-strikes-on-russian-refineries-for-high-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "thewestonmercury.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thewestonmercury.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "webindia123.com",
+          "source_country": "india",
+          "url": "https://news.webindia123.com/news/Articles/World/20261011/4509456.html"
+        },
+        {
+          "language": "en",
+          "source": "smh.com.au",
+          "source_country": "as",
+          "url": "https://www.smh.com.au/world/north-america/time-for-a-new-president-trump-calls-on-zelensky-to-go-amid-diesel-stoush-20261011-p614g5.html"
+        },
+        {
+          "language": "en",
+          "source": "bridportnews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bridportnews.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "midweekherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.midweekherald.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "elystandard.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.elystandard.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "wandsworthguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wandsworthguardian.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "andoveradvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.andoveradvertiser.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "capitalgazette.com",
+          "source_country": "united-states",
+          "url": "https://www.capitalgazette.com/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "origin_country": "as",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "liberation.fr"
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "euronews.com",
+        "globo.com",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.6209,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5497,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.8261,
+          "source_reliability": 0.8519
         },
-        "total": 0.6428,
+        "total": 0.72,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "trump",
       "subject_names": [
+        "donald trump",
         "kiev",
-        "south korea",
+        "poutine",
+        "putin",
+        "rusia",
+        "russia",
+        "russian",
+        "russie",
+        "trump",
         "ucrania",
         "ukraine",
-        "ukrainian",
-        "zaporijjia"
+        "zelenski",
+        "zelensky"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Varios ataques aéreos rusos impactaron barrios residenciales de Zaporiyia, provocando la muerte de al menos 11 personas, entre ellas tres niños, y causaron daños en zonas civiles según las informaciones coincidentes de los artículos."
+      "subject_newsroom_count": 31,
+      "summary": "Varios medios informan que Donald Trump criticó al presidente ucraniano Volodímir Zelenski tras un acuerdo entre Rusia y Ucrania sobre suministro de diésel; Trump culpó a Zelenski por el impacto en los precios del diésel y dijo que \"ha llegado el momento\" de que Ucrania elija un nuevo presidente."
     },
     {
-      "cluster_id": "subject-ukraine-be15aed17ea9",
-      "coherence": 0.6380454917628775,
+      "cluster_id": "subject-google-3b950dd45df1",
+      "coherence": 0.40704149868420614,
       "consequence": 3,
       "countries": [
+        "germany",
         "it",
-        "united-kingdom",
-        "united-states"
+        "spain",
+        "united-kingdom"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-10-09",
-      "filled_from": "europe",
-      "headline": "Corea del Sur retira a su embajador en Ucrania por disputa sobre prisioneros norcoreanos",
+      "country_count": 4,
+      "editorial_day": "2026-10-11",
+      "headline": "Ucrania ataca centros de datos de Yandex y provoca daños y cortes",
       "independent_source_count": 4,
       "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656428/ucrania-ataca-tercer-centro-datos-gigante-informatico-ruso-yandex.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html"
+        },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ckwy48rrz95vo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriff-yandex-100.html"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/08/south-korea-recalls-ambassador-to-ukraine-in-north-korean-prisoner-of-war-row"
+          "url": "https://www.euronews.com/2026/10/08/fire-rages-at-yandex-data-centre-after-ukraine-drone-attack"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.407,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
+        },
+        "total": 0.7031,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "google",
+      "subject_names": [
+        "google",
+        "yandex"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Ucrania llevó a cabo ataques con drones y/o misiles sobre varios centros de datos del gigante tecnológico ruso Yandex, provocando incendios, daños materiales y alteraciones en los servicios y la infraestructura del buscador y sus plataformas asociadas; las instalaciones atacadas son parte de la red de centros de datos que sostienen los servicios de la compañía."
+    },
+    {
+      "cluster_id": "subject-donald-tusk-bdfd6050b432",
+      "coherence": 0.5323227370567047,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-11",
+      "headline": "Polonia convoca reunión urgente tras intentos de asesinato contra líderes",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-pologne-donald-tusk-vise-par-une-possible-tentative-d-assassinat-dirigee-contre-des-membres-du-gouvernement-20261011"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/pologne-reunion-durgence-apres-une-possible-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20261011_2CRWXVPRYNH33GKRME2QG7JA5M/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/en-pologne-une-reunion-d-urgence-apres-de-possibles-tentatives-d-assassinat-contre-le-premier-ministre-et-le-ministre-de-la-defense_8232595.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/en-pologne-le-premier-ministre-donald-tusk-vise-par-une-possible-tentative-dassassinat-dirigee-DYKPCGRRKNC7NOOFBG73XS3G6M/"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/international/europe/pologne-reunion-durgence-apres-une-possible-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20261011_2CRWXVPRYNH33GKRME2QG7JA5M/",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "lexpress.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5323,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6822,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "donald tusk",
+      "subject_names": [
+        "donald tusk",
+        "pologne",
+        "polonia"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Las autoridades polacas han convocado una reunión de emergencia después de que se identificaran posibles intentos de asesinato dirigidos al primer ministro Donald Tusk y a su ministro de Defensa (y en al menos un artículo se menciona también al ministro del Interior). Los medios coinciden en que las acciones fueron catalogadas como \"posibles\" intentos de asesinato y que el gobierno respondió inmediatamente con consultas y medidas de seguridad."
+    },
+    {
+      "cluster_id": "subject-putin-a1d9b9e91490",
+      "coherence": 0.4925741815826524,
+      "consequence": 3,
+      "countries": [
+        "ar",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-10",
+      "headline": "Ucrania atacó una terminal petrolera en Rusia tras un acuerdo entre Putin y Trump",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/ucrania-ataca-terminal-petrolera-rusia-despues-acuerdo-20261010120831-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261010/11655917/ucrania-ataca-terminal-petrolera-rusa-pese-acuerdo-alcanzado-trump-putin.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ucrania-ataca-terminal-petrolera-rusa-pese-acuerdo-trump-putin-rusia-lluvia-bombas-zaporiyia_7047376_0.html"
+        },
+        {
+          "language": "es",
+          "source": "diariolaopinion.com.ar",
+          "source_country": "ar",
+          "url": "https://diariolaopinion.com.ar/nacionales/tension-geopolitica-ucrania-bombardeo-una-terminal-petrolera-rusa-tras-el-pacto-energetico-entre-trump-y-putin.htm"
+        }
+      ],
+      "mentioned_countries": [
+        "rs",
+        "up"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/ucrania-ataca-terminal-petrolera-rusa-pese-acuerdo-trump-putin-rusia-lluvia-bombas-zaporiyia_7047376_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4926,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6434,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "putin",
+      "subject_names": [
+        "donald trump",
+        "poutine",
+        "putin",
+        "rusia",
+        "trump",
+        "ucrania",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "Las notas coinciden en que Ucrania llevó a cabo un ataque contra una terminal o instalación petrolera en territorio ruso después de que se anunciara o se conociera un acuerdo energético o sobre diésel entre Vladimir Putin y Donald Trump; además mencionan en uno de los textos que Rusia causó 20 muertos en un bombardeo sobre Zaporiyia."
+    },
+    {
+      "cluster_id": "subject-russia-7da126ab0bdd",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "ni",
+        "united-kingdom"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-10",
+      "headline": "Ataques rusos con bombas matan al menos 20 civiles en Zaporizhzhia",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cwvgdpv642g5o?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/08/g-s1-147115/south-korea-to-recall-its-ambassador-to-ukraine-over-north-korean-pow-dispute"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/10/russian-strikes-on-southeastern-ukraine-kill-eight-including-three-children-authorities-sa"
         },
         {
           "language": "en",
-          "source": "theepochtimes.com",
-          "source_country": "united-states",
-          "url": "https://www.theepochtimes.com/world/south-korea-to-recall-ukraine-envoy-over-north-korean-prisoner-of-war-transfer-disclosure-6101583"
+          "source": "saharareporters.com",
+          "source_country": "ni",
+          "url": "https://saharareporters.com/2026/10/10/russian-strikes-kill-15-civilians-including-three-children-fresh-bombing-ukraines"
         }
       ],
       "mentioned_countries": [
@@ -269,138 +463,50 @@
       ],
       "origin_country": "it",
       "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/08/south-korea-recalls-ambassador-to-ukraine-in-north-korean-prisoner-of-war-row",
-      "rank": 4,
-      "reference_newsroom_count": 3,
+      "outbound_url": "https://www.euronews.com/2026/10/10/russian-strikes-on-southeastern-ukraine-kill-eight-including-three-children-authorities-sa",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "euronews.com",
-        "npr.org"
+        "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.638,
+          "coherence": 0.5,
           "corroboration": 0.6,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.2,
           "freshness": 0.7071,
-          "geographic_relevance": 0.5,
+          "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.4286,
+          "source_reliability": 0.5
         },
-        "total": 0.6208,
+        "total": 0.6307,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "russia",
       "subject_names": [
         "kiev",
-        "south korea",
-        "ucrania",
+        "russia",
+        "russian",
+        "russie",
         "ukraine",
-        "ukrainian",
-        "zaporijjia"
+        "zelensky"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Corea del Sur ha decidido retirar a su embajador en Ucrania tras un conflicto relacionado con la divulgación del traslado de prisioneros de guerra norcoreanos; la medida responde a preocupaciones del gobierno surcoreano sobre la gestión y comunicación del caso entre las dos capitales."
-    },
-    {
-      "cluster_id": "subject-sophie-adenot-b4a31600f538",
-      "coherence": 0.4390370620112556,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "headline": "La astronauta Sophie Adenot regresa a Tierra tras una misión y relata sus emociones",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/l-astronaute-francaise-sophie-adenot-de-retour-sur-terre-ferme-est-passee-par-toutes-les-emotions-dans-l-espace-20261010"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/les-larmes-suivent-l-apesanteur-maintenant-sophie-adenot-prononce-un-emouvant-discours-apres-son-retour-sur-la-terre-ferme_8231197.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/sophie-adenot-dans-l-espace/direct-retour-sur-terre-de-sophie-adenot-suivez-son-arrivee-a-cologne-et-sa-prise-de-parole-avant-de-rejoindre-le-centre-europeen-des-astronautes_8228074.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-l-astronaute-fran%C3%A7aise-sophie-adenot-de-retour-sur-terre-ferme"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261010-pass%C3%A9e-par-toutes-les-%C3%A9motions-les-premiers-mots-de-sophie-adenot-apr%C3%A8s-son-retour-sur-terre"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/science/20261010-espace-je-suis-pass%C3%A9e-par-toutes-les-%C3%A9motions-humaines-dit-sophie-adenot-de-retour-en-europe"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/%C3%A9co-tech/20261010-pass%C3%A9e-par-toutes-les-%C3%A9motions-les-premiers-mots-de-sophie-adenot-apr%C3%A8s-son-retour-sur-terre",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.439,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6923
-        },
-        "total": 0.4556,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sophie adenot",
-      "subject_names": [
-        "europa",
-        "europe",
-        "sophie adenot"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "La astronauta francesa Sophie Adenot ha regresado a tierra firme en Europa tras su estancia en el espacio; en declaraciones públicas dijo haber atravesado “todas las emociones humanas”, habló con emoción sobre su experiencia y relató cómo la gravedad afecta incluso las lágrimas al volver a la Tierra."
+      "subject_newsroom_count": 17,
+      "summary": "Varios ataques aéreos rusos en la región de Zaporizhzhia dejaron al menos 20 civiles muertos, según informes; entre las víctimas hay niños. Los ataques incluyen el uso de bombas planeadoras y fueron reportados en incidentes separados, con autoridades locales proporcionando las cifras de fallecidos."
     }
   ],
-  "discarded_ingested": 15,
+  "discarded_ingested": 80,
   "discarded_kept": 5,
-  "generated_at": "2026-10-10T11:17:58.986070+00:00",
+  "generated_at": "2026-10-11T11:31:18.709363+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,
-  "served_zone": "france",
-  "served_zone_continent": "europe",
-  "served_zone_kind": "country",
+  "served_zone": "europe",
+  "served_zone_continent": null,
+  "served_zone_kind": "continent",
   "zone": "france",
   "zone_continent": "europe",
   "zone_kind": "country"

@@ -2,147 +2,337 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-ukraine-9ea09be71ff2",
-        "subject-ukraine-bc22245cd399",
-        "subject-ukraine-be15aed17ea9",
-        "subject-ukraine-c2860e239af0"
+        "subject-trump-4f8cb0d646e2"
       ],
-      "cluster_id": "subject-ukraine-be15aed17ea9",
-      "coherence": 0.6380454917628775,
-      "consequence": 3,
+      "cluster_id": "subject-trump-4f8cb0d646e2",
+      "coherence": 0.5496712350128736,
+      "consequence": 2,
       "countries": [
+        "as",
+        "brazil",
+        "ca",
+        "india",
         "it",
+        "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-10-09",
-      "headline": "La Corée du Sud rappelle son ambassadeur en Ukraine pour un différend sur un prisonnier de guerre nord-coréen",
-      "independent_source_count": 4,
+      "country_count": 8,
+      "editorial_day": "2026-10-11",
+      "headline": "Trump demande que l'Ukraine ait un nouveau président après l'accord sur le diesel",
+      "independent_source_count": 19,
       "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/trump-rompe-zelenski-dice-hora-ucrania-nuevo-20261010190655-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/20261011/trump-rompe-zelenski-pacto-energetico-putin-salvar-inflacion-ucrania-debe-elegir-nuevo-presidente/1003744416463_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-arremete-con-dureza-contra-zelenski-tras-acuerdo-con-putin-es-hora-que-ucrania-tenga-nuevo-presidente_7047511_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/oct/10/ukraine-russia-strikes-war-trump-diesel-deal-zelenskyy"
+        },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ckwy48rrz95vo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/08/south-korea-recalls-ambassador-to-ukraine-in-north-korean-prisoner-of-war-row"
+          "url": "https://www.euronews.com/2026/10/10/trump-says-ukraine-needs-new-president-after-zelenskyy-condemns-russia-fuel-deal"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/10/10/trump-rebate-zelensky-sobre-diesel-russo-e-sugere-que-ucrania-tenha-novo-lider.ghtml"
         },
         {
           "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/08/g-s1-147115/south-korea-to-recall-its-ambassador-to-ukraine-over-north-korean-pow-dispute"
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/breakingnews/2026/10/10/russian-attacks-kill-7-in-ukraine-after-trump-strikes-diesel-deal-with-putin"
         },
         {
           "language": "en",
-          "source": "theepochtimes.com",
+          "source": "wwaytv3.com",
           "source_country": "united-states",
-          "url": "https://www.theepochtimes.com/world/south-korea-to-recall-ukraine-envoy-over-north-korean-prisoner-of-war-transfer-disclosure-6101583"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/08/south-korea-recalls-ambassador-to-ukraine-in-north-korean-prisoner-of-war-row",
-      "rank": 1,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.638,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 0.25,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6691,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "south korea",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zaporijjia"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "La Corée du Sud a rappelé son ambassadeur en Ukraine après une controverse liée à la divulgation du transfert ou du statut d’un prisonnier de guerre nord‑coréen; les médias indiquent que la décision vise à protester contre la manière dont l’affaire a été gérée et à demander des explications aux autorités ukrainiennes."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-8bf76d6eb012"
-      ],
-      "cluster_id": "subject-ukraine-8bf76d6eb012",
-      "coherence": 0.6208804210697707,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "headline": "Des frappes russes sur Zaporijjia tuent au moins 11 personnes, dont trois enfants",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/l-ambassadeur-de-coree-du-sud-en-ukraine-rentre-au-pays-apres-un-differend-diplomatique-20261010"
+          "url": "https://www.wwaytv3.com/trump-says-ukraine-needs-a-new-president-blames-zelenskyys-strikes-on-russian-refineries-for-high-diesel-prices/"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/de-nouvelles-frappes-russes-en-ukraine-font-au-moins-sept-morts-dont-trois-enfants-20261010_XY5NY6DM75F75AG2NHQDVX7ZS4/"
+          "language": "en",
+          "source": "thewestonmercury.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thewestonmercury.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-au-moins-12-morts-dont-trois-enfants-dans-des-frappes-russes-lancees-sur-zaporijjia_8231440.html#xtor=RSS-3-[lestitres]"
+          "language": "en",
+          "source": "webindia123.com",
+          "source_country": "india",
+          "url": "https://news.webindia123.com/news/Articles/World/20261011/4509456.html"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff"
+          "language": "en",
+          "source": "smh.com.au",
+          "source_country": "as",
+          "url": "https://www.smh.com.au/world/north-america/time-for-a-new-president-trump-calls-on-zelensky-to-go-amid-diesel-stoush-20261011-p614g5.html"
+        },
+        {
+          "language": "en",
+          "source": "bridportnews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bridportnews.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "midweekherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.midweekherald.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "elystandard.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.elystandard.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "wandsworthguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wandsworthguardian.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "andoveradvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.andoveradvertiser.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "capitalgazette.com",
+          "source_country": "united-states",
+          "url": "https://www.capitalgazette.com/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff",
+      "origin_country": "as",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "euronews.com",
+        "globo.com",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5497,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.8261,
+          "source_reliability": 0.8519
+        },
+        "total": 0.6987,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "kiev",
+        "poutine",
+        "putin",
+        "rusia",
+        "russia",
+        "russian",
+        "russie",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 31,
+      "summary": "Après un accord sur le carburant entre la Russie et l'Ukraine, Donald Trump a critiqué le président Volodymyr Zelensky, l'accusant d'être responsable de la hausse des prix du diesel et déclarant que l'Ukraine devrait choisir un nouveau président ; ces articles indiquent que ses commentaires font suite à la condamnation par Zelensky de l'accord énergétique avec la Russie."
+    },
+    {
+      "_linked_ids": [
+        "subject-google-3b950dd45df1"
+      ],
+      "cluster_id": "subject-google-3b950dd45df1",
+      "coherence": 0.40704149868420614,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-11",
+      "headline": "L'Ukraine attaque un centre de données du géant informatique russe Yandex",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656428/ucrania-ataca-tercer-centro-datos-gigante-informatico-ruso-yandex.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriff-yandex-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/08/fire-rages-at-yandex-data-centre-after-ukraine-drone-attack"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html",
       "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "france24.com",
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.407,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
+        },
+        "total": 0.6898,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "google",
+      "subject_names": [
+        "google",
+        "yandex"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Des forces ukrainiennes ont mené des frappes contre des centres de données appartenant à Yandex en Russie, provoquant des incendies et des perturbations des services de l'entreprise; les attaques ont touché au moins un site utilisé pour ses opérations en ligne et suscité des difficultés techniques pour le moteur de recherche et ses services associés."
+    },
+    {
+      "_linked_ids": [
+        "subject-donald-tusk-bdfd6050b432"
+      ],
+      "cluster_id": "subject-donald-tusk-bdfd6050b432",
+      "coherence": 0.5323227370567047,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-11",
+      "headline": "En Pologne, une possible tentative d’assassinat vise le Premier ministre et un ministre",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-pologne-donald-tusk-vise-par-une-possible-tentative-d-assassinat-dirigee-contre-des-membres-du-gouvernement-20261011"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/pologne-reunion-durgence-apres-une-possible-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20261011_2CRWXVPRYNH33GKRME2QG7JA5M/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/en-pologne-une-reunion-d-urgence-apres-de-possibles-tentatives-d-assassinat-contre-le-premier-ministre-et-le-ministre-de-la-defense_8232595.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/en-pologne-le-premier-ministre-donald-tusk-vise-par-une-possible-tentative-dassassinat-dirigee-DYKPCGRRKNC7NOOFBG73XS3G6M/"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/international/europe/pologne-reunion-durgence-apres-une-possible-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20261011_2CRWXVPRYNH33GKRME2QG7JA5M/",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
         "francetvinfo.fr",
         "lefigaro.fr",
+        "lexpress.fr",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6209,
+          "coherence": 0.5323,
           "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -152,137 +342,135 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6662,
+        "total": 0.6555,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "donald tusk",
       "subject_names": [
-        "kiev",
-        "south korea",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zaporijjia"
+        "donald tusk",
+        "pologne",
+        "polonia"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Des frappes russes sur des quartiers résidentiels de Zaporijjia ont fait au moins 11 morts, dont trois enfants, selon les bilans publiés par plusieurs médias. Les attaques ont visé des zones habitées de la ville et ont provoqué des victimes civiles."
+      "subject_newsroom_count": 9,
+      "summary": "Les autorités polonaises ont tenu une réunion d’urgence après l’identification d’une « possible tentative d’assassinat » visant le Premier ministre Donald Tusk et au moins un ministre (intérieur ou défense selon les articles). Les médias indiquent que des investigations sont en cours et que le gouvernement a réagi rapidement pour coordonner la réponse et la sécurité des responsables concernés."
     },
     {
       "_linked_ids": [
-        "subject-meloni-35b028773f24",
-        "subject-meloni-fe1bacf8d9a4"
+        "subject-putin-a1d9b9e91490"
       ],
-      "cluster_id": "subject-meloni-fe1bacf8d9a4",
-      "coherence": 0.40835118077537824,
+      "cluster_id": "subject-putin-a1d9b9e91490",
+      "coherence": 0.4925741815826524,
       "consequence": 3,
       "countries": [
-        "france",
-        "it",
+        "ar",
         "spain"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-10-08",
-      "headline": "Giorgia Meloni fait adopter une réforme électorale en Italie",
+      "country_count": 2,
+      "editorial_day": "2026-10-10",
+      "headline": "L'Ukraine attaque une terminal pétrolière en Russie après un accord entre Trump et Poutine",
       "independent_source_count": 4,
       "members": [
         {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/italie-giorgia-meloni-obtient-sa-reforme-de-la-loi-electorale-20261008"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/ucrania-ataca-terminal-petrolera-rusia-despues-acuerdo-20261010120831-nt.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261008/11654195/meloni-logra-aprobar-nueva-ley-electoral-blindar-mayorias-parlamentarias.html"
+          "url": "https://www.lavanguardia.com/internacional/20261010/11655917/ucrania-ataca-terminal-petrolera-rusa-pese-acuerdo-alcanzado-trump-putin.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/meloni-logra-aprobar-polemica-reforma-electoral-italia-criticas-perpetuarse_1_13571468.html"
+          "url": "https://www.20minutos.es/internacional/ucrania-ataca-terminal-petrolera-rusa-pese-acuerdo-trump-putin-rusia-lluvia-bombas-zaporiyia_7047376_0.html"
         },
         {
-          "language": "en",
-          "source": "ansa.it",
-          "source_country": "it",
-          "url": "https://www.ansa.it/english/news/politics/2026/10/08/new-election-law-gives-voters-choice-ensures-stable-govts-says_26c8ca42-0d0a-4646-9b2a-3dbc00da539b.html"
+          "language": "es",
+          "source": "diariolaopinion.com.ar",
+          "source_country": "ar",
+          "url": "https://diariolaopinion.com.ar/nacionales/tension-geopolitica-ucrania-bombardeo-una-terminal-petrolera-rusa-tras-el-pacto-energetico-entre-trump-y-putin.htm"
         }
       ],
       "mentioned_countries": [
-        "it"
+        "rs",
+        "up"
       ],
-      "origin_country": "france",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/meloni-logra-aprobar-polemica-reforma-electoral-italia-criticas-perpetuarse_1_13571468.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "origin_country": "ar",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/ucrania-ataca-terminal-petrolera-rusa-pese-acuerdo-trump-putin-rusia-lluvia-bombas-zaporiyia_7047376_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "ansa.it",
-        "eldiario.es",
-        "lavanguardia.com",
-        "lefigaro.fr"
+        "20minutos.es",
+        "abc.es",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4084,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.5,
+          "coherence": 0.4926,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.5,
+          "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.5789
         },
-        "total": 0.658,
+        "total": 0.6527,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "meloni",
+      "subject_label": "putin",
       "subject_names": [
-        "italia",
-        "italy",
-        "meloni"
+        "donald trump",
+        "poutine",
+        "putin",
+        "rusia",
+        "trump",
+        "ucrania",
+        "zelenski"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Le Parlement italien a approuvé une nouvelle loi électorale portée par la Première ministre Giorgia Meloni ; elle affirme que la réforme donne plus de choix aux électeurs et garantit des gouvernements stables, tandis que des opposants critiquent la mesure comme une tentative de consolider sa majorité et de pérenniser son pouvoir."
+      "subject_newsroom_count": 21,
+      "summary": "Les articles indiquent que l'Ukraine a lancé une attaque contre une terminale pétrolière en Russie peu après un accord énergétique entre Donald Trump et Vladimir Poutine ; les textes soulignent le lien temporel entre l'accord et l'attaque et mentionnent également, dans certains cas, des conséquences humaines d'autres frappes russes en Ukraine."
     },
     {
       "_linked_ids": [
-        "subject-kramatorsk-bc2152994e59",
-        "subject-russia-8ed4cff83e5b"
+        "subject-russia-7da126ab0bdd"
       ],
-      "cluster_id": "subject-russia-8ed4cff83e5b",
+      "cluster_id": "subject-russia-7da126ab0bdd",
       "coherence": null,
       "consequence": 3,
       "countries": [
         "it",
-        "united-kingdom",
-        "united-states"
+        "ni",
+        "united-kingdom"
       ],
       "country_count": 3,
-      "editorial_day": "2026-10-08",
-      "headline": "Une frappe russe frappe des bus à Donetsk et tue au moins 30 personnes",
+      "editorial_day": "2026-10-10",
+      "headline": "Des frappes russes tuent au moins 20 civils à Zaporizhzhia",
       "independent_source_count": 3,
       "members": [
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c875pwq134l3o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cwvgdpv642g5o?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/08/at-least-12-killed-and-19-injured-after-russian-strike-hits-buses-in-donetsk"
+          "url": "https://www.euronews.com/2026/10/10/russian-strikes-on-southeastern-ukraine-kill-eight-including-three-children-authorities-sa"
         },
         {
           "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russian-strike-on-ukrainian-public-buses-leaves-dozens-dead-as-blackouts-worsen-in-kyiv"
+          "source": "saharareporters.com",
+          "source_country": "ni",
+          "url": "https://saharareporters.com/2026/10/10/russian-strikes-kill-15-civilians-including-three-children-fresh-bombing-ukraines"
         }
       ],
       "mentioned_countries": [
@@ -290,27 +478,26 @@
       ],
       "origin_country": "it",
       "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/08/at-least-12-killed-and-19-injured-after-russian-strike-hits-buses-in-donetsk",
-      "rank": 4,
-      "reference_newsroom_count": 3,
+      "outbound_url": "https://www.euronews.com/2026/10/10/russian-strikes-on-southeastern-ukraine-kill-eight-including-three-children-authorities-sa",
+      "rank": 5,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "euronews.com",
-        "pbs.org"
+        "euronews.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
-          "novelty": 0.5,
+          "novelty": 1.0,
           "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "source_reliability": 0.5
         },
-        "total": 0.6488,
+        "total": 0.644,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "russia",
@@ -319,138 +506,16 @@
         "russia",
         "russian",
         "russie",
-        "south korea",
-        "ucrania",
         "ukraine",
-        "ukrainian",
-        "zaporijjia"
+        "zelensky"
       ],
-      "subject_newsroom_count": 14,
-      "summary": "Des frappes russes ont touché deux bus dans la région de Donetsk, tuant au moins 30 personnes et en blessant plusieurs dizaines ; les autorités ukrainiennes ont signalé au moins 18 blessés. L’attaque intervient alors que les frappes meurtrières se multiplient en Ukraine et coïncide avec des pannes d’électricité signalées à Kyiv."
-    },
-    {
-      "_linked_ids": [
-        "subject-ceuta-60edf08787d9"
-      ],
-      "cluster_id": "subject-ceuta-60edf08787d9",
-      "coherence": 0.4654084021904691,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-09",
-      "headline": "Le roi Mohammed VI refuse pressions, menaces ou chantage de l’Espagne",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-10-09/mohamed-vi-advierte-de-que-la-cooperacion-con-espana-no-debe-verse-sometida-a-presion-amenaza-ni-chantaje.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/mohamed-vi-rechaza-cooperacion-espana-vea-sometida-presion-amenaza-chantaje_1_13576569.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/africa/20261009/mohamed-vi-declara-cooperacion-migratoria-espana-llegado-limite-pide-vuelta-menores/1003744415756_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/mohamed-vi-denuncia-irresponsabilidad-espana-crisis-ceuta-dice-que-no-permitira-presiones-chantajes-amenazas_7047309_0.html"
-        },
-        {
-          "language": "es",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20261009192639/mohamed-vi-carga-contra-instrumentalizacion-ceuta-avisa-no-caben-chantajes-relacion"
-        },
-        {
-          "language": "es",
-          "source": "lavozdegalicia.es",
-          "source_country": "spain",
-          "url": "https://www.lavozdegalicia.es/noticia/espana/2026/10/09/mohamed-vi-critica-irresponsabilidad-politicos-espana-rechaza-presiones-chantajes/00031791568355984685907.htm"
-        },
-        {
-          "language": "es",
-          "source": "libertaddigital.com",
-          "source_country": "spain",
-          "url": "https://www.libertaddigital.com/internacional/mundo/2026-10-09/mohamed-vi-acusa-a-espana-de-utilizar-la-invasion-y-exige-que-no-se-someta-a-marruecos-a-ninguna-presion-7473559/"
-        },
-        {
-          "language": "es",
-          "source": "lanzadigital.com",
-          "source_country": "spain",
-          "url": "https://www.lanzadigital.com/nacional/mohamed-vi-critica-la-instrumentalizacion-de-ceuta-y-advierte-de-que-no-caben-chantajes-en-la-relacion/"
-        },
-        {
-          "language": "es",
-          "source": "heraldo.es",
-          "source_country": "spain",
-          "url": "https://www.heraldo.es/noticias/nacional/2026/10/09/mohamed-vi-carga-contra-instrumentalizacion-ceuta-avisa-que-no-caben-chantajes-relacion-2058549.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/nacional/2026/10/09/2726287/mohamed-carga-contra-instrumentalizacion-ceuta-avisa-caben-chantajes-relacion.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "mo"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/africa/20261009/mohamed-vi-declara-cooperacion-migratoria-espana-llegado-limite-pide-vuelta-menores/1003744415756_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4654,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.75
-        },
-        "total": 0.5689,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "banco",
-        "ceuta",
-        "espagne",
-        "espana",
-        "madrid",
-        "mohamed",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Mohammed VI a déclaré qu’il n’acceptera ni pressions, ni menaces, ni chantage de la part de l’Espagne, dénonçant l’instrumentalisation de la crise de Ceuta et affirmant que la coopération migratoire et bilatérale a atteint ses limites si elle est soumise à de telles pratiques."
+      "subject_newsroom_count": 17,
+      "summary": "Des frappes russes sur la région de Zaporizhzhia ont tué au moins 20 personnes, dont plusieurs enfants selon les bilans cités; les attaques ont été attribuées à des bombes ou frappes aériennes et des responsables ukrainiens ont confirmé des victimes civiles parmi eux des enfants."
     }
   ],
-  "discarded_ingested": 82,
+  "discarded_ingested": 91,
   "discarded_kept": 5,
-  "generated_at": "2026-10-10T11:17:58.986070+00:00",
+  "generated_at": "2026-10-11T11:31:18.709363+00:00",
   "language": "fr",
   "period": "week",
   "schema_version": 2,

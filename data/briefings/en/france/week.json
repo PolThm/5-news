@@ -2,92 +2,156 @@
   "clusters": [
     {
       "_linked_ids": [
-        "subject-france-5fc46c07de7e"
+        "subject-france-acb08d873635"
       ],
-      "cluster_id": "subject-france-5fc46c07de7e",
+      "cluster_id": "subject-france-acb08d873635",
       "coherence": null,
       "consequence": 3,
       "countries": [
         "it",
-        "united-states"
+        "united-kingdom"
       ],
       "country_count": 2,
       "editorial_day": "2026-10-09",
-      "headline": "Students stage nationwide protests in France over education and economic issues",
+      "headline": "France deploys extra teachers as student protests continue with rallies",
       "independent_source_count": 2,
       "members": [
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/09/france-faces-perfect-storm-of-student-unrest-and-economic-turmoil"
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6vg98lw017po?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
           "url": "https://www.euronews.com/2026/10/08/fresh-day-of-student-protests-across-france-as-rally-planned-in-paris"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/why-french-students-are-leading-massive-protests-across-the-country"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "it",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/show/why-french-students-are-leading-massive-protests-across-the-country",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/08/fresh-day-of-student-protests-across-france-as-rally-planned-in-paris",
       "rank": 1,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "euronews.com",
-        "pbs.org"
+        "bbc.co.uk",
+        "euronews.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.3333,
-          "source_reliability": 0.5294
+          "source_reliability": 0.4286
         },
-        "total": 0.6286,
+        "total": 0.6194,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
         "france",
-        "french",
+        "francia",
         "lfi",
         "paris"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Students across France have organized repeated nationwide protests and rallies, including planned demonstrations in Paris, as part of widescale unrest driven by concerns about education policy and broader economic turmoil; the demonstrations have drawn large participation and attention amid a tense social and political climate."
+      "subject_newsroom_count": 21,
+      "summary": "French authorities announced the addition of 3,000 teachers as student demonstrations persisted across the country, with fresh protests and a planned rally in Paris taking place amid ongoing unrest."
     },
     {
       "_linked_ids": [
+        "subject-gign-f6026f64fc17"
+      ],
+      "cluster_id": "subject-gign-f6026f64fc17",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-11",
+      "headline": "En Guadeloupe, deux gendarmes du GIGN ont été grièvement blessés par balles lors d'une opération de police",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/faits-divers/deux-gendarmes-du-gign-ont-ete-grievement-blesses-par-balles-en-guadeloupe-20261011"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/france/guadeloupe/en-guadeloupe-deux-gendarmes-du-gign-ont-ete-grievement-blesses-par-balles-lors-d-une-operation-de-police_8232553.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/societe/faits-divers/sen-prendre-aux-forces-de-lordre-est-intolerable-deux-gendarmes-du-gign-blesses-par-balles-en-guadeloupe-d94aa0d8-c559-11f1-92e9-819eb738846b?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/france/guadeloupe/en-guadeloupe-deux-gendarmes-du-gign-ont-ete-grievement-blesses-par-balles-lors-d-une-operation-de-police_8232553.html#xtor=RSS-3-[lestitres]",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "ouest-france.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5448,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "gign",
+      "subject_names": [
+        "gign",
+        "guadeloupe"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "En Guadeloupe, deux gendarmes du GIGN ont été grièvement blessés par balles lors d'une opération de police"
+    },
+    {
+      "_linked_ids": [
+        "subject-renoir-5efe75761ffa",
         "subject-renoir-a55a400720f0"
       ],
-      "cluster_id": "subject-renoir-a55a400720f0",
-      "coherence": 0.46525921285343963,
+      "cluster_id": "subject-renoir-5efe75761ffa",
+      "coherence": null,
       "consequence": 1,
       "countries": [
-        "nl",
         "spain",
         "united-kingdom"
       ],
-      "country_count": 3,
+      "country_count": 2,
       "editorial_day": "2026-10-09",
-      "headline": "Two Renoir paintings stolen from French museum recovered after one month",
-      "independent_source_count": 4,
+      "headline": "Two Renoir paintings stolen from French museum are recovered",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
@@ -106,41 +170,34 @@
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
           "url": "https://www.bbc.co.uk/news/articles/cwkg50v1vn07o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2634279"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "nl",
-      "outbound_source": "nos.nl",
-      "outbound_url": "https://nos.nl/l/2634279",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/cultura/2026-10-09/recuperados-un-mes-despues-los-dos-cuadros-robados-del-museo-renoir-en-francia.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
         "elpais.com",
-        "lavanguardia.com",
-        "nos.nl"
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4653,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.5,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "novelty": 0.5,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5056,
+        "total": 0.4614,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "renoir",
@@ -148,272 +205,290 @@
         "renoir"
       ],
       "subject_newsroom_count": 5,
-      "summary": "Two paintings by Pierre-Auguste Renoir that were stolen from a museum on the French Riviera have been recovered about a month after the theft; authorities located and retrieved both works and investigations into the incident are ongoing."
+      "summary": "Two paintings by Pierre-Auguste Renoir that had been stolen from a museum on France’s Côte d’Azur were recovered about a month after the theft; authorities located and seized the works and an investigation into the case is ongoing."
     },
     {
       "_linked_ids": [
-        "subject-ukraine-9ea09be71ff2",
-        "subject-ukraine-bc22245cd399",
-        "subject-ukraine-be15aed17ea9",
-        "subject-ukraine-c2860e239af0"
+        "subject-trump-4f8cb0d646e2"
       ],
-      "cluster_id": "subject-ukraine-be15aed17ea9",
-      "coherence": 0.6380454917628775,
-      "consequence": 3,
+      "cluster_id": "subject-trump-4f8cb0d646e2",
+      "coherence": 0.5496712350128736,
+      "consequence": 2,
       "countries": [
+        "as",
+        "brazil",
+        "ca",
+        "india",
         "it",
+        "spain",
         "united-kingdom",
         "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-10-09",
+      "country_count": 8,
+      "editorial_day": "2026-10-11",
       "filled_from": "europe",
-      "headline": "South Korea recalls its ambassador to Ukraine over North Korean POW disclosure",
-      "independent_source_count": 4,
+      "headline": "Trump says Ukraine needs a new president after Zelensky criticizes diesel deal",
+      "independent_source_count": 19,
       "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/trump-rompe-zelenski-dice-hora-ucrania-nuevo-20261010190655-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/20261011/trump-rompe-zelenski-pacto-energetico-putin-salvar-inflacion-ucrania-debe-elegir-nuevo-presidente/1003744416463_0.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-arremete-con-dureza-contra-zelenski-tras-acuerdo-con-putin-es-hora-que-ucrania-tenga-nuevo-presidente_7047511_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/oct/10/ukraine-russia-strikes-war-trump-diesel-deal-zelenskyy"
+        },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ckwy48rrz95vo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/08/south-korea-recalls-ambassador-to-ukraine-in-north-korean-prisoner-of-war-row"
+          "url": "https://www.euronews.com/2026/10/10/trump-says-ukraine-needs-new-president-after-zelenskyy-condemns-russia-fuel-deal"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/10/10/trump-rebate-zelensky-sobre-diesel-russo-e-sugere-que-ucrania-tenha-novo-lider.ghtml"
         },
         {
           "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/08/g-s1-147115/south-korea-to-recall-its-ambassador-to-ukraine-over-north-korean-pow-dispute"
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/breakingnews/2026/10/10/russian-attacks-kill-7-in-ukraine-after-trump-strikes-diesel-deal-with-putin"
         },
         {
           "language": "en",
-          "source": "theepochtimes.com",
+          "source": "wwaytv3.com",
           "source_country": "united-states",
-          "url": "https://www.theepochtimes.com/world/south-korea-to-recall-ukraine-envoy-over-north-korean-prisoner-of-war-transfer-disclosure-6101583"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/08/south-korea-recalls-ambassador-to-ukraine-in-north-korean-prisoner-of-war-row",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "npr.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.638,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 0.25,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6091,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "south korea",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zaporijjia"
-      ],
-      "subject_newsroom_count": 25,
-      "summary": "South Korea has recalled its ambassador to Ukraine after Ukraine disclosed information about a North Korean prisoner of war; the decision followed disagreement over the transfer or handling of the North Korean POW and was described by Seoul as a diplomatic protest that will involve reviewing the bilateral relationship."
-    },
-    {
-      "_linked_ids": [
-        "subject-ukraine-8bf76d6eb012"
-      ],
-      "cluster_id": "subject-ukraine-8bf76d6eb012",
-      "coherence": 0.6208804210697707,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "filled_from": "europe",
-      "headline": "Russian strikes on Zaporizhzhia kill at least 11 including three children",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/l-ambassadeur-de-coree-du-sud-en-ukraine-rentre-au-pays-apres-un-differend-diplomatique-20261010"
+          "url": "https://www.wwaytv3.com/trump-says-ukraine-needs-a-new-president-blames-zelenskyys-strikes-on-russian-refineries-for-high-diesel-prices/"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/de-nouvelles-frappes-russes-en-ukraine-font-au-moins-sept-morts-dont-trois-enfants-20261010_XY5NY6DM75F75AG2NHQDVX7ZS4/"
+          "language": "en",
+          "source": "thewestonmercury.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thewestonmercury.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-au-moins-12-morts-dont-trois-enfants-dans-des-frappes-russes-lancees-sur-zaporijjia_8231440.html#xtor=RSS-3-[lestitres]"
+          "language": "en",
+          "source": "webindia123.com",
+          "source_country": "india",
+          "url": "https://news.webindia123.com/news/Articles/World/20261011/4509456.html"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff"
+          "language": "en",
+          "source": "smh.com.au",
+          "source_country": "as",
+          "url": "https://www.smh.com.au/world/north-america/time-for-a-new-president-trump-calls-on-zelensky-to-go-amid-diesel-stoush-20261011-p614g5.html"
+        },
+        {
+          "language": "en",
+          "source": "bridportnews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bridportnews.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "midweekherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.midweekherald.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "elystandard.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.elystandard.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "wandsworthguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wandsworthguardian.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "andoveradvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.andoveradvertiser.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "capitalgazette.com",
+          "source_country": "united-states",
+          "url": "https://www.capitalgazette.com/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff",
+      "origin_country": "as",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html",
       "rank": 4,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "liberation.fr"
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "euronews.com",
+        "globo.com",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.6209,
-          "corroboration": 0.3333,
+          "coherence": 0.5497,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.8261,
+          "source_reliability": 0.8519
+        },
+        "total": 0.6387,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "kiev",
+        "poutine",
+        "putin",
+        "rusia",
+        "russia",
+        "russian",
+        "russie",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 31,
+      "summary": "Former US president Donald Trump criticized Ukrainian President Volodymyr Zelensky after Zelensky condemned a recent diesel fuel agreement between Russia and other parties, blaming Zelensky’s actions for higher diesel prices and calling for Ukraine to choose a new leader. Multiple outlets report Trump framed the diesel deal and strikes on Russian refineries as reasons for his call for new Ukrainian leadership."
+    },
+    {
+      "_linked_ids": [
+        "subject-google-3b950dd45df1"
+      ],
+      "cluster_id": "subject-google-3b950dd45df1",
+      "coherence": 0.40704149868420614,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-11",
+      "filled_from": "europe",
+      "headline": "Ukraine strikes multiple Yandex data centres, causing damage and outages",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656428/ucrania-ataca-tercer-centro-datos-gigante-informatico-ruso-yandex.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriff-yandex-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/08/fire-rages-at-yandex-data-centre-after-ukraine-drone-attack"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.407,
+          "corroboration": 0.6667,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.6522
         },
-        "total": 0.6062,
+        "total": 0.6298,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "google",
       "subject_names": [
-        "kiev",
-        "south korea",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zaporijjia"
+        "google",
+        "yandex"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Russian strikes hit residential areas in Zaporizhzhia, killing at least 11 people, among them three children, and causing multiple injuries, according to reports from the scene and local authorities."
-    },
-    {
-      "_linked_ids": [
-        "subject-sophie-adenot-34a2353d47e6",
-        "subject-sophie-adenot-b4a31600f538"
-      ],
-      "cluster_id": "subject-sophie-adenot-b4a31600f538",
-      "coherence": 0.4390370620112556,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "headline": "French astronaut Sophie Adenot returns to Earth after mission",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/l-astronaute-francaise-sophie-adenot-de-retour-sur-terre-ferme-est-passee-par-toutes-les-emotions-dans-l-espace-20261010"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/les-larmes-suivent-l-apesanteur-maintenant-sophie-adenot-prononce-un-emouvant-discours-apres-son-retour-sur-la-terre-ferme_8231197.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/sciences/espace/sophie-adenot/sophie-adenot-dans-l-espace/direct-retour-sur-terre-de-sophie-adenot-suivez-son-arrivee-a-cologne-et-sa-prise-de-parole-avant-de-rejoindre-le-centre-europeen-des-astronautes_8228074.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261010-l-astronaute-fran%C3%A7aise-sophie-adenot-de-retour-sur-terre-ferme"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261010-pass%C3%A9e-par-toutes-les-%C3%A9motions-les-premiers-mots-de-sophie-adenot-apr%C3%A8s-son-retour-sur-terre"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/science/20261010-espace-je-suis-pass%C3%A9e-par-toutes-les-%C3%A9motions-humaines-dit-sophie-adenot-de-retour-en-europe"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/%C3%A9co-tech/20261010-pass%C3%A9e-par-toutes-les-%C3%A9motions-les-premiers-mots-de-sophie-adenot-apr%C3%A8s-son-retour-sur-terre",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.439,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 0.5,
-          "prominence": 0.5,
-          "source_reliability": 0.6923
-        },
-        "total": 0.379,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sophie adenot",
-      "subject_names": [
-        "europa",
-        "europe",
-        "sophie adenot"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Sophie Adenot, a French astronaut, has returned to Earth and said she experienced a full range of emotions during her time in space; upon arrival back in Europe she delivered an emotional speech and described feeling moved as gravity caused tears to fall."
+      "subject_newsroom_count": 9,
+      "summary": "Ukrainian forces attacked several data centres belonging to Russian tech company Yandex, damaging at least one facility and causing service disruptions; reports indicate fires and operational problems at the targeted sites following drone or missile strikes."
     }
   ],
-  "discarded_ingested": 17,
+  "discarded_ingested": 22,
   "discarded_kept": 5,
-  "generated_at": "2026-10-10T11:17:58.986070+00:00",
+  "generated_at": "2026-10-11T11:31:18.709363+00:00",
   "language": "en",
   "period": "week",
   "schema_version": 2,

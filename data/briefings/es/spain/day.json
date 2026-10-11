@@ -1,423 +1,536 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-sol-3b83f0d6e188",
-      "coherence": null,
+      "cluster_id": "subject-erc-ece7c8aafdb6",
+      "coherence": 0.39458434611178084,
       "consequence": 2,
       "countries": [
-        "spain"
+        "spain",
+        "unknown"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "headline": "La Policía vigila a grupos radicales tras protestas en la Puerta del Sol por la vivienda",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-10-11",
+      "headline": "Gabriel Rufián volverá a encabezar la lista de ERC para las generales del 29‑N",
+      "independent_source_count": 6,
       "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/catalunya/2026-10-11/rufian-sera-candidato-por-esquerra-republicana-el-29-n.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/cataluna/rufian-encabezara-candidatura-erc-elecciones-29n-20261011121241-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/elecciones/elecciones-generales/2026/10/11/6acb6909e5fdeaee188b4580.html"
+        },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/10/10/6ac9f02d21efa0601c8b4576.html"
+          "url": "https://www.elmundo.es/cataluna/2026/10/11/6aca79c0e9cf4a25568b45b0.html"
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/madrid/2026-10-10/acampada-puerta-sol-vigilancia-policial-1tna-1tps_4442443/"
+          "url": "https://www.europapress.es/catalunya/noticia-gabriel-rufian-encabezara-lista-erc-congreso-elecciones-generales-20261011120802.html"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/madrid/policia-monitoriza-grupos-radicales-tras-dos-semanas-protestas-puerta-sol-por-vivienda_7047387_0.html"
+          "language": "cat",
+          "source": "3cat.cat",
+          "source_country": "unknown",
+          "url": "https://www.3cat.cat/3catinfo/la-precampanya-arrenca-amb-lhabitatge-com-a-eix-central-i-la-incognita-rufian/noticia/3433501/"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/madrid/2026-10-10/acampada-puerta-sol-vigilancia-policial-1tna-1tps_4442443/",
+      "outbound_source": "3cat.cat",
+      "outbound_url": "https://www.3cat.cat/3catinfo/la-precampanya-arrenca-amb-lhabitatge-com-a-eix-central-i-la-incognita-rufian/noticia/3433501/",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "20minutos.es",
-        "elconfidencial.com",
-        "elmundo.es"
+        "abc.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.3946,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.6283,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "erc",
+      "subject_names": [
+        "congreso",
+        "erc",
+        "frente amplio",
+        "gabriel rufian",
+        "rufian"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Gabriel Rufián y Esquerra Republicana han alcanzado un acuerdo por el que Rufián será el cabeza de lista de ERC en las elecciones generales del 29 de noviembre, encabezando la candidatura por Barcelona y liderando la lista al Congreso."
+    },
+    {
+      "cluster_id": "subject-ceuta-db7e378e33fa",
+      "coherence": 0.49294573852111534,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-11",
+      "headline": "La Policía desaloja el último gran asentamiento ilegal de inmigrantes en El Guano, Ceuta",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-11/la-policia-se-despliega-en-el-guano-para-desalojar-otro-asentamiento-de-inmigrantes-en-ceuta-48-horas-antes-de-la-visita-de-los-reyes.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/policia-desaloja-ultimo-asentamiento-ilegal-inmigrantes-ceuta-20261011085959-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/11/6acb3418e85ece49688b458e.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/sociedad/noticia-policia-despliega-guano-desalojar-ultimo-gran-asentamiento-ilegal-inmigrantes-20261011085302.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/sociedad/noticia-policia-despliega-guano-desalojar-ultimo-gran-asentamiento-ilegal-inmigrantes-20261011085302.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4929,
           "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6042,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta",
+        "guano",
+        "marruecos"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Las fuerzas policiales se desplegaron en la playa de El Guano, en Ceuta, para desalojar el último gran asentamiento ilegal de inmigrantes; la operación tuvo lugar en los días previos a la visita de los Reyes y las autoridades afirmaron que se trataba del último campamento de estas características en la ciudad."
+    },
+    {
+      "cluster_id": "subject-sanchez-c50bb6a11569",
+      "coherence": 0.3693192208040469,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "it"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-11",
+      "headline": "Pedro Sánchez inicia su campaña poniendo la vivienda en el centro",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261011-s%C3%A1nchez-lance-sa-campagne-en-promettant-de-renforcer-la-loi-sur-le-logement"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261011-elections-l%C3%A9gislatives-en-espagne-renforcer-la-loi-sur-le-logement"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261011-elections-l%C3%A9gislatives-en-espagne-pedro-s%C3%A1nchez-lance-sa-campagne"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261011-espagne-pedro-s%C3%A1nchez-met-crise-logement-coeur-campagne-maricarmen-vox"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261011-espagne-logement-corruption-s%C3%A9curit%C3%A9-la-campagne-des-l%C3%A9gislatives-est-d%C3%A9j%C3%A0-lanc%C3%A9e"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/10/spanish-pm-sanchez-launches-campaign-with-housing-as-key-theme"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/10/spanish-pm-sanchez-launches-campaign-with-housing-as-key-theme",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "euronews.com",
+        "france24.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3693,
+          "corroboration": 0.5,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "source_reliability": 0.6923
         },
-        "total": 0.5848,
+        "total": 0.5939,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sol",
+      "subject_label": "sanchez",
       "subject_names": [
-        "sol"
+        "espagne",
+        "feijoo",
+        "psoe",
+        "sanchez",
+        "supremo"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Tras semanas de movilizaciones en la Puerta del Sol por el problema de la vivienda, la Policía ha intensificado la monitorización de grupos radicales implicados en las protestas; las informaciones coinciden en que los seguimientos se mantienen mientras persisten las concentraciones en la céntrica plaza."
+      "subject_newsroom_count": 15,
+      "summary": "El presidente del gobierno español, Pedro Sánchez, ha lanzado su campaña para las elecciones legislativas y ha colocado la crisis de la vivienda como tema central, prometiendo reforzar la ley sobre el alojamiento; la campaña también aborda asuntos como la corrupción y la seguridad según las coberturas."
     },
     {
-      "cluster_id": "subject-ceuta-60edf08787d9",
-      "coherence": 0.4654084021904691,
+      "cluster_id": "subject-trump-4f8cb0d646e2",
+      "coherence": 0.5496712350128736,
       "consequence": 2,
       "countries": [
-        "spain"
+        "as",
+        "brazil",
+        "ca",
+        "india",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-09",
-      "headline": "Mahoma VI advierte a España que no aceptará presiones, amenazas ni chantajes",
-      "independent_source_count": 10,
+      "country_count": 8,
+      "editorial_day": "2026-10-11",
+      "filled_from": "europe",
+      "headline": "Trump dice que Ucrania necesita un nuevo presidente tras acuerdo sobre diésel",
+      "independent_source_count": 19,
       "members": [
         {
           "language": "es",
-          "source": "elpais.com",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-10-09/mohamed-vi-advierte-de-que-la-cooperacion-con-espana-no-debe-verse-sometida-a-presion-amenaza-ni-chantaje.html"
+          "url": "https://www.abc.es/internacional/trump-rompe-zelenski-dice-hora-ucrania-nuevo-20261010190655-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/mohamed-vi-rechaza-cooperacion-espana-vea-sometida-presion-amenaza-chantaje_1_13576569.html"
+          "url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/africa/20261009/mohamed-vi-declara-cooperacion-migratoria-espana-llegado-limite-pide-vuelta-menores/1003744415756_0.html"
+          "url": "https://www.elespanol.com/mundo/20261011/trump-rompe-zelenski-pacto-energetico-putin-salvar-inflacion-ucrania-debe-elegir-nuevo-presidente/1003744416463_0.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/mohamed-vi-denuncia-irresponsabilidad-espana-crisis-ceuta-dice-que-no-permitira-presiones-chantajes-amenazas_7047309_0.html"
+          "url": "https://www.20minutos.es/internacional/trump-arremete-con-dureza-contra-zelenski-tras-acuerdo-con-putin-es-hora-que-ucrania-tenga-nuevo-presidente_7047511_0.html"
         },
         {
-          "language": "es",
-          "source": "diariosigloxxi.com",
-          "source_country": "spain",
-          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20261009192639/mohamed-vi-carga-contra-instrumentalizacion-ceuta-avisa-no-caben-chantajes-relacion"
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/oct/10/ukraine-russia-strikes-war-trump-diesel-deal-zelenskyy"
         },
         {
-          "language": "es",
-          "source": "lavozdegalicia.es",
-          "source_country": "spain",
-          "url": "https://www.lavozdegalicia.es/noticia/espana/2026/10/09/mohamed-vi-critica-irresponsabilidad-politicos-espana-rechaza-presiones-chantajes/00031791568355984685907.htm"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "es",
-          "source": "libertaddigital.com",
-          "source_country": "spain",
-          "url": "https://www.libertaddigital.com/internacional/mundo/2026-10-09/mohamed-vi-acusa-a-espana-de-utilizar-la-invasion-y-exige-que-no-se-someta-a-marruecos-a-ninguna-presion-7473559/"
-        },
-        {
-          "language": "es",
-          "source": "lanzadigital.com",
-          "source_country": "spain",
-          "url": "https://www.lanzadigital.com/nacional/mohamed-vi-critica-la-instrumentalizacion-de-ceuta-y-advierte-de-que-no-caben-chantajes-en-la-relacion/"
-        },
-        {
-          "language": "es",
-          "source": "heraldo.es",
-          "source_country": "spain",
-          "url": "https://www.heraldo.es/noticias/nacional/2026/10/09/mohamed-vi-carga-contra-instrumentalizacion-ceuta-avisa-que-no-caben-chantajes-relacion-2058549.html"
-        },
-        {
-          "language": "es",
-          "source": "ultimahora.es",
-          "source_country": "spain",
-          "url": "https://www.ultimahora.es/noticias/nacional/2026/10/09/2726287/mohamed-carga-contra-instrumentalizacion-ceuta-avisa-caben-chantajes-relacion.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "mo"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/africa/20261009/mohamed-vi-declara-cooperacion-migratoria-espana-llegado-limite-pide-vuelta-menores/1003744415756_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4654,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.75
-        },
-        "total": 0.5796,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "banco",
-        "ceuta",
-        "espagne",
-        "espana",
-        "madrid",
-        "mohamed",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "El rey Mohamed VI aseguró que no tolerará presiones, amenazas ni chantajes desde España, criticó la \"instrumentalización\" e \"irresponsabilidad\" política en la crisis de Ceuta y advirtió de que la cooperación —incluida la migratoria— ha alcanzado sus límites si se condiciona mediante coacción."
-    },
-    {
-      "cluster_id": "subject-volkswagen-48d01a85fe0f",
-      "coherence": 0.3966260753994688,
-      "consequence": 2,
-      "countries": [
-        "it",
-        "mx",
-        "spain",
-        "up"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-09",
-      "headline": "Volkswagen presenta el nuevo SUV eléctrico ID. Tiguan y anuncia precios en España",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/motor/novedades/volkswagen-lanza-nuevo-id-tiguan-electrico-barato-gasolina-ayudas_1_13576420.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/motor/2026/10/09/6ac917fce5fdea855e8b4596.html"
-        },
-        {
-          "language": "es",
-          "source": "eleconomista.com.mx",
-          "source_country": "mx",
-          "url": "https://www.eleconomista.com.mx/autos/volkswagen-id-tiguan-electrica-autonomia-precio-mexico-20261009-837811.html"
-        },
-        {
-          "language": "it",
-          "source": "auto.it",
+          "language": "en",
+          "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.auto.it/news/attualita/2026/10/09-9178470/volkswagen_id_tiguan_mostra_il_suo_vero_volto"
+          "url": "https://www.euronews.com/2026/10/10/trump-says-ukraine-needs-new-president-after-zelenskyy-condemns-russia-fuel-deal"
         },
         {
-          "language": "ukr",
-          "source": "korrespondent.net",
-          "source_country": "up",
-          "url": "https://ua.korrespondent.net/lifestyle/motors/4918811-Volkswagen-predstavyla-elektrokrosover-ID-Tiguan"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "it",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/empresas/motor/2026/10/09/6ac917fce5fdea855e8b4596.html",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3966,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.5604,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "volkswagen",
-      "subject_names": [
-        "volkswagen"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Volkswagen ha presentado el ID. Tiguan, una versión eléctrica del popular Tiguan, que se ofrecerá en España con un precio que, con ayudas, puede ser más bajo que el del modelo de gasolina; el vehículo promete hasta 600 km de autonomía según las especificaciones difundidas."
-    },
-    {
-      "cluster_id": "subject-ukraine-8bf76d6eb012",
-      "coherence": 0.6208804210697707,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-10",
-      "filled_from": "europe",
-      "headline": "Bombardeos rusos en Zaporiyia causan al menos 11 muertos, incluidos niños",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/l-ambassadeur-de-coree-du-sud-en-ukraine-rentre-au-pays-apres-un-differend-diplomatique-20261010"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/10/10/trump-rebate-zelensky-sobre-diesel-russo-e-sugere-que-ucrania-tenha-novo-lider.ghtml"
         },
         {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/de-nouvelles-frappes-russes-en-ukraine-font-au-moins-sept-morts-dont-trois-enfants-20261010_XY5NY6DM75F75AG2NHQDVX7ZS4/"
+          "language": "en",
+          "source": "winnipegfreepress.com",
+          "source_country": "ca",
+          "url": "https://www.winnipegfreepress.com/breakingnews/2026/10/10/russian-attacks-kill-7-in-ukraine-after-trump-strikes-diesel-deal-with-putin"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-au-moins-12-morts-dont-trois-enfants-dans-des-frappes-russes-lancees-sur-zaporijjia_8231440.html#xtor=RSS-3-[lestitres]"
+          "language": "en",
+          "source": "wwaytv3.com",
+          "source_country": "united-states",
+          "url": "https://www.wwaytv3.com/trump-says-ukraine-needs-a-new-president-blames-zelenskyys-strikes-on-russian-refineries-for-high-diesel-prices/"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff"
+          "language": "en",
+          "source": "thewestonmercury.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thewestonmercury.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "webindia123.com",
+          "source_country": "india",
+          "url": "https://news.webindia123.com/news/Articles/World/20261011/4509456.html"
+        },
+        {
+          "language": "en",
+          "source": "smh.com.au",
+          "source_country": "as",
+          "url": "https://www.smh.com.au/world/north-america/time-for-a-new-president-trump-calls-on-zelensky-to-go-amid-diesel-stoush-20261011-p614g5.html"
+        },
+        {
+          "language": "en",
+          "source": "bridportnews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bridportnews.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "midweekherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.midweekherald.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "elystandard.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.elystandard.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "wandsworthguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wandsworthguardian.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "andoveradvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.andoveradvertiser.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+        },
+        {
+          "language": "en",
+          "source": "capitalgazette.com",
+          "source_country": "united-states",
+          "url": "https://www.capitalgazette.com/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20261010-ukraine-en-direct-les-discussions-ont-%C3%A9t%C3%A9-constructives-%C3%A0-miami-selon-steve-witkoff",
+      "origin_country": "as",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html",
       "rank": 4,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "liberation.fr"
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "euronews.com",
+        "globo.com",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.6209,
-          "corroboration": 0.3333,
+          "coherence": 0.5497,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.8261,
+          "source_reliability": 0.8519
+        },
+        "total": 0.67,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "kiev",
+        "poutine",
+        "putin",
+        "rusia",
+        "russia",
+        "russian",
+        "russie",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "zelenski",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 31,
+      "summary": "Varios medios informan que Donald Trump criticó al presidente ucraniano Volodímir Zelenski tras un acuerdo entre Rusia y Ucrania sobre suministro de diésel; Trump culpó a Zelenski por el impacto en los precios del diésel y dijo que \"ha llegado el momento\" de que Ucrania elija un nuevo presidente."
+    },
+    {
+      "cluster_id": "subject-google-3b950dd45df1",
+      "coherence": 0.40704149868420614,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "it",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-11",
+      "filled_from": "europe",
+      "headline": "Ucrania ataca centros de datos de Yandex y provoca daños y cortes",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656428/ucrania-ataca-tercer-centro-datos-gigante-informatico-ruso-yandex.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriff-yandex-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/08/fire-rages-at-yandex-data-centre-after-ukraine-drone-attack"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "euronews.com",
+        "lavanguardia.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.407,
+          "corroboration": 0.6667,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.6522
         },
-        "total": 0.6428,
+        "total": 0.6531,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "google",
       "subject_names": [
-        "kiev",
-        "south korea",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zaporijjia"
+        "google",
+        "yandex"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Varios ataques aéreos rusos impactaron barrios residenciales de Zaporiyia, provocando la muerte de al menos 11 personas, entre ellas tres niños, y causaron daños en zonas civiles según las informaciones coincidentes de los artículos."
-    },
-    {
-      "cluster_id": "subject-maricarmen-6656d7ca063f",
-      "coherence": null,
-      "consequence": 0,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-09",
-      "headline": "Fallece Maricarmen, símbolo de la crisis de la vivienda en España",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/le-destin-tragique-de-maricarmen-cette-retraitee-decedee-visage-de-la-crise-du-logement-en-espagne-20261008"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261009-elle-a-uni-l-espagne-l-hommage-de-barcelone-%C3%A0-maricarmen-la-retrait%C3%A9e-symbole-de-la-crise-du-logement"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261008.OBS119022/la-lutte-continue-en-espagne-la-mort-de-maricarmen-abascal-symbole-de-la-crise-du-logement-relance-la-contestation-sociale.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/monde/20261008.OBS119022/la-lutte-continue-en-espagne-la-mort-de-maricarmen-abascal-symbole-de-la-crise-du-logement-relance-la-contestation-sociale.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "lefigaro.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.403,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "maricarmen",
-      "subject_names": [
-        "abascal",
-        "banco",
-        "espagne",
-        "espana",
-        "madrid",
-        "maricarmen",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Maricarmen Abascal, una jubilada convertida en símbolo de la crisis de la vivienda en España, ha fallecido; su muerte ha provocado homenajes en Barcelona y reavivado protestas y debates públicos sobre la situación habitacional y la lucha por el derecho a la vivienda."
+      "subject_newsroom_count": 9,
+      "summary": "Ucrania llevó a cabo ataques con drones y/o misiles sobre varios centros de datos del gigante tecnológico ruso Yandex, provocando incendios, daños materiales y alteraciones en los servicios y la infraestructura del buscador y sus plataformas asociadas; las instalaciones atacadas son parte de la red de centros de datos que sostienen los servicios de la compañía."
     }
   ],
-  "discarded_ingested": 31,
+  "discarded_ingested": 23,
   "discarded_kept": 5,
-  "generated_at": "2026-10-10T11:17:58.986070+00:00",
+  "generated_at": "2026-10-11T11:31:18.709363+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

@@ -1,559 +1,184 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-riyad-f53f6c7fcbc4",
-      "coherence": 0.5146056515953985,
+      "cluster_id": "subject-trump-bc556912bcf3",
+      "coherence": 0.44197979810677257,
       "consequence": 3,
       "countries": [
-        "ae",
-        "bg",
+        "ar",
+        "bl",
+        "brazil",
         "france",
-        "india",
-        "it",
-        "nl",
-        "united-kingdom",
+        "mo",
+        "spain",
         "united-states",
-        "unknown"
+        "ve"
       ],
-      "country_count": 9,
-      "editorial_day": "2026-10-11",
-      "headline": "Ataque en el aeropuerto de Riad causa 12 muertos y más de 300 heridos",
-      "independent_source_count": 35,
+      "country_count": 8,
+      "editorial_day": "2026-10-12",
+      "headline": "Trump anuncia un cese de fuego energético entre Rusia y Ucrania",
+      "independent_source_count": 17,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/11/arabie-saoudite-douze-morts-et-plus-de-300-blesses-dans-une-attaque-contre-l-aeroport-de-riyad-imputee-aux-houthistes_6791016_3211.html"
-        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/plusieurs-blesses-apres-le-tir-dun-missile-par-les-houthis-sur-laeroport-de-riyad-le-trafic-aerien-bloque-20261010_4KRVB4KK4BA65CAZAKG2XPY2K4/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/douze-morts-dans-une-attaque-imputee-aux-houthis-contre-l-aeroport-de-ryad-20261010"
+          "url": "https://www.liberation.fr/international/europe/donald-trump-dit-que-la-russie-et-lukraine-auraient-conclu-un-cessez-le-feu-energetique-sans-fournir-de-precisions-20261011_7VGXC3YGA5AGRJCWKQM3FBPVXQ/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/proche-orient/yemen/en-arabie-saoudite-au-moins-douze-morts-dans-une-attaque-contre-l-aeroport-de-ryad-imputee-aux-houthis_8232244.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-donald-trump-annonce-une-treve-energetique-volodymyr-zelensky-dement_8233501.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/moyen-orient/20261011-une-attaque-contre-l-a%C3%A9roport-de-riyad-fait-au-moins-12-morts-et-plus-de-300-bless%C3%A9s"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/10/yemen-government-allied-forces-recapture-bab-al-mandab-strait-houthis-taiz"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/10/evacuations-and-injuries-reported-at-riyadh-airport-after-another-alleged-houthi-attack"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2634508"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/10/g-s1-147682/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
-        },
-        {
-          "language": "en",
-          "source": "hampshirechronicle.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.hampshirechronicle.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "glasgowtimes.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.glasgowtimes.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "brentwoodlive.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.brentwoodlive.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "london-now.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.london-now.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "ilfordrecorder.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ilfordrecorder.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "westerntelegraph.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.westerntelegraph.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "chardandilminsternews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.chardandilminsternews.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "sloughobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.sloughobserver.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "northsomersettimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.northsomersettimes.co.uk/news/national/26625877.riyadh-airport-closure-extended-12-killed-suspected-houthi-attack/"
-        },
-        {
-          "language": "en",
-          "source": "watfordobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.watfordobserver.co.uk/news/national/26625812.12-killed-attack-riyadh-airport---saudi-authorities/"
-        },
-        {
-          "language": "en",
-          "source": "prokerala.com",
-          "source_country": "india",
-          "url": "https://www.prokerala.com/news/articles/a1822958.html"
-        },
-        {
-          "language": "en",
-          "source": "eveshamjournal.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.eveshamjournal.co.uk/news/national/26625812.12-killed-attack-riyadh-airport---saudi-authorities/"
-        },
-        {
-          "language": "en",
-          "source": "knoe.com",
-          "source_country": "united-states",
-          "url": "https://www.knoe.com/2026/10/11/american-among-12-killed-more-than-300-hurt-latest-attack-riyadh-airport-authorities-say/"
-        },
-        {
-          "language": "en",
-          "source": "burnhamandhighbridgeweeklynews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.burnhamandhighbridgeweeklynews.co.uk/news/national/26625812.12-killed-attack-riyadh-airport---saudi-authorities/"
-        },
-        {
-          "language": "en",
-          "source": "edp24.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.edp24.co.uk/news/national/26625812.12-killed-attack-riyadh-airport---saudi-authorities/"
-        },
-        {
-          "language": "en",
-          "source": "wvasfm.org",
-          "source_country": "united-states",
-          "url": "https://www.wvasfm.org/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
-        },
-        {
-          "language": "en",
-          "source": "washingtonexaminer.com",
-          "source_country": "united-states",
-          "url": "http://www.washingtonexaminer.com/news/world/4762397/american-citizen-dead-houthi-attack-riyadh/"
-        },
-        {
-          "language": "en",
-          "source": "redditchadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.redditchadvertiser.co.uk/news/national/26625812.12-killed-attack-riyadh-airport---saudi-authorities/"
-        },
-        {
-          "language": "en",
-          "source": "thedailystar.net",
-          "source_country": "bg",
-          "url": "https://www.thedailystar.net/news/world/news/two-bangladeshis-among-12-killed-riyadh-airport-attack-300-more-injured-4295676"
-        },
-        {
-          "language": "en",
-          "source": "interlochenpublicradio.org",
-          "source_country": "united-states",
-          "url": "https://www.interlochenpublicradio.org/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
-        },
-        {
-          "language": "en",
-          "source": "kalw.org",
-          "source_country": "united-states",
-          "url": "https://www.kalw.org/npr-news/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
-        },
-        {
-          "language": "en",
-          "source": "gulfnews.com",
-          "source_country": "ae",
-          "url": "https://gulfnews.com/world/gulf/saudi/12-killed-309-injured-in-attack-on-riyadh-airport-1.500706138"
-        },
-        {
-          "language": "en",
-          "source": "gulfnews.com",
-          "source_country": "ae",
-          "url": "https://gulfnews.com/business/aviation/riyadh-airport-attack-egyptian-flight-attendant-28-among-12-killed-1.500706143"
-        },
-        {
-          "language": "en",
-          "source": "newsx.com",
-          "source_country": "india",
-          "url": "https://www.newsx.com/world/12-killed-in-riyadh-airport-attack-including-an-american-over-300-injured-will-us-join-saudi-war-against-houthis-281948/"
-        },
-        {
-          "language": "en",
-          "source": "wlrn.org",
-          "source_country": "united-states",
-          "url": "https://www.wlrn.org/npr-breaking-news/2026-10-10/attack-on-riyadh-airport-killed-12-people-and-wounded-over-300-more-saudi-authorities-say"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261012-ukraine-trump-annonce-un-cessez-le-feu-%C3%A9nerg%C3%A9tique-pour-faire-baisser-les-prix-aux-%C3%A9tats-unis"
         },
         {
           "language": "fr",
-          "source": "maville.com",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://laseyne.maville.com/actu/actudet_-attaque-de-l-aeroport-de-ryad-en-arabie-saoudite-12-morts-et-plus-de-300-blesses-ce-que-l-on-sait-de-la-situation_fil-7522865_actu.Htm"
-        },
-        {
-          "language": "hi",
-          "source": "haribhoomi.com",
-          "source_country": "india",
-          "url": "https://www.haribhoomi.com/world/news/houthi-attack-riyadh-airport-saudi-arabia-casualties-updates-117040"
-        }
-      ],
-      "mentioned_countries": [
-        "sa"
-      ],
-      "origin_country": "ae",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/10/evacuations-and-injuries-reported-at-riyadh-airport-after-another-alleged-houthi-attack",
-      "rank": 1,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "euronews.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "nos.nl",
-        "npr.org",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5146,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.8974,
-          "source_reliability": 0.9101
-        },
-        "total": 0.8031,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "riyad",
-      "subject_names": [
-        "arabie",
-        "riad",
-        "riyad",
-        "riyadh"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Un ataque atribuido a los rebeldes hutíes en el aeropuerto de Riad dejó 12 personas muertas y más de 300 heridas; las autoridades saudíes señalaron víctimas internacionales entre los fallecidos y el aeropuerto ha cerrado temporalmente mientras continúan las investigaciones y respuestas militares en la región."
-    },
-    {
-      "cluster_id": "subject-djibouti-a7610cd6b683",
-      "coherence": 0.5222406547280514,
-      "consequence": 3,
-      "countries": [
-        "ei",
-        "france",
-        "nl",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-11",
-      "headline": "Un barco volcó frente a Yibuti causando al menos 109 muertos",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/afrique/article/2026/10/11/au-large-de-djibouti-au-moins-109-migrants-meurent-dans-le-naufrage-d-une-embarcation_6791713_3212.html"
+          "url": "https://www.nouvelobs.com/monde/20261012.OBS119138/ce-que-l-on-sait-du-cessez-le-feu-energetique-entre-l-ukraine-et-la-russie-annonce-par-trump.html"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/afrique/au-moins-109-migrants-morts-et-plus-de-116-portes-disparus-dans-un-naufrage-entre-djibouti-et-le-yemen-20261011_JIM756ATHBFR7HU3YZ4UY34CUE/"
+          "url": "https://www.challenges.fr/monde/le-cessez-le-feu-energetique-entre-kiev-et-moscou-existe-t-il-vraiment-une-centrale-ukrainienne-frappee-par-la-russie-apres-lannonce-de-trump_646298"
         },
         {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/afrique/20261011-naufrage-large-djibouti-fait-plus-100-morts-et-autant-personnes-disparues"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-11/zelenski-ofrece-a-putin-una-tregua-energetica-en-plena-escalada-verbal-con-trump.html"
         },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2634560"
-        },
-        {
-          "language": "en",
-          "source": "rte.ie",
-          "source_country": "ei",
-          "url": "https://www.rte.ie/news/2026/1011/1594911-109-migrants-dead-in-boat-wreck-off-djibouti-says-un/"
-        },
-        {
-          "language": "en",
-          "source": "bignewsnetwork.com",
-          "source_country": "united-states",
-          "url": "http://www.bignewsnetwork.com/news/279365436/109-dead-over-116-missing-after-boat-capsizes-off-djibouti-coast-iom"
-        },
-        {
-          "language": "en",
-          "source": "bignewsnetwork.com",
-          "source_country": "united-states",
-          "url": "http://www.bignewsnetwork.com/news/279365457/update-109-dead-over-116-missing-after-boat-capsizes-off-djibouti-coast-iom"
-        },
-        {
-          "language": "en",
-          "source": "miragenews.com",
-          "source_country": "united-states",
-          "url": "https://www.miragenews.com/109-dead-including-15-children-in-deadliest-1758205/"
-        }
-      ],
-      "mentioned_countries": [
-        "dj",
-        "ym"
-      ],
-      "origin_country": "ei",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/afrique/20261011-naufrage-large-djibouti-fait-plus-100-morts-et-autant-personnes-disparues",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "nos.nl"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5222,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.6923
-        },
-        "total": 0.723,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "djibouti",
-      "subject_names": [
-        "djibouti"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Al menos 109 migrantes murieron y más de 116 permanecen desaparecidos tras el naufragio de una embarcación frente a la costa de Yibuti; entre las víctimas se incluyen niños según los informes compilados por organizaciones internacionales."
-    },
-    {
-      "cluster_id": "subject-trump-4f8cb0d646e2",
-      "coherence": 0.5496712350128736,
-      "consequence": 2,
-      "countries": [
-        "as",
-        "brazil",
-        "ca",
-        "india",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 8,
-      "editorial_day": "2026-10-11",
-      "headline": "Trump dice que Ucrania necesita un nuevo presidente tras acuerdo sobre diésel",
-      "independent_source_count": 19,
-      "members": [
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/trump-rompe-zelenski-dice-hora-ucrania-nuevo-20261010190655-nt.html"
+          "url": "https://www.abc.es/internacional/zelenski-responde-trump-convocara-elecciones-putin-acepta-20261011155841-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656578/trump-anuncia-tregua-energetica-efecto-inmediato-ucrania-rusia.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/20261011/trump-rompe-zelenski-pacto-energetico-putin-salvar-inflacion-ucrania-debe-elegir-nuevo-presidente/1003744416463_0.html"
+          "url": "https://www.eldiario.es/internacional/trump-asegura-rusia-ucrania-han-aceptado-alto-fuego-energetico-les-pide-no-rompan_1_13578878.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/trump-arremete-con-dureza-contra-zelenski-tras-acuerdo-con-putin-es-hora-que-ucrania-tenga-nuevo-presidente_7047511_0.html"
+          "url": "https://www.20minutos.es/internacional/rusia-ataca-un-buque-cuatro-locomotoras-ucrania-plena-tregua-energetica-anunciada-por-trump_7047715_0.html"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/10/ukraine-russia-strikes-war-trump-diesel-deal-zelenskyy"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/10/trump-says-ukraine-needs-new-president-after-zelenskyy-condemns-russia-fuel-deal"
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/trump-anuncia-alto-fuego-energia-rusia-ucrania-guerra_7047658_0.html"
         },
         {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/10/trump-rebate-zelensky-sobre-diesel-russo-e-sugere-que-ucrania-tenha-novo-lider.ghtml"
+          "url": "https://g1.globo.com/mundo/noticia/2026/10/11/trump-anuncia-tregua-energetica-entre-russia-e-ucrania-o-que-se-sabe.ghtml"
         },
         {
-          "language": "en",
-          "source": "winnipegfreepress.com",
-          "source_country": "ca",
-          "url": "https://www.winnipegfreepress.com/breakingnews/2026/10/10/russian-attacks-kill-7-in-ukraine-after-trump-strikes-diesel-deal-with-putin"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/ucrania-russia/noticia/2026/10/11/trump-diz-que-ucrania-e-russia-concordaram-com-cessar-fogo-energetico.ghtml"
         },
         {
-          "language": "en",
-          "source": "wwaytv3.com",
+          "language": "fr",
+          "source": "h24info.ma",
+          "source_country": "mo",
+          "url": "https://h24info.ma/economie/international-economie/trump-un-cessez-le-feu/"
+        },
+        {
+          "language": "pt",
+          "source": "euronews.com",
           "source_country": "united-states",
-          "url": "https://www.wwaytv3.com/trump-says-ukraine-needs-a-new-president-blames-zelenskyys-strikes-on-russian-refineries-for-high-diesel-prices/"
+          "url": "https://pt.euronews.com/2026/10/12/zelenskyy-diz-que-a-russia-ignorou-o-cessar-fogo-energetico-de-trump-e-continuou-a-atacar-"
         },
         {
-          "language": "en",
-          "source": "thewestonmercury.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thewestonmercury.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
+          "language": "es",
+          "source": "lostiempos.com",
+          "source_country": "bl",
+          "url": "https://www.lostiempos.com/actualidad/mundo/20261011/donald-trump-anuncia-tregua-energetica-rusia-ucrania"
         },
         {
-          "language": "en",
-          "source": "webindia123.com",
-          "source_country": "india",
-          "url": "https://news.webindia123.com/news/Articles/World/20261011/4509456.html"
+          "language": "es",
+          "source": "aporrea.org",
+          "source_country": "ve",
+          "url": "https://www.aporrea.org/internacionales/n424593.html"
         },
         {
-          "language": "en",
-          "source": "smh.com.au",
-          "source_country": "as",
-          "url": "https://www.smh.com.au/world/north-america/time-for-a-new-president-trump-calls-on-zelensky-to-go-amid-diesel-stoush-20261011-p614g5.html"
+          "language": "es",
+          "source": "diariouno.com.ar",
+          "source_country": "ar",
+          "url": "https://www.diariouno.com.ar/mundo/donald-trump-anuncio-un-alto-el-fuego-energetico-rusia-y-ucrania-n1605350"
         },
         {
-          "language": "en",
-          "source": "bridportnews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bridportnews.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
-        },
-        {
-          "language": "en",
-          "source": "midweekherald.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.midweekherald.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
-        },
-        {
-          "language": "en",
-          "source": "elystandard.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.elystandard.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
-        },
-        {
-          "language": "en",
-          "source": "wandsworthguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.wandsworthguardian.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
-        },
-        {
-          "language": "en",
-          "source": "andoveradvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.andoveradvertiser.co.uk/news/national/26625655.trump-says-ukraine-needs-new-president-blames-zelensky-diesel-prices/"
-        },
-        {
-          "language": "en",
-          "source": "capitalgazette.com",
-          "source_country": "united-states",
-          "url": "https://www.capitalgazette.com/2026/10/10/trump-says-ukraine-should-get-a-new-president-as-he-blames-zelenskyy-for-us-diesel-prices/"
+          "language": "fr",
+          "source": "martinique.franceantilles.fr",
+          "source_country": "france",
+          "url": "https://www.martinique.franceantilles.fr/actualite/international/trump-annonce-un-cessez-le-feu-energetique-entre-lukraine-et-la-russie-1095849.php"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "as",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/trump-carga-zelenski-criticar-pacto-putin-diesel-llegado-momento-ucrania-tenga-nuevo-presidente_1_13577813.html",
-      "rank": 3,
-      "reference_newsroom_count": 8,
+      "origin_country": "ar",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/zelenski-responde-trump-convocara-elecciones-putin-acepta-20261011155841-nt.html",
+      "rank": 1,
+      "reference_newsroom_count": 12,
       "reference_newsrooms": [
         "20minutos.es",
         "abc.es",
-        "bbc.co.uk",
+        "challenges.fr",
         "eldiario.es",
-        "elespanol.com",
+        "elpais.com",
         "euronews.com",
+        "france24.com",
+        "francetvinfo.fr",
         "globo.com",
-        "theguardian.com"
+        "lavanguardia.com",
+        "liberation.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5497,
+          "coherence": 0.442,
           "corroboration": 0.8,
-          "editorial_weight": 0.5,
+          "editorial_weight": 0.6,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.8261,
-          "source_reliability": 0.8519
+          "prominence": 0.8095,
+          "source_reliability": 0.8667
         },
-        "total": 0.72,
+        "total": 0.8047,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "trump",
       "subject_names": [
+        "brexit",
         "donald trump",
         "kiev",
+        "kremlin",
+        "moscou",
         "poutine",
         "putin",
         "rusia",
@@ -563,174 +188,377 @@
         "trump",
         "ucrania",
         "ukraine",
+        "vladimir poutine",
+        "volodymyr zelensky",
+        "white house",
         "zelenski",
         "zelensky"
       ],
-      "subject_newsroom_count": 31,
-      "summary": "Varios medios informan que Donald Trump criticó al presidente ucraniano Volodímir Zelenski tras un acuerdo entre Rusia y Ucrania sobre suministro de diésel; Trump culpó a Zelenski por el impacto en los precios del diésel y dijo que \"ha llegado el momento\" de que Ucrania elija un nuevo presidente."
+      "subject_newsroom_count": 34,
+      "summary": "Donald Trump afirmó que Rusia y Ucrania acordaron un \"cese de fuego energético\" para suspender ataques contra infraestructuras energéticas; varios medios y gobiernos exteriores reaccionaron a su anuncio, mientras que autoridades ucranianas y reportes sobre nuevos ataques señalaron discrepancias sobre si la tregua está siendo respetada."
     },
     {
-      "cluster_id": "subject-google-3b950dd45df1",
-      "coherence": 0.40704149868420614,
+      "cluster_id": "subject-trump-e486bc954039",
+      "coherence": 0.4355268752220941,
       "consequence": 3,
       "countries": [
+        "be",
+        "france",
         "germany",
-        "it",
-        "spain",
-        "united-kingdom"
+        "spain"
       ],
       "country_count": 4,
-      "editorial_day": "2026-10-11",
-      "headline": "Ucrania ataca centros de datos de Yandex y provoca daños y cortes",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261011/11656428/ucrania-ataca-tercer-centro-datos-gigante-informatico-ruso-yandex.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c68xzqqn4ekro?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/ukraine-russland-angriff-yandex-100.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/08/fire-rages-at-yandex-data-centre-after-ukraine-drone-attack"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261008/11654053/ucrania-ataca-un-centro-de-datos-de-yandex-gigante-de-la-ia-en-rusia.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "lavanguardia.com",
-        "tagesschau.de"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.407,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.7031,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "google",
-      "subject_names": [
-        "google",
-        "yandex"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Ucrania llevó a cabo ataques con drones y/o misiles sobre varios centros de datos del gigante tecnológico ruso Yandex, provocando incendios, daños materiales y alteraciones en los servicios y la infraestructura del buscador y sus plataformas asociadas; las instalaciones atacadas son parte de la red de centros de datos que sostienen los servicios de la compañía."
-    },
-    {
-      "cluster_id": "subject-donald-tusk-bdfd6050b432",
-      "coherence": 0.5323227370567047,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-11",
-      "headline": "Polonia convoca reunión urgente tras intentos de asesinato contra líderes",
-      "independent_source_count": 4,
+      "editorial_day": "2026-10-12",
+      "headline": "La UE sanciona a 1.600 personas y entidades vinculadas a la guerra rusa en Ucrania",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/en-pologne-donald-tusk-vise-par-une-possible-tentative-d-assassinat-dirigee-contre-des-membres-du-gouvernement-20261011"
+          "url": "https://www.lemonde.fr/international/article/2026/10/11/alors-que-l-amerique-de-donald-trump-desserre-son-etau-sur-le-kremlin-l-europe-ajoute-plus-de-1-600-noms-a-sa-liste-des-sanctions_6791819_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/pologne-reunion-durgence-apres-une-possible-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20261011_2CRWXVPRYNH33GKRME2QG7JA5M/"
+          "url": "https://www.liberation.fr/international/europe/guerre-en-ukraine-de-nouvelles-sanctions-de-lue-contre-la-russie-vont-etre-officiellement-validees-ce-lundi-20261011_VMPOJLWTZZG7NEEJXMS2S72V6M/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261012/11656906/ue-sanciona-1-600-personas-entidades-rusas-apoya-zelenski-frente-trump.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20261012/ue-arropa-ucrania-frente-trump-sanciona-personas-entidades-industria-militar-rusa/1003744417236_0.html"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "lalibre.be",
+          "source_country": "be",
+          "url": "https://www.lalibre.be/international/europe/guerre-ukraine-russie/2026/10/12/lue-ajoute-1600-noms-a-sa-liste-de-sanctions-pour-soutien-a-la-guerre-russe-en-ukraine-FWRV36WNPBAB7FGTYNT5C7DJYQ/"
+        }
+      ],
+      "mentioned_countries": [
+        "rs",
+        "up"
+      ],
+      "origin_country": "be",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/11/alors-que-l-amerique-de-donald-trump-desserre-son-etau-sur-le-kremlin-l-europe-ajoute-plus-de-1-600-noms-a-sa-liste-des-sanctions_6791819_3210.html",
+      "rank": 2,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "liberation.fr",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4355,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.7232,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "kremlin",
+        "moscou",
+        "putin",
+        "rusia",
+        "russian",
+        "russie",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "white house"
+      ],
+      "subject_newsroom_count": 34,
+      "summary": "La Unión Europea ha añadido más de 1.600 nombres a su lista de sanciones, dirigidas a personas y entidades rusas señaladas por su apoyo a la guerra en Ucrania, en una medida presentada como respaldo a Ucrania mientras Estados Unidos bajo Donald Trump afloja su presión sobre el Kremlin."
+    },
+    {
+      "cluster_id": "subject-riad-b4f786812036",
+      "coherence": 0.43724963025729524,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-12",
+      "headline": "Ataque hutí al aeropuerto de Riad causa al menos 12 muertos",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/en-pologne-une-reunion-d-urgence-apres-de-possibles-tentatives-d-assassinat-contre-le-premier-ministre-et-le-ministre-de-la-defense_8232595.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.nouvelobs.com/monde/20261011.OBS119103/douze-morts-dans-une-attaque-contre-l-aeroport-de-ryad.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/monde/12-morts-et-plus-de-300-blesses-pourquoi-lattaque-houthie-sur-laeroport-de-ryad-est-un-coup-tres-dur-porte-aux-ambitions-de-mohammed-ben-salmane_646293"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/muerto-once-fallecidos-ataque-aeropuerto-riad-20261012100847-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/heridos-300-heridos-ataque-huties-aeropuerto-riad-20261011081156-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261010/11656029/fuerte-explosion-aeropuerto-riad-lleva-cancelar-nuevos-vuelos.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/12-muertos-300-heridos-ataque-huti-aeropuerto-riad_1_13578028.html"
+        }
+      ],
+      "mentioned_countries": [
+        "sa"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261010/11656029/fuerte-explosion-aeropuerto-riad-lleva-cancelar-nuevos-vuelos.html",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "abc.es",
+        "challenges.fr",
+        "eldiario.es",
+        "lavanguardia.com",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4372,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6923
+        },
+        "total": 0.7061,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "riad",
+      "subject_names": [
+        "arabie",
+        "houthi",
+        "riad",
+        "riyad",
+        "riyadh",
+        "ryad",
+        "yemen"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "Un ataque atribuido a los hutíes contra el aeropuerto de Riad dejó al menos 12 personas muertas y alrededor de 300 heridos; las fuentes coinciden en que es uno de los ataques más letales en la región en años y provocó importantes víctimas y daños entre pasajeros y personal."
+    },
+    {
+      "cluster_id": "subject-tusk-082a17620287",
+      "coherence": 0.4026963325007423,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-12",
+      "headline": "Detenido un sospechoso por un plan para asesinar al primer ministro Donald Tusk",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/12/en-pologne-l-extreme-droite-mise-en-cause-dans-la-tentative-d-assassinat-contre-le-premier-ministre-donald-tusk-et-son-ministre-de-la-defense_6792596_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/11/en-pologne-donald-tusk-et-son-ministre-de-la-defense-vises-par-un-projet-de-tentative-d-assassinat_6792039_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261012-pologne-un-suspect-arr%C3%AAt%C3%A9-en-pologne-pour-un-projet-d-assassinat-du-premier-ministre-donald-tusk"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/europe/en-pologne-le-premier-ministre-donald-tusk-vise-par-une-possible-tentative-dassassinat-dirigee-DYKPCGRRKNC7NOOFBG73XS3G6M/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656555/servicios-seguridad-polacos-reunen-posible-intento-asesinato-primer-ministro-ministro-defensa.html"
+        },
+        {
+          "language": "pt",
+          "source": "infomoney.com.br",
+          "source_country": "brazil",
+          "url": "https://www.infomoney.com.br/mundo/polonia-apura-possivel-plano-para-assassinar-premie-donald-tusk-e-ministro-da-defesa/"
         }
       ],
       "mentioned_countries": [
         "pl"
       ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/international/europe/pologne-reunion-durgence-apres-une-possible-tentative-dassassinat-contre-le-premier-ministre-donald-tusk-20261011_2CRWXVPRYNH33GKRME2QG7JA5M/",
-      "rank": 5,
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261011/11656555/servicios-seguridad-polacos-reunen-posible-intento-asesinato-primer-ministro-ministro-defensa.html",
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "lexpress.fr",
-        "liberation.fr"
+        "france24.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "lexpress.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5323,
-          "corroboration": 0.3333,
+          "coherence": 0.4027,
+          "corroboration": 0.6,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.5556,
+          "source_reliability": 0.68
         },
-        "total": 0.6822,
+        "total": 0.699,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "donald tusk",
+      "subject_label": "tusk",
       "subject_names": [
         "donald tusk",
         "pologne",
-        "polonia"
+        "polonia",
+        "tusk"
       ],
       "subject_newsroom_count": 9,
-      "summary": "Las autoridades polacas han convocado una reunión de emergencia después de que se identificaran posibles intentos de asesinato dirigidos al primer ministro Donald Tusk y a su ministro de Defensa (y en al menos un artículo se menciona también al ministro del Interior). Los medios coinciden en que las acciones fueron catalogadas como \"posibles\" intentos de asesinato y que el gobierno respondió inmediatamente con consultas y medidas de seguridad."
+      "summary": "Las autoridades polacas han detenido a un sospechoso en relación con un presunto plan para intentar asesinar al primer ministro Donald Tusk y al ministro de Defensa; la investigación apunta a implicaciones del entorno de la extrema derecha y la policía considera desbaratado el posible atentado."
+    },
+    {
+      "cluster_id": "subject-taiwan-73872ba3e6e8",
+      "coherence": 0.5702651433855315,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "germany"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-12",
+      "headline": "China sanciona a ministros de Paraguay y Belice por mantener relaciones con Taiwán",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/asie-pacifique/20261012-la-chine-sanctionne-des-ministres-latino-am%C3%A9ricains-pour-avoir-maintenu-des-relations-diplomatiques-avec-ta%C3%AFwan"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/10/12/china-sancoes-paraguai-belize.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "abril.com.br",
+          "source_country": "brazil",
+          "url": "https://veja.abril.com.br/economia/china-sanciona-ministros-de-paraguai-e-belize-por-relacoes-com-taiwan/"
+        },
+        {
+          "language": "es",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/es/china-sanciona-a-ministros-de-belice-y-paraguay-por-contacto-con-taiw%C3%A1n/a-79636392"
+        }
+      ],
+      "mentioned_countries": [
+        "tw",
+        "china"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/es/china-sanciona-a-ministros-de-belice-y-paraguay-por-contacto-con-taiw%C3%A1n/a-79636392",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "dw.com",
+        "globo.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5703,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6978,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "taiwan",
+      "subject_names": [
+        "taiwan"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "China anunció sanciones contra ministros de Paraguay y de Belice por mantener relaciones diplomáticas con Taiwán; las notas coinciden en que las medidas fueron impuestas en respuesta a la continuidad de esos vínculos entre esos países y Taipéi."
     }
   ],
-  "discarded_ingested": 232,
+  "discarded_ingested": 321,
   "discarded_kept": 5,
-  "generated_at": "2026-10-11T11:31:18.709363+00:00",
+  "generated_at": "2026-10-12T13:23:34.269407+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

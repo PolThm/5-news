@@ -504,14 +504,20 @@ def run_cycle(
     union: list[dict] = []
     if completed:
         try:
-            history_entries = read_history(
-                data_root / "history",
-                reference_date=started_at,
-                window_days=_HISTORY_RETENTION_DAYS,
+            # History and its embeddings only feed cross-day linking: no linked
+            # Period, no read, no embed call.
+            linking = bool(linked_periods())
+            history_entries = (
+                read_history(
+                    data_root / "history",
+                    reference_date=started_at,
+                    window_days=_HISTORY_RETENTION_DAYS,
+                )
+                if linking
+                else []
             )
-            # Embedding only feeds cross-day linking, so no linked Period means no call.
             embedding_by_id: dict[str, list[float]] = {}
-            if linked_periods():
+            if linking:
                 trace(
                     f"linking: embedding {len(clusters)} clusters + {len(history_entries)} history"
                 )
@@ -555,7 +561,8 @@ def run_cycle(
             failures.append(Failure("cycle", f"ranking raised: {exc}"))
             completed = False
 
-    if completed:
+    # Nor a write, which would embed every selected Cluster for nothing.
+    if completed and linked_periods():
         try:
             append_history(
                 union,

@@ -576,6 +576,7 @@ def test_rank_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
     assert any("rank exploded" in f["detail"] for f in record["failures"])
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_history_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
     """Same guard pattern as collect/dedupe/cluster/rank: history is the
     fifth guarded step, and a crash in it must not prevent cycle.json from
@@ -604,6 +605,22 @@ def test_history_crashing_still_leaves_a_cycle_record(tmp_path: Path) -> None:
     assert any("history exploded" in f["detail"] for f in record["failures"])
 
 
+def test_no_linked_period_means_no_history_written(tmp_path: Path) -> None:
+    run_cycle(
+        collect=lambda: _collection(
+            _record("Ceasefire agreed", "reuters.com", "united-kingdom"),
+            _record("Ceasefire agreed", "lemonde.fr", "france"),
+        ),
+        cycle_id="2026-08-11T00-00-00Z",
+        data_root=tmp_path,
+        embed=_no_op_embed,
+        submit_summarize_fn=_no_op_submit_summarize,
+    )
+
+    assert not (tmp_path / "history" / "clusters.jsonl").exists()
+
+
+@pytest.mark.usefixtures("week_enabled")
 def test_history_runs_after_rank_and_records_selected_clusters(tmp_path: Path) -> None:
     """The end-to-end path: a cycle with genuine selected Clusters writes
     them to data/history/clusters.jsonl."""

@@ -66,6 +66,7 @@ from pipeline.stages.agenda import WrittenAgenda, run_agenda
 from pipeline.stages.briefing_matrix import (
     build_period_pools,
     dedupe_union,
+    linked_periods,
     rank_all_zones,
 )
 from pipeline.stages.cluster import EmbedFn, run_cluster
@@ -508,8 +509,13 @@ def run_cycle(
                 reference_date=started_at,
                 window_days=_HISTORY_RETENTION_DAYS,
             )
-            trace(f"linking: embedding {len(clusters)} clusters + {len(history_entries)} history")
-            embedding_by_id = _embed_for_linking(clusters, history_entries, embed)
+            # Embedding only feeds cross-day linking, so no linked Period means no call.
+            embedding_by_id: dict[str, list[float]] = {}
+            if linked_periods():
+                trace(
+                    f"linking: embedding {len(clusters)} clusters + {len(history_entries)} history"
+                )
+                embedding_by_id = _embed_for_linking(clusters, history_entries, embed)
             trace("linking: building period pools (cross-day linking runs here)")
             pools = build_period_pools(
                 today_clusters=clusters,

@@ -2,7 +2,7 @@
 // loadBriefing's own resolution) as a fetchable static asset under
 // site/public/briefings/<lang>/<zone>/<period>.json -- Astro serves
 // everything under public/ verbatim at the site root, so the client
-// island (period-switcher.ts) can `fetch("/briefings/fr/world/week.json")`
+// island (period-switcher.ts) can `fetch("/briefings/fr/world/day.json")`
 // and get exactly the same data the corresponding page was statically
 // rendered from (EXPERIENCE.md: "no network round-trip beyond fetching
 // that one file").
@@ -15,7 +15,7 @@
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { OUTPUT_LANGUAGE_CYCLE, ZONE_CYCLE } from "../src/lib/briefing.ts";
+import { OUTPUT_LANGUAGE_CYCLE, PERIOD_CYCLE, ZONE_CYCLE } from "../src/lib/briefing.ts";
 import { loadBriefing } from "../src/lib/loadBriefing.ts";
 
 export interface Combination {
@@ -24,17 +24,13 @@ export interface Combination {
   period: string;
 }
 
-const PERIODS = ["day", "week"];
-
-// Cross product of all 3 Languages x all 15 Zones (Story 4.3) x all 3
-// Periods = 135 entries, reusing briefing.ts's own OUTPUT_LANGUAGE_CYCLE/
-// ZONE_CYCLE rather than a third hand-duplicated copy of either list --
+// Cross product of all 3 Languages x 3 Zones x 1 Period = 9 entries,
+// reusing briefing.ts's own OUTPUT_LANGUAGE_CYCLE/ZONE_CYCLE/PERIOD_CYCLE
+// rather than another hand-duplicated copy of any list --
 // [lang]/[zone]/[period].astro's getStaticPaths does the same cross
-// product. Both this list and that route file's getStaticPaths must stay
-// in sync by hand (see that route file's own comment) since neither can
-// import the other.
+// product from the same three cycles.
 export const COMBINATIONS: Combination[] = OUTPUT_LANGUAGE_CYCLE.flatMap((lang) =>
-  ZONE_CYCLE.flatMap((zone) => PERIODS.map((period) => ({ lang, zone, period })))
+  ZONE_CYCLE.flatMap((zone) => PERIOD_CYCLE.map((period) => ({ lang, zone, period })))
 );
 
 export function copyBriefingsToPublic(

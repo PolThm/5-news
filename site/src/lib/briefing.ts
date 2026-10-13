@@ -6,7 +6,7 @@
 // there is a version bump (schemaVersion), never a silent field edit here.
 
 export type ZoneKind = "world" | "continent" | "country";
-export type Period = "day" | "week";
+export type Period = "day";
 export type OutputLanguage = "fr" | "en" | "es";
 
 export const OUTPUT_LANGUAGE_CYCLE: readonly OutputLanguage[] = ["fr", "en", "es"];
@@ -108,26 +108,17 @@ export interface BriefingRecord {
   generated_at: string;
 }
 
-// The day -> week -> day cycle Story 4.2's mad-libs Period word
-// advances through on each click (FR-2). A plain array-index cycle, not a
-// lookup table with explicit next-pointers, since three elements never
-// need more machinery than that -- kept here (not in a page/component) so
-// both the server-rendered link's href and the client island's click
-// handler compute the identical next value from one source of truth.
-const PERIOD_CYCLE: readonly Period[] = ["day", "week"];
-
-export function nextPeriod(current: Period): Period {
-  const index = PERIOD_CYCLE.indexOf(current);
-  return PERIOD_CYCLE[(index + 1) % PERIOD_CYCLE.length];
-}
+// Every published Period, mirroring pipeline/config/__init__.py's PERIODS.
+// A single Period, so the mad-libs Period word is plain text, not a control.
+export const PERIOD_CYCLE: readonly Period[] = ["day"];
 
 // The mad-libs sentence's Period word text, per Period, per Output
 // Language (Story 4.7) -- distinct from the Period's own URL slug
-// ("day"/"week"), which is never shown to a reader.
+// ("day"), which is never shown to a reader.
 const PERIOD_SENTENCE_TEXT: Record<OutputLanguage, Record<Period, string>> = {
-  fr: { day: "aujourd'hui", week: "cette semaine" },
-  en: { day: "today", week: "this week" },
-  es: { day: "hoy", week: "esta semana" },
+  fr: { day: "aujourd'hui" },
+  en: { day: "today" },
+  es: { day: "hoy" },
 };
 
 export function periodSentenceText(period: Period, lang: OutputLanguage): string {
@@ -184,7 +175,7 @@ export function editorialAttribution(lang: OutputLanguage): string {
   return EDITORIAL_ATTRIBUTION[lang];
 }
 
-// The 15 Zones (World, 6 Continents, 8 Countries), in the exact cycle order
+// The 3 Zones (World and 2 Countries), in the exact cycle order
 // of pipeline/config/__init__.py's ZONES tuple. Hand-mirrored, not
 // imported -- site/ must never import from pipeline/
 // (scripts/check-boundary.sh forbids any cross-reference); this list is
@@ -193,7 +184,6 @@ export function editorialAttribution(lang: OutputLanguage): string {
 // file's own header comment).
 export const ZONE_CYCLE: readonly string[] = [
   "world",
-  "europe",
   "france",
   "spain",
 ];
@@ -219,25 +209,22 @@ export function nextZone(current: string): string {
 const ZONE_SENTENCE_LABEL: Record<OutputLanguage, Partial<Record<string, string>>> = {
   fr: {
     world: "dans le Monde",
-    europe: "en Europe",
     france: "en France",
     spain: "en Espagne",
   },
   en: {
     world: "in the World",
-    europe: "in Europe",
     france: "in France",
     spain: "in Spain",
   },
   es: {
     world: "en el Mundo",
-    europe: "en Europa",
     france: "en Francia",
     spain: "en España",
   },
 };
 
-// Defensive fallback for a zone slug outside the known 15 (malformed data,
+// Defensive fallback for a zone slug outside the known Zones (malformed data,
 // per fallbackNoticeText's own precedent below) -- returns the raw slug
 // rather than `undefined`/throwing, so a build never crashes on
 // unexpected input.
@@ -253,19 +240,14 @@ export function zoneSentenceLabel(zone: string, lang: OutputLanguage): string {
 // n'a pas..."/"France doesn't have..."). Only Continents ever appear as
 // `servedLabel` (a Country never falls back to another Country) and only
 // Countries ever appear as `requestedLabel` (Continents and World never
-// fall back, per pipeline/stages/rank.py's own logic) -- so each map only
-// needs to cover the 6 Continents or 8 Countries respectively, not all 15
-// Zones.
+// fall back, per pipeline/stages/rank.py's own logic).
+//
+// Empty while no Continent is a Zone: the pipeline only falls back to a
+// Continent that is itself a Zone, so no notice renders.
 const ZONE_SERVED_LABEL: Record<OutputLanguage, Partial<Record<string, string>>> = {
-  fr: {
-    europe: "l'Europe",
-  },
-  en: {
-    europe: "Europe",
-  },
-  es: {
-    europe: "Europa",
-  },
+  fr: {},
+  en: {},
+  es: {},
 };
 
 interface RequestedLabel {
@@ -417,7 +399,7 @@ export function formatCount(n: number, lang: OutputLanguage): string {
 // Article's `source_country`, per Output Language.
 //
 // Deliberately NOT trimmed when the routable Zones narrowed to
-// World/Europe/France/Spain on 2026-08-19. This table is keyed on where an
+// World/France/Spain. This table is keyed on where an
 // Article came *from*, not on where a reader can navigate to: the chip lists
 // the countries behind a Cluster's Consensus Score, and a published cycle's
 // ~10,000 Articles span ~145 of them. Removing an entry here would not remove

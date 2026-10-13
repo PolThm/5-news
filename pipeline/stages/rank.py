@@ -829,9 +829,9 @@ def _topped_up(
     taken = {item["cluster_id"] for item in own}
     filled = list(own)
     wider: list[Zone] = []
-    parent = continent_for(serving_zone)
-    if parent is not None:
-        wider.append(parent)
+    # The continent as geography, routable or not: Europe has no Briefing of its own.
+    if serving_zone.continent is not None:
+        wider.append(Zone(serving_zone.continent, ZoneKind.CONTINENT))
     wider.append(_WORLD_ZONE)
 
     for source_zone in wider:

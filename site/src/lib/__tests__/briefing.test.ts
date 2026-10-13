@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   OUTPUT_LANGUAGE_CYCLE,
+  PERIOD_CYCLE,
   ZONE_CYCLE,
   attributionText,
   consensusChipText,
@@ -14,7 +15,6 @@ import {
   isZoneFallback,
   madLibsLeadIn,
   needsEditorialAttribution,
-  nextPeriod,
   nextZone,
   offlineBannerText,
   periodSentenceText,
@@ -63,10 +63,9 @@ describe("hasValidAttribution", () => {
   });
 });
 
-describe("nextPeriod", () => {
-  it("cycles day -> week -> day", () => {
-    expect(nextPeriod("day")).toBe("week");
-    expect(nextPeriod("week")).toBe("day");
+describe("PERIOD_CYCLE", () => {
+  it("has exactly the one Period from the pipeline's config.PERIODS", () => {
+    expect(PERIOD_CYCLE).toEqual(["day"]);
   });
 });
 
@@ -79,24 +78,20 @@ describe("OUTPUT_LANGUAGE_CYCLE", () => {
 describe("periodSentenceText", () => {
   it("returns the correct word for each Period, in each language", () => {
     expect(periodSentenceText("day", "fr")).toBe("aujourd'hui");
-    expect(periodSentenceText("week", "fr")).toBe("cette semaine");
     expect(periodSentenceText("day", "en")).toBe("today");
-    expect(periodSentenceText("week", "en")).toBe("this week");
     expect(periodSentenceText("day", "es")).toBe("hoy");
-    expect(periodSentenceText("week", "es")).toBe("esta semana");
   });
 });
 
 describe("ZONE_CYCLE", () => {
-  it("has exactly the 4 Zones from the pipeline's config.ZONES, in the same order", () => {
-    expect(ZONE_CYCLE).toEqual(["world", "europe", "france", "spain"]);
+  it("has exactly the 3 Zones from the pipeline's config.ZONES, in the same order", () => {
+    expect(ZONE_CYCLE).toEqual(["world", "france", "spain"]);
   });
 });
 
 describe("nextZone", () => {
-  it("cycles through all 4 Zones in order and wraps Spain -> World", () => {
-    expect(nextZone("world")).toBe("europe");
-    expect(nextZone("europe")).toBe("france");
+  it("cycles through all 3 Zones in order and wraps Spain -> World", () => {
+    expect(nextZone("world")).toBe("france");
     expect(nextZone("france")).toBe("spain");
     expect(nextZone("spain")).toBe("world");
   });
@@ -105,27 +100,25 @@ describe("nextZone", () => {
 describe("zoneSentenceLabel", () => {
   it("returns the full preposition-inclusive French phrase for each Zone", () => {
     expect(zoneSentenceLabel("world", "fr")).toBe("dans le Monde");
-    expect(zoneSentenceLabel("europe", "fr")).toBe("en Europe");
     expect(zoneSentenceLabel("france", "fr")).toBe("en France");
     expect(zoneSentenceLabel("spain", "fr")).toBe("en Espagne");
   });
 
   it("returns the correct English phrase for every Zone", () => {
     expect(zoneSentenceLabel("world", "en")).toBe("in the World");
-    expect(zoneSentenceLabel("europe", "en")).toBe("in Europe");
     expect(zoneSentenceLabel("france", "en")).toBe("in France");
     expect(zoneSentenceLabel("spain", "en")).toBe("in Spain");
   });
 
   it("returns the correct Spanish phrase for every Zone", () => {
     expect(zoneSentenceLabel("world", "es")).toBe("en el Mundo");
-    expect(zoneSentenceLabel("europe", "es")).toBe("en Europa");
     expect(zoneSentenceLabel("france", "es")).toBe("en Francia");
     expect(zoneSentenceLabel("spain", "es")).toBe("en España");
   });
 
   it("degrades to the raw slug for an unknown zone rather than returning undefined", () => {
     expect(zoneSentenceLabel("not-a-real-zone", "en")).toBe("not-a-real-zone");
+    expect(zoneSentenceLabel("europe", "fr")).toBe("europe");
   });
 });
 
@@ -146,53 +139,13 @@ describe("fallbackNoticeText", () => {
     expect(fallbackNoticeText({ zone: "france", served_zone: "france" }, "es")).toBeNull();
   });
 
-  it("returns the exact French sentence from the UX mockup when France falls back to Europe", () => {
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "fr")).toBe(
-      "Affichage de l'Europe — la France n'a pas assez de couverture aujourd'hui."
-    );
-  });
-
-  it("returns the correct English sentence when France falls back to Europe", () => {
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "en")).toBe(
-      "Showing Europe — France doesn't have enough coverage today."
-    );
-  });
-
-  it("returns the correct Spanish sentence when France falls back to Europe", () => {
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "es")).toBe(
-      "Mostrando Europa — Francia no tiene suficiente cobertura hoy."
-    );
-  });
-
-  it("uses each country's correct subject-form article in the requested-zone clause", () => {
-    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "fr")).toBe(
-      "Affichage de l'Europe — l'Espagne n'a pas assez de couverture aujourd'hui."
-    );
-    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "es")).toBe(
-      "Mostrando Europa — España no tiene suficiente cobertura hoy."
-    );
-  });
-
-  it("agrees the verb in the singular for every Zone that can currently fall back", () => {
-    // The `plural` flag on ZONE_REQUESTED_LABEL exists because "les
-    // États-Unis"/"the United States"/"Estados Unidos" takes a plural verb in
-    // all three languages. That was the only one of the 8 Countries where the
-    // agreement mattered, and the 2026-08-19 scope cut to
-    // World/Europe/France/Spain removed it -- so no current Zone reaches the
-    // plural branch, and this locks the singular form every remaining Zone
-    // does produce. The branch itself is kept rather than deleted: the next
-    // plural country ("les Pays-Bas") is one table entry away, and the
-    // agreement is easy to get wrong from scratch in three languages.
+  it("returns null for a fallback to Europe, which is no longer a Zone, in any language", () => {
+    // A Briefing published before Europe was dropped can still carry
+    // served_zone "europe"; with no Continent Zone there is no served label.
     for (const zone of ["france", "spain"]) {
-      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "fr")).toContain(
-        "n'a pas assez de couverture"
-      );
-      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "en")).toContain(
-        "doesn't have enough coverage"
-      );
-      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "es")).toContain(
-        "no tiene suficiente cobertura"
-      );
+      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "fr")).toBeNull();
+      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "en")).toBeNull();
+      expect(fallbackNoticeText({ zone, served_zone: "europe" }, "es")).toBeNull();
     }
   });
 
@@ -248,7 +201,6 @@ describe("endScreenText", () => {
 
   it("reuses periodSentenceText's exact wording for each Period, in each language", () => {
     expect(endScreenText(3, "day", "fr")).toContain("aujourd'hui.");
-    expect(endScreenText(3, "week", "fr")).toContain("cette semaine.");
     expect(endScreenText(3, "day", "en")).toContain("today.");
     expect(endScreenText(3, "day", "es")).toContain("hoy.");
   });

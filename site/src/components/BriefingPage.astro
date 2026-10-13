@@ -25,7 +25,6 @@ import {
   formatCount,
   hasValidAttribution,
   madLibsLeadIn,
-  nextPeriod,
   nextZone,
   offlineBannerText,
   OUTPUT_LANGUAGE_CYCLE,
@@ -46,7 +45,6 @@ interface Props {
 
 const { briefing, lang, zone, period } = Astro.props;
 
-const nextPeriodHref = `/${lang}/${zone}/${nextPeriod(period)}`;
 // Built from the *route's* zone prop (what was requested), never
 // briefing.served_zone -- see this file's own header comment above on why
 // a Continent-fallback page's Zone link must always advance from the
@@ -110,7 +108,7 @@ function formatTimestamp(iso: string): string {
         rendered with that build-specific attribute. Half this page's DOM
         is NOT rendered by Astro: period-switcher.ts rebuilds the item
         list, fallback notice, Discarded Volume line and End Screen in the
-        browser after every Zone/Period/Language swap (a deliberate
+        browser after every Zone/Language swap (a deliberate
         hand-kept mirror of the markup below -- see that module's own
         docstring), and plain innerHTML cannot reproduce a hash the island
         has no way to know. Every one of those rebuilt elements therefore
@@ -218,11 +216,11 @@ function formatTimestamp(iso: string): string {
         line-height: 1.25;
         color: #1a1a18;
       }
-      /* .word applies to both mad-libs words (Zone and Period, both real
-         <a> elements as of Story 4.3) -- the dotted underline must look
-         identical for both, and must not pick up a browser's default solid
-         link-underline styling (DESIGN.md's explicit "dotted, not solid"
-         distinction from attribution links). */
+      /* .word is the Zone mad-libs word, a real <a> -- dotted, never a
+         browser's default solid link underline (DESIGN.md's explicit
+         "dotted, not solid" distinction from attribution links). The
+         Period word is plain sentence text: with one Period it is not a
+         control, so it carries no .word styling. */
       h1 .word {
         color: #1f4d3d;
         text-decoration: underline dotted 2px;
@@ -508,14 +506,7 @@ function formatTimestamp(iso: string): string {
             data-zone={zone}
             data-period={period}
             href={nextZoneHref}>{zoneSentenceLabel(zone, lang)}</a
-          >, <a
-            class="word"
-            data-period-word
-            data-lang={lang}
-            data-zone={zone}
-            data-period={period}
-            href={nextPeriodHref}>{periodSentenceText(period, lang)}</a
-          >.
+          >, <span data-period-text>{periodSentenceText(period, lang)}</span>.
         </h1>
         {
           fallbackNotice && (

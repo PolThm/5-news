@@ -28,7 +28,7 @@ from __future__ import annotations
 
 from datetime import UTC, datetime, timedelta
 
-from pipeline.config import ZONES
+from pipeline.config import PERIODS, ZONES
 from pipeline.domain import Period
 from pipeline.stages.history import cycle_date
 from pipeline.stages.rank import ZoneRanking, link_across_days, rank_for_zone
@@ -39,6 +39,11 @@ from pipeline.stages.rank import ZoneRanking, link_across_days, rank_for_zone
 _WINDOW_DAYS: dict[Period, int] = {
     Period.WEEK: 7,
 }
+
+
+def linked_periods() -> list[Period]:
+    """The published Periods whose pool links today's Clusters with history."""
+    return [period for period in _WINDOW_DAYS if period in PERIODS]
 
 
 def build_period_pools(
@@ -98,8 +103,8 @@ def build_period_pools(
             >= (reference - timedelta(days=1)).date().isoformat()
         ]
     }
-    for period, window_days in _WINDOW_DAYS.items():
-        window_history = _within_window(history_entries, reference, window_days)
+    for period in linked_periods():
+        window_history = _within_window(history_entries, reference, _WINDOW_DAYS[period])
         pools[period] = [
             *link_across_days(linkable, window_history, embedding_by_id),
             *unlinkable,
@@ -172,4 +177,4 @@ def dedupe_union(rankings: list[ZoneRanking]) -> list[dict]:
     return list(seen.values())
 
 
-__all__ = ["build_period_pools", "dedupe_union", "rank_all_zones"]
+__all__ = ["build_period_pools", "dedupe_union", "linked_periods", "rank_all_zones"]

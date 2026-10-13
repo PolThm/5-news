@@ -65,14 +65,14 @@ describe("entryTargetFor", () => {
     // already made. A thing someone chose beats a guess about where
     // they are.
     expect(entryTargetFor({ lang: "fr", zone: "world", period: "day" }, "es-ES")).toBeNull();
-    expect(entryTargetFor({ lang: "fr", zone: "spain", period: "week" }, "es-ES")).toBe(
-      "/fr/spain/week"
+    expect(entryTargetFor({ lang: "fr", zone: "spain", period: "day" }, "es-ES")).toBe(
+      "/fr/spain/day"
     );
   });
 
   it("resumes a stored Zone and Period, not just the Language", () => {
-    expect(entryTargetFor({ lang: "en", zone: "europe", period: "week" }, "en-US")).toBe(
-      "/en/europe/week"
+    expect(entryTargetFor({ lang: "en", zone: "france", period: "day" }, "en-US")).toBe(
+      "/en/france/day"
     );
   });
 

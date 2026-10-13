@@ -71,14 +71,14 @@ GENERATED_AT = datetime(2026, 8, 11, 6, 0, tzinfo=UTC)
 # --- assemble_briefings ------------------------------------------------------
 
 
-def test_assembles_exactly_24_briefings() -> None:
+def test_assembles_exactly_9_briefings() -> None:
     clusters = [_cluster("a")]
     zone_rankings = _full_zone_rankings(clusters)
     summaries_by_language = _full_summaries_by_language(["a"])
 
     briefings = assemble_briefings(zone_rankings, summaries_by_language, generated_at=GENERATED_AT)
 
-    assert len(briefings) == 4 * 2 * 3
+    assert len(briefings) == 3 * 1 * 3
 
 
 def test_every_briefing_carries_the_cycles_generated_at_not_wall_clock() -> None:
@@ -184,13 +184,13 @@ def test_a_cluster_present_in_multiple_zones_is_not_summarized_twice_but_appears
         for b in briefings
         if b.zone.slug == "france" and b.period == Period.DAY and b.language == OutputLanguage.FR
     )
-    europe_briefing = next(
+    spain_briefing = next(
         b
         for b in briefings
-        if b.zone.slug == "europe" and b.period == Period.DAY and b.language == OutputLanguage.FR
+        if b.zone.slug == "spain" and b.period == Period.DAY and b.language == OutputLanguage.FR
     )
     assert france_briefing.clusters[0]["cluster_id"] == "shared"
-    assert europe_briefing.clusters[0]["cluster_id"] == "shared"
+    assert spain_briefing.clusters[0]["cluster_id"] == "shared"
 
 
 def test_a_cluster_missing_from_the_summaries_pool_degrades_to_no_summary_key_change() -> None:

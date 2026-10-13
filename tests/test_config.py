@@ -1,7 +1,7 @@
 """Configuration is data, not code (AC 3).
 
 These tests pin the values that URLs, published file paths, and the
-24-Briefing matrix all depend on. Changing a slug here breaks the site's
+9-Briefing matrix all depend on. Changing a slug here breaks the site's
 routing, so the tests exist to make such a change deliberate.
 """
 
@@ -10,27 +10,21 @@ from pipeline.config import (
     PERIODS,
     ZONES,
     briefing_combinations,
+    continent_for,
     countries_in_continent,
 )
 from pipeline.domain import ZoneKind
 
 
-def test_four_zones() -> None:
-    """Narrowed from 15 on 2026-08-19 (World, 6 Continents, 8 Countries).
-
-    Two of those Continents -- Africa and Oceania -- never had a single
-    Country defined beneath them, so the Zone-word cycle could pass through
-    them but never descend. Covering four Zones well was the brief's own
-    guidance; fifteen was the PRD's addition.
-    """
-    assert len(ZONES) == 4
+def test_three_zones() -> None:
+    """Narrowed from 15 on 2026-08-19, then Europe dropped on 2026-10-13."""
+    assert len(ZONES) == 3
 
 
 def test_zone_slugs_are_exact() -> None:
     """Slugs appear in URLs and published paths. They are not free to change."""
     assert [z.slug for z in ZONES] == [
         "world",
-        "europe",
         "france",
         "spain",
     ]
@@ -39,18 +33,24 @@ def test_zone_slugs_are_exact() -> None:
 def test_zone_kinds() -> None:
     kinds = [z.kind for z in ZONES]
     assert kinds.count(ZoneKind.WORLD) == 1
-    assert kinds.count(ZoneKind.CONTINENT) == 1
+    assert kinds.count(ZoneKind.CONTINENT) == 0
     assert kinds.count(ZoneKind.COUNTRY) == 2
 
 
 def test_every_country_has_a_continent() -> None:
-    """FR-16 (Story 2.5) serves a country's continent when the country is too
-    thin. Without the parent link there is nothing to fall back to."""
-    continents = {z.slug for z in ZONES if z.kind is ZoneKind.CONTINENT}
+    """Geography, not navigation: a country's continent need not be a Zone, but
+    it scores and tops up its Briefing, so it must name a known continent."""
     for zone in ZONES:
         if zone.kind is ZoneKind.COUNTRY:
             assert zone.continent is not None, f"{zone.slug} has no continent"
-            assert zone.continent in continents, f"{zone.slug} -> unknown {zone.continent}"
+            assert countries_in_continent(zone.continent), (
+                f"{zone.slug} -> unknown {zone.continent}"
+            )
+
+
+def test_no_country_falls_back_to_an_unroutable_continent() -> None:
+    for zone in ZONES:
+        assert continent_for(zone) is None
 
 
 def test_non_countries_have_no_continent() -> None:
@@ -60,18 +60,18 @@ def test_non_countries_have_no_continent() -> None:
 
 
 def test_periods() -> None:
-    assert [p.value for p in PERIODS] == ["day", "week"]
+    assert [p.value for p in PERIODS] == ["day"]
 
 
 def test_output_languages() -> None:
     assert [lang.value for lang in OUTPUT_LANGUAGES] == ["fr", "en", "es"]
 
 
-def test_matrix_is_24() -> None:
-    """4 Zones x 2 Periods x 3 Output Languages (FR-15, narrowed 2026-08-19)."""
+def test_matrix_is_9() -> None:
+    """3 Zones x 1 Period x 3 Output Languages (FR-15, narrowed 2026-10-13)."""
     combos = list(briefing_combinations())
-    assert len(combos) == 24
-    assert len(set(combos)) == 24, "combinations must be unique"
+    assert len(combos) == 9
+    assert len(set(combos)) == 9, "combinations must be unique"
 
 
 def test_matrix_ordering_is_lang_zone_period() -> None:

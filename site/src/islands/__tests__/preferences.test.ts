@@ -33,10 +33,10 @@ const FRENCH_WORLD_DAY: RoutePreference = { lang: "fr", zone: "world", period: "
 
 describe("routeFromPathname", () => {
   it("reads the triple out of a published Briefing path", () => {
-    expect(routeFromPathname("/es/france/week")).toEqual({
+    expect(routeFromPathname("/es/france/day")).toEqual({
       lang: "es",
       zone: "france",
-      period: "week",
+      period: "day",
     });
   });
 
@@ -72,31 +72,34 @@ describe("routeFromPathname", () => {
   });
 
   it("returns null for a slug this build no longer publishes", () => {
-    // The Zone list narrowed from 15 to 4 on 2026-08-19. A reader whose
-    // stored (or bookmarked) Zone was dropped must not be routed to a 404.
+    // Zones and Periods have been dropped more than once (Europe and week
+    // on 2026-10-13). A reader whose stored (or bookmarked) slug was
+    // dropped must not be routed to a 404.
     expect(routeFromPathname("/fr/germany/day")).toBeNull();
+    expect(routeFromPathname("/fr/europe/day")).toBeNull();
     expect(routeFromPathname("/de/world/day")).toBeNull();
+    expect(routeFromPathname("/fr/world/week")).toBeNull();
     expect(routeFromPathname("/fr/world/month")).toBeNull();
   });
 });
 
 describe("routePath", () => {
   it("builds the canonical page path for a preference", () => {
-    expect(routePath({ lang: "es", zone: "europe", period: "week" })).toBe("/es/europe/week");
+    expect(routePath({ lang: "es", zone: "spain", period: "day" })).toBe("/es/spain/day");
   });
 
   it("round-trips with routeFromPathname", () => {
-    const preference: RoutePreference = { lang: "en", zone: "spain", period: "week" };
+    const preference: RoutePreference = { lang: "en", zone: "spain", period: "day" };
     expect(routeFromPathname(routePath(preference))).toEqual(preference);
   });
 });
 
 describe("parsePreference", () => {
   it("parses a well-formed stored value", () => {
-    expect(parsePreference('{"lang":"fr","zone":"spain","period":"week"}')).toEqual({
+    expect(parsePreference('{"lang":"fr","zone":"spain","period":"day"}')).toEqual({
       lang: "fr",
       zone: "spain",
-      period: "week",
+      period: "day",
     });
   });
 
@@ -123,7 +126,9 @@ describe("parsePreference", () => {
     // a stale STORED value would keep redirecting the reader there on every
     // single open, with no way out short of clearing site data.
     expect(parsePreference('{"lang":"fr","zone":"germany","period":"day"}')).toBeNull();
+    expect(parsePreference('{"lang":"fr","zone":"europe","period":"day"}')).toBeNull();
     expect(parsePreference('{"lang":"de","zone":"world","period":"day"}')).toBeNull();
+    expect(parsePreference('{"lang":"fr","zone":"france","period":"week"}')).toBeNull();
     expect(parsePreference('{"lang":"fr","zone":"world","period":"month"}')).toBeNull();
   });
 
@@ -136,8 +141,8 @@ describe("parsePreference", () => {
 describe("readPreference / writePreference", () => {
   it("writes and reads back a preference", () => {
     const storage = fakeStorage();
-    writePreference(storage, { lang: "es", zone: "europe", period: "week" });
-    expect(readPreference(storage)).toEqual({ lang: "es", zone: "europe", period: "week" });
+    writePreference(storage, { lang: "es", zone: "spain", period: "day" });
+    expect(readPreference(storage)).toEqual({ lang: "es", zone: "spain", period: "day" });
   });
 
   it("returns null when storage is unavailable", () => {

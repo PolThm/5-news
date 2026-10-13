@@ -29,19 +29,18 @@ STAGE_NAMES: tuple[str, ...] = (
 
 # --- Zones -------------------------------------------------------------------
 
-# 4 Zones: World, 1 Continent, 2 Countries (FR-3, narrowed 2026-08-19).
+# 3 Zones: World and 2 Countries (FR-3, narrowed 2026-08-19, then 2026-10-13).
 #
 # Down from 15 (World, 6 Continents, 8 Countries). The original set was the
 # PRD's own invention rather than anything the brief asked for -- the brief's
 # guidance was that 5-10 countries covered *well* beats the whole world
 # covered badly, which is what this restores. Africa and Oceania never had a
 # single Country defined under them, so two of the six Continents could never
-# be reached by the Zone-word cycle's country hops at all.
+# be reached by the Zone-word cycle's country hops at all. Europe stopped being
+# a Zone on 2026-10-13.
 #
-# The `continent` field on a country is not decoration: FR-16 (Story 2.5)
-# serves a country's containing continent when the country has too few
-# Qualifying Clusters. Without the parent link there is nothing to fall back
-# to -- both Countries here point at Europe, so the fallback stays exercised.
+# A country's `continent` is geography only: it scores and tops up with
+# European stories, but FR-16 never falls back to a continent that is not a Zone.
 #
 # Note this is the set of *routable* Zones, not the set of countries the
 # pipeline can recognize as an Article's origin. Those are different concerns
@@ -50,15 +49,15 @@ STAGE_NAMES: tuple[str, ...] = (
 # rather than "gm".
 ZONES: tuple[Zone, ...] = (
     Zone("world", ZoneKind.WORLD),
-    Zone("europe", ZoneKind.CONTINENT),
     Zone("france", ZoneKind.COUNTRY, continent="europe"),
     Zone("spain", ZoneKind.COUNTRY, continent="europe"),
 )
 
 # Narrowed from (day, week, month) on 2026-08-19. Month is gone: it was the
 # hardest window to fill honestly -- a 30-day pool needs 30 days of cycles
-# before it means anything -- and it cost a third of every publish.
-PERIODS: tuple[Period, ...] = (Period.DAY, Period.WEEK)
+# before it means anything -- and it cost a third of every publish. Week went
+# on 2026-10-13; its pooling and weights stay, unused, behind this one line.
+PERIODS: tuple[Period, ...] = (Period.DAY,)
 
 OUTPUT_LANGUAGES: tuple[OutputLanguage, ...] = (
     OutputLanguage.FR,
@@ -194,14 +193,14 @@ def zone_by_slug(slug: str) -> Zone:
 
 def continent_for(zone: Zone) -> Zone | None:
     """The Zone this one falls back to when it has too few Qualifying Clusters
-    (FR-16). Only countries have one."""
+    (FR-16): its continent, and only when that continent is itself a Zone."""
     if zone.continent is None:
         return None
-    return zone_by_slug(zone.continent)
+    return next((candidate for candidate in ZONES if candidate.slug == zone.continent), None)
 
 
 def briefing_combinations() -> Iterator[tuple[OutputLanguage, Zone, Period]]:
-    """Every Briefing the pipeline generates per cycle: 4 x 2 x 3 = 24.
+    """Every Briefing the pipeline generates per cycle: 3 x 3 x 1 = 9.
 
     Yielded in the order a Briefing is addressed — language, zone, period —
     matching the published path ``<lang>/<zone>/<period>.json``.

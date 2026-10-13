@@ -16,11 +16,21 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
+import pytest
 from pipeline.adapters import CollectionResult, Failure
 from pipeline.adapters.cohere_embed import EmbeddingResult
-from pipeline.domain import ArticleRecord, OutputLanguage
+from pipeline.domain import ArticleRecord, OutputLanguage, Period
 from pipeline.stages.cycle import CycleResult, memoize_embeddings, run_cycle
 from pipeline.stages.summarize import WrittenSubmission, WrittenSummarize
+
+
+@pytest.fixture
+def week_enabled(monkeypatch: pytest.MonkeyPatch) -> None:
+    """The week Period back on: the agenda fixtures date their event the day
+    before the cycle, which only the week pool reaches."""
+    import pipeline.stages.briefing_matrix as briefing_matrix
+
+    monkeypatch.setattr(briefing_matrix, "PERIODS", (Period.DAY, Period.WEEK))
 
 
 def _record(title: str, source: str, country: str = "france") -> ArticleRecord:
@@ -1612,6 +1622,7 @@ def test_an_agenda_that_raises_does_not_take_the_cycle_down(tmp_path: Path) -> N
     assert any("agenda raised" in f["detail"] for f in record["failures"])
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_rank_actually_receives_the_agenda_items_not_the_clusters(tmp_path: Path) -> None:
     """Asserts on what reached rank, which is the thing that was broken.
 
@@ -1681,6 +1692,7 @@ def test_rank_actually_receives_the_agenda_items_not_the_clusters(tmp_path: Path
     assert not any("small.example" in json.dumps(r) for r in ranked)
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_subjects_are_the_candidates_when_the_reference_press_forms_any(
     tmp_path: Path, working_agenda
 ) -> None:
@@ -1737,6 +1749,7 @@ def test_a_corpus_with_no_reference_press_falls_back_to_the_chronicle(
     assert any("no subject cleared the editorial floor" in f["detail"] for f in record["failures"])
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_the_consequence_verdict_reaches_the_ranking(tmp_path: Path, working_agenda) -> None:
     """The wiring, not just the adapter. This project has shipped a stage that
     ran and changed nothing twice -- the agenda stage, whose output was
@@ -1762,6 +1775,7 @@ def test_the_consequence_verdict_reaches_the_ranking(tmp_path: Path, working_age
     assert all(item["score"]["components"]["impact"] == 1.0 for item in ranked)
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_a_failed_consequence_call_costs_the_ordering_not_the_cycle(
     tmp_path: Path, working_agenda
 ) -> None:
@@ -1793,6 +1807,7 @@ def test_a_failed_consequence_call_costs_the_ordering_not_the_cycle(
     assert all(item["score"]["components"]["impact"] == 0.5 for item in ranked)
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_zone_rankings_json_round_trips_articles_ingested(tmp_path: Path, working_agenda) -> None:
     """FR-8's Discarded Volume was published as 0/0 on 2026-08-20 despite
     `rank_for_zone` computing the real count correctly -- `_write_zone_rankings`

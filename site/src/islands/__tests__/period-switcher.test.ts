@@ -10,10 +10,8 @@ import {
   zoneAbbreviation,
   languageAnnouncementText,
   nextLanguage,
-  nextPeriod,
   nextZone,
   pageUrl,
-  periodAnnouncementText,
   periodSentenceText,
   renderDiscardedVolumeHtml,
   renderEndScreenHtml,
@@ -50,13 +48,6 @@ function createFakeAnchor() {
   };
 }
 
-describe("nextPeriod", () => {
-  it("cycles day -> week -> month -> day", () => {
-    expect(nextPeriod("day")).toBe("week");
-    expect(nextPeriod("week")).toBe("day");
-  });
-});
-
 describe("periodSentenceText", () => {
   it("returns the correct word for each Period, in each language", () => {
     expect(periodSentenceText("day", "fr")).toBe("aujourd'hui");
@@ -74,8 +65,9 @@ describe("nextLanguage", () => {
 });
 
 describe("nextZone", () => {
-  it("cycles through all 4 Zones and wraps Brazil -> World", () => {
-    expect(nextZone("world")).toBe("europe");
+  it("cycles through all 3 Zones and wraps Spain -> World", () => {
+    expect(nextZone("world")).toBe("france");
+    expect(nextZone("france")).toBe("spain");
     expect(nextZone("spain")).toBe("world");
   });
 });
@@ -83,16 +75,16 @@ describe("nextZone", () => {
 describe("zoneSentenceLabel", () => {
   it("mirrors briefing.ts's zoneSentenceLabel exactly for a sample of each preposition case, in each language", () => {
     expect(zoneSentenceLabel("world", "fr")).toBe("dans le Monde");
-    expect(zoneSentenceLabel("europe", "fr")).toBe("en Europe");
+    expect(zoneSentenceLabel("france", "fr")).toBe("en France");
 
     expect(zoneSentenceLabel("world", "en")).toBe("in the World");
 
     expect(zoneSentenceLabel("world", "es")).toBe("en el Mundo");
   });
 
-  it("falls back to the raw slug for a zone outside the known 15, mirroring briefing.ts's own defensive fallback", () => {
+  it("falls back to the raw slug for a zone outside the known Zones, mirroring briefing.ts's own defensive fallback", () => {
     // A malformed data-zone attribute or malformed fetched JSON could
-    // reach this with a value outside the 15 known Zones -- must degrade
+    // reach this with a value outside the known Zones -- must degrade
     // to the raw slug, not "undefined" (Blind Hunter review of Story
     // 4.7 caught this table's mirror had silently dropped
     // briefing.ts's `?? zone` fallback and Partial<Record<...>> typing).
@@ -101,41 +93,26 @@ describe("zoneSentenceLabel", () => {
 });
 
 // Story 4.8 (AC2): pure functions producing the aria-live announcement
-// text for each axis. Match the AC's own example phrasing shape ("Zone,
-// World, button, cycles to Europe") for Zone/Period, since both are
-// cycle-by-one controls; Language deliberately does NOT use "cycles to"
-// wording, since Story 4.7 established it as a direct-jump control with
-// no "next value" concept -- forcing cycle language onto it would
-// misdescribe the actual interaction to a screen-reader user.
+// text for each clickable axis. Match the AC's own example phrasing shape
+// ("Zone, World, button, cycles to France") for the cycle-by-one Zone
+// control; Language deliberately does NOT use "cycles to" wording, since
+// Story 4.7 established it as a direct-jump control with no "next value"
+// concept -- forcing cycle language onto it would misdescribe the actual
+// interaction to a screen-reader user.
 describe("zoneAnnouncementText", () => {
   it("announces role, current value, and the next value in the cycle, in each language", () => {
-    // Bare zone names throughout (matching the AC's own example exactly:
-    // "Zone, World, button, cycles to Europe") -- Blind Hunter review
-    // caught that reusing zoneSentenceLabel's preposition-inclusive form
-    // ("in the World", "in Europe") here doubled up with this
-    // announcement's own verb phrase, producing "cycles to in Europe".
-    expect(zoneAnnouncementText("world", "europe", "fr")).toBe(
-      "Zone, le Monde, bouton, passe à l'Europe"
+    // Bare zone names throughout -- Blind Hunter review caught that
+    // reusing zoneSentenceLabel's preposition-inclusive form ("in the
+    // World", "in France") here doubled up with this announcement's own
+    // verb phrase, producing "cycles to in France".
+    expect(zoneAnnouncementText("world", "france", "fr")).toBe(
+      "Zone, le Monde, bouton, passe à la France"
     );
-    expect(zoneAnnouncementText("world", "europe", "en")).toBe(
-      "Zone, the World, button, cycles to Europe"
+    expect(zoneAnnouncementText("world", "france", "en")).toBe(
+      "Zone, the World, button, cycles to France"
     );
-    expect(zoneAnnouncementText("world", "europe", "es")).toBe(
-      "Zona, el Mundo, botón, cambia a Europa"
-    );
-  });
-});
-
-describe("periodAnnouncementText", () => {
-  it("announces role, current value, and the next value in the cycle, in each language", () => {
-    expect(periodAnnouncementText("day", "week", "fr")).toBe(
-      "Période, aujourd'hui, bouton, passe à cette semaine"
-    );
-    expect(periodAnnouncementText("day", "week", "en")).toBe(
-      "Period, today, button, cycles to this week"
-    );
-    expect(periodAnnouncementText("day", "week", "es")).toBe(
-      "Período, hoy, botón, cambia a esta semana"
+    expect(zoneAnnouncementText("world", "france", "es")).toBe(
+      "Zona, el Mundo, botón, cambia a Francia"
     );
   });
 });
@@ -154,23 +131,12 @@ describe("languageAnnouncementText", () => {
 });
 
 describe("fallbackNoticeText", () => {
-  it("mirrors briefing.ts's fallbackNoticeText exactly, including plural verb agreement, in each language", () => {
+  it("mirrors briefing.ts's fallbackNoticeText: null without a fallback, and null for Europe, which is no longer a Zone", () => {
     expect(fallbackNoticeText({ zone: "france", served_zone: "france" }, "fr")).toBeNull();
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "fr")).toBe(
-      "Affichage de l'Europe — la France n'a pas assez de couverture aujourd'hui."
-    );
-    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "fr")).toBe(
-      "Affichage de l'Europe — l'Espagne n'a pas assez de couverture aujourd'hui."
-    );
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "en")).toBe(
-      "Showing Europe — France doesn't have enough coverage today."
-    );
-    expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, "en")).toBe(
-      "Showing Europe — Spain doesn't have enough coverage today."
-    );
-    expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, "es")).toBe(
-      "Mostrando Europa — Francia no tiene suficiente cobertura hoy."
-    );
+    for (const lang of ["fr", "en", "es"] as const) {
+      expect(fallbackNoticeText({ zone: "france", served_zone: "europe" }, lang)).toBeNull();
+      expect(fallbackNoticeText({ zone: "spain", served_zone: "europe" }, lang)).toBeNull();
+    }
   });
 });
 
@@ -190,7 +156,7 @@ describe("renderFallbackNoticeHtml", () => {
     expect(html).toBe("");
   });
 
-  it("returns the notice div with escaped, exact text when a fallback is active", () => {
+  it("returns an empty string for a fallback to a served Zone with no label (Europe)", () => {
     const html = renderFallbackNoticeHtml(
       {
         zone: "france",
@@ -202,21 +168,19 @@ describe("renderFallbackNoticeHtml", () => {
       },
       "fr"
     );
-    expect(html).toBe(
-      '<div class="fallback-notice" id="fallback-notice">Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui.</div>'
-    );
+    expect(html).toBe("");
   });
 });
 
 describe("briefingJsonUrl", () => {
   it("builds the exact static-asset path the copy script exposes", () => {
-    expect(briefingJsonUrl("fr", "world", "week")).toBe("/briefings/fr/world/week.json");
+    expect(briefingJsonUrl("fr", "france", "day")).toBe("/briefings/fr/france/day.json");
   });
 });
 
 describe("pageUrl", () => {
   it("builds the equivalent static route path for a lang/zone/period", () => {
-    expect(pageUrl("fr", "world", "week")).toBe("/fr/world/week");
+    expect(pageUrl("fr", "france", "day")).toBe("/fr/france/day");
   });
 });
 
@@ -546,14 +510,13 @@ describe("renderEndScreenHtml", () => {
 });
 
 describe("attach", () => {
-  it("attaches exactly one click listener to each mad-libs word even when called repeatedly", () => {
+  it("attaches exactly one click listener to the Zone word even when called repeatedly, and none to the Period word", () => {
     // Reproduces the bug Story 4.2's adversarial review caught: attach()
     // is re-invoked after every swap, but the swap mutates the existing
-    // anchors in place rather than replacing them -- without the
-    // ATTACHED_MARKER guard, each call added a duplicate listener per word,
-    // so a single click fired the handler once per prior attach() call.
-    // Story 4.3 extends attach() to cover both the Zone and Period words,
-    // so this test verifies the guard holds for both independently.
+    // anchor in place rather than replacing it -- without the
+    // ATTACHED_MARKER guard, each call added a duplicate listener, so a
+    // single click fired the handler once per prior attach() call.
+    // The Period word is plain text (one Period), so it is never wired.
     const zoneAnchor = createFakeAnchor();
     const periodAnchor = createFakeAnchor();
     const originalDocument = globalThis.document;
@@ -573,7 +536,7 @@ describe("attach", () => {
       attach();
 
       expect(zoneAnchor.clickListenerCount).toBe(1);
-      expect(periodAnchor.clickListenerCount).toBe(1);
+      expect(periodAnchor.clickListenerCount).toBe(0);
     } finally {
       globalThis.document = originalDocument;
     }
@@ -886,11 +849,11 @@ describe("attachLanguageWords (via attach)", () => {
 
     const leadInNode = { nodeType: 3, textContent: "Voici ce qui se passe " };
     const zoneWordLink = createFakeWordLink("world", "day", "fr");
-    const periodWordLink = createFakeWordLink("world", "day", "fr");
+    const periodText = { textContent: "" };
     const sentence = {
       childNodes: [leadInNode],
       querySelector: (selector: string) =>
-        selector.includes("zone") ? zoneWordLink : selector.includes("period") ? periodWordLink : null,
+        selector.includes("zone") ? zoneWordLink : selector.includes("period") ? periodText : null,
       insertAdjacentHTML: () => {},
     };
     const itemList = createFakeElement();
@@ -927,8 +890,8 @@ describe("attachLanguageWords (via attach)", () => {
         ok: true,
         json: () =>
           Promise.resolve({
-            zone: "europe",
-            served_zone: "europe",
+            zone: "france",
+            served_zone: "france",
             generated_at: "2026-08-12T06:14:00Z",
             discarded_ingested: 0,
             discarded_kept: 0,
@@ -942,14 +905,14 @@ describe("attachLanguageWords (via attach)", () => {
 
     try {
       attach(); // attaches the Zone word's click listener via document.querySelector above
-      zoneWordLink.dispatchClick(); // world -> europe
+      zoneWordLink.dispatchClick(); // world -> france
       await new Promise((resolve) => setTimeout(resolve, 0));
       await new Promise((resolve) => setTimeout(resolve, 0));
 
       // The actual regression: before the fix, these stayed "world"
       // forever (href alone was updated, dataset.zone was not).
-      expect(enLink.dataset.zone).toBe("europe");
-      expect(esLink.dataset.zone).toBe("europe");
+      expect(enLink.dataset.zone).toBe("france");
+      expect(esLink.dataset.zone).toBe("france");
     } finally {
       globalThis.document = originalDocument;
       globalThis.fetch = originalFetch;
@@ -999,11 +962,11 @@ describe("attachLanguageWords (via attach)", () => {
 
     const leadInNode = { nodeType: 3, textContent: "Voici ce qui se passe " };
     const zoneWordLink = createFakeWordLink("world", "day", "fr");
-    const periodWordLink = createFakeWordLink("world", "day", "fr");
+    const periodText = { textContent: "" };
     const sentence = {
       childNodes: [leadInNode],
       querySelector: (selector: string) =>
-        selector.includes("zone") ? zoneWordLink : selector.includes("period") ? periodWordLink : null,
+        selector.includes("zone") ? zoneWordLink : selector.includes("period") ? periodText : null,
       insertAdjacentHTML: () => {},
     };
     const itemList = createFakeElement();
@@ -1039,8 +1002,8 @@ describe("attachLanguageWords (via attach)", () => {
         ok: true,
         json: () =>
           Promise.resolve({
-            zone: "europe",
-            served_zone: "europe",
+            zone: "france",
+            served_zone: "france",
             generated_at: "2026-08-12T06:14:00Z",
             discarded_ingested: 0,
             discarded_kept: 0,
@@ -1054,11 +1017,11 @@ describe("attachLanguageWords (via attach)", () => {
 
     try {
       attach();
-      zoneWordLink.dispatchClick(); // world -> europe, French
+      zoneWordLink.dispatchClick(); // world -> france, French
       await new Promise((resolve) => setTimeout(resolve, 0));
       await new Promise((resolve) => setTimeout(resolve, 0));
 
-      expect(announcer.textContent).toBe(zoneAnnouncementText("world", "europe", "fr"));
+      expect(announcer.textContent).toBe(zoneAnnouncementText("world", "france", "fr"));
     } finally {
       globalThis.document = originalDocument;
       globalThis.fetch = originalFetch;

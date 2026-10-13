@@ -1,3 +1,7 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/:lang/europe/:period", "destination": "/:lang/world/day", "permanent": false },
+    { "source": "/:lang/:zone/week", "destination": "/:lang/:zone/day", "permanent": false }
+  ]
 }

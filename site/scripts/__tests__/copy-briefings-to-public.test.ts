@@ -5,14 +5,14 @@ import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { COMBINATIONS, copyBriefingsToPublic } from "../copy-briefings-to-public";
 
 describe("COMBINATIONS", () => {
-  it("covers all 3 Languages x 4 Zones x 2 Periods (Story 4.7 extends this from fr-only)", () => {
-    expect(COMBINATIONS).toHaveLength(24);
-    expect(COMBINATIONS).toContainEqual({ lang: "fr", zone: "spain", period: "week" });
+  it("covers all 3 Languages x 3 Zones x 1 Period", () => {
+    expect(COMBINATIONS).toHaveLength(9);
+    expect(COMBINATIONS).toContainEqual({ lang: "fr", zone: "spain", period: "day" });
     expect(COMBINATIONS).toContainEqual({ lang: "en", zone: "world", period: "day" });
     expect(COMBINATIONS).toContainEqual({ lang: "es", zone: "world", period: "day" });
-    expect(COMBINATIONS.filter((c) => c.zone === "world" && c.lang === "fr")).toHaveLength(2);
-    expect(COMBINATIONS.filter((c) => c.lang === "en")).toHaveLength(8);
-    expect(COMBINATIONS.filter((c) => c.lang === "es")).toHaveLength(8);
+    expect(COMBINATIONS.some((c) => c.zone === "europe" || c.period === "week")).toBe(false);
+    expect(COMBINATIONS.filter((c) => c.lang === "en")).toHaveLength(3);
+    expect(COMBINATIONS.filter((c) => c.lang === "es")).toHaveLength(3);
   });
 });
 

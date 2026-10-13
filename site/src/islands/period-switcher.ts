@@ -1,7 +1,7 @@
 // Story 4.2's client-side progressive enhancement, extended by Story 4.3
 // to also handle the Zone mad-libs word, by Story 4.5 for the Consensus
 // chip's expand/collapse, and by Story 4.7 for the Output Language
-// control: intercepts a click on any mad-libs word or language option,
+// control: intercepts a click on the Zone mad-libs word or a language option,
 // fetches the target Briefing's JSON directly (EXPERIENCE.md: "no network
 // round-trip beyond fetching that one file" -- not an HTML page
 // fetch-and-swap), re-renders the sentence + fallback notice + item list +
@@ -25,7 +25,6 @@
 import {
   browserStorage,
   LANGUAGE_CYCLE,
-  PERIOD_CYCLE,
   rememberCurrentRoute,
   writePreference,
   ZONE_CYCLE,
@@ -73,15 +72,10 @@ export type { LanguageSlug, PeriodSlug, ZoneSlug };
 // hand-kept mirror, not an import (Astro/Node-side lib code is not
 // bundled for the browser here).
 const PERIOD_SENTENCE_TEXT: Record<LanguageSlug, Record<PeriodSlug, string>> = {
-  fr: { day: "aujourd'hui", week: "cette semaine" },
-  en: { day: "today", week: "this week" },
-  es: { day: "hoy", week: "esta semana" },
+  fr: { day: "aujourd'hui" },
+  en: { day: "today" },
+  es: { day: "hoy" },
 };
-
-export function nextPeriod(current: PeriodSlug): PeriodSlug {
-  const index = PERIOD_CYCLE.indexOf(current);
-  return PERIOD_CYCLE[(index + 1) % PERIOD_CYCLE.length];
-}
 
 export function periodSentenceText(period: PeriodSlug, lang: LanguageSlug): string {
   return PERIOD_SENTENCE_TEXT[lang][period];
@@ -98,34 +92,26 @@ export function nextLanguage(current: LanguageSlug): LanguageSlug {
 const ZONE_SENTENCE_LABEL: Record<LanguageSlug, Partial<Record<string, string>>> = {
   fr: {
     world: "dans le Monde",
-    europe: "en Europe",
     france: "en France",
     spain: "en Espagne",
   },
   en: {
     world: "in the World",
-    europe: "in Europe",
     france: "in France",
     spain: "in Spain",
   },
   es: {
     world: "en el Mundo",
-    europe: "en Europa",
     france: "en Francia",
     spain: "en España",
   },
 };
 
+// Empty while no Continent is a Zone -- mirrors briefing.ts's ZONE_SERVED_LABEL.
 const ZONE_SERVED_LABEL: Record<LanguageSlug, Partial<Record<ZoneSlug, string>>> = {
-  fr: {
-    europe: "l'Europe",
-  },
-  en: {
-    europe: "Europe",
-  },
-  es: {
-    europe: "Europa",
-  },
+  fr: {},
+  en: {},
+  es: {},
 };
 
 interface RequestedLabel {
@@ -154,7 +140,7 @@ export function nextZone(current: ZoneSlug): ZoneSlug {
 }
 
 export function zoneSentenceLabel(zone: string, lang: LanguageSlug): string {
-  // Defensive fallback for a zone slug outside the known 15 (a malformed
+  // Defensive fallback for a zone slug outside the known Zones (a malformed
   // data-zone attribute, or malformed fetched JSON) -- returns the raw
   // slug rather than "undefined", mirroring briefing.ts's own
   // zoneSentenceLabel exactly.
@@ -165,36 +151,32 @@ export function isZoneFallback(briefing: Pick<BriefingLike, "zone" | "served_zon
   return briefing.served_zone !== briefing.zone;
 }
 
-// Story 4.8 (AC2): aria-live announcement text for each mad-libs axis --
-// role, current value, and (for the two cycle-by-one axes) what changing
-// it does. Match the AC's own example phrasing shape ("Zone, World,
-// button, cycles to Europe") for Zone/Period; Language deliberately does
-// NOT use "cycles to" wording, since it's a direct-jump control with no
-// "next value" concept (Story 4.7) -- forcing cycle language onto it
-// would misdescribe the actual interaction to a screen-reader user.
-// The AC's own example phrasing ("Zone, World, button, cycles to
-// Europe") uses BARE zone names, with no preposition -- ZONE_SENTENCE_LABEL
-// above bakes a preposition into every entry for its own mad-libs-sentence
-// use case ("in the World", "in Europe"), which would double up with this
-// announcement's own verb phrase ("cycles to in Europe") if reused
-// directly. A separate bare-name table avoids that, at the cost of a
-// third hand-mirrored lookup for the same 15 Zones.
+// Story 4.8 (AC2): aria-live announcement text for each clickable axis --
+// role, current value, and (for the cycle-by-one Zone axis) what changing
+// it does, in the AC's own phrasing shape ("Zone, World, button, cycles to
+// France"); Language deliberately does NOT use "cycles to" wording, since
+// it's a direct-jump control with no "next value" concept (Story 4.7) --
+// forcing cycle language onto it would misdescribe the actual interaction
+// to a screen-reader user.
+// The announcement uses BARE zone names, with no preposition --
+// ZONE_SENTENCE_LABEL above bakes a preposition into every entry for its
+// own mad-libs-sentence use case ("in the World", "in France"), which
+// would double up with this announcement's own verb phrase ("cycles to in
+// France") if reused directly. A separate bare-name table avoids that, at
+// the cost of a third hand-mirrored lookup for the same Zones.
 const ZONE_BARE_NAME: Record<LanguageSlug, Partial<Record<string, string>>> = {
   fr: {
     world: "le Monde",
-    europe: "l'Europe",
     france: "la France",
     spain: "l'Espagne",
   },
   en: {
     world: "the World",
-    europe: "Europe",
     france: "France",
     spain: "Spain",
   },
   es: {
     world: "el Mundo",
-    europe: "Europa",
     france: "Francia",
     spain: "España",
   },
@@ -217,21 +199,6 @@ export function zoneAnnouncementText(
 ): string {
   const { role, verb } = ZONE_ANNOUNCEMENT_ROLE[lang];
   return `${role}, ${zoneBareName(currentZone, lang)}, ${lang === "fr" ? "bouton" : lang === "es" ? "botón" : "button"}, ${verb} ${zoneBareName(nextZoneSlug, lang)}`;
-}
-
-const PERIOD_ANNOUNCEMENT_ROLE: Record<LanguageSlug, { role: string; verb: string }> = {
-  fr: { role: "Période", verb: "passe à" },
-  en: { role: "Period", verb: "cycles to" },
-  es: { role: "Período", verb: "cambia a" },
-};
-
-export function periodAnnouncementText(
-  currentPeriod: PeriodSlug,
-  nextPeriodSlug: PeriodSlug,
-  lang: LanguageSlug
-): string {
-  const { role, verb } = PERIOD_ANNOUNCEMENT_ROLE[lang];
-  return `${role}, ${periodSentenceText(currentPeriod, lang)}, ${lang === "fr" ? "bouton" : lang === "es" ? "botón" : "button"}, ${verb} ${periodSentenceText(nextPeriodSlug, lang)}`;
 }
 
 const LANGUAGE_ANNOUNCEMENT_ROLE: Record<LanguageSlug, string> = {
@@ -317,7 +284,7 @@ function escapeHtml(value: string): string {
 // Article's `source_country`, per Output Language.
 //
 // Deliberately NOT trimmed when the routable Zones narrowed to
-// World/Europe/France/Spain on 2026-08-19: this is keyed on where an Article
+// World/France/Spain: this is keyed on where an Article
 // came *from*, not where a reader can navigate to. A published cycle's
 // Articles span ~145 countries; an unlisted one renders as its raw slug in
 // the one place the product asks the reader to trust a count. Mirrors
@@ -422,8 +389,8 @@ const TIMESTAMP_WITH_DATE: Record<LanguageSlug, { lead: string; join: string }> 
 // the one that never shows "CEST" at all. Deriving it from the UTC offset
 // gives every language the same, expected abbreviation.
 //
-// The table covers Central/Western/Eastern Europe, which is what this site's
-// Zones (france, spain, europe, world) actually put readers in. Anywhere
+// The table covers Central/Western/Eastern Europe, which is where this site's
+// Zones (france, spain, world) mostly put readers. Anywhere
 // else falls through to Intl's own short name, which is correct for the
 // Americas ("EDT", "PST") and degrades to a readable "GMT+9" elsewhere --
 // better than inventing an abbreviation for a zone we have not reasoned about.
@@ -771,31 +738,31 @@ export function renderEndScreenHtml(
 const ATTACHED_MARKER = "data-mad-libs-attached";
 
 /**
- * Attaches the click-to-swap behavior to both mad-libs words (Zone and
- * Period) and every Output Language option currently in the document.
+ * Attaches the click-to-swap behavior to the Zone mad-libs word and every
+ * Output Language option currently in the document. The Period word is
+ * plain text, not a control: there is only one Period.
  * Called once on initial load and again after every successful swap -- the
- * mad-libs words are mutated in place rather than replaced, so re-calling
+ * Zone word is mutated in place rather than replaced, so re-calling
  * this is normally a no-op, but the ATTACHED_MARKER guard keeps it safe
  * (no duplicate listeners, no multiply-firing clicks -- the exact bug
  * Story 4.2's own adversarial review caught and fixed) even if a future
  * markup change ever does replace a node outright.
  */
 export function attach(): void {
-  attachWord("[data-zone-word]", "zone");
-  attachWord("[data-period-word]", "period");
+  attachZoneWord();
   attachLanguageWords();
   attachChips();
   localiseTimestamp();
 }
 
-function attachWord(selector: string, axis: "zone" | "period"): void {
-  const link = document.querySelector<HTMLAnchorElement>(selector);
+function attachZoneWord(): void {
+  const link = document.querySelector<HTMLAnchorElement>("[data-zone-word]");
   if (!link || link.hasAttribute(ATTACHED_MARKER)) return;
 
   link.setAttribute(ATTACHED_MARKER, "");
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    void handleClick(link, { axis: axis });
+    void handleClick(link, { axis: "zone" });
   });
 }
 
@@ -804,10 +771,10 @@ const LANGUAGE_ATTACHED_MARKER = "data-lang-attached";
 /**
  * Attaches the click-to-switch behavior to every Output Language option
  * currently in the document -- a fundamentally different shape from
- * attachWord's single-node cycle-by-one pattern (see this story's own Dev
+ * attachZoneWord's single-node cycle-by-one pattern (see this story's own Dev
  * Notes): 3 separate elements, each with its own explicit target language
  * rather than a "next value" to compute, and clicking the already-active
- * language must be a no-op (Zone/Period never have this case, since every
+ * language must be a no-op (the Zone word never has this case, since every
  * click always advances to a genuinely different value). Uses the same
  * per-element idempotency-guard pattern as attachChips, scoped to its own
  * marker.
@@ -850,10 +817,10 @@ const CHIP_ATTACHED_MARKER = "data-chip-attached";
  * (source list readable with zero client-side execution) for the reader
  * this function never runs for.
  *
- * Called once on initial load and again after every Zone/Period/Language
+ * Called once on initial load and again after every Zone/Language
  * swap, since `handleClick`'s wholesale `#item-list` replacement destroys
- * the previous chips' listeners entirely (unlike the mad-libs words,
- * which are mutated in place) -- every freshly-rendered chip starts
+ * the previous chips' listeners entirely (unlike the Zone word,
+ * which is mutated in place) -- every freshly-rendered chip starts
  * collapsed, matching that same base CSS rule.
  */
 export function attachChips(): void {
@@ -876,7 +843,7 @@ function toggleChip(chip: HTMLButtonElement): void {
 }
 
 interface ClickTarget {
-  axis: "zone" | "period" | "lang";
+  axis: "zone" | "lang";
   targetLang?: LanguageSlug;
 }
 
@@ -890,9 +857,8 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
   }
 
   const targetZone = target.axis === "zone" ? nextZone(zone) : zone;
-  const targetPeriod = target.axis === "period" ? nextPeriod(period) : period;
   const targetLang = target.axis === "lang" ? target.targetLang ?? lang : lang;
-  const jsonUrl = briefingJsonUrl(targetLang, targetZone, targetPeriod);
+  const jsonUrl = briefingJsonUrl(targetLang, targetZone, period);
 
   try {
     const response = await fetch(jsonUrl);
@@ -905,7 +871,7 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
     const sentenceBlock = document.getElementById("sentence-block");
     const discarded = document.getElementById("discarded");
     if (!sentence || !itemList || !timestamp || !sentenceBlock || !discarded) {
-      window.location.href = pageUrl(targetLang, targetZone, targetPeriod);
+      window.location.href = pageUrl(targetLang, targetZone, period);
       return;
     }
 
@@ -921,39 +887,36 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
     }
 
     const zoneLink = sentence.querySelector<HTMLAnchorElement>("[data-zone-word]");
-    const periodLink = sentence.querySelector<HTMLAnchorElement>("[data-period-word]");
-    for (const wordLink of [zoneLink, periodLink]) {
-      if (!wordLink) continue;
-      wordLink.dataset.zone = targetZone;
-      wordLink.dataset.period = targetPeriod;
-      wordLink.dataset.lang = targetLang;
-    }
     if (zoneLink) {
+      zoneLink.dataset.zone = targetZone;
+      zoneLink.dataset.period = period;
+      zoneLink.dataset.lang = targetLang;
       zoneLink.textContent = zoneSentenceLabel(targetZone, targetLang);
-      zoneLink.href = pageUrl(targetLang, nextZone(targetZone), targetPeriod);
+      zoneLink.href = pageUrl(targetLang, nextZone(targetZone), period);
     }
-    if (periodLink) {
-      periodLink.textContent = periodSentenceText(targetPeriod, targetLang);
-      periodLink.href = pageUrl(targetLang, targetZone, nextPeriod(targetPeriod));
+    // Plain text, not a control, but its wording follows a language swap.
+    const periodText = sentence.querySelector<HTMLElement>("[data-period-text]");
+    if (periodText) {
+      periodText.textContent = periodSentenceText(period, targetLang);
     }
 
     // Update every Output Language option's href/dataset/active-state to
-    // reflect the new Zone/Period (so switching Zone, say, doesn't leave
-    // a stale Period baked into the Language links) and, when this click
-    // WAS a language switch, which option is now active.
+    // reflect the new Zone (so switching Zone doesn't leave a stale Zone
+    // baked into the Language links) and, when this click WAS a language
+    // switch, which option is now active.
     const languageLinks = document.querySelectorAll<HTMLAnchorElement>("[data-lang-word]");
     for (const languageLink of languageLinks) {
       const optionLang = languageLink.dataset.targetLang as LanguageSlug | undefined;
       if (!optionLang) continue;
-      languageLink.href = pageUrl(optionLang, targetZone, targetPeriod);
+      languageLink.href = pageUrl(optionLang, targetZone, period);
       languageLink.dataset.lang = targetLang;
       // A subsequent language click reads its target Zone/Period from
       // THIS link's own dataset (see handleClick's own zone/period reads
-      // above) -- without updating these too, switching Zone or Period
-      // and then Language would silently revert to whatever Zone/Period
-      // was on the page at initial load.
+      // above) -- without updating these too, switching Zone and then
+      // Language would silently revert to whatever Zone was on the page
+      // at initial load.
       languageLink.dataset.zone = targetZone;
-      languageLink.dataset.period = targetPeriod;
+      languageLink.dataset.period = period;
       const isActive = optionLang === targetLang;
       languageLink.classList.toggle("active", isActive);
       if (isActive) languageLink.setAttribute("aria-current", "true");
@@ -977,20 +940,18 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
 
     const existingEndScreen = document.getElementById("end-screen");
     existingEndScreen?.remove();
-    const endScreenHtml = renderEndScreenHtml(briefing.clusters.length, targetPeriod, targetLang);
+    const endScreenHtml = renderEndScreenHtml(briefing.clusters.length, period, targetLang);
     if (endScreenHtml) discarded.insertAdjacentHTML("afterend", endScreenHtml);
 
     // AC2's aria-live announcement -- exactly one axis changes per click
     // (target.axis), so only that axis's announcement is written; the
-    // other two axes' values are unchanged and don't need announcing.
+    // other axes' values are unchanged and don't need announcing.
     // Language is announced in the PREVIOUS language (lang, not
     // targetLang) -- see languageAnnouncementText's own docstring.
     const announcer = document.getElementById("sr-announcer");
     if (announcer) {
       if (target.axis === "zone") {
         announcer.textContent = zoneAnnouncementText(zone, targetZone, targetLang);
-      } else if (target.axis === "period") {
-        announcer.textContent = periodAnnouncementText(period, targetPeriod, targetLang);
       } else if (target.axis === "lang") {
         announcer.textContent = languageAnnouncementText(targetLang, lang);
       }
@@ -1005,7 +966,7 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
     // by a real navigation.
     document.documentElement.lang = targetLang;
 
-    window.history.pushState({}, "", pageUrl(targetLang, targetZone, targetPeriod));
+    window.history.pushState({}, "", pageUrl(targetLang, targetZone, period));
 
     // Persisted here as well as on page load (see this module's own
     // bottom-of-file init): a swap only pushState's the URL, so the
@@ -1014,7 +975,7 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
     writePreference(browserStorage(), {
       lang: targetLang,
       zone: targetZone,
-      period: targetPeriod,
+      period,
     });
 
     attach();
@@ -1023,7 +984,7 @@ async function handleClick(link: HTMLAnchorElement, target: ClickTarget): Promis
     // half-updated page (AD-10's "degrade, don't break" applied to the
     // reader's own path) -- a network hiccup or unexpected 404 must not
     // silently fail into a dead click.
-    window.location.href = pageUrl(targetLang, targetZone, targetPeriod);
+    window.location.href = pageUrl(targetLang, targetZone, period);
   }
 }
 

@@ -17,19 +17,20 @@
 // copy instead of two: period-switcher.ts imports them from here, and
 // language-detect.ts validates against them too.
 //
-// Validating on READ matters as much as on write. A Zone that a later
-// config change drops -- as the 15 -> 4 Zone narrowing on 2026-08-19
-// already did once -- would otherwise strand a returning reader on a 404
-// forever, since the stale stored value would keep redirecting them there
-// on every open, with no way back short of clearing site data.
+// Validating on READ matters as much as on write. A Zone or Period that a
+// later config change drops -- as the 15 -> 4 Zone narrowing on 2026-08-19
+// and the Europe / week removal on 2026-10-13 both did -- would otherwise
+// strand a returning reader on a 404 forever, since the stale stored value
+// would keep redirecting them there on every open, with no way back short
+// of clearing site data.
 
-export const PERIOD_CYCLE = ["day", "week"] as const;
+export const PERIOD_CYCLE = ["day"] as const;
 export type PeriodSlug = (typeof PERIOD_CYCLE)[number];
 
 export const LANGUAGE_CYCLE = ["fr", "en", "es"] as const;
 export type LanguageSlug = (typeof LANGUAGE_CYCLE)[number];
 
-export const ZONE_CYCLE = ["world", "europe", "france", "spain"] as const;
+export const ZONE_CYCLE = ["world", "france", "spain"] as const;
 export type ZoneSlug = (typeof ZONE_CYCLE)[number];
 
 export interface RoutePreference {
@@ -62,7 +63,7 @@ export function routePath(preference: RoutePreference): string {
 
 /**
  * Reads a route triple back out of a pathname, or null when the path is
- * not one of the 24 published Briefing addresses.
+ * not one of the 9 published Briefing addresses.
  *
  * `/` deliberately returns null, not the fr/world/day it happens to
  * render: `/` is the neutral entry point, never an explicit choice the

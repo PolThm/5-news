@@ -129,7 +129,7 @@ describe("no-JS readability of the built page", () => {
     // script to its real code first, then tell the three apart by a
     // distinctive marker each one alone contains (navigator.language for
     // the language-detect redirect; navigator.serviceWorker for the SW
-    // registration; data-period-word for the Period-switcher island).
+    // registration; data-zone-word for the Zone-switcher island).
     // Marker, not tag position and not inline-ness -- neither is stable.
     const resolved = scripts.map((s) => {
       const srcMatch = s.tag.match(/src="([^"]+)"/);
@@ -145,7 +145,7 @@ describe("no-JS readability of the built page", () => {
     const swRegister = resolved.find((s) => s.code.includes("navigator.serviceWorker"));
     expect(swRegister).toBeDefined();
 
-    const periodSwitcher = resolved.find((s) => s.code.includes("data-period-word"));
+    const periodSwitcher = resolved.find((s) => s.code.includes("data-zone-word"));
     if (!periodSwitcher) throw new Error("could not identify the Period-switcher <script> tag");
     // All three must be genuinely distinct tags, not one tag matching
     // several markers because the bundler merged entry points.
@@ -153,10 +153,9 @@ describe("no-JS readability of the built page", () => {
     expect(periodSwitcher.code).toMatch(/briefings\/\$\{|\/briefings\//);
   });
 
-  it("renders the Period word as a real <a href> to the equivalent static route, not a placeholder", () => {
-    expect(html).toMatch(
-      /<a class="word" data-period-word data-lang="fr" data-zone="world" data-period="day" href="\/fr\/world\/week"[^>]*>aujourd&#39;hui<\/a>/
-    );
+  it("renders the Period word as plain text, not a control", () => {
+    expect(html).toMatch(/<span data-period-text[^>]*>aujourd&#39;hui<\/span>/);
+    expect(html).not.toContain("data-period-word");
   });
 
   it("includes every item's Summary text as plain HTML content", () => {
@@ -312,7 +311,7 @@ describe("no-JS readability of the built page", () => {
 
   it("renders the Zone word as a real <a href> to the equivalent static route, not a placeholder", () => {
     expect(html).toMatch(
-      /<a class="word" data-zone-word data-lang="fr" data-zone="world" data-period="day" href="\/fr\/europe\/day"[^>]*>dans le Monde<\/a>/
+      /<a class="word" data-zone-word data-lang="fr" data-zone="world" data-period="day" href="\/fr\/france\/day"[^>]*>dans le Monde<\/a>/
     );
   });
 
@@ -396,26 +395,13 @@ describe("no-JS readability of the built page", () => {
 // so every `it` that inspects `dist/` now performs its own build against
 // the fixtures as they stand at that exact moment, eliminating the race
 // rather than relying on describe-block ordering.
-describe("Zone axis: Continent and Country pages (Story 4.3)", () => {
-  const DIST_EUROPE_DAY = join(SITE_ROOT, "dist", "fr", "europe", "day.html");
+describe("Zone axis: Country pages (Story 4.3)", () => {
   const DIST_SPAIN_DAY = join(SITE_ROOT, "dist", "fr", "spain", "day.html");
 
   // Story 4.7 narrowed the routing enumeration to 24 pages (was 135), so a
   // fresh `astro build` now runs noticeably longer -- these tests'
   // explicit 30s timeout replaces vitest's 5s default, which the build
   // started intermittently exceeding once the page count grew.
-  it(
-    "builds a Continent page (Europe) with the correct sentence label and Zone-word target",
-    () => {
-      execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-      const html = readFileSync(DIST_EUROPE_DAY, "utf-8");
-      expect(html).toMatch(
-        /<a class="word" data-zone-word data-lang="fr" data-zone="europe" data-period="day" href="\/fr\/france\/day"[^>]*>en Europe<\/a>/
-      );
-    },
-    30000
-  );
-
   it(
     "builds a Country page (Spain) with the correct sentence label and Zone-word target, and no fallback notice (AC4)",
     () => {
@@ -441,63 +427,6 @@ describe("Zone axis: Continent and Country pages (Story 4.3)", () => {
   );
 });
 
-// AC3: the Continent-fallback notice, actually rendered in a real build by
-// temporarily substituting france/day.json's fixture-fallback content with
-// fallback-example.json (zone: france / served_zone: europe) -- no route's
-// normal data ever has zone != served_zone today (see Task 3's Dev Notes
-// decision not to entangle the general Zone fixtures with this one-off
-// case), so this test creates that condition itself, the same way the AC6
-// describe block below temporarily empties day.json's clusters. Same
-// crash-safety discipline as that block: .bak written before mutation,
-// restore in try/finally inside the `it` block itself, mutate/build/assert/
-// restore all within the one `it` (no shared `beforeAll`) so this block's
-// build can never race another block's fixture state.
-describe("Continent-fallback notice (AC3)", () => {
-  const FIXTURE_PATH = join(SITE_ROOT, "src", "fixtures", "day.json");
-  const BACKUP_PATH = `${FIXTURE_PATH}.ac3.bak`;
-  const FALLBACK_EXAMPLE_PATH = join(SITE_ROOT, "src", "fixtures", "fallback-example.json");
-  const originalFixture = readFileSync(FIXTURE_PATH, "utf-8");
-  writeFileSync(BACKUP_PATH, originalFixture);
-
-  afterAll(() => {
-    if (existsSync(BACKUP_PATH)) rmSync(BACKUP_PATH);
-  });
-
-  // This test runs astro build TWICE (once for the fallback fixture, once
-  // more in the finally block to restore dist/) -- doubly exposed to
-  // Story 4.7's 3x larger page count, hence a longer explicit timeout than
-  // the single-build tests above.
-  it(
-    "renders the exact French sentence with the secondary color styling for a fallback Briefing",
-    () => {
-      const fallbackContent = readFileSync(FALLBACK_EXAMPLE_PATH, "utf-8");
-      writeFileSync(FIXTURE_PATH, fallbackContent);
-
-      try {
-        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-
-        const html = readFileSync(join(SITE_ROOT, "dist", "fr", "france", "day.html"), "utf-8");
-        expect(html).toMatch(
-          /<div class="fallback-notice" id="fallback-notice"[^>]*>Affichage de l&#39;Europe — la France n&#39;a pas assez de couverture aujourd&#39;hui\.<\/div>/
-        );
-        const css = resolveCss(html);
-        expect(css).toMatch(/\.fallback-notice[^{]*\{[^}]*color:#8a3a2b/);
-        expect(css).toMatch(/\.fallback-notice[^{]*\{[^}]*background:#f6dcd4/);
-      } finally {
-        writeFileSync(FIXTURE_PATH, originalFixture);
-        // Rebuild once more with the restored fixture so dist/ never reflects
-        // this test's temporary mutation for whichever test runs next (the
-        // real fix for the cross-block contamination this story's own review
-        // caught -- restoring the source file isn't enough on its own if a
-        // later test only reads a stale dist/ build instead of building
-        // fresh itself, so both disciplines now apply together).
-        execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
-      }
-    },
-    60000
-  );
-});
-
 // Story 4.4: AC1 (variable item count, no placeholders) and AC3 (a single
 // dominating item's block is content-driven height, not capped). This
 // describe block only verifies -- BriefingPage.astro's item-list rendering
@@ -516,12 +445,11 @@ describe("variable item count (AC1, AC3)", () => {
   });
 
   it(
-    "renders exactly as many .item divs as clusters exist, for 3 and 4 clusters (existing fixtures)",
+    "renders exactly as many .item divs as clusters exist, for the day fixture's 4 clusters",
     () => {
       execFileSync("npx", ["astro", "build"], { cwd: SITE_ROOT, stdio: "pipe" });
 
       const dayHtml = readFileSync(DIST_INDEX, "utf-8"); // day.json: 4 clusters
-      const weekHtml = readFileSync(join(SITE_ROOT, "dist", "fr", "world", "week.html"), "utf-8"); // week.json: 3 clusters
 
       // Count only server-rendered .item divs -- the island's own inlined
       // <script> source carries the literal string `<div class="item">` as
@@ -533,7 +461,6 @@ describe("variable item count (AC1, AC3)", () => {
       const countItems = (html: string) =>
         (stripInlineScript(html).match(/<div class="item"/g) ?? []).length;
       expect(countItems(dayHtml)).toBe(4);
-      expect(countItems(weekHtml)).toBe(3);
     },
     30000
   );
@@ -696,11 +623,9 @@ describe("Output Language axis (Story 4.7)", () => {
   it("renders the English mad-libs lead-in, Zone/Period words, and timestamp prefix as static text", () => {
     expect(englishHtml).toContain("Here&#39;s what&#39;s happening");
     expect(englishHtml).toMatch(
-      /<a class="word" data-zone-word data-lang="en" data-zone="world" data-period="day" href="\/en\/europe\/day"[^>]*>in the World<\/a>/
+      /<a class="word" data-zone-word data-lang="en" data-zone="world" data-period="day" href="\/en\/france\/day"[^>]*>in the World<\/a>/
     );
-    expect(englishHtml).toMatch(
-      /<a class="word" data-period-word data-lang="en" data-zone="world" data-period="day" href="\/en\/world\/week"[^>]*>today<\/a>/
-    );
+    expect(englishHtml).toMatch(/<span data-period-text[^>]*>today<\/span>/);
     // The date is asserted alongside the prefix: rendering it is the point
     // (a time alone reads as "this morning" however stale the cycle is), and
     // day-first is what pins "en" to en-GB rather than letting it resolve to
@@ -711,11 +636,9 @@ describe("Output Language axis (Story 4.7)", () => {
   it("renders the Spanish mad-libs lead-in, Zone/Period words, and timestamp prefix as static text", () => {
     expect(spanishHtml).toContain("Esto es lo que está pasando");
     expect(spanishHtml).toMatch(
-      /<a class="word" data-zone-word data-lang="es" data-zone="world" data-period="day" href="\/es\/europe\/day"[^>]*>en el Mundo<\/a>/
+      /<a class="word" data-zone-word data-lang="es" data-zone="world" data-period="day" href="\/es\/france\/day"[^>]*>en el Mundo<\/a>/
     );
-    expect(spanishHtml).toMatch(
-      /<a class="word" data-period-word data-lang="es" data-zone="world" data-period="day" href="\/es\/world\/week"[^>]*>hoy<\/a>/
-    );
+    expect(spanishHtml).toMatch(/<span data-period-text[^>]*>hoy<\/span>/);
     expect(spanishHtml).toContain("Actualizado el 11 ago, a las 06:14 UTC");
   });
 

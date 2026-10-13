@@ -13,9 +13,23 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 
+import pytest
 from pipeline.config import PERIODS, ZONES
 from pipeline.domain import Period
-from pipeline.stages.briefing_matrix import build_period_pools, dedupe_union, rank_all_zones
+from pipeline.stages.briefing_matrix import (
+    build_period_pools,
+    dedupe_union,
+    linked_periods,
+    rank_all_zones,
+)
+
+
+@pytest.fixture
+def week_enabled(monkeypatch: pytest.MonkeyPatch) -> None:
+    """The week Period back on, so its dormant pooling stays exercised."""
+    import pipeline.stages.briefing_matrix as briefing_matrix
+
+    monkeypatch.setattr(briefing_matrix, "PERIODS", (Period.DAY, Period.WEEK))
 
 
 def _cluster(cluster_id: str, sources: int, countries: list[str]) -> dict:
@@ -91,6 +105,7 @@ def test_day_pool_is_unaffected_by_history_entries() -> None:
     assert pools[Period.DAY] == today
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_week_pool_links_recent_history_but_not_entries_past_its_window() -> None:
     today = [_cluster("today1", sources=2, countries=["france", "germany"])]
     history = [
@@ -115,7 +130,16 @@ def test_week_pool_links_recent_history_but_not_entries_past_its_window() -> Non
     assert "old" not in week_ids
 
 
-def test_both_periods_are_always_present() -> None:
+def test_no_published_period_links_history_so_none_needs_an_embedding() -> None:
+    assert linked_periods() == []
+
+
+@pytest.mark.usefixtures("week_enabled")
+def test_the_week_period_links_history_when_published() -> None:
+    assert linked_periods() == [Period.WEEK]
+
+
+def test_every_period_is_always_present() -> None:
     pools = build_period_pools(today_clusters=[], history_entries=[], embedding_by_id={})
 
     assert set(pools.keys()) == set(PERIODS)
@@ -275,6 +299,7 @@ def test_every_pooled_cluster_can_substantiate_its_own_consensus_score() -> None
             assert cluster["country_count"] == len(cluster["countries"])
 
 
+@pytest.mark.usefixtures("week_enabled")
 def test_the_day_pool_holds_the_days_own_events_not_the_whole_agenda() -> None:
     """A "today" Briefing must not lead on something from five days ago.
 

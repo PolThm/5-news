@@ -10,8 +10,19 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+from pipeline.domain import Zone, ZoneKind
 from pipeline.stages import read_jsonl
 from pipeline.stages.rank import run_rank
+
+
+@pytest.fixture
+def routable_europe(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Europe as a Zone again, so FR-16's fallback and the Continent rules stay
+    exercised although no Continent is routable today."""
+    import pipeline.config as config
+
+    monkeypatch.setattr(config, "ZONES", (*config.ZONES, Zone("europe", ZoneKind.CONTINENT)))
 
 
 def _cluster(cluster_id: str, sources: int, countries: int) -> dict:
@@ -288,6 +299,7 @@ def test_a_well_served_country_needs_no_fallback() -> None:
     assert len(result.ranked_clusters) == 2
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_a_thin_country_falls_back_to_its_continent() -> None:
     from pipeline.config import zone_by_slug
     from pipeline.stages.rank import rank_for_zone
@@ -310,6 +322,25 @@ def test_a_thin_country_falls_back_to_its_continent() -> None:
     assert len(result.ranked_clusters) == 3
 
 
+def test_a_thin_country_is_topped_up_rather_than_fall_back_to_an_unroutable_continent() -> None:
+    from pipeline.config import zone_by_slug
+    from pipeline.stages.rank import rank_for_zone
+
+    clusters = [
+        _zone_cluster("fr1", sources=3, countries=["france", "germany"]),
+        _zone_cluster("uk1", sources=2, countries=["united-kingdom", "germany"]),
+        _zone_cluster("de1", sources=2, countries=["germany", "japan"]),
+    ]
+    zone = zone_by_slug("france")
+
+    result = rank_for_zone(clusters, zone)
+
+    assert result.served_zone == zone
+    assert result.substituted is False
+    assert {c["filled_from"] for c in result.ranked_clusters if "filled_from" in c} == {"europe"}
+
+
+@pytest.mark.usefixtures("routable_europe")
 def test_a_continent_zone_never_falls_back_further() -> None:
     """A Continent has nowhere further to fall back to -- even a thin
     Continent must not attempt to substitute World, which the current
@@ -326,6 +357,7 @@ def test_a_continent_zone_never_falls_back_further() -> None:
     assert result.substituted is False
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_relevance_is_derived_from_the_countries_list_not_a_new_signal() -> None:
     from pipeline.config import zone_by_slug
     from pipeline.stages.rank import _is_relevant_to
@@ -344,6 +376,7 @@ def test_relevance_is_derived_from_the_countries_list_not_a_new_signal() -> None
     assert _is_relevant_to(cluster, spain) is False
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_a_cluster_relevant_to_zero_of_the_target_countries_is_excluded() -> None:
     from pipeline.config import zone_by_slug
     from pipeline.stages.rank import rank_for_zone
@@ -387,6 +420,7 @@ def test_world_zone_never_falls_back(monkeypatch) -> None:
     assert result.substituted is False
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_a_continent_with_too_few_qualifying_clusters_still_serves_itself() -> None:
     """A Continent has nowhere further to fall back to (World is not a
     fallback target per this story's scope) -- even a Continent below the
@@ -405,6 +439,7 @@ def test_a_continent_with_too_few_qualifying_clusters_still_serves_itself() -> N
     assert len(result.ranked_clusters) == 1
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_relevance_is_membership_not_exclusive_assignment() -> None:
     """A Cluster is relevant to every Zone it touches, independently -- being
     relevant to one Country does not assign it away from that Country's
@@ -426,6 +461,7 @@ def test_relevance_is_membership_not_exclusive_assignment() -> None:
     assert _is_relevant_to(cluster, zone_by_slug("spain")) is False
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_fallback_still_respects_the_five_item_cap() -> None:
     """The MAX_SELECTED_CLUSTERS cap applies at the zone that ends up
     actually serving the request, not the originally requested one --
@@ -459,6 +495,7 @@ def test_fallback_still_respects_the_five_item_cap() -> None:
     assert len(result.ranked_clusters) == 5
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_real_cluster_output_is_consumable_by_rank_for_zone(tmp_path) -> None:
     """Integration check: the countries field pipeline.stages.cluster.py
     actually writes to disk round-trips correctly through
@@ -590,6 +627,7 @@ def test_cap_only_removes_never_pads(monkeypatch=None) -> None:
     assert len(capped) == 2, "the excess is dropped, never backfilled with padding"
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_continent_briefing_applies_the_cap_with_backfill() -> None:
     """AC1, end to end: an over-represented country's excess Cluster is
     dropped and a lower-ranked Cluster from another country fills the freed
@@ -610,6 +648,7 @@ def test_continent_briefing_applies_the_cap_with_backfill() -> None:
     assert len(ids) == 3
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_cap_before_slice_backfills_from_beyond_the_top_five() -> None:
     """The real regression this ordering exists to prevent: with 5 ranked
     slots and MORE than 5 total candidates, capping AFTER the slice would
@@ -937,6 +976,7 @@ def test_mismatched_embedding_dimensions_degrade_to_no_merge() -> None:
 # --- Placement is about the Event, not about the newsroom --------------------
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_a_zone_is_decided_by_what_happened_not_by_who_reported_it() -> None:
     """The fix for the published week Briefings of 2026-08-19.
 
@@ -968,6 +1008,7 @@ def test_a_zone_is_decided_by_what_happened_not_by_who_reported_it() -> None:
     assert _is_relevant_to(from_abroad, zone_by_slug("europe")) is True
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_an_unplaceable_cluster_reaches_world_only() -> None:
     """~20% of GKG rows name no location. Absent evidence is not evidence of
     absence, but it is not evidence of presence either -- such a Cluster can
@@ -1685,6 +1726,7 @@ def test_articles_ingested_counts_every_relevant_events_own_members() -> None:
     assert ranking.articles_ingested == 3, "2 relevant events, 2+1 members -- not the unrelated one"
 
 
+@pytest.mark.usefixtures("routable_europe")
 def test_a_fallen_back_zone_reports_the_continents_own_pool() -> None:
     """After FR-16's fallback, `articles_ingested` must reflect what was
     actually retrieved for the Zone that is actually SERVED -- the recursive

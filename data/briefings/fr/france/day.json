@@ -1,435 +1,239 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-lfi-ce70711afaa3",
-      "coherence": 0.6150096672564238,
+      "cluster_id": "subject-france-ad1fc6b81fa9",
+      "coherence": 0.49337959226205585,
       "consequence": 3,
       "countries": [
-        "france"
+        "india",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states",
+        "ve"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-12",
-      "headline": "La justice annule les élections municipales de Saint‑Fons remportées par LFI",
-      "independent_source_count": 4,
+      "country_count": 6,
+      "editorial_day": "2026-10-13",
+      "headline": "Des centaines de supermarchés français touchés par une cyberattaque sur la réfrigération",
+      "independent_source_count": 7,
       "members": [
         {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/12/municipales-a-saint-fons-pres-de-lyon-la-justice-annule-les-elections-remportees-par-lfi-en-raison-d-irregularites-sur-une-liste-concurrente_6792629_823448.html"
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/tecnologia/centenares-supermercados-francia-victimas-ciberataque-disparo-temperatura-congeladores_1_13581861.html"
         },
         {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/la-justice-annule-les-elections-municipales-a-saint-fons-remportees-par-lfi-20261012"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/municipales/les-elections-municipales-a-saint-fons-remportees-par-la-france-insoumise-annulees-par-la-justice-en-raison-d-irregularites-sur-une-liste-concurrente_8233828.html#xtor=RSS-3-[lestitres]"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/12/hundreds-of-french-supermarkets-hit-by-cyberattack-on-refrigeration-systems"
         },
         {
-          "language": "fr",
-          "source": "lyoncapitale.fr",
-          "source_country": "france",
-          "url": "https://www.lyoncapitale.fr/actualite/les-elections-municipales-a-saint-fons-remportees-par-lfi-annulees-par-la-justice"
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/new-updates/france-supermarket-cyberattack-how-hackers-turned-fridges-into-furnaces-at-122-degrees-and-what-it-reveals-about-connected-devices/articleshow/134906714.cms"
+        },
+        {
+          "language": "en",
+          "source": "thenextweb.com",
+          "source_country": "united-states",
+          "url": "https://thenextweb.com/news/french-supermarket-refrigeration-cyberattack-intermarche"
+        },
+        {
+          "language": "en",
+          "source": "bresciaoggi.it",
+          "source_country": "it",
+          "url": "https://www.bresciaoggi.it/news/mondo/francia-attacco-cyber-mette-fuori-uso-refrigerazione-supermercati-1.13151205"
+        },
+        {
+          "language": "es",
+          "source": "eluniversal.com",
+          "source_country": "ve",
+          "url": "https://www.eluniversal.com/internacional/243105/un-ciberataque-a-supermercados-en-francia-dano-productos-frescos-y-congelados"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/politique/la-justice-annule-les-elections-municipales-a-saint-fons-remportees-par-lfi-20261012",
+      "origin_country": "india",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/12/hundreds-of-french-supermarkets-hit-by-cyberattack-on-refrigeration-systems",
       "rank": 1,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr"
+        "bbc.co.uk",
+        "eldiario.es",
+        "euronews.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.615,
+          "coherence": 0.4934,
+          "corroboration": 0.75,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.68
+        },
+        "total": 0.7128,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "lfi",
+        "marseille",
+        "paris",
+        "reunion"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Une cyberattaque a perturbé les systèmes de réfrigération de centaines de supermarchés en France, provoquant des températures anormalement élevées dans des chambres froides et congélateurs et entraînant la détérioration de produits frais et surgelés. Les intrusions ont affecté de nombreux magasins simultanément en exploitant des équipements connectés, mettant hors service ou faisant monter la température des installations de froid."
+    },
+    {
+      "cluster_id": "subject-france-d62ae3960b97",
+      "coherence": 0.5620032441286191,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-13",
+      "headline": "La marine française arraisonne un pétrolier soupçonné lié à la flotte fantôme russe",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/video/2026/10/13/la-france-arraisonne-un-petrolier-au-sud-de-la-reunion-soupconne-d-appartenir-a-la-flotte-fantome-russe_6793076_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/13/la-marine-francaise-arraisonne-un-petrolier-au-sud-de-la-reunion-soupconne-d-appartenir-a-la-flotte-fantome-russe_6792875_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/flotte-fantome-russe-un-petrolier-battant-pavillon-beninois-arraisonne-et-deroute-vers-la-reunion-20261013_LPGNYYG3QZBRTHD3JKPALWTZU4/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/russie/la-france-intercepte-un-petrolier-soupconne-d-appartenir-a-la-flotte-fantome-russe-au-large-de-la-reunion_8235562.html#xtor=RSS-3-%5Bgeneral%5D"
+        }
+      ],
+      "mentioned_countries": [
+        "rs",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/13/la-marine-francaise-arraisonne-un-petrolier-au-sud-de-la-reunion-soupconne-d-appartenir-a-la-flotte-fantome-russe_6792875_3210.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.562,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
+          "prominence": 0.4286,
+          "source_reliability": 0.6
         },
-        "total": 0.6765,
+        "total": 0.6691,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "lfi",
+      "subject_label": "france",
       "subject_names": [
-        "lfi",
-        "lyon",
-        "saint-fons"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Les tribunaux ont annulé les élections municipales à Saint‑Fons, près de Lyon, alors remportées par La France insoumise (LFI), en raison d’irrégularités relevées sur une liste concurrente, entraînant la nullité du scrutin selon les décisions judiciaires."
-    },
-    {
-      "cluster_id": "subject-aubagne-9200b79e66bf",
-      "coherence": 0.4794667836195996,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-12",
-      "headline": "Un principal de collège et une enseignante blessés par des tirs à Aubagne, un adolescent interpellé",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/en-direct-principal-d-un-college-et-enseignante-blesses-a-l-arme-a-feu-a-aubagne-macron-salue-la-reaction-exemplaire-de-l-equipe-educative-qui-a-permis-d-eviter-le-pire-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/marseille/principal-d-un-college-et-une-enseignante-blesses-a-l-arme-a-feu-a-aubagne-edouard-geffray-denonce-un-acte-inadmissible-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/marseille/aubagne-le-proviseur-d-un-college-blesse-a-l-arme-a-feu-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/education/blocage-des-lycees-a-aubagne-un-proviseur-et-une-enseignante-blesses-par-balle-20261012_OSTP7ANEEVCN3J2DSG6NBTKSXI/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261012-france-plusieurs-personnes-bless%C3%A9es-par-balle-dans-un-lyc%C3%A9e-%C3%A0-aubagne"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261012-un-principal-de-coll%C3%A8ge-bless%C3%A9-par-un-tir-de-fusil-de-chasse-%C3%A0-aubagne-un-jeune-interpell%C3%A9"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/faits-divers/20261012.OBS119141/a-aubagne-un-principal-de-college-et-une-enseignante-blesses-par-un-tir-de-fusil-de-chasse-un-jeune-interpelle-ce-que-l-on-sait.html"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/le-principal-d-un-college-et-une-professeur-touches-par-un-tir-d-arme-a-feu-1342679"
-        },
-        {
-          "language": "fr",
-          "source": "nicematin.com",
-          "source_country": "france",
-          "url": "https://www.nicematin.com/faits-divers/attaque-dans-un-college-a-aubagne-l-arme-cachee-dans-un-etui-a-guitare-plusieurs-coups-tires-l-auteur-intercepte-les-circonstances-des-tirs-se-precisent-10740031"
-        },
-        {
-          "language": "fr",
-          "source": "estrepublicain.fr",
-          "source_country": "france",
-          "url": "https://www.estrepublicain.fr/faits-divers-justice/2026/10/12/aubagne-le-principal-et-une-professeure-de-college-blesses-par-un-tir-de-fusil-un-eleve-a-ete-arrete"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/france/20261012-un-principal-de-coll%C3%A8ge-bless%C3%A9-par-un-tir-de-fusil-de-chasse-%C3%A0-aubagne-un-jeune-interpell%C3%A9",
-      "rank": 2,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "france24.com",
-        "lefigaro.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "radiofrance.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4795,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7778
-        },
-        "total": 0.6278,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "aubagne",
-      "subject_names": [
-        "aubagne",
         "france",
         "francia",
         "french",
-        "marseille"
+        "lfi",
+        "marseille",
+        "paris",
+        "reunion"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "À Aubagne (Bouches‑du‑Rhône), des coups de feu tirés avec un fusil de chasse ont blessé le principal d’un collège et une enseignante ; plusieurs sources indiquent qu’un jeune a été arrêté sur place et que l’équipe éducative a réagi pour maîtriser la situation."
+      "subject_newsroom_count": 26,
+      "summary": "Au large de l’île de La Réunion, la marine française a arraisonné et dérouté vers la Réunion un pétrolier battant pavillon béninois, soupçonné d’appartenir à la « flotte fantôme » russe et d’être impliqué dans du trafic de carburant; les autorités françaises ont intercepté le navire et le redirigent pour enquête."
     },
     {
-      "cluster_id": "subject-paris-e8737687c62c",
-      "coherence": 0.5289274783272453,
-      "consequence": 1,
+      "cluster_id": "subject-raphael-glucksmann-bb2230bfe3e4",
+      "coherence": 0.44581639377664983,
+      "consequence": 2,
       "countries": [
         "france",
-        "united-states"
+        "spain"
       ],
       "country_count": 2,
       "editorial_day": "2026-10-12",
-      "headline": "Un incendie ravage le marché historique des Enfants‑Rouges à Paris",
-      "independent_source_count": 8,
+      "headline": "Raphaël Glucksmann remporte la primaire de la gauche et devient candidat à la présidentielle",
+      "independent_source_count": 6,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/12/le-marche-des-enfants-rouges-a-paris-ravage-par-les-flammes-annonce-le-maire-d-arrondissement_6792525_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/faits-divers/c-etait-le-poumon-du-quartier-a-paris-riverains-et-commercants-bouleverses-par-l-incendie-du-marche-des-enfants-rouges-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/faits-divers/paris-le-marche-des-enfants-rouges-ravage-par-un-incendie-les-pompiers-mobilises-sur-place-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/faits-divers/structure-metallique-fondue-etals-detruits-les-images-de-l-interieur-du-marche-des-enfants-rouges-ravage-par-les-flammes-a-paris-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/paris-le-marche-des-enfants-rouges-ravage-par-un-incendie-20261012_C5Z3L3CCWFASXCS2QCL7FBKQKE/"
-        },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/societe/paris-l-historique-marche-des-enfants-rouges-ravage-par-les-flammes-20261012"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/incendie/le-marche-des-enfants-rouges-a-paris-ravage-par-les-flammes-annonce-la-mairie_8233399.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261012-march%C3%A9-des-enfants-rouges-paris-ravag%C3%A9-par-incendie"
+          "url": "https://www.la-croix.com/politique/vainqueur-de-la-primaire-raphael-glucksmann-reinstalle-l-hypothese-dune-gauche-de-gouvernement-20261012"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/faits-divers/20261012.OBS119142/tous-les-etalages-ont-brule-ce-que-l-on-sait-de-l-incendie-qui-a-ravage-le-marche-historique-des-enfants-rouges-a-paris.html"
-        },
-        {
-          "language": "en",
-          "source": "abc7chicago.com",
-          "source_country": "united-states",
-          "url": "https://abc7chicago.com/story/violent-fire-destroys-enfants-rouges-food-market-paris-officials-say/19931817/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/10/12/le-marche-des-enfants-rouges-a-paris-ravage-par-les-flammes-annonce-le-maire-d-arrondissement_6792525_3224.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5289,
-          "corroboration": 0.5,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7838
-        },
-        "total": 0.598,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "paris",
-      "subject_names": [
-        "enfants-rouges",
-        "paris"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "Un violent incendie a largement détruit le marché des Enfants‑Rouges à Paris : la structure métallique a fondu, tous les étals ont été brûlés et les pompiers sont intervenus sur place. Commerçants et riverains, qui décrivent le lieu comme le « poumon du quartier », se disent bouleversés par la perte de ce marché historique."
-    },
-    {
-      "cluster_id": "subject-citroen-50c464744cec",
-      "coherence": 0.40852006077159775,
-      "consequence": 1,
-      "countries": [
-        "au",
-        "france",
-        "it",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-12",
-      "headline": "Citroën relance la 2CV sous la forme d’un concept électrique",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/avec-sa-2-cv-electrique-citroen-veut-prendre-sa-part-dans-le-grand-retour-des-icones-automobiles-20261011_CIDVAJZH3VBTNPO4Z2C2IA3TZU/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/economie/mondial-de-l-auto-apres-le-phenomene-r5-la-2cv-de-citroen-renait-elle-aussi-en-100-electrique-20261011"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/12/citroen-revives-its-classic-2cv-with-a-new-electric-concept"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://www.euronews.com/video/2026/10/12/citroen-revives-its-classic-2cv-with-a-new-electric-concept"
-        },
-        {
-          "language": "de",
-          "source": "derstandard.at",
-          "source_country": "au",
-          "url": "https://www.derstandard.at/consent/tcf/story/3000000343674/comeback-der-ente-citroen-bringt-den-2cv-als-e-auto-zurueck"
-        },
-        {
-          "language": "de",
-          "source": "gmx.at",
-          "source_country": "au",
-          "url": "https://www.gmx.at/magazine/auto/citroen-bereitet-comeback-ente-42824220"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "au",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/economie/mondial-de-l-auto-apres-le-phenomene-r5-la-2cv-de-citroen-renait-elle-aussi-en-100-electrique-20261011",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4085,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6667
-        },
-        "total": 0.5445,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "citroen",
-      "subject_names": [
-        "citroen"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Citroën présente une réinterprétation moderne de sa mythique 2CV sous la forme d’un concept 100 % électrique, dévoilé au Mondial de l’auto, marquant la volonté de la marque de ressusciter cette icône automobile en version électrique."
-    },
-    {
-      "cluster_id": "subject-renoir-f6b0885a468d",
-      "coherence": 0.454933606355582,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-12",
-      "headline": "Deux tableaux de Renoir volés à Cagnes-sur-Mer retrouvés et examinés par des scientifiques",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/arts-expos/les-deux-tableaux-de-renoir-voles-puis-retrouves-vont-etre-examines-par-des-scientifiques-avant-leur-retour-au-musee_8233543.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.nouvelobs.com/politique/20261011.OBS119125/primaire-de-la-gauche-raphael-glucksmann-elu-candidat-a-la-presidentielle-des-le-premier-tour.html"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/faits-divers/20261011.OBS119106/vol-de-tableaux-de-renoir-a-cagnes-sur-mer-le-principal-suspect-mis-en-examen.html"
+          "url": "https://www.nouvelobs.com/politique/20261011.OBS119108/primaire-sociale-democrate-raphael-glucksmann-espere-l-emporter-au-premier-tour-les-resultats-connus-ce-soir.html"
         },
         {
           "language": "fr",
-          "source": "radiofrance.fr",
+          "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/trace-adn-filature-faux-mur-comment-les-enqueteurs-ont-retrouve-les-deux-tableaux-de-renoir-voles-a-cagnes-sur-mer-8923689"
+          "url": "https://www.lexpress.fr/politique/ps/primaire-de-la-gauche-raphael-glucksmann-lemporte-des-le-premier-tour-avec-66-des-voix-77XWJDWI7BE4RCP5VNH4BH33RI/"
         },
         {
-          "language": "fr",
-          "source": "maville.com",
-          "source_country": "france",
-          "url": "https://toulon.maville.com/sortir/infos_-les-tableaux-de-renoir-qui-avaient-ete-voles-a-cagnes-sur-mer-puis-retrouves-vont-etre-examines_fil-7524455_actu.Htm"
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/eurodiputado-glucksmann-gana-claridad-primera-vuelta-primarias-20261012104224-nt.html"
         },
         {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/culture/vols-de-tableaux-de-renoir-l-une-des-deux-toiles-retrouvees-a-ete-legerement-dechiree-derriere-un-mur-de-parpaings-indetectable-31034820.php"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261011/11656515/eurodiputado-raphael-glucksmann-gana-primarias-socialistas-franceses.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/raphael-glucksmann-gana-primarias-partido-socialista-frances-sera-candidato-presidenciales-2027_1_13579013.html"
         }
       ],
       "mentioned_countries": [
@@ -437,40 +241,204 @@
       ],
       "origin_country": "france",
       "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/faits-divers/20261011.OBS119106/vol-de-tableaux-de-renoir-a-cagnes-sur-mer-le-principal-suspect-mis-en-examen.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
+      "outbound_url": "https://www.nouvelobs.com/politique/20261011.OBS119108/primaire-sociale-democrate-raphael-glucksmann-espere-l-emporter-au-premier-tour-les-resultats-connus-ce-soir.html",
+      "rank": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "nouvelobs.com",
-        "radiofrance.fr"
+        "abc.es",
+        "eldiario.es",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lexpress.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4549,
-          "corroboration": 0.3333,
+          "coherence": 0.4458,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.7241
+        },
+        "total": 0.6121,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "raphael glucksmann",
+      "subject_names": [
+        "glucksmann",
+        "raphael glucksmann"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Raphaël Glucksmann a remporté la primaire social-démocrate / de la gauche dès le premier tour, obtenant une nette majorité des voix et s’imposant comme le candidat du Parti socialiste pour l’élection présidentielle de 2027."
+    },
+    {
+      "cluster_id": "subject-france-93a45cd29f12",
+      "coherence": 0.4320534483302785,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-13",
+      "headline": "Un élève blesse deux enseignants avec une carabine dans un collège à Aubagne",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261012-france-%C3%A0-aubagne-un-coll%C3%A9gien-tire-au-fusil-de-chasse-sur-le-principal-et-une-professeure"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/tiroteo-un-colegio-francia-un-alumno-14-anos-hiere-con-una-escopeta-caza-dos-profesores_7047861_0.html"
+        },
+        {
+          "language": "es",
+          "source": "pulsoslp.com.mx",
+          "source_country": "mx",
+          "url": "https://pulsoslp.com.mx/mundo/adolescente-dispara-en-una-escuela-en-francia/2095101"
+        },
+        {
+          "language": "es",
+          "source": "rtve.es",
+          "source_country": "spain",
+          "url": "https://www.rtve.es/noticias/20261013/alumno-hiere-escopeta-profesores-sur-francia/17263685.shtml"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/france/20261012-france-%C3%A0-aubagne-un-coll%C3%A9gien-tire-au-fusil-de-chasse-sur-le-principal-et-une-professeure",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "rfi.fr",
+        "rtve.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4321,
+          "corroboration": 0.6,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.5143,
+        "total": 0.6079,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "renoir",
+      "subject_label": "france",
       "subject_names": [
-        "renoir"
+        "aubagne",
+        "france",
+        "francia",
+        "french",
+        "lfi",
+        "marseille",
+        "paris",
+        "reunion"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Deux tableaux de Renoir, dérobés à Cagnes-sur-Mer, ont été retrouvés après une enquête ayant mobilisé filatures, analyses ADN et découverte derrière un mur de parpaings; l’un des deux présente une légère déchirure au verso et les œuvres vont être examinées par des spécialistes pendant que le principal suspect a été mis en examen."
+      "subject_newsroom_count": 26,
+      "summary": "Un collégien de 14 ans a tiré avec une carabine de chasse dans un collège à Aubagne, blessant le principal et une professeure. Les articles indiquent que les deux personnels ont été atteints lors de l’incident et que le jeune auteur est identifié comme élève de l’établissement."
+    },
+    {
+      "cluster_id": "subject-france-d8274d16de79",
+      "coherence": 0.4591713292596178,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-13",
+      "headline": "Les émissions de gaz à effet de serre en France diminuent en 2026 mais le recul reste insuffisant",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/planete/article/2026/10/13/les-emissions-de-gaz-a-effet-de-serre-en-france-diminuent-du-fait-de-l-envolee-des-prix-des-carburants_6793062_3244.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/environnement/climat/climat-la-reduction-des-emissions-se-poursuit-en-france-mais-a-un-rythme-nettement-insuffisant-20261013_4REMYKKCNZH4XGEQI2YNE7NG6E/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/planete/france-les-emissions-de-gaz-a-effet-de-serre-en-baisse-en-2026-mais-pas-assez-20261013"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261013-france-%C3%A9missions-gaz-effet-de-serre-baisse-2026-mais-rythme-reste-trop-lent-carburants"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/planete/article/2026/10/13/les-emissions-de-gaz-a-effet-de-serre-en-france-diminuent-du-fait-de-l-envolee-des-prix-des-carburants_6793062_3244.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4592,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6001,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "french",
+        "lfi",
+        "marseille",
+        "paris",
+        "reunion"
+      ],
+      "subject_newsroom_count": 26,
+      "summary": "Les quatre articles indiquent que les émissions de gaz à effet de serre en France ont diminué en 2026, en partie attribué à la forte hausse des prix des carburants, mais tous soulignent que la baisse reste trop lente par rapport aux objectifs climatiques et aux besoins pour limiter le réchauffement."
     }
   ],
-  "discarded_ingested": 53,
+  "discarded_ingested": 48,
   "discarded_kept": 5,
-  "generated_at": "2026-10-12T13:23:34.269407+00:00",
+  "generated_at": "2026-10-13T12:52:19.766278+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

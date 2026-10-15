@@ -1,34 +1,103 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-aubagne-6fcc18baac13",
-      "coherence": 0.4495572433565066,
+      "cluster_id": "subject-sebastien-lecornu-8ad721d7d5e1",
+      "coherence": 0.4460370996463575,
       "countries": [
+        "au",
         "france",
-        "sz"
+        "germany"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-15",
+      "headline": "Blocus des lycées : Lecornu dénonce une dérive en « mouvement de violences urbaines »",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/politique/mobilisation-des-lyceens-sebastien-lecornu-denonce-la-transformation-du-mouvement-en-mouvement-de-violences-urbaines-20261015"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/blocus-des-lycees-lecornu-denonce-une-derive-en-mouvement-de-violences-urbaines-20261015"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/direct-mouvement-lyceen-les-organisations-lyceennes-doivent-etre-recues-pour-la-troisieme-fois-par-le-ministre-de-l-education_8238049.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-10/schuelerproteste-frankreich-sebastien-lecornu-gewalt"
+        },
+        {
+          "language": "de",
+          "source": "vol.at",
+          "source_country": "au",
+          "url": "https://www.vol.at/frankreichs-premier-kritisiert-gewalt-bei-schuelerprotesten/10550063"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "au",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/societe/blocus-des-lycees-lecornu-denonce-une-derive-en-mouvement-de-violences-urbaines-20261015",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.446,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.5,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.592,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "sebastien lecornu",
+      "subject_names": [
+        "lecornu",
+        "sebastien lecornu"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Blocus des lycées : Lecornu dénonce une dérive en « mouvement de violences urbaines »"
+    },
+    {
+      "cluster_id": "subject-aubagne-46659ba5bdb3",
+      "coherence": 0.3894478374982323,
+      "countries": [
+        "be",
+        "france"
       ],
       "country_count": 2,
       "editorial_day": "2026-10-15",
       "headline": "Fusillade d'Aubagne : détention requise contre le collégien, \"influencé\" par les tueries de masse",
-      "independent_source_count": 10,
+      "independent_source_count": 6,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/15/aubagne-un-adolescent-de-13-ans-soupconne-d-avoir-ete-en-lien-avec-le-tireur-a-ete-place-en-garde-a-vue_6794430_3224.html"
-        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
           "url": "https://www.liberation.fr/societe/police-justice/fusillade-dans-un-college-daubagne-un-autre-mineur-place-en-garde-a-vue-20261015_V62GLCCLKVFLNNUU7XQSFHQEIE/"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/fusillade-daubagne-detention-provisoire-pour-le-collegien-influence-par-les-tueries-de-masse-20261015_JC45I4Q22VE25MFVOPW32XQLYQ/"
         },
         {
           "language": "fr",
@@ -38,582 +107,283 @@
         },
         {
           "language": "fr",
-          "source": "notretemps.com",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.notretemps.com/depeches/fusillade-d-aubagne-un-autre-mineur-en-garde-a-vue-140237"
+          "url": "https://www.france24.com/fr/france/20261015-fusillade-d-aubagne-d%C3%A9tention-provisoire-pour-le-tireur-un-autre-mineur-en-garde-%C3%A0-vue"
         },
         {
           "language": "fr",
-          "source": "lematin.ch",
-          "source_country": "sz",
-          "url": "https://www.lematin.ch/story/france-un-autre-mineur-en-garde-a-vue-apres-la-fusillade-d-aubagne-103650189"
+          "source": "lavenir.net",
+          "source_country": "be",
+          "url": "https://www.lavenir.net/actu/monde/2026/10/14/fusillade-dans-un-lycee-a-aubagne-ladolescent-de-14-ans-ecroue-4SFFN75RONFYVBNNT3PBXL6QDI/"
         },
         {
           "language": "fr",
-          "source": "20minutes.fr",
+          "source": "lanouvellerepublique.fr",
           "source_country": "france",
-          "url": "https://www.20minutes.fr/societe/4254496-20261015-fusillade-college-aubagne-autre-ado-place-garde-vue"
+          "url": "https://www.lanouvellerepublique.fr/a-la-une/principal-de-college-et-enseignante-blesses-a-aubagne-l-eleve-de-14-ans-place-en-detention-provisoire-1792013460"
         },
         {
           "language": "fr",
-          "source": "lindependant.fr",
-          "source_country": "france",
-          "url": "https://www.lindependant.fr/2026/10/15/fusillade-dans-un-college-daubagne-il-est-soupconne-davoir-ete-en-lien-avec-le-tireur-via-tiktok-un-adolescent-de-13-ans-place-en-garde-a-vue-13603188.php"
-        },
-        {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/faits-divers/fusillade-a-aubagne-un-autre-mineur-place-en-garde-a-vue-il-etait-en-lien-avec-le-collegien-tireur-via-tiktok-31081622.php"
-        },
-        {
-          "language": "fr",
-          "source": "franceguyane.fr",
-          "source_country": "france",
-          "url": "https://www.franceguyane.fr/actualite/france/fusillade-daubagne-detention-requise-contre-le-collegien-influence-par-les-tueries-de-masse-1096222.php"
-        },
-        {
-          "language": "fr",
-          "source": "lepetitjournal.com",
-          "source_country": "france",
-          "url": "https://lepetitjournal.com/expat-politique/actualites/fusillade-daubagne-detention-requise-contre-le-collegien-influence-par-les-tueries-de-masse-456293"
+          "source": "dhnet.be",
+          "source_country": "be",
+          "url": "https://www.dhnet.be/actu/monde/2026/10/14/fusillade-daubagne-detention-requise-contre-le-collegien-influence-par-les-tueries-de-masse-EY5O7M4M7NHIDIVNT6BHJ7GDCM/"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "lepetitjournal.com",
-      "outbound_url": "https://lepetitjournal.com/expat-politique/actualites/fusillade-daubagne-detention-requise-contre-le-collegien-influence-par-les-tueries-de-masse-456293",
-      "rank": 1,
+      "origin_country": "be",
+      "outbound_source": "dhnet.be",
+      "outbound_url": "https://www.dhnet.be/actu/monde/2026/10/14/fusillade-daubagne-detention-requise-contre-le-collegien-influence-par-les-tueries-de-masse-EY5O7M4M7NHIDIVNT6BHJ7GDCM/",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "france24.com",
         "la-croix.com",
-        "lemonde.fr",
         "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4496,
+          "coherence": 0.3894,
           "corroboration": 0.5,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.5,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7647
+          "prominence": 0.6,
+          "source_reliability": 0.6522
         },
-        "total": 0.5791,
+        "total": 0.5628,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "aubagne",
       "subject_names": [
         "aubagne",
-        "community",
-        "education",
         "fusillade",
         "true crime"
       ],
-      "subject_newsroom_count": 5,
+      "subject_newsroom_count": 7,
       "summary": "Fusillade d'Aubagne : détention requise contre le collégien, \"influencé\" par les tueries de masse"
     },
     {
-      "cluster_id": "subject-louvre-b6f2b8d932ab",
-      "coherence": null,
+      "cluster_id": "subject-saint-denis-90e5f8f3cba4",
+      "coherence": 0.509903943393893,
       "countries": [
-        "brazil",
-        "it",
-        "spain"
+        "france"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-10-14",
-      "headline": "Louvre could be forced to close without major overhaul, director warns",
-      "independent_source_count": 3,
+      "country_count": 1,
+      "editorial_day": "2026-10-15",
+      "headline": "A Saint-Denis, des membres du personnel du lycée Paul-Eluard dénoncent une intervention \"violente\" de la police dans l'établissement",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/louvre-advierte-que-podria-tener-que-cerrar-si-no-acomete-una-renovacion-integral_7048870_0.html"
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/actualite-france/en-direct-colere-des-lyceens-nouvelle-reunion-ce-jeudi-entre-les-organisations-lyceennes-et-les-ministres-de-l-education-nationale-et-de-l-enseignement-superieur-20261015"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/14/louvre-could-be-forced-to-close-without-major-overhaul-director-warns"
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/mobilisation-lyceenne-des-professeurs-denoncent-linterpellation-dun-eleve-au-sein-du-lycee-paul-eluard-a-saint-denis-20261015_IOZ4CWWLUBFE3GOZLMHXFIPJOE/"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://oglobo.globo.com/cultura/noticia/2026/10/14/louvre-um-dos-museus-mais-famosos-do-mundo-pode-fechar-as-portas-se-nao-passar-por-reformas-diz-presidente.ghtml"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/des-membres-du-personnel-du-lycee-paul-eluard-a-saint-denis-denoncent-une-intervention-violente-de-la-police-dans-l-etablissement_8238745.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "bfmtv.com",
+          "source_country": "france",
+          "url": "https://www.bfmtv.com/societe/manifestations/a-saint-denis-des-personnels-du-lycee-paul-eluard-denoncent-une-intervention-violente-de-la-police-dans-le-lycee_AD-202610150626.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/14/louvre-could-be-forced-to-close-without-major-overhaul-director-warns",
-      "rank": 2,
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/societe/education/blocage-des-lycees/des-membres-du-personnel-du-lycee-paul-eluard-a-saint-denis-denoncent-une-intervention-violente-de-la-police-dans-l-etablissement_8238745.html#xtor=RSS-3-[lestitres]",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "20minutos.es",
-        "euronews.com",
-        "globo.com"
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5099,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.5,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5539,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "saint-denis",
+      "subject_names": [
+        "saint-denis"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "A Saint-Denis, des membres du personnel du lycée Paul-Eluard dénoncent une intervention \"violente\" de la police dans l'établissement"
+    },
+    {
+      "cluster_id": "subject-france-5ffdeb1bf2de",
+      "coherence": 0.5082907973784117,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-15",
+      "headline": "Périscolaire : un rapport du Sénat pointe des dysfonctionnements \"systémiques\" à l'échelle nationale",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/10/15/violences-dans-le-periscolaire-un-rapport-du-senat-alerte-sur-les-defaillances-et-la-protection-insuffisante-des-enfants_6794450_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/education/periscolaire-les-defaillances-systemiques-parisiennes-revelent-des-failles-presentes-dans-toute-la-france-selon-un-rapport-senatorial-20261015_MQTKINX7PNGARMAP5KVMRQVATE/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261015-p%C3%A9riscolaire-un-rapport-du-s%C3%A9nat-pointe-des-dysfonctionnements-syst%C3%A9miques-%C3%A0-l-%C3%A9chelle-nationale"
+        },
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr:443/politique/periscolaire-la-france-ne-protege-pas-assez-ses-enfants-un-rapport-du-senat-denonce-des-defaillances-dans-tout-le-pays-31085835.php"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/france/20261015-p%C3%A9riscolaire-un-rapport-du-s%C3%A9nat-pointe-des-dysfonctionnements-syst%C3%A9miques-%C3%A0-l-%C3%A9chelle-nationale",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "france24.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5083,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.5,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.5537,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "emmanuel macron",
+        "france",
+        "francia",
+        "lfi",
+        "paris",
+        "senat"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "Périscolaire : un rapport du Sénat pointe des dysfonctionnements \"systémiques\" à l'échelle nationale"
+    },
+    {
+      "cluster_id": "subject-bretagne-4f5e61a04d97",
+      "coherence": null,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-15",
+      "headline": "La Fonderie de Bretagne officiellement placée en liquidation judiciaire, 244 salariés licenciés",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/economie/article/2026/10/15/la-fin-des-fonderies-de-bretagne-apres-soixante-annees-d-existence-et-une-serie-de-reprises-infructueuses_6794449_3234.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/la-fonderie-de-bretagne-en-route-vers-la-liquidation-judiciaire-faute-de-repreneur-20261014_CGFGJRKDOVBF7HOA4AXDGEE2Q4/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/economie/industrie/la-fonderie-de-bretagne-officiellement-placee-en-liquidation-judiciaire-244-salaries-licencies_8238751.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/economie/industrie/la-fonderie-de-bretagne-officiellement-placee-en-liquidation-judiciaire-244-salaries-licencies_8238751.html#xtor=RSS-3-[lestitres]",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.6,
+          "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.5,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5396,
+        "total": 0.5481,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "louvre",
+      "subject_label": "bretagne",
       "subject_names": [
-        "louvre"
+        "bretagne",
+        "fonderie"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Louvre could be forced to close without major overhaul, director warns"
-    },
-    {
-      "cluster_id": "subject-sally-rooney-51d5da00599c",
-      "coherence": 0.5716611598737038,
-      "countries": [
-        "as",
-        "ei",
-        "france",
-        "germany",
-        "is",
-        "it",
-        "nl",
-        "ro",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 10,
-      "editorial_day": "2026-10-15",
-      "filled_from": "europe",
-      "headline": "Sally Rooney retira sus novelas de las librerías de Reino Unido por la persecución a su apoyo a Palestine Action",
-      "independent_source_count": 22,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/livres/les-livres-de-sally-rooney-ne-peuvent-plus-etre-vendus-au-royaume-uni-suite-a-son-soutien-a-palestine-action_8238421.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-10-15/la-escritora-sally-rooney-ya-no-vendera-sus-libros-en-el-reino-unido-por-su-activismo-propalestino.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/sally-rooney-retira-novelas-librerias-reino-unido_1_13585510.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmx23q4g307vo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/10/14/news/sally_rooney_libri_regno_unito_divieto_gaza_palestinian_group-425648002/?rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2635017"
-        },
-        {
-          "language": "en",
-          "source": "irishcentral.com",
-          "source_country": "ei",
-          "url": "https://www.irishcentral.com/news/sally-rooney-books-uk-dropped"
-        },
-        {
-          "language": "en",
-          "source": "canberratimes.com.au",
-          "source_country": "as",
-          "url": "https://www.canberratimes.com.au/story/9369472/sally-rooney-books-pulled-over-palestine-action-support/"
-        },
-        {
-          "language": "fr",
-          "source": "humanite.fr",
-          "source_country": "france",
-          "url": "https://www.humanite.fr/monde/palestine/sally-rooney-est-contrainte-de-retirer-ses-livres-des-rayons-au-royaume-uni-a-cause-de-son-soutien-a-palestine-action"
-        },
-        {
-          "language": "ron",
-          "source": "stiripesurse.ro",
-          "source_country": "ro",
-          "url": "https://www.stiripesurse.ro/scriitoarea-sally-rooney-nu-isi-mai-poate-vinde-cartile-in-marea-britanie-care-este-motivul_3928620"
-        },
-        {
-          "language": "en",
-          "source": "israelnationalnews.com",
-          "source_country": "is",
-          "url": "https://www.israelnationalnews.com/flashes/695404"
-        },
-        {
-          "language": "en",
-          "source": "halesowennews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.halesowennews.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "newsshopper.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.newsshopper.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "thewestmorlandgazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thewestmorlandgazette.co.uk/news/national/uk-today/26637535.sally-rooney-says-books-no-longer-sold-uk-publisher/"
-        },
-        {
-          "language": "en",
-          "source": "wiltshiretimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.wiltshiretimes.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "denbighshirefreepress.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.denbighshirefreepress.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "swindonadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.swindonadvertiser.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "dailyecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.dailyecho.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "newsshopper.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.newsshopper.co.uk/news/national/uk-today/26637535.sally-rooney-says-books-no-longer-sold-uk-publisher/"
-        },
-        {
-          "language": "en",
-          "source": "cambstimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.cambstimes.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "dumbartonreporter.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.dumbartonreporter.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "en",
-          "source": "dorsetecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.dorsetecho.co.uk/news/national/26637172.sally-rooneys-books-withdrawn-uk-support-palestine-action/"
-        },
-        {
-          "language": "de",
-          "source": "unternehmen-heute.de",
-          "source_country": "germany",
-          "url": "https://unternehmen-heute.de/news.php?newsid=6714743"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "is"
-      ],
-      "origin_country": "as",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/cultura/sally-rooney-retira-novelas-librerias-reino-unido_1_13585510.html",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "eldiario.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "nos.nl",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5717,
-          "corroboration": 0.8333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.5,
-          "novelty": 1.0,
-          "prominence": 0.8462,
-          "source_reliability": 0.8667
-        },
-        "total": 0.6235,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sally rooney",
-      "subject_names": [
-        "palestine action",
-        "reino unido",
-        "sally rooney"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Sally Rooney retira sus novelas de las librerías de Reino Unido por la persecución a su apoyo a Palestine Action"
-    },
-    {
-      "cluster_id": "subject-albania-1e28b33114f5",
-      "coherence": 0.4347944030084593,
-      "countries": [
-        "brazil",
-        "germany",
-        "it",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-14",
-      "filled_from": "europe",
-      "headline": "Albania: Student protests in Tirana turn violent as Flamingo Revolution escalates",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261014/11659104/nueva-protesta-estudiantes-acaba-cargas-policiales-saqueos-e-incendios-tirana.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/14/student-protests-tirana-albania-police-clashes"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cq80zk5k2ep4o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/europa/unruhen-albanien-102.html"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/albania-fire-at-education-ministry-as-students-protest/a-79661193?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/14/albania-student-protests-in-tirana-turn-violent-as-flamingo-revolution-escalates"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/14/ministerio-da-educacao-da-albania-e-incendiado-durante-protesto-estudantil.ghtml"
-        },
-        {
-          "language": "de",
-          "source": "stuttgarter-nachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.stuttgarter-nachrichten.de/politik/tirana-gewaltsame-proteste-in-albanien-bildungsministerium-in-brand-gesteckt-79571283.html"
-        }
-      ],
-      "mentioned_countries": [
-        "al"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/10/14/albania-student-protests-in-tirana-turn-violent-as-flamingo-revolution-escalates",
-      "rank": 4,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com",
-        "tagesschau.de",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4348,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4667,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 0.5,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7419
-        },
-        "total": 0.5576,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "albania",
-      "subject_names": [
-        "albania",
-        "albanie",
-        "tirana"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Albania: Student protests in Tirana turn violent as Flamingo Revolution escalates"
-    },
-    {
-      "cluster_id": "subject-trump-73f454dd5e94",
-      "coherence": 0.438914387251617,
-      "countries": [
-        "cb",
-        "france",
-        "germany",
-        "ir",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-15",
-      "filled_from": "europe",
-      "headline": "Donald Trump signe un accord avec Vladimir Poutine sur le diesel russe et prend l'Ukraine de court",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/accord-sur-le-diesel-russe-la-trahison-de-donald-trump-arrive-au-pire-moment-pour-lukraine-RC6SIYU5ZNBRFO2B23FGGMNWFM/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/amerique/accord-sur-le-diesel-russe-donald-trump-critique-jusque-dans-son-propre-camp-JJ6W5TX5E5HKBALZHVICQDSPZA/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-ce-que-cache-laccord-sur-le-diesel-entre-donald-trump-et-vladimir-poutine-QYLC3KQFFREANHJEAY4FSJEZ3Q/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/donald-trump-signe-un-accord-avec-vladimir-poutine-sur-le-diesel-russe-et-prend-lukraine-de-court-HHV47L2NJVEHJOUCHIDGNI2YLU/"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/how-trump-s-diesel-deal-with-russia-will-impact-the-united-states-and-ukraine/a-79658596?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/ukraine-and-the-us-what-s-next-after-trump-s-diesel-deal-with-russia/a-79650785?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/politics/trumps-diesel-deal-with-putin-draws-bipartisan-criticism-from-a-frustrated-congress"
-        },
-        {
-          "language": "en",
-          "source": "cambodiantimes.com",
-          "source_country": "cb",
-          "url": "http://www.cambodiantimes.com/news/279374906/trump-on-wrong-side-of-history-zelenskyy-criticises-us-russia-diesel-deal"
-        },
-        {
-          "language": "en",
-          "source": "iranherald.com",
-          "source_country": "ir",
-          "url": "http://www.iranherald.com/news/279374906/trump-on-wrong-side-of-history-zelenskyy-criticises-us-russia-diesel-deal"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "cb",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/donald-trump-signe-un-accord-avec-vladimir-poutine-sur-le-diesel-russe-et-prend-lukraine-de-court-HHV47L2NJVEHJOUCHIDGNI2YLU/",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "dw.com",
-        "lexpress.fr",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4389,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.5,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.7576
-        },
-        "total": 0.5441,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "donald trump",
-        "groenlandia",
-        "kiev",
-        "kyiv",
-        "russia",
-        "russian",
-        "trump",
-        "trump's",
-        "ukraine",
-        "washington",
-        "zelensky",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 27,
-      "summary": "Donald Trump signe un accord avec Vladimir Poutine sur le diesel russe et prend l'Ukraine de court"
+      "subject_newsroom_count": 3,
+      "summary": "La Fonderie de Bretagne officiellement placée en liquidation judiciaire, 244 salariés licenciés"
     }
   ],
-  "discarded_ingested": 16,
+  "discarded_ingested": 31,
   "discarded_kept": 5,
-  "generated_at": "2026-10-15T10:10:47.835738+00:00",
+  "generated_at": "2026-10-15T15:19:39.104482+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

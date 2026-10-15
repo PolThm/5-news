@@ -1,15 +1,229 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-moncloa-3f7fad8231bf",
-      "coherence": 0.47702551260777704,
+      "cluster_id": "subject-cnmc-e268bfcf17e8",
+      "coherence": 0.7887162239587533,
+      "consequence": 3,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-10-15",
-      "headline": "La Junta Electoral expedienta a Sánchez por pedir \"una mayoría más rotunda\" desde Moncloa tras la convocatoria del 29-N",
-      "independent_source_count": 9,
+      "headline": "Government restructures CNMC, creating Chief Economist post and subdirectorate",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/gobierno-cambios-cnmc-crea-economista-jefe-subdireccion-inteligencia-economica_1_13586856.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/economia/2026-10-15/cnmc-economista-jefe-inteligencia-economica-1hms_4445248/"
+        },
+        {
+          "language": "es",
+          "source": "economiadigital.es",
+          "source_country": "spain",
+          "url": "https://www.economiadigital.es/economia/cnmc-crea-figura-economista-jefe-subdireccion-inteligencia-economica.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/gobierno-cambios-cnmc-crea-economista-jefe-subdireccion-20261015091020-nt.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/economia/gobierno-cambios-cnmc-crea-economista-jefe-subdireccion-inteligencia-economica_1_13586856.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.7887,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6974,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cnmc",
+      "subject_names": [
+        "cnmc",
+        "economista jefe",
+        "inteligencia economica",
+        "subdireccion"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "The government has reorganized Spain’s National Commission on Markets and Competition (CNMC) by establishing a new Chief Economist role and creating a Subdirectorate for Economic Intelligence; the change aims to enhance the commission’s economic analysis and intelligence capabilities and was announced as an internal restructuring of the CNMC’s organization."
+    },
+    {
+      "cluster_id": "subject-ceuta-88d136d122f4",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-15",
+      "headline": "Defense forwards audio evidence of soldiers boasting about beatings of migrants in Ceuta to courts",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/desalambre/defensa-asegura-investigara-audios-militares-presumen-palizas-migrantes-ceuta_1_13587546.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-10-15/defensa-remite-al-juzgado-los-audios-de-militares-presumiendo-de-palizas-a-migrantes-en-ceuta_4445766/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-defensa-remite-juzgado-fiscalia-informacion-audios-militares-presumiendo-palizas-migrantes-ceuta-20261015160934.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/desalambre/defensa-asegura-investigara-audios-militares-presumen-palizas-migrantes-ceuta_1_13587546.html",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "eldiario.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6581,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "audiencia nacional",
+        "ceuta",
+        "fiscalia",
+        "marruecos"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Spain’s Ministry of Defense has sent to the judicial authorities and the public prosecutor audio recordings in which military personnel are heard claiming to have beaten migrants in Ceuta; the materials have been remitted to the examining court and Fiscalía for investigation."
+    },
+    {
+      "cluster_id": "subject-ibi-3526ce7d4c6b",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-15",
+      "headline": "Madrid will cut property tax (IBI) to the legal minimum of 0.4%",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/madrid/madrid-baja-ibi-minimo-legal-20261015113838-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/madrid/somos/almeida-baja-ibi-minimo-legal-madrid-beneficiara-propietarios-viviendas-caras_1_13587288.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/10/15/almeida-bajara-ibi-minimo-legal-2027-ahorro-31-millones-madrilenos.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/madrid/somos/almeida-baja-ibi-minimo-legal-madrid-beneficiara-propietarios-viviendas-caras_1_13587288.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6581,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ibi",
+      "subject_names": [
+        "almeida",
+        "ibi",
+        "madrid",
+        "roma"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Madrid’s city government will reduce the municipal property tax (IBI) to the legal minimum rate of 0.4 percent, a change scheduled to take effect in 2027 and estimated to save Madrid residents around €31 million; the reduction will primarily benefit owners of higher-value homes."
+    },
+    {
+      "cluster_id": "subject-moncloa-2bc2f08b14c3",
+      "coherence": 0.49108017667599313,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-15",
+      "headline": "Electoral board opens sanctioning file against Sánchez for Moncloa press conference",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "es",
@@ -58,12 +272,6 @@
           "source": "europapress.es",
           "source_country": "spain",
           "url": "https://www.europapress.es/nacional/noticia-jec-abre-nuevo-expediente-sancionador-sanchez-hacer-partidismo-moncloa-20261015164433.html"
-        },
-        {
-          "language": "es",
-          "source": "larazon.es",
-          "source_country": "spain",
-          "url": "https://www.larazon.es/espana/junta-electoral-sanciona-sanchez-hacer-campana-moncloa-dia-que-convoco-elecciones_202610156ad0e39ccfd4076f0c7bfbfa.html"
         }
       ],
       "mentioned_countries": [
@@ -72,7 +280,7 @@
       "origin_country": "spain",
       "outbound_source": "elespanol.com",
       "outbound_url": "https://www.elespanol.com/espana/politica/20261015/junta-electoral-expedienta-sanchez-pedir-mayoria-rotunda-moncloa-convocatoria/1003744421691_0.html",
-      "rank": 1,
+      "rank": 4,
       "reference_newsroom_count": 8,
       "reference_newsrooms": [
         "abc.es",
@@ -86,174 +294,39 @@
       ],
       "score": {
         "components": {
-          "coherence": 0.477,
+          "coherence": 0.4911,
           "corroboration": 0.3333,
           "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.5,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7647
+          "prominence": 0.6667,
+          "source_reliability": 0.75
         },
-        "total": 0.6196,
+        "total": 0.6564,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "moncloa",
       "subject_names": [
-        "espana",
-        "feijoo",
         "junta electoral",
         "moncloa",
-        "pedro sanchez",
         "psoe",
         "sanchez"
       ],
       "subject_newsroom_count": 8,
-      "summary": "La Junta Electoral expedienta a Sánchez por pedir \"una mayoría más rotunda\" desde Moncloa tras la convocatoria del 29-N"
-    },
-    {
-      "cluster_id": "subject-almeida-3d5dae774ce3",
-      "coherence": null,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-15",
-      "headline": "Almeida baja el IBI al mínimo legal en Madrid y beneficiará más a los propietarios de las viviendas más caras",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/madrid/2026-10-15/almeida-rebajara-el-ibi-al-minimo-permitido.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/madrid/somos/almeida-baja-ibi-minimo-legal-madrid-beneficiara-propietarios-viviendas-caras_1_13587288.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/economia/2026/10/15/almeida-bajara-ibi-minimo-legal-2027-ahorro-31-millones-madrilenos.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/madrid/somos/almeida-baja-ibi-minimo-legal-madrid-beneficiara-propietarios-viviendas-caras_1_13587288.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.5,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5481,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "almeida",
-      "subject_names": [
-        "almeida",
-        "ibi"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Almeida baja el IBI al mínimo legal en Madrid y beneficiará más a los propietarios de las viviendas más caras"
-    },
-    {
-      "cluster_id": "subject-ceuta-88d136d122f4",
-      "coherence": null,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-15",
-      "headline": "Defensa envía a la Justicia los audios de elDiario.es en los que militares presumen de sus palizas a migrantes en Ceuta",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/defensa-asegura-investigara-audios-militares-presumen-palizas-migrantes-ceuta_1_13587546.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-10-15/defensa-remite-al-juzgado-los-audios-de-militares-presumiendo-de-palizas-a-migrantes-en-ceuta_4445766/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-defensa-remite-juzgado-fiscalia-informacion-audios-militares-presumiendo-palizas-migrantes-ceuta-20261015160934.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/desalambre/defensa-asegura-investigara-audios-militares-presumen-palizas-migrantes-ceuta_1_13587546.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "elconfidencial.com",
-        "eldiario.es",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.5,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5481,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "fiscalia",
-        "marruecos"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "Defensa envía a la Justicia los audios de elDiario.es en los que militares presumen de sus palizas a migrantes en Ceuta"
+      "summary": "Spain's central electoral board has opened a sanctioning file against Prime Minister Pedro Sánchez after a press conference held at the Moncloa palace in which he announced housing decrees and made evaluative political statements; the move follows a complaint alleging the appearance constituted campaigning or partisan activity from the government residence."
     },
     {
       "cluster_id": "subject-madrid-983fc4ba788e",
       "coherence": null,
+      "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-10-15",
-      "headline": "Un juzgado de Madrid abre diligencias para investigar las filtraciones de las agendas de Zapatero",
+      "headline": "Madrid court opens probe into leak of Zapatero’s personal messages",
       "independent_source_count": 3,
       "members": [
         {
@@ -281,7 +354,7 @@
       "origin_country": "spain",
       "outbound_source": "elconfidencial.com",
       "outbound_url": "https://www.elconfidencial.com/espana/2026-10-15/un-juzgado-de-madrid-abre-diligencias-para-investigar-las-filtraciones-de-las-agendas-de-zapatero_4445582/",
-      "rank": 4,
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "elconfidencial.com",
@@ -295,132 +368,26 @@
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.5,
+          "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5481,
+        "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "madrid",
       "subject_names": [
-        "barcelona",
         "madrid",
         "roma"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "Un juzgado de Madrid abre diligencias para investigar las filtraciones de las agendas de Zapatero"
-    },
-    {
-      "cluster_id": "subject-sally-rooney-ca16d7ac6171",
-      "coherence": 0.5175330400223035,
-      "countries": [
-        "as",
-        "france",
-        "it",
-        "my",
-        "spain",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-10-15",
-      "filled_from": "europe",
-      "headline": "Sally Rooney retira sus novelas de las librerías de Reino Unido por la persecución a su apoyo a Palestine Action",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/culture/livres/les-livres-de-sally-rooney-ne-peuvent-plus-etre-vendus-au-royaume-uni-suite-a-son-soutien-a-palestine-action_8238421.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-10-15/la-escritora-sally-rooney-ya-no-vendera-sus-libros-en-el-reino-unido-por-su-activismo-propalestino.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/sally-rooney-retira-novelas-librerias-reino-unido_1_13585510.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/10/14/news/sally_rooney_libri_regno_unito_divieto_gaza_palestinian_group-425648002/?rss"
-        },
-        {
-          "language": "en",
-          "source": "thestar.com.my",
-          "source_country": "my",
-          "url": "https://www.thestar.com.my/lifestyle/culture/2026/10/15/irish-author-sally-rooneys-books-pulled-from-uk-over-palestine-action-support"
-        },
-        {
-          "language": "fr",
-          "source": "tf1info.fr",
-          "source_country": "unknown",
-          "url": "https://www.tf1info.fr/culture/soutien-a-la-palestine-pourquoi-sally-rooney-ne-veut-plus-vendre-ses-livres-au-royaume-uni-2470176.html"
-        },
-        {
-          "language": "en",
-          "source": "time.com",
-          "source_country": "united-states",
-          "url": "https://time.com/article/2026/10/15/sally-rooney-palestine-action-uk-books/"
-        },
-        {
-          "language": "en",
-          "source": "smh.com.au",
-          "source_country": "as",
-          "url": "https://www.smh.com.au/culture/books/sally-rooney-s-books-pulled-from-uk-shelves-over-palestine-action-support-20261015-p615q4.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom",
-        "is"
-      ],
-      "origin_country": "as",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/cultura/sally-rooney-retira-novelas-librerias-reino-unido_1_13585510.html",
-      "rank": 5,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5175,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.5,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7143
-        },
-        "total": 0.5756,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "sally rooney",
-      "subject_names": [
-        "reino unido",
-        "sally rooney"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Sally Rooney retira sus novelas de las librerías de Reino Unido por la persecución a su apoyo a Palestine Action"
+      "subject_newsroom_count": 11,
+      "summary": "A court in Madrid has opened judicial proceedings to investigate the unauthorized disclosure of former Prime Minister José Luis Rodríguez Zapatero’s personal messages and agendas connected to the Plus Ultra case. The investigations focus on who leaked the private communications and aim to determine responsibility for the breaches; proceedings were initiated after the files became public in the context of the Plus Ultra investigation."
     }
   ],
-  "discarded_ingested": 25,
+  "discarded_ingested": 31,
   "discarded_kept": 5,
-  "generated_at": "2026-10-15T15:19:39.104482+00:00",
+  "generated_at": "2026-10-15T16:28:38.553085+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

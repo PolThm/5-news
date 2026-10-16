@@ -1,0 +1,20 @@
+{
+  "articles_collected": 12170,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 10563,
+  "clusters_selected": 13,
+  "completed": true,
+  "cycle_id": "2026-10-16T10-01-50Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-oregon-a7f6cb9a5cdd: response was not valid JSON (likely truncated or refused): Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "groups_after_dedupe": 10708,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-10-16T10:01:50.562081+00:00",
+  "summarize_batches": {}
+}

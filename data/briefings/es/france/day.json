@@ -1,120 +1,17 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-manche-b20cf5985b7f",
-      "coherence": 0.502195810371856,
-      "consequence": 2,
-      "countries": [
-        "ar",
-        "brazil",
-        "france",
-        "spain",
-        "vm"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-16",
-      "headline": "Un minibús choca con un tren de mercancías en la entrada francesa del Eurotúnel, 19 heridos",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/tunnel-de-la-manche-collision-entre-un-bus-et-un-train-19-blesses-dont-5-en-urgence-absolue-20261015_SCJJ6TEZ3NBZ5BW3RWLDHTDIH4/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/tunnel-sous-la-manche-un-minibus-percute-un-train-de-fret-a-l-arret-19-blesses-20261015"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/accident/un-grave-accident-entre-un-bus-et-un-train-s-est-produit-a-l-entree-du-tunnel-sous-la-manche-pres-de-calais-et-a-fait-une-vingtaine-de-blesses_8239282.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/15-heridos-accidente-autobus-tren-mercancias-eurotunel_1_13589669.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/mas-una-quincena-heridos-cuatro-ellos-criticos-por-un-accidente-salida-francesa-eurotunel_7049404_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/15/batida-entre-trem-e-onibus-na-entrada-do-eurotunel-deixa-feridos-na-franca.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "ellitoral.com",
-          "source_country": "ar",
-          "url": "https://www.ellitoral.com/internacionales/minibus-leshuttle-canal-francia_0_zaOkCU4mBX.html"
-        },
-        {
-          "language": "fr",
-          "source": "lecourrier.vn",
-          "source_country": "vm",
-          "url": "https://lecourrier.vn/tunnel-sous-la-manche-un-minibus-percute-un-train-de-fret-a-larret-19-blesses/1357514.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/10/15/batida-entre-trem-e-onibus-na-entrada-do-eurotunel-deixa-feridos-na-franca.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "francetvinfo.fr",
-        "globo.com",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5022,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7333
-        },
-        "total": 0.6779,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "manche",
-      "subject_names": [
-        "eurotunel",
-        "manche"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Un minibús colisionó con un tren de mercancías que estaba detenido en la entrada francesa del túnel bajo la Mancha cerca de Calais, provocando heridas a 19 personas según las informaciones disponibles."
-    },
-    {
-      "cluster_id": "subject-france-0010c340ccad",
-      "coherence": 0.6795015829803324,
+      "cluster_id": "subject-paris-4066fdf54fcd",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "france"
+        "france",
+        "it"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-15",
-      "headline": "Francia y Alemania acuerdan el futuro de la industria automotriz europea",
-      "independent_source_count": 5,
+      "country_count": 2,
+      "editorial_day": "2026-10-16",
+      "headline": "Francia y Alemania acuerdan plan común para la industria automovilística europea",
+      "independent_source_count": 2,
       "members": [
         {
           "language": "fr",
@@ -123,28 +20,10 @@
           "url": "https://www.lemonde.fr/economie/article/2026/10/15/la-france-et-l-allemagne-s-accordent-sur-l-avenir-d-une-industrie-automobile-made-in-europe_6794759_3234.html"
         },
         {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/economie/la-france-et-l-allemagne-trouvent-un-accord-sur-lavenir-de-lindustrie-automobile-20261015"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9co-tech/20261015-la-france-et-l-allemagne-trouvent-un-accord-provisoire-sur-l-avenir-de-l-industrie-automobile"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261015-la-france-et-l-allemagne-s-entendent-sur-l-avenir-de-l-industrie-automobile"
-        },
-        {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/economie/industrie/la-france-et-l-allemagne-trouvent-un-accord-sur-l-avenir-de-l-industrie-automobile-31088829.php"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/16/france-and-germany-strike-car-industry-deal-linking-2035-engine-rules-to-made-in-europe-pu"
         }
       ],
       "mentioned_countries": [
@@ -152,158 +31,372 @@
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/economie/la-france-et-l-allemagne-trouvent-un-accord-sur-lavenir-de-lindustrie-automobile-20261015",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/economie/article/2026/10/15/la-france-et-l-allemagne-s-accordent-sur-l-avenir-d-une-industrie-automobile-made-in-europe_6794759_3234.html",
+      "rank": 1,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
-        "lemonde.fr",
-        "rfi.fr"
+        "euronews.com",
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6795,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.6682,
+        "total": 0.6143,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "paris",
       "subject_names": [
-        "conseil",
+        "berlin",
+        "celine dion",
+        "elysee",
+        "france",
+        "paris"
+      ],
+      "subject_newsroom_count": 21,
+      "summary": "Francia y Alemania han pactado una iniciativa conjunta para apoyar una industria automovilística «made in Europe», vinculando las normas sobre motores previstas para 2035 a medidas que favorezcan la fabricación en Europa; el acuerdo busca coordinar políticas industriales y regulatorias para proteger la producción europea del sector."
+    },
+    {
+      "cluster_id": "subject-renfe-fe3640fc4e83",
+      "coherence": 0.5614621996332957,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-17",
+      "headline": "El sindicato de maquinistas Semaf convoca una huelga de 24 horas en Renfe el 29 de octubre",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-10-17/el-sindicato-de-maquinistas-semaf-llama-a-una-huelga-de-24-horas-en-renfe-para-el-dia-29.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/maquinistas-semaf-convocan-huelga-renfe-29-octubre_1_13592383.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20261016/maquinistas-estallan-renfe-convocan-huelga-octubre/1003744423579_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/empresas/2026/10/16/6ad25287e4d4d8c5018b4570.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/economia/maquinistas-semaf-convocan-huelga-renfe-29-octubre_1_13592383.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5615,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6124,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "renfe",
+      "subject_names": [
+        "renfe"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "El sindicato de maquinistas Semaf ha convocado una huelga de 24 horas en Renfe para el 29 de octubre; los artículos coinciden en que la protesta ha sido anunciada por Semaf y afectará a la operadora ese día."
+    },
+    {
+      "cluster_id": "subject-paris-61a433ab7f4f",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "germany",
+        "it",
+        "lu"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-17",
+      "headline": "Francia se prepara para una jornada de protestas en todo el país",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/france-braces-for-nationwide-protests/a-79685584?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/17/france-braces-for-tense-protests-as-security-concerns-take-centre-stage"
+        },
+        {
+          "language": "en",
+          "source": "chronicle.lu",
+          "source_country": "lu",
+          "url": "https://www.chronicle.lu/category/international/64065-students-trade-unions-yellow-vests-set-to-protest-across-france"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "germany",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/17/france-braces-for-tense-protests-as-security-concerns-take-centre-stage",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "dw.com",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.5925,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "paris",
+      "subject_names": [
+        "berlin",
+        "celine dion",
+        "elysee",
         "france",
         "francia",
         "french",
-        "lfi",
         "paris"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "Francia y Alemania alcanzaron un acuerdo sobre el rumbo de la industria automotriz, confirmando una posición conjunta para apoyar la transformación del sector en Europa; los gobiernos negociaron medidas y principios comunes para acompañar la transición industrial y tecnológica del automóvil en el continente."
+      "subject_newsroom_count": 21,
+      "summary": "Estudiantes, sindicatos y chalecos amarillos han organizado movilizaciones en múltiples ciudades de Francia; las convocatorias aumentan y las autoridades anticipan tensión y preocupaciones de seguridad mientras los manifestantes planean concentraciones a nivel nacional."
     },
     {
-      "cluster_id": "subject-trump-a4d737b2ce63",
-      "coherence": 0.4930860747113702,
-      "consequence": 3,
+      "cluster_id": "subject-lyon-152f3c21f922",
+      "coherence": null,
+      "consequence": 2,
       "countries": [
-        "france",
-        "hr",
-        "spain",
-        "united-kingdom"
+        "france"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-10-16",
-      "filled_from": "europe",
-      "headline": "Trump califica de “vergüenza” la reanudación de ataques ucranianos a refinerías rusas",
-      "independent_source_count": 9,
+      "country_count": 1,
+      "editorial_day": "2026-10-17",
+      "headline": "Manifestaciones del 17 de octubre generan detenciones y altercados en varias ciudades",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/16/guerre-en-ukraine-volodymyr-zelensky-acte-la-reprise-des-frappes-contre-les-raffineries-russes-une-honte-selon-donald-trump_6795219_3210.html"
+          "url": "https://www.lefigaro.fr/actualite-france/en-direct-gilets-jaunes-lyceens-syndicats-suivez-les-manifestations-et-les-blocages-du-17-octobre-20261017"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/une-honte-trump-tance-de-nouveau-zelensky-apres-lannonce-de-la-reprise-des-frappes-ukrainiennes-sur-les-raffineries-russes-20261016_XVQDGBWGTRFJBFUW6DYFRUKJ44/"
+          "url": "https://www.liberation.fr/societe/education/en-direct-mouvement-du-17-octobre-contre-la-vie-chere-les-jeunes-et-les-jaunes-se-mobilisent-20261017_GH4UURZMZJHZ3HG7ZHNPSP7GDE/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/donald-trump-juge-que-la-reprise-par-l-ukraine-des-frappes-sur-les-raffineries-russes-est-une-honte_8239546.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261016-en-direct-la-reprise-des-frappes-ukrainiennes-contre-les-raffineries-russes-est-une-honte-dit-trump"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/cest-une-honte-la-nouvelle-charge-de-donald-trump-contre-volodymyr-zelensky-ECMRWFPBYFFBDAPOMTOL2KE6EM/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-16/trump-tacha-de-verguenza-la-reanudacion-de-los-ataques-ucranios-contra-las-refinerias-rusas.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/16/trump-calls-ukraines-resumption-of-strikes-on-russian-oil-refineries-a-disgrace"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/trump-calls-ukraine-renewed-strikes-090555000.html"
-        },
-        {
-          "language": "hrv",
-          "source": "telegram.hr",
-          "source_country": "hr",
-          "url": "https://www.telegram.hr/vijesti/trump-sve-bezobzirnije-podupire-moskvu-ukrajinski-napadi-na-ruske-rafinerije-su-sramota/"
+          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-17-octobre-lyceens-etudiants-gilets-jaunes-des-milliers-de-manifestants-attendus-dans-toute-la-france_8241022.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "mentioned_countries": [
-        "rs",
-        "up"
+        "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/16/guerre-en-ukraine-volodymyr-zelensky-acte-la-reprise-des-frappes-contre-les-raffineries-russes-une-honte-selon-donald-trump_6795219_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
+      "outbound_source": "lefigaro.fr",
+      "outbound_url": "https://www.lefigaro.fr/actualite-france/en-direct-gilets-jaunes-lyceens-syndicats-suivez-les-manifestations-et-les-blocages-du-17-octobre-20261017",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elpais.com",
         "francetvinfo.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "rfi.fr",
-        "theguardian.com"
+        "lefigaro.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4931,
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "lyon",
+      "subject_names": [
+        "berlin",
+        "celine dion",
+        "elysee",
+        "france",
+        "lyon",
+        "marseille",
+        "paris",
+        "rennes"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "El 17 de octubre se celebraron movilizaciones contra el aumento del coste de la vida en varias ciudades francesas: en París hubo alrededor de 40 detenciones, en Lyon y Marsella se registraron enfrentamientos y en Rennes y otras localidades se colocaron barreras y se incendiaron barricadas; en Bretaña también hubo bloqueos y barreras filtrantes por parte de «chalecos amarillos»."
+    },
+    {
+      "cluster_id": "subject-russia-d755023a09da",
+      "coherence": 0.827957415349525,
+      "consequence": 3,
+      "countries": [
+        "it",
+        "united-kingdom",
+        "united-states",
+        "unknown"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-17",
+      "filled_from": "europe",
+      "headline": "Rusia ataca nueve regiones de Ucrania mientras aumentan las tensiones entre Zelenski y Trump",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/16/russia-strikes-nine-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russia-strikes-9-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump"
+        },
+        {
+          "language": "en",
+          "source": "nagalandpost.com",
+          "source_country": "unknown",
+          "url": "https://nagalandpost.com/russia-strikes-ukraine-grid-amid-clash/"
+        },
+        {
+          "language": "en",
+          "source": "latimes.com",
+          "source_country": "united-states",
+          "url": "https://www.latimes.com/world-nation/story/2026-10-16/russia-strikes-9-ukrainian-regions-as-strain-grows-between-zelensky-trump"
+        },
+        {
+          "language": "en",
+          "source": "thewestmorlandgazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thewestmorlandgazette.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "thetelegraphandargus.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thetelegraphandargus.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "theargus.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.theargus.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "london-now.co.uk",
+          "source_country": "unknown",
+          "url": "https://www.london-now.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "swindonadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.swindonadvertiser.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "somersetcountygazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.somersetcountygazette.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/16/russia-strikes-nine-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.828,
           "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7576
+          "prominence": 0.7143,
+          "source_reliability": 0.7333
         },
-        "total": 0.7065,
+        "total": 0.6821,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "trump",
+      "subject_label": "russia",
       "subject_names": [
-        "california",
+        "bbc",
         "donald trump",
-        "fort hood",
-        "groenlandia",
+        "ilhan omar",
         "kiev",
-        "kremlin",
-        "kyiv",
-        "noire",
-        "rusia",
+        "moscou",
+        "pen",
         "russia",
         "russian",
         "russie",
@@ -311,207 +404,19 @@
         "trump",
         "ucrania",
         "ukraine",
+        "ukrainian",
         "volodymyr zelensky",
         "zelenski",
-        "zelensky"
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 29,
-      "summary": "Varios medios informan que Donald Trump criticó duramente la decisión de Ucrania de reanudar bombardeos contra refinerías en territorio ruso, describiendo esos ataques como \"una vergüenza\" o \"una honra\" según las citas recogidas; las piezas coinciden en que su comentario fue una nueva carga pública contra el presidente ucraniano Volodymyr Zelensky tras el anuncio de las operaciones."
-    },
-    {
-      "cluster_id": "subject-ukraine-525e2a18b018",
-      "coherence": 0.4179786461758561,
-      "consequence": 3,
-      "countries": [
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states",
-        "vm"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-16",
-      "filled_from": "europe",
-      "headline": "Starlink se ha vuelto crítico para las comunicaciones militares en la guerra de Ucrania",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-16/ucrania-necesita-usar-los-satelites-de-starlink-en-la-guerra-pero-el-pentagono-tiene-el-control.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cqkgk4zg54reo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cqr7yzpxm083o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/how-starlink-disruptions-affected-ukraines-battlefield-operations"
-        },
-        {
-          "language": "vie",
-          "source": "dantri.com.vn",
-          "source_country": "vm",
-          "url": "https://dantri.com.vn/the-gioi/vi-sao-starlink-dac-biet-quan-trong-tren-chien-truong-ukraine-20261015093644641.htm"
-        },
-        {
-          "language": "it",
-          "source": "tg24.sky.it",
-          "source_country": "it",
-          "url": "https://tg24.sky.it/mondo/2026/10/15/guerra-ucraina-starlink-droni"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "it",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/show/how-starlink-disruptions-affected-ukraines-battlefield-operations",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "elpais.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.418,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6667
-        },
-        "total": 0.647,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "california",
-        "donald trump",
-        "elon musk",
-        "etats-unis",
-        "fort hood",
-        "groenlandia",
-        "kiev",
-        "kyiv",
-        "musk",
-        "noire",
-        "spacex",
-        "starlink",
-        "trump",
-        "ukraine",
-        "washington"
-      ],
-      "subject_newsroom_count": 24,
-      "summary": "Los artículos coinciden en que los satélites de Starlink proporcionan conectividad esencial a las fuerzas ucranianas y a sistemas militares en el frente, que ayudan a coordinar operaciones, transmisiones en tiempo real y transmitir datos cuando las redes terrestres son atacadas o no funcionan. También señalan que Estados Unidos, a través del Pentágono, ejerce control sobre el uso y la gestión del servicio, y que las interrupciones o limitaciones en Starlink han tenido impactos operativos palpables en la capacidad de mando y en la eficacia de algunas misiones."
-    },
-    {
-      "cluster_id": "subject-albania-1417fc3e5f1e",
-      "coherence": 0.40387545431698724,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "germany",
-        "it",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-10-15",
-      "filled_from": "europe",
-      "headline": "Estudiantes incendian el Ministerio de Educación y atacan edificios gubernamentales en Tirana",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261015/11659963/albania-arde-protestas-estudiantiles-rechazo-visceral-gobierno.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cq80zk5k2ep4o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/albania-fire-at-education-ministry-as-students-protest/a-79661193?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/14/albania-student-protests-in-tirana-turn-violent-as-flamingo-revolution-escalates"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/14/ministerio-da-educacao-da-albania-e-incendiado-durante-protesto-estudantil.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "al"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/10/14/albania-student-protests-in-tirana-turn-violent-as-flamingo-revolution-escalates",
-      "rank": 5,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "euronews.com",
-        "globo.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4039,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
-        },
-        "total": 0.6363,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "albania",
-      "subject_names": [
-        "albania",
-        "albanie",
-        "tirana"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Estudiantes en Tirana protagonizaron protestas violentas contra el gobierno en las que incendiaron el Ministerio de Educación y atacaron otros edificios gubernamentales; las manifestaciones forman parte de una movilización estudiantil amplia y escalada en la capital albanesa."
+      "subject_newsroom_count": 13,
+      "summary": "Los artículos coinciden en que fuerzas rusas llevaron a cabo ataques que afectaron a nueve regiones ucranianas y dañaron la red eléctrica en medio de una creciente tensión política entre el presidente ucraniano Volodímir Zelenski y el expresidente estadounidense Donald Trump."
     }
   ],
-  "discarded_ingested": 18,
+  "discarded_ingested": 16,
   "discarded_kept": 5,
-  "generated_at": "2026-10-16T10:01:50.562081+00:00",
+  "generated_at": "2026-10-17T09:35:02.842368+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

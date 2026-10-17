@@ -1,612 +1,239 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-oregon-a7f6cb9a5cdd",
-      "coherence": 0.5104516562739103,
+      "cluster_id": "subject-russia-d755023a09da",
+      "coherence": 0.827957415349525,
       "consequence": 3,
       "countries": [
-        "as",
-        "au",
-        "ca",
-        "germany",
-        "id",
-        "india",
         "it",
-        "md",
-        "mx",
-        "rp",
-        "spain",
         "united-kingdom",
-        "united-states"
+        "united-states",
+        "unknown"
       ],
-      "country_count": 13,
-      "editorial_day": "2026-10-16",
-      "headline": "Un adolescente mata a tiros a tres niños y una maestra en una escuela de primaria en Oregón",
-      "independent_source_count": 48,
+      "country_count": 4,
+      "editorial_day": "2026-10-17",
+      "headline": "Rusia ataca nueve regiones de Ucrania mientras aumentan las tensiones entre Zelenski y Trump",
+      "independent_source_count": 10,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/16/russia-strikes-nine-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/russia-strikes-9-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump"
+        },
+        {
+          "language": "en",
+          "source": "nagalandpost.com",
+          "source_country": "unknown",
+          "url": "https://nagalandpost.com/russia-strikes-ukraine-grid-amid-clash/"
+        },
+        {
+          "language": "en",
+          "source": "latimes.com",
+          "source_country": "united-states",
+          "url": "https://www.latimes.com/world-nation/story/2026-10-16/russia-strikes-9-ukrainian-regions-as-strain-grows-between-zelensky-trump"
+        },
+        {
+          "language": "en",
+          "source": "thewestmorlandgazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thewestmorlandgazette.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "thetelegraphandargus.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.thetelegraphandargus.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "theargus.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.theargus.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "london-now.co.uk",
+          "source_country": "unknown",
+          "url": "https://www.london-now.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "swindonadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.swindonadvertiser.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        },
+        {
+          "language": "en",
+          "source": "somersetcountygazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.somersetcountygazette.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/10/16/russia-strikes-nine-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump",
+      "rank": 1,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.828,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7143,
+          "source_reliability": 0.7333
+        },
+        "total": 0.7321,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russia",
+      "subject_names": [
+        "bbc",
+        "donald trump",
+        "ilhan omar",
+        "kiev",
+        "moscou",
+        "pen",
+        "russia",
+        "russian",
+        "russie",
+        "starlink",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "ukrainian",
+        "volodymyr zelensky",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Los artículos coinciden en que fuerzas rusas llevaron a cabo ataques que afectaron a nueve regiones ucranianas y dañaron la red eléctrica en medio de una creciente tensión política entre el presidente ucraniano Volodímir Zelenski y el expresidente estadounidense Donald Trump."
+    },
+    {
+      "cluster_id": "subject-rusia-600d9fdcdad8",
+      "coherence": 0.47126987900962125,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-17",
+      "headline": "Trump suspende temporalmente sanciones del Congreso contra Rusia por \"interés nacional\"",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/us/2026-10-16/un-tiroteo-en-una-escuela-primaria-de-oregon-deja-tres-ninos-y-un-profesor-muertos.html"
+          "url": "https://elpais.com/us/2026-10-17/trump-suspende-temporalmente-sanciones-contra-rusia-por-interes-nacional.html"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/cuatro-muertos-tiroteo-escuela-oregon-eeuu-20261016005748-nt.html"
+          "url": "https://www.abc.es/internacional/favor-trump-putin-suspende-ley-sanciones-disenada-20261017080758-nt.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261016/11660337/cuatro-muertos-tres-ninos-tiroteo-escuela-primaria-oregon.html"
+          "url": "https://www.lavanguardia.com/internacional/20261017/11661313/trump-suspende-temporalmente-sanciones-congreso-rusia-interes-nacional.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/adolescente-mata-tres-ninos-profesor-escuela-primaria-oregon-abatido_1_13589865.html"
+          "url": "https://www.eldiario.es/internacional/trump-suspende-sanciones-rusia-recien-aprobadas-tres-semanas-legislativas-pacto-diesel-putin_1_13593288.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/2026/10/17/trump-suspende-temporalmente-sanciones-congreso-rusia-interes-nacional.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/america/eeuu/20261017/trump-levanta-varias-sanciones-rusia-guerra-ucrania-nombre-interes-nacional-estadounidense/1003744423930_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/10/17/6ad3068ffdddffb8258b45b6.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/un-tiroteo-una-escuela-primaria-oregon-deja-cuatro-muertos-entre-ellos-tres-menores_7049422_0.html"
-        },
-        {
-          "language": "de",
-          "source": "tagesschau.de",
-          "source_country": "germany",
-          "url": "https://www.tagesschau.de/ausland/amerika/schuesse-grundschule-oregon-100.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/16/four-killed-in-oregon-elementary-school-shooting-including-three-children-aged-5-to-11"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/10/15/news/sparatoria_oregon_scuola_elementare-425651298/?rss"
-        },
-        {
-          "language": "en",
-          "source": "yankton.net",
-          "source_country": "united-states",
-          "url": "https://www.yankton.net/news/national_ap/article_54727a86-fa2a-5132-a545-20faa86a6895.html"
-        },
-        {
-          "language": "en",
-          "source": "wgowam.com",
-          "source_country": "united-states",
-          "url": "https://www.wgowam.com/2026/10/16/tragedy-at-oregon-elementary-school-leaves-four-dead-and-two-injured/"
-        },
-        {
-          "language": "en",
-          "source": "texarkanagazette.com",
-          "source_country": "united-states",
-          "url": "https://www.texarkanagazette.com/news/2026/oct/16/teen-shooter-kills-4-at-oregon-elementary-school/"
-        },
-        {
-          "language": "en",
-          "source": "980waav.com",
-          "source_country": "united-states",
-          "url": "https://www.980waav.com/2026/10/16/tragedy-at-oregon-elementary-school-leaves-four-dead-and-two-injured/"
-        },
-        {
-          "language": "en",
-          "source": "ottumwacourier.com",
-          "source_country": "united-states",
-          "url": "https://www.ottumwacourier.com/news/national_news/teen-shooter-kills-4-at-oregon-elementary-school-before-being-shot-by-a-witness/article_d2a86e20-6599-5f7d-8abe-98415aaeb95d.html"
-        },
-        {
-          "language": "de",
-          "source": "vienna.at",
-          "source_country": "au",
-          "url": "https://www.vienna.at/16-jaehriger-toetet-drei-kinder-und-einen-lehrer-an-us-volksschule/10550876"
-        },
-        {
-          "language": "ind",
-          "source": "okezone.com",
-          "source_country": "id",
-          "url": "https://news.okezone.com/read/2026/10/16/18/3248308/penembakan-sekolah-di-oregon-tewaskan-3-anak-dan-1-guru-pelaku-remaja-16-tahun"
-        },
-        {
-          "language": "en",
-          "source": "rappler.com",
-          "source_country": "rp",
-          "url": "https://www.rappler.com/world/us-canada/shooter-oregon-us-elementary-school-deaths-violence-october-15-2026/"
-        },
-        {
-          "language": "en",
-          "source": "cbc.ca",
-          "source_country": "ca",
-          "url": "https://www.cbc.ca/news/world/oregon-school-shooting-9.7382749"
-        },
-        {
-          "language": "en",
-          "source": "royston-crow.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.royston-crow.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "fox13now.com",
-          "source_country": "united-states",
-          "url": "https://www.fox13now.com/us-news/crime/police-say-at-least-2-were-hospitalized-after-shooting-at-elementary-school-and-the-shooter-is-dead"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://newsradiowkcy.iheart.com/content/2026-10-15-multiple-victims-including-children-in-oregon-elementary-school-shooting/"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://wmmbam.iheart.com/content/2026-10-15-multiple-victims-including-children-in-oregon-elementary-school-shooting/"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://wmmbam.iheart.com/content/2026-10-16-3-kids-1-adult-dead-after-shooting-at-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "harrowtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.harrowtimes.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "darlingtonandstocktontimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.darlingtonandstocktontimes.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "theboltonnews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.theboltonnews.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "wsls.com",
-          "source_country": "united-states",
-          "url": "https://www.wsls.com/news/national/2026/10/15/police-say-at-least-2-were-hospitalized-after-shooting-at-elementary-school-and-the-shooter-is-dead/"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://wmmbam.iheart.com/featured/florida-news/content/2026-10-15-oregon-police-multiple-victims-including-kids-after-active-shooter-at-oregon-elementary-school/"
-        },
-        {
-          "language": "en",
-          "source": "sconeadvocate.com.au",
-          "source_country": "as",
-          "url": "https://www.sconeadvocate.com.au/story/9369623/five-reported-dead-after-shooting-at-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "wafb.com",
-          "source_country": "united-states",
-          "url": "https://www.wafb.com/2026/10/15/police-responding-reports-active-shooter-oregon-elementary-school/"
-        },
-        {
-          "language": "en",
-          "source": "kshb.com",
-          "source_country": "united-states",
-          "url": "https://www.kshb.com/us-news/crime/police-say-at-least-2-were-hospitalized-after-shooting-at-elementary-school-and-the-shooter-is-dead"
-        },
-        {
-          "language": "en",
-          "source": "fox23.com",
-          "source_country": "united-states",
-          "url": "https://fox23.com/news/nation-world/police-responding-to-reported-active-shooter-situation-at-elementary-school-in-oregon-silver-rail-elementary-school-guns-weapons-investigation-lockdown-children-students-teachers-deschutes-county-sheriffs-office"
-        },
-        {
-          "language": "en",
-          "source": "tribdem.com",
-          "source_country": "united-states",
-          "url": "https://www.tribdem.com/news/five-people-believed-dead-following-shooting-at-oregon-elementary-school-two-officials-say/article_b090da91-fd8e-57b8-a1ba-4dfbb27652d5.html"
-        },
-        {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://economictimes.indiatimes.com/news/international/world-news/oregon-school-shooting-leaves-4-dead-including-children-shooter-killed/articleshow/134979771.cms"
-        },
-        {
-          "language": "en",
-          "source": "wishtv.com",
-          "source_country": "united-states",
-          "url": "https://www.wishtv.com/news/national/multiple-people-injured-shooter-killed-at-oregon-elementary-school-police-say/"
-        },
-        {
-          "language": "en",
-          "source": "cbs12.com",
-          "source_country": "united-states",
-          "url": "https://cbs12.com/news/nation-world/police-responding-to-reported-active-shooter-situation-at-elementary-school-in-oregon-silver-rail-elementary-school-guns-weapons-investigation-lockdown-children-students-teachers-deschutes-county-sheriffs-office"
-        },
-        {
-          "language": "en",
-          "source": "singletonargus.com.au",
-          "source_country": "as",
-          "url": "https://www.singletonargus.com.au/story/9369623/five-reported-dead-after-shooting-at-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "dailyecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.dailyecho.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "eadt.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.eadt.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "news4jax.com",
-          "source_country": "united-states",
-          "url": "https://www.news4jax.com/news/national/2026/10/15/police-say-at-least-2-were-hospitalized-after-shooting-at-elementary-school-and-the-shooter-is-dead/"
-        },
-        {
-          "language": "en",
-          "source": "yourlocalguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.yourlocalguardian.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://newsradiowkcy.iheart.com/content/2026-10-16-3-kids-1-adult-dead-after-shooting-at-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "newschannel5.com",
-          "source_country": "united-states",
-          "url": "https://www.newschannel5.com/us-news/crime/police-say-at-least-2-were-hospitalized-after-shooting-at-elementary-school-and-the-shooter-is-dead"
-        },
-        {
-          "language": "en",
-          "source": "hayspost.com",
-          "source_country": "united-states",
-          "url": "https://hayspost.com/posts/1269ed9c-f7fb-488f-bd38-d6624931b4e1"
-        },
-        {
-          "language": "en",
-          "source": "ksbw.com",
-          "source_country": "united-states",
-          "url": "https://www.ksbw.com/article/silver-rail-elementary-school-bend-oregon-report-active-shooter/74150171"
-        },
-        {
-          "language": "en",
-          "source": "10news.com",
-          "source_country": "united-states",
-          "url": "https://www.10news.com/us-news/crime/police-say-at-least-2-were-hospitalized-after-shooting-at-elementary-school-and-the-shooter-is-dead"
-        },
-        {
-          "language": "en",
-          "source": "northwaleschronicle.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.northwaleschronicle.co.uk/news/national/26641802.five-believed-dead-following-shooting-oregon-school/"
-        },
-        {
-          "language": "en",
-          "source": "wesh.com",
-          "source_country": "united-states",
-          "url": "https://www.wesh.com/article/silver-rail-elementary-school-bend-oregon-report-active-shooter/74150171"
-        },
-        {
-          "language": "es",
-          "source": "lineadirectaportal.com",
-          "source_country": "mx",
-          "url": "https://lineadirectaportal.com/internacional/confirman-5-muertos-tras-tiroteo-en-escuela-de-oregon-entre-ellos-3-ninos-2026-10-15__1721250"
-        },
-        {
-          "language": "ron",
-          "source": "ziarulnational.md",
-          "source_country": "md",
-          "url": "https://www.ziarulnational.md/atac-armat-la-o-scoala-din-oregon-trei-copii-si-un-adult-au-fost-ucisi-iar-atacatorul-a-murit/"
-        },
-        {
-          "language": "de",
-          "source": "nwzonline.de",
-          "source_country": "germany",
-          "url": "https://www.nwzonline.de/panorama-meldungen/kriminalitaet-fuenf-tote-bei-gewalttat-an-grundschule-in-oregon_a_4,3,2111775327.html"
-        },
-        {
-          "language": "de",
-          "source": "soester-anzeiger.de",
-          "source_country": "germany",
-          "url": "http://www.soester-anzeiger.de/deutschland-welt/fuenf-tote-bei-gewalttat-an-grundschule-in-oregon-zr-94543610.html"
-        },
-        {
-          "language": "de",
-          "source": "wiesbadener-kurier.de",
-          "source_country": "germany",
-          "url": "https://www.wiesbadener-kurier.de/panorama/aus-aller-welt/fuenf-tote-bei-gewalttat-an-grundschule-in-oregon-6551490"
+          "url": "https://www.20minutos.es/internacional/trump-levanta-las-sanciones-contra-rusia-por-guerra-pleno-giro-hacia-putin-por-motivos-interes-nacional_7049933_0.html"
         }
       ],
       "mentioned_countries": [
-        "united-states"
+        "rs"
       ],
-      "origin_country": "as",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261016/11660337/cuatro-muertos-tres-ninos-tiroteo-escuela-primaria-oregon.html",
-      "rank": 1,
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/trump-suspende-sanciones-rusia-recien-aprobadas-tres-semanas-legislativas-pacto-diesel-putin_1_13593288.html",
+      "rank": 2,
       "reference_newsroom_count": 8,
       "reference_newsrooms": [
         "20minutos.es",
         "abc.es",
         "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
         "elpais.com",
-        "euronews.com",
-        "lavanguardia.com",
-        "repubblica.it",
-        "tagesschau.de"
+        "expansion.com",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5105,
-          "corroboration": 0.8667,
+          "coherence": 0.4713,
+          "corroboration": 0.3333,
           "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.9231,
-          "source_reliability": 0.9304
-        },
-        "total": 0.8021,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "oregon",
-      "subject_names": [
-        "etats-unis",
-        "oregon",
-        "washington"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Un adolescente mata a tiros a tres niños y una maestra en una escuela de primaria en Oregón"
-    },
-    {
-      "cluster_id": "subject-china-2d6470da6178",
-      "coherence": 0.521626636384146,
-      "consequence": 3,
-      "countries": [
-        "ar",
-        "brazil",
-        "france",
-        "germany",
-        "it",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 7,
-      "editorial_day": "2026-10-16",
-      "headline": "China y Corea del Norte inauguran un puente fronterizo tras 12 años de demora",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/l-inauguration-dun-pont-scelle-le-degel-entre-la-chine-et-la-coree-du-nord-20261015"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-15/corea-del-norte-y-china-abren-un-nuevo-puente-tras-12-anos-de-retrasos.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261015/11659533/china-corea-norte-inauguran-gran-puente-sobre-yalu-construido-14-anos.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck1exgw3j115o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/north-korea-china-open-border-bridge-after-12-year-delay/a-79666112?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/15/china-and-north-korea-open-new-yalu-river-bridge-after-12-year-delay"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/15/new-four-lane-bridge-between-china-and-north-korea-opens-after-a-decade-of-delay"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/15/ponte-entre-china-e-coreia-do-norte-e-inaugurada.ghtml"
-        },
-        {
-          "language": "es",
-          "source": "sinmordaza.com",
-          "source_country": "ar",
-          "url": "https://sinmordaza.com/noticia/522094-china-y-corea-del-norte-inauguraron-un-puente-fronterizo-tras-12-anos-de-demoras.html"
-        }
-      ],
-      "mentioned_countries": [
-        "china",
-        "kn"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/15/new-four-lane-bridge-between-china-and-north-korea-opens-after-a-decade-of-delay",
-      "rank": 2,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "elpais.com",
-        "euronews.com",
-        "globo.com",
-        "la-croix.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5216,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
           "prominence": 0.6667,
-          "source_reliability": 0.7647
+          "source_reliability": 0.75
         },
-        "total": 0.7706,
+        "total": 0.7274,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "china",
+      "subject_label": "rusia",
       "subject_names": [
-        "china",
-        "chine",
-        "north korea"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "Los dos países abrieron oficialmente un nuevo puente sobre el río Yalu que conecta sus fronteras; la estructura fue completada años atrás pero su puesta en servicio se retrasó aproximadamente 12 años, y la inauguración marca un restablecimiento visible de la conectividad entre Pekín y Pyongyang."
-    },
-    {
-      "cluster_id": "subject-trump-a4d737b2ce63",
-      "coherence": 0.4930860747113702,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "hr",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-16",
-      "headline": "Trump califica de “vergüenza” la reanudación de ataques ucranianos a refinerías rusas",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/16/guerre-en-ukraine-volodymyr-zelensky-acte-la-reprise-des-frappes-contre-les-raffineries-russes-une-honte-selon-donald-trump_6795219_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/amerique/une-honte-trump-tance-de-nouveau-zelensky-apres-lannonce-de-la-reprise-des-frappes-ukrainiennes-sur-les-raffineries-russes-20261016_XVQDGBWGTRFJBFUW6DYFRUKJ44/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/donald-trump-juge-que-la-reprise-par-l-ukraine-des-frappes-sur-les-raffineries-russes-est-une-honte_8239546.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261016-en-direct-la-reprise-des-frappes-ukrainiennes-contre-les-raffineries-russes-est-une-honte-dit-trump"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/cest-une-honte-la-nouvelle-charge-de-donald-trump-contre-volodymyr-zelensky-ECMRWFPBYFFBDAPOMTOL2KE6EM/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-16/trump-tacha-de-verguenza-la-reanudacion-de-los-ataques-ucranios-contra-las-refinerias-rusas.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/16/trump-calls-ukraines-resumption-of-strikes-on-russian-oil-refineries-a-disgrace"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/trump-calls-ukraine-renewed-strikes-090555000.html"
-        },
-        {
-          "language": "hrv",
-          "source": "telegram.hr",
-          "source_country": "hr",
-          "url": "https://www.telegram.hr/vijesti/trump-sve-bezobzirnije-podupire-moskvu-ukrajinski-napadi-na-ruske-rafinerije-su-sramota/"
-        }
-      ],
-      "mentioned_countries": [
-        "rs",
-        "up"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/16/guerre-en-ukraine-volodymyr-zelensky-acte-la-reprise-des-frappes-contre-les-raffineries-russes-une-honte-selon-donald-trump_6795219_3210.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "elpais.com",
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "rfi.fr",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4931,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7576
-        },
-        "total": 0.7565,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "california",
+        "bbc",
+        "congreso",
         "donald trump",
-        "fort hood",
-        "groenlandia",
+        "ilhan omar",
         "kiev",
         "kremlin",
-        "kyiv",
-        "noire",
+        "moscou",
+        "oleshky",
+        "pen",
+        "putin",
         "rusia",
         "russia",
         "russian",
@@ -615,232 +242,309 @@
         "trump",
         "ucrania",
         "ukraine",
-        "volodymyr zelensky",
-        "zelenski",
-        "zelensky"
+        "ukrainian"
       ],
-      "subject_newsroom_count": 29,
-      "summary": "Varios medios informan que Donald Trump criticó duramente la decisión de Ucrania de reanudar bombardeos contra refinerías en territorio ruso, describiendo esos ataques como \"una vergüenza\" o \"una honra\" según las citas recogidas; las piezas coinciden en que su comentario fue una nueva carga pública contra el presidente ucraniano Volodymyr Zelensky tras el anuncio de las operaciones."
+      "subject_newsroom_count": 9,
+      "summary": "El presidente Donald Trump anunció la suspensión temporal de sanciones aprobadas por el Congreso contra Rusia, justificando la medida por el \"interés nacional\" de Estados Unidos; varios medios coinciden en que la decisión se produce tras acercamientos con Vladimir Putin y antes de comicios legislativos, y que el Kremlin la calificó favorablemente."
     },
     {
-      "cluster_id": "subject-iran-042fde3fe034",
-      "coherence": 0.4878774409233052,
+      "cluster_id": "subject-zelensky-b2534a35d18c",
+      "coherence": 0.5182718452481451,
       "consequence": 3,
       "countries": [
+        "ei",
         "france",
-        "germany",
-        "mx",
-        "spain"
+        "nl",
+        "rb"
       ],
       "country_count": 4,
-      "editorial_day": "2026-10-16",
-      "headline": "EE. UU. evaluó usar la 'madre de todas las bombas' contra Irán",
+      "editorial_day": "2026-10-17",
+      "headline": "Zelenski pide a la UE 70.000 millones de euros adicionales para 2027",
       "independent_source_count": 7,
       "members": [
         {
           "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-volodymyr-zelensky-reclame-70-milliards-d-euros-en-plus_8241460.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/proche-moyen-orient/guerre-en-iran-washington-envisage-dutiliser-la-mere-de-toutes-les-bombes-FRXTUBXE7BHI5BGGMVUTJBR4DA/"
+          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-plaidoyer-de-volodymyr-zelensky-a-lue-pour-une-rallonge-de-70-milliards-deuros-EBQPX3MIK5B45MQFOO3GCZYHHI/"
         },
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/trump-considera-lanzar-madre-bombas-sobre-iran-20261015232056-nt.html"
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2635264"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261015/11659475/que-es-ee-uu-estudia-lanzar-madre-todas-bombas-iran-cnn.html"
+          "language": "en",
+          "source": "thejournal.ie",
+          "source_country": "ei",
+          "url": "https://www.thejournal.ie/zelensky-eu-funding-request-7195879-Oct2026/"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/eeuu-plantea-lanzar-madre-bombas-iran-cnn_1_13588107.html"
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/guerre-en-ukraine-volodymyr-zelensky-reclame-70-milliards-d-euros-en-plus-a-l-ue-pour-2027-6421177"
         },
         {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/internacional/noticia-trump-pone-mesa-uso-madre-todas-bombas-caso-nuevo-ataque-contra-iran-20261016092702.html"
+          "language": "fr",
+          "source": "lalsace.fr",
+          "source_country": "france",
+          "url": "https://www.lalsace.fr/defense-guerre-conflit/2026/10/16/c-est-un-montant-realiste-volodymyr-zelensky-reclame-a-l-ue-70-milliards-d-euros-en-plus"
         },
         {
-          "language": "es",
-          "source": "vanguardia.com.mx",
-          "source_country": "mx",
-          "url": "https://vanguardia.com.mx/noticias/internacional/trump-considera-usar-la-madre-de-todas-las-bombas-contra-iran-segun-fuentes-MC24158477"
-        },
-        {
-          "language": "de",
-          "source": "hna.de",
-          "source_country": "germany",
-          "url": "http://www.hna.de/politik/iran-pentagon-erwaegt-mutter-aller-bomben-ausweg-fuer-trump-zr-94543440.html"
+          "language": "srp",
+          "source": "rtvbn.com",
+          "source_country": "rb",
+          "url": "https://www.rtvbn.com/4097832/zelenski-od-eu-trazi-dodatno-70-milijardi-evra-za-nastavak-rata"
         }
       ],
       "mentioned_countries": [
-        "ir"
+        "up"
       ],
-      "origin_country": "france",
+      "origin_country": "ei",
       "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/proche-moyen-orient/guerre-en-iran-washington-envisage-dutiliser-la-mere-de-toutes-les-bombes-FRXTUBXE7BHI5BGGMVUTJBR4DA/",
-      "rank": 4,
-      "reference_newsroom_count": 5,
+      "outbound_url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-plaidoyer-de-volodymyr-zelensky-a-lue-pour-une-rallonge-de-70-milliards-deuros-EBQPX3MIK5B45MQFOO3GCZYHHI/",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "europapress.es",
-        "lavanguardia.com",
-        "lexpress.fr"
+        "francetvinfo.fr",
+        "lexpress.fr",
+        "nos.nl",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4879,
+          "coherence": 0.5183,
           "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.6364,
-          "source_reliability": 0.7037
+          "source_reliability": 0.6923
         },
-        "total": 0.7318,
+        "total": 0.7226,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "iran",
+      "subject_label": "zelensky",
       "subject_names": [
-        "california",
-        "donald trump",
-        "fort hood",
-        "groenlandia",
-        "hormuz",
-        "iran",
-        "trump"
+        "kiev",
+        "pen",
+        "russie",
+        "starlink",
+        "ucrania",
+        "ukraine",
+        "volodymyr zelensky",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Varios medios informan que el Gobierno de Estados Unidos, durante la presidencia de Donald Trump, estudió la posibilidad de emplear la llamada \"madre de todas las bombas\" (MOAB) como respuesta a nuevos ataques desde Irán. Las informaciones coinciden en que la opción fue considerada por responsables estadounidenses y discutida como una alternativa militar, sin detallar que se hubiera ordenado su uso ni proporcionar fechas o objetivos específicos."
+      "subject_newsroom_count": 22,
+      "summary": "Volodímir Zelenski solicitó a los líderes de la Unión Europea un incremento de 70.000 millones de euros para apoyar a Ucrania el próximo año (2027), describiendo esa cifra como realista y enmarcando la petición como necesaria para la continuación del esfuerzo ucraniano contra la guerra."
     },
     {
-      "cluster_id": "subject-pakistan-f00388fb920f",
-      "coherence": 0.4615739544978984,
+      "cluster_id": "subject-frente-amplio-0eccfa295a7e",
+      "coherence": 0.4902687959146168,
       "consequence": 3,
       "countries": [
-        "it",
-        "pk",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "spain"
       ],
-      "country_count": 5,
-      "editorial_day": "2026-10-15",
-      "headline": "Colapso del techo de una escuela en Pakistán provoca decenas de muertes",
-      "independent_source_count": 8,
+      "country_count": 1,
+      "editorial_day": "2026-10-17",
+      "headline": "PSOE y Frente Amplio pactan ir en lista única al Senado en varias circunscripciones",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261015/11659687/32-ninos-mueren-desplomarse-techo-escuela-pakistan.html"
+          "url": "https://elpais.com/espana/elecciones-generales/2026-10-16/el-psoe-y-la-izquierda-alcanzan-un-pacto-nacional-de-listas-conjuntas-al-senado.html"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/oct/15/pakistan-peshawar-school-roof-collapse-leaves-students-dead"
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/psoe-frente-amplio-llegan-acuerdo-presentar-listas-conjuntas-senado_1_13583230.html"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cked326llddgo?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/economia/politica/2026/10/17/psoe-frente-amplio-acuerdan-presentarse-senado-lista-unica.html"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/cr5yn5wel153o?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/16/6ad23f39e85eced3738b45a2.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/15/pakistan-classrooms-reduced-to-rubble-in-deadly-school-disaster-at-leat-32-pupils-killed"
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/economia/psoe-frente-amplio-llegan-acuerdo-concurrir-bloque-senado-29n_1_2238540.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/15/school-roof-collapse-kills-teacher-and-at-least-17-children-in-northwest-pakistan"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20261017/psoe-frente-amplio-acuerdan-ir-juntos-senado-coalicion-llamara-progreso/1003744423896_0.html"
         },
         {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/15/nx-s1-6003437/school-roof-collapse-pakistan"
-        },
-        {
-          "language": "en",
-          "source": "kxly920.com",
-          "source_country": "united-states",
-          "url": "https://kxly920.com/2026/10/15/roof-collapse-at-pakistan-school-kills-32-students-1-teacher/"
-        },
-        {
-          "language": "en",
-          "source": "pakistantelegraph.com",
-          "source_country": "pk",
-          "url": "http://www.pakistantelegraph.com/news/279376543/4th-ld-writethru-death-toll-rises-to-33-after-school-roof-collapse-in-nw-pakistan"
-        },
-        {
-          "language": "en",
-          "source": "kztv10.com",
-          "source_country": "united-states",
-          "url": "https://www.kztv10.com/world/asia/at-least-35-dead-more-than-50-injured-in-pakistan-school-roof-collapse"
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-psoe-frente-amplio-otros-partidos-izquierda-acuerdan-presentarse-unidos-47-circunscripciones-senado-20261017003722.html"
         }
       ],
       "mentioned_countries": [
-        "pk"
+        "spain"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/15/school-roof-collapse-kills-teacher-and-at-least-17-children-in-northwest-pakistan",
-      "rank": 5,
-      "reference_newsroom_count": 5,
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/politica/psoe-frente-amplio-llegan-acuerdo-presentar-listas-conjuntas-senado_1_13583230.html",
+      "rank": 4,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com",
-        "lavanguardia.com",
-        "npr.org",
-        "theguardian.com"
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com",
+        "infolibre.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4616,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "coherence": 0.4903,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7714
+          "prominence": 0.6364,
+          "source_reliability": 0.7241
         },
-        "total": 0.7025,
+        "total": 0.7195,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "pakistan",
+      "subject_label": "frente amplio",
       "subject_names": [
-        "pakistan"
+        "canarias",
+        "frente amplio",
+        "psoe",
+        "senado"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Un techo se desplomó en una escuela en el noroeste de Pakistán, provocando la muerte de decenas de niños y al menos un docente, y dejando además a muchas personas heridas; las informaciones de las distintas fuentes coinciden en que el accidente fue grave y causó múltiples víctimas y heridos."
+      "subject_newsroom_count": 8,
+      "summary": "PSOE y Frente Amplio acordaron presentar candidaturas conjuntas al Senado bajo una única lista —bautizada como Senado de Progreso en algunas notas— para las elecciones del 29 de noviembre, concurriendo unidos en 47 circunscripciones y sumando a otros partidos de izquierda en el pacto con el objetivo de desafiar la mayoría del PP."
+    },
+    {
+      "cluster_id": "subject-ormuz-136544209a31",
+      "coherence": 0.6990631109118164,
+      "consequence": 3,
+      "countries": [
+        "af",
+        "ar",
+        "it",
+        "jm",
+        "united-states"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-10-17",
+      "headline": "Superpetrolero impacta con una mina y queda en llamas en el Estrecho de Ormuz",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/17/super-tanker-ablaze-after-striking-mine-in-strait-of-hormuz-irgc-says"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/show/news-wrap-iran-says-cargo-ship-sank-after-hitting-a-mine-in-strait-of-hormuz"
+        },
+        {
+          "language": "en",
+          "source": "coloradostar.com",
+          "source_country": "united-states",
+          "url": "http://www.coloradostar.com/news/279380774/iran-says-supertanker-hit-mine-in-strait-of-hormuz"
+        },
+        {
+          "language": "en",
+          "source": "jamaicantimes.com",
+          "source_country": "jm",
+          "url": "http://www.jamaicantimes.com/news/279380774/iran-says-supertanker-hit-mine-in-strait-of-hormuz"
+        },
+        {
+          "language": "en",
+          "source": "bignewsnetwork.com",
+          "source_country": "united-states",
+          "url": "http://www.bignewsnetwork.com/news/279380774/iran-says-supertanker-hit-mine-in-strait-of-hormuz"
+        },
+        {
+          "language": "en",
+          "source": "argentinastar.com",
+          "source_country": "ar",
+          "url": "http://www.argentinastar.com/news/279380774/iran-says-supertanker-hit-mine-in-strait-of-hormuz"
+        },
+        {
+          "language": "en",
+          "source": "afghanistansun.com",
+          "source_country": "af",
+          "url": "http://www.afghanistansun.com/news/279380774/iran-says-supertanker-hit-mine-in-strait-of-hormuz"
+        }
+      ],
+      "mentioned_countries": [
+        "ir"
+      ],
+      "origin_country": "af",
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/show/news-wrap-iran-says-cargo-ship-sank-after-hitting-a-mine-in-strait-of-hormuz",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6991,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.6522
+        },
+        "total": 0.715,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ormuz",
+      "subject_names": [
+        "hormuz",
+        "ormuz"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Varios informes indican que un superpetrolero chocó con una mina en el Estrecho de Ormuz, lo que provocó un incendio a bordo; fuentes iraníes señalaron que el buque quedó afectado tras el impacto y hubo reportes de que el carguero se hundió posteriormente."
     }
   ],
-  "discarded_ingested": 328,
+  "discarded_ingested": 183,
   "discarded_kept": 5,
-  "generated_at": "2026-10-16T10:01:50.562081+00:00",
+  "generated_at": "2026-10-17T09:35:02.842368+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

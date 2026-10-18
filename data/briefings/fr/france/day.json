@@ -1,259 +1,399 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-paris-4066fdf54fcd",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-cisjordanie-4c90894cedaa",
+      "coherence": 0.5471941025974141,
+      "consequence": 2,
       "countries": [
         "france",
-        "it"
+        "po",
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-10-16",
-      "headline": "La France et l’Allemagne concluent un accord sur l’avenir de l’industrie automobile européenne",
-      "independent_source_count": 2,
+      "country_count": 3,
+      "editorial_day": "2026-10-18",
+      "headline": "Des colons attaquent un convoi diplomatique européen en Cisjordanie et blessent un maire français",
+      "independent_source_count": 11,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/10/15/la-france-et-l-allemagne-s-accordent-sur-l-avenir-d-une-industrie-automobile-made-in-europe_6794759_3234.html"
+          "url": "https://www.lemonde.fr/international/article/2026/10/18/en-cisjordanie-des-colons-attaquent-un-convoi-diplomatique-europeen-et-frappent-un-maire-du-nord-de-la-france_6796789_3210.html"
         },
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/16/france-and-germany-strike-car-industry-deal-linking-2035-engine-rules-to-made-in-europe-pu"
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-cisjordanie-un-maire-francais-blesse-dans-l-attaque-d-un-convoi-diplomatique-par-des-colons-20261017"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/moyen-orient/en-cisjordanie-un-maire-francais-roue-de-coups-par-des-colons-israeliens-lors-de-lattaque-dun-convoi-diplomatique-europeen-20261017_MYBG2DLIGZFCLPHW4C7QD3XQSI/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/en-cisjordanie-des-colons-attaquent-un-convoi-diplomatique-europeen-et-frappent-un-maire-francais-20261017"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/israel/des-colons-israeliens-attaquent-un-convoi-diplomatique-europeen-en-cisjordanie-et-frappent-un-maire-francais_8241916.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20261017-cisjordanie-occup%C3%A9e-colons-israel-attaque-convoi-diplomatique-frappent-maire-fran%C3%A7ais"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-4860877"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-17/un-grupo-de-colonos-israelies-ataca-a-una-comitiva-de-diplomaticos-europeos-en-cisjordania.html"
+        },
+        {
+          "language": "fr",
+          "source": "franceguyane.fr",
+          "source_country": "france",
+          "url": "https://www.franceguyane.fr/actualite/international/cisjordanie-des-colons-attaquent-un-convoi-diplomatique-europeen-et-frappent-un-maire-francais-1096617.php"
+        },
+        {
+          "language": "fr",
+          "source": "humanite.fr",
+          "source_country": "france",
+          "url": "https://www.humanite.fr/monde/cisjordanie/cisjordanie-occupee-un-maire-pcf-agresse-par-des-colons-juifs"
+        },
+        {
+          "language": "pt",
+          "source": "sapo.pt",
+          "source_country": "po",
+          "url": "https://sapo.pt/artigo/diplomatas-europeus-atacados-por-colonos-israelitas-na-cisjordania-6ad3a90367f99269c88f0abe"
         }
       ],
       "mentioned_countries": [
-        "germany",
+        "is",
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/economie/article/2026/10/15/la-france-et-l-allemagne-s-accordent-sur-l-avenir-d-une-industrie-automobile-made-in-europe_6794759_3234.html",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/moyen-orient/20261017-cisjordanie-occup%C3%A9e-colons-israel-attaque-convoi-diplomatique-frappent-maire-fran%C3%A7ais",
       "rank": 1,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "euronews.com",
-        "lemonde.fr"
+        "elpais.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
+          "coherence": 0.5472,
+          "corroboration": 0.6,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6938,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cisjordanie",
+      "subject_names": [
+        "cisjordania",
+        "cisjordanie",
+        "european",
+        "palestinians",
+        "west bank"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Des colonnes de colons israéliens ont pris à partie un convoi diplomatique européen en Cisjordanie; lors de l'attaque un maire français présent dans la délégation a été frappé et blessé, et le ministère des Affaires étrangères a condamné l'agression."
+    },
+    {
+      "cluster_id": "subject-france-2a1ba48e25a0",
+      "coherence": 0.3846899677823671,
+      "consequence": 3,
+      "countries": [
+        "co",
+        "mx",
+        "spain",
+        "unknown"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-18",
+      "headline": "Des manifestations anti-coût de la vie provoquent violences et arrestations en France",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/166-detenidos-protestas-estudiantes-francia-coste-vida-20261017150236-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/graves-disturbios-las-protestas-contra-coste-vida-francia-detenidos-altercados-violentos_7050021_0.html"
+        },
+        {
+          "language": "es",
+          "source": "sandiegored.com",
+          "source_country": "mx",
+          "url": "https://www.sandiegored.com/noticia/caos-en-paris-reportan-autos-incendiados-y-saqueos-a-tiendas-de-lujo-durante-protestas-contra-el-encarecimiento-de-la-vida/"
+        },
+        {
+          "language": "es",
+          "source": "bitlysdowssl-aws.com",
+          "source_country": "unknown",
+          "url": "https://bitlysdowssl-aws.com/2026/10/nos-ahogamos-las-protestas-por-el-costo-de-la-vida-sacuden-francia/"
+        },
+        {
+          "language": "es",
+          "source": "elnuevosiglo.com.co",
+          "source_country": "co",
+          "url": "https://www.elnuevosiglo.com.co/internacional/francia-estalla-por-el-costo-de-vida-y-los-disturbios-sacuden-varias-ciudades"
+        },
+        {
+          "language": "es",
+          "source": "lapatria.com",
+          "source_country": "co",
+          "url": "https://www.lapatria.com/internacional/paris-registra-100-detenciones-durante-protestas-contra-el-costo-de-vida-en-francia"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "co",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/graves-disturbios-las-protestas-contra-coste-vida-francia-detenidos-altercados-violentos_7050021_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3847,
+          "corroboration": 0.6667,
           "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.6,
+          "source_reliability": 0.6364
         },
-        "total": 0.6143,
+        "total": 0.6706,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "paris",
+      "subject_label": "france",
       "subject_names": [
-        "berlin",
-        "celine dion",
-        "elysee",
         "france",
-        "paris"
+        "francia",
+        "limoges",
+        "marseille",
+        "paris",
+        "proteste"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "Les deux pays se sont mis d’accord sur une stratégie commune pour soutenir une industrie automobile « made in Europe », liant les règles sur les moteurs prévues pour 2035 à des mesures visant à renforcer la production et la compétitivité européennes dans le secteur automobile."
+      "subject_newsroom_count": 32,
+      "summary": "Des protestations contre la hausse du coût de la vie ont dégénéré en violences et pillages dans plusieurs villes françaises, avec des incendies de véhicules et de magasins de luxe, des centaines de personnes arrêtées et au moins un manifestant gravement blessé, perdant une main."
     },
     {
-      "cluster_id": "subject-renfe-fe3640fc4e83",
-      "coherence": 0.5614621996332957,
-      "consequence": 2,
+      "cluster_id": "subject-limoges-8bccbab49b27",
+      "coherence": 0.4614397088451241,
+      "consequence": 1,
       "countries": [
+        "it",
+        "nl",
+        "pl",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-17",
-      "headline": "Les conducteurs de Semaf déclenchent une grève de 24 heures à Renfe le 29 octobre",
-      "independent_source_count": 4,
+      "country_count": 4,
+      "editorial_day": "2026-10-18",
+      "headline": "L’hôtel de ville historique de Limoges est détruit par un incendie lors de manifestations",
+      "independent_source_count": 10,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-10-17/el-sindicato-de-maquinistas-semaf-llama-a-una-huelga-de-24-horas-en-renfe-para-el-dia-29.html"
+          "url": "https://elpais.com/internacional/2026-10-17/el-ayuntamiento-de-limoges-destruido-por-las-llamas-en-la-jornada-de-protestas-en-francia.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/maquinistas-semaf-convocan-huelga-renfe-29-octubre_1_13592383.html"
+          "url": "https://www.abc.es/internacional/incendio-ayuntamiento-limoges-tragedia-patrimonio-frances-20261018103712-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261017/11661641/grupo-manifestantes-incendia-historico-ayuntamiento-limoges.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261017/11661587/imagenes-protestas-francia.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20261016/maquinistas-estallan-renfe-convocan-huelga-octubre/1003744423579_0.html"
+          "url": "https://www.elespanol.com/mundo/europa/20261017/francia-no-deja-intimidar-sigue-protestando-coste-vida-detenidos-joven-pierde-mano/1003744424397_0.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/economia/empresas/2026/10/16/6ad25287e4d4d8c5018b4570.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/economia/maquinistas-semaf-convocan-huelga-renfe-29-octubre_1_13592383.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5615,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "url": "https://www.europapress.es/internacional/noticia-ayuntamiento-limoges-arde-completo-protestas-francia-20261017220756.html"
         },
-        "total": 0.6124,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "renfe",
-      "subject_names": [
-        "renfe"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Le syndicat de conducteurs Semaf a convoqué une grève de 24 heures des maquinistes de Renfe pour le 29 octobre ; les articles indiquent que l’arrêt de travail a été annoncé par Semaf et vise le personnel de conduite de la compagnie ferroviaire nationale."
-    },
-    {
-      "cluster_id": "subject-paris-61a433ab7f4f",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "germany",
-        "it",
-        "lu"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-17",
-      "headline": "La France connaît une journée nationale de manifestations organisées par divers groupes",
-      "independent_source_count": 3,
-      "members": [
         {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/france-braces-for-nationwide-protests/a-79685584?maca=en-rss-en-world-4025-rdf"
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ayuntamiento-limoges-arde-completo-durante-protestas-francia_7050083_0.html"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/17/france-braces-for-tense-protests-as-security-concerns-take-centre-stage"
+          "url": "https://www.euronews.com/2026/10/18/spire-collapses-at-historic-limoges-town-hall-amid-violent-protests-across-france"
         },
         {
           "language": "en",
-          "source": "chronicle.lu",
-          "source_country": "lu",
-          "url": "https://www.chronicle.lu/category/international/64065-students-trade-unions-yellow-vests-set-to-protest-across-france"
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/17/historic-limoges-town-hall-engulfed-in-flames-amid-protests-in-france"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2635418"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/mundo/europa/2026-10-18/ayuntamiento-limoges-incendio-protestas-1hms_4447352/"
+        },
+        {
+          "language": "pol",
+          "source": "rp.pl",
+          "source_country": "pl",
+          "url": "https://www.rp.pl/spoleczenstwo/art45351991-pozar-zabytkowego-ratusza-w-limoges-we-francji-zamaskowani-sprawcy-podpalili-budynek"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "germany",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/17/france-braces-for-tense-protests-as-security-concerns-take-centre-stage",
+      "origin_country": "it",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/mundo/europa/20261017/francia-no-deja-intimidar-sigue-protestando-coste-vida-detenidos-joven-pierde-mano/1003744424397_0.html",
       "rank": 3,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 9,
       "reference_newsrooms": [
-        "dw.com",
-        "euronews.com"
+        "20minutos.es",
+        "abc.es",
+        "elconfidencial.com",
+        "elespanol.com",
+        "elpais.com",
+        "euronews.com",
+        "europapress.es",
+        "lavanguardia.com",
+        "nos.nl"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
+          "coherence": 0.4614,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.5294,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.7143,
+          "source_reliability": 0.814
         },
-        "total": 0.5925,
+        "total": 0.6246,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "paris",
+      "subject_label": "limoges",
       "subject_names": [
-        "berlin",
-        "celine dion",
-        "elysee",
         "france",
         "francia",
-        "french",
-        "paris"
+        "limoges",
+        "marseille",
+        "paris",
+        "proteste"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "Des manifestations nationales sont prévues en France avec la participation d’étudiants, de syndicats et du mouvement des gilets jaunes ; les mobilisations s’intensifient et les autorités redoutent des tensions et des problèmes de sécurité pendant ces rassemblements."
+      "subject_newsroom_count": 16,
+      "summary": "Lors de manifestations violentes en France, un groupe de manifestants a provoqué un incendie qui a enflammé l’hôtel de ville historique de Limoges; le bâtiment a subi d’importants dégâts, la flèche/torre s’est effondrée et les images montrent l’édifice en flammes pendant les émeutes."
     },
     {
-      "cluster_id": "subject-lyon-152f3c21f922",
+      "cluster_id": "subject-france-f8f107e5a752",
       "coherence": null,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-17",
-      "headline": "Manifestations du 17 octobre contre la vie chère : incidents et interpellations dans plusieurs villes",
+      "editorial_day": "2026-10-18",
+      "headline": "Des centaines de personnes interpellées lors des manifestations du 17 octobre en France",
       "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/en-direct-gilets-jaunes-lyceens-syndicats-suivez-les-manifestations-et-les-blocages-du-17-octobre-20261017"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/education/en-direct-mouvement-du-17-octobre-contre-la-vie-chere-les-jeunes-et-les-jaunes-se-mobilisent-20261017_GH4UURZMZJHZ3HG7ZHNPSP7GDE/"
+          "url": "https://www.lefigaro.fr/actualite-france/en-direct-au-lendemain-des-violences-du-17-octobre-la-france-se-reveille-sous-le-choc-20261018"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-17-octobre-lyceens-etudiants-gilets-jaunes-des-milliers-de-manifestants-attendus-dans-toute-la-france_8241022.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/economie/greve/direct-mobilisation-du-17-octobre-1-200-personnes-ont-ete-interpellees-selon-le-premier-ministre-qui-pointe-des-degres-de-violence-inacceptables_8242435.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261018-17-octobre-sc%C3%A8nes-de-chaos-et-au-moins-1200-interpellations-en-france"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lefigaro.fr",
-      "outbound_url": "https://www.lefigaro.fr/actualite-france/en-direct-gilets-jaunes-lyceens-syndicats-suivez-les-manifestations-et-les-blocages-du-17-octobre-20261017",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/vid%C3%A9o/20261018-17-octobre-sc%C3%A8nes-de-chaos-et-au-moins-1200-interpellations-en-france",
       "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
-        "lefigaro.fr",
-        "liberation.fr"
+        "lefigaro.fr"
       ],
       "score": {
         "components": {
@@ -270,153 +410,102 @@
         "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "lyon",
+      "subject_label": "france",
       "subject_names": [
-        "berlin",
-        "celine dion",
-        "elysee",
         "france",
-        "lyon",
+        "francia",
+        "limoges",
         "marseille",
         "paris",
-        "rennes"
+        "proteste"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Le 17 octobre, des mobilisations contre la vie chère ont eu lieu dans plusieurs villes françaises : à Paris une quarantaine de personnes ont été interpellées, à Lyon et Marseille des heurts ont été signalés, et en Bretagne des barrages filtrants et des barricades enflammées ont été observés, avec des groupes dispersés sur certains points de rassemblement."
+      "subject_newsroom_count": 32,
+      "summary": "Les articles indiquent que des manifestations ont eu lieu le 17 octobre en France et qu'elles ont donné lieu à de nombreuses interpellations : les bilans évoquent au moins 1 200 à 1 800 personnes arrêtées au cours des événements. Une cellule interministérielle de crise doit se réunir en réponse à la situation."
     },
     {
-      "cluster_id": "subject-russia-d755023a09da",
-      "coherence": 0.827957415349525,
-      "consequence": 3,
+      "cluster_id": "subject-vance-e93c00a801c1",
+      "coherence": 0.47794115525588765,
+      "consequence": 1,
       "countries": [
-        "it",
-        "united-kingdom",
-        "united-states",
-        "unknown"
+        "ez",
+        "france",
+        "germany",
+        "nl"
       ],
       "country_count": 4,
-      "editorial_day": "2026-10-17",
-      "filled_from": "europe",
-      "headline": "La Russie frappe neuf régions ukrainiennes alors que les tensions montent entre Zelenskyy et Trump",
-      "independent_source_count": 10,
+      "editorial_day": "2026-10-18",
+      "headline": "JD Vance attribue les violences en France à l'immigration",
+      "independent_source_count": 5,
       "members": [
         {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/10/16/russia-strikes-nine-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump"
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/flash-actu/manifestations-en-france-jd-vance-tient-l-immigration-responsable-des-violences-20261018"
         },
         {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russia-strikes-9-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump"
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-10/jd-vance-usa-frankreich-ausschreitungen-einwanderung-gxe"
         },
         {
-          "language": "en",
-          "source": "nagalandpost.com",
-          "source_country": "unknown",
-          "url": "https://nagalandpost.com/russia-strikes-ukraine-grid-amid-clash/"
+          "language": "de",
+          "source": "kreiszeitung.de",
+          "source_country": "germany",
+          "url": "https://www.kreiszeitung.de/politik/jd-vance-gibt-migration-schuld-an-krawallen-in-frankreich-zr-94546272.html"
         },
         {
-          "language": "en",
-          "source": "latimes.com",
-          "source_country": "united-states",
-          "url": "https://www.latimes.com/world-nation/story/2026-10-16/russia-strikes-9-ukrainian-regions-as-strain-grows-between-zelensky-trump"
+          "language": "nl",
+          "source": "welingelichtekringen.nl",
+          "source_country": "nl",
+          "url": "https://www.welingelichtekringen.nl/samenleving/vance-immigratie-is-verantwoordelijk-voor-geweld-in-frankrijk"
         },
         {
-          "language": "en",
-          "source": "thewestmorlandgazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thewestmorlandgazette.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
-        },
-        {
-          "language": "en",
-          "source": "thetelegraphandargus.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thetelegraphandargus.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
-        },
-        {
-          "language": "en",
-          "source": "theargus.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.theargus.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
-        },
-        {
-          "language": "en",
-          "source": "london-now.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.london-now.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
-        },
-        {
-          "language": "en",
-          "source": "swindonadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.swindonadvertiser.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
-        },
-        {
-          "language": "en",
-          "source": "somersetcountygazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.somersetcountygazette.co.uk/news/national/26643122.russia-strikes-nine-ukrainian-regions-strain-grows-zelensky-trump/"
+          "language": "ces",
+          "source": "idnes.cz",
+          "source_country": "ez",
+          "url": "https://www.idnes.cz/zpravy/zahranicni/migrace-francie-nasilnosti-protesty-vance-usa.A261018_103100_zahranicni_jhr"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "france"
       ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/10/16/russia-strikes-nine-ukrainian-regions-as-strain-grows-between-zelenskyy-and-trump",
+      "origin_country": "ez",
+      "outbound_source": "zeit.de",
+      "outbound_url": "https://www.zeit.de/politik/ausland/2026-10/jd-vance-usa-frankreich-ausschreitungen-einwanderung-gxe",
       "rank": 5,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "euronews.com",
-        "pbs.org"
+        "lefigaro.fr",
+        "zeit.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.828,
+          "coherence": 0.4779,
           "corroboration": 0.6667,
           "editorial_weight": 0.2,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.7333
+          "prominence": 0.5556,
+          "source_reliability": 0.6
         },
-        "total": 0.6821,
+        "total": 0.532,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "russia",
+      "subject_label": "vance",
       "subject_names": [
-        "bbc",
-        "donald trump",
-        "ilhan omar",
-        "kiev",
-        "moscou",
-        "pen",
-        "russia",
-        "russian",
-        "russie",
-        "starlink",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "volodymyr zelensky",
-        "zelenski",
-        "zelensky",
-        "zelenskyy"
+        "vance"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "Des frappes russes ont touché neuf régions d'Ukraine, y compris des attaques contre le réseau électrique, tandis que les relations politiques se tendent entre le président ukrainien Volodymyr Zelenskyy et l'ancien président américain Donald Trump."
+      "subject_newsroom_count": 4,
+      "summary": "Plusieurs articles rapportent que le sénateur américain JD Vance a déclaré que l'immigration est responsable des violences et des émeutes en France, liant ainsi les troubles sociaux à une gestion qu'il juge défaillante des flux migratoires."
     }
   ],
-  "discarded_ingested": 16,
+  "discarded_ingested": 46,
   "discarded_kept": 5,
-  "generated_at": "2026-10-17T09:35:02.842368+00:00",
+  "generated_at": "2026-10-18T09:46:49.464211+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

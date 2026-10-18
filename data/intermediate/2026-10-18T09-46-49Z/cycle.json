@@ -1,0 +1,24 @@
+{
+  "articles_collected": 7427,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 6747,
+  "clusters_selected": 10,
+  "completed": true,
+  "cycle_id": "2026-10-18T09-46-49Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261018093000.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "gateway",
+      "detail": "subject-limoges-8bccbab49b27: HTTP 500"
+    }
+  ],
+  "groups_after_dedupe": 6845,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-10-18T09:46:49.464211+00:00",
+  "summarize_batches": {}
+}

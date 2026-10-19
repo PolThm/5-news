@@ -1,34 +1,140 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ertzaintza-ad506639bdef",
-      "coherence": null,
+      "cluster_id": "subject-puigdemont-4f2eed05404d",
+      "coherence": 0.3900787984472537,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-17",
-      "headline": "La Ertzaintza detiene en Irún a dos jóvenes investigados por delitos de terrorismo",
-      "independent_source_count": 3,
+      "editorial_day": "2026-10-19",
+      "headline": "El juez Llarena retira la orden de detención contra Carles Puigdemont",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-10-17/la-ertzaintza-detiene-en-irun-a-dos-personas-acusadas-de-terrorismo-y-con-informacion-sobre-las-fuerzas-de-seguridad.html"
+          "url": "https://elpais.com/espana/2026-10-19/llarena-confirma-su-decision-de-levantar-la-orden-de-detencion-de-puigdemont-con-criticas-al-constitucional.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/euskadi/ertzaintza-audiencia-nacional-investigan-jovenes-nacionalidad-espanola-delitos-graves-terrorismo_1_13594556.html"
+          "url": "https://www.eldiario.es/catalunya/juez-llarena-critica-constitucional-confirma-puigdemont-volver-espana-detenido_1_13596182.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/pais-vasco/2026/10/17/6ad3e8bbe9cf4afa078b4587.html"
+          "url": "https://www.elmundo.es/espana/2026/10/19/6ad5d223e85ece27348b4599.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/llarena-levanta-definitivamente-orden-detencion-puigdemont-carga-fallo-constitucional_1_2238672.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/tribunales/20261019/juez-llarena-retira-orden-detener-puigddemont-acata-fallo-tc-no-comparto-afea-descalificaciones-ts/1003744425386_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/tribunales/20261019/juez-llarena-retira-orden-detener-puigddemont-acata-fallo-tc-no-comparto-afea-descalificaciones-ts/1003744425386_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.3901,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
+        },
+        "total": 0.6084,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "puigdemont",
+      "subject_names": [
+        "canarias",
+        "ceuta",
+        "constitucional",
+        "defensor",
+        "espana",
+        "llarena",
+        "madrid",
+        "puigdemont",
+        "supremo"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "El juez del Tribunal Supremo Pablo Llarena ha confirmado la retirada definitiva de la orden de detención contra Carles Puigdemont tras acatar la resolución del Tribunal Constitucional, aunque en sus escritos critica el fallo del Constitucional y rechaza parte de sus apreciaciones."
+    },
+    {
+      "cluster_id": "subject-defensor-a6ad4cbb43ee",
+      "coherence": 0.42017676527413084,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-19",
+      "headline": "El Tribunal Constitucional eleva al Pleno la decisión sobre el recurso del Defensor del Pueblo",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-19/el-pleno-del-constitucional-decidira-sobre-la-admision-del-recurso-del-defensor-del-pueblo-sobre-la-ley-de-nietos.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/19/6ad5f59ae85ece82378b456f.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/10/19/6ad5d6bafc6c83be138b4576.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiariomontanes.es",
+          "source_country": "spain",
+          "url": "https://www.eldiariomontanes.es/nacional/constitucional-eleva-pleno-votacion-admitir-recurso-defensor-20261019122232-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "iustel.com",
+          "source_country": "spain",
+          "url": "https://www.iustel.com/diario_del_derecho/noticia.asp?ref_iustel=1270288"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/nacional/tc-decidira-esta-semana-sobre-peticion-defensor-pueblo-dejar-sin-efecto-suspension-voto-por-ley-nietos_7050409_0.html"
         }
       ],
       "mentioned_countries": [
@@ -36,12 +142,252 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/2026-10-17/la-ertzaintza-detiene-en-irun-a-dos-personas-acusadas-de-terrorismo-y-con-informacion-sobre-las-fuerzas-de-seguridad.html",
-      "rank": 1,
+      "outbound_url": "https://elpais.com/espana/2026-10-19/el-pleno-del-constitucional-decidira-sobre-la-admision-del-recurso-del-defensor-del-pueblo-sobre-la-ley-de-nietos.html",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
+        "20minutos.es",
         "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4202,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6667
+        },
+        "total": 0.5859,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "defensor",
+      "subject_names": [
+        "constitucional",
+        "defensor",
+        "supremo"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "El Tribunal Constitucional somete al Pleno la decisión de admitir o inadmitir el recurso presentado por el Defensor del Pueblo contra la suspensión del derecho de voto de nacionalizados prevista en la llamada 'ley de nietos'; un informe interno del propio tribunal aconseja que la admisión sería prematura, y la decisión final se prevé esta semana."
+    },
+    {
+      "cluster_id": "subject-adam-575b077143ad",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-19",
+      "headline": "Temporal 'Adam' deja al menos tres muertos y múltiples rescates en la Comunidad Valenciana",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/el-tiempo/2026-10-19/ultima-hora-del-temporal-en-espana-en-directo.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/20261019/ultima-hora-temporal-espana-directo-llegada-dana-adam-mantiene-avisos-rojos-sur-valencia-norte-alicante-lluvias-inundaciones/1003744425552_10.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/sociedad/noticia-dana-adam-directo-ultima-hora-temporal-lluvias-espana-20261019082348.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/sociedad/noticia-dana-adam-directo-ultima-hora-temporal-lluvias-espana-20261019082348.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "adam",
+      "subject_names": [
+        "adam",
+        "canarias",
+        "ceuta",
+        "dana adam",
+        "espana",
+        "madrid",
+        "ume"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "La dana denominada 'Adam' ha provocado lluvias intensas en la Comunidad Valenciana, donde equipos de rescate han realizado operaciones por mar y aire; las labores han localizado un nuevo cadáver en Oliva (Valencia), con lo que asciende a tres el número de víctimas mortales confirmadas, y continúan las intervenciones en las zonas más afectadas."
+    },
+    {
+      "cluster_id": "subject-abascal-6659f1297d51",
+      "coherence": 0.5267350029482349,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-19",
+      "headline": "Montse Lluís será la número dos de Vox por Madrid en las listas del 29-N",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/sorpresa-listas-vox-29n-montse-lluis-negociadora-20261019110614-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/numero-vox-madrid-sera-montserrat-lluis-negociadora-pactos-autonomicos-pp_1_13596475.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20261019/montse-lluis-negociadora-pactos-pp-vox-autonomias-numero-abascal-madrid/1003744425679_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/19/6ad5d572e85ecee8408b458b.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-10-19/abascal-asciende-a-la-negociadora-de-los-pactos-con-el-pp-y-al-portavoz-en-ceuta-como-2-y-3-por-madrid-para-el-29n_4447946/"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/nacional/numero-dos-abascal-lista-vox-congreso-sera-montse-lluis-negociadora-los-pactos-con-pp_7050425_0.html"
+        },
+        {
+          "language": "es",
+          "source": "periodistadigital.com",
+          "source_country": "spain",
+          "url": "https://www.periodistadigital.com/politica/partidos-politicos/20261019/abascal-completa-lista-vox-madrid-negociadora-pactos-pp-portavoz-ceuta-noticia-689405258059/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/politica/20261019/montse-lluis-negociadora-pactos-pp-vox-autonomias-numero-abascal-madrid/1003744425679_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5267,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7143
+        },
+        "total": 0.5675,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "abascal",
+      "subject_names": [
+        "abascal",
+        "canarias",
+        "ceuta",
+        "espana",
+        "madrid",
+        "montse lluis",
+        "psoe",
+        "vox"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "Vox ha situado a Montse Lluís, quien negoció los pactos autonómicos con el PP, como número dos en la lista por Madrid para las elecciones del 29 de noviembre; las informaciones señalan además que el portavoz de Vox en Ceuta ocupa el puesto tres."
+    },
+    {
+      "cluster_id": "subject-lopez-4067a8dc5d25",
+      "coherence": null,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-19",
+      "headline": "Cristina Sánchez López ingresa en la RAE y asume la silla p",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/el-cultural/letras/20261019/filologa-cristina-sanchez-lopez-ingresa-rae-ocupar-silla/1003744425823_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/cultura/2026-10-18/la-filologa-cristina-sanchez-lopez-asume-la-silla-p-de-la-rae-con-una-celebracion-de-la-aventura-de-la-gramatica.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/cultura/cristina-sanchez-lopez-ingresa-rae-defensa-gramatica-20261018153001-nt.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/cultura/2026-10-18/la-filologa-cristina-sanchez-lopez-asume-la-silla-p-de-la-rae-con-una-celebracion-de-la-aventura-de-la-gramatica.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "elespanol.com",
         "elpais.com"
       ],
       "score": {
@@ -49,415 +395,30 @@
           "coherence": 0.5,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5496,
+        "total": 0.5114,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ertzaintza",
+      "subject_label": "lopez",
       "subject_names": [
-        "ertzaintza"
+        "cristina sanchez",
+        "lopez",
+        "rae",
+        "sanchez"
       ],
       "subject_newsroom_count": 3,
-      "summary": "La Ertzaintza arrestó en Irún a dos personas de nacionalidad española, jóvenes vinculados al entorno abertzale, que están siendo investigadas por delitos graves de terrorismo; entre los hechos que motivaron la detención figura la tenencia de información sobre agentes de las fuerzas de seguridad destinados en Euskadi y la causa está siendo seguida por la Audiencia Nacional."
-    },
-    {
-      "cluster_id": "subject-barcelona-d90a0ea07196",
-      "coherence": 0.42907866564495867,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-17",
-      "headline": "El PP designa a Xavier García Albiol candidato por Barcelona para las elecciones",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/catalunya/2026-10-17/el-pp-situa-a-albiol-como-candidato-por-barcelona-el-29-n-para-frenar-a-vox.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/pp-elige-albiol-competir-vox-barcelona_1_13594147.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/10/17/6ad38816e85ecef0198b45b1.html"
-        },
-        {
-          "language": "es",
-          "source": "ondacero.es",
-          "source_country": "spain",
-          "url": "https://www.ondacero.es/elecciones/generales/xavier-garcia-albiol-sera-candidato-congreso-barcelona_202610176ad3a11abafd3d7363631494.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/catalunya/pp-elige-albiol-competir-vox-barcelona_1_13594147.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4291,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5457,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "barcelona",
-      "subject_names": [
-        "albiol",
-        "barcelona",
-        "vox"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "El Partido Popular ha elegido a Xavier García Albiol como su candidato al Congreso por la provincia de Barcelona para las elecciones del 29 de noviembre; la decisión busca reforzar al PP en Barcelona ante el avance de Vox, según las informaciones publicadas."
-    },
-    {
-      "cluster_id": "subject-ukraine-613316958556",
-      "coherence": 0.6121538151230886,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-18",
-      "filled_from": "europe",
-      "headline": "Ucrania lanza uno de los mayores ataques con drones contra San Petersburgo",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-18/ucrania-lanza-un-intenso-ataque-sobre-san-petersburgo-y-golpea-una-terminal-petrolera-un-centro-de-datos-y-un-centro-logistico.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261018/11661899/ucrania-lanza-san-petersburgo-mayores-ataques-drones-guerra.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/ucrania-lanza-mayores-ataques-drones-guerra-san-petersburgo_1_13594846.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/20261018/ucrania-siembra-caos-san-petersburgo-mayores-ataques-drones-inicio-guerra/1003744424861_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/10/18/6ad47819fdddffbd688b457a.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ucrania-lanza-contra-san-petersburgo-uno-los-mayores-ataques-con-drones-guerra_7050104_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261018/11661899/ucrania-lanza-san-petersburgo-mayores-ataques-drones-guerra.html",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6122,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
-        },
-        "total": 0.6723,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "russia",
-        "russie",
-        "san petersburgo",
-        "starlink",
-        "ucrania",
-        "ukraine",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 26,
-      "summary": "Varios medios coinciden en que Ucrania llevó a cabo un intenso ataque con drones contra San Petersburgo, en el que alcanzaron una terminal petrolera, un centro de datos y un centro logístico; describen el asalto como uno de los mayores ataques con drones desde el inicio de la guerra y señalan que sembró caos en la ciudad."
-    },
-    {
-      "cluster_id": "subject-cisjordanie-4c90894cedaa",
-      "coherence": 0.5471941025974141,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "po",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-18",
-      "filled_from": "europe",
-      "headline": "Colonos israelíes atacan un convoy diplomático europeo y agreden a un alcalde francés",
-      "independent_source_count": 11,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/18/en-cisjordanie-des-colons-attaquent-un-convoi-diplomatique-europeen-et-frappent-un-maire-du-nord-de-la-france_6796789_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/en-cisjordanie-un-maire-francais-blesse-dans-l-attaque-d-un-convoi-diplomatique-par-des-colons-20261017"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/en-cisjordanie-un-maire-francais-roue-de-coups-par-des-colons-israeliens-lors-de-lattaque-dun-convoi-diplomatique-europeen-20261017_MYBG2DLIGZFCLPHW4C7QD3XQSI/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/en-cisjordanie-des-colons-attaquent-un-convoi-diplomatique-europeen-et-frappent-un-maire-francais-20261017"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/israel/des-colons-israeliens-attaquent-un-convoi-diplomatique-europeen-en-cisjordanie-et-frappent-un-maire-francais_8241916.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/moyen-orient/20261017-cisjordanie-occup%C3%A9e-colons-israel-attaque-convoi-diplomatique-frappent-maire-fran%C3%A7ais"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/l-info-de-france-inter-4860877"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-17/un-grupo-de-colonos-israelies-ataca-a-una-comitiva-de-diplomaticos-europeos-en-cisjordania.html"
-        },
-        {
-          "language": "fr",
-          "source": "franceguyane.fr",
-          "source_country": "france",
-          "url": "https://www.franceguyane.fr/actualite/international/cisjordanie-des-colons-attaquent-un-convoi-diplomatique-europeen-et-frappent-un-maire-francais-1096617.php"
-        },
-        {
-          "language": "fr",
-          "source": "humanite.fr",
-          "source_country": "france",
-          "url": "https://www.humanite.fr/monde/cisjordanie/cisjordanie-occupee-un-maire-pcf-agresse-par-des-colons-juifs"
-        },
-        {
-          "language": "pt",
-          "source": "sapo.pt",
-          "source_country": "po",
-          "url": "https://sapo.pt/artigo/diplomatas-europeus-atacados-por-colonos-israelitas-na-cisjordania-6ad3a90367f99269c88f0abe"
-        }
-      ],
-      "mentioned_countries": [
-        "is",
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/moyen-orient/20261017-cisjordanie-occup%C3%A9e-colons-israel-attaque-convoi-diplomatique-frappent-maire-fran%C3%A7ais",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "elpais.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "radiofrance.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5472,
-          "corroboration": 0.6,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.7895
-        },
-        "total": 0.6438,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "cisjordanie",
-      "subject_names": [
-        "cisjordania",
-        "cisjordanie",
-        "european",
-        "palestinians",
-        "west bank"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "En Cisjordania, colonos israelíes atacaron un convoy diplomático europeo; durante el incidente un alcalde francés que formaba parte de la comitiva fue agredido y resultó herido, hecho que el Ministerio de Asuntos Exteriores francés calificó como una grave agresión."
-    },
-    {
-      "cluster_id": "subject-france-2a1ba48e25a0",
-      "coherence": 0.3846899677823671,
-      "consequence": 3,
-      "countries": [
-        "co",
-        "mx",
-        "spain",
-        "unknown"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-18",
-      "filled_from": "europe",
-      "headline": "Amplias protestas por el coste de la vida provocan disturbios en Francia",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/166-detenidos-protestas-estudiantes-francia-coste-vida-20261017150236-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/graves-disturbios-las-protestas-contra-coste-vida-francia-detenidos-altercados-violentos_7050021_0.html"
-        },
-        {
-          "language": "es",
-          "source": "sandiegored.com",
-          "source_country": "mx",
-          "url": "https://www.sandiegored.com/noticia/caos-en-paris-reportan-autos-incendiados-y-saqueos-a-tiendas-de-lujo-durante-protestas-contra-el-encarecimiento-de-la-vida/"
-        },
-        {
-          "language": "es",
-          "source": "bitlysdowssl-aws.com",
-          "source_country": "unknown",
-          "url": "https://bitlysdowssl-aws.com/2026/10/nos-ahogamos-las-protestas-por-el-costo-de-la-vida-sacuden-francia/"
-        },
-        {
-          "language": "es",
-          "source": "elnuevosiglo.com.co",
-          "source_country": "co",
-          "url": "https://www.elnuevosiglo.com.co/internacional/francia-estalla-por-el-costo-de-vida-y-los-disturbios-sacuden-varias-ciudades"
-        },
-        {
-          "language": "es",
-          "source": "lapatria.com",
-          "source_country": "co",
-          "url": "https://www.lapatria.com/internacional/paris-registra-100-detenciones-durante-protestas-contra-el-costo-de-vida-en-francia"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "co",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/graves-disturbios-las-protestas-contra-coste-vida-francia-detenidos-altercados-violentos_7050021_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3847,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6206,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia",
-        "limoges",
-        "marseille",
-        "paris",
-        "proteste"
-      ],
-      "subject_newsroom_count": 32,
-      "summary": "Protestas contra el encarecimiento de la vida en varias ciudades francesas derivaron en disturbios con incendios, saqueos y detenciones; las movilizaciones fueron generalizadas y en París se registraron alrededor de 100 arrestos, además de informes sobre heridos graves entre los manifestantes."
+      "summary": "La filóloga Cristina Sánchez López tomó posesión de la silla p en la Real Academia Española; en su discurso defendió la gramática como herramienta central para entender y cartografiar el idioma y la celebración destacó el valor de la aventura del estudio gramatical."
     }
   ],
-  "discarded_ingested": 15,
+  "discarded_ingested": 35,
   "discarded_kept": 5,
-  "generated_at": "2026-10-18T09:46:49.464211+00:00",
+  "generated_at": "2026-10-19T11:03:53.930268+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

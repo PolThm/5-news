@@ -1,285 +1,34 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-europa-7d321a742350",
-      "coherence": 0.4882339105316347,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-23",
-      "headline": "Verano excepcionalmente cálido provoca más de 50.000 muertes en Europa",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/clima-y-medio-ambiente/2026-10-22/autopsia-del-verano-mas-mortifero-en-europa-50000-fallecidos-por-calor.html"
-        },
-        {
-          "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/medioambiente/verano-caluroso-registrado-deja-7-000-fallecidos-espana-50-000-europa_1_2238852.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/salud/2026/10/23/6ada5bb9e9cf4a6b638b456d.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/una-investigacion-cientifica-achaca-mas-50-000-muertes-europa-este-verano-exceso-olas-calor_7052495_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/clima-y-medio-ambiente/2026-10-22/autopsia-del-verano-mas-mortifero-en-europa-50000-fallecidos-por-calor.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elmundo.es",
-        "elpais.com",
-        "infolibre.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4882,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6769,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "europa",
-      "subject_names": [
-        "barcelona",
-        "espana",
-        "europa",
-        "europe",
-        "madrid",
-        "spain"
-      ],
-      "subject_newsroom_count": 19,
-      "summary": "Cuatro investigaciones y reportes coinciden en que el reciente verano fue el más caluroso registrado y que las olas de calor asociadas causaron más de 50.000 muertes en Europa; en España se contabilizan cerca de 7.000 fallecimientos atribuibles al calor extremo, según los datos citados."
-    },
-    {
-      "cluster_id": "subject-ceuta-034f6f8d2858",
+      "cluster_id": "subject-asturias-80d744006a84",
       "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "ns",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-22",
-      "headline": "España e Italia acuerdan poner fin a los controles fronterizos tras la crisis de Ceuta",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/espana-acuerda-italia-poner-controles-fronterizos-impuestos-crisis-ceuta_1_13605485.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/10/22/6ad9c768fdddff962b8b45a2.html"
-        },
-        {
-          "language": "nl",
-          "source": "surinametimes.com",
-          "source_country": "ns",
-          "url": "https://www.surinametimes.com/artikel/italie-en-spanje-heffen-grenscontroles-op-na-migrantencrisis-rond-ceuta"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "it"
-      ],
-      "origin_country": "ns",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/10/22/6ad9c768fdddff962b8b45a2.html",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.6207,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "barcelona",
-        "ceuta",
-        "espana",
-        "guardia civil",
-        "interior",
-        "italia",
-        "madrid",
-        "melilla",
-        "principe",
-        "spain"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Los gobiernos de España e Italia han acordado levantar los controles fronterizos que se implantaron tras la crisis migratoria alrededor de Ceuta; la decisión fue comunicada por los ministerios responsables de Interior en ambos países."
-    },
-    {
-      "cluster_id": "subject-feijoo-06c49eeef425",
-      "coherence": 0.48742481570143403,
-      "consequence": 2,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-23",
-      "headline": "Feijóo afirma que su primer objetivo es que Sánchez deje el Gobierno",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/elecciones-generales/2026-10-23/feijoo-intentara-gobernar-aunque-no-sea-la-lista-mas-votada-mi-primer-objetivo-es-que-sanchez-se-vaya.html"
-        },
-        {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/elecciones/elecciones-generales/2026/10/23/6adb1891468aeb861d8b456d.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/23/6adafa3efc6c8384348b4579.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-feijoo-si-compromete-gobierne-lista-mas-votada-primer-objetivo-vaya-sanchez-20261023104948.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "expansion.com",
-      "outbound_url": "https://www.expansion.com/elecciones/elecciones-generales/2026/10/23/6adb1891468aeb861d8b456d.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "expansion.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4874,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6035,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "feijoo",
-      "subject_names": [
-        "abalos",
-        "barcelona",
-        "espana",
-        "feijoo",
-        "igualdad",
-        "madrid",
-        "milei",
-        "pedro sanchez",
-        "psoe",
-        "rtve",
-        "sanchez",
-        "spain",
-        "vox"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Alberto Núñez Feijóo ha declarado públicamente que su prioridad es lograr que Pedro Sánchez deje la presidencia para abrir una nueva etapa en España y ha dicho que intentará gobernar incluso si su lista no es la más votada, subrayando que el Partido Popular es la primera fuerza política."
-    },
-    {
-      "cluster_id": "subject-ceuta-2fcb0bbdf343",
-      "coherence": 0.4437453493727368,
       "consequence": 1,
       "countries": [
         "spain"
       ],
       "country_count": 1,
       "editorial_day": "2026-10-23",
-      "headline": "La Policía y Guardia Civil desalojan a 200 migrantes en el barrio del Príncipe en Ceuta",
-      "independent_source_count": 5,
+      "headline": "Los Reyes presiden la entrega de los Premios Princesa de Asturias 2026",
+      "independent_source_count": 3,
       "members": [
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/asturias/premios-princesa-asturias-2026-reivindican-esperanza-futuro-comun-cultura-ciencia-avales_1_13610547.html"
+        },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/10/23/6adb3291e85ece0f738b4587.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/reportajes/20261023/policia-irrumpe-barrio-principe-desaloja-centenar-migrantes-dormian-calles-garajes/1003744432085_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-10-23/ceuta-desalojo-migrantes-operativo-1tps_4451422/"
+          "url": "https://www.elmundo.es/yodona/moda/reina-letizia/2026/10/23/6adb8140e9cf4aae228b4579.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ejecuta-operativo-discreto-barrio-principe-ceuta-desalojar-200-migrantes-20261023100929.html"
-        },
-        {
-          "language": "es",
-          "source": "andaluciainformacion.es",
-          "source_country": "spain",
-          "url": "https://www.andaluciainformacion.es/articulo/sociedad/intervencion-policial-discreta-ceuta-desalojar-200-migrantes-principe/202610231014163515607.html"
+          "url": "https://www.europapress.es/asturias/noticia-ceremonia-premios-princesa-asturias-2026-arranca-teatro-campoamor-20261023183820.html"
         }
       ],
       "mentioned_countries": [
@@ -287,124 +36,616 @@
       ],
       "origin_country": "spain",
       "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/epsocial/migracion/noticia-gobierno-ejecuta-operativo-discreto-barrio-principe-ceuta-desalojar-200-migrantes-20261023100929.html",
-      "rank": 4,
-      "reference_newsroom_count": 4,
+      "outbound_url": "https://www.europapress.es/asturias/noticia-ceremonia-premios-princesa-asturias-2026-arranca-teatro-campoamor-20261023183820.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "elespanol.com",
+        "eldiario.es",
         "elmundo.es",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4437,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5284,
+        "total": 0.4763,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "asturias",
       "subject_names": [
-        "ceuta",
-        "guardia civil",
-        "interior",
-        "melilla",
-        "principe"
+        "asturias",
+        "leonor"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Fuerzas policiales realizaron en el barrio ceutí del Príncipe un operativo discreto para desalojar a aproximadamente 200 migrantes que estaban ocultos o dormían en calles, garajes, azoteas y viviendas; la intervención fue ejecutada por la Policía y la Guardia Civil según coinciden las informaciones."
+      "subject_newsroom_count": 7,
+      "summary": "Los Reyes presidieron la ceremonia de los Premios Princesa de Asturias 2026, un acto que destacó la celebración de la cultura y la ciencia como motor de esperanza en el futuro común; en el evento la Reina Letizia y la Princesa Leonor acudieron con prendas de diseño español, incluida una pieza de tejido reciclado."
     },
     {
-      "cluster_id": "subject-netflix-e4514481e4c5",
-      "coherence": 0.5466643429488643,
-      "consequence": 0,
+      "cluster_id": "subject-hitler-94d686d1c87e",
+      "coherence": 0.4790394847731594,
+      "consequence": 2,
       "countries": [
-        "spain"
+        "as",
+        "france",
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-23",
-      "headline": "Netflix adapta 'La Regenta' con Ester Expósito como protagonista",
-      "independent_source_count": 5,
+      "country_count": 6,
+      "editorial_day": "2026-10-24",
+      "filled_from": "europe",
+      "headline": "Un incendio destruye el 'Nido del Águila', hay un detenido",
+      "independent_source_count": 13,
       "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]"
+        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/cultura/cine/2026-10-23/ester-exposito-y-oriol-pla-protagonizaran-la-regenta-en-una-nueva-version-filmica-de-netflix.html"
+          "url": "https://elpais.com/internacional/2026-10-24/las-llamas-destruyen-el-nido-del-aguila-la-famosa-residencia-de-hitler-en-los-alpes.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261024/11667088/detenido-alemania-sospechoso-incendiar-nido-aguila-hitler.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/cultura/cine/netflix-anuncia-adaptacion-clasico-clarin-regenta-ester-exposito-protagonista_1_13608850.html"
+          "url": "https://www.eldiario.es/internacional/detenido-alemania-incendio-nido-aguila-casa-hitler-alpes_1_13611950.html"
         },
         {
           "language": "es",
-          "source": "diariodesevilla.es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.diariodesevilla.es/television/ester-exposito-sera-regenta-nuevo_0_2008321956.html"
+          "url": "https://www.elmundo.es/internacional/2026/10/24/6adc5e6fe4d4d83e7e8b4571.html"
         },
         {
           "language": "es",
-          "source": "elconfidencial.com",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.vanitatis.elconfidencial.com/estilo/ocio/2026-10-23/ester-exposito-la-regenta-netlix-inicio-rodaje-mar-coll_4451405/"
+          "url": "https://www.20minutos.es/internacional/incendio-destruye-nido-aguila-famoso-refugio-montana-hitler-detenido_7052909_0.html"
         },
         {
-          "language": "es",
-          "source": "diariodejerez.es",
-          "source_country": "spain",
-          "url": "https://www.diariodejerez.es/television/ester-exposito-sera-regenta-nuevo_0_2008321957.html"
+          "language": "en",
+          "source": "express.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.express.co.uk/news/world/2259973/adolf-hitler-mountain-retreat-ablaze-arrest"
+        },
+        {
+          "language": "en",
+          "source": "rockymounttelegram.com",
+          "source_country": "united-states",
+          "url": "http://www.rockymounttelegram.com/news/world/fire-breaks-out-at-alpine-retreat-built-for-hitler-in-germany-a-person-is-detained/article_c17f356d-7429-52d5-bb27-7db9e239bf69.html"
+        },
+        {
+          "language": "en",
+          "source": "stardem.com",
+          "source_country": "united-states",
+          "url": "http://www.stardem.com/ap/world/fire-breaks-out-at-alpine-retreat-built-for-hitler-in-germany-a-person-is-detained/article_8a50070f-b52d-5ce2-aa13-6a122952d6e2.html"
+        },
+        {
+          "language": "en",
+          "source": "aol.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.aol.co.uk/articles/adolf-hitlers-mountain-retreat-ablaze-081800000.html"
+        },
+        {
+          "language": "en",
+          "source": "perthnow.com.au",
+          "source_country": "as",
+          "url": "https://www.perthnow.com.au/news/crime/arrest-in-germany-after-fire-engulfs-hitler-retreat-c-23066874"
+        },
+        {
+          "language": "it",
+          "source": "blitzquotidiano.it",
+          "source_country": "it",
+          "url": "https://www.blitzquotidiano.it/cronaca/incendia-il-rifugio-alpino-di-adolf-hitler-in-fiamme-ledificio-amato-dai-gerarchi-nazisti-3807832/"
+        },
+        {
+          "language": "it",
+          "source": "ilmessaggero.it",
+          "source_country": "it",
+          "url": "https://www.ilmessaggero.it/mondo/nido_aquila_hitler_incendio_rifugio_alpi_cosa_e_successo-9845798.html"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "germany"
       ],
-      "origin_country": "spain",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/cultura/cine/netflix-anuncia-adaptacion-clasico-clarin-regenta-ester-exposito-protagonista_1_13608850.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
+      "origin_country": "as",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "elconfidencial.com",
+        "20minutos.es",
         "eldiario.es",
-        "elpais.com"
+        "elmundo.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "lavanguardia.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5467,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.479,
+          "corroboration": 0.75,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
+          "prominence": 0.7647,
+          "source_reliability": 0.8
         },
-        "total": 0.452,
+        "total": 0.6349,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "netflix",
+      "subject_label": "hitler",
       "subject_names": [
-        "ester exposito",
-        "netflix"
+        "adolf hitler",
+        "afd",
+        "aguila'",
+        "alemania",
+        "alpes",
+        "hitler",
+        "nido"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Netflix producirá una nueva versión fílmica de La Regenta, el clásico de Leopoldo Alas Clarín, con Ester Expósito en el papel principal; Oriol Pla también figura entre los intérpretes y la plataforma anuncia un enfoque contemporáneo y femenino para la adaptación."
+      "subject_newsroom_count": 7,
+      "summary": "Un incendio ha arrasado la residencia alpina conocida como el 'Nido del Águila', la casa de montaña construida para Adolf Hitler en Baviera; las informaciones coinciden en que una persona ha sido detenida como sospechosa del incendio."
+    },
+    {
+      "cluster_id": "subject-moody’s-130e10a6eb13",
+      "coherence": 0.5295754869016815,
+      "consequence": 2,
+      "countries": [
+        "au",
+        "france"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-24",
+      "filled_from": "europe",
+      "headline": "Moody’s mantiene la calificación soberana de Francia en Aa3 con perspectiva negativa",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/finances-publiques-moody-s-accorde-un-sursis-a-la-france-20261024"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative"
+        },
+        {
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/economie/lagence-moodys-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-23-10-2026-TRQZCOUILFF7DPUYCW3BULQHFY.php"
+        },
+        {
+          "language": "de",
+          "source": "vol.at",
+          "source_country": "au",
+          "url": "https://www.vol.at/moodys-belaesst-einstufung-von-frankreichs-bonitaet-gleich/10579910"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "au",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5296,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
+        },
+        "total": 0.6097,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "moody’s",
+      "subject_names": [
+        "aa3",
+        "art basel",
+        "france",
+        "moody’s",
+        "paris",
+        "republique",
+        "vincennes"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "La agencia Moody’s ha decidido no bajar la calificación crediticia soberana de Francia, manteniéndola en Aa3, pero ha dejado la perspectiva en negativa, según coinciden los artículos citados."
+    },
+    {
+      "cluster_id": "subject-melania-trump-cd7c2828c621",
+      "coherence": 0.49229884158060666,
+      "consequence": 1,
+      "countries": [
+        "as",
+        "bu",
+        "ci",
+        "france",
+        "india",
+        "it",
+        "mx",
+        "my",
+        "rs",
+        "spain",
+        "sy",
+        "sz",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 14,
+      "editorial_day": "2026-10-24",
+      "filled_from": "europe",
+      "headline": "Melania Trump logra una tregua local en Oleshky entre Rusia y Ucrania",
+      "independent_source_count": 24,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/melania-trump-affirme-avoir-obtenu-une-treve-entre-russes-et-ukrainiens-a-olechky-20261023_4KW4CUVBGFDOZOFJI7VDP4XVDM/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/melania-trump-affirme-avoir-obtenu-une-treve-entre-russes-et-ukrainiens-a-olechky_8251402.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/casa-blanca-asegura-melania-trump-logrado-alto-20261023154657-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261023/11666620/melania-trump-consigue-tregua-ciudad-ucraniana.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/melania-trump-anuncia-alto-fuego-rusia-ucrania-ciudad-oleshky-mediado_1_13610460.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/melania-trump-media-con-exito-un-alto-fuego-ciudad-ucraniana-oleshki-para-facilitar-una-evacuacion_7052782_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6vgxkvl4w5eo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/show/news-wrap-white-house-says-melania-trump-brokered-localized-ceasefire-deal-in-oleshky"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/melania-trump-helps-secure-a-ceasefire-deal-in-russian-occupied-oleshky-the-white-house-says"
+        },
+        {
+          "language": "en",
+          "source": "eurasiareview.com",
+          "source_country": "united-states",
+          "url": "https://www.eurasiareview.com/24102026-white-house-says-melania-trump-brokers-localized-cease-fire-for-occupied-ukrainian-city/"
+        },
+        {
+          "language": "it",
+          "source": "savonanews.it",
+          "source_country": "it",
+          "url": "https://www.savonanews.it/2026/10/24/leggi-notizia/argomenti/ultimora/articolo/ucraina-russia-tregua-umanitaria-per-oleshky-dal-27-ottobre-laccordo-mediato-da-melania-trump.html"
+        },
+        {
+          "language": "en",
+          "source": "iheart.com",
+          "source_country": "united-states",
+          "url": "https://945wpti.iheart.com/content/2026-10-23-melania-trump-brokers-ceasefire-for-humanitarian-aid-in-oleshky/"
+        },
+        {
+          "language": "en",
+          "source": "outlookindia.com",
+          "source_country": "india",
+          "url": "https://www.outlookindia.com/international/russia-ukraine-agree-to-ceasefire-in-oleshky-after-melania-trumps-efforts-white-house"
+        },
+        {
+          "language": "en",
+          "source": "aawsat.com",
+          "source_country": "sy",
+          "url": "https://english.aawsat.com/world/5332844-melania-trump-helps-forge-ceasefire-deal-russian-occupied-ukrainian-city-white-house"
+        },
+        {
+          "language": "en",
+          "source": "rferl.org",
+          "source_country": "rs",
+          "url": "https://www.rferl.org/a/white-house-says-melania-trump-brokers-localized-cease-fire-for-occupied-ukrainian-city/33883147.html"
+        },
+        {
+          "language": "en",
+          "source": "bgnes.com",
+          "source_country": "bu",
+          "url": "http://www.bgnes.com/conflicts/melania-trump-announces-russia-ukraine-ceasefire-in-occupied-city-of-oleshky"
+        },
+        {
+          "language": "en",
+          "source": "iheart.com",
+          "source_country": "united-states",
+          "url": "https://woodradio.iheart.com/content/2026-10-23-melania-trump-brokers-ceasefire-for-humanitarian-aid-in-oleshky/"
+        },
+        {
+          "language": "en",
+          "source": "perthnow.com.au",
+          "source_country": "as",
+          "url": "https://www.perthnow.com.au/news/conflict/melania-trump-brokers-oleshky-deal-with-russia-ukraine-c-23064874"
+        },
+        {
+          "language": "en",
+          "source": "freemalaysiatoday.com",
+          "source_country": "my",
+          "url": "https://www.freemalaysiatoday.com/category/world/2026/10/23/melania-trump-says-secured-ceasefire-in-ukrainian-city-of-oleshky"
+        },
+        {
+          "language": "en",
+          "source": "nebraska.tv",
+          "source_country": "united-states",
+          "url": "https://nebraska.tv/news/nation-world/first-lady-melania-trump-secures-ceasefire-for-aid-evacuations-in-russia-occupied-ukrainian-city-oleshky-white-house-news-push-to-end-war-special-envoy-steve-witkoff-putin-zelenskyy"
+        },
+        {
+          "language": "en",
+          "source": "wtvm.com",
+          "source_country": "united-states",
+          "url": "https://www.wtvm.com/2026/10/23/white-house-announces-melania-trump-secures-ceasefire-russian-occupied-ukrainian-city/"
+        },
+        {
+          "language": "en",
+          "source": "latimes.com",
+          "source_country": "united-states",
+          "url": "https://www.latimes.com/world-nation/story/2026-10-23/melania-trump-helps-forge-ceasefire-deal-in-russian-occupied-ukrainian-city-white-house-says"
+        },
+        {
+          "language": "it",
+          "source": "milanofinanza.it",
+          "source_country": "it",
+          "url": "https://www.milanofinanza.it/news/ucraina-melania-trump-ottiene-una-tregua-a-oleshky-dal-29-ottobre-202610231745311467"
+        },
+        {
+          "language": "es",
+          "source": "excelsior.com.mx",
+          "source_country": "mx",
+          "url": "https://www.excelsior.com.mx/internacional/melania-trump-logra-alto-fuego-oleshky-tras-mediacion-entre-rusia-y-ucrania"
+        },
+        {
+          "language": "es",
+          "source": "biobiochile.cl",
+          "source_country": "ci",
+          "url": "https://www.biobiochile.cl/noticias/internacional/eeuu/2026/10/23/casa-blanca-anuncia-que-melania-trump-logro-acuerdo-de-alto-al-fuego-entre-rusia-y-ucrania.shtml"
+        },
+        {
+          "language": "fr",
+          "source": "24heures.ch",
+          "source_country": "sz",
+          "url": "https://www.24heures.ch/ukraine-melania-trump-annonce-un-cessez-le-feu-a-olechky-752337598431"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "as",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/casa-blanca-asegura-melania-trump-logrado-alto-20261023154657-nt.html",
+      "rank": 4,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "francetvinfo.fr",
+        "lavanguardia.com",
+        "liberation.fr",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4923,
+          "corroboration": 0.875,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.8571,
+          "source_reliability": 0.8806
+        },
+        "total": 0.5997,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "melania trump",
+      "subject_names": [
+        "alaska",
+        "canada",
+        "donald trump",
+        "melania trump",
+        "mexico",
+        "new york",
+        "olechky",
+        "oleshki",
+        "putin",
+        "rusia",
+        "trump",
+        "ucrania"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Según la Casa Blanca y múltiples medios, Melania Trump medió y logró un alto el fuego localizado en la ciudad ucraniana ocupada de Oleshky para permitir la entrega de ayuda humanitaria y facilitar evacuaciones; el acuerdo involucra a las partes rusas y ucranianas y fue anunciado por fuentes oficiales y por la propia Melania Trump."
+    },
+    {
+      "cluster_id": "subject-paris-106fbe572eee",
+      "coherence": 0.4213025048548672,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-24",
+      "filled_from": "europe",
+      "headline": "Tribunal confirma y mantiene único recorrido autorizado en París",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/live/2026/10/24/en-direct-manifestations-du-24-octobre-a-paris-le-parcours-entre-la-porte-d-italie-et-la-porte-de-vincennes-reste-le-seul-autorise-apres-le-rejet-d-un-recours-par-le-tribunal-administratif_6799445_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/actualite-france/en-direct-mobilisation-manifestations-24-octobre-etudiants-lyceens-acte-ii-gilets-jaunes-orleans-congres-du-rn-20261024"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/societe/manifestations/manifestations-du-24-octobre-suivez-en-direct-cette-nouvelle-journee-de-mobilisation-sous-tres-haute-securite_8251987.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261024-en-direct-centaines-manifestations-france-climat-fortes-tensions-mobilisation-revendications-salaires-education-syndicats-pouvoir-d-achat-lycee-police-macron"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/societe/20261023.OBS119457/manifestations-du-24-octobre-parcours-a-paris-interdictions-securite-a-quoi-faut-il-s-attendre.html"
+        },
+        {
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/mobilisation-du-24-octobre-nouveau-parcours-a-paris-manifestation-autorisee-a-marseille-6392298"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/societe/20261023.OBS119457/manifestations-du-24-octobre-parcours-a-paris-interdictions-securite-a-quoi-faut-il-s-attendre.html",
+      "rank": 5,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "nouvelobs.com",
+        "radiofrance.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4213,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.576,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "paris",
+      "subject_names": [
+        "art basel",
+        "france",
+        "paris",
+        "republique",
+        "vincennes"
+      ],
+      "subject_newsroom_count": 28,
+      "summary": "Los artículos coinciden en que para las manifestaciones del 24 de octubre en París las autoridades han impuesto y el tribunal administrativo ha rechazado recursos contra un único recorrido autorizado entre la porte d’Italie y la porte de Vincennes; los organizadores aceptaron ese trayecto y las delegaciones indican medidas de seguridad y prohibiciones aplicables."
     }
   ],
-  "discarded_ingested": 34,
+  "discarded_ingested": 13,
   "discarded_kept": 5,
-  "generated_at": "2026-10-23T10:22:39.379809+00:00",
+  "generated_at": "2026-10-24T09:43:19.180013+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

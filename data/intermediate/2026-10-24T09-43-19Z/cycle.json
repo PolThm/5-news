@@ -1,0 +1,28 @@
+{
+  "articles_collected": 10453,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 8920,
+  "clusters_selected": 12,
+  "completed": true,
+  "cycle_id": "2026-10-24T09-43-19Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "rss",
+      "detail": "repubblica.it: HTTP 403"
+    },
+    {
+      "adapter": "rss",
+      "detail": "globo.com: no items parsed from response"
+    }
+  ],
+  "groups_after_dedupe": 9057,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-10-24T09:43:19.180013+00:00",
+  "summarize_batches": {}
+}

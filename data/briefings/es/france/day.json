@@ -1,361 +1,158 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-e4c902fcaab2",
-      "coherence": 0.4737036366699493,
+      "cluster_id": "subject-moody’s-130e10a6eb13",
+      "coherence": 0.5295754869016815,
       "consequence": 2,
       "countries": [
-        "ar",
-        "as",
-        "co",
-        "france",
-        "it",
-        "sf",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 9,
-      "editorial_day": "2026-10-23",
-      "headline": "Francia confirma la primera infección humana por el virus Shamonda y el paciente fallece",
-      "independent_source_count": 13,
-      "members": [
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20261022.OBS119431/faut-il-s-inquieter-du-virus-shamonda-qui-vient-de-faire-sa-premiere-victime-humaine-en-france.html"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-10-22/muere-en-francia-un-hombre-infectado-por-el-virus-shamonda-en-el-primer-caso-conocido-en-un-ser-humano.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/muere-francia-un-hombre-con-virus-shamonda-que-hasta-ahora-se-creia-no-transmisible-humanos_7051994_0.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6reyx1d9ge9o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/france-reports-first-human-case-of-livestock-virus-shamonda-in-patient-who-later-died"
-        },
-        {
-          "language": "it",
-          "source": "zazoom.it",
-          "source_country": "it",
-          "url": "https://www.zazoom.it/2026-10-23/virus-shamonda-dal-primo-caso-umano-in-francia-alla-diffusione-in-europa-che-cosa-sappiamo/19837464/"
-        },
-        {
-          "language": "es",
-          "source": "colombia.com",
-          "source_country": "co",
-          "url": "https://www.colombia.com:443/actualidad/internacionales/muere-la-primera-persona-por-virus-shamonda-en-francia-608376"
-        },
-        {
-          "language": "en",
-          "source": "sowetan.co.za",
-          "source_country": "sf",
-          "url": "https://www.sowetan.co.za/news/world/2026-10-22-explainer-france-confirms-deceased-patient-had-shamonda-virus-what-to-know/"
-        },
-        {
-          "language": "en",
-          "source": "standard.net.au",
-          "source_country": "as",
-          "url": "https://www.standard.net.au/story/9374666/first-human-shamonda-case-after-patient-dies-in-france/"
-        },
-        {
-          "language": "en",
-          "source": "bignewsnetwork.com",
-          "source_country": "united-states",
-          "url": "http://www.bignewsnetwork.com/news/279392866/who-reports-first-human-infection-with-shamonda-virus-in-france-patient-dies"
-        },
-        {
-          "language": "fr",
-          "source": "notretemps.com",
-          "source_country": "france",
-          "url": "https://www.notretemps.com/depeches/virus-shamonda-premiere-detection-chez-un-humain-en-france-pas-de-risque-sanitaire-global-identifie-140534"
-        },
-        {
-          "language": "es",
-          "source": "lanacion.com.ar",
-          "source_country": "ar",
-          "url": "https://www.lanacion.com.ar/el-mundo/francia-reporta-el-primer-caso-humano-del-virus-shamonda-que-es-y-lo-que-dicen-las-autoridades-nid22102026/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com.co",
-          "source_country": "co",
-          "url": "https://www.elpais.com.co/mundo/que-es-el-virus-shamonda-que-ya-cobro-su-primera-victima-humana-en-francia-esto-es-lo-que-se-sabe-2214.html"
-        }
-      ],
-      "mentioned_countries": [
+        "au",
         "france"
       ],
-      "origin_country": "ar",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/muere-francia-un-hombre-con-virus-shamonda-que-hasta-ahora-se-creia-no-transmisible-humanos_7051994_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "elpais.com",
-        "nouvelobs.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4737,
-          "corroboration": 0.8182,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.7838
-        },
-        "total": 0.6798,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "france",
-        "francia"
-      ],
-      "subject_newsroom_count": 23,
-      "summary": "Las autoridades francesas confirmaron el primer caso conocido de infección humana por el virus Shamonda en un paciente que posteriormente murió; el virus, hasta ahora asociado a animales y transmitido por mosquitos, fue detectado tras la investigación clínica y no se ha identificado un riesgo sanitario global inmediato según los comunicados citados por los medios."
-    },
-    {
-      "cluster_id": "subject-tempete-austen-977804d249cd",
-      "coherence": 0.5574034989226587,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-23",
-      "headline": "La tempestad Austen deja 23 departamentos en alerta naranja y cortes eléctricos",
-      "independent_source_count": 7,
+      "country_count": 2,
+      "editorial_day": "2026-10-24",
+      "headline": "Moody’s mantiene la calificación soberana de Francia en Aa3 con perspectiva negativa",
+      "independent_source_count": 8,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/article/2026/10/23/tempete-austen-23-departements-du-nord-et-de-l-ouest-de-la-france-en-vigilance-orange-plus-de-160-000-foyers-prives-d-electricite_6799023_3244.html"
-        },
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/meteo/en-direct-tempete-austen-vents-meteo-vigilance-orange-rafales-bretagne-finistere-ile-de-france-20261023"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/conjoncture/tempete-austen-161-000-foyers-prives-d-electricite-en-france-annonce-enedis-20261023"
+          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/environnement/climat/tempete-austen-23-departements-en-vigilance-orange-vent-plus-de-160-000-foyers-prives-delectricite-20261023_T73VRBNT6ZEEDBOSCH2ONJKBKU/"
+          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/planete/tempete-austen-23-departements-en-vigilance-orange-vent-161-000-foyers-prives-d-electricite-20261023"
+          "url": "https://www.la-croix.com/economie/finances-publiques-moody-s-accorde-un-sursis-a-la-france-20261024"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/meteo/vingt-trois-departements-de-l-ouest-et-du-nord-desormais-places-en-vigilance-orange-pour-vents-violents-en-raison-du-passage-de-la-tempete-austen_8250061.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261023-temp%C3%AAte-austen-161-000-foyers-priv%C3%A9s-d-%C3%A9lectricit%C3%A9-23-d%C3%A9partements-en-vigilance-orange"
+          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible"
         },
         {
           "language": "fr",
-          "source": "tendanceouest.com",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.tendanceouest.com/actualite-443582-tempete-austen-14-000-foyers-prives-d-electricite-en-normandie"
+          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative"
+        },
+        {
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/economie/lagence-moodys-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-23-10-2026-TRQZCOUILFF7DPUYCW3BULQHFY.php"
+        },
+        {
+          "language": "de",
+          "source": "vol.at",
+          "source_country": "au",
+          "url": "https://www.vol.at/moodys-belaesst-einstufung-von-frankreichs-bonitaet-gleich/10579910"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/planete/tempete-austen-23-departements-en-vigilance-orange-vent-161-000-foyers-prives-d-electricite-20261023",
-      "rank": 2,
+      "origin_country": "au",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
+      "rank": 1,
       "reference_newsroom_count": 6,
       "reference_newsrooms": [
         "france24.com",
         "francetvinfo.fr",
         "la-croix.com",
         "lefigaro.fr",
-        "lemonde.fr",
-        "liberation.fr"
+        "liberation.fr",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5574,
-          "corroboration": 0.3333,
+          "coherence": 0.5296,
+          "corroboration": 0.5,
           "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7419
+          "prominence": 0.6667,
+          "source_reliability": 0.7333
         },
-        "total": 0.6459,
+        "total": 0.6597,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "tempete austen",
+      "subject_label": "moody’s",
       "subject_names": [
-        "austen",
+        "aa3",
+        "art basel",
         "france",
-        "francia",
-        "tempete austen"
+        "moody’s",
+        "paris",
+        "republique",
+        "vincennes"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "La tempestad Austen provocó que 23 departamentos del norte y oeste de Francia fueran puestos en vigilancia naranja por fuertes vientos y dejó entre 161.000 y casi 289.000 hogares privados de electricidad según los recuentos publicados por varios medios; en Normandía se reportaron además alrededor de 14.000 viviendas sin suministro."
+      "subject_newsroom_count": 7,
+      "summary": "La agencia Moody’s ha decidido no bajar la calificación crediticia soberana de Francia, manteniéndola en Aa3, pero ha dejado la perspectiva en negativa, según coinciden los artículos citados."
     },
     {
-      "cluster_id": "subject-macron-7d494316dfae",
-      "coherence": 0.48740159209058775,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-22",
-      "headline": "Macron anuncia la prohibición de manifestaciones no organizadas por sindicatos",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/macron-prohibe-manifestaciones-ilegitimas-convocadas-sindicatos-20261022140740-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/macron-anuncia-prohibicion-manifestaciones-no-organizadas-sindicatos-francia_1_13606510.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/macron-anuncia-restricciones-las-manifestaciones-francia-convoca-un-consejo-defensa-por-seguridad_7052065_0.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiadevalladolid.com",
-          "source_country": "spain",
-          "url": "https://www.eldiadevalladolid.com/noticia/za91d02ea-10d4-4105-83a78d00218862ee/202610/macron-anuncia-que-se-prohibiran-manifestaciones-no-sindicales"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/macron-anuncia-restricciones-las-manifestaciones-francia-convoca-un-consejo-defensa-por-seguridad_7052065_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4874,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6261,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "macron",
-      "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "macron",
-        "matignon"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "El presidente francés Emmanuel Macron ha anunciado que se prohibirán las manifestaciones que no estén convocadas o organizadas por sindicatos; las notas indican que la medida busca impedir concentraciones consideradas carentes de legitimidad y aplicar la prohibición en todo el territorio nacional."
-    },
-    {
-      "cluster_id": "subject-bobigny-f037d350495c",
-      "coherence": 0.4339183308302206,
+      "cluster_id": "subject-paris-106fbe572eee",
+      "coherence": 0.4213025048548672,
       "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-23",
-      "headline": "El departamento de Seine-Saint-Denis solicita al Defensor de los Derechos investigar la detención de menores en Bobigny",
-      "independent_source_count": 5,
+      "editorial_day": "2026-10-24",
+      "headline": "Tribunal confirma y mantiene único recorrido autorizado en París",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/23/bobigny-le-president-de-seine-saint-denis-saisit-le-defenseur-des-droits-sur-les-conditions-de-detention-de-mineurs-au-depot-du-tribunal_6799056_3224.html"
+          "url": "https://www.lemonde.fr/societe/live/2026/10/24/en-direct-manifestations-du-24-octobre-a-paris-le-parcours-entre-la-porte-d-italie-et-la-porte-de-vincennes-reste-le-seul-autorise-apres-le-rejet-d-un-recours-par-le-tribunal-administratif_6799445_3224.html"
         },
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/mineurs-detenus-au-depot-de-bobigny-le-defenseur-des-droits-saisi-20261023_4HQCOMTMTBHS5HJ2GCXL47J7PQ/"
+          "url": "https://www.lefigaro.fr/actualite-france/en-direct-mobilisation-manifestations-24-octobre-etudiants-lyceens-acte-ii-gilets-jaunes-orleans-congres-du-rn-20261024"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/le-departement-de-seine-saint-denis-reclame-au-defenseur-des-droits-une-enquete-relative-aux-conditions-de-detention-de-mineurs-au-depot-de-bobigny_8250430.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/societe/manifestations/manifestations-du-24-octobre-suivez-en-direct-cette-nouvelle-journee-de-mobilisation-sous-tres-haute-securite_8251987.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261024-en-direct-centaines-manifestations-france-climat-fortes-tensions-mobilisation-revendications-salaires-education-syndicats-pouvoir-d-achat-lycee-police-macron"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20261022.OBS119423/devant-le-tribunal-de-bobigny-un-rassemblement-contre-les-conditions-de-detention-de-mineurs-c-est-indigne-d-un-etat-de-droit.html"
+          "url": "https://www.nouvelobs.com/societe/20261023.OBS119457/manifestations-du-24-octobre-parcours-a-paris-interdictions-securite-a-quoi-faut-il-s-attendre.html"
         },
         {
           "language": "fr",
           "source": "radiofrance.fr",
           "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/bouteilles-d-urine-banquettes-en-beton-froid-une-avocate-denonce-les-conditions-de-detention-de-mineurs-a-bobigny-8399708"
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/mobilisation-du-24-octobre-nouveau-parcours-a-paris-manifestation-autorisee-a-marseille-6392298"
         }
       ],
       "mentioned_countries": [
@@ -363,114 +160,266 @@
       ],
       "origin_country": "france",
       "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/societe/20261022.OBS119423/devant-le-tribunal-de-bobigny-un-rassemblement-contre-les-conditions-de-detention-de-mineurs-c-est-indigne-d-un-etat-de-droit.html",
-      "rank": 4,
-      "reference_newsroom_count": 5,
+      "outbound_url": "https://www.nouvelobs.com/societe/20261023.OBS119457/manifestations-du-24-octobre-parcours-a-paris-interdictions-securite-a-quoi-faut-il-s-attendre.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
+        "lefigaro.fr",
         "lemonde.fr",
-        "liberation.fr",
         "nouvelobs.com",
         "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4339,
+          "coherence": 0.4213,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.6137,
+        "total": 0.626,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "bobigny",
+      "subject_label": "paris",
       "subject_names": [
-        "bobigny",
-        "defenseur",
-        "etat"
+        "art basel",
+        "france",
+        "paris",
+        "republique",
+        "vincennes"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Las autoridades del departamento de Seine-Saint-Denis han pedido al Défenseur des droits que investigue las condiciones de detención de menores en el depósito del tribunal de Bobigny tras denuncias de abogados y manifestaciones públicas que describen instalaciones inadecuadas, como banquetas de hormigón, frío y objetos insalubres en los espacios de retención."
+      "subject_newsroom_count": 28,
+      "summary": "Los artículos coinciden en que para las manifestaciones del 24 de octubre en París las autoridades han impuesto y el tribunal administrativo ha rechazado recursos contra un único recorrido autorizado entre la porte d’Italie y la porte de Vincennes; los organizadores aceptaron ese trayecto y las delegaciones indican medidas de seguridad y prohibiciones aplicables."
     },
     {
-      "cluster_id": "subject-paris-72cf12e6cc64",
-      "coherence": null,
+      "cluster_id": "subject-orleans-eaf2734c93a1",
+      "coherence": 0.4011309780104301,
       "consequence": 2,
       "countries": [
-        "brazil",
-        "spain"
+        "france",
+        "germany",
+        "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-10-23",
-      "headline": "Motorista atira contra pedestres e mata uma pessoa e fere 4 nos arredores de Paris",
-      "independent_source_count": 3,
+      "country_count": 3,
+      "editorial_day": "2026-10-24",
+      "headline": "Congreso del RN en Orléans se celebra entre fuertes tensiones y protestas",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261023/hombre-dispara-coche-suburbio-paris-deja-muerto-heridos-detenido/1003744432223_0.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/marine-le-pen/afflux-de-militants-d-extreme-droite-manifestation-de-la-gauche-pourquoi-le-congres-du-rn-a-orleans-ce-week-end-est-au-c-ur-des-tensions_8250358.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/10/23/6adb2f6c21efa0bc628b45a7.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/front-national/reportage-a-orleans-la-crainte-des-sympathisants-et-militants-du-rn-devant-la-mobilisation-des-manifestants-contre-l-extreme-droite_8251378.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/23/homem-armado-mata-um-e-fere-quatro-em-cidade-francesa-nos-arredores-de-paris.ghtml"
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261022.OBS119442/le-congres-du-rn-a-orleans-s-annonce-sous-haute-tension-entre-mobilisation-et-interdiction-de-manifester.html"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-10/rn-parteitag-orleans-jordan-bardella-marine-le-pen-proteste"
+        },
+        {
+          "language": "fr",
+          "source": "courrierinternational.com",
+          "source_country": "united-states",
+          "url": "https://www.courrierinternational.com/article/vu-de-l-etranger-a-orleans-en-marge-du-congres-du-rn-pourrait-regner-une-ambiance-proche-de-la-guerre-civile_280866"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/10/23/homem-armado-mata-um-e-fere-quatro-em-cidade-francesa-nos-arredores-de-paris.ghtml",
-      "rank": 5,
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/politique/20261022.OBS119442/le-congres-du-rn-a-orleans-s-annonce-sous-haute-tension-entre-mobilisation-et-interdiction-de-manifester.html",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elespanol.com",
-        "elmundo.es",
-        "globo.com"
+        "francetvinfo.fr",
+        "nouvelobs.com",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4011,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6071,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "orleans",
+      "subject_names": [
+        "orleans"
+      ],
+      "subject_newsroom_count": 6,
+      "summary": "El congreso del Rassemblement National en Orléans reúne a militantes de extrema derecha y provoca movilizaciones y manifestaciones de la izquierda; las jornadas están marcadas por un despliegue de seguridad, prohibiciones de manifestar en zonas y preocupación entre autoridades y asistentes por el riesgo de incidentes y la intensidad de las protestas."
+    },
+    {
+      "cluster_id": "subject-macron-ec93ea2adc06",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-23",
+      "headline": "Representantes de estudiantes se reúnen con Macron y llaman a mantener la movilización",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/mouvement-lyceen-apres-leur-rencontre-avec-macron-les-representants-appellent-a-continuer-a-se-mobiliser-20261023"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261022-en-direct-france-macron-recoit-lyceens-rencontre-forces-de-l-ordre-lecornu-limoges-manifestations"
+        },
+        {
+          "language": "es",
+          "source": "rtve.es",
+          "source_country": "spain",
+          "url": "https://www.rtve.es/noticias/20261023/francia-protestas-sabado-macron-estudiantes/17280955.shtml"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "france24.com",
+      "outbound_url": "https://www.france24.com/fr/france/20261022-en-direct-france-macron-recoit-lyceens-rencontre-forces-de-l-ordre-lecornu-limoges-manifestations",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "france24.com",
+        "la-croix.com",
+        "rtve.es"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
           "editorial_weight": 0.2727,
-          "freshness": 1.0,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.6014,
+        "total": 0.5663,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "francia",
+        "macron"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Tras reunirse con el presidente Emmanuel Macron, representantes del movimiento estudiantil francés anunciaron que continuarán las protestas; los delegados transmitieron a Macron sus demandas y llamaron a sus compañeros a seguir movilizándose."
+    },
+    {
+      "cluster_id": "subject-paris-e84bdc8cb5ce",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-23",
+      "headline": "Manifestaciones del 17 de octubre en Francia y Países Bajos desatan episodios de violencia",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/vox/monde/17-octobre-en-france-comme-aux-pays-bas-nos-gouvernants-sont-en-plein-desarroi-face-a-une-violence-qu-ils-n-ont-pas-voulu-voir-20261023"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/social/20261018.OBS119317/la-france-a-un-probleme-avec-la-violence-ce-que-la-presse-internationale-dit-des-manifestations-du-17-octobre.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/violences-du-17-octobre-la-france-ecran-de-tous-les-fantasmes-y-compris-les-plus-sombres-5PDSAADMKVGRNFO226O3OO6EMA/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/social/20261018.OBS119317/la-france-a-un-probleme-avec-la-violence-ce-que-la-presse-internationale-dit-des-manifestations-du-17-octobre.html",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "lefigaro.fr",
+        "lexpress.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5496,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "paris",
       "subject_names": [
         "art basel",
+        "france",
         "paris",
         "republique",
-        "yvelines"
+        "vincennes"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Motorista atira contra pedestres e mata uma pessoa e fere 4 nos arredores de Paris"
+      "subject_newsroom_count": 28,
+      "summary": "Las piezas coinciden en que las protestas del 17 de octubre dieron lugar a episodios de violencia notables, que han puesto en evidencia la incapacidad de las autoridades para anticiparlos o contenerlos. Señalan además que estos hechos alimentan debates y preocupaciones tanto a nivel nacional como en la prensa internacional sobre el manejo de la seguridad y la interpretación pública de los disturbios."
     }
   ],
-  "discarded_ingested": 53,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-10-23T10:22:39.379809+00:00",
+  "generated_at": "2026-10-24T09:43:19.180013+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

@@ -1,30 +1,307 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-jordan-2c4f4c2767d2",
-      "coherence": 0.6626402895347716,
+      "cluster_id": "subject-musk-a21ed9824b04",
+      "coherence": 0.4595526022595249,
       "consequence": 3,
       "countries": [
-        "ca",
         "france",
+        "germany",
         "india",
-        "mo",
         "nl",
-        "united-kingdom",
-        "united-states",
-        "unknown"
+        "rs",
+        "spain",
+        "unknown",
+        "vm"
       ],
       "country_count": 8,
-      "editorial_day": "2026-10-24",
-      "headline": "Sept personnes tuées lors d'une fusillade dans une église en Jordanie",
-      "independent_source_count": 33,
+      "editorial_day": "2026-10-25",
+      "headline": "Elon Musk accuse l’armée ukrainienne d’avoir enfreint les conditions d’utilisation de Starlink",
+      "independent_source_count": 13,
       "members": [
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/jordanie-au-moins-sept-morts-dans-une-fusillade-dans-une-eglise-grecque-orthodoxe-20261023"
+          "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-elon-musk-accuse-kiev-de-violer-les-conditions-d-utilisation-du-reseau-starlink_6799896_3210.html"
         },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/elon-musk-accuse-l-ukraine-de-violer-les-conditions-d-utilisation-de-starlink-20261025"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/la-ligne-de-front-ukrainienne-seffondrerait-immediatement-elon-musk-menace-de-desactiver-starlink-si-kyiv-continue-a-violer-les-conditions-dutilisation-20261025_FDEVWFTQINGGRCHTKTULNON4RM/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261021/11664763/elon-musk-ordeno-limitar-acceso-ucrania-version-militar-starlink.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/musk-ukraine-starlink-100.html"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-10/elon-musk-starlink-ukraine-spacex"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2636534"
+        },
+        {
+          "language": "en",
+          "source": "presstv.co.uk",
+          "source_country": "unknown",
+          "url": "https://www.presstv.co.uk/Detail/2026/10/25/779135/Ukraine-military-violated-Starlink-Musk-killed-people"
+        },
+        {
+          "language": "vie",
+          "source": "baomoi.com",
+          "source_country": "vm",
+          "url": "https://baomoi.com/elon-musk-lan-dau-tien-chi-ra-loi-cua-ukraine-dan-den-su-co-starlink-c56349181.epi"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://timesofindia.indiatimes.com/world/europe/to-kill-people-musk-accuses-ukraine-military-of-misusing-starlink-for-drone-strikes/articleshow/135181125.cms"
+        },
+        {
+          "language": "en",
+          "source": "russiaherald.com",
+          "source_country": "rs",
+          "url": "http://www.russiaherald.com/news/279396816/ukraine-military-violated-starlink-terms-of-service-cant-be-used-for-offensive-drone-strikes-elon-musk"
+        },
+        {
+          "language": "nl",
+          "source": "drimble.nl",
+          "source_country": "nl",
+          "url": "https://drimble.nl/binnenlands-nieuws/108393267/musk-oekraine-hield-zich-niet-aan-gebruiksvoorwaarden-starlink.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-elon-musk-reprocha-ucrania-uso-indebido-starlink-matar-gente-20261024231034.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261021/11664763/elon-musk-ordeno-limitar-acceso-ucrania-version-militar-starlink.html",
+      "rank": 1,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "europapress.es",
+        "lavanguardia.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "nos.nl",
+        "tagesschau.de",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4596,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.8049
+        },
+        "total": 0.7783,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "musk",
+      "subject_names": [
+        "elon musk",
+        "kiev",
+        "melania trump",
+        "musk",
+        "rubio",
+        "rusia",
+        "starlink",
+        "ucrania",
+        "ukraine",
+        "ukraine's",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Elon Musk a déclaré que les forces ukrainiennes ont violé les conditions d’utilisation du service satellite Starlink, les accusant d’avoir utilisé la version militaire du système de manière offensive, notamment pour des frappes de drones, et a menacé de limiter ou de désactiver l’accès en réponse."
+    },
+    {
+      "cluster_id": "subject-obama-947fa5887e78",
+      "coherence": 0.47477439242458164,
+      "consequence": 3,
+      "countries": [
+        "ei",
+        "france",
+        "india",
+        "lu",
+        "my",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 8,
+      "editorial_day": "2026-10-25",
+      "headline": "Barack Obama attaque Donald Trump en campagne pour soutenir les démocrates",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/25/midterms-2026-barack-obama-en-campagne-pour-soutenir-les-democrates-attaque-le-mandat-de-donald-trump-marque-par-le-chaos-la-cruaute-la-corruption-et-l-incompetence_6800059_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/amerique/deux-annees-de-chaos-de-cruaute-de-corruption-et-dincompetence-en-campagne-pour-les-democrates-obama-sattaque-a-trump-avec-virulence-20261025_PRFDSTMOI5CM5NTOTHKDSW72VA/"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/obama-desembarca-midterms-ataque-feroz-trump-caos-20261025091308-nt.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmj6jwe1j1gjo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "rte.ie",
+          "source_country": "ei",
+          "url": "https://www.rte.ie/news/us/2026/1025/1596761-obama-trump-us-midterms/"
+        },
+        {
+          "language": "fr",
+          "source": "lequotidien.lu",
+          "source_country": "lu",
+          "url": "https://lequotidien.lu/a-la-une/en-campagne-pour-les-democrates-obama-sattaque-a-trump-avec-virulence/"
+        },
+        {
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/international/etats-unis/elections-americaines/deux-annees-de-chaos-de-cruaute-de-corruption-barack-obama-se-paie-donald-trump-a-une-semaine-des-midterms-25-10-2026-YT5A6OOUNJGTJA2M72L3OFVHGA.php"
+        },
+        {
+          "language": "en",
+          "source": "thehindu.com",
+          "source_country": "india",
+          "url": "https://www.thehindu.com/news/international/obama-blasts-trumps-chaos-and-cruelty-while-campaigning-for-democrats/article71622458.ece"
+        },
+        {
+          "language": "en",
+          "source": "koat.com",
+          "source_country": "united-states",
+          "url": "https://www.koat.com/article/obama-assails-cruelty-and-indecency-from-trump-midterm/74238426"
+        },
+        {
+          "language": "en",
+          "source": "idahopress.com",
+          "source_country": "united-states",
+          "url": "http://www.idahopress.com/ap_news/us/obama-in-midwest-assails-cruelty-and-indecency-from-trump-and-his-allies-in-the-midterm/article_e1def55b-b1d3-5d2c-95d0-dec43ab2c71f.html"
+        },
+        {
+          "language": "en",
+          "source": "hngnews.com",
+          "source_country": "united-states",
+          "url": "http://www.hngnews.com/nation_world/obama-in-midwest-assails-cruelty-and-indecency-from-trump-and-his-allies-in-the-midterm/article_13107a2c-5cc6-5ed9-a2e1-c12695170c04.html"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://economictimes.indiatimes.com/news/international/world-news/obama-in-midwest-assails-cruelty-and-indecency-from-trump-and-his-allies-in-the-midterm-campaign/articleshow/135181294.cms"
+        },
+        {
+          "language": "en",
+          "source": "freemalaysiatoday.com",
+          "source_country": "my",
+          "url": "https://www.freemalaysiatoday.com/category/highlight/2026/10/25/obama-blasts-trump-s-chaos-and-cruelty-while-campaigning-for-democrats"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "ei",
+      "outbound_source": "hngnews.com",
+      "outbound_url": "http://www.hngnews.com/nation_world/obama-in-midwest-assails-cruelty-and-indecency-from-trump-and-his-allies-in-the-midterm/article_13107a2c-5cc6-5ed9-a2e1-c12695170c04.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "bbc.co.uk",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4748,
+          "corroboration": 0.8,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.7895
+        },
+        "total": 0.7394,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "obama",
+      "subject_names": [
+        "alaska",
+        "barack obama",
+        "donald trump",
+        "el-sayed",
+        "etats-unis",
+        "obama",
+        "trump",
+        "watch"
+      ],
+      "subject_newsroom_count": 12,
+      "summary": "Lors d'une tournée de soutien aux candidats démocrates avant les élections de mi-mandat, Barack Obama a vigoureusement critiqué le bilan de Donald Trump, dénonçant des années marquées par « le chaos, la cruauté, la corruption et l’incompétence » et s’en prenant également à la conduite et aux alliés de l’ancien président."
+    },
+    {
+      "cluster_id": "subject-jordan-bardella-0d790d51b079",
+      "coherence": 0.8350474609028151,
+      "consequence": 3,
+      "countries": [
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-10-24",
+      "headline": "Des hommes armés ouvrent le feu lors d’un enterrement dans une église en Jordanie",
+      "independent_source_count": 8,
+      "members": [
         {
           "language": "en",
           "source": "theguardian.com",
@@ -33,15 +310,9 @@
         },
         {
           "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/ck87zlpzny15o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "nl",
-          "source": "nos.nl",
-          "source_country": "nl",
-          "url": "https://nos.nl/l/2636333"
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/10/24/nx-s1-6015414/shooting-church-jordan"
         },
         {
           "language": "en",
@@ -51,235 +322,86 @@
         },
         {
           "language": "en",
-          "source": "breitbart.com",
+          "source": "wamc.org",
           "source_country": "united-states",
-          "url": "https://www.breitbart.com/national-security/2026/10/23/at-least-seven-killed-in-church-shooting-in-southern-jordan/"
+          "url": "https://www.wamc.org/2026-10-24/gunmen-open-fire-at-a-church-during-a-funeral-in-jordan-killing-7-and-wounding-40"
         },
         {
           "language": "en",
-          "source": "deccanchronicle.com",
-          "source_country": "india",
-          "url": "https://www.deccanchronicle.com/world/seven-killed-after-gunmen-open-fire-at-church-in-jordan-1998353"
-        },
-        {
-          "language": "en",
-          "source": "sltrib.com",
+          "source": "kuow.org",
           "source_country": "united-states",
-          "url": "https://www.sltrib.com/religion/2026/10/23/deadly-shooting-christian-church/"
+          "url": "https://www.kuow.org/npr-news/2026-10-24/gunmen-open-fire-at-a-church-during-a-funeral-in-jordan-killing-7-and-wounding-40"
         },
         {
           "language": "en",
-          "source": "wboc.com",
+          "source": "ksl.com",
           "source_country": "united-states",
-          "url": "https://www.wboc.com/news/international/gunmen-open-fire-inside-a-church-in-jordan-causing-deaths-and-injuries/article_2b491202-6973-5d8e-b46c-4a0f9df6deac.html"
+          "url": "https://www.ksl.com:443/article/51640175/gunmen-open-fire-at-a-church-during-a-funeral-in-jordan-killing-7-and-wounding-40"
         },
         {
           "language": "en",
-          "source": "yorkpress.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.yorkpress.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "ncregister.com",
+          "source": "hppr.org",
           "source_country": "united-states",
-          "url": "https://www.ncregister.com/cna/at-least-6-killed-dozens-wounded-in-jordan-as-gunmen-open-fire-in-church-during-funeral"
+          "url": "https://www.hppr.org/npr-news/2026-10-24/gunmen-open-fire-at-a-church-during-a-funeral-in-jordan-killing-7-and-wounding-40"
         },
         {
           "language": "en",
-          "source": "kilburntimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.kilburntimes.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "glasgowtimes.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.glasgowtimes.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "halesowennews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.halesowennews.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "elystandard.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.elystandard.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "milfordmercury.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.milfordmercury.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "aol.com",
+          "source": "wyomingpublicmedia.org",
           "source_country": "united-states",
-          "url": "https://www.aol.com/articles/unidentified-gunmen-open-fire-church-115918000.html"
-        },
-        {
-          "language": "en",
-          "source": "warringtonguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.warringtonguardian.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "richmondandtwickenhamtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.richmondandtwickenhamtimes.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "tivysideadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.tivysideadvertiser.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "freerepublic.com",
-          "source_country": "united-states",
-          "url": "https://freerepublic.com/focus/f-news/4400305/posts"
-        },
-        {
-          "language": "en",
-          "source": "eadt.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.eadt.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "newhamrecorder.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.newhamrecorder.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "thetottenhamindependent.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thetottenhamindependent.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "ilfordrecorder.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ilfordrecorder.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "stourbridgenews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.stourbridgenews.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "oxfordmail.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.oxfordmail.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "dunfermlinepress.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.dunfermlinepress.com/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "hamhigh.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.hamhigh.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "northwichguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.northwichguardian.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "en",
-          "source": "thewestmorlandgazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thewestmorlandgazette.co.uk/news/national/26666326.seven-killed-jordan-gunmen-attack-church-funeral/"
-        },
-        {
-          "language": "fr",
-          "source": "lactualite.com",
-          "source_country": "ca",
-          "url": "https://lactualite.com/actualites/sept-morts-et-34-blesses-lors-dune-attaque-dans-une-eglise-en-jordanie/"
-        },
-        {
-          "language": "fr",
-          "source": "h24info.ma",
-          "source_country": "mo",
-          "url": "https://h24info.ma/economie/international-economie/jordanie-sept-morts-dans-une-attaque-contre-une-eglise/"
+          "url": "https://www.wyomingpublicmedia.org/2026-10-24/gunmen-open-fire-at-a-church-during-a-funeral-in-jordan-killing-7-and-wounding-40"
         }
       ],
       "mentioned_countries": [
         "jo"
       ],
-      "origin_country": "ca",
-      "outbound_source": "nos.nl",
-      "outbound_url": "https://nos.nl/l/2636333",
-      "rank": 1,
-      "reference_newsroom_count": 5,
+      "origin_country": "united-kingdom",
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/world/gunmen-open-fire-at-a-church-during-a-funeral-in-jordan-killing-7-and-wounding-34",
+      "rank": 3,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "la-croix.com",
-        "nos.nl",
+        "npr.org",
         "pbs.org",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.6626,
-          "corroboration": 0.8,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
+          "coherence": 0.835,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.8919,
-          "source_reliability": 0.8987
+          "prominence": 0.6667,
+          "source_reliability": 0.7037
         },
-        "total": 0.7835,
+        "total": 0.6957,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "jordan",
+      "subject_label": "jordan bardella",
       "subject_names": [
         "jordan",
-        "jordanie"
+        "jordan bardella"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Des hommes armés ont ouvert le feu pendant des obsèques dans une église en Jordanie, tuant sept personnes et faisant plusieurs dizaines de blessés; les attaques ont eu lieu à l'intérieur du lieu de culte et les autorités confirment le bilan mortel et de nombreux blessés."
+      "subject_newsroom_count": 10,
+      "summary": "Lors d’un enterrement dans une église en Jordanie, des hommes armés ont ouvert le feu, tuant au moins sept personnes et en blessant plusieurs dizaines (des chiffres cités varient entre 34 et 40 blessés selon les comptes rendus). Les attaques ont eu lieu pendant la cérémonie funéraire et ont provoqué de nombreuses victimes et des blessés évacués vers des établissements de santé."
     },
     {
-      "cluster_id": "subject-tibet-27da511b9b70",
-      "coherence": 0.5041816672042625,
+      "cluster_id": "subject-tibet-16ccb1388407",
+      "coherence": 0.46726126267379164,
       "consequence": 3,
       "countries": [
-        "dr",
-        "france",
         "it",
+        "so",
         "spain",
-        "united-kingdom",
-        "united-states",
-        "unknown"
+        "united-kingdom"
       ],
-      "country_count": 7,
+      "country_count": 4,
       "editorial_day": "2026-10-24",
-      "headline": "Un séisme de magnitude 7 frappe le Tibet et fait au moins 16 morts",
-      "independent_source_count": 9,
+      "headline": "Un séisme de magnitude 7 frappe le Tibet et cause des morts et des dégâts",
+      "independent_source_count": 6,
       "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/evenements-meteorologiques-extremes/un-seisme-de-magnitude-7-secoue-le-tibet-et-fait-au-moins-16-morts_8250571.html#xtor=RSS-3-%5Bgeneral%5D"
-        },
         {
           "language": "es",
           "source": "lavanguardia.com",
@@ -312,364 +434,166 @@
         },
         {
           "language": "en",
-          "source": "breitbart.com",
-          "source_country": "united-states",
-          "url": "https://www.breitbart.com/national-security/2026/10/23/earthquake-tibet-kills-at-least-16-destroys-hundreds-homes/"
-        },
-        {
-          "language": "tur",
-          "source": "tgrthaber.com",
-          "source_country": "unknown",
-          "url": "https://www.tgrthaber.com/dunya/cinin-ozerk-bolgesi-tibette-7-buyuklugunde-deprem-16-olu-76-yarali-3367178"
-        },
-        {
-          "language": "es",
-          "source": "acento.com.do",
-          "source_country": "dr",
-          "url": "https://acento.com.do/actualidad/terremoto-en-el-tibet-que-se-sabe-del-temblor-de-magnitud-7-que-dejo-16-muertos-y-mas-de-12000-evacuados-9776251.html"
+          "source": "jowhar.com",
+          "source_country": "so",
+          "url": "https://jowhar.com/tibet-earthquake-kills-16-and-injures-dozens-officials-report/"
         }
       ],
       "mentioned_countries": [
         "china"
       ],
-      "origin_country": "dr",
+      "origin_country": "it",
       "outbound_source": "expansion.com",
       "outbound_url": "https://www.expansion.com/sociedad/2026/10/23/terremoto-magnitud-7-tibet-chino-deja-16-muertos.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
+      "rank": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "eldiario.es",
         "euronews.com",
         "expansion.com",
-        "francetvinfo.fr",
         "lavanguardia.com",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5042,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
+          "coherence": 0.4673,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 0.7071,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
+          "prominence": 0.6,
+          "source_reliability": 0.68
         },
-        "total": 0.7594,
+        "total": 0.6919,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "tibet",
       "subject_names": [
         "tibet"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Un séisme de magnitude 7 a frappé la région autonome du Tibet en Chine, faisant au moins 16 morts et des dizaines de blessés; des centaines de maisons ont été détruites et plus de 12 000 personnes ont été évacuées selon les bilans rapportés."
+      "subject_newsroom_count": 6,
+      "summary": "Un séisme de magnitude 7 a frappé le Tibet, faisant au moins 16 morts et de nombreux blessés; des centaines de maisons ont été détruites et plus de 12 000 personnes ont été évacuées, selon les bilans officiels."
     },
     {
-      "cluster_id": "subject-ormuz-b29df3a7f892",
-      "coherence": 0.5997768747517549,
-      "consequence": 3,
-      "countries": [
-        "po",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-24",
-      "headline": "L'Iran annonce des explosions et incendies sur deux superpétroliers dans le détroit d'Ormuz",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261024/11667069/iran-informa-explosiones-e-incendios-otros-dos-superpetroleros-ormuz.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/iran-informa-explosiones-incendios-otros-dos-superpetroleros-ormuz_7052901_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "rtp.pt",
-          "source_country": "po",
-          "url": "https://www.rtp.pt/noticias/guerra-no-medio-oriente/guarda-revolucionaria-iraniana-reporta-explosoes-em-mais-dois-superpetroleiros-no-estreito-de-ormuz_n1773944"
-        },
-        {
-          "language": "pt",
-          "source": "executivedigest.sapo.pt",
-          "source_country": "po",
-          "url": "https://executivedigest.sapo.pt/irao-guarda-revolucionaria-reporta-explosoes-em-mais-dois-superpetroleiros-no-estreito-de-ormuz/"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/10/24/6adc5721e85ecebf648b459a.html"
-        }
-      ],
-      "mentioned_countries": [
-        "ir"
-      ],
-      "origin_country": "po",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261024/11667069/iran-informa-explosiones-e-incendios-otros-dos-superpetroleros-ormuz.html",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elmundo.es",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5998,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.619
-        },
-        "total": 0.695,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ormuz",
-      "subject_names": [
-        "ormuz"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Les autorités iraniennes, via la Garde révolutionnaire, ont signalé des explosions suivies d'incendies sur deux superpétroliers dans le détroit d'Ormuz. Les récits concordent sur le lieu (détroit d'Ormuz) et la nature des incidents (explosions et feux affectant deux navires-citernes), sans donner de détails supplémentaires sur les causes, l'ampleur des dommages ou d'éventuelles victimes."
-    },
-    {
-      "cluster_id": "subject-hitler-94d686d1c87e",
-      "coherence": 0.4790394847731594,
+      "cluster_id": "subject-vucic-2cfdf1bca082",
+      "coherence": 0.42732343038282483,
       "consequence": 2,
       "countries": [
-        "as",
         "france",
         "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "md",
+        "nl",
+        "spain"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-10-24",
-      "headline": "Le « Nid d'Aigle », la retraite alpine de Hitler, incendié et un suspect arrêté",
-      "independent_source_count": 13,
+      "country_count": 5,
+      "editorial_day": "2026-10-25",
+      "headline": "Des étudiants serbes se mobilisent pour défier Vučić aux législatives",
+      "independent_source_count": 9,
       "members": [
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.lefigaro.fr/international/les-etudiants-veulent-faire-la-revolution-en-serbie-la-gen-z-en-marche-contre-aleksandar-vucic-avant-les-legislatives-20261024"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/en-serbie-les-etudiants-veulent-defier-aleksandar-vucic-dans-les-urnes-20261025_EYDF2NZT4NGM3LXHDSJIMWHISQ/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/legislatives-en-serbie-les-etudiants-veulent-rallier-les-seniors-a-leur-cause-pour-battre-aleksandar-vucic-20261023"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-les-etudiants-a-lassaut-du-pouvoir-daleksandar-vucic-GTJXXLXEPRA33PAMNAKQOD5YRQ/"
         },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-24/las-llamas-destruyen-el-nido-del-aguila-la-famosa-residencia-de-hitler-en-los-alpes.html"
+          "url": "https://elpais.com/internacional/2026-10-25/los-estudiantes-de-serbia-disputan-el-poder-a-vucic-en-las-urnas-tras-casi-dos-anos-de-protestas.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261024/11667088/detenido-alemania-sospechoso-incendiar-nido-aguila-hitler.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/detenido-alemania-incendio-nido-aguila-casa-hitler-alpes_1_13611950.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/10/24/6adc5e6fe4d4d83e7e8b4571.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/incendio-destruye-nido-aguila-famoso-refugio-montana-hitler-detenido_7052909_0.html"
-        },
-        {
-          "language": "en",
-          "source": "express.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.express.co.uk/news/world/2259973/adolf-hitler-mountain-retreat-ablaze-arrest"
-        },
-        {
-          "language": "en",
-          "source": "rockymounttelegram.com",
-          "source_country": "united-states",
-          "url": "http://www.rockymounttelegram.com/news/world/fire-breaks-out-at-alpine-retreat-built-for-hitler-in-germany-a-person-is-detained/article_c17f356d-7429-52d5-bb27-7db9e239bf69.html"
-        },
-        {
-          "language": "en",
-          "source": "stardem.com",
-          "source_country": "united-states",
-          "url": "http://www.stardem.com/ap/world/fire-breaks-out-at-alpine-retreat-built-for-hitler-in-germany-a-person-is-detained/article_8a50070f-b52d-5ce2-aa13-6a122952d6e2.html"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/adolf-hitlers-mountain-retreat-ablaze-081800000.html"
-        },
-        {
-          "language": "en",
-          "source": "perthnow.com.au",
-          "source_country": "as",
-          "url": "https://www.perthnow.com.au/news/crime/arrest-in-germany-after-fire-engulfs-hitler-retreat-c-23066874"
+          "url": "https://www.elespanol.com/mundo/europa/20261025/serbia-mafia-estudiantes-miden-resistencia-autoritaria-vucic-elecciones-inciertas-ultimos-anos/1003744433358_0.html"
         },
         {
           "language": "it",
-          "source": "blitzquotidiano.it",
+          "source": "repubblica.it",
           "source_country": "it",
-          "url": "https://www.blitzquotidiano.it/cronaca/incendia-il-rifugio-alpino-di-adolf-hitler-in-fiamme-ledificio-amato-dai-gerarchi-nazisti-3807832/"
+          "url": "https://www.repubblica.it/esteri/2026/10/24/news/dalle_piazze_alle_urne_studenti_sfidano_vucic_serbia_sale_tensione_vigilia_del_voto-425672113/?rss"
         },
         {
-          "language": "it",
-          "source": "ilmessaggero.it",
-          "source_country": "it",
-          "url": "https://www.ilmessaggero.it/mondo/nido_aquila_hitler_incendio_rifugio_alpi_cosa_e_successo-9845798.html"
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2636539"
+        },
+        {
+          "language": "ron",
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/78621680"
         }
       ],
       "mentioned_countries": [
-        "germany"
+        "ri"
       ],
-      "origin_country": "as",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]",
-      "rank": 4,
-      "reference_newsroom_count": 6,
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-les-etudiants-a-lassaut-du-pouvoir-daleksandar-vucic-GTJXXLXEPRA33PAMNAKQOD5YRQ/",
+      "rank": 5,
+      "reference_newsroom_count": 8,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elmundo.es",
+        "elespanol.com",
         "elpais.com",
-        "francetvinfo.fr",
-        "lavanguardia.com"
+        "la-croix.com",
+        "lefigaro.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nos.nl",
+        "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.479,
-          "corroboration": 0.75,
-          "editorial_weight": 0.4286,
+          "coherence": 0.4273,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.8
+          "prominence": 0.6923,
+          "source_reliability": 0.7647
         },
-        "total": 0.6849,
+        "total": 0.6884,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "hitler",
+      "subject_label": "vucic",
       "subject_names": [
-        "adolf hitler",
-        "afd",
-        "aguila'",
-        "alemania",
-        "alpes",
-        "hitler",
-        "nido"
+        "aleksandar vucic",
+        "serbia",
+        "serbie",
+        "vucic"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Un incendie a ravagé le « Nid d'Aigle », la résidence de montagne construite pour Adolf Hitler dans les Alpes bavaroises ; les médias signalent qu'une personne a été arrêtée en lien avec l'incendie."
-    },
-    {
-      "cluster_id": "subject-cisjordania-66aa8aa7349d",
-      "coherence": 0.40947631104765503,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-24",
-      "headline": "Netanyahu ordonne une opération de grande envergure en Cisjordanie",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-23/el-ejercito-israeli-mata-a-dos-palestinos-armados-tras-un-tiroteo-en-cisjordania.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261023/11666234/netanyahu-ordena-cierre-cisjordania-tiroteo-cerca-hebron.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/netanyahu-ordena-cierre-cisjordania-dias-elecciones-ataque-cerca-hebron_1_13608925.html"
-        },
-        {
-          "language": "pt",
-          "source": "correiobraziliense.com.br",
-          "source_country": "brazil",
-          "url": "https://www.correiobraziliense.com.br/mundo/2026/10/7526800-netanyahu-reage-a-ataque-e-determina-fechamento-da-cisjordania.html"
-        }
-      ],
-      "mentioned_countries": [
-        "is"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261023/11666234/netanyahu-ordena-cierre-cisjordania-tiroteo-cerca-hebron.html",
-      "rank": 5,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4095,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6685,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "cisjordania",
-      "subject_names": [
-        "cisjordania",
-        "cisjordanie",
-        "gaza",
-        "hebron",
-        "israel",
-        "netanyahou",
-        "netanyahu",
-        "west bank"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Après la mort de deux soldats lors d’un attaque armée près d’Hébron, le Premier ministre Benjamin Netanyahu a ordonné une vaste opération en Cisjordanie et la fermeture des zones concernées; les mesures ont été prises à quelques jours des élections israéliennes."
+      "subject_newsroom_count": 17,
+      "summary": "Des mouvements étudiants, nés de près de deux ans de protestations contre Aleksandar Vučić, se présentent désormais en force aux élections législatives en Serbie, cherchant à traduire leur mobilisation de la rue aux urnes, à attirer le soutien des électeurs plus âgés et à contester la domination politique et l'autoritarisme perçu du président sortant."
     }
   ],
-  "discarded_ingested": 236,
+  "discarded_ingested": 212,
   "discarded_kept": 5,
-  "generated_at": "2026-10-24T09:43:19.180013+00:00",
+  "generated_at": "2026-10-25T09:59:32.364165+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

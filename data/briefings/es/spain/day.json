@@ -1,651 +1,521 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-asturias-80d744006a84",
-      "coherence": null,
-      "consequence": 1,
+      "cluster_id": "subject-madrid-69da772d3f67",
+      "coherence": 0.44943635615668776,
+      "consequence": 2,
       "countries": [
+        "ar",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-23",
-      "headline": "Los Reyes presiden la entrega de los Premios Princesa de Asturias 2026",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-10-25",
+      "headline": "Disturbios en Barcelona dejan 128 detenidos y saqueos en comercios",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/asturias/premios-princesa-asturias-2026-reivindican-esperanza-futuro-comun-cultura-ciencia-avales_1_13610547.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/yodona/moda/reina-letizia/2026/10/23/6adb8140e9cf4aae228b4579.html"
+          "url": "https://www.elespanol.com/espana/20261024/saqueos-vandalismo-barcelona-concentracion-jovenes-antisistema-acaba-detenidos/1003744433857_0.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/asturias/noticia-ceremonia-premios-princesa-asturias-2026-arranca-teatro-campoamor-20261023183820.html"
+          "url": "https://www.europapress.es/catalunya/noticia-128-detenidos-disturbios-barcelona-sabado-72-ellos-menores-edad-20261025090646.html"
+        },
+        {
+          "language": "es",
+          "source": "infobae.com",
+          "source_country": "ar",
+          "url": "https://www.infobae.com/espana/2026/10/25/noche-de-caos-y-disturbios-en-barcelona-la-cifra-de-detenidos-sube-a-128-la-mayoria-menores-de-edad-y-hay-15-policias-heridos/"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/cataluna/2026-10-24/disturbios-plaza-catalunya-mossos-activistas-1tna-1tps_4452402/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "france"
+      ],
+      "origin_country": "ar",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/20261024/saqueos-vandalismo-barcelona-concentracion-jovenes-antisistema-acaba-detenidos/1003744433857_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elespanol.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4494,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "madrid",
+      "subject_names": [
+        "barcelona",
+        "espana",
+        "madrid",
+        "mourinho",
+        "valladolid"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Una protesta juvenil en Barcelona terminó en disturbios con saqueos, quema de vehículos y enfrentamientos con la policía; las autoridades detuvieron a 128 personas, la mayoría menores de edad, y hubo varios agentes heridos."
+    },
+    {
+      "cluster_id": "subject-musk-a21ed9824b04",
+      "coherence": 0.4595526022595249,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "india",
+        "nl",
+        "rs",
+        "spain",
+        "unknown",
+        "vm"
+      ],
+      "country_count": 8,
+      "editorial_day": "2026-10-25",
+      "filled_from": "europe",
+      "headline": "Elon Musk acusa a Ucrania de violar las condiciones de uso de Starlink",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/live/2026/10/25/en-direct-guerre-en-ukraine-elon-musk-accuse-kiev-de-violer-les-conditions-d-utilisation-du-reseau-starlink_6799896_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/elon-musk-accuse-l-ukraine-de-violer-les-conditions-d-utilisation-de-starlink-20261025"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/la-ligne-de-front-ukrainienne-seffondrerait-immediatement-elon-musk-menace-de-desactiver-starlink-si-kyiv-continue-a-violer-les-conditions-dutilisation-20261025_FDEVWFTQINGGRCHTKTULNON4RM/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261021/11664763/elon-musk-ordeno-limitar-acceso-ucrania-version-militar-starlink.html"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/musk-ukraine-starlink-100.html"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-10/elon-musk-starlink-ukraine-spacex"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2636534"
+        },
+        {
+          "language": "en",
+          "source": "presstv.co.uk",
+          "source_country": "unknown",
+          "url": "https://www.presstv.co.uk/Detail/2026/10/25/779135/Ukraine-military-violated-Starlink-Musk-killed-people"
+        },
+        {
+          "language": "vie",
+          "source": "baomoi.com",
+          "source_country": "vm",
+          "url": "https://baomoi.com/elon-musk-lan-dau-tien-chi-ra-loi-cua-ukraine-dan-den-su-co-starlink-c56349181.epi"
+        },
+        {
+          "language": "en",
+          "source": "indiatimes.com",
+          "source_country": "india",
+          "url": "https://timesofindia.indiatimes.com/world/europe/to-kill-people-musk-accuses-ukraine-military-of-misusing-starlink-for-drone-strikes/articleshow/135181125.cms"
+        },
+        {
+          "language": "en",
+          "source": "russiaherald.com",
+          "source_country": "rs",
+          "url": "http://www.russiaherald.com/news/279396816/ukraine-military-violated-starlink-terms-of-service-cant-be-used-for-offensive-drone-strikes-elon-musk"
+        },
+        {
+          "language": "nl",
+          "source": "drimble.nl",
+          "source_country": "nl",
+          "url": "https://drimble.nl/binnenlands-nieuws/108393267/musk-oekraine-hield-zich-niet-aan-gebruiksvoorwaarden-starlink.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/internacional/noticia-elon-musk-reprocha-ucrania-uso-indebido-starlink-matar-gente-20261024231034.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261021/11664763/elon-musk-ordeno-limitar-acceso-ucrania-version-militar-starlink.html",
+      "rank": 2,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "europapress.es",
+        "lavanguardia.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "nos.nl",
+        "tagesschau.de",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4596,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.8049
+        },
+        "total": 0.7283,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "musk",
+      "subject_names": [
+        "elon musk",
+        "kiev",
+        "melania trump",
+        "musk",
+        "rubio",
+        "rusia",
+        "starlink",
+        "ucrania",
+        "ukraine",
+        "ukraine's",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Varios medios informan que Elon Musk dijo que el ejército ucraniano habría incumplido las condiciones de uso del servicio satelital Starlink, afirmando que se empleó para ataques letales con drones y advirtiendo que podría limitar o desactivar el acceso militar si las supuestas violaciones continúan."
+    },
+    {
+      "cluster_id": "subject-vucic-2cfdf1bca082",
+      "coherence": 0.42732343038282483,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "it",
+        "md",
+        "nl",
+        "spain"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-10-25",
+      "filled_from": "europe",
+      "headline": "Estudiantes serbios se movilizan para desafiar a Aleksandar Vučić en las elecciones",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/les-etudiants-veulent-faire-la-revolution-en-serbie-la-gen-z-en-marche-contre-aleksandar-vucic-avant-les-legislatives-20261024"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/en-serbie-les-etudiants-veulent-defier-aleksandar-vucic-dans-les-urnes-20261025_EYDF2NZT4NGM3LXHDSJIMWHISQ/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/legislatives-en-serbie-les-etudiants-veulent-rallier-les-seniors-a-leur-cause-pour-battre-aleksandar-vucic-20261023"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-les-etudiants-a-lassaut-du-pouvoir-daleksandar-vucic-GTJXXLXEPRA33PAMNAKQOD5YRQ/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-25/los-estudiantes-de-serbia-disputan-el-poder-a-vucic-en-las-urnas-tras-casi-dos-anos-de-protestas.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20261025/serbia-mafia-estudiantes-miden-resistencia-autoritaria-vucic-elecciones-inciertas-ultimos-anos/1003744433358_0.html"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/10/24/news/dalle_piazze_alle_urne_studenti_sfidano_vucic_serbia_sale_tensione_vigilia_del_voto-425672113/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2636539"
+        },
+        {
+          "language": "ron",
+          "source": "news.yam.md",
+          "source_country": "md",
+          "url": "https://news.yam.md/ro/story/78621680"
+        }
+      ],
+      "mentioned_countries": [
+        "ri"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-les-etudiants-a-lassaut-du-pouvoir-daleksandar-vucic-GTJXXLXEPRA33PAMNAKQOD5YRQ/",
+      "rank": 3,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elpais.com",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nos.nl",
+        "repubblica.it"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4273,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7647
+        },
+        "total": 0.6384,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "vucic",
+      "subject_names": [
+        "aleksandar vucic",
+        "serbia",
+        "serbie",
+        "vucic"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "Estudiantes en Serbia, tras casi dos años de protestas, se organizan para presentar una alternativa y movilizar votos contra Aleksandar Vučić en las legislativas; buscan sumar apoyos intergeneracionales, alertan sobre la creciente tensión política y plantean que los comicios serán una prueba de la resistencia a su poder."
+    },
+    {
+      "cluster_id": "subject-oviedo-e4dc32d9379b",
+      "coherence": 0.41034786157762027,
+      "consequence": 0,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-25",
+      "headline": "El rey Felipe VI es operado de cataratas en el ojo izquierdo y recibe el alta",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-24/felipe-vi-operado-de-cataratas-del-ojo-izquierdo-en-oviedo.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/politica/rey-felipe-vi-somete-operacion-cataratas-oviedo_1_13613044.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/20261024/rey-felipe-vi-operado-cataratas-ojo-izquierdo-pasara-noche-hospital-oviedo/1003744433843_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-rey-sale-centro-oftalmologico-oviedo-donde-fue-operado-cataratas-sabado-regresa-madrid-20261025101827.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.vanitatis.elconfidencial.com/casas-reales/2026-10-25/rey-felipe-alta-operacion-cataratas-regreso-madrid_4452480/"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/asturias/noticia-ceremonia-premios-princesa-asturias-2026-arranca-teatro-campoamor-20261023183820.html",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/20261024/rey-felipe-vi-operado-cataratas-ojo-izquierdo-pasara-noche-hospital-oviedo/1003744433843_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
+        "elconfidencial.com",
         "eldiario.es",
-        "elmundo.es",
+        "elespanol.com",
+        "elpais.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.4103,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.4763,
+        "total": 0.4642,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "asturias",
+      "subject_label": "oviedo",
       "subject_names": [
-        "asturias",
-        "leonor"
+        "barcelona",
+        "espana",
+        "felipe",
+        "madrid",
+        "mourinho",
+        "oviedo",
+        "valladolid"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Los Reyes presidieron la ceremonia de los Premios Princesa de Asturias 2026, un acto que destacó la celebración de la cultura y la ciencia como motor de esperanza en el futuro común; en el evento la Reina Letizia y la Princesa Leonor acudieron con prendas de diseño español, incluida una pieza de tejido reciclado."
+      "subject_newsroom_count": 6,
+      "summary": "Felipe VI fue sometido a una intervención de cataratas en el ojo izquierdo en un centro oftalmológico de Oviedo, pasó la noche en el hospital y posteriormente recibió el alta para regresar a Madrid."
     },
     {
-      "cluster_id": "subject-hitler-94d686d1c87e",
-      "coherence": 0.4790394847731594,
-      "consequence": 2,
+      "cluster_id": "subject-eurovision-junior-31ebdbbfd79e",
+      "coherence": 0.48429392490436984,
+      "consequence": 0,
       "countries": [
-        "as",
-        "france",
-        "it",
-        "spain",
-        "united-kingdom",
-        "united-states"
+        "spain"
       ],
-      "country_count": 6,
-      "editorial_day": "2026-10-24",
-      "filled_from": "europe",
-      "headline": "Un incendio destruye el 'Nido del Águila', hay un detenido",
-      "independent_source_count": 13,
+      "country_count": 1,
+      "editorial_day": "2026-10-25",
+      "headline": "Armenia gana Eurovisión Junior 2026 y España queda segunda con Lucas Paulano",
+      "independent_source_count": 5,
       "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]"
-        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-24/las-llamas-destruyen-el-nido-del-aguila-la-famosa-residencia-de-hitler-en-los-alpes.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261024/11667088/detenido-alemania-sospechoso-incendiar-nido-aguila-hitler.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/detenido-alemania-incendio-nido-aguila-casa-hitler-alpes_1_13611950.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/10/24/6adc5e6fe4d4d83e7e8b4571.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/incendio-destruye-nido-aguila-famoso-refugio-montana-hitler-detenido_7052909_0.html"
-        },
-        {
-          "language": "en",
-          "source": "express.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.express.co.uk/news/world/2259973/adolf-hitler-mountain-retreat-ablaze-arrest"
-        },
-        {
-          "language": "en",
-          "source": "rockymounttelegram.com",
-          "source_country": "united-states",
-          "url": "http://www.rockymounttelegram.com/news/world/fire-breaks-out-at-alpine-retreat-built-for-hitler-in-germany-a-person-is-detained/article_c17f356d-7429-52d5-bb27-7db9e239bf69.html"
-        },
-        {
-          "language": "en",
-          "source": "stardem.com",
-          "source_country": "united-states",
-          "url": "http://www.stardem.com/ap/world/fire-breaks-out-at-alpine-retreat-built-for-hitler-in-germany-a-person-is-detained/article_8a50070f-b52d-5ce2-aa13-6a122952d6e2.html"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/adolf-hitlers-mountain-retreat-ablaze-081800000.html"
-        },
-        {
-          "language": "en",
-          "source": "perthnow.com.au",
-          "source_country": "as",
-          "url": "https://www.perthnow.com.au/news/crime/arrest-in-germany-after-fire-engulfs-hitler-retreat-c-23066874"
-        },
-        {
-          "language": "it",
-          "source": "blitzquotidiano.it",
-          "source_country": "it",
-          "url": "https://www.blitzquotidiano.it/cronaca/incendia-il-rifugio-alpino-di-adolf-hitler-in-fiamme-ledificio-amato-dai-gerarchi-nazisti-3807832/"
-        },
-        {
-          "language": "it",
-          "source": "ilmessaggero.it",
-          "source_country": "it",
-          "url": "https://www.ilmessaggero.it/mondo/nido_aquila_hitler_incendio_rifugio_alpi_cosa_e_successo-9845798.html"
-        }
-      ],
-      "mentioned_countries": [
-        "germany"
-      ],
-      "origin_country": "as",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/allemagne/la-residence-de-villegiature-d-adolphe-hitler-le-nid-d-aigle-incendiee-en-baviere-un-suspect-arrete_8251921.html#xtor=RSS-3-[lestitres]",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.479,
-          "corroboration": 0.75,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.8
-        },
-        "total": 0.6349,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "hitler",
-      "subject_names": [
-        "adolf hitler",
-        "afd",
-        "aguila'",
-        "alemania",
-        "alpes",
-        "hitler",
-        "nido"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Un incendio ha arrasado la residencia alpina conocida como el 'Nido del Águila', la casa de montaña construida para Adolf Hitler en Baviera; las informaciones coinciden en que una persona ha sido detenida como sospechosa del incendio."
-    },
-    {
-      "cluster_id": "subject-moody’s-130e10a6eb13",
-      "coherence": 0.5295754869016815,
-      "consequence": 2,
-      "countries": [
-        "au",
-        "france"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-24",
-      "filled_from": "europe",
-      "headline": "Moody’s mantiene la calificación soberana de Francia en Aa3 con perspectiva negativa",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/conjoncture/dette-a-la-surprise-generale-moody-s-ne-degrade-pas-la-france-20261023"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/economie/finances-publiques-moody-s-accorde-un-sursis-a-la-france-20261024"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/l-agence-moody-s-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative_8251510.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261022-notation-de-la-france-un-abaissement-de-la-note-par-moody-s-jug%C3%A9-tr%C3%A8s-plausible"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/%C3%A9conomie/20261023-france-l-agence-moody-s-maintient-la-note-souveraine-%C3%A0-aa3-avec-perspective-n%C3%A9gative"
-        },
-        {
-          "language": "fr",
-          "source": "leparisien.fr",
-          "source_country": "france",
-          "url": "https://www.leparisien.fr/economie/lagence-moodys-maintient-la-note-souveraine-de-la-france-a-aa3-avec-perspective-negative-23-10-2026-TRQZCOUILFF7DPUYCW3BULQHFY.php"
-        },
-        {
-          "language": "de",
-          "source": "vol.at",
-          "source_country": "au",
-          "url": "https://www.vol.at/moodys-belaesst-einstufung-von-frankreichs-bonitaet-gleich/10579910"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "au",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/dette-contre-toute-attente-moodys-maintient-la-note-de-la-france-20261023_B6U3PWPYWFFHNKTAT7H3JXBBNY/",
-      "rank": 3,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5296,
-          "corroboration": 0.5,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7333
-        },
-        "total": 0.6097,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "moody’s",
-      "subject_names": [
-        "aa3",
-        "art basel",
-        "france",
-        "moody’s",
-        "paris",
-        "republique",
-        "vincennes"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "La agencia Moody’s ha decidido no bajar la calificación crediticia soberana de Francia, manteniéndola en Aa3, pero ha dejado la perspectiva en negativa, según coinciden los artículos citados."
-    },
-    {
-      "cluster_id": "subject-melania-trump-cd7c2828c621",
-      "coherence": 0.49229884158060666,
-      "consequence": 1,
-      "countries": [
-        "as",
-        "bu",
-        "ci",
-        "france",
-        "india",
-        "it",
-        "mx",
-        "my",
-        "rs",
-        "spain",
-        "sy",
-        "sz",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 14,
-      "editorial_day": "2026-10-24",
-      "filled_from": "europe",
-      "headline": "Melania Trump logra una tregua local en Oleshky entre Rusia y Ucrania",
-      "independent_source_count": 24,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/melania-trump-affirme-avoir-obtenu-une-treve-entre-russes-et-ukrainiens-a-olechky-20261023_4KW4CUVBGFDOZOFJI7VDP4XVDM/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/melania-trump-affirme-avoir-obtenu-une-treve-entre-russes-et-ukrainiens-a-olechky_8251402.html#xtor=RSS-3-[lestitres]"
+          "url": "https://elpais.com/television/2026-10-24/armenia-gana-eurovision-junior-2026-y-espana-queda-segunda-con-lucas-paulano-y-cuore-bello-te-quiero-te-quiero.html"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/casa-blanca-asegura-melania-trump-logrado-alto-20261023154657-nt.html"
+          "url": "https://www.abc.es/play/television/eurovision/armenia-gana-eurovision-junior-2026-lucas-paulano-20261025101038-nt.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "granadahoy.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261023/11666620/melania-trump-consigue-tregua-ciudad-ucraniana.html"
+          "url": "https://www.granadahoy.com/television/espana-queda-puertas-ganar-eurovision_0_2008335297.html"
+        },
+        {
+          "language": "es",
+          "source": "leonoticias.com",
+          "source_country": "spain",
+          "url": "https://www.leonoticias.com/culturas/tv/armenia-gana-eurovision-junior-2026-espana-queda-20261024235430-ntrc.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/melania-trump-anuncia-alto-fuego-rusia-ucrania-ciudad-oleshky-mediado_1_13610460.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/melania-trump-media-con-exito-un-alto-fuego-ciudad-ucraniana-oleshki-para-facilitar-una-evacuacion_7052782_0.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6vgxkvl4w5eo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/show/news-wrap-white-house-says-melania-trump-brokered-localized-ceasefire-deal-in-oleshky"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/melania-trump-helps-secure-a-ceasefire-deal-in-russian-occupied-oleshky-the-white-house-says"
-        },
-        {
-          "language": "en",
-          "source": "eurasiareview.com",
-          "source_country": "united-states",
-          "url": "https://www.eurasiareview.com/24102026-white-house-says-melania-trump-brokers-localized-cease-fire-for-occupied-ukrainian-city/"
-        },
-        {
-          "language": "it",
-          "source": "savonanews.it",
-          "source_country": "it",
-          "url": "https://www.savonanews.it/2026/10/24/leggi-notizia/argomenti/ultimora/articolo/ucraina-russia-tregua-umanitaria-per-oleshky-dal-27-ottobre-laccordo-mediato-da-melania-trump.html"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://945wpti.iheart.com/content/2026-10-23-melania-trump-brokers-ceasefire-for-humanitarian-aid-in-oleshky/"
-        },
-        {
-          "language": "en",
-          "source": "outlookindia.com",
-          "source_country": "india",
-          "url": "https://www.outlookindia.com/international/russia-ukraine-agree-to-ceasefire-in-oleshky-after-melania-trumps-efforts-white-house"
-        },
-        {
-          "language": "en",
-          "source": "aawsat.com",
-          "source_country": "sy",
-          "url": "https://english.aawsat.com/world/5332844-melania-trump-helps-forge-ceasefire-deal-russian-occupied-ukrainian-city-white-house"
-        },
-        {
-          "language": "en",
-          "source": "rferl.org",
-          "source_country": "rs",
-          "url": "https://www.rferl.org/a/white-house-says-melania-trump-brokers-localized-cease-fire-for-occupied-ukrainian-city/33883147.html"
-        },
-        {
-          "language": "en",
-          "source": "bgnes.com",
-          "source_country": "bu",
-          "url": "http://www.bgnes.com/conflicts/melania-trump-announces-russia-ukraine-ceasefire-in-occupied-city-of-oleshky"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://woodradio.iheart.com/content/2026-10-23-melania-trump-brokers-ceasefire-for-humanitarian-aid-in-oleshky/"
-        },
-        {
-          "language": "en",
-          "source": "perthnow.com.au",
-          "source_country": "as",
-          "url": "https://www.perthnow.com.au/news/conflict/melania-trump-brokers-oleshky-deal-with-russia-ukraine-c-23064874"
-        },
-        {
-          "language": "en",
-          "source": "freemalaysiatoday.com",
-          "source_country": "my",
-          "url": "https://www.freemalaysiatoday.com/category/world/2026/10/23/melania-trump-says-secured-ceasefire-in-ukrainian-city-of-oleshky"
-        },
-        {
-          "language": "en",
-          "source": "nebraska.tv",
-          "source_country": "united-states",
-          "url": "https://nebraska.tv/news/nation-world/first-lady-melania-trump-secures-ceasefire-for-aid-evacuations-in-russia-occupied-ukrainian-city-oleshky-white-house-news-push-to-end-war-special-envoy-steve-witkoff-putin-zelenskyy"
-        },
-        {
-          "language": "en",
-          "source": "wtvm.com",
-          "source_country": "united-states",
-          "url": "https://www.wtvm.com/2026/10/23/white-house-announces-melania-trump-secures-ceasefire-russian-occupied-ukrainian-city/"
-        },
-        {
-          "language": "en",
-          "source": "latimes.com",
-          "source_country": "united-states",
-          "url": "https://www.latimes.com/world-nation/story/2026-10-23/melania-trump-helps-forge-ceasefire-deal-in-russian-occupied-ukrainian-city-white-house-says"
-        },
-        {
-          "language": "it",
-          "source": "milanofinanza.it",
-          "source_country": "it",
-          "url": "https://www.milanofinanza.it/news/ucraina-melania-trump-ottiene-una-tregua-a-oleshky-dal-29-ottobre-202610231745311467"
-        },
-        {
-          "language": "es",
-          "source": "excelsior.com.mx",
-          "source_country": "mx",
-          "url": "https://www.excelsior.com.mx/internacional/melania-trump-logra-alto-fuego-oleshky-tras-mediacion-entre-rusia-y-ucrania"
-        },
-        {
-          "language": "es",
-          "source": "biobiochile.cl",
-          "source_country": "ci",
-          "url": "https://www.biobiochile.cl/noticias/internacional/eeuu/2026/10/23/casa-blanca-anuncia-que-melania-trump-logro-acuerdo-de-alto-al-fuego-entre-rusia-y-ucrania.shtml"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/ukraine-melania-trump-annonce-un-cessez-le-feu-a-olechky-752337598431"
+          "url": "https://www.eldiario.es/vertele/noticias/espana-roza-triunfo-eurovision-junior-2026-lucas-paulano-queda-2o-vista-rtve-futuro-eurovisivo_1_13611216.html"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "spain"
       ],
-      "origin_country": "as",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/casa-blanca-asegura-melania-trump-logrado-alto-20261023154657-nt.html",
-      "rank": 4,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "francetvinfo.fr",
-        "lavanguardia.com",
-        "liberation.fr",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4923,
-          "corroboration": 0.875,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.8571,
-          "source_reliability": 0.8806
-        },
-        "total": 0.5997,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "melania trump",
-      "subject_names": [
-        "alaska",
-        "canada",
-        "donald trump",
-        "melania trump",
-        "mexico",
-        "new york",
-        "olechky",
-        "oleshki",
-        "putin",
-        "rusia",
-        "trump",
-        "ucrania"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Según la Casa Blanca y múltiples medios, Melania Trump medió y logró un alto el fuego localizado en la ciudad ucraniana ocupada de Oleshky para permitir la entrega de ayuda humanitaria y facilitar evacuaciones; el acuerdo involucra a las partes rusas y ucranianas y fue anunciado por fuentes oficiales y por la propia Melania Trump."
-    },
-    {
-      "cluster_id": "subject-paris-106fbe572eee",
-      "coherence": 0.4213025048548672,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-24",
-      "filled_from": "europe",
-      "headline": "Tribunal confirma y mantiene único recorrido autorizado en París",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/live/2026/10/24/en-direct-manifestations-du-24-octobre-a-paris-le-parcours-entre-la-porte-d-italie-et-la-porte-de-vincennes-reste-le-seul-autorise-apres-le-rejet-d-un-recours-par-le-tribunal-administratif_6799445_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/en-direct-mobilisation-manifestations-24-octobre-etudiants-lyceens-acte-ii-gilets-jaunes-orleans-congres-du-rn-20261024"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/manifestations/manifestations-du-24-octobre-suivez-en-direct-cette-nouvelle-journee-de-mobilisation-sous-tres-haute-securite_8251987.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261024-en-direct-centaines-manifestations-france-climat-fortes-tensions-mobilisation-revendications-salaires-education-syndicats-pouvoir-d-achat-lycee-police-macron"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20261023.OBS119457/manifestations-du-24-octobre-parcours-a-paris-interdictions-securite-a-quoi-faut-il-s-attendre.html"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/mobilisation-du-24-octobre-nouveau-parcours-a-paris-manifestation-autorisee-a-marseille-6392298"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/societe/20261023.OBS119457/manifestations-du-24-octobre-parcours-a-paris-interdictions-securite-a-quoi-faut-il-s-attendre.html",
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/television/2026-10-24/armenia-gana-eurovision-junior-2026-y-espana-queda-segunda-con-lucas-paulano-y-cuore-bello-te-quiero-te-quiero.html",
       "rank": 5,
-      "reference_newsroom_count": 6,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "nouvelobs.com",
-        "radiofrance.fr"
+        "abc.es",
+        "eldiario.es",
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4213,
+          "coherence": 0.4843,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
+          "prominence": 0.5556,
+          "source_reliability": 0.619
         },
-        "total": 0.576,
+        "total": 0.4445,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "paris",
+      "subject_label": "eurovision junior",
       "subject_names": [
-        "art basel",
-        "france",
-        "paris",
-        "republique",
-        "vincennes"
+        "barcelona",
+        "espana",
+        "eurovision junior",
+        "lucas paulano",
+        "madrid",
+        "mourinho",
+        "valladolid"
       ],
-      "subject_newsroom_count": 28,
-      "summary": "Los artículos coinciden en que para las manifestaciones del 24 de octubre en París las autoridades han impuesto y el tribunal administrativo ha rechazado recursos contra un único recorrido autorizado entre la porte d’Italie y la porte de Vincennes; los organizadores aceptaron ese trayecto y las delegaciones indican medidas de seguridad y prohibiciones aplicables."
+      "subject_newsroom_count": 3,
+      "summary": "En la final de Eurovisión Junior 2026 Armenia se proclamó vencedora y España, representada por Lucas Paulano con la canción 'Cuore Bello (Te quiero, te quiero)', alcanzó la segunda posición; los artículos coinciden en que España quedó muy cerca del triunfo y en destacar la actuación y el resultado del joven artista."
     }
   ],
-  "discarded_ingested": 13,
+  "discarded_ingested": 16,
   "discarded_kept": 5,
-  "generated_at": "2026-10-24T09:43:19.180013+00:00",
+  "generated_at": "2026-10-25T09:59:32.364165+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

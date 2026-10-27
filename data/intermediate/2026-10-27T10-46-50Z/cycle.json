@@ -1,0 +1,32 @@
+{
+  "articles_collected": 8017,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 6911,
+  "clusters_selected": 10,
+  "completed": true,
+  "cycle_id": "2026-10-27T10-46-50Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "rss",
+      "detail": "globo.com: no items parsed from response"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261027103000.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261027103000.translation.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 7063,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-10-27T10:46:50.810712+00:00",
+  "summarize_batches": {}
+}

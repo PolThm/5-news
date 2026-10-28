@@ -1,67 +1,365 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-senat-5acf5e1bbad3",
-      "coherence": 0.5304701300989936,
-      "consequence": 3,
+      "cluster_id": "subject-espagne-b4fb87ca2716",
+      "coherence": 0.45141328871422126,
+      "consequence": 1,
       "countries": [
-        "france"
+        "be",
+        "bn",
+        "france",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-27",
-      "filled_from": "europe",
-      "headline": "Le Sénat rejette la réforme du statut de la Corse et les autonomistes quittent les négociations",
-      "independent_source_count": 5,
+      "country_count": 5,
+      "editorial_day": "2026-10-28",
+      "headline": "Collision entre deux trains au sud de Madrid faisant au moins 30 morts",
+      "independent_source_count": 17,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/politique/article/2026/10/27/autonomie-de-la-corse-le-senat-rejette-la-reforme-constitutionnelle-le-camp-autonomiste-annonce-son-retrait-du-processus_6800949_823448.html"
+          "url": "https://www.lemonde.fr/international/live/2026/10/28/en-direct-une-collision-entre-deux-trains-en-espagne-fait-de-nombreux-morts_6801550_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/28/en-espagne-deux-trains-sont-entres-en-collision-au-sud-de-madrid_6801548_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/en-direct-espagne-nouvelle-catastrophe-ferroviaire-au-moins-10-morts-au-sud-de-madrid-20261028"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/espagne-deux-trains-entrent-en-collision-au-sud-de-madrid-plusieurs-blesses-20261028"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/collision-mortelle-entre-deux-trains-en-espagne-les-premieres-images-de-la-catastrophe-ferroviaire-20261028"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/politique/statut-de-la-corse-la-droite-senatoriale-fait-capoter-la-reforme-le-camp-autonomiste-claque-la-porte-20261027_RPLV5KQRINAFXALXYVKMDKGA7Y/"
+          "url": "https://www.liberation.fr/international/europe/une-collision-entre-deux-trains-fait-plusieurs-blesses-en-espagne-20261028_4FA7VFGSBNG2ZJIFT7II3P7BUM/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/statut-de-la-corse-le-senat-rejette-la-reforme-le-camp-autonomiste-claque-la-porte-20261026"
+          "url": "https://www.la-croix.com/international/espagne-une-collision-entre-deux-trains-fait-au-moins-dix-morts-20261028"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261027-statut-corse-camp-autonomiste-claque-porte-rejet-reforme-senat-processus-beauvau"
+          "url": "https://www.mediapart.fr/journal/international/281026/espagne-au-moins-30-morts-dans-une-collision-entre-deux-trains-au-sud-de-madrid"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/espagne/plusieurs-dizaines-de-morts-dans-une-collision-de-trains-en-espagne_8257189.html#xtor=RSS-3-%5Bgeneral%5D"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261027-statut-de-la-corse-le-s%C3%A9nat-rejette-la-r%C3%A9forme-le-camp-autonomiste-claque-la-porte"
+          "url": "https://www.rfi.fr/fr/europe/20261028-collision-de-trains-en-espagne-au-moins-dix-morts-sont-%C3%A0-d%C3%A9plorer-selon-les-autorit%C3%A9s"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261028.OBS119606/un-accident-de-trains-en-espagne-au-sud-de-madrid-fait-au-moins-une-dizaine-de-morts.html"
+        },
+        {
+          "language": "en",
+          "source": "somersetlive.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.somersetlive.co.uk/news/uk-world-news/spain-train-crash-sees-two-11216957"
+        },
+        {
+          "language": "fr",
+          "source": "lanouvelletribune.info",
+          "source_country": "bn",
+          "url": "https://lanouvelletribune.info/2026/10/espagne-46-morts-apres-la-collision-de-deux-trains/"
+        },
+        {
+          "language": "fr",
+          "source": "lejsl.com",
+          "source_country": "france",
+          "url": "https://www.lejsl.com/faits-divers-justice/2026/10/28/castille-la-manche-une-collision-entre-deux-trains-fait-de-nombreux-blesses"
+        },
+        {
+          "language": "fr",
+          "source": "ladepeche.fr",
+          "source_country": "france",
+          "url": "https://www.ladepeche.fr/2026/10/28/direct-collision-mortelle-de-trains-en-espagne-au-moins-dix-morts-selon-les-autorites-locales-qui-evoquent-un-bilan-qui-pourrait-salourdir-13624357.php"
+        },
+        {
+          "language": "fr",
+          "source": "centrepresseaveyron.fr",
+          "source_country": "france",
+          "url": "https://www.centrepresseaveyron.fr/2026/10/28/au-moins-dix-morts-et-de-nombreux-blesses-selon-un-bilan-provisoire-en-espagne-deux-trains-se-percutent-sur-la-ligne-a-grande-vitesse-entre-madrid-et-13624131.php"
+        },
+        {
+          "language": "fr",
+          "source": "lejsl.com",
+          "source_country": "france",
+          "url": "https://www.lejsl.com/faits-divers-justice/2026/10/28/collision-entre-deux-trains-renfe-et-iryo-en-espagne-au-moins-30-morts-une-erreur-humaine-evoquee"
+        },
+        {
+          "language": "fr",
+          "source": "linternaute.com",
+          "source_country": "france",
+          "url": "https://www.linternaute.com/actualite/faits-divers/11311479-collision-train-espagne/"
+        },
+        {
+          "language": "fr",
+          "source": "rtbf.be",
+          "source_country": "be",
+          "url": "https://www.rtbf.be/article/direct-espagne-collision-entre-deux-trains-au-sud-de-tolede-au-moins-dix-morts-et-plusieurs-dizaines-de-blesses-11806996"
+        },
+        {
+          "language": "fr",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://fr.euronews.com/2026/10/28/collision-de-trains-en-espagne-au-moins-10-morts-plusieurs-blesses"
+        },
+        {
+          "language": "fr",
+          "source": "republicain-lorrain.fr",
+          "source_country": "france",
+          "url": "https://www.republicain-lorrain.fr/faits-divers-justice/2026/10/28/collision-entre-deux-trains-renfe-et-iryo-en-espagne-au-moins-30-morts-une-erreur-humaine-evoquee"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "be",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/28/en-espagne-deux-trains-sont-entres-en-collision-au-sud-de-madrid_6801548_3210.html",
+      "rank": 1,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "euronews.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4514,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.8095,
+          "source_reliability": 0.871
+        },
+        "total": 0.6338,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espagne",
+      "subject_names": [
+        "ave",
+        "espagne",
+        "espana",
+        "iryo",
+        "madrid",
+        "renfe",
+        "sevilla",
+        "spain",
+        "toledo",
+        "urda"
+      ],
+      "subject_newsroom_count": 12,
+      "summary": "Deux trains sont entrés en collision au sud de Madrid, entraînant un bilan provisoire d’au moins 30 morts et de nombreux blessés; les autorités locales indiquent que le nombre de victimes pourrait encore augmenter et évoquent une piste d’erreur humaine parmi les causes possibles."
+    },
+    {
+      "cluster_id": "subject-putin-acfec777b25a",
+      "coherence": 0.4403860679771199,
+      "consequence": 3,
+      "countries": [
+        "id",
+        "india",
+        "pk",
+        "ro",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 6,
+      "editorial_day": "2026-10-28",
+      "filled_from": "europe",
+      "headline": "Les dirigeants de Finlande et de Norvège ont téléphoné à Poutine",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-10-27/los-lideres-de-finlandia-y-noruega-llaman-a-putin-para-buscar-una-salida-a-la-guerra-en-ucrania.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261027/11669469/lideres-finlandia-noruega-llaman-putin-restablecer-negociaciones-paz.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/los-lideres-finlandia-noruega-hablan-con-putin-rompen-tabu-europeo-frenar-guerra-implica-conversaciones-directas_7053883_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "voiceofvienna.org",
+          "source_country": "pk",
+          "url": "https://voiceofvienna.org/finland-and-norway-break-silence-with-rare-call-to-putin/"
+        },
+        {
+          "language": "ind",
+          "source": "liputan6.com",
+          "source_country": "id",
+          "url": "https://www.liputan6.com/global/read/8322794/putin-bicara-90-menit-dengan-pemimpin-finlandia-dan-norwegia-soal-perang-ukraina"
+        },
+        {
+          "language": "en",
+          "source": "prokerala.com",
+          "source_country": "india",
+          "url": "https://www.prokerala.com/news/articles/a1829726.html"
+        },
+        {
+          "language": "ron",
+          "source": "bursa.ro",
+          "source_country": "ro",
+          "url": "https://www.bursa.ro/reuters-liderii-finlandei-si-norvegiei-au-cerut-lui-vladimir-putin-oprirea-razboiului-din-ucraina-41618062"
+        }
+      ],
+      "mentioned_countries": [
+        "fi"
+      ],
+      "origin_country": "id",
+      "outbound_source": "20minutos.es",
+      "outbound_url": "https://www.20minutos.es/internacional/los-lideres-finlandia-noruega-hablan-con-putin-rompen-tabu-europeo-frenar-guerra-implica-conversaciones-directas_7053883_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "bbc.co.uk",
+        "elpais.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4404,
+          "corroboration": 0.75,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7143
+        },
+        "total": 0.6736,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "putin",
+      "subject_names": [
+        "finlandia",
+        "putin",
+        "russia"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Les dirigeants de la Finlande et de la Norvège ont eu un appel rare avec le président russe Vladimir Poutine au sujet de la guerre en Ukraine; selon les communiqués, ils ont évoqué la nécessité de chercher une sortie et de relancer des négociations de paix par des pourparlers directs."
+    },
+    {
+      "cluster_id": "subject-france-b00a93c1f2c8",
+      "coherence": 0.4923173043844793,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-28",
+      "filled_from": "europe",
+      "headline": "Le Sénat adopte et élargit le projet de loi « casseurs‑payeurs »",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/casseurs-payeurs-un-projet-de-loi-critique-au-senat-en-plein-coeur-de-la-contestation-20261026"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/france/281026/le-dechainement-repressif-du-senat-sur-la-loi-casseurs-payeurs"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/prestations-sociales-saisies-nouvelles-interdictions-de-manifester-le-projet-de-loi-casseurs-payeurs-adopte-et-elargi-au-senat-en-plein-c-ur-de-la-contestation_8256748.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261028-france-le-s%C3%A9nat-adopte-le-projet-de-loi-casseurs-payeurs-apr%C3%A8s-les-manifestations-du-17-octobre"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/societe/justice/violences-du-17-octobre-le-senat-adopte-et-elargit-le-projet-de-loi-casseurs-payeurs-Y3VGTPNF25BRFDWDUZKOKKMEP4/"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/politique/article/2026/10/27/autonomie-de-la-corse-le-senat-rejette-la-reforme-constitutionnelle-le-camp-autonomiste-annonce-son-retrait-du-processus_6800949_823448.html",
-      "rank": 1,
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/casseurs-payeurs-un-projet-de-loi-critique-au-senat-en-plein-coeur-de-la-contestation-20261026",
+      "rank": 3,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "france24.com",
+        "francetvinfo.fr",
         "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
+        "lexpress.fr",
+        "mediapart.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5305,
+          "coherence": 0.4923,
           "corroboration": 0.3333,
           "editorial_weight": 0.3846,
           "freshness": 1.0,
@@ -71,336 +369,210 @@
           "prominence": 0.5556,
           "source_reliability": 0.6522
         },
-        "total": 0.6486,
+        "total": 0.644,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "senat",
+      "subject_label": "france",
       "subject_names": [
-        "corse",
+        "emmanuel macron",
+        "france",
+        "francia",
+        "limoges",
+        "parcoursup",
+        "paris",
+        "pen",
+        "royaume-uni",
         "senat"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Les sénateurs ont rejeté le projet de loi sur le statut et l’autonomie de la Corse, provoquant la fin du processus de négociation: les représentants du camp autonomiste ont annoncé qu’ils quittaient les pourparlers après ce vote, dénonçant l’échec de la réforme."
+      "subject_newsroom_count": 22,
+      "summary": "Le Sénat français a adopté le projet de loi dit « casseurs‑payeurs » — présenté après les violences du 17 octobre — en l’élargissant, en introduisant des mesures renforcées comme la possibilité de saisie de prestations sociales, des interdictions de manifester et des outils visant à bloquer ou encadrer des contenus en ligne ; l’adoption suscite des réactions critiques sur le caractère répressif du texte."
     },
     {
-      "cluster_id": "subject-putin-0d2855628d29",
-      "coherence": 0.4815883181054569,
-      "consequence": 3,
+      "cluster_id": "subject-toledo-e343e38ef1f0",
+      "coherence": 0.4309850140817938,
+      "consequence": 0,
       "countries": [
-        "spain",
-        "united-kingdom"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-10-27",
-      "filled_from": "europe",
-      "headline": "Les dirigeants de Finlande et de Norvège ont parlé à Vladimir Poutine pour demander la fin de la guerre en Ukraine",
-      "independent_source_count": 4,
+      "country_count": 1,
+      "editorial_day": "2026-10-28",
+      "headline": "Deux trains de passagers entrent en collision près d'Urda (Tolède)",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/lideres-noruega-finlandia-hablan-putin-persuadirle-sobre-20261027111023-nt.html"
+          "url": "https://elpais.com/espana/2026-10-28/el-accidente-de-dos-trenes-de-alta-velocidad-en-toledo-en-imagenes.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-10-28/varios-vagones-descarrilados-las-imagenes-aereas-del-accidente-de-trenes-en-toledo.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/castilla-la-mancha/videos-fotos-accidente-trenes-toledo_1_13620887.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/directo-urgente-ultima-hora-colisionan-trenes-pasajeros-urda-toledo-ave-iryo_6_2239144.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261027/lideres-finlandia-noruega-llaman-putin-exigen-dialogo-directo-poner-fin-guerra-ucrania/1003744436043_0.html"
+          "url": "https://www.elespanol.com/invertia/observatorios/movilidad/20261028/primeras-imagenes-accidente-ferroviario-colision-trenes-urda-toledo/1003744437702_3.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "elconfidencial.com",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/10/27/6ae077c3fc6c83125a8b4586.html"
+          "url": "https://www.elconfidencial.com/espana/2026-10-28/todas-las-imagenes-y-videos-del-accidente-de-tren-en-urda-toledo_4454544/"
         },
         {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/live/2026/oct/27/russia-ukraine-oleshky-serbia-france-europe-latest-news-updates"
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/transportes-00343/noticia-dos-vagones-tren-iryo-siniestrado-urda-toledo-descarrilaron-ser-alcanzados-tren-renfe-20261028095818.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/castilla-lamancha/noticia-accidente-tren-toledo-imagenes-asi-quedado-iryo-ave-choque-urda-20261028104305.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-10-28/primeras-imagenes-vagones-tren-toledo-1qrt-1tna_4454584/"
+        },
+        {
+          "language": "es",
+          "source": "lasexta.com",
+          "source_country": "spain",
+          "url": "https://www.lasexta.com/noticias/sociedad/imagenes-desastre-accidente-dos-trenes-toledo-imagenes_202610286ae1bc7902501232156aa4dc.html"
         }
       ],
       "mentioned_countries": [
-        "fi",
-        "no"
+        "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/europa/20261027/lideres-finlandia-noruega-llaman-putin-exigen-dialogo-directo-poner-fin-guerra-ucrania/1003744436043_0.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "outbound_source": "infolibre.es",
+      "outbound_url": "https://www.infolibre.es/politica/directo-urgente-ultima-hora-colisionan-trenes-pasajeros-urda-toledo-ave-iryo_6_2239144.html",
+      "rank": 4,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
         "elespanol.com",
-        "elmundo.es",
-        "theguardian.com"
+        "elpais.com",
+        "europapress.es",
+        "infolibre.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4816,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
+          "coherence": 0.431,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.6364,
+          "source_reliability": 0.7838
         },
-        "total": 0.6428,
+        "total": 0.4862,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "putin",
+      "subject_label": "toledo",
       "subject_names": [
-        "finlandia",
-        "kiev",
-        "kyiv",
-        "olechky",
-        "putin",
-        "rusia",
-        "ucrania",
-        "ukraine"
+        "ave",
+        "iryo",
+        "sevilla",
+        "toledo",
+        "urda"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Les chefs d’État de Finlande et de Norvège ont eu un appel téléphonique inhabituel et décrit comme franc et substantiel avec Vladimir Poutine; ils ont exigé un dialogue direct et ont demandé des mesures visant à mettre fin à la guerre en Ukraine, selon les comptes rendus des entretiens."
+      "subject_newsroom_count": 12,
+      "summary": "Deux trains de passagers, un train Iryo et un AVE de Renfe, sont entrés en collision près d'Urda, dans la province de Tolède ; plusieurs wagons ont été endommagés et certains du train Iryo sont sortis des rails et sont tombés sur un talus, comme le montrent de nombreuses photos et vidéos aériennes et au sol publiées sur les lieux."
     },
     {
-      "cluster_id": "subject-ukraine-12ffdba718c5",
-      "coherence": 0.45266268581665026,
-      "consequence": 3,
+      "cluster_id": "subject-ballon-c90baaf4b7f2",
+      "coherence": null,
+      "consequence": 0,
       "countries": [
         "france",
-        "sz"
+        "ve"
       ],
       "country_count": 2,
       "editorial_day": "2026-10-27",
-      "filled_from": "europe",
-      "headline": "Début d’une trêve humanitaire à Olechky tandis que Kiev est frappée",
-      "independent_source_count": 5,
+      "headline": "Alexia Putellas et Harry Kane remportent le Ballon d'Or 2026",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/guerre-ukraine-la-treve-de-melania-trump-a-olechky-debute-kyiv-a-nouveau-lourdement-frappe-20261027_77TME5HHYBF23C7RTD32JYP45I/"
-        },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1707-point-conflit-ukrainien-poutine-aujourdhui-20261027"
+          "url": "https://www.la-croix.com/sport/l-espagnole-alexia-putellas-ballon-dor-et-plus-encore-20261027"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261027-ukraine-treve-olechky-commence-operation-humanitaire-russie"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-ce-que-lon-sait-de-la-treve-a-olechky-ville-occupee-au-bord-de-la-famine-LW2RXENTONFAVBBY2A6PVLGUB4/"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/ukraine-debut-dune-treve-a-olechky-pour-une-operation-humanitaire-602976026465"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "france",
-      "outbound_source": "24heures.ch",
-      "outbound_url": "https://www.24heures.ch/ukraine-debut-dune-treve-a-olechky-pour-une-operation-humanitaire-602976026465",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "la-croix.com",
-        "lexpress.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4527,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6428,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "olechky",
-        "rusia",
-        "ucrania",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Une trêve humanitaire a commencé à Olechky, ville occupée confrontée à une grave pénurie alimentaire, afin de permettre une opération d’aide et d’évacuation. Les médias indiquent en parallèle que Kiev a subi de nouvelles frappes russes pendant que la pause humanitaire était mise en place."
-    },
-    {
-      "cluster_id": "subject-nigeria-12cd96f71d7b",
-      "coherence": 0.45275536353567547,
-      "consequence": 3,
-      "countries": [
-        "germany",
-        "spain",
-        "sy",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-26",
-      "filled_from": "europe",
-      "headline": "Une patiente atteinte d’Ebola évacuée du Nigeria vers la Suisse",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/1st-confirmed-ebola-patient-in-nigeria-evacuated-to-switzerland"
-        },
-        {
-          "language": "en",
-          "source": "naharnet.com",
-          "source_country": "sy",
-          "url": "https://www.naharnet.com:443/stories/en/323353-swiss-ebola-patient-in-nigeria-evacuated-to-switzerland"
+          "url": "https://www.rfi.fr/fr/sports/20261026-en-direct-suivez-la-c%C3%A9r%C3%A9monie-du-ballon-d-or-2026"
         },
         {
           "language": "es",
-          "source": "rtve.es",
-          "source_country": "spain",
-          "url": "https://www.rtve.es/noticias/20261026/trasladada-a-hospital-suiza-mujer-enfermo-ebola-nigeria/17284358.shtml"
-        },
-        {
-          "language": "de",
-          "source": "mopo.de",
-          "source_country": "germany",
-          "url": "https://www.mopo.de/news/panorama/ebola-patientin-von-nigeria-in-die-schweiz-ausgeflogen/5055573"
+          "source": "correodelcaroni.com",
+          "source_country": "ve",
+          "url": "https://correodelcaroni.com/deportes/harry-kane-y-alexia-putellas-los-balones-de-oro-del-2026/"
         }
       ],
       "mentioned_countries": [
-        "ni",
-        "sz"
+        "spain"
       ],
-      "origin_country": "germany",
-      "outbound_source": "mopo.de",
-      "outbound_url": "https://www.mopo.de/news/panorama/ebola-patientin-von-nigeria-in-die-schweiz-ausgeflogen/5055573",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "pbs.org",
-        "rtve.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4528,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5556
-        },
-        "total": 0.5866,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nigeria",
-      "subject_names": [
-        "nigeria"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Les articles indiquent qu’une femme atteinte d’Ebola, le premier cas confirmé au Nigeria selon l’un des textes, a été évacuée depuis le Nigeria vers la Suisse pour y recevoir des soins. Ils s’accordent sur le transfert international de la patiente vers un établissement de santé suisse."
-    },
-    {
-      "cluster_id": "subject-vucic-37be807e318a",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "china",
-        "it",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-27",
-      "filled_from": "europe",
-      "headline": "Aleksandar Vučić concède sa défaite électorale et des foules célèbrent",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/c8x23x1yn6w6o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/25/serbia-crowds-celebrate-in-belgrade-after-vucic-admits-defeat"
-        },
-        {
-          "language": "en",
-          "source": "chinadaily.com.cn",
-          "source_country": "china",
-          "url": "http://global.chinadaily.com.cn/a/202610/27/WS6ae000d5e4b06d4aa0564f26.html"
-        }
-      ],
-      "mentioned_countries": [
-        "ri"
-      ],
-      "origin_country": "china",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/10/25/serbia-crowds-celebrate-in-belgrade-after-vucic-admits-defeat",
+      "origin_country": "france",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/sports/20261026-en-direct-suivez-la-c%C3%A9r%C3%A9monie-du-ballon-d-or-2026",
       "rank": 5,
       "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com"
+        "la-croix.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.6,
+          "corroboration": 0.5,
           "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "freshness": 0.7071,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5
         },
-        "total": 0.5425,
+        "total": 0.4007,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "vucic",
+      "subject_label": "ballon",
       "subject_names": [
-        "belgrade",
-        "serbia",
-        "vucic"
+        "ballon",
+        "putellas"
       ],
-      "subject_newsroom_count": 16,
-      "summary": "Les articles indiquent qu’Aleksandar Vučić a reconnu sa défaite aux élections en Serbie, que son aveu a provoqué des scènes de joie et d’étonnement dans les rues de Belgrade, et que des foules se sont rassemblées pour célébrer après son annonce."
+      "subject_newsroom_count": 5,
+      "summary": "Les trois articles indiquent qu'Alexia Putellas (Espagne) et Harry Kane (Angleterre) ont chacun été sacrés lauréats du Ballon d'Or 2026."
     }
   ],
-  "discarded_ingested": 9,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-10-27T10:46:50.810712+00:00",
+  "generated_at": "2026-10-28T11:29:31.194425+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

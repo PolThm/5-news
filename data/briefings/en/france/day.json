@@ -1,497 +1,620 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-b00a93c1f2c8",
-      "coherence": 0.4923173043844793,
-      "consequence": 3,
+      "cluster_id": "subject-lfi-c21a56a6fa06",
+      "coherence": 0.5068970934835125,
+      "consequence": 2,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-10-28",
-      "headline": "French Senate adopts and expands 'casseurs-payeurs' bill after October 17 violence",
-      "independent_source_count": 5,
+      "editorial_day": "2026-10-29",
+      "headline": "French MP Raphaël Arnault questioned by police over Lyon murder investigation",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/casseurs-payeurs-un-projet-de-loi-critique-au-senat-en-plein-coeur-de-la-contestation-20261026"
+          "url": "https://www.lefigaro.fr/faits-divers/meurtre-de-quentin-deranque-a-lyon-le-depute-lfi-raphael-arnault-a-ete-auditionne-par-la-police-20261029"
         },
         {
           "language": "fr",
-          "source": "mediapart.fr",
+          "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/france/281026/le-dechainement-repressif-du-senat-sur-la-loi-casseurs-payeurs"
+          "url": "https://www.lefigaro.fr/faits-divers/meurtre-de-quentin-deranque-a-lyon-la-famille-de-la-victime-demande-l-audition-du-depute-lfi-raphael-arnault-pour-association-de-malfaiteurs-20261027"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/mort-de-quentin-deranque-le-depute-lfi-raphael-arnault-auditionne-par-la-sous-direction-antiterroriste-20261029_RZ6DC6RDEFCAJDLPVLNZQIYC5Y/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/prestations-sociales-saisies-nouvelles-interdictions-de-manifester-le-projet-de-loi-casseurs-payeurs-adopte-et-elargi-au-senat-en-plein-c-ur-de-la-contestation_8256748.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261028-france-le-s%C3%A9nat-adopte-le-projet-de-loi-casseurs-payeurs-apr%C3%A8s-les-manifestations-du-17-octobre"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/societe/justice/violences-du-17-octobre-le-senat-adopte-et-elargit-le-projet-de-loi-casseurs-payeurs-Y3VGTPNF25BRFDWDUZKOKKMEP4/"
+          "url": "https://www.franceinfo.fr/faits-divers/mort-de-quentin-militant-identitaire-agresse-a-lyon/meurtre-de-quentin-deranque-le-depute-insoumis-raphael-arnault-entendu-en-audition-libre-plusieurs-heures-par-la-police-antiterroriste-mercredi_8258525.html#xtor=RSS-3-[lestitres]"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/casseurs-payeurs-un-projet-de-loi-critique-au-senat-en-plein-coeur-de-la-contestation-20261026",
+      "outbound_source": "lefigaro.fr",
+      "outbound_url": "https://www.lefigaro.fr/faits-divers/meurtre-de-quentin-deranque-a-lyon-la-famille-de-la-victime-demande-l-audition-du-depute-lfi-raphael-arnault-pour-association-de-malfaiteurs-20261027",
       "rank": 1,
-      "reference_newsroom_count": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "la-croix.com",
-        "lexpress.fr",
-        "mediapart.fr",
-        "rfi.fr"
+        "lefigaro.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4923,
+          "coherence": 0.5069,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.4286,
+          "source_reliability": 0.6
         },
-        "total": 0.694,
+        "total": 0.5891,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "lfi",
       "subject_names": [
-        "emmanuel macron",
-        "france",
-        "francia",
-        "limoges",
-        "parcoursup",
-        "paris",
-        "pen",
-        "royaume-uni",
-        "senat"
+        "lfi",
+        "quentin deranque"
       ],
-      "subject_newsroom_count": 22,
-      "summary": "The French Senate voted to adopt and broaden a bill nicknamed 'casseurs-payeurs' in the wake of violent incidents on October 17; measures discussed include allowing seizure of social benefits, imposing bans on demonstrating, and provisions affecting social networks, and the move has been characterized as a strong, expanded response to those disturbances."
+      "subject_newsroom_count": 6,
+      "summary": "French left-wing MP Raphaël Arnault was summoned and questioned for several hours by police, including officers from the anti-terrorism sub-directorate, in connection with the murder of Quentin Deranque in Lyon; the victim’s family has requested Arnault be investigated for alleged association of wrongdoers."
     },
     {
-      "cluster_id": "subject-marseille-a8587d072293",
-      "coherence": 0.4837593481345105,
-      "consequence": 1,
+      "cluster_id": "subject-christine-lagarde-74ffe1c54234",
+      "coherence": 0.4966986800111507,
+      "consequence": 3,
       "countries": [
         "france",
-        "sz"
+        "germany",
+        "spain",
+        "united-kingdom"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-10-28",
-      "headline": "21-year-old man shot dead at Marseille drug-dealing spot",
-      "independent_source_count": 4,
+      "country_count": 4,
+      "editorial_day": "2026-10-29",
+      "filled_from": "europe",
+      "headline": "Christine Lagarde will step down as ECB president on 7 February 2027",
+      "independent_source_count": 18,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/10/28/a-marseille-un-homme-succombe-a-des-tirs-de-kalachnikov-sur-un-point-de-deal-du-11-arrondissement_6801546_3224.html"
+          "url": "https://www.lemonde.fr/economie/article/2026/10/29/christine-lagarde-va-quitter-la-presidence-de-la-bce-le-7-fevrier-2027_6802307_3234.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/conjoncture/christine-lagarde-va-quitter-la-presidence-de-la-bce-le-7-fevrier-2027-20261029"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/christine-lagarde-va-quitter-la-presidence-de-la-banque-centrale-europeenne-le-7-fevrier-2027-20261029_RO22YANRKZHJTKFGXTWRN3DWD4/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/bce-christine-lagarde-va-quitter-la-presidence-avant-la-fin-de-son-mandat-20261029"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/a-marseille-un-jeune-homme-de-21-ans-tue-par-balles-dans-le-11e-arrondissement-sur-fond-de-narcotrafic_8256934.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/monde/europe/christine-lagarde-annonce-son-depart-anticipe-de-la-banque-centrale-europeenne-en-fevrier-2027_8258633.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261029-christine-lagarde-va-quitter-la-pr%C3%A9sidence-de-la-bce-en-f%C3%A9vrier-2027"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261029-bce-christine-lagarde-quittera-la-pr%C3%A9sidence-le-7-f%C3%A9vrier-2027-avant-la-fin-de-son-mandat"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/economie/bce-christine-lagarde-va-quitter-la-presidence-neuf-mois-avant-la-fin-de-son-mandat-O455L6LZ65GHJHUGC5NUERC3XQ/"
         },
         {
           "language": "fr",
           "source": "ouest-france.fr",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/faits-divers/meurtres/un-homme-de-21-ans-tue-a-marseille-par-des-tirs-de-fusil-d-assaut-sur-un-point-de-deal-77de8670-d2a6-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.ouest-france.fr/economie/christine-lagarde/christine-lagarde-annonce-quelle-quittera-la-presidence-de-la-bce-en-fevrier-514a50a2-d382-11f1-81f2-0d14b9f9c452?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
         },
-        {
-          "language": "fr",
-          "source": "tdg.ch",
-          "source_country": "sz",
-          "url": "https://www.tdg.ch/marseille-un-homme-de-21-ans-tue-par-balles-sur-un-point-de-deal-507157414306"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/societe/article/2026/10/28/a-marseille-un-homme-succombe-a-des-tirs-de-kalachnikov-sur-un-point-de-deal-du-11-arrondissement_6801546_3224.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "ouest-france.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4838,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5308,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "marseille",
-      "subject_names": [
-        "marseille"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "A 21-year-old man was killed by gunfire at a known drug-dealing location in Marseille’s 11th arrondissement; the shooting involved assault-rifle shots, occurred on a point of sale, and authorities are investigating with two people sought in connection to the attack."
-    },
-    {
-      "cluster_id": "subject-putin-acfec777b25a",
-      "coherence": 0.4403860679771199,
-      "consequence": 3,
-      "countries": [
-        "id",
-        "india",
-        "pk",
-        "ro",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-10-28",
-      "filled_from": "europe",
-      "headline": "Leaders of Finland and Norway hold rare call with Vladimir Putin",
-      "independent_source_count": 8,
-      "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-10-27/los-lideres-de-finlandia-y-noruega-llaman-a-putin-para-buscar-una-salida-a-la-guerra-en-ucrania.html"
+          "url": "https://elpais.com/economia/2026-10-29/christine-lagarde-dejara-la-presidencia-del-bce-el-7-de-febrero-y-abre-la-carrera-por-su-sucesion.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261027/11669469/lideres-finlandia-noruega-llaman-putin-restablecer-negociaciones-paz.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/los-lideres-finlandia-noruega-hablan-con-putin-rompen-tabu-europeo-frenar-guerra-implica-conversaciones-directas_7053883_0.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "voiceofvienna.org",
-          "source_country": "pk",
-          "url": "https://voiceofvienna.org/finland-and-norway-break-silence-with-rare-call-to-putin/"
-        },
-        {
-          "language": "ind",
-          "source": "liputan6.com",
-          "source_country": "id",
-          "url": "https://www.liputan6.com/global/read/8322794/putin-bicara-90-menit-dengan-pemimpin-finlandia-dan-norwegia-soal-perang-ukraina"
-        },
-        {
-          "language": "en",
-          "source": "prokerala.com",
-          "source_country": "india",
-          "url": "https://www.prokerala.com/news/articles/a1829726.html"
-        },
-        {
-          "language": "ron",
-          "source": "bursa.ro",
-          "source_country": "ro",
-          "url": "https://www.bursa.ro/reuters-liderii-finlandei-si-norvegiei-au-cerut-lui-vladimir-putin-oprirea-razboiului-din-ucraina-41618062"
-        }
-      ],
-      "mentioned_countries": [
-        "fi"
-      ],
-      "origin_country": "id",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/los-lideres-finlandia-noruega-hablan-con-putin-rompen-tabu-europeo-frenar-guerra-implica-conversaciones-directas_7053883_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4404,
-          "corroboration": 0.75,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7143
-        },
-        "total": 0.6736,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "putin",
-      "subject_names": [
-        "finlandia",
-        "putin",
-        "russia"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "The leaders of Finland and Norway spoke directly with Russian President Vladimir Putin in a rare phone call to discuss the war in Ukraine. The conversations, confirmed by the Kremlin and multiple outlets, aimed to seek a path toward ending or de‑escalating the conflict and represented an unusual direct engagement by Nordic leaders with Putin."
-    },
-    {
-      "cluster_id": "subject-vucic-bd1457d06bc1",
-      "coherence": 0.44044902647308837,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-10-27",
-      "filled_from": "europe",
-      "headline": "Student movement defeats Aleksandar Vučić's ruling party in Serbia elections",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-le-mouvement-etudiant-met-fin-au-regne-daleksandar-vucic-Y2DWFKCOBNA7NCJU3RLHHJGSTM/"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-les-etudiants-a-lassaut-du-pouvoir-daleksandar-vucic-GTJXXLXEPRA33PAMNAKQOD5YRQ/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261027/11668645/movimiento-estudiantil-serbia-triunfo-urnas-reto-gobernar.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261026/11668689/que-que-quiere-lista-estudiantil-serbia-movimiento-protesta-derrotado-aleksandar-vucic.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261025/11667785/movimiento-estudiantil-derrota-vucic-elecciones-generales-serbia.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261024/11666667/movimiento-estudiantil-serbia-amenaza-vucic-primera-vez-diez-anos.html"
+          "url": "https://www.abc.es/economia/lagarde-dejara-presidencia-bce-proximo-febrero-20261029111717-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/movimiento-estudiantil-pone-reinado-autoritario-12-anos-vucic-serbia_1_13614161.html"
+          "url": "https://www.eldiario.es/economia/lagarde-anuncia-salida-presidencia-bce-abre-pugna-sucesion_1_13623923.html"
         },
         {
           "language": "es",
-          "source": "infolibre.es",
+          "source": "expansion.com",
           "source_country": "spain",
-          "url": "https://www.infolibre.es/mediapart/estudiantes-ponen-vucic-serbia-miedo-cambiar-bando_1_2239031.html"
+          "url": "https://www.expansion.com/mercados/2026/10/29/lagarde-anuncia-deja-presidencia-bce-7-febrero.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/economia/bancos-centrales/20261029/lagarde-anuncia-dejara-presidencia-bce-febrero-cos-favoritos-sucederle/1003744439371_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/dinero-inversion/2026/10/29/6ae31ae8e4d4d8a0548b459c.html"
         },
         {
           "language": "en",
-          "source": "bbc.co.uk",
+          "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c574pvy82k0mo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.theguardian.com/world/2026/oct/29/european-central-bank-chief-christine-lagarde-to-step-down-nine-months-early"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/wirtschaft/finanzen/lagarde-ezb-ruecktritt-100.html"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/european-central-bank-ecb-head-christine-lagarde-to-step-down-in-february-before-her-term-ends/a-79794353?maca=en-rss-en-world-4025-rdf"
         }
       ],
       "mentioned_countries": [
-        "ri"
+        "spain"
       ],
       "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/legislatives-en-serbie-les-etudiants-a-lassaut-du-pouvoir-daleksandar-vucic-GTJXXLXEPRA33PAMNAKQOD5YRQ/",
-      "rank": 4,
-      "reference_newsroom_count": 5,
+      "outbound_source": "expansion.com",
+      "outbound_url": "https://www.expansion.com/mercados/2026/10/29/lagarde-anuncia-deja-presidencia-bce-7-febrero.html",
+      "rank": 2,
+      "reference_newsroom_count": 18,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "abc.es",
+        "dw.com",
         "eldiario.es",
-        "infolibre.es",
-        "lavanguardia.com",
-        "lexpress.fr"
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "expansion.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "ouest-france.fr",
+        "rfi.fr",
+        "tagesschau.de",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4404,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "coherence": 0.4967,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.6923,
+          "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.7714
+          "prominence": 0.8182,
+          "source_reliability": 0.871
         },
-        "total": 0.6353,
+        "total": 0.7705,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "vucic",
+      "subject_label": "christine lagarde",
       "subject_names": [
-        "aleksandar vucic",
-        "serbia",
-        "serbie",
-        "vucic"
+        "banque",
+        "bce",
+        "christine lagarde",
+        "lagarde"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "A student-led political movement won enough support in the Serbian legislative elections to end Aleksandar Vučić’s long-standing rule, marking the first major electoral challenge to his authority in about a decade and raising questions about how the activists will transition from protest to governing."
+      "subject_newsroom_count": 18,
+      "summary": "Christine Lagarde has announced she will leave her post as president of the European Central Bank on 7 February 2027, a departure that comes nine months before the scheduled end of her mandate; her early exit opens the process to choose her successor."
     },
     {
-      "cluster_id": "subject-belgrade-137d053e489e",
-      "coherence": 0.45818900187404954,
-      "consequence": 2,
+      "cluster_id": "subject-espagne-3aeb72d74840",
+      "coherence": 0.5063905325673022,
+      "consequence": 3,
       "countries": [
         "france",
-        "india",
-        "it",
-        "united-states"
+        "sg",
+        "uv"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-10-28",
+      "country_count": 3,
+      "editorial_day": "2026-10-29",
       "filled_from": "europe",
-      "headline": "Attacker shot dead by police after assault outside Israeli Embassy in Belgrade",
+      "headline": "Collision between two high-speed trains in Spain kills at least 68 people",
       "independent_source_count": 9,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/28/en-serbie-un-assaillant-abattu-pres-de-l-ambassade-israelienne-a-belgrade-israel-confirme-une-tentative-d-attentat-terroriste_6801547_3210.html"
+          "url": "https://www.lemonde.fr/international/live/2026/10/28/en-direct-accident-entre-deux-trains-en-espagne-au-moins-68-morts-trois-jours-de-deuil-national-et-des-minutes-de-silence-organisees-a-travers-le-pays_6801550_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/10/28/ce-que-l-on-sait-de-l-accident-entre-deux-trains-en-espagne-qui-a-fait-au-moins-64-morts_6801589_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/espagne-le-recit-des-23-dernieres-minutes-qui-ont-mene-a-la-collision-entre-deux-trains-qui-a-fait-au-moins-68-morts-20261028"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/serbie-un-assaillant-abattu-devant-lambassade-disrael-a-belgrade-20261028_JVOUUVE2JNEK5MIZ2AP3CR5LIE/"
+          "url": "https://www.liberation.fr/international/europe/une-collision-entre-deux-trains-fait-plusieurs-blesses-en-espagne-20261028_4FA7VFGSBNG2ZJIFT7II3P7BUM/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/espagne-une-collision-entre-deux-trains-fait-au-moins-dix-morts-20261028"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261028.OBS119627/accident-entre-deux-trains-en-espagne-que-sait-on-des-causes-de-la-collision.html"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261028.OBS119606/un-accident-de-trains-en-espagne-au-sud-de-madrid-fait-au-moins-une-dizaine-de-morts.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/espagne-au-moins-30-morts-dans-une-collision-entre-deux-trains-a-grande-vitesse-JTMX232KCRHGBCITZEH52ZDXZQ/"
+        },
+        {
+          "language": "fr",
+          "source": "lefaso.net",
+          "source_country": "uv",
+          "url": "https://lefaso.net/spip.php?article150300"
+        },
+        {
+          "language": "fr",
+          "source": "senego.com",
+          "source_country": "sg",
+          "url": "https://senego.com/68-morts-et-une-centaine-de-blesses-drame-ferroviaire-en-espagne-3-jours-de-deuil-national_2018326.html"
+        },
+        {
+          "language": "fr",
+          "source": "dakaractu.com",
+          "source_country": "sg",
+          "url": "https://www.dakaractu.com/Collision-de-trains-en-Espagne-le-bilan-monte-a-au-moins-68-morts-et-des-dizaines-de-blesses_a277563.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20261028.OBS119606/un-accident-de-trains-en-espagne-au-sud-de-madrid-fait-au-moins-une-dizaine-de-morts.html",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5064,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7895
+        },
+        "total": 0.6939,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espagne",
+      "subject_names": [
+        "barcelona",
+        "dozens",
+        "espagne",
+        "espana",
+        "feijoo",
+        "j’ai",
+        "madrid",
+        "renfe",
+        "spain"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "Two trains collided in Spain in a high-speed rail accident that left at least 68 people dead and dozens injured; the government declared three days of national mourning while authorities investigate the causes and the sequence of events that led to the crash."
+    },
+    {
+      "cluster_id": "subject-ukraine-0f25216b7d65",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-10-29",
+      "filled_from": "europe",
+      "headline": "Russian strike on Dnipro railway station kills 13 and prompts Western appeal",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/live/2026/10/29/en-direct-guerre-en-ukraine-volodymyr-zelensky-reclame-de-nouvelles-sanctions-contre-la-russie-apres-la-terrible-frappe-russe-contre-la-gare-ferroviaire-de-dnipro-qui-a-fait-13-morts_6799896_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1709-point-conflit-ukrainien-poutine-aujourdhui-20261029"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/israel/un-assaillant-mineur-abattu-par-la-police-devant-l-ambassade-d-israel-a-belgrade-le-gouvernement-serbe-evoque-une-attaque-terroriste_8256862.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/10/28/news/belgrado_ambasciata_israele_attentato_terroristico-425680752/?rss"
-        },
-        {
-          "language": "en",
-          "source": "news4jax.com",
-          "source_country": "united-states",
-          "url": "https://www.news4jax.com/news/world/2026/10/28/serbian-police-say-assailant-killed-after-attacking-a-guard-outside-the-israeli-embassy-in-belgrade/"
-        },
-        {
-          "language": "en",
-          "source": "thetimestribune.com",
-          "source_country": "united-states",
-          "url": "https://www.thetimestribune.com/news/national_news/serbian-police-say-assailant-killed-after-attacking-officer-outside-the-israeli-embassy-in-belgrade/article_16d5a436-e856-5a03-a16e-5b88cba63c54.html"
-        },
-        {
-          "language": "it",
-          "source": "opinione.it",
-          "source_country": "it",
-          "url": "https://opinione.it/esteri/2026/10/28/zaccaria-trevi-belgrado-attacco-guardia-ambasciata-israeliana-terrorismo/"
-        },
-        {
-          "language": "hi",
-          "source": "bhaskar.com",
-          "source_country": "india",
-          "url": "https://www.bhaskar.com/g/international/news/serbia-israeli-embassy-attack-belgrade-police-teenager-shot-139514755.html"
-        },
-        {
-          "language": "fr",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://fr.euronews.com/2026/10/28/un-assaillant-abattu-par-la-police-devant-lambassade-disrael-a-belgrade"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/au-moins-13-morts-dans-une-attaque-russe-sur-la-gare-de-dnipro-en-ukraine-volodymyr-zelensky-exhorte-l-occident-a-l-action-apres-une-horrible-frappe_8258627.html#xtor=RSS-3-%5Bgeneral%5D"
         }
       ],
       "mentioned_countries": [
-        "is",
-        "ri",
-        "rb"
+        "up",
+        "rs"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/international/europe/serbie-un-assaillant-abattu-devant-lambassade-disrael-a-belgrade-20261028_JVOUUVE2JNEK5MIZ2AP3CR5LIE/",
-      "rank": 5,
-      "reference_newsroom_count": 5,
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/live/2026/10/29/en-direct-guerre-en-ukraine-volodymyr-zelensky-reclame-de-nouvelles-sanctions-contre-la-russie-apres-la-terrible-frappe-russe-contre-la-gare-ferroviaire-de-dnipro-qui-a-fait-13-morts_6799896_3210.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "euronews.com",
         "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr",
-        "repubblica.it"
+        "la-croix.com",
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4582,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3846,
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.6081,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "dnipro",
+        "kyiv",
+        "rusia",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 16,
+      "summary": "A Russian strike on the railway station in Dnipro killed 13 people, prompting Ukrainian President Volodymyr Zelensky to denounce the attack as horrific and call on Western countries to impose new sanctions and take action in response."
+    },
+    {
+      "cluster_id": "subject-apple-bd15cfa97ebb",
+      "coherence": 0.4623203047643043,
+      "consequence": 2,
+      "countries": [
+        "ae",
+        "as",
+        "au",
+        "bk",
+        "france",
+        "germany",
+        "spain",
+        "sz",
+        "tu",
+        "united-states",
+        "up",
+        "vm"
+      ],
+      "country_count": 12,
+      "editorial_day": "2026-10-29",
+      "filled_from": "europe",
+      "headline": "Apple announces first MacBook Pro with touchscreen and OLED",
+      "independent_source_count": 17,
+      "members": [
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/tecnologia/2026/10/28/apple-presenta-primer-macbook-pantalla-tactil.html"
+        },
+        {
+          "language": "en",
+          "source": "star1063.com.au",
+          "source_country": "as",
+          "url": "https://www.star1063.com.au/trending/technology/apple-finally-gives-macbooks-a-touchscreen-and-its-about-time/"
+        },
+        {
+          "language": "en",
+          "source": "emirates247.com",
+          "source_country": "ae",
+          "url": "https://www.emirates247.com/world/apple-unveils-its-first-touchscreen-macbook/7228"
+        },
+        {
+          "language": "vie",
+          "source": "vnexpress.net",
+          "source_country": "vm",
+          "url": "https://vnexpress.net/apple-ra-macbook-pro-man-hinh-oled-cam-ung-5138099.html"
+        },
+        {
+          "language": "en",
+          "source": "fox5dc.com",
+          "source_country": "united-states",
+          "url": "https://www.fox5dc.com/news/apple-touchscreen-macbooks"
+        },
+        {
+          "language": "en",
+          "source": "tomshardware.com",
+          "source_country": "united-states",
+          "url": "https://www.tomshardware.com/laptops/apple-launches-new-macbook-with-touchscreen-and-oled-starts-at-usd2-899"
+        },
+        {
+          "language": "es",
+          "source": "xataka.com",
+          "source_country": "spain",
+          "url": "https://www.xataka.com/ordenadores/apple-presenta-fin-su-primer-macbook-pro-pantalla-tactil-recupera-mitico-logo-iluminado"
+        },
+        {
+          "language": "glg",
+          "source": "diariosigloxxi.com",
+          "source_country": "spain",
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20261028190557/apple-presenta-primer-macbook-pro-pantalla-tactil-impulsado-chips-m5-pro-m5-max"
+        },
+        {
+          "language": "hrv",
+          "source": "klix.ba",
+          "source_country": "bk",
+          "url": "https://www.klix.ba/scitech/tehnologija/apple-predstavio-prvi-macbook-pro-s-ekranom-na-dodir-i-oled-panelom/261028319"
+        },
+        {
+          "language": "tur",
+          "source": "haberaktuel.com",
+          "source_country": "tu",
+          "url": "https://www.haberaktuel.com/apple-ilk-dokunmatik-ekranli-macbook-proyu-tanitti-3517099"
+        },
+        {
+          "language": "fr",
+          "source": "tradingsat.com",
+          "source_country": "france",
+          "url": "https://www.tradingsat.com/apple-US0378331005/actualites/apple-apple-devoile-ses-premiers-macbook-tactiles-a-partir-de-2899-dollars-1172690.html"
+        },
+        {
+          "language": "de",
+          "source": "welt.de",
+          "source_country": "germany",
+          "url": "https://www.welt.de/newsticker/dpa_nt/infoline_nt/netzwelt/article6ae23886d1f524f7ccaa9bf8/apple-bringt-erstes-macbook-mit-touch-display-heraus.html"
+        },
+        {
+          "language": "de",
+          "source": "spiegel.de",
+          "source_country": "germany",
+          "url": "https://www.spiegel.de/netzwelt/gadgets/macbook-apple-bringt-seinen-ersten-laptop-mit-touchscreen-heraus-a-1ec3b0eb-77ff-4ca5-8ae1-1e96e6c99bba"
+        },
+        {
+          "language": "de",
+          "source": "volksstimme.de",
+          "source_country": "germany",
+          "url": "https://www.volksstimme.de/leben/technik/apple-bringt-erstes-macbook-mit-touch-display-heraus-4346666"
+        },
+        {
+          "language": "de",
+          "source": "gmx.ch",
+          "source_country": "sz",
+          "url": "https://www.gmx.ch/magazine/digital/apple-bringt-erstes-macbook-touch-display-42886564"
+        },
+        {
+          "language": "de",
+          "source": "gmx.at",
+          "source_country": "au",
+          "url": "https://www.gmx.at/magazine/digital/apple-bringt-erstes-macbook-touch-display-42886564"
+        },
+        {
+          "language": "ru",
+          "source": "unian.net",
+          "source_country": "up",
+          "url": "https://www.unian.net/techno/gadgets/macbook-pro-apple-predstavila-noutbuk-s-sensornym-ekranom-13543035.html"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "ae",
+      "outbound_source": "diariosigloxxi.com",
+      "outbound_url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20261028190557/apple-presenta-primer-macbook-pro-pantalla-tactil-impulsado-chips-m5-pro-m5-max",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "expansion.com",
+        "spiegel.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4623,
+          "corroboration": 0.8571,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7419
+          "prominence": 0.8095,
+          "source_reliability": 0.8182
         },
-        "total": 0.6085,
+        "total": 0.5911,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "belgrade",
+      "subject_label": "apple",
       "subject_names": [
-        "belgrade",
-        "belgrado",
-        "serbie"
+        "apple"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Police in Belgrade shot and killed an assailant who attacked or tried to attack a guard or officer outside the Israeli Embassy; Serbian authorities described the incident as an attempted terrorist attack, and reports indicate the attacker was killed at the scene."
+      "subject_newsroom_count": 3,
+      "summary": "Apple has unveiled its first MacBook Pro models featuring a touchscreen and OLED display, powered by M5 Pro and M5 Max chips; the new lineup includes a restored illuminated Apple logo and starts at $2,899."
     }
   ],
-  "discarded_ingested": 9,
+  "discarded_ingested": 6,
   "discarded_kept": 5,
-  "generated_at": "2026-10-28T11:29:31.194425+00:00",
+  "generated_at": "2026-10-29T11:39:44.852948+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

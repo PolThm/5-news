@@ -1,0 +1,24 @@
+{
+  "articles_collected": 7890,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 6849,
+  "clusters_selected": 12,
+  "completed": true,
+  "cycle_id": "2026-10-31T11-02-30Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261031104500.translation.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 6993,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-10-31T11:02:30.665040+00:00",
+  "summarize_batches": {}
+}

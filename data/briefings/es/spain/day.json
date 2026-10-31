@@ -1,367 +1,427 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-espagne-5f2771a90c52",
-      "coherence": 0.4431389412344857,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-10-30",
-      "headline": "Colisión de trenes en España deja víctimas y abre investigación",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/29/en-espagne-la-catastrophe-ferroviaire-d-urda-pose-a-nouveau-la-question-du-developpement-inconsidere-des-trains-a-grande-vitesse_6802350_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/conjoncture/collision-de-trains-en-espagne-un-tel-accident-pourrait-il-se-produire-en-france-20261029"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/economie/accident-ferroviaire-en-espagne-un-tel-drame-pourrait-il-se-produire-en-france-20261029"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/defaillance-technique-negligence-humaine-ou-en-est-l-enquete-sur-la-catastrophe-ferroviaire-en-espagne_8258672.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "spain",
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/29/en-espagne-la-catastrophe-ferroviaire-d-urda-pose-a-nouveau-la-question-du-developpement-inconsidere-des-trains-a-grande-vitesse_6802350_3210.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4431,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6715,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "espagne",
-      "subject_names": [
-        "espagne",
-        "feijoo",
-        "france",
-        "paris",
-        "pedro sanchez",
-        "sanchez",
-        "spain"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "Varios medios coinciden en que un choque ferroviario en la localidad de Urda, España, causó víctimas y daños, que ha provocado la apertura de una investigación para determinar causas aún no confirmadas; las hipótesis discutidas en los artículos incluyen fallos técnicos y posibles errores humanos, y los análisis también plantean si un accidente similar podría ocurrir en Francia, examinando normas, seguridad y procedimientos comparativos."
-    },
-    {
-      "cluster_id": "subject-sanchez-3003230700a4",
-      "coherence": 0.5361491068194034,
+      "cluster_id": "subject-espagne-4a8761448753",
+      "coherence": 0.4303066447981455,
       "consequence": 2,
       "countries": [
-        "spain"
+        "it",
+        "spain",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-30",
-      "headline": "Sánchez reconoce que la confianza en la alta velocidad está quebrada y promete soluciones",
+      "country_count": 4,
+      "editorial_day": "2026-10-31",
+      "headline": "Segundo accidente ferroviario grave en nueve meses deja España en luto",
       "independent_source_count": 4,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-10-30/sanchez-hay-una-confianza-quebrada-en-el-sistema-de-alta-velocidad.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/ckn9rq8204l0o?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/sanchez-admite-confianza-quebrada-alta-velocidad-espanola-reitera-accidentes-son-inasumibles_1_13626547.html"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/10/29/europe-today-second-high-speed-rail-disaster-in-nine-months-leaves-spain-in-grief"
         },
         {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-10-30/sanchez-promete-soluciones-accidente-confianza-ave_4456194/"
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/show/shock-anger-and-mourning-in-spain-after-2nd-major-train-crash-this-year"
         },
         {
-          "language": "es",
-          "source": "europapress.es",
+          "language": "en",
+          "source": "thelocal.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-sanchez-admite-confianza-alta-velocidad-quebrada-promete-soluciones-20261030111144.html"
+          "url": "https://www.thelocal.es/20261031/tears-fear-anger-relatives-of-spain-train-crash-dead-await-fate"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-sanchez-admite-confianza-alta-velocidad-quebrada-promete-soluciones-20261030111144.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "origin_country": "it",
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/show/shock-anger-and-mourning-in-spain-after-2nd-major-train-crash-this-year",
+      "rank": 1,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "eldiario.es",
-        "elpais.com",
-        "europapress.es"
+        "bbc.co.uk",
+        "euronews.com",
+        "pbs.org"
       ],
       "score": {
         "components": {
-          "coherence": 0.5361,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4303,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.5,
-          "source_reliability": 0.6
+          "source_reliability": 0.5789
         },
-        "total": 0.6093,
+        "total": 0.6144,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sanchez",
+      "subject_label": "espagne",
       "subject_names": [
-        "feijoo",
-        "pedro sanchez",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "El presidente Pedro Sánchez ha admitido públicamente que la confianza en el sistema de alta velocidad ferroviaria está \"quebrada\" tras dos accidentes y ha asegurado que son hechos \"inasumibles\"; además ha anunciado que se tomarán medidas para dar respuesta y recuperar esa confianza."
-    },
-    {
-      "cluster_id": "subject-barcelona-582e46808fc4",
-      "coherence": 0.5359023903073701,
-      "consequence": 1,
-      "countries": [
+        "espagne",
+        "sanchez",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-30",
-      "headline": "Detenido un menor vinculado a canales de 'blocus' por los saqueos en Barcelona",
+      "subject_newsroom_count": 11,
+      "summary": "Un choque de tren de alta velocidad en España provocó muertos y heridos, desatando dolor, enfado y divisiones políticas; es el segundo accidente ferroviario grave en el país en nueve meses y familiares esperan noticias sobre las víctimas mientras la sociedad reclama explicaciones y responsabilidades."
+    },
+    {
+      "cluster_id": "subject-patriot-160e897ce8ba",
+      "coherence": 0.4454057145752732,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "germany",
+        "united-kingdom",
+        "unknown",
+        "vm"
+      ],
+      "country_count": 5,
+      "editorial_day": "2026-10-31",
+      "filled_from": "europe",
+      "headline": "Estados Unidos aprueba la venta de 500 misiles Patriot a Ucrania",
       "independent_source_count": 5,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/catalunya/2026-10-30/detenido-un-menor-por-los-organizar-los-saqueos-de-blocus-del-sabado-en-barcelona.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/le-gouvernement-americain-approuve-la-vente-de-500-missiles-patriot-a-l-ukraine_8261099.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/amerika/usa-ukraine-patriot-100.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/mossos-detienen-segundo-menor-vinculado-canales-blocus-saqueos-barcelona_1_13626276.html"
+          "source": "bitlysdowssl-aws.com",
+          "source_country": "unknown",
+          "url": "https://bitlysdowssl-aws.com/2026/10/ee-uu-aprueba-la-venta-de-500-misiles-patriot-a-ucrania-tras-reclamos-de-kiev-por-retrasos-en-el-suministro/"
         },
         {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/cataluna/2026/10/30/6ae45863e9cf4a4b168b4570.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/cataluna/2026-10-30/mossos-detienen-menor-saqueos-barcelona-1tna-1tps_4456070/"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/catalunya/noticia-detenido-menor-vinculado-canales-blocus-relacionados-saqueos-barcelona-20261030093914.html"
+          "language": "vie",
+          "source": "thanhnien.vn",
+          "source_country": "vm",
+          "url": "https://thanhnien.vn/my-duyet-ban-500-ten-lua-danh-chan-patriot-cho-ukraine-185261031071317489.htm"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "up"
       ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/catalunya/noticia-detenido-menor-vinculado-canales-blocus-relacionados-saqueos-barcelona-20261030093914.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/le-gouvernement-americain-approuve-la-vente-de-500-missiles-patriot-a-l-ukraine_8261099.html#xtor=RSS-3-[lestitres]",
+      "rank": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "elconfidencial.com",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es"
+        "bbc.co.uk",
+        "francetvinfo.fr",
+        "tagesschau.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.5359,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "coherence": 0.4454,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "source_reliability": 0.619
         },
-        "total": 0.5526,
+        "total": 0.648,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "barcelona",
+      "subject_label": "patriot",
       "subject_names": [
-        "barcelona",
-        "detenido"
+        "kiev",
+        "patriot",
+        "russia",
+        "russian",
+        "ukraine"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Las fuentes coinciden en que los Mossos han arrestado a un menor relacionado con canales de mensajería del movimiento 'blocus' por su implicación en los saqueos ocurridos en Barcelona durante las movilizaciones; se le atribuye difusión y aliento de los disturbios y su detención se produjo tras las acciones del sábado 24 de octubre."
+      "subject_newsroom_count": 5,
+      "summary": "El gobierno de Estados Unidos autorizó la venta de 500 misiles Patriot a Ucrania. Las notas señalan que la decisión responde a solicitudes ucranianas por retrasos en suministros y consiste en la aprobación formal de ese paquete de misiles defendiendo necesidades de Kiev."
     },
     {
-      "cluster_id": "subject-espagne-29f17c5854f4",
+      "cluster_id": "subject-oleshky-2ffc15fe15d0",
+      "coherence": 0.42839993830935863,
+      "consequence": 3,
+      "countries": [
+        "so",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-10-31",
+      "filled_from": "europe",
+      "headline": "Comienzan evacuaciones y entrega de ayuda en Oleshky tras breve alto el fuego",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/oct/30/evacuation-besieged-ukrainian-city-oleshky"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c60me298k1yeo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/aid-operation-and-evacuations-in-oleshky-amid-brief-truce-agreed-to-by-russia-and-ukraine"
+        },
+        {
+          "language": "en",
+          "source": "jowhar.com",
+          "source_country": "so",
+          "url": "https://jowhar.com/evacuations-start-in-besieged-oleshky-during-ceasefire-window/"
+        },
+        {
+          "language": "en",
+          "source": "military.com",
+          "source_country": "united-states",
+          "url": "https://www.military.com/brief-truce-agreed-by-russia-and-ukraine-allows-aid-operation-and-evacuations-in-oleshky"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "so",
+      "outbound_source": "pbs.org",
+      "outbound_url": "https://www.pbs.org/newshour/world/aid-operation-and-evacuations-in-oleshky-amid-brief-truce-agreed-to-by-russia-and-ukraine",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "pbs.org",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4284,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.6345,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "oleshky",
+      "subject_names": [
+        "kherson",
+        "kiev",
+        "oleshky",
+        "rusia",
+        "russia",
+        "russian",
+        "ucrania",
+        "ukraine",
+        "ukrainian"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Rusia y Ucrania acordaron una breve tregua que permitió iniciar una operación humanitaria en Oleshky, con entrega de ayuda y la evacuación de civiles de la ciudad bajo ocupación rusa; las evacuaciones se realizaron durante la ventana de cese de hostilidades y fueron descritas como limitadas en duración."
+    },
+    {
+      "cluster_id": "subject-italia-12cc943bcf9b",
+      "coherence": 0.4859722970357374,
+      "consequence": 3,
+      "countries": [
+        "da",
+        "france",
+        "germany",
+        "no"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-10-31",
+      "filled_from": "europe",
+      "headline": "Cientos de miles de personas protestan en Italia contra el gobierno de Meloni",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/europe/20261031-en-italie-une-journ%C3%A9e-de-manifestations-massive-qui-met-la-pression-sur-le-gouvernement-meloni"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/italien-protest-meloni-100.html"
+        },
+        {
+          "language": "dan",
+          "source": "nordjyske.dk",
+          "source_country": "da",
+          "url": "https://nordjyske.dk/nyheder/udland/massedemonstrationer-mod-meloni-fylder-italiens-gader/6230134"
+        },
+        {
+          "language": "de",
+          "source": "rhein-zeitung.de",
+          "source_country": "germany",
+          "url": "https://www.rhein-zeitung.de/deutschland-welt/politik/hunderttausende-gegen-meloni-auf-der-strasse_arid-4166472.html"
+        },
+        {
+          "language": "de",
+          "source": "t-online.de",
+          "source_country": "germany",
+          "url": "https://www.t-online.de/nachrichten/ausland/id_101505984/proteste-in-italien-hunderttausende-gegen-meloni-auf-der-strasse.html"
+        },
+        {
+          "language": "de",
+          "source": "t-online.de",
+          "source_country": "germany",
+          "url": "https://www.t-online.de/nachrichten/ausland/id_101505464/hunderttausende-gegen-meloni-auf-der-strasse.html"
+        },
+        {
+          "language": "nor",
+          "source": "aftenposten.no",
+          "source_country": "no",
+          "url": "https://www.aftenposten.no/verden/i/31nWzA/demonstrasjoner-over-hele-italia-mot-regjeringen-og-meloni"
+        }
+      ],
+      "mentioned_countries": [
+        "it"
+      ],
+      "origin_country": "da",
+      "outbound_source": "tagesschau.de",
+      "outbound_url": "https://www.tagesschau.de/ausland/europa/italien-protest-meloni-100.html",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "rfi.fr",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.486,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6343,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "italia",
+      "subject_names": [
+        "italia",
+        "italie",
+        "meloni"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "En varias ciudades de Italia tuvieron lugar manifestaciones masivas en las que cientos de miles de personas salieron a las calles para protestar contra el gobierno de Giorgia Meloni; las marchas se extendieron por todo el país y expresaron un amplio descontento con la administración."
+    },
+    {
+      "cluster_id": "subject-oleshky-8c66afc8eff2",
       "coherence": null,
-      "consequence": 1,
+      "consequence": 3,
       "countries": [
         "france",
         "united-kingdom"
       ],
       "country_count": 2,
       "editorial_day": "2026-10-30",
-      "headline": "Accidente de tren en España deja varias víctimas identificadas",
-      "independent_source_count": 2,
+      "filled_from": "europe",
+      "headline": "Cese del fuego temporal trae alivio a residentes de Jersón",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/ancienne-ministre-membre-de-la-guardia-civil-athlete-qui-sont-les-premieres-victimes-identifiees-de-l-accident-de-train-en-espagne-20261030"
+          "url": "https://www.lefigaro.fr/international/comme-un-jour-de-fete-les-habitants-de-kherson-savourent-un-cessez-le-feu-inedit-entre-l-ukraine-et-la-russie-20261030"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/on-a-pu-souffler-un-peu-a-kherson-pendant-la-treve-quelques-jours-de-repit-dans-une-ville-meurtrie-20261030_VCVYVCBNYZEXXFKPEIMKNNSCWE/"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cr78plp1p9yvo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/ck1l393pyrylo?at_medium=RSS&at_campaign=rss"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "up"
       ],
       "origin_country": "france",
       "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cr78plp1p9yvo?at_medium=RSS&at_campaign=rss",
-      "rank": 4,
-      "reference_newsroom_count": 2,
+      "outbound_url": "https://www.bbc.co.uk/news/articles/ck1l393pyrylo?at_medium=RSS&at_campaign=rss",
+      "rank": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "lefigaro.fr"
+        "lefigaro.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.5028,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "espagne",
-      "subject_names": [
-        "espagne",
-        "spain"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "Los artículos coinciden en que un reciente accidente de tren en España causó varias víctimas identificadas, entre ellas una deportista joven, una exministra y una miembro de la Guardia Civil; las piezas informan sobre la identificación de estas primeras víctimas tras el siniestro."
-    },
-    {
-      "cluster_id": "subject-espagne-5e73e2e1ad9e",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france",
-        "it"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-29",
-      "headline": "El rey Felipe VI visita a las víctimas tras un accidente de tren en España",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/29/accident-de-trains-en-espagne-le-roi-felipe-vi-a-rendu-visite-aux-victimes_6802375_3211.html"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/10/29/spain-minute-of-silence-for-train-crash-victims-as-king-visits-hospital"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/29/accident-de-trains-en-espagne-le-roi-felipe-vi-a-rendu-visite-aux-victimes_6802375_3211.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "editorial_weight": 0.2727,
           "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.4676,
+        "total": 0.5896,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "espagne",
+      "subject_label": "oleshky",
       "subject_names": [
-        "espagne",
-        "spain"
+        "kherson",
+        "oleshky",
+        "ukrainian"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "Tras un accidente de tren en España, el rey Felipe VI visitó a las personas heridas en el hospital; en paralelo se guardó un minuto de silencio en recuerdo de las víctimas."
+      "subject_newsroom_count": 8,
+      "summary": "Un acuerdo de alto el fuego entre Ucrania y Rusia permitió días de calma en Jersón, donde los habitantes salieron a la calle, pudieron reabastecerse y descansar tras semanas de hostilidades; pese al alivio y la vida recuperada momentáneamente, la población teme por el futuro y la posibilidad de que la violencia retome."
     }
   ],
-  "discarded_ingested": 33,
+  "discarded_ingested": 8,
   "discarded_kept": 5,
-  "generated_at": "2026-10-30T11:31:33.568047+00:00",
+  "generated_at": "2026-10-31T11:02:30.665040+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

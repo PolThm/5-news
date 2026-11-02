@@ -1,18 +1,206 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-espagne-e930b266c96b",
-      "coherence": null,
-      "consequence": 3,
+      "cluster_id": "subject-murcia-5082d1cd6f82",
+      "coherence": 0.4646092240499382,
+      "consequence": 1,
       "countries": [
-        "france",
-        "united-kingdom"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-10-31",
-      "headline": "Un accidente de tren altera la campaña electoral de Pedro Sánchez",
+      "country_count": 1,
+      "editorial_day": "2026-11-02",
+      "headline": "Detienen a un hombre por asesinar a puñaladas a una mujer en Murcia",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-11-02/detenido-un-hombre-por-matar-a-punaladas-a-una-mujer-en-plena-calle-en-murcia.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/murcia/detenido-hombre-muerte-mujer-anos-barrio-murciano-20261102115306-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/murcia/sociedad/mujer-33-anos-muere-apunalada-plena-luz-dia-barrio-fama-murcia_1_13631682.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/20261102/policia-nacional-detiene-hombre-matar-punaladas-mujer-anos-barrio-fama-murcia/1003744443165_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/murcia/2026/11/02/6ae867dce9cf4a9d5a8b4586.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-11-02/detenido-muerte-mujer-arma-blanca-murcia-1tps_4457430/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/murcia/noticia-fallece-mujer-45-anos-herida-arma-blanca-barrio-murciano-fama-20261102111920.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/murcia/noticia-fallece-mujer-45-anos-herida-arma-blanca-barrio-murciano-fama-20261102111920.html",
+      "rank": 1,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4646,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7241
+        },
+        "total": 0.5697,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "murcia",
+      "subject_names": [
+        "fama",
+        "murcia"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "La Policía Nacional ha detenido a un hombre como presunto autor de la muerte por arma blanca de una mujer en el barrio de La Fama, en Murcia; la víctima, cuya edad aparece entre 38 y 45 años según las fuentes, fue localizada tras el ataque y el arresto se produjo en relación con los hechos."
+    },
+    {
+      "cluster_id": "subject-palma-c9577dd17a1d",
+      "coherence": 0.4941634774998386,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-02",
+      "headline": "Restablecido el suministro eléctrico en La Palma tras un apagón de casi cuatro horas",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-11-02/la-isla-de-la-palma-sufre-un-apagon-general-que-deja-a-la-isla-sin-suministro-electrico.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/canarias/cero-energetico-palma-averia-deja-isla-completamente-20261102094624-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/canariasahora/lapalmaahora/sociedad/palma-queda-luz_1_13631074.html"
+        },
+        {
+          "language": "es",
+          "source": "expansion.com",
+          "source_country": "spain",
+          "url": "https://www.expansion.com/sociedad/2026/11/02/isla-palma-sufre-apagon-general-deja-isla-suministro-electrico-1.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/02/6ae84c15e85ece0f5a8b4582.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/islas-canarias/noticia-mas-50500-clientes-suministro-electrico-palma-cero-energetico-20261102095456.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/canariasahora/lapalmaahora/sociedad/palma-queda-luz_1_13631074.html",
+      "rank": 2,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "expansion.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4942,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6923
+        },
+        "total": 0.5614,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "palma",
+      "subject_names": [
+        "palma",
+        "restablecido"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "La isla de La Palma quedó sin suministro eléctrico durante casi cuatro horas debido a un apagón general; los servicios han confirmado que la energía fue restablecida por completo y el suministro volvió al 100% de la isla."
+    },
+    {
+      "cluster_id": "subject-sanchez-2c7dd24e9ff2",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-01",
+      "headline": "Accidente ferroviario en Urda afecta la campaña electoral de Sánchez",
       "independent_source_count": 3,
       "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/a-un-mois-des-elections-en-espagne-la-catastrophe-ferroviaire-d-urda-pese-sur-la-campagne-20261101"
+        },
         {
           "language": "fr",
           "source": "nouvelobs.com",
@@ -24,12 +212,6 @@
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/europe/espagne-apres-laccident-ferroviaire-la-campagne-electorale-de-pedro-sanchez-bouleversee-GX2PLR2F7JH55MNGO2H73L72VE/"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmeweppr990qo?at_medium=RSS&at_campaign=rss"
         }
       ],
       "mentioned_countries": [
@@ -38,472 +220,404 @@
       "origin_country": "france",
       "outbound_source": "lexpress.fr",
       "outbound_url": "https://www.lexpress.fr/monde/europe/espagne-apres-laccident-ferroviaire-la-campagne-electorale-de-pedro-sanchez-bouleversee-GX2PLR2F7JH55MNGO2H73L72VE/",
-      "rank": 1,
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "lefigaro.fr",
         "lexpress.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.5,
+          "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.6396,
+        "total": 0.5496,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "espagne",
+      "subject_label": "sanchez",
       "subject_names": [
         "espagne",
+        "espana",
         "feijoo",
-        "oscar puente",
         "pedro sanchez",
-        "sanchez",
-        "spain"
+        "sanchez"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Un grave accidente ferroviario en España ha trastocado la campaña electoral del presidente Pedro Sánchez: el siniestro ha desencadenado debates políticos y críticas que han desplazado la agenda de los partidos y podrían influir en las opciones de reelección de Sánchez, según coinciden las crónicas."
+      "subject_newsroom_count": 16,
+      "summary": "Un accidente de tren en Urda, ocurrido a un mes de las elecciones generales, ha marcado la campaña electoral en España: el siniestro ha provocado críticas políticas, debates sobre la gestión y la seguridad ferroviaria, y ha obligado al presidente Pedro Sánchez y a otros actores políticos a responder públicamente mientras la campaña se reordena en torno al episodio."
     },
     {
-      "cluster_id": "subject-espagne-1dbc08b16956",
-      "coherence": 0.5209002222077408,
-      "consequence": 2,
+      "cluster_id": "subject-iliana-iotova-0cad58493d96",
+      "coherence": 0.48796651699366433,
+      "consequence": 3,
       "countries": [
-        "france"
+        "al",
+        "as",
+        "france",
+        "it",
+        "lu",
+        "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-10-31",
-      "headline": "Colisión de trenes en España deja 69 muertos e incluye a una ciudadana francesa",
-      "independent_source_count": 4,
+      "country_count": 6,
+      "editorial_day": "2026-11-02",
+      "filled_from": "europe",
+      "headline": "Iliana Iotova gana la presidencia de Bulgaria y será la primera mujer presidenta",
+      "independent_source_count": 13,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/31/collision-de-trains-en-espagne-une-francaise-parmi-les-69-morts-le-ministere-des-affaires-etrangeres-dit-sa-tres-vive-emotion_6803714_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/11/02/en-bulgarie-iliana-iotova-gagne-l-election-presidentielle-haut-la-main-face-a-son-opposant-pro-europeen_6805224_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/catastrophe-ferroviaire-en-espagne-une-francaise-parmi-les-69-morts-20261031_S5PPP4BNYVBLLJDZXCRLIEMISU/"
+          "url": "https://www.liberation.fr/international/europe/presidentielle-en-bulgarie-un-duel-serre-sur-fond-de-tensions-avec-la-russie-en-mer-noire-20261101_PWOECFDJYVEDXCP7XGL4URBHZM/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/collision-de-trains-en-espagne-une-francaise-morte-dans-l-accident-ferroviaire-20261031"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/espagne/accident-de-trains-pres-de-tolede/une-francaise-figure-parmi-les-victimes-de-la-collision-de-trains-en-espagne-qui-a-fait-69-morts-annonce-le-ministere-des-affaires-etrangeres_8261951.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/31/collision-de-trains-en-espagne-une-francaise-parmi-les-69-morts-le-ministere-des-affaires-etrangeres-dit-sa-tres-vive-emotion_6803714_3210.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5209,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5724,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "espagne",
-      "subject_names": [
-        "espagne",
-        "spain"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Una colisión de trenes en España causó la muerte de 69 personas; entre las víctimas figura una ciudadana francesa, según informó el Ministerio de Asuntos Exteriores, que expresó su profunda consternación."
-    },
-    {
-      "cluster_id": "subject-france-e205d35da5cc",
-      "coherence": 0.7934707172803396,
-      "consequence": 3,
-      "countries": [
-        "ca",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-10-31",
-      "filled_from": "europe",
-      "headline": "Miles protestan en Francia por tercer fin de semana seguido",
-      "independent_source_count": 19,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/10/31/g-s1-151121/france-seethes-again-as-youth-led-protests-sweep-europe"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/a-third-weekend-of-protests-in-france-as-youth-led-rallies-sweep-europe"
-        },
-        {
-          "language": "en",
-          "source": "nwemail.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.nwemail.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "cp24.com",
-          "source_country": "ca",
-          "url": "https://www.cp24.com/news/world/2026/10/31/a-third-weekend-of-protests-in-france-as-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "politico.eu",
-          "source_country": "united-states",
-          "url": "https://www.politico.eu/article/france-youth-protests-cost-of-living-spread-europe/"
-        },
-        {
-          "language": "en",
-          "source": "bournemouthecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bournemouthecho.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "harrowtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.harrowtimes.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "watfordobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.watfordobserver.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "echo-news.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.echo-news.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "countypress.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.countypress.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "cravenherald.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.cravenherald.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "hillingdontimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.hillingdontimes.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "idahopress.com",
-          "source_country": "united-states",
-          "url": "http://www.idahopress.com/news/world/a-third-weekend-of-protests-in-france-as-youth-led-rallies-sweep-europe/article_30cdc955-9d34-58a6-a958-3a1a2c503ca1.html"
-        },
-        {
-          "language": "en",
-          "source": "dorsetecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.dorsetecho.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "ludlowadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ludlowadvertiser.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "burytimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.burytimes.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "falmouthpacket.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.falmouthpacket.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        },
-        {
-          "language": "en",
-          "source": "timesandstar.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.timesandstar.co.uk/news/national/26687375.third-weekend-protests-france-youth-led-rallies-sweep-europe/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "ca",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/world/a-third-weekend-of-protests-in-france-as-youth-led-rallies-sweep-europe",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "npr.org",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7935,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.8261,
-          "source_reliability": 0.8367
-        },
-        "total": 0.6688,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "europe",
-        "france",
-        "francia",
-        "paris"
-      ],
-      "subject_newsroom_count": 27,
-      "summary": "Miles de jóvenes y otros manifestantes realizaron un tercer fin de semana consecutivo de protestas en Francia, con marchas y concentraciones que se extendieron a otras ciudades europeas, según las coberturas; las movilizaciones fueron descritas como lideradas en gran parte por jóvenes y se repitieron en múltiples localidades."
-    },
-    {
-      "cluster_id": "subject-polonia-40ae7ae2db99",
-      "coherence": 0.42748447858237315,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-01",
-      "filled_from": "europe",
-      "headline": "En Polonia se desata una crisis política por el control del Tribunal Constitucional",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/10/31/en-pologne-nuit-de-heurts-devant-le-tribunal-constitutionnel_6803472_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/en-pologne-le-bras-de-fer-autour-du-tribunal-constitutionnel-vire-au-chaos-20261031"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261031.OBS119732/police-antiemeute-deployee-partis-politiques-convoques-en-pologne-le-tribunal-constitutionnel-au-c-ur-d-une-crise-politique.html"
+          "url": "https://www.la-croix.com/presidentielle-en-bulgarie-un-duel-serre-sur-fond-de-tensions-en-mer-noire-20261031"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/crise-politique-en-pologne-le-tribunal-constitutionnel-au-coeur-dun-bras-de-fer-6RBPSVDI5NBF3ELLJNPDQ6CAQY/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-01/la-batalla-politica-en-polonia-deriva-en-una-guerra-abierta-por-el-control-del-tribunal-constitucional.html"
+          "url": "https://www.lexpress.fr/monde/europe/bulgarie-la-prorusse-iliana-iotova-remporte-lelection-presidentielle-57QQTGDT35FHJHQUYSE63TNA3Q/"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/crisis-constitucional-polonia-presidente-tribunal-favor-dejenme-20261101110145-nt.html"
+          "url": "https://www.abc.es/internacional/iliana-iotova-nueva-presidenta-bulgara-impulsa-acercamiento-20261102110732-nt.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261031/11672737/polonia-crisis-suspension-tribunal-constitucional-presidente-tusk-nawrocki-policia.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/crisis-institucional-polonia-suspension-presidente-constitucional-abre-fractura-politica-desata-protestas_1_13628838.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/10/31/polonia-busca-saida-para-crise-institucional-apos-intervencao-policial-no-tribunal-constitucional.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "pl"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/10/31/en-pologne-nuit-de-heurts-devant-le-tribunal-constitutionnel_6803472_3210.html",
-      "rank": 4,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elpais.com",
-        "globo.com",
-        "la-croix.com",
-        "lavanguardia.com",
-        "lemonde.fr",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4275,
-          "corroboration": 0.6,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7714
-        },
-        "total": 0.6344,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "polonia",
-      "subject_names": [
-        "parlamento",
-        "pologne",
-        "polonia",
-        "tribunal constitucional"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Los artículos coinciden en que en Polonia ha estallado una crisis institucional en torno al Tribunal Constitucional: la suspensión del presidente del tribunal y la disputa por su acceso han provocado confrontaciones políticas, concentraciones y disturbios ante el edificio, intervención de policías antidisturbios y una fuerte polarización entre partidos mientras se buscan soluciones institucionales."
-    },
-    {
-      "cluster_id": "subject-polonia-8ab532fd9bcd",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "ar",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-10-31",
-      "filled_from": "europe",
-      "headline": "El presidente de Polonia ordena levantar el bloqueo policial y convoca al Parlamento",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/presidente-polonia-ordena-policia-retirar-bloqueo-convoca-20261031123407-nt.html"
+          "url": "https://www.lavanguardia.com/internacional/20261102/11673892/prorrusa-iliana-yotova-gana-presidenciales-bulgaria.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/presidente-polonia-ordena-policia-retirar-bloqueo-convoca-parlamento-para-restablecer-orden_7055762_0.html"
+          "url": "https://www.20minutos.es/internacional/iliana-yotova-nueva-presidenta-bulgaria-primera-mujer-elegida-jefe-estado-es-prorrusa-como-jefe-gobierno_7056141_0.html"
         },
         {
           "language": "es",
-          "source": "eldestapeweb.com",
-          "source_country": "ar",
-          "url": "http://www.eldestapeweb.com/internacionales/presidente-polonia-exigio-terminar-bloqueo-policial-demando-congreso-restaurar-orden-2026103115823"
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/prorrusa-iliana-yotova-gana-las-elecciones-presidenciales-bulgaria-con-51-los-votos-segun-los-sondeos_7056068_0.html"
+        },
+        {
+          "language": "en",
+          "source": "illawarramercury.com.au",
+          "source_country": "as",
+          "url": "https://www.illawarramercury.com.au/story/9383949/bulgaria-elects-iotova-as-its-first-female-president/"
+        },
+        {
+          "language": "en",
+          "source": "westernadvocate.com.au",
+          "source_country": "as",
+          "url": "https://www.westernadvocate.com.au/story/9383949/bulgaria-elects-iotova-as-its-first-female-president/"
+        },
+        {
+          "language": "sqi",
+          "source": "botasot.info",
+          "source_country": "al",
+          "url": "https://www.botasot.info/evrope-bota/2545596/iliana-iotova-kryeson-raundin-e-dyte-te-zgjedhjeve-presidenciale-ne-bullgari/"
+        },
+        {
+          "language": "fr",
+          "source": "lessentiel.lu",
+          "source_country": "lu",
+          "url": "https://www.lessentiel.lu/fr/story/bulgarie-iliana-iotova-remporte-la-presidentielle-103660388"
+        },
+        {
+          "language": "es",
+          "source": "heraldo.es",
+          "source_country": "spain",
+          "url": "https://www.heraldo.es/noticias/internacional/2026/11/01/iliana-yotova-gana-elecciones-presidenciales-bulgaria-sondeos-2064923.html"
+        },
+        {
+          "language": "it",
+          "source": "italpress.com",
+          "source_country": "it",
+          "url": "https://www.italpress.com/bulgaria-yotova-vince-vittoria-il-ballottaggio-per-la-presidenza/"
         }
       ],
       "mentioned_countries": [
-        "pl"
+        "bu"
       ],
-      "origin_country": "ar",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/presidente-polonia-ordena-policia-retirar-bloqueo-convoca-parlamento-para-restablecer-orden_7055762_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "al",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/01/presidentielle-en-bulgarie-iliana-iotova-remporte-l-election-selon-plusieurs-sondages-a-la-sortie-des-urnes_6804603_3210.html",
+      "rank": 4,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
         "20minutos.es",
-        "abc.es"
+        "abc.es",
+        "la-croix.com",
+        "lavanguardia.com",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "coherence": 0.488,
+          "corroboration": 0.75,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
+          "prominence": 0.7647,
+          "source_reliability": 0.8298
         },
-        "total": 0.5707,
+        "total": 0.72,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "polonia",
+      "subject_label": "iliana iotova",
       "subject_names": [
-        "parlamento",
-        "pologne",
-        "polonia",
-        "tribunal constitucional"
+        "bulgaria",
+        "bulgarie",
+        "iliana iotova",
+        "moscou"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "El presidente de Polonia ordenó a la Policía que retire un bloqueo y convocó al Parlamento para restablecer el orden, exigiendo el fin de la medida de fuerza y pidiendo a la institución legislativa que actúe para normalizar la situación."
+      "subject_newsroom_count": 8,
+      "summary": "Los artículos coinciden en que Iliana Iotova ganó la elección presidencial en Bulgaria, imponiéndose en la segunda vuelta según sondeos y resultados, y que se destaca por su postura favorable al diálogo con Rusia; además se señala que es la primera mujer elegida jefe del Estado en el país."
+    },
+    {
+      "cluster_id": "subject-ukraine-9ecd19417803",
+      "coherence": 0.5151742602819838,
+      "consequence": 3,
+      "countries": [
+        "as",
+        "france",
+        "germany",
+        "india",
+        "sz",
+        "united-kingdom",
+        "united-states",
+        "unknown"
+      ],
+      "country_count": 8,
+      "editorial_day": "2026-11-02",
+      "filled_from": "europe",
+      "headline": "Aplicaciones de alerta de emergencia en Ucrania y Rusia fueron hackeadas",
+      "independent_source_count": 24,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/l-ukraine-et-la-russie-touchees-par-des-cyberattaques-apres-la-fin-d-un-cessez-le-feu-dans-la-region-de-kherson_8263511.html#xtor=RSS-3-%5Bgeneral%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261102-ukraine-russie-les-deux-pays-touch%C3%A9s-par-des-cyberattaques"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/02/hackers-fake-nuclear-chemical-threat-alert-kyiv-ukraine-emergency-app"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "westernadvocate.com.au",
+          "source_country": "as",
+          "url": "https://www.westernadvocate.com.au/story/9383924/fake-emergency-alerts-after-ukraine-russia-apps-hacked/"
+        },
+        {
+          "language": "en",
+          "source": "cinaradio.com",
+          "source_country": "india",
+          "url": "https://www.cinaradio.com/2026/11/02/ukraine-russian-alert-systems-hit-by-cyberattacks-that-spread-alarming-messages/"
+        },
+        {
+          "language": "en",
+          "source": "newsweek.com",
+          "source_country": "united-states",
+          "url": "https://www.newsweek.com/ukraine-and-russia-hit-by-hoax-nuclear-threat-alerts-after-cyberattacks-12648269"
+        },
+        {
+          "language": "en",
+          "source": "bridgwatermercury.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bridgwatermercury.co.uk/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
+        },
+        {
+          "language": "en",
+          "source": "wmur.com",
+          "source_country": "united-states",
+          "url": "https://www.wmur.com/article/ukraine-russia-cyberattacks-emergency-apps/74308609"
+        },
+        {
+          "language": "en",
+          "source": "messengernewspapers.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.messengernewspapers.co.uk/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
+        },
+        {
+          "language": "en",
+          "source": "nypost.com",
+          "source_country": "united-states",
+          "url": "https://nypost.com/2026/11/02/world-news/hackers-breach-emergency-alert-apps-in-ukraine-and-russia-with-fake-warnings-of-nuclear-attacks/"
+        },
+        {
+          "language": "en",
+          "source": "hamhigh.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.hamhigh.co.uk/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
+        },
+        {
+          "language": "en",
+          "source": "ksbw.com",
+          "source_country": "united-states",
+          "url": "https://www.ksbw.com/article/ukraine-russia-cyberattacks-emergency-apps/74308609"
+        },
+        {
+          "language": "en",
+          "source": "wpbf.com",
+          "source_country": "united-states",
+          "url": "https://www.wpbf.com/article/ukraine-russia-cyberattacks-emergency-apps/74308609"
+        },
+        {
+          "language": "en",
+          "source": "london-now.co.uk",
+          "source_country": "unknown",
+          "url": "https://www.london-now.co.uk/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
+        },
+        {
+          "language": "en",
+          "source": "wisn.com",
+          "source_country": "united-states",
+          "url": "https://www.wisn.com/article/ukraine-russia-cyberattacks-emergency-apps/74308609"
+        },
+        {
+          "language": "en",
+          "source": "stroudnewsandjournal.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.stroudnewsandjournal.co.uk/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
+        },
+        {
+          "language": "en",
+          "source": "newser.com",
+          "source_country": "united-states",
+          "url": "https://www.newser.com/story/399210/hacked-emergency-apps-in-ukraine-russia-got-scary-overnight.html"
+        },
+        {
+          "language": "en",
+          "source": "irvinetimes.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.irvinetimes.com/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
+        },
+        {
+          "language": "de",
+          "source": "hna.de",
+          "source_country": "germany",
+          "url": "https://www.hna.de/politik/hacker-manipulieren-warn-apps-in-ukraine-und-russland-zr-94569088.html"
+        },
+        {
+          "language": "de",
+          "source": "bazonline.ch",
+          "source_country": "sz",
+          "url": "https://www.bazonline.ch/ukraine-notfall-app-air-alert-nach-hack-mit-falschmeldungen-732536963305"
+        },
+        {
+          "language": "de",
+          "source": "wn.de",
+          "source_country": "germany",
+          "url": "https://www.wn.de/schlaglichter/app-fuer-notfall-warnungen-in-ukraine-und-russland-gehackt-3705052"
+        },
+        {
+          "language": "de",
+          "source": "derbund.ch",
+          "source_country": "sz",
+          "url": "https://www.derbund.ch/ukraine-notfall-app-air-alert-nach-hack-mit-falschmeldungen-732536963305"
+        },
+        {
+          "language": "de",
+          "source": "wa.de",
+          "source_country": "germany",
+          "url": "http://www.wa.de/politik/hacker-manipulieren-warn-apps-in-ukraine-und-russland-zr-94569088.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "as",
+      "outbound_source": "wa.de",
+      "outbound_url": "http://www.wa.de/politik/hacker-manipulieren-warn-apps-in-ukraine-und-russland-zr-94569088.html",
+      "rank": 5,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "france24.com",
+        "francetvinfo.fr",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5152,
+          "corroboration": 0.8,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8571,
+          "source_reliability": 0.8667
+        },
+        "total": 0.7009,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ukraine",
+      "subject_names": [
+        "kiev",
+        "olechky",
+        "oleshky",
+        "rusia",
+        "russia",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine"
+      ],
+      "subject_newsroom_count": 20,
+      "summary": "Ataques cibernéticos comprometieron aplicaciones de alerta a la población en Ucrania y en Rusia, desde las cuales se enviaron mensajes falsos alarmando de amenazas —incluyendo avisos de ataque nuclear— que no eran reales; autoridades y operadores confirmaron intrusiones y trabajos para restaurar el servicio y verificar la veracidad de las alertas."
     }
   ],
-  "discarded_ingested": 11,
+  "discarded_ingested": 23,
   "discarded_kept": 5,
-  "generated_at": "2026-11-01T11:56:56.625901+00:00",
+  "generated_at": "2026-11-02T13:44:13.954313+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

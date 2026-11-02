@@ -1,0 +1,28 @@
+{
+  "articles_collected": 6610,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 5763,
+  "clusters_selected": 13,
+  "completed": true,
+  "cycle_id": "2026-11-02T13-44-13Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261102131500.translation.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-marseille-b1b6b0a08488: response was not valid JSON (likely truncated or refused): Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "groups_after_dedupe": 5855,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-11-02T13:44:13.954313+00:00",
+  "summarize_batches": {}
+}

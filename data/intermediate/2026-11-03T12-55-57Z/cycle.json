@@ -1,0 +1,24 @@
+{
+  "articles_collected": 12039,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 10529,
+  "clusters_selected": 14,
+  "completed": true,
+  "cycle_id": "2026-11-03T12-55-57Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-tenerife-3909b283a8ea: response was not valid JSON (likely truncated or refused): Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "groups_after_dedupe": 10721,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-11-03T12:55:57.983230+00:00",
+  "summarize_batches": {}
+}

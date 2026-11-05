@@ -1,30 +1,91 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-arkea-7003cf2e87eb",
-      "coherence": 0.4584080505628991,
+      "cluster_id": "subject-corse-7ef6003c91a9",
+      "coherence": 0.5602175963393565,
       "consequence": 2,
       "countries": [
-        "france",
-        "spain"
+        "france"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-04",
-      "headline": "Crédit Mutuel Arkéa hit by cyberattack that stole €118 million",
-      "independent_source_count": 7,
+      "country_count": 1,
+      "editorial_day": "2026-11-05",
+      "headline": "Hérault, Gard and Corsica placed on orange rain‑flood alert by Météo‑France",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/04/le-credit-mutuel-arkea-confirme-avoir-ete-victime-d-une-cyberattaque-le-detournement-est-evalue-a-118-millions-d-euros_6806141_4408996.html"
+          "url": "https://www.lemonde.fr/planete/article/2026/11/05/l-herault-et-le-gard-rejoignent-la-corse-dans-une-vigilance-orange-pluie-inondation-etendue-durant-la-journee-de-jeudi_6806834_3244.html"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/economie/la-banque-credit-mutuel-arkea-victime-dune-cyberattaque-118-millions-deuros-derobes-20261104_4Z63MN5LKFBCLK3MH6L2AAR3PQ/"
+          "url": "https://www.liberation.fr/environnement/climat/lherault-le-gard-et-la-corse-en-vigilance-orange-pluie-inondation-20261105_KDSKIO5WGFASNOLSRHU7OA3MTE/"
         },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/planete/pluie-et-inondation-deux-departements-du-sud-et-la-corse-places-en-vigilance-orange-20261105"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/environnement/meteo/l-herault-et-le-gard-rejoignent-la-corse-en-vigilance-orange-pluie-inondation-annonce-meteo-france_8268779.html#xtor=RSS-3-[lestitres]"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/environnement/meteo/l-herault-et-le-gard-rejoignent-la-corse-en-vigilance-orange-pluie-inondation-annonce-meteo-france_8268779.html#xtor=RSS-3-[lestitres]",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5602,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6122,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "corse",
+      "subject_names": [
+        "corse",
+        "gard"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Météo‑France has placed the Hérault and Gard departments and parts of Corsica under an orange-level vigilance for heavy rain and flooding; authorities reported multiple evacuations in southern Corsica as the alerts were issued."
+    },
+    {
+      "cluster_id": "subject-arkea-41f46871b55c",
+      "coherence": 0.423239828247415,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-05",
+      "headline": "Crédit Mutuel Arkéa confirms fraudulent transfers after cyberattack",
+      "independent_source_count": 4,
+      "members": [
         {
           "language": "fr",
           "source": "la-croix.com",
@@ -35,57 +96,54 @@
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/fraude/le-credit-mutuel-arkea-bretagne-victime-d-un-piratage-de-plus-de-100-millions-d-euros-sans-repercussion-pour-les-clients_8267399.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/des-millions-d-euros-voles-une-attaque-inedite-et-une-enquete-ouverte-ce-que-l-on-sait-du-piratage-du-credit-mutuel-arkea_8269124.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "ouest-france.fr",
+          "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.ouest-france.fr/economie/entreprises/credit-mutuel-arkea/des-millions-deuros-derobes-cryptoactifs-ce-que-lon-sait-de-la-cyberattaque-dont-a-ete-victime-le-credit-mutuel-arkea-dec9ea58-d848-11f1-b736-5b9907ef0b5a?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-france-la-banque-cr%C3%A9dit-mutuel-ark%C3%A9a-victime-d-une-cyberattaque"
         },
         {
-          "language": "es",
-          "source": "expansion.com",
-          "source_country": "spain",
-          "url": "https://www.expansion.com/empresas/banca/2026/11/04/frances-credit-mutuel-arkea-sufre-ciberataque-le-roban-118-millones-euros.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-france-cyberattaque-du-groupe-cr%C3%A9dit-mutuel-ark%C3%A9a-une-enqu%C3%AAte-ouverte"
         },
         {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/economia/2026/11/04/6aeb1bc8fc6c83be3b8b456e.html"
+          "language": "fr",
+          "source": "radiofrance.fr",
+          "source_country": "france",
+          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/cyberattaque-au-credit-mutuel-arkea-ils-ont-attaque-un-sous-traitant-explique-un-specialiste-1085005"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/economie/fraude/le-credit-mutuel-arkea-bretagne-victime-d-un-piratage-de-plus-de-100-millions-d-euros-sans-repercussion-pour-les-clients_8267399.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 7,
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/economie/credit-mutuel-arkea-la-banque-reconnait-des-operations-frauduleuses-apres-une-cyberattaque-20261104",
+      "rank": 2,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elmundo.es",
-        "expansion.com",
+        "france24.com",
         "francetvinfo.fr",
         "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr",
-        "ouest-france.fr"
+        "radiofrance.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4584,
-          "corroboration": 0.5,
-          "editorial_weight": 0.4667,
+          "coherence": 0.4232,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7241
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.659,
+        "total": 0.5984,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "arkea",
@@ -93,421 +151,227 @@
         "arkea",
         "credit mutuel"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "French bank Crédit Mutuel Arkéa suffered a cyberattack in which attackers carried out fraudulent operations and stole about €118 million, with some funds reportedly converted into cryptoassets; the bank says customers have not been affected."
+      "subject_newsroom_count": 4,
+      "summary": "Crédit Mutuel Arkéa said it was hit by a cyberattack that led to fraudulent operations and the theft of millions of euros. Authorities have opened an investigation, and investigators and specialists say the attackers targeted a subcontractor, prompting ongoing probes into how the intrusion occurred and the extent of the financial losses."
     },
     {
-      "cluster_id": "subject-transportes-6fd61259bce5",
-      "coherence": 0.5752078803764132,
-      "consequence": 3,
+      "cluster_id": "subject-france-89323f195618",
+      "coherence": null,
+      "consequence": 2,
       "countries": [
-        "brazil",
         "france"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-04",
-      "filled_from": "europe",
-      "headline": "Spanish transport minister resigns after deadly train collision",
-      "independent_source_count": 4,
+      "country_count": 1,
+      "editorial_day": "2026-11-05",
+      "headline": "Nationwide protests and strikes take place across France on November 5, 2026",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/03/espagne-le-ministre-des-transports-demissionne-apres-la-catastrophe-ferroviaire-meurtriere_6805667_3210.html"
-        },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/collision-ferroviaire-en-espagne-le-ministre-des-transports-presente-sa-demission-20261103"
+          "url": "https://www.la-croix.com/societe/live-greve-jeudi-5-novembre-transports-sncf-ratp-ecole-manifestations-france-aujourdhui-20261105"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261103-espagne-apr%C3%A8s-l-accident-ferroviaire-mortel-le-ministre-des-transports-pr%C3%A9sente-sa-d%C3%A9mission"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/03/apos-dois-acidentes-ferroviarios-que-deixaram-115-mortos-ministro-dos-transportes-da-espanha-renuncia.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/europe/20261103-espagne-apr%C3%A8s-l-accident-ferroviaire-mortel-le-ministre-des-transports-pr%C3%A9sente-sa-d%C3%A9mission",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "globo.com",
-        "la-croix.com",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5752,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.654,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "transportes",
-      "subject_names": [
-        "carlos cuerpo",
-        "espagne",
-        "oscar puente",
-        "psoe",
-        "puente",
-        "transportes"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "The minister of transport in Spain has presented his resignation following a fatal railway accident that resulted in many deaths; the decision comes in the wake of two recent train incidents that together left 115 people dead."
-    },
-    {
-      "cluster_id": "subject-bruselas-459e2860aef6",
-      "coherence": 0.5028349860448116,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-04",
-      "filled_from": "europe",
-      "headline": "EU calls train accidents in Spain very worrying and urges faster ERTMS rollout",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261104/bruselas-ve-preocupantes-accidentes-tren-espana-pide-acelerar-despliegue-sistema-seguridad-ertms/1003744445781_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/04/6aeb2967e9cf4ab16b8b45a4.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/economia/transportes-00343/noticia-bruselas-ve-muy-preocupante-dos-accidentes-meses-insta-rapido-despliegue-ertms-toda-ue-20261104133232.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-califica-muy-preocupantes-los-accidentes-ferroviarios-espana-pide-gobierno-acelerar-implantacion-emrts_7057128_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "be",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/mundo/europa/20261104/bruselas-ve-preocupantes-accidentes-tren-espana-pide-acelerar-despliegue-sistema-seguridad-ertms/1003744445781_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "elespanol.com",
-        "elmundo.es",
-        "europapress.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5028,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6287,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "bruselas",
-      "subject_names": [
-        "bruselas",
-        "espana",
-        "madrid",
-        "nfl"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "The European Commission said it finds recent train accidents in Spain \"very worrying,\" noting two incidents within months, and urged rapid deployment of the European Rail Traffic Management System (ERTMS) across the EU to improve rail safety."
-    },
-    {
-      "cluster_id": "subject-europe-0baec73068d7",
-      "coherence": 0.5312403789342027,
-      "consequence": 2,
-      "countries": [
-        "ar",
-        "cb",
-        "germany",
-        "india",
-        "md",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 8,
-      "editorial_day": "2026-11-04",
-      "filled_from": "europe",
-      "headline": "Seven European flights received bomb threats and underwent security checks",
-      "independent_source_count": 13,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-03/seis-vuelos-en-europa-registran-amenazas-de-bomba-y-obligan-a-activar-los-dispositivos-de-seguridad-de-los-aeropuertos.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6x2wd4v04eeo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/multiple-flights-to-european-airports-targeted-by-bomb-threats/a-79842434?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/flights-across-europe-face-disruption-after-false-bomb-threats"
-        },
-        {
-          "language": "en",
-          "source": "deccanchronicle.com",
-          "source_country": "india",
-          "url": "https://www.deccanchronicle.com/world/flights-across-europe-searched-and-diverted-after-hoax-bomb-threats-2001570"
-        },
-        {
-          "language": "en",
-          "source": "cambodiantimes.com",
-          "source_country": "cb",
-          "url": "http://www.cambodiantimes.com/news/279409913/hoax-bomb-threats-trigger-flight-disruptions-security-checks-across-europe"
-        },
-        {
-          "language": "en",
-          "source": "sandiegouniontribune.com",
-          "source_country": "united-states",
-          "url": "https://www.sandiegouniontribune.com/2026/11/03/europe-flights-fake-bomb-threats/"
-        },
-        {
-          "language": "en",
-          "source": "sitkasentinel.com",
-          "source_country": "united-states",
-          "url": "http://www.sitkasentinel.com/stories/flights-across-europe-face-disruption-after-false-bomb-threats,183606"
-        },
-        {
-          "language": "en",
-          "source": "plymouthherald.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.plymouthherald.co.uk/news/uk-world-news/bomb-threats-mapped-seven-european-11226351"
-        },
-        {
-          "language": "en",
-          "source": "newyorkstatesman.com",
-          "source_country": "united-states",
-          "url": "http://www.newyorkstatesman.com/news/279409913/hoax-bomb-threats-trigger-flight-disruptions-security-checks-across-europe"
-        },
-        {
-          "language": "en",
-          "source": "haitisun.com",
-          "source_country": "united-states",
-          "url": "http://www.haitisun.com/news/279409913/hoax-bomb-threats-trigger-flight-disruptions-security-checks-across-europe"
-        },
-        {
-          "language": "es",
-          "source": "tn.com.ar",
-          "source_country": "ar",
-          "url": "https://tn.com.ar/internacional/2026/11/03/cuatro-aviones-recibieron-amenazas-de-bomba-en-europa-y-se-desplegaron-fuertes-operativos-de-seguridad-en-tres-paises/"
-        },
-        {
-          "language": "ron",
-          "source": "news.yam.md",
-          "source_country": "md",
-          "url": "https://news.yam.md/ro/story/81458052"
-        }
-      ],
-      "mentioned_countries": [
-        "it",
-        "bu"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "dw.com",
-      "outbound_url": "https://www.dw.com/en/multiple-flights-to-european-airports-targeted-by-bomb-threats/a-79842434?maca=en-rss-en-world-4025-rdf",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com",
-        "elpais.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5312,
-          "corroboration": 0.8,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.7647,
-          "source_reliability": 0.7895
-        },
-        "total": 0.6228,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "europe",
-      "subject_names": [
-        "europa",
-        "europe",
-        "european"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Multiple passenger flights bound for or operating in Europe were targeted by suspected or hoax bomb threats, prompting airport security checks, searches and some diversions or temporary disruptions across several countries; authorities and airlines treated the warnings as serious while investigating and clearing the aircraft before operations resumed."
-    },
-    {
-      "cluster_id": "subject-europe-d279ffbaf4bf",
-      "coherence": 0.4363884103565754,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "pk",
-        "spain",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-11-03",
-      "filled_from": "europe",
-      "headline": "Cyberattacks hit supermarket freezers and refrigerators across Europe",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/02/des-cyberattaques-contre-des-refrigerateurs-et-des-congelateurs-visent-plusieurs-supermarches-en-europe_6805296_3210.html"
+          "url": "https://www.rfi.fr/fr/france/20261105-en-direct-gr%C3%A8ve-du-5-novembre-la-col%C3%A8re-sociale-monte-d-un-cran-des-manifestations-attendues-partout-en-france"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/economie/20261102.OBS119792/ce-que-l-on-sait-de-la-cyberattaque-contre-des-refrigerateurs-dans-plusieurs-supermarches-en-europe.html"
+          "url": "https://www.nouvelobs.com/societe/20261105.OBS119867/en-direct-greve-du-5-novembre-marseille-lyon-plusieurs-corteges-s-elancent-un-peu-partout-en-france.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/france/20261105-en-direct-gr%C3%A8ve-du-5-novembre-la-col%C3%A8re-sociale-monte-d-un-cran-des-manifestations-attendues-partout-en-france",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "lyon",
+        "macron"
+      ],
+      "subject_newsroom_count": 23,
+      "summary": "On November 5, 2026, coordinated strikes and demonstrations occurred across multiple French cities, including Paris, Lyon and Marseille, with numerous processions and public gatherings as part of a nationwide escalation of social anger."
+    },
+    {
+      "cluster_id": "subject-france-d4d3d1487a18",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-05",
+      "headline": "Workers and students stage nationwide protests and strikes across France",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/05/protesters-france-march-strikes-education-cost-of-living"
         },
         {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/frigos-pirates-dans-des-supermarches-de-nouvelles-attaques-en-europe-et-un-mystere-qui-demeure-IZKRSF4ETBDTLMBXQC6XVB3WXU/"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "it",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "euronews.com",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.5761,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "lyon",
+        "macron"
+      ],
+      "subject_newsroom_count": 23,
+      "summary": "Across France, workers and students joined nationwide demonstrations and strike action to protest rising living costs, with street protests taking place in multiple cities as part of coordinated national mobilisation."
+    },
+    {
+      "cluster_id": "subject-ceuta-52e9715f84cc",
+      "coherence": 0.5461476481069049,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-05",
+      "filled_from": "europe",
+      "headline": "Amnesty documents new alleged military abuses against migrants in Ceuta",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-11-04/amnistia-internacional-denuncia-nuevas-presuntas-agresiones-de-militares-a-migrantes-en-ceuta.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/tecnologia/supermercados-europa-bases-militares-eeuu-pasando-hackeos-frigorificos_1_13634024.html"
+          "url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-nuevas-agresiones-militares-migrantes-ceuta-apunta-inaccion-defensa_1_13638890.html"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cwy8lm1m59mvo?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/05/6aec4463e85ece1b2d8b4598.html"
         },
         {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/heres-what-to-know-about-another-cyberattack-on-european-supermarket-fridges"
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/amnistia-denuncia-nuevos-casos-malos-tratos-militares-personas-migrantes-ceuta_1_2239486.html"
         },
         {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/freezers-at-supermarkets-in-several-european-countries-hit-by-apparent-cyberattacks-ruining-food"
-        },
-        {
-          "language": "en",
-          "source": "tribune.com.pk",
-          "source_country": "pk",
-          "url": "https://tribune.com.pk/story/2638475/european-supermarkets-rush-to-patch-vulnerabilities-after-region-wide-fridge-hack"
-        },
-        {
-          "language": "en",
-          "source": "wral.com",
-          "source_country": "united-states",
-          "url": "https://www.wral.com/news/ap/b6abf-european-supermarket-fridges-got-hacked-again-heres-what-to-know/"
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/reportajes/20261105/amnistia-internacional-denuncia-nuevos-casos-torturas-malos-tratos-militares-migrantes-ceuta/1003744446748_0.html"
         }
       ],
       "mentioned_countries": [
-        "sw"
+        "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/world/freezers-at-supermarkets-in-several-european-countries-hit-by-apparent-cyberattacks-ruining-food",
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/2026-11-04/amnistia-internacional-denuncia-nuevas-presuntas-agresiones-de-militares-a-migrantes-en-ceuta.html",
       "rank": 5,
-      "reference_newsroom_count": 6,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "bbc.co.uk",
         "eldiario.es",
-        "lemonde.fr",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "pbs.org"
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "infolibre.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4364,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.4286,
-          "freshness": 0.7071,
+          "coherence": 0.5461,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7576
+          "prominence": 0.5556,
+          "source_reliability": 0.6522
         },
-        "total": 0.5861,
+        "total": 0.6505,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "europe",
+      "subject_label": "ceuta",
       "subject_names": [
-        "europa",
-        "europe",
-        "european"
+        "amnistia internacional",
+        "ceuta"
       ],
-      "subject_newsroom_count": 18,
-      "summary": "Multiple supermarkets in about ten European countries reported that freezers and refrigerators were disrupted by cyberattacks, causing food spoilage and operational problems; retailers and authorities scrambled to isolate affected systems, apply patches or disconnect equipment, and investigate the source while the motive and perpetrators remain unclear."
+      "subject_newsroom_count": 5,
+      "summary": "Amnesty International has documented additional alleged cases of abuse, including what it describes as mistreatment and possible torture, by Spanish military personnel against migrants in Ceuta, raising the total number of documented incidents to around 50 and criticizing the Ministry of Defence for inaction."
     }
   ],
-  "discarded_ingested": 7,
+  "discarded_ingested": 18,
   "discarded_kept": 5,
-  "generated_at": "2026-11-04T13:10:32.798877+00:00",
+  "generated_at": "2026-11-05T13:24:52.813645+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

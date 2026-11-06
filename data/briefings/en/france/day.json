@@ -1,202 +1,287 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-corse-7ef6003c91a9",
-      "coherence": 0.5602175963393565,
+      "cluster_id": "subject-europe-4be444ac4c2e",
+      "coherence": 0.4360997769033269,
       "consequence": 2,
+      "countries": [
+        "brazil",
+        "france",
+        "germany",
+        "rq",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-11-06",
+      "headline": "Bomb threats force diversions and disruptions to multiple European flights",
+      "independent_source_count": 11,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/economie/transports/une-quatrieme-vague-dalertes-a-la-bombe-sur-des-avions-en-europe-ce-vendredi-20261106_SDRSYSOKF5GCXI4JDMKEXSZ22I/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261106-vols-perturb%C3%A9s-par-des-alertes-%C3%A0-la-bombe-en-europe-ce-que-l-on-sait"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-06/como-una-oleada-de-falsas-amenazas-altera-el-transporte-aereo-en-europa.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261106/11677930/nueva-oleada-amenazas-bomba-europa-15-vuelos-afectados.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/continua-oleada-falsas-amenazas-bomba-aeropuertos-europeos_1_13643832.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/05/bomb-threats-disrupt-flights-across-europe-and-renew-hybrid-warfare-fears"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/europa/bombendrohungen-flugzeuge-100.html"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/bomb-threats-disrupt-several-flights-across-europe/a-79861216?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/06/novas-ameacas-de-bomba-afetam-voos-europa.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "metro.pr",
+          "source_country": "rq",
+          "url": "https://www.metro.pr/noticias/2026/11/05/nueva-ola-de-falsas-amenazas-de-bomba-afecta-vuelos-y-aeropuertos-en-europa/"
+        },
+        {
+          "language": "es",
+          "source": "telemundoatlanta.com",
+          "source_country": "united-states",
+          "url": "https://www.telemundoatlanta.com/2026/11/05/amenazas-de-bomba-obligan-desviar-varios-vuelos-en-europa-tras-falsas-alarmas-anteriores/"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/bomb-threats-disrupt-several-flights-across-europe/a-79861216?maca=en-rss-en-world-4025-rdf",
+      "rank": 1,
+      "reference_newsroom_count": 9,
+      "reference_newsrooms": [
+        "dw.com",
+        "eldiario.es",
+        "elpais.com",
+        "france24.com",
+        "globo.com",
+        "lavanguardia.com",
+        "liberation.fr",
+        "tagesschau.de",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4361,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7949
+        },
+        "total": 0.7056,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "europe",
+      "subject_names": [
+        "europa",
+        "europe",
+        "european",
+        "france",
+        "francia",
+        "lyon",
+        "macron",
+        "republique"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "A wave of bomb threats affected numerous passenger flights across Europe, prompting evacuations, diversions and security checks at airports in several countries; authorities determined many of the alerts to be false and investigations are under way while airlines and airports experienced delays and cancellations."
+    },
+    {
+      "cluster_id": "subject-france-d1963b71f4c7",
+      "coherence": 0.5318626504876551,
+      "consequence": 1,
+      "countries": [
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-06",
+      "headline": "Bus crashes into tree in eastern France, killing two and injuring 16",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-06/un-autobus-interurbano-se-estrella-contra-un-arbol-en-el-este-de-francia-y-causa-dos-muertos-y-numerosos-heridos.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/dos-muertos-heridos-accidente-autobus-francia-20261106113158-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261106/11677789/mueren-dos-menores-16-personas-resultan-heridas-accidente-autobus-francia.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/muertos-menor-edad-16-heridos-accidente-autobus-francia_1_13643553.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20261106/autobus-escolar-sale-carretera-estrella-arbol-francia-muertos/1003744448456_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/11/06/6aed954bfdddff65498b457f.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/dos-muertos-uno-ellos-menor-edad-16-heridos-salirse-carretera-un-autobus-francia_7058102_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/mundo/europa/20261106/autobus-escolar-sale-carretera-estrella-arbol-francia-muertos/1003744448456_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5319,
+          "corroboration": 0.5,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.75
+        },
+        "total": 0.6047,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "france",
+        "francia",
+        "lyon",
+        "macron",
+        "republique"
+      ],
+      "subject_newsroom_count": 23,
+      "summary": "A bus crashed into a tree in eastern France, killing two people (including a minor) and injuring 16 others. The vehicle was carrying school-aged passengers, and authorities reported multiple injured transported to medical facilities; investigations and emergency responses were underway."
+    },
+    {
+      "cluster_id": "subject-bouna-990168e502e6",
+      "coherence": null,
+      "consequence": 1,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-05",
-      "headline": "Hérault, Gard and Corsica placed on orange rain‑flood alert by Météo‑France",
-      "independent_source_count": 4,
+      "editorial_day": "2026-11-06",
+      "headline": "Paris proposes placing Zyed and Bouna's names at Place de la Nation",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/planete/article/2026/11/05/l-herault-et-le-gard-rejoignent-la-corse-dans-une-vigilance-orange-pluie-inondation-etendue-durant-la-journee-de-jeudi_6806834_3244.html"
+          "url": "https://www.lemonde.fr/societe/article/2026/11/06/a-paris-emmanuel-gregoire-propose-que-les-noms-de-zyed-et-bouna-morts-en-2005-a-clichy-sous-bois-figurent-place-de-la-nation_6807786_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/politique/des-milliers-de-personnes-se-souviendront-de-leur-histoire-emmanuel-gregoire-propose-que-les-noms-de-zyed-et-bouna-figurent-place-de-la-nation-20261106"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/environnement/climat/lherault-le-gard-et-la-corse-en-vigilance-orange-pluie-inondation-20261105_KDSKIO5WGFASNOLSRHU7OA3MTE/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/planete/pluie-et-inondation-deux-departements-du-sud-et-la-corse-places-en-vigilance-orange-20261105"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/environnement/meteo/l-herault-et-le-gard-rejoignent-la-corse-en-vigilance-orange-pluie-inondation-annonce-meteo-france_8268779.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.liberation.fr/idees-et-debats/tribunes/a-zyed-et-bouna-la-place-de-la-nation-reconnaissante-20261106_5UC4L4WDWRBZRIEDANORW6FYEE/"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/environnement/meteo/l-herault-et-le-gard-rejoignent-la-corse-en-vigilance-orange-pluie-inondation-annonce-meteo-france_8268779.html#xtor=RSS-3-[lestitres]",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5602,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6122,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "corse",
-      "subject_names": [
-        "corse",
-        "gard"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Météo‑France has placed the Hérault and Gard departments and parts of Corsica under an orange-level vigilance for heavy rain and flooding; authorities reported multiple evacuations in southern Corsica as the alerts were issued."
-    },
-    {
-      "cluster_id": "subject-arkea-41f46871b55c",
-      "coherence": 0.423239828247415,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-05",
-      "headline": "Crédit Mutuel Arkéa confirms fraudulent transfers after cyberattack",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/economie/credit-mutuel-arkea-la-banque-reconnait-des-operations-frauduleuses-apres-une-cyberattaque-20261104"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/des-millions-d-euros-voles-une-attaque-inedite-et-une-enquete-ouverte-ce-que-l-on-sait-du-piratage-du-credit-mutuel-arkea_8269124.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-france-la-banque-cr%C3%A9dit-mutuel-ark%C3%A9a-victime-d-une-cyberattaque"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261105-france-cyberattaque-du-groupe-cr%C3%A9dit-mutuel-ark%C3%A9a-une-enqu%C3%AAte-ouverte"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/cyberattaque-au-credit-mutuel-arkea-ils-ont-attaque-un-sous-traitant-explique-un-specialiste-1085005"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "la-croix.com",
-      "outbound_url": "https://www.la-croix.com/economie/credit-mutuel-arkea-la-banque-reconnait-des-operations-frauduleuses-apres-une-cyberattaque-20261104",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "radiofrance.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4232,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5984,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "arkea",
-      "subject_names": [
-        "arkea",
-        "credit mutuel"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Crédit Mutuel Arkéa said it was hit by a cyberattack that led to fraudulent operations and the theft of millions of euros. Authorities have opened an investigation, and investigators and specialists say the attackers targeted a subcontractor, prompting ongoing probes into how the intrusion occurred and the extent of the financial losses."
-    },
-    {
-      "cluster_id": "subject-france-89323f195618",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-05",
-      "headline": "Nationwide protests and strikes take place across France on November 5, 2026",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/societe/live-greve-jeudi-5-novembre-transports-sncf-ratp-ecole-manifestations-france-aujourdhui-20261105"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261105-en-direct-gr%C3%A8ve-du-5-novembre-la-col%C3%A8re-sociale-monte-d-un-cran-des-manifestations-attendues-partout-en-france"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20261105.OBS119867/en-direct-greve-du-5-novembre-marseille-lyon-plusieurs-corteges-s-elancent-un-peu-partout-en-france.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/france/20261105-en-direct-gr%C3%A8ve-du-5-novembre-la-col%C3%A8re-sociale-monte-d-un-cran-des-manifestations-attendues-partout-en-france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/idees-et-debats/tribunes/a-zyed-et-bouna-la-place-de-la-nation-reconnaissante-20261106_5UC4L4WDWRBZRIEDANORW6FYEE/",
       "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "la-croix.com",
-        "nouvelobs.com",
-        "rfi.fr"
+        "lefigaro.fr",
+        "lemonde.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
@@ -205,173 +290,263 @@
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 0.3333,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5848,
+        "total": 0.5114,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "france",
+      "subject_label": "bouna",
       "subject_names": [
-        "france",
-        "francia",
-        "lyon",
-        "macron"
+        "bouna",
+        "zyed"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "On November 5, 2026, coordinated strikes and demonstrations occurred across multiple French cities, including Paris, Lyon and Marseille, with numerous processions and public gatherings as part of a nationwide escalation of social anger."
+      "subject_newsroom_count": 3,
+      "summary": "Paris city official Emmanuel Grégoire proposed that the names of Zyed and Bouna, who died in 2005 in Clichy-sous-Bois, be inscribed at Place de la Nation; the proposal frames this as a gesture of public recognition and remembrance for their deaths."
     },
     {
-      "cluster_id": "subject-france-d4d3d1487a18",
-      "coherence": null,
+      "cluster_id": "subject-russell-brand-efa39ea37389",
+      "coherence": 0.4361638419304461,
       "consequence": 2,
       "countries": [
-        "it",
-        "united-kingdom"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-05",
-      "headline": "Workers and students stage nationwide protests and strikes across France",
-      "independent_source_count": 2,
-      "members": [
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/nov/05/protesters-france-march-strikes-education-cost-of-living"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "it",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/11/05/france-workers-and-students-unite-in-nationwide-protests-over-living-costs",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "euronews.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
-        },
-        "total": 0.5761,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
         "france",
-        "francia",
-        "lyon",
-        "macron"
+        "gt",
+        "mx",
+        "spain",
+        "united-states"
       ],
-      "subject_newsroom_count": 23,
-      "summary": "Across France, workers and students joined nationwide demonstrations and strike action to protest rising living costs, with street protests taking place in multiple cities as part of coordinated national mobilisation."
-    },
-    {
-      "cluster_id": "subject-ceuta-52e9715f84cc",
-      "coherence": 0.5461476481069049,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-05",
+      "country_count": 5,
+      "editorial_day": "2026-11-06",
       "filled_from": "europe",
-      "headline": "Amnesty documents new alleged military abuses against migrants in Ceuta",
-      "independent_source_count": 5,
+      "headline": "Russell Brand found guilty of rape and multiple sexual assaults",
+      "independent_source_count": 7,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/05/l-ancien-comedien-britannique-russell-brand-juge-coupable-d-un-viol-et-d-agressions-sexuelles_6807325_3210.html"
+        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-11-04/amnistia-internacional-denuncia-nuevas-presuntas-agresiones-de-militares-a-migrantes-en-ceuta.html"
+          "url": "https://elpais.com/sociedad/2026-11-05/un-jurado-declara-al-actor-russell-brand-culpable-de-una-violacion-y-tres-agresiones-sexuales.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/gente/russell-brand-destino-aguarda-tras-declarado-culpable-20261106124148-nt.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/desalambre/amnistia-internacional-documenta-nuevas-agresiones-militares-migrantes-ceuta-apunta-inaccion-defensa_1_13638890.html"
+          "url": "https://www.eldiario.es/cultura/cine/actor-russell-brand-declarado-culpable-violacion-delitos-sexuales_1_13641915.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/05/6aec4463e85ece1b2d8b4598.html"
+          "source": "prensalibre.com",
+          "source_country": "gt",
+          "url": "https://www.prensalibre.com/vida/escenario/russell-brand-expareja-de-katy-perry-es-declarado-culpable-de-violacion-y-tres-cargos-de-agresion-sexual-cuando-recibira-su-sentencia/"
+        },
+        {
+          "language": "tur",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://tr.euronews.com/2026/11/05/ingiliz-komedyen-russell-brand-hakkinda-tecavuz-ve-cinsel-saldiri-suclarindan-mahkumiyet-k"
+        },
+        {
+          "language": "pt",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://pt.euronews.com/2026/11/05/comediante-russell-brand-condenado-por-violacao-e-tres-agressoes-sexuais-no-reino-unido"
         },
         {
           "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/amnistia-denuncia-nuevos-casos-malos-tratos-militares-personas-migrantes-ceuta_1_2239486.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/reportajes/20261105/amnistia-internacional-denuncia-nuevos-casos-torturas-malos-tratos-militares-migrantes-ceuta/1003744446748_0.html"
+          "source": "tribuna.com.mx",
+          "source_country": "mx",
+          "url": "https://tribuna.com.mx/espectaculos/2026/11/05/russell-brand-a-prision-el-exesposo-de-katy-perry-es-declarado-culpable-de-violacion-y-agresion-sexual_711267/"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "united-kingdom"
       ],
-      "origin_country": "spain",
+      "origin_country": "france",
       "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/2026-11-04/amnistia-internacional-denuncia-nuevas-presuntas-agresiones-de-militares-a-migrantes-en-ceuta.html",
-      "rank": 5,
+      "outbound_url": "https://elpais.com/sociedad/2026-11-05/un-jurado-declara-al-actor-russell-brand-culpable-de-una-violacion-y-tres-agresiones-sexuales.html",
+      "rank": 4,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
+        "abc.es",
         "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
         "elpais.com",
-        "infolibre.es"
+        "euronews.com",
+        "lemonde.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5461,
-          "corroboration": 0.3333,
+          "coherence": 0.4362,
+          "corroboration": 0.7143,
           "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.6364,
+          "source_reliability": 0.7333
         },
-        "total": 0.6505,
+        "total": 0.6085,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "russell brand",
       "subject_names": [
-        "amnistia internacional",
-        "ceuta"
+        "reino unido",
+        "russell brand"
       ],
-      "subject_newsroom_count": 5,
-      "summary": "Amnesty International has documented additional alleged cases of abuse, including what it describes as mistreatment and possible torture, by Spanish military personnel against migrants in Ceuta, raising the total number of documented incidents to around 50 and criticizing the Ministry of Defence for inaction."
+      "subject_newsroom_count": 10,
+      "summary": "A UK jury has convicted former comedian and actor Russell Brand of rape and three counts of sexual assault. The convictions stem from allegations by multiple women; reports indicate he faces sentencing but do not give a date or length of sentence. Coverage identifies Brand as a high-profile figure and former partner of Katy Perry."
+    },
+    {
+      "cluster_id": "subject-congo-7d1371581c57",
+      "coherence": 0.8196319538121941,
+      "consequence": 2,
+      "countries": [
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-06",
+      "filled_from": "europe",
+      "headline": "British doctor infected with Ebola in DR Congo evacuated to and treated in London",
+      "independent_source_count": 14,
+      "members": [
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/evacuado-reino-unido-un-medico-britanico-contagiado-ebola-durante-respuesta-epidemia-rd-congo_7058018_0.html"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows"
+        },
+        {
+          "language": "en",
+          "source": "hamhigh.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.hamhigh.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "wiltshiretimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.wiltshiretimes.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "burytimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.burytimes.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "midweekherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.midweekherald.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "redditchadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.redditchadvertiser.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "chesterstandard.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.chesterstandard.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "impartialreporter.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.impartialreporter.com/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "gazetteherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.gazetteherald.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "stourbridgenews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.stourbridgenews.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "dudleynews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.dudleynews.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "sloughobserver.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.sloughobserver.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        },
+        {
+          "language": "en",
+          "source": "northwichguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.northwichguardian.co.uk/news/national/26704133.british-doctor-infected-ebola-congo-treated-london-hospital/"
+        }
+      ],
+      "mentioned_countries": [
+        "united-kingdom"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/world/2026/nov/04/british-healthcare-worker-ebola-evacuated-drc-to-uk-document-shows",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "theguardian.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.8196,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.7778,
+          "source_reliability": 0.7895
+        },
+        "total": 0.5958,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "congo",
+      "subject_names": [
+        "congo"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "A British doctor who contracted Ebola while working in the Democratic Republic of Congo has been evacuated to the United Kingdom and is receiving treatment in a London hospital. The evacuation and hospital care were carried out after the doctor became infected during the response effort in Congo."
     }
   ],
-  "discarded_ingested": 18,
+  "discarded_ingested": 28,
   "discarded_kept": 5,
-  "generated_at": "2026-11-05T13:24:52.813645+00:00",
+  "generated_at": "2026-11-06T13:07:36.541314+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

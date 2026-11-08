@@ -1,432 +1,503 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-urda-e7856a8d3a02",
-      "coherence": 0.3958144309549412,
-      "consequence": 3,
+      "cluster_id": "subject-zaragoza-61e645e844f9",
+      "coherence": 0.49811772975247626,
+      "consequence": 1,
       "countries": [
-        "france",
         "spain",
-        "united-kingdom"
+        "united-states"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-11-06",
-      "headline": "La Fiscalía Europea inicia una investigación por presunta fraude tras el accidente ferroviario de Urda",
-      "independent_source_count": 5,
+      "country_count": 2,
+      "editorial_day": "2026-11-08",
+      "headline": "Fallece un soldado durante un ejercicio de instrucción en San Gregorio",
+      "independent_source_count": 6,
       "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/06/catastrophe-ferroviaire-en-espagne-le-parquet-europeen-ouvre-une-enquete-quant-a-d-eventuelles-fraudes-sur-la-ligne-accidentee-a-urda_6807780_3210.html"
-        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-11-06/la-fiscalia-europea-investiga-un-presunto-fraude-en-las-obras-de-la-alta-velocidad-tras-el-accidente-de-urda.html"
+          "url": "https://elpais.com/espana/2026-11-08/muere-un-soldado-durante-unos-ejercicios-en-el-campo-de-maniobras-de-san-gregorio.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/aragon/muere-militar-ejercicio-instruccion-campo-maniobras-san-20261108092912-nt.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/06/6aed98e121efa0477c8b457d.html"
+          "url": "https://www.elmundo.es/espana/2026/11/08/6af038e8e85ececa1c8b456f.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/observatorio-defensa/20261108/muere-soldado-actividad-instruccion-centro-adiestramiento-san-gregorio-zaragoza/1003744450501_0.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-fiscalia-europea-abre-investigacion-posible-fraude-fondos-comunitarios-ave-accidente-urda-20261106102906.html"
+          "url": "https://www.europapress.es/aragon/noticia-zaragoza-fallece-soldado-accidente-centro-adiestramiento-san-gregorio-20261108101342.html"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6x2wwnz5445o?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://es.euronews.com/2026/11/08/muere-militar-ejercito-tierra-accidente-instruccion-zaragoza"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/2026-11-06/la-fiscalia-europea-investiga-un-presunto-fraude-en-las-obras-de-la-alta-velocidad-tras-el-accidente-de-urda.html",
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/observatorio-defensa/20261108/muere-soldado-actividad-instruccion-centro-adiestramiento-san-gregorio-zaragoza/1003744450501_0.html",
       "rank": 1,
-      "reference_newsroom_count": 5,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "abc.es",
+        "elespanol.com",
         "elmundo.es",
         "elpais.com",
-        "europapress.es",
-        "lemonde.fr"
+        "euronews.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.3958,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3846,
-          "freshness": 0.7071,
+          "coherence": 0.4981,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 1.0,
+          "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.6739,
+        "total": 0.5786,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "urda",
+      "subject_label": "zaragoza",
       "subject_names": [
-        "adif",
-        "fiscalia europea",
-        "urda"
+        "ejercito",
+        "san gregorio",
+        "zaragoza"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "La Fiscalía Europea ha abierto una investigación sobre posibles fraudes relacionados con la línea donde ocurrió el accidente ferroviario de Urda; la operación implica solicitudes de documentación a Adif y la colaboración de unidades policiales como la UCO mientras se analizan las obras de alta velocidad vinculadas al siniestro."
+      "subject_newsroom_count": 7,
+      "summary": "Un soldado del Ejército de Tierra murió durante una actividad de instrucción en el Centro de Adiestramiento/Campo de Maniobras de San Gregorio, en Zaragoza; los hechos ocurrieron mientras se realizaba un ejercicio militar y fueron confirmados por las informaciones sobre el accidente."
     },
     {
-      "cluster_id": "subject-ukraine-3feafdfc94ef",
-      "coherence": 0.4696178701550241,
+      "cluster_id": "subject-pologne-51282a062e3f",
+      "coherence": 0.5025951037754156,
       "consequence": 3,
       "countries": [
-        "france",
-        "spain"
+        "france"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-07",
+      "country_count": 1,
+      "editorial_day": "2026-11-08",
       "filled_from": "europe",
-      "headline": "Rusia realiza fuertes ataques en Kiev que dañan un puente y centros energéticos",
-      "independent_source_count": 4,
+      "headline": "Un tirador mata a seis personas en la plaza principal de Cracovia",
+      "independent_source_count": 11,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/07/en-pologne-au-moins-six-morts-dans-une-attaque-par-arme-a-feu-a-cracovie-le-tireur-interpelle_6808293_3211.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/pologne-2-morts-et-10-blesses-a-cracovie-donald-tusk-evoque-une-fusillade-tragique-le-tireur-a-ete-interpelle-20261107"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/pologne-des-corps-retrouves-chez-le-tireur-fascination-pour-lextreme-droite-ce-que-lon-sait-apres-lattentat-mortel-de-cracovie-20261108_X5EYERZROJAVTG4PWU44XJA5JI/"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/pologne-5-morts-et-une-dizaine-de-blesses-dans-une-fusillade-a-cracovie-20261107_SOXK4M35TFC5HCTPTS3UN5KWBM/"
+        },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1718-point-conflit-ukrainien-poutine-aujourdhui-20261107"
+          "url": "https://www.la-croix.com/international/pologne-une-fusillade-a-cracovie-fait-cinq-morts-le-tireur-interpelle-20261107"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/081126/pologne-un-tireur-fascine-par-l-extreme-droite-abat-six-personnes-cracovie"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/071126/pologne-un-tireur-abat-six-personnes-dans-le-centre-touristique-de-cracovie"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/en-pologne-une-fusillade-a-cracovie-fait-cinq-morts-et-plusieurs-blesses-selon-le-porte-parole-de-la-police_8272454.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261107-frappes-russes-%C3%A0-kiev-et-sa-r%C3%A9gion-un-pont-et-des-sites-%C3%A9nerg%C3%A9tiques-touch%C3%A9s"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pologne-un-tireur-fascin%C3%A9-par-l-extr%C3%AAme-droite-abat-six-personnes-%C3%A0-cracovie-1"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261107-ukraine-un-pont-et-des-infrastructures-touch%C3%A9es-par-des-frappes-russes-%C3%A0-kiev-et-sa-r%C3%A9gion"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ataque-masivo-rusia-kiev-contra-instalaciones-energeticas-misiles-balisticos-danan-un-puente-centrales-electricas_7058448_0.html"
+          "url": "https://www.rfi.fr/fr/europe/20261107-pologne-fusillade-dans-le-centre-de-cracovie-le-tireur-interpell%C3%A9"
         },
         {
           "language": "fr",
-          "source": "vosgesmatin.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.vosgesmatin.fr/defense-guerre-conflit/2026/11/07/des-frappes-russes-touchent-des-infrastructures-energetiques-et-perturbent-le-chauffage-a-kiev"
+          "url": "https://www.nouvelobs.com/monde/20261108.OBS119941/pologne-un-tireur-fascine-par-l-extreme-droite-tue-six-passants-sur-la-grande-place-de-cracovie.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/societe/justice/pologne-six-morts-des-corps-retrouves-chez-le-tireur-fascination-pour-lextreme-droite-ce-que-lon-7XSPS4S6GJD6VHUROGSSFVUCDY/"
+        },
+        {
+          "language": "fr",
+          "source": "corsematin.com",
+          "source_country": "france",
+          "url": "https://www.corsematin.com/article/francemonde/88296095674667/pologne-une-fusillade-a-cracovie-fait-cinq-morts"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "france",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/europe/20261107-pologne-fusillade-dans-le-centre-de-cracovie-le-tireur-interpell%C3%A9",
+      "rank": 2,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5026,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.8261
+        },
+        "total": 0.7003,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "pologne",
+      "subject_names": [
+        "cracovia",
+        "cracovie",
+        "krakow",
+        "pologne",
+        "polonia"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Un atacante abrió fuego en el centro turístico de Cracovia, matando a seis personas e hiriendo a varios más; el agresor fue neutralizado o detenido y las autoridades han iniciado una investigación por terrorismo tras hallar también cuerpos en su domicilio y constatar su fascinación por ideologías de extrema derecha."
+    },
+    {
+      "cluster_id": "subject-ukraine-277b59e4b753",
+      "coherence": 0.45791928183393704,
+      "consequence": 3,
+      "countries": [
+        "germany",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-11-08",
+      "filled_from": "europe",
+      "headline": "Rusia lanza ataques con misiles y drones que hieren a nueve y dañan la red eléctrica ucraniana",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/ukraine-russia-hits-kyiv-with-airstrikes-ahead-of-trilateral-talks/a-79883851?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "netscape.com",
+          "source_country": "united-states",
+          "url": "https://isp.netscape.com:443/news/world/story/0001/20261108/b042adf1f95848f5d233da866a72e312"
+        },
+        {
+          "language": "en",
+          "source": "lancasteronline.com",
+          "source_country": "united-states",
+          "url": "https://lancasteronline.com/news/world/drone-and-missile-attacks-wound-9-in-ukraine-as-country-prepares-for-talks-with-russia/article_d2e10b78-8bde-5c9b-a300-a6115a391024.html"
+        },
+        {
+          "language": "en",
+          "source": "adn.com",
+          "source_country": "united-states",
+          "url": "https://www.adn.com/nation-world/2026/11/07/russian-drone-and-missile-attacks-strike-ukraine-ahead-of-peace-talks-with-us/"
         }
       ],
       "mentioned_countries": [
         "up",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "france24.com",
-      "outbound_url": "https://www.france24.com/fr/europe/20261107-ukraine-un-pont-et-des-infrastructures-touch%C3%A9es-par-des-frappes-russes-%C3%A0-kiev-et-sa-r%C3%A9gion",
-      "rank": 2,
-      "reference_newsroom_count": 3,
+      "origin_country": "germany",
+      "outbound_source": "dw.com",
+      "outbound_url": "https://www.dw.com/en/ukraine-russia-hits-kyiv-with-airstrikes-ahead-of-trilateral-talks/a-79883851?maca=en-rss-en-world-4025-rdf",
+      "rank": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "20minutos.es",
-        "france24.com",
-        "la-croix.com"
+        "bbc.co.uk",
+        "dw.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4696,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4579,
+          "corroboration": 0.6,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6364
+          "prominence": 0.5556,
+          "source_reliability": 0.6
         },
-        "total": 0.6286,
+        "total": 0.6196,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "ukraine",
       "subject_names": [
         "kiev",
+        "kyiv",
+        "russia",
+        "russian",
         "ukraine"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "Las fuentes coinciden en que ataques rusos en Kiev y su región alcanzaron instalaciones energéticas y afectaron al menos un puente; las incursiones provocaron daños en infraestructuras de suministro y alteraron el servicio de calefacción en la ciudad."
+      "subject_newsroom_count": 18,
+      "summary": "Ataques con misiles y drones de Rusia alcanzaron áreas de Ucrania y causaron al menos nueve heridos y daños en la infraestructura eléctrica en los días previos a las conversaciones trilaterales entre Ucrania, Rusia y Estados Unidos; los ataques incluyeron bombardeos contra Kyiv y dejaron afectaciones en el suministro eléctrico según los informes."
     },
     {
-      "cluster_id": "subject-russell-brand-eb92d9a560a4",
-      "coherence": 0.5503426645870305,
-      "consequence": 3,
+      "cluster_id": "subject-trump-ebcbe934d50f",
+      "coherence": 0.4279288568913838,
+      "consequence": 2,
       "countries": [
-        "it",
+        "brazil",
+        "rs",
+        "united-kingdom",
         "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-06",
+      "country_count": 4,
+      "editorial_day": "2026-11-08",
       "filled_from": "europe",
-      "headline": "Russell Brand declarado culpable de violación y agresiones sexuales",
+      "headline": "Melania Trump recibe en la Casa Blanca a enviados de Rusia y Ucrania para promover una tregua",
       "independent_source_count": 4,
       "members": [
         {
           "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/11/05/british-comedian-russell-brand-found-guilty-of-rape-and-three-sexual-assaults-by-london-ju"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/11/05/nx-s1-6030720/russell-brand-rape-sexual-assault-prison"
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o?at_medium=RSS&at_campaign=rss"
         },
         {
           "language": "en",
           "source": "pbs.org",
           "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russell-brand-convicted-of-rape-and-sexual-assault"
+          "url": "https://www.pbs.org/newshour/politics/watch-first-lady-melania-trump-hosted-russian-and-ukrainian-officials-trump-met-with-putins-envoy"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/05/melania-trump-recebe-representantes-da-ucrania-e-russia-na-casa-branca-em-meio-a-negociacoes-de-paz.ghtml"
         },
         {
           "language": "en",
-          "source": "ijpr.org",
-          "source_country": "united-states",
-          "url": "https://www.ijpr.org/npr-news/2026-11-05/from-comedian-to-convicted-rapist-what-to-know-about-russell-brand"
+          "source": "russiaherald.com",
+          "source_country": "rs",
+          "url": "http://www.russiaherald.com/news/279418990/chosen-humanity-over-war-melania-trump-hosts-russian-ukrainian-envoys-at-white-house-after-mediating-oleshky-ceasefire"
         }
       ],
       "mentioned_countries": [
-        "united-kingdom"
+        "up"
       ],
-      "origin_country": "it",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/world/russell-brand-convicted-of-rape-and-sexual-assault",
-      "rank": 3,
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/05/melania-trump-recebe-representantes-da-ucrania-e-russia-na-casa-branca-em-meio-a-negociacoes-de-paz.ghtml",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "euronews.com",
-        "npr.org",
+        "bbc.co.uk",
+        "globo.com",
         "pbs.org"
       ],
       "score": {
         "components": {
-          "coherence": 0.5503,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.6003,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "russell brand",
-      "subject_names": [
-        "russell brand"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Un jurado en Londres declaró culpable al comediante británico Russell Brand de violación y de tres agresiones sexuales; los artículos coinciden en que el fallo convierte su carrera pública en un proceso criminalizado y detallan que las condenas cubren múltiples víctimas y años de conducta denunciada."
-    },
-    {
-      "cluster_id": "subject-amsterdam-11a89654149a",
-      "coherence": 0.503203334693758,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "germany",
-        "it",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 6,
-      "editorial_day": "2026-11-07",
-      "filled_from": "europe",
-      "headline": "Más de 100 manifestantes irrumpen en la obra de un centro de datos de Microsoft en Ámsterdam",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261107-des-militants-occupent-le-chantier-d-un-centre-de-donn%C3%A9es-microsoft-%C3%A0-amsterdam"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/nov/06/activists-break-into-building-site-of-microsoft-datacentre-in-amsterdam"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/video/2026/11/06/netherlands-protesters-storm-amsterdam-data-centre-construction-site"
-        },
-        {
-          "language": "en",
-          "source": "clickondetroit.com",
-          "source_country": "united-states",
-          "url": "https://www.clickondetroit.com/news/world/2026/11/06/protesters-break-into-microsoft-data-center-site-in-amsterdam-as-europes-backlash-spreads/"
-        },
-        {
-          "language": "en",
-          "source": "gizmodo.com",
-          "source_country": "united-states",
-          "url": "https://gizmodo.com/more-than-100-protesters-storm-a-microsoft-data-center-site-in-amsterdam-2000836356"
-        },
-        {
-          "language": "en",
-          "source": "ksat.com",
-          "source_country": "united-states",
-          "url": "https://www.ksat.com/news/world/2026/11/06/protesters-break-into-microsoft-data-center-site-in-amsterdam-as-europes-backlash-spreads/"
-        },
-        {
-          "language": "en",
-          "source": "2news.com",
-          "source_country": "unknown",
-          "url": "https://www.2news.com/news/national/protesters-break-into-microsoft-data-center-site-in-amsterdam-as-europe-s-backlash-spreads/article_7e08bd26-56d8-5908-b8a6-dd26f0c1c3df.html"
-        },
-        {
-          "language": "de",
-          "source": "finanznachrichten.de",
-          "source_country": "germany",
-          "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70063455-protest-gegen-microsoft-rechenzentrum-in-amsterdam-viele-festnahmen-016.htm"
-        },
-        {
-          "language": "de",
-          "source": "finanzen.net",
-          "source_country": "germany",
-          "url": "https://www.finanzen.net/nachricht/aktien/protest-gegen-microsoft-rechenzentrum-in-amsterdam-viele-festnahmen-16045346"
-        }
-      ],
-      "mentioned_countries": [
-        "nl",
-        "it"
-      ],
-      "origin_country": "france",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/video/2026/11/06/netherlands-protesters-storm-amsterdam-data-centre-construction-site",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "euronews.com",
-        "france24.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5032,
-          "corroboration": 0.75,
+          "coherence": 0.4279,
+          "corroboration": 0.6667,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.7241
+          "prominence": 0.5,
+          "source_reliability": 0.5789
         },
-        "total": 0.5945,
+        "total": 0.5641,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "amsterdam",
+      "subject_label": "trump",
       "subject_names": [
-        "amsterdam"
+        "casa blanca",
+        "donald trump",
+        "kiev",
+        "kyiv",
+        "maga",
+        "melania trump",
+        "russia",
+        "russian",
+        "stephen miller",
+        "trump",
+        "ukraine"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Más de un centenar de manifestantes entraron en el recinto de construcción de un nuevo centro de datos de Microsoft en Ámsterdam para protestar contra el proyecto; la acción implicó la ocupación del lugar por parte de los activistas y se enmarca en una oleada de resistencia en Europa contra este tipo de instalaciones."
+      "subject_newsroom_count": 29,
+      "summary": "Melania Trump reunió en la Casa Blanca a representantes de Rusia y Ucrania, incluyendo al enviado de Putin, y pidió una tregua duradera tras mediar en un alto el fuego en Oleshky; los encuentros formaron parte de esfuerzos por avanzar en negociaciones de paz."
     },
     {
-      "cluster_id": "subject-belgica-f64c88817269",
-      "coherence": 0.4752382197108088,
-      "consequence": 3,
+      "cluster_id": "subject-bourget-f2b73a10d7ee",
+      "coherence": 0.39025132452169853,
+      "consequence": 2,
       "countries": [
-        "po",
-        "spain",
-        "sy"
+        "france"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-11-06",
+      "country_count": 1,
+      "editorial_day": "2026-11-08",
       "filled_from": "europe",
-      "headline": "Bélgica autoriza registros domiciliarios para localizar a migrantes irregulares",
-      "independent_source_count": 4,
+      "headline": "Jean‑Luc Mélenchon presenta su programa y convoca a la ruptura en Le Bourget",
+      "independent_source_count": 6,
       "members": [
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/belgica-permitira-redadas-domiciliarias-migrantes-indocumentados-20261106132634-nt.html"
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/elections/presidentielle/reportage-nous-allons-gagner-au-bourget-jean-luc-melenchon-devoile-son-programme-pour-2027-et-poursuit-sa-demonstration-de-force_8272679.html#xtor=RSS-3-[lestitres]"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261106/11677958/belgica-avala-registrar-casas-presuntos-migrantes-irregulares.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pr%C3%A9sidentielle-il-faut-tout-changer-lance-m%C3%A9lenchon-%C3%A0-son-meeting-au-bourget"
         },
         {
-          "language": "pt",
-          "source": "acorianooriental.pt",
-          "source_country": "po",
-          "url": "https://www.acorianooriental.pt/noticia/belgica-autoriza-policia-a-entrar-em-casas-para-deter-imigrantes-ilegais-381837"
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261108-pr%C3%A9sidentielle-en-france-jean-luc-m%C3%A9lenchon-pr%C3%A9sente-son-programme-lors-d-un-grand-meeting-au-bourget"
         },
         {
-          "language": "es",
-          "source": "sana.sy",
-          "source_country": "sy",
-          "url": "https://sana.sy/es/world/2341823/"
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261107.OBS119939/ici-est-la-force-au-bourget-melenchon-met-sa-nouvelle-france-au-programme.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/economie/presidentielle-2027-au-bourget-jean-luc-melenchon-mise-sur-la-rupture-pour-conquerir-lelysee-LOUEYCV6DVAEZOJYYRZHQ5V3CI/"
+        },
+        {
+          "language": "fr",
+          "source": "vosgesmatin.fr",
+          "source_country": "france",
+          "url": "https://www.vosgesmatin.fr/elections/2026/11/07/il-faut-tout-changer-au-bourget-jean-luc-melenchon-brandit-son-programme"
         }
       ],
       "mentioned_countries": [
-        "be"
+        "france"
       ],
-      "origin_country": "po",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/belgica-permitira-redadas-domiciliarias-migrantes-indocumentados-20261106132634-nt.html",
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/politique/20261107.OBS119939/ici-est-la-force-au-bourget-melenchon-met-sa-nouvelle-france-au-programme.html",
       "rank": 5,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "abc.es",
-        "lavanguardia.com"
+        "france24.com",
+        "francetvinfo.fr",
+        "lexpress.fr",
+        "nouvelobs.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4752,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
+          "coherence": 0.3903,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 1.0,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5556
+          "prominence": 0.6,
+          "source_reliability": 0.68
         },
-        "total": 0.5827,
+        "total": 0.5611,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "belgica",
+      "subject_label": "bourget",
       "subject_names": [
-        "belgica"
+        "bourget",
+        "edouard philippe",
+        "france",
+        "french",
+        "goncourt",
+        "jean-luc melenchon",
+        "macron",
+        "melenchon",
+        "paris"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "El gobierno belga ha aprobado una medida que permite a la policía entrar en domicilios para identificar y detener a personas sospechosas de ser migrantes irregulares; las autoridades han respaldado operativos de registro en viviendas con el objetivo de localizar a inmigrantes indocumentados."
+      "subject_newsroom_count": 9,
+      "summary": "En un mitin en Le Bourget, Jean‑Luc Mélenchon expuso su programa para la campaña presidencial de 2027 y llamó a una ruptura política con el lema de cambio total, buscando consolidar apoyo y mostrar fuerza ante sus simpatizantes."
     }
   ],
   "discarded_ingested": 14,
   "discarded_kept": 5,
-  "generated_at": "2026-11-07T11:51:57.563976+00:00",
+  "generated_at": "2026-11-08T12:04:51.525393+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

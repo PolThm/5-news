@@ -1,0 +1,28 @@
+{
+  "articles_collected": 6620,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 5780,
+  "clusters_selected": 12,
+  "completed": true,
+  "cycle_id": "2026-11-09T14-10-33Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261109134500.translation.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "gateway",
+      "detail": "subject-tiktok-c512f77cf906: HTTP 400"
+    }
+  ],
+  "groups_after_dedupe": 5927,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-11-09T14:10:33.712804+00:00",
+  "summarize_batches": {}
+}

@@ -1,53 +1,167 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-zaragoza-61e645e844f9",
-      "coherence": 0.49811772975247626,
-      "consequence": 1,
+      "cluster_id": "subject-senegal-8ed37686e823",
+      "coherence": 0.5527190750920159,
+      "consequence": 3,
       "countries": [
-        "spain",
+        "as",
+        "germany",
+        "india",
+        "it",
+        "united-kingdom",
         "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-08",
-      "headline": "A soldier dies during a training exercise at San Gregorio training center",
-      "independent_source_count": 6,
+      "country_count": 6,
+      "editorial_day": "2026-11-09",
+      "headline": "Migrant boat sinks off Senegal coast, dozens reported dead",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cv2d6dpge65go?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/ausland/afrika/viele-tote-bootsunglueck-senegal-100.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/11/08/at-least-21-dead-after-migrant-boat-capsizes-off-senegal-authorities-say"
+        },
+        {
+          "language": "en",
+          "source": "abcnews.com",
+          "source_country": "united-states",
+          "url": "https://abcnews.com/International/wireStory/death-toll-rises-39-after-migrant-boat-capsizes-137968623"
+        },
+        {
+          "language": "en",
+          "source": "hindustantimes.com",
+          "source_country": "india",
+          "url": "https://www.hindustantimes.com/world-news/us-news/migrant-boat-sinks-off-senegal-34-killed-authorities-101794164987255.html"
+        },
+        {
+          "language": "en",
+          "source": "yasstribune.com.au",
+          "source_country": "as",
+          "url": "https://www.yasstribune.com.au/story/9387857/twenty-one-die-as-migrant-boat-sinks-off-senegal-coast/"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/many-killed-after-migrant-boat-sinks-off-senegal/a-79890883"
+        },
+        {
+          "language": "en",
+          "source": "bendigoadvertiser.com.au",
+          "source_country": "as",
+          "url": "https://www.bendigoadvertiser.com.au/story/9387857/twenty-one-die-as-migrant-boat-sinks-off-senegal-coast/"
+        },
+        {
+          "language": "en",
+          "source": "goulburnpost.com.au",
+          "source_country": "as",
+          "url": "https://www.goulburnpost.com.au/story/9387857/twenty-one-die-as-migrant-boat-sinks-off-senegal-coast/"
+        }
+      ],
+      "mentioned_countries": [
+        "sg",
+        "spain"
+      ],
+      "origin_country": "as",
+      "outbound_source": "euronews.com",
+      "outbound_url": "https://www.euronews.com/2026/11/08/at-least-21-dead-after-migrant-boat-capsizes-off-senegal-authorities-say",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "dw.com",
+        "euronews.com",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5527,
+          "corroboration": 0.75,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7333
+        },
+        "total": 0.7388,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "senegal",
+      "subject_names": [
+        "senegal"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "A migrant boat bound for Europe sank off the coast of Senegal, causing a large loss of life; authorities and multiple reports place the death toll in the dozens, with figures reported ranging from at least 21 to as many as 39 victims. Rescue and recovery efforts were underway and officials confirmed fatalities among those aboard."
+    },
+    {
+      "cluster_id": "subject-supremo-2c7567d34c09",
+      "coherence": 0.6389125198413192,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-09",
+      "headline": "Spanish Supreme Court refuses to suspend voting rights for descendants under 'law of grandchildren'",
+      "independent_source_count": 7,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-11-08/muere-un-soldado-durante-unos-ejercicios-en-el-campo-de-maniobras-de-san-gregorio.html"
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-09/el-supremo-rechaza-suspender-tambien-el-derecho-al-voto-de-los-hijos-de-los-nacionalizados-por-la-ley-de-nietos.html"
         },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/aragon/muere-militar-ejercicio-instruccion-campo-maniobras-san-20261108092912-nt.html"
+          "url": "https://www.abc.es/espana/tribunal-supremo-rechaza-suspender-voto-hijos-nacionalizados-20261109140336-nt.html"
         },
         {
           "language": "es",
-          "source": "elmundo.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/08/6af038e8e85ececa1c8b456f.html"
+          "url": "https://www.eldiario.es/politica/supremo-rechaza-peticion-vox-impedir-votar-29n-hijos-nacionalizados-ley-nietos_1_13649698.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/politica/supremo-rechaza-suspender-voto-hijos-nacionalizados-ley-nietos_1_2239687.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/observatorio-defensa/20261108/muere-soldado-actividad-instruccion-centro-adiestramiento-san-gregorio-zaragoza/1003744450501_0.html"
+          "url": "https://www.elespanol.com/espana/tribunales/20261109/supremo-no-suspende-voto-nacionalizaron-espanoles-hijos-favorecidos-ley-nietos/1003744444287_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/09/6af1c361e9cf4ab4658b4571.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/aragon/noticia-zaragoza-fallece-soldado-accidente-centro-adiestramiento-san-gregorio-20261108101342.html"
-        },
-        {
-          "language": "es",
-          "source": "euronews.com",
-          "source_country": "united-states",
-          "url": "https://es.euronews.com/2026/11/08/muere-militar-ejercito-tierra-accidente-instruccion-zaragoza"
+          "url": "https://www.europapress.es/nacional/noticia-supremo-descarta-suspender-voto-hijos-nacionalizados-ley-nietos-20261109135924.html"
         }
       ],
       "mentioned_countries": [
@@ -55,449 +169,301 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/observatorio-defensa/20261108/muere-soldado-actividad-instruccion-centro-adiestramiento-san-gregorio-zaragoza/1003744450501_0.html",
-      "rank": 1,
-      "reference_newsroom_count": 6,
+      "outbound_url": "https://www.elespanol.com/espana/tribunales/20261109/supremo-no-suspende-voto-nacionalizaron-espanoles-hijos-favorecidos-ley-nietos/1003744444287_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
         "abc.es",
+        "eldiario.es",
         "elespanol.com",
         "elmundo.es",
         "elpais.com",
-        "euronews.com",
+        "europapress.es",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6389,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7241
+        },
+        "total": 0.7373,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "supremo",
+      "subject_names": [
+        "supremo"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "The Spanish Supreme Court has rejected requests to suspend the voting rights of people who became Spanish citizens through the 'law of grandchildren' and of their children, leaving around 189,000–190,000 affected beneficiaries eligible to vote in the upcoming election."
+    },
+    {
+      "cluster_id": "subject-tiktok-c512f77cf906",
+      "coherence": 0.5145640299575376,
+      "consequence": 3,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-09",
+      "headline": "Spanish government asks prosecutors to probe TikTok and considers suspending its services",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/sociedad/gobierno-plantea-paralizar-servicios-tiktok-espana-permitir-20261109113857-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/sociedad/gobierno-pide-fiscalia-investigue-tik-tok-contenidos-pederastia_1_13649002.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/09/6af1a1d1e9cf4a0d5f8b4583.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/observatorios/digital/20261109/gobierno-plantea-paralizar-tiktok-denuncias-posibles-videos-abuso-sexual-infantil-plataforma/1003744451087_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-11-09/tiktok-abuso-sexual-infantil-fiscalia-1tps_4461552/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/epsocial/infancia/noticia-gobierno-plantea-paralizar-tiktok-denuncias-posibles-videos-abuso-sexual-infantil-plataforma-20261109114500.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/sociedad/gobierno-pide-fiscalia-investigue-tik-tok-contenidos-pederastia_1_13649002.html",
+      "rank": 3,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.4981,
-          "corroboration": 0.5,
+          "coherence": 0.5146,
+          "corroboration": 0.3333,
           "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.6,
           "source_reliability": 0.6923
         },
-        "total": 0.5786,
+        "total": 0.7106,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "zaragoza",
+      "subject_label": "tiktok",
       "subject_names": [
-        "ejercito",
-        "san gregorio",
-        "zaragoza"
+        "ayuso",
+        "espana",
+        "tiktok"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "A member of the Spanish Army died during a training/instruction exercise at the San Gregorio training center in Zaragoza. The incident occurred while troops were carrying out maneuvers or instructional activities at the facility; authorities have described the death as an accident and investigations or official procedures have been reported following the event."
+      "subject_newsroom_count": 12,
+      "summary": "The Spanish government has requested that the public prosecutor investigate TikTok over content involving alleged child sexual abuse and is considering measures that could include suspending the platform’s services in Spain due to concerns about violations of children’s rights."
     },
     {
-      "cluster_id": "subject-pologne-51282a062e3f",
-      "coherence": 0.5025951037754156,
+      "cluster_id": "subject-ceuta-ba2bf0ecd02e",
+      "coherence": 0.5815198017122039,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-09",
+      "headline": "Police clear migrant camp at Ceuta port for a second consecutive day",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/09/6af1a38ee4d4d8ec5f8b4587.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/08/6af03dffe9cf4a8a4e8b456e.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/reportajes/20261109/policia-continua-desalojo-campamento-puerto-ceuta-segundo-operativo-horas/1003744450899_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-policia-desaloja-segundo-dia-consecutivo-campamento-migrantes-puerto-ceuta-20261109101343.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elmundo.es",
+      "outbound_url": "https://www.elmundo.es/espana/2026/11/08/6af03dffe9cf4a8a4e8b456e.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elmundo.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5815,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
+        },
+        "total": 0.5981,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "ceuta"
+      ],
+      "subject_newsroom_count": 3,
+      "summary": "Spanish National Police carried out a second day of operations to dismantle and evict a migrant camp located at the Port of Ceuta, continuing removal efforts within 24 hours."
+    },
+    {
+      "cluster_id": "subject-michel-zecler-bf374008e233",
+      "coherence": 0.4791017623964867,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-08",
+      "editorial_day": "2026-11-09",
       "filled_from": "europe",
-      "headline": "Gunman kills six and wounds others in shooting in Kraków",
-      "independent_source_count": 11,
+      "headline": "Three police officers go on trial in Paris over 2020 beating of Michel Zecler",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/07/en-pologne-au-moins-six-morts-dans-une-attaque-par-arme-a-feu-a-cracovie-le-tireur-interpelle_6808293_3211.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/pologne-2-morts-et-10-blesses-a-cracovie-donald-tusk-evoque-une-fusillade-tragique-le-tireur-a-ete-interpelle-20261107"
-        },
-        {
-          "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/pologne-des-corps-retrouves-chez-le-tireur-fascination-pour-lextreme-droite-ce-que-lon-sait-apres-lattentat-mortel-de-cracovie-20261108_X5EYERZROJAVTG4PWU44XJA5JI/"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/pologne-5-morts-et-une-dizaine-de-blesses-dans-une-fusillade-a-cracovie-20261107_SOXK4M35TFC5HCTPTS3UN5KWBM/"
+          "url": "https://www.liberation.fr/societe/police-justice/agression-de-michel-zecler-en-2020-trois-policiers-devant-la-cour-criminelle-de-paris-a-partir-de-ce-lundi-20261109_2IEP5AOUHRCQTD65E4YTKFMFMI/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/pologne-une-fusillade-a-cracovie-fait-cinq-morts-le-tireur-interpelle-20261107"
+          "url": "https://www.la-croix.com/societe/affaire-michel-zecler-six-ans-apres-trois-policiers-juges-pour-l-agression-du-producteur-20261109"
         },
         {
           "language": "fr",
           "source": "mediapart.fr",
           "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/081126/pologne-un-tireur-fascine-par-l-extreme-droite-abat-six-personnes-cracovie"
-        },
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/071126/pologne-un-tireur-abat-six-personnes-dans-le-centre-touristique-de-cracovie"
+          "url": "https://www.mediapart.fr/journal/france/081126/six-ans-apres-les-policiers-qui-ont-tabasse-michel-zecler-juges-devant-une-cour-criminelle"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/en-pologne-une-fusillade-a-cracovie-fait-cinq-morts-et-plusieurs-blesses-selon-le-porte-parole-de-la-police_8272454.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/faits-divers/producteur-passe-a-tabac-par-des-policiers/le-proces-de-trois-policiers-accuses-d-avoir-roue-de-coups-michel-zecler-s-ouvre-a-paris_8274458.html#xtor=RSS-3-[lestitres]"
         },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pologne-un-tireur-fascin%C3%A9-par-l-extr%C3%AAme-droite-abat-six-personnes-%C3%A0-cracovie-1"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261107-pologne-fusillade-dans-le-centre-de-cracovie-le-tireur-interpell%C3%A9"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261108.OBS119941/pologne-un-tireur-fascine-par-l-extreme-droite-tue-six-passants-sur-la-grande-place-de-cracovie.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/societe/justice/pologne-six-morts-des-corps-retrouves-chez-le-tireur-fascination-pour-lextreme-droite-ce-que-lon-7XSPS4S6GJD6VHUROGSSFVUCDY/"
-        },
-        {
-          "language": "fr",
-          "source": "corsematin.com",
-          "source_country": "france",
-          "url": "https://www.corsematin.com/article/francemonde/88296095674667/pologne-une-fusillade-a-cracovie-fait-cinq-morts"
-        }
-      ],
-      "mentioned_countries": [
-        "pl"
-      ],
-      "origin_country": "france",
-      "outbound_source": "rfi.fr",
-      "outbound_url": "https://www.rfi.fr/fr/europe/20261107-pologne-fusillade-dans-le-centre-de-cracovie-le-tireur-interpell%C3%A9",
-      "rank": 2,
-      "reference_newsroom_count": 10,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "mediapart.fr",
-        "nouvelobs.com",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5026,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.5556,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7333,
-          "source_reliability": 0.8261
-        },
-        "total": 0.7003,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "pologne",
-      "subject_names": [
-        "cracovia",
-        "cracovie",
-        "krakow",
-        "pologne",
-        "polonia"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "A shooter opened fire in central Kraków, killing six people and injuring around a dozen to fifteen others before being detained; authorities found bodies at the suspect’s home and say he was fascinated by far‑right ideologies, and prosecutors have opened a terrorism investigation."
-    },
-    {
-      "cluster_id": "subject-ukraine-277b59e4b753",
-      "coherence": 0.45791928183393704,
-      "consequence": 3,
-      "countries": [
-        "germany",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-08",
-      "filled_from": "europe",
-      "headline": "Russian drone and missile strikes wound nine and damage Ukraine's power network ahead of talks",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "dw.com",
-          "source_country": "germany",
-          "url": "https://www.dw.com/en/ukraine-russia-hits-kyiv-with-airstrikes-ahead-of-trilateral-talks/a-79883851?maca=en-rss-en-world-4025-rdf"
-        },
-        {
-          "language": "en",
-          "source": "netscape.com",
-          "source_country": "united-states",
-          "url": "https://isp.netscape.com:443/news/world/story/0001/20261108/b042adf1f95848f5d233da866a72e312"
-        },
-        {
-          "language": "en",
-          "source": "lancasteronline.com",
-          "source_country": "united-states",
-          "url": "https://lancasteronline.com/news/world/drone-and-missile-attacks-wound-9-in-ukraine-as-country-prepares-for-talks-with-russia/article_d2e10b78-8bde-5c9b-a300-a6115a391024.html"
-        },
-        {
-          "language": "en",
-          "source": "adn.com",
-          "source_country": "united-states",
-          "url": "https://www.adn.com/nation-world/2026/11/07/russian-drone-and-missile-attacks-strike-ukraine-ahead-of-peace-talks-with-us/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "germany",
-      "outbound_source": "dw.com",
-      "outbound_url": "https://www.dw.com/en/ukraine-russia-hits-kyiv-with-airstrikes-ahead-of-trilateral-talks/a-79883851?maca=en-rss-en-world-4025-rdf",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "dw.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4579,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6
-        },
-        "total": 0.6196,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "kiev",
-        "kyiv",
-        "russia",
-        "russian",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 18,
-      "summary": "Russian drone and missile attacks struck Ukraine, wounding nine people and damaging parts of the country’s power network as Kyiv prepared for forthcoming talks involving Ukraine, Russia and the United States."
-    },
-    {
-      "cluster_id": "subject-trump-ebcbe934d50f",
-      "coherence": 0.4279288568913838,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "rs",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-11-08",
-      "filled_from": "europe",
-      "headline": "Melania Trump hosts Russian and Ukrainian envoys at the White House",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/politics/watch-first-lady-melania-trump-hosted-russian-and-ukrainian-officials-trump-met-with-putins-envoy"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/05/melania-trump-recebe-representantes-da-ucrania-e-russia-na-casa-branca-em-meio-a-negociacoes-de-paz.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "russiaherald.com",
-          "source_country": "rs",
-          "url": "http://www.russiaherald.com/news/279418990/chosen-humanity-over-war-melania-trump-hosts-russian-ukrainian-envoys-at-white-house-after-mediating-oleshky-ceasefire"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/05/melania-trump-recebe-representantes-da-ucrania-e-russia-na-casa-branca-em-meio-a-negociacoes-de-paz.ghtml",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "globo.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4279,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.5789
-        },
-        "total": 0.5641,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "casa blanca",
-        "donald trump",
-        "kiev",
-        "kyiv",
-        "maga",
-        "melania trump",
-        "russia",
-        "russian",
-        "stephen miller",
-        "trump",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 29,
-      "summary": "First Lady Melania Trump hosted delegations from Russia and Ukraine at the White House, meeting with representatives from both countries as part of efforts surrounding a ceasefire in Oleshky and calls for a lasting truce. The meetings included Russia’s envoy and Ukrainian officials and were presented as part of mediation and peace-negotiation efforts."
-    },
-    {
-      "cluster_id": "subject-bourget-f2b73a10d7ee",
-      "coherence": 0.39025132452169853,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-08",
-      "filled_from": "europe",
-      "headline": "Jean-Luc Mélenchon presents his 2027 presidential program at Le Bourget",
-      "independent_source_count": 6,
-      "members": [
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/elections/presidentielle/reportage-nous-allons-gagner-au-bourget-jean-luc-melenchon-devoile-son-programme-pour-2027-et-poursuit-sa-demonstration-de-force_8272679.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261108-pr%C3%A9sidentielle-il-faut-tout-changer-lance-m%C3%A9lenchon-%C3%A0-son-meeting-au-bourget"
+          "url": "https://www.franceinfo.fr/faits-divers/police/violences-policieres/affaire-michel-zecler-pres-de-six-ans-apres-son-agression-le-producteur-temoigne-de-son-traumatisme_8274236.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261108-pr%C3%A9sidentielle-en-france-jean-luc-m%C3%A9lenchon-pr%C3%A9sente-son-programme-lors-d-un-grand-meeting-au-bourget"
+          "url": "https://www.rfi.fr/fr/france/20261109-france-six-ans-apr%C3%A8s-le-tabassage-de-michel-zecler-trois-policiers-comparaissent-devant-la-justice"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "la1ere.franceinfo.fr",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20261107.OBS119939/ici-est-la-force-au-bourget-melenchon-met-sa-nouvelle-france-au-programme.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/economie/presidentielle-2027-au-bourget-jean-luc-melenchon-mise-sur-la-rupture-pour-conquerir-lelysee-LOUEYCV6DVAEZOJYYRZHQ5V3CI/"
-        },
-        {
-          "language": "fr",
-          "source": "vosgesmatin.fr",
-          "source_country": "france",
-          "url": "https://www.vosgesmatin.fr/elections/2026/11/07/il-faut-tout-changer-au-bourget-jean-luc-melenchon-brandit-son-programme"
+          "url": "https://la1ere.franceinfo.fr/guadeloupe/six-ans-apres-trois-policiers-juges-pour-l-agression-du-producteur-michel-zecler-1755885.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "nouvelobs.com",
-      "outbound_url": "https://www.nouvelobs.com/politique/20261107.OBS119939/ici-est-la-force-au-bourget-melenchon-met-sa-nouvelle-france-au-programme.html",
+      "outbound_source": "mediapart.fr",
+      "outbound_url": "https://www.mediapart.fr/journal/france/081126/six-ans-apres-les-policiers-qui-ont-tabasse-michel-zecler-juges-devant-une-cour-criminelle",
       "rank": 5,
       "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "france24.com",
         "francetvinfo.fr",
-        "lexpress.fr",
-        "nouvelobs.com",
+        "la-croix.com",
+        "liberation.fr",
+        "mediapart.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.3903,
+          "coherence": 0.4791,
           "corroboration": 0.3333,
           "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.6,
-          "source_reliability": 0.68
+          "source_reliability": 0.7143
         },
-        "total": 0.5611,
+        "total": 0.6468,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "bourget",
+      "subject_label": "michel zecler",
       "subject_names": [
-        "bourget",
-        "edouard philippe",
         "france",
-        "french",
-        "goncourt",
-        "jean-luc melenchon",
-        "macron",
-        "melenchon",
-        "paris"
+        "michel zecler",
+        "paris",
+        "teddy riner"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "At a large rally in Le Bourget, Jean-Luc Mélenchon unveiled his program for the 2027 presidential campaign, framing it as a call for major change and a break with the current order; he used the event to demonstrate political strength and rally supporters behind his 'New France' agenda."
+      "subject_newsroom_count": 6,
+      "summary": "Six years after the 2020 incident, three police officers have been brought before a criminal court in Paris accused of violently beating music producer Michel Zecler; the trial opens as Zecler testifies about the lasting physical and psychological trauma from the attack."
     }
   ],
-  "discarded_ingested": 14,
+  "discarded_ingested": 30,
   "discarded_kept": 5,
-  "generated_at": "2026-11-08T12:04:51.525393+00:00",
+  "generated_at": "2026-11-09T14:10:33.712804+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

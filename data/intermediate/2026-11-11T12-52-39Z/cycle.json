@@ -1,0 +1,32 @@
+{
+  "articles_collected": 7214,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 6239,
+  "clusters_selected": 11,
+  "completed": true,
+  "cycle_id": "2026-11-11T12-52-39Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "elconfidencial.com: HTTP 404"
+    },
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261111123000.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261111123000.translation.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 6374,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-11-11T12:52:39.118624+00:00",
+  "summarize_batches": {}
+}

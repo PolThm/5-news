@@ -1,20 +1,118 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-france-6b3307e990d9",
-      "coherence": 0.4053823838700714,
-      "consequence": 2,
+      "cluster_id": "subject-russie-89062e6abda2",
+      "coherence": 0.516931506492637,
+      "consequence": 3,
       "countries": [
-        "france",
-        "india",
-        "spain",
-        "united-states"
+        "france"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-11-11",
-      "headline": "La France accuse l'Iran d'une cyberattaque visant les frigos de supermarchés",
-      "independent_source_count": 6,
+      "country_count": 1,
+      "editorial_day": "2026-11-12",
+      "headline": "La Russie interdit l’entrée à deux députés et deux journalistes français",
+      "independent_source_count": 5,
       "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/11/quatre-journalistes-et-deputes-francais-interdits-de-sejour-en-russie-une-nouvelle-etape-dans-la-degradation-des-relations-entre-paris-et-moscou_6809031_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/11/la-russie-interdit-l-entree-sur-son-territoire-a-deux-deputes-et-deux-journalistes-francais-apres-l-expulsion-de-xenia-fedorova_6808983_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/russie-deux-deputes-et-deux-journalistes-francais-interdits-d-entrer-sur-le-territoire-20261111"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/replay-radio/d-un-monde-a-l-autre/deux-journalistes-francais-interdits-de-territoire-en-russie-dans-un-contexte-de-restrictions-croissantes-contre-la-presse-etrangere_8258075.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261111.OBS120052/deux-deputes-et-deux-journalistes-francais-interdits-d-entree-en-russie-en-reponse-a-l-expulsion-de-xenia-fedorova-selon-moscou.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/expulsion-de-xenia-fedorova-la-replique-de-la-russie-moscou-interdit-de-territoire-deux-journalistes-ZEC37MGPJZE25GFZPZ5SEG4S6Q/"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/11/la-russie-interdit-l-entree-sur-son-territoire-a-deux-deputes-et-deux-journalistes-francais-apres-l-expulsion-de-xenia-fedorova_6808983_3210.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
+        "lexpress.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5169,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6923
+        },
+        "total": 0.699,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russie",
+      "subject_names": [
+        "moscou",
+        "russie",
+        "xenia fedorova"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "La Russie a décidé d’interdire l’entrée sur son territoire à deux députés et deux journalistes français; cette mesure est présentée comme une réplique à l’expulsion de Xenia Fedorova et s’inscrit dans un contexte de tensions croissantes entre Paris et Moscou et de restrictions visant la presse étrangère."
+    },
+    {
+      "cluster_id": "subject-france-24c041a63a0e",
+      "coherence": 0.5642738787375755,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-12",
+      "headline": "La France accuse l'Iran d’une cyberattaque visant les frigos de supermarchés",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/international/111126/cyberattaque-contre-des-frigos-de-supermarches-paris-accuse-l-iran-et-menace-de-riposter"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/%C3%A9missions/on-va-plus-loin/20261112-cyberattaque-des-frigos-la-france-accuse-l-iran"
+        },
         {
           "language": "fr",
           "source": "nouvelobs.com",
@@ -26,30 +124,6 @@
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/proche-moyen-orient/cyberattaque-contre-des-frigos-de-supermarches-la-france-pointe-du-doigt-liran-KFV2UIYCJ5GJDEX4VNBHINE4UU/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261109/11680202/francia-acusa-iran-ciberataque-neveras-supermercados.html"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges"
-        },
-        {
-          "language": "guj",
-          "source": "divyabhaskar.co.in",
-          "source_country": "india",
-          "url": "https://www.divyabhaskar.co.in/national/news/france-warns-iran-cyber-attack-supermarket-refrigeration-hack-139645746.html"
-        },
-        {
-          "language": "en",
-          "source": "aninews.in",
-          "source_country": "india",
-          "url": "https://aninews.in/news/world/middle-east/unable-to-manage-fridges-iran-mocks-france-after-paris-blames-irgc-unit-for-supermarket-cyberattack20261111012142/"
         }
       ],
       "mentioned_countries": [
@@ -57,465 +131,87 @@
         "ir"
       ],
       "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261109/11680202/francia-acusa-iran-ciberataque-neveras-supermercados.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4054,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6667
-        },
-        "total": 0.6333,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "chine",
-        "eric zemmour",
-        "france",
-        "francia",
-        "iran",
-        "paris",
-        "rubio",
-        "teheran"
-      ],
-      "subject_newsroom_count": 20,
-      "summary": "Les articles indiquent que la France a pointé l'Iran, en particulier une unité liée aux Gardiens de la révolution, comme responsable d'une cyberattaque contre les systèmes de réfrigération de supermarchés survenue le mois dernier; une enquête et des procédures judiciaires ont été ouvertes en France, et l'Iran a réagi en niant ou en se moquant des accusations."
-    },
-    {
-      "cluster_id": "subject-france-6414d366f93b",
-      "coherence": 0.4739690661330209,
-      "consequence": 2,
-      "countries": [
-        "be",
-        "france",
-        "sz"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-10",
-      "headline": "Éric Zemmour annonce officiellement sa candidature à la présidentielle 2027",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/candidats/eric-zemmour-se-lance-dans-une-seconde-campagne-presidentielle-20261110"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/elections/presidentielle-2027-eric-zemmour-bien-candidat-pour-la-deuxieme-fois-20261110_XPLKJUN3CZEUBK5R6SQAA42ONY/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/presidentielle-2027-eric-zemmour-annonce-officiellement-sa-candidature-20261110"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261110-france-sans-surprise-%C3%A9ric-zemmour-annonce-sa-candidature-%C3%A0-l-%C3%A9lection-pr%C3%A9sidentielle"
-        },
-        {
-          "language": "fr",
-          "source": "republicain-lorrain.fr",
-          "source_country": "france",
-          "url": "https://www.republicain-lorrain.fr/politique/2026/11/10/eric-zemmour-officiellement-candidat-il-promet-deux-millions-d-immigres-en-moins"
-        },
-        {
-          "language": "fr",
-          "source": "huffingtonpost.fr",
-          "source_country": "france",
-          "url": "https://www.huffingtonpost.fr/politique/article/eric-zemmour-officialise-sa-candidature-a-la-presidentielle-ce-que-tout-le-monde-savait-deja_355413.html"
-        },
-        {
-          "language": "fr",
-          "source": "rtn.ch",
-          "source_country": "sz",
-          "url": "https://www.rtn.ch/rtn/Actualite/Monde/20261110-Eric-Zemmour-annonce-sa-candidature-a-la-presidentielle.html"
-        },
-        {
-          "language": "fr",
-          "source": "dhnet.be",
-          "source_country": "be",
-          "url": "https://www.dhnet.be/actu/monde/2026/11/10/eric-zemmour-annonce-sa-candidature-a-la-presidentielle-pour-conserver-une-france-francaise-TUG5BLJVEVCDXG433IOJJTYGPU/"
-        },
-        {
-          "language": "fr",
-          "source": "dna.fr",
-          "source_country": "france",
-          "url": "https://www.dna.fr/politique/2026/11/10/eric-zemmour-officiellement-candidat-il-promet-deux-millions-d-immigres-en-moins"
-        },
-        {
-          "language": "fr",
-          "source": "24heures.ch",
-          "source_country": "sz",
-          "url": "https://www.24heures.ch/france-eric-zemmour-annonce-sa-candidature-a-la-presidentielle-731176894006"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "be",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/politique/elections/presidentielle-2027-eric-zemmour-bien-candidat-pour-la-deuxieme-fois-20261110_XPLKJUN3CZEUBK5R6SQAA42ONY/",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/proche-moyen-orient/cyberattaque-contre-des-frigos-de-supermarches-la-france-pointe-du-doigt-liran-KFV2UIYCJ5GJDEX4VNBHINE4UU/",
       "rank": 2,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "la-croix.com",
-        "lefigaro.fr",
-        "liberation.fr",
-        "rfi.fr"
+        "france24.com",
+        "lexpress.fr",
+        "mediapart.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.474,
-          "corroboration": 0.6,
+          "coherence": 0.5643,
+          "corroboration": 0.3333,
           "editorial_weight": 0.3333,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.75
+          "prominence": 0.5,
+          "source_reliability": 0.6
         },
-        "total": 0.6073,
+        "total": 0.686,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "france",
       "subject_names": [
-        "chine",
-        "eric zemmour",
+        "cisjordanie",
+        "cyberattaque",
         "france",
-        "francia",
+        "iran",
+        "iranian",
+        "macron",
         "paris"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "Les articles concordent pour dire qu’Éric Zemmour a officiellement confirmé sa candidature à l’élection présidentielle de 2027 en France; plusieurs sources notent que cette annonce était attendue et qu’il formule des propositions fermes sur l’immigration, notamment la promesse controversée de réduire le nombre d’immigrés."
+      "subject_newsroom_count": 17,
+      "summary": "Les autorités françaises ont expliqué qu’une cyberattaque a visé des réfrigérateurs dans des supermarchés, qu’elles imputent à l’Iran, et le parquet a ouvert une enquête ; le gouvernement a en outre menacé de répondre à cette opération informatique."
     },
     {
-      "cluster_id": "subject-ukraine-785d98a08446",
-      "coherence": 0.9440205307320875,
+      "cluster_id": "subject-bce-7e37c03d1c06",
+      "coherence": null,
       "consequence": 3,
       "countries": [
-        "united-kingdom",
-        "united-states"
+        "spain"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-11",
-      "filled_from": "europe",
-      "headline": "La Russie et l’Ukraine tiennent près de quatre heures de pourparlers médiés par les États-Unis à Abou Dhabi",
-      "independent_source_count": 14,
+      "country_count": 1,
+      "editorial_day": "2026-11-12",
+      "headline": "La France soutient favorablement la candidature d’Hernández de Cos à la présidence de la BCE",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/russia-and-ukraine-hold-nearly-4-hours-of-u-s-mediated-talks-in-abu-dhabi"
-        },
-        {
-          "language": "en",
-          "source": "timesleader.com",
-          "source_country": "united-states",
-          "url": "https://www.timesleader.com/news/1765162/russia-and-ukraine-hold-nearly-4-hours-of-us-mediated-talks-in-abu-dhabi"
-        },
-        {
-          "language": "en",
-          "source": "sthelensstar.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.sthelensstar.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "swindonadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.swindonadvertiser.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "bridgwatermercury.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bridgwatermercury.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "gazette-news.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.gazette-news.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "watfordobserver.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.watfordobserver.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "runcornandwidnesworld.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.runcornandwidnesworld.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "leighjournal.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.leighjournal.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "somersetcountygazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.somersetcountygazette.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "countytimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.countytimes.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "wiltshiretimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.wiltshiretimes.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        },
-        {
-          "language": "en",
-          "source": "messengernewspapers.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.messengernewspapers.co.uk/news/national/26716656.russia-ukraine-hold-nearly-four-hours-us-mediated-talks-abu-dhabi/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "united-kingdom",
-      "outbound_source": "npr.org",
-      "outbound_url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
-      "rank": 3,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "npr.org",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.944,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7778,
-          "source_reliability": 0.7895
-        },
-        "total": 0.6841,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ukraine",
-      "subject_names": [
-        "abu dhabi",
-        "kiev",
-        "russia",
-        "ukraine"
-      ],
-      "subject_newsroom_count": 21,
-      "summary": "Des délégations russes et ukrainiennes ont participé à des pourparlers d’environ quatre heures à Abou Dhabi, avec la médiation des États-Unis; les réunions ont eu lieu en personne et ont été confirmées par plusieurs sources couvrant l’événement."
-    },
-    {
-      "cluster_id": "subject-rusia-65abed411825",
-      "coherence": 0.5590789994553874,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "spain",
-        "united-states"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-11",
-      "filled_from": "europe",
-      "headline": "Un militaire américain arrêté au Royaume‑Uni soupçonné d’espionnage pour la Russie",
-      "independent_source_count": 9,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/11/un-militaire-americain-arrete-en-angleterre-soupconne-d-espionnage-au-profit-de-la-russie_6808915_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/royaume-uni-un-militaire-americain-affecte-a-une-base-de-lotan-soupconne-despionnage-au-profit-de-la-russie-20261111_6O5JZRMV45GRNO73UMV2X4MXII/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261111-un-militaire-am%C3%A9ricain-en-d%C3%A9tention-%C3%A0-londres-soup%C3%A7onn%C3%A9-d-espionnage-au-profit-de-la-russie"
-        },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-11/la-policia-britanica-detiene-a-un-soldado-estadounidense-acusado-de-espiar-para-rusia.html"
+          "url": "https://elpais.com/economia/2026-11-12/francia-se-inclina-por-apoyar-al-espanol-hernandez-de-cos-para-la-presidencia-del-bce.html"
         },
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/internacional/reino-unido-detiene-miembro-ejercito-estados-unidos-20261110201216-nt.html"
+          "url": "https://www.eldiario.es/economia/posible-apoyo-francia-hernandez-cos-allana-camino-presidencia-bce_1_13657460.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
+          "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261111/detenido-soldado-eeuu-reino-unido-acusado-espiar-servicios-inteligencia-rusia/1003744453461_0.html"
-        },
-        {
-          "language": "es",
-          "source": "nacion.com",
-          "source_country": "united-states",
-          "url": "https://www.nacion.com/el-mundo/reino-unido-detiene-a-militar-estadounidense/D7KVKK76KZEL5F7SVLHJQZ4XA4/story/"
-        },
-        {
-          "language": "es",
-          "source": "negocios.com",
-          "source_country": "spain",
-          "url": "https://www.negocios.com/geopolitica/reino-unido-detiene-militar-estadounidense-presunto-espionaje-rusia/20261110205552497724.html"
-        },
-        {
-          "language": "fr",
-          "source": "dna.fr",
-          "source_country": "france",
-          "url": "https://www.dna.fr/faits-divers-justice/2026/11/10/un-militaire-americain-arrete-soupconne-d-espionnage-pour-le-compte-de-la-russie"
+          "url": "https://www.europapress.es/economia/finanzas-00340/noticia-francia-apoyaria-espanol-hernandez-cos-presidente-bce-ft-le-monde-20261112104138.html"
         }
       ],
       "mentioned_countries": [
-        "united-kingdom",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/reino-unido-detiene-miembro-ejercito-estados-unidos-20261110201216-nt.html",
-      "rank": 4,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "abc.es",
-        "elespanol.com",
-        "elpais.com",
-        "france24.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5591,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6923,
-          "source_reliability": 0.75
-        },
-        "total": 0.6249,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "rusia",
-      "subject_names": [
-        "abu dhabi",
-        "british",
-        "congreso",
-        "eeuu",
-        "estados unidos",
-        "kiev",
-        "putin",
-        "reino unido",
-        "royaume-uni",
-        "rusia",
-        "russia",
-        "russie",
-        "ucrania",
-        "ukraine",
-        "usa"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "La police britannique a arrêté un soldat américain stationné au Royaume‑Uni et le retient sous suspicion d’avoir espionné au profit des services russes; les informations disponibles indiquent qu’il est lié à une base de l’OTAN et fait l’objet d’une enquête pour présumé transfert d’informations aux services de renseignement russes."
-    },
-    {
-      "cluster_id": "subject-ukraine-8c953e78c255",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
         "france"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-11",
-      "filled_from": "europe",
-      "headline": "Kiev et Moscou concluent un accord de principe pour un échange massif de prisonniers",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/11/11/en-direct-guerre-en-ukraine-accord-de-principe-avec-la-russie-pour-un-nouvel-echange-de-prisonniers-de-guerre-a-grande-echelle_6808609_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1722-point-conflit-ukrainien-poutine-aujourdhui-20261111"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-negociations-ukraine-russie-suite-et-fin-des-pourparlers-mercredi-apres-des-changements-salues-par-volodymyr-zelensky_8277323.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/direct-negociations-ukraine-russie-suite-et-fin-des-pourparlers-mercredi-apres-des-changements-salues-par-volodymyr-zelensky_8277323.html#xtor=RSS-3-[lestitres]",
-      "rank": 5,
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/economia/finanzas-00340/noticia-francia-apoyaria-espanol-hernandez-cos-presidente-bce-ft-le-monde-20261112104138.html",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr"
+        "eldiario.es",
+        "elpais.com",
+        "europapress.es"
       ],
       "score": {
         "components": {
@@ -523,30 +219,168 @@
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
+          "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.6081,
+        "total": 0.6581,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "bce",
       "subject_names": [
-        "abu dabi",
-        "abu dhabi",
-        "kiev",
-        "russia",
-        "ukraine"
+        "bce",
+        "calais",
+        "cos",
+        "francia",
+        "hernandez"
       ],
-      "subject_newsroom_count": 21,
-      "summary": "Les autorités ukrainiennes et russes se sont mises d’accord sur un échange « à grande échelle » de prisonniers de guerre, les deux parties ayant trouvé un accord de principe lors de négociations visant à rapatrier un nombre important de détenus des camps adverses."
+      "subject_newsroom_count": 6,
+      "summary": "Les articles indiquent que la France se montre prête à appuyer la candidature de l’Espagnol Pablo Hernández de Cos pour devenir président de la Banque centrale européenne, un soutien qui faciliterait son accès au poste selon les informations communes aux trois sources."
+    },
+    {
+      "cluster_id": "subject-francia-396e9b5bcb96",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-12",
+      "headline": "Alerte à la bombe suspend la circulation des trains dans le nord de la France",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-12/una-amenaza-de-bomba-detiene-la-circulacion-de-trenes-en-el-norte-de-francia-y-provoca-retrasos-en-el-eurotunel.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/alerta-bomba-estacion-tren-francia-20261112102909-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/nuevos-avisos-bomba-afectan-trenes-francia-cientos-colegios-italia_1_13658351.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "abc.es",
+      "outbound_url": "https://www.abc.es/internacional/alerta-bomba-estacion-tren-francia-20261112102909-nt.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "francia",
+      "subject_names": [
+        "calais",
+        "francia"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Une alerte à la bombe dans une gare du nord de la France a entraîné l'arrêt de la circulation des trains et des retards dans le tunnel sous la Manche ; d'autres avis similaires ont aussi perturbé des lignes en France et touché des établissements en Italie, provoquant des interruptions et des retards."
+    },
+    {
+      "cluster_id": "subject-france-69bc9da54342",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "india"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-12",
+      "headline": "Un responsable des colons israéliens en Cisjordanie refoulé à son arrivée en France",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/12/un-representant-des-colonies-juives-en-cisjordanie-refoule-a-son-arrivee-en-france-israel-denonce-une-mesure-inacceptable_6809040_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/moyen-orient/un-responsable-des-colons-israeliens-en-cisjordanie-occupee-refoule-a-son-arrivee-en-france-20261112_TVROMQCX5ZCJ3KIS7YDAOP6ULE/"
+        },
+        {
+          "language": "en",
+          "source": "hindustantimes.com",
+          "source_country": "india",
+          "url": "https://www.hindustantimes.com/world-news/israeli-settler-representative-turned-back-after-arriving-in-france-101794429139456.html"
+        }
+      ],
+      "mentioned_countries": [
+        "is",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "hindustantimes.com",
+      "outbound_url": "https://www.hindustantimes.com/world-news/israeli-settler-representative-turned-back-after-arriving-in-france-101794429139456.html",
+      "rank": 5,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5
+        },
+        "total": 0.5825,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "cisjordanie",
+        "cyberattaque",
+        "france",
+        "macron",
+        "paris"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "Les articles indiquent qu’un représentant des colonies juives/colons israéliens de Cisjordanie a été empêché d’entrer en France et renvoyé à son arrivée. La décision a suscité des réactions de l’État israélien qui a qualifié la mesure d’inacceptable. Les comptes concordent sur le lieu d’origine du responsable (les colonies/colons en Cisjordanie), l’action prise par les autorités françaises (refus d’entrée) et la réaction critique israélienne."
     }
   ],
-  "discarded_ingested": 21,
+  "discarded_ingested": 26,
   "discarded_kept": 5,
-  "generated_at": "2026-11-11T12:52:39.118624+00:00",
+  "generated_at": "2026-11-12T13:55:15.559089+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

@@ -1,0 +1,32 @@
+{
+  "articles_collected": 8525,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 7388,
+  "clusters_selected": 9,
+  "completed": true,
+  "cycle_id": "2026-11-13T13-19-24Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261113130000.translation.gkg.csv.zip: HTTP 404"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-norvege-c54e4e49d5ba: response was not valid JSON (likely truncated or refused): Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "adapter": "claude",
+      "detail": "cluster subject-norvege-c54e4e49d5ba: response was not valid JSON (likely truncated or refused): Expecting value: line 1 column 1 (char 0)"
+    }
+  ],
+  "groups_after_dedupe": 7540,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-11-13T13:19:24.876092+00:00",
+  "summarize_batches": {}
+}

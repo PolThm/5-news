@@ -1,217 +1,135 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-russie-89062e6abda2",
-      "coherence": 0.516931506492637,
+      "cluster_id": "subject-allemagne-672eec306c6a",
+      "coherence": 0.4594834923582727,
       "consequence": 3,
       "countries": [
-        "france"
+        "ez",
+        "france",
+        "germany",
+        "united-states"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-12",
-      "headline": "Russia bans entry to two French MPs and two journalists following Fedorova expulsion",
+      "country_count": 4,
+      "editorial_day": "2026-11-13",
+      "filled_from": "europe",
+      "headline": "Mercedes-Benz halts new investments in Germany and is considering factory closures",
       "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/11/quatre-journalistes-et-deputes-francais-interdits-de-sejour-en-russie-une-nouvelle-etape-dans-la-degradation-des-relations-entre-paris-et-moscou_6809031_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/11/la-russie-interdit-l-entree-sur-son-territoire-a-deux-deputes-et-deux-journalistes-francais-apres-l-expulsion-de-xenia-fedorova_6808983_3210.html"
+          "url": "https://www.liberation.fr/economie/transports/mercedes-benz-envisage-des-fermetures-dusines-en-allemagne-et-y-suspend-ses-investissements-20261113_6UCUMV2BYBHMFJCPMU5CAATRG4/"
         },
         {
           "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/russie-deux-deputes-et-deux-journalistes-francais-interdits-d-entrer-sur-le-territoire-20261111"
+          "url": "https://www.la-croix.com/economie/allemagne-mercedes-benz-envisage-la-fermeture-d-usines-et-suspend-tout-nouvel-investissement-20261112"
+        },
+        {
+          "language": "de",
+          "source": "tagesschau.de",
+          "source_country": "germany",
+          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/mercedes-stopp-investitionen-100.html"
+        },
+        {
+          "language": "ces",
+          "source": "lidovky.cz",
+          "source_country": "ez",
+          "url": "https://www.lidovky.cz/byznys/mercedes-pozastavi-investice-v-nemecku-uzavreni-zavodu.A261112_205636_ln_ekonomika_rkj"
+        },
+        {
+          "language": "es",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://es.euronews.com/2026/11/12/mercedes-congela-nuevas-inversiones-en-alemania-y-baraja-cerrar-fabricas"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "ez",
+      "outbound_source": "tagesschau.de",
+      "outbound_url": "https://www.tagesschau.de/wirtschaft/unternehmen/mercedes-stopp-investitionen-100.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "euronews.com",
+        "la-croix.com",
+        "liberation.fr",
+        "tagesschau.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4595,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6603,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "allemagne",
+      "subject_names": [
+        "alemania",
+        "allemagne",
+        "mercedes"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Mercedes-Benz has suspended new investments in Germany and is evaluating the potential closure of some German plants; the company is reviewing its production footprint amid changing circumstances, according to multiple reports."
+    },
+    {
+      "cluster_id": "subject-norvege-c54e4e49d5ba",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-13",
+      "filled_from": "europe",
+      "headline": "La Finlande annonce bloquer les visas des athlètes russes, la Norvège prévoit une mesure similaire",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/sport/article/2026/11/12/helsinki-annonce-bloquer-les-visas-des-athletes-russes-qui-n-ont-rien-a-faire-en-finlande-alors-que-s-y-profilent-les-championnats-du-monde-de-patinage-artistique_6809152_3242.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/en-norvege-et-en-finlande-les-sportifs-professionnels-russes-desormais-interdits-de-competitions-20261112_JFG2APX73BAHBCQIZRO6XOLIRE/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/replay-radio/d-un-monde-a-l-autre/deux-journalistes-francais-interdits-de-territoire-en-russie-dans-un-contexte-de-restrictions-croissantes-contre-la-presse-etrangere_8258075.html#xtor=RSS-3-%5Bmonde%5D"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261111.OBS120052/deux-deputes-et-deux-journalistes-francais-interdits-d-entree-en-russie-en-reponse-a-l-expulsion-de-xenia-fedorova-selon-moscou.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/expulsion-de-xenia-fedorova-la-replique-de-la-russie-moscou-interdit-de-territoire-deux-journalistes-ZEC37MGPJZE25GFZPZ5SEG4S6Q/"
+          "url": "https://www.franceinfo.fr/monde/norvege/la-norvege-va-interdire-aux-athletes-russes-de-participer-a-des-competitions-sur-son-territoire_8280068.html#xtor=RSS-3-%5Bmonde%5D"
         }
       ],
       "mentioned_countries": [
-        "france",
+        "no",
         "rs"
       ],
       "origin_country": "france",
       "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/11/la-russie-interdit-l-entree-sur-son-territoire-a-deux-deputes-et-deux-journalistes-francais-apres-l-expulsion-de-xenia-fedorova_6808983_3210.html",
-      "rank": 1,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lemonde.fr",
-        "lexpress.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5169,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6923
-        },
-        "total": 0.699,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "russie",
-      "subject_names": [
-        "moscou",
-        "russie",
-        "xenia fedorova"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Russia has barred two French deputies and two French journalists from entering its territory, a move presented by Moscow as a response to the earlier expulsion of Xenia Fedorova; the measures are described in multiple French news outlets as part of worsening relations and increasing restrictions on foreign press."
-    },
-    {
-      "cluster_id": "subject-france-24c041a63a0e",
-      "coherence": 0.5642738787375755,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-12",
-      "headline": "France says Iran responsible for cyberattack on supermarket refrigerators",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "mediapart.fr",
-          "source_country": "france",
-          "url": "https://www.mediapart.fr/journal/international/111126/cyberattaque-contre-des-frigos-de-supermarches-paris-accuse-l-iran-et-menace-de-riposter"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/%C3%A9missions/on-va-plus-loin/20261112-cyberattaque-des-frigos-la-france-accuse-l-iran"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/justice/20261109.OBS119998/cyberattaque-contre-des-frigos-l-iran-mis-en-cause-par-la-france-une-enquete-ouverte-par-le-parquet.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/proche-moyen-orient/cyberattaque-contre-des-frigos-de-supermarches-la-france-pointe-du-doigt-liran-KFV2UIYCJ5GJDEX4VNBHINE4UU/"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "ir"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/proche-moyen-orient/cyberattaque-contre-des-frigos-de-supermarches-la-france-pointe-du-doigt-liran-KFV2UIYCJ5GJDEX4VNBHINE4UU/",
+      "outbound_url": "https://www.lemonde.fr/sport/article/2026/11/12/helsinki-annonce-bloquer-les-visas-des-athletes-russes-qui-n-ont-rien-a-faire-en-finlande-alors-que-s-y-profilent-les-championnats-du-monde-de-patinage-artistique_6809152_3242.html",
       "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "france24.com",
-        "lexpress.fr",
-        "mediapart.fr",
-        "nouvelobs.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5643,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.686,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "cisjordanie",
-        "cyberattaque",
-        "france",
-        "iran",
-        "iranian",
-        "macron",
-        "paris"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "French authorities have accused Iran of carrying out a cyberattack that disrupted supermarket refrigerators and have opened an investigation; prosecutors are handling the case and French officials have warned of possible responses while investigating the incident."
-    },
-    {
-      "cluster_id": "subject-bce-7e37c03d1c06",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-12",
-      "headline": "France indicates support for Spanish candidate Hernández de Cos for ECB presidency",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/economia/2026-11-12/francia-se-inclina-por-apoyar-al-espanol-hernandez-de-cos-para-la-presidencia-del-bce.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/economia/posible-apoyo-francia-hernandez-cos-allana-camino-presidencia-bce_1_13657460.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/economia/finanzas-00340/noticia-francia-apoyaria-espanol-hernandez-cos-presidente-bce-ft-le-monde-20261112104138.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/economia/finanzas-00340/noticia-francia-apoyaria-espanol-hernandez-cos-presidente-bce-ft-le-monde-20261112104138.html",
-      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "europapress.es"
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
@@ -219,68 +137,226 @@
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
+          "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.6581,
+        "total": 0.6081,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "bce",
+      "subject_label": "norvege",
       "subject_names": [
-        "bce",
-        "calais",
-        "cos",
-        "francia",
-        "hernandez"
+        "norvege"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Three Spanish news outlets report that France has shown willingness to back Spain’s Bank of Spain governor, Pablo Hernández de Cos, as a candidate for the presidency of the European Central Bank, a development presented as helping his prospects in the selection process."
+      "subject_newsroom_count": 3,
+      "summary": "La Finlande annonce bloquer les visas des athlètes russes, la Norvège prévoit une mesure similaire"
     },
     {
-      "cluster_id": "subject-francia-396e9b5bcb96",
+      "cluster_id": "subject-dublin-bd97f403e5f2",
+      "coherence": 0.44607571533337487,
+      "consequence": 3,
+      "countries": [
+        "sn",
+        "united-states"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-13",
+      "filled_from": "europe",
+      "headline": "U.S. envoys met with Vladimir Putin in the Kremlin after Abu Dhabi Ukraine talks",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/11/12/nx-s1-6038809/us-envoys-meet-putin-russia-ukraine-war-talks"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/11/12/nx-s1-6037558/u-s-officials-set-to-meet-with-putin-zelenskyy-following-abu-dhabi-peace-talks"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/u-s-envoys-meet-with-putin-in-moscow-on-ukraine-talks-then-head-for-dublin-to-see-zelenskyy"
+        },
+        {
+          "language": "en",
+          "source": "asiaone.com",
+          "source_country": "sn",
+          "url": "https://www.asiaone.com:443/world/us-envoys-meet-putin-moscow-ukraine-talks-then-see-zelenskiy-dublin"
+        },
+        {
+          "language": "en",
+          "source": "kurv.com",
+          "source_country": "united-states",
+          "url": "https://www.kurv.com/us-envoys-meet-with-putin-in-the-kremlin-after-ukraine-talks-in-abu-dhabi/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "sn",
+      "outbound_source": "npr.org",
+      "outbound_url": "https://www.npr.org/2026/11/12/nx-s1-6037558/u-s-officials-set-to-meet-with-putin-zelenskyy-following-abu-dhabi-peace-talks",
+      "rank": 3,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "npr.org",
+        "pbs.org"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4461,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.619
+        },
+        "total": 0.6075,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "dublin",
+      "subject_names": [
+        "abu dhabi",
+        "dublin",
+        "europa",
+        "europe",
+        "kallas",
+        "kiev",
+        "kremlin",
+        "putin",
+        "rusia",
+        "russia",
+        "ukraine",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "U.S. envoys who participated in Ukraine-related discussions in Abu Dhabi traveled to Moscow and met with President Vladimir Putin in the Kremlin, then planned to travel to Dublin to meet Ukrainian President Volodymyr Zelenskyy."
+    },
+    {
+      "cluster_id": "subject-trump-af59d4039d81",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-13",
+      "filled_from": "europe",
+      "headline": "Trump envoys say Russia accepts European participation in Ukraine talks",
+      "independent_source_count": 2,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/13/guerre-en-ukraine-les-emissaires-americains-assurent-que-les-europeens-seront-associes-aux-prochaines-reunions-de-negociation-de-paix_6809269_3210.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-13/el-enviado-de-trump-asegura-que-putin-acepta-que-europa-se-sume-a-las-negociaciones-de-paz-sobre-ucrania.html"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/13/guerre-en-ukraine-les-emissaires-americains-assurent-que-les-europeens-seront-associes-aux-prochaines-reunions-de-negociation-de-paix_6809269_3210.html",
+      "rank": 4,
+      "reference_newsroom_count": 2,
+      "reference_newsrooms": [
+        "elpais.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
+        },
+        "total": 0.5994,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "camara",
+        "donald trump",
+        "europe",
+        "kallas",
+        "kiev",
+        "mexico",
+        "russia",
+        "trump",
+        "ukraine",
+        "zelensky"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Representatives of Donald Trump stated that Russian President Vladimir Putin is willing to allow European countries to join negotiations on ending the war in Ukraine, and the envoys acknowledged the need for Europeans to be associated with those peace talks."
+    },
+    {
+      "cluster_id": "subject-santander-a4e6b92ba2d9",
       "coherence": null,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-12",
-      "headline": "Bomb threats halt train services in northern France and disrupt Eurotunnel",
+      "editorial_day": "2026-11-13",
+      "filled_from": "europe",
+      "headline": "Santander and Moeve pull TikTok ads over child sexual abuse content",
       "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-12/una-amenaza-de-bomba-detiene-la-circulacion-de-trenes-en-el-norte-de-francia-y-provoca-retrasos-en-el-eurotunel.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/alerta-bomba-estacion-tren-francia-20261112102909-nt.html"
+          "url": "https://elpais.com/tecnologia/2026-11-13/tiktok-ya-pierde-publicidad-en-espana-por-los-contenidos-de-abuso-sexual-infantil-santander-y-moeve-retiran-sus-anuncios.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/nuevos-avisos-bomba-afectan-trenes-francia-cientos-colegios-italia_1_13658351.html"
+          "url": "https://www.eldiario.es/sociedad/banco-santander-moeve-retiran-publicidad-tiktok-contenidos-pederastia_1_13661815.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/empresas/energia/20261113/moeve-santander-primeras-empresas-espanolas-retirar-publicidad-tiktok-contenido-pedofilo-red/1003744457336_0.html"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/alerta-bomba-estacion-tren-francia-20261112102909-nt.html",
-      "rank": 4,
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/tecnologia/2026-11-13/tiktok-ya-pierde-publicidad-en-espana-por-los-contenidos-de-abuso-sexual-infantil-santander-y-moeve-retiran-sus-anuncios.html",
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "abc.es",
         "eldiario.es",
+        "elespanol.com",
         "elpais.com"
       ],
       "score": {
@@ -289,98 +365,28 @@
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 1.0,
+          "geographic_relevance": 0.5,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5848,
+        "total": 0.5348,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "francia",
+      "subject_label": "santander",
       "subject_names": [
-        "calais",
-        "francia"
+        "moeve",
+        "santander",
+        "tiktok"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Multiple bomb alerts in northern France forced temporary suspension or disruption of train services and caused delays at the Eurotunnel; the incidents are part of a wider wave of bomb warnings that also affected rail operations in France and led to precautionary measures in other European locations, including closures or checks at schools in Italy."
-    },
-    {
-      "cluster_id": "subject-france-69bc9da54342",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france",
-        "india"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-12",
-      "headline": "Representative of West Bank settlers denied entry to France",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/12/un-representant-des-colonies-juives-en-cisjordanie-refoule-a-son-arrivee-en-france-israel-denonce-une-mesure-inacceptable_6809040_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/moyen-orient/un-responsable-des-colons-israeliens-en-cisjordanie-occupee-refoule-a-son-arrivee-en-france-20261112_TVROMQCX5ZCJ3KIS7YDAOP6ULE/"
-        },
-        {
-          "language": "en",
-          "source": "hindustantimes.com",
-          "source_country": "india",
-          "url": "https://www.hindustantimes.com/world-news/israeli-settler-representative-turned-back-after-arriving-in-france-101794429139456.html"
-        }
-      ],
-      "mentioned_countries": [
-        "is",
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "hindustantimes.com",
-      "outbound_url": "https://www.hindustantimes.com/world-news/israeli-settler-representative-turned-back-after-arriving-in-france-101794429139456.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.5825,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "cisjordanie",
-        "cyberattaque",
-        "france",
-        "macron",
-        "paris"
-      ],
-      "subject_newsroom_count": 17,
-      "summary": "France refused entry to a representative of Israeli settlements in the occupied West Bank when he arrived, a move that prompted Israeli officials to call the decision unacceptable; reports say the individual was turned back at the border and did not enter French territory."
+      "subject_newsroom_count": 4,
+      "summary": "Two Spanish companies, Banco Santander and fashion brand Moeve, have withdrawn their advertising from TikTok citing the platform’s presence of child sexual abuse content; multiple news outlets report both firms as the first Spanish advertisers to take this step."
     }
   ],
-  "discarded_ingested": 26,
+  "discarded_ingested": 12,
   "discarded_kept": 5,
-  "generated_at": "2026-11-12T13:55:15.559089+00:00",
+  "generated_at": "2026-11-13T13:19:24.876092+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

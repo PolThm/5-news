@@ -1,34 +1,72 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-clermont-ferrand-0168b921e584",
-      "coherence": null,
-      "consequence": 1,
+      "cluster_id": "subject-poste-13c70bf17c7f",
+      "coherence": 0.5372492697783636,
+      "consequence": 2,
       "countries": [
-        "france"
+        "france",
+        "rs",
+        "sz"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-14",
-      "headline": "Un adolescent tué lors d’une course de voitures illégale près de Clermont-Ferrand",
-      "independent_source_count": 3,
+      "country_count": 3,
+      "editorial_day": "2026-11-15",
+      "headline": "Maileva, filiale du groupe La Poste, victime d’une cyberattaque et vol de données",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/faits-divers/clermont-ferrand-un-jeune-spectateur-tue-lors-d-une-course-de-voitures-illegale-20261114"
+          "url": "https://www.lefigaro.fr/secteur/high-tech/cyberattaque-chez-maileva-filiale-de-la-poste-ce-que-l-on-sait-du-vol-des-donnees-personnelles-d-un-tiers-de-la-population-francaise-20261115"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/secteur/high-tech/victime-d-une-cyberattaque-maileva-une-filiale-de-la-poste-annonce-un-vol-de-donnees-concernant-22-millions-de-personnes-20261114"
         },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/un-adolescent-de-15-ans-tue-lors-dune-course-de-voitures-sauvage-pres-de-clermont-ferrand-20261114_MLWGAC3AMVG5DJOMBNLGNZQ3CU/"
+          "url": "https://www.liberation.fr/economie/une-filiale-de-la-poste-piratee-22-millions-de-personnes-concernees-20261115_YHARNQX345BADFNXBPGKU2FY6Y/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/une-filiale-de-la-poste-victime-d-un-vol-de-donnees-massif-22-millions-de-personnes-concernees-20261114"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/un-adolescent-tue-lors-d-une-course-de-voitures-sauvage-pres-de-clermont-ferrand_8282270.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/victime-d-une-cyberattaque-maileva-une-filiale-du-groupe-la-poste-annonce-un-vol-de-donnees-touchant-22-millions-de-personnes_8282825.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261114-la-cyberattaque-d-une-filiale-de-la-poste-entra%C3%AEne-un-vol-de-donn%C3%A9es-touchant-22-millions-de-personnes"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/economie/20261115.OBS120145/les-donnees-de-millions-de-personnes-volees-lors-d-une-cyberattaque-contre-une-filiale-du-groupe-la-poste-ce-que-l-on-sait.html"
+        },
+        {
+          "language": "fr",
+          "source": "latele.ch",
+          "source_country": "sz",
+          "url": "https://latele.ch/articles/cyberattaque-vol-de-donnees-chez-une-filiale-de-la-poste-francaise"
+        },
+        {
+          "language": "ru",
+          "source": "news.mail.ru",
+          "source_country": "rs",
+          "url": "https://news.mail.ru/politics/73099303/"
         }
       ],
       "mentioned_countries": [
@@ -36,369 +74,403 @@
       ],
       "origin_country": "france",
       "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/faits-divers/un-adolescent-tue-lors-d-une-course-de-voitures-sauvage-pres-de-clermont-ferrand_8282270.html#xtor=RSS-3-[lestitres]",
+      "outbound_url": "https://www.franceinfo.fr/internet/securite-sur-internet/cyberattaques/victime-d-une-cyberattaque-maileva-une-filiale-du-groupe-la-poste-annonce-un-vol-de-donnees-touchant-22-millions-de-personnes_8282825.html#xtor=RSS-3-[lestitres]",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
+        "france24.com",
         "francetvinfo.fr",
+        "la-croix.com",
         "lefigaro.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5114,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "clermont-ferrand",
-      "subject_names": [
-        "clermont-ferrand"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Un jeune spectateur de 15 ans a été tué lors d’une course de voitures illégale/sauvage organisée près de Clermont-Ferrand ; l’accident est survenu pendant cet événement non autorisé et la victime était présente en tant que spectateur."
-    },
-    {
-      "cluster_id": "subject-russie-4f7089800590",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-13",
-      "headline": "La Russie interdit l'entrée à deux députés et deux journalistes français en représailles",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/russie/la-chroniqueuse-pro-kremlin-xenia-fedorova-juge-la-diplomatie-russe-plus-mesuree-que-l-etat-francais_8281559.html#xtor=RSS-3-%5Bmonde%5D"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261111.OBS120052/deux-deputes-et-deux-journalistes-francais-interdits-d-entree-en-russie-en-reponse-a-l-expulsion-de-xenia-fedorova-selon-moscou.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/expulsion-de-xenia-fedorova-la-replique-de-la-russie-moscou-interdit-de-territoire-deux-journalistes-ZEC37MGPJZE25GFZPZ5SEG4S6Q/"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/expulsion-de-xenia-fedorova-la-replique-de-la-russie-moscou-interdit-de-territoire-deux-journalistes-ZEC37MGPJZE25GFZPZ5SEG4S6Q/",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lexpress.fr",
+        "liberation.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 0.7071,
+          "coherence": 0.5372,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6667,
+          "source_reliability": 0.7576
         },
-        "total": 0.4763,
+        "total": 0.6719,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "russie",
+      "subject_label": "poste",
       "subject_names": [
-        "moscou",
-        "russie"
+        "maileva",
+        "poste"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "En réponse à l'expulsion de la chroniqueuse pro‑Kremlin Xenia Fedorova par la France, les autorités russes ont annoncé l'interdiction d'entrée sur leur territoire pour deux députés et deux journalistes français; Xenia Fedorova a qualifié cette mesure russe de \"plus mesurée\" que son expulsion par la France."
+      "subject_newsroom_count": 8,
+      "summary": "Les articles indiquent qu’une filiale de La Poste, Maileva, a été la cible d’une cyberattaque entraînant le vol de données personnelles de 22 millions de personnes; les médias confirment que l’entreprise a annoncé l’incident et que des enquêtes sont en cours pour déterminer l’ampleur exacte et les suites à donner."
     },
     {
-      "cluster_id": "subject-ucrania-99a7458455a8",
-      "coherence": 0.38445609780090884,
+      "cluster_id": "subject-zelensky-8d05f8670780",
+      "coherence": 0.4603413137381297,
       "consequence": 3,
       "countries": [
-        "spain"
+        "france",
+        "spain",
+        "ve"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-14",
+      "country_count": 3,
+      "editorial_day": "2026-11-15",
       "filled_from": "europe",
-      "headline": "L’UE nomme une équipe de cinq pays pour négocier la paix en Ukraine",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-13/el-enviado-de-trump-asegura-que-putin-acepta-que-europa-se-sume-a-las-negociaciones-de-paz-sobre-ucrania.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/ue-busca-representante-negociacion-rusia-sobre-guerra-20261113184434-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261113/11683788/cinco-paises-ue-representaran-europa-negociaciones-ucrania.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261113/espana-queda-equipo-negociacion-pactado-ue-hablar-rusia-paz-ucrania/1003744458022_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ue-enviara-representantes-cinco-paises-las-conversaciones-paz-entre-rusia-ucrania-espana-se-queda-fuera_7061008_0.html"
-        },
-        {
-          "language": "es",
-          "source": "mundiario.com",
-          "source_country": "spain",
-          "url": "https://www.mundiario.com/internacional/europa-renuncia-voz-unica-negociar-paz-ucrania-deja-espana-fuera-equipo/20261114014350452763.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/ue-busca-representante-negociacion-rusia-sobre-guerra-20261113184434-nt.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3845,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.6338,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ucrania",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "europa",
-        "europe",
-        "kremlin",
-        "madrid",
-        "polonia",
-        "rusia",
-        "ucrania"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "L’Union européenne a renoncé à désigner un seul représentant et a choisi un groupe composé de représentants de cinq pays pour mener les pourparlers de paix avec la Russie au sujet de la guerre en Ukraine ; plusieurs articles indiquent en outre que l’Espagne ne fait pas partie de cette équipe."
-    },
-    {
-      "cluster_id": "subject-zelensky-bad47073a073",
-      "coherence": 0.530783163080647,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-14",
-      "filled_from": "europe",
-      "headline": "Zelensky affirme que les États‑Unis ont proposé de céder le Donbass contre une adhésion à l'OTAN",
-      "independent_source_count": 5,
+      "headline": "Zelensky affirme que les États‑Unis ont proposé l’OTAN contre le Donbass",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/live/2026/11/14/en-direct-guerre-en-ukraine-volodymyr-zelensky-affirme-que-les-etats-unis-ont-evoque-des-concessions-territoriales-en-echange-d-une-adhesion-a-l-otan_6808609_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/11/15/ukraine-volodymyr-zelensky-evoque-l-hypothese-americaine-d-une-adhesion-de-son-pays-a-l-otan-contre-la-cession-du-donbass_6810710_3210.html"
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.la-croix.com/international/ukraine-russie-jour-1725-point-conflit-ukrainien-poutine-aujourdhui-20261114"
+          "url": "https://www.liberation.fr/international/europe/le-donbass-contre-une-place-a-lotan-selon-zelensky-les-etats-unis-ont-propose-un-deal-impliquant-des-concessions-territoriales-20261114_EZCVGIUABZDC3EFI4AD5L25NWA/"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-volodymy-zelensky-affirme-que-les-etats-unis-ont-propose-des-concessions-territoriales-en-echange-d-une-adhesion-de-kiev-a-l-otan_8282333.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261114-washington-propos%C3%A9-kiev-c%C3%A8de-donbass-%C3%A9change-adh%C3%A9sion-otan-affirme-zelensky"
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-affirme-que-washington-a-propose-des-concessions-territoriales-en-echange-d-une-adhesion-de-l-ukraine-a-l-otan_8282804.html#xtor=RSS-3-%5Bmonde%5D"
         },
         {
           "language": "fr",
           "source": "lexpress.fr",
           "source_country": "france",
           "url": "https://www.lexpress.fr/monde/europe/ukraine-washington-aurait-propose-une-cession-du-donbass-en-echange-dune-adhesion-a-lotan-volodymyr-VJOP65NI2JDMNEU4FSHCOL32RQ/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-14/zelenski-asegura-que-ee-uu-sugiere-admitir-a-ucrania-en-la-otan-a-cambio-de-entregar-el-donbas-a-rusia.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/zelenski-dice-eeuu-planteado-admitir-ucrania-otan-si-retira-donbas_1_13664343.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/zelenski-asegura-que-eeuu-ha-ofrecido-ucrania-entrar-otan-cambio-renunciar-donbas_7061157_0.html"
+        },
+        {
+          "language": "es",
+          "source": "confirmado.com.ve",
+          "source_country": "ve",
+          "url": "https://confirmado.com.ve/zelenski-dice-que-ee-uu-ha-planteado-admitir-a-ucrania-en-la-otan-si-se-retira-de-donbas/"
         }
       ],
       "mentioned_countries": [
-        "united-states",
-        "up"
+        "up",
+        "united-states"
       ],
       "origin_country": "france",
       "outbound_source": "lexpress.fr",
       "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-washington-aurait-propose-une-cession-du-donbass-en-echange-dune-adhesion-a-lotan-volodymyr-VJOP65NI2JDMNEU4FSHCOL32RQ/",
-      "rank": 4,
-      "reference_newsroom_count": 5,
+      "rank": 2,
+      "reference_newsroom_count": 7,
       "reference_newsrooms": [
-        "france24.com",
+        "20minutos.es",
+        "eldiario.es",
+        "elpais.com",
         "francetvinfo.fr",
-        "la-croix.com",
         "lemonde.fr",
-        "lexpress.fr"
+        "lexpress.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5308,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
+          "coherence": 0.4603,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4667,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.6667,
+          "source_reliability": 0.7419
         },
-        "total": 0.5753,
+        "total": 0.6943,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "zelensky",
       "subject_names": [
         "abu dhabi",
-        "asia",
+        "donbas",
         "donbass",
-        "etats-unis",
+        "eeuu",
+        "estados unidos",
+        "european",
         "kiev",
+        "miami",
         "moscow",
+        "nato",
+        "otan",
+        "rusia",
         "russia",
-        "trump",
+        "ucrania",
         "ukraine",
-        "vance",
         "volodymyr zelensky",
         "washington",
-        "white house",
         "zelenski",
         "zelensky",
         "zelenskyy"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Plusieurs articles rapportent que le président ukrainien Volodymyr Zelensky a déclaré que les États‑Unis auraient proposé qu'un territoire du Donbass soit cédé en échange d'une adhésion de l'Ukraine à l'OTAN; les comptes rendent compte de cette affirmation et indiquent que Zelensky a évoqué, dans la suite de sa déclaration, la possibilité d'organiser un référendum."
+      "subject_newsroom_count": 18,
+      "summary": "Les articles indiquent que le président ukrainien Volodymyr Zelensky a déclaré que les États‑Unis auraient proposé d’appuyer une adhésion de l’Ukraine à l’OTAN à la condition de céder ou renoncer au contrôle du Donbass, et qu’il a évoqué la possibilité d’un référendum sur cette question."
     },
     {
-      "cluster_id": "subject-miguel-ac8e0aab300e",
-      "coherence": null,
-      "consequence": 1,
+      "cluster_id": "subject-macron-d4190aead9c9",
+      "coherence": 0.4929922558448496,
+      "consequence": 3,
       "countries": [
-        "pe",
-        "spain"
+        "co",
+        "france",
+        "ro"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-14",
+      "country_count": 3,
+      "editorial_day": "2026-11-15",
       "filled_from": "europe",
-      "headline": "Le gardien Jesús Owono puni de 12 matchs après une expulsion contre Tenerife",
-      "independent_source_count": 3,
+      "headline": "Emmanuel Macron accuse ceux qui veulent réduire l’aide à l’Ukraine de vouloir l’imposer à une paix injuste",
+      "independent_source_count": 6,
       "members": [
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/deportes/futbol/2026-11-13/competicion-sanciona-con-12-partidos-a-jesus-owono-tras-su-expulsion-ante-el-tenerife.html"
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/live/2026/11/14/en-direct-guerre-en-ukraine-emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-a-kiev-et-l-obliger-a-une-paix-injuste_6808609_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste_8282819.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261114-macron-d%C3%A9nonce-ceux-qui-veulent-rationner-l-aide-%C3%A0-l-ukraine-et-l-obliger-%C3%A0-une-paix-injuste"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261115.OBS120149/emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-l-ukraine-et-l-obliger-a-une-paix-injuste.html"
         },
         {
           "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20261113/owono-portero-andorra-choco-jesus-miguel-recibe-partidos-sancion/1003744454095_0.html"
+          "source": "notimerica.com",
+          "source_country": "co",
+          "url": "https://www.notimerica.com/politica/noticia-ucrania-macron-advierte-quien-quieren-reducir-aportaciones-ucrania-aspira-paz-injusta-20261114221250.html"
         },
         {
-          "language": "es",
-          "source": "libero.pe",
-          "source_country": "pe",
-          "url": "https://libero.pe:443/futbol-internacional/liga-espanola/2026/11/13/jesus-owono-recibe-12-partidos-de-sancion-choque-causo-muerte-de-jesus-de-miguel-1192321"
+          "language": "ron",
+          "source": "bursa.ro",
+          "source_country": "ro",
+          "url": "https://www.bursa.ro/macron-cei-care-vor-sa-8222rationalizeze-resursele-ucrainei-vor-s-o-forteze-sa-accepte-8222o-pace-nedreapta-66050168"
         }
       ],
       "mentioned_countries": [
-        "an"
+        "up"
       ],
-      "origin_country": "pe",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/deportes/futbol/20261113/owono-portero-andorra-choco-jesus-miguel-recibe-partidos-sancion/1003744454095_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 2,
+      "origin_country": "co",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste_8282819.html#xtor=RSS-3-%5Bmonde%5D",
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elespanol.com",
-        "elpais.com"
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.493,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6605,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "macron"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Lors de plusieurs interventions, Emmanuel Macron a dénoncé « ceux qui veulent rationner » l’aide à l’Ukraine, affirmant que réduire les soutiens vise à contraindre le pays à accepter « une paix injuste ». Ces déclarations ont été reprises par plusieurs médias internationaux."
+    },
+    {
+      "cluster_id": "subject-allemagne-ce3acc10c65a",
+      "coherence": null,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-15",
+      "filled_from": "europe",
+      "headline": "Ilse Aigner pourrait devenir la première femme présidente fédérale d'Allemagne",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/allemagne-ilse-aigner-un-profil-inedit-bientot-premiere-femme-presidente-du-pays-20261114"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/allemagne-ilse-aigner-cette-conservatrice-atypique-qui-pourrait-devenir-la-premiere-femme-presidente-PRJTZD34EJEWLGE2YJKDPQJDXA/"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261109/11679981/socialcristiana-ilse-aigner-sera-primera-mujer-presidenta-federal-alemania.html"
+        }
+      ],
+      "mentioned_countries": [
+        "germany"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261109/11679981/socialcristiana-ilse-aigner-sera-primera-mujer-presidenta-federal-alemania.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lavanguardia.com",
+        "lexpress.fr"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 0.3333,
+          "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
-          "source_reliability": 0.5
+          "source_reliability": 0.5294
         },
-        "total": 0.4592,
+        "total": 0.6248,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "miguel",
+      "subject_label": "allemagne",
       "subject_names": [
-        "miguel",
-        "tenerife"
+        "allemagne",
+        "ilse aigner"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Les articles indiquent que Jesús Owono, gardien de l’équipe d’Andorra, a été sanctionné par une suspension de 12 matchs suite à une expulsion lors du match contre Tenerife. Ils précisent que l’expulsion faisait suite à un choc impliquant Jesús de Miguel, incident mentionné comme la cause de la sanction et lié à la mort de Jesús de Miguel."
+      "subject_newsroom_count": 3,
+      "summary": "Les articles indiquent qu'Ilse Aigner, une dirigeante conservatrice et membre de la CSU/social-chrétienne, est pressentie pour succéder à l'actuelle présidence fédérale allemande, ce qui ferait d'elle la première femme à occuper ce poste en Allemagne. Ils décrivent son profil comme atypique parmi les conservateurs et soulignent que sa candidature ou nomination est envisagée dans le paysage politique allemand."
+    },
+    {
+      "cluster_id": "subject-france-d03bf93672ef",
+      "coherence": 0.42906545956384834,
+      "consequence": 0,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-15",
+      "headline": "Teddy Riner attire la foule au salon Made in France sans dévoiler son programme",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/elections/presidentielles/je-suis-un-pur-produit-francais-le-candidat-teddy-riner-s-offre-un-premier-bain-de-foule-au-salon-du-made-in-france-a-paris-20261114"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/politique/presidentielle-au-salon-du-made-in-france-teddy-riner-coupe-le-cordon-avec-macron-mais-ne-donne-toujours-pas-de-programme-20261114_CJ3ZTFA4P5A35EHP75BUXHTZXU/"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261114-pr%C3%A9sidentielle-en-france-teddy-riner-attire-les-foules-mais-ne-d%C3%A9voile-encore-rien-de-son-programme"
+        },
+        {
+          "language": "fr",
+          "source": "la1ere.franceinfo.fr",
+          "source_country": "france",
+          "url": "https://la1ere.franceinfo.fr/on-est-la-france-ou-on-ne-l-est-pas-teddy-riner-poursuit-sa-campagne-de-candidat-surprise-a-la-presidentielle-au-salon-made-in-france-1758000.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/politique/presidentielle-au-salon-du-made-in-france-teddy-riner-coupe-le-cordon-avec-macron-mais-ne-donne-toujours-pas-de-programme-20261114_CJ3ZTFA4P5A35EHP75BUXHTZXU/",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "lefigaro.fr",
+        "liberation.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4291,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.4342,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "algerie",
+        "france",
+        "francia",
+        "made",
+        "paris",
+        "teddy riner",
+        "turquie"
+      ],
+      "subject_newsroom_count": 22,
+      "summary": "Teddy Riner, candidat surprise à l’élection présidentielle, a participé à un premier bain de foule au salon Made in France à Paris où il a attiré de nombreux visiteurs, affirmé son attachement à la France et clairement pris ses distances vis-à-vis d’Emmanuel Macron, mais il n’a pas présenté de programme détaillé."
     }
   ],
-  "discarded_ingested": 10,
+  "discarded_ingested": 17,
   "discarded_kept": 5,
-  "generated_at": "2026-11-14T12:23:30.571204+00:00",
+  "generated_at": "2026-11-15T12:53:35.532674+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

@@ -1,455 +1,506 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-iran-b39c58eb968d",
-      "coherence": 0.448925362487512,
+      "cluster_id": "subject-zelensky-8d05f8670780",
+      "coherence": 0.4603413137381297,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain",
+        "ve"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-11-15",
+      "headline": "Zelenski afirma que EE. UU. propuso admitir a Ucrania en la OTAN a cambio del Donbás",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/15/ukraine-volodymyr-zelensky-evoque-l-hypothese-americaine-d-une-adhesion-de-son-pays-a-l-otan-contre-la-cession-du-donbass_6810710_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/le-donbass-contre-une-place-a-lotan-selon-zelensky-les-etats-unis-ont-propose-un-deal-impliquant-des-concessions-territoriales-20261114_EZCVGIUABZDC3EFI4AD5L25NWA/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/volodymyr-zelensky-affirme-que-washington-a-propose-des-concessions-territoriales-en-echange-d-une-adhesion-de-l-ukraine-a-l-otan_8282804.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/monde/europe/ukraine-washington-aurait-propose-une-cession-du-donbass-en-echange-dune-adhesion-a-lotan-volodymyr-VJOP65NI2JDMNEU4FSHCOL32RQ/"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-14/zelenski-asegura-que-ee-uu-sugiere-admitir-a-ucrania-en-la-otan-a-cambio-de-entregar-el-donbas-a-rusia.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/zelenski-dice-eeuu-planteado-admitir-ucrania-otan-si-retira-donbas_1_13664343.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/zelenski-asegura-que-eeuu-ha-ofrecido-ucrania-entrar-otan-cambio-renunciar-donbas_7061157_0.html"
+        },
+        {
+          "language": "es",
+          "source": "confirmado.com.ve",
+          "source_country": "ve",
+          "url": "https://confirmado.com.ve/zelenski-dice-que-ee-uu-ha-planteado-admitir-a-ucrania-en-la-otan-si-se-retira-de-donbas/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "united-states"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/monde/europe/ukraine-washington-aurait-propose-une-cession-du-donbass-en-echange-dune-adhesion-a-lotan-volodymyr-VJOP65NI2JDMNEU4FSHCOL32RQ/",
+      "rank": 1,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4603,
+          "corroboration": 0.6,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.7419
+        },
+        "total": 0.7443,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "zelensky",
+      "subject_names": [
+        "abu dhabi",
+        "donbas",
+        "donbass",
+        "eeuu",
+        "estados unidos",
+        "european",
+        "kiev",
+        "miami",
+        "moscow",
+        "nato",
+        "otan",
+        "rusia",
+        "russia",
+        "ucrania",
+        "ukraine",
+        "volodymyr zelensky",
+        "washington",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Varios medios coinciden en que el presidente ucraniano Volodímir Zelenski declaró que Estados Unidos planteó la posibilidad de que Ucrania ingresara en la OTAN a cambio de ceder o renunciar al control del Donbás; las informaciones señalan que Zelenski mencionó esa propuesta y la idea de consultar a la población mediante un referéndum sobre cualquier concesión territorial."
+    },
+    {
+      "cluster_id": "subject-bahrein-f3bf28140346",
+      "coherence": 0.5080827915856465,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "po",
+        "ri"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-11-15",
+      "headline": "Irán afirma haber atacado con drones una base estadounidense en Baréin",
+      "independent_source_count": 7,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/15/l-iran-revendique-une-attaque-de-drones-contre-une-base-americaine-a-bahrein_6810990_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/moyen-orient/liran-revendique-une-nouvelle-attaque-contre-une-base-militaire-des-etats-unis-a-bahrein-20261115_VSADW3X4B5BTBJTSUPFQTRM2LU/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/iran/guerre-entre-les-etats-unis-israel-et-l-iran/l-iran-revendique-une-attaque-contre-une-base-americaine-au-bahrein_8283197.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/moyen-orient/20261115-iran-revendique-frappes-drones-contre-base-am%C3%A9ricaine-au-bahre%C3%AFn"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/13/ira-diz-ter-atacado-radar-dos-eua-no-bahrein.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "sapo.pt",
+          "source_country": "po",
+          "url": "https://sapo.pt/artigo/teerao-reivindica-ataque-contra-base-militar-dos-eua-no-bahrein-6af99b9cfaafdbf5ce72a1c1"
+        },
+        {
+          "language": "srp",
+          "source": "slobodnaevropa.org",
+          "source_country": "ri",
+          "url": "https://www.slobodnaevropa.org/a/bahrein-iran-napad/33898965.html"
+        }
+      ],
+      "mentioned_countries": [
+        "ir",
+        "united-states"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/13/ira-diz-ter-atacado-radar-dos-eua-no-bahrein.ghtml",
+      "rank": 2,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5081,
+          "corroboration": 0.6667,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6364,
+          "source_reliability": 0.7037
+        },
+        "total": 0.7342,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bahrein",
+      "subject_names": [
+        "bahrain",
+        "bahrein",
+        "gulf",
+        "iran",
+        "teheran"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Varios medios coinciden en que Irán reivindicó ataques con drones dirigidos a una base militar estadounidense en Baréin; las informaciones indican que Teherán aseguró haber golpeado instalaciones vinculadas a Estados Unidos mientras las autoridades de Baréin dijeron haber detectado o interceptado ataques, según las fuentes citadas."
+    },
+    {
+      "cluster_id": "subject-macron-d4190aead9c9",
+      "coherence": 0.4929922558448496,
+      "consequence": 3,
+      "countries": [
+        "co",
+        "france",
+        "ro"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-11-15",
+      "headline": "Macron critica la reducción de ayuda a Ucrania y advierte sobre una paz injusta",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/live/2026/11/14/en-direct-guerre-en-ukraine-emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-a-kiev-et-l-obliger-a-une-paix-injuste_6808609_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste_8282819.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/france/20261114-macron-d%C3%A9nonce-ceux-qui-veulent-rationner-l-aide-%C3%A0-l-ukraine-et-l-obliger-%C3%A0-une-paix-injuste"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261115.OBS120149/emmanuel-macron-denonce-ceux-qui-veulent-rationner-l-aide-l-ukraine-et-l-obliger-a-une-paix-injuste.html"
+        },
+        {
+          "language": "es",
+          "source": "notimerica.com",
+          "source_country": "co",
+          "url": "https://www.notimerica.com/politica/noticia-ucrania-macron-advierte-quien-quieren-reducir-aportaciones-ucrania-aspira-paz-injusta-20261114221250.html"
+        },
+        {
+          "language": "ron",
+          "source": "bursa.ro",
+          "source_country": "ro",
+          "url": "https://www.bursa.ro/macron-cei-care-vor-sa-8222rationalizeze-resursele-ucrainei-vor-s-o-forteze-sa-accepte-8222o-pace-nedreapta-66050168"
+        }
+      ],
+      "mentioned_countries": [
+        "up"
+      ],
+      "origin_country": "co",
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/emmanuel-macron-affirme-que-ceux-qui-veulent-rationner-l-aide-a-l-ukraine-veulent-l-obliger-a-une-paix-injuste_8282819.html#xtor=RSS-3-%5Bmonde%5D",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "lemonde.fr",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.493,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.7105,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "macron",
+      "subject_names": [
+        "emmanuel macron",
+        "macron"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "El presidente francés Emmanuel Macron ha denunciado a quienes quieren restringir o racionar la ayuda a Ucrania, afirmando que esa postura busca forzar al país a aceptar \"una paz injusta\"; esta declaración aparece de forma consistente en las informaciones del 9 al 14 de noviembre citadas."
+    },
+    {
+      "cluster_id": "subject-putin-ffd298b7e551",
+      "coherence": 0.4667833799293919,
       "consequence": 3,
       "countries": [
         "germany",
+        "india",
         "it",
-        "sy",
         "united-kingdom",
         "united-states"
       ],
       "country_count": 5,
-      "editorial_day": "2026-11-14",
-      "headline": "Irán afirma haber atacado un radar militar estadounidense en Baréin",
-      "independent_source_count": 6,
+      "editorial_day": "2026-11-15",
+      "headline": "Trump, Putin y Xi se reunirán juntos en China la próxima semana",
+      "independent_source_count": 8,
       "members": [
         {
           "language": "en",
-          "source": "theguardian.com",
+          "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/nov/13/iran-us-radar-bahrain-sirik-hormuz"
+          "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "en",
-          "source": "dw.com",
+          "language": "de",
+          "source": "tagesschau.de",
           "source_country": "germany",
-          "url": "https://www.dw.com/en/iran-targeted-us-radar-system-in-bahrain/a-79942640?maca=en-rss-en-world-4025-rdf"
+          "url": "https://www.tagesschau.de/ausland/amerika/treffen-trump-putin-xi-100.html"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/11/13/irgc-says-it-destroyed-us-radar-in-bahrain-after-attack-on-southern-iran"
+          "url": "https://www.euronews.com/2026/11/14/trump-xi-and-putin-to-meet-in-china-white-house-says"
         },
         {
           "language": "en",
-          "source": "naharnet.com",
-          "source_country": "sy",
-          "url": "https://www.naharnet.com/stories/en/323750-iran-s-revolutionary-guard-claims-strike-on-us-radar-in-bahrain"
-        },
-        {
-          "language": "en",
-          "source": "naharnet.com",
-          "source_country": "sy",
-          "url": "https://www.naharnet.com/stories/en/323766-us-says-shot-down-two-iranian-drones-targeted-at-bahrain"
-        },
-        {
-          "language": "en",
-          "source": "channel3000.com",
+          "source": "breitbart.com",
           "source_country": "united-states",
-          "url": "https://www.channel3000.com/news/us-military-downs-2-iranian-attack-drones-as-iran-claims-a-strike-on-a-us/article_e1572bd1-ea32-5ab5-819c-0e05767c4983.html"
+          "url": "https://www.breitbart.com/news/trump-to-meet-putin-xi-in-china-for-historic-nuclear-arms-talks/"
+        },
+        {
+          "language": "mar",
+          "source": "tarunbharat.com",
+          "source_country": "india",
+          "url": "https://www.tarunbharat.com/trump-putin-jinping-to-meet-together-for-the-first-time/"
         },
         {
           "language": "en",
-          "source": "onenewspage.com",
+          "source": "fox34.com",
           "source_country": "united-states",
-          "url": "https://www.onenewspage.com/story/iran-live-updates-us-denies-irans-claim-that-it-destroyed-us-radar-in-bahrain-1fc55e6b/"
+          "url": "https://www.fox34.com/2026/11/14/trump-xi-putin-plan-an-unprecedented-joint-meeting-white-house-says/"
+        },
+        {
+          "language": "en",
+          "source": "wbrc.com",
+          "source_country": "united-states",
+          "url": "https://www.wbrc.com/2026/11/14/trump-xi-putin-plan-an-unprecedented-joint-meeting-white-house-says/"
+        },
+        {
+          "language": "de",
+          "source": "muensterschezeitung.de",
+          "source_country": "germany",
+          "url": "https://www.muensterschezeitung.de/nachrichten/schlagzeilen/trump-trifft-xi-und-putin-in-china-3719237"
         }
       ],
       "mentioned_countries": [
-        "ir"
+        "china"
       ],
       "origin_country": "germany",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/11/13/irgc-says-it-destroyed-us-radar-in-bahrain-after-attack-on-southern-iran",
-      "rank": 1,
+      "outbound_source": "tagesschau.de",
+      "outbound_url": "https://www.tagesschau.de/ausland/amerika/treffen-trump-putin-xi-100.html",
+      "rank": 4,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "dw.com",
+        "bbc.co.uk",
         "euronews.com",
-        "theguardian.com"
+        "tagesschau.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.4489,
+          "coherence": 0.4668,
           "corroboration": 0.7143,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
+          "prominence": 0.6667,
+          "source_reliability": 0.7037
         },
-        "total": 0.7028,
+        "total": 0.7081,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "iran",
+      "subject_label": "putin",
       "subject_names": [
-        "bahrain",
-        "iran",
-        "teheran"
+        "chine",
+        "donald trump",
+        "jinping",
+        "kremlin",
+        "poutine",
+        "putin",
+        "trump",
+        "vladimir poutine",
+        "white house"
       ],
       "subject_newsroom_count": 18,
-      "summary": "Fuentes coinciden en que Irán declaró haber atacado un sistema de radar estadounidense ubicado en Baréin y que Estados Unidos respondió negando que el radar hubiera sido destruido; además, las informaciones indican que EE. UU. aseguró haber derribado dos drones iraníes dirigidos hacia Baréin durante las mismas tensiones."
+      "summary": "La Casa Blanca anunció que los presidentes Donald Trump, Vladimir Putin y Xi Jinping planean un encuentro conjunto en China la próxima semana; las notas coinciden en que será una reunión histórica y sin precedentes entre los tres líderes, organizada para abordar asuntos de alto nivel, incluida la seguridad nuclear."
     },
     {
-      "cluster_id": "subject-trump-c25238049713",
-      "coherence": 0.4270647023008791,
+      "cluster_id": "subject-israel-5e5be495b371",
+      "coherence": 0.4249354616708567,
       "consequence": 3,
       "countries": [
-        "brazil",
         "france",
-        "spain"
+        "germany",
+        "spain",
+        "united-kingdom"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-11-14",
-      "headline": "Trump, Xi y Putin se reunirán en China la próxima semana",
+      "country_count": 4,
+      "editorial_day": "2026-11-15",
+      "headline": "Israel mata a un comandante de la rama militar de Hamás en el sur de Gaza",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "liberation.fr",
+          "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/trump-xi-et-poutine-se-reuniront-pour-la-premiere-fois-la-semaine-prochaine-20261114_CIW7BCBPCRGHHB6OOJYO52HCJM/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-14/ee-uu-confirma-la-reunion-de-trump-xi-y-putin-la-semana-proxima-en-china.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/11/14/6af7fe21e85ecea3138b456f.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/13/trump-xi-jinping-e-putin-se-reunirao-na-proxima-semana.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "china"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/13/trump-xi-jinping-e-putin-se-reunirao-na-proxima-semana.ghtml",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elmundo.es",
-        "elpais.com",
-        "globo.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4271,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6962,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "asia",
-        "chine",
-        "donald trump",
-        "jinping",
-        "maison blanche",
-        "poutine",
-        "putin",
-        "trump",
-        "vance",
-        "vladimir poutine",
-        "washington",
-        "white house"
-      ],
-      "subject_newsroom_count": 27,
-      "summary": "Los presidentes Donald Trump, Xi Jinping y Vladimir Putin sostendrán una reunión conjunta en China la próxima semana; la convocatoria ha sido confirmada por fuentes oficiales y descrita como un encuentro inédito entre los tres líderes."
-    },
-    {
-      "cluster_id": "subject-ucrania-99a7458455a8",
-      "coherence": 0.38445609780090884,
-      "consequence": 3,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-14",
-      "headline": "La UE designa un equipo de cinco países para negociar la paz en Ucrania",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-13/el-enviado-de-trump-asegura-que-putin-acepta-que-europa-se-sume-a-las-negociaciones-de-paz-sobre-ucrania.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/ue-busca-representante-negociacion-rusia-sobre-guerra-20261113184434-nt.html"
+          "url": "https://www.lemonde.fr/international/article/2026/11/15/un-commandant-de-la-branche-militaire-du-hamas-tue-dans-une-frappe-dans-le-sud-de-la-bande-de-gaza_6810874_3210.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261113/11683788/cinco-paises-ue-representaran-europa-negociaciones-ucrania.html"
+          "url": "https://www.lavanguardia.com/internacional/20261115/11684754/israel-mata-alto-comandante-hamas-bombardeo-sur-gaza.html"
         },
         {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261113/espana-queda-equipo-negociacion-pactado-ue-hablar-rusia-paz-ucrania/1003744458022_0.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cqrkg4r6mg7xo?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ue-enviara-representantes-cinco-paises-las-conversaciones-paz-entre-rusia-ucrania-espana-se-queda-fuera_7061008_0.html"
-        },
-        {
-          "language": "es",
-          "source": "mundiario.com",
-          "source_country": "spain",
-          "url": "https://www.mundiario.com/internacional/europa-renuncia-voz-unica-negociar-paz-ucrania-deja-espana-fuera-equipo/20261114014350452763.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/ue-busca-representante-negociacion-rusia-sobre-guerra-20261113184434-nt.html",
-      "rank": 3,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elespanol.com",
-        "elpais.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.3845,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.68
-        },
-        "total": 0.6838,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ucrania",
-      "subject_names": [
-        "ceuta",
-        "espana",
-        "europa",
-        "europe",
-        "kremlin",
-        "madrid",
-        "polonia",
-        "rusia",
-        "ucrania"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "La Unión Europea ha renunciado a nombrar un único representante y ha acordado enviar un grupo negociador formado por representantes de cinco países (junto a la UE) para participar en las conversaciones de paz con Rusia sobre la guerra en Ucrania; en ese reparto España no figura entre los países seleccionados."
-    },
-    {
-      "cluster_id": "subject-gaza-1c0817aaf2eb",
-      "coherence": 0.4320556480879424,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "it",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-13",
-      "headline": "Israel bombardea un hospital en Gaza y causa al menos seis muertos",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261112/11682217/israel-bombardea-hospital-gaza-causa-seis-muertos-20-heridos.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/israel-bombardea-veces-hospital-sur-franja-gaza-mata-seis-personas_1_13657307.html"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/11/13/news/gaza_israele_bombarda_ospedale_nasser_sei_morti_anche_chirurgo_american_doctor-425720399/?rss"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/12/ataque-israelense-a-hospital-em-gaza-deixa-mortos.ghtml"
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-11/gaza-samir-abu-junis-tot-hamas-kommandeur-luftangriff-israel-rafah-chan-junis"
         }
       ],
       "mentioned_countries": [
         "gz",
         "is"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/12/ataque-israelense-a-hospital-em-gaza-deixa-mortos.ghtml",
-      "rank": 4,
+      "origin_country": "france",
+      "outbound_source": "lemonde.fr",
+      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/15/un-commandant-de-la-branche-militaire-du-hamas-tue-dans-une-frappe-dans-le-sud-de-la-bande-de-gaza_6810874_3210.html",
+      "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "eldiario.es",
-        "globo.com",
+        "bbc.co.uk",
         "lavanguardia.com",
-        "repubblica.it"
+        "lemonde.fr",
+        "zeit.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.4321,
-          "corroboration": 0.6,
+          "coherence": 0.4249,
+          "corroboration": 0.6667,
           "editorial_weight": 0.3333,
-          "freshness": 0.7071,
+          "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6617,
+        "total": 0.7027,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "gaza",
+      "subject_label": "israel",
       "subject_names": [
         "gaza",
+        "hamas",
         "israel"
       ],
-      "subject_newsroom_count": 15,
-      "summary": "Varios artículos coinciden en que fuerzas israelíes atacaron un hospital en el sur de la Franja de Gaza, donde al menos seis personas murieron y alrededor de veinte resultaron heridas; entre las víctimas figura un médico vinculado a la organización American Doctor, según las informaciones."
-    },
-    {
-      "cluster_id": "subject-schumer-88b92b7ca79c",
-      "coherence": 0.5597031100058533,
-      "consequence": 3,
-      "countries": [
-        "ca",
-        "it",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 4,
-      "editorial_day": "2026-11-13",
-      "headline": "El senador Chris Van Hollen desafía a Chuck Schumer por el liderazgo del Senado",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/11/13/us-senator-chris-van-hollen-to-challenge-chuck-schumer-for-senate-majority-leader"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://wspd.iheart.com/content/2026-11-13-senator-chris-van-hollen-announces-challenge-to-schumer-for-senate-leadership/"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://wflaorlando.iheart.com/content/2026-11-13-senator-chris-van-hollen-announces-challenge-to-schumer-for-senate-leadership/"
-        },
-        {
-          "language": "en",
-          "source": "truthout.org",
-          "source_country": "united-states",
-          "url": "https://truthout.org/articles/schumer-whos-more-unpopular-than-trump-gets-a-challenger-for-majority-leader/"
-        },
-        {
-          "language": "en",
-          "source": "wellandtribune.ca",
-          "source_country": "ca",
-          "url": "https://www.wellandtribune.ca/news/world/united-states/who-is-chris-van-hollen-the-senator-challenging-chuck-schumer-to-be-majority-leader/article_bc36a322-7b33-5739-8aa9-aea18aa1fcac.html"
-        },
-        {
-          "language": "en",
-          "source": "news4jax.com",
-          "source_country": "united-states",
-          "url": "https://www.news4jax.com/news/politics/2026/11/13/who-is-chris-van-hollen-the-senator-challenging-chuck-schumer-to-be-majority-leader/"
-        }
-      ],
-      "mentioned_countries": [
-        "united-states"
-      ],
-      "origin_country": "ca",
-      "outbound_source": "euronews.com",
-      "outbound_url": "https://www.euronews.com/2026/11/13/us-senator-chris-van-hollen-to-challenge-chuck-schumer-for-senate-majority-leader",
-      "rank": 5,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5597,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6364
-        },
-        "total": 0.6565,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "schumer",
-      "subject_names": [
-        "schumer"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Varios medios informan que el senador demócrata Chris Van Hollen ha anunciado formalmente que presentará una candidatura para reemplazar a Chuck Schumer como líder de la mayoría en el Senado de Estados Unidos, planteando un desafío interno dentro del liderazgo demócrata."
+      "subject_newsroom_count": 20,
+      "summary": "Fuentes oficiales dicen que Israel llevó a cabo un ataque en el sur de la Franja de Gaza que resultó en la muerte de un alto comandante de la rama militar de Hamás; los informes coinciden en localizar el hecho en el sur de la franja y atribuir la reivindicación a autoridades israelíes."
     }
   ],
-  "discarded_ingested": 166,
+  "discarded_ingested": 181,
   "discarded_kept": 5,
-  "generated_at": "2026-11-14T12:23:30.571204+00:00",
+  "generated_at": "2026-11-15T12:53:35.532674+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

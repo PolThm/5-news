@@ -1,0 +1,28 @@
+{
+  "articles_collected": 8768,
+  "briefings_path": "data/briefings",
+  "clusters_after_grouping": 7759,
+  "clusters_selected": 13,
+  "completed": true,
+  "cycle_id": "2026-11-16T13-53-45Z",
+  "degraded": true,
+  "failures": [
+    {
+      "adapter": "rss",
+      "detail": "lavanguardia.com: request failed: IncompleteRead(277621 bytes read)"
+    },
+    {
+      "adapter": "rss",
+      "detail": "euronews.com: HTTP 404"
+    },
+    {
+      "adapter": "gdelt",
+      "detail": "http://data.gdeltproject.org/gdeltv2/20261116133000.gkg.csv.zip: HTTP 404"
+    }
+  ],
+  "groups_after_dedupe": 7927,
+  "phase": "published",
+  "published": true,
+  "started_at": "2026-11-16T13:53:45.509162+00:00",
+  "summarize_batches": {}
+}

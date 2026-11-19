@@ -1,753 +1,933 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-iran-fd46421a8768",
-      "coherence": 0.6305948046264491,
+      "cluster_id": "subject-myanmar-e2631592fa44",
+      "coherence": 0.4930763579798705,
       "consequence": 3,
       "countries": [
-        "as",
+        "af",
+        "au",
         "brazil",
-        "mu",
+        "ca",
+        "dr",
+        "germany",
+        "is",
+        "it",
+        "nl",
         "spain",
         "united-kingdom",
         "united-states",
         "unknown"
       ],
-      "country_count": 7,
-      "editorial_day": "2026-11-18",
-      "headline": "L'Iran frappe une base américaine au Koweït et vise des sites à Bahreïn",
-      "independent_source_count": 22,
+      "country_count": 13,
+      "editorial_day": "2026-11-19",
+      "headline": "La Cour internationale de Justice déclare que le Myanmar a commis un génocide contre les Rohingyas",
+      "independent_source_count": 36,
       "members": [
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/iran-ataca-base-aerea-kuwait-objetivos-barein-nuevo-bombardeo-eeuu_1_13672875.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/11/18/6afd7a6121efa04d6f8b4597.html"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/iran-fires-at-u-s-facility-in-bahrain-as-tehran-resumes-strikes-on-arab-neighbors"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/18/ira-ataca-instalacoes-de-drones-e-misseis-dos-eua-no-kuwait.ghtml"
-        },
-        {
-          "language": "en",
-          "source": "chesterstandard.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.chesterstandard.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "london-now.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.london-now.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "gazetteseries.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.gazetteseries.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "denbighshirefreepress.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.denbighshirefreepress.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "messengernewspapers.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.messengernewspapers.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "wtae.com",
-          "source_country": "united-states",
-          "url": "https://www.wtae.com/article/iran-gulf-attacks-us-air-base-kuwait-bahrain/74461869"
-        },
-        {
-          "language": "en",
-          "source": "thetottenhamindependent.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thetottenhamindependent.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "thurrockgazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thurrockgazette.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "omanobserver.om",
-          "source_country": "mu",
-          "url": "https://www.omanobserver.om/article/1199879/world/region/iran-fires-at-kuwait-after-us-strike-on-iranian-island"
-        },
-        {
-          "language": "en",
-          "source": "queanbeyanage.com.au",
-          "source_country": "as",
-          "url": "https://www.queanbeyanage.com.au/story/9394287/iran-fires-at-kuwait-after-us-strike-on-iranian-island/"
-        },
-        {
-          "language": "en",
-          "source": "falmouthpacket.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.falmouthpacket.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "southwalesargus.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.southwalesargus.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "easternriverinachronicle.com.au",
-          "source_country": "as",
-          "url": "https://www.easternriverinachronicle.com.au/story/9394287/iran-fires-at-kuwait-after-us-strike-on-iranian-island/"
-        },
-        {
-          "language": "en",
-          "source": "4029tv.com",
-          "source_country": "united-states",
-          "url": "https://www.4029tv.com/article/iran-gulf-attacks-us-air-base-kuwait-bahrain/74461869"
-        },
-        {
-          "language": "en",
-          "source": "bordertelegraph.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.bordertelegraph.com/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        },
-        {
-          "language": "en",
-          "source": "hayspost.com",
-          "source_country": "united-states",
-          "url": "https://hayspost.com/posts/02a3cb36-f8a1-487a-9e58-e09457fbdfb2"
-        },
-        {
-          "language": "en",
-          "source": "thetimes-tribune.com",
-          "source_country": "united-states",
-          "url": "https://www.thetimes-tribune.com/2026/11/18/iran-gulf-attacks-us-air-base-kuwait/"
-        },
-        {
-          "language": "en",
-          "source": "eastlondonadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.eastlondonadvertiser.co.uk/news/national/26740606.iran-widens-gulf-attacks-fires-us-base-kuwait-targets-bahrain/"
-        }
-      ],
-      "mentioned_countries": [
-        "ir"
-      ],
-      "origin_country": "as",
-      "outbound_source": "pbs.org",
-      "outbound_url": "https://www.pbs.org/newshour/world/iran-fires-at-u-s-facility-in-bahrain-as-tehran-resumes-strikes-on-arab-neighbors",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elmundo.es",
-        "globo.com",
-        "pbs.org"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.6306,
-          "corroboration": 0.7778,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.8462,
-          "source_reliability": 0.8571
-        },
-        "total": 0.7617,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "iran",
-      "subject_names": [
-        "bahrain",
-        "bahrein",
-        "eeuu",
-        "estados unidos",
-        "iran",
-        "koweit",
-        "kuwait",
-        "marco rubio",
-        "ormuz",
-        "qeshm",
-        "usa",
-        "washington"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "Les articles indiquent que l'Iran a élargi ses attaques dans le Golfe en tirant sur une installation ou base liée aux forces américaines au Koweït et en visant des cibles à Bahreïn, ces actions intervenant après des frappes précédentes dans la région impliquant les États-Unis."
-    },
-    {
-      "cluster_id": "subject-shenzhen-1c615a3d6074",
-      "coherence": 0.4290604817515561,
-      "consequence": 3,
-      "countries": [
-        "bg",
-        "france",
-        "it"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-18",
-      "headline": "Trump, Xi et Poutine se rencontrent à Shenzhen lors du sommet de l'APEC",
-      "independent_source_count": 10,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/a-shenzhen-un-sommet-xi-trump-poutine-historique-et-la-crainte-d-un-nouveau-yalta-20261117"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/sommet-xi-trump-poutine-a-shenzhen-a-la-table-des-negociations-un-president-americain-affaibli-20261117"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/asie-pacifique/sommet-de-shenzen-limprevisible-trump-et-le-vieil-ami-poutine-deux-dirigeants-aux-antipodes-dans-les-medias-chinois-20261118_P7HQFGKZWZHMBENKN7GPTW5BLM/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/international/trump-poutine-et-xi-a-shenzhen-les-europeens-grands-absents-du-rendez-vous-20261118"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/info-en-continu/20261118-trump-xi-poutine-derri%C3%A8re-la-photo-de-shenzhen-trois-agendas"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/asie-pacifique/20261118-le-sommet-de-l-apec-s-ouvre-%C3%A0-shenzhen-en-attendant-la-r%C3%A9union-entre-donald-trump-vladimir-poutine-et-xi-jinping"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/sommet-entre-vladimir-poutine-donald-trump-et-xi-jinping-a-shenzhen-la-crainte-dun-yalta-20-T7TL44CIT5ETFMXYK2OMHYW4SQ/"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/monde/le-veritable-homme-fort-a-shenzhen-ne-sera-pas-celui-quon-croit-pourquoi-le-sommet-entre-poutine-trump-et-xi-na-rien-dun-yalta-20_646999"
-        },
-        {
-          "language": "fr",
-          "source": "radiofrance.fr",
-          "source_country": "france",
-          "url": "https://www.radiofrance.fr/franceinter/podcasts/l-info-de-france-inter/apec-1009696"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/11/18/news/putin_xi_trump_perche_trilaterale_shenzhen_non_e_nuova_yalta-425732121/?rss"
-        },
-        {
-          "language": "en",
-          "source": "thedailystar.net",
-          "source_country": "bg",
-          "url": "https://www.thedailystar.net/slow-reads/geopolitical-insights/news/the-shenzhen-gambit-trump-xi-putin-and-the-unsettled-global-order-4326401"
-        }
-      ],
-      "mentioned_countries": [
-        "china"
-      ],
-      "origin_country": "bg",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/monde/le-veritable-homme-fort-a-shenzhen-ne-sera-pas-celui-quon-croit-pourquoi-le-sommet-entre-poutine-trump-et-xi-na-rien-dun-yalta-20_646999",
-      "rank": 2,
-      "reference_newsroom_count": 9,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "france24.com",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "radiofrance.fr",
-        "repubblica.it",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4291,
-          "corroboration": 0.6,
-          "editorial_weight": 0.5294,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.7143,
-          "source_reliability": 0.8
-        },
-        "total": 0.76,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "shenzhen",
-      "subject_names": [
-        "apec",
-        "asia",
-        "biden",
-        "china's",
-        "chine",
-        "donald trump",
-        "jinping",
-        "poutine",
-        "putin",
-        "shenzhen",
-        "trump",
-        "vladimir poutine",
-        "yalta"
-      ],
-      "subject_newsroom_count": 22,
-      "summary": "Les dirigeants Donald Trump, Xi Jinping et Vladimir Poutine se sont retrouvés à Shenzhen pendant le sommet de l'APEC, échangeant des poignées de main et participant à une réunion tripartite très suivie par les médias. Les articles s'accordent sur la portée symbolique de ce rendez‑vous, notent l'absence des Européens et soulignent les perceptions contrastées des trois dirigeants — un Trump imprévisible, un Poutine de longue date et un Xi au centre de l'hôte — ainsi que les débats sur l'impact géopolitique de leur rencontre sans qu'un consensus n'émerge sur l'idée d'un \"nouveau Yalta\"."
-    },
-    {
-      "cluster_id": "subject-rwanda-4812c45ab875",
-      "coherence": 0.45435528292290084,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-18",
-      "headline": "Cinq pays de l’UE annoncent la création d’un centre de renvoi de migrants au Rwanda",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/migrants/migrants-cinq-pays-europeens-envisagent-d-envoyer-au-rwanda-des-demandeurs-d-asile-deboutes_8287772.html#xtor=RSS-3-%5Bmonde%5D"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/monde/20261117.OBS120208/expulsion-de-migrants-au-rwanda-la-ligne-rouge-que-cinq-pays-europeens-viennent-de-franchir.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/cinq-pays-de-lue-devoilent-leur-projet-de-centre-pour-migrants-au-rwanda-PSF4X3ATCFEMLLWUPF4CPK2JXY/"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/monde/apres-un-premier-fiasco-a-347-millions-deuros-le-rwanda-relance-le-pari-des-centres-de-migrants-avec-cinq-pays-europeens_647027"
+          "url": "https://elpais.com/internacional/2026-11-19/el-tribunal-internacional-de-justicia-concluye-que-el-ejercito-de-myanmar-mato-a-miles-de-rohinyas-y-cometio-actos-de-violencia-extrema-contra-ellos.html"
         },
         {
           "language": "es",
           "source": "lavanguardia.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261116/11685591/cinco-paises-crean-ruanda-primer-centro-deportar-migrantes-fuera-ue.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/world/2026/nov/16/eu-states-immigration-return-hubs-rwanda"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "fr",
-          "source": "24matins.fr",
-          "source_country": "france",
-          "url": "https://www.24matins.fr/transferts-de-migrants-cinq-pays-de-lue-misent-sur-le-rwanda-malgre-le-flou-1424320"
-        }
-      ],
-      "mentioned_countries": [
-        "rw"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261116/11685591/cinco-paises-crean-ruanda-primer-centro-deportar-migrantes-fuera-ue.html",
-      "rank": 3,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "challenges.fr",
-        "francetvinfo.fr",
-        "lavanguardia.com",
-        "lexpress.fr",
-        "nouvelobs.com",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4544,
-          "corroboration": 0.6,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7419
-        },
-        "total": 0.7436,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "rwanda",
-      "subject_names": [
-        "ruanda",
-        "rwanda"
-      ],
-      "subject_newsroom_count": 16,
-      "summary": "Cinq États membres de l’Union européenne ont dévoilé un projet commun visant à installer au Rwanda un centre destiné à accueillir des migrants déboutés pour faciliter leur renvoi hors de l’UE. Le plan, présenté malgré des doutes et des critiques et après un précédent accord coûteux entre le Rwanda et d’autres pays, suscite des interrogations sur les modalités pratiques, juridiques et financières de ces transferts."
-    },
-    {
-      "cluster_id": "subject-alaska-2e99c5cd386a",
-      "coherence": 0.5439671986463785,
-      "consequence": 2,
-      "countries": [
-        "co",
-        "france",
-        "is",
-        "it",
-        "my",
-        "nl",
-        "spain",
-        "sz",
-        "united-kingdom",
-        "united-states"
-      ],
-      "country_count": 10,
-      "editorial_day": "2026-11-18",
-      "headline": "Mary Peltola remporte le siège sénatorial de l'Alaska et fait basculer le Sénat vers les démocrates",
-      "independent_source_count": 28,
-      "members": [
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261118-midterms-l-alaska-tourne-d%C3%A9mocrate-avec-l-%C3%A9lection-de-mary-peltola"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/us/2026-11-18/mary-peltola-gana-en-alaska-y-sella-una-mayoria-democrata-de-56-escanos-en-el-senado.html"
+          "url": "https://www.lavanguardia.com/internacional/20261119/11687944/corte-internacional-justicia-birmania-cometio-genocidio-rohinya.html"
         },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/democrata-mary-peltola-arrebata-republicanos-escano-alaska-senado-deja-camara-alta-mayoria-56-44_1_13672620.html"
+          "url": "https://www.eldiario.es/internacional/tribunal-onu-concluye-myanmar-cometio-genocidio-minoria-rohingya-caso-historico_1_13675952.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/eeuu/20261118/mary-peltola-arrebata-republicanos-escano-senado-alaska-amplia-mayoria-democrata/1003744462322_0.html"
+          "url": "https://www.elespanol.com/mundo/asia/20261119/myanmar-cometio-genocidio-minoria-musulmana-rohinya-corte-internacional-justicia/1003744464396_0.html"
         },
         {
           "language": "en",
           "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/us-news/2026/nov/18/first-thing-peltolas-alaska-victory-secures-56th-democratic-seat-in-senate"
+          "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/15/myanmar-rohingya-genocide-icj"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/myanmar-committed-genocide-against-rohingya-top-un-court-rules/a-79987898?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "en",
+          "source": "dw.com",
+          "source_country": "germany",
+          "url": "https://www.dw.com/en/icj-to-rule-on-rohingya-genocide-case-against-myanmar-what-to-know/a-79981434?maca=en-rss-en-world-4025-rdf"
+        },
+        {
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-11/myanmar-laut-un-gericht-verantwortlich-fuer-voelkermord-an-rohingya"
         },
         {
           "language": "en",
           "source": "euronews.com",
           "source_country": "it",
-          "url": "https://www.euronews.com/2026/11/18/cheers-and-reactions-in-alaska-after-mary-peltolas-senate-win"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/11/18/democrat-mary-peltola-unseats-republican-and-flips-us-senate-seat-in-tight-race-in-alaska"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/11/18/news/midterm_usa_democratici_vincono_alaska_mary_peltola_senato-425731128/?rss"
+          "url": "https://www.euronews.com/2026/11/19/myanmar-guilty-of-genocide-against-rohingya-un-court-rules"
         },
         {
           "language": "nl",
           "source": "nos.nl",
           "source_country": "nl",
-          "url": "https://nos.nl/l/2639952"
+          "url": "https://nos.nl/l/2640142"
         },
         {
           "language": "en",
-          "source": "times-standard.com",
+          "source": "npr.org",
           "source_country": "united-states",
-          "url": "https://www.times-standard.com/2026/11/18/mary-peltola-alaska-senate-win/"
+          "url": "https://www.npr.org/2026/11/19/g-s1-154340/un-court-myanmar-genocide-rohingya"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/19/myanmar-tinha-intencao-de-destruir-a-populacao-rohingya-diz-onu.ghtml"
         },
         {
           "language": "en",
-          "source": "canoncitydailyrecord.com",
+          "source": "apr.org",
           "source_country": "united-states",
-          "url": "https://www.canoncitydailyrecord.com/2026/11/18/mary-peltola-alaska-senate-win/"
+          "url": "https://www.apr.org/2026-11-19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "eastbaytimes.com",
+          "source": "kpbs.org",
           "source_country": "united-states",
-          "url": "https://www.eastbaytimes.com/2026/11/18/mary-peltola-alaska-senate-win/"
+          "url": "https://www.kpbs.org/news/international/2026/11/19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "iheart.com",
+          "source": "publicradioeast.org",
           "source_country": "united-states",
-          "url": "https://whp580.iheart.com/content/2026-11-18-democrat-peltola-wins-ak-senate-race/"
+          "url": "https://www.publicradioeast.org/2026-11-19/international-court-of-justice-issues-ruling-on-myanmar-genocide-case"
         },
         {
           "language": "en",
-          "source": "nvdaily.com",
-          "source_country": "united-states",
-          "url": "https://www.nvdaily.com/associated_press_national/democrat-mary-peltola-wins-us-senate-race-in-alaska-beating-incumbent-republican-dan-sullivan/article_1b741db4-a992-5bbb-8b71-13317fed5372.html"
-        },
-        {
-          "language": "en",
-          "source": "wmtw.com",
-          "source_country": "united-states",
-          "url": "https://www.wmtw.com/article/alaska-senate-race-peltola-beats-dan-sullivan/74459832"
-        },
-        {
-          "language": "en",
-          "source": "dominicanrepublicpost.com",
-          "source_country": "united-states",
-          "url": "https://dominicanrepublicpost.com/mary-peltola-flips-alaska-senate-seat-in-another-democratic-win/"
-        },
-        {
-          "language": "en",
-          "source": "wtvr.com",
-          "source_country": "united-states",
-          "url": "https://www.wtvr.com/politics/america-votes/mary-peltola-projected-to-flip-alaska-senate-seat-giving-democrats-56-44-majority"
-        },
-        {
-          "language": "en",
-          "source": "wpbf.com",
-          "source_country": "united-states",
-          "url": "https://www.wpbf.com/article/alaska-senate-race-peltola-beats-dan-sullivan/74459832"
-        },
-        {
-          "language": "en",
-          "source": "iheart.com",
-          "source_country": "united-states",
-          "url": "https://wflaorlando.iheart.com/content/2026-11-18-democrat-peltola-wins-ak-senate-race/"
-        },
-        {
-          "language": "en",
-          "source": "freemalaysiatoday.com",
-          "source_country": "my",
-          "url": "https://www.freemalaysiatoday.com/category/world/2026/11/18/democrat-peltola-wins-in-alaska-securing-56-44-us-senate-majority"
-        },
-        {
-          "language": "en",
-          "source": "jpost.com",
+          "source": "al-monitor.com",
           "source_country": "is",
-          "url": "http://www.jpost.com/american-politics/article-915261"
+          "url": "https://www.al-monitor.com/originals/2026/11/top-un-court-finds-myanmar-committed-genocide-against-muslim-rohingya"
         },
         {
           "language": "en",
-          "source": "kval.com",
+          "source": "kuaf.com",
           "source_country": "united-states",
-          "url": "https://kval.com/news/nation-world/democrat-mary-peltola-wins-alasak-senate-race-beating-incumbent-republican-dan-sullivan-politics-blue-wave-gas-cost-of-living-affordability"
+          "url": "https://www.kuaf.com/npr-news/2026-11-19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "kvnf.org",
+          "source": "wfsu.org",
           "source_country": "united-states",
-          "url": "https://www.kvnf.org/npr-news/2026-11-17/mary-peltola-flips-alaskas-senate-seat-into-democrats-column"
+          "url": "https://news.wfsu.org/npr-news/2026-11-19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "foxreno.com",
+          "source": "wn.com",
           "source_country": "united-states",
-          "url": "https://foxreno.com/news/nation-world/democrat-mary-peltola-wins-alasak-senate-race-beating-incumbent-republican-dan-sullivan-politics-blue-wave-gas-cost-of-living-affordability"
+          "url": "https://article.wn.com/view/2026/11/19/myanmar_forces_killed_aposthousands_of_rohingya_civilians_ap/"
         },
         {
           "language": "en",
-          "source": "alaskapublic.org",
+          "source": "prairiepublic.org",
           "source_country": "united-states",
-          "url": "https://alaskapublic.org/news/politics/elections/2026-11-17/mary-peltola-wins-u-s-senate-seat-in-alaska"
+          "url": "https://news.prairiepublic.org/news-from-npr/2026-11-19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "kasu.org",
+          "source": "aspenpublicradio.org",
           "source_country": "united-states",
-          "url": "https://www.kasu.org/politics/2026-11-17/mary-peltola-flips-alaskas-senate-seat-into-democrats-column"
+          "url": "https://www.aspenpublicradio.org/2026-11-19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "wmur.com",
+          "source": "kvpr.org",
           "source_country": "united-states",
-          "url": "https://www.wmur.com/article/alaska-senate-race-peltola-beats-dan-sullivan/74459832"
+          "url": "https://www.kvpr.org/npr-news/2026-11-19/top-u-n-court-rules-myanmar-committed-genocide-against-the-rohingya"
         },
         {
           "language": "en",
-          "source": "nvdaily.com",
+          "source": "ksevradio.com",
           "source_country": "united-states",
-          "url": "https://www.nvdaily.com/associated_press_national/why-ap-called-the-alaska-senate-race-for-democrat-mary-peltola/article_edcf8614-b224-56ad-819e-396bd41923d5.html"
+          "url": "https://ksevradio.com/reactions-as-top-un-court-finds-myanmar-guilty-of-genocide-against-rohingya/"
         },
         {
-          "language": "es",
-          "source": "telemundodallas.com",
-          "source_country": "united-states",
-          "url": "https://www.telemundodallas.com/destacados/mary-peltola-gana-alaska-senado/2615218/"
+          "language": "en",
+          "source": "ariananews.af",
+          "source_country": "af",
+          "url": "https://www.ariananews.af/world-court-finds-myanmar-forces-killed-thousands-of-rohingya-ruling-ongoing/"
         },
         {
-          "language": "es",
-          "source": "notimerica.com",
-          "source_country": "co",
-          "url": "https://www.notimerica.com/politica/noticia-eeuu-amp-democrata-mary-peltola-vence-alaska-convierte-primera-senadora-nativa-americana-estado-20261118054001.html"
+          "language": "en",
+          "source": "sitkasentinel.com",
+          "source_country": "united-states",
+          "url": "http://www.sitkasentinel.com/stories/un-court-set-to-rule-on-case-alleging-myanmar-committed-genocide-in-rohingya-crackdown,187412"
+        },
+        {
+          "language": "en",
+          "source": "redriverradio.org",
+          "source_country": "united-states",
+          "url": "https://www.redriverradio.org/2026-11-19/international-court-of-justice-issues-ruling-on-myanmar-genocide-case"
+        },
+        {
+          "language": "en",
+          "source": "al-monitor.com",
+          "source_country": "is",
+          "url": "https://www.al-monitor.com/originals/2026/11/world-court-finds-myanmar-committed-genocide-against-rohingya-population"
         },
         {
           "language": "de",
-          "source": "tagesanzeiger.ch",
-          "source_country": "sz",
-          "url": "https://www.tagesanzeiger.ch/alaska-peltola-gewinnt-senatssitz-fuer-demokraten-734183031813"
+          "source": "badische-zeitung.de",
+          "source_country": "germany",
+          "url": "https://www.badische-zeitung.de/un-gericht-macht-myanmar-fuer-rohingya-genozid-verantwortlich"
+        },
+        {
+          "language": "de",
+          "source": "sn.at",
+          "source_country": "au",
+          "url": "https://www.sn.at/politik/weltpolitik/uno-gericht-myanmar-verantwortlich-fuer-rohingya-voelkermord-art-684821"
+        },
+        {
+          "language": "de",
+          "source": "mz.de",
+          "source_country": "unknown",
+          "url": "https://www.mz.de/deutschland-und-welt/politik/un-gericht-macht-myanmar-fur-rohingya-genozid-verantwortlich-4359085"
+        },
+        {
+          "language": "de",
+          "source": "op-online.de",
+          "source_country": "germany",
+          "url": "http://www.op-online.de/politik/un-gericht-macht-myanmar-fuer-rohingya-genozid-verantwortlich-zr-94597935.html"
+        },
+        {
+          "language": "de",
+          "source": "fnp.de",
+          "source_country": "germany",
+          "url": "http://www.fnp.de/politik/un-gericht-macht-myanmar-fuer-rohingya-genozid-verantwortlich-zr-94597935.html"
+        },
+        {
+          "language": "de",
+          "source": "rhein-zeitung.de",
+          "source_country": "germany",
+          "url": "https://www.rhein-zeitung.de/deutschland-welt/politik/un-gericht-macht-myanmar-fuer-rohingya-genozid-verantwortlich_arid-4171442.html"
+        },
+        {
+          "language": "it",
+          "source": "corriere.it",
+          "source_country": "it",
+          "url": "https://www.corriere.it/esteri/26_novembre_19/myanmar-genocidio-rohingya-condanna-985be440-e723-4a76-8698-d00ba2664xlk.shtml"
+        },
+        {
+          "language": "fr",
+          "source": "ledevoir.com",
+          "source_country": "ca",
+          "url": "https://www.ledevoir.com/monde/asie/1026173/myanmar-commis-genocide-encontre-rohingyas-statue-cij"
+        },
+        {
+          "language": "es",
+          "source": "acento.com.do",
+          "source_country": "dr",
+          "url": "https://acento.com.do/bbc-news-mundo/la-onu-declara-culpable-de-genocidio-contra-los-rohingyas-a-myanmar-el-primer-estado-condenado-por-este-crimen-9792974.html"
+        },
+        {
+          "language": "cat",
+          "source": "ara.cat",
+          "source_country": "spain",
+          "url": "https://www.ara.cat/internacional/asia/judici-myanmar-rendre-comptes-genocidi-rohingya_1_5915679.html"
+        },
+        {
+          "language": "en",
+          "source": "pajhwok.com",
+          "source_country": "af",
+          "url": "https://pajhwok.com/2026/11/19/icj-to-rule-on-genocide-against-rohingya-in-myanmar/"
+        }
+      ],
+      "mentioned_countries": [
+        "ga"
+      ],
+      "origin_country": "af",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/world/2026/nov/15/myanmar-rohingya-genocide-icj",
+      "rank": 1,
+      "reference_newsroom_count": 12,
+      "reference_newsrooms": [
+        "corriere.it",
+        "dw.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elpais.com",
+        "euronews.com",
+        "globo.com",
+        "lavanguardia.com",
+        "nos.nl",
+        "npr.org",
+        "theguardian.com",
+        "zeit.de"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4931,
+          "corroboration": 0.8667,
+          "editorial_weight": 0.6,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.9,
+          "source_reliability": 0.92
+        },
+        "total": 0.8228,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "myanmar",
+      "subject_names": [
+        "birmania",
+        "birmanie",
+        "cij",
+        "corte internacional",
+        "cour",
+        "myanmar",
+        "onu",
+        "rohingyas"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "La Cour internationale de Justice, le principal tribunal des Nations unies, a statué qu’au cours de la répression contre la minorité rohingya le Myanmar a commis des actes constituant un génocide; les décisions et comptes rendus cités indiquent que le tribunal a reconnu la responsabilité de l’État et a conclu que des milliers de civils rohingyas ont été tués ou victimes de violences dans le cadre de cette campagne."
+    },
+    {
+      "cluster_id": "subject-hakeem-jeffries-a0a038efe2db",
+      "coherence": 0.4613485788898105,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "it",
+        "mx",
+        "pe",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-11-19",
+      "headline": "Les démocrates choisissent Hakeem Jeffries comme candidat au poste de speaker",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/am%C3%A9riques/20261118-%C3%A9tats-unis-le-d%C3%A9mocrate-hakeem-jeffries-bient%C3%B4t-%C3%A0-la-pr%C3%A9sidence-de-la-chambre-des-repr%C3%A9sentants"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261118.OBS120250/etats-unis-qui-est-hakeem-jeffries-le-candidat-des-democrates-pour-le-poste-de-speaker-de-la-chambre-des-representants.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/us/2026-11-18/los-democratas-proponen-a-hakeem-jefferies-como-primer-presidente-negro-de-la-camara-de-representantes-en-el-nuevo-congreso.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/hakeem-jeffries-primer-negro-presidir-camara-baja-20261119085554-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/democratas-eligen-hakeem-jeffries-lider-nueva-mayoria-20261118173739-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261118/11687474/democratas-validan-hakeem-jeffries-lider-primer-presidente-negro-camara-baja.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/hakeem-jeffries-referente-establishment-democrata-proisraeli-sera-primer-afroamericano-presidir-camara-representantes_1_13674439.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/los-democratas-eligen-hakeem-jeffries-como-candidato-para-presidir-camara-representantes-eeuu_7062801_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmy49873dn95o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/11/18/hakeem-jeffries-moves-closer-to-becoming-first-black-us-house-speaker"
+        },
+        {
+          "language": "en",
+          "source": "wwaytv3.com",
+          "source_country": "united-states",
+          "url": "https://www.wwaytv3.com/hakeem-jeffries-could-become-the-first-black-house-speaker-after-democratic-nomination/"
+        },
+        {
+          "language": "fr",
+          "source": "leparisien.fr",
+          "source_country": "france",
+          "url": "https://www.leparisien.fr/international/etats-unis/etats-unis-hakeem-jeffries-en-passe-de-devenir-le-premier-president-noir-de-la-chambre-des-representants-18-11-2026-K5EI565FPNFE3EIC7QTKO6TYTA.php"
+        },
+        {
+          "language": "es",
+          "source": "larepublica.pe",
+          "source_country": "pe",
+          "url": "https://larepublica.pe/mundo/2026/11/18/democratas-amplian-su-poder-en-el-senado-tras-ganar-en-alaska-y-postulan-a-hakeem-jeffries-como-presidente-de-la-camara-de-representantes-863010"
+        },
+        {
+          "language": "es",
+          "source": "calibre800.com",
+          "source_country": "mx",
+          "url": "https://www.calibre800.com/2026/11/18/democratas-nominan-a-hakeem-jeffries-para-que-sea-el-proximo-presidente-de-la-camara-de-representantes/"
         }
       ],
       "mentioned_countries": [
         "united-states"
       ],
-      "origin_country": "co",
-      "outbound_source": "nos.nl",
-      "outbound_url": "https://nos.nl/l/2639952",
-      "rank": 4,
-      "reference_newsroom_count": 8,
+      "origin_country": "france",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/hakeem-jeffries-referente-establishment-democrata-proisraeli-sera-primer-afroamericano-presidir-camara-representantes_1_13674439.html",
+      "rank": 2,
+      "reference_newsroom_count": 9,
       "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
         "eldiario.es",
-        "elespanol.com",
         "elpais.com",
         "euronews.com",
-        "france24.com",
-        "nos.nl",
-        "repubblica.it",
+        "lavanguardia.com",
+        "nouvelobs.com",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4613,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.5294,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.8261
+        },
+        "total": 0.7844,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "hakeem jeffries",
+      "subject_names": [
+        "camara",
+        "congreso",
+        "etats-unis",
+        "hakeem jeffries",
+        "house",
+        "jeffries",
+        "representantes",
+        "usa"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Les articles indiquent que le Parti démocrate a désigné Hakeem Jeffries comme son candidat pour présider la Chambre des représentants des États-Unis; s’il est élu par la nouvelle majorité, il deviendrait le premier Afro-Américain à occuper la présidence de la Chambre, et son profil est présenté comme celui d’un dirigeant du courant centriste/establishment démocrate."
+    },
+    {
+      "cluster_id": "subject-anthropic-08d2c35c3bb5",
+      "coherence": 0.47543085680006103,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "france",
+        "germany",
+        "india",
+        "pl",
+        "rs",
+        "spain",
+        "sw",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 10,
+      "editorial_day": "2026-11-19",
+      "headline": "Anthropic réalise la plus grande introduction en Bourse et lève environ 81 milliards de dollars",
+      "independent_source_count": 42,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/ia-anthropic-leve-pres-de-80-milliards-de-dollars-en-bourse-et-bat-le-record-de-spacex-20261119"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-11-18/anthropic-desbanca-a-spacex-y-protagoniza-la-mayor-salida-a-bolsa-de-la-historia.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6742m39xgzxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/economia/noticia/2026/11/19/maior-ipo-da-historia-como-a-anthropic-superou-a-spacex.ghtml"
+        },
+        {
+          "language": "en",
+          "source": "lufkindailynews.com",
+          "source_country": "united-states",
+          "url": "https://lufkindailynews.com/news_reuters/business/anthropic-valued-at-1-5-trillion-as-ipo-raises-record-81-billion/article_f2a317e5-c04c-5620-9848-04b685b86667.html"
+        },
+        {
+          "language": "en",
+          "source": "wisn.com",
+          "source_country": "united-states",
+          "url": "https://www.wisn.com/article/anthropic-raises-billion-dollar-ipo/74440669"
+        },
+        {
+          "language": "en",
+          "source": "malverngazette.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.malverngazette.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "publicradioeast.org",
+          "source_country": "united-states",
+          "url": "https://www.publicradioeast.org/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "surreycomet.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.surreycomet.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "kurv.com",
+          "source_country": "united-states",
+          "url": "https://www.kurv.com/anthropic-set-to-begin-trading-as-a-1-5-trillion-company-in-the-biggest-ipo-on-record/"
+        },
+        {
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/technology/2026/nov/19/anthropic-public-trading-ipo"
+        },
+        {
+          "language": "en",
+          "source": "dailynews.com",
+          "source_country": "united-states",
+          "url": "https://www.dailynews.com/2026/11/19/anthropic-ipo-trading/"
+        },
+        {
+          "language": "en",
+          "source": "kuaf.com",
+          "source_country": "united-states",
+          "url": "https://www.kuaf.com/npr-news/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "breitbart.com",
+          "source_country": "united-states",
+          "url": "https://www.breitbart.com/tech/2026/11/19/anthropic-raises-81-billion-in-stock-market-debut-valuing-ai-startup-at-1-5-trillion/"
+        },
+        {
+          "language": "en",
+          "source": "prairiepublic.org",
+          "source_country": "united-states",
+          "url": "https://news.prairiepublic.org/news-from-npr/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "borehamwoodtimes.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.borehamwoodtimes.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "barryanddistrictnews.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.barryanddistrictnews.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "oxfordmail.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.oxfordmail.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "stroudnewsandjournal.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.stroudnewsandjournal.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "aspenpublicradio.org",
+          "source_country": "united-states",
+          "url": "https://www.aspenpublicradio.org/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "tivysideadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.tivysideadvertiser.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "en",
+          "source": "redriverradio.org",
+          "source_country": "united-states",
+          "url": "https://www.redriverradio.org/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "kvpr.org",
+          "source_country": "united-states",
+          "url": "https://www.kvpr.org/npr-news/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "kpbs.org",
+          "source_country": "united-states",
+          "url": "https://www.kpbs.org/news/science-technology/2026/11/19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "mcall.com",
+          "source_country": "united-states",
+          "url": "https://www.mcall.com/2026/11/19/anthropic-ipo-trading/"
+        },
+        {
+          "language": "en",
+          "source": "wfsu.org",
+          "source_country": "united-states",
+          "url": "https://news.wfsu.org/npr-news/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "wfmj.com",
+          "source_country": "united-states",
+          "url": "https://www.wfmj.com/news/consumer/anthropic-set-to-begin-trading-after-pricing-its-stock-at-83-per-share-in-biggest/article_6661561e-8bd6-53af-bc78-c27fd62101d4.html"
+        },
+        {
+          "language": "en",
+          "source": "apr.org",
+          "source_country": "united-states",
+          "url": "https://www.apr.org/business-education/2026-11-19/ai-giant-anthropic-raises-more-than-100-billion-in-record-setting-ipo"
+        },
+        {
+          "language": "en",
+          "source": "ipswichstar.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.ipswichstar.co.uk/news/national/26744852.anthropic-smash-ipo-records-gbp1-13trn-valuation/"
+        },
+        {
+          "language": "de",
+          "source": "computerbase.de",
+          "source_country": "germany",
+          "url": "https://www.computerbase.de/news/wirtschaft/anthropic-boersengang-trotz-sorge-vor-ki-krise-liegt-bewertung-bei-1-5-billionen-usd.100404/"
+        },
+        {
+          "language": "pt",
+          "source": "correiodopovo.com.br",
+          "source_country": "brazil",
+          "url": "https://www.correiodopovo.com.br/jornal-com-tecnologia/anthropic-estreia-na-bolsa-com-numeros-recordes-apesar-de-duvidas-sobre-ia-1.1766003"
+        },
+        {
+          "language": "en",
+          "source": "businessworld.in",
+          "source_country": "india",
+          "url": "https://www.businessworld.in/article/anthropic-s-107-3-bn-ipo-surpasses-spacex-s-record-offering-634263"
+        },
+        {
+          "language": "en",
+          "source": "business-standard.com",
+          "source_country": "india",
+          "url": "https://www.business-standard.com/technology/tech-news/anthropic-ipo-5-things-to-know-about-the-record-81-3-billion-listing-126111900184_1.html"
+        },
+        {
+          "language": "pol",
+          "source": "pb.pl",
+          "source_country": "pl",
+          "url": "https://www.pb.pl/rekordowe-ipo-anthropic-pozyskane-1073-mld-usd-i-wycena-na-poziomie-15-bln-usd-1270662"
+        },
+        {
+          "language": "de",
+          "source": "schwarzwaelder-bote.de",
+          "source_country": "germany",
+          "url": "https://www.schwarzwaelder-bote.de/wirtschaft/ki-firma-aus-den-usa-anthropic-mit-rekord-boersengang-1073-milliarden-dollar-79719076.html"
+        },
+        {
+          "language": "de",
+          "source": "oz-online.de",
+          "source_country": "germany",
+          "url": "https://www.oz-online.de/artikel/1704875/Anthropic-mit-Rekord-Boersengang-107-3-Milliarden-Dollar"
+        },
+        {
+          "language": "de",
+          "source": "muensterschezeitung.de",
+          "source_country": "germany",
+          "url": "https://www.muensterschezeitung.de/nachrichten/wirtschaft/anthropic-mit-rekord-boersengang-1073-milliarden-dollar-3726102"
+        },
+        {
+          "language": "ru",
+          "source": "interfax.ru",
+          "source_country": "rs",
+          "url": "https://www.interfax.ru/business/1130013"
+        },
+        {
+          "language": "swe",
+          "source": "aftonbladet.se",
+          "source_country": "sw",
+          "url": "https://www.aftonbladet.se/nyheter/a/Rr77qd/aftonbladet-direkt?pinnedEntry=1506215"
+        },
+        {
+          "language": "en",
+          "source": "nbcnews.com",
+          "source_country": "united-states",
+          "url": "https://www.nbcnews.com/business/markets/anthropic-ipo-valuation-ai-boom-rcna610069"
+        },
+        {
+          "language": "swe",
+          "source": "svd.se",
+          "source_country": "sw",
+          "url": "https://www.svd.se/a/GPGeV9/anthropic-siktar-pa-rekordstor-borsnotering"
+        },
+        {
+          "language": "swe",
+          "source": "nyheter24.se",
+          "source_country": "sw",
+          "url": "https://nyheter24.se/nyheter/ekonomi/naringsliv/1532006-anthropic-siktar-pa-rekordstor-borsnotering"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "nyheter24.se",
+      "outbound_url": "https://nyheter24.se/nyheter/ekonomi/naringsliv/1532006-anthropic-siktar-pa-rekordstor-borsnotering",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "elpais.com",
+        "globo.com",
+        "la-croix.com",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.544,
+          "coherence": 0.4754,
           "corroboration": 0.8333,
-          "editorial_weight": 0.5,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.875,
-          "source_reliability": 0.8961
+          "prominence": 0.913,
+          "source_reliability": 0.9175
         },
-        "total": 0.7263,
+        "total": 0.766,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "alaska",
+      "subject_label": "anthropic",
       "subject_names": [
-        "alaska",
-        "eeuu",
-        "estados unidos",
-        "marco rubio",
-        "mary peltola",
-        "peltola",
-        "senado",
-        "senat",
-        "senate",
-        "usa"
+        "anthropic",
+        "ipo",
+        "openai",
+        "spacex"
       ],
-      "subject_newsroom_count": 20,
-      "summary": "Mary Peltola, candidate démocrate, a battu le républicain Dan Sullivan et gagné le siège sénatorial de l'Alaska; cette victoire donne aux démocrates une majorité de 56 sièges contre 44 au Sénat, et suscite des réactions et célébrations en Alaska."
+      "subject_newsroom_count": 16,
+      "summary": "Les articles s’accordent pour dire qu’Anthropic a effectué une introduction en Bourse record, levant environ 81 milliards (ou des montants équivalents cités autour de 100–107 milliards selon conversion) et se voyant attribuer une valorisation d’environ 1,5 billion de dollars (1,5 trillion en anglais), dépassant ainsi le précédent record détenu par SpaceX."
     },
     {
-      "cluster_id": "subject-italia-0699068b6777",
-      "coherence": 0.4541376208949357,
+      "cluster_id": "subject-crimea-bc6bedb9ec4d",
+      "coherence": 0.461820560980557,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-11-19",
+      "headline": "L'Ukraine frappe le pont de Crimée pour la troisième fois en une semaine",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/ucrania-ataca-puente-crimea-tercera-vez-semana-20261119113742-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261119/11687931/tercer-ataque-esta-semana-contra-el-puente-de-crimea-horas-antes-de-la-cumbre-de-putin-con-xi-y-trump.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ucrania-golpea-tercera-vez-puente-crimea-trump-putin-xi-reunen-china_1_13675832.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ucrania-golpea-por-tercera-vez-una-semana-puente-crimea-horas-antes-cumbre-historica-entre-putin-trump-xi_7062989_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/18/enquanto-putin-se-reune-com-trump-e-xi-ucrania-ataca-ponte-da-crimeia-pela-terceira-vez-na-semana.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "eluniversal.com.mx",
+          "source_country": "mx",
+          "url": "https://www.eluniversal.com.mx/mundo/ucrania-lanza-nuevo-ataque-contra-puente-de-crimea-ocurre-tras-inedita-reunion-de-putin-con-trump-y-xi-jinping-en-china/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "china"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/18/enquanto-putin-se-reune-com-trump-e-xi-ucrania-ataca-ponte-da-crimeia-pela-terceira-vez-na-semana.ghtml",
+      "rank": 4,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "globo.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4618,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.7197,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "crimea",
+      "subject_names": [
+        "crimea",
+        "crimee",
+        "donald trump",
+        "putin",
+        "rusia",
+        "russie",
+        "trump",
+        "ucrania"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Les articles indiquent qu'au cours d'une même semaine, l'Ukraine a mené un troisième attaque contre le pont de Crimée; ces frappes sont survenues peu avant ou pendant une réunion entre Vladimir Poutine, Xi Jinping et Donald Trump en Chine, et Moscou a menacé d'une réponse plus sévère."
+    },
+    {
+      "cluster_id": "subject-danemark-9a777f071c5e",
+      "coherence": 0.5461340982956369,
       "consequence": 3,
       "countries": [
         "france",
-        "spain"
+        "germany"
       ],
       "country_count": 2,
-      "editorial_day": "2026-11-18",
-      "headline": "L’Italie adopte une loi contre l’antisémitisme suscitant des critiques",
+      "editorial_day": "2026-11-19",
+      "headline": "Le Danemark ratifie un accord de sécurité entre les États‑Unis et le Groenland",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/17/un-projet-de-loi-sur-l-antisemitisme-soutenu-par-giorgia-meloni-et-critique-par-l-opposition-a-ete-adopte-en-italie_6813047_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/11/19/groenland-le-parlement-danois-ratifie-l-accord-de-securite-avec-les-etats-unis-et-le-territoire-autonome_6813273_3210.html"
         },
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/italie-une-loi-contre-lantisemitisme-relance-le-debat-sur-la-critique-disrael-OTIGAHGQMZHH7E7GT2Q6ZKXBDA/"
+          "url": "https://www.la-croix.com/international/le-parlement-danois-adopte-l-accord-de-securite-avec-les-etats-unis-et-le-groenland-20261119"
         },
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-18/italia-aprueba-una-ley-que-abre-la-posibilidad-de-considerar-antisemitismo-las-criticas-a-israel.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261119-le-danemark-ratifie-l-accord-de-s%C3%A9curit%C3%A9-avec-les-%C3%A9tats-unis-et-le-groenland"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261118/11686981/italia-aprueba-ley-antisemitismo-criticas-izquierda.html"
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-11/sicherheitsabkommen-usa-daenemark-groenland-gxe"
         }
       ],
       "mentioned_countries": [
-        "it",
-        "is"
+        "united-states",
+        "gl",
+        "da"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/17/un-projet-de-loi-sur-l-antisemitisme-soutenu-par-giorgia-meloni-et-critique-par-l-opposition-a-ete-adopte-en-italie_6813047_3210.html",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/international/le-parlement-danois-adopte-l-accord-de-securite-avec-les-etats-unis-et-le-groenland-20261119",
       "rank": 5,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elpais.com",
-        "lavanguardia.com",
+        "france24.com",
+        "la-croix.com",
         "lemonde.fr",
-        "lexpress.fr"
+        "zeit.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.4541,
+          "coherence": 0.5461,
           "corroboration": 0.5,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -757,21 +937,23 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6895,
+        "total": 0.7005,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "italia",
+      "subject_label": "danemark",
       "subject_names": [
-        "italia",
-        "italie"
+        "danemark",
+        "etats-unis",
+        "groenland",
+        "usa"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Le Parlement italien a adopté un projet de loi visant à lutter contre l’antisémitisme, soutenu par la cheffe du gouvernement Giorgia Meloni; la mesure ouvre la possibilité de considérer comme antisémitisme certaines critiques d’Israël et a déclenché des réserves et des critiques de la gauche et de l’opposition."
+      "subject_newsroom_count": 5,
+      "summary": "Le Parlement danois a adopté et ratifié un accord de sécurité impliquant le Danemark, le Groenland et les États‑Unis, officialisant ainsi une coopération en matière de sécurité entre les trois parties telle que présentée dans les articles."
     }
   ],
-  "discarded_ingested": 248,
+  "discarded_ingested": 339,
   "discarded_kept": 5,
-  "generated_at": "2026-11-18T14:25:48.469376+00:00",
+  "generated_at": "2026-11-19T14:37:01.819050+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

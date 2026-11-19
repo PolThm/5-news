@@ -1,279 +1,49 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-nucleo-nacional-a2476fad9f7b",
-      "coherence": 0.4965321693989815,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-18",
-      "headline": "Muere Enrique Lemus, fundador y dirigente de Núcleo Nacional",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-11-18/nucleo-nacional-anuncia-la-muerte-de-su-fundador-enrique-lemus.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/castilla-y-leon/politica/fallece-fundador-nucleo-nacional-enrique-lemus-horas-muerte-cerebral_1_13673220.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/17/6afcbdfefdddffe2408b457d.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-11-18/enrique-lemus-muerte-nucleo-nacional_4467249/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/espana/2026/11/17/6afcbdfefdddffe2408b457d.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elconfidencial.com",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4965,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.5313,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "nucleo nacional",
-      "subject_names": [
-        "enrique lemus",
-        "nucleo nacional"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Enrique Lemus, uno de los fundadores y dirigente de la organización Núcleo Nacional, ha fallecido en Valladolid tras sufrir un infarto; su muerte fue anunciada por la propia formación y se produce días después de que fuera detenido."
-    },
-    {
-      "cluster_id": "subject-italia-0699068b6777",
-      "coherence": 0.4541376208949357,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Italia aprueba una ley contra el antisemitismo que genera polémica",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/17/un-projet-de-loi-sur-l-antisemitisme-soutenu-par-giorgia-meloni-et-critique-par-l-opposition-a-ete-adopte-en-italie_6813047_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/italie-une-loi-contre-lantisemitisme-relance-le-debat-sur-la-critique-disrael-OTIGAHGQMZHH7E7GT2Q6ZKXBDA/"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-18/italia-aprueba-una-ley-que-abre-la-posibilidad-de-considerar-antisemitismo-las-criticas-a-israel.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261118/11686981/italia-aprueba-ley-antisemitismo-criticas-izquierda.html"
-        }
-      ],
-      "mentioned_countries": [
-        "it",
-        "is"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/17/un-projet-de-loi-sur-l-antisemitisme-soutenu-par-giorgia-meloni-et-critique-par-l-opposition-a-ete-adopte-en-italie_6813047_3210.html",
-      "rank": 2,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "elpais.com",
-        "lavanguardia.com",
-        "lemonde.fr",
-        "lexpress.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4541,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6395,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "italia",
-      "subject_names": [
-        "italia",
-        "italie"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "El Parlamento italiano aprobó una ley contra el antisemitismo respaldada por la primera ministra Giorgia Meloni y criticada por la izquierda; la norma amplía las definiciones que podrían incluir algunas críticas a Israel y ha reabierto el debate público sobre los límites entre la lucha contra el antisemitismo y la libertad de expresión."
-    },
-    {
-      "cluster_id": "subject-ucrania-d8d57da824b6",
-      "coherence": 0.5455150519596599,
+      "cluster_id": "subject-bruselas-7913a9e9bbc0",
+      "coherence": null,
       "consequence": 3,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Bruselas propone un nuevo préstamo de 45.000 millones de euros para Ucrania en 2027",
-      "independent_source_count": 4,
+      "editorial_day": "2026-11-19",
+      "headline": "Bruselas abre un expediente a España por deficiencias en la lucha contra el fraude de fondos europeos",
+      "independent_source_count": 3,
       "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261118/11687087/bruselas-propone-nuevo-prestamo-45-000-millones-ucrania-traves-eurobonos.html"
-        },
         {
           "language": "es",
           "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/comision-europea-propone-nuevo-prestamo-45-000-millones-ucrania-tensiones-presupuestarias_1_13673032.html"
+          "url": "https://www.eldiario.es/economia/bruselas-llama-atencion-espana-lucha-fraude-fondos-europeos_1_13676442.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261118/bruselas-plantea-credito-millones-ucrania-enfrenta-alemania-hungria-chequia-eslovaquia/1003744462577_0.html"
+          "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20261119/bruselas-lanza-expediente-espana-deficiencias-lucha-fraude-fondos-europeos/1003744464301_0.html"
         },
         {
           "language": "es",
           "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-propone-un-nuevo-prestamo-ucrania-45-000-millones-para-2027_7062529_0.html"
+          "url": "https://www.20minutos.es/internacional/bruselas-expedienta-espana-por-incumplir-las-normas-contra-malversacion-fondos-europeos_7063147_0.html"
         }
       ],
       "mentioned_countries": [
-        "up"
+        "be",
+        "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/bruselas-propone-un-nuevo-prestamo-ucrania-45-000-millones-para-2027_7062529_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/economia/bruselas-llama-atencion-espana-lucha-fraude-fondos-europeos_1_13676442.html",
+      "rank": 1,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "20minutos.es",
         "eldiario.es",
-        "elespanol.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5455,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6338,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ucrania",
-      "subject_names": [
-        "bruselas",
-        "bruxelles",
-        "rusia",
-        "ucrania",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "La Comisión Europea ha presentado una propuesta para conceder a Ucrania un préstamo de 45.000 millones de euros con vencimiento en 2027, financiado mediante la emisión de eurobonos; la iniciativa genera tensiones entre Estados miembros, en particular entre Alemania y países como Hungría, Chequia y Eslovaquia, y se enmarca en discusiones sobre el presupuesto comunitario."
-    },
-    {
-      "cluster_id": "subject-kiev-769e7c413b25",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Ucrania inflige daños graves al puente de Kerch que une Rusia y Crimea",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/une-operation-sans-precedent-l-ukraine-inflige-de-serieux-dommages-au-pont-de-kertch-reliant-la-russie-a-la-crimee-20261117"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261118-guerre-en-ukraine-en-crim%C3%A9e-ou-%C3%A0-kiev-les-frappes-contre-des-ponts-perturbent-la-logistique-et-le-quotidien"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-pont-de-crimee-symbole-de-lannexion-russe-frappe-lors-dune-operation-sans-NKD7K2QXHZCNXAIVRD6SFU5NRY/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-pont-de-crimee-symbole-de-lannexion-russe-frappe-lors-dune-operation-sans-NKD7K2QXHZCNXAIVRD6SFU5NRY/",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "lefigaro.fr",
-        "lexpress.fr",
-        "rfi.fr"
+        "elespanol.com"
       ],
       "score": {
         "components": {
@@ -281,109 +51,369 @@
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
+          "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.6081,
+        "total": 0.6581,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "kiev",
+      "subject_label": "bruselas",
       "subject_names": [
-        "biden",
-        "china's",
-        "crimea",
-        "crimee",
-        "donald trump",
-        "kiev",
-        "putin",
-        "rusia",
-        "russia",
-        "russian",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "zelenski"
+        "bruselas",
+        "ceuta",
+        "espana",
+        "madrid",
+        "mediterraneo",
+        "valencia"
       ],
-      "subject_newsroom_count": 9,
-      "summary": "Operaciones ucranianas alcanzaron el puente de Kerch —símbolo de la anexión rusa de Crimea— causando importantes daños y perturbando la logística y la vida cotidiana; las incursiones sobre puentes en Crimea y Kiev se describen como inusuales y tienen efecto en el transporte y el abastecimiento."
+      "subject_newsroom_count": 8,
+      "summary": "La Comisión Europea ha iniciado un expediente contra España por considerar que existen deficiencias en el cumplimiento de las normas destinadas a prevenir y perseguir el fraude y la malversación de fondos europeos; los medios coinciden en que Bruselas ha llamado la atención formalmente al país y ha puesto en marcha este procedimiento administrativo."
     },
     {
-      "cluster_id": "subject-burnham-28413bbbac6e",
-      "coherence": null,
+      "cluster_id": "subject-espana-e98618f03338",
+      "coherence": 0.5942770141537471,
       "consequence": 2,
       "countries": [
-        "france",
-        "spain",
-        "united-kingdom"
+        "spain"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Andy Burnham reabre el debate sobre una posible aproximación a la UE",
-      "independent_source_count": 3,
+      "country_count": 1,
+      "editorial_day": "2026-11-19",
+      "headline": "Detienen en Valencia a dos presuntos dirigentes de la red que sostenía a Blocus",
+      "independent_source_count": 4,
       "members": [
         {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/brexit-pourquoi-andy-burnham-rouvre-le-debat-explosif-dun-retour-dans-lue-IXE7MIT4HBG6LHJNZX3RI7ITUQ/"
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/comunidad-valenciana/2026-11-19/detienen-en-valencia-a-dos-supuestos-dirigentes-de-la-red-que-sostenia-blocus-en-espana.html"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "eldiario.es",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261117/11685897/aproximacion-burnham-europa-resucita-batallas-brexit.html"
+          "url": "https://www.eldiario.es/comunitat-valenciana/detenidos-valencia-supuestos-dirigentes-red-sostenia-blocus-espana_1_13675967.html"
         },
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cq4gn3109pzgo?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/comunitat-valenciana/noticia-detenidos-valencia-dos-presuntos-dirigentes-red-sostenia-blocus-20261119091202.html"
+        },
+        {
+          "language": "es",
+          "source": "elperiodic.com",
+          "source_country": "spain",
+          "url": "https://www.elperiodic.com/valencia/estructura-blocus-valencia-detenidos-amenaza-saquear-ciudad_1103452"
         }
       ],
       "mentioned_countries": [
-        "united-kingdom"
+        "spain"
       ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261117/11685897/aproximacion-burnham-europa-resucita-batallas-brexit.html",
-      "rank": 5,
+      "origin_country": "spain",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/espana/comunidad-valenciana/2026-11-19/detienen-en-valencia-a-dos-supuestos-dirigentes-de-la-red-que-sostenia-blocus-en-espana.html",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
-        "lavanguardia.com",
-        "lexpress.fr"
+        "eldiario.es",
+        "elpais.com",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5943,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.5789
+        },
+        "total": 0.6007,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espana",
+      "subject_names": [
+        "ceuta",
+        "espana",
+        "madrid",
+        "valencia"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "En València fueron arrestadas dos personas acusadas de ser dirigentes de la estructura que apoyaba al colectivo Blocus; la detención forma parte de una operación policial que investiga la red y su implicación en amenazas de saqueo de la ciudad, según las diligencias y comunicaciones oficiales recogidas por los medios."
+    },
+    {
+      "cluster_id": "subject-espana-2ecbb3d11850",
+      "coherence": 0.5022052179763091,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-19",
+      "headline": "La Policía concluye que 10.000 flotadores idénticos indican coordinación previa",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/19/6afefe4dfc6c83eb1c8b456f.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/tribunales/20261119/informe-cenif-concluye-uso-flotadores-iguales-invasion-ceuta-apunta-logistica-previa/1003744464237_0.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/nacional/noticia-policia-apunta-uso-miles-flotadores-mismo-modelo-entrada-ceuta-requiere-organizacion-20261119150544.html"
+        },
+        {
+          "language": "es",
+          "source": "diariovasco.com",
+          "source_country": "spain",
+          "url": "https://www.diariovasco.com/politica/nuevo-informe-policia-concluye-uso-10000-flotadores-20261119141324-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "larioja.com",
+          "source_country": "spain",
+          "url": "https://www.larioja.com/nacional/nuevo-informe-policia-concluye-uso-10000-flotadores-20261119141324-ntrc.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "mo"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/tribunales/20261119/informe-cenif-concluye-uso-flotadores-iguales-invasion-ceuta-apunta-logistica-previa/1003744464237_0.html",
+      "rank": 3,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elmundo.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5022,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.619
+        },
+        "total": 0.5933,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espana",
+      "subject_names": [
+        "ceuta",
+        "espana",
+        "madrid",
+        "valencia"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Varios informes policiales coinciden en que el empleo masivo de 10.000 flotadores del mismo modelo durante la entrada masiva a nado a Ceuta apunta a una logística y coordinación previas, ya que el uso de tantos elementos idénticos requiere organización para su distribución y empleo durante el asalto."
+    },
+    {
+      "cluster_id": "subject-sanchez-770ca812b2e6",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-19",
+      "headline": "El PP acusa a Sánchez de traicionar a España por ceder ante Puigdemont",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/politica/20261119/pp-dice-testimonio-puigdemont-demuestra-traicion-sanchez-cambio-espana-sillon/1003744464143_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6afedde0fc6c8362338b45b2.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-11-19/pp-acusa-sanchez-ceder-puigdemont-1tps_4468200/"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elconfidencial.com",
+      "outbound_url": "https://www.elconfidencial.com/espana/2026-11-19/pp-acusa-sanchez-ceder-puigdemont-1tps_4468200/",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.6,
+          "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
+          "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5614,
+        "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "burnham",
+      "subject_label": "sanchez",
       "subject_names": [
-        "brexit",
-        "burnham"
+        "ceuta",
+        "espana",
+        "feijoo",
+        "madrid",
+        "psoe",
+        "puigdemont",
+        "sanchez",
+        "valencia"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Los artículos coinciden en que Andy Burnham, político británico, ha planteado públicamente la idea de acercarse de nuevo a la Unión Europea, reactivando controversias relacionadas con el Brexit; subrayan además que el contexto europeo ha cambiado desde la salida del Reino Unido, por lo que cualquier propuesta de reintegración o cooperación tendría que tener en cuenta una UE distinta a la que el país dejó."
+      "subject_newsroom_count": 9,
+      "summary": "El Partido Popular ha criticado con dureza al presidente Pedro Sánchez tras la entrevista con Carles Puigdemont, afirmando que el testimonio del expresident catalán pone de manifiesto una 'traición' de Sánchez por haberse plegado a Puigdemont \"por un sillón\"; los líderes del PP califican la conversación como la prueba documental de la legislatura y reprochan que el presidente haya priorizado su puesto sobre los intereses de España."
+    },
+    {
+      "cluster_id": "subject-julio-iglesias-e040a494ac70",
+      "coherence": 0.46745479553398994,
+      "consequence": 1,
+      "countries": [
+        "as",
+        "brazil",
+        "france",
+        "japan",
+        "mx",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 7,
+      "editorial_day": "2026-11-19",
+      "headline": "Julio Iglesias investigado por presuntas agresiones sexuales",
+      "independent_source_count": 9,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/18/le-chanteur-espagnol-julio-iglesias-vise-par-une-enquete-pour-agressions-sexuelles-sur-deux-anciennes-employees_6813131_3210.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/c6x284pnn4e2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/pop-arte/noticia/2026/11/18/tribunal-espanhol-abre-investigacao-contra-julio-iglesias-apos-denuncias-de-agressao-sexual.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "eldiariodechihuahua.mx",
+          "source_country": "mx",
+          "url": "https://www.eldiariodechihuahua.mx/espectaculos/2026/nov/19/investigan-a-julio-iglesias-por-delitos-sexuales-858856.html"
+        },
+        {
+          "language": "es",
+          "source": "telemundo51.com",
+          "source_country": "united-states",
+          "url": "https://www.telemundo51.com/entretenimiento/entretenimiento-destacados/tribunal-superior-abre-investigacion-contra-julio-iglesias-presuntos-delitos-sexuales-espana/2851708/"
+        },
+        {
+          "language": "en",
+          "source": "bunburymail.com.au",
+          "source_country": "as",
+          "url": "https://www.bunburymail.com.au/story/9394303/court-probes-misconduct-claims-against-julio-iglesias/"
+        },
+        {
+          "language": "en",
+          "source": "stardem.com",
+          "source_country": "united-states",
+          "url": "http://www.stardem.com/ap/world/singer-julio-iglesias-faces-spanish-high-court-investigation-into-alleged-sexual-misconduct/article_103ae3f5-9602-50b2-b221-503f4b562241.html"
+        },
+        {
+          "language": "en",
+          "source": "abc7news.com",
+          "source_country": "united-states",
+          "url": "https://abc7news.com/post/singer-julio-iglesias-father-enrique-faces-spanish-high-court-investigation-alleged-sexual-misconduct/20052320/"
+        },
+        {
+          "language": "en",
+          "source": "japantoday.com",
+          "source_country": "japan",
+          "url": "https://japantoday.com/category/entertainment/singer-julio-iglesias-faces-spanish-high-court-investigation-into-alleged-sexual-misconduct"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "as",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/pop-arte/noticia/2026/11/18/tribunal-espanhol-abre-investigacao-contra-julio-iglesias-apos-denuncias-de-agressao-sexual.ghtml",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "bbc.co.uk",
+        "globo.com",
+        "lemonde.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4675,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.6923,
+          "source_reliability": 0.7241
+        },
+        "total": 0.5696,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "julio iglesias",
+      "subject_names": [
+        "julio iglesias"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Varias fuentes coinciden en que el cantante Julio Iglesias, padre de Enrique Iglesias, está siendo investigado por la Audiencia Nacional de España por denuncias de presuntas agresiones o delitos sexuales presentadas por exempleadas; la investigación fue abierta por la justicia española y se refiere a denuncias recientes contra el artista."
     }
   ],
-  "discarded_ingested": 8,
+  "discarded_ingested": 40,
   "discarded_kept": 5,
-  "generated_at": "2026-11-18T14:25:48.469376+00:00",
+  "generated_at": "2026-11-19T14:37:01.819050+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

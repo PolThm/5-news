@@ -1,34 +1,53 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-defenseur-ff2309a202bc",
-      "coherence": null,
+      "cluster_id": "subject-france-f9a93d9f60dd",
+      "coherence": 0.5672722584263801,
       "consequence": 2,
       "countries": [
-        "france"
+        "france",
+        "sz"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-18",
-      "headline": "Defensor del Pueblo recibe 106 denuncias por actuaciones policiales",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-11-19",
+      "headline": "Los daños de las protestas del 17 de octubre fueron evaluados en 207 millones de euros",
+      "independent_source_count": 6,
       "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/conjoncture/un-montant-particulierement-eleve-les-violences-du-17-octobre-ont-coute-207-millions-d-euros-selon-france-assureurs-20261119"
+        },
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/mouvement-social-106-saisines-aupres-du-defenseur-des-droits-relatives-a-des-interventions-policieres-depuis-septembre-20261118_6QMA7Y643RHIXFU7GBYQHYVXKQ/"
+          "url": "https://www.liberation.fr/economie/violences-du-17-octobre-france-assureurs-chiffre-la-facture-a-207-millions-deuros-20261119_M4X6CHUJQNFJXNMC7PLA5MF6UM/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/violences-urbaines-du-17-octobre-france-assureurs-estime-les-couts-a-207-millions-d-euros-20261119"
         },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/si-des-failles-sont-constituees-on-l-enoncera-clairement-106-saisines-recues-par-le-defenseur-des-droits-depuis-les-mobilisations-sociales-en-septembre_8288195.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/france-assureurs-estime-a-plus-de-200-millions-d-euros-le-cout-des-degats-engendres-par-les-violences-urbaines-et-les-pillages-des-17-et-18-octobre_8290007.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "sudouest.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261118-mobilisation-sociale-en-france-plus-de-100-saisies-du-d%C3%A9fenseur-des-droits-pour-des-interventions-des-forces-de-l-ordre"
+          "url": "https://www.sudouest.fr:443/ile-de-france/paris/violences-urbaines-du-17-octobre-en-france-leur-cout-s-eleve-a-207-millions-d-euros-selon-france-assureurs-31584888.php"
+        },
+        {
+          "language": "fr",
+          "source": "24heures.ch",
+          "source_country": "sz",
+          "url": "https://www.24heures.ch/france-les-dommages-du-17-octobre-pourraient-couter-207-millions-deuros-321906078353"
         }
       ],
       "mentioned_countries": [
@@ -36,93 +55,285 @@
       ],
       "origin_country": "france",
       "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/si-des-failles-sont-constituees-on-l-enoncera-clairement-106-saisines-recues-par-le-defenseur-des-droits-depuis-les-mobilisations-sociales-en-septembre_8288195.html#xtor=RSS-3-[lestitres]",
+      "outbound_url": "https://www.franceinfo.fr/societe/mobilisation-du-17-octobre/france-assureurs-estime-a-plus-de-200-millions-d-euros-le-cout-des-degats-engendres-par-les-violences-urbaines-et-les-pillages-des-17-et-18-octobre_8290007.html#xtor=RSS-3-[lestitres]",
       "rank": 1,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "francetvinfo.fr",
-        "liberation.fr",
-        "rfi.fr"
+        "la-croix.com",
+        "lefigaro.fr",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5673,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.6667
+        },
+        "total": 0.6361,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "france",
+      "subject_names": [
+        "emmanuel macron",
+        "france",
+        "france assureurs",
+        "francia",
+        "lyon",
+        "paris"
+      ],
+      "subject_newsroom_count": 15,
+      "summary": "Diversos medios coinciden en que France Assureurs estimó el coste de las violencias urbanas y pillajes del 17 (y 18) de octubre en aproximadamente 207 millones de euros (mencionado como “más de 200 millones” en algunas notas), cifra que agrupa los daños registrados tras esos episodios."
+    },
+    {
+      "cluster_id": "subject-melenchon-26a79e2109f1",
+      "coherence": 0.4637760446287016,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-19",
+      "headline": "Marine Tondelier acepta explorar una coalición en torno a Jean‑Luc Mélenchon",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/presidentielle-2027-marine-tondelier-prete-a-travailler-a-une-coalition-autour-de-la-candidature-melenchon-20261118"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261119.OBS120264/tondelier-prete-a-une-coalition-autour-de-melenchon-pour-la-presidentielle-et-ca-fait-hurler-le-ps.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/politique/la-dynamique-est-indeniable-marine-tondelier-ouvre-la-porte-a-une-coalition-derriere-la-candidature-de-jean-luc-melenchon_647059"
+        },
+        {
+          "language": "fr",
+          "source": "huffingtonpost.fr",
+          "source_country": "france",
+          "url": "https://www.huffingtonpost.fr/politique/article/presidentielle-2027-marine-tondelier-ouvre-la-voie-a-un-ralliement-des-ecologistes-a-jean-luc-melenchon_360890.html"
+        },
+        {
+          "language": "fr",
+          "source": "estrepublicain.fr",
+          "source_country": "france",
+          "url": "https://www.estrepublicain.fr/elections/2026/11/18/je-suis-prete-les-ecologistes-sont-prets-tondelier-fait-un-pas-vers-une-coalition-avec-melenchon"
+        },
+        {
+          "language": "fr",
+          "source": "ledauphine.com",
+          "source_country": "france",
+          "url": "https://www.ledauphine.com/elections/2026/11/18/je-suis-prete-les-ecologistes-sont-prets-tondelier-fait-un-pas-vers-une-coalition-avec-melenchon"
+        }
+      ],
+      "mentioned_countries": [
+        "france",
+        "up"
+      ],
+      "origin_country": "france",
+      "outbound_source": "challenges.fr",
+      "outbound_url": "https://www.challenges.fr/politique/la-dynamique-est-indeniable-marine-tondelier-ouvre-la-porte-a-une-coalition-derriere-la-candidature-de-jean-luc-melenchon_647059",
+      "rank": 2,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "la-croix.com",
+        "nouvelobs.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4638,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.6522
         },
-        "total": 0.5848,
+        "total": 0.5917,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "defenseur",
+      "subject_label": "melenchon",
       "subject_names": [
-        "defenseur"
+        "jean-luc melenchon",
+        "lfi",
+        "marine tondelier",
+        "melenchon"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Desde las movilizaciones sociales iniciadas en septiembre, el Defensor del Pueblo ha recibido 106 saisines relacionadas con intervenciones de las fuerzas del orden; las autoridades encargadas del organismo indican que evaluarán si existen fallos en esas actuaciones y lo comunicarán claramente si se constatan."
+      "subject_newsroom_count": 8,
+      "summary": "Varios medios informan que Marine Tondelier, dirigente de los Ecologistas, declaró estar dispuesta a trabajar en una coalición alrededor de la candidatura de Jean‑Luc Mélenchon para la presidencial de 2027, señalando que la dinámica a su favor es notable; la propuesta ha provocado reacciones dentro del espectro político señalado en las fuentes."
     },
     {
-      "cluster_id": "subject-italia-0699068b6777",
-      "coherence": 0.4541376208949357,
+      "cluster_id": "subject-crimea-bc6bedb9ec4d",
+      "coherence": 0.461820560980557,
+      "consequence": 3,
+      "countries": [
+        "brazil",
+        "mx",
+        "spain"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-11-19",
+      "filled_from": "europe",
+      "headline": "Ucrania ataca por tercera vez en una semana el puente de Crimea",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/ucrania-ataca-puente-crimea-tercera-vez-semana-20261119113742-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261119/11687931/tercer-ataque-esta-semana-contra-el-puente-de-crimea-horas-antes-de-la-cumbre-de-putin-con-xi-y-trump.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ucrania-golpea-tercera-vez-puente-crimea-trump-putin-xi-reunen-china_1_13675832.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ucrania-golpea-por-tercera-vez-una-semana-puente-crimea-horas-antes-cumbre-historica-entre-putin-trump-xi_7062989_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/18/enquanto-putin-se-reune-com-trump-e-xi-ucrania-ataca-ponte-da-crimeia-pela-terceira-vez-na-semana.ghtml"
+        },
+        {
+          "language": "es",
+          "source": "eluniversal.com.mx",
+          "source_country": "mx",
+          "url": "https://www.eluniversal.com.mx/mundo/ucrania-lanza-nuevo-ataque-contra-puente-de-crimea-ocurre-tras-inedita-reunion-de-putin-con-trump-y-xi-jinping-en-china/"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "china"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/18/enquanto-putin-se-reune-com-trump-e-xi-ucrania-ataca-ponte-da-crimeia-pela-terceira-vez-na-semana.ghtml",
+      "rank": 3,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "globo.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4618,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6,
+          "source_reliability": 0.68
+        },
+        "total": 0.6697,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "crimea",
+      "subject_names": [
+        "crimea",
+        "crimee",
+        "donald trump",
+        "putin",
+        "rusia",
+        "russie",
+        "trump",
+        "ucrania"
+      ],
+      "subject_newsroom_count": 18,
+      "summary": "Varios medios coinciden en que Ucrania lanzó un nuevo ataque contra el puente de Crimea, el tercero registrado en el transcurso de una semana; el hecho ocurrió horas antes o mientras se celebraba una reunión entre Vladimir Putin, Xi Jinping y Donald Trump en China, y según las notas citadas el ataque suscitó advertencias de respuesta por parte de Rusia."
+    },
+    {
+      "cluster_id": "subject-danemark-9a777f071c5e",
+      "coherence": 0.5461340982956369,
       "consequence": 3,
       "countries": [
         "france",
-        "spain"
+        "germany"
       ],
       "country_count": 2,
-      "editorial_day": "2026-11-18",
+      "editorial_day": "2026-11-19",
       "filled_from": "europe",
-      "headline": "Italia aprueba una ley contra el antisemitismo que genera polémica",
+      "headline": "Dinamarca ratifica un acuerdo de seguridad entre Estados Unidos y Groenlandia",
       "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
           "source": "lemonde.fr",
           "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/17/un-projet-de-loi-sur-l-antisemitisme-soutenu-par-giorgia-meloni-et-critique-par-l-opposition-a-ete-adopte-en-italie_6813047_3210.html"
+          "url": "https://www.lemonde.fr/international/article/2026/11/19/groenland-le-parlement-danois-ratifie-l-accord-de-securite-avec-les-etats-unis-et-le-territoire-autonome_6813273_3210.html"
         },
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/italie-une-loi-contre-lantisemitisme-relance-le-debat-sur-la-critique-disrael-OTIGAHGQMZHH7E7GT2Q6ZKXBDA/"
+          "url": "https://www.la-croix.com/international/le-parlement-danois-adopte-l-accord-de-securite-avec-les-etats-unis-et-le-groenland-20261119"
         },
         {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-18/italia-aprueba-una-ley-que-abre-la-posibilidad-de-considerar-antisemitismo-las-criticas-a-israel.html"
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261119-le-danemark-ratifie-l-accord-de-s%C3%A9curit%C3%A9-avec-les-%C3%A9tats-unis-et-le-groenland"
         },
         {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261118/11686981/italia-aprueba-ley-antisemitismo-criticas-izquierda.html"
+          "language": "de",
+          "source": "zeit.de",
+          "source_country": "germany",
+          "url": "https://www.zeit.de/politik/ausland/2026-11/sicherheitsabkommen-usa-daenemark-groenland-gxe"
         }
       ],
       "mentioned_countries": [
-        "it",
-        "is"
+        "united-states",
+        "gl",
+        "da"
       ],
       "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/17/un-projet-de-loi-sur-l-antisemitisme-soutenu-par-giorgia-meloni-et-critique-par-l-opposition-a-ete-adopte-en-italie_6813047_3210.html",
-      "rank": 2,
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/international/le-parlement-danois-adopte-l-accord-de-securite-avec-les-etats-unis-et-le-groenland-20261119",
+      "rank": 4,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "elpais.com",
-        "lavanguardia.com",
+        "france24.com",
+        "la-croix.com",
         "lemonde.fr",
-        "lexpress.fr"
+        "zeit.de"
       ],
       "score": {
         "components": {
-          "coherence": 0.4541,
+          "coherence": 0.5461,
           "corroboration": 0.5,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
@@ -132,250 +343,195 @@
           "prominence": 0.5,
           "source_reliability": 0.6
         },
-        "total": 0.6395,
+        "total": 0.6505,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "italia",
+      "subject_label": "danemark",
       "subject_names": [
-        "italia",
-        "italie"
+        "danemark",
+        "etats-unis",
+        "groenland",
+        "usa"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "El Parlamento italiano aprobó una ley contra el antisemitismo respaldada por la primera ministra Giorgia Meloni y criticada por la izquierda; la norma amplía las definiciones que podrían incluir algunas críticas a Israel y ha reabierto el debate público sobre los límites entre la lucha contra el antisemitismo y la libertad de expresión."
+      "subject_newsroom_count": 5,
+      "summary": "El Parlamento de Dinamarca aprobó y ratificó un acuerdo de seguridad entre Dinamarca, Estados Unidos y el territorio autónomo de Groenlandia; las fuentes coinciden en que la medida formaliza la cooperación en materia de seguridad entre las tres partes."
     },
     {
-      "cluster_id": "subject-ucrania-d8d57da824b6",
-      "coherence": 0.5455150519596599,
-      "consequence": 3,
+      "cluster_id": "subject-van-gogh-63293c1403a5",
+      "coherence": 0.6567846853037936,
+      "consequence": 0,
       "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Bruselas propone un nuevo préstamo de 45.000 millones de euros para Ucrania en 2027",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261118/11687087/bruselas-propone-nuevo-prestamo-45-000-millones-ucrania-traves-eurobonos.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/comision-europea-propone-nuevo-prestamo-45-000-millones-ucrania-tensiones-presupuestarias_1_13673032.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261118/bruselas-plantea-credito-millones-ucrania-enfrenta-alemania-hungria-chequia-eslovaquia/1003744462577_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/bruselas-propone-un-nuevo-prestamo-ucrania-45-000-millones-para-2027_7062529_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "up"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "20minutos.es",
-      "outbound_url": "https://www.20minutos.es/internacional/bruselas-propone-un-nuevo-prestamo-ucrania-45-000-millones-para-2027_7062529_0.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "elespanol.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5455,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6338,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ucrania",
-      "subject_names": [
-        "bruselas",
-        "bruxelles",
-        "rusia",
-        "ucrania",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "La Comisión Europea ha presentado una propuesta para conceder a Ucrania un préstamo de 45.000 millones de euros con vencimiento en 2027, financiado mediante la emisión de eurobonos; la iniciativa genera tensiones entre Estados miembros, en particular entre Alemania y países como Hungría, Chequia y Eslovaquia, y se enmarca en discusiones sobre el presupuesto comunitario."
-    },
-    {
-      "cluster_id": "subject-kiev-769e7c413b25",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Ucrania inflige daños graves al puente de Kerch que une Rusia y Crimea",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/une-operation-sans-precedent-l-ukraine-inflige-de-serieux-dommages-au-pont-de-kertch-reliant-la-russie-a-la-crimee-20261117"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261118-guerre-en-ukraine-en-crim%C3%A9e-ou-%C3%A0-kiev-les-frappes-contre-des-ponts-perturbent-la-logistique-et-le-quotidien"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-pont-de-crimee-symbole-de-lannexion-russe-frappe-lors-dune-operation-sans-NKD7K2QXHZCNXAIVRD6SFU5NRY/"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/monde/europe/guerre-en-ukraine-le-pont-de-crimee-symbole-de-lannexion-russe-frappe-lors-dune-operation-sans-NKD7K2QXHZCNXAIVRD6SFU5NRY/",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "lefigaro.fr",
-        "lexpress.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6081,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "kiev",
-      "subject_names": [
-        "biden",
-        "china's",
-        "crimea",
-        "crimee",
-        "donald trump",
-        "kiev",
-        "putin",
-        "rusia",
-        "russia",
-        "russian",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Operaciones ucranianas alcanzaron el puente de Kerch —símbolo de la anexión rusa de Crimea— causando importantes daños y perturbando la logística y la vida cotidiana; las incursiones sobre puentes en Crimea y Kiev se describen como inusuales y tienen efecto en el transporte y el abastecimiento."
-    },
-    {
-      "cluster_id": "subject-burnham-28413bbbac6e",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
+        "ca",
         "france",
-        "spain",
-        "united-kingdom"
+        "united-kingdom",
+        "united-states",
+        "vm"
       ],
-      "country_count": 3,
-      "editorial_day": "2026-11-18",
-      "filled_from": "europe",
-      "headline": "Andy Burnham reabre el debate sobre una posible aproximación a la UE",
-      "independent_source_count": 3,
+      "country_count": 5,
+      "editorial_day": "2026-11-19",
+      "headline": "Un cuadro de Van Gogh se vende por un récord de 190,4 millones de dólares",
+      "independent_source_count": 19,
       "members": [
         {
           "language": "fr",
-          "source": "lexpress.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.lexpress.fr/monde/europe/brexit-pourquoi-andy-burnham-rouvre-le-debat-explosif-dun-retour-dans-lue-IXE7MIT4HBG6LHJNZX3RI7ITUQ/"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261117/11685897/aproximacion-burnham-europa-resucita-batallas-brexit.html"
+          "url": "https://www.la-croix.com/culture/un-tableau-de-van-gogh-vendu-1904-millions-de-dollars-record-pour-le-peintre-20261119"
         },
         {
           "language": "en",
           "source": "bbc.co.uk",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cq4gn3109pzgo?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "the-messenger.com",
+          "source_country": "united-states",
+          "url": "https://www.the-messenger.com/news/world/article_c390b19a-dc8a-5172-99cc-5f90e199db96.html"
+        },
+        {
+          "language": "en",
+          "source": "bhpioneer.com",
+          "source_country": "united-states",
+          "url": "https://www.bhpioneer.com/a_and_e/a-van-gogh-with-a-complex-past-sells-for-a-record-190-million-at-auction/article_d72f1d2f-fe94-5871-aa8c-d9dce316ac5b.html"
+        },
+        {
+          "language": "en",
+          "source": "wn.com",
+          "source_country": "united-states",
+          "url": "https://article.wn.com/view/2026/11/19/Van_Gogh_painting_sells_for_record_1904_million_after_row/"
+        },
+        {
+          "language": "en",
+          "source": "theglobeandmail.com",
+          "source_country": "ca",
+          "url": "https://www.theglobeandmail.com/culture/art-and-architecture/article-van-gogh-chataigniers-en-fleurs-auction/"
+        },
+        {
+          "language": "en",
+          "source": "wn.com",
+          "source_country": "united-states",
+          "url": "https://article.wn.com/view/2026/11/19/Van_Gogh_painting_sells_for_record_1904m_after_dispute_j/"
+        },
+        {
+          "language": "en",
+          "source": "abcnews.com",
+          "source_country": "united-states",
+          "url": "https://abcnews.com/International/wireStory/van-gogh-complex-past-sells-record-190-million-138284157"
+        },
+        {
+          "language": "vie",
+          "source": "baomoi.com",
+          "source_country": "vm",
+          "url": "https://baomoi.com/tranh-van-gogh-lap-ky-luc-dau-gia-190-4-trieu-usd-c56555291.epi"
+        },
+        {
+          "language": "en",
+          "source": "hexham-courant.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.hexham-courant.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "newsshopper.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.newsshopper.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "southwalesargus.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.southwalesargus.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "bromsgroveadvertiser.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bromsgroveadvertiser.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "inquisitr.com",
+          "source_country": "united-states",
+          "url": "https://www.inquisitr.com/sothebys-van-gogh-auction-record/"
+        },
+        {
+          "language": "en",
+          "source": "northwaleschronicle.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.northwaleschronicle.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "thecomet.net",
+          "source_country": "united-kingdom",
+          "url": "https://www.thecomet.net/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "eveningnews24.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.eveningnews24.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "yorkpress.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.yorkpress.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "gazetteherald.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.gazetteherald.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
+        },
+        {
+          "language": "en",
+          "source": "yourlocalguardian.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.yourlocalguardian.co.uk/news/national/26742993.van-gogh-painting-sells-record-gbp145-million-auction/"
         }
       ],
       "mentioned_countries": [
-        "united-kingdom"
+        "germany",
+        "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261117/11685897/aproximacion-burnham-europa-resucita-batallas-brexit.html",
+      "origin_country": "ca",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo?at_medium=RSS&at_campaign=rss",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
         "bbc.co.uk",
-        "lavanguardia.com",
-        "lexpress.fr"
+        "la-croix.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.6,
-          "editorial_weight": 0.2727,
+          "coherence": 0.6568,
+          "corroboration": 0.7143,
+          "editorial_weight": 0.2,
           "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "geographic_relevance": 1.0,
+          "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.8261,
+          "source_reliability": 0.84
         },
-        "total": 0.5614,
+        "total": 0.505,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "burnham",
+      "subject_label": "van gogh",
       "subject_names": [
-        "brexit",
-        "burnham"
+        "van gogh"
       ],
-      "subject_newsroom_count": 4,
-      "summary": "Los artículos coinciden en que Andy Burnham, político británico, ha planteado públicamente la idea de acercarse de nuevo a la Unión Europea, reactivando controversias relacionadas con el Brexit; subrayan además que el contexto europeo ha cambiado desde la salida del Reino Unido, por lo que cualquier propuesta de reintegración o cooperación tendría que tener en cuenta una UE distinta a la que el país dejó."
+      "subject_newsroom_count": 6,
+      "summary": "Un cuadro de Vincent van Gogh se vendió en subasta por 190,4 millones de dólares (aproximadamente 145 millones de libras), estableciendo un récord para el pintor; la venta atrajo atención por el historial complejo de la obra y por disputas relacionadas con su pasado."
     }
   ],
-  "discarded_ingested": 5,
+  "discarded_ingested": 34,
   "discarded_kept": 5,
-  "generated_at": "2026-11-18T14:25:48.469376+00:00",
+  "generated_at": "2026-11-19T14:37:01.819050+00:00",
   "language": "es",
   "period": "day",
   "schema_version": 2,

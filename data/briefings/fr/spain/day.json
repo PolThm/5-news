@@ -1,46 +1,395 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-feijoo-2d34db663bed",
-      "coherence": 0.4094475458256769,
-      "consequence": 2,
+      "cluster_id": "subject-danemark-4ed3011cae4f",
+      "coherence": 0.5423733604122455,
+      "consequence": 3,
       "countries": [
+        "brazil",
+        "france",
         "spain"
       ],
+      "country_count": 3,
+      "editorial_day": "2026-11-21",
+      "filled_from": "europe",
+      "headline": "Le Danemark accuse la Russie d’avoir ordonné la tentative d’assassinat d’un rappeur ukrainien",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/20/le-danemark-accuse-la-russie-d-avoir-commandite-la-tentative-d-assassinat-d-un-rappeur-ukrainien-sur-son-territoire_6813695_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/au-danemark-les-autorites-accusent-la-russie-davoir-commandite-le-meurtre-dun-rappeur-ukrainien-20261120_IHVAG2EHGBDZTPAZP3AK7NU43A/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/union-europeenne/le-danemark-soupconne-la-russie-d-avoir-planifie-l-assassinat-d-un-ukrainien-sur-son-sol_8292689.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-le-danemark-accuse-la-russie-d-avoir-tent%C3%A9-d-assassiner-un-rappeur-ukrainien"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-20/dinamarca-acusa-a-rusia-de-intentar-asesinar-en-su-territorio-a-un-rapero-ucranio-estadounidense.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/europa-vuelca-dinamarca-tras-intento-asesinato-rapero-20261121134246-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/dinamarca-expulsa-un-agregado-ruso-por-una-conspiracion-para-asesinar-un-musico-ucraniano_7063902_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "da",
+        "up",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml",
+      "rank": 1,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "elpais.com",
+        "france24.com",
+        "francetvinfo.fr",
+        "globo.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5424,
+          "corroboration": 0.6,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.75
+        },
+        "total": 0.7126,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "danemark",
+      "subject_names": [
+        "danemark",
+        "dinamarca",
+        "emmanuel macron",
+        "finlande",
+        "otan",
+        "rusia",
+        "russia",
+        "russie",
+        "ucrania",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Les articles indiquent que les autorités danoises affirment que des services liés à la Russie ont planifié et tenté d’assassiner un rappeur ukrainien sur le sol danois ; en conséquence, le Danemark a pris des mesures diplomatiques, notamment l’expulsion d’un membre du personnel russe, et plusieurs pays européens ont exprimé leur soutien à Copenhague."
+    },
+    {
+      "cluster_id": "subject-russie-1f1b5a9b918f",
+      "coherence": 0.6713280430026658,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
       "country_count": 1,
-      "editorial_day": "2026-11-20",
-      "headline": "Feijóo est jugé vainqueur du face‑à‑face avec Sánchez selon plusieurs sondages",
+      "editorial_day": "2026-11-21",
+      "filled_from": "europe",
+      "headline": "L’armée finlandaise détecte une attaque de drone contre un cargo russe dans le golfe de Finlande",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/finlande-l-armee-a-detecte-une-attaque-de-drone-contre-un-cargo-russe-dans-le-golfe-de-finlande-20261121"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/la-guerre-setend-jusqua-nos-portes-une-attaque-de-drone-detectee-contre-un-cargo-russe-dans-le-golfe-de-finlande-20261121_IBIBYATSGVC5TKHIW7MAULCT5U/"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261121-une-attaque-de-drone-contre-un-cargo-russe-d%C3%A9tect%C3%A9e-dans-le-golfe-de-finlande"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/europe/finlande/une-attaque-de-drone-contre-un-cargo-russe-detectee-par-larmee-finlandaise-dans-le-golfe-de-finlande-96771304-e5a7-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        }
+      ],
+      "mentioned_countries": [
+        "fi",
+        "rs"
+      ],
+      "origin_country": "france",
+      "outbound_source": "ouest-france.fr",
+      "outbound_url": "https://www.ouest-france.fr/europe/finlande/une-attaque-de-drone-contre-un-cargo-russe-detectee-par-larmee-finlandaise-dans-le-golfe-de-finlande-96771304-e5a7-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "france24.com",
+        "lefigaro.fr",
+        "liberation.fr",
+        "ouest-france.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.6713,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6489,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "russie",
+      "subject_names": [
+        "emmanuel macron",
+        "finlande",
+        "russie"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Les quatre articles indiquent que l’armée finlandaise a détecté une attaque menée par un drone visant un cargo russe dans le golfe de Finlande. Les comptes rendent compte de la détection de l’incident par les autorités militaires finlandaises et situent l’événement dans cette zone maritime, sans fournir de détails supplémentaires communs sur les auteurs, l’étendue des dégâts ou des victimes."
+    },
+    {
+      "cluster_id": "subject-polonia-146cef2911e6",
+      "coherence": 0.4869049720431672,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-21",
+      "filled_from": "europe",
+      "headline": "Deux missiles et un drone russes tombent en Pologne sans faire de victimes",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/russie/deux-missiles-russes-tombent-dans-le-sud-est-de-la-pologne_8293478.html#xtor=RSS-3-%5Bmonde%5D"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-20/dos-misiles-y-un-dron-rusos-caen-en-el-este-de-polonia-en-plenas-maniobras-militares-de-una-decena-de-paises-europeos.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261120/11689106/dos-misiles-rusos-caen-territorio-polaco-varsovia-habla-provocacion.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/polonia-dice-misiles-rusos-dron-dirigian-ucrania-han-caido-territorio-causar-victimas_1_13680258.html"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261120/11689106/dos-misiles-rusos-caen-territorio-polaco-varsovia-habla-provocacion.html",
+      "rank": 3,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elpais.com",
+        "francetvinfo.fr",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4869,
+          "corroboration": 0.5,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6434,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "polonia",
+      "subject_names": [
+        "pologne",
+        "polonia"
+      ],
+      "subject_newsroom_count": 13,
+      "summary": "Les autorités polonaises indiquent que deux missiles et un drone russes, apparemment dirigés vers l’Ukraine, sont tombés dans l’est/sud-est de la Pologne pendant des manœuvres militaires multinationales; les incidents n’ont pas causé de victimes selon ces sources."
+    },
+    {
+      "cluster_id": "subject-trump-12e6e5733476",
+      "coherence": 0.5198115397564746,
+      "consequence": 2,
+      "countries": [
+        "it",
+        "spain",
+        "united-kingdom"
+      ],
+      "country_count": 3,
+      "editorial_day": "2026-11-21",
+      "filled_from": "europe",
+      "headline": "Zelensky qualifie Poutine de « meurtrier » après que Trump l’a appelé « ami »",
       "independent_source_count": 4,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/espana/elecciones-generales/2026-11-20/feijoo-gano-el-cara-a-cara-contra-sanchez-por-10-puntos-segun-el-sondeo-de-40db-para-el-pais-y-la-ser.html"
+          "url": "https://elpais.com/internacional/2026-11-21/zelenski-despues-de-que-trump-se-refiriera-a-putin-como-un-amigo-para-nosotros-es-un-asesino.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "20minutos.es",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/45-ve-feijoo-vencedor-cara-cara-pedro-sanchez-voto-apenas-mueve_1_13678798.html"
+          "url": "https://www.20minutos.es/internacional/reaccion-zelenski-despues-que-trump-llamase-amigo-putin-para-nosotros-es-un-asesino_7063972_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/11/21/putin-a-killer-zelenskyy-says-after-trump-calls-russian-leader-his-friend"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo"
+        }
+      ],
+      "mentioned_countries": [
+        "pl"
+      ],
+      "origin_country": "it",
+      "outbound_source": "bbc.co.uk",
+      "outbound_url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "bbc.co.uk",
+        "elpais.com",
+        "euronews.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5198,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6522
+        },
+        "total": 0.5867,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "trump",
+      "subject_names": [
+        "donald trump",
+        "kiev",
+        "kyiv",
+        "maga",
+        "otan",
+        "putin",
+        "rusia",
+        "russian",
+        "trump",
+        "ucrania",
+        "ukraine",
+        "zelenski"
+      ],
+      "subject_newsroom_count": 25,
+      "summary": "Les articles indiquent qu’après que Donald Trump a décrit Vladimir Poutine comme son « ami », le président ukrainien Volodymyr Zelensky a réagi publiquement en qualifiant Poutine de « meurtrier ». Les comptes rendent compte de cette déclaration de Zelensky en réponse aux propos attribués à Trump, sans ajouter d’autres détails contradictoires."
+    },
+    {
+      "cluster_id": "subject-madrid-a02cd137cd2a",
+      "coherence": null,
+      "consequence": 0,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-21",
+      "headline": "Rafael Nadal est confirmé comme nouveau dirigeant du Real Madrid",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/deportes/real-madrid/florentino-sienta-nadal-derecha-ovacion-unanime-orgullo-20261121103146-nt.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/politica/encuesta-ganando-cara-cara-sanchez-feijoo_11_13674665.html"
+          "url": "https://www.elespanol.com/deportes/futbol/20261121/rafa-nadal-ratificado-aclamado-nuevo-directivo-madrid-voy-espero-anos/1003744467433_0.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/ganador-debate-cara-cara-pedro-sanchez-feijoo-encuesta-20261119214314-nt.html"
+          "url": "https://www.elmundo.es/deportes/futbol/2026/11/21/6b01646de85ecec7518b4581.html"
         }
       ],
       "mentioned_countries": [
@@ -48,154 +397,8 @@
       ],
       "origin_country": "spain",
       "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html",
-      "rank": 1,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4094,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6522
-        },
-        "total": 0.5967,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "feijoo",
-      "subject_names": [
-        "abascal",
-        "alberto nunez",
-        "espagne",
-        "feijoo",
-        "pedro sanchez",
-        "puigdemont",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 15,
-      "summary": "Plusieurs sondages et bilans des médias indiquent que Alberto Feijóo a été perçu comme le vainqueur du débat face à Pedro Sánchez, recueillant autour de 45 % des opinions favorables dans certaines enquêtes; malgré cela, les intentions de vote générales restent globalement stables et les mouvements entre partis semblent limités."
-    },
-    {
-      "cluster_id": "subject-pedro-sanchez-2df0ff97fd68",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-20",
-      "headline": "Pedro Sánchez reconnaît des « erreurs » lors d'un débat dix jours avant les élections",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/20/en-espagne-a-dix-jours-des-elections-legislatives-pedro-sanchez-admet-des-erreurs_6813603_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261120-espagne-attaqu%C3%A9-sur-son-bilan-par-son-rival-conservateur-s%C3%A1nchez-admet-des-erreurs"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261120-espagne-lors-d-un-d%C3%A9bat-tendu-avec-alberto-nu%C3%B1ez-feijoo-pedro-sanchez-reconna%C3%AEt-des-erreurs"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lemonde.fr",
-      "outbound_url": "https://www.lemonde.fr/international/article/2026/11/20/en-espagne-a-dix-jours-des-elections-legislatives-pedro-sanchez-admet-des-erreurs_6813603_3210.html",
-      "rank": 2,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "france24.com",
-        "lemonde.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5848,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "pedro sanchez",
-      "subject_names": [
-        "abascal",
-        "alberto nunez",
-        "espagne",
-        "feijoo",
-        "pedro sanchez",
-        "puigdemont",
-        "sanchez"
-      ],
-      "subject_newsroom_count": 12,
-      "summary": "Lors d'un débat tendu avec le chef du Parti populaire Alberto Núñez Feijoo, à dix jours des élections législatives, le président sortant Pedro Sánchez a admis avoir commis des « erreurs » en défendant son bilan face aux attaques de son rival conservateur."
-    },
-    {
-      "cluster_id": "subject-ceuta-7cda445e11ed",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-20",
-      "headline": "La marine marocaine bloque brièvement les travaux d’un nouvel épi à Ceuta",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/nuevo-rifirrafe-marina-marroqui-ceuta-horas-ampliacion-20261120143612-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/20/6b0041dee4d4d8696f8b458d.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/20261120/armada-marroqui-bloquea-fuerza-prolongacion-espigon-ceuta-gobierno-ordena-suspender-obras/1003744466203_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "mo",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/espana/20261120/armada-marroqui-bloquea-fuerza-prolongacion-espigon-ceuta-gobierno-ordena-suspender-obras/1003744466203_0.html",
-      "rank": 3,
+      "outbound_url": "https://www.elmundo.es/deportes/futbol/2026/11/21/6b01646de85ecec7518b4581.html",
+      "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "abc.es",
@@ -209,185 +412,29 @@
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5114,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ceuta",
-      "subject_names": [
-        "ceuta",
-        "marruecos"
-      ],
-      "subject_newsroom_count": 7,
-      "summary": "Des bâtiments de la marine marocaine ont interrompu pendant quelques heures les travaux d’extension d’un épi à Ceuta, affirmant que les travaux se déroulaient en eaux marocaines ; face à cet incident, les autorités espagnoles ont ordonné la suspension des travaux."
-    },
-    {
-      "cluster_id": "subject-eta-828db3efc11c",
-      "coherence": null,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-20",
-      "headline": "Le roi Felipe VI rend hommage au courage des entrepreneurs basques face à ETA",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/2026-11-20/el-rey-pide-en-bilbao-no-olvidar-el-sufrimiento-que-causo-el-terrorismo-de-eta-las-amenazas-y-la-falta-de-libertad.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/pais-vasco/rey-revindica-bilbao-coraje-empresa-vasca-frente-20261120133851-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/reportajes/20261120/felipe-vi-reconoce-bilbao-coraje-anadido-empresarios-vascos-frente-decadas-terrorismo-eta/1003744466562_0.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/espana/pais-vasco/rey-revindica-bilbao-coraje-empresa-vasca-frente-20261120133851-nt.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "abc.es",
-        "elespanol.com",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5114,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "eta",
-      "subject_names": [
-        "bilbao",
-        "eta"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "À Bilbao, le roi Felipe VI a appelé à ne pas oublier les souffrances causées par le terrorisme d’ETA, les menaces et la privation de liberté, et a salué le « courage » ou « courage ajouté » des entreprises et entrepreneurs basques qui ont affronté ces décennies de violence."
-    },
-    {
-      "cluster_id": "subject-espana-152369bc04f4",
-      "coherence": 0.5239847001468017,
-      "consequence": 0,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-20",
-      "headline": "L’Espagne affrontera la France en quarts de finale de la Ligue des Nations",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/deportes/futbol/2026-11-20/espana-se-medira-ante-francia-en-los-cuartos-de-final-de-la-nations-league.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/deportes/futbol/espana-medira-francia-zidane-mbappe-cuartos-final-20261120124832-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/spin/deportes/espana-medira-francia-cuartos-nations-league-duelo-aires-revancha-pm_1_13680307.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20261120/espana-vera-caras-francia-mbappe-zidane-cuartos-nations-league/1003744465717_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/uefa-nations-league/2026/11/20/6b00239de85ecec80b8b457b.html"
-        }
-      ],
-      "mentioned_countries": [
-        "france",
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/deportes/futbol/20261120/espana-vera-caras-francia-mbappe-zidane-cuartos-nations-league/1003744465717_0.html",
-      "rank": 5,
-      "reference_newsroom_count": 5,
-      "reference_newsrooms": [
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.524,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3846,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
           "impact": 0.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.4778,
+        "total": 0.4381,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "espana",
+      "subject_label": "madrid",
       "subject_names": [
-        "conseil",
-        "espana",
-        "france",
-        "francia",
-        "gobierno",
-        "ligue",
-        "macron",
+        "barcelona",
         "madrid",
-        "mbappe",
-        "nations league",
-        "paris",
-        "zidane"
+        "rafa nadal",
+        "rafael nadal",
+        "real madrid"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Les équipes nationales d’Espagne et de France se retrouveront en quarts de finale de la Ligue des Nations ; la confrontation est présentée comme un duel de revanche face à une France emmenée notamment par Kylian Mbappé et dirigée par Zinédine Zidane."
+      "subject_newsroom_count": 10,
+      "summary": "Les articles indiquent que Rafael Nadal a été officiellement ratifié comme membre du conseil ou dirigeant du Real Madrid lors de l’assemblée du club, qu’il a été accueilli favorablement et qu’il a déclaré qu’il espère rester à ce poste pendant de nombreuses années."
     }
   ],
-  "discarded_ingested": 25,
+  "discarded_ingested": 7,
   "discarded_kept": 5,
-  "generated_at": "2026-11-20T14:15:12.367593+00:00",
+  "generated_at": "2026-11-21T13:38:27.318024+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

@@ -1,138 +1,337 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-danemark-4ed3011cae4f",
-      "coherence": 0.5423733604122455,
+      "cluster_id": "subject-barcelona-77b042c62476",
+      "coherence": 0.5754409432233416,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-22",
+      "headline": "Un arbre tombe lors de la Cursa de Dones à Barcelone et blesse neuf femmes",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/cataluna/nueve-mujeres-corrian-carrera-popular-resultan-heridas-20261122112941-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/catalunya/nueve-mujeres-heridas-caer-arbol-durante-carrera-barcelona_1_13683948.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/cataluna/2026/11/22/6b02c12d21efa07f188b457c.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/catalunya/noticia-heridas-caida-arbol-meridiana-barcelona-cursa-les-dones-20261122111334.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "europapress.es",
+      "outbound_url": "https://www.europapress.es/catalunya/noticia-heridas-caida-arbol-meridiana-barcelona-cursa-les-dones-20261122111334.html",
+      "rank": 1,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elmundo.es",
+        "europapress.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5754,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.5407,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "barcelona",
+      "subject_names": [
+        "barcelona",
+        "villarreal"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Lors de la course féminine Cursa de Dones à Barcelone, un arbre est tombé, blessant au moins neuf femmes ; la chute serait liée au fort vent et les personnes touchées ont reçu des soins après l'incident."
+    },
+    {
+      "cluster_id": "subject-emmanuel-macron-0dc80c56834c",
+      "coherence": 0.48869881628058054,
       "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-22",
+      "filled_from": "europe",
+      "headline": "Emmanuel Macron veut inscrire une « règle d'or » budgétaire et convoquer le Congrès",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/politique/budget-emmanuel-macron-reflechirait-a-convoquer-le-congres-pour-instaurer-une-regle-d-or-20261122"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261122-france-emmanuel-macron-pense-%C3%A0-une-r%C3%A8gle-d-or-budg%C3%A9taire-la-droite-et-le-rn-lui-emboitent-le-pas"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261122.OBS120348/qu-est-ce-que-la-regle-d-or-budgetaire-que-macron-envisage-d-inscrire-dans-la-constitution.html"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/quest-ce-que-la-regle-dor-cet-outil-budgetaire-quemmanuel-macron-souhaiterait-inscrire-dans-la-constitution-1c9619b8-e660-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "latribune.fr",
+          "source_country": "france",
+          "url": "https://www.latribune.fr/article/la-tribune-dimanche/politique/78452239301209/emmanuel-macron-veut-convoquer-un-congres-pour-adopter-une-regle-d-or-budgetaire"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "latribune.fr",
+      "outbound_url": "https://www.latribune.fr/article/la-tribune-dimanche/politique/78452239301209/emmanuel-macron-veut-convoquer-un-congres-pour-adopter-une-regle-d-or-budgetaire",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "lefigaro.fr",
+        "nouvelobs.com",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4887,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.5556,
+          "source_reliability": 0.6364
+        },
+        "total": 0.6305,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "emmanuel macron",
+      "subject_names": [
+        "emmanuel macron",
+        "macron"
+      ],
+      "subject_newsroom_count": 8,
+      "summary": "Le président Emmanuel Macron souhaite inscrire une « règle d'or » budgétaire dans la Constitution et envisagerait de convoquer le Congrès pour l'adopter. Plusieurs articles expliquent que cette démarche vise à contraindre les finances publiques par une norme constitutionnelle, décrivent les grandes lignes de la règle d'or telle qu'envisagée et signalent que cette proposition suscite l'adhésion de partis de droite et du Rassemblement national."
+    },
+    {
+      "cluster_id": "subject-hugues-moutouh-99959e39fa48",
+      "coherence": 0.4771336235379068,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-22",
+      "filled_from": "europe",
+      "headline": "Le préfet Hugues Moutouh demandé de se retirer après des soupçons de fuites vers le RN",
+      "independent_source_count": 12,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/societe/article/2026/11/21/fuites-de-beauvau-vers-le-rn-d-un-email-trouve-au-domicile-d-un-ami-de-marine-le-pen-aux-suspicions-visant-le-prefet-moutouh-itineraire-d-une-enquete-sensible_6814067_3224.html"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/politique/soupcons-de-fuites-au-profit-du-rn-un-mail-du-service-du-prefet-hugues-moutouh-decouvert-en-perquisition-chez-un-proche-de-marine-le-pen-20261122"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/politique/enquete-visant-le-rn-le-prefet-moutouh-demande-a-etre-releve-de-ses-fonctions-20261121"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/actualite-france/soupcons-de-fuites-au-profit-du-rn-le-prefet-hugues-moutouh-dans-la-tempete-20261120"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/fuites-au-ministere-de-linterieur-un-mail-du-service-du-prefet-moutouh-decouvert-chez-un-proche-de-marine-le-pen-20261122_35OXDYGGVRFFXGEIYX72YKYHGM/"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/suspecte-detre-une-taupe-du-rn-le-prefet-moutouh-demande-a-etre-releve-de-ses-fonctions-20261121_LUXHW7N52BELTCNJHZ6VHWMFHU/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/politique/le-prefet-moutouh-demissionne-apres-des-soupcons-de-fuites-vers-le-rn-20261122"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/front-national/le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-au-rn-des-informations-confidentielles-sur-des-enquetes-visant-le-parti-demande-a-etre-releve-de-ses-fonctions_8294069.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-enqu%C3%AAte-rn-le-pr%C3%A9fet-moutouh-demande-%C3%A0-%C3%AAtre-relev%C3%A9-de-ses-fonctions-communiqu%C3%A9"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261121-france-soup%C3%A7onn%C3%A9-de-fuites-li%C3%A9es-au-rn-le-pr%C3%A9fet-moutouh-demande-%C3%A0-%C3%AAtre-relev%C3%A9-de-ses-fonctions"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/justice/20261122.OBS120354/scandale-du-rn-un-mail-du-service-du-prefet-moutouh-decouvert-reaction-de-le-pen-le-point-sur-les-derniers-rebondissements.html"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/politique/20261120.OBS120292/qui-est-hugues-moutouh-le-prefet-bulldozer-soupconne-d-avoir-renseigne-le-rn-sur-des-enquetes.html"
+        },
+        {
+          "language": "fr",
+          "source": "lexpress.fr",
+          "source_country": "france",
+          "url": "https://www.lexpress.fr/politique/le-prefet-hugues-moutouh-au-coeur-des-soupcons-de-fuites-vers-le-rn-comment-marine-le-pen-veut-UV32FRIURNHVRFSWDGLGIV4WFY/"
+        },
+        {
+          "language": "fr",
+          "source": "ouest-france.fr",
+          "source_country": "france",
+          "url": "https://www.ouest-france.fr/politique/rassemblement-national/enquete-rn-un-mail-dune-collaboratrice-du-prefet-moutouh-decouvert-chez-un-proche-de-le-pen-5d37d6a4-e66b-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+        },
+        {
+          "language": "fr",
+          "source": "sudouest.fr",
+          "source_country": "france",
+          "url": "https://www.sudouest.fr/france/enquete-sur-des-fuites-vers-le-rn-le-prefet-moutouh-demande-a-etre-releve-de-ses-fonctions-31606843.php"
+        },
+        {
+          "language": "fr",
+          "source": "franceinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/politique/front-national/le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-au-rn-des-informations-confidentielles-sur-des-enquetes-visant-le-parti-demande-a-etre-releve-de-ses-fonctions_8294069.html"
+        }
+      ],
+      "mentioned_countries": [
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "lexpress.fr",
+      "outbound_url": "https://www.lexpress.fr/politique/le-prefet-hugues-moutouh-au-coeur-des-soupcons-de-fuites-vers-le-rn-comment-marine-le-pen-veut-UV32FRIURNHVRFSWDGLGIV4WFY/",
+      "rank": 3,
+      "reference_newsroom_count": 10,
+      "reference_newsrooms": [
+        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
+        "lefigaro.fr",
+        "lemonde.fr",
+        "lexpress.fr",
+        "liberation.fr",
+        "nouvelobs.com",
+        "ouest-france.fr",
+        "rfi.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4771,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.5556,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.75,
+          "source_reliability": 0.8519
+        },
+        "total": 0.6257,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "hugues moutouh",
+      "subject_names": [
+        "beauvau",
+        "hugues moutouh",
+        "jean-luc melenchon",
+        "marine",
+        "moutouh",
+        "pen"
+      ],
+      "subject_newsroom_count": 11,
+      "summary": "Plusieurs articles indiquent qu’un courriel provenant du service du préfet Hugues Moutouh a été retrouvé lors d’une perquisition chez un proche de Marine Le Pen, suscitant des soupçons de transmissions d’informations confidentielles au Rassemblement National. Confronté à ces allégations, Moutouh a demandé à être relevé de ses fonctions (certains titres parlent de démission) et a nié être l’auteur d’une « chasse à l’homme », tandis qu’une enquête est en cours pour déterminer l’origine et l’ampleur des fuites."
+    },
+    {
+      "cluster_id": "subject-finlandia-a719a017d426",
+      "coherence": 0.3934558237181276,
+      "consequence": 2,
       "countries": [
         "brazil",
         "france",
         "spain"
       ],
       "country_count": 3,
-      "editorial_day": "2026-11-21",
+      "editorial_day": "2026-11-22",
       "filled_from": "europe",
-      "headline": "Le Danemark accuse la Russie d’avoir ordonné la tentative d’assassinat d’un rappeur ukrainien",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/international/article/2026/11/20/le-danemark-accuse-la-russie-d-avoir-commandite-la-tentative-d-assassinat-d-un-rappeur-ukrainien-sur-son-territoire_6813695_3210.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/au-danemark-les-autorites-accusent-la-russie-davoir-commandite-le-meurtre-dun-rappeur-ukrainien-20261120_IHVAG2EHGBDZTPAZP3AK7NU43A/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/union-europeenne/le-danemark-soupconne-la-russie-d-avoir-planifie-l-assassinat-d-un-ukrainien-sur-son-sol_8292689.html#xtor=RSS-3-%5Bmonde%5D"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261121-le-danemark-accuse-la-russie-d-avoir-tent%C3%A9-d-assassiner-un-rappeur-ukrainien"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-20/dinamarca-acusa-a-rusia-de-intentar-asesinar-en-su-territorio-a-un-rapero-ucranio-estadounidense.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/europa-vuelca-dinamarca-tras-intento-asesinato-rapero-20261121134246-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/dinamarca-expulsa-un-agregado-ruso-por-una-conspiracion-para-asesinar-un-musico-ucraniano_7063902_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "da",
-        "up",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml",
-      "rank": 1,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "elpais.com",
-        "france24.com",
-        "francetvinfo.fr",
-        "globo.com",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5424,
-          "corroboration": 0.6,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.75
-        },
-        "total": 0.7126,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "danemark",
-      "subject_names": [
-        "danemark",
-        "dinamarca",
-        "emmanuel macron",
-        "finlande",
-        "otan",
-        "rusia",
-        "russia",
-        "russie",
-        "ucrania",
-        "zelenski"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Les articles indiquent que les autorités danoises affirment que des services liés à la Russie ont planifié et tenté d’assassiner un rappeur ukrainien sur le sol danois ; en conséquence, le Danemark a pris des mesures diplomatiques, notamment l’expulsion d’un membre du personnel russe, et plusieurs pays européens ont exprimé leur soutien à Copenhague."
-    },
-    {
-      "cluster_id": "subject-russie-1f1b5a9b918f",
-      "coherence": 0.6713280430026658,
-      "consequence": 3,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-21",
-      "filled_from": "europe",
-      "headline": "L’armée finlandaise détecte une attaque de drone contre un cargo russe dans le golfe de Finlande",
-      "independent_source_count": 4,
+      "headline": "Un drone ukrainien frappe un cargo russe dans le golfe de Finlande",
+      "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
           "source": "lefigaro.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/finlande-l-armee-a-detecte-une-attaque-de-drone-contre-un-cargo-russe-dans-le-golfe-de-finlande-20261121"
+          "url": "https://www.lefigaro.fr/international/apres-l-attaque-contre-un-porte-conteneurs-russe-la-finlande-craint-une-extension-de-la-guerre-en-mer-baltique-20261122"
         },
         {
           "language": "fr",
@@ -144,297 +343,132 @@
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/europe/20261121-une-attaque-de-drone-contre-un-cargo-russe-d%C3%A9tect%C3%A9e-dans-le-golfe-de-finlande"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-la-finlande-fait-%C3%A9tat-d-une-attaque-de-drone-ukrainien-contre-un-cargo-russe-en-mer-baltique"
         },
         {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/europe/finlande/une-attaque-de-drone-contre-un-cargo-russe-detectee-par-larmee-finlandaise-dans-le-golfe-de-finlande-96771304-e5a7-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261121/11689834/drones-ucranianos-atacan-carguero-ruso-golfo-finlandia.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/21/drones-atingem-navio-de-carga-russo-no-golfo-da-finlandia-pais-reforca-seguranca.ghtml"
         }
       ],
       "mentioned_countries": [
         "fi",
         "rs"
       ],
-      "origin_country": "france",
-      "outbound_source": "ouest-france.fr",
-      "outbound_url": "https://www.ouest-france.fr/europe/finlande/une-attaque-de-drone-contre-un-cargo-russe-detectee-par-larmee-finlandaise-dans-le-golfe-de-finlande-96771304-e5a7-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu",
-      "rank": 2,
-      "reference_newsroom_count": 4,
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261121/11689834/drones-ucranianos-atacan-carguero-ruso-golfo-finlandia.html",
+      "rank": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
         "france24.com",
+        "globo.com",
+        "lavanguardia.com",
         "lefigaro.fr",
-        "liberation.fr",
-        "ouest-france.fr"
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.6713,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6489,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "russie",
-      "subject_names": [
-        "emmanuel macron",
-        "finlande",
-        "russie"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Les quatre articles indiquent que l’armée finlandaise a détecté une attaque menée par un drone visant un cargo russe dans le golfe de Finlande. Les comptes rendent compte de la détection de l’incident par les autorités militaires finlandaises et situent l’événement dans cette zone maritime, sans fournir de détails supplémentaires communs sur les auteurs, l’étendue des dégâts ou des victimes."
-    },
-    {
-      "cluster_id": "subject-polonia-146cef2911e6",
-      "coherence": 0.4869049720431672,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-21",
-      "filled_from": "europe",
-      "headline": "Deux missiles et un drone russes tombent en Pologne sans faire de victimes",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/russie/deux-missiles-russes-tombent-dans-le-sud-est-de-la-pologne_8293478.html#xtor=RSS-3-%5Bmonde%5D"
-        },
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-20/dos-misiles-y-un-dron-rusos-caen-en-el-este-de-polonia-en-plenas-maniobras-militares-de-una-decena-de-paises-europeos.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261120/11689106/dos-misiles-rusos-caen-territorio-polaco-varsovia-habla-provocacion.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/polonia-dice-misiles-rusos-dron-dirigian-ucrania-han-caido-territorio-causar-victimas_1_13680258.html"
-        }
-      ],
-      "mentioned_countries": [
-        "pl"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261120/11689106/dos-misiles-rusos-caen-territorio-polaco-varsovia-habla-provocacion.html",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elpais.com",
-        "francetvinfo.fr",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4869,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
-        },
-        "total": 0.6434,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "polonia",
-      "subject_names": [
-        "pologne",
-        "polonia"
-      ],
-      "subject_newsroom_count": 13,
-      "summary": "Les autorités polonaises indiquent que deux missiles et un drone russes, apparemment dirigés vers l’Ukraine, sont tombés dans l’est/sud-est de la Pologne pendant des manœuvres militaires multinationales; les incidents n’ont pas causé de victimes selon ces sources."
-    },
-    {
-      "cluster_id": "subject-trump-12e6e5733476",
-      "coherence": 0.5198115397564746,
-      "consequence": 2,
-      "countries": [
-        "it",
-        "spain",
-        "united-kingdom"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-21",
-      "filled_from": "europe",
-      "headline": "Zelensky qualifie Poutine de « meurtrier » après que Trump l’a appelé « ami »",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-21/zelenski-despues-de-que-trump-se-refiriera-a-putin-como-un-amigo-para-nosotros-es-un-asesino.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/reaccion-zelenski-despues-que-trump-llamase-amigo-putin-para-nosotros-es-un-asesino_7063972_0.html"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "en",
-          "source": "euronews.com",
-          "source_country": "it",
-          "url": "https://www.euronews.com/2026/11/21/putin-a-killer-zelenskyy-says-after-trump-calls-russian-leader-his-friend"
-        },
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo"
-        }
-      ],
-      "mentioned_countries": [
-        "pl"
-      ],
-      "origin_country": "it",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo",
-      "rank": 4,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "elpais.com",
-        "euronews.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5198,
+          "coherence": 0.3935,
           "corroboration": 0.6,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
+          "prominence": 0.5556,
           "source_reliability": 0.6522
         },
-        "total": 0.5867,
+        "total": 0.5855,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "trump",
+      "subject_label": "finlandia",
       "subject_names": [
-        "donald trump",
+        "finlande",
+        "finlandia",
         "kiev",
         "kyiv",
-        "maga",
-        "otan",
-        "putin",
-        "rusia",
         "russian",
-        "trump",
-        "ucrania",
-        "ukraine",
-        "zelenski"
+        "ukraine"
       ],
-      "subject_newsroom_count": 25,
-      "summary": "Les articles indiquent qu’après que Donald Trump a décrit Vladimir Poutine comme son « ami », le président ukrainien Volodymyr Zelensky a réagi publiquement en qualifiant Poutine de « meurtrier ». Les comptes rendent compte de cette déclaration de Zelensky en réponse aux propos attribués à Trump, sans ajouter d’autres détails contradictoires."
+      "subject_newsroom_count": 8,
+      "summary": "Des médias rapportent qu’un cargo russe a été touché par un drone ukrainien dans le golfe de Finlande en mer Baltique; la Finlande a renforcé ses mesures de sécurité et craint que l’attaque n’étende le conflit vers ses eaux, et certains commentateurs évoquent la possibilité que le navire transportât du matériel militaire."
     },
     {
-      "cluster_id": "subject-madrid-a02cd137cd2a",
+      "cluster_id": "subject-russia-55b0b8972f82",
       "coherence": null,
-      "consequence": 0,
+      "consequence": 3,
       "countries": [
-        "spain"
+        "brazil",
+        "united-kingdom"
       ],
-      "country_count": 1,
+      "country_count": 2,
       "editorial_day": "2026-11-21",
-      "headline": "Rafael Nadal est confirmé comme nouveau dirigeant du Real Madrid",
-      "independent_source_count": 3,
+      "filled_from": "europe",
+      "headline": "Le Danemark affirme que la Russie a planifié l'assassinat d'un rappeur américano-ukrainien",
+      "independent_source_count": 2,
       "members": [
         {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/deportes/real-madrid/florentino-sienta-nadal-derecha-ovacion-unanime-orgullo-20261121103146-nt.html"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno?at_medium=RSS&at_campaign=rss"
         },
         {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/deportes/futbol/20261121/rafa-nadal-ratificado-aclamado-nuevo-directivo-madrid-voy-espero-anos/1003744467433_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/deportes/futbol/2026/11/21/6b01646de85ecec7518b4581.html"
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "da"
       ],
-      "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/deportes/futbol/2026/11/21/6b01646de85ecec7518b4581.html",
+      "origin_country": "brazil",
+      "outbound_source": "globo.com",
+      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 2,
       "reference_newsrooms": [
-        "abc.es",
-        "elespanol.com",
-        "elmundo.es"
+        "bbc.co.uk",
+        "globo.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.0,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2,
+          "freshness": 0.7071,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.3333,
+          "source_reliability": 0.4286
         },
-        "total": 0.4381,
+        "total": 0.5643,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "madrid",
+      "subject_label": "russia",
       "subject_names": [
-        "barcelona",
-        "madrid",
-        "rafa nadal",
-        "rafael nadal",
-        "real madrid"
+        "danemark",
+        "kremlin",
+        "russia",
+        "russie"
       ],
-      "subject_newsroom_count": 10,
-      "summary": "Les articles indiquent que Rafael Nadal a été officiellement ratifié comme membre du conseil ou dirigeant du Real Madrid lors de l’assemblée du club, qu’il a été accueilli favorablement et qu’il a déclaré qu’il espère rester à ce poste pendant de nombreuses années."
+      "subject_newsroom_count": 8,
+      "summary": "Les autorités danoises disent avoir déjoué un complot attribué à des agents russes visant à tuer un rappeur de nationalité américaine et ukrainienne vivant au Danemark; le Service de renseignement danois a annoncé l'existence d'une opération d'assassinat présumée et enquête sur des responsables liés à la Russie."
     }
   ],
-  "discarded_ingested": 7,
+  "discarded_ingested": 14,
   "discarded_kept": 5,
-  "generated_at": "2026-11-21T13:38:27.318024+00:00",
+  "generated_at": "2026-11-22T13:30:27.053881+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

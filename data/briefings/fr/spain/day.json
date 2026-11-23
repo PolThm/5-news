@@ -1,40 +1,34 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-barcelona-77b042c62476",
-      "coherence": 0.5754409432233416,
-      "consequence": 1,
+      "cluster_id": "subject-sanchez-9a5218c4567a",
+      "coherence": null,
+      "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-22",
-      "headline": "Un arbre tombe lors de la Cursa de Dones à Barcelone et blesse neuf femmes",
-      "independent_source_count": 4,
+      "editorial_day": "2026-11-23",
+      "headline": "Pedro Sánchez annonce un impôt sur les ultra-riches visant les patrimoines ≥100 millions",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/cataluna/nueve-mujeres-corrian-carrera-popular-resultan-heridas-20261122112941-nt.html"
+          "url": "https://www.abc.es/economia/cuentas-corrientes/impuesto-ultrarricos-partir-100-millones-pedro-sanchez-20261123163259-nt.html"
         },
         {
           "language": "es",
-          "source": "eldiario.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/nueve-mujeres-heridas-caer-arbol-durante-carrera-barcelona_1_13683948.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/cataluna/2026/11/22/6b02c12d21efa07f188b457c.html"
+          "url": "https://www.elespanol.com/invertia/mis-finanzas/fiscalidad/20261123/nuevo-impuesto-ultrarricos-perjuicio-fiscal-ano-caida-inversion-fuga-capitales/1003744468554_0.html"
         },
         {
           "language": "es",
           "source": "europapress.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/catalunya/noticia-heridas-caida-arbol-meridiana-barcelona-cursa-les-dones-20261122111334.html"
+          "url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-nuevo-impuesto-ultrarricos-recaudara-2000-millones-vivienda-pensiones-crianza-20261123090541.html"
         }
       ],
       "mentioned_countries": [
@@ -42,100 +36,224 @@
       ],
       "origin_country": "spain",
       "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/catalunya/noticia-heridas-caida-arbol-meridiana-barcelona-cursa-les-dones-20261122111334.html",
+      "outbound_url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-nuevo-impuesto-ultrarricos-recaudara-2000-millones-vivienda-pensiones-crianza-20261123090541.html",
       "rank": 1,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "abc.es",
-        "eldiario.es",
-        "elmundo.es",
+        "elespanol.com",
         "europapress.es"
       ],
       "score": {
         "components": {
-          "coherence": 0.5754,
+          "coherence": 0.5,
           "corroboration": 0.3333,
-          "editorial_weight": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.3333,
+          "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5407,
+        "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "barcelona",
+      "subject_label": "sanchez",
       "subject_names": [
-        "barcelona",
-        "villarreal"
+        "abascal",
+        "feijoo",
+        "pedro sanchez",
+        "sanchez"
       ],
-      "subject_newsroom_count": 7,
-      "summary": "Lors de la course féminine Cursa de Dones à Barcelone, un arbre est tombé, blessant au moins neuf femmes ; la chute serait liée au fort vent et les personnes touchées ont reçu des soins après l'incident."
+      "subject_newsroom_count": 13,
+      "summary": "Le gouvernement espagnol met en place un nouvel impôt ciblant les personnes détenant au moins 100 millions d'euros, dont le produit est estimé à 2 000 millions d'euros destinés au logement, aux retraites et à la parentalité ; les estimations indiquent qu'environ 100–123 contribuables seraient concernés et des craintes de fuite de capitaux pourraient réduire les recettes."
     },
     {
-      "cluster_id": "subject-emmanuel-macron-0dc80c56834c",
-      "coherence": 0.48869881628058054,
+      "cluster_id": "subject-ucrania-14a896b21bd4",
+      "coherence": 0.42461885749891315,
       "consequence": 3,
       "countries": [
-        "france"
+        "brazil",
+        "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-22",
+      "country_count": 2,
+      "editorial_day": "2026-11-23",
       "filled_from": "europe",
-      "headline": "Emmanuel Macron veut inscrire une « règle d'or » budgétaire et convoquer le Congrès",
+      "headline": "L’Ukraine affirme avoir coulé une corvette russe au large de la Libye",
+      "independent_source_count": 8,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/internacional/2026-11-23/ucrania-asume-la-autoria-del-ataque-con-drones-que-hundio-en-libia-un-barco-de-guerra-ruso.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/zelenski-reivindica-ataque-drones-corbeta-rusia-anclada-20261123090950-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261122/11690571/posible-ataque-ucrania-buque-guerra-ruso-puerto-libia.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ucrania-hunde-buque-guerra-ruso-costa-libia-ataque-drones-navales_1_13685008.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/mundo/europa/20261123/guerra-ucrania-salta-mediterraneo-kiev-hunde-corbeta-ataca-carguero-rusos-costa-libia/1003744468226_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/11/23/6b03ddfde9cf4a5f188b4574.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ucrania-reivindica-hundimiento-un-buque-guerra-ruso-libia-con-siete-drones-navales_7064491_0.html"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/23/zelensky-reivindica-ataque-navio-de-guerra-russo-libia-video.ghtml"
+        }
+      ],
+      "mentioned_countries": [
+        "up",
+        "rs"
+      ],
+      "origin_country": "brazil",
+      "outbound_source": "lavanguardia.com",
+      "outbound_url": "https://www.lavanguardia.com/internacional/20261122/11690571/posible-ataque-ucrania-buque-guerra-ruso-puerto-libia.html",
+      "rank": 2,
+      "reference_newsroom_count": 8,
+      "reference_newsrooms": [
+        "20minutos.es",
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "globo.com",
+        "lavanguardia.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4246,
+          "corroboration": 0.5,
+          "editorial_weight": 0.5,
+          "freshness": 1.0,
+          "geographic_relevance": 0.5,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.6667,
+          "source_reliability": 0.75
+        },
+        "total": 0.6885,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ucrania",
+      "subject_names": [
+        "finlandia",
+        "kiev",
+        "kremlin",
+        "kyiv",
+        "libia",
+        "libya",
+        "libye",
+        "mediterraneo",
+        "moscou",
+        "nato",
+        "russian",
+        "russie",
+        "ucrania",
+        "ukraine",
+        "ukrainian",
+        "zelenski",
+        "zelensky",
+        "zelenskyy"
+      ],
+      "subject_newsroom_count": 10,
+      "summary": "Plusieurs médias rapportent que l’Ukraine revendique avoir attaqué et coulé un navire de guerre russe — décrit comme une corvette — au large de la côte libyenne à l’aide de drones navals ou marins, étendant ainsi les opérations liées à la guerre en Ukraine jusque dans le bassin méditerranéen. Les comptes indiquent que l’action a visé un bâtiment russe dans un port ou près des côtes de la Libye, sans fournir de détails indépendants sur les pertes ou sur la vérification indépendante de l’événement."
+    },
+    {
+      "cluster_id": "subject-ukraine-3895a865b911",
+      "coherence": 0.4634641114643804,
+      "consequence": 3,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-23",
+      "filled_from": "europe",
+      "headline": "Au moins 15 morts lors de frappes russes dans la région de Kyiv",
       "independent_source_count": 5,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/budget-emmanuel-macron-reflechirait-a-convoquer-le-congres-pour-instaurer-une-regle-d-or-20261122"
+          "url": "https://www.liberation.fr/international/europe/ukraine-au-moins-15-morts-lors-de-frappes-russes-dans-la-region-de-kyiv-le-conseil-de-securite-de-lonu-se-reunit-20261123_S7QSYHJ5HZFVJFMWFJMBDMWXGM/"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-des-frappes-russes-font-au-moins-14-morts-dans-la-region-de-kiev_8295389.html#xtor=RSS-3-[lestitres]"
         },
         {
           "language": "fr",
           "source": "rfi.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261122-france-emmanuel-macron-pense-%C3%A0-une-r%C3%A8gle-d-or-budg%C3%A9taire-la-droite-et-le-rn-lui-emboitent-le-pas"
+          "url": "https://www.rfi.fr/fr/europe/20261123-ukraine-au-moins-15-morts-apr%C3%A8s-des-frappes-russes-dans-la-r%C3%A9gion-de-kiev-des-habitants-priv%C3%A9s-d-eau"
+        },
+        {
+          "language": "es",
+          "source": "lavanguardia.com",
+          "source_country": "spain",
+          "url": "https://www.lavanguardia.com/internacional/20261123/11690935/elevan-a-15-muertos-ataques-rusos-region-kyiv-zelenski-reivindica-ataques-buques-rusos-libia.html"
         },
         {
           "language": "fr",
-          "source": "nouvelobs.com",
+          "source": "bfmtv.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20261122.OBS120348/qu-est-ce-que-la-regle-d-or-budgetaire-que-macron-envisage-d-inscrire-dans-la-constitution.html"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/economie/budget-collectivites-etat/quest-ce-que-la-regle-dor-cet-outil-budgetaire-quemmanuel-macron-souhaiterait-inscrire-dans-la-constitution-1c9619b8-e660-11f1-afa7-9a0bb82a33d1?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        },
-        {
-          "language": "fr",
-          "source": "latribune.fr",
-          "source_country": "france",
-          "url": "https://www.latribune.fr/article/la-tribune-dimanche/politique/78452239301209/emmanuel-macron-veut-convoquer-un-congres-pour-adopter-une-regle-d-or-budgetaire"
+          "url": "https://www.bfmtv.com/international/europe/ukraine/guerre-en-ukraine-au-moins-15-morts-apres-les-frappes-dans-la-region-de-kiev-selon-un-nouveau-bilan_AD-202611230161.html"
         }
       ],
       "mentioned_countries": [
-        "france"
+        "up",
+        "rs"
       ],
       "origin_country": "france",
-      "outbound_source": "latribune.fr",
-      "outbound_url": "https://www.latribune.fr/article/la-tribune-dimanche/politique/78452239301209/emmanuel-macron-veut-convoquer-un-congres-pour-adopter-une-regle-d-or-budgetaire",
-      "rank": 2,
+      "outbound_source": "francetvinfo.fr",
+      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-des-frappes-russes-font-au-moins-14-morts-dans-la-region-de-kiev_8295389.html#xtor=RSS-3-[lestitres]",
+      "rank": 3,
       "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "lefigaro.fr",
-        "nouvelobs.com",
-        "ouest-france.fr",
+        "francetvinfo.fr",
+        "lavanguardia.com",
+        "liberation.fr",
         "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4887,
-          "corroboration": 0.3333,
+          "coherence": 0.4635,
+          "corroboration": 0.5,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
@@ -144,331 +262,163 @@
           "prominence": 0.5556,
           "source_reliability": 0.6364
         },
-        "total": 0.6305,
+        "total": 0.6441,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "emmanuel macron",
+      "subject_label": "ukraine",
       "subject_names": [
-        "emmanuel macron",
-        "macron"
+        "kiev",
+        "kremlin",
+        "kyiv",
+        "moscou",
+        "nato",
+        "ucrania",
+        "ukraine"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Le président Emmanuel Macron souhaite inscrire une « règle d'or » budgétaire dans la Constitution et envisagerait de convoquer le Congrès pour l'adopter. Plusieurs articles expliquent que cette démarche vise à contraindre les finances publiques par une norme constitutionnelle, décrivent les grandes lignes de la règle d'or telle qu'envisagée et signalent que cette proposition suscite l'adhésion de partis de droite et du Rassemblement national."
+      "subject_newsroom_count": 26,
+      "summary": "Plusieurs frappes russes dans la région de Kyiv ont fait au moins 15 morts et ont privé des habitants d’eau; les attaques interviennent avant des réunions à l’ONU et à l’OTAN prévues le même jour, selon les bilans communiqués par les autorités."
     },
     {
-      "cluster_id": "subject-hugues-moutouh-99959e39fa48",
-      "coherence": 0.4771336235379068,
-      "consequence": 2,
+      "cluster_id": "subject-chu-19da10861563",
+      "coherence": null,
+      "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-22",
+      "editorial_day": "2026-11-23",
       "filled_from": "europe",
-      "headline": "Le préfet Hugues Moutouh demandé de se retirer après des soupçons de fuites vers le RN",
-      "independent_source_count": 12,
+      "headline": "Le CHU de Guadeloupe touché par une cyberattaque majeure, plan blanc activé",
+      "independent_source_count": 3,
       "members": [
         {
           "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/societe/article/2026/11/21/fuites-de-beauvau-vers-le-rn-d-un-email-trouve-au-domicile-d-un-ami-de-marine-le-pen-aux-suspicions-visant-le-prefet-moutouh-itineraire-d-une-enquete-sensible_6814067_3224.html"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/soupcons-de-fuites-au-profit-du-rn-un-mail-du-service-du-prefet-hugues-moutouh-decouvert-en-perquisition-chez-un-proche-de-marine-le-pen-20261122"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/politique/enquete-visant-le-rn-le-prefet-moutouh-demande-a-etre-releve-de-ses-fonctions-20261121"
-        },
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/actualite-france/soupcons-de-fuites-au-profit-du-rn-le-prefet-hugues-moutouh-dans-la-tempete-20261120"
-        },
-        {
-          "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/fuites-au-ministere-de-linterieur-un-mail-du-service-du-prefet-moutouh-decouvert-chez-un-proche-de-marine-le-pen-20261122_35OXDYGGVRFFXGEIYX72YKYHGM/"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/suspecte-detre-une-taupe-du-rn-le-prefet-moutouh-demande-a-etre-releve-de-ses-fonctions-20261121_LUXHW7N52BELTCNJHZ6VHWMFHU/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/le-prefet-moutouh-demissionne-apres-des-soupcons-de-fuites-vers-le-rn-20261122"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/front-national/le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-au-rn-des-informations-confidentielles-sur-des-enquetes-visant-le-parti-demande-a-etre-releve-de-ses-fonctions_8294069.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.liberation.fr/societe/on-revient-au-papier-et-au-crayon-le-chu-de-guadeloupe-victime-dune-cyberattaque-le-plan-blanc-declenche-20261123_CY3JELIW6BDVFPOYD5JMKWEAMY/"
         },
         {
           "language": "fr",
           "source": "france24.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-enqu%C3%AAte-rn-le-pr%C3%A9fet-moutouh-demande-%C3%A0-%C3%AAtre-relev%C3%A9-de-ses-fonctions-communiqu%C3%A9"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261121-france-soup%C3%A7onn%C3%A9-de-fuites-li%C3%A9es-au-rn-le-pr%C3%A9fet-moutouh-demande-%C3%A0-%C3%AAtre-relev%C3%A9-de-ses-fonctions"
+          "url": "https://www.france24.com/fr/vid%C3%A9o/20261123-le-chu-de-guadeloupe-victime-d-une-cyberattaque-de-grande-ampleur"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/justice/20261122.OBS120354/scandale-du-rn-un-mail-du-service-du-prefet-moutouh-decouvert-reaction-de-le-pen-le-point-sur-les-derniers-rebondissements.html"
-        },
-        {
-          "language": "fr",
-          "source": "nouvelobs.com",
-          "source_country": "france",
-          "url": "https://www.nouvelobs.com/politique/20261120.OBS120292/qui-est-hugues-moutouh-le-prefet-bulldozer-soupconne-d-avoir-renseigne-le-rn-sur-des-enquetes.html"
-        },
-        {
-          "language": "fr",
-          "source": "lexpress.fr",
-          "source_country": "france",
-          "url": "https://www.lexpress.fr/politique/le-prefet-hugues-moutouh-au-coeur-des-soupcons-de-fuites-vers-le-rn-comment-marine-le-pen-veut-UV32FRIURNHVRFSWDGLGIV4WFY/"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/politique/rassemblement-national/enquete-rn-un-mail-dune-collaboratrice-du-prefet-moutouh-decouvert-chez-un-proche-de-le-pen-5d37d6a4-e66b-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
-        },
-        {
-          "language": "fr",
-          "source": "sudouest.fr",
-          "source_country": "france",
-          "url": "https://www.sudouest.fr/france/enquete-sur-des-fuites-vers-le-rn-le-prefet-moutouh-demande-a-etre-releve-de-ses-fonctions-31606843.php"
-        },
-        {
-          "language": "fr",
-          "source": "franceinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/front-national/le-prefet-hugues-moutouh-soupconne-d-avoir-transmis-au-rn-des-informations-confidentielles-sur-des-enquetes-visant-le-parti-demande-a-etre-releve-de-ses-fonctions_8294069.html"
+          "url": "https://www.nouvelobs.com/societe/20261123.OBS120374/ce-que-l-on-sait-de-la-cyberattaque-survenue-au-chu-de-guadeloupe-a-pointe-a-pitre.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "lexpress.fr",
-      "outbound_url": "https://www.lexpress.fr/politique/le-prefet-hugues-moutouh-au-coeur-des-soupcons-de-fuites-vers-le-rn-comment-marine-le-pen-veut-UV32FRIURNHVRFSWDGLGIV4WFY/",
-      "rank": 3,
-      "reference_newsroom_count": 10,
-      "reference_newsrooms": [
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "lemonde.fr",
-        "lexpress.fr",
-        "liberation.fr",
-        "nouvelobs.com",
-        "ouest-france.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4771,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.5556,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.75,
-          "source_reliability": 0.8519
-        },
-        "total": 0.6257,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "hugues moutouh",
-      "subject_names": [
-        "beauvau",
-        "hugues moutouh",
-        "jean-luc melenchon",
-        "marine",
-        "moutouh",
-        "pen"
-      ],
-      "subject_newsroom_count": 11,
-      "summary": "Plusieurs articles indiquent qu’un courriel provenant du service du préfet Hugues Moutouh a été retrouvé lors d’une perquisition chez un proche de Marine Le Pen, suscitant des soupçons de transmissions d’informations confidentielles au Rassemblement National. Confronté à ces allégations, Moutouh a demandé à être relevé de ses fonctions (certains titres parlent de démission) et a nié être l’auteur d’une « chasse à l’homme », tandis qu’une enquête est en cours pour déterminer l’origine et l’ampleur des fuites."
-    },
-    {
-      "cluster_id": "subject-finlandia-a719a017d426",
-      "coherence": 0.3934558237181276,
-      "consequence": 2,
-      "countries": [
-        "brazil",
-        "france",
-        "spain"
-      ],
-      "country_count": 3,
-      "editorial_day": "2026-11-22",
-      "filled_from": "europe",
-      "headline": "Un drone ukrainien frappe un cargo russe dans le golfe de Finlande",
-      "independent_source_count": 5,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/international/apres-l-attaque-contre-un-porte-conteneurs-russe-la-finlande-craint-une-extension-de-la-guerre-en-mer-baltique-20261122"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/la-guerre-setend-jusqua-nos-portes-une-attaque-de-drone-detectee-contre-un-cargo-russe-dans-le-golfe-de-finlande-20261121_IBIBYATSGVC5TKHIW7MAULCT5U/"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261122-la-finlande-fait-%C3%A9tat-d-une-attaque-de-drone-ukrainien-contre-un-cargo-russe-en-mer-baltique"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261121/11689834/drones-ucranianos-atacan-carguero-ruso-golfo-finlandia.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/21/drones-atingem-navio-de-carga-russo-no-golfo-da-finlandia-pais-reforca-seguranca.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "fi",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261121/11689834/drones-ucranianos-atacan-carguero-ruso-golfo-finlandia.html",
+      "outbound_source": "liberation.fr",
+      "outbound_url": "https://www.liberation.fr/societe/on-revient-au-papier-et-au-crayon-le-chu-de-guadeloupe-victime-dune-cyberattaque-le-plan-blanc-declenche-20261123_CY3JELIW6BDVFPOYD5JMKWEAMY/",
       "rank": 4,
-      "reference_newsroom_count": 5,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "france24.com",
-        "globo.com",
-        "lavanguardia.com",
-        "lefigaro.fr",
-        "liberation.fr"
+        "liberation.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.3935,
-          "corroboration": 0.6,
-          "editorial_weight": 0.3846,
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6522
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5855,
+        "total": 0.6081,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "finlandia",
+      "subject_label": "chu",
       "subject_names": [
-        "finlande",
-        "finlandia",
-        "kiev",
-        "kyiv",
-        "russian",
-        "ukraine"
+        "chu",
+        "guadeloupe"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Des médias rapportent qu’un cargo russe a été touché par un drone ukrainien dans le golfe de Finlande en mer Baltique; la Finlande a renforcé ses mesures de sécurité et craint que l’attaque n’étende le conflit vers ses eaux, et certains commentateurs évoquent la possibilité que le navire transportât du matériel militaire."
+      "subject_newsroom_count": 3,
+      "summary": "Les trois articles indiquent que le Centre Hospitalier Universitaire (CHU) de Pointe‑à‑Pitre en Guadeloupe a été la cible d’une importante cyberattaque qui a perturbé ses systèmes informatiques; l’établissement a déclenché le plan blanc, est revenu provisoirement au travail sur papier et crayon et organise la prise en charge des patients malgré les dysfonctionnements informatiques."
     },
     {
-      "cluster_id": "subject-russia-55b0b8972f82",
+      "cluster_id": "subject-reino-unido-467379936635",
       "coherence": null,
       "consequence": 3,
       "countries": [
         "brazil",
-        "united-kingdom"
+        "spain"
       ],
       "country_count": 2,
-      "editorial_day": "2026-11-21",
+      "editorial_day": "2026-11-22",
       "filled_from": "europe",
-      "headline": "Le Danemark affirme que la Russie a planifié l'assassinat d'un rappeur américano-ukrainien",
-      "independent_source_count": 2,
+      "headline": "L’Union européenne et le Royaume‑Uni marquent un nouveau départ politique après le Brexit",
+      "independent_source_count": 3,
       "members": [
         {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno?at_medium=RSS&at_campaign=rss"
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/internacional/ue-reino-unido-escenifican-reinicio-brexit-pasos-politicos-acuerdos-claves_1_13679720.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/ue-reino-unido-estrechan-lazos-claves-sus-acuerdos-segunda-cumbre-tras-brexit_7063844_0.html"
         },
         {
           "language": "pt",
           "source": "globo.com",
           "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml"
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml"
         }
       ],
       "mentioned_countries": [
-        "da"
+        "united-kingdom"
       ],
       "origin_country": "brazil",
-      "outbound_source": "globo.com",
-      "outbound_url": "https://g1.globo.com/mundo/noticia/2026/11/20/russia-rapper-kyivstoner-dinamarca.ghtml",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/internacional/ue-reino-unido-escenifican-reinicio-brexit-pasos-politicos-acuerdos-claves_1_13679720.html",
       "rank": 5,
-      "reference_newsroom_count": 2,
+      "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "bbc.co.uk",
+        "20minutos.es",
+        "eldiario.es",
         "globo.com"
       ],
       "score": {
         "components": {
           "coherence": 0.5,
           "corroboration": 0.5,
-          "editorial_weight": 0.2,
+          "editorial_weight": 0.2727,
           "freshness": 0.7071,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.3333,
-          "source_reliability": 0.4286
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
         },
-        "total": 0.5643,
+        "total": 0.5896,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "russia",
+      "subject_label": "reino unido",
       "subject_names": [
-        "danemark",
-        "kremlin",
-        "russia",
-        "russie"
+        "reino unido",
+        "royaume-uni"
       ],
-      "subject_newsroom_count": 8,
-      "summary": "Les autorités danoises disent avoir déjoué un complot attribué à des agents russes visant à tuer un rappeur de nationalité américaine et ukrainienne vivant au Danemark; le Service de renseignement danois a annoncé l'existence d'une opération d'assassinat présumée et enquête sur des responsables liés à la Russie."
+      "subject_newsroom_count": 11,
+      "summary": "Lors d’une deuxième réunion post‑Brexit, l’Union européenne et le Royaume‑Uni ont signé un accord et annoncé une série d’initiatives visant à resserrer leurs liens politiques et institutionnels; les articles soulignent un geste de « relance » des relations plutôt que la conclusion d’un grand traité unique, en mettant l’accent sur des accords concrets négociés pour faciliter la coopération future."
     }
   ],
-  "discarded_ingested": 14,
+  "discarded_ingested": 9,
   "discarded_kept": 5,
-  "generated_at": "2026-11-22T13:30:27.053881+00:00",
+  "generated_at": "2026-11-23T16:19:46.530680+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

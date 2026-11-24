@@ -1,107 +1,269 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-chu-19da10861563",
-      "coherence": null,
+      "cluster_id": "subject-sanofi-fb79c9b7f744",
+      "coherence": 0.49921709934237446,
       "consequence": 3,
       "countries": [
-        "france"
+        "france",
+        "germany",
+        "spain",
+        "sz",
+        "tu",
+        "united-states",
+        "unknown"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-23",
-      "headline": "University hospital in Guadeloupe hit by large cyberattack, emergency plan activated",
-      "independent_source_count": 3,
+      "country_count": 7,
+      "editorial_day": "2026-11-24",
+      "headline": "Sanofi acquires US biotech Insmed in a €37.6bn / $41bn deal",
+      "independent_source_count": 16,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/on-revient-au-papier-et-au-crayon-le-chu-de-guadeloupe-victime-dune-cyberattaque-le-plan-blanc-declenche-20261123_CY3JELIW6BDVFPOYD5JMKWEAMY/"
+          "url": "https://www.liberation.fr/economie/laboratoires-pharmaceutiques-avec-le-rachat-de-lamericain-insmed-sanofi-realise-la-plus-grosse-acquisition-de-son-histoire-20261124_JZ6D6TECL5AXPP7EY3F3BRMZSI/"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261123-le-chu-de-guadeloupe-victime-d-une-cyberattaque-de-grande-ampleur"
+          "url": "https://www.la-croix.com/sanofi-debourse-376-milliards-d-euros-pour-acquerir-l-americain-insmed-et-preparer-son-avenir-20261124"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/entreprise/sante/acquisition-majeure-pour-sanofi-et-la-france-le-geant-pharmaceutique-absorbe-la-biotech-americaine-insmed-pour-376-milliards-deuros_647144"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://cincodias.elpais.com/companias/2026-11-24/sanofi-cierra-un-acuerdo-para-comprar-insmed-por-37600-millones-en-la-mayor-operacion-del-sector-farmaceutico-en-tres-anos.html"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://www.euronews.com/2026/11/24/why-french-pharma-firm-sanofi-is-paying-41-billion-for-us-company-insmed"
+        },
+        {
+          "language": "en",
+          "source": "theyeshivaworld.com",
+          "source_country": "united-states",
+          "url": "https://www.theyeshivaworld.com/news/general/2627590/massive-buyout-french-drugmaker-sanofi-strikes-41-billion-deal-for-american-biotech-company-insmed.html"
+        },
+        {
+          "language": "en",
+          "source": "bioxconomy.com",
+          "source_country": "unknown",
+          "url": "https://www.bioxconomy.com/partnering/sanofi-goes-all-in-on-respiratory-disease-with-41bn-insmed-acquisition"
+        },
+        {
+          "language": "tur",
+          "source": "fortuneturkey.com",
+          "source_country": "tu",
+          "url": "https://www.fortuneturkey.com/sanofi-insmedi-41-milyar-dolara-satin-alacak"
+        },
+        {
+          "language": "de",
+          "source": "az-online.de",
+          "source_country": "germany",
+          "url": "https://www.az-online.de/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-zr-94604914.html"
+        },
+        {
+          "language": "de",
+          "source": "op-online.de",
+          "source_country": "germany",
+          "url": "http://www.op-online.de/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-zr-94604914.html"
+        },
+        {
+          "language": "de",
+          "source": "finanzen.ch",
+          "source_country": "sz",
+          "url": "https://www.finanzen.ch/nachrichten/aktien/sanofi-bietet-41-milliarden-dollar-fuer-insmed-sanofi-aktie-im-fokus-1036794670"
+        },
+        {
+          "language": "de",
+          "source": "gea.de",
+          "source_country": "germany",
+          "url": "https://www.gea.de/welt/wirtschaft_artikel,-sanofi-kauft-us-biotechfirma-f%C3%BCr-41-milliarden-dollar-_arid,7176626.html"
+        },
+        {
+          "language": "de",
+          "source": "shz.de",
+          "source_country": "germany",
+          "url": "https://www.shz.de/deutschland-welt/wirtschaft/artikel/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-51794895"
+        },
+        {
+          "language": "de",
+          "source": "noz.de",
+          "source_country": "germany",
+          "url": "https://www.noz.de/deutschland-welt/wirtschaft/artikel/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-51794894"
+        },
+        {
+          "language": "de",
+          "source": "azonline.de",
+          "source_country": "germany",
+          "url": "https://www.azonline.de/welt/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-3731645"
+        },
+        {
+          "language": "de",
+          "source": "handelsblatt.com",
+          "source_country": "germany",
+          "url": "https://www.handelsblatt.com/unternehmen/industrie/pharma-sanofi-kauft-biotech-firma-insmed-fuer-41-milliarden-dollar/100272269.html"
+        }
+      ],
+      "mentioned_countries": [
+        "united-states",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "op-online.de",
+      "outbound_url": "http://www.op-online.de/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-zr-94604914.html",
+      "rank": 1,
+      "reference_newsroom_count": 5,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "elpais.com",
+        "euronews.com",
+        "la-croix.com",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4992,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.3846,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.8,
+          "source_reliability": 0.8222
+        },
+        "total": 0.7551,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "sanofi",
+      "subject_names": [
+        "insmed",
+        "sanofi"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "French pharmaceutical group Sanofi is buying the American biotech company Insmed in a major acquisition valued at €37.6 billion (about $41 billion), the largest deal in the company’s history and one of the biggest recent transactions in the pharmaceutical sector; the purchase emphasizes Sanofi’s strategic investment in respiratory and specialty medicines."
+    },
+    {
+      "cluster_id": "subject-nahel-merzouk-341b9f1963f6",
+      "coherence": 0.5287926845824875,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-24",
+      "headline": "Court orders murder trial for police officer who killed Nahel Merzouk",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/societe/police-justice/mort-de-nahel-merzouk-la-cour-dappel-de-versailles-ordonne-un-proces-pour-meurtre-contre-le-policier-qui-la-tue-20261124_HLTCW73RNRDUPJOWTA4ET4ZAEY/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/societe/mort-de-nahel-merzouk-la-cour-d-appel-ordonne-un-proces-pour-meurtre-a-lencontre-du-policier-20261124"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/france/241126/le-policier-qui-tue-nahel-merzouk-doit-bien-etre-juge-pour-meurtre"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/adolescent-tue-par-un-policier-a-nanterre/mort-de-nahel-merzouk-en-2023-la-cour-d-appel-de-versailles-confirme-le-renvoi-du-policier-devant-les-assises-pour-meurtre_8295785.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261124-mort-de-nahel-en-2023-en-appel-la-justice-fran%C3%A7aise-ordonne-un-proc%C3%A8s-pour-meurtre-%C3%A0-l-encontre-du-policier"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20261123.OBS120374/ce-que-l-on-sait-de-la-cyberattaque-survenue-au-chu-de-guadeloupe-a-pointe-a-pitre.html"
+          "url": "https://www.nouvelobs.com/societe/20261124.OBS120401/mort-de-nahel-merzouk-la-justice-ordonne-un-proces-pour-meurtre-a-l-encontre-du-policier.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/on-revient-au-papier-et-au-crayon-le-chu-de-guadeloupe-victime-dune-cyberattaque-le-plan-blanc-declenche-20261123_CY3JELIW6BDVFPOYD5JMKWEAMY/",
-      "rank": 1,
-      "reference_newsroom_count": 3,
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/france/20261124-mort-de-nahel-en-2023-en-appel-la-justice-fran%C3%A7aise-ordonne-un-proc%C3%A8s-pour-meurtre-%C3%A0-l-encontre-du-policier",
+      "rank": 2,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
         "liberation.fr",
-        "nouvelobs.com"
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5288,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.6581,
+        "total": 0.7123,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "chu",
+      "subject_label": "nahel merzouk",
       "subject_names": [
-        "chu",
-        "guadeloupe"
+        "nahel merzouk"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "The University Hospital Center (CHU) in Pointe-à-Pitre, Guadeloupe was the target of a major cyberattack that disrupted computer systems and forced staff to revert to paper records and manual processes. The hospital declared its emergency plan (plan blanc), suspended some scheduled activities and consultations, and said investigations and recovery efforts were underway while authorities and technical teams worked to restore services."
+      "subject_newsroom_count": 6,
+      "summary": "France’s Versailles court of appeal has ruled that the police officer who shot and killed Nahel Merzouk in 2023 should be tried for murder, confirming his referral to the assize court."
     },
     {
-      "cluster_id": "subject-emmanuel-macron-41bd1f7b219e",
-      "coherence": 0.46014750987329855,
-      "consequence": 2,
+      "cluster_id": "subject-emmanuel-macron-c29bfa4268d3",
+      "coherence": 0.42575022108968874,
+      "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-23",
-      "headline": "President Macron says he is considering adding a fiscal 'golden rule' to the Constitution",
-      "independent_source_count": 7,
+      "editorial_day": "2026-11-24",
+      "headline": "President Macron proposes adding a fiscal 'golden rule' to the Constitution",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/regle-dor-budgetaire-emmanuel-macron-reflechit-a-sen-emparer-la-droite-et-lextreme-droite-sen-rejouissent-20261122_BPFY5UQC7VGJNMGJO35GLLOZJQ/"
-        },
-        {
-          "language": "fr",
           "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/economie/regle-d-or-budgetaire-voulue-par-macron-ce-que-contient-le-texte-porte-en-2011-par-sarkozy-20261123"
+          "url": "https://www.la-croix.com/politique/regle-d-or-budgetaire-emmanuel-macron-mise-sur-un-congres-pour-parfaire-son-inventaire-20261123"
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/economie/budget-macron-reflechit-a-adopter-une-regle-d-or-dans-la-constitution-20261123"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261123-france-macron-envisage-de-r%C3%A9unir-le-cong%C3%A8s-pour-une-r%C3%A8gle-d-or-budg%C3%A9taire"
+          "url": "https://www.nouvelobs.com/economie/20261124.OBS120400/regle-d-or-budgetaire-emmanuel-macron-le-president-tartuffe.html"
         },
         {
           "language": "fr",
@@ -120,12 +282,6 @@
           "source": "challenges.fr",
           "source_country": "france",
           "url": "https://www.challenges.fr/economie/cest-une-forme-dassurance-vie-la-regle-dor-budgetaire-en-france-une-idee-a-laquelle-emmanuel-macron-ouvre-la-porte_647109"
-        },
-        {
-          "language": "fr",
-          "source": "huffingtonpost.fr",
-          "source_country": "france",
-          "url": "https://www.huffingtonpost.fr/politique/article/une-regle-d-or-budgetaire-macron-confirme-y-songer-mais-scrute-un-facteur-precis_363299.html"
         }
       ],
       "mentioned_countries": [
@@ -134,246 +290,273 @@
       "origin_country": "france",
       "outbound_source": "nouvelobs.com",
       "outbound_url": "https://www.nouvelobs.com/politique/20261122.OBS120348/qu-est-ce-que-la-regle-d-or-budgetaire-que-macron-envisage-d-inscrire-dans-la-constitution.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
+      "rank": 3,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
         "challenges.fr",
-        "france24.com",
         "la-croix.com",
         "lexpress.fr",
-        "liberation.fr",
         "nouvelobs.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4601,
+          "coherence": 0.4258,
           "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
+          "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
-          "impact": 0.6667,
+          "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7419
+          "prominence": 0.5,
+          "source_reliability": 0.6522
         },
-        "total": 0.6343,
+        "total": 0.672,
         "weights_version": "2026-08-20.4"
       },
       "subject_label": "emmanuel macron",
       "subject_names": [
-        "constitution",
         "emmanuel macron",
         "macron"
       ],
-      "subject_newsroom_count": 12,
-      "summary": "Multiple French outlets report that President Emmanuel Macron has publicly said he is exploring the idea of enshrining a so‑called 'règle d’or' (golden rule) budget constraint in the Constitution, potentially requiring a special parliamentary procedure or Congress to adopt it; the proposal echoes a 2011 draft linked to Nicolas Sarkozy, has drawn approval from right and far‑right parties, and is being examined alongside legal, technical and political safeguards described in the press."
+      "subject_newsroom_count": 7,
+      "summary": "President Emmanuel Macron is considering enshrining a fiscal 'golden rule' in the French Constitution and is preparing to use a parliamentary Congress to refine and present the proposal; the measure is discussed by commentators as a way to bind public spending rules and has been described by supporters as a form of long‑term fiscal assurance."
     },
     {
-      "cluster_id": "subject-deraillement-9bfe874d951f",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-23",
-      "headline": "Several people arrested after Normandy TER derailment investigation",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/societe/police-justice/deraillement-dun-ter-en-normandie-deux-mois-apres-laccident-trois-hommes-interpelles-20261123_PAISRZ76MVHDPLGCIWBNBWGBUE/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/deraillement-d-un-train-en-normandie-trois-hommes-interpelles-20261123"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/faits-divers/accident/info-radio-france-deraillement-d-un-ter-en-seine-maritime-trois-hommes-interpelles-pres-de-rouen_8295620.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/police-justice/deraillement-dun-ter-en-normandie-deux-mois-apres-laccident-trois-hommes-interpelles-20261123_PAISRZ76MVHDPLGCIWBNBWGBUE/",
-      "rank": 3,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "la-croix.com",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5848,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "deraillement",
-      "subject_names": [
-        "deraillement"
-      ],
-      "subject_newsroom_count": 3,
-      "summary": "Authorities detained multiple individuals near Rouen in connection with the TER train derailment in Seine-Maritime; the arrests occurred about two months after the accident and involved three to four suspects according to the reports."
-    },
-    {
-      "cluster_id": "subject-express-a98437016dc8",
-      "coherence": null,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-23",
-      "headline": "Valérie Pécresse says commissioning of Grand Paris Express Line 18 in December is ‘very compromised’",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/economie/article/2026/11/23/grand-paris-express-valerie-pecresse-juge-tres-compromise-la-mise-en-service-de-la-ligne-18-avant-la-fin-de-l-annee_6814396_3234.html"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/economie/transports/grand-paris-express-la-mise-en-service-du-premier-troncon-en-decembre-est-tres-compromise-selon-valerie-pecresse-20261123_N2XZMNQBRFAT5HNK545Y5TEDTU/"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/economie/transports/la-mise-en-service-de-la-ligne-18-du-grand-paris-express-en-decembre-est-tres-compromise-selon-valerie-pecresse_8296103.html#xtor=RSS-3-[lestitres]"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/economie/transports/grand-paris-express-la-mise-en-service-du-premier-troncon-en-decembre-est-tres-compromise-selon-valerie-pecresse-20261123_N2XZMNQBRFAT5HNK545Y5TEDTU/",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lemonde.fr",
-        "liberation.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.5848,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "express",
-      "subject_names": [
-        "express",
-        "grand paris",
-        "valerie pecresse"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Valérie Pécresse has said that the planned December commissioning of the first section of the Grand Paris Express Line 18 is \"very compromised.\" Multiple French news outlets report she raised doubts about the line being ready for service before the end of the year."
-    },
-    {
-      "cluster_id": "subject-corse-75d7fba06b90",
-      "coherence": null,
+      "cluster_id": "subject-gisele-pelicot-22d28f02869a",
+      "coherence": 0.4642888966936336,
       "consequence": 1,
       "countries": [
-        "france"
+        "ar",
+        "au",
+        "brazil",
+        "france",
+        "it",
+        "nl",
+        "spain",
+        "united-kingdom"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-23",
-      "headline": "Two young men sentenced to three and six months’ prison for damaging Virgin Mary statue in Corsica",
-      "independent_source_count": 3,
+      "country_count": 8,
+      "editorial_day": "2026-11-24",
+      "headline": "Gisèle Pelicot accuses publisher of distributing her nude photos and will take legal action",
+      "independent_source_count": 17,
       "members": [
         {
           "language": "fr",
-          "source": "lefigaro.fr",
+          "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.lefigaro.fr/faits-divers/statue-de-la-vierge-degradee-en-corse-les-deux-prevenus-ecopent-de-trois-et-six-mois-de-prison-ferme-amenages-20261123"
+          "url": "https://www.nouvelobs.com/justice/20261123.OBS120377/une-nouvelle-violence-gisele-pelicot-va-saisir-la-justice-apres-la-diffusion-d-images-intimes-par-une-maison-d-edition.html"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/sociedad/2026-11-24/gisele-pelicot-denuncia-el-uso-de-imagenes-intimas-sin-su-autorizacion-para-promocionar-un-libro-me-siento-profundamente-conmocionada.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/internacional/gisele-pelicot-shock-uso-fotos-suyas-desnuda-20261123221055-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/internacional/2026/11/24/6b057016e85ece05188b4599.html"
+        },
+        {
+          "language": "es",
+          "source": "20minutos.es",
+          "source_country": "spain",
+          "url": "https://www.20minutos.es/internacional/gisele-pelicot-denuncia-una-editorial-por-difundir-imagenes-intimas-para-promocionar-un-libro-que-cuestiona-su-inocencia_7064804_0.html"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cm3eg502nxw2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "it",
+          "source": "repubblica.it",
+          "source_country": "it",
+          "url": "https://www.repubblica.it/esteri/2026/11/24/news/gisele_pelicot_foto_nuda_denuncia_casa_editrice_francia-425745581/?rss"
+        },
+        {
+          "language": "nl",
+          "source": "nos.nl",
+          "source_country": "nl",
+          "url": "https://nos.nl/l/2640782"
+        },
+        {
+          "language": "pt",
+          "source": "globo.com",
+          "source_country": "brazil",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/24/gisele-pelicot-denuncia-uso-comercial-fotos-nua-humilhada-novamente.ghtml"
+        },
+        {
+          "language": "pt",
+          "source": "rondoniadinamica.com",
+          "source_country": "brazil",
+          "url": "https://www.rondoniadinamica.com/noticias/2026/11/gisele-pelicot-denuncia-uso-comercial-de-fotos-de-nudez-suas-humilhada-novamente,259440.shtml"
+        },
+        {
+          "language": "en",
+          "source": "metro.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://metro.co.uk/2026/11/24/gisele-pelicot-left-shocked-nude-images-sent-media-29814773/"
+        },
+        {
+          "language": "en",
+          "source": "bbc.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.com/news/articles/cm3eg502nxw2o"
+        },
+        {
+          "language": "es",
+          "source": "eldestapeweb.com",
+          "source_country": "ar",
+          "url": "http://www.eldestapeweb.com/sociedad/gisele-pelicot-denuncio-editorial-usar-fotos-intimas-vender-libro-20261123191634"
+        },
+        {
+          "language": "es",
+          "source": "minutouno.com",
+          "source_country": "ar",
+          "url": "https://www.minutouno.com/mundo/gisele-pelicot-denuncio-que-una-editorial-difundio-fotos-suyas-desnuda-promocionar-un-libro-n6348416"
+        },
+        {
+          "language": "pt",
+          "source": "r7.com",
+          "source_country": "brazil",
+          "url": "https://noticias.r7.com/internacional/gisele-pelicot-diz-que-editora-francesa-usou-fotos-dela-nua-para-promover-ensaio-23112026/"
+        },
+        {
+          "language": "de",
+          "source": "kurier.at",
+          "source_country": "au",
+          "url": "https://kurier.at/chronik/welt/gisele-pelicot-nacktfotos-werbung-tinbad-verlag-essay/403207819"
         },
         {
           "language": "fr",
-          "source": "la-croix.com",
+          "source": "linternaute.com",
           "source_country": "france",
-          "url": "https://www.la-croix.com/religion/statue-de-la-vierge-degradee-en-corse-deux-jeunes-condamnes-a-3-et-6-mois-de-prison-ferme-20261123"
-        },
-        {
-          "language": "fr",
-          "source": "ouest-france.fr",
-          "source_country": "france",
-          "url": "https://www.ouest-france.fr/societe/justice/statue-de-la-vierge-degradee-en-corse-les-deux-jeunes-hommes-ont-ete-condamnes-a-3-et-6-mois-de-prison-ferme-amenages-e0b0cd0c-e755-11f1-bd4e-6f30b8f49e21?utm_source=fluxpublicactu&utm_medium=fluxrss&utm_campaign=banquedecontenu"
+          "url": "https://www.linternaute.com/actualite/faits-divers/11315883-une-nouvelle-fois-humiliee-et-blessee-gisele-pelicot-s-indigne-d-un-ouvrage-sur-elle-et-va-saisir-la-justice/"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
-      "origin_country": "france",
-      "outbound_source": "lefigaro.fr",
-      "outbound_url": "https://www.lefigaro.fr/faits-divers/statue-de-la-vierge-degradee-en-corse-les-deux-prevenus-ecopent-de-trois-et-six-mois-de-prison-ferme-amenages-20261123",
-      "rank": 5,
-      "reference_newsroom_count": 3,
+      "origin_country": "ar",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/justice/20261123.OBS120377/une-nouvelle-violence-gisele-pelicot-va-saisir-la-justice-apres-la-diffusion-d-images-intimes-par-une-maison-d-edition.html",
+      "rank": 4,
+      "reference_newsroom_count": 9,
       "reference_newsrooms": [
-        "la-croix.com",
-        "lefigaro.fr",
-        "ouest-france.fr"
+        "20minutos.es",
+        "abc.es",
+        "bbc.co.uk",
+        "elmundo.es",
+        "elpais.com",
+        "globo.com",
+        "nos.nl",
+        "nouvelobs.com",
+        "repubblica.it"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4643,
+          "corroboration": 0.8,
+          "editorial_weight": 0.5294,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
+          "prominence": 0.8095,
+          "source_reliability": 0.8431
+        },
+        "total": 0.6425,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "gisele pelicot",
+      "subject_names": [
+        "gisele pelicot"
+      ],
+      "subject_newsroom_count": 9,
+      "summary": "Gisèle Pelicot says a publisher circulated intimate nude images of her to promote a book questioning her innocence, leaving her shocked, humiliated and deeply affected; she has announced she will pursue legal action against the publisher for using the photos without her authorization."
+    },
+    {
+      "cluster_id": "subject-byd-7e3fda5c0ad3",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france",
+        "spain"
+      ],
+      "country_count": 2,
+      "editorial_day": "2026-11-24",
+      "headline": "Chinese automaker BYD announces plan to acquire a factory site in Moselle, France",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/economie/automobile-le-constructeur-chinois-byd-annonce-vouloir-acquerir-une-usine-en-moselle-20261124"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/automobile/bientot-une-usine-byd-en-france-pourquoi-le-constructeur-chinois-mise-sur-le-site-dineos-en-moselle_647161"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/motor/sector_y_mercado/china-byd-decanta-francia-lugar-espana-nueva-planta-europea_1_13689822.html"
+        }
+      ],
+      "mentioned_countries": [
+        "china",
+        "france"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/economie/automobile-le-constructeur-chinois-byd-annonce-vouloir-acquerir-une-usine-en-moselle-20261124",
+      "rank": 5,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "challenges.fr",
+        "eldiario.es",
+        "la-croix.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.5,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
           "prominence": 0.4286,
           "source_reliability": 0.5294
         },
-        "total": 0.5114,
+        "total": 0.6014,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "corse",
+      "subject_label": "byd",
       "subject_names": [
-        "corse",
-        "statue",
-        "vierge"
+        "byd",
+        "moselle"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Two young men were convicted for degrading a statue of the Virgin Mary in Corsica and given custodial sentences of three and six months, respectively; both sentences are described as served under arrangements (aménagements). The reports agree on the location (Corsica), the nature of the offense (damage to a Virgin Mary statue), the identities of the defendants as young men, and the two prison terms (three months and six months) handed down."
+      "subject_newsroom_count": 5,
+      "summary": "BYD has announced its intention to acquire a manufacturing site in the Moselle department in northeastern France for a new European factory. The company is targeting an existing industrial site associated with Ineos in the region and has chosen France over Spain for this project, according to the articles."
     }
   ],
-  "discarded_ingested": 25,
+  "discarded_ingested": 55,
   "discarded_kept": 5,
-  "generated_at": "2026-11-23T16:19:46.530680+00:00",
+  "generated_at": "2026-11-24T16:08:07.066411+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

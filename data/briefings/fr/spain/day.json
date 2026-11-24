@@ -1,424 +1,606 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-sanchez-9a5218c4567a",
-      "coherence": null,
-      "consequence": 2,
+      "cluster_id": "subject-espana-0b3f1c316514",
+      "coherence": 0.4870416063650721,
+      "consequence": 3,
       "countries": [
+        "co",
         "spain"
       ],
-      "country_count": 1,
-      "editorial_day": "2026-11-23",
-      "headline": "Pedro Sánchez annonce un impôt sur les ultra-riches visant les patrimoines ≥100 millions",
-      "independent_source_count": 3,
+      "country_count": 2,
+      "editorial_day": "2026-11-24",
+      "headline": "La Commission européenne prévient l'Espagne d'un risque d'expédition pour dépassement des dépenses",
+      "independent_source_count": 11,
       "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-11-24/bruselas-advierte-a-espana-de-que-se-arriesga-a-un-expediente-de-la-ue-si-no-contiene-el-gasto-publico.html"
+        },
         {
           "language": "es",
           "source": "abc.es",
           "source_country": "spain",
-          "url": "https://www.abc.es/economia/cuentas-corrientes/impuesto-ultrarricos-partir-100-millones-pedro-sanchez-20261123163259-nt.html"
+          "url": "https://www.abc.es/economia/bruselas-amenaza-sancionar-espana-deficit-excesivo-dia-20261124160049-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/comision-europea-advierte-espana-riesgo-deficit-excesivo-2026-2027_1_13688720.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/invertia/mis-finanzas/fiscalidad/20261123/nuevo-impuesto-ultrarricos-perjuicio-fiscal-ano-caida-inversion-fuga-capitales/1003744468554_0.html"
+          "url": "https://www.elespanol.com/invertia/economia/macroeconomia/20261124/bruselas-amenaza-sanchez-expediente-sancionador-rebasar-techo-gasto-pactado-ue/1003744469849_0.html"
         },
         {
           "language": "es",
-          "source": "europapress.es",
+          "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-nuevo-impuesto-ultrarricos-recaudara-2000-millones-vivienda-pensiones-crianza-20261123090541.html"
+          "url": "https://www.elmundo.es/economia/2026/11/24/6b059b66fc6c837c2b8b4585.html"
+        },
+        {
+          "language": "glg",
+          "source": "diariosigloxxi.com",
+          "source_country": "spain",
+          "url": "https://www.diariosigloxxi.com/texto-ep/mostrar/20261124160635/bruselas-avisa-espana-expone-expediente-superar-limites-gasto-2026"
+        },
+        {
+          "language": "es",
+          "source": "notimerica.com",
+          "source_country": "co",
+          "url": "https://www.notimerica.com/politica/noticia-ue-bruselas-avisa-espana-expone-expediente-superar-limites-gasto-2026-20261124160920.html"
+        },
+        {
+          "language": "es",
+          "source": "diariovasco.com",
+          "source_country": "spain",
+          "url": "https://www.diariovasco.com/economia/bruselas-alerta-espana-desvio-gasto-publico-deja-20261124153655-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/economia/2026-11-24/bruselas-avisa-espana-camino-entrar-brazo-correctivo-gasto_4471666/"
+        },
+        {
+          "language": "es",
+          "source": "hoy.es",
+          "source_country": "spain",
+          "url": "https://www.hoy.es/economia/bruselas-alerta-espana-desvio-gasto-publico-deja-20261124153655-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "latribunadetoledo.es",
+          "source_country": "spain",
+          "url": "https://www.latribunadetoledo.es/noticia/z94a6ccaf-88d4-4bf9-9fb9262cd62c3d6d/202611/bruselas-amenaza-con-expedientar-a-espana-por-el-gasto-de-2026"
+        }
+      ],
+      "mentioned_countries": [
+        "spain",
+        "be"
+      ],
+      "origin_country": "co",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/invertia/economia/macroeconomia/20261124/bruselas-amenaza-sanchez-expediente-sancionador-rebasar-techo-gasto-pactado-ue/1003744469849_0.html",
+      "rank": 1,
+      "reference_newsroom_count": 6,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.487,
+          "corroboration": 0.5,
+          "editorial_weight": 0.4286,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.7778
+        },
+        "total": 0.7322,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "espana",
+      "subject_names": [
+        "andalucia",
+        "bruselas",
+        "espagne",
+        "espana",
+        "feijoo",
+        "felipe gonzalez",
+        "madrid",
+        "pedro sanchez",
+        "sanchez"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "Plusieurs médias indiquent que la Commission européenne a alerté l'Espagne qu'une hausse prévue des dépenses publiques pour 2026 (et 2027 selon certains articles) pourrait entraîner l'ouverture d'une procédure pour déficit ou dépassement des limites budgétaires de l'UE si Madrid ne maîtrise pas son déficit."
+    },
+    {
+      "cluster_id": "subject-laliga-27f2b4ae08c3",
+      "coherence": 0.5987261490321161,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-24",
+      "headline": "Miguel Ángel Gil Marín démissionne de son poste de vice‑président de LaLiga",
+      "independent_source_count": 6,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/deportes/futbol/2026-11-24/miguel-angel-gil-marin-dimite-como-vicepresidente-de-laliga.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/deportes/gil-marin-dimite-vicepresidente-laliga-tras-seis-20261124140907-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/deportes/futbol/20261124/gil-marin-dimite-vicepresidente-laliga-financiacion-tebas-union-clubes-europeos-rival-efc/1003744470158_0.html"
+        },
+        {
+          "language": "es",
+          "source": "cope.es",
+          "source_country": "spain",
+          "url": "https://www.cope.es/programas/tiempo-de-juego/noticias/miguel-angel-gil-marin-dimite-vicepresidente-primero-laliga-20261124_3481055.html"
+        },
+        {
+          "language": "es",
+          "source": "lavozdegalicia.es",
+          "source_country": "spain",
+          "url": "https://www.lavozdegalicia.es/noticia/deportes/2026/11/24/miguel-angel-gil-marin-dimite-vicepresidente-laliga/00031795532994811220791.htm"
+        },
+        {
+          "language": "es",
+          "source": "latribunadetoledo.es",
+          "source_country": "spain",
+          "url": "https://www.latribunadetoledo.es/noticia/z2d1bf849-527d-46dd-ad243bf7e53f0d84/202611/gil-marin-dimite-como-vicepresidente-primero-de-laliga"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "europapress.es",
-      "outbound_url": "https://www.europapress.es/nacional/noticia-sanchez-anuncia-nuevo-impuesto-ultrarricos-recaudara-2000-millones-vivienda-pensiones-crianza-20261123090541.html",
-      "rank": 1,
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/deportes/futbol/20261124/gil-marin-dimite-vicepresidente-laliga-financiacion-tebas-union-clubes-europeos-rival-efc/1003744470158_0.html",
+      "rank": 2,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "abc.es",
         "elespanol.com",
-        "europapress.es"
+        "elpais.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5987,
           "corroboration": 0.3333,
           "editorial_weight": 0.2727,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.6667,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.6522
         },
-        "total": 0.5848,
+        "total": 0.6079,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "sanchez",
+      "subject_label": "laliga",
       "subject_names": [
-        "abascal",
-        "feijoo",
-        "pedro sanchez",
-        "sanchez"
+        "gil marin",
+        "laliga"
       ],
-      "subject_newsroom_count": 13,
-      "summary": "Le gouvernement espagnol met en place un nouvel impôt ciblant les personnes détenant au moins 100 millions d'euros, dont le produit est estimé à 2 000 millions d'euros destinés au logement, aux retraites et à la parentalité ; les estimations indiquent qu'environ 100–123 contribuables seraient concernés et des craintes de fuite de capitaux pourraient réduire les recettes."
+      "subject_newsroom_count": 3,
+      "summary": "Miguel Ángel Gil Marín a démissionné de son poste de vice‑président (vice‑président premier selon certains articles) de LaLiga après plusieurs années à ce poste aux côtés de Javier Tebas ; plusieurs médias indiquent que sa démission est liée au financement par Tebas de l’Union des Clubs Européens."
     },
     {
-      "cluster_id": "subject-ucrania-14a896b21bd4",
-      "coherence": 0.42461885749891315,
-      "consequence": 3,
-      "countries": [
-        "brazil",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-23",
-      "filled_from": "europe",
-      "headline": "L’Ukraine affirme avoir coulé une corvette russe au large de la Libye",
-      "independent_source_count": 8,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/internacional/2026-11-23/ucrania-asume-la-autoria-del-ataque-con-drones-que-hundio-en-libia-un-barco-de-guerra-ruso.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/zelenski-reivindica-ataque-drones-corbeta-rusia-anclada-20261123090950-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261122/11690571/posible-ataque-ucrania-buque-guerra-ruso-puerto-libia.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/ucrania-hunde-buque-guerra-ruso-costa-libia-ataque-drones-navales_1_13685008.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/europa/20261123/guerra-ucrania-salta-mediterraneo-kiev-hunde-corbeta-ataca-carguero-rusos-costa-libia/1003744468226_0.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/internacional/2026/11/23/6b03ddfde9cf4a5f188b4574.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ucrania-reivindica-hundimiento-un-buque-guerra-ruso-libia-con-siete-drones-navales_7064491_0.html"
-        },
-        {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/23/zelensky-reivindica-ataque-navio-de-guerra-russo-libia-video.ghtml"
-        }
-      ],
-      "mentioned_countries": [
-        "up",
-        "rs"
-      ],
-      "origin_country": "brazil",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261122/11690571/posible-ataque-ucrania-buque-guerra-ruso-puerto-libia.html",
-      "rank": 2,
-      "reference_newsroom_count": 8,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es",
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "globo.com",
-        "lavanguardia.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4246,
-          "corroboration": 0.5,
-          "editorial_weight": 0.5,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.75
-        },
-        "total": 0.6885,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "ucrania",
-      "subject_names": [
-        "finlandia",
-        "kiev",
-        "kremlin",
-        "kyiv",
-        "libia",
-        "libya",
-        "libye",
-        "mediterraneo",
-        "moscou",
-        "nato",
-        "russian",
-        "russie",
-        "ucrania",
-        "ukraine",
-        "ukrainian",
-        "zelenski",
-        "zelensky",
-        "zelenskyy"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Plusieurs médias rapportent que l’Ukraine revendique avoir attaqué et coulé un navire de guerre russe — décrit comme une corvette — au large de la côte libyenne à l’aide de drones navals ou marins, étendant ainsi les opérations liées à la guerre en Ukraine jusque dans le bassin méditerranéen. Les comptes indiquent que l’action a visé un bâtiment russe dans un port ou près des côtes de la Libye, sans fournir de détails indépendants sur les pertes ou sur la vérification indépendante de l’événement."
-    },
-    {
-      "cluster_id": "subject-ukraine-3895a865b911",
-      "coherence": 0.4634641114643804,
+      "cluster_id": "subject-sanofi-fb79c9b7f744",
+      "coherence": 0.49921709934237446,
       "consequence": 3,
       "countries": [
         "france",
-        "spain"
+        "germany",
+        "spain",
+        "sz",
+        "tu",
+        "united-states",
+        "unknown"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-23",
+      "country_count": 7,
+      "editorial_day": "2026-11-24",
       "filled_from": "europe",
-      "headline": "Au moins 15 morts lors de frappes russes dans la région de Kyiv",
-      "independent_source_count": 5,
+      "headline": "Sanofi acquiert la biotech américaine Insmed pour 37,6 milliards d’euros",
+      "independent_source_count": 16,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/international/europe/ukraine-au-moins-15-morts-lors-de-frappes-russes-dans-la-region-de-kyiv-le-conseil-de-securite-de-lonu-se-reunit-20261123_S7QSYHJ5HZFVJFMWFJMBDMWXGM/"
+          "url": "https://www.liberation.fr/economie/laboratoires-pharmaceutiques-avec-le-rachat-de-lamericain-insmed-sanofi-realise-la-plus-grosse-acquisition-de-son-histoire-20261124_JZ6D6TECL5AXPP7EY3F3BRMZSI/"
         },
         {
           "language": "fr",
-          "source": "francetvinfo.fr",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-des-frappes-russes-font-au-moins-14-morts-dans-la-region-de-kiev_8295389.html#xtor=RSS-3-[lestitres]"
+          "url": "https://www.la-croix.com/sanofi-debourse-376-milliards-d-euros-pour-acquerir-l-americain-insmed-et-preparer-son-avenir-20261124"
         },
         {
           "language": "fr",
-          "source": "rfi.fr",
+          "source": "challenges.fr",
           "source_country": "france",
-          "url": "https://www.rfi.fr/fr/europe/20261123-ukraine-au-moins-15-morts-apr%C3%A8s-des-frappes-russes-dans-la-r%C3%A9gion-de-kiev-des-habitants-priv%C3%A9s-d-eau"
+          "url": "https://www.challenges.fr/entreprise/sante/acquisition-majeure-pour-sanofi-et-la-france-le-geant-pharmaceutique-absorbe-la-biotech-americaine-insmed-pour-376-milliards-deuros_647144"
         },
         {
           "language": "es",
-          "source": "lavanguardia.com",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261123/11690935/elevan-a-15-muertos-ataques-rusos-region-kyiv-zelenski-reivindica-ataques-buques-rusos-libia.html"
+          "url": "https://cincodias.elpais.com/companias/2026-11-24/sanofi-cierra-un-acuerdo-para-comprar-insmed-por-37600-millones-en-la-mayor-operacion-del-sector-farmaceutico-en-tres-anos.html"
         },
         {
-          "language": "fr",
-          "source": "bfmtv.com",
-          "source_country": "france",
-          "url": "https://www.bfmtv.com/international/europe/ukraine/guerre-en-ukraine-au-moins-15-morts-apres-les-frappes-dans-la-region-de-kiev-selon-un-nouveau-bilan_AD-202611230161.html"
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "united-states",
+          "url": "https://www.euronews.com/2026/11/24/why-french-pharma-firm-sanofi-is-paying-41-billion-for-us-company-insmed"
+        },
+        {
+          "language": "en",
+          "source": "theyeshivaworld.com",
+          "source_country": "united-states",
+          "url": "https://www.theyeshivaworld.com/news/general/2627590/massive-buyout-french-drugmaker-sanofi-strikes-41-billion-deal-for-american-biotech-company-insmed.html"
+        },
+        {
+          "language": "en",
+          "source": "bioxconomy.com",
+          "source_country": "unknown",
+          "url": "https://www.bioxconomy.com/partnering/sanofi-goes-all-in-on-respiratory-disease-with-41bn-insmed-acquisition"
+        },
+        {
+          "language": "tur",
+          "source": "fortuneturkey.com",
+          "source_country": "tu",
+          "url": "https://www.fortuneturkey.com/sanofi-insmedi-41-milyar-dolara-satin-alacak"
+        },
+        {
+          "language": "de",
+          "source": "az-online.de",
+          "source_country": "germany",
+          "url": "https://www.az-online.de/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-zr-94604914.html"
+        },
+        {
+          "language": "de",
+          "source": "op-online.de",
+          "source_country": "germany",
+          "url": "http://www.op-online.de/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-zr-94604914.html"
+        },
+        {
+          "language": "de",
+          "source": "finanzen.ch",
+          "source_country": "sz",
+          "url": "https://www.finanzen.ch/nachrichten/aktien/sanofi-bietet-41-milliarden-dollar-fuer-insmed-sanofi-aktie-im-fokus-1036794670"
+        },
+        {
+          "language": "de",
+          "source": "gea.de",
+          "source_country": "germany",
+          "url": "https://www.gea.de/welt/wirtschaft_artikel,-sanofi-kauft-us-biotechfirma-f%C3%BCr-41-milliarden-dollar-_arid,7176626.html"
+        },
+        {
+          "language": "de",
+          "source": "shz.de",
+          "source_country": "germany",
+          "url": "https://www.shz.de/deutschland-welt/wirtschaft/artikel/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-51794895"
+        },
+        {
+          "language": "de",
+          "source": "noz.de",
+          "source_country": "germany",
+          "url": "https://www.noz.de/deutschland-welt/wirtschaft/artikel/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-51794894"
+        },
+        {
+          "language": "de",
+          "source": "azonline.de",
+          "source_country": "germany",
+          "url": "https://www.azonline.de/welt/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-3731645"
+        },
+        {
+          "language": "de",
+          "source": "handelsblatt.com",
+          "source_country": "germany",
+          "url": "https://www.handelsblatt.com/unternehmen/industrie/pharma-sanofi-kauft-biotech-firma-insmed-fuer-41-milliarden-dollar/100272269.html"
         }
       ],
       "mentioned_countries": [
-        "up",
-        "rs"
+        "united-states",
+        "france"
       ],
       "origin_country": "france",
-      "outbound_source": "francetvinfo.fr",
-      "outbound_url": "https://www.franceinfo.fr/monde/europe/manifestations-en-ukraine/guerre-en-ukraine-des-frappes-russes-font-au-moins-14-morts-dans-la-region-de-kiev_8295389.html#xtor=RSS-3-[lestitres]",
+      "outbound_source": "op-online.de",
+      "outbound_url": "http://www.op-online.de/wirtschaft/sanofi-kauft-us-biotechfirma-fuer-41-milliarden-dollar-zr-94604914.html",
       "rank": 3,
-      "reference_newsroom_count": 4,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "francetvinfo.fr",
-        "lavanguardia.com",
-        "liberation.fr",
-        "rfi.fr"
+        "challenges.fr",
+        "elpais.com",
+        "euronews.com",
+        "la-croix.com",
+        "liberation.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.4635,
-          "corroboration": 0.5,
-          "editorial_weight": 0.3333,
+          "coherence": 0.4992,
+          "corroboration": 0.7778,
+          "editorial_weight": 0.3846,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.5556,
-          "source_reliability": 0.6364
+          "prominence": 0.8,
+          "source_reliability": 0.8222
         },
-        "total": 0.6441,
+        "total": 0.7051,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ukraine",
+      "subject_label": "sanofi",
       "subject_names": [
-        "kiev",
-        "kremlin",
-        "kyiv",
-        "moscou",
-        "nato",
-        "ucrania",
-        "ukraine"
+        "insmed",
+        "sanofi"
       ],
-      "subject_newsroom_count": 26,
-      "summary": "Plusieurs frappes russes dans la région de Kyiv ont fait au moins 15 morts et ont privé des habitants d’eau; les attaques interviennent avant des réunions à l’ONU et à l’OTAN prévues le même jour, selon les bilans communiqués par les autorités."
+      "subject_newsroom_count": 5,
+      "summary": "Sanofi a conclu l’achat d’Insmed, une société biopharmaceutique américaine, dans une opération valorisée à 37,6 milliards d’euros (environ 41 milliards de dollars), la plus importante acquisition de son histoire et l’une des plus importantes récentes dans le secteur pharmaceutique ; la transaction renforce l’engagement de Sanofi dans les maladies respiratoires et la biotechnologie."
     },
     {
-      "cluster_id": "subject-chu-19da10861563",
-      "coherence": null,
+      "cluster_id": "subject-nahel-merzouk-341b9f1963f6",
+      "coherence": 0.5287926845824875,
       "consequence": 3,
       "countries": [
         "france"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-23",
+      "editorial_day": "2026-11-24",
       "filled_from": "europe",
-      "headline": "Le CHU de Guadeloupe touché par une cyberattaque majeure, plan blanc activé",
-      "independent_source_count": 3,
+      "headline": "La cour d’appel de Versailles ordonne un procès pour meurtre contre le policier",
+      "independent_source_count": 6,
       "members": [
         {
           "language": "fr",
           "source": "liberation.fr",
           "source_country": "france",
-          "url": "https://www.liberation.fr/societe/on-revient-au-papier-et-au-crayon-le-chu-de-guadeloupe-victime-dune-cyberattaque-le-plan-blanc-declenche-20261123_CY3JELIW6BDVFPOYD5JMKWEAMY/"
+          "url": "https://www.liberation.fr/societe/police-justice/mort-de-nahel-merzouk-la-cour-dappel-de-versailles-ordonne-un-proces-pour-meurtre-contre-le-policier-qui-la-tue-20261124_HLTCW73RNRDUPJOWTA4ET4ZAEY/"
         },
         {
           "language": "fr",
-          "source": "france24.com",
+          "source": "la-croix.com",
           "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261123-le-chu-de-guadeloupe-victime-d-une-cyberattaque-de-grande-ampleur"
+          "url": "https://www.la-croix.com/societe/mort-de-nahel-merzouk-la-cour-d-appel-ordonne-un-proces-pour-meurtre-a-lencontre-du-policier-20261124"
+        },
+        {
+          "language": "fr",
+          "source": "mediapart.fr",
+          "source_country": "france",
+          "url": "https://www.mediapart.fr/journal/france/241126/le-policier-qui-tue-nahel-merzouk-doit-bien-etre-juge-pour-meurtre"
+        },
+        {
+          "language": "fr",
+          "source": "francetvinfo.fr",
+          "source_country": "france",
+          "url": "https://www.franceinfo.fr/faits-divers/adolescent-tue-par-un-policier-a-nanterre/mort-de-nahel-merzouk-en-2023-la-cour-d-appel-de-versailles-confirme-le-renvoi-du-policier-devant-les-assises-pour-meurtre_8295785.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "rfi.fr",
+          "source_country": "france",
+          "url": "https://www.rfi.fr/fr/france/20261124-mort-de-nahel-en-2023-en-appel-la-justice-fran%C3%A7aise-ordonne-un-proc%C3%A8s-pour-meurtre-%C3%A0-l-encontre-du-policier"
         },
         {
           "language": "fr",
           "source": "nouvelobs.com",
           "source_country": "france",
-          "url": "https://www.nouvelobs.com/societe/20261123.OBS120374/ce-que-l-on-sait-de-la-cyberattaque-survenue-au-chu-de-guadeloupe-a-pointe-a-pitre.html"
+          "url": "https://www.nouvelobs.com/societe/20261124.OBS120401/mort-de-nahel-merzouk-la-justice-ordonne-un-proces-pour-meurtre-a-l-encontre-du-policier.html"
         }
       ],
       "mentioned_countries": [
         "france"
       ],
       "origin_country": "france",
-      "outbound_source": "liberation.fr",
-      "outbound_url": "https://www.liberation.fr/societe/on-revient-au-papier-et-au-crayon-le-chu-de-guadeloupe-victime-dune-cyberattaque-le-plan-blanc-declenche-20261123_CY3JELIW6BDVFPOYD5JMKWEAMY/",
+      "outbound_source": "rfi.fr",
+      "outbound_url": "https://www.rfi.fr/fr/france/20261124-mort-de-nahel-en-2023-en-appel-la-justice-fran%C3%A7aise-ordonne-un-proc%C3%A8s-pour-meurtre-%C3%A0-l-encontre-du-policier",
       "rank": 4,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 6,
       "reference_newsrooms": [
-        "france24.com",
+        "francetvinfo.fr",
+        "la-croix.com",
         "liberation.fr",
-        "nouvelobs.com"
+        "mediapart.fr",
+        "nouvelobs.com",
+        "rfi.fr"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
+          "coherence": 0.5288,
           "corroboration": 0.3333,
-          "editorial_weight": 0.2727,
+          "editorial_weight": 0.4286,
           "freshness": 1.0,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6,
+          "source_reliability": 0.6923
         },
-        "total": 0.6081,
+        "total": 0.6623,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "chu",
+      "subject_label": "nahel merzouk",
       "subject_names": [
-        "chu",
-        "guadeloupe"
+        "nahel merzouk"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Les trois articles indiquent que le Centre Hospitalier Universitaire (CHU) de Pointe‑à‑Pitre en Guadeloupe a été la cible d’une importante cyberattaque qui a perturbé ses systèmes informatiques; l’établissement a déclenché le plan blanc, est revenu provisoirement au travail sur papier et crayon et organise la prise en charge des patients malgré les dysfonctionnements informatiques."
+      "subject_newsroom_count": 6,
+      "summary": "La cour d’appel de Versailles a confirmé le renvoi devant les assises du policier qui a tué Nahel Merzouk en 2023 et ordonné qu’il soit jugé pour meurtre, décision reprise par plusieurs médias qui indiquent que la justice maintient ainsi la qualification pénale de l’affaire en appel."
     },
     {
-      "cluster_id": "subject-reino-unido-467379936635",
-      "coherence": null,
+      "cluster_id": "subject-libya-8e25d176b9ef",
+      "coherence": 0.46264157287603114,
       "consequence": 3,
       "countries": [
-        "brazil",
-        "spain"
+        "it",
+        "united-kingdom",
+        "united-states"
       ],
-      "country_count": 2,
-      "editorial_day": "2026-11-22",
+      "country_count": 3,
+      "editorial_day": "2026-11-23",
       "filled_from": "europe",
-      "headline": "L’Union européenne et le Royaume‑Uni marquent un nouveau départ politique après le Brexit",
-      "independent_source_count": 3,
+      "headline": "L'Ukraine affirme avoir frappé et coulé des navires russes au large de la Libye",
+      "independent_source_count": 8,
       "members": [
         {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/ue-reino-unido-escenifican-reinicio-brexit-pasos-politicos-acuerdos-claves_1_13679720.html"
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/23/ukraine-naval-drones-strike-russian-warship-libya"
         },
         {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/ue-reino-unido-estrechan-lazos-claves-sus-acuerdos-segunda-cumbre-tras-brexit_7063844_0.html"
+          "language": "en",
+          "source": "theguardian.com",
+          "source_country": "united-kingdom",
+          "url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya"
         },
         {
-          "language": "pt",
-          "source": "globo.com",
-          "source_country": "brazil",
-          "url": "https://g1.globo.com/mundo/noticia/2026/11/20/reino-unido-ue-acordo-brexit.ghtml"
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/videos/c6wy93q5wwqvo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "bbc.co.uk",
+          "source_country": "united-kingdom",
+          "url": "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/11/23/ukraine-releases-footage-of-strikes-on-two-russian-vessels-off-libya"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/11/23/satellite-images-show-russian-warship-capsized-in-libya-after-suspected-ukrainian-drone-st"
+        },
+        {
+          "language": "en",
+          "source": "euronews.com",
+          "source_country": "it",
+          "url": "https://www.euronews.com/2026/11/23/un-mission-in-libya-urges-probe-after-russian-ship-hit-by-drones-off-benghazi"
+        },
+        {
+          "language": "en",
+          "source": "npr.org",
+          "source_country": "united-states",
+          "url": "https://www.npr.org/2026/11/23/g-s1-155017/ukraine-attack-russian-warship-libya"
+        },
+        {
+          "language": "en",
+          "source": "pbs.org",
+          "source_country": "united-states",
+          "url": "https://www.pbs.org/newshour/world/zelenskyy-hails-ukraines-attack-on-a-russian-warship-docked-at-a-naval-base-in-libya"
+        },
+        {
+          "language": "en",
+          "source": "dailygazette.com",
+          "source_country": "united-states",
+          "url": "https://www.dailygazette.com/ap/business/ukrainian-naval-drones-strike-a-new-russian-warship-in-libya-and-other-mideast-news/article_0a56d2f4-62a1-5048-b237-7997e3bf8cce.html"
+        },
+        {
+          "language": "en",
+          "source": "wgcu.org",
+          "source_country": "united-states",
+          "url": "https://www.wgcu.org/2026-11-23/ukraine-war-expands-as-zelenskyy-claims-sea-drone-strike-in-libya"
+        },
+        {
+          "language": "en",
+          "source": "10news.com",
+          "source_country": "united-states",
+          "url": "https://www.10news.com/world/europe/ukrainian-drones-sink-russian-warship-in-north-africa"
+        },
+        {
+          "language": "en",
+          "source": "wgcu.org",
+          "source_country": "united-states",
+          "url": "https://www.wgcu.org/2026-11-23/zelenskyy-hails-ukraines-attack-on-a-russian-warship-docked-at-a-naval-base-in-libya"
         }
       ],
       "mentioned_countries": [
-        "united-kingdom"
+        "up"
       ],
-      "origin_country": "brazil",
-      "outbound_source": "eldiario.es",
-      "outbound_url": "https://www.eldiario.es/internacional/ue-reino-unido-escenifican-reinicio-brexit-pasos-politicos-acuerdos-claves_1_13679720.html",
+      "origin_country": "it",
+      "outbound_source": "theguardian.com",
+      "outbound_url": "https://www.theguardian.com/world/2026/nov/22/blast-russian-ship-suspected-drone-attack-benghazi-libya",
       "rank": 5,
-      "reference_newsroom_count": 3,
+      "reference_newsroom_count": 5,
       "reference_newsrooms": [
-        "20minutos.es",
-        "eldiario.es",
-        "globo.com"
+        "bbc.co.uk",
+        "euronews.com",
+        "npr.org",
+        "pbs.org",
+        "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
+          "coherence": 0.4626,
+          "corroboration": 0.6,
+          "editorial_weight": 0.3846,
           "freshness": 0.7071,
           "geographic_relevance": 0.5,
           "impact": 1.0,
           "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
+          "prominence": 0.6667,
+          "source_reliability": 0.814
         },
-        "total": 0.5896,
+        "total": 0.6434,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "reino unido",
+      "subject_label": "libya",
       "subject_names": [
-        "reino unido",
-        "royaume-uni"
+        "kiev",
+        "kremlin",
+        "libia",
+        "libya",
+        "libye",
+        "russian",
+        "ucrania",
+        "ukraine",
+        "ukraine's",
+        "ukrainian",
+        "zelensky",
+        "zelenskyy"
       ],
-      "subject_newsroom_count": 11,
-      "summary": "Lors d’une deuxième réunion post‑Brexit, l’Union européenne et le Royaume‑Uni ont signé un accord et annoncé une série d’initiatives visant à resserrer leurs liens politiques et institutionnels; les articles soulignent un geste de « relance » des relations plutôt que la conclusion d’un grand traité unique, en mettant l’accent sur des accords concrets négociés pour faciliter la coopération future."
+      "subject_newsroom_count": 10,
+      "summary": "Les articles indiquent que l'Ukraine a revendiqué l'utilisation de drones navals pour frapper deux navires russes au large de la Libye, publiant des vidéos et images satellites liées aux attaques. Des sources citées décrivent au moins un navire russe endommagé ou coulé près de Benghazi et donnent la déclaration du président Zelensky saluant l'opération; les comptes rendus situent les frappes dans les eaux proches d'une base navale libyenne."
     }
   ],
-  "discarded_ingested": 9,
+  "discarded_ingested": 21,
   "discarded_kept": 5,
-  "generated_at": "2026-11-23T16:19:46.530680+00:00",
+  "generated_at": "2026-11-24T16:08:07.066411+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,

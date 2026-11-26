@@ -1,55 +1,448 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-trump-a93a385133af",
-      "coherence": 0.435800869470095,
-      "consequence": 1,
+      "cluster_id": "subject-bce-a685581abd63",
+      "coherence": 0.48489526736929955,
+      "consequence": 3,
       "countries": [
-        "co",
         "france",
-        "spain",
-        "united-kingdom"
+        "spain"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-11-25",
-      "headline": "Kilmar Ábrego García leaves the United States and arrives in Spain",
-      "independent_source_count": 8,
+      "country_count": 2,
+      "editorial_day": "2026-11-26",
+      "headline": "Pablo Hernández de Cos will succeed Christine Lagarde as ECB president",
+      "independent_source_count": 11,
       "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/conjoncture/bce-l-espagnol-pablo-hernandez-de-cos-sur-le-point-d-etre-choisi-comme-successeur-de-christine-lagarde-20261120"
+        },
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/conjoncture/l-espagnol-pablo-hernandez-de-cos-va-succeder-a-christine-lagarde-a-la-bce-20261126"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/christine-lagarde-va-etre-remplacee-par-lespagnol-pablo-hernandez-de-cos-a-la-tete-de-la-bce-20261126_GFSOMAAJCRFSFDBYP5KYFRNG54/"
+        },
         {
           "language": "fr",
           "source": "francetvinfo.fr",
           "source_country": "france",
-          "url": "https://www.franceinfo.fr/monde/usa/decret-anti-immigration-de-trump/le-salvadorien-symbole-des-expulsions-sous-donald-trump-quitte-de-lui-meme-les-etats-unis_8298651.html#xtor=RSS-3-%5Bmonde%5D"
+          "url": "https://www.franceinfo.fr/monde/europe/union-europeenne/l-ex-gouverneur-de-la-banque-d-espagne-pablo-hernandez-de-cos-va-succeder-a-christine-lagarde-a-la-tete-de-la-banque-centrale-europeenne_8301510.html#xtor=RSS-3-[lestitres]"
+        },
+        {
+          "language": "fr",
+          "source": "france24.com",
+          "source_country": "france",
+          "url": "https://www.france24.com/fr/europe/20261126-pr%C3%A9sidence-bce-espagnol-pablo-hernandez-de-cos-succ%C3%A9dera-christine-lagarde"
+        },
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/economia/2026-11-26/hernandez-de-cos-se-convertira-en-febrero-en-el-primer-espanol-en-presidir-el-bce.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/economia/consejo-europeo-elige-pablo-hernandez-cos-nuevo-20261126142403-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/economia/lideres-europeos-eligen-espanol-pablo-hernandez-cos-presidente-bce_1_13694914.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/internacional/espanol-hernandez-cos-sera-presidente-bce-recibir-apoyo-paises-bajos_1_2241285.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/invertia/economia/bancos-centrales/20261126/hernandez-cos-vence-halcon-holandes-knot-presidira-bce-puesto-poder-union-europea/1003744472828_0.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/economia/2026/11/26/6b083332fdddff741f8b4595.html"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/economia/macroeconomia-00338/noticia-pablo-hernandez-cos-primer-espanol-presidira-bce-crisis-deuda-ia-inflacion-20261126162635.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "elpais.com",
+      "outbound_url": "https://elpais.com/economia/2026-11-26/hernandez-de-cos-se-convertira-en-febrero-en-el-primer-espanol-en-presidir-el-bce.html",
+      "rank": 1,
+      "reference_newsroom_count": 11,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "france24.com",
+        "francetvinfo.fr",
+        "infolibre.es",
+        "lefigaro.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4849,
+          "corroboration": 0.5,
+          "editorial_weight": 0.5789,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.7333,
+          "source_reliability": 0.8182
+        },
+        "total": 0.77,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "bce",
+      "subject_names": [
+        "bce",
+        "christine lagarde",
+        "cos",
+        "espana",
+        "felipe",
+        "hernandez",
+        "madrid",
+        "pablo hernandez",
+        "union europea"
+      ],
+      "subject_newsroom_count": 17,
+      "summary": "European leaders have chosen Spanish central banker Pablo Hernández de Cos to become the next president of the European Central Bank, succeeding Christine Lagarde; he is set to take office in February and will be the first Spaniard to hold the post."
+    },
+    {
+      "cluster_id": "subject-uco-501766ced80a",
+      "coherence": 0.4118842554047102,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-26",
+      "headline": "Spanish investigators find possible criminal irregularities in Belate tunnel contract",
+      "independent_source_count": 4,
+      "members": [
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/uco-apunta-posibles-irregularidades-adjudicacion-modificados-tuneles-20261126110120-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/navarra/uco-ve-indicios-delito-obras-belate-adjudicadas-gobierno-navarra-tres-dias-generales_1_13694927.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/26/6b080638fdddff29568b4579.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/tribunales/20261126/uco-halla-posibles-irregularidades-penales-tunel-belate-obra-adjudicada-socio-cerdan/1003744472972_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/tribunales/20261126/uco-halla-posibles-irregularidades-penales-tunel-belate-obra-adjudicada-socio-cerdan/1003744472972_0.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "abc.es",
+        "eldiario.es",
+        "elespanol.com",
+        "elmundo.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4119,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.5944,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "uco",
+      "subject_names": [
+        "belate",
+        "chivite",
+        "uco"
+      ],
+      "subject_newsroom_count": 4,
+      "summary": "Spain’s Guardia Civil unit UCO has detected indications of possible criminal irregularities in the awarding of the Belate tunnel works by the Navarra government; the project was a major regional contract that was awarded to a firm linked to an associate of politician Cerdán, and the UCO’s findings have emerged shortly before national elections."
+    },
+    {
+      "cluster_id": "subject-ibiza-b9138de2b68e",
+      "coherence": 0.5787728707605277,
+      "consequence": 1,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-26",
+      "headline": "One sailor dies and several are injured after a fuel tanker sinks near Ibiza",
+      "independent_source_count": 13,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-11-26/muere-un-marinero-en-el-hundimiento-de-un-buque-cargado-de-combustible-cerca-de-ibiza.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/espana/baleares/muere-marino-tras-hundirse-cerca-ibiza-buque-20261126071415-nt.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/illes-balears/muerto-hundimiento-barco-cargado-gasoil-costa-ibiza_1_13694359.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/economia-y-sociedad/muere-marinero-hundimiento-barco-cargado-petroleo-costa-ibiza_1_2241253.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/baleares/ibiza/2026/11/26/6b07cf2ee4d4d8cb118b4592.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-11-26/hundimiento-barco-petroleo-ibiza-1tps_4472854/"
+        },
+        {
+          "language": "es",
+          "source": "europapress.es",
+          "source_country": "spain",
+          "url": "https://www.europapress.es/illes-balears/noticia-fallece-hombre-hundimiento-buque-7000-toneladas-gasoil-25-millas-ibiza-20261126075227.html"
+        },
+        {
+          "language": "es",
+          "source": "diariodenavarra.es",
+          "source_country": "spain",
+          "url": "https://www.diariodenavarra.es/noticias/sucesos/2026/11/26/muere-marinero-hundimiento-barco-cargado-combustible-cerca-ibiza-843809-122.html"
+        },
+        {
+          "language": "es",
+          "source": "diariosur.es",
+          "source_country": "spain",
+          "url": "https://www.diariosur.es/sociedad/muere-marinero-tras-hundimiento-buque-cargado-combustible-20261126072712-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "elcomercio.es",
+          "source_country": "spain",
+          "url": "https://www.elcomercio.es/sociedad/muere-marinero-tras-hundimiento-buque-cargado-combustible-20261126072712-ntrc.html"
+        },
+        {
+          "language": "es",
+          "source": "heraldo.es",
+          "source_country": "spain",
+          "url": "https://www.heraldo.es/noticias/nacional/2026/11/26/muere-un-marinero-hundimiento-un-barco-cerca-ibiza-cargado-mas-un-millon-litros-combustible-2071953.html"
+        },
+        {
+          "language": "es",
+          "source": "vozpopuli.com",
+          "source_country": "spain",
+          "url": "https://www.vozpopuli.com/espana/muere-un-marinero-y-seis-resultan-heridos-al-hundirse-un-barco-con-12-millones-de-litros-de-combustible-cerca-de-ibiza.html"
+        },
+        {
+          "language": "es",
+          "source": "larazon.es",
+          "source_country": "spain",
+          "url": "https://www.larazon.es/baleares/muere-marinero-hundir-barco-cargado-combustible-cerca-ibiza_202611266b07cfbaff6fec29219b7d3c.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/illes-balears/muerto-hundimiento-barco-cargado-gasoil-costa-ibiza_1_13694359.html",
+      "rank": 3,
+      "reference_newsroom_count": 7,
+      "reference_newsrooms": [
+        "abc.es",
+        "elconfidencial.com",
+        "eldiario.es",
+        "elmundo.es",
+        "elpais.com",
+        "europapress.es",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5788,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.4667,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.7647,
+          "source_reliability": 0.8049
+        },
+        "total": 0.5913,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ibiza",
+      "subject_names": [
+        "ibiza",
+        "muere"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "A ship carrying a large load of diesel or fuel sank off the coast of Ibiza, leaving one sailor dead and multiple crew members injured. Reports indicate the vessel was carrying roughly 1.2 million liters (about 7,000 tonnes) of fuel and went down some 20–40 nautical miles/kilometers from Ibiza; authorities and rescue teams responded to the incident."
+    },
+    {
+      "cluster_id": "subject-ceuta-a257542acd44",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-26",
+      "headline": "Consul in Tétouan says he warned ambassador a day before Ceuta border surge",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/espana/2026-11-26/el-consul-en-tetuan-dice-a-la-jueza-que-informo-al-embajador-de-que-la-frontera-de-ceuta-estaba-caliente.html"
+        },
+        {
+          "language": "es",
+          "source": "elmundo.es",
+          "source_country": "spain",
+          "url": "https://www.elmundo.es/espana/2026/11/26/6b082288fc6c831a088b4574.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/espana/tribunales/20261126/consul-tetuan-dice-elevo-embajador-dia-invasion-alerta-frontera-ceuti-caliente/1003744473223_0.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/espana/tribunales/20261126/consul-tetuan-dice-elevo-embajador-dia-invasion-alerta-frontera-ceuti-caliente/1003744473223_0.html",
+      "rank": 4,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.5294
+        },
+        "total": 0.5848,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "ceuta",
+      "subject_names": [
+        "canarias",
+        "ceuta",
+        "tetuan"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "The consul in Tétouan told a judge and said publicly that, after receiving an alert from the CNI, he informed the Spanish ambassador the day before the mass crossing that the Ceuta border was \"hot\" or \"caliente\"; the judge has requested the consul's messages to the ambassador sent after the intelligence warning."
+    },
+    {
+      "cluster_id": "subject-kilmar-abrego-9ba9cba55168",
+      "coherence": 0.39017414529951666,
+      "consequence": 1,
+      "countries": [
+        "france",
+        "spain",
+        "united-kingdom",
+        "united-states"
+      ],
+      "country_count": 4,
+      "editorial_day": "2026-11-26",
+      "headline": "Kilmar Ábrego García leaves the United States and moves to Spain",
+      "independent_source_count": 5,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/26/kilmar-abrego-garcia-le-salvadorien-devenu-symbole-des-expulsions-massives-sous-donald-trump-est-arrive-en-espagne-pour-une-nouvelle-vie_6815471_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/figure-de-la-politique-anti-immigration-de-donald-trump-kilmar-abrego-garcia-a-quitte-les-etats-unis-20261125"
         },
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
           "url": "https://elpais.com/internacional/2026-11-25/kilmar-abrego-garcia-victima-de-las-deportaciones-masivas-de-trump-aterriza-en-madrid.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/internacional/kilmar-abrego-garcia-migrante-deportado-error-megacarcel-salvador-deja-eeuu-rumbo-espana_1_13690877.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/mundo/america/eeuu/20261125/abrego-garcia-salvadoreno-deportado-trump-error-megacarcel-bukele-va-eeuu-rumbo-espana/1003744471122_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/kilmar-abrego-salvadoreno-deportado-por-eeuu-llega-madrid-tras-su-batalla-legal-con-administracion-trump_7065621_0.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/salvadoreno-kilmar-abrego-decide-abandonar-eeuu-tras-enfrentarse-administracion-trump-se-dirige-espana_7065428_0.html"
         },
         {
           "language": "en",
@@ -59,499 +452,70 @@
         },
         {
           "language": "en",
-          "source": "bbc.co.uk",
+          "source": "theguardian.com",
           "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/c6808pyy5dl9o?at_medium=RSS&at_campaign=rss"
+          "url": "https://www.theguardian.com/us-news/2026/nov/26/kilmar-abrego-garcia-spain-departure-trump"
         },
         {
-          "language": "es",
-          "source": "notimerica.com",
-          "source_country": "co",
-          "url": "https://www.notimerica.com/politica/noticia-salvadoreno-kilmar-abrego-decide-abandonar-eeuu-enfrentarse-administracion-trump-pone-rumbo-espana-20261125045043.html"
+          "language": "en",
+          "source": "coloradohometownweekly.com",
+          "source_country": "united-states",
+          "url": "https://www.coloradohometownweekly.com/2026/11/24/self-deportation-abrego-garcia/"
         }
       ],
       "mentioned_countries": [
-        "spain"
+        "spain",
+        "united-states"
       ],
-      "origin_country": "co",
+      "origin_country": "france",
       "outbound_source": "theguardian.com",
       "outbound_url": "https://www.theguardian.com/us-news/2026/nov/24/kilmar-abrego-garcia-leaves-us",
-      "rank": 1,
-      "reference_newsroom_count": 7,
+      "rank": 5,
+      "reference_newsroom_count": 4,
       "reference_newsrooms": [
-        "20minutos.es",
-        "bbc.co.uk",
-        "eldiario.es",
-        "elespanol.com",
         "elpais.com",
-        "francetvinfo.fr",
+        "la-croix.com",
+        "lemonde.fr",
         "theguardian.com"
       ],
       "score": {
         "components": {
-          "coherence": 0.4358,
+          "coherence": 0.3902,
           "corroboration": 0.6667,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6667,
-          "source_reliability": 0.7647
-        },
-        "total": 0.6025,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "trump",
-      "subject_names": [
-        "abrego garcia",
-        "administracion trump",
-        "donald trump",
-        "eeuu",
-        "espana",
-        "estados unidos",
-        "garcia",
-        "iran",
-        "kilmar abrego",
-        "madrid",
-        "trump",
-        "vox"
-      ],
-      "subject_newsroom_count": 29,
-      "summary": "Kilmar Ábrego García, a Salvadoran whose case became central to mass deportations under the Trump administration, has decided to leave the United States and has arrived in Spain after a legal struggle with U.S. authorities; reporting also notes that the U.S. government criticized Spain for allowing his entry."
-    },
-    {
-      "cluster_id": "subject-puigdemont-5f39a68f819e",
-      "coherence": 0.45729456039089966,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-25",
-      "headline": "Carles Puigdemont announces he will return to Catalonia on 12 December",
-      "independent_source_count": 6,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/espana/elecciones-generales/2026-11-25/puigdemont-anuncia-que-regresara-a-barcelona-el-sabado-12-de-diciembre.html"
-        },
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/catalunya/puigdemont-anuncia-volvera-12-diciembre-catalunya-pedir-perdon-renunciar_1_13691159.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/espana/2026/11/25/6b06b417fc6c83ba038b458e.html"
-        },
-        {
-          "language": "es",
-          "source": "infolibre.es",
-          "source_country": "spain",
-          "url": "https://www.infolibre.es/politica/puigdemont-anuncia-regreso-espana-proximo-12-diciembre-volvere-pedir-permiso-perdon_1_2241213.html"
-        },
-        {
-          "language": "es",
-          "source": "elespanol.com",
-          "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/politica/20261125/puigdemont-triunfante-proclama-fracaso-espana-volvera-cataluna-sin-pedir-permiso-perdon/1003744471388_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-puigdemont-anuncia-regresara-cataluna-12-diciembre-despues-anos-belgica-20261125111810.html"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elpais.com",
-      "outbound_url": "https://elpais.com/espana/elecciones-generales/2026-11-25/puigdemont-anuncia-que-regresara-a-barcelona-el-sabado-12-de-diciembre.html",
-      "rank": 2,
-      "reference_newsroom_count": 6,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "elespanol.com",
-        "elmundo.es",
-        "elpais.com",
-        "europapress.es",
-        "infolibre.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4573,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4286,
-          "freshness": 1.0,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.6,
-          "source_reliability": 0.6923
-        },
-        "total": 0.557,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "puigdemont",
-      "subject_names": [
-        "carles puigdemont",
-        "cataluna",
-        "espagne",
-        "espana",
-        "madrid",
-        "puigdemont",
-        "vox"
-      ],
-      "subject_newsroom_count": 10,
-      "summary": "Carles Puigdemont, who has been living in Belgium for nine years, announced he will return to Catalonia on 12 December and said he will do so \"without asking for forgiveness or permission,\" framing his return as a response to what he described as the Spanish state's failure."
-    },
-    {
-      "cluster_id": "subject-bullas-f048075533bf",
-      "coherence": 0.4586185934878253,
-      "consequence": 1,
-      "countries": [
-        "spain"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-25",
-      "headline": "Man fatally stabs his 32-year-old partner in Bullas, Murcia, and flees",
-      "independent_source_count": 4,
-      "members": [
-        {
-          "language": "es",
-          "source": "elpais.com",
-          "source_country": "spain",
-          "url": "https://elpais.com/sociedad/2026-11-25/la-guardia-civil-investiga-como-violencia-machista-el-asesinato-de-una-mujer-de-32-anos-en-murcia.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/espana/murcia/investigan-asesinato-mujer-anos-bullas-murcia-guardia-20261125140752-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "elmundo.es",
-          "source_country": "spain",
-          "url": "https://www.elmundo.es/murcia/2026/11/25/6b06dcb021efa05d2c8b4570.html"
-        },
-        {
-          "language": "es",
-          "source": "elconfidencial.com",
-          "source_country": "spain",
-          "url": "https://www.elconfidencial.com/espana/2026-11-25/asesinato-mujer-bullas-violencia-machista-1tna-1tps_4472340/"
-        }
-      ],
-      "mentioned_countries": [
-        "spain"
-      ],
-      "origin_country": "spain",
-      "outbound_source": "elconfidencial.com",
-      "outbound_url": "https://www.elconfidencial.com/espana/2026-11-25/asesinato-mujer-bullas-violencia-machista-1tna-1tps_4472340/",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "abc.es",
-        "elconfidencial.com",
-        "elmundo.es",
-        "elpais.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.4586,
-          "corroboration": 0.3333,
           "editorial_weight": 0.3333,
           "freshness": 1.0,
           "geographic_relevance": 1.0,
           "impact": 0.3333,
           "novelty": 1.0,
-          "prominence": 0.5,
-          "source_reliability": 0.6
+          "prominence": 0.5556,
+          "source_reliability": 0.68
         },
-        "total": 0.5267,
+        "total": 0.5575,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "bullas",
+      "subject_label": "kilmar abrego",
       "subject_names": [
-        "bullas",
-        "guardia civil",
-        "murcia"
-      ],
-      "subject_newsroom_count": 6,
-      "summary": "Authorities in Murcia are investigating the killing of a 32-year-old woman in the town of Bullas as a gender-based/partner violence case after she was stabbed; the suspected partner has fled and is being sought by the Guardia Civil."
-    },
-    {
-      "cluster_id": "subject-amazon-5ce8aff0d265",
-      "coherence": 0.791335101508923,
-      "consequence": 2,
-      "countries": [
-        "india",
+        "abrego garcia",
+        "chine",
+        "donald trump",
+        "eeuu",
+        "espagne",
+        "espana",
+        "etats-unis",
+        "felipe",
+        "garcia",
+        "kilmar abrego",
+        "madrid",
         "spain",
-        "united-kingdom",
-        "unknown"
+        "trump"
       ],
-      "country_count": 4,
-      "editorial_day": "2026-11-25",
-      "filled_from": "europe",
-      "headline": "Amazon will start selling cars online in the UK next year",
-      "independent_source_count": 16,
-      "members": [
-        {
-          "language": "es",
-          "source": "eldiario.es",
-          "source_country": "spain",
-          "url": "https://www.eldiario.es/motor/sector_y_mercado/amazon-autos-entra-reino-unido-gestionar-venta-online-coches-35-marcas-eeuu_1_13688025.html"
-        },
-        {
-          "language": "en",
-          "source": "theguardian.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.theguardian.com/uk-news/2026/nov/25/amazon-motors-into-uk-car-market"
-        },
-        {
-          "language": "en",
-          "source": "ibtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ibtimes.co.uk/amazon-autos-uk-launch-hyundai-2027-1834807"
-        },
-        {
-          "language": "en",
-          "source": "surreycomet.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.surreycomet.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "northwichguardian.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.northwichguardian.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "messengernewspapers.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.messengernewspapers.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "newarkadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.newarkadvertiser.co.uk/national/amazon-to-sell-cars-online-in-uk-from-next-year-174720/"
-        },
-        {
-          "language": "en",
-          "source": "thehindubusinessline.com",
-          "source_country": "india",
-          "url": "https://www.thehindubusinessline.com/companies/amazon-to-launch-amazon-autos-in-uk-in-early-2027-in-first-expansion-beyond-us/article71741258.ece"
-        },
-        {
-          "language": "en",
-          "source": "aol.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.aol.co.uk/articles/amazon-sell-cars-online-uk-060016000.html"
-        },
-        {
-          "language": "en",
-          "source": "eadt.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.eadt.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "glasgowtimes.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.glasgowtimes.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "leighjournal.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.leighjournal.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "huntspost.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.huntspost.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "northwaleschronicle.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.northwaleschronicle.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "chesterstandard.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.chesterstandard.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        },
-        {
-          "language": "en",
-          "source": "times-series.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.times-series.co.uk/news/national/26760078.amazon-sell-cars-online-uk-next-year/"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom"
-      ],
-      "origin_country": "india",
-      "outbound_source": "aol.co.uk",
-      "outbound_url": "https://www.aol.co.uk/articles/amazon-sell-cars-online-uk-060016000.html",
-      "rank": 4,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "eldiario.es",
-        "theguardian.com"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7913,
-          "corroboration": 0.6667,
-          "editorial_weight": 0.2,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.8,
-          "source_reliability": 0.8095
-        },
-        "total": 0.6108,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "amazon",
-      "subject_names": [
-        "amazon"
-      ],
-      "subject_newsroom_count": 4,
-      "summary": "Amazon is launching its vehicle sales service, Amazon Autos, in the United Kingdom from next year, expanding the programme it already operates in the United States and offering online listings for multiple car brands."
-    },
-    {
-      "cluster_id": "subject-france-369ae851673f",
-      "coherence": 0.5008790105303143,
-      "consequence": 2,
-      "countries": [
-        "france"
-      ],
-      "country_count": 1,
-      "editorial_day": "2026-11-25",
-      "filled_from": "europe",
-      "headline": "David Lisnard reelected president of the Association of Mayors of France",
-      "independent_source_count": 7,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lefigaro.fr",
-          "source_country": "france",
-          "url": "https://www.lefigaro.fr/elections/presidentielles/david-lisnard-reelu-pour-un-troisieme-mandat-a-la-tete-des-maires-de-france-20261125"
-        },
-        {
-          "language": "fr",
-          "source": "liberation.fr",
-          "source_country": "france",
-          "url": "https://www.liberation.fr/politique/elections/en-campagne-pour-lelysee-david-lisnard-reelu-a-la-tete-des-maires-de-france-20261125_SGKQEG6H3FHHPMAGJUG2OU2I2Q/"
-        },
-        {
-          "language": "fr",
-          "source": "la-croix.com",
-          "source_country": "france",
-          "url": "https://www.la-croix.com/politique/association-des-maires-de-france-david-lisnard-reelu-pour-un-troisieme-mandat-20261125"
-        },
-        {
-          "language": "fr",
-          "source": "francetvinfo.fr",
-          "source_country": "france",
-          "url": "https://www.franceinfo.fr/politique/david-lisnard/c-est-le-fruit-de-la-mobilisation-d-une-france-de-terrain-david-lisnard-candidat-a-la-presidentielle-est-reelu-a-la-tete-de-l-association-des-maires-de-france_8299698.html#xtor=RSS-3-[lestitres]"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261125-david-lisnard-%C3%A0-la-t%C3%AAte-des-maires-de-france-un-record-de-participation-depuis-1989"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/vid%C3%A9o/20261125-france-david-lisnard-r%C3%A9elu-%C3%A0-la-pr%C3%A9sidence-de-l-association-de-maire-de-france"
-        },
-        {
-          "language": "fr",
-          "source": "france24.com",
-          "source_country": "france",
-          "url": "https://www.france24.com/fr/france/20261125-france-david-lisnard-annonce-sa-reelection-a-la-tete-de-l-association-des-maires-de-france"
-        },
-        {
-          "language": "fr",
-          "source": "rfi.fr",
-          "source_country": "france",
-          "url": "https://www.rfi.fr/fr/france/20261125-david-lisnard-candidat-%C3%A0-la-pr%C3%A9sidentielle-r%C3%A9%C3%A9lu-%C3%A0-la-t%C3%AAte-de-l-association-des-maires-de-france"
-        },
-        {
-          "language": "fr",
-          "source": "challenges.fr",
-          "source_country": "france",
-          "url": "https://www.challenges.fr/politique/david-lisnard-contre-philippe-laurent-derriere-la-bataille-pour-la-tete-des-maires-de-france-lombre-de-la-presidentielle-de-2027_647132"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "france",
-      "outbound_source": "challenges.fr",
-      "outbound_url": "https://www.challenges.fr/politique/david-lisnard-contre-philippe-laurent-derriere-la-bataille-pour-la-tete-des-maires-de-france-lombre-de-la-presidentielle-de-2027_647132",
-      "rank": 5,
-      "reference_newsroom_count": 7,
-      "reference_newsrooms": [
-        "challenges.fr",
-        "france24.com",
-        "francetvinfo.fr",
-        "la-croix.com",
-        "lefigaro.fr",
-        "liberation.fr",
-        "rfi.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5009,
-          "corroboration": 0.3333,
-          "editorial_weight": 0.4667,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.6364,
-          "source_reliability": 0.7714
-        },
-        "total": 0.5998,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "france",
-      "subject_names": [
-        "cannes",
-        "david lisnard",
-        "emmanuel macron",
-        "france",
-        "lisnard",
-        "paris",
-        "teddy riner"
-      ],
-      "subject_newsroom_count": 14,
-      "summary": "David Lisnard was reelected to lead the Association of Mayors of France for a third term, winning a vote marked by high participation; his reelection comes as he campaigns for the French presidency, and his victory followed a contest that included rival Philippe Laurent."
+      "subject_newsroom_count": 9,
+      "summary": "Kilmar Ábrego García, a Salvadoran whose case became emblematic of large-scale deportations under Donald Trump, has left the United States and arrived in Spain to begin a new life. The articles agree he was at the centre of a contested deportation, fought his removal, and ultimately departed the U.S.; coverage notes his move to Spain marks the next chapter after his high-profile legal and political struggle."
     }
   ],
-  "discarded_ingested": 21,
+  "discarded_ingested": 56,
   "discarded_kept": 5,
-  "generated_at": "2026-11-25T15:54:30.161270+00:00",
+  "generated_at": "2026-11-26T15:35:20.964269+00:00",
   "language": "en",
   "period": "day",
   "schema_version": 2,

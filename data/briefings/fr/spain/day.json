@@ -1,48 +1,196 @@
 {
   "clusters": [
     {
-      "cluster_id": "subject-ceuta-6d1b554b4786",
-      "coherence": null,
+      "cluster_id": "subject-canaries-551fcdef9847",
+      "coherence": 0.5247764601087753,
+      "consequence": 3,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-28",
+      "headline": "Quatorze migrants retrouvés morts au large des îles Canaries",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/28/en-espagne-14-migrants-retrouves-morts-au-large-des-canaries_6816100_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "lemonde.fr",
+          "source_country": "france",
+          "url": "https://www.lemonde.fr/international/article/2026/11/27/en-espagne-au-moins-huit-migrants-retrouves-morts-au-large-des-canaries-et-plus-de-80-autres-secourus_6815893_3210.html"
+        },
+        {
+          "language": "fr",
+          "source": "liberation.fr",
+          "source_country": "france",
+          "url": "https://www.liberation.fr/international/europe/au-large-des-iles-canaries-14-migrants-retrouves-morts-dans-le-naufrage-dune-embarcation-20261128_VPOPSO6ZTJDVHFEXOYOKM7RR6E/"
+        },
+        {
+          "language": "fr",
+          "source": "la-croix.com",
+          "source_country": "france",
+          "url": "https://www.la-croix.com/international/migration-au-moins-huit-morts-et-six-blesses-graves-retrouves-au-large-des-canaries-20261127"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "la-croix.com",
+      "outbound_url": "https://www.la-croix.com/international/migration-au-moins-huit-morts-et-six-blesses-graves-retrouves-au-large-des-canaries-20261127",
+      "rank": 1,
+      "reference_newsroom_count": 3,
+      "reference_newsrooms": [
+        "la-croix.com",
+        "lemonde.fr",
+        "liberation.fr"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.5248,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.2727,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 1.0,
+          "novelty": 1.0,
+          "prominence": 0.4286,
+          "source_reliability": 0.6
+        },
+        "total": 0.6646,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "canaries",
+      "subject_names": [
+        "canaries",
+        "migration"
+      ],
+      "subject_newsroom_count": 5,
+      "summary": "Des restes de quatorze personnes ont été retrouvés après le naufrage d’une embarcation au large des îles Canaries ; plusieurs dizaines d’autres migrants ont été secourus lors des opérations de sauvetage menées en mer."
+    },
+    {
+      "cluster_id": "subject-cartagena-4f28808d1963",
+      "coherence": 0.4820347069722223,
       "consequence": 2,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-27",
-      "headline": "Un informateur affirme qu’un chef de la police de Tétouan l’a prévenu de l’entrée massive à Ceuta",
-      "independent_source_count": 3,
+      "editorial_day": "2026-11-28",
+      "headline": "Le gouvernement de Murcie saisit la justice pour empêcher l’arrivée du navire naufragé à Cartagena",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/espana/confidente-declara-jefe-policia-tetuan-aviso-tres-20261127141932-nt.html"
+          "url": "https://elpais.com/espana/2026-11-28/el-gobierno-murciano-pedira-a-la-justicia-impedir-que-el-buque-naufragado-llegue-a-cartagena.html"
+        },
+        {
+          "language": "es",
+          "source": "eldiario.es",
+          "source_country": "spain",
+          "url": "https://www.eldiario.es/murcia/gobierno-murcia-pedira-justicia-medidas-cautelarisimas-impedir-buque-naufragado-llegue-cartagena_1_13701200.html"
+        },
+        {
+          "language": "es",
+          "source": "infolibre.es",
+          "source_country": "spain",
+          "url": "https://www.infolibre.es/medioambiente/murcia-recurre-justicia-impedir-llegada-cartagena-buque-accidentado-ibiza_1_2241470.html"
         },
         {
           "language": "es",
           "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.elespanol.com/espana/tribunales/20261127/confidente-declara-prefecto-policia-tetuan-oualidi-anuncio-asalto-masivo-ceuta-dias/1003744474769_0.html"
-        },
-        {
-          "language": "es",
-          "source": "europapress.es",
-          "source_country": "spain",
-          "url": "https://www.europapress.es/nacional/noticia-confidente-declara-jefe-policia-tetuan-le-aviso-tres-semanas-antes-entrada-masiva-ceuta-20261127135918.html"
+          "url": "https://www.elespanol.com/espana/20261128/gobierno-murcia-acudira-justicia-tratar-impedir-buque-naufragado-ibiza-llegue-cartagena/1003744476002_0.html"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elespanol.com",
-      "outbound_url": "https://www.elespanol.com/espana/tribunales/20261127/confidente-declara-prefecto-policia-tetuan-oualidi-anuncio-asalto-masivo-ceuta-dias/1003744474769_0.html",
-      "rank": 1,
+      "outbound_source": "eldiario.es",
+      "outbound_url": "https://www.eldiario.es/murcia/gobierno-murcia-pedira-justicia-medidas-cautelarisimas-impedir-buque-naufragado-llegue-cartagena_1_13701200.html",
+      "rank": 2,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "eldiario.es",
+        "elespanol.com",
+        "elpais.com",
+        "infolibre.es"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.482,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.6667,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.6028,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "cartagena",
+      "subject_names": [
+        "cartagena",
+        "ibiza",
+        "murcia"
+      ],
+      "subject_newsroom_count": 7,
+      "summary": "Le gouvernement régional de Murcie a engagé des recours judiciaires visant à empêcher le transfert du pétrolier naufragé en Ibiza vers le port de Cartagena ; les articles indiquent qu’il considère Cartagena comme la seule escale viable et cherche à obtenir une décision de justice pour bloquer son arrivée."
+    },
+    {
+      "cluster_id": "subject-espagne-5e165c7d1565",
+      "coherence": null,
+      "consequence": 2,
+      "countries": [
+        "france"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-28",
+      "headline": "La crise du logement devient un enjeu majeur des législatives en Espagne",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "fr",
+          "source": "lefigaro.fr",
+          "source_country": "france",
+          "url": "https://www.lefigaro.fr/international/crise-du-logement-corruption-tensions-migratoires-en-espagne-une-campagne-legislative-bousculee-par-les-imprevus-20261128"
+        },
+        {
+          "language": "fr",
+          "source": "nouvelobs.com",
+          "source_country": "france",
+          "url": "https://www.nouvelobs.com/monde/20261127.OBS121392/elections-legislatives-en-espagne-le-c-ur-de-la-crise-du-logement-c-est-qu-il-n-y-en-a-pas-assez.html"
+        },
+        {
+          "language": "fr",
+          "source": "challenges.fr",
+          "source_country": "france",
+          "url": "https://www.challenges.fr/monde/je-ne-vois-pas-le-bout-du-tunnel-en-espagne-la-crise-du-logement-simpose-comme-un-enjeu-cle-des-legislatives_647141"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "france",
+      "outbound_source": "nouvelobs.com",
+      "outbound_url": "https://www.nouvelobs.com/monde/20261127.OBS121392/elections-legislatives-en-espagne-le-c-ur-de-la-crise-du-logement-c-est-qu-il-n-y-en-a-pas-assez.html",
+      "rank": 3,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
-        "abc.es",
-        "elespanol.com",
-        "europapress.es"
+        "challenges.fr",
+        "lefigaro.fr",
+        "nouvelobs.com"
       ],
       "score": {
         "components": {
@@ -59,399 +207,138 @@
         "total": 0.5848,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "ceuta",
+      "subject_label": "espagne",
       "subject_names": [
-        "canarias",
-        "ceuta",
-        "tetuan"
+        "espagne",
+        "spain"
       ],
-      "subject_newsroom_count": 6,
-      "summary": "Trois articles rapportent qu’un informateur a déclaré qu’un responsable de la police de Tétouan l’a averti plusieurs semaines avant d’une entrée massive de personnes à Ceuta ; ils précisent que cet avertissement a eu lieu environ vingt jours à trois semaines avant l’événement et citent le nom du préfet de police El Oualidi comme source de l’annonce selon la déclaration de l’informateur."
+      "subject_newsroom_count": 14,
+      "summary": "Les trois articles soulignent que la pénurie de logements abordables et la hausse des loyers placent la crise du logement au cœur de la campagne législative espagnole, exacerbant les tensions sociales et contraignant les partis à proposer des réponses face à une situation perçue comme durablement insatisfaisante."
     },
     {
-      "cluster_id": "subject-venezuela-43b97b9c3aa1",
-      "coherence": null,
+      "cluster_id": "subject-feijoo-6e26ab201f76",
+      "coherence": 0.45562339281696973,
       "consequence": 1,
-      "countries": [
-        "ar",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-26",
-      "headline": "Edmundo González annonce son retour au Venezuela après plus de deux ans d’exil",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/edmundo-gonzalez-pone-fin-exilio-madrid-volvera-20261126123458-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "20minutos.es",
-          "source_country": "spain",
-          "url": "https://www.20minutos.es/internacional/edmundo-gonzalez-anuncia-su-regreso-venezuela-proxima-semana-tras-mas-dos-anos-exiliado-espana_7066358_0.html"
-        },
-        {
-          "language": "en",
-          "source": "mercopress.com",
-          "source_country": "ar",
-          "url": "https://en.mercopress.com/2026/11/26/edmundo-gonzalez-announces-his-return-to-venezuela-after-more-than-two-years-in-exile-in-spain"
-        }
-      ],
-      "mentioned_countries": [
-        "ve",
-        "spain"
-      ],
-      "origin_country": "ar",
-      "outbound_source": "abc.es",
-      "outbound_url": "https://www.abc.es/internacional/edmundo-gonzalez-pone-fin-exilio-madrid-volvera-20261126123458-nt.html",
-      "rank": 2,
-      "reference_newsroom_count": 2,
-      "reference_newsrooms": [
-        "20minutos.es",
-        "abc.es"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2,
-          "freshness": 0.7071,
-          "geographic_relevance": 1.0,
-          "impact": 0.3333,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5
-        },
-        "total": 0.474,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "venezuela",
-      "subject_names": [
-        "venezuela"
-      ],
-      "subject_newsroom_count": 5,
-      "summary": "Edmundo González, exilé à Madrid depuis plus de deux ans, a annoncé qu’il mettra fin à son exil et rentrera au Venezuela la semaine du 5 décembre."
-    },
-    {
-      "cluster_id": "subject-french-0209d31487e5",
-      "coherence": 0.7885727998398373,
-      "consequence": 2,
-      "countries": [
-        "india",
-        "it",
-        "united-kingdom",
-        "united-states",
-        "unknown"
-      ],
-      "country_count": 5,
-      "editorial_day": "2026-11-27",
-      "filled_from": "europe",
-      "headline": "Gérard Depardieu renvoyé en procès pour viol et agression sexuelle",
-      "independent_source_count": 25,
-      "members": [
-        {
-          "language": "en",
-          "source": "bbc.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss"
-        },
-        {
-          "language": "it",
-          "source": "repubblica.it",
-          "source_country": "it",
-          "url": "https://www.repubblica.it/esteri/2026/11/26/news/francia_depardieu_rinviato_a_giudizio_per_stupro_attrice_charlotte_arnould-425752809/?rss"
-        },
-        {
-          "language": "en",
-          "source": "npr.org",
-          "source_country": "united-states",
-          "url": "https://www.npr.org/2026/11/27/nx-s1-6055559/gerard-depardieu-trial-rape-france"
-        },
-        {
-          "language": "en",
-          "source": "pbs.org",
-          "source_country": "united-states",
-          "url": "https://www.pbs.org/newshour/world/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "wmra.org",
-          "source_country": "united-states",
-          "url": "https://www.wmra.org/2026-11-27/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "wvasfm.org",
-          "source_country": "united-states",
-          "url": "https://www.wvasfm.org/2026-11-27/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "kclu.org",
-          "source_country": "united-states",
-          "url": "https://www.kclu.org/world/2026-11-27/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "northcountrypublicradio.org",
-          "source_country": "united-states",
-          "url": "https://www.northcountrypublicradio.org/news/npr/nx-s1-6055559/french-cinema-star-g-rard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "northernpublicradio.org",
-          "source_country": "united-states",
-          "url": "https://www.northernpublicradio.org/2026-11-27/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "ksfr.org",
-          "source_country": "united-states",
-          "url": "https://www.ksfr.org/npr-news/2026-11-27/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "wknofm.org",
-          "source_country": "united-states",
-          "url": "https://www.wknofm.org/news-from-npr/2026-11-27/french-cinema-star-gerard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault"
-        },
-        {
-          "language": "en",
-          "source": "ibtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ibtimes.co.uk/gerard-depardieu-rape-trial-charlotte-arnould-1835088"
-        },
-        {
-          "language": "en",
-          "source": "romfordrecorder.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.romfordrecorder.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "indiatimes.com",
-          "source_country": "india",
-          "url": "https://timesofindia.indiatimes.com/entertainment/english/hollywood/news/french-actor-gerard-depardieu-to-stand-trial-on-2018-rape-charge-lawyer/articleshow/136204297.cms"
-        },
-        {
-          "language": "en",
-          "source": "ludlowadvertiser.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.ludlowadvertiser.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "milfordmercury.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.milfordmercury.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "somersetcountygazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.somersetcountygazette.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "braintreeandwithamtimes.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.braintreeandwithamtimes.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "london-now.co.uk",
-          "source_country": "unknown",
-          "url": "https://www.london-now.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "thewestmorlandgazette.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thewestmorlandgazette.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "peeblesshirenews.com",
-          "source_country": "united-kingdom",
-          "url": "https://www.peeblesshirenews.com/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "burnhamandhighbridgeweeklynews.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.burnhamandhighbridgeweeklynews.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "thenorthernecho.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.thenorthernecho.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        },
-        {
-          "language": "en",
-          "source": "kake.com",
-          "source_country": "united-states",
-          "url": "https://www.kake.com/news/entertainment/french-cinema-star-g-rard-depardieu-ordered-to-stand-trial-for-rape-and-sexual-assault/article_e0d94051-9b50-5994-a45c-1a23850e8e9d.html"
-        },
-        {
-          "language": "en",
-          "source": "stroudnewsandjournal.co.uk",
-          "source_country": "united-kingdom",
-          "url": "https://www.stroudnewsandjournal.co.uk/news/national/26766639.french-actor-gerard-depardieu-ordered-stand-trial-rape-sexual-assault/"
-        }
-      ],
-      "mentioned_countries": [
-        "france"
-      ],
-      "origin_country": "india",
-      "outbound_source": "bbc.co.uk",
-      "outbound_url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss",
-      "rank": 3,
-      "reference_newsroom_count": 4,
-      "reference_newsrooms": [
-        "bbc.co.uk",
-        "npr.org",
-        "pbs.org",
-        "repubblica.it"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.7886,
-          "corroboration": 0.7143,
-          "editorial_weight": 0.3333,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 0.6667,
-          "novelty": 1.0,
-          "prominence": 0.8621,
-          "source_reliability": 0.871
-        },
-        "total": 0.6521,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "french",
-      "subject_names": [
-        "depardieu",
-        "french",
-        "gerard depardieu"
-      ],
-      "subject_newsroom_count": 9,
-      "summary": "Plusieurs médias annoncent que l'acteur français Gérard Depardieu a été ordonné de comparaître en procès après des accusations de viol et d'agression sexuelle portant sur des faits datant de 2018, impliquant une actrice plaignante; la décision judiciaire avance la tenue d'un procès, sans détailler ici de verdict ni de peine prononcée."
-    },
-    {
-      "cluster_id": "subject-reino-unido-225715a24c47",
-      "coherence": null,
-      "consequence": 3,
-      "countries": [
-        "france",
-        "spain"
-      ],
-      "country_count": 2,
-      "editorial_day": "2026-11-27",
-      "filled_from": "europe",
-      "headline": "Un cyberincident oblige le ministère du Travail britannique à suspendre plusieurs services en ligne",
-      "independent_source_count": 3,
-      "members": [
-        {
-          "language": "fr",
-          "source": "lemonde.fr",
-          "source_country": "france",
-          "url": "https://www.lemonde.fr/pixels/article/2026/11/27/royaume-uni-le-ministere-du-travail-declare-un-cyberincident-et-met-plusieurs-de-ses-services-hors-ligne_6815850_4408996.html"
-        },
-        {
-          "language": "es",
-          "source": "abc.es",
-          "source_country": "spain",
-          "url": "https://www.abc.es/internacional/cibertaque-suspende-numerosos-servicios-ministerio-trabajo-pensiones-20261127112052-nt.html"
-        },
-        {
-          "language": "es",
-          "source": "lavanguardia.com",
-          "source_country": "spain",
-          "url": "https://www.lavanguardia.com/internacional/20261127/11694810/ciberataque-obliga-suspender-servicios-online-ministerio-trabajo-reino-unido.html"
-        }
-      ],
-      "mentioned_countries": [
-        "united-kingdom"
-      ],
-      "origin_country": "france",
-      "outbound_source": "lavanguardia.com",
-      "outbound_url": "https://www.lavanguardia.com/internacional/20261127/11694810/ciberataque-obliga-suspender-servicios-online-ministerio-trabajo-reino-unido.html",
-      "rank": 4,
-      "reference_newsroom_count": 3,
-      "reference_newsrooms": [
-        "abc.es",
-        "lavanguardia.com",
-        "lemonde.fr"
-      ],
-      "score": {
-        "components": {
-          "coherence": 0.5,
-          "corroboration": 0.5,
-          "editorial_weight": 0.2727,
-          "freshness": 1.0,
-          "geographic_relevance": 0.5,
-          "impact": 1.0,
-          "novelty": 1.0,
-          "prominence": 0.4286,
-          "source_reliability": 0.5294
-        },
-        "total": 0.6248,
-        "weights_version": "2026-08-20.4"
-      },
-      "subject_label": "reino unido",
-      "subject_names": [
-        "reino unido",
-        "royaume-uni"
-      ],
-      "subject_newsroom_count": 8,
-      "summary": "Le ministère du Travail et des Pensions du Royaume‑Uni a déclaré un « cyberincident » et a mis hors ligne plusieurs de ses services en ligne, suspendant l’accès à divers services administratifs pendant que des mesures sont prises pour évaluer et résoudre l’incident."
-    },
-    {
-      "cluster_id": "subject-muere-manuel-883ccd4268e1",
-      "coherence": null,
-      "consequence": 0,
       "countries": [
         "spain"
       ],
       "country_count": 1,
-      "editorial_day": "2026-11-27",
-      "headline": "Manuel Ramírez, éditeur indépendant reconnu, est décédé",
-      "independent_source_count": 3,
+      "editorial_day": "2026-11-28",
+      "headline": "Feijóo se rend à Ceuta pendant la journée de réflexion pour montrer son soutien",
+      "independent_source_count": 4,
       "members": [
         {
           "language": "es",
           "source": "elpais.com",
           "source_country": "spain",
-          "url": "https://elpais.com/cultura/2026-11-27/muere-manuel-ramirez-el-editor-discreto-del-prestigioso-sello-pre-textos.html"
+          "url": "https://elpais.com/espana/elecciones-generales/2026-11-28/feijoo-viaja-a-ceuta-en-la-jornada-de-reflexion-para-pelear-los-ultimos-votos.html"
         },
         {
           "language": "es",
-          "source": "abc.es",
+          "source": "elespanol.com",
           "source_country": "spain",
-          "url": "https://www.abc.es/cultura/muere-manuel-ramirez-grandes-editores-independientes-espana-20261127153919-nt.html"
+          "url": "https://www.elespanol.com/espana/politica/20261128/feijoo-cumple-promesa-vivas-pasa-dia-reflexion-ceuta-acto-solidaridad-sin-hacer-campana/1003744476022_0.html"
         },
         {
           "language": "es",
           "source": "elmundo.es",
           "source_country": "spain",
-          "url": "https://www.elmundo.es/cultura/literatura/2026/11/27/6b097913e4d4d882508b458f.html"
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/28/6b0abb9921efa09a3f8b459a.html"
+        },
+        {
+          "language": "es",
+          "source": "elconfidencial.com",
+          "source_country": "spain",
+          "url": "https://www.elconfidencial.com/espana/2026-11-28/feijoo-ceuta-jornada-reflexion-elecciones_4474701/"
         }
       ],
       "mentioned_countries": [
         "spain"
       ],
       "origin_country": "spain",
-      "outbound_source": "elmundo.es",
-      "outbound_url": "https://www.elmundo.es/cultura/literatura/2026/11/27/6b097913e4d4d882508b458f.html",
+      "outbound_source": "elconfidencial.com",
+      "outbound_url": "https://www.elconfidencial.com/espana/2026-11-28/feijoo-ceuta-jornada-reflexion-elecciones_4474701/",
+      "rank": 4,
+      "reference_newsroom_count": 4,
+      "reference_newsrooms": [
+        "elconfidencial.com",
+        "elespanol.com",
+        "elmundo.es",
+        "elpais.com"
+      ],
+      "score": {
+        "components": {
+          "coherence": 0.4556,
+          "corroboration": 0.3333,
+          "editorial_weight": 0.3333,
+          "freshness": 1.0,
+          "geographic_relevance": 1.0,
+          "impact": 0.3333,
+          "novelty": 1.0,
+          "prominence": 0.5,
+          "source_reliability": 0.6
+        },
+        "total": 0.5263,
+        "weights_version": "2026-08-20.4"
+      },
+      "subject_label": "feijoo",
+      "subject_names": [
+        "abascal",
+        "almodovar",
+        "ceuta",
+        "espana",
+        "feijoo",
+        "madrid",
+        "montero",
+        "pedro sanchez",
+        "sanchez",
+        "sevilla"
+      ],
+      "subject_newsroom_count": 14,
+      "summary": "Alberto Núñez Feijóo s’est rendu à Ceuta durant la journée de réflexion du 29-N pour manifester son soutien et sa solidarité avec la ville; selon les articles, il a passé la journée là-bas en réponse à une demande de Juan Vivas et sans mener d’actes de campagne explicites."
+    },
+    {
+      "cluster_id": "subject-copa-davis-f414f1b6d22c",
+      "coherence": null,
+      "consequence": 0,
+      "countries": [
+        "spain"
+      ],
+      "country_count": 1,
+      "editorial_day": "2026-11-28",
+      "headline": "Carlos Alcaraz domine Arthur Fery lors du premier set des demi‑finales de la Coupe Davis",
+      "independent_source_count": 3,
+      "members": [
+        {
+          "language": "es",
+          "source": "elpais.com",
+          "source_country": "spain",
+          "url": "https://elpais.com/deportes/2026-11-28/espana-reino-unido-en-directo-el-partido-de-la-copa-davis-en-vivo.html"
+        },
+        {
+          "language": "es",
+          "source": "abc.es",
+          "source_country": "spain",
+          "url": "https://www.abc.es/deportes/tenis/alcaraz-fery-sigue-directo-segundo-partido-semifinal-20261128142815-di.html"
+        },
+        {
+          "language": "es",
+          "source": "elespanol.com",
+          "source_country": "spain",
+          "url": "https://www.elespanol.com/deportes/20261128/arthur-fery-carlos-alcaraz-tenis-hoy-directo-marcador-estadisticas-narracion-vivo-semis-copa-davis/1003744476049_22.html"
+        }
+      ],
+      "mentioned_countries": [
+        "spain"
+      ],
+      "origin_country": "spain",
+      "outbound_source": "elespanol.com",
+      "outbound_url": "https://www.elespanol.com/deportes/20261128/arthur-fery-carlos-alcaraz-tenis-hoy-directo-marcador-estadisticas-narracion-vivo-semis-copa-davis/1003744476049_22.html",
       "rank": 5,
       "reference_newsroom_count": 3,
       "reference_newsrooms": [
         "abc.es",
-        "elmundo.es",
+        "elespanol.com",
         "elpais.com"
       ],
       "score": {
@@ -469,18 +356,24 @@
         "total": 0.4381,
         "weights_version": "2026-08-20.4"
       },
-      "subject_label": "muere manuel",
+      "subject_label": "copa davis",
       "subject_names": [
-        "muere manuel",
-        "ramirez"
+        "abascal",
+        "alcaraz",
+        "almodovar",
+        "copa davis",
+        "espana",
+        "madrid",
+        "pedro sanchez",
+        "sanchez"
       ],
-      "subject_newsroom_count": 3,
-      "summary": "Les articles indiquent que Manuel Ramírez, figure discrète et influente de l’édition indépendante en Espagne et directeur du prestigieux label Pre-Textos, est mort. Ils soulignent son rôle central comme éditeur apprécié pour son enthousiasme silencieux, sa rigueur professionnelle et son importance pour la littérature espagnole contemporaine."
+      "subject_newsroom_count": 5,
+      "summary": "Lors du deuxième match des demi‑finales entre l’Espagne et la Grande‑Bretagne en Coupe Davis, Carlos Alcaraz a pris l’avantage en écrasant Arthur Fery dans le premier set; les articles suivent en direct le déroulement du match avec scores et statistiques."
     }
   ],
-  "discarded_ingested": 18,
+  "discarded_ingested": 20,
   "discarded_kept": 5,
-  "generated_at": "2026-11-27T15:26:48.385365+00:00",
+  "generated_at": "2026-11-28T14:26:05.816502+00:00",
   "language": "fr",
   "period": "day",
   "schema_version": 2,
